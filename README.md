@@ -12,7 +12,7 @@ Several students at Georgia Tech helped review the eBook:
 * Kantwon Rogers
 * Hemanth Koralla
 * Ikenna Omekam
-* 
+
 Several high school students have also been involved in the creation of the eBook.
 * Atiba Nkosi Kee
 * Robert McKenzie
