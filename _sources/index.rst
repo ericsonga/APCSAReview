@@ -198,6 +198,18 @@ Recursion
    Recursion/rMedMC.rst
    Recursion/rHardMC.rst
    
+Searching and Sorting
+::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+   
+   SearchSort/searchBasics.rst
+   SearchSort/seqSearch.rst  
+   SearchSort/binarySearch.rst
+   SearchSort/selSort.rst
+   SearchSort/insertionSort.rst
+   SearchSort/mergeSort.rst
    
 Practice Multiple-Choice Tests
 :::::::::::::::::::::::::::::::::
@@ -205,7 +217,7 @@ Practice Multiple-Choice Tests
 .. toctree::
    :maxdepth: 2
 
-   GettingStarted/test2.rst
+   GettingStarted/test3.rst
    
 Indices
 ::::::::::::::::::
