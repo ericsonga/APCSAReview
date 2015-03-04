@@ -92,7 +92,7 @@ try to run the ``main`` method in the currently selected class.  A ``main`` meth
 that do the work in an object-oriented program and then have the objects do the work. Some books show having a main method in another class which is often called a runner class, but this is not required.  
 I like to have a ``main`` method in each of my classes that tests the methods in that class.  The ``main`` method in the ``Person`` class creates two ``Person`` objects and prints their values out using the ``toString`` method.  The ``toString`` method is what is called on an object when you execute ``System.out.println(object)``. 
 
-.. figure:: Figures/personRun.png
+.. figure:: Figures/PersonRun.png
     :width: 600px
     :align: center
     :figclass: align-center
