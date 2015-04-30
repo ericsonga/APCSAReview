@@ -36,7 +36,7 @@ Strings are **immutable** which means that they can't change. Anything that you 
    :answer_c: H
    :answer_d: h
    :correct: a
-   :feedback_a: Strings are immutable, meaning they don't change.  Any method that that changes a string returns a new string.  So s1 never changes.  
+   :feedback_a: Strings are immutable, meaning they don't change.  Any method that changes a string returns a new string.  So s1 never changes.  
    :feedback_b: This would be true if the question was what is the value of s2 and it was substring(0,2) not (0,1)
    :feedback_c: This would be true if the question was what is the value of s2, not s1.  
    :feedback_d: This would be true if the question was what is the value of s3, not s1. 

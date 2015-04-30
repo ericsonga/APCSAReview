@@ -23,7 +23,7 @@ Preface and Getting Setup
    GettingStarted/preface.rst
    GettingStarted/whatIsJava.rst
    GettingStarted/DrJava.rst
-   GettingStarted/test1.rst
+   GettingStarted/ptest1.rst
    GettingStarted/gridWorld.rst
 
 
@@ -211,13 +211,22 @@ Searching and Sorting
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
    
-Practice Multiple-Choice Tests
+Practice Multiple-Choice Exams
 :::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
 
-   GettingStarted/test3.rst
+   Tests/test1.rst
+   
+Timed Multiple-Choice Exams
+:::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+
+   Tests/test2.rst
+   Tests/test3.rst
    
 Indices
 ::::::::::::::::::

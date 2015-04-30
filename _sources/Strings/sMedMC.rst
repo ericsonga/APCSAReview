@@ -35,7 +35,7 @@ These problems are similar to those that you will see on the AP CS A exam.
 .. mchoicemf:: qsm_2
    :answer_a: org
    :answer_b: eor
-   :answer_c: erog
+   :answer_c: eorg
    :answer_d: orgi
    :answer_e: You will get an index out of bounds exception
    :correct: a

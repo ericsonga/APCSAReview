@@ -27,10 +27,10 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_e: The methods have different numbers of parameters
    :correct: e
    :feedback_a: Methods that do different things should be named differently.
-   :feedback_b: There is no reason the parameter names ought to be different if the two functions are performing the same action.
+   :feedback_b: There is no reason the parameter names ought to be different if the two methods are performing the same action.
    :feedback_c: If the methods have different post-conditions, they are performing different functions, and should be named differently.
    :feedback_d: If two methods perform the same function, they can be named the same.  However, the number of parameters, type of parameters, or order of parameter types must be different.  
-   :feedback_e: Overloading occurs when two functions perform the same essential operation, but take a different number and/or type of parameters.
+   :feedback_e: Overloading occurs when two methods perform the same essential operation, but take a different number and/or type of parameters.
 
    Under which of these conditions is it appropriate to overload a method (ie: the class will contain two methods with the same name)?
    
