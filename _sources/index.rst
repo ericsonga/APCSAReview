@@ -21,11 +21,8 @@ Preface and Getting Setup
    :maxdepth: 2
 
    GettingStarted/preface.rst
-   GettingStarted/whatIsJava.rst
-   GettingStarted/DrJava.rst
    GettingStarted/ptest1.rst
-   GettingStarted/gridWorld.rst
-
+   
 
 Java Basics: Classes and Objects
 :::::::::::::::::::::::::::::::::::::::::::
@@ -33,6 +30,7 @@ Java Basics: Classes and Objects
 .. toctree::
    :maxdepth: 2
 
+   JavaBasics/whatIsJava.rst
    JavaBasics/introClassObject.rst
    JavaBasics/firstClass.rst
 
@@ -45,6 +43,7 @@ Variables
 
    VariableBasics/vIntro.rst
    VariableBasics/declareVars.rst
+   VariableBasics/changeVars.rst
    VariableBasics/nameVars.rst
    VariableBasics/operators.rst
    VariableBasics/casting.rst
@@ -110,6 +109,7 @@ Loops
    LoopBasics/lEasyMC.rst
    LoopBasics/lMedMC.rst
    LoopBasics/lHardMC.rst
+   LoopBasics/selfDivisorA.rst
    
 Arrays
 ::::::::::::::::::::
@@ -128,6 +128,7 @@ Arrays
    ArrayBasics/aEasyMC.rst
    ArrayBasics/aMedMC.rst
    ArrayBasics/aHardMC.rst   
+   ArrayBasics/selfDivisorB.rst
    
 List and ArrayList
 ::::::::::::::::::::
@@ -227,6 +228,16 @@ Timed Multiple-Choice Exams
 
    Tests/test2.rst
    Tests/test3.rst
+   Tests/test4.rst
+   
+Appendix 1 
+::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+
+   Appendix/DrJava.rst
+   Appendix/gridWorld.rst
    
 Indices
 ::::::::::::::::::

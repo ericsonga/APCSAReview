@@ -17,24 +17,29 @@ A **for** loop is usually used when you know how many times you want the loop to
   
 The code in the initialization area is executed before the first execution of the loop, the condition is checked each time through the loop and the loop continues as long as the condition is true, at the end of each execution of the body of the loop the changes are done.   
 
-.. code-block:: java
-
-  public static void printPopSong()
-  {
-   String line1 = " bottles of pop on the wall";
-   String line2 = " bottles of pop";  
-   String line3 = "Take one down and pass it around";  
-  
-   // while more 1's in the message
-   for (int i = 5; i > 0; i--)
+.. livecode:: lcfc1
+   :language: java
+   
+   public class SongTest
    {
-      System.out.println(i + line1);
-      System.out.println(i + line2); 
-      System.out.println(line3); 
-      System.out.println((i - 1) + line1);
-      System.out.println();
+
+      public static void printPopSong()
+      {
+         String line1 = " bottles of pop on the wall";
+         String line2 = " bottles of pop";  
+         String line3 = "Take one down and pass it around";  
+  
+         // while more 1's in the message
+         for (int i = 5; i > 0; i--)
+         {
+            System.out.println(i + line1);
+            System.out.println(i + line2); 
+            System.out.println(line3); 
+            System.out.println((i - 1) + line1);
+            System.out.println();
+         }
+      }
    }
-  }
   
 The method **printPopSong** prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.  
 

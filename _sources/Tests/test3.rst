@@ -7,14 +7,12 @@ Practice Exam 3 for the AP CS A Exam
 
 The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Hover over the clock icon to see the current time remaining. Click on the "Submit Answers" button at the end when you are done.  It will display the number correct, number wrong, and number skipped after the "Submit Answer" button.
 
-.. starttimer:: Start
+.. startexam:: timed_Test
+    :showtitle: Exam Not Started
+    :hidetitle: Currently Taking Exam
     :duration: 38
-
-.. revealquestions:: timed_Test
-    :showtitle: Timed Exam Paused or Not Started
-    :hidetitle: Currently Taking Timed Exam
     
-    .. timedmchoicemf:: pe3_1
+    .. exammchoicemf:: pe3_1
        :answer_a: 10
        :answer_b: 15
        :answer_c: 17
@@ -39,7 +37,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               total = total + matrix[row][1];
            }
 
-    .. timedmchoicemf:: pe3_2
+    .. exammchoicemf:: pe3_2
        :answer_a: There is no difference.  
        :answer_b: Abstract classes can have methods with bodies (code in them), but interfaces can not.
        :answer_c: Abstract classes can be instantiated, while interfaces can not.
@@ -54,7 +52,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
        What is the difference between an interface and an abstract class?
 
-    .. timedmchoicemf:: pe3_3
+    .. exammchoicemf:: pe3_3
        :answer_a: [9, 3, 17, 2, 16, 4, 1]
        :answer_b: [1, 4, 16, 2, 17, 3, 9]
        :answer_c: [9, 3, 17, 16, 4, 1, 2]
@@ -82,7 +80,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           }
 
 
-    .. timedmchoicemf:: pe3_4
+    .. exammchoicemf:: pe3_4
        :answer_a: Interface
        :answer_b: Polymorphism
        :answer_c: Inheritance (is-a)
@@ -116,7 +114,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              private Dog[] dogs;
           } 
           
-    .. timedmchoicemf:: pe3_5
+    .. exammchoicemf:: pe3_5
        :answer_a: return 9 * y;
        :answer_b: return 6 * y;
        :answer_c: return y; 
@@ -140,7 +138,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              return y;
           }
 	      
-    .. timedmchoicemf:: pe3_6
+    .. exammchoicemf:: pe3_6
        :answer_a: test();
        :answer_b: super.super.test();
        :answer_c: super.test();
@@ -155,7 +153,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
        Class C extends class B, which extends class A. Also, all of the three classes implement a public method test(). How can a method in an object of class C invoke the test() method defined in class A (without creating a new instance of class A)?
 	      
-    .. timedmchoicemf:: pe3_7
+    .. exammchoicemf:: pe3_7
        :answer_a: v.test(sporty,v);
        :answer_b: sporty.test(c,c);
        :answer_c: v.test(sporty,c);
@@ -193,7 +191,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           }
 
 	      
-    .. timedmchoicemf:: pe3_8
+    .. exammchoicemf:: pe3_8
        :answer_a: 8
        :answer_b: 1
        :answer_c: 2
@@ -217,7 +215,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           }
 
 	      
-    .. timedmchoicemf:: pe3_9
+    .. exammchoicemf:: pe3_9
        :answer_a: 1 3 5 7 9 11 13 15 17 19
        :answer_b: 0 2 4 6 8 10 12 14 16 18
        :answer_c: 2 4 6 8 10 12 14 16 18
@@ -240,7 +238,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                 System.out.print(k + " ");
           }
 
-    .. timedmchoicemf:: pe3_10
+    .. exammchoicemf:: pe3_10
        :answer_a: [a, c, e, d, g]
        :answer_b: [c, e, d, b, g]
        :answer_c: [a, c, e, g]
@@ -266,7 +264,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           list.add("g");
           System.out.println(list);
   
-    .. timedmchoicemf:: pe3_11
+    .. exammchoicemf:: pe3_11
        :answer_a: pm1pm2cm2cm1
        :answer_b: pm1pm2
        :answer_c: pm1pm2cm1cm2
@@ -307,7 +305,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              }
           }
 	      
-    .. timedmchoicemf:: pe3_12
+    .. exammchoicemf:: pe3_12
        :answer_a: I only
        :answer_b: II only
        :answer_c: III only
@@ -346,7 +344,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           II.	b.growl;
           III.	((Bear) b).growl();
           
-    .. timedmchoicemf:: pe3_13
+    .. exammchoicemf:: pe3_13
        :answer_a: Mirrors the values from the top half to the bottom half of the 2D array
        :answer_b: Mirrors the values from the left halt to the right half of the 2D array
        :answer_c: Mirrors the values from the bottom half to the top half of the 2D array
@@ -375,7 +373,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              }
           }
 
-    .. timedmchoicemf:: pe3_14
+    .. exammchoicemf:: pe3_14
        :answer_a: 12344321
        :answer_b: 1234
        :answer_c: 4321
@@ -402,7 +400,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              System.out.print(x % 10); 
           } 
 
-    .. timedmchoicemf:: pe3_15
+    .. exammchoicemf:: pe3_15
        :answer_a: public class Room extends Classroom implements Building { … }
        :answer_b: public class Classroom extends Room { … } public class Building { private Room[] rooms; …. }
        :answer_c: public class Room extends Building { private Classroom room; …. }
@@ -417,7 +415,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
        A classroom is a room and a building has many rooms. If the three classes Room, Classroom, and Building create objects that have the same relationship which of the following is the most appropriate set of declarations?
 	      
-    .. timedmchoicemf:: pe3_16
+    .. exammchoicemf:: pe3_16
        :answer_a: Whenever the first element in a is equal to val 
        :answer_b: Whenever a contains any element which equals val. 
        :answer_c: Whenever more than 1 element in a is equal to val. 
@@ -444,7 +442,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           return temp; 
 
 	      
-    .. timedmchoicemf:: pe3_17
+    .. exammchoicemf:: pe3_17
        :answer_a: 1 1 1 2 2 1 2 2 3 1 3 2 4 1 4 2 5 1 5 2
        :answer_b: 1 2 2 4 3 6 4 8 
        :answer_c: 1 1 1 2 2 1 2 2 3 1 3 2 4 1 4 2 
@@ -467,7 +465,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           } 
 
 	      
-    .. timedmchoicemf:: pe3_18
+    .. exammchoicemf:: pe3_18
        :answer_a: method1 and method3
        :answer_b: method1 only
        :answer_c: method2 only
@@ -519,7 +517,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           }
 
 
-    .. timedmchoicemf:: pe3_19
+    .. exammchoicemf:: pe3_19
        :answer_a: 13, 28
        :answer_b: 13, 29
        :answer_c: 14, 28
@@ -544,7 +542,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           }
 
 	      
-    .. timedmchoicemf:: pe3_20
+    .. exammchoicemf:: pe3_20
        :answer_a: I and III 
        :answer_b: All are true
        :answer_c: I, III, and IV
@@ -571,7 +569,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           III. s2.equals(s3);
           IV. s2 == s3;
           
-    .. finishtimer:: Finish
+    .. finishexam:: Finish
 
 	      
 	      

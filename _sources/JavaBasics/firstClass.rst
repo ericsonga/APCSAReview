@@ -2,7 +2,7 @@
    :prefix: 2-2-
    :start: 1
 
-First Example Class
+First Example Classes
 ==============================
 
 ..	index::
@@ -12,25 +12,45 @@ First Example Class
 	pair: class; method
 	pair: class; main method
 	
+To define a class in Java use the **keywords** ``public class`` followed by a *ClassName*.  Then the body of the class is enclosed in a starting ``{`` and ending ``}`` as shown below.
+
+.. code-block:: java 
+
+   public class ClassName
+   {
+   }
+   
 The following is an example class in Java.  A class in Java can have fields (data or properties), constructors (ways to initialize the fields), methods (behaviors), and a main method for testing the class. It does 
-not have to have any of these items.    
+not have to have *any* of these items.  The following would compile, but what do you think would happen if you tried to have a computer execute it?
+   
+.. code-block:: java 
 
-..	index::
-	single: public
-	pair: class; public
-	
-All classes on the Advanced Placement Computer Science A exam will be **public** as shown in the first line.  Think of **public** as like a social networking site that anyone can read.  Notice that some of the
-words in the code below are in green. 
+   public class FirstClass
+   {
+   }
+   
 
- ..	index::
-	single: keyword
-	pair: Java; keyword
-	pair: Java; naming convention
+The class ``FirstClass`` doesn't have anything inside of it, so the computer wouldn't know what to do if we asked it to execute the class.    
 
-These are Java keywords which means that they are part of the Java language, notice that they are start with a lowercase letter.  All keywords in Java start with a lowercase letter.
-Only the class name ``Person`` starts with an uppercase letter.  In Java the convention is that only class names start with a capital letter.  
+When you ask the Java run-time to *run* a class (java ClassName) it will start execution in the ``main`` method.  Click on the *Run* button to have the computer execute the ``main`` method in the following class.
 
-.. code-block:: java
+.. livecode:: lcfc1
+   :language: java
+
+   public class SecondClass
+   {
+      public static void main(String[] args)
+      {
+         System.out.println("Hi there!");
+      }
+   }
+   
+The class ``SecondClass`` isn't very object-oriented.  The only thing in it is the ``main`` method which is a **class method** (one that works on the class), not an **object method** (one that works on the current object).  Let's create a class where each object of the class represents a person.  Every person has a name and probably has a cell phone number.  We can store this data in **fields** in a Person object.  We provide **methods** to get and set the data.  We provide a **constructor** to initialize the data when the object is first created.
+
+Go ahead and click the *Run* button to see what gets printed.
+
+.. livecode:: lcfc2
+   :language: java
 
    public class Person
    {
@@ -87,19 +107,24 @@ Running a Java Program
 	pair: Java; run program
 	pair: Java; main method
    
-When you execute a Java program, you give it the name of the class that has the ``main`` method to execute and execution will start there.  If DrJava if you click the run button it will
-try to run the ``main`` method in the currently selected class.  A ``main`` method should create objects
-that do the work in an object-oriented program and then have the objects do the work. Some books show having a main method in another class which is often called a runner class, but this is not required.  
+When you execute a Java program, you give it the name of the class that has the ``main`` method to execute and execution will start there.  A ``main`` method should create objects
+that do the work in an object-oriented program and then have the objects do the work. The following is the ``main`` method for the Person class.
+
+.. code-block:: java
+
+     //////////// main for testing //////////////
+     public static void main(String[] args)
+     {
+       Person p1 = new Person("Deja", "555 132-3253");
+       System.out.println(p1);
+       Person p2 = new Person("Avery", "555 132-6632"); 
+       System.out.println(p2);
+     }
+
+Some books show having a main method in another class which is often called a runner class, but this is not required.  
 I like to have a ``main`` method in each of my classes that tests the methods in that class.  The ``main`` method in the ``Person`` class creates two ``Person`` objects and prints their values out using the ``toString`` method.  The ``toString`` method is what is called on an object when you execute ``System.out.println(object)``. 
 
-.. figure:: Figures/PersonRun.png
-    :width: 600px
-    :align: center
-    :figclass: align-center
-
-    Figure 1: The result of running the Person class in DrJava
-
-All classes in Java can have fields, constructors, methods, and a main method.
+Try changing the code in the ``main`` method so that you create a Person object with your data (your name and cell phone number).  Click the *Run* button to test the program.
 
 Fields - Instance Variables
 ==============================
@@ -179,24 +204,3 @@ The ``Person`` class has methods for getting the name and cell phone and for set
                                 cell: " + this.cell; }
   
 
-Main Method
-==================
-
-..	index::
-	pair: class; main method
-	
-The only thing that can be changed on the first line of the main method (``public static void main(String[] args)``) is ``args``.  The ``args`` is just the name that can be used in the ``main`` method to refer to an array of strings that is passed to the ``main`` method.  The rest of the words have to be there and
-should be in that order.  The ``main`` method is what the Java run-time looks for to start execution when you execute ``java Person``.  
-
-.. code-block:: java
-
-     //////////// main for testing //////////////
-     public static void main(String[] args)
-     {
-       Person p1 = new Person("Deja", "555 132-3253");
-       System.out.println(p1);
-       Person p2 = new Person("Avery", "555 132-6632"); 
-       System.out.println(p2);
-     }
-     
-Click on the following `link <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person%0A+++%7B%0A+++++///+fields+////////////////%0A+++++private+String+name%3B%0A+++++private+String+cell%3B%0A++%0A+++++///////+constructors+////////////////////%0A+++++public+Person(String+theName,+String+theCell)%0A+++++%7B%0A+++++++this.name+%3D+theName%3B%0A+++++++this.cell+%3D+theCell%3B%0A+++++%7D%0A++%0A+++++////////////+methods+///////////////////////%0A+++++public+String+getName()+%0A+++++%7B+%09%0A+++++%09return+this.name%3B+%0A+++++%7D%0A+++++public+void+setName(String+theName)+%0A+++++%7B+%0A+++++%09this.name+%3D+theName%3B+%0A+++++%7D%0A++%0A+++++public+String+getCell()+%0A+++++%7B++%0A+++++%09return+this.cell%3B+%0A+++++%7D%0A+++++%0A+++++public+void+setCell(String+theCell)+%0A+++++%7B+%0A+++++%09this.cell+%3D+theCell%3B+%0A+++++%7D%0A++%0A+++++public+String+toString()+%7B+return+%22name%3A+%22+%2B+this.name+%2B+%0A++++++++++++++++++++++++++++++++%22,+cell%3A+%22+%2B+this.cell%3B+%7D%0A++%0A++%0A+++++////////////+main+for+testing+//////////////%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A+++++++Person+p1+%3D+new+Person(%22Deja%22,+%22555+132-3253%22)%3B%0A+++++++System.out.println(p1)%3B%0A+++++++Person+p2+%3D+new+Person(%22Avery%22,+%22555+132-6632%22)%3B+%0A+++++++System.out.println(p2)%3B%0A+++++%7D%0A++%0A+++%7D&mode=display&curInstr=4>`_ to go to the Java visualizer and then you can step through the code using the Forward button and see the objects get created and the fields initialized.  You can even change the code and create an object that represents you.
