@@ -25,7 +25,7 @@ options(
         outdir="../static/"+project_name,
         confdir=".",
         template_args={'course_id':project_name,
-          #             'login_required':'false',
+           #            'login_required':'false',
                        'login_required':'true',
                        'appname':master_app,
                        'loglevel':10,
