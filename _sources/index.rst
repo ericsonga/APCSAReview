@@ -110,7 +110,6 @@ Loops
    LoopBasics/lMedMC.rst
    LoopBasics/lHardMC.rst
    LoopBasics/selfDivisorA.rst
-   LoopBasics/stringScrambleA.rst
    
 Arrays
 ::::::::::::::::::::
