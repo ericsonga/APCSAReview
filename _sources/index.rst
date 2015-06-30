@@ -129,9 +129,9 @@ Arrays
    ArrayBasics/aEasyMC.rst
    ArrayBasics/aMedMC.rst
    ArrayBasics/aHardMC.rst  
+   ArrayBasics/selfDivisorB.rst
    ArrayBasics/horseBarnA.rst 
    ArrayBasics/horseBarnB.rst 
-   ArrayBasics/selfDivisorB.rst
    
 List and ArrayList
 ::::::::::::::::::::
@@ -164,7 +164,8 @@ Two-dimensional Arrays
    Array2dBasics/a2dEasyMC.rst
    Array2dBasics/a2dMedMC.rst
    Array2dBasics/a2dHardMC.rst
-
+   Array2dBasics/grayImageA.rst
+   Array2dBasics/grayImageB.rst
    
 Object-Oriented Concepts
 ::::::::::::::::::::::::

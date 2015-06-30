@@ -86,7 +86,7 @@
     <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="top" title="Runestone Interactive Overview" href="../index.html" />
-    <link rel="next" title="Free Response - Self Divisor B" href="selfDivisorB.html" />
+    <link rel="next" title="Lists" href="../ListBasics/listbasics.html" />
     <link rel="prev" title="Free Response - Horse Barn A" href="horseBarnA.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -291,8 +291,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Free Response - Self Divisor B' data-toggle="tooltip" >
-    <a href="selfDivisorB.html" >
+  <li id="relations-next" title='Next Chapter - Lists' data-toggle="tooltip" >
+    <a href="../ListBasics/listbasics.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -338,16 +338,23 @@
 </div>
 <p>A horse barn consists of N numbered spaces. Each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the HorseBarn class is shown below.</p>
 <p><strong>Part b.</strong>  Write the HorseBarn method consolidate. This method consolidates the barn by moving horses so that the horses are in adjacent spaces, starting at index 0, with no empty spaces between any two horses. After the barn is consolidated, the horses are in the same order as they were before the consolidation.</p>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="../_images/horseBarnB.png"><img alt="../_images/horseBarnB.png" src="../_images/horseBarnB.png" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">Figure 1: Example calls and results</span></p>
+</div>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HorseBarn</span>
 <span class="o">{</span>
    <span class="cm">/** The spaces in the barn. Each array element holds a reference to the horse</span>
-<span class="cm">    * that is currently occupying the space. A null value indicates an empty space.</span>
+<span class="cm">    * that is currently occupying the space. A null value indicates an empty</span>
+<span class="cm">    * space.</span>
 <span class="cm">    */</span>
    <span class="kd">private</span> <span class="n">Horse</span><span class="o">[]</span> <span class="n">spaces</span><span class="o">;</span>
 
-   <span class="cm">/** Consolidates the barn by moving horses so that the horses are in adjacent spaces,</span>
-<span class="cm">    * starting at index 0, with no empty space between any two horses.</span>
-<span class="cm">    * Postcondition: The order of the horses is the same as before the consolidation.</span>
+   <span class="cm">/** Consolidates the barn by moving horses so that the horses are in</span>
+<span class="cm">    *  adjacent spaces, starting at index 0, with no empty space between</span>
+<span class="cm">    *  any two horses.</span>
+<span class="cm">    * Postcondition: The order of the horses is the same as before the</span>
+<span class="cm">    *  consolidation.</span>
 <span class="cm">    */</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">consolidate</span><span class="o">()</span>
    <span class="o">{</span> <span class="cm">/* to be implemented in part (b) */</span> <span class="o">}</span>
@@ -356,30 +363,33 @@
 </div>
 <div class="section" id="how-to-solve-this-problem">
 <h2>How to solve this problem<a class="headerlink" href="#how-to-solve-this-problem" title="Permalink to this headline">¶</a></h2>
-<p>To consolidate the Horses in the array, we will first need to loop through the array &#8220;spaces,&#8221; looking for non-null elements (spaces with a Horse object), to add to a temporary array.</p>
+<p>One way to solve this problem is to create a temporary array the same size as <code class="docutils literal"><span class="pre">spaces</span></code> and then loop through the current <code class="docutils literal"><span class="pre">spaces</span></code> array and if the current element isn&#8217;t null copy it to the temporary array.</p>
 
             <div id="frhbb_1" class="alert alert-warning">
-            7-12-1: Which loop should you use to solve this problem?<form name="frhbb_1_form" method="get" action="" onsubmit="return false;">
+            7-14-1: Which loop should you use to solve this problem?<form name="frhbb_1_form" method="get" action="" onsubmit="return false;">
             <input type="radio" name="group1" value="a" id="frhbb_1_opt_a" />
-            <label for= "frhbb_1_opt_a">  a) for or for each</label><br />
+            <label for= "frhbb_1_opt_a">  a) for</label><br />
             
             <input type="radio" name="group1" value="b" id="frhbb_1_opt_b" />
-            <label for= "frhbb_1_opt_b">  b) while</label><br />
+            <label for= "frhbb_1_opt_b">  b) for each</label><br />
+            
+            <input type="radio" name="group1" value="c" id="frhbb_1_opt_c" />
+            <label for= "frhbb_1_opt_c">  c) while</label><br />
             
 
             <script>
             $(document).ready(function(){checkRadio('frhbb_1');});
             </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frhbb_1','a',['Use a for loop when you know how many times a loop needs to execute.  Use a for each if you want to loop through all the elements in a collection.', 'Use a while loop when you don\u0027t know how many times a loop needs to execute.'])">Check Me</button>
+            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frhbb_1','a',['Use a for loop when you know how many times a loop needs to execute and need the index.', 'Use a for each if you want to loop through all the elements in a collection and don\u0027t need an index.', 'Use a while loop when you don\u0027t know how many times a loop needs to execute.'])">Check Me</button>
             <button class='btn btn-default' id="frhbb_1_bcomp" disabled name="compare" onclick="compareAnswers('frhbb_1');">Compare Me</button>
             </form><br />
             <div id="frhbb_1_feedback">
             </div>
             </div>
-            <p>While we are looping through the &#8220;spaces&#8221; array, we need to check for non-null positions.</p>
+            <p>While we are looping through the <code class="docutils literal"><span class="pre">spaces</span></code> array, we need to check for non-null positions.</p>
 
             <div id="frhbb_2" class="alert alert-warning">
-            7-12-2: How do we check if the space at the current index isn&#8217;t null?<form name="frhbb_2_form" method="get" action="" onsubmit="return false;">
+            7-14-2: How do we check if the space at the current index isn&#8217;t null?<form name="frhbb_2_form" method="get" action="" onsubmit="return false;">
             <input type="radio" name="group1" value="a" id="frhbb_2_opt_a" />
             <label for= "frhbb_2_opt_a">  a) if (spaces.get(index) != null)</label><br />
             
@@ -399,7 +409,7 @@
             <div id="frhbb_2_feedback">
             </div>
             </div>
-            <p>Try to write the code for the method consolidate. When you are ready click &#8220;Run&#8221; to test your solution.</p>
+            <p>Try to write the code for the method <code class="docutils literal"><span class="pre">consolidate</span></code>. When you are ready click &#8220;Run&#8221; to test your solution.</p>
 <div id="cont"></div>
 <div id="lcfrhbb1" lang="java" class="ac_section alert alert-warning">
 
@@ -429,9 +439,11 @@ public class HorseBarn
    }
 
 
-   /** Consolidates the barn by moving horses so that the horses are in adjacent spaces,
-    * starting at index 0, with no empty space between any two horses.
-    * Postcondition: The order of the horses is the same as before the consolidation.
+   /** Consolidates the barn by moving horses so that the horses are
+    *  in adjacent spaces, starting at index 0, with no empty space
+    *  between any two horses.
+    * Postcondition: The order of the horses is the same as before
+    *  the consolidation.
     */
    public void consolidate()
    {
@@ -522,12 +534,12 @@ public class HorseBarn
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="horseBarnA.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Free Response - Self Divisor B' data-toggle="tooltip" >
-    <a href="selfDivisorB.html" >
+  <li id="relations-next" class="navLink" title='Next Section - Lists' data-toggle="tooltip" >
+    <a href="../ListBasics/listbasics.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="selfDivisorB.html" >Next Section - Free Response - Self Divisor B</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../ListBasics/listbasics.html" >Next Section - Lists</a>
 
 <script type="text/javascript">
 

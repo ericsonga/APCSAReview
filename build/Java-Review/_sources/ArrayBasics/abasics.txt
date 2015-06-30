@@ -7,7 +7,7 @@ Arrays in Java
 
 .. video:: v_interfaces
    :controls:
-   :thumb: ../_static/interfaces.png
+   :thumb: ../_static/videoStart.png
 
    http://ice-web.cc.gatech.edu/ce21/1/static/video/Arrays.mov
    http://ice-web.cc.gatech.edu/ce21/1/static/video/Arrays.webm

@@ -27,7 +27,7 @@ options(
                        'appname':master_app,
                        'loglevel': 0,
                        'course_url':master_url,
-                       'use_services': 'false',
+                       'use_services': 'true',
                        'python3': 'false'
                         }
     )

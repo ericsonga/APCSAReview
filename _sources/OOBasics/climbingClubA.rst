@@ -168,3 +168,6 @@ Video - One way to code the solution
 .. video:: v_interfaces
    :controls:
    :thumb: ../_static/codeVideo.png
+   
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q1A.mov 
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q1A.webm

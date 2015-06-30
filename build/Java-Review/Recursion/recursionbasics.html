@@ -321,6 +321,28 @@
   
   <div class="section" id="recursion">
 <h1>Recursion<a class="headerlink" href="#recursion" title="Permalink to this headline">¶</a></h1>
+<div id="v_recursion" class="video_popup" >
+<video controls preload="none"  poster="../_static/videoStart.png">
+    <source src="http://ice-web.cc.gatech.edu/ce21/1/static/video/Recursion.mov" type="video/mp4"></source>
+    No supported video types
+</video>
+</div>
+<script>
+   jQuery(function($) {
+      $('#v_recursion_thumb').click(function(e) {
+         $('#v_recursion').show();
+         $('#v_recursion_thumb').hide();
+         logBookEvent({'event':'video','act':'play','div_id': 'v_recursion'});
+         // Log the run event
+      });
+      $('#v_recursion video').one("click", function(){
+        this.play();
+      });
+      $('#v_recursion video').one("play", function(){
+        logBookEvent({'event':'video','act':'play','div_id': 'v_recursion'});
+      });
+   });
+</script>
 <p>The AP CS A exam usually has about 4-6 recursion problems.  You only need to know how to trace recursive methods (figure out what they return or print).  You will <em>not</em> be asked to write a recursive method on the exam.</p>
 </div>
 <div class="section" id="what-is-recursion">

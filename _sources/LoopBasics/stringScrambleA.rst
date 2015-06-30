@@ -19,6 +19,15 @@ The following is part a of a free response question from 2014.  It was question 
 * If two consecutive letters consist of an "A" followed by a letter that is not an "A", then the two letters are swapped in the resulting string.
 * Once the letters in two adjacent positions have been swapped, neither of those two positions can be involved in a future swap.
 
+The following table shows several examples of words and their scrambled versions.
+
+.. figure:: Figures/scrambleA.png
+    :width: 500px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: Example calls and results
+
 .. code-block:: java 
    
    import java.util.List;
@@ -46,17 +55,7 @@ The following is part a of a free response question from 2014.  It was question 
       {
          /* to be implemented in part a */
       }
-      
-      /********************** Test *********************/
-      public static void main(String[] args)
-      {
-         System.out.println("\nTesting Part (a):\n");
-    
-         String[] words = {"TAN", "ABRACADABRA", "WHOA", 
-                           "AARDVARK", "EGGS", "A", ""};
-         for (String word : words)
-            System.out.println(word + " becomes " + scrambleWord(word));
-      }  
+ 
    }
     
 How to solve this problem
@@ -140,7 +139,23 @@ The following shows what to do to solve the example with "WHOA".
    
 In this case since we didn't swap any characters we only incement the index by 1 each time through the loop.
 
-The code will need to loop through the characters in the string and compare two adjacent characters.  There are two ways to compare two adjacent characters without going beyond the bounds of the loop.  One way is to start the index at 0 and loop while the index is less than one less than the length of the string and then get the characters at the index and at the index plus one. Another way is to start the index at 1 and loop while the index is less than the length of the string and then get the characters at one less than the index and at the index.  If the first character is an "A" and the second is not an "A" then swap them and increment the index to make sure that you don't check characters that have already been swapped.  Each time through the loop also increment the index.  Write the method scrambleWord below. 
+The code will need to loop through the characters in the string and compare two adjacent characters.  There are two ways to compare two adjacent characters without going beyond the bounds of the loop.  One way is to start the index at 0 and loop while the index is less than one less than the length of the string and then get the characters at the index and at the index plus one. Another way is to start the index at 1 and loop while the index is less than the length of the string and then get the characters at one less than the index and at the index.  If the first character is an "A" and the second is not an "A" then swap them and increment the index to make sure that you don't check characters that have already been swapped.  Each time through the loop also increment the index.  
+
+Video - The algorithm
+=========================
+
+The video below explains the algorithm to use in solving the problem.
+
+.. video:: v_interfaces
+   :controls:
+   :thumb: ../_static/algorithmVideo.png
+   
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/20141a.mov
+   
+Write the Code
+===================
+
+Write the method scrambleWord below. 
 
 .. livecode:: lcfrssa5
    :language: java
@@ -155,10 +170,14 @@ The code will need to loop through the characters in the string and compare two 
       /** Scrambles a given word.
        *  @param word the word to be scrambled
        *  @return the scrambled word (possibly equal to word)
-       *  Precondition: word is either an empty string or contains only uppercase letters.
-       *  Postcondition: the string returned was created from word as follows:
-       *   - the word was scrambled, beginning at the first letter and continuing from left to right
-       *   - two consecutive letters consisting of "A" followed by a letter that was not "A" were swapped
+       *  Precondition: word is either an empty string or contains 
+       *    only uppercase letters.
+       *  Postcondition: the string returned was created from word 
+       *      as follows:
+       *   - the word was scrambled, beginning at the first letter
+       *      and continuing from left to right
+       *   - two consecutive letters consisting of "A" followed by
+       *        a letter that was not "A" were swapped
        *   - letters were swapped at most once
        */
       public static String scrambleWord(String word)
@@ -171,7 +190,8 @@ The code will need to loop through the characters in the string and compare two 
       {
          System.out.println("\nTesting Part (a):\n");
     
-         String[] words = {"TAN", "ABRACADABRA", "WHOA", "AARDVARK", "EGGS", "A", ""};
+         String[] words = {"TAN", "ABRACADABRA", "WHOA", 
+                           "AARDVARK", "EGGS", "A", ""};
          for (String word : words)
             System.out.println(word + " becomes " + scrambleWord(word));
       }  
@@ -181,6 +201,14 @@ Video - One way to code the solution
 =====================================
 
 There are many possible solutions to this problem.  The video below shows one solution.
+
+.. video:: v_interfaces
+   :controls:
+   :thumb: ../_static/codeVideo.png
+   
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/20141acode.mov
+
+
 
    
 

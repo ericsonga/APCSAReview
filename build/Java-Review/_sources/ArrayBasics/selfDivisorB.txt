@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 7-13-
+   :prefix: 7-12-
    :start: 1
 
 Free Response - Self Divisor B
@@ -56,12 +56,12 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
 
       public static void main (String[] args)
       {
-        System.out.println("Found the following self divisors for firstNumSelfDivisors(10, 3)");
+        System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
         for (int n : firstNumSelfDivisors(10, 3))
            System.out.print(n + " ");
         System.out.println();
         
-        System.out.println("Found the following self divisors for firstNumSelfDivisors(22, 5)");
+        System.out.println("Self divisors for firstNumSelfDivisors(22, 5)");
         for (int n : firstNumSelfDivisors(22, 5))
            System.out.print(n + " ");
         System.out.println();
@@ -142,12 +142,12 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
 
       public static void main (String[] args)
       {
-        System.out.println("Found the following self divisors for firstNumSelfDivisors(10, 3)");
+        System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
         for (int n : firstNumSelfDivisors(10, 3))
            System.out.print(n + " ");
         System.out.println();
         
-        System.out.println("Found the following self divisors for firstNumSelfDivisors(22, 5)");
+        System.out.println("Self divisors for firstNumSelfDivisors(22, 5):");
         for (int n : firstNumSelfDivisors(22, 5))
            System.out.print(n + " ");
         System.out.println();

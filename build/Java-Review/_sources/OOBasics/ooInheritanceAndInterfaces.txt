@@ -7,7 +7,7 @@ Inheritance and Interfaces
 
 .. video:: v_interfaces
    :controls:
-   :thumb: ../_static/interfaces.png
+   :thumb: ../_static/videoStart.png
 
    http://ice-web.cc.gatech.edu/ce21/1/static/video/Interfaces.mov
    http://ice-web.cc.gatech.edu/ce21/1/static/video/Interfaces.webm
