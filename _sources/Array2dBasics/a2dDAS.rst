@@ -20,9 +20,9 @@ To declare a 2D array, specify the type of elements that will be stored in the a
 
     .. blank:: 2darrayNullblank
         :correct: null$
-        :feedback1: ('.*','Did you actually try this in DrJava?')
+        :feedback1: ('.*','Did you actually try this?')
 
-        What is printed in DrJava when you type System.out.println(ticketInfo); and hit enter after you do the above declarations? 
+        What is printed when you type System.out.println(ticketInfo); after you do the above declarations? 
 
 ..	index::
 	pair: 2D Array; creation

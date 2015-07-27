@@ -5,7 +5,7 @@
 Practice Exam 3 for the AP CS A Exam
 -------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Hover over the clock icon to see the current time remaining. Click on the "Submit Answers" button at the end when you are done.  It will display the number correct, number wrong, and number skipped after the "Submit Answer" button.
+The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Submit answers" button only when you are done.  It will display the number correct, number wrong, and number skipped after the "Submit answers" button.
 
 .. timed:: postexam3
     :timelimit: 38
