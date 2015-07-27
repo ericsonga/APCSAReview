@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Practice Exam 1 for the AP CS A Exam<a class="headerlink" href="#practice-exam-1-for-the-ap-cs-a-exam" title="Permalink to this headline">¶</a></h1>
 <p>The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.</p>
 
-            <div id="qt3_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_1">
             <p>14-1-1: Given the following method.  What is the output when <code class="docutils literal"><span class="pre">m1(5)</span></code> is called?</p>
 <div class="highlight-java"><div class="highlight"><pre>public int m1 (int a)
 {
@@ -333,34 +347,21 @@
 }
 </pre></div>
 </div>
-<form name="qt3_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_1_opt_a" />
-            <label for= "qt3_1_opt_a">  a) 50</label><br />
+
+            <li data-component="answer" data-correct id="qt3_1_opt_a">50</li><li data-component="feedback" id="qt3_1_opt_a">This is a recursive method.  It will return 10 when a is equal to 1, otherwise it will do a recursive call.  Each call adds 10.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_1_opt_b" />
-            <label for= "qt3_1_opt_b">  b) 20</label><br />
+            <li data-component="answer"  id="qt3_1_opt_b">20</li><li data-component="feedback" id="qt3_1_opt_b">This would be true if the call was m(2).</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_1_opt_c" />
-            <label for= "qt3_1_opt_c">  c) 60</label><br />
+            <li data-component="answer"  id="qt3_1_opt_c">60</li><li data-component="feedback" id="qt3_1_opt_c">This would be true if the call was m(6).</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_1_opt_d" />
-            <label for= "qt3_1_opt_d">  d) 10</label><br />
+            <li data-component="answer"  id="qt3_1_opt_d">10</li><li data-component="feedback" id="qt3_1_opt_d">This would be true if the call was m(1).</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_1_opt_e" />
-            <label for= "qt3_1_opt_e">  e) 30</label><br />
+            <li data-component="answer"  id="qt3_1_opt_e">30</li><li data-component="feedback" id="qt3_1_opt_e">This would be true if the call was m(3).</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_1','a',['This is a recursive method.  It will return 10 when a is equal to 1, otherwise it will do a recursive call.  Each call adds 10.', 'This would be true if the call was m(2).', 'This would be true if the call was m(6).', 'This would be true if the call was m(1).', 'This would be true if the call was m(3).'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_1_bcomp" disabled name="compare" onclick="compareAnswers('qt3_1');">Compare Me</button>
-            </form><br />
-            <div id="qt3_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_2">
             <p>14-1-2: What will the following code print when it is executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span>
@@ -368,34 +369,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_2_opt_a" />
-            <label for= "qt3_2_opt_a">  a) 1 2 3 2 4 6</label><br />
+
+            <li data-component="answer"  id="qt3_2_opt_a">1 2 3 2 4 6</li><li data-component="feedback" id="qt3_2_opt_a">This would be true if it was j < 3.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_2_opt_b" />
-            <label for= "qt3_2_opt_b">  b) 1 2 3 2 4 6 3 6 9</label><br />
+            <li data-component="answer" data-correct id="qt3_2_opt_b">1 2 3 2 4 6 3 6 9</li><li data-component="feedback" id="qt3_2_opt_b">The variable j will range from 1 to 3 and k will range from 1 to 3.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_2_opt_c" />
-            <label for= "qt3_2_opt_c">  c) 1 2 2 4 3 6</label><br />
+            <li data-component="answer"  id="qt3_2_opt_c">1 2 2 4 3 6</li><li data-component="feedback" id="qt3_2_opt_c">This would be true if it was k <= 3.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_2_opt_d" />
-            <label for= "qt3_2_opt_d">  d) 1 2 3 4 2 4 6 8 3 6 9 12</label><br />
+            <li data-component="answer"  id="qt3_2_opt_d">1 2 3 4 2 4 6 8 3 6 9 12</li><li data-component="feedback" id="qt3_2_opt_d">This would be true if it was k <= 4.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_2_opt_e" />
-            <label for= "qt3_2_opt_e">  e) 0 1 2 3 0 2 4 6 0 3 6 9</label><br />
+            <li data-component="answer"  id="qt3_2_opt_e">0 1 2 3 0 2 4 6 0 3 6 9</li><li data-component="feedback" id="qt3_2_opt_e">This would be true if k started at 0 instead of 1.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_2','b',['This would be true if it was j \u003C 3.', 'The variable j will range from 1 to 3 and k will range from 1 to 3.', 'This would be true if it was k \u003C\u003D 3.', 'This would be true if it was k \u003C\u003D 4.', 'This would be true if k started at 0 instead of 1.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_2_bcomp" disabled name="compare" onclick="compareAnswers('qt3_2');">Compare Me</button>
-            </form><br />
-            <div id="qt3_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_3">
             <p>14-1-3: What value is returned as the result of <code class="docutils literal"><span class="pre">mystery(7)</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
@@ -404,34 +392,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_3_opt_a" />
-            <label for= "qt3_3_opt_a">  a) 128</label><br />
+
+            <li data-component="answer" data-correct id="qt3_3_opt_a">128</li><li data-component="feedback" id="qt3_3_opt_a">This is the result of mystery(7) since this method is 2 to the nth power.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_3_opt_b" />
-            <label for= "qt3_3_opt_b">  b) 256</label><br />
+            <li data-component="answer"  id="qt3_3_opt_b">256</li><li data-component="feedback" id="qt3_3_opt_b">This would be the result of mystery(8).</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_3_opt_c" />
-            <label for= "qt3_3_opt_c">  c) 64</label><br />
+            <li data-component="answer"  id="qt3_3_opt_c">64</li><li data-component="feedback" id="qt3_3_opt_c">This would be the result of mystery(6).</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_3_opt_d" />
-            <label for= "qt3_3_opt_d">  d) 2</label><br />
+            <li data-component="answer"  id="qt3_3_opt_d">2</li><li data-component="feedback" id="qt3_3_opt_d">This would be the result of mystery(1).</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_3_opt_e" />
-            <label for= "qt3_3_opt_e">  e) 1</label><br />
+            <li data-component="answer"  id="qt3_3_opt_e">1</li><li data-component="feedback" id="qt3_3_opt_e">This would be the result of mystery(0).</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_3','a',['This is the result of mystery(7) since this method is 2 to the nth power.', 'This would be the result of mystery(8).', 'This would be the result of mystery(6).', 'This would be the result of mystery(1).', 'This would be the result of mystery(0).'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_3_bcomp" disabled name="compare" onclick="compareAnswers('qt3_3');">Compare Me</button>
-            </form><br />
-            <div id="qt3_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_4">
             <p>14-1-4: Given the following code.  Which of the following would return true?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">Integer</span> <span class="n">int1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
 <span class="n">Integer</span> <span class="n">int2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
@@ -444,95 +419,56 @@
 <span class="n">V</span><span class="o">.</span> <span class="o">(</span><span class="n">int2</span> <span class="o">==</span> <span class="n">int3</span><span class="o">)</span>
 </pre></div>
 </div>
-<form name="qt3_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_4_opt_a" />
-            <label for= "qt3_4_opt_a">  a) I and II only</label><br />
+
+            <li data-component="answer"  id="qt3_4_opt_a">I and II only</li><li data-component="feedback" id="qt3_4_opt_a">How about III and V?  Since int3 was set to int2 they do refer to the same object.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_4_opt_b" />
-            <label for= "qt3_4_opt_b">  b) I, II, III, and V</label><br />
+            <li data-component="answer" data-correct id="qt3_4_opt_b">I, II, III, and V</li><li data-component="feedback" id="qt3_4_opt_b">The variables int1 and int2 refer to two different objects (even though they have the same value) so IV will be false.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_4_opt_c" />
-            <label for= "qt3_4_opt_c">  c) All will return true</label><br />
+            <li data-component="answer"  id="qt3_4_opt_c">All will return true</li><li data-component="feedback" id="qt3_4_opt_c">Look at IV.  Are int1 and int2 referring to the same object?</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_4_opt_d" />
-            <label for= "qt3_4_opt_d">  d) I, II, and III only</label><br />
+            <li data-component="answer"  id="qt3_4_opt_d">I, II, and III only</li><li data-component="feedback" id="qt3_4_opt_d">V is also true.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_4_opt_e" />
-            <label for= "qt3_4_opt_e">  e) III, IV, and V only</label><br />
+            <li data-component="answer"  id="qt3_4_opt_e">III, IV, and V only</li><li data-component="feedback" id="qt3_4_opt_e">I and II are also true since they have the same value.  IV is not since they don't refere to the same object.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_4','b',['How about III and V?  Since int3 was set to int2 they do refer to the same object.', 'The variables int1 and int2 refer to two different objects (even though they have the same value) so IV will be false.', 'Look at IV.  Are int1 and int2 referring to the same object?', 'V is also true.', 'I and II are also true since they have the same value.  IV is not since they don\u0027t refere to the same object.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_4_bcomp" disabled name="compare" onclick="compareAnswers('qt3_4');">Compare Me</button>
-            </form><br />
-            <div id="qt3_4_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_5" class="alert alert-warning">
-            14-1-5: Under which of these conditions will a sequential search be faster than a binary search?<form name="qt3_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_5_opt_a" />
-            <label for= "qt3_5_opt_a">  a) The search value is not in the array</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_5">
+            14-1-5: Under which of these conditions will a sequential search be faster than a binary search?
+            <li data-component="answer"  id="qt3_5_opt_a">The search value is not in the array</li><li data-component="feedback" id="qt3_5_opt_a">If the search value is not in the array, a sequential search will have to check every item in the array before failing, a binary search will be faster.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_5_opt_b" />
-            <label for= "qt3_5_opt_b">  b) The search value is the last element in the array</label><br />
+            <li data-component="answer"  id="qt3_5_opt_b">The search value is the last element in the array</li><li data-component="feedback" id="qt3_5_opt_b">In this case a sequential search will have to check every element before finding the correct one, whereas a binary search will not.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_5_opt_c" />
-            <label for= "qt3_5_opt_c">  c) The value is in the middle of the array.</label><br />
+            <li data-component="answer"  id="qt3_5_opt_c">The value is in the middle of the array.</li><li data-component="feedback" id="qt3_5_opt_c">This would be true for a binary search, not for a sequential search.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_5_opt_d" />
-            <label for= "qt3_5_opt_d">  d) The search value is the first element in the array.</label><br />
+            <li data-component="answer" data-correct id="qt3_5_opt_d">The search value is the first element in the array.</li><li data-component="feedback" id="qt3_5_opt_d">Only when the search value is the first item in the array, and thus the first value encountered in sequential search, will sequential be faster than binary.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_5_opt_e" />
-            <label for= "qt3_5_opt_e">  e) Sequential search can never be faster than binary search.</label><br />
+            <li data-component="answer"  id="qt3_5_opt_e">Sequential search can never be faster than binary search.</li><li data-component="feedback" id="qt3_5_opt_e">When the search value is the first element, sequential will always be faster, as it will only need to check one element whereas a binary search would start in the middle of the array and have to keep looking.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_5','d',['If the search value is not in the array, a sequential search will have to check every item in the array before failing, a binary search will be faster.', 'In this case a sequential search will have to check every element before finding the correct one, whereas a binary search will not.', 'This would be true for a binary search, not for a sequential search.', 'Only when the search value is the first item in the array, and thus the first value encountered in sequential search, will sequential be faster than binary.', 'When the search value is the first element, sequential will always be faster, as it will only need to check one element whereas a binary search would start in the middle of the array and have to keep looking.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_5_bcomp" disabled name="compare" onclick="compareAnswers('qt3_5');">Compare Me</button>
-            </form><br />
-            <div id="qt3_5_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_6" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_6">
             <p>14-1-6: There is a method called <code class="docutils literal"><span class="pre">checkString</span></code> that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method.  Which is a best set of test cases?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">Data</span> <span class="n">set</span> <span class="mi">1</span><span class="o">:</span> <span class="s">&quot;aba&quot;</span><span class="o">,</span> <span class="s">&quot;abba&quot;</span><span class="o">,</span> <span class="s">&quot;aBa&quot;</span><span class="o">,</span> <span class="s">&quot;z&quot;</span>
 <span class="n">Data</span> <span class="n">set</span> <span class="mi">2</span><span class="o">:</span> <span class="s">&quot;bcb&quot;</span><span class="o">,</span> <span class="s">&quot;bcd&quot;</span><span class="o">,</span> <span class="s">&quot;c&quot;</span>
 </pre></div>
 </div>
-<form name="qt3_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_6_opt_a" />
-            <label for= "qt3_6_opt_a">  a) Data set 1 since it has more test cases.</label><br />
+
+            <li data-component="answer"  id="qt3_6_opt_a">Data set 1 since it has more test cases.</li><li data-component="feedback" id="qt3_6_opt_a">More test cases isn't necessarily better.  The tests should test the range of possible outcomes.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_6_opt_b" />
-            <label for= "qt3_6_opt_b">  b) Data set 2 since it only contains strings with lower case characters.</label><br />
+            <li data-component="answer"  id="qt3_6_opt_b">Data set 2 since it only contains strings with lower case characters.</li><li data-component="feedback" id="qt3_6_opt_b">It is actually better to test with strings that contain both upper and lower case characters.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_6_opt_c" />
-            <label for= "qt3_6_opt_c">  c) There are no advantages.</label><br />
+            <li data-component="answer"  id="qt3_6_opt_c">There are no advantages.</li><li data-component="feedback" id="qt3_6_opt_c">Data set 1 only contains cases that should return true.  How about checking cases that should return false?</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_6_opt_d" />
-            <label for= "qt3_6_opt_d">  d) Data set 1 since it has test cases with both upper and lower case characters.</label><br />
+            <li data-component="answer"  id="qt3_6_opt_d">Data set 1 since it has test cases with both upper and lower case characters.</li><li data-component="feedback" id="qt3_6_opt_d">There is a better answer.  While it is good to test with strings that contain both upper and lower case characters there is another reason why data set 2 is better.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_6_opt_e" />
-            <label for= "qt3_6_opt_e">  e) Data set 2 since it contains strings which should return true and should return false.</label><br />
+            <li data-component="answer" data-correct id="qt3_6_opt_e">Data set 2 since it contains strings which should return true and should return false.</li><li data-component="feedback" id="qt3_6_opt_e">You want to test all possible results and data set 1 only contains strings that should return true.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_6');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_6','e',['More test cases isn\u0027t necessarily better.  The tests should test the range of possible outcomes.', 'It is actually better to test with strings that contain both upper and lower case characters.', 'Data set 1 only contains cases that should return true.  How about checking cases that should return false?', 'There is a better answer.  While it is good to test with strings that contain both upper and lower case characters there is another reason why data set 2 is better.', 'You want to test all possible results and data set 1 only contains strings that should return true.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_6_bcomp" disabled name="compare" onclick="compareAnswers('qt3_6');">Compare Me</button>
-            </form><br />
-            <div id="qt3_6_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_7" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_7">
             <p>14-1-7: Which of the following code will produce this output:</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="mi">1</span>
 <span class="mi">22</span>
@@ -585,34 +521,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_7_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_7_opt_a" />
-            <label for= "qt3_7_opt_a">  a) I</label><br />
+
+            <li data-component="answer"  id="qt3_7_opt_a">I</li><li data-component="feedback" id="qt3_7_opt_a">This will loop i from 0 to 4 and from j from 0 to i.  So, it won't output any 5s.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_7_opt_b" />
-            <label for= "qt3_7_opt_b">  b) II</label><br />
+            <li data-component="answer"  id="qt3_7_opt_b">II</li><li data-component="feedback" id="qt3_7_opt_b">This will loop with i changing from 1 to 4 and j from i to 0.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_7_opt_c" />
-            <label for= "qt3_7_opt_c">  c) III</label><br />
+            <li data-component="answer" data-correct id="qt3_7_opt_c">III</li><li data-component="feedback" id="qt3_7_opt_c">This will loop with i changing from 1 to 5 and then for each I, j will loop from i to 0 printing the value of i and then a new line.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_7_opt_d" />
-            <label for= "qt3_7_opt_d">  d) IV</label><br />
+            <li data-component="answer"  id="qt3_7_opt_d">IV</li><li data-component="feedback" id="qt3_7_opt_d">This will loop with i changing from 1 to 5 and j from 0 to i but it will print each value on a different line.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_7_opt_e" />
-            <label for= "qt3_7_opt_e">  e) V</label><br />
+            <li data-component="answer"  id="qt3_7_opt_e">V</li><li data-component="feedback" id="qt3_7_opt_e">This will loop with i changing from 0 to 4 and j from 0 to i</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_7');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_7','c',['This will loop i from 0 to 4 and from j from 0 to i.  So, it won\u0027t output any 5s.', 'This will loop with i changing from 1 to 4 and j from i to 0.', 'This will loop with i changing from 1 to 5 and then for each I, j will loop from i to 0 printing the value of i and then a new line.', 'This will loop with i changing from 1 to 5 and j from 0 to i but it will print each value on a different line.', 'This will loop with i changing from 0 to 4 and j from 0 to i'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_7_bcomp" disabled name="compare" onclick="compareAnswers('qt3_7');">Compare Me</button>
-            </form><br />
-            <div id="qt3_7_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_8" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_8">
             <p>14-1-8: What will the following print?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
 <span class="n">list1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">5</span><span class="o">));</span>
@@ -624,34 +547,21 @@
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list1</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qt3_8_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_8_opt_a" />
-            <label for= "qt3_8_opt_a">  a) [0, 1, 2, 3, 4, 5]</label><br />
+
+            <li data-component="answer"  id="qt3_8_opt_a">[0, 1, 2, 3, 4, 5]</li><li data-component="feedback" id="qt3_8_opt_a">This code does not sort the items in the list and set replaces the value at that index.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_8_opt_b" />
-            <label for= "qt3_8_opt_b">  b) [0, 1, 2, 4, 5]</label><br />
+            <li data-component="answer"  id="qt3_8_opt_b">[0, 1, 2, 4, 5]</li><li data-component="feedback" id="qt3_8_opt_b">This code does not sort the items in the list.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_8_opt_c" />
-            <label for= "qt3_8_opt_c">  c) [5, 4, 1, 0]</label><br />
+            <li data-component="answer"  id="qt3_8_opt_c">[5, 4, 1, 0]</li><li data-component="feedback" id="qt3_8_opt_c">There is only one set. The add moves all current values at the index and above to the right one before adding at that index.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_8_opt_d" />
-            <label for= "qt3_8_opt_d">  d) [5, 4, 2, 1, 0]</label><br />
+            <li data-component="answer"  id="qt3_8_opt_d">[5, 4, 2, 1, 0]</li><li data-component="feedback" id="qt3_8_opt_d">The add moves over all items at that index before adding the value at the index.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_8_opt_e" />
-            <label for= "qt3_8_opt_e">  e) [5, 4, 1, 2, 0]</label><br />
+            <li data-component="answer" data-correct id="qt3_8_opt_e">[5, 4, 1, 2, 0]</li><li data-component="feedback" id="qt3_8_opt_e">The add method with one parameters will add that value to end of the list.  The method set changes the value at that index in the list.  The method add with an index will move anything at the index or above one to the right and then set the value of that index.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_8');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_8','e',['This code does not sort the items in the list and set replaces the value at that index.', 'This code does not sort the items in the list.', 'There is only one set. The add moves all current values at the index and above to the right one before adding at that index.', 'The add moves over all items at that index before adding the value at the index.', 'The add method with one parameters will add that value to end of the list.  The method set changes the value at that index in the list.  The method add with an index will move anything at the index or above one to the right and then set the value of that index.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_8_bcomp" disabled name="compare" onclick="compareAnswers('qt3_8');">Compare Me</button>
-            </form><br />
-            <div id="qt3_8_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_9" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_9">
             <p>14-1-9: Consider the following declaration for a class that will be used to represent points in the xy-coordinate plane.  Which of these constructors would be legal for the NamedPoint class?</p>
 <div class="highlight-java"><div class="highlight"><pre> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Point</span>
  <span class="o">{</span>
@@ -703,34 +613,21 @@
      <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_9_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_9_opt_a" />
-            <label for= "qt3_9_opt_a">  a) I and III</label><br />
+
+            <li data-component="answer" data-correct id="qt3_9_opt_a">I and III</li><li data-component="feedback" id="qt3_9_opt_a">NamedPoint will inherit from Point all fields but the fields are private and they can not be directly accessed in NamedPoint.  You can use super as the first line in a constructor to initialize inherited fields.  You can also set your own fields in a constructor.  If you don't use super as the first line in a constructor one will be put there by the compiler that will call the parent's no argument constructor.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_9_opt_b" />
-            <label for= "qt3_9_opt_b">  b) I only</label><br />
+            <li data-component="answer"  id="qt3_9_opt_b">I only</li><li data-component="feedback" id="qt3_9_opt_b">I is okay but III is also okay.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_9_opt_c" />
-            <label for= "qt3_9_opt_c">  c) II only</label><br />
+            <li data-component="answer"  id="qt3_9_opt_c">II only</li><li data-component="feedback" id="qt3_9_opt_c">II is invalid.  Children inherit all of the fields from a parent but do not have direct access to private fields.  You can use super in a constructor to initialize inherited fields by calling the parent's constructor with the same parameter list.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_9_opt_d" />
-            <label for= "qt3_9_opt_d">  d) III only</label><br />
+            <li data-component="answer"  id="qt3_9_opt_d">III only</li><li data-component="feedback" id="qt3_9_opt_d">I is also okay</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_9_opt_e" />
-            <label for= "qt3_9_opt_e">  e) I and II</label><br />
+            <li data-component="answer"  id="qt3_9_opt_e">I and II</li><li data-component="feedback" id="qt3_9_opt_e">I is okay but II is invalid.  Children inherit all of the fields from a parent but do not have direct access to private fields.  You can use super in a constructor to initialize inherited fields by calling the parent's constructor with the same parameter list.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_9');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_9','a',['NamedPoint will inherit from Point all fields but the fields are private and they can not be directly accessed in NamedPoint.  You can use super as the first line in a constructor to initialize inherited fields.  You can also set your own fields in a constructor.  If you don\u0027t use super as the first line in a constructor one will be put there by the compiler that will call the parent\u0027s no argument constructor.', 'I is okay but III is also okay.', 'II is invalid.  Children inherit all of the fields from a parent but do not have direct access to private fields.  You can use super in a constructor to initialize inherited fields by calling the parent\u0027s constructor with the same parameter list.', 'I is also okay', 'I is okay but II is invalid.  Children inherit all of the fields from a parent but do not have direct access to private fields.  You can use super in a constructor to initialize inherited fields by calling the parent\u0027s constructor with the same parameter list.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_9_bcomp" disabled name="compare" onclick="compareAnswers('qt3_9');">Compare Me</button>
-            </form><br />
-            <div id="qt3_9_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_10" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_10">
             <p>14-1-10: Given the following incomplete class declaration:</p>
 <div class="highlight-java"><div class="highlight"><pre> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TimeRecord</span>
  <span class="o">{</span>
@@ -798,34 +695,21 @@
     <span class="n">timeCards</span><span class="o">[</span><span class="n">k</span><span class="o">].</span><span class="na">advance</span><span class="o">(</span><span class="n">timeCards</span><span class="o">[</span><span class="n">k</span><span class="o">].</span><span class="na">getHours</span><span class="o">(),</span> <span class="n">timeCards</span><span class="o">[</span><span class="n">k</span><span class="o">].</span><span class="na">getMinutes</span><span class="o">());</span>
 </pre></div>
 </div>
-<form name="qt3_10_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_10_opt_a" />
-            <label for= "qt3_10_opt_a">  a) I</label><br />
+
+            <li data-component="answer" data-correct id="qt3_10_opt_a">I</li><li data-component="feedback" id="qt3_10_opt_a">This will add each current time card hours and minutes to the total.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_10_opt_b" />
-            <label for= "qt3_10_opt_b">  b) II</label><br />
+            <li data-component="answer"  id="qt3_10_opt_b">II</li><li data-component="feedback" id="qt3_10_opt_b">This won't total the hours and minutes and there is no advance method that takes no arguments.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_10_opt_c" />
-            <label for= "qt3_10_opt_c">  c) III</label><br />
+            <li data-component="answer"  id="qt3_10_opt_c">III</li><li data-component="feedback" id="qt3_10_opt_c">There is no advance method that takes no arguments and it doesn't return a value to add to a total.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_10_opt_d" />
-            <label for= "qt3_10_opt_d">  d) IV</label><br />
+            <li data-component="answer"  id="qt3_10_opt_d">IV</li><li data-component="feedback" id="qt3_10_opt_d">The fields hours and minutes are private and can't be accessed directly in another class.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_10_opt_e" />
-            <label for= "qt3_10_opt_e">  e) V</label><br />
+            <li data-component="answer"  id="qt3_10_opt_e">V</li><li data-component="feedback" id="qt3_10_opt_e">This will add the hour and minutes from the current time record to itself.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_10');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_10','a',['This will add each current time card hours and minutes to the total.', 'This won\u0027t total the hours and minutes and there is no advance method that takes no arguments.', 'There is no advance method that takes no arguments and it doesn\u0027t return a value to add to a total.', 'The fields hours and minutes are private and can\u0027t be accessed directly in another class.', 'This will add the hour and minutes from the current time record to itself.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_10_bcomp" disabled name="compare" onclick="compareAnswers('qt3_10');">Compare Me</button>
-            </form><br />
-            <div id="qt3_10_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_11" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_11">
             <p>14-1-11: Consider the following class definitions, which of the following can replace the missing code?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ContactInfo</span>
 <span class="o">{</span>
@@ -878,62 +762,36 @@
    <span class="k">this</span><span class="o">.</span><span class="na">nickname</span> <span class="o">=</span> <span class="n">theNickname</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="qt3_11_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_11_opt_a" />
-            <label for= "qt3_11_opt_a">  a) I</label><br />
+
+            <li data-component="answer"  id="qt3_11_opt_a">I</li><li data-component="feedback" id="qt3_11_opt_a">There is no parent constructor which takes all three of these parameters.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_11_opt_b" />
-            <label for= "qt3_11_opt_b">  b) II</label><br />
+            <li data-component="answer"  id="qt3_11_opt_b">II</li><li data-component="feedback" id="qt3_11_opt_b">You can not access private inherited fields directly.  You can either use public method to get and set their values or invoke the parent's constructor using super(paramList) as the first line of code in a constructor.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_11_opt_c" />
-            <label for= "qt3_11_opt_c">  c) III</label><br />
+            <li data-component="answer"  id="qt3_11_opt_c">III</li><li data-component="feedback" id="qt3_11_opt_c">You can not access private inherited fields directly.  You can either use public method to get and set their values or invoke the parent's constructor using super(paramList) as the first line of code in a constructor.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_11_opt_d" />
-            <label for= "qt3_11_opt_d">  d) IV</label><br />
+            <li data-component="answer"  id="qt3_11_opt_d">IV</li><li data-component="feedback" id="qt3_11_opt_d">You can not access private inherited fields directly.  You can either use public method to get and set their values or invoke the parent's constructor using super(paramList) as the first line of code in a constructor.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_11_opt_e" />
-            <label for= "qt3_11_opt_e">  e) V</label><br />
+            <li data-component="answer" data-correct id="qt3_11_opt_e">V</li><li data-component="feedback" id="qt3_11_opt_e">To initialize inherited private fields you can use the parent's constructor.  Use super followed by the parameter list as the first line of code in the constructor.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_11');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_11','e',['There is no parent constructor which takes all three of these parameters.', 'You can not access private inherited fields directly.  You can either use public method to get and set their values or invoke the parent\u0027s constructor using super(paramList) as the first line of code in a constructor.', 'You can not access private inherited fields directly.  You can either use public method to get and set their values or invoke the parent\u0027s constructor using super(paramList) as the first line of code in a constructor.', 'You can not access private inherited fields directly.  You can either use public method to get and set their values or invoke the parent\u0027s constructor using super(paramList) as the first line of code in a constructor.', 'To initialize inherited private fields you can use the parent\u0027s constructor.  Use super followed by the parameter list as the first line of code in the constructor.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_11_bcomp" disabled name="compare" onclick="compareAnswers('qt3_11');">Compare Me</button>
-            </form><br />
-            <div id="qt3_11_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_12" class="alert alert-warning">
-            14-1-12: Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?<form name="qt3_12_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_12_opt_a" />
-            <label for= "qt3_12_opt_a">  a) The value is the first one in the array</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_12">
+            14-1-12: Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?
+            <li data-component="answer"  id="qt3_12_opt_a">The value is the first one in the array</li><li data-component="feedback" id="qt3_12_opt_a">This would be true for the shortest execution.  This would only take one execution of the loop.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_12_opt_b" />
-            <label for= "qt3_12_opt_b">  b) The value is in the middle of the array</label><br />
+            <li data-component="answer"  id="qt3_12_opt_b">The value is in the middle of the array</li><li data-component="feedback" id="qt3_12_opt_b">This would take 5 executions of the loop.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_12_opt_c" />
-            <label for= "qt3_12_opt_c">  c) The value is at position 3 in the array</label><br />
+            <li data-component="answer"  id="qt3_12_opt_c">The value is at position 3 in the array</li><li data-component="feedback" id="qt3_12_opt_c">This would take 3 executions of the loop.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_12_opt_d" />
-            <label for= "qt3_12_opt_d">  d) The value isn't in the array</label><br />
+            <li data-component="answer" data-correct id="qt3_12_opt_d">The value isn't in the array</li><li data-component="feedback" id="qt3_12_opt_d">A sequential search loops through the elements of an array starting with the first and ending with the last and returns from the loop as soon as it finds the passed value.  It has to check every value in the array when the value it is looking for is not in the array.  This would take 10 executions of the loop.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_12_opt_e" />
-            <label for= "qt3_12_opt_e">  e) The value is at position 6 in the array</label><br />
+            <li data-component="answer"  id="qt3_12_opt_e">The value is at position 6 in the array</li><li data-component="feedback" id="qt3_12_opt_e">This would take 6 executions of the loop.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_12');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_12','d',['This would be true for the shortest execution.  This would only take one execution of the loop.', 'This would take 5 executions of the loop.', 'This would take 3 executions of the loop.', 'A sequential search loops through the elements of an array starting with the first and ending with the last and returns from the loop as soon as it finds the passed value.  It has to check every value in the array when the value it is looking for is not in the array.  This would take 10 executions of the loop.', 'This would take 6 executions of the loop.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_12_bcomp" disabled name="compare" onclick="compareAnswers('qt3_12');">Compare Me</button>
-            </form><br />
-            <div id="qt3_12_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_13" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_13">
             <p>14-1-13: Which of the following reasons for using an inheritance hierarchy are valid?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">I</span><span class="o">.</span>   <span class="n">Methods</span> <span class="n">from</span> <span class="n">a</span> <span class="n">superclass</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">in</span> <span class="n">a</span> <span class="n">subclass</span> <span class="n">without</span> <span class="n">rewriting</span>
      <span class="n">or</span> <span class="n">copying</span> <span class="n">code</span><span class="o">.</span>
@@ -944,34 +802,21 @@
 <span class="n">V</span><span class="o">.</span>   <span class="n">None</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span>
 </pre></div>
 </div>
-<form name="qt3_13_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_13_opt_a" />
-            <label for= "qt3_13_opt_a">  a) IV</label><br />
+
+            <li data-component="answer" data-correct id="qt3_13_opt_a">IV</li><li data-component="feedback" id="qt3_13_opt_a">All of these are valid reasons to use an inheritance heirarchy.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_13_opt_b" />
-            <label for= "qt3_13_opt_b">  b) V</label><br />
+            <li data-component="answer"  id="qt3_13_opt_b">V</li><li data-component="feedback" id="qt3_13_opt_b">In fact, all of the reasons listed are valid. Subclasses can reuse methods written for superclasses without code replication, subclasses can be stored in the same array, and passed as arguments to methods meant for the superclass.   All of which make writing code more streamlined.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_13_opt_c" />
-            <label for= "qt3_13_opt_c">  c) I and II</label><br />
+            <li data-component="answer"  id="qt3_13_opt_c">I and II</li><li data-component="feedback" id="qt3_13_opt_c">III is also valid. In some cases you might want to store subclasses together in a single array, and inheritance allows for this.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_13_opt_d" />
-            <label for= "qt3_13_opt_d">  d) I and III</label><br />
+            <li data-component="answer"  id="qt3_13_opt_d">I and III</li><li data-component="feedback" id="qt3_13_opt_d">II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method instead of writing individual methods for each subclass.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_13_opt_e" />
-            <label for= "qt3_13_opt_e">  e) I only</label><br />
+            <li data-component="answer"  id="qt3_13_opt_e">I only</li><li data-component="feedback" id="qt3_13_opt_e">II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_13');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_13','a',['All of these are valid reasons to use an inheritance heirarchy.', 'In fact, all of the reasons listed are valid. Subclasses can reuse methods written for superclasses without code replication, subclasses can be stored in the same array, and passed as arguments to methods meant for the superclass.   All of which make writing code more streamlined.', 'III is also valid. In some cases you might want to store subclasses together in a single array, and inheritance allows for this.', 'II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method instead of writing individual methods for each subclass.', 'II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_13_bcomp" disabled name="compare" onclick="compareAnswers('qt3_13');">Compare Me</button>
-            </form><br />
-            <div id="qt3_13_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_14" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_14">
             <p>14-1-14: Consider the following method and if <code class="docutils literal"><span class="pre">int[]</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">{8,</span> <span class="pre">3,</span> <span class="pre">1}</span></code>, what is the value in <code class="docutils literal"><span class="pre">a[1]</span></code> after <code class="docutils literal"><span class="pre">m1(a);</span></code> is run?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kt">int</span> <span class="nf">m1</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span>
 <span class="o">{</span>
@@ -980,34 +825,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_14_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_14_opt_a" />
-            <label for= "qt3_14_opt_a">  a) 4</label><br />
+
+            <li data-component="answer"  id="qt3_14_opt_a">4</li><li data-component="feedback" id="qt3_14_opt_a">This would be true if it was <code>return(a[1]*= 2);</code>.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_14_opt_b" />
-            <label for= "qt3_14_opt_b">  b) 16</label><br />
+            <li data-component="answer"  id="qt3_14_opt_b">16</li><li data-component="feedback" id="qt3_14_opt_b">This would be true if the return statement was <code>return (a[0]*=2);</code>.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_14_opt_c" />
-            <label for= "qt3_14_opt_c">  c) 7</label><br />
+            <li data-component="answer"  id="qt3_14_opt_c">7</li><li data-component="feedback" id="qt3_14_opt_c">This would be true if it was <code>a[0]--;</code>  Or it would be true if array indicies started at 1, but they start with 0.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_14_opt_d" />
-            <label for= "qt3_14_opt_d">  d) 2</label><br />
+            <li data-component="answer" data-correct id="qt3_14_opt_d">2</li><li data-component="feedback" id="qt3_14_opt_d">The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to a 2.  The return <code>(a[1] * 2)</code> does not change the value at <code>a[1]</code>.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_14_opt_e" />
-            <label for= "qt3_14_opt_e">  e) 3</label><br />
+            <li data-component="answer"  id="qt3_14_opt_e">3</li><li data-component="feedback" id="qt3_14_opt_e">This can't be true because <code>a[1]--;</code> means the same as <code>a[1] = a[1] - 1;</code>  So the 3 will become a 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method.  But, since an array is an object a copy of the value is a copy of the reference to the object.  So changes to objects in methods are permanent.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_14');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_14','d',['This would be true if it was \u003Ccode\u003Ereturn(a[1]*\u003D 2)\u003B\u003C/code\u003E.', 'This would be true if the return statement was \u003Ccode\u003Ereturn (a[0]*\u003D2)\u003B\u003C/code\u003E.', 'This would be true if it was \u003Ccode\u003Ea[0]\u002D\u002D\u003B\u003C/code\u003E  Or it would be true if array indicies started at 1, but they start with 0.', 'The statement \u003Ccode\u003Ea[1]\u002D\u002D\u003B\u003C/code\u003E is the same as \u003Ccode\u003Ea[1] \u003D a[1] \u002D 1\u003B\u003C/code\u003E so this will change the 3 to a 2.  The return \u003Ccode\u003E(a[1] * 2)\u003C/code\u003E does not change the value at \u003Ccode\u003Ea[1]\u003C/code\u003E.', 'This can\u0027t be true because \u003Ccode\u003Ea[1]\u002D\u002D\u003B\u003C/code\u003E means the same as \u003Ccode\u003Ea[1] \u003D a[1] \u002D 1\u003B\u003C/code\u003E  So the 3 will become a 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method.  But, since an array is an object a copy of the value is a copy of the reference to the object.  So changes to objects in methods are permanent.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_14_bcomp" disabled name="compare" onclick="compareAnswers('qt3_14');">Compare Me</button>
-            </form><br />
-            <div id="qt3_14_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_15" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_15">
             <p>14-1-15: What are the values of <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> after the <code class="docutils literal"><span class="pre">for</span></code> loop finishes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">,</span> <span class="n">t</span><span class="o">;</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">6</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
@@ -1018,34 +850,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_15_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_15_opt_a" />
-            <label for= "qt3_15_opt_a">  a) a = 6 and b = 7</label><br />
+
+            <li data-component="answer"  id="qt3_15_opt_a">a = 6 and b = 7</li><li data-component="feedback" id="qt3_15_opt_a">This would be true if the loop stopped when i was equal to 6.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_15_opt_b" />
-            <label for= "qt3_15_opt_b">  b) a = 6 and b = 13</label><br />
+            <li data-component="answer"  id="qt3_15_opt_b">a = 6 and b = 13</li><li data-component="feedback" id="qt3_15_opt_b">Actually i = 6 and t = 6 and a = 13 after the loop finishes.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_15_opt_c" />
-            <label for= "qt3_15_opt_c">  c) a = 13 and b = 0</label><br />
+            <li data-component="answer" data-correct id="qt3_15_opt_c">a = 13 and b = 0</li><li data-component="feedback" id="qt3_15_opt_c">The variable i loops from 1 to 6 <br>i = 1, t = 10, a = 4, b = 9<br>i = 2, t = 4, a  = 11, b =2<br>i = 3, t = 11, a = 5, b = 8<br>i = 4, t = 5, a = 12, b = 1<br>i = 5, t = 12, a = 6, b = 7<br>i = 6, t = 6, a = 13, b = 0</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_15_opt_d" />
-            <label for= "qt3_15_opt_d">  d) a = 6 and b = 0</label><br />
+            <li data-component="answer"  id="qt3_15_opt_d">a = 6 and b = 0</li><li data-component="feedback" id="qt3_15_opt_d">Actually i = 6 and t = 6 and b = 0 after the loop finishes.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_15_opt_e" />
-            <label for= "qt3_15_opt_e">  e) a = 0 and b = 13</label><br />
+            <li data-component="answer"  id="qt3_15_opt_e">a = 0 and b = 13</li><li data-component="feedback" id="qt3_15_opt_e">No a = 13 and b = 0 after the loop finishes.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_15');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_15','c',['This would be true if the loop stopped when i was equal to 6.', 'Actually i \u003D 6 and t \u003D 6 and a \u003D 13 after the loop finishes.', 'The variable i loops from 1 to 6 \u003Cbr\u003Ei \u003D 1, t \u003D 10, a \u003D 4, b \u003D 9\u003Cbr\u003Ei \u003D 2, t \u003D 4, a  \u003D 11, b \u003D2\u003Cbr\u003Ei \u003D 3, t \u003D 11, a \u003D 5, b \u003D 8\u003Cbr\u003Ei \u003D 4, t \u003D 5, a \u003D 12, b \u003D 1\u003Cbr\u003Ei \u003D 5, t \u003D 12, a \u003D 6, b \u003D 7\u003Cbr\u003Ei \u003D 6, t \u003D 6, a \u003D 13, b \u003D 0', 'Actually i \u003D 6 and t \u003D 6 and b \u003D 0 after the loop finishes.', 'No a \u003D 13 and b \u003D 0 after the loop finishes.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_15_bcomp" disabled name="compare" onclick="compareAnswers('qt3_15');">Compare Me</button>
-            </form><br />
-            <div id="qt3_15_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_16" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_16">
             <p>14-1-16: Consider the following code.  What string is referenced by <code class="docutils literal"><span class="pre">s1</span></code> after the code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Hi There&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">;</span>
@@ -1056,34 +875,21 @@
 <span class="n">s4</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="qt3_16_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_16_opt_a" />
-            <label for= "qt3_16_opt_a">  a) hi there</label><br />
+
+            <li data-component="answer"  id="qt3_16_opt_a">hi there</li><li data-component="feedback" id="qt3_16_opt_a">This would only be correct if we had s1 = s2; after s2.toLowerCase(); was executed.  Strings are immutable and so any change to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_16_opt_b" />
-            <label for= "qt3_16_opt_b">  b) HI THERE</label><br />
+            <li data-component="answer"  id="qt3_16_opt_b">HI THERE</li><li data-component="feedback" id="qt3_16_opt_b">This would be correct if we had s1 = s3; after s3.toUpperCase(); was executed.  Strings are immutable and so any change to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_16_opt_c" />
-            <label for= "qt3_16_opt_c">  c) Hi There</label><br />
+            <li data-component="answer" data-correct id="qt3_16_opt_c">Hi There</li><li data-component="feedback" id="qt3_16_opt_c">Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_16_opt_d" />
-            <label for= "qt3_16_opt_d">  d) null</label><br />
+            <li data-component="answer"  id="qt3_16_opt_d">null</li><li data-component="feedback" id="qt3_16_opt_d">This would be true if we had s1 = s4; after s4 = null; was executed.  Strings are immutable and so any changes to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_16_opt_e" />
-            <label for= "qt3_16_opt_e">  e) hI tHERE</label><br />
+            <li data-component="answer"  id="qt3_16_opt_e">hI tHERE</li><li data-component="feedback" id="qt3_16_opt_e">Strings are immutable and so any changes to a string returns a new string.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_16');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_16','c',['This would only be correct if we had s1 \u003D s2\u003B after s2.toLowerCase()\u003B was executed.  Strings are immutable and so any change to a string returns a new string.', 'This would be correct if we had s1 \u003D s3\u003B after s3.toUpperCase()\u003B was executed.  Strings are immutable and so any change to a string returns a new string.', 'Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change', 'This would be true if we had s1 \u003D s4\u003B after s4 \u003D null\u003B was executed.  Strings are immutable and so any changes to a string returns a new string.', 'Strings are immutable and so any changes to a string returns a new string.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_16_bcomp" disabled name="compare" onclick="compareAnswers('qt3_16');">Compare Me</button>
-            </form><br />
-            <div id="qt3_16_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_17" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_17">
             <p>14-1-17: Consider the following code segment.  What value is in sum after this code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix</span> <span class="o">=</span> <span class="o">{{</span><span class="mi">1</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">2</span><span class="o">},{</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">4</span><span class="o">},{</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">},{</span><span class="mi">1</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">}};</span>
 
@@ -1095,34 +901,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_17_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_17_opt_a" />
-            <label for= "qt3_17_opt_a">  a) 4</label><br />
+
+            <li data-component="answer"  id="qt3_17_opt_a">4</li><li data-component="feedback" id="qt3_17_opt_a">This would be correct if the variable col was 0 because then it would add 1 + 1 + 1 + 1 which is 4.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_17_opt_b" />
-            <label for= "qt3_17_opt_b">  b) 8</label><br />
+            <li data-component="answer" data-correct id="qt3_17_opt_b">8</li><li data-component="feedback" id="qt3_17_opt_b">The variable col is 2, so it adds 2 + 2 + 3 + 1 which is 8.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_17_opt_c" />
-            <label for= "qt3_17_opt_c">  c) 9</label><br />
+            <li data-component="answer"  id="qt3_17_opt_c">9</li><li data-component="feedback" id="qt3_17_opt_c">This would be correct if the variable col was 1 because then it would add 1 + 2 + 2 + 4 which is 9.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_17_opt_d" />
-            <label for= "qt3_17_opt_d">  d) 12</label><br />
+            <li data-component="answer"  id="qt3_17_opt_d">12</li><li data-component="feedback" id="qt3_17_opt_d">This would be correct if the variable col was 3 becuase then it would add 2 + 4 + 4 + 2 which is 12.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_17_opt_e" />
-            <label for= "qt3_17_opt_e">  e) 10</label><br />
+            <li data-component="answer"  id="qt3_17_opt_e">10</li><li data-component="feedback" id="qt3_17_opt_e">This would be true if we were adding the values in the 3rd row (row = 2) instead of the 3rd column.  This would be 1 + 2 + 3 + 4 which is 10.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_17');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_17','b',['This would be correct if the variable col was 0 because then it would add 1 + 1 + 1 + 1 which is 4.', 'The variable col is 2, so it adds 2 + 2 + 3 + 1 which is 8.', 'This would be correct if the variable col was 1 because then it would add 1 + 2 + 2 + 4 which is 9.', 'This would be correct if the variable col was 3 becuase then it would add 2 + 4 + 4 + 2 which is 12.', 'This would be true if we were adding the values in the 3rd row (row \u003D 2) instead of the 3rd column.  This would be 1 + 2 + 3 + 4 which is 10.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_17_bcomp" disabled name="compare" onclick="compareAnswers('qt3_17');">Compare Me</button>
-            </form><br />
-            <div id="qt3_17_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_18" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_18">
             <p>14-1-18: Consider the following code segment, what are the contents of mat after the code segment has executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="o">[][]</span> <span class="n">mat</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">4</span><span class="o">];</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">mat</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">row</span><span class="o">++)</span>
@@ -1139,34 +932,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_18_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_18_opt_a" />
-            <label for= "qt3_18_opt_a">  a) { { 2, 1, 1, 1 }, { 2, 2, 1, 1 }, { 2, 2, 2, 1 } }</label><br />
+
+            <li data-component="answer"  id="qt3_18_opt_a">{ { 2, 1, 1, 1 }, { 2, 2, 1, 1 }, { 2, 2, 2, 1 } }</li><li data-component="feedback" id="qt3_18_opt_a">This would be true if it was filling mat with 1 if the row index is less than the column index, but it fills with a 3 in this case.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_18_opt_b" />
-            <label for= "qt3_18_opt_b">  b) { { 2, 3, 3, 3 }, { 1, 2, 3, 3 }, { 1, 1, 2, 3 } }</label><br />
+            <li data-component="answer" data-correct id="qt3_18_opt_b">{ { 2, 3, 3, 3 }, { 1, 2, 3, 3 }, { 1, 1, 2, 3 } }</li><li data-component="feedback" id="qt3_18_opt_b">This will fill mat with 3 if the row index is less than the column index, 2 if the row index is equal to the column index, and a 1 if the row index is greater than the column index.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_18_opt_c" />
-            <label for= "qt3_18_opt_c">  c) { { 2, 1, 1 }, { 2, 2, 1 }, { 2, 2, 2 }, { 2, 2, 2 } }</label><br />
+            <li data-component="answer"  id="qt3_18_opt_c">{ { 2, 1, 1 }, { 2, 2, 1 }, { 2, 2, 2 }, { 2, 2, 2 } }</li><li data-component="feedback" id="qt3_18_opt_c">This would be true if it was int [][] mat = new int [4][3] and it filled the mat with 1 if the row index is less than the column index.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_18_opt_d" />
-            <label for= "qt3_18_opt_d">  d) { { 2, 3, 3 }, { 1, 2, 3 }, { 1, 1, 2 }, { 1, 1, 1 } }</label><br />
+            <li data-component="answer"  id="qt3_18_opt_d">{ { 2, 3, 3 }, { 1, 2, 3 }, { 1, 1, 2 }, { 1, 1, 1 } }</li><li data-component="feedback" id="qt3_18_opt_d">This would be true if it was int [][] mat = new int [4][3]. Remember that the first number is the number of rows.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_18_opt_e" />
-            <label for= "qt3_18_opt_e">  e) { { 1, 3, 3, 3 }, { 2, 1, 3, 3 }, { 2, 2, 1, 3 } }</label><br />
+            <li data-component="answer"  id="qt3_18_opt_e">{ { 1, 3, 3, 3 }, { 2, 1, 3, 3 }, { 2, 2, 1, 3 } }</li><li data-component="feedback" id="qt3_18_opt_e">This would be true if it filled the mat with 1 if the row and column indices are equal and 2 if the row index is greater than the column index.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_18');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_18','b',['This would be true if it was filling mat with 1 if the row index is less than the column index, but it fills with a 3 in this case.', 'This will fill mat with 3 if the row index is less than the column index, 2 if the row index is equal to the column index, and a 1 if the row index is greater than the column index.', 'This would be true if it was int [][] mat \u003D new int [4][3] and it filled the mat with 1 if the row index is less than the column index.', 'This would be true if it was int [][] mat \u003D new int [4][3]. Remember that the first number is the number of rows.', 'This would be true if it filled the mat with 1 if the row and column indices are equal and 2 if the row index is greater than the column index.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_18_bcomp" disabled name="compare" onclick="compareAnswers('qt3_18');">Compare Me</button>
-            </form><br />
-            <div id="qt3_18_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_19" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_19">
             <p>14-1-19: Assume that <code class="docutils literal"><span class="pre">temp</span></code> is an <code class="docutils literal"><span class="pre">int</span></code> variable initialized to be greater than zero and that <code class="docutils literal"><span class="pre">a</span></code> is an array of type <code class="docutils literal"><span class="pre">int</span></code>.  Also, consider the following code segment.  What of the following will cause an infinite loop?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">k</span><span class="o">++</span> <span class="o">)</span>
 <span class="o">{</span>
@@ -1177,34 +957,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_19_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_19_opt_a" />
-            <label for= "qt3_19_opt_a">  a) The values don't matter, this will always cause an infinite loop.</label><br />
+
+            <li data-component="answer"  id="qt3_19_opt_a">The values don't matter, this will always cause an infinite loop.</li><li data-component="feedback" id="qt3_19_opt_a">An infinite loop will not always occur in this program segment.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_19_opt_b" />
-            <label for= "qt3_19_opt_b">  b) Whenever a has a value larger then temp.</label><br />
+            <li data-component="answer"  id="qt3_19_opt_b">Whenever a has a value larger then temp.</li><li data-component="feedback" id="qt3_19_opt_b">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_19_opt_c" />
-            <label for= "qt3_19_opt_c">  c) When all values in a are larger than temp.</label><br />
+            <li data-component="answer"  id="qt3_19_opt_c">When all values in a are larger than temp.</li><li data-component="feedback" id="qt3_19_opt_c">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_19_opt_d" />
-            <label for= "qt3_19_opt_d">  d) Whenever a includes a value equal to temp.</label><br />
+            <li data-component="answer"  id="qt3_19_opt_d">Whenever a includes a value equal to temp.</li><li data-component="feedback" id="qt3_19_opt_d">Values equal to temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_19_opt_e" />
-            <label for= "qt3_19_opt_e">  e) Whenever a includes a value that is less than or equal to zero.</label><br />
+            <li data-component="answer" data-correct id="qt3_19_opt_e">Whenever a includes a value that is less than or equal to zero.</li><li data-component="feedback" id="qt3_19_opt_e">When a contains a value that is less than or equal to zero, then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_19');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_19','e',['An infinite loop will not always occur in this program segment.', 'Values larger then temp will not cause an infinite loop.', 'Values larger then temp will not cause an infinite loop.', 'Values equal to temp will not cause an infinite loop.', 'When a contains a value that is less than or equal to zero, then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value \u003E 0), so an infinite loop will occur.'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_19_bcomp" disabled name="compare" onclick="compareAnswers('qt3_19');">Compare Me</button>
-            </form><br />
-            <div id="qt3_19_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qt3_20" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt3_20">
             <p>14-1-20: Consider the following method.  What is the output from <code class="docutils literal"><span class="pre">conditionTest(3,-2);</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">conditionTest</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="o">)</span>
  <span class="o">{</span>
@@ -1226,32 +993,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qt3_20_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt3_20_opt_a" />
-            <label for= "qt3_20_opt_a">  a) A</label><br />
+
+            <li data-component="answer"  id="qt3_20_opt_a">A</li><li data-component="feedback" id="qt3_20_opt_a">This would be true if num1 and num2 were both greater than 0 and num1 was greater than num2.  However, num2 is less than 0.</li>
             
-            <input type="radio" name="group1" value="b" id="qt3_20_opt_b" />
-            <label for= "qt3_20_opt_b">  b) B</label><br />
+            <li data-component="answer"  id="qt3_20_opt_b">B</li><li data-component="feedback" id="qt3_20_opt_b">This would be true if num1 and num2 were both greater than 0 and num1 was less than or equal to num2.  However, num2 is less than 0.</li>
             
-            <input type="radio" name="group1" value="c" id="qt3_20_opt_c" />
-            <label for= "qt3_20_opt_c">  c) C</label><br />
+            <li data-component="answer" data-correct id="qt3_20_opt_c">C</li><li data-component="feedback" id="qt3_20_opt_c">The first test is false since num2 is less than 0 and for a complex conditional joined with And (&&) to be true both expressions must be true.  Next, <code>else if ((num2<0) || (num1<0))</code> is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.</li>
             
-            <input type="radio" name="group1" value="d" id="qt3_20_opt_d" />
-            <label for= "qt3_20_opt_d">  d) D</label><br />
+            <li data-component="answer"  id="qt3_20_opt_d">D</li><li data-component="feedback" id="qt3_20_opt_d">This will never happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code).</li>
             
-            <input type="radio" name="group1" value="e" id="qt3_20_opt_e" />
-            <label for= "qt3_20_opt_e">  e) E</label><br />
+            <li data-component="answer"  id="qt3_20_opt_e">E</li><li data-component="feedback" id="qt3_20_opt_e">This will never happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code).</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qt3_20');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qt3_20','c',['This would be true if num1 and num2 were both greater than 0 and num1 was greater than num2.  However, num2 is less than 0.', 'This would be true if num1 and num2 were both greater than 0 and num1 was less than or equal to num2.  However, num2 is less than 0.', 'The first test is false since num2 is less than 0 and for a complex conditional joined with And (\u0026\u0026) to be true both expressions must be true.  Next, \u003Ccode\u003Eelse if ((num2\u003C0) || (num1\u003C0))\u003C/code\u003E is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.', 'This will never happen since if num2 is less than 0 the previous conditional would be true \u003Ccode\u003E((num2\u003C0) || (num1\u003C0))\u003C/code).', 'This will never happen since if num2 is less than 0 the previous conditional would be true \u003Ccode\u003E((num2\u003C0) || (num1\u003C0))\u003C/code).'])">Check Me</button>
-            <button class='btn btn-default' id="qt3_20_bcomp" disabled name="compare" onclick="compareAnswers('qt3_20');">Compare Me</button>
-            </form><br />
-            <div id="qt3_20_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

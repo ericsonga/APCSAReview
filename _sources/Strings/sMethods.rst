@@ -24,6 +24,51 @@ For the AP CS A exam there are only a few things that you have to know about str
     
     -  the ``boolean equals(String other)`` returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.  
     
+Run the code below to see the output from ``length``, ``substring``, and ``indexOf``.
+
+.. activecode:: lcsm1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        String message1 = "Happy Birthday";
+        String message2 = "Hello Class";
+        
+        System.out.println(message1.length());
+        System.out.println(message2.length());
+        
+        System.out.println(message1.substring(0,5));
+        System.out.println(message1.substring(6));
+        
+        System.out.println(message1.indexOf("day"));
+        System.out.println(message1.indexOf("Hello"));
+        System.out.println(message2.indexOf("Hello"));
+      }
+   }
+   
+Run the example below to see the output from ``compareTo`` and ``equals``.
+
+.. activecode:: lcsm2
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        String message = "Hello!";
+        
+        System.out.println(message.compareTo("Hello there"));
+        System.out.println(message.compareTo("Hello!"));
+        System.out.println(message.compareTo("And"));
+        System.out.println(message.compareTo("Zoo"));
+        
+        System.out.println(message.equals("Hello!"));
+        System.out.println(message.equals("hello!"));
+      }
+   }
+
 There are lots of other methods in the String class.  See the Java documentation for the String class at http://docs.oracle.com/javase/6/docs/api/java/lang/String.html.  You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
 
 Strings are **immutable** which means that they can't change. Anything that you do to modify a string (like creating a substring or appending strings) returns a new string.

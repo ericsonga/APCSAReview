@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -388,67 +402,31 @@
 <h2>How to solve this problem<a class="headerlink" href="#how-to-solve-this-problem" title="Permalink to this headline">¶</a></h2>
 <p>The first thing to do is to create a new instance of the <code class="docutils literal"><span class="pre">ClimbInfo</span></code> object, which will be added to the <code class="docutils literal"><span class="pre">climbList</span></code> array.</p>
 
-            <div id="frcca_1" class="alert alert-warning">
-            X-X-1: Which of the following correctly creates a new <code class="docutils literal"><span class="pre">ClimbInfo</span></code> object?<form name="frcca_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frcca_1_opt_a" />
-            <label for= "frcca_1_opt_a">  a) ClimbInfo climb = ClimbInfo(peakName, climbTime);</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frcca_1">
+            X-X-1: Which of the following correctly creates a new <code class="docutils literal"><span class="pre">ClimbInfo</span></code> object?
+            <li data-component="answer"  id="frcca_1_opt_a">ClimbInfo climb = ClimbInfo(peakName, climbTime);</li><li data-component="feedback" id="frcca_1_opt_a">The keyword 'new' is missing. This is required to create a new instance of a class.</li>
             
-            <input type="radio" name="group1" value="b" id="frcca_1_opt_b" />
-            <label for= "frcca_1_opt_b">  b) ClimbInfo climb = new ClimbInfo(climbTime, peakName);</label><br />
+            <li data-component="answer"  id="frcca_1_opt_b">ClimbInfo climb = new ClimbInfo(climbTime, peakName);</li><li data-component="feedback" id="frcca_1_opt_b">Double check the order of the parameters in the constructor.</li>
             
-            <input type="radio" name="group1" value="c" id="frcca_1_opt_c" />
-            <label for= "frcca_1_opt_c">  c) ClimbInfo climb = new ClimbInfo(peakName, climbTime);</label><br />
+            <li data-component="answer" data-correct id="frcca_1_opt_c">ClimbInfo climb = new ClimbInfo(peakName, climbTime);</li><li data-component="feedback" id="frcca_1_opt_c">This will correctly create a new ClimbInfo object.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frcca_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frcca_1','c',['The keyword \u0027new\u0027 is missing. This is required to create a new instance of a class.', 'Double check the order of the parameters in the constructor.', 'This will correctly create a new ClimbInfo object.'])">Check Me</button>
-            <button class='btn btn-default' id="frcca_1_bcomp" disabled name="compare" onclick="compareAnswers('frcca_1');">Compare Me</button>
-            </form><br />
-            <div id="frcca_1_feedback">
-            </div>
-            </div>
+            </ul>
             <p>Next, we need to know how to add to the end of a list.</p>
 
-            <div id="frcca_2" class="alert alert-warning">
-            X-X-2: Which of the following correctly adds the element <code class="docutils literal"><span class="pre">infoObj</span></code> to the end of the &#8216;climbList&#8217; list?<form name="frcca_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frcca_2_opt_a" />
-            <label for= "frcca_2_opt_a">  a) climbList.add(infoObj);</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frcca_2">
+            X-X-2: Which of the following correctly adds the element <code class="docutils literal"><span class="pre">infoObj</span></code> to the end of the &#8216;climbList&#8217; list?
+            <li data-component="answer"  id="frcca_2_opt_a">climbList.add(infoObj);</li><li data-component="feedback" id="frcca_2_opt_a">The add method with one parameter appends the element to the end of the list.</li>
             
-            <input type="radio" name="group1" value="b" id="frcca_2_opt_b" />
-            <label for= "frcca_2_opt_b">  b) climbList[nextIndex] = infoObj;</label><br />
+            <li data-component="answer" data-correct id="frcca_2_opt_b">climbList[nextIndex] = infoObj;</li><li data-component="feedback" id="frcca_2_opt_b">This is the syntax for setting the value of an array at an index.</li>
             
-            <input type="radio" name="group1" value="c" id="frcca_2_opt_c" />
-            <label for= "frcca_2_opt_c">  c) climbList.add(0, infoObj);</label><br />
+            <li data-component="answer"  id="frcca_2_opt_c">climbList.add(0, infoObj);</li><li data-component="feedback" id="frcca_2_opt_c">This will add infoObj at index 0, but first move to the right any existing items.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frcca_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frcca_2','b',['The add method with one parameter appends the element to the end of the list.', 'This is the syntax for setting the value of an array at an index.', 'This will add infoObj at index 0, but first move to the right any existing items.'])">Check Me</button>
-            <button class='btn btn-default' id="frcca_2_bcomp" disabled name="compare" onclick="compareAnswers('frcca_2');">Compare Me</button>
-            </form><br />
-            <div id="frcca_2_feedback">
-            </div>
-            </div>
+            </ul>
             <p>Try to write the code for the method addClimb. When you are ready click &#8220;Run&#8221; to test your solution.</p>
-<div id="cont"></div>
-<div id="lcfrcca1" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrcca1_runb" onclick="Jobe.runlive('lcfrcca1', 'java', '', 'http://ice-web.cc.gatech.edu/ce21/1/static/classes/ClimbInfo.class')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrcca1_saveb"
-                onclick="saveEditor('lcfrcca1');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrcca1_loadb"
-                onclick="requestCode('lcfrcca1');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrcca1_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrcca1_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrcca1 data-lang="java"    data-timelimit=25000   data-audio=''  data-datafile='http://ice-web.cc.gatech.edu/ce21/1/static/classes/ClimbInfo.class'   >
 import java.util.List;
 import java.util.ArrayList;
 
@@ -500,25 +478,8 @@ public class ClimbingClub
                          "Whiteface, Algonquin, Monadnock");
    }
 }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrcca1_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrcca1 )</span> </p>
-
-    
-    <script>
-        $(document).ready(function() { Jobe.pushDataFile("http://ice-web.cc.gatech.edu/ce21/1/static/classes/ClimbInfo.class"); } );
-    </script>
-    
-</div></div>
+</pre>
+</div>
 <div class="section" id="video-one-way-to-code-the-solution">
 <h2>Video - One way to code the solution<a class="headerlink" href="#video-one-way-to-code-the-solution" title="Permalink to this headline">¶</a></h2>
 <div id="v_interfaces" class="video_popup" >

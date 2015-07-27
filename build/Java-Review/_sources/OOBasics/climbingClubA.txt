@@ -106,7 +106,7 @@ Next, we need to know how to add to the end of a list.
    
 Try to write the code for the method addClimb. When you are ready click "Run" to test your solution.   
    
-.. livecode:: lcfrcca1
+.. activecode:: lcfrcca1
    :language: java
    :datafile:  http://ice-web.cc.gatech.edu/ce21/1/static/classes/ClimbInfo.class
    

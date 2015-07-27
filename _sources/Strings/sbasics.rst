@@ -21,12 +21,19 @@ What is a String?
 Declaring and Creating Strings
 ==============================
 
-You can declare a variable to be of type ``String``. Notice that class names in Java, like ``String``, begin with a capital letter.  All primitive types: ``int``, ``double``, and ``boolean``, begin with a lowercase letter.  This is one easy way to tell the difference between primitive types and class types. Try the following in DrJava's interactions pane.
+You can declare a variable to be of type ``String``. Notice that class names in Java, like ``String``, begin with a capital letter.  All primitive types: ``int``, ``double``, and ``boolean``, begin with a lowercase letter.  This is one easy way to tell the difference between primitive types and class types. Try the following.
 
-.. code-block:: java 
-
-  String greeting; 
-  System.out.println(greeting);
+.. activecode:: lcsb1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        String greeting = null;
+        System.out.println(greeting);
+      }
+   }
 
 The code above declares an object variable named greeting and sets the value of greeting to the Java keyword ``null`` to show that it doesn't refer to any object yet.  So ``System.out.println(greeting);`` will print ``null``.  Object variables **refer** to objects in memory.  A reference is a way to find the actual object, like adding a contact to your phone lets you reach someone without knowing exactly where they are.  The value of greeting is null since the string object has not been created yet. 
 
@@ -57,17 +64,22 @@ In Java you can also use just a **string literal**, which is a set of characters
 
   greeting = "Hello";
 
-In both cases an object of the ``String`` class will be created in memory and the value of the variable greeting will be set to an object reference, a way to find that object. Now that greeting refers to an actual object we can ask the object what class created it. Try entering the following in DrJava's interactions pane.  What does it print? 
+In both cases an object of the ``String`` class will be created in memory and the value of the variable greeting will be set to an object reference, a way to find that object. Now that greeting refers to an actual object we can ask the object what class created it. Try the following.  What does it print? 
 
-.. code-block:: java
-  :linenos: 
-
-  String greeting = "Hello";
-  Class currClass = greeting.getClass();
-  System.out.println(currClass);
-  Class parentClass = currClass.getSuperclass();
-  System.out.println(parentClass);
-  
+.. activecode:: lcsb2
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        String greeting = "Hello";
+        Class currClass = greeting.getClass();
+        System.out.println(currClass);
+        Class parentClass = currClass.getSuperclass();
+        System.out.println(parentClass);
+      }
+   }
 
 The code above will first print ``class java.lang.String`` since ``greeting`` was created by the ``String`` class.  The full name for the ``String`` class is ``java.lang.String``.  The ``java.lang`` part is the **package** name.  Every class in the Java language is in a package and the standard classes like ``String`` are in the ``java.lang`` package.  Every object in Java contains a reference to the class that created it.  Also, every class contains a reference to its **parent** class.  Yes, a class can have a parent class, just as you have parents.  But, in Java a class can only have one parent.  A class can ``inherit`` object fields and methods from a parent class, just like you inherit musical ability from a parent.  The fourth line will print ``class java.lang.Object`` because the parent class (superclass) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.  
 

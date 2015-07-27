@@ -49,7 +49,7 @@ The first thing to do is try to solve the examples by hand.  The question tells 
 
 To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 each go into 128 evenly (have a 0 remainder) then the method should return true. 
 
-.. livecode:: lcfrsda2
+.. activecode:: lcfrsda2
    :language: java
    
    public class Test
@@ -64,7 +64,7 @@ To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 
 
 To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remainder that is greater than 0, so it can't be a self-divisor and we return false.
 
-.. livecode:: lcfrsda3
+.. activecode:: lcfrsda3
    :language: java
    
    public class Test
@@ -81,7 +81,7 @@ So we need to loop through all the digits in the number one at a time and test i
 
 How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the modulus operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
 
-.. livecode:: lcfrsda4
+.. activecode:: lcfrsda4
    :language: java
    
    public class Test
@@ -121,7 +121,7 @@ We need to loop through all the digits in a number.  For example, with 128 the f
    
 Try to write the code for the method isSelfDivisor.  When you are ready click "Run" to test your solution. Remember that it should return true for 128, false for 26, false for 120, and false for 102.   
    
-.. livecode:: lcfrsda5
+.. activecode:: lcfrsda5
    :language: java
    
    public class SelfDivisor

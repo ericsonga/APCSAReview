@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -321,13 +335,19 @@
   <div class="section" id="operators">
 <h1>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h1>
 <p id="index-0">Java uses the standard mathematical operators for addition (<code class="docutils literal"><span class="pre">+</span></code>), subtraction (<code class="docutils literal"><span class="pre">-</span></code>), multiplication (<code class="docutils literal"><span class="pre">*</span></code>), and division (<code class="docutils literal"><span class="pre">/</span></code>).  Java uses (<code class="docutils literal"><span class="pre">==</span></code>) to test if the value on the left is equal to the value on the right and (<code class="docutils literal"><span class="pre">!=</span></code>) to test if two items are not equal.  But, the percent sign operator (<code class="docutils literal"><span class="pre">%</span></code>) is the <strong>modulus</strong> or remainder operator.</p>
-<p>Try the following in DrJava&#8217;s interaction pane.  You can download DrJava for free from <a class="reference external" href="http://www.drjava.org">http://www.drjava.org</a>.  The interaction pane lets you try out Java code without having to declare a class.  It also automatically prints the result of a statement when you press enter.  What does it print when you type each of the following lines and hit enter?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="mi">11</span> <span class="o">%</span> <span class="mi">10</span>
-<span class="mi">3</span> <span class="o">%</span> <span class="mi">4</span>
-<span class="mi">8</span> <span class="o">%</span> <span class="mi">2</span>
-<span class="mi">9</span> <span class="o">%</span> <span class="mi">2</span>
-</pre></div>
-</div>
+
+<pre data-component="activecode" id=lcop1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test1
+{
+   public static void main(String[] args)
+   {
+     System.out.println(11 % 10);
+     System.out.println(3 % 4);
+     System.out.println(8 % 2);
+     System.out.println(9 % 2);
+   }
+}
+</pre>
 <p id="index-1">The <strong>modulus</strong> operator (<code class="docutils literal"><span class="pre">%</span></code>) returns the remainder after you divide the first number by the second number.  The <strong>modulus</strong> operator has been used quite a bit on the AP CS A exam, so you should be familiar with it.</p>
 <blockquote>
 <div><ul class="simple">
@@ -336,54 +356,57 @@
 <li>Use it to get the number of minutes left when you convert to hours (<code class="docutils literal"><span class="pre">num</span> <span class="pre">%</span> <span class="pre">60</span></code>).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at <a class="reference external" href="http://coweb.cc.gatech.edu/ice-gt/1278">http://coweb.cc.gatech.edu/ice-gt/1278</a>.</li>
 </ul>
 </div></blockquote>
+<p>In addition, the <strong>Math</strong> class provides us with multiple methods that can be useful within our own Java classes. The random() method returns a number greater than or equal to 0.0, and less than 1.0. Try out the following code.</p>
 
-            <div id="q2_7" class="alert alert-warning">
-            3-4-1: What is the result of 158 % 10?<form name="q2_7_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_7_opt_a" />
-            <label for= "q2_7_opt_a">  a) 15</label><br />
-            
-            <input type="radio" name="group1" value="b" id="q2_7_opt_b" />
-            <label for= "q2_7_opt_b">  b) 16</label><br />
-            
-            <input type="radio" name="group1" value="c" id="q2_7_opt_c" />
-            <label for= "q2_7_opt_c">  c) 8</label><br />
-            
+<pre data-component="activecode" id=lcop3 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test3
+{
+   public static void main(String[] args)
+   {
+     System.out.println(Math.random());
+     System.out.println(Math.random());
+   }
+}
+</pre>
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_7');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_7','c',['This would be the result of 158 divided by 10.  Modulus gives you the remainder.', 'Modulus gives you the remainder after the division.', 'When you divide 158 by 10 you get a remainder of 8.'])">Check Me</button>
-            <button class='btn btn-default' id="q2_7_bcomp" disabled name="compare" onclick="compareAnswers('q2_7');">Compare Me</button>
-            </form><br />
-            <div id="q2_7_feedback">
-            </div>
-            </div>
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_4_1">
+            3-4-1: What is the result of 158 % 10?
+            <li data-component="answer"  id="q3_4_1_opt_a">15</li><li data-component="feedback" id="q3_4_1_opt_a">This would be the result of 158 divided by 10.  Modulus gives you the remainder.</li>
             
-            <div id="q2_8" class="alert alert-warning">
-            3-4-2: What is the result of 3 % 8?<form name="q2_8_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_8_opt_a" />
-            <label for= "q2_8_opt_a">  a) 3</label><br />
+            <li data-component="answer"  id="q3_4_1_opt_b">16</li><li data-component="feedback" id="q3_4_1_opt_b">Modulus gives you the remainder after the division.</li>
             
-            <input type="radio" name="group1" value="b" id="q2_8_opt_b" />
-            <label for= "q2_8_opt_b">  b) 2</label><br />
-            
-            <input type="radio" name="group1" value="c" id="q2_8_opt_c" />
-            <label for= "q2_8_opt_c">  c) 8</label><br />
+            <li data-component="answer" data-correct id="q3_4_1_opt_c">8</li><li data-component="feedback" id="q3_4_1_opt_c">When you divide 158 by 10 you get a remainder of 8.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_8');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_8','a',['8 goes into 3 no times so the remainder is 3.  The remainder of a smaller number divided by a larger number is always the smaller number!', 'This would be the remainder if the question was 8 % 3 but here we are asking for the reminder after we divide 3 by 8.', 'What is the remainder after you divide 3 by 8?'])">Check Me</button>
-            <button class='btn btn-default' id="q2_8_bcomp" disabled name="compare" onclick="compareAnswers('q2_8');">Compare Me</button>
-            </form><br />
-            <div id="q2_8_feedback">
-            </div>
-            </div>
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_4_2">
+            3-4-2: What is the result of 3 % 8?
+            <li data-component="answer" data-correct id="q3_4_2_opt_a">3</li><li data-component="feedback" id="q3_4_2_opt_a">8 goes into 3 no times so the remainder is 3.  The remainder of a smaller number divided by a larger number is always the smaller number!</li>
+            
+            <li data-component="answer"  id="q3_4_2_opt_b">2</li><li data-component="feedback" id="q3_4_2_opt_b">This would be the remainder if the question was 8 % 3 but here we are asking for the reminder after we divide 3 by 8.</li>
+            
+            <li data-component="answer"  id="q3_4_2_opt_c">8</li><li data-component="feedback" id="q3_4_2_opt_c">What is the remainder after you divide 3 by 8?</li>
+            
+
+            </ul>
             <p>You are also expected to know the double plus operator (<code class="docutils literal"><span class="pre">++</span></code>) and the double minus operator (<code class="docutils literal"><span class="pre">--</span></code>).  The <code class="docutils literal"><span class="pre">++</span></code> operator is used to add one to the current value: <code class="docutils literal"><span class="pre">x++</span></code> is the same as <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">1</span></code>.  The <code class="docutils literal"><span class="pre">--</span></code> operator is used to subtract one from the current value: <code class="docutils literal"><span class="pre">y--</span></code> is the same as <code class="docutils literal"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">y</span> <span class="pre">-</span> <span class="pre">1</span></code>.
 You should know that <code class="docutils literal"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">y</span></code> is the same as <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">-=</span> <span class="pre">y</span></code> is the same as <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">y</span></code>, <code class="docutils literal"><span class="pre">x</span> <span class="pre">*=</span> <span class="pre">y</span></code> is the same as <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">y</span></code>, and <code class="docutils literal"><span class="pre">x</span> <span class="pre">/=</span> <span class="pre">y</span></code> is the same as <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code>.</p>
 
-            <div id="q2_9" class="alert alert-warning">
+<pre data-component="activecode" id=lcpp data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test2
+{
+   public static void main(String[] args)
+   {
+     int num = 0;
+     System.out.println(num);
+     num++;
+     System.out.println(num);
+   }
+}
+</pre>
+
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q3_4_3">
             <p>3-4-3: What are the values of x, y, and z after the following code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
@@ -393,32 +416,19 @@ You should know that <code class="docutils literal"><span class="pre">x</span> <
 <span class="n">z</span><span class="o">+=</span><span class="n">y</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="q2_9_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_9_opt_a" />
-            <label for= "q2_9_opt_a">  a) x = -1, y = 1, z = 4</label><br />
+
+            <li data-component="answer"  id="q3_4_3_opt_a">x = -1, y = 1, z = 4</li><li data-component="feedback" id="q3_4_3_opt_a">This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.</li>
             
-            <input type="radio" name="group1" value="b" id="q2_9_opt_b" />
-            <label for= "q2_9_opt_b">  b) x = -1, y = 2, z = 3</label><br />
+            <li data-component="answer"  id="q3_4_3_opt_b">x = -1, y = 2, z = 3</li><li data-component="feedback" id="q3_4_3_opt_b">This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.</li>
             
-            <input type="radio" name="group1" value="c" id="q2_9_opt_c" />
-            <label for= "q2_9_opt_c">  c) x = -1, y = 2, z = 2</label><br />
+            <li data-component="answer"  id="q3_4_3_opt_c">x = -1, y = 2, z = 2</li><li data-component="feedback" id="q3_4_3_opt_c">This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.</li>
             
-            <input type="radio" name="group1" value="d" id="q2_9_opt_d" />
-            <label for= "q2_9_opt_d">  d) x = -1, y = 2, z = 2</label><br />
+            <li data-component="answer"  id="q3_4_3_opt_d">x = -1, y = 2, z = 2</li><li data-component="feedback" id="q3_4_3_opt_d">This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.</li>
             
-            <input type="radio" name="group1" value="e" id="q2_9_opt_e" />
-            <label for= "q2_9_opt_e">  e) x = -1, y = 2, z = 4</label><br />
+            <li data-component="answer" data-correct id="q3_4_3_opt_e">x = -1, y = 2, z = 4</li><li data-component="feedback" id="q3_4_3_opt_e">This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_9');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_9','e',['This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.', 'This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.', 'This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.', 'This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.', 'This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.'])">Check Me</button>
-            <button class='btn btn-default' id="q2_9_bcomp" disabled name="compare" onclick="compareAnswers('q2_9');">Compare Me</button>
-            </form><br />
-            <div id="q2_9_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

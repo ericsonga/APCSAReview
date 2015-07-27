@@ -89,7 +89,7 @@ Figuring out the algorithm
 
 It can help to write out what you need to do to get each of the characters to compare.  The following shows what to do to solve the example with "ABRACADABRA". 
    
-.. livecode:: lcfrssa3
+.. activecode:: lcfrssa3
    :language: java
    
    public class Test
@@ -121,7 +121,7 @@ In this example we are looping through the characters from left to right one at 
    
 The following shows what to do to solve the example with "WHOA".  
    
-.. livecode:: lcfrssa4
+.. activecode:: lcfrssa4
    :language: java
    
    public class Test
@@ -157,7 +157,7 @@ Write the Code
 
 Write the method scrambleWord below. 
 
-.. livecode:: lcfrssa5
+.. activecode:: lcfrssa5
    :language: java
    
    import java.util.List;
@@ -206,7 +206,7 @@ There are many possible solutions to this problem.  The video below shows one so
    :controls:
    :thumb: ../_static/codeVideo.png
    
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/20141acode.mov
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/20141-a.mov
 
 
 

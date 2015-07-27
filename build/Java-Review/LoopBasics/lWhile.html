@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -321,18 +335,27 @@
   <div class="section" id="while-loops">
 <h1>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h1>
 <p id="index-0">A <strong>while</strong> loop is typically used when you don&#8217;t know how many times the loop will execute.  You might use it while processing a string.  Google has been scanning old books and then using software to read the scanned text.  But, the software can get things mixed up like using 1 for l.  The following code loops through a string replacing all 1&#8217;s with l&#8217;s.</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="s">&quot;Have a 1ong and happy 1ife&quot;</span><span class="o">;</span>
-<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 
-<span class="c1">// while more 1&#39;s in the message</span>
-<span class="k">while</span> <span class="o">(</span><span class="n">message</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;1&quot;</span><span class="o">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">)</span>
-<span class="o">{</span>
-   <span class="n">index</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;1&quot;</span><span class="o">);</span>
-   <span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="n">index</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;l&quot;</span> <span class="o">+</span> <span class="n">message</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
-<span class="o">}</span>
-</pre></div>
-</div>
-<p>The while loop starts on line 5 in the code above.  Statements 7 and 8 are in the body of the loop (between the opening parenthesis on line 6 and the closing one on line 9).  Please note that Java doesn&#8217;t require your code to be correctly indented (code moved to the right a few spaces) to make it clear what
+<pre data-component="activecode" id=lclw1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test
+{
+   public static void main(String[] args)
+   {
+     String message = "Have a 1ong and happy 1ife";
+     int index = 0;
+
+     // while more 1's in the message
+     while (message.indexOf("1") >= 0)
+     {
+       index = message.indexOf("1");
+       message = message.substring(0,index) + "l" + message.substring(index+1);
+     }
+
+     System.out.println(message);
+   }
+}
+</pre>
+<p>The while loop starts on line 9 in the code above.  Statements 11 and 12 are in the body of the loop (between the opening parenthesis on line 6 and the closing one on line 9).  Please note that Java doesn&#8217;t require your code to be correctly indented (code moved to the right a few spaces) to make it clear what
 statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.</p>
 <p id="index-1">One thing to be careful about with while loops is making sure that you don&#8217;t end up with an <strong>infinite loop</strong>.  An infinite loop is one that never stops (the condition is always true).</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="c1">// an infinite loop</span>
@@ -345,7 +368,7 @@ statements are part of the body of the loop, but it is good practice.  On the fr
 <p>The infinite loop above is pretty obvious.  But, most infinite loops are accidental.  They usually occur because you forget to change the thing you are checking in the condition.</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="qlb_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlb_1">
             <p>6-3-1: What does the following code print?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span><span class="o">;</span>
 <span class="k">while</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span>
@@ -355,28 +378,17 @@ statements are part of the body of the loop, but it is good practice.  On the fr
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qlb_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlb_1_opt_a" />
-            <label for= "qlb_1_opt_a">  a) 5 4 3 2 1</label><br />
+
+            <li data-component="answer"  id="qlb_1_opt_a">5 4 3 2 1</li><li data-component="feedback" id="qlb_1_opt_a">x is initialized (set) to -5 to start.</li>
             
-            <input type="radio" name="group1" value="b" id="qlb_1_opt_b" />
-            <label for= "qlb_1_opt_b">  b) -5 -4 -3 -2 -1</label><br />
+            <li data-component="answer"  id="qlb_1_opt_b">-5 -4 -3 -2 -1</li><li data-component="feedback" id="qlb_1_opt_b">x is incremented (x++) before the print statement executes.</li>
             
-            <input type="radio" name="group1" value="c" id="qlb_1_opt_c" />
-            <label for= "qlb_1_opt_c">  c) -4 -3 -2 -1 0</label><br />
+            <li data-component="answer" data-correct id="qlb_1_opt_c">-4 -3 -2 -1 0</li><li data-component="feedback" id="qlb_1_opt_c">x is set to -5 to start but then incremented by 1 so it first prints -4.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlb_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlb_1','c',['x is initialized (set) to \u002D5 to start.', 'x is incremented (x++) before the print statement executes.', 'x is set to \u002D5 to start but then incremented by 1 so it first prints \u002D4.'])">Check Me</button>
-            <button class='btn btn-default' id="qlb_1_bcomp" disabled name="compare" onclick="compareAnswers('qlb_1');">Compare Me</button>
-            </form><br />
-            <div id="qlb_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qlb_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlb_2">
             <p>6-3-2: What are the values of var1 and var2 when the code finishes executing?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="n">var1</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">var2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
@@ -388,34 +400,21 @@ statements are part of the body of the loop, but it is good practice.  On the fr
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qlb_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlb_2_opt_a" />
-            <label for= "qlb_2_opt_a">  a) var1 = 1, var2 = 1</label><br />
+
+            <li data-component="answer"  id="qlb_2_opt_a">var1 = 1, var2 = 1</li><li data-component="feedback" id="qlb_2_opt_a">The loop stops one of two ways, when var2 = 0 or when var1 / var2 = 0 - neither is true in this case</li>
             
-            <input type="radio" name="group1" value="b" id="qlb_2_opt_b" />
-            <label for= "qlb_2_opt_b">  b) var1 = 2, var2 = 0</label><br />
+            <li data-component="answer" data-correct id="qlb_2_opt_b">var1 = 2, var2 = 0</li><li data-component="feedback" id="qlb_2_opt_b">The loop stopped because var2 = 0.  After the first execution of the loop var1 = 1 and var2 = 1.  After the second execution of the loop var1 = 2 and var2 = 0.  This stops the loop and doesn't execute the second part of the complex conditional.</li>
             
-            <input type="radio" name="group1" value="c" id="qlb_2_opt_c" />
-            <label for= "qlb_2_opt_c">  c) var1 = 3, var2 = -1</label><br />
+            <li data-component="answer"  id="qlb_2_opt_c">var1 = 3, var2 = -1</li><li data-component="feedback" id="qlb_2_opt_c">The loop stops one of two ways, when var2 = 0 or when var1 / var2 = 0 - neither is true in this case</li>
             
-            <input type="radio" name="group1" value="d" id="qlb_2_opt_d" />
-            <label for= "qlb_2_opt_d">  d) var1 = 0, var2 = 2</label><br />
+            <li data-component="answer"  id="qlb_2_opt_d">var1 = 0, var2 = 2</li><li data-component="feedback" id="qlb_2_opt_d">The loop stops one of two ways, when var2 = 0 or when var1 / var2 = 0 - neither is true in this case</li>
             
-            <input type="radio" name="group1" value="e" id="qlb_2_opt_e" />
-            <label for= "qlb_2_opt_e">  e) The loop will cause a run-time error with a division by zero</label><br />
+            <li data-component="answer"  id="qlb_2_opt_e">The loop will cause a run-time error with a division by zero</li><li data-component="feedback" id="qlb_2_opt_e">Even though var1 = 2 and var2 = 0 when the conditional is executed the first condition is true so the rest of the complex conditional won't execute.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlb_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlb_2','b',['The loop stops one of two ways, when var2 \u003D 0 or when var1 / var2 \u003D 0 \u002D neither is true in this case', 'The loop stopped because var2 \u003D 0.  After the first execution of the loop var1 \u003D 1 and var2 \u003D 1.  After the second execution of the loop var1 \u003D 2 and var2 \u003D 0.  This stops the loop and doesn\u0027t execute the second part of the complex conditional.', 'The loop stops one of two ways, when var2 \u003D 0 or when var1 / var2 \u003D 0 \u002D neither is true in this case', 'The loop stops one of two ways, when var2 \u003D 0 or when var1 / var2 \u003D 0 \u002D neither is true in this case', 'Even though var1 \u003D 2 and var2 \u003D 0 when the conditional is executed the first condition is true so the rest of the complex conditional won\u0027t execute.'])">Check Me</button>
-            <button class='btn btn-default' id="qlb_2_bcomp" disabled name="compare" onclick="compareAnswers('qlb_2');">Compare Me</button>
-            </form><br />
-            <div id="qlb_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qlb_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlb_3">
             <p>6-3-3: What are the values in a after multAll(3) executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">a</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="o">-</span><span class="mi">5</span><span class="o">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">};</span>
 
@@ -430,31 +429,19 @@ statements are part of the body of the loop, but it is good practice.  On the fr
 <span class="o">}</span> <span class="c1">// end method</span>
 </pre></div>
 </div>
-<form name="qlb_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlb_3_opt_a" />
-            <label for= "qlb_3_opt_a">  a) {1, 3, -5, -2}</label><br />
+
+            <li data-component="answer"  id="qlb_3_opt_a">{1, 3, -5, -2}</li><li data-component="feedback" id="qlb_3_opt_a">This would be true if the contents of arrays could not be changed but they can.</li>
             
-            <input type="radio" name="group1" value="b" id="qlb_3_opt_b" />
-            <label for= "qlb_3_opt_b">  b) {3, 9, -15, -6}</label><br />
+            <li data-component="answer" data-correct id="qlb_3_opt_b">{3, 9, -15, -6}</li><li data-component="feedback" id="qlb_3_opt_b">This code multiplies each value in a by the passed amt which is 3 in this case.</li>
             
-            <input type="radio" name="group1" value="c" id="qlb_3_opt_c" />
-            <label for= "qlb_3_opt_c">  c) {2, 6, -10, -4}</label><br />
+            <li data-component="answer"  id="qlb_3_opt_c">{2, 6, -10, -4}</li><li data-component="feedback" id="qlb_3_opt_c">This would be correct if we called multAll(2) instead of multAll(3).</li>
             
-            <input type="radio" name="group1" value="d" id="qlb_3_opt_d" />
-            <label for= "qlb_3_opt_d">  d) The code will never stop executing due to an infinite loop</label><br />
+            <li data-component="answer"  id="qlb_3_opt_d">The code will never stop executing due to an infinite loop</li><li data-component="feedback" id="qlb_3_opt_d">The variable i starts at 0 and increments each time through the loop and stops when it equals the number of items in a.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlb_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlb_3','b',['This would be true if the contents of arrays could not be changed but they can.', 'This code multiplies each value in a by the passed amt which is 3 in this case.', 'This would be correct if we called multAll(2) instead of multAll(3).', 'The variable i starts at 0 and increments each time through the loop and stops when it equals the number of items in a.'])">Check Me</button>
-            <button class='btn btn-default' id="qlb_3_bcomp" disabled name="compare" onclick="compareAnswers('qlb_3');">Compare Me</button>
-            </form><br />
-            <div id="qlb_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qlb_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlb_4">
             <p>6-3-4: What are the values in a after mult(2) executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">a</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="o">-</span><span class="mi">5</span><span class="o">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">};</span>
 
@@ -468,159 +455,23 @@ statements are part of the body of the loop, but it is good practice.  On the fr
 <span class="o">}</span> <span class="c1">// end method</span>
 </pre></div>
 </div>
-<form name="qlb_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlb_4_opt_a" />
-            <label for= "qlb_4_opt_a">  a) {1, 3, -5, -2}</label><br />
+
+            <li data-component="answer"  id="qlb_4_opt_a">{1, 3, -5, -2}</li><li data-component="feedback" id="qlb_4_opt_a">Does the value of i ever change inside the loop?</li>
             
-            <input type="radio" name="group1" value="b" id="qlb_4_opt_b" />
-            <label for= "qlb_4_opt_b">  b) {3, 9, -15, -6}</label><br />
+            <li data-component="answer"  id="qlb_4_opt_b">{3, 9, -15, -6}</li><li data-component="feedback" id="qlb_4_opt_b">Does the value of i ever change inside the loop?</li>
             
-            <input type="radio" name="group1" value="c" id="qlb_4_opt_c" />
-            <label for= "qlb_4_opt_c">  c) {2, 6, -10, -4}</label><br />
+            <li data-component="answer"  id="qlb_4_opt_c">{2, 6, -10, -4}</li><li data-component="feedback" id="qlb_4_opt_c">Does the value of i ever change inside the loop?</li>
             
-            <input type="radio" name="group1" value="d" id="qlb_4_opt_d" />
-            <label for= "qlb_4_opt_d">  d) The code will never stop executing due to an infinite loop</label><br />
+            <li data-component="answer" data-correct id="qlb_4_opt_d">The code will never stop executing due to an infinite loop</li><li data-component="feedback" id="qlb_4_opt_d">The value of i is initialized to 0 and then never changes inside the body of the loop, so this loop will never stop.  It is an infinite loop.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlb_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlb_4','d',['Does the value of i ever change inside the loop?', 'Does the value of i ever change inside the loop?', 'Does the value of i ever change inside the loop?', 'The value of i is initialized to 0 and then never changes inside the body of the loop, so this loop will never stop.  It is an infinite loop.'])">Check Me</button>
-            <button class='btn btn-default' id="qlb_4_bcomp" disabled name="compare" onclick="compareAnswers('qlb_4');">Compare Me</button>
-            </form><br />
-            <div id="qlb_4_feedback">
-            </div>
-            </div>
+            </ul>
             <p><strong>Mixed up programs</strong></p>
 
-        <div class='parsons alert alert-warning' id="parsons-148">
-        <div class="parsons-text">6-3-5: The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.  The code
-will need to be correctly indented for your solution to be correct.  To indent just drag the block to the right.<br /><br /></div>
-        <div style="clear:left;"></div>
-        <div id="parsons-orig-148" style="display:none;">public static String remA(String s)\n{
-   int index = 0;
-   // while still an a in str\nwhile (s.indexOf("a") >= 0)\n{\n   index = s.indexOf("a");\n   s = s.substring(0,index) +\n      s.substring(index+1);\n} // end while
-   return s;
-} // end method</div>
-        <div class="sortable-code-container">
-        <div id="parsons-sortableTrash-148" class="sortable-code"></div>
-        <div id="parsons-sortableCode-148" class="sortable-code"></div>
-        <div style="clear:left;"></div>
-        </div>
-        <div class="parsons-controls">
-        <input type="button" class='btn btn-success' id="checkMe148" value="Check Me"/>
-        <input type="button" class='btn btn-default' id="reset148" value="Reset"/>
-        <div id="parsons-message-148"></div>
-        </div>
-        </div>
-
-    <script>
-        $pjQ(document).ready(function(){
-
-            $("#parsons-148").not(".sortable-code").not(".parsons-controls").on("click", function(){
-                 $('html, body').animate({
-                    scrollTop: ($("#parsons-148").offset().top - 50)
-                }, 700);
-            }).find(".sortable-code, .parsons-controls").click(function(e) {
-                return false;
-                });
-            var msgBox = $("#parsons-message-148");
-            msgBox.hide();
-        var displayErrors = function (fb) {
-            if(fb.errors.length > 0) {
-                    var hash = pp_148.getHash("#ul-parsons-sortableCode-148");
-                    msgBox.fadeIn(500);
-                    msgBox.attr('class','alert alert-danger');
-                    msgBox.html(fb.errors[0]);
-                    logBookEvent({'event':'parsons', 'act':hash, 'div_id':'plb_1'});
-
-            } else {
-                    logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'plb_1'});
-                    msgBox.fadeIn(100);
-                    msgBox.attr('class','alert alert-success');
-                    msgBox.html("Perfect!")
-                }
-
-        }
-
-        $(window).load(function() {
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-148");
-            var trashul = $("#ul-parsons-sortableTrash-148");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            sortableul.height(minHeight);
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-        });
- 
-
-        var pp_148 = new ParsonsWidget({
-                'sortableId': 'parsons-sortableCode-148',
-        'trashId': 'parsons-sortableTrash-148',
-                'max_wrong_lines': 1,
-                'solution_label': 'Drop blocks here',
-                'feedback_cb' : displayErrors
-        });
-        pp_148.init($pjQ("#parsons-orig-148").text());
-    pp_148.shuffleLines();
-            
-        if(localStorage.getItem('plb_1') && localStorage.getItem('plb_1-trash')) {
-            try {
-                var solution = localStorage.getItem('plb_1');
-                var trash = localStorage.getItem('plb_1-trash');
-                pp_148.createHTMLFromHashes(solution,trash);
-                pp_148.getFeedback();
-            } catch(err) {
-                var text = "An error occured restoring old plb_1 state.  Error: ";
-                console.log(text + err.message);
-            }
-
-        }
-            $pjQ("#reset148").click(function(event){
-              event.preventDefault();
-              pp_148.shuffleLines();
-            
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-148");
-            var trashul = $("#ul-parsons-sortableTrash-148");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-              msgBox.hide();
-            });
-            
-            $pjQ("#checkMe148").click(function(event){
-              event.preventDefault();
-              var hash = pp_148.getHash("#ul-parsons-sortableCode-148");
-              localStorage.setItem('plb_1',hash);
-              hash = pp_148.getHash("#ul-parsons-sortableTrash-148");
-              localStorage.setItem('plb_1-trash',hash);
-            
-            pp_148.getFeedback();
-            msgBox.fadeIn(100);
-            
-            });
-            
-        });
-            
-
-    </script>
-
-</div>
+    <pre data-component="parsons" id="plb_1">
+        <span data-question>6-3-5: The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.  The code
+will need to be correctly indented for your solution to be correct.  To indent just drag the block to the right.</span>None</pre>
+    </div>
 
 
   

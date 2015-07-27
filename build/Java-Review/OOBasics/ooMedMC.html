@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Medium Multiple Choice Questions<a class="headerlink" href="#medium-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are similar to those you will see on the AP CS A exam.</p>
 
-            <div id="qoom_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoom_1">
             <p>10-13-1: Given the following class declarations, what is the output from <code class="docutils literal"><span class="pre">Student</span> <span class="pre">s1</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">GradStudent();</span></code> followed by <code class="docutils literal"><span class="pre">s1.getInfo();</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getFood</span><span class="o">()</span> <span class="o">{</span>
@@ -340,34 +354,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qoom_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoom_1_opt_a" />
-            <label for= "qoom_1_opt_a">  a) Won't compile since <code>GradStudent</code> doesn't have a <code>getInfo</code> method</label><br />
+
+            <li data-component="answer"  id="qoom_1_opt_a">Won't compile since <code>GradStudent</code> doesn't have a <code>getInfo</code> method</li><li data-component="feedback" id="qoom_1_opt_a"><code>GradStudent</code> will inherit the <code>getInfo</code> method from <code>Student</code>. This would be true if <code>getInfo</code> was a private method.</li>
             
-            <input type="radio" name="group1" value="b" id="qoom_1_opt_b" />
-            <label for= "qoom_1_opt_b">  b) Taco</label><br />
+            <li data-component="answer" data-correct id="qoom_1_opt_b">Taco</li><li data-component="feedback" id="qoom_1_opt_b">Objects know what class they are created as and all methods are resolved starting with that class at run time. If the method isn't found in that class the parent class is checked (and so on until it is found). So it will first look for <code>getInfo</code> in <code>GradStudent</code> and when it doesn't find it it will look in <code>Student</code>. In <code>getInfo</code> it calls <code>this.getFood</code>. Again, it will first look for this method in <code>GradStudent</code>. It will find the <code>getFood</code> method there and return "Taco".</li>
             
-            <input type="radio" name="group1" value="c" id="qoom_1_opt_c" />
-            <label for= "qoom_1_opt_c">  c) Pizza</label><br />
+            <li data-component="answer"  id="qoom_1_opt_c">Pizza</li><li data-component="feedback" id="qoom_1_opt_c">This would be true if it was <code>Student s1 = new Student();</code></li>
             
-            <input type="radio" name="group1" value="d" id="qoom_1_opt_d" />
-            <label for= "qoom_1_opt_d">  d) Won't compile since you are creating a <code>GradStudent</code>, not a <code>Student</code></label><br />
+            <li data-component="answer"  id="qoom_1_opt_d">Won't compile since you are creating a <code>GradStudent</code>, not a <code>Student</code></li><li data-component="feedback" id="qoom_1_opt_d">An object of a subclass can be substituted for a parent class object. A <code>GradStudent</code> is a <code>Student</code>.</li>
             
-            <input type="radio" name="group1" value="e" id="qoom_1_opt_e" />
-            <label for= "qoom_1_opt_e">  e) Won't compile since you use <code>this.getFood()</code></label><br />
+            <li data-component="answer"  id="qoom_1_opt_e">Won't compile since you use <code>this.getFood()</code></li><li data-component="feedback" id="qoom_1_opt_e">In object methods if you leave off the <code>this.</code> when invoking an object method it will be added for you by the compiler. The keyword <code>this</code> refers to the current object which is implicitly passed to all object methods.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoom_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoom_1','b',['\u003Ccode\u003EGradStudent\u003C/code\u003E will inherit the \u003Ccode\u003EgetInfo\u003C/code\u003E method from \u003Ccode\u003EStudent\u003C/code\u003E. This would be true if \u003Ccode\u003EgetInfo\u003C/code\u003E was a private method.', 'Objects know what class they are created as and all methods are resolved starting with that class at run time. If the method isn\u0027t found in that class the parent class is checked (and so on until it is found). So it will first look for \u003Ccode\u003EgetInfo\u003C/code\u003E in \u003Ccode\u003EGradStudent\u003C/code\u003E and when it doesn\u0027t find it it will look in \u003Ccode\u003EStudent\u003C/code\u003E. In \u003Ccode\u003EgetInfo\u003C/code\u003E it calls \u003Ccode\u003Ethis.getFood\u003C/code\u003E. Again, it will first look for this method in \u003Ccode\u003EGradStudent\u003C/code\u003E. It will find the \u003Ccode\u003EgetFood\u003C/code\u003E method there and return \u0022Taco\u0022.', 'This would be true if it was \u003Ccode\u003EStudent s1 \u003D new Student()\u003B\u003C/code\u003E', 'An object of a subclass can be substituted for a parent class object. A \u003Ccode\u003EGradStudent\u003C/code\u003E is a \u003Ccode\u003EStudent\u003C/code\u003E.', 'In object methods if you leave off the \u003Ccode\u003Ethis.\u003C/code\u003E when invoking an object method it will be added for you by the compiler. The keyword \u003Ccode\u003Ethis\u003C/code\u003E refers to the current object which is implicitly passed to all object methods.'])">Check Me</button>
-            <button class='btn btn-default' id="qoom_1_bcomp" disabled name="compare" onclick="compareAnswers('qoom_1');">Compare Me</button>
-            </form><br />
-            <div id="qoom_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoom_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoom_2">
             <p>10-13-2: Given the following class declarations, and <code class="docutils literal"><span class="pre">EnhancedItem</span> <span class="pre">enItemObj</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">EnhancedItem();</span></code> in a client class, which of the following statements would compile?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Item</span>
 <span class="o">{</span>
@@ -397,34 +398,21 @@
 <span class="n">III</span><span class="o">.</span> <span class="n">enItemObj</span><span class="o">.</span><span class="na">setX</span><span class="o">(</span><span class="mi">52</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qoom_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoom_2_opt_a" />
-            <label for= "qoom_2_opt_a">  a) I only</label><br />
+
+            <li data-component="answer"  id="qoom_2_opt_a">I only</li><li data-component="feedback" id="qoom_2_opt_a">I is wrong because <code>y</code> is a private field and thus can not be directly accessed from code in a client class.</li>
             
-            <input type="radio" name="group1" value="b" id="qoom_2_opt_b" />
-            <label for= "qoom_2_opt_b">  b) II only</label><br />
+            <li data-component="answer"  id="qoom_2_opt_b">II only</li><li data-component="feedback" id="qoom_2_opt_b">I is wrong because <code>y</code>  is a private field and thus can not be directly accessed from code in a client class. II is correct because <code>EnhancedItem</code> has <code>setY</code> as a public method. III is correct because <code>EnhancedItem</code> inherits the public method <code>setX</code> from <code>Item</code>.</li>
             
-            <input type="radio" name="group1" value="c" id="qoom_2_opt_c" />
-            <label for= "qoom_2_opt_c">  c) I and II only</label><br />
+            <li data-component="answer"  id="qoom_2_opt_c">I and II only</li><li data-component="feedback" id="qoom_2_opt_c">I is wrong because <code>y</code>  is a private field and thus can not be directly accessed from code in a client class.</li>
             
-            <input type="radio" name="group1" value="d" id="qoom_2_opt_d" />
-            <label for= "qoom_2_opt_d">  d) II and III only</label><br />
+            <li data-component="answer" data-correct id="qoom_2_opt_d">II and III only</li><li data-component="feedback" id="qoom_2_opt_d">I is wrong because <code>y</code>  is a private field and thus can not be directly accessed from code in a client class.  II is correct because <code>EnhancedItem</code> has <code>setY</code> as a public method.  III is correct because <code>EnhancedItem</code> inherits the public method <code>setX</code> from <code>Item</code>.</li>
             
-            <input type="radio" name="group1" value="e" id="qoom_2_opt_e" />
-            <label for= "qoom_2_opt_e">  e) I, II, and III</label><br />
+            <li data-component="answer"  id="qoom_2_opt_e">I, II, and III</li><li data-component="feedback" id="qoom_2_opt_e">I is wrong because <code>y</code>  is a private field and thus can not be directly accessed from code in a client class.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoom_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoom_2','d',['I is wrong because \u003Ccode\u003Ey\u003C/code\u003E is a private field and thus can not be directly accessed from code in a client class.', 'I is wrong because \u003Ccode\u003Ey\u003C/code\u003E  is a private field and thus can not be directly accessed from code in a client class. II is correct because \u003Ccode\u003EEnhancedItem\u003C/code\u003E has \u003Ccode\u003EsetY\u003C/code\u003E as a public method. III is correct because \u003Ccode\u003EEnhancedItem\u003C/code\u003E inherits the public method \u003Ccode\u003EsetX\u003C/code\u003E from \u003Ccode\u003EItem\u003C/code\u003E.', 'I is wrong because \u003Ccode\u003Ey\u003C/code\u003E  is a private field and thus can not be directly accessed from code in a client class.', 'I is wrong because \u003Ccode\u003Ey\u003C/code\u003E  is a private field and thus can not be directly accessed from code in a client class.  II is correct because \u003Ccode\u003EEnhancedItem\u003C/code\u003E has \u003Ccode\u003EsetY\u003C/code\u003E as a public method.  III is correct because \u003Ccode\u003EEnhancedItem\u003C/code\u003E inherits the public method \u003Ccode\u003EsetX\u003C/code\u003E from \u003Ccode\u003EItem\u003C/code\u003E.', 'I is wrong because \u003Ccode\u003Ey\u003C/code\u003E  is a private field and thus can not be directly accessed from code in a client class.'])">Check Me</button>
-            <button class='btn btn-default' id="qoom_2_bcomp" disabled name="compare" onclick="compareAnswers('qoom_2');">Compare Me</button>
-            </form><br />
-            <div id="qoom_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoom_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoom_3">
             <p>10-13-3: Given the following class declarations and initializations in a client program, which of the following is a correct call to <code class="docutils literal"><span class="pre">method1</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test1</span>
 <span class="o">{</span>
@@ -448,68 +436,42 @@
 <span class="n">Test3</span> <span class="n">t3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Test3</span><span class="o">();</span>
 </pre></div>
 </div>
-<form name="qoom_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoom_3_opt_a" />
-            <label for= "qoom_3_opt_a">  a) t1.method1(t1,t1);</label><br />
+
+            <li data-component="answer"  id="qoom_3_opt_a">t1.method1(t1,t1);</li><li data-component="feedback" id="qoom_3_opt_a">You can't pass an object of class <code>Test1</code> since it is not either an object of type <code>Test2</code> or an object of type <code>Test3</code>. You can pass the specified type or an object that is a subclass of the specified type but <code>Test1</code> is not a subclass of <code>Test2</code> or <code>Test3</code>.</li>
             
-            <input type="radio" name="group1" value="b" id="qoom_3_opt_b" />
-            <label for= "qoom_3_opt_b">  b) t2.method1(t2,t2);</label><br />
+            <li data-component="answer"  id="qoom_3_opt_b">t2.method1(t2,t2);</li><li data-component="feedback" id="qoom_3_opt_b">You can't pass an object of class <code>Test2</code> as a parameter of type <code>Test3</code>. <code>Test2</code> is the parent class of <code>Test3</code> not a subclass. You can pass an object of the specified type or an object of any subclass.</li>
             
-            <input type="radio" name="group1" value="c" id="qoom_3_opt_c" />
-            <label for= "qoom_3_opt_c">  c) t3.method1(t1,t1);</label><br />
+            <li data-component="answer"  id="qoom_3_opt_c">t3.method1(t1,t1);</li><li data-component="feedback" id="qoom_3_opt_c">You can't pass an object of class <code>Test1</code> since it is not either an object of type <code>Test2</code> or an object of type <code>Test3</code>. You can pass the specified type or an object that is a subclass of the specified type but <code>Test1</code> is not a subclass of <code>Test2</code> or <code>Test3</code>.</li>
             
-            <input type="radio" name="group1" value="d" id="qoom_3_opt_d" />
-            <label for= "qoom_3_opt_d">  d) t2.method1(t3,t2);</label><br />
+            <li data-component="answer"  id="qoom_3_opt_d">t2.method1(t3,t2);</li><li data-component="feedback" id="qoom_3_opt_d">You can't pass <code>t2</code> as an object of type <code>Test3</code> since it is an object of class <code>Test2</code> and class <code>Test2</code> is not either class <code>Test3</code> or a subclass of class <code>Test3</code>. Class <code>Test2</code> is the parent of class <code>Test3</code>.</li>
             
-            <input type="radio" name="group1" value="e" id="qoom_3_opt_e" />
-            <label for= "qoom_3_opt_e">  e) t3.method1(t3,t3);</label><br />
+            <li data-component="answer" data-correct id="qoom_3_opt_e">t3.method1(t3,t3);</li><li data-component="feedback" id="qoom_3_opt_e">Since <code>method1</code> is a public method of class <code>Test1</code> objects of any subclasses of <code>Test1</code> can invoke the method. So, it can be invoked on <code>t3</code> since it is an object of <code>Test3</code> and this is a subclass of <code>Test1</code>.  And, since <code>method1</code> takes an object of class <code>Test2</code> and <code>Test3</code> as parameters. This actually means it can take an object of <code>Test2</code> or any subclass of <code>Test2</code> and an object of <code>Test3</code> or any subclass of <code>Test3</code>. So it can take <code>t3</code> which is an object of class <code>Test3</code> as an object of <code>Test2</code> since <code>Test3</code> is a subclass of <code>Test2</code>.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoom_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoom_3','e',['You can\u0027t pass an object of class \u003Ccode\u003ETest1\u003C/code\u003E since it is not either an object of type \u003Ccode\u003ETest2\u003C/code\u003E or an object of type \u003Ccode\u003ETest3\u003C/code\u003E. You can pass the specified type or an object that is a subclass of the specified type but \u003Ccode\u003ETest1\u003C/code\u003E is not a subclass of \u003Ccode\u003ETest2\u003C/code\u003E or \u003Ccode\u003ETest3\u003C/code\u003E.', 'You can\u0027t pass an object of class \u003Ccode\u003ETest2\u003C/code\u003E as a parameter of type \u003Ccode\u003ETest3\u003C/code\u003E. \u003Ccode\u003ETest2\u003C/code\u003E is the parent class of \u003Ccode\u003ETest3\u003C/code\u003E not a subclass. You can pass an object of the specified type or an object of any subclass.', 'You can\u0027t pass an object of class \u003Ccode\u003ETest1\u003C/code\u003E since it is not either an object of type \u003Ccode\u003ETest2\u003C/code\u003E or an object of type \u003Ccode\u003ETest3\u003C/code\u003E. You can pass the specified type or an object that is a subclass of the specified type but \u003Ccode\u003ETest1\u003C/code\u003E is not a subclass of \u003Ccode\u003ETest2\u003C/code\u003E or \u003Ccode\u003ETest3\u003C/code\u003E.', 'You can\u0027t pass \u003Ccode\u003Et2\u003C/code\u003E as an object of type \u003Ccode\u003ETest3\u003C/code\u003E since it is an object of class \u003Ccode\u003ETest2\u003C/code\u003E and class \u003Ccode\u003ETest2\u003C/code\u003E is not either class \u003Ccode\u003ETest3\u003C/code\u003E or a subclass of class \u003Ccode\u003ETest3\u003C/code\u003E. Class \u003Ccode\u003ETest2\u003C/code\u003E is the parent of class \u003Ccode\u003ETest3\u003C/code\u003E.', 'Since \u003Ccode\u003Emethod1\u003C/code\u003E is a public method of class \u003Ccode\u003ETest1\u003C/code\u003E objects of any subclasses of \u003Ccode\u003ETest1\u003C/code\u003E can invoke the method. So, it can be invoked on \u003Ccode\u003Et3\u003C/code\u003E since it is an object of \u003Ccode\u003ETest3\u003C/code\u003E and this is a subclass of \u003Ccode\u003ETest1\u003C/code\u003E.  And, since \u003Ccode\u003Emethod1\u003C/code\u003E takes an object of class \u003Ccode\u003ETest2\u003C/code\u003E and \u003Ccode\u003ETest3\u003C/code\u003E as parameters. This actually means it can take an object of \u003Ccode\u003ETest2\u003C/code\u003E or any subclass of \u003Ccode\u003ETest2\u003C/code\u003E and an object of \u003Ccode\u003ETest3\u003C/code\u003E or any subclass of \u003Ccode\u003ETest3\u003C/code\u003E. So it can take \u003Ccode\u003Et3\u003C/code\u003E which is an object of class \u003Ccode\u003ETest3\u003C/code\u003E as an object of \u003Ccode\u003ETest2\u003C/code\u003E since \u003Ccode\u003ETest3\u003C/code\u003E is a subclass of \u003Ccode\u003ETest2\u003C/code\u003E.'])">Check Me</button>
-            <button class='btn btn-default' id="qoom_3_bcomp" disabled name="compare" onclick="compareAnswers('qoom_3');">Compare Me</button>
-            </form><br />
-            <div id="qoom_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoom_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoom_4">
             <p>10-13-4:  If you have a parent class <code class="docutils literal"><span class="pre">Animal</span></code> that has a method <code class="docutils literal"><span class="pre">speak()</span></code> which returns: Awk. <code class="docutils literal"><span class="pre">Cat</span></code> has a <code class="docutils literal"><span class="pre">speak</span></code> method that returns: Meow.  <code class="docutils literal"><span class="pre">Bird</span></code> does not have a <code class="docutils literal"><span class="pre">speak</span></code> method.  <code class="docutils literal"><span class="pre">Dog</span></code> has a <code class="docutils literal"><span class="pre">speak</span></code> method that returns: Woof.  <code class="docutils literal"><span class="pre">Pig</span></code> does not have a <code class="docutils literal"><span class="pre">speak</span></code> method.  <code class="docutils literal"><span class="pre">Cow</span></code> has a <code class="docutils literal"><span class="pre">speak</span></code> method that returns: Moo.   What is the output from looping through the array <code class="docutils literal"><span class="pre">a</span></code> created below and asking each element to <code class="docutils literal"><span class="pre">speak()</span></code>?</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span class="n">Animal</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="o">{</span> <span class="k">new</span> <span class="n">Cat</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Cow</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Pig</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Bird</span><span class="o">()</span> <span class="o">}</span>
 </pre></div>
 </div>
 </div></blockquote>
-<form name="qoom_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoom_4_opt_a" />
-            <label for= "qoom_4_opt_a">  a) Meow Moo Woof Awk Awk</label><br />
+
+            <li data-component="answer" data-correct id="qoom_4_opt_a">Meow Moo Woof Awk Awk</li><li data-component="feedback" id="qoom_4_opt_a">Objects keep a reference to the class that created them. So, even if you put them in an array of <code>Animal</code> objects, they know what they are and all methods are resolved starting with the class of the object. <code>Bird</code> and <code>Pig</code> do not override speak so the <code>speak</code> method in <code>Animal</code> will execute.</li>
             
-            <input type="radio" name="group1" value="b" id="qoom_4_opt_b" />
-            <label for= "qoom_4_opt_b">  b) Awk Awk Awk Awk Awk</label><br />
+            <li data-component="answer"  id="qoom_4_opt_b">Awk Awk Awk Awk Awk</li><li data-component="feedback" id="qoom_4_opt_b">Methods are always resolved starting with the class of the object, so <code>Cat</code>, <code>Cow</code>, and <code>Dog</code> will all execute their overridden <code>speak</code> methods, so the output will be: Meow Moo Woof Awk Awk.</li>
             
-            <input type="radio" name="group1" value="c" id="qoom_4_opt_c" />
-            <label for= "qoom_4_opt_c">  c) This will not compile</label><br />
+            <li data-component="answer"  id="qoom_4_opt_c">This will not compile</li><li data-component="feedback" id="qoom_4_opt_c">Because <code>Bird</code>, <code>Cow</code>, <code>Cat</code>, <code>Dog</code>, and <code>Pig</code> are subclasses of <code>Animal</code>, they can be stored in an array declared as <code>Animal</code> without any compile time errors.</li>
             
-            <input type="radio" name="group1" value="d" id="qoom_4_opt_d" />
-            <label for= "qoom_4_opt_d">  d) This will have runtime errors</label><br />
+            <li data-component="answer"  id="qoom_4_opt_d">This will have runtime errors</li><li data-component="feedback" id="qoom_4_opt_d">Because <code>Bird</code>, <code>Cow</code>, <code>Cat</code>, <code>Dog</code>, and <code>Pig</code> are subclasses of <code>Animal</code>, they can be stored in an array declared as <code>Animal</code> without any runtime errors.</li>
             
-            <input type="radio" name="group1" value="e" id="qoom_4_opt_e" />
-            <label for= "qoom_4_opt_e">  e) Meow Moo Woof Oink Awk</label><br />
+            <li data-component="answer"  id="qoom_4_opt_e">Meow Moo Woof Oink Awk</li><li data-component="feedback" id="qoom_4_opt_e">The <code>Pig</code> class did not override the <code>speak</code> method, so it will use the method from <code>Animal</code>, thus the output should be: Meow Moo Woof Awk Awk</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoom_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoom_4','a',['Objects keep a reference to the class that created them. So, even if you put them in an array of \u003Ccode\u003EAnimal\u003C/code\u003E objects, they know what they are and all methods are resolved starting with the class of the object. \u003Ccode\u003EBird\u003C/code\u003E and \u003Ccode\u003EPig\u003C/code\u003E do not override speak so the \u003Ccode\u003Espeak\u003C/code\u003E method in \u003Ccode\u003EAnimal\u003C/code\u003E will execute.', 'Methods are always resolved starting with the class of the object, so \u003Ccode\u003ECat\u003C/code\u003E, \u003Ccode\u003ECow\u003C/code\u003E, and \u003Ccode\u003EDog\u003C/code\u003E will all execute their overridden \u003Ccode\u003Espeak\u003C/code\u003E methods, so the output will be: Meow Moo Woof Awk Awk.', 'Because \u003Ccode\u003EBird\u003C/code\u003E, \u003Ccode\u003ECow\u003C/code\u003E, \u003Ccode\u003ECat\u003C/code\u003E, \u003Ccode\u003EDog\u003C/code\u003E, and \u003Ccode\u003EPig\u003C/code\u003E are subclasses of \u003Ccode\u003EAnimal\u003C/code\u003E, they can be stored in an array declared as \u003Ccode\u003EAnimal\u003C/code\u003E without any compile time errors.', 'Because \u003Ccode\u003EBird\u003C/code\u003E, \u003Ccode\u003ECow\u003C/code\u003E, \u003Ccode\u003ECat\u003C/code\u003E, \u003Ccode\u003EDog\u003C/code\u003E, and \u003Ccode\u003EPig\u003C/code\u003E are subclasses of \u003Ccode\u003EAnimal\u003C/code\u003E, they can be stored in an array declared as \u003Ccode\u003EAnimal\u003C/code\u003E without any runtime errors.', 'The \u003Ccode\u003EPig\u003C/code\u003E class did not override the \u003Ccode\u003Espeak\u003C/code\u003E method, so it will use the method from \u003Ccode\u003EAnimal\u003C/code\u003E, thus the output should be: Meow Moo Woof Awk Awk'])">Check Me</button>
-            <button class='btn btn-default' id="qoom_4_bcomp" disabled name="compare" onclick="compareAnswers('qoom_4');">Compare Me</button>
-            </form><br />
-            <div id="qoom_4_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoom_5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoom_5">
             <p>10-13-5: Given the following class declarations and code, what is the result when the code is run?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span>
 <span class="o">{</span>
@@ -539,34 +501,21 @@
 <span class="n">fastCar</span><span class="o">.</span><span class="na">display</span><span class="o">();</span>
 </pre></div>
 </div>
-<form name="qoom_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoom_5_opt_a" />
-            <label for= "qoom_5_opt_a">  a) The code compiles and runs with no errors, the output is 5 6 5 6</label><br />
+
+            <li data-component="answer"  id="qoom_5_opt_a">The code compiles and runs with no errors, the output is 5 6 5 6</li><li data-component="feedback" id="qoom_5_opt_a"><code>RaceCar</code>, while it inherits methods from <code>Car</code> via inheritance, has a separate and different constructor that sets the initial fuel amount to <code>2 * g</code>, thus in this case, <code>fuel</code> for <code>fastCar</code> is set to <code>10</code> initially.</li>
             
-            <input type="radio" name="group1" value="b" id="qoom_5_opt_b" />
-            <label for= "qoom_5_opt_b">  b) The code compiles and runs with no errors, the output is: 5 6 10 11</label><br />
+            <li data-component="answer" data-correct id="qoom_5_opt_b">The code compiles and runs with no errors, the output is: 5 6 10 11</li><li data-component="feedback" id="qoom_5_opt_b">The code compiles correctly, and because <code>RaceCar</code> extends the <code>Car</code> class, all the public methods of <code>Car</code> can be used by <code>RaceCar</code> objects. Also, a variable <code>Car</code> can refer to a <code>Car</code> object or an object of any subclass of <code>Car</code>. An object always knows the class that created it, so even though <code>fastCar</code> is declared to be a <code>Car</code> the constructor that is executed is the one for <code>RaceCar</code>.</li>
             
-            <input type="radio" name="group1" value="c" id="qoom_5_opt_c" />
-            <label for= "qoom_5_opt_c">  c) The code compiles and runs with no errors, the output is 10 11 10 11</label><br />
+            <li data-component="answer"  id="qoom_5_opt_c">The code compiles and runs with no errors, the output is 10 11 10 11</li><li data-component="feedback" id="qoom_5_opt_c">The variable <code>car</code> is a <code>Car</code> object, so the constructor used is not the same as the <code>fastCar</code> object which is a <code>RaceCar</code>. The <code>car</code> constructor does not change the passed in parameter, so it is set to <code>5</code> initially.</li>
             
-            <input type="radio" name="group1" value="d" id="qoom_5_opt_d" />
-            <label for= "qoom_5_opt_d">  d) The code won't compile.</label><br />
+            <li data-component="answer"  id="qoom_5_opt_d">The code won't compile.</li><li data-component="feedback" id="qoom_5_opt_d"><code>RaceCar</code> inherits from the <code>Car</code> class so all the public methods in <code>Car</code> can be accessed by any object of the <code>RaceCar</code> class.</li>
             
-            <input type="radio" name="group1" value="e" id="qoom_5_opt_e" />
-            <label for= "qoom_5_opt_e">  e) You get a runtime error <code>ClassCastException</code>, when <code>fastCar.addFuel()</code> is executed.</label><br />
+            <li data-component="answer"  id="qoom_5_opt_e">You get a runtime error <code>ClassCastException</code>, when <code>fastCar.addFuel()</code> is executed.</li><li data-component="feedback" id="qoom_5_opt_e"><code>RaceCar</code> inherits from the <code>Car</code> class so all the public methods in <code>Car</code> can be accessed by any object of the <code>RaceCar</code> class.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoom_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoom_5','b',['\u003Ccode\u003ERaceCar\u003C/code\u003E, while it inherits methods from \u003Ccode\u003ECar\u003C/code\u003E via inheritance, has a separate and different constructor that sets the initial fuel amount to \u003Ccode\u003E2 * g\u003C/code\u003E, thus in this case, \u003Ccode\u003Efuel\u003C/code\u003E for \u003Ccode\u003EfastCar\u003C/code\u003E is set to \u003Ccode\u003E10\u003C/code\u003E initially.', 'The code compiles correctly, and because \u003Ccode\u003ERaceCar\u003C/code\u003E extends the \u003Ccode\u003ECar\u003C/code\u003E class, all the public methods of \u003Ccode\u003ECar\u003C/code\u003E can be used by \u003Ccode\u003ERaceCar\u003C/code\u003E objects. Also, a variable \u003Ccode\u003ECar\u003C/code\u003E can refer to a \u003Ccode\u003ECar\u003C/code\u003E object or an object of any subclass of \u003Ccode\u003ECar\u003C/code\u003E. An object always knows the class that created it, so even though \u003Ccode\u003EfastCar\u003C/code\u003E is declared to be a \u003Ccode\u003ECar\u003C/code\u003E the constructor that is executed is the one for \u003Ccode\u003ERaceCar\u003C/code\u003E.', 'The variable \u003Ccode\u003Ecar\u003C/code\u003E is a \u003Ccode\u003ECar\u003C/code\u003E object, so the constructor used is not the same as the \u003Ccode\u003EfastCar\u003C/code\u003E object which is a \u003Ccode\u003ERaceCar\u003C/code\u003E. The \u003Ccode\u003Ecar\u003C/code\u003E constructor does not change the passed in parameter, so it is set to \u003Ccode\u003E5\u003C/code\u003E initially.', '\u003Ccode\u003ERaceCar\u003C/code\u003E inherits from the \u003Ccode\u003ECar\u003C/code\u003E class so all the public methods in \u003Ccode\u003ECar\u003C/code\u003E can be accessed by any object of the \u003Ccode\u003ERaceCar\u003C/code\u003E class.', '\u003Ccode\u003ERaceCar\u003C/code\u003E inherits from the \u003Ccode\u003ECar\u003C/code\u003E class so all the public methods in \u003Ccode\u003ECar\u003C/code\u003E can be accessed by any object of the \u003Ccode\u003ERaceCar\u003C/code\u003E class.'])">Check Me</button>
-            <button class='btn btn-default' id="qoom_5_bcomp" disabled name="compare" onclick="compareAnswers('qoom_5');">Compare Me</button>
-            </form><br />
-            <div id="qoom_5_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoom_6" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoom_6">
             <p>10-13-6: Given the following class declarations and code, what is the result when the code is run?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span>
 <span class="o">{</span>
@@ -598,32 +547,19 @@
 <span class="n">III</span><span class="o">.</span> <span class="o">((</span><span class="n">Dictionary</span><span class="o">)</span> <span class="n">b</span><span class="o">).</span><span class="na">getDefinition</span><span class="o">(</span><span class="s">&quot;wonderful&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qoom_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoom_6_opt_a" />
-            <label for= "qoom_6_opt_a">  a) I only</label><br />
+
+            <li data-component="answer"  id="qoom_6_opt_a">I only</li><li data-component="feedback" id="qoom_6_opt_a">Both I and III are correct. I is correct because variable <code>b</code> has been declared to be an object of the class <code>Book</code> so you can invoke any public methods that are defined in the <code>Book</code> class or in parents of <code>Book</code>. II is not correct because you can't invoke methods in the <code>Dictionary</code> class directly on <code>b</code> since <code>b</code> is declared to be of type <code>Book</code> not type <code>Dictionary</code> and <code>Dictionary</code> is a subclass of <code>Book</code> not a parent class of <code>Book</code>. III is correct because you can cast <code>b</code> to type <code>Dictionary</code> and then invoke public methods in <code>Dictionary</code>.</li>
             
-            <input type="radio" name="group1" value="b" id="qoom_6_opt_b" />
-            <label for= "qoom_6_opt_b">  b) II only</label><br />
+            <li data-component="answer"  id="qoom_6_opt_b">II only</li><li data-component="feedback" id="qoom_6_opt_b">You can't invoke methods in the <code>Dictionary</code> class directly on <code>b</code> since <code>b</code> is declared to be of type <code>Book</code> not type <code>Dictionary</code> and <code>Dictionary</code> is a subclass of <code>Book</code> not a parent class of <code>Book</code>. The compiler checks that the method exists on the declared class type, not the run-time type of the object.</li>
             
-            <input type="radio" name="group1" value="c" id="qoom_6_opt_c" />
-            <label for= "qoom_6_opt_c">  c) I and III only</label><br />
+            <li data-component="answer" data-correct id="qoom_6_opt_c">I and III only</li><li data-component="feedback" id="qoom_6_opt_c">I is correct because variable <code>b</code> has been declared to be an object of the class <code>Book</code> so you can invoke any public methods that are defined in the <code>Book</code> class or in parents of <code>Book</code>. II is not correct because you can't invoke methods in the <code>Dictionary</code> class directly on <code>b</code> since <code>b</code> is declared to be of type <code>Book</code> not type <code>Dictionary</code> and <code>Dictionary</code> is a subclass of <code>Book</code> not a parent class of <code>Book</code>. III is correct because you can cast <code>b</code> to type <code>Dictionary</code> and then invoke public methods in <code>Dictionary</code>.</li>
             
-            <input type="radio" name="group1" value="d" id="qoom_6_opt_d" />
-            <label for= "qoom_6_opt_d">  d) III only</label><br />
+            <li data-component="answer"  id="qoom_6_opt_d">III only</li><li data-component="feedback" id="qoom_6_opt_d">I is also correct.</li>
             
-            <input type="radio" name="group1" value="e" id="qoom_6_opt_e" />
-            <label for= "qoom_6_opt_e">  e) I, II, and III</label><br />
+            <li data-component="answer"  id="qoom_6_opt_e">I, II, and III</li><li data-component="feedback" id="qoom_6_opt_e">You can't invoke methods in the <code>Dictionary</code> class directly on <code>b</code> since <code>b</code> is declared to be of type <code>Book</code> not type <code>Dictionary</code> and <code>Dictionary</code> is a subclass of <code>Book</code> not a parent class of <code>Book</code>. The compiler checks that the method exists on the declared class, not the run-time class.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoom_6');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoom_6','c',['Both I and III are correct. I is correct because variable \u003Ccode\u003Eb\u003C/code\u003E has been declared to be an object of the class \u003Ccode\u003EBook\u003C/code\u003E so you can invoke any public methods that are defined in the \u003Ccode\u003EBook\u003C/code\u003E class or in parents of \u003Ccode\u003EBook\u003C/code\u003E. II is not correct because you can\u0027t invoke methods in the \u003Ccode\u003EDictionary\u003C/code\u003E class directly on \u003Ccode\u003Eb\u003C/code\u003E since \u003Ccode\u003Eb\u003C/code\u003E is declared to be of type \u003Ccode\u003EBook\u003C/code\u003E not type \u003Ccode\u003EDictionary\u003C/code\u003E and \u003Ccode\u003EDictionary\u003C/code\u003E is a subclass of \u003Ccode\u003EBook\u003C/code\u003E not a parent class of \u003Ccode\u003EBook\u003C/code\u003E. III is correct because you can cast \u003Ccode\u003Eb\u003C/code\u003E to type \u003Ccode\u003EDictionary\u003C/code\u003E and then invoke public methods in \u003Ccode\u003EDictionary\u003C/code\u003E.', 'You can\u0027t invoke methods in the \u003Ccode\u003EDictionary\u003C/code\u003E class directly on \u003Ccode\u003Eb\u003C/code\u003E since \u003Ccode\u003Eb\u003C/code\u003E is declared to be of type \u003Ccode\u003EBook\u003C/code\u003E not type \u003Ccode\u003EDictionary\u003C/code\u003E and \u003Ccode\u003EDictionary\u003C/code\u003E is a subclass of \u003Ccode\u003EBook\u003C/code\u003E not a parent class of \u003Ccode\u003EBook\u003C/code\u003E. The compiler checks that the method exists on the declared class type, not the run\u002Dtime type of the object.', 'I is correct because variable \u003Ccode\u003Eb\u003C/code\u003E has been declared to be an object of the class \u003Ccode\u003EBook\u003C/code\u003E so you can invoke any public methods that are defined in the \u003Ccode\u003EBook\u003C/code\u003E class or in parents of \u003Ccode\u003EBook\u003C/code\u003E. II is not correct because you can\u0027t invoke methods in the \u003Ccode\u003EDictionary\u003C/code\u003E class directly on \u003Ccode\u003Eb\u003C/code\u003E since \u003Ccode\u003Eb\u003C/code\u003E is declared to be of type \u003Ccode\u003EBook\u003C/code\u003E not type \u003Ccode\u003EDictionary\u003C/code\u003E and \u003Ccode\u003EDictionary\u003C/code\u003E is a subclass of \u003Ccode\u003EBook\u003C/code\u003E not a parent class of \u003Ccode\u003EBook\u003C/code\u003E. III is correct because you can cast \u003Ccode\u003Eb\u003C/code\u003E to type \u003Ccode\u003EDictionary\u003C/code\u003E and then invoke public methods in \u003Ccode\u003EDictionary\u003C/code\u003E.', 'I is also correct.', 'You can\u0027t invoke methods in the \u003Ccode\u003EDictionary\u003C/code\u003E class directly on \u003Ccode\u003Eb\u003C/code\u003E since \u003Ccode\u003Eb\u003C/code\u003E is declared to be of type \u003Ccode\u003EBook\u003C/code\u003E not type \u003Ccode\u003EDictionary\u003C/code\u003E and \u003Ccode\u003EDictionary\u003C/code\u003E is a subclass of \u003Ccode\u003EBook\u003C/code\u003E not a parent class of \u003Ccode\u003EBook\u003C/code\u003E. The compiler checks that the method exists on the declared class, not the run\u002Dtime class.'])">Check Me</button>
-            <button class='btn btn-default' id="qoom_6_bcomp" disabled name="compare" onclick="compareAnswers('qoom_6');">Compare Me</button>
-            </form><br />
-            <div id="qoom_6_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

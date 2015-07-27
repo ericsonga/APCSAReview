@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -397,83 +411,48 @@
 </td></tr></table></div>
 <p>To see this executing using the Java Visualizer click on this <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&amp;mode=display&amp;curInstr=0">link</a></p>
 
-            <div id="qbs_1" class="alert alert-warning">
-            12-3-1: Which will cause the <em>shortest</em> execution of a binary search looking for a value in an array of integers?<form name="qbs_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qbs_1_opt_a" />
-            <label for= "qbs_1_opt_a">  a) The value is the first one in the array</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qbs_1">
+            12-3-1: Which will cause the <em>shortest</em> execution of a binary search looking for a value in an array of integers?
+            <li data-component="answer"  id="qbs_1_opt_a">The value is the first one in the array</li><li data-component="feedback" id="qbs_1_opt_a">This would be true for sequential search, not binary.</li>
             
-            <input type="radio" name="group1" value="b" id="qbs_1_opt_b" />
-            <label for= "qbs_1_opt_b">  b) The value is in the middle of the array</label><br />
+            <li data-component="answer" data-correct id="qbs_1_opt_b">The value is in the middle of the array</li><li data-component="feedback" id="qbs_1_opt_b">If the value is in the middle of the array the binary search will return after one iteration of the loop.</li>
             
-            <input type="radio" name="group1" value="c" id="qbs_1_opt_c" />
-            <label for= "qbs_1_opt_c">  c) The value is the last one in the array</label><br />
+            <li data-component="answer"  id="qbs_1_opt_c">The value is the last one in the array</li><li data-component="feedback" id="qbs_1_opt_c">How would that be the shortest in a binary search?</li>
             
-            <input type="radio" name="group1" value="d" id="qbs_1_opt_d" />
-            <label for= "qbs_1_opt_d">  d) The value isn't in the array</label><br />
+            <li data-component="answer"  id="qbs_1_opt_d">The value isn't in the array</li><li data-component="feedback" id="qbs_1_opt_d">This is true for the longest execution time, but we are looking for the shortest.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qbs_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qbs_1','b',['This would be true for sequential search, not binary.', 'If the value is in the middle of the array the binary search will return after one iteration of the loop.', 'How would that be the shortest in a binary search?', 'This is true for the longest execution time, but we are looking for the shortest.'])">Check Me</button>
-            <button class='btn btn-default' id="qbs_1_bcomp" disabled name="compare" onclick="compareAnswers('qbs_1');">Compare Me</button>
-            </form><br />
-            <div id="qbs_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qbs_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qbs_2">
             <p>12-3-2: Which of the following condition must be true in order to search for a value using binary search?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">I</span><span class="o">.</span> <span class="n">The</span> <span class="n">values</span> <span class="n">in</span> <span class="n">the</span> <span class="n">array</span> <span class="n">must</span> <span class="n">be</span> <span class="n">integers</span><span class="o">.</span>
 <span class="n">II</span><span class="o">.</span> <span class="n">The</span> <span class="n">values</span> <span class="n">in</span> <span class="n">the</span> <span class="n">array</span> <span class="n">must</span> <span class="n">be</span> <span class="n">in</span> <span class="n">sorted</span> <span class="n">order</span><span class="o">.</span>
 <span class="n">III</span><span class="o">.</span> <span class="n">The</span> <span class="n">array</span> <span class="n">must</span> <span class="n">not</span> <span class="n">contain</span> <span class="n">duplicate</span> <span class="n">values</span><span class="o">.</span>
 </pre></div>
 </div>
-<form name="qbs_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qbs_2_opt_a" />
-            <label for= "qbs_2_opt_a">  a) I only</label><br />
+
+            <li data-component="answer"  id="qbs_2_opt_a">I only</li><li data-component="feedback" id="qbs_2_opt_a">You can use a binary search on any type of data that can be compared, but the data must be in order.</li>
             
-            <input type="radio" name="group1" value="b" id="qbs_2_opt_b" />
-            <label for= "qbs_2_opt_b">  b) I and II</label><br />
+            <li data-component="answer"  id="qbs_2_opt_b">I and II</li><li data-component="feedback" id="qbs_2_opt_b">You can use a binary search on any type of data that can be compared.</li>
             
-            <input type="radio" name="group1" value="c" id="qbs_2_opt_c" />
-            <label for= "qbs_2_opt_c">  c) II only</label><br />
+            <li data-component="answer" data-correct id="qbs_2_opt_c">II only</li><li data-component="feedback" id="qbs_2_opt_c">The only requirement for using a Binary Search is that the values must be ordered.</li>
             
-            <input type="radio" name="group1" value="d" id="qbs_2_opt_d" />
-            <label for= "qbs_2_opt_d">  d) II and III</label><br />
+            <li data-component="answer"  id="qbs_2_opt_d">II and III</li><li data-component="feedback" id="qbs_2_opt_d">The array can contain duplicate values.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qbs_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qbs_2','c',['You can use a binary search on any type of data that can be compared, but the data must be in order.', 'You can use a binary search on any type of data that can be compared.', 'The only requirement for using a Binary Search is that the values must be ordered.', 'The array can contain duplicate values.'])">Check Me</button>
-            <button class='btn btn-default' id="qbs_2_bcomp" disabled name="compare" onclick="compareAnswers('qbs_2');">Compare Me</button>
-            </form><br />
-            <div id="qbs_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qbs_3" class="alert alert-warning">
-            12-3-3: How many times would the while loop execute if you first do int[] arr = {2, 10, 23, 31, 55, 86} and then call  binarySearch(arr,55)?<form name="qbs_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qbs_3_opt_a" />
-            <label for= "qbs_3_opt_a">  a) 2</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qbs_3">
+            12-3-3: How many times would the while loop execute if you first do int[] arr = {2, 10, 23, 31, 55, 86} and then call  binarySearch(arr,55)?
+            <li data-component="answer" data-correct id="qbs_3_opt_a">2</li><li data-component="feedback" id="qbs_3_opt_a">It will first compare with the value at index 2 and then index 4 and then return 4.</li>
             
-            <input type="radio" name="group1" value="b" id="qbs_3_opt_b" />
-            <label for= "qbs_3_opt_b">  b) 1</label><br />
+            <li data-component="answer"  id="qbs_3_opt_b">1</li><li data-component="feedback" id="qbs_3_opt_b">This would be true if we were looking for 23.</li>
             
-            <input type="radio" name="group1" value="c" id="qbs_3_opt_c" />
-            <label for= "qbs_3_opt_c">  c) 3</label><br />
+            <li data-component="answer"  id="qbs_3_opt_c">3</li><li data-component="feedback" id="qbs_3_opt_c">This would be true if we were looking for 31.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qbs_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qbs_3','a',['It will first compare with the value at index 2 and then index 4 and then return 4.', 'This would be true if we were looking for 23.', 'This would be true if we were looking for 31.'])">Check Me</button>
-            <button class='btn btn-default' id="qbs_3_bcomp" disabled name="compare" onclick="compareAnswers('qbs_3');">Compare Me</button>
-            </form><br />
-            <div id="qbs_3_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

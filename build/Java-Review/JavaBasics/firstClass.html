@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -339,22 +353,8 @@ not have to have <em>any</em> of these items.  The following would compile, but 
 </div>
 <p>The class <code class="docutils literal"><span class="pre">FirstClass</span></code> doesn&#8217;t have anything inside of it, so the computer wouldn&#8217;t know what to do if we asked it to execute the class.</p>
 <p>When you ask the Java run-time to <em>run</em> a class (java ClassName) it will start execution in the <code class="docutils literal"><span class="pre">main</span></code> method.  Click on the <em>Run</em> button to have the computer execute the <code class="docutils literal"><span class="pre">main</span></code> method in the following class.</p>
-<div id="cont"></div>
-<div id="lcfc1" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfc1_runb" onclick="Jobe.runlive('lcfc1', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfc1_saveb"
-                onclick="saveEditor('lcfc1');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfc1_loadb"
-                onclick="requestCode('lcfc1');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfc1_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfc1_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfc1 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class SecondClass
 {
    public static void main(String[] args)
@@ -362,38 +362,11 @@ public class SecondClass
       System.out.println("Hi there!");
    }
 }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfc1_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfc1 )</span> </p>
-
-    
-</div><p>The class <code class="docutils literal"><span class="pre">SecondClass</span></code> isn&#8217;t very object-oriented.  The only thing in it is the <code class="docutils literal"><span class="pre">main</span></code> method which is a <strong>class method</strong> (one that works on the class), not an <strong>object method</strong> (one that works on the current object).  Let&#8217;s create a class where each object of the class represents a person.  Every person has a name and probably has a cell phone number.  We can store this data in <strong>fields</strong> in a Person object.  We provide <strong>methods</strong> to get and set the data.  We provide a <strong>constructor</strong> to initialize the data when the object is first created.</p>
+</pre>
+<p>The class <code class="docutils literal"><span class="pre">SecondClass</span></code> isn&#8217;t very object-oriented.  The only thing in it is the <code class="docutils literal"><span class="pre">main</span></code> method which is a <strong>class method</strong> (one that works on the class), not an <strong>object method</strong> (one that works on the current object).  Let&#8217;s create a class where each object of the class represents a person.  Every person has a name and probably has a cell phone number.  We can store this data in <strong>fields</strong> in a Person object.  We provide <strong>methods</strong> to get and set the data.  We provide a <strong>constructor</strong> to initialize the data when the object is first created.</p>
 <p>Go ahead and click the <em>Run</em> button to see what gets printed.</p>
-<div id="cont"></div>
-<div id="lcfc2" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfc2_runb" onclick="Jobe.runlive('lcfc2', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfc2_saveb"
-                onclick="saveEditor('lcfc2');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfc2_loadb"
-                onclick="requestCode('lcfc2');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfc2_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfc2_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfc2 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class Person
 {
   /// fields ////////////////
@@ -441,21 +414,8 @@ public class Person
   }
 
 }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfc2_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfc2 )</span> </p>
-
-    
-</div></div>
+</pre>
+</div>
 <div class="section" id="running-a-java-program">
 <h1>Running a Java Program<a class="headerlink" href="#running-a-java-program" title="Permalink to this headline">¶</a></h1>
 <p id="index-1">When you execute a Java program, you give it the name of the class that has the <code class="docutils literal"><span class="pre">main</span></code> method to execute and execution will start there.  A <code class="docutils literal"><span class="pre">main</span></code> method should create objects

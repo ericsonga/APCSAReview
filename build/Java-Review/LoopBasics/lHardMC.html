@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Hard Multiple Choice Questions<a class="headerlink" href="#hard-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are harder than most of those that you will usually see on the AP CS A exam.</p>
 
-            <div id="qlh_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlh_1">
             <p>6-8-1: Assume that nums has been created as an ArrayList object and initially contains the following Integer values: [o, 0, 4, 2, 5, 0, 3, 0]. What will nums contain as a result of executing the following method numQuest?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">nums</span><span class="o">;</span>
 
@@ -339,34 +353,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qlh_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlh_1_opt_a" />
-            <label for= "qlh_1_opt_a">  a) [0, 0, 4, 2, 5, 0, 3, 0]</label><br />
+
+            <li data-component="answer"  id="qlh_1_opt_a">[0, 0, 4, 2, 5, 0, 3, 0]</li><li data-component="feedback" id="qlh_1_opt_a">This shows the original values but this code does remove some zeros so this can't be right.</li>
             
-            <input type="radio" name="group1" value="b" id="qlh_1_opt_b" />
-            <label for= "qlh_1_opt_b">  b) [3, 5, 2, 4, 0, 0, 0, 0]</label><br />
+            <li data-component="answer"  id="qlh_1_opt_b">[3, 5, 2, 4, 0, 0, 0, 0]</li><li data-component="feedback" id="qlh_1_opt_b">This shows all zeros at the end, but this code removes 0's so this can't be right.</li>
             
-            <input type="radio" name="group1" value="c" id="qlh_1_opt_c" />
-            <label for= "qlh_1_opt_c">  c) [0, 0, 0, 0, 4, 2, 5, 3]</label><br />
+            <li data-component="answer"  id="qlh_1_opt_c">[0, 0, 0, 0, 4, 2, 5, 3]</li><li data-component="feedback" id="qlh_1_opt_c">This shows all zeros at the beginning, but this code removes zeros so this can't be right.</li>
             
-            <input type="radio" name="group1" value="d" id="qlh_1_opt_d" />
-            <label for= "qlh_1_opt_d">  d) [4, 2, 5, 3]</label><br />
+            <li data-component="answer"  id="qlh_1_opt_d">[4, 2, 5, 3]</li><li data-component="feedback" id="qlh_1_opt_d">This shows all zeros removed. This would be correct if k was only incremented if a value wasn't removed.</li>
             
-            <input type="radio" name="group1" value="e" id="qlh_1_opt_e" />
-            <label for= "qlh_1_opt_e">  e) [0, 4, 2, 5, 3]</label><br />
+            <li data-component="answer" data-correct id="qlh_1_opt_e">[0, 4, 2, 5, 3]</li><li data-component="feedback" id="qlh_1_opt_e">This code will loop through the array list and if the current value at the current index (k) is 0, it will remove it. When you remove a value from an array list, it moves all values to the right of that down one. So the first 0 will be deleted but the second one will not since k is incremented even if you remove something. You should only increment k if you didn't remove something and then you would remove all 0's from the list.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlh_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlh_1','e',['This shows the original values but this code does remove some zeros so this can\u0027t be right.', 'This shows all zeros at the end, but this code removes 0\u0027s so this can\u0027t be right.', 'This shows all zeros at the beginning, but this code removes zeros so this can\u0027t be right.', 'This shows all zeros removed. This would be correct if k was only incremented if a value wasn\u0027t removed.', 'This code will loop through the array list and if the current value at the current index (k) is 0, it will remove it. When you remove a value from an array list, it moves all values to the right of that down one. So the first 0 will be deleted but the second one will not since k is incremented even if you remove something. You should only increment k if you didn\u0027t remove something and then you would remove all 0\u0027s from the list.'])">Check Me</button>
-            <button class='btn btn-default' id="qlh_1_bcomp" disabled name="compare" onclick="compareAnswers('qlh_1');">Compare Me</button>
-            </form><br />
-            <div id="qlh_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qlh_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlh_2">
             <p>6-8-2: Which best characterizes the running time of the following code segment?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">;</span> <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">*</span> <span class="mi">2</span><span class="o">)</span>
@@ -374,32 +375,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qlh_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlh_2_opt_a" />
-            <label for= "qlh_2_opt_a">  a) O(log n)</label><br />
+
+            <li data-component="answer"  id="qlh_2_opt_a">O(log n)</li><li data-component="feedback" id="qlh_2_opt_a">This would be correct if there was just the inner loop.</li>
             
-            <input type="radio" name="group1" value="b" id="qlh_2_opt_b" />
-            <label for= "qlh_2_opt_b">  b) O(n log n)</label><br />
+            <li data-component="answer" data-correct id="qlh_2_opt_b">O(n log n)</li><li data-component="feedback" id="qlh_2_opt_b">The outer loop is n but the inner loop is log n since k is multiplied by 2 each time through the loop.</li>
             
-            <input type="radio" name="group1" value="c" id="qlh_2_opt_c" />
-            <label for= "qlh_2_opt_c">  c) O(n)</label><br />
+            <li data-component="answer"  id="qlh_2_opt_c">O(n)</li><li data-component="feedback" id="qlh_2_opt_c">This would be correct if there was just the outer loop.</li>
             
-            <input type="radio" name="group1" value="d" id="qlh_2_opt_d" />
-            <label for= "qlh_2_opt_d">  d) O(n*n)</label><br />
+            <li data-component="answer"  id="qlh_2_opt_d">O(n*n)</li><li data-component="feedback" id="qlh_2_opt_d">This would be correct if the inner lop was incremented by 1 instead of multiplied by 2.</li>
             
-            <input type="radio" name="group1" value="e" id="qlh_2_opt_e" />
-            <label for= "qlh_2_opt_e">  e) O(n!)</label><br />
+            <li data-component="answer"  id="qlh_2_opt_e">O(n!)</li><li data-component="feedback" id="qlh_2_opt_e">To get n! as big-oh we would need n nested loops.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlh_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlh_2','b',['This would be correct if there was just the inner loop.', 'The outer loop is n but the inner loop is log n since k is multiplied by 2 each time through the loop.', 'This would be correct if there was just the outer loop.', 'This would be correct if the inner lop was incremented by 1 instead of multiplied by 2.', 'To get n! as big\u002Doh we would need n nested loops.'])">Check Me</button>
-            <button class='btn btn-default' id="qlh_2_bcomp" disabled name="compare" onclick="compareAnswers('qlh_2');">Compare Me</button>
-            </form><br />
-            <div id="qlh_2_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

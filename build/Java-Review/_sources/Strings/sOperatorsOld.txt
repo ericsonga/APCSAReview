@@ -1,12 +1,16 @@
 .. qnum::
-   :prefix: 3--
+   :prefix: 4-4-
    :start: 1
 
-String Operators
-=================
+String Operators - Concatenation
+==================================
+
+..	index::
+	pair: String; append
+	
 Strings can be **appended** to each other which creates a new string using the ``+`` operator . This is also called **concatenation**. 
 
-:: 
+.. code-block:: java 
 
   String start = "Happy Birthday"; 
   String name = "Jose";
@@ -14,9 +18,13 @@ Strings can be **appended** to each other which creates a new string using the `
   
 Note that spaces are not added between strings automatically.  If you want a space between two strings then add one. 
 
+..	index::
+	single: toString
+	pair: Object; toString
+
 You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.  If you are appending number to a string it will be converted to a string first before being appended.  What do you think the following will print?   
 
-:: 
+.. code-block:: java 
 
   String message = "12" + 4 + 3; 
   System.out.println(message);

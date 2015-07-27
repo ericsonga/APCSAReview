@@ -11,18 +11,27 @@ Looping with the For-Each Loop
    
 You will often loop through all of the elements of an array (to get the average or to get each one to display).  You will typically do this using a **for-each** loop.  A **for-each** loop is a loop that can only be used on a collection of items.  It will loop through the collection and each time through the loop it will use the next item from the collection.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array.
 
-.. code-block:: java
-  :linenos:
-  
-  public static double getAvg(int[ ] values) 
-  {
-     double total = 0;
-     for (int val : values) 
-     {
-        total = total + val;
-     }
-     return total / values.length;
-  }
+.. activecode:: lcaf1
+   :language: java
+   
+   public class Test1
+   {
+      public static double getAvg(int[] values)
+      {
+        double total = 0;
+        for (int val : values)
+        {
+          total  = total + val;
+        }
+        return total / values.length;
+      }
+      
+      public static void main(String[] args)
+      {
+        int[ ] values = {2, 6, 7, 12, 5};
+        System.out.println(getAvg(values));
+      }
+   }
   
 ..	index::
 	single: static
@@ -30,26 +39,43 @@ You will often loop through all of the elements of an array (to get the average 
 	pair: method; class
 	pair: method; static
 
-The **for-each** loop is shown on line 4 above.  It says to loop through the array called **values** and each time through the loop set the variable **val** to the next item in the array.  We have to specify the type of **val** first since this declares a variable.  The type must match the type of objects in the array.
+The **for-each** loop is shown on line 6 above.  It says to loop through the array called **values** and each time through the loop set the variable **val** to the next item in the array.  We have to specify the type of **val** first since this declares a variable.  The type must match the type of objects in the array.
 
 The code above wasn't object-oriented.  You may have noticed that it was declared to be **static**.  This means that it is a **class method** not an **object method**.  It is a **class method** since it doesn't operate on any object fields - all data that it needs has been passed in to the method.  Class methods can be called using ``ClassName.methodName()``.  They can also be called on an object of the class.  Object methods can only be called on an object of the class.  
     
-A more object-oriented way of doing this would be if the array was a field called ``values`` in the same class as the ``getAverage`` method.  Then you don't need to pass the array **values** to the method and the method is an object (instance) method since it operates on the fields of the object.
+A more object-oriented way of doing this would be if the array was a field called ``values`` in the same class as the ``getAverage`` method.  Then you don't need to pass the array **values** to the method and the method is an object (instance) method since it operates on the fields of the object.  You will typically initialize fields in the constructor as shown below.  
 
-.. code-block:: java 
-   :linenos:
-
-   private int[ ] values; 
-
-   public double getAverage()
+.. activecode:: lcaf2
+   :language: java
+   
+   public class ArrayWorker
    {
-      double total = 0;
-      for (int val : values)
+      private int[ ] values;
+      
+      public ArrayWorker(int[] theValues)
       {
-         total = total + val;
+         values = theValues;
       }
-      return total / values.length;
-    }
+      
+      public double getAverage()
+      {
+        double total = 0;
+        for (int val : values)
+        {
+          total  = total + val;
+        }
+        return total / values.length;
+      }
+      
+      public static void main(String[] args)
+      {
+        int[] numArray =  {2, 6, 7, 12, 5};
+        ArrayWorker aWorker = new ArrayWorker(numArray); 
+        System.out.println(aWorker.getAverage());
+      }
+   }
+   
+Notice that we have to create an object of the class now in the ``main`` method.  Object methods have to be called on an object of the class.  
     
 Since ``values`` is an object field and the method ``getAverage`` is in the same class it can directly access the field ``values``.  The code could have also been written as ``this.values`` to indicate the current object's field called ``values``.  Every object method is passed the object the method was called on and it can be referenced using the Java keyword ``this``.  
     

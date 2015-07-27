@@ -13,20 +13,37 @@ Complex Conditionals
 	pair: logical; or
 	pair: conditional; complex
 
-What if you want two things to be true before the body of the conditional is executed?  Use ``&&`` as a logical ``and`` to join two Boolean expressions and the body of the condition will only be executed only if both are true.  For example, what if you want to go out and your mom said you could if you clean your room and do your homework?
+What if you want two things to be true before the body of the conditional is executed?  Use ``&&`` as a logical *and* to join two Boolean expressions and the body of the condition will only be executed only if both are true.  For example, what if you want to go out and your mom said you could if you clean your room and do your homework?  Run the code below and try different values for ``cleanedRoom`` and ``didHomework`` and see what they have to be for it to print ``You can go out``.
 
-.. code-block:: java 
+.. activecode:: lccc1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        boolean cleanedRoom = true;
+        boolean didHomework = false;
+        if (cleanedRoom && didHomework) System.out.println("You can go out");
+        else System.out.println("No, you can't go out");
+      }
+   }
 
-  if (cleanedRoom && didHomework) System.out.println("You can go out");
-  else System.out.println("No, you can't go out"); 
+What if it is okay if only one of two things is true? Use ``||`` as a logical *or* to join two Boolean expressions and the body of the condition will be executed if one or both are true.  For example, your Dad might say you can go out if you can walk or he doesn't need the car.  Try different values for ``walking`` and ``carIsAvailable`` and see what the values have to be to print ``You can go out``.
 
-What if it is okay if only one of two things is true? Use ``||`` as a logical ``or`` to join two Boolean expressions and the body of the condition will be executed if one or both are true.  For example, your Dad might say you can go out if you can walk or he doesn't need the car. 
-
-.. code-block:: java 
-
-  if (walking || carIsAvailable) System.out.println("You can go out");
-  else System.out.println("No, you can't go out"); 
-  
+.. activecode:: lccc2
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        boolean walking = true;
+        boolean carIsAvailable = false;
+        if (walking || carIsAvailable) System.out.println("You can go out");
+        else System.out.println("No, you can't go out");
+      }
+   }
 
 The following table (also called a **truth table**) shows the result for P && Q when P and Q are both expressions that can be true or false. As you can see below the result of P && Q is only true if both P and Q are true. 
 

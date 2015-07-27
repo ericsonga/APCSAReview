@@ -87,7 +87,7 @@ Once we have the name of the current ``Horse`` object, we need to compare this n
    
 Try to write the code for the method ``findHorseSpace``. When you are ready click "Run" to test your solution.   
    
-.. livecode:: lcfrhba1
+.. activecode:: lcfrhba1
    :language: java
    :datafile: HorseBarn.java
    

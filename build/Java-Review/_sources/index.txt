@@ -23,7 +23,6 @@ Preface and Getting Setup
    GettingStarted/preface.rst
    GettingStarted/ptest1.rst
    
-
 Java Basics: Classes and Objects
 :::::::::::::::::::::::::::::::::::::::::::
 
@@ -249,6 +248,8 @@ Indices
 
 * :ref:`genindex`
 * :ref:`search`
+   
+
 
 
 

@@ -40,12 +40,13 @@ What is Recursion?
   
 This method will print out "This is the method that never ends!" and then call itself, which will print out the message again, and then call itself, and so on.  This is called **infinite recursion**, which is a recursion that never ends.  Of course, this particular method is not very useful.  
 
-.. fillintheblank:: recurb1
-   :correct: 4$
-   :feedback1: ('.*','Look for the call to the same method name')
-   :blankid: recurb1blank
+.. fillintheblank:: recurb1fill
 
-   Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? :textfield:`recurb1blank::mini`
+    .. blank:: recurb1blank
+        :correct: 4$
+        :feedback1:  ('.*','Look for the call to the same method name')
+
+        Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? 
    
 ..	index::
     single: factorial
@@ -63,12 +64,13 @@ Here is another method that calculates the **factorial** of a number.  The **fac
       return n * factorial(n-1);
   }
   
-.. fillintheblank:: recurb2
-   :correct: 6$
-   :feedback1: ('.*','Look for the call to the same method name')
-   :blankid: recurb2blank
+.. fillintheblank:: recurb2fill
 
-   Which line in the method factorial contains the recursive call (the call to the same method)? :textfield:`recurb2blank::mini`
+    .. blank:: recurb1blank
+        :correct: 6$
+        :feedback1:  ('.*','Look for the call to the same method name')
+
+        Which line in the method factorial contains the recursive call (the call to the same method)?
    
 ..	index::
     single: base case

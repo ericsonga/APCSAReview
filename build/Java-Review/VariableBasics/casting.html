@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -320,107 +334,56 @@
   
   <div class="section" id="casting-variables">
 <h1>Casting Variables<a class="headerlink" href="#casting-variables" title="Permalink to this headline">¶</a></h1>
-<p>In DrJava try typing the following in the interactions pane and hit return or enter after each line.  DrJava will automatically print the result of an expression when you hit enter in the interactions pane.</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span>
-<span class="mf">1.0</span> <span class="o">/</span> <span class="mi">3</span>
-<span class="mi">1</span> <span class="o">/</span> <span class="mf">3.0</span>
-<span class="o">(</span><span class="kt">double</span><span class="o">)</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span>
-</pre></div>
-</div>
-<p>Do you get the same answer for each of these?  If not, why not?</p>
+<p>Run this code to find how Java handles division and what casting can do to the results.</p>
 
-            <div id="1div3" class="alert alert-warning">
-            3-5-1: What is printed in DrJava when you type 1 / 3 and hit enter? <input type='text' id='div13blank' class="form-control" style="display:inline; width: 60px;" value=""></input>
-            <script>
-            $(document).ready(function(){checkPreviousFIB('1div3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkFIBStorage('1div3', 'div13blank', '0$',[['.*', 'Did you actually try this in DrJava?']], false)">Check Me</button>
-            <button class='btn btn-default' id="1div3_bcomp" disabled name="compare" onclick="compareFITBAnswers('1div3');">Compare Me</button>
-            <br />
-            <br />
-            <div id="1div3_feedback">
-            </div>
-            </div>
-            
-            <div id="1Ddiv3" class="alert alert-warning">
-            3-5-2: What is printed in DrJava when you type 1.0 / 3 and hit enter? <input type='text' id='div1D3blank' class="form-control" style="display:inline; width: 210px;" value=""></input>
-            <script>
-            $(document).ready(function(){checkPreviousFIB('1Ddiv3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkFIBStorage('1Ddiv3', 'div1D3blank', '0.33+',[['.*', 'Did you actually try this in DrJava?']], false)">Check Me</button>
-            <button class='btn btn-default' id="1Ddiv3_bcomp" disabled name="compare" onclick="compareFITBAnswers('1Ddiv3');">Compare Me</button>
-            <br />
-            <br />
-            <div id="1Ddiv3_feedback">
-            </div>
-            </div>
-            <p id="index-0">Java assumes that if you are doing division with integers that you want an integer result and it will throw away any fractional part (part after the decimal point).  But, if you use a mixture of integers (int) and floating point (double) numbers Java will assume that you want a floating point result.  If you have integers and you want a floating point result from some mathematical operation <strong>cast</strong> one of the integers to a double using (double) as shown above.  By <strong>casting</strong> we don&#8217;t mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the &#8220;shape&#8221; (or type) of the variable to the right of the cast to the specified type.</p>
+<pre data-component="activecode" id=lcct1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test
+{
+   public static void main(String[] args)
+   {
+     System.out.println(1 / 3);
+     System.out.println(1.0 / 3);
+     System.out.println(1 / 3.0);
+     System.out.println((double) 1 / 3);
+   }
+}
+</pre>
+<p>Java assumes that if you are doing division with integers that you want an integer result and it will throw away any fractional part (part after the decimal point).  But, if you use a mixture of integers (int) and floating point (double) numbers Java will assume that you want a floating point result.  If you have integers and you want a floating point result from some mathematical operation <strong>cast</strong> one of the integers to a double using (double) as shown above.  By <strong>casting</strong> we don&#8217;t mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the &#8220;shape&#8221; (or type) of the variable to the right of the cast to the specified type.</p>
 <div class="align-center figure" id="id1">
 <a class="reference internal image-reference" href="../_images/casting.jpg"><img alt="../_images/casting.jpg" src="../_images/casting.jpg" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-text">Figure 3: Casting a pot in clay.</span></p>
 </div>
-<p id="index-1">Is the result of 1.0 divided by 3 correct?  Actually, Java limits the number of digits you can save for any <code class="docutils literal"><span class="pre">double</span></code> number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.</p>
+<p id="index-0">Is the result of 1.0 divided by 3 what you expected?  Java limits the number of digits you can save for any <code class="docutils literal"><span class="pre">double</span></code> number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="q2_5" class="alert alert-warning">
-            3-5-3: True or false: Java rounds up automatically when you do integer division.<form name="q2_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_5_opt_a" />
-            <label for= "q2_5_opt_a">  a) true</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_5">
+            3-5-1: True or false: Java rounds up automatically when you do integer division.
+            <li data-component="answer"  id="q2_5_opt_a">true</li><li data-component="feedback" id="q2_5_opt_a">Did you try this out in Dr Java?  Does it work that way?</li>
             
-            <input type="radio" name="group1" value="b" id="q2_5_opt_b" />
-            <label for= "q2_5_opt_b">  b) false</label><br />
+            <li data-component="answer" data-correct id="q2_5_opt_b">false</li><li data-component="feedback" id="q2_5_opt_b">Java throws away any values after the decimal point if you do integer division.  It does not round up automatically.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_5','b',['Did you try this out in Dr Java?  Does it work that way?', 'Java throws away any values after the decimal point if you do integer division.  It does not round up automatically.'])">Check Me</button>
-            <button class='btn btn-default' id="q2_5_bcomp" disabled name="compare" onclick="compareAnswers('q2_5');">Compare Me</button>
-            </form><br />
-            <div id="q2_5_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="q2_6" class="alert alert-warning">
-            3-5-4: True or false: casting always results in a double type.<form name="q2_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_6_opt_a" />
-            <label for= "q2_6_opt_a">  a) true</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_6">
+            3-5-2: True or false: casting always results in a double type.
+            <li data-component="answer"  id="q2_6_opt_a">true</li><li data-component="feedback" id="q2_6_opt_a">Try casting to int instead of double.  What does that do?</li>
             
-            <input type="radio" name="group1" value="b" id="q2_6_opt_b" />
-            <label for= "q2_6_opt_b">  b) false</label><br />
+            <li data-component="answer" data-correct id="q2_6_opt_b">false</li><li data-component="feedback" id="q2_6_opt_b">Casting results in the type that you cast to. However, if you can't really cast the value to the specified type then you will get an error.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_6');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_6','b',['Try casting to int instead of double.  What does that do?', 'Casting results in the type that you cast to. However, if you can\u0027t really cast the value to the specified type then you will get an error.'])">Check Me</button>
-            <button class='btn btn-default' id="q2_6_bcomp" disabled name="compare" onclick="compareAnswers('q2_6');">Compare Me</button>
-            </form><br />
-            <div id="q2_6_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="q2_7" class="alert alert-warning">
-            3-5-5: Which of the following returns the correct average when 3 values had been added to an integer total?<form name="q2_7_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_7_opt_a" />
-            <label for= "q2_7_opt_a">  a) (double) (total / 3);</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_7">
+            3-5-3: Which of the following returns the correct average when 3 values had been added to an integer total?
+            <li data-component="answer"  id="q2_7_opt_a">(double) (total / 3);</li><li data-component="feedback" id="q2_7_opt_a">This does integer division before casting the result to double so it loses the fractional part.</li>
             
-            <input type="radio" name="group1" value="b" id="q2_7_opt_b" />
-            <label for= "q2_7_opt_b">  b) total / 3;</label><br />
+            <li data-component="answer"  id="q2_7_opt_b">total / 3;</li><li data-component="feedback" id="q2_7_opt_b">When you divide an integer by an integer you get an integer result and lose the fractional part.</li>
             
-            <input type="radio" name="group1" value="c" id="q2_7_opt_c" />
-            <label for= "q2_7_opt_c">  c) (double) total /  3;</label><br />
+            <li data-component="answer" data-correct id="q2_7_opt_c">(double) total /  3;</li><li data-component="feedback" id="q2_7_opt_c">This will convert total to a double value and then divide by 3 to return a double result.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_7');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_7','c',['This does integer division before casting the result to double so it loses the fractional part.', 'When you divide an integer by an integer you get an integer result and lose the fractional part.', 'This will convert total to a double value and then divide by 3 to return a double result.'])">Check Me</button>
-            <button class='btn btn-default' id="q2_7_bcomp" disabled name="compare" onclick="compareAnswers('q2_7');">Compare Me</button>
-            </form><br />
-            <div id="q2_7_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

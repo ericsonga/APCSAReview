@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,39 +336,26 @@
 <h1>Hard Multiple Choice Questions<a class="headerlink" href="#hard-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are about the same or harder than those you will see on the AP CS A exam.</p>
 
-            <div id="qalh_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qalh_1">
             <p>8-9-1: What is in the list <code class="docutils literal"><span class="pre">nums</span></code> if it initially contained {5, 3, 1} and the following code is executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">nums</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">6</span><span class="o">);</span>
 <span class="n">nums</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">4</span><span class="o">);</span>
 <span class="n">nums</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qalh_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qalh_1_opt_a" />
-            <label for= "qalh_1_opt_a">  a) [5, 3, 1, 6]</label><br />
+
+            <li data-component="answer"  id="qalh_1_opt_a">[5, 3, 1, 6]</li><li data-component="feedback" id="qalh_1_opt_a">The remove(1) removes the item at index 1 which will be 5 after the 4 is added at index 0.</li>
             
-            <input type="radio" name="group1" value="b" id="qalh_1_opt_b" />
-            <label for= "qalh_1_opt_b">  b) [4, 3, 1, 6]</label><br />
+            <li data-component="answer" data-correct id="qalh_1_opt_b">[4, 3, 1, 6]</li><li data-component="feedback" id="qalh_1_opt_b">The add(6) adds the 6 at the end of the list. The add(0,4) will add 4 at index 0. The remove(1) removes the 5 at index 1.</li>
             
-            <input type="radio" name="group1" value="c" id="qalh_1_opt_c" />
-            <label for= "qalh_1_opt_c">  c) [4, 3, 6]</label><br />
+            <li data-component="answer"  id="qalh_1_opt_c">[4, 3, 6]</li><li data-component="feedback" id="qalh_1_opt_c">The remove(1) doesn't remove the 1, it removes the value at index 1.</li>
             
-            <input type="radio" name="group1" value="d" id="qalh_1_opt_d" />
-            <label for= "qalh_1_opt_d">  d) [5, 3, 6]</label><br />
+            <li data-component="answer"  id="qalh_1_opt_d">[5, 3, 6]</li><li data-component="feedback" id="qalh_1_opt_d">The 5 will be removed with the remove(1).</li>
             
-            <input type="radio" name="group1" value="e" id="qalh_1_opt_e" />
-            <label for= "qalh_1_opt_e">  e) [4, 5, 3, 6]</label><br />
+            <li data-component="answer"  id="qalh_1_opt_e">[4, 5, 3, 6]</li><li data-component="feedback" id="qalh_1_opt_e">This would be true if remove(1) removed the item with that value, but it removes the item at that index.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qalh_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qalh_1','b',['The remove(1) removes the item at index 1 which will be 5 after the 4 is added at index 0.', 'The add(6) adds the 6 at the end of the list. The add(0,4) will add 4 at index 0. The remove(1) removes the 5 at index 1.', 'The remove(1) doesn\u0027t remove the 1, it removes the value at index 1.', 'The 5 will be removed with the remove(1).', 'This would be true if remove(1) removed the item with that value, but it removes the item at that index.'])">Check Me</button>
-            <button class='btn btn-default' id="qalh_1_bcomp" disabled name="compare" onclick="compareAnswers('qalh_1');">Compare Me</button>
-            </form><br />
-            <div id="qalh_1_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

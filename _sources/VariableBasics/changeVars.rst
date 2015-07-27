@@ -7,7 +7,7 @@ Changing Variables in Java
 
 Remember that a variable holds a value and that value can change or vary.  If you use a variable to keep score you would probably increment it (add one to the current value).  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below.
 
-.. livecode:: lccv1
+.. activecode:: lccv1
    :language: java
    
    public class Test1
@@ -23,7 +23,7 @@ Remember that a variable holds a value and that value can change or vary.  If yo
    
 You can set one variable's value to a *copy* of the value of another variable.  This won't change the value of the variable that you are copying from.
 
-.. livecode:: lccv2
+.. activecode:: lccv2
    :language: java
    
    public class Test2

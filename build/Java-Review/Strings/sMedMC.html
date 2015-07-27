@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Medium Multiple Choice Questions<a class="headerlink" href="#medium-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are similar to those that you will see on the AP CS A exam.</p>
 
-            <div id="qsm_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsm_1">
             <p>4-8-1: After the following code is executed, which of I, II and/or III will evaluate to true?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;xyz&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">;</span>
@@ -333,34 +347,21 @@
 <span class="n">III</span><span class="o">.</span> <span class="n">s1</span> <span class="o">==</span> <span class="n">s3</span>
 </pre></div>
 </div>
-<form name="qsm_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsm_1_opt_a" />
-            <label for= "qsm_1_opt_a">  a) I, II, III</label><br />
+
+            <li data-component="answer" data-correct id="qsm_1_opt_a">I, II, III</li><li data-component="feedback" id="qsm_1_opt_a">The "equals" operation on strings returns true when the strings have the same characters.  The == operator returns true when they refer to the same object.  In this case all three references actually refer to the same object so both == and equals will be true.</li>
             
-            <input type="radio" name="group1" value="b" id="qsm_1_opt_b" />
-            <label for= "qsm_1_opt_b">  b) I only</label><br />
+            <li data-component="answer"  id="qsm_1_opt_b">I only</li><li data-component="feedback" id="qsm_1_opt_b">This is true, since s1 and s3 contain the same characters since s1 and s3 actually refer to the same string object. But, it isn't the only thing that is true.</li>
             
-            <input type="radio" name="group1" value="c" id="qsm_1_opt_c" />
-            <label for= "qsm_1_opt_c">  c) II only</label><br />
+            <li data-component="answer"  id="qsm_1_opt_c">II only</li><li data-component="feedback" id="qsm_1_opt_c">This is true since s2 == s1.  But, it isn't the only thing that is true.</li>
             
-            <input type="radio" name="group1" value="d" id="qsm_1_opt_d" />
-            <label for= "qsm_1_opt_d">  d) III only</label><br />
+            <li data-component="answer"  id="qsm_1_opt_d">III only</li><li data-component="feedback" id="qsm_1_opt_d">This is true since s3 == s2, and s2 == s1 so it follows that s1 == s3.  But, it isn't the only thing that is true.</li>
             
-            <input type="radio" name="group1" value="e" id="qsm_1_opt_e" />
-            <label for= "qsm_1_opt_e">  e) II and III only</label><br />
+            <li data-component="answer"  id="qsm_1_opt_e">II and III only</li><li data-component="feedback" id="qsm_1_opt_e">This is true since they all refer to the same string object.  But, they also contain the same characters so equals is also true.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsm_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsm_1','a',['The \u0022equals\u0022 operation on strings returns true when the strings have the same characters.  The \u003D\u003D operator returns true when they refer to the same object.  In this case all three references actually refer to the same object so both \u003D\u003D and equals will be true.', 'This is true, since s1 and s3 contain the same characters since s1 and s3 actually refer to the same string object. But, it isn\u0027t the only thing that is true.', 'This is true since s2 \u003D\u003D s1.  But, it isn\u0027t the only thing that is true.', 'This is true since s3 \u003D\u003D s2, and s2 \u003D\u003D s1 so it follows that s1 \u003D\u003D s3.  But, it isn\u0027t the only thing that is true.', 'This is true since they all refer to the same string object.  But, they also contain the same characters so equals is also true.'])">Check Me</button>
-            <button class='btn btn-default' id="qsm_1_bcomp" disabled name="compare" onclick="compareAnswers('qsm_1');">Compare Me</button>
-            </form><br />
-            <div id="qsm_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qsm_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsm_2">
             <p>4-8-2: What is output from the following code?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;Georgia Tech&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">7</span><span class="o">);</span>
@@ -369,34 +370,21 @@
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s3</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qsm_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsm_2_opt_a" />
-            <label for= "qsm_2_opt_a">  a) org</label><br />
+
+            <li data-component="answer" data-correct id="qsm_2_opt_a">org</li><li data-component="feedback" id="qsm_2_opt_a">The method substring(a,b) means start at a and stop before b. The method substring(a) means start at a and go to the end of the string. The first character in a string is at index 0.</li>
             
-            <input type="radio" name="group1" value="b" id="qsm_2_opt_b" />
-            <label for= "qsm_2_opt_b">  b) eor</label><br />
+            <li data-component="answer"  id="qsm_2_opt_b">eor</li><li data-component="feedback" id="qsm_2_opt_b">This can't be true since the e is at index 1 and s2 = s1.substring(2) will start at index 2 and take all characters till the end of the string.</li>
             
-            <input type="radio" name="group1" value="c" id="qsm_2_opt_c" />
-            <label for= "qsm_2_opt_c">  c) eorg</label><br />
+            <li data-component="answer"  id="qsm_2_opt_c">eorg</li><li data-component="feedback" id="qsm_2_opt_c">This can't be true since the e is at index 1 and s2 = s1.substring(2) will start at index 2 and take all characters till the end of the string.</li>
             
-            <input type="radio" name="group1" value="d" id="qsm_2_opt_d" />
-            <label for= "qsm_2_opt_d">  d) orgi</label><br />
+            <li data-component="answer"  id="qsm_2_opt_d">orgi</li><li data-component="feedback" id="qsm_2_opt_d">This would be true if substring(a,b) included the character at index b, but it doesn't.</li>
             
-            <input type="radio" name="group1" value="e" id="qsm_2_opt_e" />
-            <label for= "qsm_2_opt_e">  e) You will get an index out of bounds exception</label><br />
+            <li data-component="answer"  id="qsm_2_opt_e">You will get an index out of bounds exception</li><li data-component="feedback" id="qsm_2_opt_e">This would be true if the starting index was invalid or the ending index was past 2 past the last valid index.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsm_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsm_2','a',['The method substring(a,b) means start at a and stop before b. The method substring(a) means start at a and go to the end of the string. The first character in a string is at index 0.', 'This can\u0027t be true since the e is at index 1 and s2 \u003D s1.substring(2) will start at index 2 and take all characters till the end of the string.', 'This can\u0027t be true since the e is at index 1 and s2 \u003D s1.substring(2) will start at index 2 and take all characters till the end of the string.', 'This would be true if substring(a,b) included the character at index b, but it doesn\u0027t.', 'This would be true if the starting index was invalid or the ending index was past 2 past the last valid index.'])">Check Me</button>
-            <button class='btn btn-default' id="qsm_2_bcomp" disabled name="compare" onclick="compareAnswers('qsm_2');">Compare Me</button>
-            </form><br />
-            <div id="qsm_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qsm_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsm_3">
             <p>4-8-3: Given the following code segment, what is the value of s1 after the code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Hi There&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">;</span>
@@ -407,32 +395,19 @@
 <span class="n">s4</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="qsm_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsm_3_opt_a" />
-            <label for= "qsm_3_opt_a">  a) null</label><br />
+
+            <li data-component="answer"  id="qsm_3_opt_a">null</li><li data-component="feedback" id="qsm_3_opt_a">This would be true if we had s1 = s4 after s4 = null was executed. Strings are immutable and so any changes to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="b" id="qsm_3_opt_b" />
-            <label for= "qsm_3_opt_b">  b) hi there</label><br />
+            <li data-component="answer"  id="qsm_3_opt_b">hi there</li><li data-component="feedback" id="qsm_3_opt_b">This would only be correct if we had s1 = s2 after s2.toLowerCaase() was executed. Strings are immutable and so any change to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="c" id="qsm_3_opt_c" />
-            <label for= "qsm_3_opt_c">  c) HI THERE</label><br />
+            <li data-component="answer"  id="qsm_3_opt_c">HI THERE</li><li data-component="feedback" id="qsm_3_opt_c">This would be correct if we had s1 = s3 after s3.toUpperCase() was executed. String are immutable and so any change to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="d" id="qsm_3_opt_d" />
-            <label for= "qsm_3_opt_d">  d) Hi There</label><br />
+            <li data-component="answer" data-correct id="qsm_3_opt_d">Hi There</li><li data-component="feedback" id="qsm_3_opt_d">Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change.</li>
             
-            <input type="radio" name="group1" value="e" id="qsm_3_opt_e" />
-            <label for= "qsm_3_opt_e">  e) hI tHERE</label><br />
+            <li data-component="answer"  id="qsm_3_opt_e">hI tHERE</li><li data-component="feedback" id="qsm_3_opt_e">Strings are immutable and so any changes to a string returns a new string.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsm_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsm_3','d',['This would be true if we had s1 \u003D s4 after s4 \u003D null was executed. Strings are immutable and so any changes to a string returns a new string.', 'This would only be correct if we had s1 \u003D s2 after s2.toLowerCaase() was executed. Strings are immutable and so any change to a string returns a new string.', 'This would be correct if we had s1 \u003D s3 after s3.toUpperCase() was executed. String are immutable and so any change to a string returns a new string.', 'Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change.', 'Strings are immutable and so any changes to a string returns a new string.'])">Check Me</button>
-            <button class='btn btn-default' id="qsm_3_bcomp" disabled name="compare" onclick="compareAnswers('qsm_3');">Compare Me</button>
-            </form><br />
-            <div id="qsm_3_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

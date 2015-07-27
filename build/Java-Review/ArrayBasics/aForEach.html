@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -321,186 +335,68 @@
   <div class="section" id="looping-with-the-for-each-loop">
 <h1>Looping with the For-Each Loop<a class="headerlink" href="#looping-with-the-for-each-loop" title="Permalink to this headline">¶</a></h1>
 <p id="index-0">You will often loop through all of the elements of an array (to get the average or to get each one to display).  You will typically do this using a <strong>for-each</strong> loop.  A <strong>for-each</strong> loop is a loop that can only be used on a collection of items.  It will loop through the collection and each time through the loop it will use the next item from the collection.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array.</p>
-<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">getAvg</span><span class="o">(</span><span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">values</span><span class="o">)</span>
-<span class="o">{</span>
-   <span class="kt">double</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-   <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">val</span> <span class="o">:</span> <span class="n">values</span><span class="o">)</span>
-   <span class="o">{</span>
-      <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">val</span><span class="o">;</span>
-   <span class="o">}</span>
-   <span class="k">return</span> <span class="n">total</span> <span class="o">/</span> <span class="n">values</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
-<span class="o">}</span>
-</pre></div>
-</td></tr></table></div>
-<p id="index-1">The <strong>for-each</strong> loop is shown on line 4 above.  It says to loop through the array called <strong>values</strong> and each time through the loop set the variable <strong>val</strong> to the next item in the array.  We have to specify the type of <strong>val</strong> first since this declares a variable.  The type must match the type of objects in the array.</p>
-<p>The code above wasn&#8217;t object-oriented.  You may have noticed that it was declared to be <strong>static</strong>.  This means that it is a <strong>class method</strong> not an <strong>object method</strong>.  It is a <strong>class method</strong> since it doesn&#8217;t operate on any object fields - all data that it needs has been passed in to the method.  Class methods can be called using <code class="docutils literal"><span class="pre">ClassName.methodName()</span></code>.  They can also be called on an object of the class.  Object methods can only be called on an object of the class.</p>
-<p>A more object-oriented way of doing this would be if the array was a field called <code class="docutils literal"><span class="pre">values</span></code> in the same class as the <code class="docutils literal"><span class="pre">getAverage</span></code> method.  Then you don&#8217;t need to pass the array <strong>values</strong> to the method and the method is an object (instance) method since it operates on the fields of the object.</p>
-<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">values</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">double</span> <span class="nf">getAverage</span><span class="o">()</span>
-<span class="o">{</span>
-   <span class="kt">double</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-   <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">val</span> <span class="o">:</span> <span class="n">values</span><span class="o">)</span>
-   <span class="o">{</span>
-      <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">val</span><span class="o">;</span>
-   <span class="o">}</span>
-   <span class="k">return</span> <span class="n">total</span> <span class="o">/</span> <span class="n">values</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
- <span class="o">}</span>
-</pre></div>
-</td></tr></table></div>
+<pre data-component="activecode" id=lcaf1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test1
+{
+   public static double getAvg(int[] values)
+   {
+     double total = 0;
+     for (int val : values)
+     {
+       total  = total + val;
+     }
+     return total / values.length;
+   }
+
+   public static void main(String[] args)
+   {
+     int[ ] values = {2, 6, 7, 12, 5};
+     System.out.println(getAvg(values));
+   }
+}
+</pre>
+<p id="index-1">The <strong>for-each</strong> loop is shown on line 6 above.  It says to loop through the array called <strong>values</strong> and each time through the loop set the variable <strong>val</strong> to the next item in the array.  We have to specify the type of <strong>val</strong> first since this declares a variable.  The type must match the type of objects in the array.</p>
+<p>The code above wasn&#8217;t object-oriented.  You may have noticed that it was declared to be <strong>static</strong>.  This means that it is a <strong>class method</strong> not an <strong>object method</strong>.  It is a <strong>class method</strong> since it doesn&#8217;t operate on any object fields - all data that it needs has been passed in to the method.  Class methods can be called using <code class="docutils literal"><span class="pre">ClassName.methodName()</span></code>.  They can also be called on an object of the class.  Object methods can only be called on an object of the class.</p>
+<p>A more object-oriented way of doing this would be if the array was a field called <code class="docutils literal"><span class="pre">values</span></code> in the same class as the <code class="docutils literal"><span class="pre">getAverage</span></code> method.  Then you don&#8217;t need to pass the array <strong>values</strong> to the method and the method is an object (instance) method since it operates on the fields of the object.  You will typically initialize fields in the constructor as shown below.</p>
+
+<pre data-component="activecode" id=lcaf2 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class ArrayWorker
+{
+   private int[ ] values;
+
+   public ArrayWorker(int[] theValues)
+   {
+      values = theValues;
+   }
+
+   public double getAverage()
+   {
+     double total = 0;
+     for (int val : values)
+     {
+       total  = total + val;
+     }
+     return total / values.length;
+   }
+
+   public static void main(String[] args)
+   {
+     int[] numArray =  {2, 6, 7, 12, 5};
+     ArrayWorker aWorker = new ArrayWorker(numArray);
+     System.out.println(aWorker.getAverage());
+   }
+}
+</pre>
+<p>Notice that we have to create an object of the class now in the <code class="docutils literal"><span class="pre">main</span></code> method.  Object methods have to be called on an object of the class.</p>
 <p>Since <code class="docutils literal"><span class="pre">values</span></code> is an object field and the method <code class="docutils literal"><span class="pre">getAverage</span></code> is in the same class it can directly access the field <code class="docutils literal"><span class="pre">values</span></code>.  The code could have also been written as <code class="docutils literal"><span class="pre">this.values</span></code> to indicate the current object&#8217;s field called <code class="docutils literal"><span class="pre">values</span></code>.  Every object method is passed the object the method was called on and it can be referenced using the Java keyword <code class="docutils literal"><span class="pre">this</span></code>.</p>
 <p><strong>Mixed up programs</strong></p>
 
-        <div class='parsons alert alert-warning' id="parsons-58">
-        <div class="parsons-text">7-2-1: The following method has the correct code to return the largest value in an integer array called <b>vals</b> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.</p><br /><br /></div>
-        <div style="clear:left;"></div>
-        <div id="parsons-orig-58" style="display:none;">public int getLargest()\n{
-  int largest = vals[0];
-  for (int item : vals)\n{
-    if (item > largest)\n{
-      largest = item;
-    }  // end if
-  } // end for\nreturn largest;
-} // end method</div>
-        <div class="sortable-code-container">
-        <div id="parsons-sortableTrash-58" class="sortable-code"></div>
-        <div id="parsons-sortableCode-58" class="sortable-code"></div>
-        <div style="clear:left;"></div>
-        </div>
-        <div class="parsons-controls">
-        <input type="button" class='btn btn-success' id="checkMe58" value="Check Me"/>
-        <input type="button" class='btn btn-default' id="reset58" value="Reset"/>
-        <div id="parsons-message-58"></div>
-        </div>
-        </div>
+    <pre data-component="parsons" id="pab_2">
+        <span data-question>7-2-1: The following method has the correct code to return the largest value in an integer array called <b>vals</b> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.</p></span>None</pre>
+    <p>Some examples of finding the largest value in an array start by setting the largest variable to 0.  But, what happens if the array only contains negative numbers?  What value could you set largest to and still have it work correctly even if the field <strong>values</strong> contained only negative numbers?</p>
 
-    <script>
-        $pjQ(document).ready(function(){
-
-            $("#parsons-58").not(".sortable-code").not(".parsons-controls").on("click", function(){
-                 $('html, body').animate({
-                    scrollTop: ($("#parsons-58").offset().top - 50)
-                }, 700);
-            }).find(".sortable-code, .parsons-controls").click(function(e) {
-                return false;
-                });
-            var msgBox = $("#parsons-message-58");
-            msgBox.hide();
-        var displayErrors = function (fb) {
-            if(fb.errors.length > 0) {
-                    var hash = pp_58.getHash("#ul-parsons-sortableCode-58");
-                    msgBox.fadeIn(500);
-                    msgBox.attr('class','alert alert-danger');
-                    msgBox.html(fb.errors[0]);
-                    logBookEvent({'event':'parsons', 'act':hash, 'div_id':'pab_2'});
-
-            } else {
-                    logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'pab_2'});
-                    msgBox.fadeIn(100);
-                    msgBox.attr('class','alert alert-success');
-                    msgBox.html("Perfect!")
-                }
-
-        }
-
-        $(window).load(function() {
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-58");
-            var trashul = $("#ul-parsons-sortableTrash-58");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            sortableul.height(minHeight);
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-        });
- 
-
-        var pp_58 = new ParsonsWidget({
-                'sortableId': 'parsons-sortableCode-58',
-        'trashId': 'parsons-sortableTrash-58',
-                'max_wrong_lines': 1,
-                'solution_label': 'Drop blocks here',
-                'feedback_cb' : displayErrors
-        });
-        pp_58.init($pjQ("#parsons-orig-58").text());
-    pp_58.shuffleLines();
-            
-        if(localStorage.getItem('pab_2') && localStorage.getItem('pab_2-trash')) {
-            try {
-                var solution = localStorage.getItem('pab_2');
-                var trash = localStorage.getItem('pab_2-trash');
-                pp_58.createHTMLFromHashes(solution,trash);
-                pp_58.getFeedback();
-            } catch(err) {
-                var text = "An error occured restoring old pab_2 state.  Error: ";
-                console.log(text + err.message);
-            }
-
-        }
-            $pjQ("#reset58").click(function(event){
-              event.preventDefault();
-              pp_58.shuffleLines();
-            
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-58");
-            var trashul = $("#ul-parsons-sortableTrash-58");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-              msgBox.hide();
-            });
-            
-            $pjQ("#checkMe58").click(function(event){
-              event.preventDefault();
-              var hash = pp_58.getHash("#ul-parsons-sortableCode-58");
-              localStorage.setItem('pab_2',hash);
-              hash = pp_58.getHash("#ul-parsons-sortableTrash-58");
-              localStorage.setItem('pab_2-trash',hash);
-            
-            pp_58.getFeedback();
-            msgBox.fadeIn(100);
-            
-            });
-            
-        });
-            
-
-    </script>
-
-<p>Some examples of finding the largest value in an array start by setting the largest variable to 0.  But, what happens if the array only contains negative numbers?  What value could you set largest to and still have it work correctly even if the field <strong>values</strong> contained only negative numbers?</p>
-
-            <div id="qab_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_3">
             <p>7-2-2: Given that a is an array of integers, which of the following best describes the conditions under which the following code segment will return true?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">boolean</span> <span class="n">temp</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 <span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
@@ -510,31 +406,19 @@
 <span class="k">return</span> <span class="n">temp</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="qab_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qab_3_opt_a" />
-            <label for= "qab_3_opt_a">  a) Whenever the first element in a is equal to val.</label><br />
+
+            <li data-component="answer"  id="qab_3_opt_a">Whenever the first element in a is equal to val.</li><li data-component="feedback" id="qab_3_opt_a">This would be true if the loop started at the end of the array and moved toward the beginning.  But, it will loop from the first element to the last.</li>
             
-            <input type="radio" name="group1" value="b" id="qab_3_opt_b" />
-            <label for= "qab_3_opt_b">  b) Whenever a contains any element which equals val.</label><br />
+            <li data-component="answer"  id="qab_3_opt_b">Whenever a contains any element which equals val.</li><li data-component="feedback" id="qab_3_opt_b">This would be true if temp was only set to the result of checking if the current element in the array is equal to val when it is false.  But, it is reset each time through the loop.</li>
             
-            <input type="radio" name="group1" value="c" id="qab_3_opt_c" />
-            <label for= "qab_3_opt_c">  c) Whenever the last element in a is equal to val.</label><br />
+            <li data-component="answer" data-correct id="qab_3_opt_c">Whenever the last element in a is equal to val.</li><li data-component="feedback" id="qab_3_opt_c">The variable temp is assigned to the result of checking if the current element in the array is equal to val.  The last time through the loop it will check if the last element is equal to val.</li>
             
-            <input type="radio" name="group1" value="d" id="qab_3_opt_d" />
-            <label for= "qab_3_opt_d">  d) Whenever only 1 element in a is equal to val.</label><br />
+            <li data-component="answer"  id="qab_3_opt_d">Whenever only 1 element in a is equal to val.</li><li data-component="feedback" id="qab_3_opt_d">There is no count of the number of times the array element is equal to value.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qab_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qab_3','c',['This would be true if the loop started at the end of the array and moved toward the beginning.  But, it will loop from the first element to the last.', 'This would be true if temp was only set to the result of checking if the current element in the array is equal to val when it is false.  But, it is reset each time through the loop.', 'The variable temp is assigned to the result of checking if the current element in the array is equal to val.  The last time through the loop it will check if the last element is equal to val.', 'There is no count of the number of times the array element is equal to value.'])">Check Me</button>
-            <button class='btn btn-default' id="qab_3_bcomp" disabled name="compare" onclick="compareAnswers('qab_3');">Compare Me</button>
-            </form><br />
-            <div id="qab_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qab_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_4">
             <p>7-2-3: Given the following field and method, which of the following best describes the contents of myStuff after (int m = mystery(n);) has been executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="c1">// private field in the class</span>
 <span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">myStuff</span><span class="o">;</span>
@@ -555,31 +439,19 @@
  <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qab_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qab_4_opt_a" />
-            <label for= "qab_4_opt_a">  a) All values in positions m+1 through myStuff.length-1 are greater than or equal to n.</label><br />
+
+            <li data-component="answer" data-correct id="qab_4_opt_a">All values in positions m+1 through myStuff.length-1 are greater than or equal to n.</li><li data-component="feedback" id="qab_4_opt_a">Mystery steps backwards through the array until the first value less than the passed num (n) is found and then it returns the index where this value is found.</li>
             
-            <input type="radio" name="group1" value="b" id="qab_4_opt_b" />
-            <label for= "qab_4_opt_b">  b) All values in position 0 through m are less than n.</label><br />
+            <li data-component="answer"  id="qab_4_opt_b">All values in position 0 through m are less than n.</li><li data-component="feedback" id="qab_4_opt_b">This would be true if mystery looped forward through the array and returned when it found a value greater than the passed num (n).</li>
             
-            <input type="radio" name="group1" value="c" id="qab_4_opt_c" />
-            <label for= "qab_4_opt_c">  c) All values in position m+1 through myStuff.length-1 are less than n.</label><br />
+            <li data-component="answer"  id="qab_4_opt_c">All values in position m+1 through myStuff.length-1 are less than n.</li><li data-component="feedback" id="qab_4_opt_c">This would be true if it returned when it found a value at the current index that was greater than num (n).</li>
             
-            <input type="radio" name="group1" value="d" id="qab_4_opt_d" />
-            <label for= "qab_4_opt_d">  d) The smallest value is at position m.</label><br />
+            <li data-component="answer"  id="qab_4_opt_d">The smallest value is at position m.</li><li data-component="feedback" id="qab_4_opt_d">It returns the first time the condition is met so nothing is known about the values which are unchecked.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qab_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qab_4','a',['Mystery steps backwards through the array until the first value less than the passed num (n) is found and then it returns the index where this value is found.', 'This would be true if mystery looped forward through the array and returned when it found a value greater than the passed num (n).', 'This would be true if it returned when it found a value at the current index that was greater than num (n).', 'It returns the first time the condition is met so nothing is known about the values which are unchecked.'])">Check Me</button>
-            <button class='btn btn-default' id="qab_4_bcomp" disabled name="compare" onclick="compareAnswers('qab_4');">Compare Me</button>
-            </form><br />
-            <div id="qab_4_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qab_5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_5">
             <p>7-2-4: Given the following code segment, which of the following will cause an infinite loop?  Assume that temp is an int variable initialized to be greater than zero and that a is an array of ints.</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">k</span><span class="o">++</span> <span class="o">)</span>
 <span class="o">{</span>
@@ -590,32 +462,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qab_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qab_5_opt_a" />
-            <label for= "qab_5_opt_a">  a) The values don't matter this will always cause an infinite loop.</label><br />
+
+            <li data-component="answer"  id="qab_5_opt_a">The values don't matter this will always cause an infinite loop.</li><li data-component="feedback" id="qab_5_opt_a">An infinite loop will not always occur in this code segment.</li>
             
-            <input type="radio" name="group1" value="b" id="qab_5_opt_b" />
-            <label for= "qab_5_opt_b">  b) Whenever a includes a value that is less than or equal to zero.</label><br />
+            <li data-component="answer" data-correct id="qab_5_opt_b">Whenever a includes a value that is less than or equal to zero.</li><li data-component="feedback" id="qab_5_opt_b">When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.</li>
             
-            <input type="radio" name="group1" value="c" id="qab_5_opt_c" />
-            <label for= "qab_5_opt_c">  c) Whenever a has values larger then temp.</label><br />
+            <li data-component="answer"  id="qab_5_opt_c">Whenever a has values larger then temp.</li><li data-component="feedback" id="qab_5_opt_c">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="d" id="qab_5_opt_d" />
-            <label for= "qab_5_opt_d">  d) When all values in a are larger than temp.</label><br />
+            <li data-component="answer"  id="qab_5_opt_d">When all values in a are larger than temp.</li><li data-component="feedback" id="qab_5_opt_d">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="e" id="qab_5_opt_e" />
-            <label for= "qab_5_opt_e">  e) Whenever a includes a value equal to temp.</label><br />
+            <li data-component="answer"  id="qab_5_opt_e">Whenever a includes a value equal to temp.</li><li data-component="feedback" id="qab_5_opt_e">Values equal to temp will not cause the infinite loop.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qab_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qab_5','b',['An infinite loop will not always occur in this code segment.', 'When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value \u003E 0), so an infinite loop will occur.', 'Values larger then temp will not cause an infinite loop.', 'Values larger then temp will not cause an infinite loop.', 'Values equal to temp will not cause the infinite loop.'])">Check Me</button>
-            <button class='btn btn-default' id="qab_5_bcomp" disabled name="compare" onclick="compareAnswers('qab_5');">Compare Me</button>
-            </form><br />
-            <div id="qab_5_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

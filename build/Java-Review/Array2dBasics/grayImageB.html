@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -391,44 +405,19 @@ grayscale image with 4 rows and 5 columns.</p>
 <h2>How to solve this problem<a class="headerlink" href="#how-to-solve-this-problem" title="Permalink to this headline">¶</a></h2>
 <p>Once again, this problem starts with looping through the array of pixels, using a nested for loop for the 2D array. As we loop we will need to subtract pixel values from one another.</p>
 
-            <div id="frgib_1" class="alert alert-warning">
-            9-11-1: Which is the simplest way to subtract one integer value from another integer value?<form name="frgib_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frgib_1_opt_a" />
-            <label for= "frgib_1_opt_a">  a) result = int1 - int2;</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frgib_1">
+            9-11-1: Which is the simplest way to subtract one integer value from another integer value?
+            <li data-component="answer"  id="frgib_1_opt_a">result = int1 - int2;</li><li data-component="feedback" id="frgib_1_opt_a">While the syntax here is correct, there's an even simpler way to execute subtraction.</li>
             
-            <input type="radio" name="group1" value="b" id="frgib_1_opt_b" />
-            <label for= "frgib_1_opt_b">  b) int1 -= int2;</label><br />
+            <li data-component="answer" data-correct id="frgib_1_opt_b">int1 -= int2;</li><li data-component="feedback" id="frgib_1_opt_b">The "-=" syntax correct subtracts int2 from int1, without creating an additional, which is ideal in our solution for this problem.</li>
             
-            <input type="radio" name="group1" value="c" id="frgib_1_opt_c" />
-            <label for= "frgib_1_opt_c">  c) int1.subtract(int2);</label><br />
+            <li data-component="answer"  id="frgib_1_opt_c">int1.subtract(int2);</li><li data-component="feedback" id="frgib_1_opt_c">Because the pixels are of primitive type "int,"  there is not subtract() method which can be executed in this case.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frgib_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frgib_1','b',['While the syntax here is correct, there\u0027s an even simpler way to execute subtraction.', 'The \u0022\u002D\u003D\u0022 syntax correct subtracts int2 from int1, without creating an additional, which is ideal in our solution for this problem.', 'Because the pixels are of primitive type \u0022int,\u0022  there is not subtract() method which can be executed in this case.'])">Check Me</button>
-            <button class='btn btn-default' id="frgib_1_bcomp" disabled name="compare" onclick="compareAnswers('frgib_1');">Compare Me</button>
-            </form><br />
-            <div id="frgib_1_feedback">
-            </div>
-            </div>
+            </ul>
             <p>When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops. The code below has a mistake in it, can you spot what the problem is and fix it?</p>
-<div id="cont"></div>
-<div id="lcfrgib3" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrgib3_runb" onclick="Jobe.runlive('lcfrgib3', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrgib3_saveb"
-                onclick="saveEditor('lcfrgib3');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrgib3_loadb"
-                onclick="requestCode('lcfrgib3');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrgib3_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrgib3_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrgib3 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class Test
 {
    public static void main(String[] args)
@@ -447,37 +436,10 @@ public class Test
      }
    }
 }
-        </textarea>
-    </div>
+</pre>
+<p>Try to write the code for the method <code class="docutils literal"><span class="pre">processImage</span></code>. When you are ready click &#8220;Run&#8221; to test your solution.</p>
 
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrgib3_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrgib3 )</span> </p>
-
-    
-</div><p>Try to write the code for the method <code class="docutils literal"><span class="pre">processImage</span></code>. When you are ready click &#8220;Run&#8221; to test your solution.</p>
-<div id="cont"></div>
-<div id="lcfrgib4" lang="java" class="ac_section alert alert-warning">
-
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrgib4_runb" onclick="Jobe.runlive('lcfrgib4', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrgib4_saveb"
-                onclick="saveEditor('lcfrgib4');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrgib4_loadb"
-                onclick="requestCode('lcfrgib4');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrgib4_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrgib4_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrgib4 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class GrayImage
 {
    public static final int BLACK = 0;
@@ -536,27 +498,14 @@ public class GrayImage
      image.printValues();
    }
 }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrgib4_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrgib4 )</span> </p>
-
-    
-</div></div>
+</pre>
+</div>
 <div class="section" id="video-one-way-to-code-the-solution">
 <h2>Video - One way to code the solution<a class="headerlink" href="#video-one-way-to-code-the-solution" title="Permalink to this headline">¶</a></h2>
 <div id="v_interfaces" class="video_popup" >
 <video controls preload="none"  poster="../_static/codeVideo.png">
-    <source src="http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B.mov" type="video/mp4"></source>
-    <source src="http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B.webm" type="video/webm"></source>
+    <source src="http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B2.mov" type="video/mp4"></source>
+    <source src="http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B2.webm" type="video/webm"></source>
     No supported video types
 </video>
 </div>

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -365,67 +379,31 @@
 <h2>How to solve this problem<a class="headerlink" href="#how-to-solve-this-problem" title="Permalink to this headline">¶</a></h2>
 <p>One way to solve this problem is to create a temporary array the same size as <code class="docutils literal"><span class="pre">spaces</span></code> and then loop through the current <code class="docutils literal"><span class="pre">spaces</span></code> array and if the current element isn&#8217;t null copy it to the temporary array.</p>
 
-            <div id="frhbb_1" class="alert alert-warning">
-            7-14-1: Which loop should you use to solve this problem?<form name="frhbb_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frhbb_1_opt_a" />
-            <label for= "frhbb_1_opt_a">  a) for</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frhbb_1">
+            7-14-1: Which loop should you use to solve this problem?
+            <li data-component="answer" data-correct id="frhbb_1_opt_a">for</li><li data-component="feedback" id="frhbb_1_opt_a">Use a for loop when you know how many times a loop needs to execute and need the index.</li>
             
-            <input type="radio" name="group1" value="b" id="frhbb_1_opt_b" />
-            <label for= "frhbb_1_opt_b">  b) for each</label><br />
+            <li data-component="answer"  id="frhbb_1_opt_b">for each</li><li data-component="feedback" id="frhbb_1_opt_b">Use a for each if you want to loop through all the elements in a collection and don't need an index.</li>
             
-            <input type="radio" name="group1" value="c" id="frhbb_1_opt_c" />
-            <label for= "frhbb_1_opt_c">  c) while</label><br />
+            <li data-component="answer"  id="frhbb_1_opt_c">while</li><li data-component="feedback" id="frhbb_1_opt_c">Use a while loop when you don't know how many times a loop needs to execute.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frhbb_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frhbb_1','a',['Use a for loop when you know how many times a loop needs to execute and need the index.', 'Use a for each if you want to loop through all the elements in a collection and don\u0027t need an index.', 'Use a while loop when you don\u0027t know how many times a loop needs to execute.'])">Check Me</button>
-            <button class='btn btn-default' id="frhbb_1_bcomp" disabled name="compare" onclick="compareAnswers('frhbb_1');">Compare Me</button>
-            </form><br />
-            <div id="frhbb_1_feedback">
-            </div>
-            </div>
+            </ul>
             <p>While we are looping through the <code class="docutils literal"><span class="pre">spaces</span></code> array, we need to check for non-null positions.</p>
 
-            <div id="frhbb_2" class="alert alert-warning">
-            7-14-2: How do we check if the space at the current index isn&#8217;t null?<form name="frhbb_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frhbb_2_opt_a" />
-            <label for= "frhbb_2_opt_a">  a) if (spaces.get(index) != null)</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frhbb_2">
+            7-14-2: How do we check if the space at the current index isn&#8217;t null?
+            <li data-component="answer"  id="frhbb_2_opt_a">if (spaces.get(index) != null)</li><li data-component="feedback" id="frhbb_2_opt_a">This is the syntax for checking an element within an ArrayList.</li>
             
-            <input type="radio" name="group1" value="b" id="frhbb_2_opt_b" />
-            <label for= "frhbb_2_opt_b">  b) if (!spaces[index].null())</label><br />
+            <li data-component="answer"  id="frhbb_2_opt_b">if (!spaces[index].null())</li><li data-component="feedback" id="frhbb_2_opt_b">Is null() a standard Java method? Comparing an object with a null value is simpler.</li>
             
-            <input type="radio" name="group1" value="c" id="frhbb_2_opt_c" />
-            <label for= "frhbb_2_opt_c">  c) if (spaces[index] != null)</label><br />
+            <li data-component="answer" data-correct id="frhbb_2_opt_c">if (spaces[index] != null)</li><li data-component="feedback" id="frhbb_2_opt_c">"!=" is the best way to compare an element with a null value.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frhbb_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frhbb_2','c',['This is the syntax for checking an element within an ArrayList.', 'Is null() a standard Java method? Comparing an object with a null value is simpler.', '\u0022!\u003D\u0022 is the best way to compare an element with a null value.'])">Check Me</button>
-            <button class='btn btn-default' id="frhbb_2_bcomp" disabled name="compare" onclick="compareAnswers('frhbb_2');">Compare Me</button>
-            </form><br />
-            <div id="frhbb_2_feedback">
-            </div>
-            </div>
+            </ul>
             <p>Try to write the code for the method <code class="docutils literal"><span class="pre">consolidate</span></code>. When you are ready click &#8220;Run&#8221; to test your solution.</p>
-<div id="cont"></div>
-<div id="lcfrhbb1" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrhbb1_runb" onclick="Jobe.runlive('lcfrhbb1', 'java', '', 'HorseBarn.java')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrhbb1_saveb"
-                onclick="saveEditor('lcfrhbb1');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrhbb1_loadb"
-                onclick="requestCode('lcfrhbb1');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrhbb1_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrhbb1_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrhbb1 data-lang="java"    data-timelimit=25000   data-audio=''  data-datafile='HorseBarn.java'   >
 public class HorseBarn
 {
    private Horse[] spaces;
@@ -477,25 +455,8 @@ public class HorseBarn
      System.out.println(barn);
    }
 }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrhbb1_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrhbb1 )</span> </p>
-
-    
-    <script>
-        $(document).ready(function() { Jobe.pushDataFile("HorseBarn.java"); } );
-    </script>
-    
-</div></div>
+</pre>
+</div>
 <div class="section" id="video-one-way-to-code-the-solution">
 <h2>Video - One way to code the solution<a class="headerlink" href="#video-one-way-to-code-the-solution" title="Permalink to this headline">¶</a></h2>
 <div id="v_interfaces" class="video_popup" >

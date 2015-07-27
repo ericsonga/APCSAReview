@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -326,27 +340,16 @@ that you might want to use in your programs like Math.abs (absolute value).  The
 methods live in the object that defines the class (an object of a class named <code class="docutils literal"><span class="pre">Class</span></code>) and can be accessed directly from the class.  You do not need to create an object of the class to use them.</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="q2_8" class="alert alert-warning">
-            3-7-1: Which of the following is a correct test for a 40% possibility?<form name="q2_8_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_8_opt_a" />
-            <label for= "q2_8_opt_a">  a) if (Math.random() < 0.4)</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_8">
+            3-7-1: Which of the following is a correct test for a 40% possibility?
+            <li data-component="answer" data-correct id="q2_8_opt_a">if (Math.random() < 0.4)</li><li data-component="feedback" id="q2_8_opt_a">This is about 40% of the range from 0 to not quite 1 (which is what the Math.random method returns).</li>
             
-            <input type="radio" name="group1" value="b" id="q2_8_opt_b" />
-            <label for= "q2_8_opt_b">  b) if (Math.random() > 0.4)</label><br />
+            <li data-component="answer"  id="q2_8_opt_b">if (Math.random() > 0.4)</li><li data-component="feedback" id="q2_8_opt_b">This will be about a 60% chance.</li>
             
-            <input type="radio" name="group1" value="c" id="q2_8_opt_c" />
-            <label for= "q2_8_opt_c">  c) if (Math.random() == 0.4)</label><br />
+            <li data-component="answer"  id="q2_8_opt_c">if (Math.random() == 0.4)</li><li data-component="feedback" id="q2_8_opt_c">Do not use == with double values!  Remember that Math.random can return any number between 0 and not quite 1 (about .99999999).</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_8');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_8','a',['This is about 40% of the range from 0 to not quite 1 (which is what the Math.random method returns).', 'This will be about a 60% chance.', 'Do not use \u003D\u003D with double values!  Remember that Math.random can return any number between 0 and not quite 1 (about .99999999).'])">Check Me</button>
-            <button class='btn btn-default' id="q2_8_bcomp" disabled name="compare" onclick="compareAnswers('q2_8');">Compare Me</button>
-            </form><br />
-            <div id="q2_8_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

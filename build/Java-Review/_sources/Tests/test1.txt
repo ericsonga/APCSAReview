@@ -7,7 +7,7 @@ Practice Exam 1 for the AP CS A Exam
 
 The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  
 
-.. mchoicemf:: qt3_1
+.. mchoice:: qt3_1
    :answer_a: 50
    :answer_b: 20
    :answer_c: 60
@@ -33,7 +33,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      }
 
 
-.. mchoicemf:: qt3_2
+.. mchoice:: qt3_2
    :answer_a: 1 2 3 2 4 6
    :answer_b: 1 2 3 2 4 6 3 6 9
    :answer_c: 1 2 2 4 3 6
@@ -55,7 +55,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            System.out.print(j * k + " "); 
      } 
 
-.. mchoicemf:: qt3_3
+.. mchoice:: qt3_3
    :answer_a: 128
    :answer_b: 256
    :answer_c: 64
@@ -79,7 +79,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      } 
 
 
-.. mchoicemf:: qt3_4
+.. mchoice:: qt3_4
    :answer_a: I and II only
    :answer_b: I, II, III, and V
    :answer_c: All will return true
@@ -106,7 +106,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      IV. (int1 == int2)
      V. (int2 == int3)
      
-.. mchoicemf:: qt3_5
+.. mchoice:: qt3_5
    :answer_a: The search value is not in the array 
    :answer_b: The search value is the last element in the array  
    :answer_c: The value is in the middle of the array. 
@@ -121,7 +121,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    Under which of these conditions will a sequential search be faster than a binary search?
    
-.. mchoicemf:: qt3_6
+.. mchoice:: qt3_6
    :answer_a: Data set 1 since it has more test cases.
    :answer_b: Data set 2 since it only contains strings with lower case characters.  
    :answer_c: There are no advantages.
@@ -143,7 +143,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
      
    
-.. mchoicemf:: qt3_7
+.. mchoice:: qt3_7
    :answer_a: I
    :answer_b: II
    :answer_c: III
@@ -210,7 +210,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          System.out.println();
       }
     
-.. mchoicemf:: qt3_8
+.. mchoice:: qt3_8
    :answer_a: [0, 1, 2, 3, 4, 5]
    :answer_b: [0, 1, 2, 4, 5]
    :answer_c: [5, 4, 1, 0]
@@ -236,7 +236,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       list1.add(new Integer(0));
       System.out.println(list1);
       
-.. mchoicemf:: qt3_9
+.. mchoice:: qt3_9
    :answer_a: I and III
    :answer_b: I only
    :answer_c: II only
@@ -302,7 +302,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              myName = name;
           }
           
-.. mchoicemf:: qt3_10
+.. mchoice:: qt3_10
    :answer_a: I
    :answer_b: II
    :answer_c: III
@@ -384,7 +384,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       V. 
          timeCards[k].advance(timeCards[k].getHours(), timeCards[k].getMinutes());
          
-.. mchoicemf:: qt3_11
+.. mchoice:: qt3_11
    :answer_a: I
    :answer_b: II
    :answer_c: III
@@ -451,7 +451,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          super(theName,thePhoneNumber);
          this.nickname = theNickname;
          
-.. mchoicemf:: qt3_12
+.. mchoice:: qt3_12
    :answer_a: The value is the first one in the array
    :answer_b: The value is in the middle of the array
    :answer_c: The value is at position 3 in the array
@@ -466,7 +466,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?  
    
-.. mchoicemf:: qt3_13
+.. mchoice:: qt3_13
    :answer_a: IV
    :answer_b: V
    :answer_c: I and II
@@ -491,7 +491,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       IV.  All of the above
       V.   None of the above
       
-.. mchoicemf:: qt3_14
+.. mchoice:: qt3_14
    :answer_a: 4
    :answer_b: 16
    :answer_c: 7
@@ -514,7 +514,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          return (a[1] * 2);
       }
    
-.. mchoicemf:: qt3_15
+.. mchoice:: qt3_15
    :answer_a: a = 6 and b = 7
    :answer_b: a = 6 and b = 13   
    :answer_c: a = 13 and b = 0   
@@ -539,7 +539,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          b = t - i;
       }
       
-.. mchoicemf:: qt3_16
+.. mchoice:: qt3_16
    :answer_a: hi there  
    :answer_b: HI THERE
    :answer_c: Hi There
@@ -564,7 +564,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       s3 = s3.toUpperCase();
       s4 = null;
       
-.. mchoicemf:: qt3_17
+.. mchoice:: qt3_17
    :answer_a: 4
    :answer_b: 8
    :answer_c: 9
@@ -590,7 +590,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           sum = sum + matrix[row][col];
        }
        
-.. mchoicemf:: qt3_18
+.. mchoice:: qt3_18
    :answer_a: { { 2, 1, 1, 1 }, { 2, 2, 1, 1 }, { 2, 2, 2, 1 } }
    :answer_b: { { 2, 3, 3, 3 }, { 1, 2, 3, 3 }, { 1, 1, 2, 3 } }
    :answer_c: { { 2, 1, 1 }, { 2, 2, 1 }, { 2, 2, 2 }, { 2, 2, 2 } }
@@ -621,7 +621,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
       }
       
-.. mchoicemf:: qt3_19
+.. mchoice:: qt3_19
    :answer_a: The values don't matter, this will always cause an infinite loop.         
    :answer_b: Whenever a has a value larger then temp.
    :answer_c: When all values in a are larger than temp.
@@ -647,7 +647,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
 
    
-.. mchoicemf:: qt3_20
+.. mchoice:: qt3_20
    :answer_a: A
    :answer_b: B
    :answer_c: C

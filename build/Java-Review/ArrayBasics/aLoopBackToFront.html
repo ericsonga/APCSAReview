@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -320,13 +334,42 @@
   
   <div class="section" id="looping-from-back-to-front">
 <h1>Looping From Back to Front<a class="headerlink" href="#looping-from-back-to-front" title="Permalink to this headline">¶</a></h1>
-<p id="index-0">You don&#8217;t have to loop through an array from the front to the back.  You can loop by starting at the back of the array and move toward the front during each time through the loop.  This can be handy when you are looping through a sorted array and want to find the index of the first number that is less than some given number as shown in the method <code class="docutils literal"><span class="pre">getIndexFirstSmaller</span></code> below.  Notice that the method returns -1 if there is no number in the array that is smaller than the given number.  Why does this work?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="c1">// private field</span>
-<span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">values</span> <span class="o">=</span> <span class="o">{-</span><span class="mi">3</span><span class="o">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">16</span><span class="o">,</span> <span class="mi">23</span><span class="o">,</span> <span class="mi">55</span><span class="o">};</span>
+<p id="index-0">You don&#8217;t have to loop through an array from the front to the back.  You can loop by starting at the back of the array and move toward the front during each time through the loop.  This can be handy when you are looping through a sorted array and want to find the index of the last number that is less than some given number as shown in the method <code class="docutils literal"><span class="pre">getIndexLastSmaller</span></code> below.  Notice that the method returns -1 if there is no number in the array that is smaller than the given number.  Why does this work?</p>
 
-<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIndexFirstSmaller</span><span class="o">(</span><span class="kt">int</span> <span class="n">compare</span><span class="o">)</span>
+<pre data-component="activecode" id=lcbf1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class ArrayWorker
+{
+   private int[ ] values;
+
+   public ArrayWorker(int[] theValues)
+   {
+      values = theValues;
+   }
+
+   public int getIndexLastSmaller(int compare)
+   {
+     for (int i = values.length - 1; i >=0; i--)
+     {
+       if (values[i] < compare) return i;
+     }
+     return -1; // to show none found
+   }
+
+   public static void main(String[] args)
+   {
+     int[] numArray =  {-3, -2, 4, 16, 23, 55};
+     ArrayWorker aWorker = new ArrayWorker(numArray);
+     System.out.println(aWorker.getIndexLastSmaller(20));
+   }
+}
+</pre>
+
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_6">
+            <p>7-4-1: Given the following code segment what will be returned when you execute: getIndexLastSmaller(-13);</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">values</span> <span class="o">=</span> <span class="o">{-</span><span class="mi">20</span><span class="o">,</span> <span class="o">-</span><span class="mi">15</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">16</span><span class="o">,</span> <span class="mi">33</span><span class="o">};</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIndexLastSmaller</span><span class="o">(</span><span class="kt">int</span> <span class="n">compare</span><span class="o">)</span>
 <span class="o">{</span>
-
    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span>
    <span class="o">{</span>
       <span class="k">if</span> <span class="o">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">compare</span><span class="o">)</span> <span class="k">return</span> <span class="n">i</span><span class="o">;</span>
@@ -336,49 +379,22 @@
 </pre></div>
 </div>
 
-            <div id="qab_6" class="alert alert-warning">
-            <p>7-4-1: Given the following code segment what will be returned when you execute: getIndexFirstSmaller(-13);</p>
+            <li data-component="answer"  id="qab_6_opt_a">-1</li><li data-component="feedback" id="qab_6_opt_a">The method will only return -1 if no value in the array is less than the passed value.</li>
+            
+            <li data-component="answer"  id="qab_6_opt_b">-15</li><li data-component="feedback" id="qab_6_opt_b">The method returns the index of the first item in the array that is less than the value, not the value.</li>
+            
+            <li data-component="answer" data-correct id="qab_6_opt_c">1</li><li data-component="feedback" id="qab_6_opt_c">Since the method loops from the back towards the front -15 is the last value in the array that is less than -13 and it is at index 1.</li>
+            
+            <li data-component="answer"  id="qab_6_opt_d">You will get an out of bounds error.</li><li data-component="feedback" id="qab_6_opt_d">No, the method correctly starts the index at values.length - 1 and continues as long as i is greater than or equal to 0.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_7">
+            <p>7-4-2: Given the following code segment what will be returned when you execute: getIndexLastSmaller(7);</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">values</span> <span class="o">=</span> <span class="o">{-</span><span class="mi">20</span><span class="o">,</span> <span class="o">-</span><span class="mi">15</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">16</span><span class="o">,</span> <span class="mi">33</span><span class="o">};</span>
 
-<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIndexFirstSmaller</span><span class="o">(</span><span class="kt">int</span> <span class="n">compare</span><span class="o">)</span>
-<span class="o">{</span>
-   <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span>
-   <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">compare</span><span class="o">)</span> <span class="k">return</span> <span class="n">i</span><span class="o">;</span>
-   <span class="o">}</span>
-   <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span> <span class="c1">// to show none found</span>
-<span class="o">}</span>
-</pre></div>
-</div>
-<form name="qab_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qab_6_opt_a" />
-            <label for= "qab_6_opt_a">  a) -1</label><br />
-            
-            <input type="radio" name="group1" value="b" id="qab_6_opt_b" />
-            <label for= "qab_6_opt_b">  b) -15</label><br />
-            
-            <input type="radio" name="group1" value="c" id="qab_6_opt_c" />
-            <label for= "qab_6_opt_c">  c) 1</label><br />
-            
-            <input type="radio" name="group1" value="d" id="qab_6_opt_d" />
-            <label for= "qab_6_opt_d">  d) You will get an out of bounds error.</label><br />
-            
-
-            <script>
-            $(document).ready(function(){checkRadio('qab_6');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qab_6','c',['The method will only return \u002D1 if no value in the array is less than the passed value.', 'The method returns the index of the first item in the array that is less than the value, not the value.', 'Since the method loops from the back towards the front \u002D15 is the first value less than \u002D13 and it is at index 1.', 'No, the method correctly starts the index at values.length \u002D 1 and continues as long as i is greater than or equal to 0.'])">Check Me</button>
-            <button class='btn btn-default' id="qab_6_bcomp" disabled name="compare" onclick="compareAnswers('qab_6');">Compare Me</button>
-            </form><br />
-            <div id="qab_6_feedback">
-            </div>
-            </div>
-            
-            <div id="qab_7" class="alert alert-warning">
-            <p>7-4-2: Given the following code segment what will be returned when you execute: getIndexFirstSmaller(7);</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">values</span> <span class="o">=</span> <span class="o">{-</span><span class="mi">20</span><span class="o">,</span> <span class="o">-</span><span class="mi">15</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">16</span><span class="o">,</span> <span class="mi">33</span><span class="o">};</span>
-
-<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIndexFirstSmaller</span><span class="o">(</span><span class="kt">int</span> <span class="n">compare</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getIndexLastSmaller</span><span class="o">(</span><span class="kt">int</span> <span class="n">compare</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span>
    <span class="o">{</span>
@@ -388,29 +404,17 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qab_7_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qab_7_opt_a" />
-            <label for= "qab_7_opt_a">  a) -1</label><br />
+
+            <li data-component="answer"  id="qab_7_opt_a">-1</li><li data-component="feedback" id="qab_7_opt_a">The method will only return -1 if no value in the array is less than the passed value.</li>
             
-            <input type="radio" name="group1" value="b" id="qab_7_opt_b" />
-            <label for= "qab_7_opt_b">  b) 1</label><br />
+            <li data-component="answer"  id="qab_7_opt_b">1</li><li data-component="feedback" id="qab_7_opt_b">Check the starting index.   Is it correct?</li>
             
-            <input type="radio" name="group1" value="c" id="qab_7_opt_c" />
-            <label for= "qab_7_opt_c">  c) 2</label><br />
+            <li data-component="answer"  id="qab_7_opt_c">2</li><li data-component="feedback" id="qab_7_opt_c">Check the starting index.   Is it correct?</li>
             
-            <input type="radio" name="group1" value="d" id="qab_7_opt_d" />
-            <label for= "qab_7_opt_d">  d) You will get an out of bounds error.</label><br />
+            <li data-component="answer" data-correct id="qab_7_opt_d">You will get an out of bounds error.</li><li data-component="feedback" id="qab_7_opt_d">You can not start the index at the length of the array.  You must start at the length of the array minus one.  This is a common mistake.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qab_7');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qab_7','d',['The method will only return \u002D1 if no value in the array is less than the passed value.', 'Check the starting index.   Is it correct?', 'Check the starting index.  Is it correct?', 'You can not start the index at the length of the array.  You must start at the length of the array minus one.  This is a common mistake.'])">Check Me</button>
-            <button class='btn btn-default' id="qab_7_bcomp" disabled name="compare" onclick="compareAnswers('qab_7');">Compare Me</button>
-            </form><br />
-            <div id="qab_7_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

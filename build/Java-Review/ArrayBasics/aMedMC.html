@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,39 +336,26 @@
 <h1>Medium Multiple Choice Questions<a class="headerlink" href="#medium-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are similar to those you will see on the AP CS A exam.</p>
 
-            <div id="qcb_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_1">
             <p>7-10-1: Which of the following statements is a valid conclusion. Assume that variable b is an array of k integers and that the following is true:</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">b</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">!=</span> <span class="n">b</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="k">for</span> <span class="n">all</span> <span class="n">k</span> <span class="n">such</span> <span class="n">that</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">k</span>
 </pre></div>
 </div>
-<form name="qcb_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_1_opt_a" />
-            <label for= "qcb_1_opt_a">  a) The value in b[0] does not occur anywhere else in the array</label><br />
+
+            <li data-component="answer" data-correct id="qcb_1_opt_a">The value in b[0] does not occur anywhere else in the array</li><li data-component="feedback" id="qcb_1_opt_a">The assertion denotes that b[0] occurs only once, regardless of the order or value of the other array values.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_1_opt_b" />
-            <label for= "qcb_1_opt_b">  b) Array b is sorted</label><br />
+            <li data-component="answer"  id="qcb_1_opt_b">Array b is sorted</li><li data-component="feedback" id="qcb_1_opt_b">The array does not necessarily need to be in order for the assertion to be true.</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_1_opt_c" />
-            <label for= "qcb_1_opt_c">  c) Array b is not sorted</label><br />
+            <li data-component="answer"  id="qcb_1_opt_c">Array b is not sorted</li><li data-component="feedback" id="qcb_1_opt_c">The array does not necessarily need to be in order for the assertion to be true.</li>
             
-            <input type="radio" name="group1" value="d" id="qcb_1_opt_d" />
-            <label for= "qcb_1_opt_d">  d) Array b contains no duplicates</label><br />
+            <li data-component="answer"  id="qcb_1_opt_d">Array b contains no duplicates</li><li data-component="feedback" id="qcb_1_opt_d">The only value that must not have a duplicate is b[0]</li>
             
-            <input type="radio" name="group1" value="e" id="qcb_1_opt_e" />
-            <label for= "qcb_1_opt_e">  e) The value in b[0] is the smallest value in the array</label><br />
+            <li data-component="answer"  id="qcb_1_opt_e">The value in b[0] is the smallest value in the array</li><li data-component="feedback" id="qcb_1_opt_e">b[0] can be any value, so long as no other array element is equal to it.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_1','a',['The assertion denotes that b[0] occurs only once, regardless of the order or value of the other array values.', 'The array does not necessarily need to be in order for the assertion to be true.', 'The array does not necessarily need to be in order for the assertion to be true.', 'The only value that must not have a duplicate is b[0]', 'b[0] can be any value, so long as no other array element is equal to it.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_1_bcomp" disabled name="compare" onclick="compareAnswers('qcb_1');">Compare Me</button>
-            </form><br />
-            <div id="qcb_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qcb_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_2">
             <p>7-10-2: Consider the following code segment. Which of the following statements best describes the conditions need for temp = true?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">boolean</span> <span class="n">temp</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
@@ -363,34 +364,21 @@
 <span class="k">return</span> <span class="n">temp</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="qcb_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_2_opt_a" />
-            <label for= "qcb_2_opt_a">  a) whenever the first element in a is equal to val</label><br />
+
+            <li data-component="answer"  id="qcb_2_opt_a">whenever the first element in a is equal to val</li><li data-component="feedback" id="qcb_2_opt_a">It is the last value in a that controls the final state of temp , as the loop is progressing through the array from 0 to the end.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_2_opt_b" />
-            <label for= "qcb_2_opt_b">  b) Whenever a contains any element which equals val</label><br />
+            <li data-component="answer"  id="qcb_2_opt_b">Whenever a contains any element which equals val</li><li data-component="feedback" id="qcb_2_opt_b">Because temp is reset every time through the loop, only the last element controls whether the final value is true or false.</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_2_opt_c" />
-            <label for= "qcb_2_opt_c">  c) Whenever the last element in a is equal to val</label><br />
+            <li data-component="answer" data-correct id="qcb_2_opt_c">Whenever the last element in a is equal to val</li><li data-component="feedback" id="qcb_2_opt_c">Because each time through the loop temp is reset, it will only be returned as true if the last value in a is equal to val.</li>
             
-            <input type="radio" name="group1" value="d" id="qcb_2_opt_d" />
-            <label for= "qcb_2_opt_d">  d) Whenever more than 1 element in a is equal to val</label><br />
+            <li data-component="answer"  id="qcb_2_opt_d">Whenever more than 1 element in a is equal to val</li><li data-component="feedback" id="qcb_2_opt_d">Because temp is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for just the last value to be equal to val.</li>
             
-            <input type="radio" name="group1" value="e" id="qcb_2_opt_e" />
-            <label for= "qcb_2_opt_e">  e) Whenever exactly 1 element in a is equal to val</label><br />
+            <li data-component="answer"  id="qcb_2_opt_e">Whenever exactly 1 element in a is equal to val</li><li data-component="feedback" id="qcb_2_opt_e">Because temp is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for several elements to be equal to val.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_2','c',['It is the last value in a that controls the final state of temp , as the loop is progressing through the array from 0 to the end.', 'Because temp is reset every time through the loop, only the last element controls whether the final value is true or false.', 'Because each time through the loop temp is reset, it will only be returned as true if the last value in a is equal to val.', 'Because temp is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for just the last value to be equal to val.', 'Because temp is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for several elements to be equal to val.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_2_bcomp" disabled name="compare" onclick="compareAnswers('qcb_2');">Compare Me</button>
-            </form><br />
-            <div id="qcb_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qcb_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_3">
             <p>7-10-3: Consider the following data field and method findLongest. Mehtod findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, finLongest does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the loength of the longest consecutive block of 10s. Which of the following best describes the value return by a call to findLongest?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kt">int</span> <span class="nf">findLongest</span><span class="o">(</span><span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
@@ -408,34 +396,21 @@
    <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qcb_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_3_opt_a" />
-            <label for= "qcb_3_opt_a">  a) It is the length of the shortest consecutive block of the value target in nums</label><br />
+
+            <li data-component="answer"  id="qcb_3_opt_a">It is the length of the shortest consecutive block of the value target in nums</li><li data-component="feedback" id="qcb_3_opt_a">It doesn't reset the count ever, so it just counts all the times the target value appears in the array.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_3_opt_b" />
-            <label for= "qcb_3_opt_b">  b) It is the length of the array nums</label><br />
+            <li data-component="answer"  id="qcb_3_opt_b">It is the length of the array nums</li><li data-component="feedback" id="qcb_3_opt_b">This can't be true. There is no nums.length in the code and the only count happens lenCount is incremented when nums[k] == target.</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_3_opt_c" />
-            <label for= "qcb_3_opt_c">  c) It is the length of the first consecutive block of the value target in nums</label><br />
+            <li data-component="answer"  id="qcb_3_opt_c">It is the length of the first consecutive block of the value target in nums</li><li data-component="feedback" id="qcb_3_opt_c">It doesn't reset the count ever, so it just counts all the times the target value appears in the array.</li>
             
-            <input type="radio" name="group1" value="d" id="qcb_3_opt_d" />
-            <label for= "qcb_3_opt_d">  d) It is the number of occurrences of the value target in nms</label><br />
+            <li data-component="answer" data-correct id="qcb_3_opt_d">It is the number of occurrences of the value target in nms</li><li data-component="feedback" id="qcb_3_opt_d">The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.</li>
             
-            <input type="radio" name="group1" value="e" id="qcb_3_opt_e" />
-            <label for= "qcb_3_opt_e">  e) It is the length of the last consecutive block of the value target in nums</label><br />
+            <li data-component="answer"  id="qcb_3_opt_e">It is the length of the last consecutive block of the value target in nums</li><li data-component="feedback" id="qcb_3_opt_e">It doesn't reset the count ever, so it just counts all the times the target value appears in the array.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_3','d',['It doesn\u0027t reset the count ever, so it just counts all the times the target value appears in the array.', 'This can\u0027t be true. There is no nums.length in the code and the only count happens lenCount is incremented when nums[k] \u003D\u003D target.', 'It doesn\u0027t reset the count ever, so it just counts all the times the target value appears in the array.', 'The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.', 'It doesn\u0027t reset the count ever, so it just counts all the times the target value appears in the array.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_3_bcomp" disabled name="compare" onclick="compareAnswers('qcb_3');">Compare Me</button>
-            </form><br />
-            <div id="qcb_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qcb_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_4">
             <p>7-10-4: Consider the following data field and method. Which of the following best describes the contents of myStuff after the following statement has been executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">myStuff</span><span class="o">;</span>
 
@@ -455,32 +430,19 @@
 <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">mystery</span><span class="o">(</span><span class="n">n</span><span class="o">)</span>
 </pre></div>
 </div>
-<form name="qcb_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_4_opt_a" />
-            <label for= "qcb_4_opt_a">  a) All values in positions m+1 through myStuff.length-1 are greater than or equal to n.</label><br />
+
+            <li data-component="answer" data-correct id="qcb_4_opt_a">All values in positions m+1 through myStuff.length-1 are greater than or equal to n.</li><li data-component="feedback" id="qcb_4_opt_a">Mystery steps backwards through the array until the first value less than the passed num (n) is found and then it returns the index where this value is found. Nothing is known about the elements of the array prior to the index at which the condition is met.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_4_opt_b" />
-            <label for= "qcb_4_opt_b">  b) All values in position 0 through m are less than n.</label><br />
+            <li data-component="answer"  id="qcb_4_opt_b">All values in position 0 through m are less than n.</li><li data-component="feedback" id="qcb_4_opt_b">Mystery steps backwards through the array and quits the first time the value at the current index is less than the passed num (n). This would be true if we went forward through the array and returned when it found a value greater than the passed num (n).</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_4_opt_c" />
-            <label for= "qcb_4_opt_c">  c) All values in position m+1 through myStuff.length-1 are less than n.</label><br />
+            <li data-component="answer"  id="qcb_4_opt_c">All values in position m+1 through myStuff.length-1 are less than n.</li><li data-component="feedback" id="qcb_4_opt_c">This would be true if it returned when it found a value at the current index that was greater than num (n).</li>
             
-            <input type="radio" name="group1" value="d" id="qcb_4_opt_d" />
-            <label for= "qcb_4_opt_d">  d) The smallest value is at position m.</label><br />
+            <li data-component="answer"  id="qcb_4_opt_d">The smallest value is at position m.</li><li data-component="feedback" id="qcb_4_opt_d">The condition compares the value at the current index of the array to the passed num. It returns the first time the condition is met so nothing is known about the values which are unchecked. One of the unchecked values could be smaller.</li>
             
-            <input type="radio" name="group1" value="e" id="qcb_4_opt_e" />
-            <label for= "qcb_4_opt_e">  e) The largest value that is smaller than n is at position m.</label><br />
+            <li data-component="answer"  id="qcb_4_opt_e">The largest value that is smaller than n is at position m.</li><li data-component="feedback" id="qcb_4_opt_e">The condition checks for any value that is smaller than the passed num and returns from mystery the first time that the condition is encountered. The values are not ordered so we don't know if this is the largest value smaller than n.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_4','a',['Mystery steps backwards through the array until the first value less than the passed num (n) is found and then it returns the index where this value is found. Nothing is known about the elements of the array prior to the index at which the condition is met.', 'Mystery steps backwards through the array and quits the first time the value at the current index is less than the passed num (n). This would be true if we went forward through the array and returned when it found a value greater than the passed num (n).', 'This would be true if it returned when it found a value at the current index that was greater than num (n).', 'The condition compares the value at the current index of the array to the passed num. It returns the first time the condition is met so nothing is known about the values which are unchecked. One of the unchecked values could be smaller.', 'The condition checks for any value that is smaller than the passed num and returns from mystery the first time that the condition is encountered. The values are not ordered so we don\u0027t know if this is the largest value smaller than n.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_4_bcomp" disabled name="compare" onclick="compareAnswers('qcb_4');">Compare Me</button>
-            </form><br />
-            <div id="qcb_4_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

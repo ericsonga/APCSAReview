@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -328,82 +342,46 @@
 <p>If you aren&#8217;t sure if a class should inherit from another class ask yourself if you can substitute the child class type for the parent class type.  For example, if you have a <code class="docutils literal"><span class="pre">Book</span></code> class and it has a subclass of <code class="docutils literal"><span class="pre">ComicBook</span></code> does that make sense?  Is a comic book a kind of book?  Yes, a comic book is a kind of book so inheritance makes sense.  If it doesn&#8217;t make sense use <em>association</em> or the <em>has-a</em> relationship instead.</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="qoo_1" class="alert alert-warning">
-            10-2-1:  A bookstore is working on an on-line ordering system. For each type of published material (books and movies) they need to track the id, title, author(s), date published, and price. Which of the following would be the best design?<form name="qoo_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_1_opt_a" />
-            <label for= "qoo_1_opt_a">  a) Create one class PublishedMaterial with the requested fields plus type</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_1">
+            10-2-1:  A bookstore is working on an on-line ordering system. For each type of published material (books and movies) they need to track the id, title, author(s), date published, and price. Which of the following would be the best design?
+            <li data-component="answer"  id="qoo_1_opt_a">Create one class PublishedMaterial with the requested fields plus type</li><li data-component="feedback" id="qoo_1_opt_a">This will complicate the process of retrieving objects based on their type. Also if we need to add information that is specific to Book or Movie, it would be best if these were subclasses of PublishedMaterial.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_1_opt_b" />
-            <label for= "qoo_1_opt_b">  b) Create classes Book and Movie and each class has the requested fields</label><br />
+            <li data-component="answer"  id="qoo_1_opt_b">Create classes Book and Movie and each class has the requested fields</li><li data-component="feedback" id="qoo_1_opt_b">This involves writing more code than is necessary (usually people copy and paste the shared code) and makes it harder to fix errors. It would be better to put common fields and methods in the superclass PublishedMaterial and have Book and Movie be subclasses.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_1_opt_c" />
-            <label for= "qoo_1_opt_c">  c) Create the class PublishedMaterial and have Book and Movie inherit from it all the listed fields</label><br />
+            <li data-component="answer" data-correct id="qoo_1_opt_c">Create the class PublishedMaterial and have Book and Movie inherit from it all the listed fields</li><li data-component="feedback" id="qoo_1_opt_c">We will need to get objects based on their type so we should create classes for Book and Movie. They have common fields so we should put these in a common superclass PublishedMaterial.</li>
             
-            <input type="radio" name="group1" value="d" id="qoo_1_opt_d" />
-            <label for= "qoo_1_opt_d">  d) Create one class BookStore with the requested fields plus type</label><br />
+            <li data-component="answer"  id="qoo_1_opt_d">Create one class BookStore with the requested fields plus type</li><li data-component="feedback" id="qoo_1_opt_d">The class name, BookStore, seems to imply the thing that keeps track of the store. This would be an appropriate class name for an object that handles the items in the Bookstore. However, for the published material, it would be better to use a superclass PublishedMaterial and subclasses for Books and Movies.</li>
             
-            <input type="radio" name="group1" value="e" id="qoo_1_opt_e" />
-            <label for= "qoo_1_opt_e">  e) Create classes for PublishedMaterial, Books, Movies, Title, Price, ID, Authors, DatePublished</label><br />
+            <li data-component="answer"  id="qoo_1_opt_e">Create classes for PublishedMaterial, Books, Movies, Title, Price, ID, Authors, DatePublished</li><li data-component="feedback" id="qoo_1_opt_e">This is more classes than is necessary. Items such as Title, Price, ID, Authors and DatePublished are simple variables that do not need a class of their own but should be fields in a PublishedMaterial superclass, with Movies and Books as subclasses.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_1','c',['This will complicate the process of retrieving objects based on their type. Also if we need to add information that is specific to Book or Movie, it would be best if these were subclasses of PublishedMaterial.', 'This involves writing more code than is necessary (usually people copy and paste the shared code) and makes it harder to fix errors. It would be better to put common fields and methods in the superclass PublishedMaterial and have Book and Movie be subclasses.', 'We will need to get objects based on their type so we should create classes for Book and Movie. They have common fields so we should put these in a common superclass PublishedMaterial.', 'The class name, BookStore, seems to imply the thing that keeps track of the store. This would be an appropriate class name for an object that handles the items in the Bookstore. However, for the published material, it would be better to use a superclass PublishedMaterial and subclasses for Books and Movies.', 'This is more classes than is necessary. Items such as Title, Price, ID, Authors and DatePublished are simple variables that do not need a class of their own but should be fields in a PublishedMaterial superclass, with Movies and Books as subclasses.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_1_bcomp" disabled name="compare" onclick="compareAnswers('qoo_1');">Compare Me</button>
-            </form><br />
-            <div id="qoo_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoo_2" class="alert alert-warning">
-            10-2-2:  A movie theater has multiple showings of a movie each day.  What should the relationship be between the Movie class and the MovieShowing class?<form name="qoo_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_2_opt_a" />
-            <label for= "qoo_2_opt_a">  a) The MovieShowing class should be a subclass of the Movie class.</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_2">
+            10-2-2:  A movie theater has multiple showings of a movie each day.  What should the relationship be between the Movie class and the MovieShowing class?
+            <li data-component="answer"  id="qoo_2_opt_a">The MovieShowing class should be a subclass of the Movie class.</li><li data-component="feedback" id="qoo_2_opt_a">Is a movie showing a type of movie?  Or, does a movie showing have a movie associated with it?</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_2_opt_b" />
-            <label for= "qoo_2_opt_b">  b) The Movie class should be a subclass of the MovieShowing class.</label><br />
+            <li data-component="answer"  id="qoo_2_opt_b">The Movie class should be a subclass of the MovieShowing class.</li><li data-component="feedback" id="qoo_2_opt_b">Is a movie a type of movie showing?  Or, does a movie showing have a movie associated with it?</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_2_opt_c" />
-            <label for= "qoo_2_opt_c">  c) A MovieShowing has a movie associated with it, so it should have a Movie field.</label><br />
+            <li data-component="answer" data-correct id="qoo_2_opt_c">A MovieShowing has a movie associated with it, so it should have a Movie field.</li><li data-component="feedback" id="qoo_2_opt_c">A movie showing is not a type of movie and a movie is not a type of movie showing.  A movie showing has a movie associated with it.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_2','c',['Is a movie showing a type of movie?  Or, does a movie showing have a movie associated with it?', 'Is a movie a type of movie showing?  Or, does a movie showing have a movie associated with it?', 'A movie showing is not a type of movie and a movie is not a type of movie showing.  A movie showing has a movie associated with it.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_2_bcomp" disabled name="compare" onclick="compareAnswers('qoo_2');">Compare Me</button>
-            </form><br />
-            <div id="qoo_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoo_3" class="alert alert-warning">
-            10-2-3:  What Java keyword is used to specify the parent class?<form name="qoo_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_3_opt_a" />
-            <label for= "qoo_3_opt_a">  a) superclass</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_3">
+            10-2-3:  What Java keyword is used to specify the parent class?
+            <li data-component="answer"  id="qoo_3_opt_a">superclass</li><li data-component="feedback" id="qoo_3_opt_a">The parent class is the superclass, but this is not the Java keyword for declaring the parent class.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_3_opt_b" />
-            <label for= "qoo_3_opt_b">  b) parent</label><br />
+            <li data-component="answer"  id="qoo_3_opt_b">parent</li><li data-component="feedback" id="qoo_3_opt_b">The class you are inheriting from is called the parent or superclass, but this is not the Java keyword.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_3_opt_c" />
-            <label for= "qoo_3_opt_c">  c) extends</label><br />
+            <li data-component="answer" data-correct id="qoo_3_opt_c">extends</li><li data-component="feedback" id="qoo_3_opt_c">The extends keyword is used to specify the parent class.</li>
             
-            <input type="radio" name="group1" value="d" id="qoo_3_opt_d" />
-            <label for= "qoo_3_opt_d">  d) class</label><br />
+            <li data-component="answer"  id="qoo_3_opt_d">class</li><li data-component="feedback" id="qoo_3_opt_d">The class keyword is used to declare a class, but not the parent class.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_3','c',['The parent class is the superclass, but this is not the Java keyword for declaring the parent class.', 'The class you are inheriting from is called the parent or superclass, but this is not the Java keyword.', 'The extends keyword is used to specify the parent class.', 'The class keyword is used to declare a class, but not the parent class.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_3_bcomp" disabled name="compare" onclick="compareAnswers('qoo_3');">Compare Me</button>
-            </form><br />
-            <div id="qoo_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoo_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_4">
             <dl class="docutils">
 <dt>10-2-4:  Question: Which of the following reasons for using an inheritance heirarchy are valid?</dt>
 <dd><ol class="first last upperroman simple">
@@ -415,32 +393,19 @@
 </ol>
 </dd>
 </dl>
-<form name="qoo_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_4_opt_a" />
-            <label for= "qoo_4_opt_a">  a) V</label><br />
+
+            <li data-component="answer"  id="qoo_4_opt_a">V</li><li data-component="feedback" id="qoo_4_opt_a">In fact, all of the reasons listed are valid. Subclasses can reuse methods written for superclasses without code replication, subclasses can be stored in the same array, and passed as arguments to methods meant for the superclass. All of which make writing code more streamlined.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_4_opt_b" />
-            <label for= "qoo_4_opt_b">  b) IV</label><br />
+            <li data-component="answer" data-correct id="qoo_4_opt_b">IV</li><li data-component="feedback" id="qoo_4_opt_b">All of these are valid reasons to use an inheritance heirarchy.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_4_opt_c" />
-            <label for= "qoo_4_opt_c">  c) I and II</label><br />
+            <li data-component="answer"  id="qoo_4_opt_c">I and II</li><li data-component="feedback" id="qoo_4_opt_c">III is also valid. In some cases you might want to store subclasses together in a single array, and inheritance allows for this.</li>
             
-            <input type="radio" name="group1" value="d" id="qoo_4_opt_d" />
-            <label for= "qoo_4_opt_d">  d) I and III</label><br />
+            <li data-component="answer"  id="qoo_4_opt_d">I and III</li><li data-component="feedback" id="qoo_4_opt_d">II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method instead of writing individual methods for each subclass.</li>
             
-            <input type="radio" name="group1" value="e" id="qoo_4_opt_e" />
-            <label for= "qoo_4_opt_e">  e) I only</label><br />
+            <li data-component="answer"  id="qoo_4_opt_e">I only</li><li data-component="feedback" id="qoo_4_opt_e">I and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_4','b',['In fact, all of the reasons listed are valid. Subclasses can reuse methods written for superclasses without code replication, subclasses can be stored in the same array, and passed as arguments to methods meant for the superclass. All of which make writing code more streamlined.', 'All of these are valid reasons to use an inheritance heirarchy.', 'III is also valid. In some cases you might want to store subclasses together in a single array, and inheritance allows for this.', 'II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method instead of writing individual methods for each subclass.', 'I and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_4_bcomp" disabled name="compare" onclick="compareAnswers('qoo_4');">Compare Me</button>
-            </form><br />
-            <div id="qoo_4_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

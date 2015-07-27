@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Hard Multiple Choice Questions<a class="headerlink" href="#hard-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are harder than most of those that you will usually see on the AP CS A exam.</p>
 
-            <div id="qsh_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsh_1">
             <p>4-9-1: Given the following code segment, which of the following is true?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&quot;Hi There&quot;</span><span class="o">);</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&quot;Hi There&quot;</span><span class="o">);</span>
@@ -334,64 +348,38 @@
 <span class="n">IV</span><span class="o">.</span>  <span class="o">(</span><span class="n">s2</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">s3</span><span class="o">))</span>
 </pre></div>
 </div>
-<form name="qsh_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsh_1_opt_a" />
-            <label for= "qsh_1_opt_a">  a) II and IV</label><br />
+
+            <li data-component="answer"  id="qsh_1_opt_a">II and IV</li><li data-component="feedback" id="qsh_1_opt_a">III is also correct.</li>
             
-            <input type="radio" name="group1" value="b" id="qsh_1_opt_b" />
-            <label for= "qsh_1_opt_b">  b) II, III, and IV</label><br />
+            <li data-component="answer" data-correct id="qsh_1_opt_b">II, III, and IV</li><li data-component="feedback" id="qsh_1_opt_b">String overrides equals to check if the two string objects have the same characters. The == operator checks if two object references refer to the same object. So II is correct since s1 and s2 have the same characters. Number II is correct since s3 and s1 are referencing the same string, so they will be ==. And s2 and s3 both refer to string that have the same characters so equals will be true in IV. The only one that will not be true is I, since s1 and s2 are two different objects (even though they have the same characters).</li>
             
-            <input type="radio" name="group1" value="c" id="qsh_1_opt_c" />
-            <label for= "qsh_1_opt_c">  c) I, II, III, IV</label><br />
+            <li data-component="answer"  id="qsh_1_opt_c">I, II, III, IV</li><li data-component="feedback" id="qsh_1_opt_c">I is not correct since s1 and s2 are two different objects (even though they have the same characters). If s1 and s2 were both referring to literals, then I would be correct, but the new operator forces a new object to be created.</li>
             
-            <input type="radio" name="group1" value="d" id="qsh_1_opt_d" />
-            <label for= "qsh_1_opt_d">  d) II only</label><br />
+            <li data-component="answer"  id="qsh_1_opt_d">II only</li><li data-component="feedback" id="qsh_1_opt_d">III and IV are also correct.</li>
             
-            <input type="radio" name="group1" value="e" id="qsh_1_opt_e" />
-            <label for= "qsh_1_opt_e">  e) IV only</label><br />
+            <li data-component="answer"  id="qsh_1_opt_e">IV only</li><li data-component="feedback" id="qsh_1_opt_e">II and III are also correct.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsh_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsh_1','b',['III is also correct.', 'String overrides equals to check if the two string objects have the same characters. The \u003D\u003D operator checks if two object references refer to the same object. So II is correct since s1 and s2 have the same characters. Number II is correct since s3 and s1 are referencing the same string, so they will be \u003D\u003D. And s2 and s3 both refer to string that have the same characters so equals will be true in IV. The only one that will not be true is I, since s1 and s2 are two different objects (even though they have the same characters).', 'I is not correct since s1 and s2 are two different objects (even though they have the same characters). If s1 and s2 were both referring to literals, then I would be correct, but the new operator forces a new object to be created.', 'III and IV are also correct.', 'II and III are also correct.'])">Check Me</button>
-            <button class='btn btn-default' id="qsh_1_bcomp" disabled name="compare" onclick="compareAnswers('qsh_1');">Compare Me</button>
-            </form><br />
-            <div id="qsh_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qsh_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsh_2">
             <p>4-9-2: What does the following code print?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;13&quot;</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qsh_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsh_2_opt_a" />
-            <label for= "qsh_2_opt_a">  a) 21</label><br />
+
+            <li data-component="answer"  id="qsh_2_opt_a">21</li><li data-component="feedback" id="qsh_2_opt_a">This would be correct if it was System.out.println(13 + 5 + 3), but the 13 is a string.</li>
             
-            <input type="radio" name="group1" value="b" id="qsh_2_opt_b" />
-            <label for= "qsh_2_opt_b">  b) 1353</label><br />
+            <li data-component="answer" data-correct id="qsh_2_opt_b">1353</li><li data-component="feedback" id="qsh_2_opt_b">This is string concatenation.  When you apprend a number to a string it get turned into a string and processing is from left to right.</li>
             
-            <input type="radio" name="group1" value="c" id="qsh_2_opt_c" />
-            <label for= "qsh_2_opt_c">  c) It will give a run-time error</label><br />
+            <li data-component="answer"  id="qsh_2_opt_c">It will give a run-time error</li><li data-component="feedback" id="qsh_2_opt_c">You can append a number to a string in Java. It turns the number into a string and then appends the second string to the first string.</li>
             
-            <input type="radio" name="group1" value="d" id="qsh_2_opt_d" />
-            <label for= "qsh_2_opt_d">  d) 138</label><br />
+            <li data-component="answer"  id="qsh_2_opt_d">138</li><li data-component="feedback" id="qsh_2_opt_d">This would be correct if it was System.out.println("13" + (5 + 3)), but the 5 is turned into a string and appended to the 13 and then the same is done with the 3.</li>
             
-            <input type="radio" name="group1" value="e" id="qsh_2_opt_e" />
-            <label for= "qsh_2_opt_e">  e) It will give a compile-time error</label><br />
+            <li data-component="answer"  id="qsh_2_opt_e">It will give a compile-time error</li><li data-component="feedback" id="qsh_2_opt_e">You can append a number to a string in Java.  It will compile.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsh_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsh_2','b',['This would be correct if it was System.out.println(13 + 5 + 3), but the 13 is a string.', 'This is string concatenation.  When you apprend a number to a string it get turned into a string and processing is from left to right.', 'You can append a number to a string in Java. It turns the number into a string and then appends the second string to the first string.', 'This would be correct if it was System.out.println(\u002213\u0022 + (5 + 3)), but the 5 is turned into a string and appended to the 13 and then the same is done with the 3.', 'You can append a number to a string in Java.  It will compile.'])">Check Me</button>
-            <button class='btn btn-default' id="qsh_2_bcomp" disabled name="compare" onclick="compareAnswers('qsh_2');">Compare Me</button>
-            </form><br />
-            <div id="qsh_2_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

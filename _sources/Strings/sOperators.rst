@@ -10,11 +10,19 @@ String Operators - Concatenation
 	
 Strings can be **appended** to each other which creates a new string using the ``+`` operator . This is also called **concatenation**. 
 
-.. code-block:: java 
-
-  String start = "Happy Birthday"; 
-  String name = "Jose";
-  String final = start + " " + name;
+.. activecode:: lcso1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        String start = "Happy Birthday"; 
+        String name = "Jose";
+        String result = start + " " + name;
+        System.out.println(result);
+      }
+   }
   
 Note that spaces are not added between strings automatically.  If you want a space between two strings then add one. 
 
@@ -24,9 +32,16 @@ Note that spaces are not added between strings automatically.  If you want a spa
 
 You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.  If you are appending number to a string it will be converted to a string first before being appended.  What do you think the following will print?   
 
-.. code-block:: java 
-
-  String message = "12" + 4 + 3; 
-  System.out.println(message);
+.. activecode:: lcso2
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        String message = "12" + 4 + 3; 
+        System.out.println(message);
+      }
+   }
   
-Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want the addition to take place before the numbers are turned into a string what should you do?
+Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string.

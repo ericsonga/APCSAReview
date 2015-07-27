@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -320,16 +334,34 @@
   
   <div class="section" id="complex-conditionals">
 <h1>Complex Conditionals<a class="headerlink" href="#complex-conditionals" title="Permalink to this headline">¶</a></h1>
-<p id="index-0">What if you want two things to be true before the body of the conditional is executed?  Use <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> as a logical <code class="docutils literal"><span class="pre">and</span></code> to join two Boolean expressions and the body of the condition will only be executed only if both are true.  For example, what if you want to go out and your mom said you could if you clean your room and do your homework?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span><span class="n">cleanedRoom</span> <span class="o">&amp;&amp;</span> <span class="n">didHomework</span><span class="o">)</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;You can go out&quot;</span><span class="o">);</span>
-<span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;No, you can&#39;t go out&quot;</span><span class="o">);</span>
-</pre></div>
-</div>
-<p>What if it is okay if only one of two things is true? Use <code class="docutils literal"><span class="pre">||</span></code> as a logical <code class="docutils literal"><span class="pre">or</span></code> to join two Boolean expressions and the body of the condition will be executed if one or both are true.  For example, your Dad might say you can go out if you can walk or he doesn&#8217;t need the car.</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span><span class="n">walking</span> <span class="o">||</span> <span class="n">carIsAvailable</span><span class="o">)</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;You can go out&quot;</span><span class="o">);</span>
-<span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;No, you can&#39;t go out&quot;</span><span class="o">);</span>
-</pre></div>
-</div>
+<p id="index-0">What if you want two things to be true before the body of the conditional is executed?  Use <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> as a logical <em>and</em> to join two Boolean expressions and the body of the condition will only be executed only if both are true.  For example, what if you want to go out and your mom said you could if you clean your room and do your homework?  Run the code below and try different values for <code class="docutils literal"><span class="pre">cleanedRoom</span></code> and <code class="docutils literal"><span class="pre">didHomework</span></code> and see what they have to be for it to print <code class="docutils literal"><span class="pre">You</span> <span class="pre">can</span> <span class="pre">go</span> <span class="pre">out</span></code>.</p>
+
+<pre data-component="activecode" id=lccc1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test1
+{
+   public static void main(String[] args)
+   {
+     boolean cleanedRoom = true;
+     boolean didHomework = false;
+     if (cleanedRoom && didHomework) System.out.println("You can go out");
+     else System.out.println("No, you can't go out");
+   }
+}
+</pre>
+<p>What if it is okay if only one of two things is true? Use <code class="docutils literal"><span class="pre">||</span></code> as a logical <em>or</em> to join two Boolean expressions and the body of the condition will be executed if one or both are true.  For example, your Dad might say you can go out if you can walk or he doesn&#8217;t need the car.  Try different values for <code class="docutils literal"><span class="pre">walking</span></code> and <code class="docutils literal"><span class="pre">carIsAvailable</span></code> and see what the values have to be to print <code class="docutils literal"><span class="pre">You</span> <span class="pre">can</span> <span class="pre">go</span> <span class="pre">out</span></code>.</p>
+
+<pre data-component="activecode" id=lccc2 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test2
+{
+   public static void main(String[] args)
+   {
+     boolean walking = true;
+     boolean carIsAvailable = false;
+     if (walking || carIsAvailable) System.out.println("You can go out");
+     else System.out.println("No, you can't go out");
+   }
+}
+</pre>
 <p>The following table (also called a <strong>truth table</strong>) shows the result for P &amp;&amp; Q when P and Q are both expressions that can be true or false. As you can see below the result of P &amp;&amp; Q is only true if both P and Q are true.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -396,60 +428,38 @@
 </table>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="qcb_5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_5">
             <p>5-2-1: What is printed when the following code executes and x has been set to zero?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="o">)</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;first case&quot;</span><span class="o">);</span>
 <span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;second case&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qcb_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_5_opt_a" />
-            <label for= "qcb_5_opt_a">  a) first case</label><br />
+
+            <li data-component="answer"  id="qcb_5_opt_a">first case</li><li data-component="feedback" id="qcb_5_opt_a">This will only print if x is greater than 0 and it is not.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_5_opt_b" />
-            <label for= "qcb_5_opt_b">  b) second case</label><br />
+            <li data-component="answer" data-correct id="qcb_5_opt_b">second case</li><li data-component="feedback" id="qcb_5_opt_b">This will print if x is less than or equal to zero or if y divided by x is not equal to 3.</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_5_opt_c" />
-            <label for= "qcb_5_opt_c">  c) You will get a error because you can't divide by zero.</label><br />
+            <li data-component="answer"  id="qcb_5_opt_c">You will get a error because you can't divide by zero.</li><li data-component="feedback" id="qcb_5_opt_c">Since the first condition if false when x is equal to zero the second condition won't execute.  Execution moves to the else.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_5','b',['This will only print if x is greater than 0 and it is not.', 'This will print if x is less than or equal to zero or if y divided by x is not equal to 3.', 'Since the first condition if false when x is equal to zero the second condition won\u0027t execute.  Execution moves to the else.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_5_bcomp" disabled name="compare" onclick="compareAnswers('qcb_5');">Compare Me</button>
-            </form><br />
-            <div id="qcb_5_feedback">
-            </div>
-            </div>
+            </ul>
             <p><strong>Check your understanding</strong></p>
 
-            <div id="qcb_6" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_6">
             <p>5-2-2: What is printed when the following code executes and x has been set to zero?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="o">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="o">)</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;first case&quot;</span><span class="o">);</span>
 <span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;second case&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qcb_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_6_opt_a" />
-            <label for= "qcb_6_opt_a">  a) first case</label><br />
+
+            <li data-component="answer"  id="qcb_6_opt_a">first case</li><li data-component="feedback" id="qcb_6_opt_a">This will print if either of the two conditions are true.  The first isn't true but the second will cause an error.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_6_opt_b" />
-            <label for= "qcb_6_opt_b">  b) second case</label><br />
+            <li data-component="answer"  id="qcb_6_opt_b">second case</li><li data-component="feedback" id="qcb_6_opt_b">This will print if both of the conditions are false.  But, an error will occur when testing the second condition.</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_6_opt_c" />
-            <label for= "qcb_6_opt_c">  c) You will get a error because you can't divide by zero.</label><br />
+            <li data-component="answer" data-correct id="qcb_6_opt_c">You will get a error because you can't divide by zero.</li><li data-component="feedback" id="qcb_6_opt_c">The first condition will be false so the second one will be executed and lead to an error since you can't divide by zero.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_6');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_6','c',['This will print if either of the two conditions are true.  The first isn\u0027t true but the second will cause an error.', 'This will print if both of the conditions are false.  But, an error will occur when testing the second condition.', 'The first condition will be false so the second one will be executed and lead to an error since you can\u0027t divide by zero.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_6_bcomp" disabled name="compare" onclick="compareAnswers('qcb_6');">Compare Me</button>
-            </form><br />
-            <div id="qcb_6_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

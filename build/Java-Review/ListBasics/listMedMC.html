@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Medium Multiple Choice Questions<a class="headerlink" href="#medium-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are like those you will see on the AP CS A exam.</p>
 
-            <div id="qalm_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qalm_1">
             <p>8-8-1: What is printed as a result of executing the following code segment?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
 <span class="n">list1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
@@ -334,31 +348,19 @@
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list1</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qalm_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qalm_1_opt_a" />
-            <label for= "qalm_1_opt_a">  a) [1, 2, 3, 4, 5]</label><br />
+
+            <li data-component="answer"  id="qalm_1_opt_a">[1, 2, 3, 4, 5]</li><li data-component="feedback" id="qalm_1_opt_a">The set replaces the 3 at index 2 with the 4 so this can't be right.</li>
             
-            <input type="radio" name="group1" value="b" id="qalm_1_opt_b" />
-            <label for= "qalm_1_opt_b">  b) [1, 2, 4, 5, 6]</label><br />
+            <li data-component="answer"  id="qalm_1_opt_b">[1, 2, 4, 5, 6]</li><li data-component="feedback" id="qalm_1_opt_b">The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3.  Remember that the first index is 0.</li>
             
-            <input type="radio" name="group1" value="c" id="qalm_1_opt_c" />
-            <label for= "qalm_1_opt_c">  c) [1, 2, 5, 4, 6]</label><br />
+            <li data-component="answer" data-correct id="qalm_1_opt_c">[1, 2, 5, 4, 6]</li><li data-component="feedback" id="qalm_1_opt_c">The add method that takes just a value as a parameter adds that value to the end of the list.  The set replaces the value at that index with the new value.  The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index).</li>
             
-            <input type="radio" name="group1" value="d" id="qalm_1_opt_d" />
-            <label for= "qalm_1_opt_d">  d) [1, 5, 2, 4, 6]</label><br />
+            <li data-component="answer"  id="qalm_1_opt_d">[1, 5, 2, 4, 6]</li><li data-component="feedback" id="qalm_1_opt_d">The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1.  Remember that the first index is 0.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qalm_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qalm_1','c',['The set replaces the 3 at index 2 with the 4 so this can\u0027t be right.', 'The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3.  Remember that the first index is 0.', 'The add method that takes just a value as a parameter adds that value to the end of the list.  The set replaces the value at that index with the new value.  The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index).', 'The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1.  Remember that the first index is 0.'])">Check Me</button>
-            <button class='btn btn-default' id="qalm_1_bcomp" disabled name="compare" onclick="compareAnswers('qalm_1');">Compare Me</button>
-            </form><br />
-            <div id="qalm_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qalm_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qalm_2">
             <p>8-8-2: Given the following code and assume that <code class="docutils literal"><span class="pre">nums</span></code> initially contains [0, 0, 4, 2, 5, 0, 3], what will <code class="docutils literal"><span class="pre">nums</span></code> contain as a result of executing numQuest?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">nums</span><span class="o">;</span>
 
@@ -377,34 +379,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qalm_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qalm_2_opt_a" />
-            <label for= "qalm_2_opt_a">  a) [0, 4, 2, 5, 3]</label><br />
+
+            <li data-component="answer" data-correct id="qalm_2_opt_a">[0, 4, 2, 5, 3]</li><li data-component="feedback" id="qalm_2_opt_a">This code will loop through the array list and if the current value at the current index (k) is 0 it will remove it.  When you remove a value from an array list it moves all values to the right of that one to the the left. Since <code>k</code> is always incremented, this code will not remove the 2nd zero when there are two in a row.</li>
             
-            <input type="radio" name="group1" value="b" id="qalm_2_opt_b" />
-            <label for= "qalm_2_opt_b">  b) [3, 5, 2, 4, 0, 0, 0, 0]</label><br />
+            <li data-component="answer"  id="qalm_2_opt_b">[3, 5, 2, 4, 0, 0, 0, 0]</li><li data-component="feedback" id="qalm_2_opt_b">This shows all zeros at the end and this code removes 0's so this can't be right.</li>
             
-            <input type="radio" name="group1" value="c" id="qalm_2_opt_c" />
-            <label for= "qalm_2_opt_c">  c) [0, 0, 0, 0, 4, 2, 5, 3]</label><br />
+            <li data-component="answer"  id="qalm_2_opt_c">[0, 0, 0, 0, 4, 2, 5, 3]</li><li data-component="feedback" id="qalm_2_opt_c">This shows all zeros at the beginning and this code removes zeros so this can't be right.</li>
             
-            <input type="radio" name="group1" value="d" id="qalm_2_opt_d" />
-            <label for= "qalm_2_opt_d">  d) [4, 2, 5, 3]</label><br />
+            <li data-component="answer"  id="qalm_2_opt_d">[4, 2, 5, 3]</li><li data-component="feedback" id="qalm_2_opt_d">This shows all zeros removed.  This would be correct if k was only incremented if a value wasn't removed.</li>
             
-            <input type="radio" name="group1" value="e" id="qalm_2_opt_e" />
-            <label for= "qalm_2_opt_e">  e) [0, 0, 4, 2, 5, 0, 3, 0]</label><br />
+            <li data-component="answer"  id="qalm_2_opt_e">[0, 0, 4, 2, 5, 0, 3, 0]</li><li data-component="feedback" id="qalm_2_opt_e">This shows the original values, but this code does remove some zeros so this can't be right.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qalm_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qalm_2','a',['This code will loop through the array list and if the current value at the current index (k) is 0 it will remove it.  When you remove a value from an array list it moves all values to the right of that one to the the left. Since \u003Ccode\u003Ek\u003C/code\u003E is always incremented, this code will not remove the 2nd zero when there are two in a row.', 'This shows all zeros at the end and this code removes 0\u0027s so this can\u0027t be right.', 'This shows all zeros at the beginning and this code removes zeros so this can\u0027t be right.', 'This shows all zeros removed.  This would be correct if k was only incremented if a value wasn\u0027t removed.', 'This shows the original values, but this code does remove some zeros so this can\u0027t be right.'])">Check Me</button>
-            <button class='btn btn-default' id="qalm_2_bcomp" disabled name="compare" onclick="compareAnswers('qalm_2');">Compare Me</button>
-            </form><br />
-            <div id="qalm_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qalm_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qalm_3">
             <p>8-8-3: Which of the following best describes the behavior of process1 and process2 (shown below)?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="n">List</span> <span class="nf">process1</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
@@ -423,34 +412,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qalm_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qalm_3_opt_a" />
-            <label for= "qalm_3_opt_a">  a) Both methods produce the same result, and process1 is faster than process2.</label><br />
+
+            <li data-component="answer"  id="qalm_3_opt_a">Both methods produce the same result, and process1 is faster than process2.</li><li data-component="feedback" id="qalm_3_opt_a">In this case they do the same thing.  The only difference would be if there were values in the list in process2.</li>
             
-            <input type="radio" name="group1" value="b" id="qalm_3_opt_b" />
-            <label for= "qalm_3_opt_b">  b) The two methods produce different results and take the same amount of time.</label><br />
+            <li data-component="answer"  id="qalm_3_opt_b">The two methods produce different results and take the same amount of time.</li><li data-component="feedback" id="qalm_3_opt_b">These produce the same result on an empty list when you add to the end.</li>
             
-            <input type="radio" name="group1" value="c" id="qalm_3_opt_c" />
-            <label for= "qalm_3_opt_c">  c) The two methods produce different results, and process1 is faster than process2.</label><br />
+            <li data-component="answer"  id="qalm_3_opt_c">The two methods produce different results, and process1 is faster than process2.</li><li data-component="feedback" id="qalm_3_opt_c">These produce the same result on an empty list when you add to the end.</li>
             
-            <input type="radio" name="group1" value="d" id="qalm_3_opt_d" />
-            <label for= "qalm_3_opt_d">  d) The two methods produce different results, and process2 is faster than process1.</label><br />
+            <li data-component="answer"  id="qalm_3_opt_d">The two methods produce different results, and process2 is faster than process1.</li><li data-component="feedback" id="qalm_3_opt_d">These produce the same result on an empty list when you add to the end.</li>
             
-            <input type="radio" name="group1" value="e" id="qalm_3_opt_e" />
-            <label for= "qalm_3_opt_e">  e) Both methods produce the same result and take the same amount of time.</label><br />
+            <li data-component="answer" data-correct id="qalm_3_opt_e">Both methods produce the same result and take the same amount of time.</li><li data-component="feedback" id="qalm_3_opt_e">The method process1 adds to the end of the list each time through the loop.  The method process2 also adds to the end of the list each time through the loop.  The only difference would be if there were values in the list in process2.  Any existing values would be moved to the right.  But, there are no existing values in the list at that index or beyond.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qalm_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qalm_3','e',['In this case they do the same thing.  The only difference would be if there were values in the list in process2.', 'These produce the same result on an empty list when you add to the end.', 'These produce the same result on an empty list when you add to the end.', 'These produce the same result on an empty list when you add to the end.', 'The method process1 adds to the end of the list each time through the loop.  The method process2 also adds to the end of the list each time through the loop.  The only difference would be if there were values in the list in process2.  Any existing values would be moved to the right.  But, there are no existing values in the list at that index or beyond.'])">Check Me</button>
-            <button class='btn btn-default' id="qalm_3_bcomp" disabled name="compare" onclick="compareAnswers('qalm_3');">Compare Me</button>
-            </form><br />
-            <div id="qalm_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qalm_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qalm_4">
             <p>8-8-4: What is printed as a result of executing the following code segment?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">aList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
 <span class="n">aList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
@@ -462,32 +438,19 @@
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qalm_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qalm_4_opt_a" />
-            <label for= "qalm_4_opt_a">  a) [1, 2, 5, 4, 6, 3]</label><br />
+
+            <li data-component="answer"  id="qalm_4_opt_a">[1, 2, 5, 4, 6, 3]</li><li data-component="feedback" id="qalm_4_opt_a">The set replaces the 3 with the 4 so this can't be right.</li>
             
-            <input type="radio" name="group1" value="b" id="qalm_4_opt_b" />
-            <label for= "qalm_4_opt_b">  b) [6, 5, 4, 3, 2, 1]</label><br />
+            <li data-component="answer"  id="qalm_4_opt_b">[6, 5, 4, 3, 2, 1]</li><li data-component="feedback" id="qalm_4_opt_b">The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3.  Remember that the first index is 0.</li>
             
-            <input type="radio" name="group1" value="c" id="qalm_4_opt_c" />
-            <label for= "qalm_4_opt_c">  c) [1, 2, 3, 4, 5, 6]</label><br />
+            <li data-component="answer"  id="qalm_4_opt_c">[1, 2, 3, 4, 5, 6]</li><li data-component="feedback" id="qalm_4_opt_c">The add method that takes just a value as a parameter adds that value to the end of the list.  The set replaces the value at that index with the new value.  The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index).</li>
             
-            <input type="radio" name="group1" value="d" id="qalm_4_opt_d" />
-            <label for= "qalm_4_opt_d">  d) [1, 4, 2, 6, 3]</label><br />
+            <li data-component="answer" data-correct id="qalm_4_opt_d">[1, 4, 2, 6, 3]</li><li data-component="feedback" id="qalm_4_opt_d">The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1.  Remember that the first index is 0.</li>
             
-            <input type="radio" name="group1" value="e" id="qalm_4_opt_e" />
-            <label for= "qalm_4_opt_e">  e) [1, 2, 4, 6, 3]</label><br />
+            <li data-component="answer"  id="qalm_4_opt_e">[1, 2, 4, 6, 3]</li><li data-component="feedback" id="qalm_4_opt_e">When you declare and create a collection class you can specify the type of the items in it.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qalm_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qalm_4','d',['The set replaces the 3 with the 4 so this can\u0027t be right.', 'The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3.  Remember that the first index is 0.', 'The add method that takes just a value as a parameter adds that value to the end of the list.  The set replaces the value at that index with the new value.  The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index).', 'The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1.  Remember that the first index is 0.', 'When you declare and create a collection class you can specify the type of the items in it.'])">Check Me</button>
-            <button class='btn btn-default' id="qalm_4_bcomp" disabled name="compare" onclick="compareAnswers('qalm_4');">Compare Me</button>
-            </form><br />
-            <div id="qalm_4_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

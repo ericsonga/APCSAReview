@@ -17,7 +17,7 @@ A **for** loop is usually used when you know how many times you want the loop to
   
 The code in the initialization area is executed before the first execution of the loop, the condition is checked each time through the loop and the loop continues as long as the condition is true, at the end of each execution of the body of the loop the changes are done.   
 
-.. livecode:: lcfc1
+.. activecode:: lcfc1
    :language: java
    
    public class SongTest
@@ -38,6 +38,11 @@ The code in the initialization area is executed before the first execution of th
             System.out.println((i - 1) + line1);
             System.out.println();
          }
+      }
+      
+      public static void main(String[] args)
+      {
+         SongTest.printPopSong();
       }
    }
   

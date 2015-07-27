@@ -18,14 +18,19 @@ Operators
 
 Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``).  Java uses (``==``) to test if the value on the left is equal to the value on the right and (``!=``) to test if two items are not equal.  But, the percent sign operator (``%``) is the **modulus** or remainder operator.
 
-Try the following in DrJava's interaction pane.  You can download DrJava for free from http://www.drjava.org.  The interaction pane lets you try out Java code without having to declare a class.  It also automatically prints the result of a statement when you press enter.  What does it print when you type each of the following lines and hit enter?
-
-.. code-block:: java 
-
-  11 % 10
-  3 % 4 
-  8 % 2
-  9 % 2
+.. activecode:: lcop1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        System.out.println(11 % 10);
+        System.out.println(3 % 4);
+        System.out.println(8 % 2);
+        System.out.println(9 % 2);
+      }
+   }
   
 ..	index::
 	single: modulus
@@ -39,8 +44,22 @@ The **modulus** operator (``%``) returns the remainder after you divide the firs
     -  Use it to get the last digit from an integer number (``num % 10 = last digit on right``).  This approach could be used on the free response question Self Divisor (Question 1 from 2007).  See http://coweb.cc.gatech.edu/ice-gt/1277 for starter code and testing code.
     
     -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278.  
-    
-.. mchoicemf:: q2_7
+
+In addition, the **Math** class provides us with multiple methods that can be useful within our own Java classes. The random() method returns a number greater than or equal to 0.0, and less than 1.0. Try out the following code.
+
+.. activecode:: lcop3
+   :language: java
+   
+   public class Test3
+   {
+      public static void main(String[] args)
+      {
+        System.out.println(Math.random());
+        System.out.println(Math.random());
+      }
+   }
+   
+.. mchoicemf:: q3_4_1
    :answer_a: 15
    :answer_b: 16
    :answer_c: 8
@@ -51,7 +70,7 @@ The **modulus** operator (``%``) returns the remainder after you divide the firs
 
    What is the result of 158 % 10?
    
-.. mchoicemf:: q2_8
+.. mchoicemf:: q3_4_2
    :answer_a: 3
    :answer_b: 2
    :answer_c: 8
@@ -65,7 +84,21 @@ The **modulus** operator (``%``) returns the remainder after you divide the firs
 You are also expected to know the double plus operator (``++``) and the double minus operator (``--``).  The ``++`` operator is used to add one to the current value: ``x++`` is the same as ``x = x + 1``.  The ``--`` operator is used to subtract one from the current value: ``y--`` is the same as ``y = y - 1``.  
 You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the same as ``x = x - y``, ``x *= y`` is the same as ``x = x * y``, and ``x /= y`` is the same as ``x = x / y``.  
 
-.. mchoicemf:: q2_9
+.. activecode:: lcpp
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        int num = 0;
+        System.out.println(num);
+        num++;
+        System.out.println(num);
+      }
+   }
+
+.. mchoicemf:: q3_4_3
    :answer_a: x = -1, y = 1, z = 4
    :answer_b: x = -1, y = 2, z = 3
    :answer_c: x = -1, y = 2, z = 2

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -330,7 +344,7 @@
 <p>Any object variable can refer to an object of the declared type or <em>any descendant (subclass) of the declared type</em> at run-time.  At compile time the compiler uses the declared type to check that the methods you are trying to use are available to an object of that type.  The code won&#8217;t compile if the methods don&#8217;t exist in that class or some parent class of that class.  At run-time the actual method that is called depends on the actual type of the object.  Remember that an object keeps a reference to the class that created it (an object of the class called <code class="docutils literal"><span class="pre">Class</span></code>).  When a method is called at run-time the first place that is checked for that method is the class that created the object.  If the method is found there it will be executed.  If not, the parent of that class will be checked and so on until the method is found.</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="qoo_10" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_10">
             <p>10-9-1: What is the output from running the main method in the Shape class?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Shape</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">what</span><span class="o">()</span> <span class="o">{</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;Shape &quot;</span><span class="o">);}</span>
@@ -362,35 +376,22 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qoo_10_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_10_opt_a" />
-            <label for= "qoo_10_opt_a">  a) Shape Shape Shape Shape</label><br />
+
+            <li data-component="answer"  id="qoo_10_opt_a">Shape Shape Shape Shape</li><li data-component="feedback" id="qoo_10_opt_a">The Rectangle subclass of Shape overrides the what method so this can't be right.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_10_opt_b" />
-            <label for= "qoo_10_opt_b">  b) Shape Rectangle Square Circle</label><br />
+            <li data-component="answer"  id="qoo_10_opt_b">Shape Rectangle Square Circle</li><li data-component="feedback" id="qoo_10_opt_b">The Square subclass doesn't not override the what method so it will use the one in Rectangle.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_10_opt_c" />
-            <label for= "qoo_10_opt_c">  c) There will be a compile time error</label><br />
+            <li data-component="answer"  id="qoo_10_opt_c">There will be a compile time error</li><li data-component="feedback" id="qoo_10_opt_c">This code will compile.  The declared type can hold objects of that type or any subclass of the type.</li>
             
-            <input type="radio" name="group1" value="d" id="qoo_10_opt_d" />
-            <label for= "qoo_10_opt_d">  d) Shape Rectangle Rectangle Circle</label><br />
+            <li data-component="answer" data-correct id="qoo_10_opt_d">Shape Rectangle Rectangle Circle</li><li data-component="feedback" id="qoo_10_opt_d">The Shape object will print Shape.  The Rectangle object will print Rectangle.  The Square object will also print Rectangle since it doesn't overrride the what method.  The Circle object will print Circle.</li>
             
-            <input type="radio" name="group1" value="e" id="qoo_10_opt_e" />
-            <label for= "qoo_10_opt_e">  e) Shape Rectangle Rectangle Oval</label><br />
+            <li data-component="answer"  id="qoo_10_opt_e">Shape Rectangle Rectangle Oval</li><li data-component="feedback" id="qoo_10_opt_e">The Circle class does override the what method so this can't be right.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_10');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_10','d',['The Rectangle subclass of Shape overrides the what method so this can\u0027t be right.', 'The Square subclass doesn\u0027t not override the what method so it will use the one in Rectangle.', 'This code will compile.  The declared type can hold objects of that type or any subclass of the type.', 'The Shape object will print Shape.  The Rectangle object will print Rectangle.  The Square object will also print Rectangle since it doesn\u0027t overrride the what method.  The Circle object will print Circle.', 'The Circle class does override the what method so this can\u0027t be right.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_10_bcomp" disabled name="compare" onclick="compareAnswers('qoo_10');">Compare Me</button>
-            </form><br />
-            <div id="qoo_10_feedback">
-            </div>
-            </div>
+            </ul>
             <p><strong>Check your understanding</strong></p>
 
-            <div id="qoo_11" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_11">
             <p>10-9-2: What is the output from running the main method in the GradStudent class?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getFood</span><span class="o">()</span> <span class="o">{</span>
@@ -414,31 +415,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qoo_11_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_11_opt_a" />
-            <label for= "qoo_11_opt_a">  a) Pizza</label><br />
+
+            <li data-component="answer"  id="qoo_11_opt_a">Pizza</li><li data-component="feedback" id="qoo_11_opt_a">This would be true if s1 was actually a Student, but it is a GradStudent.  Remember that the run-time will look for the method first in the class that created the object.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_11_opt_b" />
-            <label for= "qoo_11_opt_b">  b) Taco</label><br />
+            <li data-component="answer" data-correct id="qoo_11_opt_b">Taco</li><li data-component="feedback" id="qoo_11_opt_b">Even though the getInfo method is in Student when getFood is called the run-time will look for that method first in the class that created this object which in this case is the GradStudent class.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_11_opt_c" />
-            <label for= "qoo_11_opt_c">  c) You will get a compile time error</label><br />
+            <li data-component="answer"  id="qoo_11_opt_c">You will get a compile time error</li><li data-component="feedback" id="qoo_11_opt_c">This code will compile.  The student class does have a getInfo method.</li>
             
-            <input type="radio" name="group1" value="d" id="qoo_11_opt_d" />
-            <label for= "qoo_11_opt_d">  d) You will get a run-time error</label><br />
+            <li data-component="answer"  id="qoo_11_opt_d">You will get a run-time error</li><li data-component="feedback" id="qoo_11_opt_d">There is no problem at run-time.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_11');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_11','b',['This would be true if s1 was actually a Student, but it is a GradStudent.  Remember that the run\u002Dtime will look for the method first in the class that created the object.', 'Even though the getInfo method is in Student when getFood is called the run\u002Dtime will look for that method first in the class that created this object which in this case is the GradStudent class.', 'This code will compile.  The student class does have a getInfo method.', 'There is no problem at run\u002Dtime.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_11_bcomp" disabled name="compare" onclick="compareAnswers('qoo_11');">Compare Me</button>
-            </form><br />
-            <div id="qoo_11_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoo_12" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_12">
             <p>10-9-3: What is the output from running the main method in the RaceCar class?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span>
 <span class="o">{</span>
@@ -469,31 +458,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qoo_12_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_12_opt_a" />
-            <label for= "qoo_12_opt_a">  a) 5 6 10 11</label><br />
+
+            <li data-component="answer" data-correct id="qoo_12_opt_a">5 6 10 11</li><li data-component="feedback" id="qoo_12_opt_a">The code compiles correctly, and because RaceCar extends the Car class, all the public object methods of Car can be used by RaceCar objects.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_12_opt_b" />
-            <label for= "qoo_12_opt_b">  b) 5 6 5 6</label><br />
+            <li data-component="answer"  id="qoo_12_opt_b">5 6 5 6</li><li data-component="feedback" id="qoo_12_opt_b">RaceCar, while it inherits object methods from Car via inheritance, has a separate and different constructor that sets the initial fuel amount to 2 * g, thus in this case, fuel for fastCar is set to 10 initially.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_12_opt_c" />
-            <label for= "qoo_12_opt_c">  c) 10 11 10 11</label><br />
+            <li data-component="answer"  id="qoo_12_opt_c">10 11 10 11</li><li data-component="feedback" id="qoo_12_opt_c">The variable car is a Car object, so the constructor used is not the same as the fastCar object which is a RaceCar. The car constructor does not change the passed in parameter, so it is set to 5 initially.</li>
             
-            <input type="radio" name="group1" value="d" id="qoo_12_opt_d" />
-            <label for= "qoo_12_opt_d">  d) The code won't compile.</label><br />
+            <li data-component="answer"  id="qoo_12_opt_d">The code won't compile.</li><li data-component="feedback" id="qoo_12_opt_d">RaceCar inherits from the Car class so all the public object methods in Car can be accessed by any object of the RaceCar class.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_12');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_12','a',['The code compiles correctly, and because RaceCar extends the Car class, all the public object methods of Car can be used by RaceCar objects.', 'RaceCar, while it inherits object methods from Car via inheritance, has a separate and different constructor that sets the initial fuel amount to 2 * g, thus in this case, fuel for fastCar is set to 10 initially.', 'The variable car is a Car object, so the constructor used is not the same as the fastCar object which is a RaceCar. The car constructor does not change the passed in parameter, so it is set to 5 initially.', 'RaceCar inherits from the Car class so all the public object methods in Car can be accessed by any object of the RaceCar class.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_12_bcomp" disabled name="compare" onclick="compareAnswers('qoo_12');">Compare Me</button>
-            </form><br />
-            <div id="qoo_12_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoo_13" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_13">
             <p>10-9-4: Given the following class definitions and a declaration of Book b = new Dictionary which of the following will cause a compile-time error?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span>
 <span class="o">{</span>
@@ -514,28 +491,17 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qoo_13_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_13_opt_a" />
-            <label for= "qoo_13_opt_a">  a) b.getISBN();</label><br />
+
+            <li data-component="answer"  id="qoo_13_opt_a">b.getISBN();</li><li data-component="feedback" id="qoo_13_opt_a">The b object is actually a Dictionary object which inherits the getISBN method from Book.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_13_opt_b" />
-            <label for= "qoo_13_opt_b">  b) b.getDefintion();</label><br />
+            <li data-component="answer" data-correct id="qoo_13_opt_b">b.getDefintion();</li><li data-component="feedback" id="qoo_13_opt_b">At compile time the declared type is Book and the Book class does not have or inherit a getDefintion method.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_13_opt_c" />
-            <label for= "qoo_13_opt_c">  c) ((Dictionary) b).getDefinition();</label><br />
+            <li data-component="answer"  id="qoo_13_opt_c">((Dictionary) b).getDefinition();</li><li data-component="feedback" id="qoo_13_opt_c">Casting to Dictionary means that the compiler will check the Dictionary class for the getDefinition method.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_13');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_13','b',['The b object is actually a Dictionary object which inherits the getISBN method from Book.', 'At compile time the declared type is Book and the Book class does not have or inherit a getDefintion method.', 'Casting to Dictionary means that the compiler will check the Dictionary class for the getDefinition method.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_13_bcomp" disabled name="compare" onclick="compareAnswers('qoo_13');">Compare Me</button>
-            </form><br />
-            <div id="qoo_13_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qoo_14" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qoo_14">
             <p>10-9-5: Assume that the following declaration appears in a client program <strong>Base b = new Derived();</strong>.  What is the result of the call <strong>b.methodOne()</strong>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Base</span>
 <span class="o">{</span>
@@ -567,29 +533,17 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qoo_14_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qoo_14_opt_a" />
-            <label for= "qoo_14_opt_a">  a) ABDC</label><br />
+
+            <li data-component="answer" data-correct id="qoo_14_opt_a">ABDC</li><li data-component="feedback" id="qoo_14_opt_a">Even though b is declared as type Base it is created as an object of the Derived class, so all methods to it will be resolved starting with the Derived class.</li>
             
-            <input type="radio" name="group1" value="b" id="qoo_14_opt_b" />
-            <label for= "qoo_14_opt_b">  b) AB</label><br />
+            <li data-component="answer"  id="qoo_14_opt_b">AB</li><li data-component="feedback" id="qoo_14_opt_b">This would be true if the object was created of type Base using new Base. But the object is really a Derived object. So all methods are looked for starting with the Derived class.</li>
             
-            <input type="radio" name="group1" value="c" id="qoo_14_opt_c" />
-            <label for= "qoo_14_opt_c">  c) ABCD</label><br />
+            <li data-component="answer"  id="qoo_14_opt_c">ABCD</li><li data-component="feedback" id="qoo_14_opt_c">After the call to methodOne in the super class printing "A", the code continues with the implicit this.methodTwo which resolves from the current object's class which is Derived. methodTwo in the Derived class is executed which then calls super.methodTwo which invokes printin "B" from methodTwo in the Base class. Then the "D" in the Derive methodTwo is printed. Finally the program returns to methodOne in the Derived class are prints "C".</li>
             
-            <input type="radio" name="group1" value="d" id="qoo_14_opt_d" />
-            <label for= "qoo_14_opt_d">  d) ABC</label><br />
+            <li data-component="answer"  id="qoo_14_opt_d">ABC</li><li data-component="feedback" id="qoo_14_opt_d">The call to methodTwo in super.methodOne is to this.methodTwo which is the method from the Derived class. Consequently the "D" is also printed.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qoo_14');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qoo_14','a',['Even though b is declared as type Base it is created as an object of the Derived class, so all methods to it will be resolved starting with the Derived class.', 'This would be true if the object was created of type Base using new Base. But the object is really a Derived object. So all methods are looked for starting with the Derived class.', 'After the call to methodOne in the super class printing \u0022A\u0022, the code continues with the implicit this.methodTwo which resolves from the current object\u0027s class which is Derived. methodTwo in the Derived class is executed which then calls super.methodTwo which invokes printin \u0022B\u0022 from methodTwo in the Base class. Then the \u0022D\u0022 in the Derive methodTwo is printed. Finally the program returns to methodOne in the Derived class are prints \u0022C\u0022.', 'The call to methodTwo in super.methodOne is to this.methodTwo which is the method from the Derived class. Consequently the \u0022D\u0022 is also printed.'])">Check Me</button>
-            <button class='btn btn-default' id="qoo_14_bcomp" disabled name="compare" onclick="compareAnswers('qoo_14');">Compare Me</button>
-            </form><br />
-            <div id="qoo_14_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

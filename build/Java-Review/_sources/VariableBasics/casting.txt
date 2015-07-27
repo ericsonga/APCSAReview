@@ -5,34 +5,21 @@
 Casting Variables
 =================
 
-In DrJava try typing the following in the interactions pane and hit return or enter after each line.  DrJava will automatically print the result of an expression when you hit enter in the interactions pane. 
+Run this code to find how Java handles division and what casting can do to the results.
 
-.. code-block:: java
-
-  1 / 3
-  1.0 / 3
-  1 / 3.0
-  (double) 1 / 3
-
-Do you get the same answer for each of these?  If not, why not?  
-
-.. fillintheblank:: 1div3
-   :correct: 0$
-   :feedback1: ('.*','Did you actually try this in DrJava?')
-   :blankid: div13blank
-
-   What is printed in DrJava when you type 1 / 3 and hit enter? :textfield:`div13blank::mini`
+.. activecode:: lcct1
+   :language: java
    
-.. fillintheblank:: 1Ddiv3
-   :correct: 0.33+
-   :feedback1: ('.*','Did you actually try this in DrJava?')
-   :blankid: div1D3blank
-
-   What is printed in DrJava when you type 1.0 / 3 and hit enter? :textfield:`div1D3blank::large`
-   
-..	index::
-	single: cast
-	single: casting
+   public class Test
+   {
+      public static void main(String[] args)
+      {
+        System.out.println(1 / 3);
+        System.out.println(1.0 / 3);
+        System.out.println(1 / 3.0);
+        System.out.println((double) 1 / 3);
+      }
+   }
 	
 Java assumes that if you are doing division with integers that you want an integer result and it will throw away any fractional part (part after the decimal point).  But, if you use a mixture of integers (int) and floating point (double) numbers Java will assume that you want a floating point result.  If you have integers and you want a floating point result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  By **casting** we don't mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the "shape" (or type) of the variable to the right of the cast to the specified type. 
 
@@ -46,7 +33,7 @@ Java assumes that if you are doing division with integers that you want an integ
 	pair: double; number of digits
 
 
-Is the result of 1.0 divided by 3 correct?  Actually, Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.    
+Is the result of 1.0 divided by 3 what you expected?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.    
 
 **Check your understanding**
 

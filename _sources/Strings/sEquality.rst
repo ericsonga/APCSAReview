@@ -11,14 +11,21 @@ String Equality
 
 When the operator ``==`` is used with object variables it returns true when the two variables refer to the same object.  With strings this happens when one string variable is set to another or when strings are set to the same string literal.  
 
-If you type the following code into DrJava's interactions pane what will print?
+If you run the following, what will be printed?
 
-.. code-block:: java
-
-  String s1 = "Hello";
-  String s2 = "Bye";
-  String s3 = s2;
-  System.out.println(s3);
+.. activecode:: lcse1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        String s1 = "Hello";
+        String s2 = "Bye";
+        String s3 = s2;
+        System.out.println(s3);
+      }
+   }
   
   
 It will print ``Bye`` since s3 has been assigned to the value in s2 which is an object reference to the String object that has the characters "Bye" in it.  
@@ -31,14 +38,21 @@ In addition, ``s2 == s3`` will be true since the two variables refer to the same
 
     Figure 3: Several String variables with references to objects of the String class. 
     
-If you use the ``new`` keyword to create a string it will create a new string object. So, even if we create two string objects with the same characters using the new operator they will not refer to the same object. What will the following print if you type it in DrJava's interactions pane?
+If you use the ``new`` keyword to create a string it will create a new string object. So, even if we create two string objects with the same characters using the new operator they will not refer to the same object. What will the following print?
 
-.. code-block:: java 
-
-  String s1 = new String("Hello");
-  String s2 = new String("Hello");
-  System.out.println(s1 == s2);
-  System.out.println(s1.equals(s2));
+.. activecode:: lcse2
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        String s1 = new String("Hello");
+        String s2 = new String("Hello");
+        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));
+      }
+   }
   
 Since we used the ``new`` keyword two different String objects will be created that each have the characters ``Hello`` in them.  So ``s1 == s2`` will be false since they don't refer to the same object, but ``s1.equals(s2)`` is true since the two different object contain the same characters in the same order.  
 

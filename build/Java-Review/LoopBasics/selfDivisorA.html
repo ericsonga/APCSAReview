@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -357,22 +371,8 @@
 <h2>How to solve this problem<a class="headerlink" href="#how-to-solve-this-problem" title="Permalink to this headline">¶</a></h2>
 <p>The first thing to do is try to solve the examples by hand.  The question tells us that 128 should return true, 26 should return false, and any number with a 0 in it should return false.</p>
 <p>To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 each go into 128 evenly (have a 0 remainder) then the method should return true.</p>
-<div id="cont"></div>
-<div id="lcfrsda2" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrsda2_runb" onclick="Jobe.runlive('lcfrsda2', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda2_saveb"
-                onclick="saveEditor('lcfrsda2');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda2_loadb"
-                onclick="requestCode('lcfrsda2');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrsda2_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrsda2_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrsda2 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class Test
 {
    public static void main(String[] args)
@@ -382,37 +382,10 @@ public class Test
       System.out.println(128 % 1);
    }
 }
-        </textarea>
-    </div>
+</pre>
+<p>To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remainder that is greater than 0, so it can&#8217;t be a self-divisor and we return false.</p>
 
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrsda2_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrsda2 )</span> </p>
-
-    
-</div><p>To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remainder that is greater than 0, so it can&#8217;t be a self-divisor and we return false.</p>
-<div id="cont"></div>
-<div id="lcfrsda3" lang="java" class="ac_section alert alert-warning">
-
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrsda3_runb" onclick="Jobe.runlive('lcfrsda3', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda3_saveb"
-                onclick="saveEditor('lcfrsda3');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda3_loadb"
-                onclick="requestCode('lcfrsda3');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrsda3_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrsda3_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrsda3 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class Test
 {
    public static void main(String[] args)
@@ -420,39 +393,12 @@ public class Test
       System.out.println(26 % 6);
    }
 }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrsda3_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrsda3 )</span> </p>
-
-    
-</div><p>To return false if the number has a 0 in it we just have to check if the current digit is a zero and then return false. So, 120 and 102 should both return false.</p>
+</pre>
+<p>To return false if the number has a 0 in it we just have to check if the current digit is a zero and then return false. So, 120 and 102 should both return false.</p>
 <p>So we need to loop through all the digits in the number one at a time and test if the current digit is 0 and if so return false.  Otherwise we need to test if the passed number is evenly divisible (0 remainder) by the current digit.  If it isn&#8217;t we return false.  If we have looped through all the digits and not found a problem return true.</p>
 <p>How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the modulus operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.</p>
-<div id="cont"></div>
-<div id="lcfrsda4" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrsda4_runb" onclick="Jobe.runlive('lcfrsda4', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda4_saveb"
-                onclick="saveEditor('lcfrsda4');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda4_loadb"
-                onclick="requestCode('lcfrsda4');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrsda4_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrsda4_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrsda4 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class Test
 {
    public static void main(String[] args)
@@ -463,82 +409,33 @@ public class Test
       System.out.println(12 / 10);
    }
 }
-        </textarea>
-    </div>
+</pre>
 
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrsda4_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrsda4 )</span> </p>
-
-    
-</div>
-            <div id="frsda_1" class="alert alert-warning">
-            6-9-1: Which loop should you use to loop through all the digits of the number?<form name="frsda_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frsda_1_opt_a" />
-            <label for= "frsda_1_opt_a">  a) for</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frsda_1">
+            6-9-1: Which loop should you use to loop through all the digits of the number?
+            <li data-component="answer"  id="frsda_1_opt_a">for</li><li data-component="feedback" id="frsda_1_opt_a">Use a for loop when you know how many times a loop needs to execute.  Do you know that here?</li>
             
-            <input type="radio" name="group1" value="b" id="frsda_1_opt_b" />
-            <label for= "frsda_1_opt_b">  b) for each</label><br />
+            <li data-component="answer"  id="frsda_1_opt_b">for each</li><li data-component="feedback" id="frsda_1_opt_b">Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?</li>
             
-            <input type="radio" name="group1" value="c" id="frsda_1_opt_c" />
-            <label for= "frsda_1_opt_c">  c) while</label><br />
+            <li data-component="answer" data-correct id="frsda_1_opt_c">while</li><li data-component="feedback" id="frsda_1_opt_c">Use a while loop when you don't know how many times a loop needs to execute.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frsda_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frsda_1','c',['Use a for loop when you know how many times a loop needs to execute.  Do you know that here?', 'Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?', 'Use a while loop when you don\u0027t know how many times a loop needs to execute.'])">Check Me</button>
-            <button class='btn btn-default' id="frsda_1_bcomp" disabled name="compare" onclick="compareAnswers('frsda_1');">Compare Me</button>
-            </form><br />
-            <div id="frsda_1_feedback">
-            </div>
-            </div>
+            </ul>
             <p>We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.</p>
 
-            <div id="frsda_2" class="alert alert-warning">
-            6-9-2: What should you use as the test in the while loop?<form name="frsda_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frsda_2_opt_a" />
-            <label for= "frsda_2_opt_a">  a) Loop while the current number is greater than 10.</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frsda_2">
+            6-9-2: What should you use as the test in the while loop?
+            <li data-component="answer"  id="frsda_2_opt_a">Loop while the current number is greater than 10.</li><li data-component="feedback" id="frsda_2_opt_a">What happens if the number is 10 in this case?</li>
             
-            <input type="radio" name="group1" value="b" id="frsda_2_opt_b" />
-            <label for= "frsda_2_opt_b">  b) Loop while the current number is greater than 9.</label><br />
+            <li data-component="answer"  id="frsda_2_opt_b">Loop while the current number is greater than 9.</li><li data-component="feedback" id="frsda_2_opt_b">Does this actually test the first digit in a number?</li>
             
-            <input type="radio" name="group1" value="c" id="frsda_2_opt_c" />
-            <label for= "frsda_2_opt_c">  c) Loop while the current number is greater than 0.</label><br />
+            <li data-component="answer" data-correct id="frsda_2_opt_c">Loop while the current number is greater than 0.</li><li data-component="feedback" id="frsda_2_opt_c">We will know that we are out of digits when x / 10 is 0. This wouldn't work if the number passed to the method was 0 originally, but were told in the precondition that number is greater than 0 to start.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frsda_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frsda_2','c',['What happens if the number is 10 in this case?', 'Does this actually test the first digit in a number?', 'We will know that we are out of digits when x / 10 is 0. This wouldn\u0027t work if the number passed to the method was 0 originally, but were told in the precondition that number is greater than 0 to start.'])">Check Me</button>
-            <button class='btn btn-default' id="frsda_2_bcomp" disabled name="compare" onclick="compareAnswers('frsda_2');">Compare Me</button>
-            </form><br />
-            <div id="frsda_2_feedback">
-            </div>
-            </div>
+            </ul>
             <p>Try to write the code for the method isSelfDivisor.  When you are ready click &#8220;Run&#8221; to test your solution. Remember that it should return true for 128, false for 26, false for 120, and false for 102.</p>
-<div id="cont"></div>
-<div id="lcfrsda5" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrsda5_runb" onclick="Jobe.runlive('lcfrsda5', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda5_saveb"
-                onclick="saveEditor('lcfrsda5');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsda5_loadb"
-                onclick="requestCode('lcfrsda5');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrsda5_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrsda5_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrsda5 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class SelfDivisor
 {
 
@@ -563,21 +460,8 @@ public class SelfDivisor
      System.out.println("102: " + isSelfDivisor(102));
    }
  }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrsda5_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrsda5 )</span> </p>
-
-    
-</div></div>
+</pre>
+</div>
 <div class="section" id="video-one-way-to-code-the-solution">
 <h2>Video - One way to code the solution<a class="headerlink" href="#video-one-way-to-code-the-solution" title="Permalink to this headline">¶</a></h2>
 <p>There are many possible solutions to this problem.  The video below shows one solution.</p>

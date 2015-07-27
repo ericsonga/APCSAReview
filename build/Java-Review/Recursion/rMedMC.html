@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Medium Multiple Choice Questions<a class="headerlink" href="#medium-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are similar to those you will see on the AP CS A exam.</p>
 
-            <div id="qrm_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_1">
             <p>11-7-1: Given the following method declaration, which of the following is printed as the result of the call <code class="docutils literal"><span class="pre">mystery(1234)</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="c1">//precondition:  x &gt;=0</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">mystery</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
@@ -337,34 +351,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qrm_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrm_1_opt_a" />
-            <label for= "qrm_1_opt_a">  a) 1441</label><br />
+
+            <li data-component="answer"  id="qrm_1_opt_a">1441</li><li data-component="feedback" id="qrm_1_opt_a">The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.</li>
             
-            <input type="radio" name="group1" value="b" id="qrm_1_opt_b" />
-            <label for= "qrm_1_opt_b">  b) 43211234</label><br />
+            <li data-component="answer" data-correct id="qrm_1_opt_b">43211234</li><li data-component="feedback" id="qrm_1_opt_b">This has a recursive call which means that the method calls itself when (x / 10) is greater than or equal to zero. Each time the method is called it prints the remainder of the passed value divided by 10 and then calls the method again with the result of the integer division of the passed number by 10 (which throws away the decimal part). After the recursion stops by <code>(x / 10) == 0</code> the method will print the remainder of the passed value divided by 10 again.</li>
             
-            <input type="radio" name="group1" value="c" id="qrm_1_opt_c" />
-            <label for= "qrm_1_opt_c">  c) 3443</label><br />
+            <li data-component="answer"  id="qrm_1_opt_c">3443</li><li data-component="feedback" id="qrm_1_opt_c">The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.</li>
             
-            <input type="radio" name="group1" value="d" id="qrm_1_opt_d" />
-            <label for= "qrm_1_opt_d">  d) 12344321</label><br />
+            <li data-component="answer"  id="qrm_1_opt_d">12344321</li><li data-component="feedback" id="qrm_1_opt_d">The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.</li>
             
-            <input type="radio" name="group1" value="e" id="qrm_1_opt_e" />
-            <label for= "qrm_1_opt_e">  e) Many digits are printed due to infinite recursion.</label><br />
+            <li data-component="answer"  id="qrm_1_opt_e">Many digits are printed due to infinite recursion.</li><li data-component="feedback" id="qrm_1_opt_e">When the recursive call to <code>mystery(1)</code> occurs (the 4th call to mystery), the division of x /10 equals .01--this becomes 0 because this is integer division and the remainder is thrown away. Therefore the current call will be completed and all of the previous calls to <code>mystery</code> will be completed.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrm_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrm_1','b',['The first call to \u003Ccode\u003Emystery\u003C/code\u003E with the integer 1234 will print 1234 % 10. The \u0027%\u0027 means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.', 'This has a recursive call which means that the method calls itself when (x / 10) is greater than or equal to zero. Each time the method is called it prints the remainder of the passed value divided by 10 and then calls the method again with the result of the integer division of the passed number by 10 (which throws away the decimal part). After the recursion stops by \u003Ccode\u003E(x / 10) \u003D\u003D 0\u003C/code\u003E the method will print the remainder of the passed value divided by 10 again.', 'The first call to \u003Ccode\u003Emystery\u003C/code\u003E with the integer 1234 will print 1234 % 10. The \u0027%\u0027 means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.', 'The first call to \u003Ccode\u003Emystery\u003C/code\u003E with the integer 1234 will print 1234 % 10. The \u0027%\u0027 means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.', 'When the recursive call to \u003Ccode\u003Emystery(1)\u003C/code\u003E occurs (the 4th call to mystery), the division of x /10 equals .01\u002D\u002Dthis becomes 0 because this is integer division and the remainder is thrown away. Therefore the current call will be completed and all of the previous calls to \u003Ccode\u003Emystery\u003C/code\u003E will be completed.'])">Check Me</button>
-            <button class='btn btn-default' id="qrm_1_bcomp" disabled name="compare" onclick="compareAnswers('qrm_1');">Compare Me</button>
-            </form><br />
-            <div id="qrm_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qrm_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_2">
             <p>11-7-2: Given the following method declaration, what value is returned as the result of the call <code class="docutils literal"><span class="pre">mystery(5)</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
@@ -375,34 +376,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qrm_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrm_2_opt_a" />
-            <label for= "qrm_2_opt_a">  a) 243</label><br />
+
+            <li data-component="answer" data-correct id="qrm_2_opt_a">243</li><li data-component="feedback" id="qrm_2_opt_a">For the call <code>mystery(5)</code>, <code>n != 0</code> so the <code>else</code> statement is executed. This results in the next recursive call of <code>mystery(4)</code>. This will continue until the call <code>mystery(0)</code> is executed. At this point, the value 1 will be returned. Then each call of <code>mystery</code> can return with the 3 * the result of the recursive call. So this method will compute 3 to the given power.</li>
             
-            <input type="radio" name="group1" value="b" id="qrm_2_opt_b" />
-            <label for= "qrm_2_opt_b">  b) 0</label><br />
+            <li data-component="answer"  id="qrm_2_opt_b">0</li><li data-component="feedback" id="qrm_2_opt_b">This can never be 0 because the stopping condition returns 1 when you call <code>mystery(0)</code></li>
             
-            <input type="radio" name="group1" value="c" id="qrm_2_opt_c" />
-            <label for= "qrm_2_opt_c">  c) 3</label><br />
+            <li data-component="answer"  id="qrm_2_opt_c">3</li><li data-component="feedback" id="qrm_2_opt_c">This would only be true if you called <code>mystery(1)</code></li>
             
-            <input type="radio" name="group1" value="d" id="qrm_2_opt_d" />
-            <label for= "qrm_2_opt_d">  d) 81</label><br />
+            <li data-component="answer"  id="qrm_2_opt_d">81</li><li data-component="feedback" id="qrm_2_opt_d">This would be true if you called <code>mystery(4)</code></li>
             
-            <input type="radio" name="group1" value="e" id="qrm_2_opt_e" />
-            <label for= "qrm_2_opt_e">  e) 27</label><br />
+            <li data-component="answer"  id="qrm_2_opt_e">27</li><li data-component="feedback" id="qrm_2_opt_e">This would be true if you called <code>mystery(3)</code></li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrm_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrm_2','a',['For the call \u003Ccode\u003Emystery(5)\u003C/code\u003E, \u003Ccode\u003En !\u003D 0\u003C/code\u003E so the \u003Ccode\u003Eelse\u003C/code\u003E statement is executed. This results in the next recursive call of \u003Ccode\u003Emystery(4)\u003C/code\u003E. This will continue until the call \u003Ccode\u003Emystery(0)\u003C/code\u003E is executed. At this point, the value 1 will be returned. Then each call of \u003Ccode\u003Emystery\u003C/code\u003E can return with the 3 * the result of the recursive call. So this method will compute 3 to the given power.', 'This can never be 0 because the stopping condition returns 1 when you call \u003Ccode\u003Emystery(0)\u003C/code\u003E', 'This would only be true if you called \u003Ccode\u003Emystery(1)\u003C/code\u003E', 'This would be true if you called \u003Ccode\u003Emystery(4)\u003C/code\u003E', 'This would be true if you called \u003Ccode\u003Emystery(3)\u003C/code\u003E'])">Check Me</button>
-            <button class='btn btn-default' id="qrm_2_bcomp" disabled name="compare" onclick="compareAnswers('qrm_2');">Compare Me</button>
-            </form><br />
-            <div id="qrm_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qrm_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_3">
             <p>11-7-3: Given the following method declaration, what value is returned as the result of the call <code class="docutils literal"><span class="pre">product(5)</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kt">int</span> <span class="nf">product</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
@@ -413,34 +401,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qrm_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrm_3_opt_a" />
-            <label for= "qrm_3_opt_a">  a) 1</label><br />
+
+            <li data-component="answer"  id="qrm_3_opt_a">1</li><li data-component="feedback" id="qrm_3_opt_a">The value 1 will only be returned when the initial call to product is less than or equal to 1.</li>
             
-            <input type="radio" name="group1" value="b" id="qrm_3_opt_b" />
-            <label for= "qrm_3_opt_b">  b) 10</label><br />
+            <li data-component="answer"  id="qrm_3_opt_b">10</li><li data-component="feedback" id="qrm_3_opt_b">If you assume the purpose of the method is to compute <code>n * 2</code>, this is correct, but the product method does not do this. Be sure to trace the code to see what happens.</li>
             
-            <input type="radio" name="group1" value="c" id="qrm_3_opt_c" />
-            <label for= "qrm_3_opt_c">  c) 25</label><br />
+            <li data-component="answer"  id="qrm_3_opt_c">25</li><li data-component="feedback" id="qrm_3_opt_c">If you assume the purpose of the method is to compute <code>n * n</code> this is correct, but the product method does not do this. Be sure to trace the code to see what happens.</li>
             
-            <input type="radio" name="group1" value="d" id="qrm_3_opt_d" />
-            <label for= "qrm_3_opt_d">  d) 3125</label><br />
+            <li data-component="answer"  id="qrm_3_opt_d">3125</li><li data-component="feedback" id="qrm_3_opt_d">If you assume the purpose of the method is to compute <code>n ^ n</code>, this would be correct. But product does not do this. Be sure to trace the code to see what happens.</li>
             
-            <input type="radio" name="group1" value="e" id="qrm_3_opt_e" />
-            <label for= "qrm_3_opt_e">  e) 15</label><br />
+            <li data-component="answer" data-correct id="qrm_3_opt_e">15</li><li data-component="feedback" id="qrm_3_opt_e">The result from <code>product(5)</code> is <code>5 * product(3)</code> which is 3 * product(1) which is <code>1</code> so the answer is <code>1 * 3 * 5 = 15</code>.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrm_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrm_3','e',['The value 1 will only be returned when the initial call to product is less than or equal to 1.', 'If you assume the purpose of the method is to compute \u003Ccode\u003En * 2\u003C/code\u003E, this is correct, but the product method does not do this. Be sure to trace the code to see what happens.', 'If you assume the purpose of the method is to compute \u003Ccode\u003En * n\u003C/code\u003E this is correct, but the product method does not do this. Be sure to trace the code to see what happens.', 'If you assume the purpose of the method is to compute \u003Ccode\u003En ^ n\u003C/code\u003E, this would be correct. But product does not do this. Be sure to trace the code to see what happens.', 'The result from \u003Ccode\u003Eproduct(5)\u003C/code\u003E is \u003Ccode\u003E5 * product(3)\u003C/code\u003E which is 3 * product(1) which is \u003Ccode\u003E1\u003C/code\u003E so the answer is \u003Ccode\u003E1 * 3 * 5 \u003D 15\u003C/code\u003E.'])">Check Me</button>
-            <button class='btn btn-default' id="qrm_3_bcomp" disabled name="compare" onclick="compareAnswers('qrm_3');">Compare Me</button>
-            </form><br />
-            <div id="qrm_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qrm_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_4">
             <p>11-7-4: Given the following method declaration, what value is returned as the result of the call <code class="docutils literal"><span class="pre">f(5)</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
@@ -452,32 +427,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qrm_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrm_4_opt_a" />
-            <label for= "qrm_4_opt_a">  a) 8</label><br />
+
+            <li data-component="answer"  id="qrm_4_opt_a">8</li><li data-component="feedback" id="qrm_4_opt_a">This would be true if it was <code>f(6)</code> not <code>f(5)</code>.</li>
             
-            <input type="radio" name="group1" value="b" id="qrm_4_opt_b" />
-            <label for= "qrm_4_opt_b">  b) 3</label><br />
+            <li data-component="answer"  id="qrm_4_opt_b">3</li><li data-component="feedback" id="qrm_4_opt_b">This would be true if it was <code>f(4)</code> not <code>f(5)</code>.</li>
             
-            <input type="radio" name="group1" value="c" id="qrm_4_opt_c" />
-            <label for= "qrm_4_opt_c">  c) There is no result because of infinite recursion.</label><br />
+            <li data-component="answer"  id="qrm_4_opt_c">There is no result because of infinite recursion.</li><li data-component="feedback" id="qrm_4_opt_c">This method will stop when <code>n</code> equals <code>0</code> or <code>1</code>.</li>
             
-            <input type="radio" name="group1" value="d" id="qrm_4_opt_d" />
-            <label for= "qrm_4_opt_d">  d) 5</label><br />
+            <li data-component="answer" data-correct id="qrm_4_opt_d">5</li><li data-component="feedback" id="qrm_4_opt_d">This is the Fibonacci method which returns <code>0</code> for <code>0</code> and <code>1</code> for <code>1</code> and <code>Fibonacci(n-1) + Fibonacci(n-2)</code> for the rest of the numbers.</li>
             
-            <input type="radio" name="group1" value="e" id="qrm_4_opt_e" />
-            <label for= "qrm_4_opt_e">  e) 0</label><br />
+            <li data-component="answer"  id="qrm_4_opt_e">0</li><li data-component="feedback" id="qrm_4_opt_e">This would be true if it was <code>f(0)</code> not <code>f(5)</code>.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrm_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrm_4','d',['This would be true if it was \u003Ccode\u003Ef(6)\u003C/code\u003E not \u003Ccode\u003Ef(5)\u003C/code\u003E.', 'This would be true if it was \u003Ccode\u003Ef(4)\u003C/code\u003E not \u003Ccode\u003Ef(5)\u003C/code\u003E.', 'This method will stop when \u003Ccode\u003En\u003C/code\u003E equals \u003Ccode\u003E0\u003C/code\u003E or \u003Ccode\u003E1\u003C/code\u003E.', 'This is the Fibonacci method which returns \u003Ccode\u003E0\u003C/code\u003E for \u003Ccode\u003E0\u003C/code\u003E and \u003Ccode\u003E1\u003C/code\u003E for \u003Ccode\u003E1\u003C/code\u003E and \u003Ccode\u003EFibonacci(n\u002D1) + Fibonacci(n\u002D2)\u003C/code\u003E for the rest of the numbers.', 'This would be true if it was \u003Ccode\u003Ef(0)\u003C/code\u003E not \u003Ccode\u003Ef(5)\u003C/code\u003E.'])">Check Me</button>
-            <button class='btn btn-default' id="qrm_4_bcomp" disabled name="compare" onclick="compareAnswers('qrm_4');">Compare Me</button>
-            </form><br />
-            <div id="qrm_4_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

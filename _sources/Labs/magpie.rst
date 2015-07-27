@@ -54,9 +54,66 @@ Type in the following input and record its responses.
 * The weather is nice.
 * Do you know my brother?
 
-You can step through execution of a simplified version of this (one that has just one class and no scanner) using the Java Visualizer at `link <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Magpie2%0A%7B%0A%09/**%0A%09+*+Get+a+default+greeting+%09%0A%09+*+%40return+a+greeting%0A%09+*/%0A%09public+String+getGreeting()%0A%09%7B%0A%09%09return+%22Hello,+let's+talk.%22%3B%0A%09%7D%0A%09%0A%09/**%0A%09+*+Gives+a+response+to+a+user+statement%0A%09+*+%0A%09+*+%40param+statement%0A%09+*++++++++++++the+user+statement%0A%09+*+%40return+a+response+based+on+the+rules+given%0A%09+*/%0A%09public+String+getResponse(String+statement)%0A%09%7B%0A%09%09String+response+%3D+%22%22%3B%0A%09%09if+(statement.indexOf(%22no%22)+%3E%3D+0)%0A%09%09%7B%0A%09%09%09response+%3D+%22Why+so+negative%3F%22%3B%0A%09%09%7D%0A%09%09else+if+(statement.indexOf(%22mother%22)+%3E%3D+0%0A%09%09%09%09%7C%7C+statement.indexOf(%22father%22)+%3E%3D+0%0A%09%09%09%09%7C%7C+statement.indexOf(%22sister%22)+%3E%3D+0%0A%09%09%09%09%7C%7C+statement.indexOf(%22brother%22)+%3E%3D+0)%0A%09%09%7B%0A%09%09%09response+%3D+%22Tell+me+more+about+your+family.%22%3B%0A%09%09%7D%0A%09%09else%0A%09%09%7B%0A%09%09%09response+%3D+getRandomResponse()%3B%0A%09%09%7D%0A%09%09return+response%3B%0A%09%7D%0A%0A%09/**%0A%09+*+Pick+a+default+response+to+use+if+nothing+else+fits.%0A%09+*+%40return+a+non-committal+string%0A%09+*/%0A%09private+String+getRandomResponse()%0A%09%7B%0A%09%09final+int+NUMBER_OF_RESPONSES+%3D+4%3B%0A%09%09double+r+%3D+Math.random()%3B%0A%09%09int+whichResponse+%3D+(int)(r+*+NUMBER_OF_RESPONSES)%3B%0A%09%09String+response+%3D+%22%22%3B%0A%09%09%0A%09%09if+(whichResponse+%3D%3D+0)%0A%09%09%7B%0A%09%09%09response+%3D+%22Interesting,+tell+me+more.%22%3B%0A%09%09%7D%0A%09%09else+if+(whichResponse+%3D%3D+1)%0A%09%09%7B%0A%09%09%09response+%3D+%22Hmmm.%22%3B%0A%09%09%7D%0A%09%09else+if+(whichResponse+%3D%3D+2)%0A%09%09%7B%0A%09%09%09response+%3D+%22Do+you+really+think+so%3F%22%3B%0A%09%09%7D%0A%09%09else+if+(whichResponse+%3D%3D+3)%0A%09%09%7B%0A%09%09%09response+%3D+%22You+don't+say.%22%3B%0A%09%09%7D%0A%0A%09%09return+response%3B%0A%09%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A%09%7B%0A%09%09Magpie2+maggie+%3D+new+Magpie2()%3B%0A%09%09%0A%09%09System.out.println+(maggie.getGreeting())%3B%0A++++++System.out.println(maggie.getResponse(%22My+mother+and+I+talked+last+night.%22))%3B%0A++++++System.out.println(maggie.getResponse(%22I+said+no!%22))%3B%0A++++++System.out.println(maggie.getResponse(%22The+weather+is+nice.%22))%3B%0A++++++System.out.println(maggie.getResponse(%22Do+you+know+my+brother%3F%22))%3B+%0A+++%7D%0A%09%0A%7D%0A&mode=display&curInstr=0.>`_  You can click on the Last button to just execute the code and see the output.  You can click on the First button to go back to the start and then click on the Forward button to step through the execution.  
+You can step through execution of a simplified version of this (one that has just one class and no scanner) using the code below.
 
-As you can see the ``getResponse`` method of Magpie2.java looks for certain keywords like ``"mother"`` and ``"brother"``.  Why do you think the response to "Do you know my brother?" isn't "Tell me more about your family."?  Step through the execution using the Forward button at `link <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Magpie2%0A%7B%0A%09/**%0A%09+*+Get+a+default+greeting+%09%0A%09+*+%40return+a+greeting%0A%09+*/%0A%09public+String+getGreeting()%0A%09%7B%0A%09%09return+%22Hello,+let's+talk.%22%3B%0A%09%7D%0A%09%0A%09/**%0A%09+*+Gives+a+response+to+a+user+statement%0A%09+*+%0A%09+*+%40param+statement%0A%09+*++++++++++++the+user+statement%0A%09+*+%40return+a+response+based+on+the+rules+given%0A%09+*/%0A%09public+String+getResponse(String+statement)%0A%09%7B%0A%09%09String+response+%3D+%22%22%3B%0A%09%09if+(statement.indexOf(%22no%22)+%3E%3D+0)%0A%09%09%7B%0A%09%09%09response+%3D+%22Why+so+negative%3F%22%3B%0A%09%09%7D%0A%09%09else+if+(statement.indexOf(%22mother%22)+%3E%3D+0%0A%09%09%09%09%7C%7C+statement.indexOf(%22father%22)+%3E%3D+0%0A%09%09%09%09%7C%7C+statement.indexOf(%22sister%22)+%3E%3D+0%0A%09%09%09%09%7C%7C+statement.indexOf(%22brother%22)+%3E%3D+0)%0A%09%09%7B%0A%09%09%09response+%3D+%22Tell+me+more+about+your+family.%22%3B%0A%09%09%7D%0A%09%09else%0A%09%09%7B%0A%09%09%09response+%3D+getRandomResponse()%3B%0A%09%09%7D%0A%09%09return+response%3B%0A%09%7D%0A%0A%09/**%0A%09+*+Pick+a+default+response+to+use+if+nothing+else+fits.%0A%09+*+%40return+a+non-committal+string%0A%09+*/%0A%09private+String+getRandomResponse()%0A%09%7B%0A%09%09final+int+NUMBER_OF_RESPONSES+%3D+4%3B%0A%09%09double+r+%3D+Math.random()%3B%0A%09%09int+whichResponse+%3D+(int)(r+*+NUMBER_OF_RESPONSES)%3B%0A%09%09String+response+%3D+%22%22%3B%0A%09%09%0A%09%09if+(whichResponse+%3D%3D+0)%0A%09%09%7B%0A%09%09%09response+%3D+%22Interesting,+tell+me+more.%22%3B%0A%09%09%7D%0A%09%09else+if+(whichResponse+%3D%3D+1)%0A%09%09%7B%0A%09%09%09response+%3D+%22Hmmm.%22%3B%0A%09%09%7D%0A%09%09else+if+(whichResponse+%3D%3D+2)%0A%09%09%7B%0A%09%09%09response+%3D+%22Do+you+really+think+so%3F%22%3B%0A%09%09%7D%0A%09%09else+if+(whichResponse+%3D%3D+3)%0A%09%09%7B%0A%09%09%09response+%3D+%22You+don't+say.%22%3B%0A%09%09%7D%0A%0A%09%09return+response%3B%0A%09%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A%09%7B%0A%09%09Magpie2+maggie+%3D+new+Magpie2()%3B%0A%09%09%0A%09%09System.out.println+(maggie.getGreeting())%3B%0A++++++System.out.println(maggie.getResponse(%22My+mother+and+I+talked+last+night.%22))%3B%0A++++++System.out.println(maggie.getResponse(%22I+said+no!%22))%3B%0A++++++System.out.println(maggie.getResponse(%22The+weather+is+nice.%22))%3B%0A++++++System.out.println(maggie.getResponse(%22Do+you+know+my+brother%3F%22))%3B+%0A+++%7D%0A%09%0A%7D%0A&mode=display&curInstr=0.>`_ in the Java Visualizer to figure out why.  Then try to modify the code to respond correctly.
+.. activecode:: lcmp1
+   :language: java
+   
+   public class Magpie2
+   {
+      public String getGreeting()
+      {
+        return "Hello, let's talk.";
+      }
+      
+      public String getResponse(String statement)
+      {
+        String response = "";
+        if (statement.indexOf("no") >= 0) {
+          response = "Why so negative?";
+        } else if (statement.indexOf("mother") >= 0
+                    || statement.indexOf("father") >= 0
+                    || statement.indexOf("sister") >= 0
+                    || statement.indexOf("brother") >= 0) {
+          response = "Tell me more about your family.";
+        } else {
+          response = getRandomResponse();
+        }
+        return response;
+      }
+      
+      private String getRandomResponse()
+      {
+        final int NUMBER_OF_RESPONSES = 4;
+        double r = Math.random();
+        int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+        String response = "";
+        
+        if (whichResponse == 0) {
+          response = "Interesting, tell me more.";
+        } else if (whichResponse == 1) {
+          response = "Hmmm.";
+        } else if (whichResponse == 2) {
+          response = "Do you really think so?";
+        } else if (whichResponse == 3) {
+          response = "You don't say.";
+        }
+        return response;
+	  }
+      
+      public static void main(String[] args)
+      {
+        Magpie2 maggie = new Magpie2();
+        
+        System.out.println(maggie.getGreeting());
+        System.out.println(maggie.getResponse("My mother and I talked last night."));
+        System.out.println(maggie.getResponse("I said no!"));
+        System.out.println(maggie.getResponse("The weather is nice."));
+        System.out.println(maggie.getResponse("Do you know my brother?"));
+      }
+   }
+
+As you can see the ``getResponse`` method of Magpie2 looks for certain keywords like ``"mother"`` and ``"brother"``.  Why do you think the response to "Do you know my brother?" isn't "Tell me more about your family."?  See if you can modify the code above to respond correctly.
 
 The response to "The weather is nice." is one of the random responses. Modify the code to add other random responses.
 

@@ -7,12 +7,10 @@ Practice Exam 2 for the AP CS A Exam
 
 The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Hover over the clock icon to see the current time remaining.  Click on the "Submit Answers" button at the end when you are done.  It will display the number correct, number wrong, and number skipped after the "Submit Answer" button.
 
-.. startexam:: timed_Test
-    :showtitle: Exam Not Started
-    :hidetitle: Currently Taking Exam
-    :duration: 38
+.. timed:: postexam2
+    :timelimit: 38
     
-    .. exammchoicemf:: qt2_1-14
+    .. mchoice:: qt2_1-14
        :answer_a: The value you are searching for is the first element in the array.
        :answer_b: The value you are searching for is the last element in the array
        :answer_c: The value you are searching for is in the middle of the array.
@@ -27,7 +25,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
        Under which of these conditions will a sequential search be faster than a binary search?
 
-    .. exammchoicemf:: qt2_2-9
+    .. mchoice:: qt2_2-9
        :answer_a: (c || d)
        :answer_b: (c && d)
        :answer_c: (!c) || (!d)
@@ -46,7 +44,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
            !(c || d)
 
-    .. exammchoicemf:: qt2_3-19
+    .. mchoice:: qt2_3-19
        :answer_a: Data (fields) can be directly accessed by all code in all classes. 
        :answer_b: Data (fields) can be hidden inside of an object using the abstract visibility modifier.
        :answer_c: Data (fields) are directly accessible by objects in the same package and in subclasses.
@@ -61,7 +59,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
        What is encapsulation and how does Java implement it?
 
-    .. exammchoicemf:: qt2_4-10
+    .. mchoice:: qt2_4-10
        :answer_a: The values don't matter this will always cause an infinite loop.
        :answer_b: Whenever a has values larger then temp.
        :answer_c: When all values in a are larger than temp.
@@ -86,7 +84,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             }
          }
      
-    .. exammchoicemf:: qt2_5-5
+    .. mchoice:: qt2_5-5
        :answer_a: if (x > 0) x = 0;
        :answer_b: x = 0;
        :answer_c: if (x < 0) x = 0;   
@@ -106,7 +104,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          if ( x > 0) x = -x; 
          if (x < 0) x = 0;
      
-    .. exammchoicemf:: qt2_6-15
+    .. mchoice:: qt2_6-15
        :answer_a: [1, 2, 3, 4, 5]
        :answer_b: [1, 2, 4, 5, 6]
        :answer_c: [1, 6, 2, 4, 5]
@@ -132,7 +130,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           list1.add(new Integer(6));
           System.out.println(list1);
      
-    .. exammchoicemf:: qt2_7-20
+    .. mchoice:: qt2_7-20
        :answer_a: IV
        :answer_b: I and II
        :answer_c: I and III
@@ -158,7 +156,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           V.   None of the above
             
 
-    .. exammchoicemf:: qt2_8-13
+    .. mchoice:: qt2_8-13
        :answer_a: Many digits are printed due to infinite recursion. 
        :answer_b: 3443
        :answer_c: 43211234
@@ -187,7 +185,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            System.out.print(x % 10);
          }
 
-    .. exammchoicemf:: qt2_9-18
+    .. mchoice:: qt2_9-18
        :answer_a: a = 6 and b = 7
        :answer_b: a = 13 and b = 0
        :answer_c: a = 6 and b = 0
@@ -212,7 +210,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              b = t - i;
           }
     
-    .. exammchoicemf:: qt2_10-1
+    .. mchoice:: qt2_10-1
        :answer_a: 112233445566  
        :answer_b: 123456
        :answer_c: 1223344556    
@@ -235,7 +233,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               System.out.print(test.substring(index,index+2));
          }
      
-    .. exammchoicemf:: qt2_11-3
+    .. mchoice:: qt2_11-3
        :answer_a: var1=2, var2=0
        :answer_b: var1=3, var2=-1
        :answer_c: var1=0, var2=2    
@@ -262,7 +260,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
      
      
-    .. exammchoicemf:: qt2_12-6
+    .. mchoice:: qt2_12-6
        :answer_a: (s == m - 5) && (s - 3 == 2 * (m - 3))
        :answer_b: s == m + 5 && s + 3 == 2 * m + 6 
        :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3) 
@@ -287,7 +285,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
     
      
-    .. exammchoicemf:: qt2_13-16
+    .. mchoice:: qt2_13-16
        :answer_a: {{2 3 3 3}, {1 2 3 3}, {1 1 2 3}}
        :answer_b: {{2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}}
        :answer_c: {{2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}}
@@ -318,7 +316,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            }
         }
     
-    .. exammchoicemf:: qt2_14-12
+    .. mchoice:: qt2_14-12
        :answer_a: hI tHERE 
        :answer_b: hi there
        :answer_c: HI THERE  
@@ -344,7 +342,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          s4 = null;
 
      
-    .. exammchoicemf:: qt2_15-7
+    .. mchoice:: qt2_15-7
        :answer_a: 0 1 2 0 1 2 0 1
        :answer_b: 0 2 1 0 2 1 0 2
        :answer_c: 0 2 1 0 2 1 0 2 1  
@@ -384,7 +382,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         }
      
 
-    .. exammchoicemf:: qt2_16-2
+    .. mchoice:: qt2_16-2
        :answer_a: It is the length of the array nums. 
        :answer_b: It is the length of the first consecutive block of the value target in nums.
        :answer_c:  It is the length of the shortest consecutive block of the value target in nums.
@@ -428,7 +426,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            return maxLen;
          }
       
-    .. exammchoicemf:: qt2_17-11
+    .. mchoice:: qt2_17-11
        :answer_a: 4
        :answer_b: 3
        :answer_c: 16  
@@ -451,7 +449,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             return (a[1] * 2);
          }
       
-    .. exammchoicemf:: qt2_18-4
+    .. mchoice:: qt2_18-4
        :answer_a: I and II only
        :answer_b: II only
        :answer_c: III only    
@@ -496,7 +494,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                  grade = "F";
     
 
-    .. exammchoicemf:: qt2_19-8
+    .. mchoice:: qt2_19-8
        :answer_b: minutes = minutes % 60;
        :answer_c: minutes = minutes + hours % 60; 
        :answer_d: hours = hours + minutes / 60; minutes = minutes % 60;
@@ -546,7 +544,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            // ... other methods not shown
          }
      
-    .. exammchoicemf:: qt2_20-17
+    .. mchoice:: qt2_20-17
        :answer_a: AB
        :answer_b: ABCD
        :answer_c: ABDC
@@ -592,5 +590,4 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             }
          }
      
-    .. finishexam:: timed_Test
 

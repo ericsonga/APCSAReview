@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,26 +336,16 @@
 <h1>Easy Multiple Choice Questions<a class="headerlink" href="#easy-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are easier than most of those that you will usually see on the AP CS A exam.</p>
 
-            <div id="qcb_1" class="alert alert-warning">
-            7-9-1: Which index is the last element in an array called nums at?<form name="qcb_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_1_opt_a" />
-            <label for= "qcb_1_opt_a">  a) nums.length</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_1">
+            7-9-1: Which index is the last element in an array called nums at?
+            <li data-component="answer"  id="qcb_1_opt_a">nums.length</li><li data-component="feedback" id="qcb_1_opt_a">Look at the example above when we were setting the values for the highScore array.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_1_opt_b" />
-            <label for= "qcb_1_opt_b">  b) nums.length - 1</label><br />
+            <li data-component="answer" data-correct id="qcb_1_opt_b">nums.length - 1</li><li data-component="feedback" id="qcb_1_opt_b">Since the first element in an array is at index 0 the last element is the length minus 1.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_1','b',['Look at the example above when we were setting the values for the highScore array.', 'Since the first element in an array is at index 0 the last element is the length minus 1.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_1_bcomp" disabled name="compare" onclick="compareAnswers('qcb_1');">Compare Me</button>
-            </form><br />
-            <div id="qcb_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qcb_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_2">
             <p>7-9-2: Given the following code segment, which of the following will cause an infinite loop?  Assume that temp is an int variable initialized to be greater than zero and that a is an array of ints.</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span> <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">k</span><span class="o">++</span> <span class="o">)</span>
 <span class="o">{</span>
@@ -352,34 +356,21 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qcb_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_2_opt_a" />
-            <label for= "qcb_2_opt_a">  a) The values don't matter this will always cause an infinite loop.</label><br />
+
+            <li data-component="answer"  id="qcb_2_opt_a">The values don't matter this will always cause an infinite loop.</li><li data-component="feedback" id="qcb_2_opt_a">An infinite loop will not always occur in this code segment.</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_2_opt_b" />
-            <label for= "qcb_2_opt_b">  b) Whenever a includes a value that is less than or equal to zero.</label><br />
+            <li data-component="answer" data-correct id="qcb_2_opt_b">Whenever a includes a value that is less than or equal to zero.</li><li data-component="feedback" id="qcb_2_opt_b">When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_2_opt_c" />
-            <label for= "qcb_2_opt_c">  c) Whenever a has values larger then temp.</label><br />
+            <li data-component="answer"  id="qcb_2_opt_c">Whenever a has values larger then temp.</li><li data-component="feedback" id="qcb_2_opt_c">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="d" id="qcb_2_opt_d" />
-            <label for= "qcb_2_opt_d">  d) When all values in a are larger than temp.</label><br />
+            <li data-component="answer"  id="qcb_2_opt_d">When all values in a are larger than temp.</li><li data-component="feedback" id="qcb_2_opt_d">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="e" id="qcb_2_opt_e" />
-            <label for= "qcb_2_opt_e">  e) Whenever a includes a value equal to temp.</label><br />
+            <li data-component="answer"  id="qcb_2_opt_e">Whenever a includes a value equal to temp.</li><li data-component="feedback" id="qcb_2_opt_e">Values equal to temp will not cause the infinite loop.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_2','b',['An infinite loop will not always occur in this code segment.', 'When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value \u003E 0), so an infinite loop will occur.', 'Values larger then temp will not cause an infinite loop.', 'Values larger then temp will not cause an infinite loop.', 'Values equal to temp will not cause the infinite loop.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_2_bcomp" disabled name="compare" onclick="compareAnswers('qcb_2');">Compare Me</button>
-            </form><br />
-            <div id="qcb_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qcb_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qcb_3">
             <p>7-9-3: Given the following values of a and the method doubleLast what will the values of a be after you execute: doubleLast()?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">a</span> <span class="o">=</span> <span class="o">{-</span><span class="mi">20</span><span class="o">,</span> <span class="o">-</span><span class="mi">15</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">16</span><span class="o">,</span> <span class="mi">33</span><span class="o">};</span>
 
@@ -393,29 +384,17 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qcb_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qcb_3_opt_a" />
-            <label for= "qcb_3_opt_a">  a) {-40, -30, 4, 16, 32, 66}</label><br />
+
+            <li data-component="answer"  id="qcb_3_opt_a">{-40, -30, 4, 16, 32, 66}</li><li data-component="feedback" id="qcb_3_opt_a">This would true if it looped through the whole array.  Does it?</li>
             
-            <input type="radio" name="group1" value="b" id="qcb_3_opt_b" />
-            <label for= "qcb_3_opt_b">  b) {-40, -30, 4, 8, 16, 32}</label><br />
+            <li data-component="answer"  id="qcb_3_opt_b">{-40, -30, 4, 8, 16, 32}</li><li data-component="feedback" id="qcb_3_opt_b">This would be true if it looped from the beginning to the middle.  Does it?</li>
             
-            <input type="radio" name="group1" value="c" id="qcb_3_opt_c" />
-            <label for= "qcb_3_opt_c">  c) {-20, -15, 2, 16, 32, 66}</label><br />
+            <li data-component="answer" data-correct id="qcb_3_opt_c">{-20, -15, 2, 16, 32, 66}</li><li data-component="feedback" id="qcb_3_opt_c">It loops from the middle to the end doubling each value. Since there are 6 elements it will start at index 3.</li>
             
-            <input type="radio" name="group1" value="d" id="qcb_3_opt_d" />
-            <label for= "qcb_3_opt_d">  d) {-20, -15, 2, 8, 16, 33}</label><br />
+            <li data-component="answer"  id="qcb_3_opt_d">{-20, -15, 2, 8, 16, 33}</li><li data-component="feedback" id="qcb_3_opt_d">This would be true if array elements didn't change, but they do.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qcb_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qcb_3','c',['This would true if it looped through the whole array.  Does it?', 'This would be true if it looped from the beginning to the middle.  Does it?', 'It loops from the middle to the end doubling each value. Since there are 6 elements it will start at index 3.', 'This would be true if array elements didn\u0027t change, but they do.'])">Check Me</button>
-            <button class='btn btn-default' id="qcb_3_bcomp" disabled name="compare" onclick="compareAnswers('qcb_3');">Compare Me</button>
-            </form><br />
-            <div id="qcb_3_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

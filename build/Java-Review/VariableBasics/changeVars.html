@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -321,22 +335,8 @@
   <div class="section" id="changing-variables-in-java">
 <h1>Changing Variables in Java<a class="headerlink" href="#changing-variables-in-java" title="Permalink to this headline">¶</a></h1>
 <p>Remember that a variable holds a value and that value can change or vary.  If you use a variable to keep score you would probably increment it (add one to the current value).  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below.</p>
-<div id="cont"></div>
-<div id="lccv1" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lccv1_runb" onclick="Jobe.runlive('lccv1', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lccv1_saveb"
-                onclick="saveEditor('lccv1');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lccv1_loadb"
-                onclick="requestCode('lccv1');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lccv1_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lccv1_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lccv1 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class Test1
 {
    public static void main(String[] args)
@@ -347,37 +347,10 @@ public class Test1
      System.out.println(score);
    }
 }
-        </textarea>
-    </div>
+</pre>
+<p>You can set one variable&#8217;s value to a <em>copy</em> of the value of another variable.  This won&#8217;t change the value of the variable that you are copying from.</p>
 
-    <div class="lc_output">
-        <div>
-            <pre id="lccv1_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lccv1 )</span> </p>
-
-    
-</div><p>You can set one variable&#8217;s value to a <em>copy</em> of the value of another variable.  This won&#8217;t change the value of the variable that you are copying from.</p>
-<div id="cont"></div>
-<div id="lccv2" lang="java" class="ac_section alert alert-warning">
-
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lccv2_runb" onclick="Jobe.runlive('lccv2', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lccv2_saveb"
-                onclick="saveEditor('lccv2');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lccv2_loadb"
-                onclick="requestCode('lccv2');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lccv2_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lccv2_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lccv2 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class Test2
 {
    public static void main(String[] args)
@@ -391,23 +364,10 @@ public class Test2
      System.out.println(y);
    }
 }
-        </textarea>
-    </div>
+</pre>
+<p><strong>Check your understanding</strong></p>
 
-    <div class="lc_output">
-        <div>
-            <pre id="lccv2_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lccv2 )</span> </p>
-
-    
-</div><p><strong>Check your understanding</strong></p>
-
-            <div id="q2_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="q2_1">
             <p>3-3-1: What are the values of x, y, and z after the following code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
@@ -417,158 +377,22 @@ public class Test2
 <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="q2_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="q2_1_opt_a" />
-            <label for= "q2_1_opt_a">  a) x = 0, y = 1, z = 2</label><br />
+
+            <li data-component="answer"  id="q2_1_opt_a">x = 0, y = 1, z = 2</li><li data-component="feedback" id="q2_1_opt_a">These are the initial values in the variable, but the values are changed.</li>
             
-            <input type="radio" name="group1" value="b" id="q2_1_opt_b" />
-            <label for= "q2_1_opt_b">  b) x = 1, y = 2, z = 3</label><br />
+            <li data-component="answer" data-correct id="q2_1_opt_b">x = 1, y = 2, z = 3</li><li data-component="feedback" id="q2_1_opt_b">x changes to y's initial value, y's value is doubled, and z is set to 3</li>
             
-            <input type="radio" name="group1" value="c" id="q2_1_opt_c" />
-            <label for= "q2_1_opt_c">  c) x = 2, y = 2, z = 3</label><br />
+            <li data-component="answer"  id="q2_1_opt_c">x = 2, y = 2, z = 3</li><li data-component="feedback" id="q2_1_opt_c">Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.</li>
             
-            <input type="radio" name="group1" value="d" id="q2_1_opt_d" />
-            <label for= "q2_1_opt_d">  d) x = 0, y = 0, z = 3</label><br />
+            <li data-component="answer"  id="q2_1_opt_d">x = 0, y = 0, z = 3</li><li data-component="feedback" id="q2_1_opt_d">Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('q2_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('q2_1','b',['These are the initial values in the variable, but the values are changed.', 'x changes to y\u0027s initial value, y\u0027s value is doubled, and z is set to 3', 'Remember that the equal sign doesn\u0027t mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.', 'Remember that the equal sign doesn\u0027t mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.'])">Check Me</button>
-            <button class='btn btn-default' id="q2_1_bcomp" disabled name="compare" onclick="compareAnswers('q2_1');">Compare Me</button>
-            </form><br />
-            <div id="q2_1_feedback">
-            </div>
-            </div>
+            </ul>
             <p><strong>Mixed up programs</strong></p>
 
-        <div class='parsons alert alert-warning' id="parsons-70">
-        <div class="parsons-text">3-3-2: The following has the correct code to 'swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one or more extra statements.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.<br /><br /></div>
-        <div style="clear:left;"></div>
-        <div id="parsons-orig-70" style="display:none;">int x = 3;\nint y = 5;\nint temp = 0;
-temp = x;
-x = y;
-y = temp;
-y = x; #distractor</div>
-        <div class="sortable-code-container">
-        <div id="parsons-sortableTrash-70" class="sortable-code"></div>
-        <div id="parsons-sortableCode-70" class="sortable-code"></div>
-        <div style="clear:left;"></div>
-        </div>
-        <div class="parsons-controls">
-        <input type="button" class='btn btn-success' id="checkMe70" value="Check Me"/>
-        <input type="button" class='btn btn-default' id="reset70" value="Reset"/>
-        <div id="parsons-message-70"></div>
-        </div>
-        </div>
-
-    <script>
-        $pjQ(document).ready(function(){
-
-            $("#parsons-70").not(".sortable-code").not(".parsons-controls").on("click", function(){
-                 $('html, body').animate({
-                    scrollTop: ($("#parsons-70").offset().top - 50)
-                }, 700);
-            }).find(".sortable-code, .parsons-controls").click(function(e) {
-                return false;
-                });
-            var msgBox = $("#parsons-message-70");
-            msgBox.hide();
-        var displayErrors = function (fb) {
-            if(fb.errors.length > 0) {
-                    var hash = pp_70.getHash("#ul-parsons-sortableCode-70");
-                    msgBox.fadeIn(500);
-                    msgBox.attr('class','alert alert-danger');
-                    msgBox.html(fb.errors[0]);
-                    logBookEvent({'event':'parsons', 'act':hash, 'div_id':'2_swap'});
-
-            } else {
-                    logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'2_swap'});
-                    msgBox.fadeIn(100);
-                    msgBox.attr('class','alert alert-success');
-                    msgBox.html("Perfect!")
-                }
-
-        }
-
-        $(window).load(function() {
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-70");
-            var trashul = $("#ul-parsons-sortableTrash-70");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            sortableul.height(minHeight);
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-        });
- 
-
-        var pp_70 = new ParsonsWidget({
-                'sortableId': 'parsons-sortableCode-70',
-        'trashId': 'parsons-sortableTrash-70',
-                'max_wrong_lines': 1,
-                'solution_label': 'Drop blocks here',
-                'feedback_cb' : displayErrors
-        });
-        pp_70.init($pjQ("#parsons-orig-70").text());
-    pp_70.shuffleLines();
-            
-        if(localStorage.getItem('2_swap') && localStorage.getItem('2_swap-trash')) {
-            try {
-                var solution = localStorage.getItem('2_swap');
-                var trash = localStorage.getItem('2_swap-trash');
-                pp_70.createHTMLFromHashes(solution,trash);
-                pp_70.getFeedback();
-            } catch(err) {
-                var text = "An error occured restoring old 2_swap state.  Error: ";
-                console.log(text + err.message);
-            }
-
-        }
-            $pjQ("#reset70").click(function(event){
-              event.preventDefault();
-              pp_70.shuffleLines();
-            
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-70");
-            var trashul = $("#ul-parsons-sortableTrash-70");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-              msgBox.hide();
-            });
-            
-            $pjQ("#checkMe70").click(function(event){
-              event.preventDefault();
-              var hash = pp_70.getHash("#ul-parsons-sortableCode-70");
-              localStorage.setItem('2_swap',hash);
-              hash = pp_70.getHash("#ul-parsons-sortableTrash-70");
-              localStorage.setItem('2_swap-trash',hash);
-            
-            pp_70.getFeedback();
-            msgBox.fadeIn(100);
-            
-            });
-            
-        });
-            
-
-    </script>
-
-</div>
+    <pre data-component="parsons" id="2_swap">
+        <span data-question>3-3-2: The following has the correct code to 'swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one or more extra statements.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.</span>None</pre>
+    </div>
 
 
   

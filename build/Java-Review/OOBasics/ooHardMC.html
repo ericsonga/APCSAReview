@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,7 +336,7 @@
 <h1>Hard Multiple Choice Questions<a class="headerlink" href="#hard-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are harder than those that you will typically see on the AP CS A exam.</p>
 
-            <div id="qooh_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooh_1">
             <p>10-14-1: Assume that <code class="docutils literal"><span class="pre">Base</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Derived();</span></code> appears in a client program.  What is the result of the call <code class="docutils literal"><span class="pre">b.methodOne();</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Base</span>
 <span class="o">{</span>
@@ -354,31 +368,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qooh_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qooh_1_opt_a" />
-            <label for= "qooh_1_opt_a">  a) ABDC</label><br />
+
+            <li data-component="answer" data-correct id="qooh_1_opt_a">ABDC</li><li data-component="feedback" id="qooh_1_opt_a">Even though b is declared as type <code>Base</code> it is created as an object of the <code>Derived</code> class, so all methods to it will be resolved starting with the <code>Derived</code> class. So the <code>methodOne()</code> in <code>Derived</code> will be called. This method first calls <code>super.methodOne</code> so this will invoke the method in the superclass (which is <code>Base</code>). So next the <code>methodOne</code> in <code>Base</code> will execute. This prints the letter "A" and invokes <code>this.methodTwo()</code>. Since <code>b</code> is really a <code>Derived</code> object, we check there first to see if it has a <code>methodTwo</code>. It does, so execution continues in the <code>Derived</code> class <code>methodTwo</code>. This method invokes <code>super.methodTwo</code>. So this will invoke the method in the super class (<code>Base</code>) named <code>methodTwo</code>. This method prints the letter "B" and then returns. Next the execution returns from the call to the <code>super.methodTwo</code> and prints the letter "D". We return to the <code>Base</code> class <code>methodOne</code> and return from that to the <code>Derived</code> class <code>methodOne</code> and print the letter "C".</li>
             
-            <input type="radio" name="group1" value="b" id="qooh_1_opt_b" />
-            <label for= "qooh_1_opt_b">  b) AB</label><br />
+            <li data-component="answer"  id="qooh_1_opt_b">AB</li><li data-component="feedback" id="qooh_1_opt_b">This would be true if the object was created of type <code>Base</code>. But the object is really a <code>Derived</code>  object. So all methods are looked for starting with the <code>Derived</code>  class.</li>
             
-            <input type="radio" name="group1" value="c" id="qooh_1_opt_c" />
-            <label for= "qooh_1_opt_c">  c) ABCD</label><br />
+            <li data-component="answer"  id="qooh_1_opt_c">ABCD</li><li data-component="feedback" id="qooh_1_opt_c">After the call to <code>methodOne</code> in the super class printing "A", the code continues with the implicit <code>this.methodTwo</code> which resolves from the current object's class which is <code>Derived</code>. Next, <code>methodTwo</code> in the <code>Derived</code> class is executed which then calls <code>super.methodTwo</code> which invokes <code>println</code> "B" from <code>methodTwo</code> in the <code>Base</code> class. Then the "D" in the <code>Derived</code> <code>methodTwo</code> is printed. Finally the program returns to <code>methodOne</code> in the <code>Derived</code> class are prints "C".</li>
             
-            <input type="radio" name="group1" value="d" id="qooh_1_opt_d" />
-            <label for= "qooh_1_opt_d">  d) ABC</label><br />
+            <li data-component="answer"  id="qooh_1_opt_d">ABC</li><li data-component="feedback" id="qooh_1_opt_d">The call to <code>methodTwo</code> in <code>super.methodOne</code> is to <code>this.methodTwo</code> which is the method from the <code>Derived</code> class. Consequently the "D" is also printed.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qooh_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qooh_1','a',['Even though b is declared as type \u003Ccode\u003EBase\u003C/code\u003E it is created as an object of the \u003Ccode\u003EDerived\u003C/code\u003E class, so all methods to it will be resolved starting with the \u003Ccode\u003EDerived\u003C/code\u003E class. So the \u003Ccode\u003EmethodOne()\u003C/code\u003E in \u003Ccode\u003EDerived\u003C/code\u003E will be called. This method first calls \u003Ccode\u003Esuper.methodOne\u003C/code\u003E so this will invoke the method in the superclass (which is \u003Ccode\u003EBase\u003C/code\u003E). So next the \u003Ccode\u003EmethodOne\u003C/code\u003E in \u003Ccode\u003EBase\u003C/code\u003E will execute. This prints the letter \u0022A\u0022 and invokes \u003Ccode\u003Ethis.methodTwo()\u003C/code\u003E. Since \u003Ccode\u003Eb\u003C/code\u003E is really a \u003Ccode\u003EDerived\u003C/code\u003E object, we check there first to see if it has a \u003Ccode\u003EmethodTwo\u003C/code\u003E. It does, so execution continues in the \u003Ccode\u003EDerived\u003C/code\u003E class \u003Ccode\u003EmethodTwo\u003C/code\u003E. This method invokes \u003Ccode\u003Esuper.methodTwo\u003C/code\u003E. So this will invoke the method in the super class (\u003Ccode\u003EBase\u003C/code\u003E) named \u003Ccode\u003EmethodTwo\u003C/code\u003E. This method prints the letter \u0022B\u0022 and then returns. Next the execution returns from the call to the \u003Ccode\u003Esuper.methodTwo\u003C/code\u003E and prints the letter \u0022D\u0022. We return to the \u003Ccode\u003EBase\u003C/code\u003E class \u003Ccode\u003EmethodOne\u003C/code\u003E and return from that to the \u003Ccode\u003EDerived\u003C/code\u003E class \u003Ccode\u003EmethodOne\u003C/code\u003E and print the letter \u0022C\u0022.', 'This would be true if the object was created of type \u003Ccode\u003EBase\u003C/code\u003E. But the object is really a \u003Ccode\u003EDerived\u003C/code\u003E  object. So all methods are looked for starting with the \u003Ccode\u003EDerived\u003C/code\u003E  class.', 'After the call to \u003Ccode\u003EmethodOne\u003C/code\u003E in the super class printing \u0022A\u0022, the code continues with the implicit \u003Ccode\u003Ethis.methodTwo\u003C/code\u003E which resolves from the current object\u0027s class which is \u003Ccode\u003EDerived\u003C/code\u003E. Next, \u003Ccode\u003EmethodTwo\u003C/code\u003E in the \u003Ccode\u003EDerived\u003C/code\u003E class is executed which then calls \u003Ccode\u003Esuper.methodTwo\u003C/code\u003E which invokes \u003Ccode\u003Eprintln\u003C/code\u003E \u0022B\u0022 from \u003Ccode\u003EmethodTwo\u003C/code\u003E in the \u003Ccode\u003EBase\u003C/code\u003E class. Then the \u0022D\u0022 in the \u003Ccode\u003EDerived\u003C/code\u003E \u003Ccode\u003EmethodTwo\u003C/code\u003E is printed. Finally the program returns to \u003Ccode\u003EmethodOne\u003C/code\u003E in the \u003Ccode\u003EDerived\u003C/code\u003E class are prints \u0022C\u0022.', 'The call to \u003Ccode\u003EmethodTwo\u003C/code\u003E in \u003Ccode\u003Esuper.methodOne\u003C/code\u003E is to \u003Ccode\u003Ethis.methodTwo\u003C/code\u003E which is the method from the \u003Ccode\u003EDerived\u003C/code\u003E class. Consequently the \u0022D\u0022 is also printed.'])">Check Me</button>
-            <button class='btn btn-default' id="qooh_1_bcomp" disabled name="compare" onclick="compareAnswers('qooh_1');">Compare Me</button>
-            </form><br />
-            <div id="qooh_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qooh_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooh_2">
             <p>10-14-2: If you have the following classes.  Which of the following constructors would be valid for <code class="docutils literal"><span class="pre">Point3D</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Point2D</span> <span class="o">{</span>
    <span class="kd">public</span> <span class="kt">int</span> <span class="n">x</span><span class="o">;</span>
@@ -414,32 +416,19 @@
      <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qooh_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qooh_2_opt_a" />
-            <label for= "qooh_2_opt_a">  a) II only</label><br />
+
+            <li data-component="answer"  id="qooh_2_opt_a">II only</li><li data-component="feedback" id="qooh_2_opt_a"><code>Point2D</code> does have a constructor that takes an <code>x</code> and <code>y</code> value so this is okay. Also the call to super is the first line of code in the child constructor as required. However, both I and III are okay as well.</li>
             
-            <input type="radio" name="group1" value="b" id="qooh_2_opt_b" />
-            <label for= "qooh_2_opt_b">  b) III only</label><br />
+            <li data-component="answer"  id="qooh_2_opt_b">III only</li><li data-component="feedback" id="qooh_2_opt_b">The <code>x</code> and <code>y</code> values in <code>Point2D</code> are public and so can be directly accessed by all classes including subclasses. Also there is a no-arg constructor in <code>Point2D</code> so the super no-arg constructor will be called before the first line of code in this constructor.</li>
             
-            <input type="radio" name="group1" value="c" id="qooh_2_opt_c" />
-            <label for= "qooh_2_opt_c">  c) I, II, and III</label><br />
+            <li data-component="answer" data-correct id="qooh_2_opt_c">I, II, and III</li><li data-component="feedback" id="qooh_2_opt_c">I is true because <code>Point2D</code> does have a no-arg constructor. II is true because <code>Point2D</code> does have a constructor that takes <code>x</code> and <code>y</code>. III is true because <code>Point2D</code> does have a no-arg constructor which will be called before the first line of code is executed in this constructor. The fields <code>x</code> and <code>y</code> are public in <code>Point2D</code> and thus can be directly accessed by all classes.</li>
             
-            <input type="radio" name="group1" value="d" id="qooh_2_opt_d" />
-            <label for= "qooh_2_opt_d">  d) I and II only</label><br />
+            <li data-component="answer"  id="qooh_2_opt_d">I and II only</li><li data-component="feedback" id="qooh_2_opt_d">This would be true if <code>x</code> and <code>y</code> were private in <code>Point2D</code>, but they are public.</li>
             
-            <input type="radio" name="group1" value="e" id="qooh_2_opt_e" />
-            <label for= "qooh_2_opt_e">  e) I only</label><br />
+            <li data-component="answer"  id="qooh_2_opt_e">I only</li><li data-component="feedback" id="qooh_2_opt_e"><code>Point2D</code> does have a no-arg constructor and since the constructor in <code>Point3D</code> doesn't have an explicit call to super as the first line of code in the constructor one will be added for the no-arg constructor. However, both II and III are okay as well.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qooh_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qooh_2','c',['\u003Ccode\u003EPoint2D\u003C/code\u003E does have a constructor that takes an \u003Ccode\u003Ex\u003C/code\u003E and \u003Ccode\u003Ey\u003C/code\u003E value so this is okay. Also the call to super is the first line of code in the child constructor as required. However, both I and III are okay as well.', 'The \u003Ccode\u003Ex\u003C/code\u003E and \u003Ccode\u003Ey\u003C/code\u003E values in \u003Ccode\u003EPoint2D\u003C/code\u003E are public and so can be directly accessed by all classes including subclasses. Also there is a no\u002Darg constructor in \u003Ccode\u003EPoint2D\u003C/code\u003E so the super no\u002Darg constructor will be called before the first line of code in this constructor.', 'I is true because \u003Ccode\u003EPoint2D\u003C/code\u003E does have a no\u002Darg constructor. II is true because \u003Ccode\u003EPoint2D\u003C/code\u003E does have a constructor that takes \u003Ccode\u003Ex\u003C/code\u003E and \u003Ccode\u003Ey\u003C/code\u003E. III is true because \u003Ccode\u003EPoint2D\u003C/code\u003E does have a no\u002Darg constructor which will be called before the first line of code is executed in this constructor. The fields \u003Ccode\u003Ex\u003C/code\u003E and \u003Ccode\u003Ey\u003C/code\u003E are public in \u003Ccode\u003EPoint2D\u003C/code\u003E and thus can be directly accessed by all classes.', 'This would be true if \u003Ccode\u003Ex\u003C/code\u003E and \u003Ccode\u003Ey\u003C/code\u003E were private in \u003Ccode\u003EPoint2D\u003C/code\u003E, but they are public.', '\u003Ccode\u003EPoint2D\u003C/code\u003E does have a no\u002Darg constructor and since the constructor in \u003Ccode\u003EPoint3D\u003C/code\u003E doesn\u0027t have an explicit call to super as the first line of code in the constructor one will be added for the no\u002Darg constructor. However, both II and III are okay as well.'])">Check Me</button>
-            <button class='btn btn-default' id="qooh_2_bcomp" disabled name="compare" onclick="compareAnswers('qooh_2');">Compare Me</button>
-            </form><br />
-            <div id="qooh_2_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

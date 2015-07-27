@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,59 +336,38 @@
 <h1>Easy Multiple Choice Questions<a class="headerlink" href="#easy-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are easier than most of those that you will usually see on the AP CS A exam.</p>
 
-            <div id="qce_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qce_1">
             <p>5-7-1: What does the following code print when x has been set to 187?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x is negative&quot;</span><span class="o">);</span>
 <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x is zero&quot;</span><span class="o">);</span>
 <span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;x is positive&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qce_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qce_1_opt_a" />
-            <label for= "qce_1_opt_a">  a) x is negative</label><br />
+
+            <li data-component="answer"  id="qce_1_opt_a">x is negative</li><li data-component="feedback" id="qce_1_opt_a">This will only print if x has been set to a number less than zero. Has it?</li>
             
-            <input type="radio" name="group1" value="b" id="qce_1_opt_b" />
-            <label for= "qce_1_opt_b">  b) x is zero</label><br />
+            <li data-component="answer"  id="qce_1_opt_b">x is zero</li><li data-component="feedback" id="qce_1_opt_b">This will only print if x has been set to 0.  Has it?</li>
             
-            <input type="radio" name="group1" value="c" id="qce_1_opt_c" />
-            <label for= "qce_1_opt_c">  c) x is positive</label><br />
+            <li data-component="answer" data-correct id="qce_1_opt_c">x is positive</li><li data-component="feedback" id="qce_1_opt_c">The first condition is false and x is not equal to zero so the else will execute.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qce_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qce_1','c',['This will only print if x has been set to a number less than zero. Has it?', 'This will only print if x has been set to 0.  Has it?', 'The first condition is false and x is not equal to zero so the else will execute.'])">Check Me</button>
-            <button class='btn btn-default' id="qce_1_bcomp" disabled name="compare" onclick="compareAnswers('qce_1');">Compare Me</button>
-            </form><br />
-            <div id="qce_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qce_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qce_2">
             <p>5-7-2: What is printed when the following code executes and x equals 4 and y equals 3?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(!(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">))</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;first case&quot;</span><span class="o">);</span>
 <span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;second case&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qce_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qce_2_opt_a" />
-            <label for= "qce_2_opt_a">  a) first case</label><br />
+
+            <li data-component="answer"  id="qce_2_opt_a">first case</li><li data-component="feedback" id="qce_2_opt_a">This will print if x is greater than or equal 3 and y is less than or equal 2.  In this case x is greater than 3 so the first condition is true, but the second condition is false.</li>
             
-            <input type="radio" name="group1" value="b" id="qce_2_opt_b" />
-            <label for= "qce_2_opt_b">  b) second case</label><br />
+            <li data-component="answer" data-correct id="qce_2_opt_b">second case</li><li data-component="feedback" id="qce_2_opt_b">This will print if x is less than 3 or y is greater than 2.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qce_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qce_2','b',['This will print if x is greater than or equal 3 and y is less than or equal 2.  In this case x is greater than 3 so the first condition is true, but the second condition is false.', 'This will print if x is less than 3 or y is greater than 2.'])">Check Me</button>
-            <button class='btn btn-default' id="qce_2_bcomp" disabled name="compare" onclick="compareAnswers('qce_2');">Compare Me</button>
-            </form><br />
-            <div id="qce_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qce_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qce_3">
             <p>5-7-3: What is the value of grade when the following code executes and score is 80?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="o">)</span> <span class="n">grade</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span><span class="o">;</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="o">)</span> <span class="n">grade</span> <span class="o">=</span> <span class="s">&quot;B&quot;</span><span class="o">;</span>
@@ -383,59 +376,35 @@
 <span class="k">else</span> <span class="n">grade</span> <span class="o">=</span> <span class="s">&quot;E&quot;</span><span class="o">;</span>
 </pre></div>
 </div>
-<form name="qce_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qce_3_opt_a" />
-            <label for= "qce_3_opt_a">  a) A</label><br />
+
+            <li data-component="answer"  id="qce_3_opt_a">A</li><li data-component="feedback" id="qce_3_opt_a">Notice that each of the first 4 statements start with an if.  What will actually be printed?  Try it.</li>
             
-            <input type="radio" name="group1" value="b" id="qce_3_opt_b" />
-            <label for= "qce_3_opt_b">  b) B</label><br />
+            <li data-component="answer"  id="qce_3_opt_b">B</li><li data-component="feedback" id="qce_3_opt_b">Each of the first 4 if statements will execute.</li>
             
-            <input type="radio" name="group1" value="c" id="qce_3_opt_c" />
-            <label for= "qce_3_opt_c">  c) C</label><br />
+            <li data-component="answer"  id="qce_3_opt_c">C</li><li data-component="feedback" id="qce_3_opt_c">Check this in DrJava.</li>
             
-            <input type="radio" name="group1" value="d" id="qce_3_opt_d" />
-            <label for= "qce_3_opt_d">  d) D</label><br />
+            <li data-component="answer" data-correct id="qce_3_opt_d">D</li><li data-component="feedback" id="qce_3_opt_d">Each of the if statements will be executed. So grade will be set to A, then B then C and finally D.</li>
             
-            <input type="radio" name="group1" value="e" id="qce_3_opt_e" />
-            <label for= "qce_3_opt_e">  e) E</label><br />
+            <li data-component="answer"  id="qce_3_opt_e">E</li><li data-component="feedback" id="qce_3_opt_e">This will only be true when score is less than 60.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qce_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qce_3','d',['Notice that each of the first 4 statements start with an if.  What will actually be printed?  Try it.', 'Each of the first 4 if statements will execute.', 'Check this in DrJava.', 'Each of the if statements will be executed. So grade will be set to A, then B then C and finally D.', 'This will only be true when score is less than 60.'])">Check Me</button>
-            <button class='btn btn-default' id="qce_3_bcomp" disabled name="compare" onclick="compareAnswers('qce_3');">Compare Me</button>
-            </form><br />
-            <div id="qce_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qce_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qce_4">
             <p>5-7-4: What is printed when the following code executes and x has been set to zero?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="o">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">x</span><span class="o">)</span> <span class="o">==</span> <span class="mi">3</span><span class="o">)</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;first case&quot;</span><span class="o">);</span>
 <span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;second case&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qce_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qce_4_opt_a" />
-            <label for= "qce_4_opt_a">  a) first case</label><br />
+
+            <li data-component="answer"  id="qce_4_opt_a">first case</li><li data-component="feedback" id="qce_4_opt_a">This will print if either of the two conditions are true.  The first isn't true but the second will cause an error.</li>
             
-            <input type="radio" name="group1" value="b" id="qce_4_opt_b" />
-            <label for= "qce_4_opt_b">  b) second case</label><br />
+            <li data-component="answer"  id="qce_4_opt_b">second case</li><li data-component="feedback" id="qce_4_opt_b">This will print if both of the conditions are false.  But, an error will occur when testing the second condition.</li>
             
-            <input type="radio" name="group1" value="c" id="qce_4_opt_c" />
-            <label for= "qce_4_opt_c">  c) You will get a error because you can't divide by zero.</label><br />
+            <li data-component="answer" data-correct id="qce_4_opt_c">You will get a error because you can't divide by zero.</li><li data-component="feedback" id="qce_4_opt_c">The first condition will be false so the second one will be executed and lead to an error since you can't divide by zero.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qce_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qce_4','c',['This will print if either of the two conditions are true.  The first isn\u0027t true but the second will cause an error.', 'This will print if both of the conditions are false.  But, an error will occur when testing the second condition.', 'The first condition will be false so the second one will be executed and lead to an error since you can\u0027t divide by zero.'])">Check Me</button>
-            <button class='btn btn-default' id="qce_4_bcomp" disabled name="compare" onclick="compareAnswers('qce_4');">Compare Me</button>
-            </form><br />
-            <div id="qce_4_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

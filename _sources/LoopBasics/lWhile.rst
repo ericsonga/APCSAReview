@@ -11,19 +11,28 @@ While Loops
     
 A **while** loop is typically used when you don't know how many times the loop will execute.  You might use it while processing a string.  Google has been scanning old books and then using software to read the scanned text.  But, the software can get things mixed up like using 1 for l.  The following code loops through a string replacing all 1's with l's.  
 
-.. code-block:: java 
-
-   String message = "Have a 1ong and happy 1ife"; 
-   int index = 0;
-  
-   // while more 1's in the message
-   while (message.indexOf("1") >= 0)
+.. activecode:: lclw1
+   :language: java
+   
+   public class Test
    {
-      index = message.indexOf("1");
-      message = message.substring(0,index) + "l" + message.substring(index+1);
+      public static void main(String[] args)
+      {
+        String message = "Have a 1ong and happy 1ife"; 
+        int index = 0;
+        
+        // while more 1's in the message
+        while (message.indexOf("1") >= 0)
+        {
+          index = message.indexOf("1");
+          message = message.substring(0,index) + "l" + message.substring(index+1);
+        }
+        
+        System.out.println(message);
+      }
    }
   
-The while loop starts on line 5 in the code above.  Statements 7 and 8 are in the body of the loop (between the opening parenthesis on line 6 and the closing one on line 9).  Please note that Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what
+The while loop starts on line 9 in the code above.  Statements 11 and 12 are in the body of the loop (between the opening parenthesis on line 6 and the closing one on line 9).  Please note that Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what
 statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.  
 
 ..	index::

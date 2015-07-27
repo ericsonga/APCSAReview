@@ -34,7 +34,7 @@ The class ``FirstClass`` doesn't have anything inside of it, so the computer wou
 
 When you ask the Java run-time to *run* a class (java ClassName) it will start execution in the ``main`` method.  Click on the *Run* button to have the computer execute the ``main`` method in the following class.
 
-.. livecode:: lcfc1
+.. activecode:: lcfc1
    :language: java
 
    public class SecondClass
@@ -49,7 +49,7 @@ The class ``SecondClass`` isn't very object-oriented.  The only thing in it is t
 
 Go ahead and click the *Run* button to see what gets printed.
 
-.. livecode:: lcfc2
+.. activecode:: lcfc2
    :language: java
 
    public class Person

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,36 +336,23 @@
 <h1>Hard Multiple Choice Questions<a class="headerlink" href="#hard-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are harder than most of those that you will usually see on the AP CS A exam.</p>
 
-            <div id="qvh_1" class="alert alert-warning">
-            3-11-1: Which of the following would be the correct result from the following expression: 150 (in decimal) - 21 (in octal) + 101 (in binary) - E (in hexadecimal)?<form name="qvh_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qvh_1_opt_a" />
-            <label for= "qvh_1_opt_a">  a) 186</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qvh_1">
+            3-11-1: Which of the following would be the correct result from the following expression: 150 (in decimal) - 21 (in octal) + 101 (in binary) - E (in hexadecimal)?
+            <li data-component="answer"  id="qvh_1_opt_a">186</li><li data-component="feedback" id="qvh_1_opt_a">This would be true if it was 150 + 17 (21 in octal) + 5 (101 in binary) + 14 (E in hexadecimal) which is 186.</li>
             
-            <input type="radio" name="group1" value="b" id="qvh_1_opt_b" />
-            <label for= "qvh_1_opt_b">  b) 123</label><br />
+            <li data-component="answer"  id="qvh_1_opt_b">123</li><li data-component="feedback" id="qvh_1_opt_b">This would be true if it was 150 - 17 (21 in octal) + 5 (101 in binary) - 15 (F in hexadecimal) which is 123.</li>
             
-            <input type="radio" name="group1" value="c" id="qvh_1_opt_c" />
-            <label for= "qvh_1_opt_c">  c) 125</label><br />
+            <li data-component="answer"  id="qvh_1_opt_c">125</li><li data-component="feedback" id="qvh_1_opt_c">This would be true if it was 150 - 17 (21 in octal) + 5 (101 in binary) - 13 (D in hexadecimal) which is 123.</li>
             
-            <input type="radio" name="group1" value="d" id="qvh_1_opt_d" />
-            <label for= "qvh_1_opt_d">  d) 168</label><br />
+            <li data-component="answer"  id="qvh_1_opt_d">168</li><li data-component="feedback" id="qvh_1_opt_d">How did you get this?  Maybe look up how to convert from octal and hexadecimal to decimal.</li>
             
-            <input type="radio" name="group1" value="e" id="qvh_1_opt_e" />
-            <label for= "qvh_1_opt_e">  e) 124</label><br />
+            <li data-component="answer" data-correct id="qvh_1_opt_e">124</li><li data-component="feedback" id="qvh_1_opt_e">This is 150 - 17 (21 in octal) + 5 (101 in binary) - 14 (E in hexadecimal) which is 124.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qvh_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qvh_1','e',['This would be true if it was 150 + 17 (21 in octal) + 5 (101 in binary) + 14 (E in hexadecimal) which is 186.', 'This would be true if it was 150 \u002D 17 (21 in octal) + 5 (101 in binary) \u002D 15 (F in hexadecimal) which is 123.', 'This would be true if it was 150 \u002D 17 (21 in octal) + 5 (101 in binary) \u002D 13 (D in hexadecimal) which is 123.', 'How did you get this?  Maybe look up how to convert from octal and hexadecimal to decimal.', 'This is 150 \u002D 17 (21 in octal) + 5 (101 in binary) \u002D 14 (E in hexadecimal) which is 124.'])">Check Me</button>
-            <button class='btn btn-default' id="qvh_1_bcomp" disabled name="compare" onclick="compareAnswers('qvh_1');">Compare Me</button>
-            </form><br />
-            <div id="qvh_1_feedback">
-            </div>
-            </div>
+            </ul>
             <p>The following question assumes you know about arrays and methods.  You can skip it if you haven&#8217;t covered these yet and come back when you have.</p>
 
-            <div id="qvh_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qvh_2">
             <p>3-11-2: Given the following code are the contents of <code class="docutils literal"><span class="pre">itemArray</span></code> and <code class="docutils literal"><span class="pre">val</span></code> after a call of <code class="docutils literal"><span class="pre">mod(itemArray,val)</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span><span class="o">[]</span> <span class="n">itemArray</span> <span class="o">=</span> <span class="o">{</span><span class="mi">9</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">6</span><span class="o">};</span>
 <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
@@ -366,32 +367,19 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qvh_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qvh_2_opt_a" />
-            <label for= "qvh_2_opt_a">  a) itemArray = {0, 1, 2, 3} and val = 3;</label><br />
+
+            <li data-component="answer"  id="qvh_2_opt_a">itemArray = {0, 1, 2, 3} and val = 3;</li><li data-component="feedback" id="qvh_2_opt_a">This would be true if Java used pass by reference rather than pass by value (it creates copies of the values that are passed).</li>
             
-            <input type="radio" name="group1" value="b" id="qvh_2_opt_b" />
-            <label for= "qvh_2_opt_b">  b) itemArray = {0, 1, 2, 3} and val = 5;</label><br />
+            <li data-component="answer" data-correct id="qvh_2_opt_b">itemArray = {0, 1, 2, 3} and val = 5;</li><li data-component="feedback" id="qvh_2_opt_b">Java passes parameters by copying the value.  With an array it creates a copy of the object reference.  So, <code>mod</code> will change the <code>itemArray</code>, but <code>val</code> won't change since <code>mod</code> only changes the copy of the primitive value.</li>
             
-            <input type="radio" name="group1" value="c" id="qvh_2_opt_c" />
-            <label for= "qvh_2_opt_c">  c) itemArray = {0, 0, 0, 0} and val = 0;</label><br />
+            <li data-component="answer"  id="qvh_2_opt_c">itemArray = {0, 0, 0, 0} and val = 0;</li><li data-component="feedback" id="qvh_2_opt_c">How could this have happened?</li>
             
-            <input type="radio" name="group1" value="d" id="qvh_2_opt_d" />
-            <label for= "qvh_2_opt_d">  d) itemArray = {9, 8, 7, 6} and val = 3;</label><br />
+            <li data-component="answer"  id="qvh_2_opt_d">itemArray = {9, 8, 7, 6} and val = 3;</li><li data-component="feedback" id="qvh_2_opt_d">Java passes parameters by passing the values this means that the contents of <code>itemArray</code> will be changed by the <code>mod</code> method, but <code>val</code> won't change.</li>
             
-            <input type="radio" name="group1" value="e" id="qvh_2_opt_e" />
-            <label for= "qvh_2_opt_e">  e) itemArray = {9, 8, 7, 6} and val = 5;</label><br />
+            <li data-component="answer"  id="qvh_2_opt_e">itemArray = {9, 8, 7, 6} and val = 5;</li><li data-component="feedback" id="qvh_2_opt_e">Java passes parameters by passing the values this means that the contents of <code>itemArray</code> will be changed by the <code>mod</code> method.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qvh_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qvh_2','b',['This would be true if Java used pass by reference rather than pass by value (it creates copies of the values that are passed).', 'Java passes parameters by copying the value.  With an array it creates a copy of the object reference.  So, \u003Ccode\u003Emod\u003C/code\u003E will change the \u003Ccode\u003EitemArray\u003C/code\u003E, but \u003Ccode\u003Eval\u003C/code\u003E won\u0027t change since \u003Ccode\u003Emod\u003C/code\u003E only changes the copy of the primitive value.', 'How could this have happened?', 'Java passes parameters by passing the values this means that the contents of \u003Ccode\u003EitemArray\u003C/code\u003E will be changed by the \u003Ccode\u003Emod\u003C/code\u003E method, but \u003Ccode\u003Eval\u003C/code\u003E won\u0027t change.', 'Java passes parameters by passing the values this means that the contents of \u003Ccode\u003EitemArray\u003C/code\u003E will be changed by the \u003Ccode\u003Emod\u003C/code\u003E method.'])">Check Me</button>
-            <button class='btn btn-default' id="qvh_2_bcomp" disabled name="compare" onclick="compareAnswers('qvh_2');">Compare Me</button>
-            </form><br />
-            <div id="qvh_2_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

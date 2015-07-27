@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -328,22 +342,8 @@
 <p><strong>Question 1.</strong>  A positive integer is called a &#8220;self-divisor&#8221; if every decimal digit of the number is a divisor of the number, that is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a self- divisor because it is evenly divisible by 1, 2, and 8. However, 26 is not a self-divisor because it is not evenly divisible by the digit 6. Note that 0 is not considered to be a divisor of any number, so any number containing a 0 digit is NOT a self-divisor. There are infinitely many self-divisors.</p>
 <p><strong>Part b.</strong>  Write method firstNumSelfDivisors, which takes two positive integers as parameters, representing a start value and a number of values. Method firstNumSelfDivisors returns an array of size num that contains the first num self-divisors that are greater than or equal to start.
 For example, the call firstNumSelfDivisors(10, 3) should return an array containing the values 11, 12, and 15, because the first three self-divisors that are greater than or equal to 10 are 11, 12, and 15.  Be sure to use the method isSelfDivisor in your answer which we wrote in an earlier section.</p>
-<div id="cont"></div>
-<div id="lcfrsdb1" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrsdb1_runb" onclick="Jobe.runlive('lcfrsdb1', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsdb1_saveb"
-                onclick="saveEditor('lcfrsdb1');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsdb1_loadb"
-                onclick="requestCode('lcfrsdb1');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrsdb1_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrsdb1_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrsdb1 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class SelfDivisor
 {
 
@@ -392,91 +392,40 @@ public class SelfDivisor
      System.out.println();
    }
  }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrsdb1_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrsdb1 )</span> </p>
-
-    
-</div><div class="section" id="how-to-solve-this-problem">
+</pre>
+<div class="section" id="how-to-solve-this-problem">
 <h2>How to solve this problem<a class="headerlink" href="#how-to-solve-this-problem" title="Permalink to this headline">¶</a></h2>
 <p>The first thing to do is try to solve the example by hand.  The question tells us to return an array of size num so we need to create an array of that size.  We need
 to loop as long as we haven&#8217;t found 3 self divisors and try the current value.  If the current value is a self-divisor then we add it to the array.  When we have found 3 self divisors then return the array. We will need to keep track of the number of self divisors that we have found.  We would try 10 (false), 11 (true so add to the array), 12 (true so add to the array), 13 (false), 14 (false), 15 (true so add to the array and return the array since we found 3).</p>
 
-            <div id="frsdb_1" class="alert alert-warning">
-            7-12-1: Which loop should you use to solve this problem?<form name="frsdb_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frsdb_1_opt_a" />
-            <label for= "frsdb_1_opt_a">  a) for</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frsdb_1">
+            7-12-1: Which loop should you use to solve this problem?
+            <li data-component="answer"  id="frsdb_1_opt_a">for</li><li data-component="feedback" id="frsdb_1_opt_a">Use a for loop when you know how many times a loop needs to execute.  Do you know that here?</li>
             
-            <input type="radio" name="group1" value="b" id="frsdb_1_opt_b" />
-            <label for= "frsdb_1_opt_b">  b) for each</label><br />
+            <li data-component="answer"  id="frsdb_1_opt_b">for each</li><li data-component="feedback" id="frsdb_1_opt_b">Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?</li>
             
-            <input type="radio" name="group1" value="c" id="frsdb_1_opt_c" />
-            <label for= "frsdb_1_opt_c">  c) while</label><br />
+            <li data-component="answer" data-correct id="frsdb_1_opt_c">while</li><li data-component="feedback" id="frsdb_1_opt_c">Use a while loop when you don't know how many times a loop needs to execute.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frsdb_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frsdb_1','c',['Use a for loop when you know how many times a loop needs to execute.  Do you know that here?', 'Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?', 'Use a while loop when you don\u0027t know how many times a loop needs to execute.'])">Check Me</button>
-            <button class='btn btn-default' id="frsdb_1_bcomp" disabled name="compare" onclick="compareAnswers('frsdb_1');">Compare Me</button>
-            </form><br />
-            <div id="frsdb_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="frsdb_2" class="alert alert-warning">
-            7-12-2: Which of the following correctly declares and creates the array to return?<form name="frsdb_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="frsdb_2_opt_a" />
-            <label for= "frsdb_2_opt_a">  a) int[] retArray = new int[3];</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="frsdb_2">
+            7-12-2: Which of the following correctly declares and creates the array to return?
+            <li data-component="answer"  id="frsdb_2_opt_a">int[] retArray = new int[3];</li><li data-component="feedback" id="frsdb_2_opt_a">Don't just use the size for the array from the example.  The question says to return an array of size num and num could be anything.</li>
             
-            <input type="radio" name="group1" value="b" id="frsdb_2_opt_b" />
-            <label for= "frsdb_2_opt_b">  b) retArray = new int[num];</label><br />
+            <li data-component="answer"  id="frsdb_2_opt_b">retArray = new int[num];</li><li data-component="feedback" id="frsdb_2_opt_b">Don't forget to declare your variables.</li>
             
-            <input type="radio" name="group1" value="c" id="frsdb_2_opt_c" />
-            <label for= "frsdb_2_opt_c">  c) int retArray = new int[num];</label><br />
+            <li data-component="answer"  id="frsdb_2_opt_c">int retArray = new int[num];</li><li data-component="feedback" id="frsdb_2_opt_c">Don't forget that it is an array.</li>
             
-            <input type="radio" name="group1" value="d" id="frsdb_2_opt_d" />
-            <label for= "frsdb_2_opt_d">  d) int[] retArray = new int[num];</label><br />
+            <li data-component="answer" data-correct id="frsdb_2_opt_d">int[] retArray = new int[num];</li><li data-component="feedback" id="frsdb_2_opt_d">This declares an array of ints called retArray and creates it with a size of num.</li>
             
-            <input type="radio" name="group1" value="e" id="frsdb_2_opt_e" />
-            <label for= "frsdb_2_opt_e">  e) int[] retArray;</label><br />
+            <li data-component="answer"  id="frsdb_2_opt_e">int[] retArray;</li><li data-component="feedback" id="frsdb_2_opt_e">This declares the array, but doesn't create it.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('frsdb_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('frsdb_2','d',['Don\u0027t just use the size for the array from the example.  The question says to return an array of size num and num could be anything.', 'Don\u0027t forget to declare your variables.', 'Don\u0027t forget that it is an array.', 'This declares an array of ints called retArray and creates it with a size of num.', 'This declares the array, but doesn\u0027t create it.'])">Check Me</button>
-            <button class='btn btn-default' id="frsdb_2_bcomp" disabled name="compare" onclick="compareAnswers('frsdb_2');">Compare Me</button>
-            </form><br />
-            <div id="frsdb_2_feedback">
-            </div>
-            </div>
+            </ul>
             <p>Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15.</p>
-<div id="cont"></div>
-<div id="lcfrsdb2" lang="java" class="ac_section alert alert-warning">
 
-    <div class="ac_actions">
-        <button class='btn btn-success' id="lcfrsdb2_runb" onclick="Jobe.runlive('lcfrsdb2', 'java', '', 'False')">Run</button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsdb2_saveb"
-                onclick="saveEditor('lcfrsdb2');">Save
-        </button>
-        <button class="ac_opt btn btn-default" style="display: inline-block" id="lcfrsdb2_loadb"
-                onclick="requestCode('lcfrsdb2');">Load
-        </button>
-    </div>
-    <br/>
-
-    <div id="lcfrsdb2_code_div" style="display: block;" class="ac_code_div">
-        <textarea cols="50" rows="12" id="lcfrsdb2_code" class="active_code" prefixcode="" lang="java">
+<pre data-component="activecode" id=lcfrsdb2 data-lang="java"    data-timelimit=25000   data-audio=''     >
 public class SelfDivisor
 {
 
@@ -525,21 +474,8 @@ public class SelfDivisor
      System.out.println();
    }
  }
-        </textarea>
-    </div>
-
-    <div class="lc_output">
-        <div>
-            <pre id="lcfrsdb2_pre" class="active_out"></pre>
-        </div>
-    </div> <!-- end output -->
-    <div class="clearfix"></div>
-    
-
-    <p class="ac_caption"><span class="ac_caption_text">  ( lcfrsdb2 )</span> </p>
-
-    
-</div></div>
+</pre>
+</div>
 <div class="section" id="video-one-way-to-code-the-solution">
 <h2>Video - One way to code the solution<a class="headerlink" href="#video-one-way-to-code-the-solution" title="Permalink to this headline">¶</a></h2>
 <p>There are many possible solutions to this problem.  The video below shows one solution.</p>

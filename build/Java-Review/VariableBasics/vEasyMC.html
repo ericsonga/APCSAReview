@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,126 +336,77 @@
 <h1>Easy Multiple Choice Questions<a class="headerlink" href="#easy-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are easier than most of those that you will usually see on the AP CS A exam.</p>
 
-            <div id="qve_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_1">
             <p>3-9-1: What does the following code print?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span> <span class="o">%</span> <span class="mi">3</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qve_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_1_opt_a" />
-            <label for= "qve_1_opt_a">  a) 2</label><br />
+
+            <li data-component="answer" data-correct id="qve_1_opt_a">2</li><li data-component="feedback" id="qve_1_opt_a">Whenever the first number is smaller than the second, the remainder is the first number.  Remember that % is the remainder and 3 goes into 2 0 times with a remainder of 2.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_1_opt_b" />
-            <label for= "qve_1_opt_b">  b) 0</label><br />
+            <li data-component="answer"  id="qve_1_opt_b">0</li><li data-component="feedback" id="qve_1_opt_b">This is the number of times that 3 goes into 2 but the % operator gives you the remainder.</li>
             
-            <input type="radio" name="group1" value="c" id="qve_1_opt_c" />
-            <label for= "qve_1_opt_c">  c) 3</label><br />
+            <li data-component="answer"  id="qve_1_opt_c">3</li><li data-component="feedback" id="qve_1_opt_c">Try it in DrJava.  Remember that % gives you the remainder after you divide the first number by the second one.</li>
             
-            <input type="radio" name="group1" value="d" id="qve_1_opt_d" />
-            <label for= "qve_1_opt_d">  d) 1</label><br />
+            <li data-component="answer"  id="qve_1_opt_d">1</li><li data-component="feedback" id="qve_1_opt_d">This would be correct if it was 3 % 2 since 2 would go into 3 one time with a remainder of 1.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_1','a',['Whenever the first number is smaller than the second, the remainder is the first number.  Remember that % is the remainder and 3 goes into 2 0 times with a remainder of 2.', 'This is the number of times that 3 goes into 2 but the % operator gives you the remainder.', 'Try it in DrJava.  Remember that % gives you the remainder after you divide the first number by the second one.', 'This would be correct if it was 3 % 2 since 2 would go into 3 one time with a remainder of 1.'])">Check Me</button>
-            <button class='btn btn-default' id="qve_1_bcomp" disabled name="compare" onclick="compareAnswers('qve_1');">Compare Me</button>
-            </form><br />
-            <div id="qve_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_2">
             <p>3-9-2: What does the following code print?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">19</span> <span class="o">%</span> <span class="mi">5</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qve_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_2_opt_a" />
-            <label for= "qve_2_opt_a">  a) 3</label><br />
+
+            <li data-component="answer"  id="qve_2_opt_a">3</li><li data-component="feedback" id="qve_2_opt_a">This is the number of times that 5 goes into 19, but % is the remainder.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_2_opt_b" />
-            <label for= "qve_2_opt_b">  b) 0</label><br />
+            <li data-component="answer"  id="qve_2_opt_b">0</li><li data-component="feedback" id="qve_2_opt_b">This would only be true if the first number was evenly divisible by the second number.</li>
             
-            <input type="radio" name="group1" value="c" id="qve_2_opt_c" />
-            <label for= "qve_2_opt_c">  c) 4</label><br />
+            <li data-component="answer" data-correct id="qve_2_opt_c">4</li><li data-component="feedback" id="qve_2_opt_c">5 goes into 19 3 times (15) with a remainder of 4 (19-15=4)</li>
             
-            <input type="radio" name="group1" value="d" id="qve_2_opt_d" />
-            <label for= "qve_2_opt_d">  d) 1</label><br />
+            <li data-component="answer"  id="qve_2_opt_d">1</li><li data-component="feedback" id="qve_2_opt_d">This would be correct if it was 19 % 2, but here we are dividing by 5.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_2','c',['This is the number of times that 5 goes into 19, but % is the remainder.', 'This would only be true if the first number was evenly divisible by the second number.', '5 goes into 19 3 times (15) with a remainder of 4 (19\u002D15\u003D4)', 'This would be correct if it was 19 % 2, but here we are dividing by 5.'])">Check Me</button>
-            <button class='btn btn-default' id="qve_2_bcomp" disabled name="compare" onclick="compareAnswers('qve_2');">Compare Me</button>
-            </form><br />
-            <div id="qve_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_3">
             <p>3-9-3: What does the following code print?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qve_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_3_opt_a" />
-            <label for= "qve_3_opt_a">  a) 0.3333333333333333</label><br />
+
+            <li data-component="answer"  id="qve_3_opt_a">0.3333333333333333</li><li data-component="feedback" id="qve_3_opt_a">This would be correct if it was 1.0 / 3 or 1 / 3.0.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_3_opt_b" />
-            <label for= "qve_3_opt_b">  b) 0</label><br />
+            <li data-component="answer" data-correct id="qve_3_opt_b">0</li><li data-component="feedback" id="qve_3_opt_b">When two integers are divided the results will also be integer and the fractional part is thrown away.</li>
             
-            <input type="radio" name="group1" value="c" id="qve_3_opt_c" />
-            <label for= "qve_3_opt_c">  c) It will give a run-time error</label><br />
+            <li data-component="answer"  id="qve_3_opt_c">It will give a run-time error</li><li data-component="feedback" id="qve_3_opt_c">You would get a run-time error if it was 1 / 0, because you can not divide by zero.</li>
             
-            <input type="radio" name="group1" value="d" id="qve_3_opt_d" />
-            <label for= "qve_3_opt_d">  d) 0.3</label><br />
+            <li data-component="answer"  id="qve_3_opt_d">0.3</li><li data-component="feedback" id="qve_3_opt_d">Try it in DrJava. Is this what you get?</li>
             
-            <input type="radio" name="group1" value="e" id="qve_3_opt_e" />
-            <label for= "qve_3_opt_e">  e) It will give a compile-time error</label><br />
+            <li data-component="answer"  id="qve_3_opt_e">It will give a compile-time error</li><li data-component="feedback" id="qve_3_opt_e">Integer division is allowed in Java.  It gives an integer result.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_3','b',['This would be correct if it was 1.0 / 3 or 1 / 3.0.', 'When two integers are divided the results will also be integer and the fractional part is thrown away.', 'You would get a run\u002Dtime error if it was 1 / 0, because you can not divide by zero.', 'Try it in DrJava. Is this what you get?', 'Integer division is allowed in Java.  It gives an integer result.'])">Check Me</button>
-            <button class='btn btn-default' id="qve_3_bcomp" disabled name="compare" onclick="compareAnswers('qve_3');">Compare Me</button>
-            </form><br />
-            <div id="qve_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_4">
             <p>3-9-4: What does the following code print?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qve_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_4_opt_a" />
-            <label for= "qve_4_opt_a">  a) 24</label><br />
+
+            <li data-component="answer"  id="qve_4_opt_a">24</li><li data-component="feedback" id="qve_4_opt_a">This would be true if it was System.out.println(((2 + 3) * 5) - 1), but without the parentheses the multiplication is done first.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_4_opt_b" />
-            <label for= "qve_4_opt_b">  b) 14</label><br />
+            <li data-component="answer"  id="qve_4_opt_b">14</li><li data-component="feedback" id="qve_4_opt_b">This would be true if it was System.out.println(2 + (3 * (5 - 1))), but without the parentheses the multiplication is done first and the addition and subtraction are handled from left to right.</li>
             
-            <input type="radio" name="group1" value="c" id="qve_4_opt_c" />
-            <label for= "qve_4_opt_c">  c) This will give a compile time error.</label><br />
+            <li data-component="answer"  id="qve_4_opt_c">This will give a compile time error.</li><li data-component="feedback" id="qve_4_opt_c">This will compile and run.  Try it in DrJava.  Look up operator precedence in Java.</li>
             
-            <input type="radio" name="group1" value="d" id="qve_4_opt_d" />
-            <label for= "qve_4_opt_d">  d) 16</label><br />
+            <li data-component="answer" data-correct id="qve_4_opt_d">16</li><li data-component="feedback" id="qve_4_opt_d">The multiplication is done first (3 * 5 = 15) and then the addition (2 + 15 = 17) and finally the subtraction (17 - 1 = 16).</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_4','d',['This would be true if it was System.out.println(((2 + 3) * 5) \u002D 1), but without the parentheses the multiplication is done first.', 'This would be true if it was System.out.println(2 + (3 * (5 \u002D 1))), but without the parentheses the multiplication is done first and the addition and subtraction are handled from left to right.', 'This will compile and run.  Try it in DrJava.  Look up operator precedence in Java.', 'The multiplication is done first (3 * 5 \u003D 15) and then the addition (2 + 15 \u003D 17) and finally the subtraction (17 \u002D 1 \u003D 16).'])">Check Me</button>
-            <button class='btn btn-default' id="qve_4_bcomp" disabled name="compare" onclick="compareAnswers('qve_4');">Compare Me</button>
-            </form><br />
-            <div id="qve_4_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_5">
             <p>3-9-5: Given the following code segment, what is the value of b when it finishes executing?</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span class="kt">double</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">9.6982</span><span class="o">;</span>
@@ -450,129 +415,69 @@
 </pre></div>
 </div>
 </div></blockquote>
-<form name="qve_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_5_opt_a" />
-            <label for= "qve_5_opt_a">  a) 9.6982</label><br />
+
+            <li data-component="answer"  id="qve_5_opt_a">9.6982</li><li data-component="feedback" id="qve_5_opt_a">This would be true if it was b = a.  What does the (int) do?</li>
             
-            <input type="radio" name="group1" value="b" id="qve_5_opt_b" />
-            <label for= "qve_5_opt_b">  b) 12</label><br />
+            <li data-component="answer"  id="qve_5_opt_b">12</li><li data-component="feedback" id="qve_5_opt_b">This is the initial value of b, but then b is assigned to be the result of casting the value in a to an integer. Casting to an integer from a double will truncate (throw away) the digits after the decimal.</li>
             
-            <input type="radio" name="group1" value="c" id="qve_5_opt_c" />
-            <label for= "qve_5_opt_c">  c) 10</label><br />
+            <li data-component="answer"  id="qve_5_opt_c">10</li><li data-component="feedback" id="qve_5_opt_c">Java does not round when converting from a double to an integer.</li>
             
-            <input type="radio" name="group1" value="d" id="qve_5_opt_d" />
-            <label for= "qve_5_opt_d">  d) 9</label><br />
+            <li data-component="answer" data-correct id="qve_5_opt_d">9</li><li data-component="feedback" id="qve_5_opt_d">When a double is converted into an integer in Java, it truncates (throws away) the digits after the decimal.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_5','d',['This would be true if it was b \u003D a.  What does the (int) do?', 'This is the initial value of b, but then b is assigned to be the result of casting the value in a to an integer. Casting to an integer from a double will truncate (throw away) the digits after the decimal.', 'Java does not round when converting from a double to an integer.', 'When a double is converted into an integer in Java, it truncates (throws away) the digits after the decimal.'])">Check Me</button>
-            <button class='btn btn-default' id="qve_5_bcomp" disabled name="compare" onclick="compareAnswers('qve_5');">Compare Me</button>
-            </form><br />
-            <div id="qve_5_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_6" class="alert alert-warning">
-            3-9-6: Which of the following is the decimal value for the binary number 1001011?<form name="qve_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_6_opt_a" />
-            <label for= "qve_6_opt_a">  a) 75</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_6">
+            3-9-6: Which of the following is the decimal value for the binary number 1001011?
+            <li data-component="answer" data-correct id="qve_6_opt_a">75</li><li data-component="feedback" id="qve_6_opt_a">To convert from binary to decimal use the powers of 2 starting with 2 raised to the 0 power which is 1.  So 1001011 is 1 + 2 + 8 + 64 = 75.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_6_opt_b" />
-            <label for= "qve_6_opt_b">  b) 67</label><br />
+            <li data-component="answer"  id="qve_6_opt_b">67</li><li data-component="feedback" id="qve_6_opt_b">This would be true if the binary number was 1000011.  This would be 1 + 2 + 64 = 67.</li>
             
-            <input type="radio" name="group1" value="c" id="qve_6_opt_c" />
-            <label for= "qve_6_opt_c">  c) 150</label><br />
+            <li data-component="answer"  id="qve_6_opt_c">150</li><li data-component="feedback" id="qve_6_opt_c">This would be true if we started at the right hand side with 2, but we start with 1 (2 raised to the 0 power is 1).</li>
             
-            <input type="radio" name="group1" value="d" id="qve_6_opt_d" />
-            <label for= "qve_6_opt_d">  d) 43</label><br />
+            <li data-component="answer"  id="qve_6_opt_d">43</li><li data-component="feedback" id="qve_6_opt_d">This would be true if the binary number was 101011.</li>
             
-            <input type="radio" name="group1" value="e" id="qve_6_opt_e" />
-            <label for= "qve_6_opt_e">  e) 74</label><br />
+            <li data-component="answer"  id="qve_6_opt_e">74</li><li data-component="feedback" id="qve_6_opt_e">This would be true if the binary number was 1001010.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_6');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_6','a',['To convert from binary to decimal use the powers of 2 starting with 2 raised to the 0 power which is 1.  So 1001011 is 1 + 2 + 8 + 64 \u003D 75.', 'This would be true if the binary number was 1000011.  This would be 1 + 2 + 64 \u003D 67.', 'This would be true if we started at the right hand side with 2, but we start with 1 (2 raised to the 0 power is 1).', 'This would be true if the binary number was 101011.', 'This would be true if the binary number was 1001010.'])">Check Me</button>
-            <button class='btn btn-default' id="qve_6_bcomp" disabled name="compare" onclick="compareAnswers('qve_6');">Compare Me</button>
-            </form><br />
-            <div id="qve_6_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_7" class="alert alert-warning">
-            3-9-7: How many bits would you need to represent 25 distinct values?<form name="qve_7_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_7_opt_a" />
-            <label for= "qve_7_opt_a">  a) 5</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_7">
+            3-9-7: How many bits would you need to represent 25 distinct values?
+            <li data-component="answer" data-correct id="qve_7_opt_a">5</li><li data-component="feedback" id="qve_7_opt_a">This would be enough to represent 32 distinct values, so that is more then enough to represent 25 distinct values.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_7_opt_b" />
-            <label for= "qve_7_opt_b">  b) 4</label><br />
+            <li data-component="answer"  id="qve_7_opt_b">4</li><li data-component="feedback" id="qve_7_opt_b">This would only be enough to represent 16 distinct values (2 to the 4th).</li>
             
-            <input type="radio" name="group1" value="c" id="qve_7_opt_c" />
-            <label for= "qve_7_opt_c">  c) 6</label><br />
+            <li data-component="answer"  id="qve_7_opt_c">6</li><li data-component="feedback" id="qve_7_opt_c">This is more than you need.  2 to the 6th is 64.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_7');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_7','a',['This would be enough to represent 32 distinct values, so that is more then enough to represent 25 distinct values.', 'This would only be enough to represent 16 distinct values (2 to the 4th).', 'This is more than you need.  2 to the 6th is 64.'])">Check Me</button>
-            <button class='btn btn-default' id="qve_7_bcomp" disabled name="compare" onclick="compareAnswers('qve_7');">Compare Me</button>
-            </form><br />
-            <div id="qve_7_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_8" class="alert alert-warning">
-            3-9-8: What is the hexadecimal equivalent of the following binary number: 110100?<form name="qve_8_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_8_opt_a" />
-            <label for= "qve_8_opt_a">  a) 34</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_8">
+            3-9-8: What is the hexadecimal equivalent of the following binary number: 110100?
+            <li data-component="answer" data-correct id="qve_8_opt_a">34</li><li data-component="feedback" id="qve_8_opt_a">To convert from binary to hexadecimal (base 16) convert groups of 4 bits from the right to the left to hexadecimal.  The rightmost 4 bits is 0100 which is 4 in hex.  The leftmost 4 bits would be 0011 which is 3 in hex.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_8_opt_b" />
-            <label for= "qve_8_opt_b">  b) 52</label><br />
+            <li data-component="answer"  id="qve_8_opt_b">52</li><li data-component="feedback" id="qve_8_opt_b">This would be correct if the question had asked for the value in decimal, but it asked for it in hexadecimal (base 16).</li>
             
-            <input type="radio" name="group1" value="c" id="qve_8_opt_c" />
-            <label for= "qve_8_opt_c">  c) 64</label><br />
+            <li data-component="answer"  id="qve_8_opt_c">64</li><li data-component="feedback" id="qve_8_opt_c">This would be correct if the question had asked for the value in octal, but it asked for it in hexadecimal (base 16).</li>
             
-            <input type="radio" name="group1" value="d" id="qve_8_opt_d" />
-            <label for= "qve_8_opt_d">  d) 6</label><br />
+            <li data-component="answer"  id="qve_8_opt_d">6</li><li data-component="feedback" id="qve_8_opt_d">This is the length of this binary number.  Can you convert it to hexadecimal (base 16)?</li>
             
-            <input type="radio" name="group1" value="e" id="qve_8_opt_e" />
-            <label for= "qve_8_opt_e">  e) B4</label><br />
+            <li data-component="answer"  id="qve_8_opt_e">B4</li><li data-component="feedback" id="qve_8_opt_e">This would be correct if the binary number was 10110100 instead of 110100.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_8');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_8','a',['To convert from binary to hexadecimal (base 16) convert groups of 4 bits from the right to the left to hexadecimal.  The rightmost 4 bits is 0100 which is 4 in hex.  The leftmost 4 bits would be 0011 which is 3 in hex.', 'This would be correct if the question had asked for the value in decimal, but it asked for it in hexadecimal (base 16).', 'This would be correct if the question had asked for the value in octal, but it asked for it in hexadecimal (base 16).', 'This is the length of this binary number.  Can you convert it to hexadecimal (base 16)?', 'This would be correct if the binary number was 10110100 instead of 110100.'])">Check Me</button>
-            <button class='btn btn-default' id="qve_8_bcomp" disabled name="compare" onclick="compareAnswers('qve_8');">Compare Me</button>
-            </form><br />
-            <div id="qve_8_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qve_9" class="alert alert-warning">
-            3-9-9: What is the binary equivalent of the following base 10 number: 187?<form name="qve_9_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qve_9_opt_a" />
-            <label for= "qve_9_opt_a">  a) 11011101</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_9">
+            3-9-9: What is the binary equivalent of the following base 10 number: 187?
+            <li data-component="answer"  id="qve_9_opt_a">11011101</li><li data-component="feedback" id="qve_9_opt_a">This has an extra one in the front.</li>
             
-            <input type="radio" name="group1" value="b" id="qve_9_opt_b" />
-            <label for= "qve_9_opt_b">  b) 1011001</label><br />
+            <li data-component="answer"  id="qve_9_opt_b">1011001</li><li data-component="feedback" id="qve_9_opt_b">The decimal value of 1011001 is (1*64)+ (0 * 32) + (1 * 16) + (1 * 8) + (0 * 4) + (0 * 2) + (1*1) = which is 89 base 10 (decimal)</li>
             
-            <input type="radio" name="group1" value="c" id="qve_9_opt_c" />
-            <label for= "qve_9_opt_c">  c) 10111011</label><br />
+            <li data-component="answer" data-correct id="qve_9_opt_c">10111011</li><li data-component="feedback" id="qve_9_opt_c">Using base 2 the value of 10111011 is:  128+32+16+8+2+1 = 187</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qve_9');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qve_9','c',['This has an extra one in the front.', 'The decimal value of 1011001 is (1*64)+ (0 * 32) + (1 * 16) + (1 * 8) + (0 * 4) + (0 * 2) + (1*1) \u003D which is 89 base 10 (decimal)', 'Using base 2 the value of 10111011 is:  128+32+16+8+2+1 \u003D 187'])">Check Me</button>
-            <button class='btn btn-default' id="qve_9_bcomp" disabled name="compare" onclick="compareAnswers('qve_9');">Compare Me</button>
-            </form><br />
-            <div id="qve_9_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

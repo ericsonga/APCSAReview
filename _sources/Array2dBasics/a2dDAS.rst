@@ -16,12 +16,13 @@ To declare a 2D array, specify the type of elements that will be stored in the a
   int[][] ticketInfo;
   String[][] seatingChart; 
 
-.. fillintheblank:: nullInit
-   :correct: null$
-   :feedback1: ('.*','Did you actually try this in DrJava?')
-   :blankid: 2darrayNullblank
+.. fillintheblank:: 2darrayNullfill
 
-   What is printed in DrJava when you type System.out.println(ticketInfo); and hit enter after you do the above declarations? :textfield:`2darrayNullblank::mini`
+    .. blank:: 2darrayNullblank
+        :correct: null$
+        :feedback1: ('.*','Did you actually try this in DrJava?')
+
+        What is printed in DrJava when you type System.out.println(ticketInfo); and hit enter after you do the above declarations? 
 
 ..	index::
 	pair: 2D Array; creation
@@ -33,12 +34,13 @@ To create an array use the **new** keyword, followed by a space, then the type, 
   ticketInfo = new int [2][3];
   seatingChart = new String [3][2];
   
-.. fillintheblank:: NumElements
-   :correct: 6$
-   :feedback1: ('.*','Multiply the number of rows and the number of columns')
-   :blankid: 2daNumElblank
+.. fillintheblank:: 2daNumElfill
 
-   How many elements are in ticketInfo? :textfield:`2daNumElblank::mini`
+    .. blank:: 2daNumElblank
+        :correct: 6$
+        :feedback1: ('.*','Multiply the number of rows and the number of columns')
+
+        How many elements are in ticketInfo? 
   
 Set Value(s) in a 2D Array
 ===========================
@@ -86,12 +88,13 @@ You can also initialize (set) the values for the array when you create it.  In t
   int[][] ticketInfo = {{25,20,25}, {25,20,25}};
   String[][] seatingInfo = {{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
   
-.. fillintheblank:: GetElement
-   :correct: Luke$
-   :feedback1: ('.*','Indicies start at 0 and the row is first then the column')
-   :blankid: 2daGetElblank
+.. fillintheblank:: 2daGetElfill
 
-   What is the value at ``seatingInfo[2][1]`` after the code above exectues? :textfield:`2daGetElblank::medium`
+    .. blank:: 2daNumElblank
+        :correct: Luke$
+        :feedback1:  ('.*','Indicies start at 0 and the row is first then the column')
+
+        What is the value at ``seatingInfo[2][1]`` after the code above exectues?
   
 Get a Value from a 2D Array
 ============================

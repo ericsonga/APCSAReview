@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -356,7 +370,7 @@
 </div>
 <p>Notice that the method above only increments the current index if an item was removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the items shift left.</p>
 
-            <div id="qlib_5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlib_5">
             <p>8-4-1: Assume that nums has been created as an ArrayList object and it initially contains the following Integer values. [0, 0, 4, 2, 5, 0, 3, 0] What will nums contain as a result of executing numQuest?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
 <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">nums</span><span class="o">;</span>
@@ -376,319 +390,38 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<form name="qlib_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlib_5_opt_a" />
-            <label for= "qlib_5_opt_a">  a) [0, 4, 2, 5, 3]</label><br />
+
+            <li data-component="answer" data-correct id="qlib_5_opt_a">[0, 4, 2, 5, 3]</li><li data-component="feedback" id="qlib_5_opt_a">Incrementing the index each time through the loop will miss when there are two zeros in a row.</li>
             
-            <input type="radio" name="group1" value="b" id="qlib_5_opt_b" />
-            <label for= "qlib_5_opt_b">  b) [3, 5, 2, 4, 0, 0, 0, 0]</label><br />
+            <li data-component="answer"  id="qlib_5_opt_b">[3, 5, 2, 4, 0, 0, 0, 0]</li><li data-component="feedback" id="qlib_5_opt_b">This would be true if the code moved the zeros to the end, but that is not what it does.</li>
             
-            <input type="radio" name="group1" value="c" id="qlib_5_opt_c" />
-            <label for= "qlib_5_opt_c">  c) [0, 0, 0, 0, 4, 2, 5, 3]</label><br />
+            <li data-component="answer"  id="qlib_5_opt_c">[0, 0, 0, 0, 4, 2, 5, 3]</li><li data-component="feedback" id="qlib_5_opt_c">This would be true if the code moved the zeros to the font, but that is not what it does.</li>
             
-            <input type="radio" name="group1" value="d" id="qlib_5_opt_d" />
-            <label for= "qlib_5_opt_d">  d) [4, 2, 5, 3]</label><br />
+            <li data-component="answer"  id="qlib_5_opt_d">[4, 2, 5, 3]</li><li data-component="feedback" id="qlib_5_opt_d">This would be correct if k was only incremented when an item was not removed from the list.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlib_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlib_5','a',['Incrementing the index each time through the loop will miss when there are two zeros in a row.', 'This would be true if the code moved the zeros to the end, but that is not what it does.', 'This would be true if the code moved the zeros to the font, but that is not what it does.', 'This would be correct if k was only incremented when an item was not removed from the list.'])">Check Me</button>
-            <button class='btn btn-default' id="qlib_5_bcomp" disabled name="compare" onclick="compareAnswers('qlib_5');">Compare Me</button>
-            </form><br />
-            <div id="qlib_5_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qlib_6" class="alert alert-warning">
-            8-4-2: Which of the following is a reason to use a list (assume an object of the class ArrayList) instead of an array?<form name="qlib_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qlib_6_opt_a" />
-            <label for= "qlib_6_opt_a">  a) A list will always use less memory than an array.</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qlib_6">
+            8-4-2: Which of the following is a reason to use a list (assume an object of the class ArrayList) instead of an array?
+            <li data-component="answer"  id="qlib_6_opt_a">A list will always use less memory than an array.</li><li data-component="feedback" id="qlib_6_opt_a">No, an ArrayList grows as needed so it will typically be bigger than the data you put it in. If you try to add more data and the array is full, it usually doubles in size.</li>
             
-            <input type="radio" name="group1" value="b" id="qlib_6_opt_b" />
-            <label for= "qlib_6_opt_b">  b) A list can store objects, but arrays can only store primitive types.</label><br />
+            <li data-component="answer"  id="qlib_6_opt_b">A list can store objects, but arrays can only store primitive types.</li><li data-component="feedback" id="qlib_6_opt_b">No, you can have an array of objects.</li>
             
-            <input type="radio" name="group1" value="c" id="qlib_6_opt_c" />
-            <label for= "qlib_6_opt_c">  c) A list has faster access to the last element than an array.</label><br />
+            <li data-component="answer"  id="qlib_6_opt_c">A list has faster access to the last element than an array.</li><li data-component="feedback" id="qlib_6_opt_c">No, an ArrayList is implemented using an array so it has the same access time to any index as an array does.</li>
             
-            <input type="radio" name="group1" value="d" id="qlib_6_opt_d" />
-            <label for= "qlib_6_opt_d">  d) A list resizes itself as necessary as items are added, but an array does not.</label><br />
+            <li data-component="answer" data-correct id="qlib_6_opt_d">A list resizes itself as necessary as items are added, but an array does not.</li><li data-component="feedback" id="qlib_6_opt_d">An ArrayList is really a dynamic array (one that can grow or shrink as needed).</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qlib_6');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qlib_6','d',['No, an ArrayList grows as needed so it will typically be bigger than the data you put it in. If you try to add more data and the array is full, it usually doubles in size.', 'No, you can have an array of objects.', 'No, an ArrayList is implemented using an array so it has the same access time to any index as an array does.', 'An ArrayList is really a dynamic array (one that can grow or shrink as needed).'])">Check Me</button>
-            <button class='btn btn-default' id="qlib_6_bcomp" disabled name="compare" onclick="compareAnswers('qlib_6');">Compare Me</button>
-            </form><br />
-            <div id="qlib_6_feedback">
-            </div>
-            </div>
+            </ul>
             <p><strong>Mixed up programs</strong></p>
 
-        <div class='parsons alert alert-warning' id="parsons-99">
-        <div class="parsons-text">8-4-3: The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.<br /><br /></div>
-        <div style="clear:left;"></div>
-        <div id="parsons-orig-99" style="display:none;">public static int getScore(List<String> wordList)\n{
-  int score = 0;
-  for (String word : wordList)\n{
-    if (word.length() == 3)
-    {\n  score++;\n} // end if == 3
-    else if (word.length() == 4)\n{\n  score = score + 2;\n} // end if == 4
-    else if (word.length() > 4)\n{\n  score = score + 3;\n} // end if > 4
-  } // end for
-  return score;
-} // end method
-if (word.length == 3) #distractor</div>
-        <div class="sortable-code-container">
-        <div id="parsons-sortableTrash-99" class="sortable-code"></div>
-        <div id="parsons-sortableCode-99" class="sortable-code"></div>
-        <div style="clear:left;"></div>
-        </div>
-        <div class="parsons-controls">
-        <input type="button" class='btn btn-success' id="checkMe99" value="Check Me"/>
-        <input type="button" class='btn btn-default' id="reset99" value="Reset"/>
-        <div id="parsons-message-99"></div>
-        </div>
-        </div>
-
-    <script>
-        $pjQ(document).ready(function(){
-
-            $("#parsons-99").not(".sortable-code").not(".parsons-controls").on("click", function(){
-                 $('html, body').animate({
-                    scrollTop: ($("#parsons-99").offset().top - 50)
-                }, 700);
-            }).find(".sortable-code, .parsons-controls").click(function(e) {
-                return false;
-                });
-            var msgBox = $("#parsons-message-99");
-            msgBox.hide();
-        var displayErrors = function (fb) {
-            if(fb.errors.length > 0) {
-                    var hash = pp_99.getHash("#ul-parsons-sortableCode-99");
-                    msgBox.fadeIn(500);
-                    msgBox.attr('class','alert alert-danger');
-                    msgBox.html(fb.errors[0]);
-                    logBookEvent({'event':'parsons', 'act':hash, 'div_id':'list_1'});
-
-            } else {
-                    logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'list_1'});
-                    msgBox.fadeIn(100);
-                    msgBox.attr('class','alert alert-success');
-                    msgBox.html("Perfect!")
-                }
-
-        }
-
-        $(window).load(function() {
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-99");
-            var trashul = $("#ul-parsons-sortableTrash-99");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            sortableul.height(minHeight);
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-        });
- 
-
-        var pp_99 = new ParsonsWidget({
-                'sortableId': 'parsons-sortableCode-99',
-        'trashId': 'parsons-sortableTrash-99',
-                'max_wrong_lines': 1,
-                'solution_label': 'Drop blocks here',
-                'feedback_cb' : displayErrors
-        });
-        pp_99.init($pjQ("#parsons-orig-99").text());
-    pp_99.shuffleLines();
-            
-        if(localStorage.getItem('list_1') && localStorage.getItem('list_1-trash')) {
-            try {
-                var solution = localStorage.getItem('list_1');
-                var trash = localStorage.getItem('list_1-trash');
-                pp_99.createHTMLFromHashes(solution,trash);
-                pp_99.getFeedback();
-            } catch(err) {
-                var text = "An error occured restoring old list_1 state.  Error: ";
-                console.log(text + err.message);
-            }
-
-        }
-            $pjQ("#reset99").click(function(event){
-              event.preventDefault();
-              pp_99.shuffleLines();
-            
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-99");
-            var trashul = $("#ul-parsons-sortableTrash-99");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-              msgBox.hide();
-            });
-            
-            $pjQ("#checkMe99").click(function(event){
-              event.preventDefault();
-              var hash = pp_99.getHash("#ul-parsons-sortableCode-99");
-              localStorage.setItem('list_1',hash);
-              hash = pp_99.getHash("#ul-parsons-sortableTrash-99");
-              localStorage.setItem('list_1-trash',hash);
-            
-            pp_99.getFeedback();
-            msgBox.fadeIn(100);
-            
-            });
-            
-        });
-            
-
-    </script>
-
-
-        <div class='parsons alert alert-warning' id="parsons-135">
-        <div class="parsons-text">8-4-4: The following has the correct code for a method called insertInOrder plus at least one extra unneeded code statement. This method should add the passed name in alphabetic order to a private list field called nameList.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.<br /><br /></div>
-        <div style="clear:left;"></div>
-        <div id="parsons-orig-135" style="display:none;">public void insertInOrder(String name)\n{
-  int index = 0;
-  while (index < nameList.size() &&\n       nameList.get(index).compareTo(name) < 0)\n{
-    index++;
-  } // end while
-  nameList.add(index,name);
-} // end method
-nameList.add(name); #distractor</div>
-        <div class="sortable-code-container">
-        <div id="parsons-sortableTrash-135" class="sortable-code"></div>
-        <div id="parsons-sortableCode-135" class="sortable-code"></div>
-        <div style="clear:left;"></div>
-        </div>
-        <div class="parsons-controls">
-        <input type="button" class='btn btn-success' id="checkMe135" value="Check Me"/>
-        <input type="button" class='btn btn-default' id="reset135" value="Reset"/>
-        <div id="parsons-message-135"></div>
-        </div>
-        </div>
-
-    <script>
-        $pjQ(document).ready(function(){
-
-            $("#parsons-135").not(".sortable-code").not(".parsons-controls").on("click", function(){
-                 $('html, body').animate({
-                    scrollTop: ($("#parsons-135").offset().top - 50)
-                }, 700);
-            }).find(".sortable-code, .parsons-controls").click(function(e) {
-                return false;
-                });
-            var msgBox = $("#parsons-message-135");
-            msgBox.hide();
-        var displayErrors = function (fb) {
-            if(fb.errors.length > 0) {
-                    var hash = pp_135.getHash("#ul-parsons-sortableCode-135");
-                    msgBox.fadeIn(500);
-                    msgBox.attr('class','alert alert-danger');
-                    msgBox.html(fb.errors[0]);
-                    logBookEvent({'event':'parsons', 'act':hash, 'div_id':'list_2'});
-
-            } else {
-                    logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'list_2'});
-                    msgBox.fadeIn(100);
-                    msgBox.attr('class','alert alert-success');
-                    msgBox.html("Perfect!")
-                }
-
-        }
-
-        $(window).load(function() {
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-135");
-            var trashul = $("#ul-parsons-sortableTrash-135");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            sortableul.height(minHeight);
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-        });
- 
-
-        var pp_135 = new ParsonsWidget({
-                'sortableId': 'parsons-sortableCode-135',
-        'trashId': 'parsons-sortableTrash-135',
-                'max_wrong_lines': 1,
-                'solution_label': 'Drop blocks here',
-                'feedback_cb' : displayErrors
-        });
-        pp_135.init($pjQ("#parsons-orig-135").text());
-    pp_135.shuffleLines();
-            
-        if(localStorage.getItem('list_2') && localStorage.getItem('list_2-trash')) {
-            try {
-                var solution = localStorage.getItem('list_2');
-                var trash = localStorage.getItem('list_2-trash');
-                pp_135.createHTMLFromHashes(solution,trash);
-                pp_135.getFeedback();
-            } catch(err) {
-                var text = "An error occured restoring old list_2 state.  Error: ";
-                console.log(text + err.message);
-            }
-
-        }
-            $pjQ("#reset135").click(function(event){
-              event.preventDefault();
-              pp_135.shuffleLines();
-            
-            // set min width and height
-            var sortableul = $("#ul-parsons-sortableCode-135");
-            var trashul = $("#ul-parsons-sortableTrash-135");
-            var sortableHeight = sortableul.height();
-            var sortableWidth = sortableul.width();
-            var trashWidth = trashul.width();
-            var trashHeight = trashul.height();
-            var minHeight = Math.max(trashHeight,sortableHeight);
-            var minWidth = Math.max(trashWidth, sortableWidth);
-            trashul.css("min-height",minHeight + "px");
-            sortableul.css("min-height",minHeight + "px");
-            trashul.css("min-width",minWidth + "px");
-            sortableul.css("min-width",minWidth + "px");
-              msgBox.hide();
-            });
-            
-            $pjQ("#checkMe135").click(function(event){
-              event.preventDefault();
-              var hash = pp_135.getHash("#ul-parsons-sortableCode-135");
-              localStorage.setItem('list_2',hash);
-              hash = pp_135.getHash("#ul-parsons-sortableTrash-135");
-              localStorage.setItem('list_2-trash',hash);
-            
-            pp_135.getFeedback();
-            msgBox.fadeIn(100);
-            
-            });
-            
-        });
-            
-
-    </script>
-
-</div>
+    <pre data-component="parsons" id="list_1">
+        <span data-question>8-4-3: The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.</span>None</pre>
+    
+    <pre data-component="parsons" id="list_2">
+        <span data-question>8-4-4: The following has the correct code for a method called insertInOrder plus at least one extra unneeded code statement. This method should add the passed name in alphabetic order to a private list field called nameList.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.</span>None</pre>
+    </div>
 
 
   

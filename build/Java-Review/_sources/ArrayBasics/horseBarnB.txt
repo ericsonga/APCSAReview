@@ -86,7 +86,7 @@ While we are looping through the ``spaces`` array, we need to check for non-null
    
 Try to write the code for the method ``consolidate``. When you are ready click "Run" to test your solution.   
    
-.. livecode:: lcfrhbb1
+.. activecode:: lcfrhbb1
    :language: java
    :datafile: HorseBarn.java
    

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,16 +336,9 @@
 <h1>Practice Exam 4 for the AP CS A Exam<a class="headerlink" href="#practice-exam-4-for-the-ap-cs-a-exam" title="Permalink to this headline">¶</a></h1>
 <p>The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the &#8220;Start&#8221; button when you are ready to begin the exam.  Click the &#8220;Pause&#8221; button to pause the exam (you will not be able to see the questions when the exam is paused).  Hover over the clock icon to see the current time remaining. Click on the &#8220;Submit Answers&#8221; button at the end when you are done.  It will display the number correct, number wrong, and number skipped after the &#8220;Submit Answer&#8221; button.</p>
 
-           <div id="startWrapper">
-		    <p id="timeOutput"></p>
-		    </div>
-		    
-		    <div id="controls" style="text-align: center;">
-			<button class='btn btn-inverse' id ="examButton" onclick="handleExamButtonClick()">Start</button>
-	        </div>
-            <div id='timed_Test' style='display:none'>
-            
-            <div id="pe4_1" class="alert alert-warning">
+    <ul data-component="timedAssessment" data-time=38 id="postexam4"  >
+    
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_1">
             <p>14-4-1: Consider the following partial class definitions.  Which of the constructors shown below (I, II, and III) are valid for C2?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">C1</span> <span class="o">{</span>
    <span class="kd">private</span> <span class="kt">int</span> <span class="n">num</span><span class="o">;</span>
@@ -358,77 +365,35 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_1_opt_a" />
-            <label for= "pe4_1_opt_a">  a) All three are valid</label><br />
-	        <div id= "pe4_1_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_1_opt_a">All three are valid</li><li data-component="feedback" id="pe4_1_opt_a">If there is not a call to super as the first line in a child class constructor then super() is automatically added.  However, this will cause a problem if the parent class does not have a no argument constructor.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_1_opt_b" />
-            <label for= "pe4_1_opt_b">  b) II only</label><br />
-	        <div id= "pe4_1_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_1_opt_b">II only</li><li data-component="feedback" id="pe4_1_opt_b">While II is valid so is another choice.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_1_opt_c" />
-            <label for= "pe4_1_opt_c">  c) III only</label><br />
-	        <div id= "pe4_1_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_1_opt_c">III only</li><li data-component="feedback" id="pe4_1_opt_c">While III is valid so is another choice.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_1_opt_d" />
-            <label for= "pe4_1_opt_d">  d) II and III</label><br />
-	        <div id= "pe4_1_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="pe4_1_opt_d">II and III</li><li data-component="feedback" id="pe4_1_opt_d">Since C1 has constructors that take just an int and just a String both of these are valid.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_1_opt_e" />
-            <label for= "pe4_1_opt_e">  e) None are valid</label><br />
-	        <div id= "pe4_1_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_1_opt_e">None are valid</li><li data-component="feedback" id="pe4_1_opt_e">C2 constructors can call C1 constructors using the super keyword.  In fact this call is automatically added to C2 constructors as the first line in any C2 constructor if it isn't there.</li>
             
 
-            <script>
-		    populateArrays('pe4_1','d',['If there is not a call to super as the first line in a child class constructor then super() is automatically added.  However, this will cause a problem if the parent class does not have a no argument constructor.', 'While II is valid so is another choice.', 'While III is valid so is another choice.', 'Since C1 has constructors that take just an int and just a String both of these are valid.', 'C2 constructors can call C1 constructors using the super keyword.  In fact this call is automatically added to C2 constructors as the first line in any C2 constructor if it isn\u0027t there.']);
-            $(document).ready(function(){checkExamRadio('pe4_1');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_1_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_2">
             14-4-2: The Boolean expression (x==y &amp;&amp; !(x==y)) || ( x!=y &amp;&amp; !(x!=y)) can be simplified to which of the following?
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_2_opt_a" />
-            <label for= "pe4_2_opt_a">  a) x != y</label><br />
-	        <div id= "pe4_2_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_2_opt_a">x != y</li><li data-component="feedback" id="pe4_2_opt_a">If we assume that x is not equal to y then the expression is (false && true) || (true && false) which is false.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_2_opt_b" />
-            <label for= "pe4_2_opt_b">  b) x == y</label><br />
-	        <div id= "pe4_2_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_2_opt_b">x == y</li><li data-component="feedback" id="pe4_2_opt_b">If we assume that x == y is the same than using it in the full expression should return true.  But, if x is equal to y you would get (true && false) || (false && true) which is false.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_2_opt_c" />
-            <label for= "pe4_2_opt_c">  c) true</label><br />
-	        <div id= "pe4_2_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_2_opt_c">true</li><li data-component="feedback" id="pe4_2_opt_c">How can this be true?  Remember that && requires both expressions to be true in order to return true.  You can think of (x==y && !(x==y)) as A && !A which is always false.   You can think of ( x!=y && !(x!=y) as B && !B which is always false.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_2_opt_d" />
-            <label for= "pe4_2_opt_d">  d) false</label><br />
-	        <div id= "pe4_2_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="pe4_2_opt_d">false</li><li data-component="feedback" id="pe4_2_opt_d">This can be simplified to (A && !A) || (B && !B) which is (false || false) which is false.  You can think of (x==y && !(x==y)) as A && !A which is always false.   You can think of ( x!=y && !(x!=y) as B && !B which is always false.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_2_opt_e" />
-            <label for= "pe4_2_opt_e">  e) x < y</label><br />
-	        <div id= "pe4_2_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_2_opt_e">x < y</li><li data-component="feedback" id="pe4_2_opt_e">Since this expression is only about equality how could this be true?</li>
             
 
-            <script>
-		    populateArrays('pe4_2','d',['If we assume that x is not equal to y then the expression is (false \u0026\u0026 true) || (true \u0026\u0026 false) which is false.', 'If we assume that x \u003D\u003D y is the same than using it in the full expression should return true.  But, if x is equal to y you would get (true \u0026\u0026 false) || (false \u0026\u0026 true) which is false.', 'How can this be true?  Remember that \u0026\u0026 requires both expressions to be true in order to return true.  You can think of (x\u003D\u003Dy \u0026\u0026 !(x\u003D\u003Dy)) as A \u0026\u0026 !A which is always false.   You can think of ( x!\u003Dy \u0026\u0026 !(x!\u003Dy) as B \u0026\u0026 !B which is always false.', 'This can be simplified to (A \u0026\u0026 !A) || (B \u0026\u0026 !B) which is (false || false) which is false.  You can think of (x\u003D\u003Dy \u0026\u0026 !(x\u003D\u003Dy)) as A \u0026\u0026 !A which is always false.   You can think of ( x!\u003Dy \u0026\u0026 !(x!\u003Dy) as B \u0026\u0026 !B which is always false.', 'Since this expression is only about equality how could this be true?']);
-            $(document).ready(function(){checkExamRadio('pe4_2');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_2_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_3">
             <p>14-4-3: Which of the following could be used to replace the missing code so that the method sort will sort the array a in ascending order?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sort</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
    <span class="kt">int</span> <span class="n">maxCompare</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
@@ -451,41 +416,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_3_opt_a" />
-            <label for= "pe4_3_opt_a">  a) if (a[savedIndex] > a[j]) { j = savedIndex; }</label><br />
-	        <div id= "pe4_3_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_3_opt_a">if (a[savedIndex] > a[j]) { j = savedIndex; }</li><li data-component="feedback" id="pe4_3_opt_a">Should j be set to the savedIndex?</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_3_opt_b" />
-            <label for= "pe4_3_opt_b">  b) if (a[j] > a[savedIndex]) { savedIndex = j;}</label><br />
-	        <div id= "pe4_3_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="pe4_3_opt_b">if (a[j] > a[savedIndex]) { savedIndex = j;}</li><li data-component="feedback" id="pe4_3_opt_b">This is a selection sort that is starting at end of the array and finding the largest value in the rest of the array and swapping it with the current index.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_3_opt_c" />
-            <label for= "pe4_3_opt_c">  c) if (a[j] < a[savedIndex]) { savedIndex = j; }</label><br />
-	        <div id= "pe4_3_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_3_opt_c">if (a[j] < a[savedIndex]) { savedIndex = j; }</li><li data-component="feedback" id="pe4_3_opt_c">This would be correct if this was starting at index 0 and finding the smallest item in the rest of the array, but this starts at the end of the array instead and finds the largest value in the rest of the array.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_3_opt_d" />
-            <label for= "pe4_3_opt_d">  d) if (a[j] > a[savedIndex]) { j = savedIndex;}</label><br />
-	        <div id= "pe4_3_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_3_opt_d">if (a[j] > a[savedIndex]) { j = savedIndex;}</li><li data-component="feedback" id="pe4_3_opt_d">Should j be set to the savedIndex?</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_3_opt_e" />
-            <label for= "pe4_3_opt_e">  e) if (a[j] == a[savedIndex]) { savedIndex = j; }</label><br />
-	        <div id= "pe4_3_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_3_opt_e">if (a[j] == a[savedIndex]) { savedIndex = j; }</li><li data-component="feedback" id="pe4_3_opt_e">Why would you want to change the savedIndex if the values are the same?</li>
             
 
-            <script>
-		    populateArrays('pe4_3','b',['Should j be set to the savedIndex?', 'This is a selection sort that is starting at end of the array and finding the largest value in the rest of the array and swapping it with the current index.', 'This would be correct if this was starting at index 0 and finding the smallest item in the rest of the array, but this starts at the end of the array instead and finds the largest value in the rest of the array.', 'Should j be set to the savedIndex?', 'Why would you want to change the savedIndex if the values are the same?']);
-            $(document).ready(function(){checkExamRadio('pe4_3');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_3_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_4">
             <p>14-4-4: Which of the following statements about interfaces is (are) true?</p>
 <div class="highlight-java"><div class="highlight"><pre>I.  One interface can inherit from another
 II.  All methods declared in an interface are abstract methods
@@ -494,41 +438,20 @@ III. All methods declared in an interface are public methods.
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_4_opt_a" />
-            <label for= "pe4_4_opt_a">  a) II only</label><br />
-	        <div id= "pe4_4_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_4_opt_a">II only</li><li data-component="feedback" id="pe4_4_opt_a">Methods in an interface are abstract, but more of these choices are correct.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_4_opt_b" />
-            <label for= "pe4_4_opt_b">  b) III only</label><br />
-	        <div id= "pe4_4_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_4_opt_b">III only</li><li data-component="feedback" id="pe4_4_opt_b">Methods in an interface are public, but more of these choices are correct.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_4_opt_c" />
-            <label for= "pe4_4_opt_c">  c) I and II only</label><br />
-	        <div id= "pe4_4_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_4_opt_c">I and II only</li><li data-component="feedback" id="pe4_4_opt_c">Can you declare private methods in an interface?</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_4_opt_d" />
-            <label for= "pe4_4_opt_d">  d) I, II, and III</label><br />
-	        <div id= "pe4_4_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="pe4_4_opt_d">I, II, and III</li><li data-component="feedback" id="pe4_4_opt_d">One interface can inherit from another and the methods in an interface are public and abstract.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_4_opt_e" />
-            <label for= "pe4_4_opt_e">  e) I only</label><br />
-	        <div id= "pe4_4_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_4_opt_e">I only</li><li data-component="feedback" id="pe4_4_opt_e">One interface can inherit from another, but more of these choices are correct.</li>
             
 
-            <script>
-		    populateArrays('pe4_4','d',['Methods in an interface are abstract, but more of these choices are correct.', 'Methods in an interface are public, but more of these choices are correct.', 'Can you declare private methods in an interface?', 'One interface can inherit from another and the methods in an interface are public and abstract.', 'One interface can inherit from another, but more of these choices are correct.']);
-            $(document).ready(function(){checkExamRadio('pe4_4');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_4_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_5">
             <p>14-4-5: Consider the following declarations.  If matrix is initialized to be: {{-1, -2, 3},{4, -5, 6}}.  What will the values in matrix be after changeMatrix(matrix) is called?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">3</span><span class="o">];</span>
 
@@ -542,41 +465,20 @@ III. All methods declared in an interface are public methods.
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_5_opt_a" />
-            <label for= "pe4_5_opt_a">  a) {{4, -5, 6},{-1, -2, 3}}</label><br />
-	        <div id= "pe4_5_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_5_opt_a">{{4, -5, 6},{-1, -2, 3}}</li><li data-component="feedback" id="pe4_5_opt_a">How did the values in row1 change to those in row2 and vice versa?  Why didn't any value change to the absolute value?</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_5_opt_b" />
-            <label for= "pe4_5_opt_b">  b) {{4, 5, 6},{1, 2, 3}}</label><br />
-	        <div id= "pe4_5_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_5_opt_b">{{4, 5, 6},{1, 2, 3}}</li><li data-component="feedback" id="pe4_5_opt_b">How did the values in row1 change to those in row2 and vice versa?</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_5_opt_c" />
-            <label for= "pe4_5_opt_c">  c) {{1, 2, 3},{4, 5, 6}}</label><br />
-	        <div id= "pe4_5_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_5_opt_c">{{1, 2, 3},{4, 5, 6}}</li><li data-component="feedback" id="pe4_5_opt_c">This would be true if all the matrix values were changed to their absolute value.  But, this only happens when the row and column index are the same.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_5_opt_d" />
-            <label for= "pe4_5_opt_d">  d) {{-1, -2, 3},{4, -5, 6}}</label><br />
-	        <div id= "pe4_5_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_5_opt_d">{{-1, -2, 3},{4, -5, 6}}</li><li data-component="feedback" id="pe4_5_opt_d">This would be true if none of the values in the matrix were changed.  But, this will change the value to the absolute value when the row and column index are the same.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_5_opt_e" />
-            <label for= "pe4_5_opt_e">  e) {{1, -2, 3},{4, 5, 6}}</label><br />
-	        <div id= "pe4_5_eachFeedback_e"></div>
+            <li data-component="answer" data-correct id="pe4_5_opt_e">{{1, -2, 3},{4, 5, 6}}</li><li data-component="feedback" id="pe4_5_opt_e">This only changes the value in the matrix if the row and column index are the same.  So this changes the values at (0,0) and (1,1).</li>
             
 
-            <script>
-		    populateArrays('pe4_5','e',['How did the values in row1 change to those in row2 and vice versa?  Why didn\u0027t any value change to the absolute value?', 'How did the values in row1 change to those in row2 and vice versa?', 'This would be true if all the matrix values were changed to their absolute value.  But, this only happens when the row and column index are the same.', 'This would be true if none of the values in the matrix were changed.  But, this will change the value to the absolute value when the row and column index are the same.', 'This only changes the value in the matrix if the row and column index are the same.  So this changes the values at (0,0) and (1,1).']);
-            $(document).ready(function(){checkExamRadio('pe4_5');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_5_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_6" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_6">
             <p>14-4-6: What are the values of a and b after the for loop finishes?</p>
 <div class="highlight-java"><div class="highlight"><pre>int a = 5, b = 2, temp;
 
@@ -589,41 +491,20 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_6_opt_a" />
-            <label for= "pe4_6_opt_a">  a) a = 4 and b = 3</label><br />
-	        <div id= "pe4_6_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_6_opt_a">a = 4 and b = 3</li><li data-component="feedback" id="pe4_6_opt_a">This would be true if the for loop stopped when i was equal to 4.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_6_opt_b" />
-            <label for= "pe4_6_opt_b">  b) a = 7 and b = 0</label><br />
-	        <div id= "pe4_6_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="pe4_6_opt_b">a = 7 and b = 0</li><li data-component="feedback" id="pe4_6_opt_b">Here are the values of a and b at the end of each loop: i=1, a=3, b=4; i=2, a=6, b=3; i=3, a=4, b=3; i=4; a=7; b=0;</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_6_opt_c" />
-            <label for= "pe4_6_opt_c">  c) a = 2 and b = -2</label><br />
-	        <div id= "pe4_6_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_6_opt_c">a = 2 and b = -2</li><li data-component="feedback" id="pe4_6_opt_c">Go back and check your values each time through the loop.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_6_opt_d" />
-            <label for= "pe4_6_opt_d">  d) a = 5 and b = 2</label><br />
-	        <div id= "pe4_6_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_6_opt_d">a = 5 and b = 2</li><li data-component="feedback" id="pe4_6_opt_d">This would be true if the loop stopped when i was equal to 6, but it stops when i is equal to 5.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_6_opt_e" />
-            <label for= "pe4_6_opt_e">  e) a = 9 and b = 2</label><br />
-	        <div id= "pe4_6_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_6_opt_e">a = 9 and b = 2</li><li data-component="feedback" id="pe4_6_opt_e">Keep a table of the variables and their values each time through the loop.</li>
             
 
-            <script>
-		    populateArrays('pe4_6','b',['This would be true if the for loop stopped when i was equal to 4.', 'Here are the values of a and b at the end of each loop: i\u003D1, a\u003D3, b\u003D4\u003B i\u003D2, a\u003D6, b\u003D3\u003B i\u003D3, a\u003D4, b\u003D3\u003B i\u003D4\u003B a\u003D7\u003B b\u003D0\u003B', 'Go back and check your values each time through the loop.', 'This would be true if the loop stopped when i was equal to 6, but it stops when i is equal to 5.', 'Keep a table of the variables and their values each time through the loop.']);
-            $(document).ready(function(){checkExamRadio('pe4_6');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_6_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_7" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_7">
             <p>14-4-7: Condsider the following method.  What value is returned from a call of mystery(4)?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
@@ -635,77 +516,35 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_7_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_7_opt_a" />
-            <label for= "pe4_7_opt_a">  a) 243</label><br />
-	        <div id= "pe4_7_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_7_opt_a">243</li><li data-component="feedback" id="pe4_7_opt_a">This would be true if it was mystery(5).</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_7_opt_b" />
-            <label for= "pe4_7_opt_b">  b) 0</label><br />
-	        <div id= "pe4_7_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_7_opt_b">0</li><li data-component="feedback" id="pe4_7_opt_b">How can this be?  The value 0 is never returned.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_7_opt_c" />
-            <label for= "pe4_7_opt_c">  c) 3</label><br />
-	        <div id= "pe4_7_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_7_opt_c">3</li><li data-component="feedback" id="pe4_7_opt_c">Did you notice the recursive call?</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_7_opt_d" />
-            <label for= "pe4_7_opt_d">  d) 81</label><br />
-	        <div id= "pe4_7_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="pe4_7_opt_d">81</li><li data-component="feedback" id="pe4_7_opt_d">This is the same as 3 to the 4th power (3 * 3 * 3 * 3 = 81).</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_7_opt_e" />
-            <label for= "pe4_7_opt_e">  e) 27</label><br />
-	        <div id= "pe4_7_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_7_opt_e">27</li><li data-component="feedback" id="pe4_7_opt_e">This would be true if it was mystery(3).</li>
             
 
-            <script>
-		    populateArrays('pe4_7','d',['This would be true if it was mystery(5).', 'How can this be?  The value 0 is never returned.', 'Did you notice the recursive call?', 'This is the same as 3 to the 4th power (3 * 3 * 3 * 3 \u003D 81).', 'This would be true if it was mystery(3).']);
-            $(document).ready(function(){checkExamRadio('pe4_7');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_7_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_8" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_8">
             14-4-8: Which of the following correctly shows the iterations of an ascending (from left to right) insertion sort on an array with the following elements: {6,3,8,5,1}?
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_8_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_8_opt_a" />
-            <label for= "pe4_8_opt_a">  a) {3,6,8,5,1}, {3,5,6,8,1}, {1,3,5,6,8}</label><br />
-	        <div id= "pe4_8_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_8_opt_a">{3,6,8,5,1}, {3,5,6,8,1}, {1,3,5,6,8}</li><li data-component="feedback" id="pe4_8_opt_a">This is almost right, but there should be 4 of these steps.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_8_opt_b" />
-            <label for= "pe4_8_opt_b">  b) {1,3,8,5,6}, {1,3,8,5,6}, {1,3,5,8,6}, {1,3,5,6,8}</label><br />
-	        <div id= "pe4_8_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_8_opt_b">{1,3,8,5,6}, {1,3,8,5,6}, {1,3,5,8,6}, {1,3,5,6,8}</li><li data-component="feedback" id="pe4_8_opt_b">This is selection sort, not insertion.   Selection will find the smallest and swap it with the first element in the array.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_8_opt_c" />
-            <label for= "pe4_8_opt_c">  c) {3,6,8,5,1}, {3,6,8,5,1}, {3,5,6,8,1}, {1,3,5,6,8}</label><br />
-	        <div id= "pe4_8_eachFeedback_c"></div>
+            <li data-component="answer" data-correct id="pe4_8_opt_c">{3,6,8,5,1}, {3,6,8,5,1}, {3,5,6,8,1}, {1,3,5,6,8}</li><li data-component="feedback" id="pe4_8_opt_c">An insertion sort will skip the first position and then loop inserting the next item into the correct place in the sorted elements to the left of the current item.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_8_opt_d" />
-            <label for= "pe4_8_opt_d">  d) {1,3,8,5,6}, {1,3,5,8,6}, {1,3,5,6,8}</label><br />
-	        <div id= "pe4_8_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_8_opt_d">{1,3,8,5,6}, {1,3,5,8,6}, {1,3,5,6,8}</li><li data-component="feedback" id="pe4_8_opt_d">This is selection sort, not insertion and it is also an incorrect selection sort since it skips one step.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_8_opt_e" />
-            <label for= "pe4_8_opt_e">  e) {1,6,3,8,5}, {1,3,6,8,5}, {1,3,5,6,8}</label><br />
-	        <div id= "pe4_8_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_8_opt_e">{1,6,3,8,5}, {1,3,6,8,5}, {1,3,5,6,8}</li><li data-component="feedback" id="pe4_8_opt_e">This doesn't match selection, insertion, or merge sort.</li>
             
 
-            <script>
-		    populateArrays('pe4_8','c',['This is almost right, but there should be 4 of these steps.', 'This is selection sort, not insertion.   Selection will find the smallest and swap it with the first element in the array.', 'An insertion sort will skip the first position and then loop inserting the next item into the correct place in the sorted elements to the left of the current item.', 'This is selection sort, not insertion and it is also an incorrect selection sort since it skips one step.', 'This doesn\u0027t match selection, insertion, or merge sort.']);
-            $(document).ready(function(){checkExamRadio('pe4_8');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_8_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_9" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_9">
             <p>14-4-9: Consider the following code segment.  How many times will a * be printed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
 <span class="o">{</span>
@@ -715,41 +554,20 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_9_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_9_opt_a" />
-            <label for= "pe4_9_opt_a">  a) 21</label><br />
-	        <div id= "pe4_9_eachFeedback_a"></div>
+            <li data-component="answer" data-correct id="pe4_9_opt_a">21</li><li data-component="feedback" id="pe4_9_opt_a">The general formula for the number times a loop executes is the last value - the first value  + 1.  The outer loop will execute 3 times (2-0+1) and the inner loop will execute 7 times (7-1+1) so the total is 3 * 7 = 21.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_9_opt_b" />
-            <label for= "pe4_9_opt_b">  b) 18</label><br />
-	        <div id= "pe4_9_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_9_opt_b">18</li><li data-component="feedback" id="pe4_9_opt_b">This would be true if the inner loop stopped when j equals 7.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_9_opt_c" />
-            <label for= "pe4_9_opt_c">  c) 32</label><br />
-	        <div id= "pe4_9_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_9_opt_c">32</li><li data-component="feedback" id="pe4_9_opt_c">This would be true if the outer loop executed 4 times and the inner loop 8, but is that right?</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_9_opt_d" />
-            <label for= "pe4_9_opt_d">  d) 28</label><br />
-	        <div id= "pe4_9_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_9_opt_d">28</li><li data-component="feedback" id="pe4_9_opt_d">This would be true if the outer loop executed 4 times, but is that right?</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_9_opt_e" />
-            <label for= "pe4_9_opt_e">  e) 10</label><br />
-	        <div id= "pe4_9_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_9_opt_e">10</li><li data-component="feedback" id="pe4_9_opt_e">This would be true if you added the number of times the outer loop executes and the number of times the inner loop executes, but you multiply them.</li>
             
 
-            <script>
-		    populateArrays('pe4_9','a',['The general formula for the number times a loop executes is the last value \u002D the first value  + 1.  The outer loop will execute 3 times (2\u002D0+1) and the inner loop will execute 7 times (7\u002D1+1) so the total is 3 * 7 \u003D 21.', 'This would be true if the inner loop stopped when j equals 7.', 'This would be true if the outer loop executed 4 times and the inner loop 8, but is that right?', 'This would be true if the outer loop executed 4 times, but is that right?', 'This would be true if you added the number of times the outer loop executes and the number of times the inner loop executes, but you multiply them.']);
-            $(document).ready(function(){checkExamRadio('pe4_9');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_9_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_10" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_10">
             <p>14-4-10: Consider the following method.   What is the output from conditionTest(-3,2)?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">conditionTest</span><span class="o">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">,</span> <span class="kt">int</span> <span class="n">num2</span><span class="o">)</span>
 <span class="o">{</span>
@@ -773,41 +591,20 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_10_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_10_opt_a" />
-            <label for= "pe4_10_opt_a">  a) A</label><br />
-	        <div id= "pe4_10_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_10_opt_a">A</li><li data-component="feedback" id="pe4_10_opt_a">This will only print if both num1 and num2 are greater than 0 and num1 is greater than num2.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_10_opt_b" />
-            <label for= "pe4_10_opt_b">  b) B</label><br />
-	        <div id= "pe4_10_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_10_opt_b">B</li><li data-component="feedback" id="pe4_10_opt_b">This will only print if both num1 and num2 are greater than 0 and num1 is equal to or less than num2.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_10_opt_c" />
-            <label for= "pe4_10_opt_c">  c) C</label><br />
-	        <div id= "pe4_10_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_10_opt_c">C</li><li data-component="feedback" id="pe4_10_opt_c">This will only print if both num1 and num2 are less than 0.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_10_opt_d" />
-            <label for= "pe4_10_opt_d">  d) D</label><br />
-	        <div id= "pe4_10_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_10_opt_d">D</li><li data-component="feedback" id="pe4_10_opt_d">This will only print if num2 is less than 0 and num1 is greater than or equal to 0.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_10_opt_e" />
-            <label for= "pe4_10_opt_e">  e) E</label><br />
-	        <div id= "pe4_10_eachFeedback_e"></div>
+            <li data-component="answer" data-correct id="pe4_10_opt_e">E</li><li data-component="feedback" id="pe4_10_opt_e">The first test will fail since num1 is less than 0, the second test will fail since num2 is greater than 0, the third test will also fail since num2 is greater than 0, which leads to the else being executed.</li>
             
 
-            <script>
-		    populateArrays('pe4_10','e',['This will only print if both num1 and num2 are greater than 0 and num1 is greater than num2.', 'This will only print if both num1 and num2 are greater than 0 and num1 is equal to or less than num2.', 'This will only print if both num1 and num2 are less than 0.', 'This will only print if num2 is less than 0 and num1 is greater than or equal to 0.', 'The first test will fail since num1 is less than 0, the second test will fail since num2 is greater than 0, the third test will also fail since num2 is greater than 0, which leads to the else being executed.']);
-            $(document).ready(function(){checkExamRadio('pe4_10');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_10_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_11" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_11">
             <p>14-4-11: What is value of s1 after the code below executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Hi There&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">;</span>
@@ -819,41 +616,20 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_11_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_11_opt_a" />
-            <label for= "pe4_11_opt_a">  a) hi there</label><br />
-	        <div id= "pe4_11_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_11_opt_a">hi there</li><li data-component="feedback" id="pe4_11_opt_a">This would be true if we asked what the value of s3 was.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_11_opt_b" />
-            <label for= "pe4_11_opt_b">  b) HI THERE</label><br />
-	        <div id= "pe4_11_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_11_opt_b">HI THERE</li><li data-component="feedback" id="pe4_11_opt_b">This would be true if we asked what the value of s2 was.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_11_opt_c" />
-            <label for= "pe4_11_opt_c">  c) Hi There</label><br />
-	        <div id= "pe4_11_eachFeedback_c"></div>
+            <li data-component="answer" data-correct id="pe4_11_opt_c">Hi There</li><li data-component="feedback" id="pe4_11_opt_c">Strings are immutable in Java which means they never change.  Any method that looks like it changes a string returns a new string object.  Since s1 was never changed to refer to a different string it stays the same.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_11_opt_d" />
-            <label for= "pe4_11_opt_d">  d) null</label><br />
-	        <div id= "pe4_11_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_11_opt_d">null</li><li data-component="feedback" id="pe4_11_opt_d">This would be true if we asked what the value of s4 was.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_11_opt_e" />
-            <label for= "pe4_11_opt_e">  e) hI tHERE</label><br />
-	        <div id= "pe4_11_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_11_opt_e">hI tHERE</li><li data-component="feedback" id="pe4_11_opt_e">How could this have happened?</li>
             
 
-            <script>
-		    populateArrays('pe4_11','c',['This would be true if we asked what the value of s3 was.', 'This would be true if we asked what the value of s2 was.', 'Strings are immutable in Java which means they never change.  Any method that looks like it changes a string returns a new string object.  Since s1 was never changed to refer to a different string it stays the same.', 'This would be true if we asked what the value of s4 was.', 'How could this have happened?']);
-            $(document).ready(function(){checkExamRadio('pe4_11');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_11_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_12" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_12">
             <p>14-4-12: What is the output from the following code?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;Computer Science is fun!&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">8</span><span class="o">);</span>
@@ -863,41 +639,20 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_12_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_12_opt_a" />
-            <label for= "pe4_12_opt_a">  a) mp</label><br />
-	        <div id= "pe4_12_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_12_opt_a">mp</li><li data-component="feedback" id="pe4_12_opt_a">A substring of (0,3) will have 3 characters in it (index 0, index 1, and index 2).</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_12_opt_b" />
-            <label for= "pe4_12_opt_b">  b) mpu</label><br />
-	        <div id= "pe4_12_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="pe4_12_opt_b">mpu</li><li data-component="feedback" id="pe4_12_opt_b">Remember that substring with two numbers starts at the first index and ends before the second.  So s1 = Computer, s2 = mputer, s3 = mpu</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_12_opt_c" />
-            <label for= "pe4_12_opt_c">  c) mpur</label><br />
-	        <div id= "pe4_12_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_12_opt_c">mpur</li><li data-component="feedback" id="pe4_12_opt_c">A substring of (0,3) will have 3 characters in it (index 0, index 1, and index 2).</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_12_opt_d" />
-            <label for= "pe4_12_opt_d">  d) omp</label><br />
-	        <div id= "pe4_12_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_12_opt_d">omp</li><li data-component="feedback" id="pe4_12_opt_d">Remember that the first character in a string object is at index 0.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_12_opt_e" />
-            <label for= "pe4_12_opt_e">  e) om</label><br />
-	        <div id= "pe4_12_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_12_opt_e">om</li><li data-component="feedback" id="pe4_12_opt_e">A substring of (0,3) will have 3 characters in it (index 0, index 1, and index 2).</li>
             
 
-            <script>
-		    populateArrays('pe4_12','b',['A substring of (0,3) will have 3 characters in it (index 0, index 1, and index 2).', 'Remember that substring with two numbers starts at the first index and ends before the second.  So s1 \u003D Computer, s2 \u003D mputer, s3 \u003D mpu', 'A substring of (0,3) will have 3 characters in it (index 0, index 1, and index 2).', 'Remember that the first character in a string object is at index 0.', 'A substring of (0,3) will have 3 characters in it (index 0, index 1, and index 2).']);
-            $(document).ready(function(){checkExamRadio('pe4_12');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_12_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_13" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_13">
             <p>14-4-13: Given the following class declarations, which declaration below will result in a compiler error?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="kd">implements</span> <span class="n">Comparable</span>
 <span class="o">{</span>
@@ -911,41 +666,20 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_13_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_13_opt_a" />
-            <label for= "pe4_13_opt_a">  a) Book b = new Book();</label><br />
-	        <div id= "pe4_13_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_13_opt_a">Book b = new Book();</li><li data-component="feedback" id="pe4_13_opt_a">A object can always be declared to be of the type of the class that creates it.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_13_opt_b" />
-            <label for= "pe4_13_opt_b">  b) Dictionary d = new Book();</label><br />
-	        <div id= "pe4_13_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="pe4_13_opt_b">Dictionary d = new Book();</li><li data-component="feedback" id="pe4_13_opt_b">The declared type must the the type of the class that creates the object or the type of any parent class.   Dictionary is not a parent of the Book class.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_13_opt_c" />
-            <label for= "pe4_13_opt_c">  c) Comparable c = new Book();</label><br />
-	        <div id= "pe4_13_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_13_opt_c">Comparable c = new Book();</li><li data-component="feedback" id="pe4_13_opt_c">An object can be declared to be of an interface type if the interface type is one of the parent classes of the actual type.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_13_opt_d" />
-            <label for= "pe4_13_opt_d">  d) Book b = new Dictionary ();</label><br />
-	        <div id= "pe4_13_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_13_opt_d">Book b = new Dictionary ();</li><li data-component="feedback" id="pe4_13_opt_d">The declared type can be the actual type (the class that creates the object) or any parent of the actual type.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_13_opt_e" />
-            <label for= "pe4_13_opt_e">  e) Comparable c = new Dictionary();</label><br />
-	        <div id= "pe4_13_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_13_opt_e">Comparable c = new Dictionary();</li><li data-component="feedback" id="pe4_13_opt_e">Since Dictionary inherits from Book and Book implements the Comparable interface, this is allowed.</li>
             
 
-            <script>
-		    populateArrays('pe4_13','b',['A object can always be declared to be of the type of the class that creates it.', 'The declared type must the the type of the class that creates the object or the type of any parent class.   Dictionary is not a parent of the Book class.', 'An object can be declared to be of an interface type if the interface type is one of the parent classes of the actual type.', 'The declared type can be the actual type (the class that creates the object) or any parent of the actual type.', 'Since Dictionary inherits from Book and Book implements the Comparable interface, this is allowed.']);
-            $(document).ready(function(){checkExamRadio('pe4_13');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_13_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_14" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_14">
             <p>14-4-14: What will the method below return when called with mystery(“xxzxyxx”)?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span>
 <span class="o">{</span>
@@ -960,77 +694,35 @@ for (int i=1; i&lt;=4; i++)
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_14_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_14_opt_a" />
-            <label for= "pe4_14_opt_a">  a) 2</label><br />
-	        <div id= "pe4_14_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_14_opt_a">2</li><li data-component="feedback" id="pe4_14_opt_a">This would be true if the recursion stopped when you first the first non "x", but is that what happens?</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_14_opt_b" />
-            <label for= "pe4_14_opt_b">  b) 5</label><br />
-	        <div id= "pe4_14_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="pe4_14_opt_b">5</li><li data-component="feedback" id="pe4_14_opt_b">This returns the number of "x"'s it finds in the str.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_14_opt_c" />
-            <label for= "pe4_14_opt_c">  c) 1</label><br />
-	        <div id= "pe4_14_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_14_opt_c">1</li><li data-component="feedback" id="pe4_14_opt_c">Did you notice the recursive calls?</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_14_opt_d" />
-            <label for= "pe4_14_opt_d">  d) 4</label><br />
-	        <div id= "pe4_14_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_14_opt_d">4</li><li data-component="feedback" id="pe4_14_opt_d">How does it miss one "x"?</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_14_opt_e" />
-            <label for= "pe4_14_opt_e">  e) 0</label><br />
-	        <div id= "pe4_14_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_14_opt_e">0</li><li data-component="feedback" id="pe4_14_opt_e">Since the first character is "x" how can this be true?</li>
             
 
-            <script>
-		    populateArrays('pe4_14','b',['This would be true if the recursion stopped when you first the first non \u0022x\u0022, but is that what happens?', 'This returns the number of \u0022x\u0022\u0027s it finds in the str.', 'Did you notice the recursive calls?', 'How does it miss one \u0022x\u0022?', 'Since the first character is \u0022x\u0022 how can this be true?']);
-            $(document).ready(function(){checkExamRadio('pe4_14');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_14_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_15" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_15">
             14-4-15: Which will cause the longest execution of a binary search looking for a value in an array of 9 integers?
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_15_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_15_opt_a" />
-            <label for= "pe4_15_opt_a">  a) The value is the first one in the array</label><br />
-	        <div id= "pe4_15_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_15_opt_a">The value is the first one in the array</li><li data-component="feedback" id="pe4_15_opt_a">This could take a long time, but there is an answer that takes longer.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_15_opt_b" />
-            <label for= "pe4_15_opt_b">  b) The value is in the middle of the array</label><br />
-	        <div id= "pe4_15_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_15_opt_b">The value is in the middle of the array</li><li data-component="feedback" id="pe4_15_opt_b">This would be true if we were looking for the shortest execution of a binary search</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_15_opt_c" />
-            <label for= "pe4_15_opt_c">  c) The value is at index 1 in the array</label><br />
-	        <div id= "pe4_15_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_15_opt_c">The value is at index 1 in the array</li><li data-component="feedback" id="pe4_15_opt_c">This would be the second value checked if the value at the middle is greater than the desired value.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_15_opt_d" />
-            <label for= "pe4_15_opt_d">  d) The value isn’t in the array</label><br />
-	        <div id= "pe4_15_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="pe4_15_opt_d">The value isn’t in the array</li><li data-component="feedback" id="pe4_15_opt_d">This will always take the longest when you are doing binary search.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_15_opt_e" />
-            <label for= "pe4_15_opt_e">  e) The value is at index 6 in the array</label><br />
-	        <div id= "pe4_15_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_15_opt_e">The value is at index 6 in the array</li><li data-component="feedback" id="pe4_15_opt_e">This would be the second value checked if the value at the middle is less than the desired value.</li>
             
 
-            <script>
-		    populateArrays('pe4_15','d',['This could take a long time, but there is an answer that takes longer.', 'This would be true if we were looking for the shortest execution of a binary search', 'This would be the second value checked if the value at the middle is greater than the desired value.', 'This will always take the longest when you are doing binary search.', 'This would be the second value checked if the value at the middle is less than the desired value.']);
-            $(document).ready(function(){checkExamRadio('pe4_15');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_15_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_16" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_16">
             <p>14-4-16: Given the following array declaration and the fact that Animal is the parent class for Bird, Dog, Pig, and Cow, what is output from looping through this array of animals and asking each object to speak()?</p>
 <div class="highlight-java"><div class="highlight"><pre>Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
 
@@ -1042,77 +734,35 @@ Cow has a speak method that returns “Moo”
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_16_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_16_opt_a" />
-            <label for= "pe4_16_opt_a">  a) Awk Awk Awk Awk Awk</label><br />
-	        <div id= "pe4_16_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_16_opt_a">Awk Awk Awk Awk Awk</li><li data-component="feedback" id="pe4_16_opt_a">This would be true if none of the children classes overrode the speak method, but many do.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_16_opt_b" />
-            <label for= "pe4_16_opt_b">  b) This won’t compile</label><br />
-	        <div id= "pe4_16_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_16_opt_b">This won’t compile</li><li data-component="feedback" id="pe4_16_opt_b">It is always okay to substitute a child object for a parent object.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_16_opt_c" />
-            <label for= "pe4_16_opt_c">  c) Meow Moo Woof Oink Tweet</label><br />
-	        <div id= "pe4_16_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_16_opt_c">Meow Moo Woof Oink Tweet</li><li data-component="feedback" id="pe4_16_opt_c">This would be true if Pig had a speak method that returned "Oink" and Bird had a speak method that returned "Tweet", but they do not.  The inherited speak method will be called in Animal.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_16_opt_d" />
-            <label for= "pe4_16_opt_d">  d) Meow Moo Woof Oink Awk</label><br />
-	        <div id= "pe4_16_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_16_opt_d">Meow Moo Woof Oink Awk</li><li data-component="feedback" id="pe4_16_opt_d">This would be true if Pig had a speak method that returned "Oink", but it does not.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_16_opt_e" />
-            <label for= "pe4_16_opt_e">  e) Meow Moo Woof Awk Awk</label><br />
-	        <div id= "pe4_16_eachFeedback_e"></div>
+            <li data-component="answer" data-correct id="pe4_16_opt_e">Meow Moo Woof Awk Awk</li><li data-component="feedback" id="pe4_16_opt_e">Both Pig and Bird do not have a speak method so the one in Animal will be used.</li>
             
 
-            <script>
-		    populateArrays('pe4_16','e',['This would be true if none of the children classes overrode the speak method, but many do.', 'It is always okay to substitute a child object for a parent object.', 'This would be true if Pig had a speak method that returned \u0022Oink\u0022 and Bird had a speak method that returned \u0022Tweet\u0022, but they do not.  The inherited speak method will be called in Animal.', 'This would be true if Pig had a speak method that returned \u0022Oink\u0022, but it does not.', 'Both Pig and Bird do not have a speak method so the one in Animal will be used.']);
-            $(document).ready(function(){checkExamRadio('pe4_16');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_16_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_17" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_17">
             14-4-17: What is the result of 17 (in base 16) - 13 (in base 8)?
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_17_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_17_opt_a" />
-            <label for= "pe4_17_opt_a">  a) 4 in base 8</label><br />
-	        <div id= "pe4_17_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_17_opt_a">4 in base 8</li><li data-component="feedback" id="pe4_17_opt_a">You can't just subtract the two numbers since they are in different bases.  Convert both to decimal first.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_17_opt_b" />
-            <label for= "pe4_17_opt_b">  b) 4 in base 16</label><br />
-	        <div id= "pe4_17_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_17_opt_b">4 in base 16</li><li data-component="feedback" id="pe4_17_opt_b">You can't just subtract the two numbers since they are in different bases.  Convert both to decimal first.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_17_opt_c" />
-            <label for= "pe4_17_opt_c">  c) 00001100 in base 2</label><br />
-	        <div id= "pe4_17_eachFeedback_c"></div>
+            <li data-component="answer" data-correct id="pe4_17_opt_c">00001100 in base 2</li><li data-component="feedback" id="pe4_17_opt_c">17 in base 16 is 23 in base 10.  13 in base 8 is 11 in base 10.  The answer is 12 in base 10 which is 00001100 in base 2.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_17_opt_d" />
-            <label for= "pe4_17_opt_d">  d) 00000010 in base 2</label><br />
-	        <div id= "pe4_17_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_17_opt_d">00000010 in base 2</li><li data-component="feedback" id="pe4_17_opt_d">This is 2 in base 10.  Convert both numbers to decimal and then convert the answer to binary.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_17_opt_e" />
-            <label for= "pe4_17_opt_e">  e) 4 in base 10</label><br />
-	        <div id= "pe4_17_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_17_opt_e">4 in base 10</li><li data-component="feedback" id="pe4_17_opt_e">You can't just subtract the two numbers since they are in different bases.  Convert both to decimal first.</li>
             
 
-            <script>
-		    populateArrays('pe4_17','c',['You can\u0027t just subtract the two numbers since they are in different bases.  Convert both to decimal first.', 'You can\u0027t just subtract the two numbers since they are in different bases.  Convert both to decimal first.', '17 in base 16 is 23 in base 10.  13 in base 8 is 11 in base 10.  The answer is 12 in base 10 which is 00001100 in base 2.', 'This is 2 in base 10.  Convert both numbers to decimal and then convert the answer to binary.', 'You can\u0027t just subtract the two numbers since they are in different bases.  Convert both to decimal first.']);
-            $(document).ready(function(){checkExamRadio('pe4_17');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_17_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_18" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_18">
             <p>14-4-18: Consider the following method and code.  What are the values of s and b after the following has executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span>
 <span class="o">{</span>
@@ -1127,41 +777,20 @@ Cow has a speak method that returns “Moo”
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_18_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_18_opt_a" />
-            <label for= "pe4_18_opt_a">  a) s={3, 8}; b=4;</label><br />
-	        <div id= "pe4_18_eachFeedback_a"></div>
+            <li data-component="answer" data-correct id="pe4_18_opt_a">s={3, 8}; b=4;</li><li data-component="feedback" id="pe4_18_opt_a">The value of a[1] will be doubled since passing a copy of the value of s is a copy of the reference to the array.  The value in b won't change since y will be set to a copy of b's value which is just a number.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_18_opt_b" />
-            <label for= "pe4_18_opt_b">  b) s={3, 4}; b=4;</label><br />
-	        <div id= "pe4_18_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_18_opt_b">s={3, 4}; b=4;</li><li data-component="feedback" id="pe4_18_opt_b">What about a[1] = a[1] * 2?</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_18_opt_c" />
-            <label for= "pe4_18_opt_c">  c) s={6, 4}; b=4;</label><br />
-	        <div id= "pe4_18_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_18_opt_c">s={6, 4}; b=4;</li><li data-component="feedback" id="pe4_18_opt_c">Remember that the first index in an array is index 0.  This code will double the second value in the array (the one at index 1).</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_18_opt_d" />
-            <label for= "pe4_18_opt_d">  d) s={3, 8}; b=8;</label><br />
-	        <div id= "pe4_18_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_18_opt_d">s={3, 8}; b=8;</li><li data-component="feedback" id="pe4_18_opt_d">Java passes arguments by creating a copy of the current value so the value of b won't be affected by changes to y.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_18_opt_e" />
-            <label for= "pe4_18_opt_e">  e) s={6, 8}; b=8;</label><br />
-	        <div id= "pe4_18_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_18_opt_e">s={6, 8}; b=8;</li><li data-component="feedback" id="pe4_18_opt_e">Java passes arguments by creating a copy of the current value so the value of b won't be affected by changes to y.</li>
             
 
-            <script>
-		    populateArrays('pe4_18','a',['The value of a[1] will be doubled since passing a copy of the value of s is a copy of the reference to the array.  The value in b won\u0027t change since y will be set to a copy of b\u0027s value which is just a number.', 'What about a[1] \u003D a[1] * 2?', 'Remember that the first index in an array is index 0.  This code will double the second value in the array (the one at index 1).', 'Java passes arguments by creating a copy of the current value so the value of b won\u0027t be affected by changes to y.', 'Java passes arguments by creating a copy of the current value so the value of b won\u0027t be affected by changes to y.']);
-            $(document).ready(function(){checkExamRadio('pe4_18');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_18_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_19" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_19">
             <p>14-4-19: Which of the following is (are) true?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">I</span><span class="o">.</span>  <span class="n">Insertion</span> <span class="n">sort</span> <span class="n">takes</span> <span class="n">longer</span> <span class="n">when</span> <span class="n">the</span> <span class="n">array</span> <span class="n">is</span> <span class="n">sorted</span> <span class="n">in</span> <span class="n">ascending</span> <span class="n">order</span> <span class="n">and</span>
     <span class="n">you</span> <span class="n">want</span> <span class="n">it</span> <span class="n">sorted</span> <span class="n">in</span> <span class="n">descending</span> <span class="n">order</span><span class="o">.</span>
@@ -1171,41 +800,20 @@ Cow has a speak method that returns “Moo”
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_19_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_19_opt_a" />
-            <label for= "pe4_19_opt_a">  a) I only</label><br />
-	        <div id= "pe4_19_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_19_opt_a">I only</li><li data-component="feedback" id="pe4_19_opt_a">This is true, but at least one other thing is true as well.</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_19_opt_b" />
-            <label for= "pe4_19_opt_b">  b) II only</label><br />
-	        <div id= "pe4_19_eachFeedback_b"></div>
+            <li data-component="answer"  id="pe4_19_opt_b">II only</li><li data-component="feedback" id="pe4_19_opt_b">This is true, but at least one other thing is true as well.</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_19_opt_c" />
-            <label for= "pe4_19_opt_c">  c) III only</label><br />
-	        <div id= "pe4_19_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_19_opt_c">III only</li><li data-component="feedback" id="pe4_19_opt_c">Selection sort always takes the same amount of time to execute.</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_19_opt_d" />
-            <label for= "pe4_19_opt_d">  d) I and II only</label><br />
-	        <div id= "pe4_19_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="pe4_19_opt_d">I and II only</li><li data-component="feedback" id="pe4_19_opt_d">Mergesort does use recursion (has a method that calls itself).  Insertion sort does take longer to execute when the items to be sorted are in ascending order and you want them in descending order.</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_19_opt_e" />
-            <label for= "pe4_19_opt_e">  e) I, II, and III</label><br />
-	        <div id= "pe4_19_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_19_opt_e">I, II, and III</li><li data-component="feedback" id="pe4_19_opt_e">Selection sort always takes the same amount of time to execute.</li>
             
 
-            <script>
-		    populateArrays('pe4_19','d',['This is true, but at least one other thing is true as well.', 'This is true, but at least one other thing is true as well.', 'Selection sort always takes the same amount of time to execute.', 'Mergesort does use recursion (has a method that calls itself).  Insertion sort does take longer to execute when the items to be sorted are in ascending order and you want them in descending order.', 'Selection sort always takes the same amount of time to execute.']);
-            $(document).ready(function(){checkExamRadio('pe4_19');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="pe4_19_feedback">
-            </div>
-            </div>
-            
-            <div id="pe4_20" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_20">
             <p>14-4-20: Given the following code, how many calls to mystery are made (including the first call) when mystery(0, 4, 5) is executed when arr = {1, 2, 3, 5, 7}?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="o">;</span>
 
@@ -1228,74 +836,20 @@ Cow has a speak method that returns “Moo”
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="pe4_20_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="pe4_20_opt_a" />
-            <label for= "pe4_20_opt_a">  a) The method is recursive and the first call it will compare 3 to 5 and then do mystery(3,4,5).</label><br />
-	        <div id= "pe4_20_eachFeedback_a"></div>
+            <li data-component="answer"  id="pe4_20_opt_a">The method is recursive and the first call it will compare 3 to 5 and then do mystery(3,4,5).</li><li data-component="feedback" id="pe4_20_opt_a">1</li>
             
-            <input type="radio" name="group1" value="b" id="pe4_20_opt_b" />
-            <label for= "pe4_20_opt_b">  b) There are two calls: mystery(0, 4, 5) and mystery(3, 4, 5).</label><br />
-	        <div id= "pe4_20_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="pe4_20_opt_b">There are two calls: mystery(0, 4, 5) and mystery(3, 4, 5).</li><li data-component="feedback" id="pe4_20_opt_b">2</li>
             
-            <input type="radio" name="group1" value="c" id="pe4_20_opt_c" />
-            <label for= "pe4_20_opt_c">  c) This would be true if it was mystery(0, 4, 7);</label><br />
-	        <div id= "pe4_20_eachFeedback_c"></div>
+            <li data-component="answer"  id="pe4_20_opt_c">This would be true if it was mystery(0, 4, 7);</li><li data-component="feedback" id="pe4_20_opt_c">3</li>
             
-            <input type="radio" name="group1" value="d" id="pe4_20_opt_d" />
-            <label for= "pe4_20_opt_d">  d) This would be true if we were looking for a number that isn't in the array.</label><br />
-	        <div id= "pe4_20_eachFeedback_d"></div>
+            <li data-component="answer"  id="pe4_20_opt_d">This would be true if we were looking for a number that isn't in the array.</li><li data-component="feedback" id="pe4_20_opt_d">4</li>
             
-            <input type="radio" name="group1" value="e" id="pe4_20_opt_e" />
-            <label for= "pe4_20_opt_e">  e) At most this will take log base 2 of the size of the array plus one to determine that the desired value isn't in the array.</label><br />
-	        <div id= "pe4_20_eachFeedback_e"></div>
+            <li data-component="answer"  id="pe4_20_opt_e">At most this will take log base 2 of the size of the array plus one to determine that the desired value isn't in the array.</li><li data-component="feedback" id="pe4_20_opt_e">5</li>
             
 
-            <script>
-		    populateArrays('pe4_20','b',['1', '2', '3', '4', '5']);
-            $(document).ready(function(){checkExamRadio('pe4_20');});
-            </script>
-            
- 
-            </form><br />
-            <div id="pe4_20_feedback">
-            </div>
-            </div>
-            
-
-            
-	
-	<div style="text-align: center;">
-	<button class='btn btn-inverse' id ="finish" onclick="checkExam()">Submit Answers</button>
-	</div>
-	<script>
-	    
-	    $(document).ready(function() {
-	      $("#results").hide();
-	      checkIfFinished()
-	    });
-	</script>
-
-
-            
-            </div>
-            <p id="results"></p>
- 
-            
-            <script>
-			   var time = 38 * 60;
-			   var change = -1;
-		       showTime(38 * 60);
-            </script>
-            
-            <script>
-			   var showFeedback = 1;
-            </script>
-            
-            <script>
-			   var showResult = 1;
-            </script>
-            </div>
+            </ul>
+            </ul>
+    </div>
 
 
   

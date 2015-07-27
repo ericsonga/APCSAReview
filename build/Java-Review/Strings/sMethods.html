@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -330,159 +344,141 @@
 <li>the <code class="docutils literal"><span class="pre">boolean</span> <span class="pre">equals(String</span> <span class="pre">other)</span></code> returns true when the characters in the current string are the same as the ones in the <code class="docutils literal"><span class="pre">other</span></code> string.  This method is inherited from the Object class, but is <strong>overriden</strong> which means that the String class has its own version of that method.</li>
 </ul>
 </div></blockquote>
+<p>Run the code below to see the output from <code class="docutils literal"><span class="pre">length</span></code>, <code class="docutils literal"><span class="pre">substring</span></code>, and <code class="docutils literal"><span class="pre">indexOf</span></code>.</p>
+
+<pre data-component="activecode" id=lcsm1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test1
+{
+   public static void main(String[] args)
+   {
+     String message1 = "Happy Birthday";
+     String message2 = "Hello Class";
+
+     System.out.println(message1.length());
+     System.out.println(message2.length());
+
+     System.out.println(message1.substring(0,5));
+     System.out.println(message1.substring(6));
+
+     System.out.println(message1.indexOf("day"));
+     System.out.println(message1.indexOf("Hello"));
+     System.out.println(message2.indexOf("Hello"));
+   }
+}
+</pre>
+<p>Run the example below to see the output from <code class="docutils literal"><span class="pre">compareTo</span></code> and <code class="docutils literal"><span class="pre">equals</span></code>.</p>
+
+<pre data-component="activecode" id=lcsm2 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test2
+{
+   public static void main(String[] args)
+   {
+     String message = "Hello!";
+
+     System.out.println(message.compareTo("Hello there"));
+     System.out.println(message.compareTo("Hello!"));
+     System.out.println(message.compareTo("And"));
+     System.out.println(message.compareTo("Zoo"));
+
+     System.out.println(message.equals("Hello!"));
+     System.out.println(message.equals("hello!"));
+   }
+}
+</pre>
 <p>There are lots of other methods in the String class.  See the Java documentation for the String class at <a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html">http://docs.oracle.com/javase/6/docs/api/java/lang/String.html</a>.  You don&#8217;t have to know all of these for the exam, but you can use them if you want to on the exam.</p>
 <p>Strings are <strong>immutable</strong> which means that they can&#8217;t change. Anything that you do to modify a string (like creating a substring or appending strings) returns a new string.</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="qsb_1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsb_1">
             <p>4-2-1: What is the value of s1 after the following code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Hi&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">);</span>
 <span class="n">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">();</span>
 </pre></div>
 </div>
-<form name="qsb_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsb_1_opt_a" />
-            <label for= "qsb_1_opt_a">  a) Hi</label><br />
+
+            <li data-component="answer" data-correct id="qsb_1_opt_a">Hi</li><li data-component="feedback" id="qsb_1_opt_a">Strings are immutable, meaning they don't change.  Any method that changes a string returns a new string.  So s1 never changes.</li>
             
-            <input type="radio" name="group1" value="b" id="qsb_1_opt_b" />
-            <label for= "qsb_1_opt_b">  b) hi</label><br />
+            <li data-component="answer"  id="qsb_1_opt_b">hi</li><li data-component="feedback" id="qsb_1_opt_b">This would be true if the question was what is the value of s2 and it was substring(0,2) not (0,1)</li>
             
-            <input type="radio" name="group1" value="c" id="qsb_1_opt_c" />
-            <label for= "qsb_1_opt_c">  c) H</label><br />
+            <li data-component="answer"  id="qsb_1_opt_c">H</li><li data-component="feedback" id="qsb_1_opt_c">This would be true if the question was what is the value of s2, not s1.</li>
             
-            <input type="radio" name="group1" value="d" id="qsb_1_opt_d" />
-            <label for= "qsb_1_opt_d">  d) h</label><br />
+            <li data-component="answer"  id="qsb_1_opt_d">h</li><li data-component="feedback" id="qsb_1_opt_d">This would be true if the question was what is the value of s3, not s1.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsb_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsb_1','a',['Strings are immutable, meaning they don\u0027t change.  Any method that changes a string returns a new string.  So s1 never changes.', 'This would be true if the question was what is the value of s2 and it was substring(0,2) not (0,1)', 'This would be true if the question was what is the value of s2, not s1.', 'This would be true if the question was what is the value of s3, not s1.'])">Check Me</button>
-            <button class='btn btn-default' id="qsb_1_bcomp" disabled name="compare" onclick="compareAnswers('qsb_1');">Compare Me</button>
-            </form><br />
-            <div id="qsb_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qsb_2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsb_2">
             <p>4-2-2: What is the value of s3 after the following code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Hi&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">);</span>
 <span class="n">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">();</span>
 </pre></div>
 </div>
-<form name="qsb_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsb_2_opt_a" />
-            <label for= "qsb_2_opt_a">  a) Hi</label><br />
+
+            <li data-component="answer"  id="qsb_2_opt_a">Hi</li><li data-component="feedback" id="qsb_2_opt_a">Is this the value of s3?  What does toLowerCase do?</li>
             
-            <input type="radio" name="group1" value="b" id="qsb_2_opt_b" />
-            <label for= "qsb_2_opt_b">  b) hi</label><br />
+            <li data-component="answer"  id="qsb_2_opt_b">hi</li><li data-component="feedback" id="qsb_2_opt_b">How does substring work?  Does it include the character at the end index?</li>
             
-            <input type="radio" name="group1" value="c" id="qsb_2_opt_c" />
-            <label for= "qsb_2_opt_c">  c) H</label><br />
+            <li data-component="answer"  id="qsb_2_opt_c">H</li><li data-component="feedback" id="qsb_2_opt_c">What does toLowerCase do?</li>
             
-            <input type="radio" name="group1" value="d" id="qsb_2_opt_d" />
-            <label for= "qsb_2_opt_d">  d) h</label><br />
+            <li data-component="answer" data-correct id="qsb_2_opt_d">h</li><li data-component="feedback" id="qsb_2_opt_d">s2 is set to just "H" and s3 is set to changing all characters in s2 to lower case.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsb_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsb_2','d',['Is this the value of s3?  What does toLowerCase do?', 'How does substring work?  Does it include the character at the end index?', 'What does toLowerCase do?', 's2 is set to just \u0022H\u0022 and s3 is set to changing all characters in s2 to lower case.'])">Check Me</button>
-            <button class='btn btn-default' id="qsb_2_bcomp" disabled name="compare" onclick="compareAnswers('qsb_2');">Compare Me</button>
-            </form><br />
-            <div id="qsb_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qsb_3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsb_3">
             <p>4-2-3: What is the value of pos after the following code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;abccba&quot;</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;b&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qsb_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsb_3_opt_a" />
-            <label for= "qsb_3_opt_a">  a) 2</label><br />
+
+            <li data-component="answer"  id="qsb_3_opt_a">2</li><li data-component="feedback" id="qsb_3_opt_a">The first character is at index 0 in a string.</li>
             
-            <input type="radio" name="group1" value="b" id="qsb_3_opt_b" />
-            <label for= "qsb_3_opt_b">  b) 1</label><br />
+            <li data-component="answer" data-correct id="qsb_3_opt_b">1</li><li data-component="feedback" id="qsb_3_opt_b">The method indexOf returns the first position of the passed str in the current string starting from the left (from 0).</li>
             
-            <input type="radio" name="group1" value="c" id="qsb_3_opt_c" />
-            <label for= "qsb_3_opt_c">  c) 4</label><br />
+            <li data-component="answer"  id="qsb_3_opt_c">4</li><li data-component="feedback" id="qsb_3_opt_c">Does indexOf start from the left or right?</li>
             
-            <input type="radio" name="group1" value="d" id="qsb_3_opt_d" />
-            <label for= "qsb_3_opt_d">  d) -1</label><br />
+            <li data-component="answer"  id="qsb_3_opt_d">-1</li><li data-component="feedback" id="qsb_3_opt_d">Does the string contain a b?</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsb_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsb_3','b',['The first character is at index 0 in a string.', 'The method indexOf returns the first position of the passed str in the current string starting from the left (from 0).', 'Does indexOf start from the left or right?', 'Does the string contain a b?'])">Check Me</button>
-            <button class='btn btn-default' id="qsb_3_bcomp" disabled name="compare" onclick="compareAnswers('qsb_3');">Compare Me</button>
-            </form><br />
-            <div id="qsb_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qsb_4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsb_4">
             <p>4-2-4: What is the value of len after the following executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Miss you!&quot;</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
 </pre></div>
 </div>
-<form name="qsb_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsb_4_opt_a" />
-            <label for= "qsb_4_opt_a">  a) 7</label><br />
+
+            <li data-component="answer"  id="qsb_4_opt_a">7</li><li data-component="feedback" id="qsb_4_opt_a">Count spaces and punctuation in the length.</li>
             
-            <input type="radio" name="group1" value="b" id="qsb_4_opt_b" />
-            <label for= "qsb_4_opt_b">  b) 8</label><br />
+            <li data-component="answer"  id="qsb_4_opt_b">8</li><li data-component="feedback" id="qsb_4_opt_b">Did you forget to count a space or punctuation?</li>
             
-            <input type="radio" name="group1" value="c" id="qsb_4_opt_c" />
-            <label for= "qsb_4_opt_c">  c) 9</label><br />
+            <li data-component="answer" data-correct id="qsb_4_opt_c">9</li><li data-component="feedback" id="qsb_4_opt_c">The length method returns the number of characters including spaces and punctuation.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsb_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsb_4','c',['Count spaces and punctuation in the length.', 'Did you forget to count a space or punctuation?', 'The length method returns the number of characters including spaces and punctuation.'])">Check Me</button>
-            <button class='btn btn-default' id="qsb_4_bcomp" disabled name="compare" onclick="compareAnswers('qsb_4');">Compare Me</button>
-            </form><br />
-            <div id="qsb_4_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qsb_5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qsb_5">
             <p>4-2-5: What is the value of s2 after the following code executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&quot;hi there&quot;</span><span class="o">);</span>
 <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;e&quot;</span><span class="o">);</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="n">pos</span><span class="o">);</span>
 </pre></div>
 </div>
-<form name="qsb_5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qsb_5_opt_a" />
-            <label for= "qsb_5_opt_a">  a) hi th</label><br />
+
+            <li data-component="answer" data-correct id="qsb_5_opt_a">hi th</li><li data-component="feedback" id="qsb_5_opt_a">The substring method returns the string starting at the first index and not including the last index.  The method indexOf returns the index of the first place the string occurs.</li>
             
-            <input type="radio" name="group1" value="b" id="qsb_5_opt_b" />
-            <label for= "qsb_5_opt_b">  b) hi the</label><br />
+            <li data-component="answer"  id="qsb_5_opt_b">hi the</li><li data-component="feedback" id="qsb_5_opt_b">This would be correct if substring returned all characters between the first index and last index, but does it?</li>
             
-            <input type="radio" name="group1" value="c" id="qsb_5_opt_c" />
-            <label for= "qsb_5_opt_c">  c) hi ther</label><br />
+            <li data-component="answer"  id="qsb_5_opt_c">hi ther</li><li data-component="feedback" id="qsb_5_opt_c">This would be correct if indexOf returned the last position the string str was found in the current string, does it?</li>
             
-            <input type="radio" name="group1" value="d" id="qsb_5_opt_d" />
-            <label for= "qsb_5_opt_d">  d) hi there</label><br />
+            <li data-component="answer"  id="qsb_5_opt_d">hi there</li><li data-component="feedback" id="qsb_5_opt_d">This would be correct if indexOf returned the last position the string str was found in the current string and if substring included all characters between the start and end index.  Check both of these.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qsb_5');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qsb_5','a',['The substring method returns the string starting at the first index and not including the last index.  The method indexOf returns the index of the first place the string occurs.', 'This would be correct if substring returned all characters between the first index and last index, but does it?', 'This would be correct if indexOf returned the last position the string str was found in the current string, does it?', 'This would be correct if indexOf returned the last position the string str was found in the current string and if substring included all characters between the start and end index.  Check both of these.'])">Check Me</button>
-            <button class='btn btn-default' id="qsb_5_bcomp" disabled name="compare" onclick="compareAnswers('qsb_5');">Compare Me</button>
-            </form><br />
-            <div id="qsb_5_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -381,55 +395,31 @@
 </td></tr></table></div>
 <p>To see this executing using the Java Visualizer click on this <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=+public+class+SearchTest%0A++%7B%0A%0A+++++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)%0A+++++%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++++%7B%0A+++++++++++if+(elements%5Bj%5D+%3D%3D+target)%0A+++++++++++%7B%0A++++++++++++++return+j%3B%0A+++++++++++%7D+%0A+++++++%7D%0A+++++++return+-1%3B%0A+++++%7D%0A+++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B81,+3,+-20,+15,+432%7D%3B%0A++++++++%0A++++++++//+test+when+the+target+is+in+the+array%0A++++++++int+index+%3D+sequentialSearch(arr1,-20)%3B%0A++++++++System.out.println(index)%3B%0A++++++++%0A++++++++//+test+when+the+target+is+not+in+the+array%0A++++++++index+%3D+sequentialSearch(arr1,53)%3B%0A++++++++System.out.println(index)%3B%0A+++++%7D%0A+++%7D&amp;mode=display&amp;curInstr=0">link1</a></p>
 
-            <div id="qss_1" class="alert alert-warning">
-            12-2-1: Which will cause the <em>longest</em> execution of a sequential search looking for a value in an array of integers?<form name="qss_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qss_1_opt_a" />
-            <label for= "qss_1_opt_a">  a) The value is the first one in the array</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qss_1">
+            12-2-1: Which will cause the <em>longest</em> execution of a sequential search looking for a value in an array of integers?
+            <li data-component="answer"  id="qss_1_opt_a">The value is the first one in the array</li><li data-component="feedback" id="qss_1_opt_a">This would be true for the shortest execution. This would only take one execution of the loop.</li>
             
-            <input type="radio" name="group1" value="b" id="qss_1_opt_b" />
-            <label for= "qss_1_opt_b">  b) The value is in the middle of the array</label><br />
+            <li data-component="answer"  id="qss_1_opt_b">The value is in the middle of the array</li><li data-component="feedback" id="qss_1_opt_b">Why would this be the longest execution?</li>
             
-            <input type="radio" name="group1" value="c" id="qss_1_opt_c" />
-            <label for= "qss_1_opt_c">  c) The value is the last one in the array</label><br />
+            <li data-component="answer"  id="qss_1_opt_c">The value is the last one in the array</li><li data-component="feedback" id="qss_1_opt_c">There is one case that will take longer.</li>
             
-            <input type="radio" name="group1" value="d" id="qss_1_opt_d" />
-            <label for= "qss_1_opt_d">  d) The value isn't in the array</label><br />
+            <li data-component="answer" data-correct id="qss_1_opt_d">The value isn't in the array</li><li data-component="feedback" id="qss_1_opt_d">A sequential search loops through the elements of an array or list starting with the first and ending with the last and returns from the loop as soon as it finds the passed value. It has to check every value in the array when the value it is looking for is not in the array.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qss_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qss_1','d',['This would be true for the shortest execution. This would only take one execution of the loop.', 'Why would this be the longest execution?', 'There is one case that will take longer.', 'A sequential search loops through the elements of an array or list starting with the first and ending with the last and returns from the loop as soon as it finds the passed value. It has to check every value in the array when the value it is looking for is not in the array.'])">Check Me</button>
-            <button class='btn btn-default' id="qss_1_bcomp" disabled name="compare" onclick="compareAnswers('qss_1');">Compare Me</button>
-            </form><br />
-            <div id="qss_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qss_2" class="alert alert-warning">
-            12-2-2: Which will cause the <em>shortest</em> execution of a sequential search looking for a value in an array of integers?<form name="qss_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qss_2_opt_a" />
-            <label for= "qss_2_opt_a">  a) The value is the first one in the array</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qss_2">
+            12-2-2: Which will cause the <em>shortest</em> execution of a sequential search looking for a value in an array of integers?
+            <li data-component="answer" data-correct id="qss_2_opt_a">The value is the first one in the array</li><li data-component="feedback" id="qss_2_opt_a">This would only take one execution of the loop.</li>
             
-            <input type="radio" name="group1" value="b" id="qss_2_opt_b" />
-            <label for= "qss_2_opt_b">  b) The value is in the middle of the array</label><br />
+            <li data-component="answer"  id="qss_2_opt_b">The value is in the middle of the array</li><li data-component="feedback" id="qss_2_opt_b">Are you thinking of binary search?</li>
             
-            <input type="radio" name="group1" value="c" id="qss_2_opt_c" />
-            <label for= "qss_2_opt_c">  c) The value is the last one in the array</label><br />
+            <li data-component="answer"  id="qss_2_opt_c">The value is the last one in the array</li><li data-component="feedback" id="qss_2_opt_c">This would be true if you were starting at the last element, but the algorithm in the course description starts with the first element.</li>
             
-            <input type="radio" name="group1" value="d" id="qss_2_opt_d" />
-            <label for= "qss_2_opt_d">  d) The value isn't in the array</label><br />
+            <li data-component="answer"  id="qss_2_opt_d">The value isn't in the array</li><li data-component="feedback" id="qss_2_opt_d">This is true for the longest execution time, but we are looking for the shortest.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qss_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qss_2','a',['This would only take one execution of the loop.', 'Are you thinking of binary search?', 'This would be true if you were starting at the last element, but the algorithm in the course description starts with the first element.', 'This is true for the longest execution time, but we are looking for the shortest.'])">Check Me</button>
-            <button class='btn btn-default' id="qss_2_bcomp" disabled name="compare" onclick="compareAnswers('qss_2');">Compare Me</button>
-            </form><br />
-            <div id="qss_2_feedback">
-            </div>
-            </div>
+            </ul>
             <p>Of course you can also look for a string in an array or list.  But, when you look for a string be sure to use <code class="docutils literal"><span class="pre">equals</span></code> rather than <code class="docutils literal"><span class="pre">==</span></code>.  Remember that <code class="docutils literal"><span class="pre">==</span></code> is only true when the two references refer to the same object, while <code class="docutils literal"><span class="pre">equals</span></code> returns true if the characters in the two objects are the same.</p>
 <div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2

@@ -11,33 +11,55 @@ Looping through Part of an Array
 	
 You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (&&) on line 7 to make sure that the loop doesn't go beyond the bounds of the array.
 
-.. code-block:: java 
-
-   // private field 
-   private int[ ] values = {3,8,-3, 2};
-
-   public void doubleFirstFive()
+.. activecode:: lclp1
+   :language: java
+   
+   public class Test1
    {
-     
-      for (int i = 0; i < values.length && i < 5; i++)
+      private int[ ] values = {3,8,-3, 2};
+      
+      public static void main(String[] args)
       {
-         values[i] = values[i] * 2;
+        System.out.println(doubleFirstFive());
+        for (int val : a )
+        {
+          System.out.println(val);
+        }
+      }
+      
+      public void doubleFirstFive()
+      {
+        for (int i = 0; i < values.length && i < 5; i++)
+        {
+          values[i] = values[i] * 2;
+        }
       }
    }
    
 You can even start in the middle and loop through the rest of the array.  Does this work for arrays that have an even number of elements?  Does it work for arrays that have an odd number of elements?
 
-.. code-block:: java 
-
-   // private field 
-   private int[ ] values = {3,8,-3, 2};
-
-   public void doubleLastHalf()
+.. activecode:: lclp2
+   :language: java
+   
+   public class Test2
    {
-     
-      for (int i = values.length / 2; i < values.length; i++)
+      private int[ ] values = {3,8,-3, 2};
+      
+      public static void main(String[] args)
       {
-         values[i] = values[i] * 2;
+        System.out.println(doubleLastHalf());
+        for (int val : a )
+        {
+          System.out.println(val);
+        }
+      }
+      
+      public void doubleLastHalf()
+      {
+        for (int i = values.length / 2; i < values.length; i++)
+        {
+          values[i] = values[i] * 2;
+        }
       }
    }
    

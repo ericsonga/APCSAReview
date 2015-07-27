@@ -16,7 +16,7 @@ The following is part b of a free response question from 2007.  It was question 
 **Part b.**  Write method firstNumSelfDivisors, which takes two positive integers as parameters, representing a start value and a number of values. Method firstNumSelfDivisors returns an array of size num that contains the first num self-divisors that are greater than or equal to start.
 For example, the call firstNumSelfDivisors(10, 3) should return an array containing the values 11, 12, and 15, because the first three self-divisors that are greater than or equal to 10 are 11, 12, and 15.  Be sure to use the method isSelfDivisor in your answer which we wrote in an earlier section.
 
-.. livecode:: lcfrsdb1
+.. activecode:: lcfrsdb1
    :language: java
    
    public class SelfDivisor
@@ -102,7 +102,7 @@ to loop as long as we haven't found 3 self divisors and try the current value.  
    
 Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15. 
    
-.. livecode:: lcfrsdb2
+.. activecode:: lcfrsdb2
    :language: java
    
    public class SelfDivisor

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -361,18 +375,16 @@
 </td></tr></table></div>
 <p id="index-1">This method will print out &#8220;This is the method that never ends!&#8221; and then call itself, which will print out the message again, and then call itself, and so on.  This is called <strong>infinite recursion</strong>, which is a recursion that never ends.  Of course, this particular method is not very useful.</p>
 
-            <div id="recurb1" class="alert alert-warning">
-            11-1-1: Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? <input type='text' id='recurb1blank' class="form-control" style="display:inline; width: 60px;" value=""></input>
-            <script>
-            $(document).ready(function(){checkPreviousFIB('recurb1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkFIBStorage('recurb1', 'recurb1blank', '4$',[['.*', 'Look for the call to the same method name']], false)">Check Me</button>
-            <button class='btn btn-default' id="recurb1_bcomp" disabled name="compare" onclick="compareFITBAnswers('recurb1');">Compare Me</button>
-            <br />
-            <br />
-            <div id="recurb1_feedback">
-            </div>
-            </div>
+        <p data-component="fillintheblank" data-casei="false" id="recurb1fill">
+            
+        <span data-blank>Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)?<span data-answer id="recurb1blank_answer">4$</span>
+            
+        <span data-feedback="regex" id="recurb1blank_feedback1">.*</span>
+        <span data-feedback="text" for="recurb1blank_feedback1">Look for the call to the same method name</span>
+            
+        </span>
+        
+        </p>
             <p id="index-2">Here is another method that calculates the <strong>factorial</strong> of a number.  The <strong>factorial</strong> of a number is defined as 1 for 0 and n * factorial (n-1) for any other number.</p>
 <div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -390,23 +402,21 @@
 </pre></div>
 </td></tr></table></div>
 
-            <div id="recurb2" class="alert alert-warning">
-            11-1-2: Which line in the method factorial contains the recursive call (the call to the same method)? <input type='text' id='recurb2blank' class="form-control" style="display:inline; width: 60px;" value=""></input>
-            <script>
-            $(document).ready(function(){checkPreviousFIB('recurb2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkFIBStorage('recurb2', 'recurb2blank', '6$',[['.*', 'Look for the call to the same method name']], false)">Check Me</button>
-            <button class='btn btn-default' id="recurb2_bcomp" disabled name="compare" onclick="compareFITBAnswers('recurb2');">Compare Me</button>
-            <br />
-            <br />
-            <div id="recurb2_feedback">
-            </div>
-            </div>
+        <p data-component="fillintheblank" data-casei="false" id="recurb2fill">
+            
+        <span data-blank>Which line in the method factorial contains the recursive call (the call to the same method)?<span data-answer id="recurb1blank_answer">6$</span>
+            
+        <span data-feedback="regex" id="recurb1blank_feedback1">.*</span>
+        <span data-feedback="text" for="recurb1blank_feedback1">Look for the call to the same method name</span>
+            
+        </span>
+        
+        </p>
             <p id="index-3">The factorial method has a way to stop  The recursion stops when n is equal to 0.  The thing that stops a recursive method from calling itself is called the <strong>base case</strong>.  A method can have more than one <strong>base case</strong> (way to stop the recursion).</p>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="qrb_1" class="alert alert-warning">
-            <p>11-1-3:      Is the following method recursive?</p>
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_1">
+            <p>11-1-1:      Is the following method recursive?</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">()</span>
 <span class="o">{</span>
@@ -420,26 +430,16 @@
 </pre></div>
 </div>
 </div></blockquote>
-<form name="qrb_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrb_1_opt_a" />
-            <label for= "qrb_1_opt_a">  a) Yes</label><br />
+
+            <li data-component="answer"  id="qrb_1_opt_a">Yes</li><li data-component="feedback" id="qrb_1_opt_a">Where is the call to the same method?</li>
             
-            <input type="radio" name="group1" value="b" id="qrb_1_opt_b" />
-            <label for= "qrb_1_opt_b">  b) No</label><br />
+            <li data-component="answer" data-correct id="qrb_1_opt_b">No</li><li data-component="feedback" id="qrb_1_opt_b">There is no call to the same method, so this can not be a recursive method.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrb_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrb_1','b',['Where is the call to the same method?', 'There is no call to the same method, so this can not be a recursive method.'])">Check Me</button>
-            <button class='btn btn-default' id="qrb_1_bcomp" disabled name="compare" onclick="compareAnswers('qrb_1');">Compare Me</button>
-            </form><br />
-            <div id="qrb_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qrb_2" class="alert alert-warning">
-            <p>11-1-4: Is the following method recursive?</p>
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_2">
+            <p>11-1-2: Is the following method recursive?</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery2</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
 <span class="o">{</span>
@@ -449,26 +449,16 @@
 </pre></div>
 </div>
 </div></blockquote>
-<form name="qrb_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrb_2_opt_a" />
-            <label for= "qrb_2_opt_a">  a) Yes</label><br />
+
+            <li data-component="answer" data-correct id="qrb_2_opt_a">Yes</li><li data-component="feedback" id="qrb_2_opt_a">Yes, any method that contains at least one call to the same method is recursive.</li>
             
-            <input type="radio" name="group1" value="b" id="qrb_2_opt_b" />
-            <label for= "qrb_2_opt_b">  b) No</label><br />
+            <li data-component="answer"  id="qrb_2_opt_b">No</li><li data-component="feedback" id="qrb_2_opt_b">Look again.  Check if the method contains a call to itself.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrb_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrb_2','a',['Yes, any method that contains at least one call to the same method is recursive.', 'Look again.  Check if the method contains a call to itself.'])">Check Me</button>
-            <button class='btn btn-default' id="qrb_2_bcomp" disabled name="compare" onclick="compareAnswers('qrb_2');">Compare Me</button>
-            </form><br />
-            <div id="qrb_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qrb_3" class="alert alert-warning">
-            <p>11-1-5: What is the value of n when this method stops calling itself (when it reaches the base case)?</p>
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_3">
+            <p>11-1-3: What is the value of n when this method stops calling itself (when it reaches the base case)?</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">product</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
@@ -480,29 +470,18 @@
 </pre></div>
 </div>
 </div></blockquote>
-<form name="qrb_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrb_3_opt_a" />
-            <label for= "qrb_3_opt_a">  a) 0</label><br />
+
+            <li data-component="answer"  id="qrb_3_opt_a">0</li><li data-component="feedback" id="qrb_3_opt_a">Look again.  What is the value of n when this method returns a value, without doing a recursive call?</li>
             
-            <input type="radio" name="group1" value="b" id="qrb_3_opt_b" />
-            <label for= "qrb_3_opt_b">  b) 1</label><br />
+            <li data-component="answer" data-correct id="qrb_3_opt_b">1</li><li data-component="feedback" id="qrb_3_opt_b">This method stops calling itself when n equals 1 (line 3).</li>
             
-            <input type="radio" name="group1" value="c" id="qrb_3_opt_c" />
-            <label for= "qrb_3_opt_c">  c) 2</label><br />
+            <li data-component="answer"  id="qrb_3_opt_c">2</li><li data-component="feedback" id="qrb_3_opt_c">Look for a return with a number after it.  When is this code executed?</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrb_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrb_3','b',['Look again.  What is the value of n when this method returns a value, without doing a recursive call?', 'This method stops calling itself when n equals 1 (line 3).', 'Look for a return with a number after it.  When is this code executed?'])">Check Me</button>
-            <button class='btn btn-default' id="qrb_3_bcomp" disabled name="compare" onclick="compareAnswers('qrb_3');">Compare Me</button>
-            </form><br />
-            <div id="qrb_3_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qrb_4" class="alert alert-warning">
-            <p>11-1-6: What is/are the values of n when this method stops calling itself (when it reaches the base case)?</p>
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_4">
+            <p>11-1-4: What is/are the values of n when this method stops calling itself (when it reaches the base case)?</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">bunnyEars</span><span class="o">(</span><span class="kt">int</span> <span class="n">bunnies</span><span class="o">)</span>
 <span class="o">{</span>
@@ -513,26 +492,15 @@
 </pre></div>
 </div>
 </div></blockquote>
-<form name="qrb_4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qrb_4_opt_a" />
-            <label for= "qrb_4_opt_a">  a) 0</label><br />
+
+            <li data-component="answer"  id="qrb_4_opt_a">0</li><li data-component="feedback" id="qrb_4_opt_a">This method also stops for another value of n.</li>
             
-            <input type="radio" name="group1" value="b" id="qrb_4_opt_b" />
-            <label for= "qrb_4_opt_b">  b) 1</label><br />
+            <li data-component="answer"  id="qrb_4_opt_b">1</li><li data-component="feedback" id="qrb_4_opt_b">This method also stops for another value of n.</li>
             
-            <input type="radio" name="group1" value="c" id="qrb_4_opt_c" />
-            <label for= "qrb_4_opt_c">  c) Both 0 and 1</label><br />
+            <li data-component="answer" data-correct id="qrb_4_opt_c">Both 0 and 1</li><li data-component="feedback" id="qrb_4_opt_c">This method stops calling itself when n is either 0 or 1.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qrb_4');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qrb_4','c',['This method also stops for another value of n.', 'This method also stops for another value of n.', 'This method stops calling itself when n is either 0 or 1.'])">Check Me</button>
-            <button class='btn btn-default' id="qrb_4_bcomp" disabled name="compare" onclick="compareAnswers('qrb_4');">Compare Me</button>
-            </form><br />
-            <div id="qrb_4_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

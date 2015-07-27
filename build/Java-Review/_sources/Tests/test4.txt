@@ -7,12 +7,10 @@ Practice Exam 4 for the AP CS A Exam
 
 The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Hover over the clock icon to see the current time remaining. Click on the "Submit Answers" button at the end when you are done.  It will display the number correct, number wrong, and number skipped after the "Submit Answer" button.
 
-.. startexam:: timed_Test
-    :showtitle: Exam Not Started
-    :hidetitle: Currently Taking Exam
-    :duration: 38
+.. timed:: postexam4
+    :timelimit: 38
     
-    .. exammchoicemf:: pe4_1
+    .. mchoice:: pe4_1
        :answer_a: All three are valid
        :answer_b: II only
        :answer_c: III only
@@ -52,7 +50,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          II.  public C2 (int quan) {super (quan); }
          III. public C2 (String label) { super(label); }
         
-    .. exammchoicemf:: pe4_2
+    .. mchoice:: pe4_2
        :answer_a: x != y
        :answer_b: x == y
        :answer_c: true
@@ -67,7 +65,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
        The Boolean expression (x==y && !(x==y)) || ( x!=y && !(x!=y)) can be simplified to which of the following?
        
-    .. exammchoicemf:: pe4_3
+    .. mchoice:: pe4_3
        :answer_a: if (a[savedIndex] > a[j]) { j = savedIndex; }
        :answer_b: if (a[j] > a[savedIndex]) { savedIndex = j;}
        :answer_c: if (a[j] < a[savedIndex]) { savedIndex = j; }
@@ -104,7 +102,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
 
             
-    .. exammchoicemf:: pe4_4
+    .. mchoice:: pe4_4
        :answer_a: II only
        :answer_b: III only
        :answer_c: I and II only
@@ -126,7 +124,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               (can’t have a method body).  
          III. All methods declared in an interface are public methods.
             
-    .. exammchoicemf:: pe4_5
+    .. mchoice:: pe4_5
        :answer_a: {{4, -5, 6},{-1, -2, 3}}
        :answer_b: {{4, 5, 6},{1, 2, 3}}
        :answer_c: {{1, 2, 3},{4, 5, 6}}
@@ -153,7 +151,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 	                 matrix[row][col] = Math.abs(matrix[row][col]);
          }
          
-    .. exammchoicemf:: pe4_6
+    .. mchoice:: pe4_6
        :answer_a: a = 4 and b = 3
        :answer_b: a = 7 and b = 0
        :answer_c: a = 2 and b = -2
@@ -179,7 +177,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             b = temp – i;
          }
 
-    .. exammchoicemf:: pe4_7
+    .. mchoice:: pe4_7
        :answer_a: 243
        :answer_b: 0
        :answer_c: 3
@@ -204,7 +202,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                return 3 * mystery (n - 1);
          }
          
-    .. exammchoicemf:: pe4_8
+    .. mchoice:: pe4_8
        :answer_a: {3,6,8,5,1}, {3,5,6,8,1}, {1,3,5,6,8}
        :answer_b: {1,3,8,5,6}, {1,3,8,5,6}, {1,3,5,8,6}, {1,3,5,6,8}
        :answer_c: {3,6,8,5,1}, {3,6,8,5,1}, {3,5,6,8,1}, {1,3,5,6,8}
@@ -219,7 +217,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
        
        Which of the following correctly shows the iterations of an ascending (from left to right) insertion sort on an array with the following elements: {6,3,8,5,1}?
          
-    .. exammchoicemf:: pe4_9
+    .. mchoice:: pe4_9
        :answer_a: 21
        :answer_b: 18
        :answer_c: 32
@@ -243,7 +241,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          } 
 
          
-    .. exammchoicemf:: pe4_10
+    .. mchoice:: pe4_10
        :answer_a: A
        :answer_b: B
        :answer_c: C
@@ -280,7 +278,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             }
          }
          
-    .. exammchoicemf:: pe4_11
+    .. mchoice:: pe4_11
        :answer_a: hi there
        :answer_b: HI THERE
        :answer_c: Hi There
@@ -306,7 +304,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          s4 = null;
 
        
-    .. exammchoicemf:: pe4_12
+    .. mchoice:: pe4_12
        :answer_a: mp
        :answer_b: mpu
        :answer_c: mpur
@@ -330,7 +328,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          System.out.println(s3);
 
          
-    .. exammchoicemf:: pe4_13
+    .. mchoice:: pe4_13
        :answer_a: Book b = new Book();
        :answer_b: Dictionary d = new Book();
        :answer_c: Comparable c = new Book();
@@ -358,7 +356,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
 
          
-    .. exammchoicemf:: pe4_14
+    .. mchoice:: pe4_14
        :answer_a: 2	
        :answer_b: 5
        :answer_c: 1
@@ -387,7 +385,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
 
          
-    .. exammchoicemf:: pe4_15
+    .. mchoice:: pe4_15
        :answer_a: The value is the first one in the array
        :answer_b: The value is in the middle of the array
        :answer_c: The value is at index 1 in the array
@@ -402,7 +400,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
        
        Which will cause the longest execution of a binary search looking for a value in an array of 9 integers?  
          
-    .. exammchoicemf:: pe4_16
+    .. mchoice:: pe4_16
        :answer_a: Awk Awk Awk Awk Awk
        :answer_b: This won’t compile
        :answer_c: Meow Moo Woof Oink Tweet
@@ -428,7 +426,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           Cow has a speak method that returns “Moo”
 
          
-    .. exammchoicemf:: pe4_17
+    .. mchoice:: pe4_17
        :answer_a: 4 in base 8
        :answer_b: 4 in base 16
        :answer_c: 00001100 in base 2
@@ -443,7 +441,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
        
        What is the result of 17 (in base 16) - 13 (in base 8)?
          
-    .. exammchoicemf:: pe4_18
+    .. mchoice:: pe4_18
        :answer_a: s={3, 8}; b=4;
        :answer_b: s={3, 4}; b=4;
        :answer_c: s={6, 4}; b=4;
@@ -471,7 +469,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          int b = 4;
          test(s,b);
          
-    .. exammchoicemf:: pe4_19
+    .. mchoice:: pe4_19
        :answer_a: I only
        :answer_b: II only
        :answer_c: III only
@@ -495,7 +493,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                in the correct order.
 
          
-    .. exammchoicemf:: pe4_20
+    .. mchoice:: pe4_20
        :answer_a: The method is recursive and the first call it will compare 3 to 5 and then do mystery(3,4,5).
        :answer_b: There are two calls: mystery(0, 4, 5) and mystery(3, 4, 5).
        :answer_c: This would be true if it was mystery(0, 4, 7);
@@ -531,9 +529,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                return mid;
          }
 
-        
-    
-    .. finishexam:: Finish
+
 
 	      
 	      

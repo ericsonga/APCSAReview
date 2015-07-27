@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -320,7 +334,7 @@
   
   <div class="section" id="arrays-in-java">
 <h1>Arrays in Java<a class="headerlink" href="#arrays-in-java" title="Permalink to this headline">¶</a></h1>
-<div id="v_interfaces" class="video_popup" >
+<div id="v_array" class="video_popup" >
 <video controls preload="none"  poster="../_static/videoStart.png">
     <source src="http://ice-web.cc.gatech.edu/ce21/1/static/video/Arrays.mov" type="video/mp4"></source>
     <source src="http://ice-web.cc.gatech.edu/ce21/1/static/video/Arrays.webm" type="video/webm"></source>
@@ -329,17 +343,17 @@
 </div>
 <script>
    jQuery(function($) {
-      $('#v_interfaces_thumb').click(function(e) {
-         $('#v_interfaces').show();
-         $('#v_interfaces_thumb').hide();
-         logBookEvent({'event':'video','act':'play','div_id': 'v_interfaces'});
+      $('#v_array_thumb').click(function(e) {
+         $('#v_array').show();
+         $('#v_array_thumb').hide();
+         logBookEvent({'event':'video','act':'play','div_id': 'v_array'});
          // Log the run event
       });
-      $('#v_interfaces video').one("click", function(){
+      $('#v_array video').one("click", function(){
         this.play();
       });
-      $('#v_interfaces video').one("play", function(){
-        logBookEvent({'event':'video','act':'play','div_id': 'v_interfaces'});
+      $('#v_array video').one("play", function(){
+        logBookEvent({'event':'video','act':'play','div_id': 'v_array'});
       });
    });
 </script>
@@ -349,25 +363,22 @@
 <p class="caption"><span class="caption-text">Figure 1: A row of lockers</span></p>
 </div>
 <p>Arrays are useful whenever you have several elements of data of the same type that you want to keep track of, but you don&#8217;t need to name each one.  If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two arrays.</p>
-<p>To declare an array specify the type of elements that will be stored in the array, then (<code class="docutils literal"><span class="pre">[</span> <span class="pre">]</span></code>) to show that it is an array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  <strong>The declarations do not create the array</strong>.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn&#8217;t been created yet and you try to print the value of the variable, it will print <strong>null</strong> (meaning it doesn&#8217;t reference any object yet).  Try the the following in DrJava&#8217;s interaction pane.</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span><span class="o">[</span> <span class="o">]</span> <span class="n">highScores</span><span class="o">;</span>
-<span class="n">String</span><span class="o">[</span> <span class="o">]</span> <span class="n">names</span><span class="o">;</span>
-</pre></div>
-</div>
+<p>To declare an array specify the type of elements that will be stored in the array, then (<code class="docutils literal"><span class="pre">[</span> <span class="pre">]</span></code>) to show that it is an array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  <strong>The declarations do not create the array</strong>.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn&#8217;t been created yet and you try to print the value of the variable, it will print <strong>null</strong> (meaning it doesn&#8217;t reference any object yet).  Try the the following.</p>
 
-            <div id="nullInit" class="alert alert-warning">
-            7-1-1: What is printed in DrJava when you type System.out.println(names); and hit enter after you do the above declarations? <input type='text' id='arrayNullblank' class="form-control" style="display:inline; width: 60px;" value=""></input>
-            <script>
-            $(document).ready(function(){checkPreviousFIB('nullInit');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkFIBStorage('nullInit', 'arrayNullblank', 'null$',[['.*', 'Did you actually try this in DrJava?']], false)">Check Me</button>
-            <button class='btn btn-default' id="nullInit_bcomp" disabled name="compare" onclick="compareFITBAnswers('nullInit');">Compare Me</button>
-            <br />
-            <br />
-            <div id="nullInit_feedback">
-            </div>
-            </div>
-            <p>To create an array use the <strong>new</strong> keyword, followed by a space, then the type, and then in square brackets the size of the array (number of elements to store).</p>
+<pre data-component="activecode" id=lcab1 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test1
+{
+   public static void main(String[] args)
+   {
+     int[ ] highScores = null;
+     String[ ] names = null;
+
+     System.out.println(highScores);
+     System.out.println(names);
+   }
+}
+</pre>
+<p>To create an array use the <strong>new</strong> keyword, followed by a space, then the type, and then in square brackets the size of the array (number of elements to store).</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">highScores</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>
 <span class="n">names</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">5</span><span class="o">];</span>
 </pre></div>
@@ -397,48 +408,36 @@
 <p class="caption"><span class="caption-text">Figure 2: A primitive array and an object array</span></p>
 </div>
 <p id="index-2">Arrays know their length (how many elements they can store).  It is a public read-only field so you can use <code class="docutils literal"><span class="pre">dot-notation</span></code> to access the field (<code class="docutils literal"><span class="pre">arrayName.length</span></code>).  <strong>Note that length is a field and not a method, so you don&#8217;t add parentheses after length</strong>.  However, if you use parentheses after length during the exam, you won&#8217;t lose any points.</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="n">highScores</span><span class="o">.</span><span class="na">length</span>
-</pre></div>
-</div>
+
+<pre data-component="activecode" id=lcab2 data-lang="java"    data-timelimit=25000   data-audio=''     >
+public class Test2
+{
+   public static void main(String[] args)
+   {
+     int[ ] highScores = {99,98,98,88,68};
+     System.out.println(highScores.length);
+   }
+}
+</pre>
 <p><strong>Check your understanding</strong></p>
 
-            <div id="qab_1" class="alert alert-warning">
-            7-1-2: What index is the first element in an array at?<form name="qab_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qab_1_opt_a" />
-            <label for= "qab_1_opt_a">  a) 0</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_1">
+            7-1-1: What index is the first element in an array at?
+            <li data-component="answer" data-correct id="qab_1_opt_a">0</li><li data-component="feedback" id="qab_1_opt_a">The index is really telling the computer how far the item is from the front of the array.  So the first element in an array is at index 0.</li>
             
-            <input type="radio" name="group1" value="b" id="qab_1_opt_b" />
-            <label for= "qab_1_opt_b">  b) 1</label><br />
+            <li data-component="answer"  id="qab_1_opt_b">1</li><li data-component="feedback" id="qab_1_opt_b">While this matches with how we number some things, the first item in an array is at index 0.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qab_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qab_1','a',['The index is really telling the computer how far the item is from the front of the array.  So the first element in an array is at index 0.', 'While this matches with how we number some things, the first item in an array is at index 0.'])">Check Me</button>
-            <button class='btn btn-default' id="qab_1_bcomp" disabled name="compare" onclick="compareAnswers('qab_1');">Compare Me</button>
-            </form><br />
-            <div id="qab_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qab_2" class="alert alert-warning">
-            7-1-3: Which index is the last element in an array called highScores at?<form name="qab_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qab_2_opt_a" />
-            <label for= "qab_2_opt_a">  a) highScores.length</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_2">
+            7-1-2: Which index is the last element in an array called highScores at?
+            <li data-component="answer"  id="qab_2_opt_a">highScores.length</li><li data-component="feedback" id="qab_2_opt_a">Look at the example above when we were setting the values for the highScore array.</li>
             
-            <input type="radio" name="group1" value="b" id="qab_2_opt_b" />
-            <label for= "qab_2_opt_b">  b) highScores.length - 1</label><br />
+            <li data-component="answer" data-correct id="qab_2_opt_b">highScores.length - 1</li><li data-component="feedback" id="qab_2_opt_b">Since the first element in an array is at index 0 the last element is the length minus 1.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qab_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qab_2','b',['Look at the example above when we were setting the values for the highScore array.', 'Since the first element in an array is at index 0 the last element is the length minus 1.'])">Check Me</button>
-            <button class='btn btn-default' id="qab_2_bcomp" disabled name="compare" onclick="compareAnswers('qab_2');">Compare Me</button>
-            </form><br />
-            <div id="qab_2_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

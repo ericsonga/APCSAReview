@@ -101,7 +101,7 @@ Once again, this problem starts with looping through the array of pixels, using 
 
 When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops. The code below has a mistake in it, can you spot what the problem is and fix it?
 
-.. livecode:: lcfrgib3
+.. activecode:: lcfrgib3
    :language: java
    
    public class Test
@@ -125,7 +125,7 @@ When comparing our pixel values to values deeper in the array, we need to be car
    
 Try to write the code for the method ``processImage``. When you are ready click "Run" to test your solution.   
    
-.. livecode:: lcfrgib4
+.. activecode:: lcfrgib4
    :language: java
    
    public class GrayImage
@@ -194,5 +194,5 @@ Video - One way to code the solution
    :controls:
    :thumb: ../_static/codeVideo.png
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B.mov 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B.webm
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B2.mov 
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B2.webm

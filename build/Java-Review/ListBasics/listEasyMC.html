@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,74 +336,40 @@
 <h1>Easy Multiple Choice Questions<a class="headerlink" href="#easy-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
 <p>These problems are easier than most of those that you will usually see on the AP CS A exam.</p>
 
-            <div id="qale_1" class="alert alert-warning">
-            8-7-1: Which index is the last element in a list called <code class="docutils literal"><span class="pre">nums</span></code> at?<form name="qale_1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qale_1_opt_a" />
-            <label for= "qale_1_opt_a">  a) nums.length</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qale_1">
+            8-7-1: Which index is the last element in a list called <code class="docutils literal"><span class="pre">nums</span></code> at?
+            <li data-component="answer"  id="qale_1_opt_a">nums.length</li><li data-component="feedback" id="qale_1_opt_a">You can't use length on lists and the last index is one less than the size.</li>
             
-            <input type="radio" name="group1" value="b" id="qale_1_opt_b" />
-            <label for= "qale_1_opt_b">  b) nums.length - 1</label><br />
+            <li data-component="answer"  id="qale_1_opt_b">nums.length - 1</li><li data-component="feedback" id="qale_1_opt_b">You can't use length on lists, use size instead.</li>
             
-            <input type="radio" name="group1" value="c" id="qale_1_opt_c" />
-            <label for= "qale_1_opt_c">  c) nums.size()</label><br />
+            <li data-component="answer"  id="qale_1_opt_c">nums.size()</li><li data-component="feedback" id="qale_1_opt_c">Since the first element in a list is at index 0 the last element is at the size minus 1.</li>
             
-            <input type="radio" name="group1" value="d" id="qale_1_opt_d" />
-            <label for= "qale_1_opt_d">  d) nums.size() - 1</label><br />
+            <li data-component="answer" data-correct id="qale_1_opt_d">nums.size() - 1</li><li data-component="feedback" id="qale_1_opt_d">The last element is at the size of the list minus 1.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qale_1');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qale_1','d',['You can\u0027t use length on lists and the last index is one less than the size.', 'You can\u0027t use length on lists, use size instead.', 'Since the first element in a list is at index 0 the last element is at the size minus 1.', 'The last element is at the size of the list minus 1.'])">Check Me</button>
-            <button class='btn btn-default' id="qale_1_bcomp" disabled name="compare" onclick="compareAnswers('qale_1');">Compare Me</button>
-            </form><br />
-            <div id="qale_1_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qale_2" class="alert alert-warning">
-            8-7-2: Which of the following is a reason to use an array instead of an ArrayList?<form name="qale_2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qale_2_opt_a" />
-            <label for= "qale_2_opt_a">  a) An array has faster access to its elements than a list does.</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qale_2">
+            8-7-2: Which of the following is a reason to use an array instead of an ArrayList?
+            <li data-component="answer"  id="qale_2_opt_a">An array has faster access to its elements than a list does.</li><li data-component="feedback" id="qale_2_opt_a">Since an ArrayList is implemented by an array, it has the same access time.</li>
             
-            <input type="radio" name="group1" value="b" id="qale_2_opt_b" />
-            <label for= "qale_2_opt_b">  b) An array knows it length, but a list doesn't know its length.</label><br />
+            <li data-component="answer"  id="qale_2_opt_b">An array knows it length, but a list doesn't know its length.</li><li data-component="feedback" id="qale_2_opt_b">Lists do know their length, but they don't make it public.</li>
             
-            <input type="radio" name="group1" value="c" id="qale_2_opt_c" />
-            <label for= "qale_2_opt_c">  c) An ArrayList can allocate more space than it needs.</label><br />
+            <li data-component="answer" data-correct id="qale_2_opt_c">An ArrayList can allocate more space than it needs.</li><li data-component="feedback" id="qale_2_opt_c">Every time an ArrayList fills up a new array is created that is twice as big.  This can lead to extra space that is wasted.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qale_2');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qale_2','c',['Since an ArrayList is implemented by an array, it has the same access time.', 'Lists do know their length, but they don\u0027t make it public.', 'Every time an ArrayList fills up a new array is created that is twice as big.  This can lead to extra space that is wasted.'])">Check Me</button>
-            <button class='btn btn-default' id="qale_2_bcomp" disabled name="compare" onclick="compareAnswers('qale_2');">Compare Me</button>
-            </form><br />
-            <div id="qale_2_feedback">
-            </div>
-            </div>
+            </ul>
             
-            <div id="qale_3" class="alert alert-warning">
-            8-7-3: Which of the following is a reason to use an ArrayList instead of an array?<form name="qale_3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qale_3_opt_a" />
-            <label for= "qale_3_opt_a">  a) An ArrayList can grow or shrink as needed, while an array is always the same size.</label><br />
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qale_3">
+            8-7-3: Which of the following is a reason to use an ArrayList instead of an array?
+            <li data-component="answer" data-correct id="qale_3_opt_a">An ArrayList can grow or shrink as needed, while an array is always the same size.</li><li data-component="feedback" id="qale_3_opt_a">This is the main advantage to an ArrayList.</li>
             
-            <input type="radio" name="group1" value="b" id="qale_3_opt_b" />
-            <label for= "qale_3_opt_b">  b) You can use a for-each loop on an ArrayList, but not in an array.</label><br />
+            <li data-component="answer"  id="qale_3_opt_b">You can use a for-each loop on an ArrayList, but not in an array.</li><li data-component="feedback" id="qale_3_opt_b">You can use a for-each loop on either an ArrayList or array.</li>
             
-            <input type="radio" name="group1" value="c" id="qale_3_opt_c" />
-            <label for= "qale_3_opt_c">  c) You can store objects in an ArrayList, but not in an array.</label><br />
+            <li data-component="answer"  id="qale_3_opt_c">You can store objects in an ArrayList, but not in an array.</li><li data-component="feedback" id="qale_3_opt_c">Arrays can also store objects of the same type.</li>
             
 
-            <script>
-            $(document).ready(function(){checkRadio('qale_3');});
-            </script>
-            <button class='btn btn-success' name="do answer" onclick="checkMCMFStorage('qale_3','a',['This is the main advantage to an ArrayList.', 'You can use a for\u002Deach loop on either an ArrayList or array.', 'Arrays can also store objects of the same type.'])">Check Me</button>
-            <button class='btn btn-default' id="qale_3_bcomp" disabled name="compare" onclick="compareAnswers('qale_3');">Compare Me</button>
-            </form><br />
-            <div id="qale_3_feedback">
-            </div>
-            </div>
+            </ul>
             </div>
 
 

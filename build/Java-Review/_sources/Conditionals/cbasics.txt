@@ -20,21 +20,37 @@ Java statements normally execute one at a time from top to bottom.  If you want 
 
 Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI).  
 
-.. code-block:: java
-
-  if (isRaining) System.out.println("Take an umbrella!"); 
-  System.out.println("Drive carefully."); 
+.. activecode:: lccb1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        boolean isRaining = true;
+        if (isRaining) System.out.println("Take an umbrella!"); 
+        System.out.println("Drive carefully");
+      }
+   }
   
-The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully.``.  If it is false, execution continues with the next statement which will print ``Drive carefully.``.
+The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``.  If it is false, execution continues with the next statement which will print ``Drive carefully``.
   
 What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might do one thing if a coin flip is heads and another if it is tails.  In this case use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.  
 
-.. code-block:: java 
+.. activecode:: lccb2
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        boolean isHeads = true;
+        if (isHeads) System.out.println("Let's go to the game");
+        else System.out.println("Let's watch a movie");
+      }
+   } 
 
-  if (isHeads) System.out.println("Let's go to the game.");
-  else System.out.println("Let's watch a movie.");  
-
-If ``isHeads`` is true it will print ``Let's go to the game.``, otherwise it will print ``Let's watch a movie.``.
+If ``isHeads`` is true it will print ``Let's go to the game``, otherwise it will print ``Let's watch a movie``.
 
 ..	index::
 	single: else if
@@ -42,11 +58,19 @@ If ``isHeads`` is true it will print ``Let's go to the game.``, otherwise it wil
 
 You can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if** and before the last possibility, the **else**.  
 
-.. code-block:: java 
-
-  if (x < 0) System.out.println("x is negative");
-  else if (x == 0) System.out.println("x is 0");
-  else System.out.println("x is positive");
+.. activecode:: lccb3
+   :language: java
+   
+   public class Test3
+   {
+      public static void main(String[] args)
+      {
+        int x = 2;
+        if (x < 0) System.out.println("x is negative");
+        else if (x == 0) System.out.println("x is 0");
+        else System.out.println("x is positive");
+      }
+   }
   
 **Check your understanding**
 

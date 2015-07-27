@@ -5,7 +5,7 @@
 Arrays in Java
 =================
 
-.. video:: v_interfaces
+.. video:: v_array
    :controls:
    :thumb: ../_static/videoStart.png
 
@@ -28,20 +28,22 @@ An **array** is consecutive storage for multiple items of the same type.  You ca
    
 Arrays are useful whenever you have several elements of data of the same type that you want to keep track of, but you don't need to name each one.  If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two arrays.  
 
-To declare an array specify the type of elements that will be stored in the array, then (``[ ]``) to show that it is an array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).  Try the the following in DrJava's interaction pane.
- 
-.. code-block:: java 
+To declare an array specify the type of elements that will be stored in the array, then (``[ ]``) to show that it is an array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).  Try the the following.
 
-  int[ ] highScores;
-  String[ ] names;
-
-.. fillintheblank:: nullInit
-   :correct: null$
-   :feedback1: ('.*','Did you actually try this in DrJava?')
-   :blankid: arrayNullblank
-
-   What is printed in DrJava when you type System.out.println(names); and hit enter after you do the above declarations? :textfield:`arrayNullblank::mini`
-
+.. activecode:: lcab1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        int[ ] highScores = null;
+        String[ ] names = null;
+        
+        System.out.println(highScores);
+        System.out.println(names);
+      }
+   }
 
 To create an array use the **new** keyword, followed by a space, then the type, and then in square brackets the size of the array (number of elements to store).  
 
@@ -92,9 +94,17 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 
 Arrays know their length (how many elements they can store).  It is a public read-only field so you can use ``dot-notation`` to access the field (``arrayName.length``).  **Note that length is a field and not a method, so you don't add parentheses after length**.  However, if you use parentheses after length during the exam, you won't lose any points.
 
-.. code-block:: java 
-
-  highScores.length
+.. activecode:: lcab2
+   :language: java
+   
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        int[ ] highScores = {99,98,98,88,68};
+        System.out.println(highScores.length);
+      }
+   }
 
 **Check your understanding**
 

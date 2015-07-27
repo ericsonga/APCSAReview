@@ -10,19 +10,35 @@ When processing all array elements be careful to start at the first index which 
 
 Also, be careful not to jump out of loop too early when you are looking for a value in an array.  The method below uses **return** statements to stop the execution of the method and return a value to the method that called this method.  If a return statement returns a value, the type of that value must match the return type in the method header. Methods with a return type of **void** can't return any values, but can have one or more return statements. 
 
-.. code-block:: java 
-
-   public static int findString(String[] wordArr, String target)
+.. activecode:: lcap1
+   :language: java
+   
+   public class StringWorker
    {
-      for (int index = 0; index < wordArr.length; index++)
+      private String[ ] arr = {"Hello", "Hey", "Good morning!"};
+
+      public int findString(String target)
       {
-         if (word.equals(target)
-         {
+        String word = null;
+        for (int index = 0; index < arr.length; index++)
+        {
+          word = arr[index];
+          
+          if (word.equals(target))
+          {
             return index;
-         }
-         else return -1;     
+          }
+          else return -1;
+        }
+        return -1;
+      }
+      
+      public static void main(String[] args)
+      {
+        StringWorker sWorker = new StringWorker();
+        System.out.println(sWorker.findString("Hey"));
       }
    }
    
-What is wrong with the code above?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)?  Try http://codingbat.com/prob/p194525 to see if you can do this correctly.
+What is wrong with the code above?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)?  
    

@@ -88,7 +88,7 @@ To solve this problem, we will need to loop through the entire 2D array, looking
 
 Looping through a 2D array is more complicated than the simple arrays we usually see, requiring nested for loops. Check out the code below, which displays how nested for loops work to display a block of numbers.
 
-.. livecode:: lcfrgia1
+.. activecode:: lcfrgia1
    :language: java
    
    public class Test
@@ -106,7 +106,7 @@ Looping through a 2D array is more complicated than the simple arrays we usually
    
 Try to write the code for the method ``countWhitePixels``. When you are ready click "Run" to test your solution.   
    
-.. livecode:: lcfrgia2
+.. activecode:: lcfrgia2
    :language: java
    
    public class GrayImage

@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
     <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
     <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
@@ -36,6 +40,7 @@
         HAS_SOURCE:  true
       };
     </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -50,27 +55,36 @@
     <script type="text/javascript" src="../_static/activecode.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
-    <script type="text/javascript" src="../_static/assess.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -101,7 +115,7 @@
   eBookConfig.loginRequired = false;
   eBookConfig.build_info = "unknown";
   eBookConfig.isLoggedIn = false;
-  eBookConfig.useRunestoneServices = false;
+  eBookConfig.useRunestoneServices = true;
   eBookConfig.python3 = false;
 </script>
 
@@ -322,128 +336,58 @@
 <h1>Practice Exam 2 for the AP CS A Exam<a class="headerlink" href="#practice-exam-2-for-the-ap-cs-a-exam" title="Permalink to this headline">¶</a></h1>
 <p>The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the &#8220;Start&#8221; button when you are ready to begin the exam.  Click the &#8220;Pause&#8221; button to pause the exam (you will not be able to see the questions when the exam is paused).  Hover over the clock icon to see the current time remaining.  Click on the &#8220;Submit Answers&#8221; button at the end when you are done.  It will display the number correct, number wrong, and number skipped after the &#8220;Submit Answer&#8221; button.</p>
 
-           <div id="startWrapper">
-		    <p id="timeOutput"></p>
-		    </div>
-		    
-		    <div id="controls" style="text-align: center;">
-			<button class='btn btn-inverse' id ="examButton" onclick="handleExamButtonClick()">Start</button>
-	        </div>
-            <div id='timed_Test' style='display:none'>
-            
-            <div id="qt2_1-14" class="alert alert-warning">
+    <ul data-component="timedAssessment" data-time=38 id="postexam2"  >
+    
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_1-14">
             14-2-1: Under which of these conditions will a sequential search be faster than a binary search?
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_1-14_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_1-14_opt_a" />
-            <label for= "qt2_1-14_opt_a">  a) The value you are searching for is the first element in the array.</label><br />
-	        <div id= "qt2_1-14_eachFeedback_a"></div>
+            <li data-component="answer" data-correct id="qt2_1-14_opt_a">The value you are searching for is the first element in the array.</li><li data-component="feedback" id="qt2_1-14_opt_a">Only when the search value is the first item in the array, and thus the first value encountered in sequential search, will sequential be faster than binary.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_1-14_opt_b" />
-            <label for= "qt2_1-14_opt_b">  b) The value you are searching for is the last element in the array</label><br />
-	        <div id= "qt2_1-14_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_1-14_opt_b">The value you are searching for is the last element in the array</li><li data-component="feedback" id="qt2_1-14_opt_b">In this case a sequential search will have to check every element before finding the correct one, whereas a binary search will not.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_1-14_opt_c" />
-            <label for= "qt2_1-14_opt_c">  c) The value you are searching for is in the middle of the array.</label><br />
-	        <div id= "qt2_1-14_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_1-14_opt_c">The value you are searching for is in the middle of the array.</li><li data-component="feedback" id="qt2_1-14_opt_c">Results will differ depending on the exact location of the element, but Binary Search will still find the element faster while Sequential will have to check more elements.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_1-14_opt_d" />
-            <label for= "qt2_1-14_opt_d">  d) The value you are searching for is not in the array</label><br />
-	        <div id= "qt2_1-14_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_1-14_opt_d">The value you are searching for is not in the array</li><li data-component="feedback" id="qt2_1-14_opt_d">If the search value is not in the array, a sequential search will have to check every item in the array before failing, a binary search will be faster.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_1-14_opt_e" />
-            <label for= "qt2_1-14_opt_e">  e) Sequential Search can never be faster than Binary Search.</label><br />
-	        <div id= "qt2_1-14_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_1-14_opt_e">Sequential Search can never be faster than Binary Search.</li><li data-component="feedback" id="qt2_1-14_opt_e">When the search value is the first element, Sequential will always be faster, as it will only need to check one element.</li>
             
 
-            <script>
-		    populateArrays('qt2_1-14','a',['Only when the search value is the first item in the array, and thus the first value encountered in sequential search, will sequential be faster than binary.', 'In this case a sequential search will have to check every element before finding the correct one, whereas a binary search will not.', 'Results will differ depending on the exact location of the element, but Binary Search will still find the element faster while Sequential will have to check more elements.', 'If the search value is not in the array, a sequential search will have to check every item in the array before failing, a binary search will be faster.', 'When the search value is the first element, Sequential will always be faster, as it will only need to check one element.']);
-            $(document).ready(function(){checkExamRadio('qt2_1-14');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_1-14_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_2-9" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_2-9">
             <p>14-2-2: Which of the following expressions is equivalent to the following?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="o">!(</span><span class="n">c</span> <span class="o">||</span> <span class="n">d</span><span class="o">)</span>
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_2-9_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_2-9_opt_a" />
-            <label for= "qt2_2-9_opt_a">  a) (c || d)</label><br />
-	        <div id= "qt2_2-9_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_2-9_opt_a">(c || d)</li><li data-component="feedback" id="qt2_2-9_opt_a">NOTing an OR expression does not result in the same values ORed.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_2-9_opt_b" />
-            <label for= "qt2_2-9_opt_b">  b) (c && d)</label><br />
-	        <div id= "qt2_2-9_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_2-9_opt_b">(c && d)</li><li data-component="feedback" id="qt2_2-9_opt_b">You do negate the OR to AND, but you also need to negate the values of d and d.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_2-9_opt_c" />
-            <label for= "qt2_2-9_opt_c">  c) (!c) || (!d)</label><br />
-	        <div id= "qt2_2-9_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_2-9_opt_c">(!c) || (!d)</li><li data-component="feedback" id="qt2_2-9_opt_c">This would be equivalent to (!(c && d)) using De Morgans laws.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_2-9_opt_d" />
-            <label for= "qt2_2-9_opt_d">  d) !(c && d)</label><br />
-	        <div id= "qt2_2-9_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_2-9_opt_d">!(c && d)</li><li data-component="feedback" id="qt2_2-9_opt_d">This would be equivalent to (!c || !d)</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_2-9_opt_e" />
-            <label for= "qt2_2-9_opt_e">  e) (!c) && (!d)</label><br />
-	        <div id= "qt2_2-9_eachFeedback_e"></div>
+            <li data-component="answer" data-correct id="qt2_2-9_opt_e">(!c) && (!d)</li><li data-component="feedback" id="qt2_2-9_opt_e">NOTing (negating) an OR expression is the same as the AND of the individual values NOTed (negated). See De Morgans laws.</li>
             
 
-            <script>
-		    populateArrays('qt2_2-9','e',['NOTing an OR expression does not result in the same values ORed.', 'You do negate the OR to AND, but you also need to negate the values of d and d.', 'This would be equivalent to (!(c \u0026\u0026 d)) using De Morgans laws.', 'This would be equivalent to (!c || !d)', 'NOTing (negating) an OR expression is the same as the AND of the individual values NOTed (negated). See De Morgans laws.']);
-            $(document).ready(function(){checkExamRadio('qt2_2-9');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_2-9_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_3-19" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_3-19">
             14-2-3: What is encapsulation and how does Java implement it?
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_3-19_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_3-19_opt_a" />
-            <label for= "qt2_3-19_opt_a">  a) Data (fields) can be directly accessed by all code in all classes.</label><br />
-	        <div id= "qt2_3-19_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_3-19_opt_a">Data (fields) can be directly accessed by all code in all classes.</li><li data-component="feedback" id="qt2_3-19_opt_a">Encapsulation is making data private so only code in the same class has direct access.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_3-19_opt_b" />
-            <label for= "qt2_3-19_opt_b">  b) Data (fields) can be hidden inside of an object using the abstract visibility modifier.</label><br />
-	        <div id= "qt2_3-19_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_3-19_opt_b">Data (fields) can be hidden inside of an object using the abstract visibility modifier.</li><li data-component="feedback" id="qt2_3-19_opt_b">There is no abstract visibility modfier. The keyword abstract is used on classes and methods. An abstract class is one that can't be instantiated and an abstract method is one that just has a method signature and no method body. You can not use the keyword abstract on field declarations.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_3-19_opt_c" />
-            <label for= "qt2_3-19_opt_c">  c) Data (fields) are directly accessible by objects in the same package and in subclasses.</label><br />
-	        <div id= "qt2_3-19_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_3-19_opt_c">Data (fields) are directly accessible by objects in the same package and in subclasses.</li><li data-component="feedback" id="qt2_3-19_opt_c">Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives diredct access to code in classes in the same package and subclasses.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_3-19_opt_d" />
-            <label for= "qt2_3-19_opt_d">  d) Data (fields) can be hidden inside an object using the visibility modifier private.</label><br />
-	        <div id= "qt2_3-19_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="qt2_3-19_opt_d">Data (fields) can be hidden inside an object using the visibility modifier private.</li><li data-component="feedback" id="qt2_3-19_opt_d">This is the definition of encapsulation and this is done in Java using private (a member is direclty accessible only in the class that defines it) and protected (a member is direclty accessible only within code in the same package and in subclasses).</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_3-19_opt_e" />
-            <label for= "qt2_3-19_opt_e">  e) Data (fields) are directly accessible by objects in the same package.</label><br />
-	        <div id= "qt2_3-19_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_3-19_opt_e">Data (fields) are directly accessible by objects in the same package.</li><li data-component="feedback" id="qt2_3-19_opt_e">Encapsulation means that only code in the defining class has direct access. The default package access gives direct access to code in classes in the same package.</li>
             
 
-            <script>
-		    populateArrays('qt2_3-19','d',['Encapsulation is making data private so only code in the same class has direct access.', 'There is no abstract visibility modfier. The keyword abstract is used on classes and methods. An abstract class is one that can\u0027t be instantiated and an abstract method is one that just has a method signature and no method body. You can not use the keyword abstract on field declarations.', 'Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives diredct access to code in classes in the same package and subclasses.', 'This is the definition of encapsulation and this is done in Java using private (a member is direclty accessible only in the class that defines it) and protected (a member is direclty accessible only within code in the same package and in subclasses).', 'Encapsulation means that only code in the defining class has direct access. The default package access gives direct access to code in classes in the same package.']);
-            $(document).ready(function(){checkExamRadio('qt2_3-19');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_3-19_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_4-10" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_4-10">
             <p>14-2-4: Which of the following will cause an infinite loop when <code class="docutils literal"><span class="pre">temp</span></code> is greater than zero and <code class="docutils literal"><span class="pre">a</span></code> is an array of integers.</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">k</span><span class="o">++</span> <span class="o">)</span>
 <span class="o">{</span>
@@ -455,82 +399,40 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_4-10_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_4-10_opt_a" />
-            <label for= "qt2_4-10_opt_a">  a) The values don't matter this will always cause an infinite loop.</label><br />
-	        <div id= "qt2_4-10_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_4-10_opt_a">The values don't matter this will always cause an infinite loop.</li><li data-component="feedback" id="qt2_4-10_opt_a">An infinite loop will not always occur in this program segment. It occurs when at least one value in a is less than or equal to 0.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_4-10_opt_b" />
-            <label for= "qt2_4-10_opt_b">  b) Whenever a has values larger then temp.</label><br />
-	        <div id= "qt2_4-10_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_4-10_opt_b">Whenever a has values larger then temp.</li><li data-component="feedback" id="qt2_4-10_opt_b">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_4-10_opt_c" />
-            <label for= "qt2_4-10_opt_c">  c) When all values in a are larger than temp.</label><br />
-	        <div id= "qt2_4-10_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_4-10_opt_c">When all values in a are larger than temp.</li><li data-component="feedback" id="qt2_4-10_opt_c">Values larger then temp will not cause an infinite loop.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_4-10_opt_d" />
-            <label for= "qt2_4-10_opt_d">  d) Whenever a includes a value that is less than or equal to zero.</label><br />
-	        <div id= "qt2_4-10_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="qt2_4-10_opt_d">Whenever a includes a value that is less than or equal to zero.</li><li data-component="feedback" id="qt2_4-10_opt_d">When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_4-10_opt_e" />
-            <label for= "qt2_4-10_opt_e">  e) Whenever a includes a value equal to temp.</label><br />
-	        <div id= "qt2_4-10_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_4-10_opt_e">Whenever a includes a value equal to temp.</li><li data-component="feedback" id="qt2_4-10_opt_e">Values equal to temp will not cause the infinite loop.</li>
             
 
-            <script>
-		    populateArrays('qt2_4-10','d',['An infinite loop will not always occur in this program segment. It occurs when at least one value in a is less than or equal to 0.', 'Values larger then temp will not cause an infinite loop.', 'Values larger then temp will not cause an infinite loop.', 'When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value \u003E 0), so an infinite loop will occur.', 'Values equal to temp will not cause the infinite loop.']);
-            $(document).ready(function(){checkExamRadio('qt2_4-10');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_4-10_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_5-5" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_5-5">
             <p>14-2-5: Given the following code segment, which of the following is this equivalent to?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">if</span> <span class="o">(</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span><span class="o">;</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_5-5_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_5-5_opt_a" />
-            <label for= "qt2_5-5_opt_a">  a) if (x > 0) x = 0;</label><br />
-	        <div id= "qt2_5-5_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_5-5_opt_a">if (x > 0) x = 0;</li><li data-component="feedback" id="qt2_5-5_opt_a">Even if x is < 0, the above code will set it to 0.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_5-5_opt_b" />
-            <label for= "qt2_5-5_opt_b">  b) x = 0;</label><br />
-	        <div id= "qt2_5-5_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="qt2_5-5_opt_b">x = 0;</li><li data-component="feedback" id="qt2_5-5_opt_b">No matter what x is set to originally, the code will reset it to 0.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_5-5_opt_c" />
-            <label for= "qt2_5-5_opt_c">  c) if (x < 0) x = 0;</label><br />
-	        <div id= "qt2_5-5_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_5-5_opt_c">if (x < 0) x = 0;</li><li data-component="feedback" id="qt2_5-5_opt_c">Even if x is > than 0 originally, it will be set to 0 after the code executes.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_5-5_opt_d" />
-            <label for= "qt2_5-5_opt_d">  d) if (x > 0) x = -x; else x = 0;</label><br />
-	        <div id= "qt2_5-5_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_5-5_opt_d">if (x > 0) x = -x; else x = 0;</li><li data-component="feedback" id="qt2_5-5_opt_d">The first if statment will always cause the second to be executed unless x already equals 0, such that x will never equal -x</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_5-5_opt_e" />
-            <label for= "qt2_5-5_opt_e">  e) if ( x < 0) x = 0; else x = -1;</label><br />
-	        <div id= "qt2_5-5_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_5-5_opt_e">if ( x < 0) x = 0; else x = -1;</li><li data-component="feedback" id="qt2_5-5_opt_e">The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x</li>
             
 
-            <script>
-		    populateArrays('qt2_5-5','b',['Even if x is \u003C 0, the above code will set it to 0.', 'No matter what x is set to originally, the code will reset it to 0.', 'Even if x is \u003E than 0 originally, it will be set to 0 after the code executes.', 'The first if statment will always cause the second to be executed unless x already equals 0, such that x will never equal \u002Dx', 'The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal \u002Dx']);
-            $(document).ready(function(){checkExamRadio('qt2_5-5');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_5-5_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_6-15" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_6-15">
             <p>14-2-6: Given the following code segment, what will be printed when it is executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;();</span>
 <span class="n">list1</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
@@ -543,41 +445,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_6-15_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_6-15_opt_a" />
-            <label for= "qt2_6-15_opt_a">  a) [1, 2, 3, 4, 5]</label><br />
-	        <div id= "qt2_6-15_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_6-15_opt_a">[1, 2, 3, 4, 5]</li><li data-component="feedback" id="qt2_6-15_opt_a">The set replaces the 3 with the 4 so this can't be right</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_6-15_opt_b" />
-            <label for= "qt2_6-15_opt_b">  b) [1, 2, 4, 5, 6]</label><br />
-	        <div id= "qt2_6-15_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_6-15_opt_b">[1, 2, 4, 5, 6]</li><li data-component="feedback" id="qt2_6-15_opt_b">The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_6-15_opt_c" />
-            <label for= "qt2_6-15_opt_c">  c) [1, 6, 2, 4, 5]</label><br />
-	        <div id= "qt2_6-15_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_6-15_opt_c">[1, 6, 2, 4, 5]</li><li data-component="feedback" id="qt2_6-15_opt_c">How did the 6 get in position 2?</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_6-15_opt_d" />
-            <label for= "qt2_6-15_opt_d">  d) [1, 5, 2, 4, 6]</label><br />
-	        <div id= "qt2_6-15_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_6-15_opt_d">[1, 5, 2, 4, 6]</li><li data-component="feedback" id="qt2_6-15_opt_d">The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_6-15_opt_e" />
-            <label for= "qt2_6-15_opt_e">  e) [1, 2, 5, 4, 6]</label><br />
-	        <div id= "qt2_6-15_eachFeedback_e"></div>
+            <li data-component="answer" data-correct id="qt2_6-15_opt_e">[1, 2, 5, 4, 6]</li><li data-component="feedback" id="qt2_6-15_opt_e">The add method that takes just a value as a parameter adds that value to the end of the list. The set replaces the value at that index with the new value. The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index). So the list looks like: 1 // add 1 1 2 // add 2 1 2 3 // add 3 1 2 4 // set index 2 to 4 1 2 5 4 // add 5 to index 2 (move rest right) 1 2 5 4 6 // add 6 to end</li>
             
 
-            <script>
-		    populateArrays('qt2_6-15','e',['The set replaces the 3 with the 4 so this can\u0027t be right', 'The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.', 'How did the 6 get in position 2?', 'The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.', 'The add method that takes just a value as a parameter adds that value to the end of the list. The set replaces the value at that index with the new value. The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index). So the list looks like: 1 // add 1 1 2 // add 2 1 2 3 // add 3 1 2 4 // set index 2 to 4 1 2 5 4 // add 5 to index 2 (move rest right) 1 2 5 4 6 // add 6 to end']);
-            $(document).ready(function(){checkExamRadio('qt2_6-15');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_6-15_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_7-20" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_7-20">
             <p>14-2-7: Which of the following reasons for using an inheritance heirarchy are valid?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">I</span><span class="o">.</span>   <span class="n">Methods</span> <span class="n">from</span> <span class="n">a</span> <span class="n">superclass</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">in</span> <span class="n">a</span> <span class="n">subclass</span> <span class="n">without</span>
      <span class="n">rewriting</span> <span class="n">or</span> <span class="n">copying</span> <span class="n">code</span><span class="o">.</span>
@@ -589,41 +470,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_7-20_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_7-20_opt_a" />
-            <label for= "qt2_7-20_opt_a">  a) IV</label><br />
-	        <div id= "qt2_7-20_eachFeedback_a"></div>
+            <li data-component="answer" data-correct id="qt2_7-20_opt_a">IV</li><li data-component="feedback" id="qt2_7-20_opt_a">All of these are valid reasons to use an inheritance heirarchy.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_7-20_opt_b" />
-            <label for= "qt2_7-20_opt_b">  b) I and II</label><br />
-	        <div id= "qt2_7-20_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_7-20_opt_b">I and II</li><li data-component="feedback" id="qt2_7-20_opt_b">III is also valid. In some cases you might want to store subclasses together in a single array, and inheritance allows for this.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_7-20_opt_c" />
-            <label for= "qt2_7-20_opt_c">  c) I and III</label><br />
-	        <div id= "qt2_7-20_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_7-20_opt_c">I and III</li><li data-component="feedback" id="qt2_7-20_opt_c">II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method instead of writing individual methods for each subclass.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_7-20_opt_d" />
-            <label for= "qt2_7-20_opt_d">  d) V</label><br />
-	        <div id= "qt2_7-20_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_7-20_opt_d">V</li><li data-component="feedback" id="qt2_7-20_opt_d">In fact, all of the reasons listed are valid. Subclasses can reuse methods written for superclasses without code replication, subclasses can be stored in the same array, and passed as arguments to methods meant for the superclass. All of which make writing code more streamlined.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_7-20_opt_e" />
-            <label for= "qt2_7-20_opt_e">  e) I only</label><br />
-	        <div id= "qt2_7-20_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_7-20_opt_e">I only</li><li data-component="feedback" id="qt2_7-20_opt_e">II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.</li>
             
 
-            <script>
-		    populateArrays('qt2_7-20','a',['All of these are valid reasons to use an inheritance heirarchy.', 'III is also valid. In some cases you might want to store subclasses together in a single array, and inheritance allows for this.', 'II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method instead of writing individual methods for each subclass.', 'In fact, all of the reasons listed are valid. Subclasses can reuse methods written for superclasses without code replication, subclasses can be stored in the same array, and passed as arguments to methods meant for the superclass. All of which make writing code more streamlined.', 'II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.']);
-            $(document).ready(function(){checkExamRadio('qt2_7-20');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_7-20_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_8-13" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_8-13">
             <p>14-2-8: Which of the following is printed as the result of the call <code class="docutils literal"><span class="pre">mystery(1234);</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="c1">//precondition:  x &gt;=0</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">mystery</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
@@ -639,41 +499,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_8-13_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_8-13_opt_a" />
-            <label for= "qt2_8-13_opt_a">  a) Many digits are printed due to infinite recursion.</label><br />
-	        <div id= "qt2_8-13_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_8-13_opt_a">Many digits are printed due to infinite recursion.</li><li data-component="feedback" id="qt2_8-13_opt_a">When the recursive call to mystery(1) occurs (the 4th call to mystery), the division of x /10 equals .01--this becomes 0 because this is integer division and the remainder is thrown away. Therefore the current call will be completed and all of the previous calls to mystery will be completed.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_8-13_opt_b" />
-            <label for= "qt2_8-13_opt_b">  b) 3443</label><br />
-	        <div id= "qt2_8-13_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_8-13_opt_b">3443</li><li data-component="feedback" id="qt2_8-13_opt_b">The first call to mystery with the integer 1234 will print 1234 % 10. The '%' means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_8-13_opt_c" />
-            <label for= "qt2_8-13_opt_c">  c) 43211234</label><br />
-	        <div id= "qt2_8-13_eachFeedback_c"></div>
+            <li data-component="answer" data-correct id="qt2_8-13_opt_c">43211234</li><li data-component="feedback" id="qt2_8-13_opt_c">This has a recursive call which means that the method calls itself when (x / 10) is greater than or equal to zero. Each time the method is called it prints the remainder of the passed value divided by 10 and then calls the method again with the result of the integer division of the passed number by 10 (which throws away the decimal part). After the recursion stops by (x / 10) == 0 the method will print the remainder of the passed value divided by 10 again.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_8-13_opt_d" />
-            <label for= "qt2_8-13_opt_d">  d) 1441</label><br />
-	        <div id= "qt2_8-13_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_8-13_opt_d">1441</li><li data-component="feedback" id="qt2_8-13_opt_d">The first call to mystery with the integer 1234 will print 1234 % 10. The '%' means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_8-13_opt_e" />
-            <label for= "qt2_8-13_opt_e">  e) 12344321</label><br />
-	        <div id= "qt2_8-13_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_8-13_opt_e">12344321</li><li data-component="feedback" id="qt2_8-13_opt_e">The first call to mystery with the integer 1234 will print 1234 % 10. The '%' means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.</li>
             
 
-            <script>
-		    populateArrays('qt2_8-13','c',['When the recursive call to mystery(1) occurs (the 4th call to mystery), the division of x /10 equals .01\u002D\u002Dthis becomes 0 because this is integer division and the remainder is thrown away. Therefore the current call will be completed and all of the previous calls to mystery will be completed.', 'The first call to mystery with the integer 1234 will print 1234 % 10. The \u0027%\u0027 means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.', 'This has a recursive call which means that the method calls itself when (x / 10) is greater than or equal to zero. Each time the method is called it prints the remainder of the passed value divided by 10 and then calls the method again with the result of the integer division of the passed number by 10 (which throws away the decimal part). After the recursion stops by (x / 10) \u003D\u003D 0 the method will print the remainder of the passed value divided by 10 again.', 'The first call to mystery with the integer 1234 will print 1234 % 10. The \u0027%\u0027 means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.', 'The first call to mystery with the integer 1234 will print 1234 % 10. The \u0027%\u0027 means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.']);
-            $(document).ready(function(){checkExamRadio('qt2_8-13');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_8-13_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_9-18" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_9-18">
             <p>14-2-9: Given the following code segment, what are the values of <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> after the <code class="docutils literal"><span class="pre">for</span></code> loop finishes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">,</span> <span class="n">t</span><span class="o">;</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">6</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
@@ -685,41 +524,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_9-18_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_9-18_opt_a" />
-            <label for= "qt2_9-18_opt_a">  a) a = 6 and b = 7</label><br />
-	        <div id= "qt2_9-18_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_9-18_opt_a">a = 6 and b = 7</li><li data-component="feedback" id="qt2_9-18_opt_a">This would be true if the loop stopped when i was equal to 6.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_9-18_opt_b" />
-            <label for= "qt2_9-18_opt_b">  b) a = 13 and b = 0</label><br />
-	        <div id= "qt2_9-18_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="qt2_9-18_opt_b">a = 13 and b = 0</li><li data-component="feedback" id="qt2_9-18_opt_b">The variable i loops from 1 to 6 and each time the values are as follows: i = 1, t = 10, a = 4, b = 9, i = 2, t = 4, a  = 11, b =2, i = 3, t = 11, a = 5, b = 8, i = 4, t = 5, a = 12, b = 1, i = 5, t = 12, a = 6, b = 7, i = 6, t = 6, a = 13, b = 0</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_9-18_opt_c" />
-            <label for= "qt2_9-18_opt_c">  c) a = 6 and b = 0</label><br />
-	        <div id= "qt2_9-18_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_9-18_opt_c">a = 6 and b = 0</li><li data-component="feedback" id="qt2_9-18_opt_c">Actually i = 6 and t = 6 and b = 0 after the loop finishes.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_9-18_opt_d" />
-            <label for= "qt2_9-18_opt_d">  d) a = 0 and b = 13</label><br />
-	        <div id= "qt2_9-18_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_9-18_opt_d">a = 0 and b = 13</li><li data-component="feedback" id="qt2_9-18_opt_d">Actually a = 13 and b = 0 after the loop finishes.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_9-18_opt_e" />
-            <label for= "qt2_9-18_opt_e">  e) a = 6 and b = 13</label><br />
-	        <div id= "qt2_9-18_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_9-18_opt_e">a = 6 and b = 13</li><li data-component="feedback" id="qt2_9-18_opt_e">Actually i = 6 and t = 6 and a = 13 after the loop finishes.</li>
             
 
-            <script>
-		    populateArrays('qt2_9-18','b',['This would be true if the loop stopped when i was equal to 6.', 'The variable i loops from 1 to 6 and each time the values are as follows: i \u003D 1, t \u003D 10, a \u003D 4, b \u003D 9, i \u003D 2, t \u003D 4, a  \u003D 11, b \u003D2, i \u003D 3, t \u003D 11, a \u003D 5, b \u003D 8, i \u003D 4, t \u003D 5, a \u003D 12, b \u003D 1, i \u003D 5, t \u003D 12, a \u003D 6, b \u003D 7, i \u003D 6, t \u003D 6, a \u003D 13, b \u003D 0', 'Actually i \u003D 6 and t \u003D 6 and b \u003D 0 after the loop finishes.', 'Actually a \u003D 13 and b \u003D 0 after the loop finishes.', 'Actually i \u003D 6 and t \u003D 6 and a \u003D 13 after the loop finishes.']);
-            $(document).ready(function(){checkExamRadio('qt2_9-18');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_9-18_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_10-1" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_10-1">
             <p>14-2-10: Given the following code segment, what is printed when it is executed?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">test</span> <span class="o">=</span> <span class="s">&quot;123456&quot;</span><span class="o">;</span>
 <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="n">test</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span> <span class="n">index</span> <span class="o">=</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span>
@@ -729,41 +547,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_10-1_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_10-1_opt_a" />
-            <label for= "qt2_10-1_opt_a">  a) 112233445566</label><br />
-	        <div id= "qt2_10-1_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_10-1_opt_a">112233445566</li><li data-component="feedback" id="qt2_10-1_opt_a">This would be true if the loop was printing each character twice and was incrementing the index by 1, but it prints two characters at a time and increments the index by 2.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_10-1_opt_b" />
-            <label for= "qt2_10-1_opt_b">  b) 123456</label><br />
-	        <div id= "qt2_10-1_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_10-1_opt_b">123456</li><li data-component="feedback" id="qt2_10-1_opt_b">This would be true if the loop was incremented by 2 instead of 1.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_10-1_opt_c" />
-            <label for= "qt2_10-1_opt_c">  c) 1223344556</label><br />
-	        <div id= "qt2_10-1_eachFeedback_c"></div>
+            <li data-component="answer" data-correct id="qt2_10-1_opt_c">1223344556</li><li data-component="feedback" id="qt2_10-1_opt_c">This code loops through the string printing 2 characters at a time.  The last time through the loop the index is test.length() - 2.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_10-1_opt_d" />
-            <label for= "qt2_10-1_opt_d">  d) 123234345456</label><br />
-	        <div id= "qt2_10-1_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_10-1_opt_d">123234345456</li><li data-component="feedback" id="qt2_10-1_opt_d">This would be true if the loop was printing 3 characters at a time instead of 2.  Remember that the substring doesn't include the character at the specified last index.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_10-1_opt_e" />
-            <label for= "qt2_10-1_opt_e">  e) Nothing will be printed due to an IndexOutOfBoundsException.</label><br />
-	        <div id= "qt2_10-1_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_10-1_opt_e">Nothing will be printed due to an IndexOutOfBoundsException.</li><li data-component="feedback" id="qt2_10-1_opt_e">This would be true if the loop stopped when index was less than the string length instead of one less than the string length.</li>
             
 
-            <script>
-		    populateArrays('qt2_10-1','c',['This would be true if the loop was printing each character twice and was incrementing the index by 1, but it prints two characters at a time and increments the index by 2.', 'This would be true if the loop was incremented by 2 instead of 1.', 'This code loops through the string printing 2 characters at a time.  The last time through the loop the index is test.length() \u002D 2.', 'This would be true if the loop was printing 3 characters at a time instead of 2.  Remember that the substring doesn\u0027t include the character at the specified last index.', 'This would be true if the loop stopped when index was less than the string length instead of one less than the string length.']);
-            $(document).ready(function(){checkExamRadio('qt2_10-1');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_10-1_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_11-3" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_11-3">
             <p>14-2-11: Given the following code segment, what are the values of <code class="docutils literal"><span class="pre">var1</span></code> and <code class="docutils literal"><span class="pre">var2</span></code> after the while loop finishes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kt">int</span> <span class="n">var1</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
 <span class="kt">int</span> <span class="n">var2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
@@ -776,41 +573,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_11-3_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_11-3_opt_a" />
-            <label for= "qt2_11-3_opt_a">  a) var1=2, var2=0</label><br />
-	        <div id= "qt2_11-3_eachFeedback_a"></div>
+            <li data-component="answer" data-correct id="qt2_11-3_opt_a">var1=2, var2=0</li><li data-component="feedback" id="qt2_11-3_opt_a">The loop starts with var1=0 and var2=2. The while checks that var2 isn't 0 (2!=0) and that var1 / var2 is greater than or equal to zero (0/2=0) so this is equal to zero and the body of the while loop will execute. The variable var1 has 1 added to it for a new value of 1. The variable var2 has 1 subtracted from it for a value of 1. At this point var1=1 and var2=1. The while condition is checked again. Since var2 isn't 0 (1!=0) and var1/var2 (1/1=1) is >= 0 so the body of the loop will execute again. The variable var1 has 1 added to it for a new value of 2. The variable var2 has 1 subtracted from it for a value of 0. At this point var1=2 and var2=0. The while condition is checked again. Since var2 is zero the while loop stops and the value of var1 is 2 and var2 is 0.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_11-3_opt_b" />
-            <label for= "qt2_11-3_opt_b">  b) var1=3, var2=-1</label><br />
-	        <div id= "qt2_11-3_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_11-3_opt_b">var1=3, var2=-1</li><li data-component="feedback" id="qt2_11-3_opt_b">This would be true if the body of the while loop executed 3 times, but it exectues twice.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_11-3_opt_c" />
-            <label for= "qt2_11-3_opt_c">  c) var1=0, var2=2</label><br />
-	        <div id= "qt2_11-3_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_11-3_opt_c">var1=0, var2=2</li><li data-component="feedback" id="qt2_11-3_opt_c">This would be true if the body of the while loop never executed. This would have happened if the while check was if var1 != 0 instead of var2 != 0.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_11-3_opt_d" />
-            <label for= "qt2_11-3_opt_d">  d) var1=1, var2=1</label><br />
-	        <div id= "qt2_11-3_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_11-3_opt_d">var1=1, var2=1</li><li data-component="feedback" id="qt2_11-3_opt_d">This would be true if the body of the while loop only executed one time, but it executes twice.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_11-3_opt_e" />
-            <label for= "qt2_11-3_opt_e">  e) The loop won't finish executing because of a division by zero.</label><br />
-	        <div id= "qt2_11-3_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_11-3_opt_e">The loop won't finish executing because of a division by zero.</li><li data-component="feedback" id="qt2_11-3_opt_e">The operation 0 / 2 won't cause a division by zero. The result is just zero.</li>
             
 
-            <script>
-		    populateArrays('qt2_11-3','a',['The loop starts with var1\u003D0 and var2\u003D2. The while checks that var2 isn\u0027t 0 (2!\u003D0) and that var1 / var2 is greater than or equal to zero (0/2\u003D0) so this is equal to zero and the body of the while loop will execute. The variable var1 has 1 added to it for a new value of 1. The variable var2 has 1 subtracted from it for a value of 1. At this point var1\u003D1 and var2\u003D1. The while condition is checked again. Since var2 isn\u0027t 0 (1!\u003D0) and var1/var2 (1/1\u003D1) is \u003E\u003D 0 so the body of the loop will execute again. The variable var1 has 1 added to it for a new value of 2. The variable var2 has 1 subtracted from it for a value of 0. At this point var1\u003D2 and var2\u003D0. The while condition is checked again. Since var2 is zero the while loop stops and the value of var1 is 2 and var2 is 0.', 'This would be true if the body of the while loop executed 3 times, but it exectues twice.', 'This would be true if the body of the while loop never executed. This would have happened if the while check was if var1 !\u003D 0 instead of var2 !\u003D 0.', 'This would be true if the body of the while loop only executed one time, but it executes twice.', 'The operation 0 / 2 won\u0027t cause a division by zero. The result is just zero.']);
-            $(document).ready(function(){checkExamRadio('qt2_11-3');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_11-3_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_12-6" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_12-6">
             <p>14-2-12: Susan is 5 years older than Matt. Three years from now Susan&#8217;s age will be twice Matt&#8217;s age.  What should be in place of <code class="docutils literal"><span class="pre">condition</span></code> in the code segment below to solve this problem?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">s</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="o">;</span> <span class="n">s</span><span class="o">++)</span> <span class="o">{</span>
    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">m</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="o">;</span> <span class="n">m</span><span class="o">++)</span> <span class="o">{</span>
@@ -821,41 +597,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_12-6_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_12-6_opt_a" />
-            <label for= "qt2_12-6_opt_a">  a) (s == m - 5) && (s - 3 == 2 * (m - 3))</label><br />
-	        <div id= "qt2_12-6_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_12-6_opt_a">(s == m - 5) && (s - 3 == 2 * (m - 3))</li><li data-component="feedback" id="qt2_12-6_opt_a">This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_12-6_opt_b" />
-            <label for= "qt2_12-6_opt_b">  b) s == m + 5 && s + 3 == 2 * m + 6</label><br />
-	        <div id= "qt2_12-6_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="qt2_12-6_opt_b">s == m + 5 && s + 3 == 2 * m + 6</li><li data-component="feedback" id="qt2_12-6_opt_b">Susan is 5 years older than Matt so s == m + 5 should be true and in 3 years she will be twice as old so s + 3 = 2 * (m + 3) = 2 * m + 6.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_12-6_opt_c" />
-            <label for= "qt2_12-6_opt_c">  c) s == (m - 5) && (2 * s + 3) == (m + 3)</label><br />
-	        <div id= "qt2_12-6_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_12-6_opt_c">s == (m - 5) && (2 * s + 3) == (m + 3)</li><li data-component="feedback" id="qt2_12-6_opt_c">This can't be right because Susan is 5 years older than Matt, so the first part is wrong. It has susan equal to Matt's age minus 5 which would have Matt older than Susan.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_12-6_opt_d" />
-            <label for= "qt2_12-6_opt_d">  d) None of the above is correct</label><br />
-	        <div id= "qt2_12-6_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_12-6_opt_d">None of the above is correct</li><li data-component="feedback" id="qt2_12-6_opt_d">The answer is s == m + 5 && s + 3 == 2 * m + 6.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_12-6_opt_e" />
-            <label for= "qt2_12-6_opt_e">  e) (s == (m + 5)) && ((s + 3) == (2 * m + 3))</label><br />
-	        <div id= "qt2_12-6_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_12-6_opt_e">(s == (m + 5)) && ((s + 3) == (2 * m + 3))</li><li data-component="feedback" id="qt2_12-6_opt_e">This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won't be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).</li>
             
 
-            <script>
-		    populateArrays('qt2_12-6','b',['This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?', 'Susan is 5 years older than Matt so s \u003D\u003D m + 5 should be true and in 3 years she will be twice as old so s + 3 \u003D 2 * (m + 3) \u003D 2 * m + 6.', 'This can\u0027t be right because Susan is 5 years older than Matt, so the first part is wrong. It has susan equal to Matt\u0027s age minus 5 which would have Matt older than Susan.', 'The answer is s \u003D\u003D m + 5 \u0026\u0026 s + 3 \u003D\u003D 2 * m + 6.', 'This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won\u0027t be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).']);
-            $(document).ready(function(){checkExamRadio('qt2_12-6');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_12-6_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_13-16" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_13-16">
             <p>14-2-13: Given the following code segment, What are the contents of <code class="docutils literal"><span class="pre">mat</span></code> after the code segment has been executed?</p>
 <div class="highlight-java"><div class="highlight"><pre> <span class="kt">int</span> <span class="o">[][]</span> <span class="n">mat</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">4</span><span class="o">];</span>
  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">mat</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">row</span><span class="o">++)</span>
@@ -873,41 +628,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_13-16_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_13-16_opt_a" />
-            <label for= "qt2_13-16_opt_a">  a) {{2 3 3 3}, {1 2 3 3}, {1 1 2 3}}</label><br />
-	        <div id= "qt2_13-16_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_13-16_opt_a">{{2 3 3 3}, {1 2 3 3}, {1 1 2 3}}</li><li data-component="feedback" id="qt2_13-16_opt_a">This would be true if you set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_13-16_opt_b" />
-            <label for= "qt2_13-16_opt_b">  b) {{2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}}</label><br />
-	        <div id= "qt2_13-16_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_13-16_opt_b">{{2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}}</li><li data-component="feedback" id="qt2_13-16_opt_b">This would be true if the first value when you create a 2-d array was the number of columns and the second was the number of rows. Also you would need to set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_13-16_opt_c" />
-            <label for= "qt2_13-16_opt_c">  c) {{2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}}</label><br />
-	        <div id= "qt2_13-16_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_13-16_opt_c">{{2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}}</li><li data-component="feedback" id="qt2_13-16_opt_c">This would be true if the first value when you create a 2-d array was the number of columns and the second was the number of rows.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_13-16_opt_d" />
-            <label for= "qt2_13-16_opt_d">  d) {{2 1 1 1}, {3 2 1 1}, {3 3 2 1}}</label><br />
-	        <div id= "qt2_13-16_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="qt2_13-16_opt_d">{{2 1 1 1}, {3 2 1 1}, {3 3 2 1}}</li><li data-component="feedback" id="qt2_13-16_opt_d">When you create a 2-d array the first value is the number of rows and the second is the number of columns. This code will put a 1 in the array when the row index is less than the column index and a 2 in the array when the row and column index are the same, and a 3 in the array when the row index is greater than the column index.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_13-16_opt_e" />
-            <label for= "qt2_13-16_opt_e">  e) {{1 1 1 1}, {2 2 2 2}, {3 3 3 3}}</label><br />
-	        <div id= "qt2_13-16_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_13-16_opt_e">{{1 1 1 1}, {2 2 2 2}, {3 3 3 3}}</li><li data-component="feedback" id="qt2_13-16_opt_e">This would be true if you set the value to the row index.</li>
             
 
-            <script>
-		    populateArrays('qt2_13-16','d',['This would be true if you set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.', 'This would be true if the first value when you create a 2\u002Dd array was the number of columns and the second was the number of rows. Also you would need to set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.', 'This would be true if the first value when you create a 2\u002Dd array was the number of columns and the second was the number of rows.', 'When you create a 2\u002Dd array the first value is the number of rows and the second is the number of columns. This code will put a 1 in the array when the row index is less than the column index and a 2 in the array when the row and column index are the same, and a 3 in the array when the row index is greater than the column index.', 'This would be true if you set the value to the row index.']);
-            $(document).ready(function(){checkExamRadio('qt2_13-16');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_13-16_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_14-12" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_14-12">
             <p>14-2-14: Given the following code segment, what will the value of <code class="docutils literal"><span class="pre">s1</span></code> be after this executes?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">&quot;Hi There&quot;</span><span class="o">;</span>
 <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="o">;</span>
@@ -919,41 +653,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_14-12_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_14-12_opt_a" />
-            <label for= "qt2_14-12_opt_a">  a) hI tHERE</label><br />
-	        <div id= "qt2_14-12_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_14-12_opt_a">hI tHERE</li><li data-component="feedback" id="qt2_14-12_opt_a">Strings are immutable and so any changes to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_14-12_opt_b" />
-            <label for= "qt2_14-12_opt_b">  b) hi there</label><br />
-	        <div id= "qt2_14-12_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_14-12_opt_b">hi there</li><li data-component="feedback" id="qt2_14-12_opt_b">This would only be correct if we had s1 = s2; after s2.toLowerCase(); was executed. Strings are immutable and so any change to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_14-12_opt_c" />
-            <label for= "qt2_14-12_opt_c">  c) HI THERE</label><br />
-	        <div id= "qt2_14-12_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_14-12_opt_c">HI THERE</li><li data-component="feedback" id="qt2_14-12_opt_c">This would be correct if we had s1 = s3; after s3.toUpperCase(); was executed. Strings are immutable and so any change to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_14-12_opt_d" />
-            <label for= "qt2_14-12_opt_d">  d) null</label><br />
-	        <div id= "qt2_14-12_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_14-12_opt_d">null</li><li data-component="feedback" id="qt2_14-12_opt_d">This would be true if we had s1 = s4; after s4 = null; was executed. Strings are immutable and so any changes to a string returns a new string.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_14-12_opt_e" />
-            <label for= "qt2_14-12_opt_e">  e) Hi There</label><br />
-	        <div id= "qt2_14-12_eachFeedback_e"></div>
+            <li data-component="answer" data-correct id="qt2_14-12_opt_e">Hi There</li><li data-component="feedback" id="qt2_14-12_opt_e">Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change</li>
             
 
-            <script>
-		    populateArrays('qt2_14-12','e',['Strings are immutable and so any changes to a string returns a new string.', 'This would only be correct if we had s1 \u003D s2\u003B after s2.toLowerCase()\u003B was executed. Strings are immutable and so any change to a string returns a new string.', 'This would be correct if we had s1 \u003D s3\u003B after s3.toUpperCase()\u003B was executed. Strings are immutable and so any change to a string returns a new string.', 'This would be true if we had s1 \u003D s4\u003B after s4 \u003D null\u003B was executed. Strings are immutable and so any changes to a string returns a new string.', 'Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change']);
-            $(document).ready(function(){checkExamRadio('qt2_14-12');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_14-12_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_15-7" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_15-7">
             <p>14-2-15: Given the following code segment, what is printed when it executes?</p>
 <div class="highlight-java"><div class="highlight"><pre> <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">()</span>
  <span class="o">{</span>
@@ -979,41 +692,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_15-7_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_15-7_opt_a" />
-            <label for= "qt2_15-7_opt_a">  a) 0 1 2 0 1 2 0 1</label><br />
-	        <div id= "qt2_15-7_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_15-7_opt_a">0 1 2 0 1 2 0 1</li><li data-component="feedback" id="qt2_15-7_opt_a">The second time through the loop the value of num is 2 and 2 % 3 is 2 not 1.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_15-7_opt_b" />
-            <label for= "qt2_15-7_opt_b">  b) 0 2 1 0 2 1 0 2</label><br />
-	        <div id= "qt2_15-7_eachFeedback_b"></div>
+            <li data-component="answer" data-correct id="qt2_15-7_opt_b">0 2 1 0 2 1 0 2</li><li data-component="feedback" id="qt2_15-7_opt_b">The while loop will iterate 8 times. The value of num each time through the loop is: 0, 2, 4, 6, 8, 10, 12, and 14. The corresponding remainder operator of 3 is: 0, 2, 1, 0, 2, 1, 0, 2, which is print to the console.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_15-7_opt_c" />
-            <label for= "qt2_15-7_opt_c">  c) 0 2 1 0 2 1 0 2 1</label><br />
-	        <div id= "qt2_15-7_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_15-7_opt_c">0 2 1 0 2 1 0 2 1</li><li data-component="feedback" id="qt2_15-7_opt_c">The loop will iterate 8 times not 9. When the value of num exceeds 14, num will no longer be evaluated against the conditional statements. The remainder operator of 3 will be evaluated on the num values of 0, 2, 4, 6, 8, 10, 12 and 14.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_15-7_opt_d" />
-            <label for= "qt2_15-7_opt_d">  d) 2 1 0 2 1 0 2 1</label><br />
-	        <div id= "qt2_15-7_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_15-7_opt_d">2 1 0 2 1 0 2 1</li><li data-component="feedback" id="qt2_15-7_opt_d">The value of num the first time through the loop is 0 so the first remainder is 0 not 2. This would be true if the value of num was 2 to start.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_15-7_opt_e" />
-            <label for= "qt2_15-7_opt_e">  e) 0 2 1 0 2 1 0</label><br />
-	        <div id= "qt2_15-7_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_15-7_opt_e">0 2 1 0 2 1 0</li><li data-component="feedback" id="qt2_15-7_opt_e">This would be true if the loop stopped when the value of num was less than 14 but it is less than or equal to 14.</li>
             
 
-            <script>
-		    populateArrays('qt2_15-7','b',['The second time through the loop the value of num is 2 and 2 % 3 is 2 not 1.', 'The while loop will iterate 8 times. The value of num each time through the loop is: 0, 2, 4, 6, 8, 10, 12, and 14. The corresponding remainder operator of 3 is: 0, 2, 1, 0, 2, 1, 0, 2, which is print to the console.', 'The loop will iterate 8 times not 9. When the value of num exceeds 14, num will no longer be evaluated against the conditional statements. The remainder operator of 3 will be evaluated on the num values of 0, 2, 4, 6, 8, 10, 12 and 14.', 'The value of num the first time through the loop is 0 so the first remainder is 0 not 2. This would be true if the value of num was 2 to start.', 'This would be true if the loop stopped when the value of num was less than 14 but it is less than or equal to 14.']);
-            $(document).ready(function(){checkExamRadio('qt2_15-7');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_15-7_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_16-2" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_16-2">
             <p>14-2-16: Consider the following data field and method <code class="docutils literal"><span class="pre">findLongest</span></code>. Method <code class="docutils literal"><span class="pre">findLongest</span></code> is intended to find the longest consecutive block of the value target occurring in the array nums; however, <code class="docutils literal"><span class="pre">findLongest</span></code> does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call <code class="docutils literal"><span class="pre">findLongest(10)</span></code> should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to <code class="docutils literal"><span class="pre">findLongest</span></code>?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">private</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kt">int</span> <span class="nf">findLongest</span><span class="o">(</span><span class="kt">int</span> <span class="n">target</span><span class="o">)</span>
@@ -1044,41 +736,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_16-2_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_16-2_opt_a" />
-            <label for= "qt2_16-2_opt_a">  a) It is the length of the array nums.</label><br />
-	        <div id= "qt2_16-2_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_16-2_opt_a">It is the length of the array nums.</li><li data-component="feedback" id="qt2_16-2_opt_a">This can't be true. There is no nums.length in the code and the only count happens lenCount is incremented when nums[k] == target.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_16-2_opt_b" />
-            <label for= "qt2_16-2_opt_b">  b) It is the length of the first consecutive block of the value target in nums.</label><br />
-	        <div id= "qt2_16-2_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_16-2_opt_b">It is the length of the first consecutive block of the value target in nums.</li><li data-component="feedback" id="qt2_16-2_opt_b">It doesn't reset the count ever so it just counts all the times the target value appears in the array.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_16-2_opt_c" />
-            <label for= "qt2_16-2_opt_c">  c) It is the length of the shortest consecutive block of the value target in nums.</label><br />
-	        <div id= "qt2_16-2_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_16-2_opt_c">It is the length of the shortest consecutive block of the value target in nums.</li><li data-component="feedback" id="qt2_16-2_opt_c">It doesn't reset the count ever so it just counts all the times the target value appears in the array.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_16-2_opt_d" />
-            <label for= "qt2_16-2_opt_d">  d) It is the number of occurrences of the value target in nums.</label><br />
-	        <div id= "qt2_16-2_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="qt2_16-2_opt_d">It is the number of occurrences of the value target in nums.</li><li data-component="feedback" id="qt2_16-2_opt_d">The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_16-2_opt_e" />
-            <label for= "qt2_16-2_opt_e">  e) It is the length of the last consecutive block of the value target in nums.</label><br />
-	        <div id= "qt2_16-2_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_16-2_opt_e">It is the length of the last consecutive block of the value target in nums.</li><li data-component="feedback" id="qt2_16-2_opt_e">It doesn't reset the count ever so it just counts all the times the target value appears in the array.</li>
             
 
-            <script>
-		    populateArrays('qt2_16-2','d',['This can\u0027t be true. There is no nums.length in the code and the only count happens lenCount is incremented when nums[k] \u003D\u003D target.', 'It doesn\u0027t reset the count ever so it just counts all the times the target value appears in the array.', 'It doesn\u0027t reset the count ever so it just counts all the times the target value appears in the array.', 'The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.', 'It doesn\u0027t reset the count ever so it just counts all the times the target value appears in the array.']);
-            $(document).ready(function(){checkExamRadio('qt2_16-2');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_16-2_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_17-11" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_17-11">
             <p>14-2-17: Given the following method declaration, and <code class="docutils literal"><span class="pre">int[]</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">{8,</span> <span class="pre">3,</span> <span class="pre">1}</span></code>, what is the value in <code class="docutils literal"><span class="pre">a[1]</span></code> after <code class="docutils literal"><span class="pre">m1(a);</span></code> is run?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">m1</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span>
 <span class="o">{</span>
@@ -1088,41 +759,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_17-11_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_17-11_opt_a" />
-            <label for= "qt2_17-11_opt_a">  a) 4</label><br />
-	        <div id= "qt2_17-11_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_17-11_opt_a">4</li><li data-component="feedback" id="qt2_17-11_opt_a">This would be true if it was return (a[1] *= 2);</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_17-11_opt_b" />
-            <label for= "qt2_17-11_opt_b">  b) 3</label><br />
-	        <div id= "qt2_17-11_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_17-11_opt_b">3</li><li data-component="feedback" id="qt2_17-11_opt_b">This can't be true because a[1]--; means the same as a[1] = a[1] - 1; so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_17-11_opt_c" />
-            <label for= "qt2_17-11_opt_c">  c) 16</label><br />
-	        <div id= "qt2_17-11_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_17-11_opt_c">16</li><li data-component="feedback" id="qt2_17-11_opt_c">This would be true if it was return (a[0] *= 2);</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_17-11_opt_d" />
-            <label for= "qt2_17-11_opt_d">  d) 7</label><br />
-	        <div id= "qt2_17-11_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_17-11_opt_d">7</li><li data-component="feedback" id="qt2_17-11_opt_d">This would be true if it was a[0]--;</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_17-11_opt_e" />
-            <label for= "qt2_17-11_opt_e">  e) 2</label><br />
-	        <div id= "qt2_17-11_eachFeedback_e"></div>
+            <li data-component="answer" data-correct id="qt2_17-11_opt_e">2</li><li data-component="feedback" id="qt2_17-11_opt_e">The statement a[1]--; is the same as a[1] = a[1] - 1; so this will change to 3 to 2.  The return (a[1] * 2) does not change the value at a[1].</li>
             
 
-            <script>
-		    populateArrays('qt2_17-11','e',['This would be true if it was return (a[1] *\u003D 2)\u003B', 'This can\u0027t be true because a[1]\u002D\u002D\u003B means the same as a[1] \u003D a[1] \u002D 1\u003B so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.', 'This would be true if it was return (a[0] *\u003D 2)\u003B', 'This would be true if it was a[0]\u002D\u002D\u003B', 'The statement a[1]\u002D\u002D\u003B is the same as a[1] \u003D a[1] \u002D 1\u003B so this will change to 3 to 2.  The return (a[1] * 2) does not change the value at a[1].']);
-            $(document).ready(function(){checkExamRadio('qt2_17-11');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_17-11_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_18-4" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_18-4">
             <p>14-2-18: At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, 75 to 83 inclusive is a C, and below 75 is an F.  Which of the following code segments will assign the correct string to <code class="docutils literal"><span class="pre">grade</span></code> for a given integer score?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">I</span><span class="o">.</span>   <span class="nf">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">93</span><span class="o">)</span>
         <span class="n">grade</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span><span class="o">;</span>
@@ -1153,41 +803,20 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_18-4_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_18-4_opt_a" />
-            <label for= "qt2_18-4_opt_a">  a) I and II only</label><br />
-	        <div id= "qt2_18-4_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_18-4_opt_a">I and II only</li><li data-component="feedback" id="qt2_18-4_opt_a">Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_18-4_opt_b" />
-            <label for= "qt2_18-4_opt_b">  b) II only</label><br />
-	        <div id= "qt2_18-4_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_18-4_opt_b">II only</li><li data-component="feedback" id="qt2_18-4_opt_b">Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_18-4_opt_c" />
-            <label for= "qt2_18-4_opt_c">  c) III only</label><br />
-	        <div id= "qt2_18-4_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_18-4_opt_c">III only</li><li data-component="feedback" id="qt2_18-4_opt_c">Choice III is one of the correct answers. However, choice I is also correct. Choice I uses multiple if's with logical ands in the conditions to check that the numbers are in range. Choice III uses ifs with else if to make sure that only one conditional is executed.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_18-4_opt_d" />
-            <label for= "qt2_18-4_opt_d">  d) I and III only</label><br />
-	        <div id= "qt2_18-4_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="qt2_18-4_opt_d">I and III only</li><li data-component="feedback" id="qt2_18-4_opt_d">Choice I uses multiple if's with logical ands in the conditions to check that the numbers are in range. Choice Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". Choice III uses ifs with else if to make sure that only one conditional is executed.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_18-4_opt_e" />
-            <label for= "qt2_18-4_opt_e">  e) I, II, and III</label><br />
-	        <div id= "qt2_18-4_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_18-4_opt_e">I, II, and III</li><li data-component="feedback" id="qt2_18-4_opt_e">Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.</li>
             
 
-            <script>
-		    populateArrays('qt2_18-4','d',['Choice II won\u0027t work since if you had a score of 94 it would first assign the grade to an \u0022A\u0022 but then it would execute the next if and change the grade to a \u0022B\u0022 and so on until the grade was set to a \u0022C\u0022. This could have been fixed by using else if instead of just if.', 'Choice II won\u0027t work since if you had a score of 94 it would first assign the grade to an \u0022A\u0022 but then it would execute the next if and change the grade to a \u0022B\u0022 and so on until the grade was set to a \u0022C\u0022. This could have been fixed by using else if instead of just if.', 'Choice III is one of the correct answers. However, choice I is also correct. Choice I uses multiple if\u0027s with logical ands in the conditions to check that the numbers are in range. Choice III uses ifs with else if to make sure that only one conditional is executed.', 'Choice I uses multiple if\u0027s with logical ands in the conditions to check that the numbers are in range. Choice Choice II won\u0027t work since if you had a score of 94 it would first assign the grade to an \u0022A\u0022 but then it would execute the next if and change the grade to a \u0022B\u0022 and so on until the grade was set to a \u0022C\u0022. Choice III uses ifs with else if to make sure that only one conditional is executed.', 'Choice II won\u0027t work since if you had a score of 94 it would first assign the grade to an \u0022A\u0022 but then it would execute the next if and change the grade to a \u0022B\u0022 and so on until the grade was set to a \u0022C\u0022. This could have been fixed by using else if instead of just if.']);
-            $(document).ready(function(){checkExamRadio('qt2_18-4');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_18-4_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_19-8" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_19-8">
             <p>14-2-19: Given the following incomplete class declaration, which of the following can be used to replace the missing code in the <code class="docutils literal"><span class="pre">advance</span></code> method so that it will correctly update the time?</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TimeRecord</span>
 <span class="o">{</span>
@@ -1225,37 +854,18 @@
 </pre></div>
 </div>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_19-8_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="b" id="qt2_19-8_opt_b" />
-            <label for= "qt2_19-8_opt_b">  b) minutes = minutes % 60;</label><br />
-	        <div id= "qt2_19-8_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_19-8_opt_b">minutes = minutes % 60;</li><li data-component="feedback" id="qt2_19-8_opt_b">This won't add to hour so it can't be correct. It will set minutes to the remainder of dividing minutes by 60 so minutes will be set correctly.</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_19-8_opt_c" />
-            <label for= "qt2_19-8_opt_c">  c) minutes = minutes + hours % 60;</label><br />
-	        <div id= "qt2_19-8_eachFeedback_c"></div>
+            <li data-component="answer"  id="qt2_19-8_opt_c">minutes = minutes + hours % 60;</li><li data-component="feedback" id="qt2_19-8_opt_c">This will set the minutes to the minutes plus the remainder of dividing the hours by 60.</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_19-8_opt_d" />
-            <label for= "qt2_19-8_opt_d">  d) hours = hours + minutes / 60; minutes = minutes % 60;</label><br />
-	        <div id= "qt2_19-8_eachFeedback_d"></div>
+            <li data-component="answer" data-correct id="qt2_19-8_opt_d">hours = hours + minutes / 60; minutes = minutes % 60;</li><li data-component="feedback" id="qt2_19-8_opt_d">This will update the hours and minutes correctly. It will add the floor of the division of minutes by 60 to hours and then set minutes to the remainder of the division of minutes by 60.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_19-8_opt_e" />
-            <label for= "qt2_19-8_opt_e">  e) hours = hours + minutes / 60;</label><br />
-	        <div id= "qt2_19-8_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_19-8_opt_e">hours = hours + minutes / 60;</li><li data-component="feedback" id="qt2_19-8_opt_e">This will correctly update the hours, but not update the minutes.</li>
             
 
-            <script>
-		    populateArrays('qt2_19-8','d',['This won\u0027t add to hour so it can\u0027t be correct. It will set minutes to the remainder of dividing minutes by 60 so minutes will be set correctly.', 'This will set the minutes to the minutes plus the remainder of dividing the hours by 60.', 'This will update the hours and minutes correctly. It will add the floor of the division of minutes by 60 to hours and then set minutes to the remainder of the division of minutes by 60.', 'This will correctly update the hours, but not update the minutes.']);
-            $(document).ready(function(){checkExamRadio('qt2_19-8');});
-            </script>
+            </ul>
             
- 
-            </form><br />
-            <div id="qt2_19-8_feedback">
-            </div>
-            </div>
-            
-            <div id="qt2_20-17" class="alert alert-warning">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qt2_20-17">
             <p>14-2-20:  Given the following class declarations, and assuming that the following declaration appears in a client program: <code class="docutils literal"><span class="pre">Base</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">Derived();</span></code>, what is the result of the call <code class="docutils literal"><span class="pre">b.methodOne();</span></code>?</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Base</span>
@@ -1290,74 +900,20 @@
 </div>
 </div></blockquote>
 
-            <div class="timeTip" title=" "><img src="../_static/clock.png" style="width:15px;height:15px"></div>
-            <form name="qt2_20-17_form" method="get" action="" onsubmit="return false;">
-            <input type="radio" name="group1" value="a" id="qt2_20-17_opt_a" />
-            <label for= "qt2_20-17_opt_a">  a) AB</label><br />
-	        <div id= "qt2_20-17_eachFeedback_a"></div>
+            <li data-component="answer"  id="qt2_20-17_opt_a">AB</li><li data-component="feedback" id="qt2_20-17_opt_a">This would be true if the object was created of type Base using new Base. But the object is really a Derived object. So all methods are looked for starting with the Derived class.</li>
             
-            <input type="radio" name="group1" value="b" id="qt2_20-17_opt_b" />
-            <label for= "qt2_20-17_opt_b">  b) ABCD</label><br />
-	        <div id= "qt2_20-17_eachFeedback_b"></div>
+            <li data-component="answer"  id="qt2_20-17_opt_b">ABCD</li><li data-component="feedback" id="qt2_20-17_opt_b">After the call to methodOne in the super class printing "A", the code continues with the implicit this.methodTwo which resolves from the current object's class which is Derived. methodTwo in the Derived class is executed which then calls super.methodTwo which invokes printin "B" from methodTwo in the Base class. Then the "D" in the Derive methodTwo is printed. Finally the program returns to methodOne in the Derived class are prints "C".</li>
             
-            <input type="radio" name="group1" value="c" id="qt2_20-17_opt_c" />
-            <label for= "qt2_20-17_opt_c">  c) ABDC</label><br />
-	        <div id= "qt2_20-17_eachFeedback_c"></div>
+            <li data-component="answer" data-correct id="qt2_20-17_opt_c">ABDC</li><li data-component="feedback" id="qt2_20-17_opt_c">Even though b is declared as type Base it is created as an object of the Derived class, so all methods to it will be resolved starting with the Derived class. So the methodOne() in Derived will be called. This method first calls super.methodOne so this will invoke the method in the superclass (which is Base). So next the methodOne in Base will execute. This prints the letter "A" and invokes this.methodTwo(). Since b is really a Derived object, we check there first to see if it has a methodTwo. It does, so execution continues in Derived's methodTwo. This method invokes super.methodTwo. So this will invoke the method in the super class (Base) named methodTwo. This method prints the letter "B" and then returns. Next the execution returns from the call to the super.methodTwo and prints the letter "D". We return to the Base class methodOne and return from that to the Derived class methodOne and print the letter "C".</li>
             
-            <input type="radio" name="group1" value="d" id="qt2_20-17_opt_d" />
-            <label for= "qt2_20-17_opt_d">  d) ABC</label><br />
-	        <div id= "qt2_20-17_eachFeedback_d"></div>
+            <li data-component="answer"  id="qt2_20-17_opt_d">ABC</li><li data-component="feedback" id="qt2_20-17_opt_d">The call to methodTwo in super.methodOne is to this.methodTwo which is the method from the Derived class. Consequently the "D" is also printed.</li>
             
-            <input type="radio" name="group1" value="e" id="qt2_20-17_opt_e" />
-            <label for= "qt2_20-17_opt_e">  e) Nothing is printed due to infinite recursion.</label><br />
-	        <div id= "qt2_20-17_eachFeedback_e"></div>
+            <li data-component="answer"  id="qt2_20-17_opt_e">Nothing is printed due to infinite recursion.</li><li data-component="feedback" id="qt2_20-17_opt_e">This is not an example of recursion. No method is called from within itself.</li>
             
 
-            <script>
-		    populateArrays('qt2_20-17','c',['This would be true if the object was created of type Base using new Base. But the object is really a Derived object. So all methods are looked for starting with the Derived class.', 'After the call to methodOne in the super class printing \u0022A\u0022, the code continues with the implicit this.methodTwo which resolves from the current object\u0027s class which is Derived. methodTwo in the Derived class is executed which then calls super.methodTwo which invokes printin \u0022B\u0022 from methodTwo in the Base class. Then the \u0022D\u0022 in the Derive methodTwo is printed. Finally the program returns to methodOne in the Derived class are prints \u0022C\u0022.', 'Even though b is declared as type Base it is created as an object of the Derived class, so all methods to it will be resolved starting with the Derived class. So the methodOne() in Derived will be called. This method first calls super.methodOne so this will invoke the method in the superclass (which is Base). So next the methodOne in Base will execute. This prints the letter \u0022A\u0022 and invokes this.methodTwo(). Since b is really a Derived object, we check there first to see if it has a methodTwo. It does, so execution continues in Derived\u0027s methodTwo. This method invokes super.methodTwo. So this will invoke the method in the super class (Base) named methodTwo. This method prints the letter \u0022B\u0022 and then returns. Next the execution returns from the call to the super.methodTwo and prints the letter \u0022D\u0022. We return to the Base class methodOne and return from that to the Derived class methodOne and print the letter \u0022C\u0022.', 'The call to methodTwo in super.methodOne is to this.methodTwo which is the method from the Derived class. Consequently the \u0022D\u0022 is also printed.', 'This is not an example of recursion. No method is called from within itself.']);
-            $(document).ready(function(){checkExamRadio('qt2_20-17');});
-            </script>
-            
- 
-            </form><br />
-            <div id="qt2_20-17_feedback">
-            </div>
-            </div>
-            
-
-            
-	
-	<div style="text-align: center;">
-	<button class='btn btn-inverse' id ="finish" onclick="checkExam()">Submit Answers</button>
-	</div>
-	<script>
-	    
-	    $(document).ready(function() {
-	      $("#results").hide();
-	      checkIfFinished()
-	    });
-	</script>
-
-
-            
-            </div>
-            <p id="results"></p>
- 
-            
-            <script>
-			   var time = 38 * 60;
-			   var change = -1;
-		       showTime(38 * 60);
-            </script>
-            
-            <script>
-			   var showFeedback = 1;
-            </script>
-            
-            <script>
-			   var showResult = 1;
-            </script>
-            </div>
+            </ul>
+            </ul>
+    </div>
 
 
   
