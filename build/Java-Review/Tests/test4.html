@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/shortanswer.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
@@ -76,11 +75,13 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
+    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
@@ -236,6 +237,7 @@
 
         <li class="divider-vertical"></li>
 
+        
         <!-- user account dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -259,7 +261,7 @@
           </ul>
         </li>
         <!-- end user account dropdown -->
-
+        
         <li class="divider-vertical"></li>
 
         <!-- help menu dropdown -->
@@ -334,9 +336,9 @@
   
   <div class="section" id="practice-exam-4-for-the-ap-cs-a-exam">
 <h1>Practice Exam 4 for the AP CS A Exam<a class="headerlink" href="#practice-exam-4-for-the-ap-cs-a-exam" title="Permalink to this headline">¶</a></h1>
-<p>The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the &#8220;Start&#8221; button when you are ready to begin the exam.  Click the &#8220;Pause&#8221; button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the &#8220;Submit answers&#8221; button only when you are done.  It will display the number correct, number wrong, and number skipped after the &#8220;Submit answers&#8221; button.</p>
+<p>The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the &#8220;Start&#8221; button when you are ready to begin the exam.  Click the &#8220;Pause&#8221; button to pause the exam (you will not be able to see the questions when the exam is paused).  Hover over the clock icon to see the current time remaining. Click on the &#8220;Submit Answers&#8221; button at the end when you are done.  It will display the number correct, number wrong, and number skipped after the &#8220;Submit Answer&#8221; button.</p>
 
-    <ul data-component="timedAssessment" data-time=38 id="postexam4"  >
+    <ul data-component="timedAssessment" data-time=1 id="postexam4"  >
     
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="pe4_1">
             <p>14-4-1: Consider the following partial class definitions.  Which of the constructors shown below (I, II, and III) are valid for C2?</p>
@@ -879,7 +881,10 @@ Cow has a speak method that returns “Moo”
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
-      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      
+      | <a href="#">Back to top</a>
       
     </p>
     <p>

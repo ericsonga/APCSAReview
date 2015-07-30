@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/shortanswer.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
@@ -76,11 +75,13 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
+    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
@@ -236,6 +237,7 @@
 
         <li class="divider-vertical"></li>
 
+        
         <!-- user account dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -259,7 +261,7 @@
           </ul>
         </li>
         <!-- end user account dropdown -->
-
+        
         <li class="divider-vertical"></li>
 
         <!-- help menu dropdown -->
@@ -344,11 +346,12 @@
 
         <p data-component="fillintheblank" data-casei="false" id="2darrayNullfill">
             
-        <span data-blank>What is printed when you type System.out.println(ticketInfo); after you do the above declarations?<span data-answer id="2darrayNullblank_answer">null$</span>
+        <span data-blank>
+            What is printed when you type System.out.println(ticketInfo); and hit enter after you do the above declarations?
+        <span data-feedback="regex" style="display: none" id="2darrayNullblank_feedback1">.*</span>
+        <span data-feedback="text" style="display: none" for="2darrayNullblank_feedback1">Did you actually try this?</span>
             
-        <span data-feedback="regex" id="2darrayNullblank_feedback1">.*</span>
-        <span data-feedback="text" for="2darrayNullblank_feedback1">Did you actually try this?</span>
-            
+        <span data-answer style="display: none" id="2darrayNullblank_answer">null$</span>
         </span>
         
         </p>
@@ -360,11 +363,12 @@
 
         <p data-component="fillintheblank" data-casei="false" id="2daNumElfill">
             
-        <span data-blank>How many elements are in ticketInfo?<span data-answer id="2daNumElblank_answer">6$</span>
+        <span data-blank>
+            How many elements are in ticketInfo?
+        <span data-feedback="regex" style="display: none" id="2daNumElblank_feedback1">.*</span>
+        <span data-feedback="text" style="display: none" for="2daNumElblank_feedback1">Multiply the number of rows and the number of columns</span>
             
-        <span data-feedback="regex" id="2daNumElblank_feedback1">.*</span>
-        <span data-feedback="text" for="2daNumElblank_feedback1">Multiply the number of rows and the number of columns</span>
-            
+        <span data-answer style="display: none" id="2daNumElblank_answer">6$</span>
         </span>
         
         </p>
@@ -408,11 +412,12 @@
 
         <p data-component="fillintheblank" data-casei="false" id="2daGetElfill">
             
-        <span data-blank>What is the value at ``seatingInfo[2][1]`` after the code above exectues?<span data-answer id="2daNumElblank_answer">Luke$</span>
+        <span data-blank>
+            What is the value at <code class="docutils literal"><span class="pre">seatingInfo[2][1]</span></code> after the code above exectues?
+        <span data-feedback="regex" style="display: none" id="2daNumElblank_feedback1">.*</span>
+        <span data-feedback="text" style="display: none" for="2daNumElblank_feedback1">Indicies start at 0 and the row is first then the column</span>
             
-        <span data-feedback="regex" id="2daNumElblank_feedback1">.*</span>
-        <span data-feedback="text" for="2daNumElblank_feedback1">Indicies start at 0 and the row is first then the column</span>
-            
+        <span data-answer style="display: none" id="2daNumElblank_answer">Luke$</span>
         </span>
         
         </p>
@@ -470,7 +475,10 @@
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
-      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      
+      | <a href="#">Back to top</a>
       
     </p>
     <p>

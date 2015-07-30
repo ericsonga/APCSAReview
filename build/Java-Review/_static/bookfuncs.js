@@ -93,6 +93,7 @@ function gotUser(data, status, whatever) {
     } else {
         if (!caughtErr) {
             mess = d.email;
+            eBookConfig.email = d.email;
             eBookConfig.isLoggedIn = true;
             eBookConfig.cohortId = d.cohortId;
             $(document).trigger("runestone:login")
@@ -243,9 +244,17 @@ function addDelay(directive, action, delay) {
 
 
 // initialize stuff
-$(document).ready(handleLoginLogout);
-$(document).ready(getNumUsers);
-$(document).ready(getOnlineUsers);
+$(document).ready(function() {
+    if (eBookConfig && eBookConfig.useRunestoneServices) {
+        $(document).ready(handleLoginLogout);
+        $(document).ready(getNumUsers);
+        $(document).ready(getOnlineUsers);
+    } else {
+        if (typeof eBookConfig === 'undefined') {
+            console.log("eBookConfig is not defined.  This page must not be set up for Runestone");
+        }
+    }
+});
 
 // misc stuff
 // todo:  This could be further distributed but making a video.js file just for one function seems dumb.

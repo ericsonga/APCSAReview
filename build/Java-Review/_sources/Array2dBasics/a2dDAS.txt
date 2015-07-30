@@ -22,7 +22,7 @@ To declare a 2D array, specify the type of elements that will be stored in the a
         :correct: null$
         :feedback1: ('.*','Did you actually try this?')
 
-        What is printed when you type System.out.println(ticketInfo); after you do the above declarations? 
+        What is printed when you type System.out.println(ticketInfo); and hit enter after you do the above declarations? 
 
 ..	index::
 	pair: 2D Array; creation

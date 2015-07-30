@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
     <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/shortanswer.css" type="text/css" />
     <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
     <link rel="stylesheet" href="../_static/video.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
@@ -76,11 +75,13 @@
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
     <script type="text/javascript" src="../_static/livecode.js"></script>
     <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../_static/lib/prettify.js"></script>
     <script type="text/javascript" src="../_static/lib/underscore-min.js"></script>
     <script type="text/javascript" src="../_static/lib/lis.js"></script>
     <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/parsonsaux.js"></script>
+    <script type="text/javascript" src="../_static/parsons-noconflict.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
     <script type="text/javascript" src="../_static/reveal.js"></script>
     <script type="text/javascript" src="../_static/shortanswer.js"></script>
@@ -236,6 +237,7 @@
 
         <li class="divider-vertical"></li>
 
+        
         <!-- user account dropdown -->
         <li class="dropdown">
           <a class="dropdown-toggle" href="#" data-toggle="dropdown">
@@ -259,7 +261,7 @@
           </ul>
         </li>
         <!-- end user account dropdown -->
-
+        
         <li class="divider-vertical"></li>
 
         <!-- help menu dropdown -->
@@ -392,9 +394,136 @@ public class ArrayWorker
 <p>Since <code class="docutils literal"><span class="pre">values</span></code> is an object field and the method <code class="docutils literal"><span class="pre">getAverage</span></code> is in the same class it can directly access the field <code class="docutils literal"><span class="pre">values</span></code>.  The code could have also been written as <code class="docutils literal"><span class="pre">this.values</span></code> to indicate the current object&#8217;s field called <code class="docutils literal"><span class="pre">values</span></code>.  Every object method is passed the object the method was called on and it can be referenced using the Java keyword <code class="docutils literal"><span class="pre">this</span></code>.</p>
 <p><strong>Mixed up programs</strong></p>
 
-    <pre data-component="parsons" id="pab_2">
-        <span data-question>7-2-1: The following method has the correct code to return the largest value in an integer array called <b>vals</b> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.</p></span>None</pre>
-    <p>Some examples of finding the largest value in an array start by setting the largest variable to 0.  But, what happens if the array only contains negative numbers?  What value could you set largest to and still have it work correctly even if the field <strong>values</strong> contained only negative numbers?</p>
+        <div class='parsons alert alert-warning' id="parsons-84">
+        <div class="parsons-text">7-2-1: The following method has the correct code to return the largest value in an integer array called <b>vals</b> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.</p><br /><br /></div>
+        <div style="clear:left;"></div>
+        <div id="parsons-orig-84" style="display:none;">public int getLargest()\n{
+  int largest = vals[0];
+  for (int item : vals)\n{
+    if (item > largest)\n{
+      largest = item;
+    }  // end if
+  } // end for\nreturn largest;
+} // end method</div>
+        <div class="sortable-code-container">
+        <div id="parsons-sortableTrash-84" class="sortable-code"></div>
+        <div id="parsons-sortableCode-84" class="sortable-code"></div>
+        <div style="clear:left;"></div>
+        </div>
+        <div class="parsons-controls">
+        <input type="button" class='btn btn-success' id="checkMe84" value="Check Me"/>
+        <input type="button" class='btn btn-default' id="reset84" value="Reset"/>
+        <div id="parsons-message-84"></div>
+        </div>
+        </div>
+
+    <script>
+        $pjQ(document).ready(function(){
+            var rb = new RunestoneBase();
+            $("#parsons-84").not(".sortable-code").not(".parsons-controls").on("click", function(){
+                 $('html, body').animate({
+                    scrollTop: ($("#parsons-84").offset().top - 50)
+                }, 700);
+            }).find(".sortable-code, .parsons-controls").click(function(e) {
+                return false;
+                });
+            var msgBox = $("#parsons-message-84");
+            msgBox.hide();
+        var displayErrors = function (fb) {
+            if(fb.errors.length > 0) {
+                    var hash = pp_84.getHash("#ul-parsons-sortableCode-84");
+                    msgBox.fadeIn(500);
+                    msgBox.attr('class','alert alert-danger');
+                    msgBox.html(fb.errors[0]);
+                    rb.logBookEvent({'event':'parsons', 'act':hash, 'div_id':'pab_2'});
+
+            } else {
+                    rb.logBookEvent({'event':'parsons', 'act':'yes', 'div_id':'pab_2'});
+                    msgBox.fadeIn(100);
+                    msgBox.attr('class','alert alert-success');
+                    msgBox.html("Perfect!")
+                }
+
+        }
+
+        $(window).load(function() {
+            // set min width and height
+            var sortableul = $("#ul-parsons-sortableCode-84");
+            var trashul = $("#ul-parsons-sortableTrash-84");
+            var sortableHeight = sortableul.height();
+            var sortableWidth = sortableul.width();
+            var trashWidth = trashul.width();
+            var trashHeight = trashul.height();
+            var minHeight = Math.max(trashHeight,sortableHeight);
+            var minWidth = Math.max(trashWidth, sortableWidth);
+            trashul.css("min-height",minHeight + "px");
+            sortableul.css("min-height",minHeight + "px");
+            sortableul.height(minHeight);
+            trashul.css("min-width",minWidth + "px");
+            sortableul.css("min-width",minWidth + "px");
+        });
+ 
+
+        var pp_84 = new ParsonsWidget({
+                'sortableId': 'parsons-sortableCode-84',
+        'trashId': 'parsons-sortableTrash-84',
+                'max_wrong_lines': 1,
+                'solution_label': 'Drop blocks here',
+                'feedback_cb' : displayErrors
+        });
+        pp_84.init($pjQ("#parsons-orig-84").text());
+    pp_84.shuffleLines();
+            
+        if(localStorage.getItem('pab_2') && localStorage.getItem('pab_2-trash')) {
+            try {
+                var solution = localStorage.getItem('pab_2');
+                var trash = localStorage.getItem('pab_2-trash');
+                pp_84.createHTMLFromHashes(solution,trash);
+                pp_84.getFeedback();
+            } catch(err) {
+                var text = "An error occured restoring old pab_2 state.  Error: ";
+                console.log(text + err.message);
+            }
+
+        }
+            $pjQ("#reset84").click(function(event){
+              event.preventDefault();
+              pp_84.shuffleLines();
+            
+            // set min width and height
+            var sortableul = $("#ul-parsons-sortableCode-84");
+            var trashul = $("#ul-parsons-sortableTrash-84");
+            var sortableHeight = sortableul.height();
+            var sortableWidth = sortableul.width();
+            var trashWidth = trashul.width();
+            var trashHeight = trashul.height();
+            var minHeight = Math.max(trashHeight,sortableHeight);
+            var minWidth = Math.max(trashWidth, sortableWidth);
+            trashul.css("min-height",minHeight + "px");
+            sortableul.css("min-height",minHeight + "px");
+            trashul.css("min-width",minWidth + "px");
+            sortableul.css("min-width",minWidth + "px");
+              msgBox.hide();
+            });
+            
+            $pjQ("#checkMe84").click(function(event){
+              event.preventDefault();
+              var hash = pp_84.getHash("#ul-parsons-sortableCode-84");
+              localStorage.setItem('pab_2',hash);
+              hash = pp_84.getHash("#ul-parsons-sortableTrash-84");
+              localStorage.setItem('pab_2-trash',hash);
+            
+            pp_84.getFeedback();
+            msgBox.fadeIn(100);
+            
+            });
+            
+        });
+            
+
+    </script>
+
+<p>Some examples of finding the largest value in an array start by setting the largest variable to 0.  But, what happens if the array only contains negative numbers?  What value could you set largest to and still have it work correctly even if the field <strong>values</strong> contained only negative numbers?</p>
 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qab_3">
             <p>7-2-2: Given that a is an array of integers, which of the following best describes the conditions under which the following code segment will return true?</p>
@@ -505,7 +634,10 @@ public class ArrayWorker
 <footer class="footer">
   <div class="container">
     <p class="pull-right">
-      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span> | <a href="#">Back to top</a>
+      
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      
+      | <a href="#">Back to top</a>
       
     </p>
     <p>
