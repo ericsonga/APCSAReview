@@ -52,21 +52,31 @@ Looping Through a 2D Array
 
 Since you can find out the number of rows and columns in a 2D array you can use a **nested for loop** (one loop inside of another loop) to loop through all of the elements of a 2D array.
 
-.. code-block:: java 
+.. activecode:: lcgetAverage
+   :language: java 
+   
+   public class Test
+   {
 
-  public static double getAverage(int[][] a)
-  {
-     double total = 0;
-     for (int row = 0; row < a.length; row++)
-     {
-         for (int col = 0; col < a[0].length; col++)
+      public static double getAverage(int[][] a)
+      {
+         double total = 0;
+         for (int row = 0; row < a.length; row++)
          {
-            total = total + a[row][col];
+            for (int col = 0; col < a[0].length; col++)
+            {
+               total = total + a[row][col];
+            }
          }
-     }
-     return total / (a.length * a[0].length);
-  }
-  
+         return total / (a.length * a[0].length);
+      }
+      
+      public static void main(String[] args)
+      {
+         int[][] matrix = {{1,2,3},{4,5,6}};
+         System.out.println(getAverage(matrix));
+      }
+   }
 Some key things to notice about this code are:
 
 - ``total`` is declared to be a double so that the result will be a double.  If ``total`` was declared to be an ``int`` then the result would be an integer and the values after the decimal point would be thrown away.  

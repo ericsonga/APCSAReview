@@ -14,15 +14,44 @@ Luckily Java has a class that handles this type of thing.  It is called **ArrayL
 
 To be able to plug in different implementing classes, you should declare the variable type to be ``List`` and the only place you should use the class ``ArrayList`` is when you actually create the list as shown below.  This minimizes the number of places you have to change your code if you change your mind and use a different implementing class in the future.  
  
-.. code-block:: java 
+.. activecode:: lcalastr
+   :language: java
 
-  import java.util.*;  // import all classes in this package.
-  List<String> nameList = new ArrayList<String>();
-  nameList.add("Diego");
-  nameList.add("Grace");
-  nameList.add("Deja"); 
+   import java.util.*;  // import all classes in this package.
+   public class Test
+   {
+      public static void main(String[] arts)
+      {
+         List nameList = new ArrayList();
+         nameList.add("Diego");
+         nameList.add("Grace");
+         nameList.add("Deja"); 
+         System.out.println(nameList);
+      }
+   }
 
-This code creates an object variable called nameList that will refer to a  List of String objects and sets its reference to an object of the ArrayList class that can hold String objects.  The ``<String>`` tells Java the type of objects that you will have in your List. If you try to put objects of other types in the list you will get a run-time error. 
+This code creates an object variable called nameList that will refer to a List of objects and sets its reference to an object of the ArrayList class.  
+
+You can also create lists of integer values.
+
+.. activecode:: lcalaint
+   :language: java
+
+   import java.util.*;  // import all classes in this package.
+   public class Test
+   {
+      public static void main(String[] arts)
+      {
+         List list1 = new ArrayList();
+         list1.add(new Integer(1));
+         list1.add(new Integer(2));
+         list1.set(1, new Integer(3));
+         list1.add(1, new Integer(4));
+         list1.add(new Integer(5));
+         System.out.println(list1);
+      }
+   }
+
 
 **Check your understanding**
 

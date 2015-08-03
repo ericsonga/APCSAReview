@@ -14,17 +14,13 @@ You don't have to loop through all of the elements of an array.  You can loop th
 .. activecode:: lclp1
    :language: java
    
-   public class Test1
+   public class ArrayWorker
    {
-      private int[ ] values = {3,8,-3, 2};
+      private int[ ] values;
       
-      public static void main(String[] args)
+      public ArrayWorker(int[] theValues)
       {
-        System.out.println(doubleFirstFive());
-        for (int val : a )
-        {
-          System.out.println(val);
-        }
+         values = theValues;
       }
       
       public void doubleFirstFive()
@@ -34,6 +30,22 @@ You don't have to loop through all of the elements of an array.  You can loop th
           values[i] = values[i] * 2;
         }
       }
+      
+      public void printArray()
+      {
+         for (int val: values)
+         {
+            System.out.println(val);
+         }
+      }
+      
+      public static void main(String[] args)
+      {
+        int[] numArray = {3,8,-3, 2};
+        ArrayWorker worker = new ArrayWorker(numArray);
+        worker.doubleFirstFive();
+        worker.printArray();
+      }
    }
    
 You can even start in the middle and loop through the rest of the array.  Does this work for arrays that have an even number of elements?  Does it work for arrays that have an odd number of elements?
@@ -41,17 +53,13 @@ You can even start in the middle and loop through the rest of the array.  Does t
 .. activecode:: lclp2
    :language: java
    
-   public class Test2
+   public class ArrayWorker
    {
-      private int[ ] values = {3,8,-3, 2};
+      private int[ ] values;
       
-      public static void main(String[] args)
+      public ArrayWorker(int[] theValues)
       {
-        System.out.println(doubleLastHalf());
-        for (int val : a )
-        {
-          System.out.println(val);
-        }
+         values = theValues;
       }
       
       public void doubleLastHalf()
@@ -60,6 +68,22 @@ You can even start in the middle and loop through the rest of the array.  Does t
         {
           values[i] = values[i] * 2;
         }
+      }
+      
+      public void printArray()
+      {
+         for (int val: values)
+         {
+            System.out.println(val);
+         }
+      }
+      
+      public static void main(String[] args)
+      {
+        int[] numArray = {3,8,-3, 2};
+        ArrayWorker worker = new ArrayWorker(numArray);
+        worker.doubleLastHalf();
+        worker.printArray();
       }
    }
    
