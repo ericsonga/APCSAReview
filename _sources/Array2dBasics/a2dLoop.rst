@@ -77,6 +77,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
          System.out.println(getAverage(matrix));
       }
    }
+   
 Some key things to notice about this code are:
 
 - ``total`` is declared to be a double so that the result will be a double.  If ``total`` was declared to be an ``int`` then the result would be an integer and the values after the decimal point would be thrown away.  
