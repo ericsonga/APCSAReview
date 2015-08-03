@@ -129,8 +129,6 @@ Arrays
    ArrayBasics/aMedMC.rst
    ArrayBasics/aHardMC.rst  
    ArrayBasics/selfDivisorB.rst
-   ArrayBasics/horseBarnA.rst 
-   ArrayBasics/horseBarnB.rst 
    
 List and ArrayList
 ::::::::::::::::::::
@@ -186,7 +184,6 @@ Object-Oriented Concepts
    OOBasics/ooEasyMC.rst
    OOBasics/ooMedMC.rst
    OOBasics/ooHardMC.rst
-   OOBasics/climbingClubA.rst
    
 Recursion
 :::::::::
