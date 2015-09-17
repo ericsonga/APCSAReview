@@ -53,7 +53,7 @@ The infinite loop above is pretty obvious.  But, most infinite loops are acciden
 
 **Check your understanding**
 
-.. mchoicemf:: qlb_1
+.. mchoice:: qlb_1
    :answer_a: 5 4 3 2 1
    :answer_b: -5 -4 -3 -2 -1
    :answer_c: -4 -3 -2 -1 0
@@ -73,7 +73,7 @@ The infinite loop above is pretty obvious.  But, most infinite loops are acciden
         System.out.print(x + " ");
      }
    
-.. mchoicemf:: qlb_2
+.. mchoice:: qlb_2
    :answer_a: var1 = 1, var2 = 1
    :answer_b: var1 = 2, var2 = 0
    :answer_c: var1 = 3, var2 = -1
@@ -99,7 +99,7 @@ The infinite loop above is pretty obvious.  But, most infinite loops are acciden
         var2 = var2 -1;
      }
   
-.. mchoicemf:: qlb_3
+.. mchoice:: qlb_3
    :answer_a: {1, 3, -5, -2}
    :answer_b: {3, 9, -15, -6}
    :answer_c: {2, 6, -10, -4}
@@ -126,7 +126,7 @@ The infinite loop above is pretty obvious.  But, most infinite loops are acciden
         } // end while
      } // end method  
      
-.. mchoicemf:: qlb_4
+.. mchoice:: qlb_4
    :answer_a: {1, 3, -5, -2}
    :answer_b: {3, 9, -15, -6}
    :answer_c: {2, 6, -10, -4}

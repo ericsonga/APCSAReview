@@ -58,7 +58,7 @@ Or you can import everything at that level in a **package**. A package is a coll
   
 Don't worry about adding import statements on the AP CS A exam.  Any that you need will be provided for you.
   
-.. mchoicemf:: qlib_1
+.. mchoice:: qlib_1
    :answer_a: You can only have one import statement in a source file.
    :answer_b: You must specify the class to import.
    :answer_c: Import statements must be before other code in a Java source file.  

@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are harder than those that you will typically see on the AP CS A exam.
 
-.. mchoicemf:: qooh_1
+.. mchoice:: qooh_1
    :answer_a: ABDC
    :answer_b: AB
    :answer_c: ABCD
@@ -51,7 +51,7 @@ These problems are harder than those that you will typically see on the AP CS A 
          }
       }
       
-.. mchoicemf:: qooh_2
+.. mchoice:: qooh_2
    :answer_a: II only
    :answer_b: III only
    :answer_c: I, II, and III

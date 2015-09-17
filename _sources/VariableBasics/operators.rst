@@ -59,7 +59,7 @@ In addition, the **Math** class provides us with multiple methods that can be us
       }
    }
    
-.. mchoicemf:: q3_4_1
+.. mchoice:: q3_4_1
    :answer_a: 15
    :answer_b: 16
    :answer_c: 8
@@ -70,7 +70,7 @@ In addition, the **Math** class provides us with multiple methods that can be us
 
    What is the result of 158 % 10?
    
-.. mchoicemf:: q3_4_2
+.. mchoice:: q3_4_2
    :answer_a: 3
    :answer_b: 2
    :answer_c: 8
@@ -98,7 +98,7 @@ You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the 
       }
    }
 
-.. mchoicemf:: q3_4_3
+.. mchoice:: q3_4_3
    :answer_a: x = -1, y = 1, z = 4
    :answer_b: x = -1, y = 2, z = 3
    :answer_c: x = -1, y = 2, z = 2

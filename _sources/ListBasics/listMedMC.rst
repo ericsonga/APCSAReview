@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are like those you will see on the AP CS A exam.
 
-.. mchoicemf:: qalm_1
+.. mchoice:: qalm_1
    :answer_a: [1, 2, 3, 4, 5]
    :answer_b: [1, 2, 4, 5, 6]
    :answer_c: [1, 2, 5, 4, 6]
@@ -32,7 +32,7 @@ These problems are like those you will see on the AP CS A exam.
       System.out.println(list1);
 
    
-.. mchoicemf:: qalm_2
+.. mchoice:: qalm_2
    :answer_a: [0, 4, 2, 5, 3]   
    :answer_b: [3, 5, 2, 4, 0, 0, 0, 0]   
    :answer_c: [0, 0, 0, 0, 4, 2, 5, 3]  
@@ -66,7 +66,7 @@ These problems are like those you will see on the AP CS A exam.
       }
 
 
-.. mchoicemf:: qalm_3
+.. mchoice:: qalm_3
    :answer_a: Both methods produce the same result, and process1 is faster than process2.    
    :answer_b: The two methods produce different results and take the same amount of time.  
    :answer_c: The two methods produce different results, and process1 is faster than process2. 
@@ -99,7 +99,7 @@ These problems are like those you will see on the AP CS A exam.
          return someList;
       }
       
-.. mchoicemf:: qalm_4
+.. mchoice:: qalm_4
    :answer_a: [1, 2, 5, 4, 6, 3]
    :answer_b: [6, 5, 4, 3, 2, 1]
    :answer_c: [1, 2, 3, 4, 5, 6]

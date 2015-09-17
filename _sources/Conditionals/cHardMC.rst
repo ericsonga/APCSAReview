@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are harder than most of those that you will usually see on the AP CS A exam.
 
-.. mchoicemf:: qch_1
+.. mchoice:: qch_1
    :answer_a: s starts with two or more of the same characters
    :answer_b: s contains two or more of the same characters
    :answer_c: s contains two or more of the same character in a row
@@ -29,7 +29,7 @@ These problems are harder than most of those that you will usually see on the AP
            s.charAt(1) || check(s.substring(1)));
      }
     
-.. mchoicemf:: qch_2
+.. mchoice:: qch_2
    :answer_a: s == (m - 5) && (2 * s + 3) == (m + 3)
    :answer_b: (s == m - 5) && (s - 3 == 2 * (m - 3))
    :answer_c: (s == (m + 5)) && ((s + 3) == (2 * m + 3))
@@ -53,7 +53,7 @@ These problems are harder than most of those that you will usually see on the AP
         }
      }
 
-.. mchoicemf:: qch_3
+.. mchoice:: qch_3
    :answer_a: (x > 15 && x < 18) && (x > 10)
    :answer_b: (y < 20) || (x > 15 && x < 18)
    :answer_c: ((x > 10) || (x > 15 && x < 18)) || (y < 20)

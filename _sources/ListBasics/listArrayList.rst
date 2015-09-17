@@ -1,6 +1,4 @@
-.. qnum::
-   :prefix: 8-3-
-   :start: 1
+mchoice
      
 The ArrayList Class
 ===================
@@ -55,7 +53,7 @@ You can also create lists of integer values.
 
 **Check your understanding**
 
-.. mchoicemf:: qlib_2
+.. mchoice:: qlib_2
    :answer_a: [1, 2, 3, 4, 5]
    :answer_b: [1, 2, 4, 5, 6]
    :answer_c: [1, 2, 5, 4, 6]
@@ -79,7 +77,7 @@ You can also create lists of integer values.
       list1.add(new Integer(6));
       System.out.println(list1);
    
-.. mchoicemf:: qlib_3
+.. mchoice:: qlib_3
    :answer_a: [2, 3]
    :answer_b: [1, 2, 3]
    :answer_c: [1, 2]
@@ -101,7 +99,7 @@ You can also create lists of integer values.
       list1.remove(1);
       System.out.println(list1);
       
-.. mchoicemf:: qlib_4
+.. mchoice:: qlib_4
    :answer_a: [1, 2, 3, 4, 5]
    :answer_b: [1, 2, 4, 5, 6]
    :answer_c: [1, 2, 5, 4, 6]

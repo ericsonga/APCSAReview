@@ -29,7 +29,7 @@ The code above declares an interface called ``Checker`` that contains a public a
 
 Another example of an interface in Java is the **Iterator** interface.  It is used to loop through collection classes (classes that hold groups of objects like ``ArrayList``).
 
-.. mchoicemf:: qooi_1
+.. mchoice:: qooi_1
    :answer_a: I only  
    :answer_b: II only 
    :answer_c: I and II

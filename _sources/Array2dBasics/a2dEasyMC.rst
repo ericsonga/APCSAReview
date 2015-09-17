@@ -8,7 +8,7 @@ Easy Multiple Choice Questions
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
 
-.. mchoicemf:: qa2de_1
+.. mchoice:: qa2de_1
    :answer_a: 2
    :answer_b: 4
    :answer_c: 8
@@ -19,7 +19,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    How many columns does ``a`` have if it is created as follows ``int[][] a = {{2, 4, 6, 8}, {1, 2, 3, 4}};``?	
 
-.. mchoicemf:: qa2de_2
+.. mchoice:: qa2de_2
    :answer_a: <code>strGrid[0][2] = "S";</code>
    :answer_b: <code>strGrid[1][3] = "S";</code>
    :answer_c: <code>strGrid[3][1] = "S";</code>
@@ -34,7 +34,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which of the following statements assigns the letter S to the third row and first column of a two-dimensional array named ``strGrid`` (assuming row-major order).
    
-.. mchoicemf:: qa2de_3
+.. mchoice:: qa2de_3
    :answer_a: a[0][3]
    :answer_b: a[1][3]
    :answer_c: a[0][2]

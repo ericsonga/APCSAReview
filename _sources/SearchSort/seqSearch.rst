@@ -49,7 +49,7 @@ The code for ``sequentialSearch`` below is from the AP CS A course description.
    
 To see this executing using the Java Visualizer click on this `link1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=+public+class+SearchTest%0A++%7B%0A%0A+++++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)%0A+++++%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++++%7B%0A+++++++++++if+(elements%5Bj%5D+%3D%3D+target)%0A+++++++++++%7B%0A++++++++++++++return+j%3B%0A+++++++++++%7D+%0A+++++++%7D%0A+++++++return+-1%3B%0A+++++%7D%0A+++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B81,+3,+-20,+15,+432%7D%3B%0A++++++++%0A++++++++//+test+when+the+target+is+in+the+array%0A++++++++int+index+%3D+sequentialSearch(arr1,-20)%3B%0A++++++++System.out.println(index)%3B%0A++++++++%0A++++++++//+test+when+the+target+is+not+in+the+array%0A++++++++index+%3D+sequentialSearch(arr1,53)%3B%0A++++++++System.out.println(index)%3B%0A+++++%7D%0A+++%7D&mode=display&curInstr=0>`_
            
-.. mchoicemf:: qss_1
+.. mchoice:: qss_1
    :answer_a: The value is the first one in the array
    :answer_b: The value is in the middle of the array
    :answer_c: The value is the last one in the array 
@@ -62,7 +62,7 @@ To see this executing using the Java Visualizer click on this `link1 <http://csc
    
    Which will cause the *longest* execution of a sequential search looking for a value in an array of integers?
    
-.. mchoicemf:: qss_2
+.. mchoice:: qss_2
    :answer_a: The value is the first one in the array
    :answer_b: The value is in the middle of the array
    :answer_c: The value is the last one in the array 

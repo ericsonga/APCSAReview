@@ -17,7 +17,7 @@ methods live in the object that defines the class (an object of a class named ``
 
 **Check your understanding**
 
-.. mchoicemf:: q2_8
+.. mchoice:: q2_8
    :answer_a: if (Math.random() < 0.4)
    :answer_b: if (Math.random() > 0.4)
    :answer_c: if (Math.random() == 0.4)

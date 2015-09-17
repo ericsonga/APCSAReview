@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those you will see on the AP CS A exam.
            
-.. mchoicemf:: qrm_1
+.. mchoice:: qrm_1
    :answer_a: 1441
    :answer_b: 43211234
    :answer_c: 3443
@@ -36,7 +36,7 @@ These problems are similar to those you will see on the AP CS A exam.
          System.out.print(x % 10);
       }
 
-.. mchoicemf:: qrm_2
+.. mchoice:: qrm_2
    :answer_a: 243
    :answer_b: 0
    :answer_c: 3
@@ -61,7 +61,7 @@ These problems are similar to those you will see on the AP CS A exam.
             return 3 * mystery (n - 1);
       }
       
-.. mchoicemf:: qrm_3
+.. mchoice:: qrm_3
    :answer_a: 1
    :answer_b: 10
    :answer_c: 25
@@ -86,7 +86,7 @@ These problems are similar to those you will see on the AP CS A exam.
             return n * product(n - 2);
       }
       
-.. mchoicemf:: qrm_4
+.. mchoice:: qrm_4
    :answer_a: 8
    :answer_b: 3
    :answer_c: There is no result because of infinite recursion.

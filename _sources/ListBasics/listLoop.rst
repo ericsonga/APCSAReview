@@ -49,7 +49,7 @@ Be careful when you remove items from a list as you loop through it.  Remember t
   
 Notice that the method above only increments the current index if an item was removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the items shift left.  
 
-.. mchoicemf:: qlib_5
+.. mchoice:: qlib_5
    :answer_a: [0, 4, 2, 5, 3]
    :answer_b: [3, 5, 2, 4, 0, 0, 0, 0]
    :answer_c: [0, 0, 0, 0, 4, 2, 5, 3]
@@ -81,7 +81,7 @@ Notice that the method above only increments the current index if an item was re
          }
       }
       
-.. mchoicemf:: qlib_6
+.. mchoice:: qlib_6
    :answer_a: A list will always use less memory than an array.
    :answer_b: A list can store objects, but arrays can only store primitive types.
    :answer_c: A list has faster access to the last element than an array.

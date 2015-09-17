@@ -21,7 +21,7 @@ Java uses ``!`` to indicate negation.  Applying DeMorgan's Laws to ``!(x < 3 && 
 
 For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_Morgan's_laws.  
 
-.. mchoicemf:: qcb_8
+.. mchoice:: qcb_8
    :answer_a: first case
    :answer_b: second case 
    :correct: b
@@ -35,7 +35,7 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
      if (!(x < 3 || y > 2)) System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoicemf:: qcb_9
+.. mchoice:: qcb_9
    :answer_a: first case
    :answer_b: second case 
    :correct: a

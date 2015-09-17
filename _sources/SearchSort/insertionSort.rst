@@ -59,7 +59,7 @@ The code for ``insertionSort`` below is from the AP CS A course description.
    
 To see this executing using the Java Visualizer click on this `link <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+insertionSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++for+(int+j+%3D+1%3B+j+%3C+elements.length%3B+j%2B%2B)+%0A++++++++%7B%0A+++++++++++int+temp+%3D+elements%5Bj%5D%3B%0A+++++++++++int+possibleIndex+%3D+j%3B%0A+++++++++++while+(possibleIndex+%3E+0+%26%26+temp+%3C+elements%5BpossibleIndex+-+1%5D)+%0A+++++++++++%7B%0A++++++++++++++elements%5BpossibleIndex%5D+%3D+elements%5BpossibleIndex+-+1%5D%3B%0A++++++++++++++possibleIndex--%3B+%0A+++++++++++%7D%0A+++++++++++elements%5BpossibleIndex%5D+%3D+temp%3B%0A++++++++%7D%0A++++%7D%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++insertionSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_
 
-.. mchoicemf:: qins_1  
+.. mchoice:: qins_1  
    :answer_a: If the data is already sorted in ascending order
    :answer_b: If the data is already sorted in descending order
    :answer_c: It will always take the same amount of time to execute
@@ -70,7 +70,7 @@ To see this executing using the Java Visualizer click on this `link <http://csci
    
    Under what condition will an insertion sort execute faster?
    
-.. mchoicemf:: qins_2
+.. mchoice:: qins_2
    :answer_a: line 1
    :answer_b: line 2
    :answer_c: line 3

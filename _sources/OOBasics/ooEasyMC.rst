@@ -8,7 +8,7 @@ Easy Multiple Choice Questions
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
 
-.. mchoicemf:: qooe_1
+.. mchoice:: qooe_1
    :answer_a: Initialize the fields in the object.
    :answer_b: Determines the amount of space needed for an object and creates the object.
    :answer_c: Names the new object.
@@ -19,7 +19,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    What best describes the purpose of a class's constructor?
 
-.. mchoicemf:: qooe_2
+.. mchoice:: qooe_2
    :answer_a: The methods do different things.
    :answer_b: The methods have different parameter names.
    :answer_c: The methods have different post-conditions.
@@ -34,7 +34,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Under which of these conditions is it appropriate to overload a method (ie: the class will contain two methods with the same name)?
    
-.. mchoicemf:: qooe_3
+.. mchoice:: qooe_3
    :answer_a: I and II only
    :answer_b: II only
    :answer_c: I, II and III
@@ -55,7 +55,7 @@ These problems are easier than most of those that you will usually see on the AP
       II.  This class must be declared as abstract.
       III.  You can't declare any fields in this class. 
       
-.. mchoicemf:: qooe_4
+.. mchoice:: qooe_4
    :answer_a: Abstract classes cannot be instantiated, but they can be sub-classed.  
    :answer_b: Abstract classes can be instantiated, but they cannot be sub-classed.  
    :answer_c: Abstract classes can only contain abstract methods.  They can be sub-classed.
@@ -68,7 +68,7 @@ These problems are easier than most of those that you will usually see on the AP
    
    Which of the following is true about abstract classes?
    
-.. mchoicemf:: qooe_5
+.. mchoice:: qooe_5
    :answer_a: Use four unrelated classes: <code>Car</code>, <code>Doors</code>, <code>AirConditioning</code>, and <code>MilesPerGallon</code>.
    :answer_b: Use a class <code>Car</code> with three subclasses: <code>Doors</code>, <code>AirConditioning</code>, and <code>MilesPerGallon</code>.
    :answer_c: Use a class <code>Car</code>, with fields: <code>numDoors</code>, <code>hasAir</code>, and <code>milesPerGallon</code>.
@@ -83,7 +83,7 @@ These problems are easier than most of those that you will usually see on the AP
 
     A car dealership needs a program to store information about the cars for sale. For each car, they want to keep track of the following information: number of doors (2 or 4), whether the car has air conditioning, and its average number of miles per gallon. Which of the following is the best design?
     
-.. mchoicemf:: qooe_6
+.. mchoice:: qooe_6
    :answer_a: How the methods are implemented.
    :answer_b: The method names.
    :answer_c: The method return types.
@@ -98,7 +98,7 @@ These problems are easier than most of those that you will usually see on the AP
    
     A program is being written by a team of programmers. One programmer is implementing a class called ``Employee``; another programmer is writing code that will use the ``Employee`` class. Which of the following aspects of the public methods and fields of the ``Employee`` class does not need to be known by both programmers?
     
-.. mchoicemf:: qooe_7
+.. mchoice:: qooe_7
    :answer_a: Create one class <code>PublishedMaterial</code> with the requested fields plus type.  
    :answer_b: Create classes <code>Book</code>, <code>Movie</code>, and <code>AudioTape</code> with the requested fields.
    :answer_c: Create one class <code>BookStore</code> with the requested fields plus type.

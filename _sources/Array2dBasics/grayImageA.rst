@@ -74,7 +74,7 @@ How to solve this problem
 
 To solve this problem, we will need to loop through the entire 2D array, looking for instances of a ``WHITE`` pixel, keeping track of our count during the loop.
 
-.. mchoicemf:: frgia_1
+.. mchoice:: frgia_1
    :answer_a: for
    :answer_b: for each
    :answer_c: while

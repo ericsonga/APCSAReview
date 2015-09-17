@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are harder than most of those that you will usually see on the AP CS A exam.
 
-.. mchoicemf:: qcb_1
+.. mchoice:: qcb_1
    :answer_a: Both implementations work as intended and are equally fast.
    :answer_b: Both implementations work as intended, but implementation 1 is faster than implementation 2.
    :answer_c: Both implementations work as intended, but implementation 2 is faster than implementation 1.
@@ -50,7 +50,7 @@ These problems are harder than most of those that you will usually see on the AP
         for (int k = 0; k <= j; k++)
            sum[j] = sum [j] + arr[k];
 
-.. mchoicemf:: qcb_2
+.. mchoice:: qcb_2
    :answer_a: The maximum brightness value for all pixels in imagePixel
    :answer_b: The column with the greatest brightness sum
    :answer_c: The most frequent brightness value in imagePixels

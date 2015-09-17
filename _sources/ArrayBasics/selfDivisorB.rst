@@ -74,7 +74,7 @@ How to solve this problem
 The first thing to do is try to solve the example by hand.  The question tells us to return an array of size num so we need to create an array of that size.  We need 
 to loop as long as we haven't found 3 self divisors and try the current value.  If the current value is a self-divisor then we add it to the array.  When we have found 3 self divisors then return the array. We will need to keep track of the number of self divisors that we have found.  We would try 10 (false), 11 (true so add to the array), 12 (true so add to the array), 13 (false), 14 (false), 15 (true so add to the array and return the array since we found 3).  
 
-.. mchoicemf:: frsdb_1
+.. mchoice:: frsdb_1
    :answer_a: for
    :answer_b: for each
    :answer_c: while
@@ -85,7 +85,7 @@ to loop as long as we haven't found 3 self divisors and try the current value.  
 
    Which loop should you use to solve this problem?
 
-.. mchoicemf:: frsdb_2
+.. mchoice:: frsdb_2
    :answer_a: int[] retArray = new int[3];
    :answer_b: retArray = new int[num];
    :answer_c: int retArray = new int[num];

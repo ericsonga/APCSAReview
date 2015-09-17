@@ -13,7 +13,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
  
 **Check your understanding**
 
-.. mchoicemf:: qcb_7
+.. mchoice:: qcb_7
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  

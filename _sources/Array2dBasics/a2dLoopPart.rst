@@ -36,7 +36,7 @@ You can loop through just part of a 2D array.  For example, you might want to su
   
 You can change the starting value and ending value to loop through a subset of a 2D array. 
 
-.. activecode:: lca2dloopPart
+.. activecode:: lca2dloopPart2
    :language: java 
  
 

@@ -12,7 +12,7 @@ If a parent class isn't specified using the **extends** keyword, the class will 
   
 **Check your understanding**
 
-.. mchoicemf:: qoo_5
+.. mchoice:: qoo_5
    :answer_a: public void getFood()
    :answer_b: public String getFood(int quantity)
    :answer_c: public String getFood()
@@ -59,7 +59,7 @@ If a parent class isn't specified using the **extends** keyword, the class will 
          }
       }
       
-.. mchoicemf:: qoo_6
+.. mchoice:: qoo_6
    :answer_a: public void getFood()
    :answer_b: public String getFood(int quantity)
    :answer_c: public String getFood()

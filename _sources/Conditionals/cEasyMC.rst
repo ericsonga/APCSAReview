@@ -7,7 +7,7 @@ Easy Multiple Choice Questions
 
 These problems are easier than most of those that you will usually see on the AP CS A exam. 
 
-.. mchoicemf:: qce_1
+.. mchoice:: qce_1
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -24,7 +24,7 @@ These problems are easier than most of those that you will usually see on the AP
      else if (x == 0) System.out.println("x is zero"); 
      else System.out.println("x is positive");
 
-.. mchoicemf:: qce_2
+.. mchoice:: qce_2
    :answer_a: first case
    :answer_b: second case 
    :correct: b
@@ -38,7 +38,7 @@ These problems are easier than most of those that you will usually see on the AP
      if (!(x < 3 || y > 2)) System.out.println("first case");
      else System.out.println("second case");
 
-.. mchoicemf:: qce_3
+.. mchoice:: qce_3
    :answer_a: A
    :answer_b: B
    :answer_c: C
@@ -61,7 +61,7 @@ These problems are easier than most of those that you will usually see on the AP
      if (score >= 60) grade = "D";
      else grade = "E";
 
-.. mchoicemf:: qce_4
+.. mchoice:: qce_4
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  

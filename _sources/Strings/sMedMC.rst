@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those that you will see on the AP CS A exam.
 
-.. mchoicemf:: qsm_1
+.. mchoice:: qsm_1
    :answer_a: I, II, III
    :answer_b: I only
    :answer_c: II only
@@ -32,7 +32,7 @@ These problems are similar to those that you will see on the AP CS A exam.
      II.  s1 == s2
      III. s1 == s3
 
-.. mchoicemf:: qsm_2
+.. mchoice:: qsm_2
    :answer_a: org
    :answer_b: eor
    :answer_c: eorg
@@ -55,7 +55,7 @@ These problems are similar to those that you will see on the AP CS A exam.
      String s3 = s2.substring(0,3);
      System.out.println(s3);
 
-.. mchoicemf:: qsm_3
+.. mchoice:: qsm_3
    :answer_a: null
    :answer_b: hi there
    :answer_c: HI THERE

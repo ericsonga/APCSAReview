@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those you will see on the AP CS A exam.
 
-.. mchoicemf:: qlm_1
+.. mchoice:: qlm_1
    :answer_a: 10
    :answer_b: 5
    :answer_c: 25
@@ -29,7 +29,7 @@ These problems are similar to those you will see on the AP CS A exam.
            System.out.println("*");
      }
 
-.. mchoicemf:: qlm_2
+.. mchoice:: qlm_2
    :answer_a: I
    :answer_b: II
    :answer_c: III
@@ -87,7 +87,7 @@ These problems are similar to those you will see on the AP CS A exam.
              System.out.println();
           }
 
-.. mchoicemf:: qlm_3
+.. mchoice:: qlm_3
    :answer_a: 0 2 4 6 8 10 12 14 16 18
    :answer_b: 4 16
    :answer_c: 0 6 12 18
@@ -109,7 +109,7 @@ These problems are similar to those you will see on the AP CS A exam.
            System.out.println(k + " ");
      }
 
-.. mchoicemf:: qlm_4
+.. mchoice:: qlm_4
    :answer_a: I
    :answer_b: II
    :answer_c: III
@@ -167,7 +167,7 @@ These problems are similar to those you will see on the AP CS A exam.
              System.out.println();
           }
 
-.. mchoicemf:: qlm_5
+.. mchoice:: qlm_5
    :answer_a: When all values in a are larger than temp.
    :answer_b: The values don't matter. This will always cause an infinite loop.
    :answer_c: Whenever a has values larger than temp.
@@ -190,7 +190,7 @@ These problems are similar to those you will see on the AP CS A exam.
         }
      }
 
-.. mchoicemf:: qlm_6
+.. mchoice:: qlm_6
    :answer_a: var1 = 0, var2 = 2
    :answer_b: var1 = 1, var2 = 1
    :answer_c: var1 = 3, var2 = -1

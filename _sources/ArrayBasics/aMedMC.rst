@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those you will see on the AP CS A exam.
 
-.. mchoicemf:: qcb_1
+.. mchoice:: qcb_1
    :answer_a: The value in b[0] does not occur anywhere else in the array
    :answer_b: Array b is sorted
    :answer_c: Array b is not sorted
@@ -26,7 +26,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
      b[0] != b[k] for all k such that 1 <= k
 
-.. mchoicemf:: qcb_2
+.. mchoice:: qcb_2
    :answer_a: whenever the first element in a is equal to val
    :answer_b: Whenever a contains any element which equals val
    :answer_c: Whenever the last element in a is equal to val
@@ -49,7 +49,7 @@ These problems are similar to those you will see on the AP CS A exam.
      }
      return temp;
 
-.. mchoicemf:: qcb_3
+.. mchoice:: qcb_3
    :answer_a: It is the length of the shortest consecutive block of the value target in nums
    :answer_b: It is the length of the array nums
    :answer_c: It is the length of the first consecutive block of the value target in nums
@@ -81,7 +81,7 @@ These problems are similar to those you will see on the AP CS A exam.
            maxLen = lenCount;
         }
 
-.. mchoicemf:: qcb_4
+.. mchoice:: qcb_4
    :answer_a: All values in positions m+1 through myStuff.length-1 are greater than or equal to n.
    :answer_b: All values in position 0 through m are less than n.
    :answer_c: All values in position m+1 through myStuff.length-1 are less than n.

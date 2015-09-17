@@ -65,7 +65,7 @@ Since we used the ``new`` keyword two different String objects will be created t
   
 **Check your understanding**
 
-.. mchoicemf:: qsb_6
+.. mchoice:: qsb_6
    :answer_a: s1 == s2 and s1 == s3
    :answer_b: s1 == s2 and s1.equals(s3)
    :answer_c: s1 != s2 and s1.equals(s3)

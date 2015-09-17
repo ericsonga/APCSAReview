@@ -80,7 +80,7 @@ How to solve this problem
 
 The first thing to do is to create a new instance of the ``ClimbInfo`` object, which will be added to the ``climbList`` array. 
 
-.. mchoicemf:: frcca_1
+.. mchoice:: frcca_1
    :answer_a: ClimbInfo climb = ClimbInfo(peakName, climbTime);
    :answer_b: ClimbInfo climb = new ClimbInfo(climbTime, peakName);
    :answer_c: ClimbInfo climb = new ClimbInfo(peakName, climbTime);
@@ -93,7 +93,7 @@ The first thing to do is to create a new instance of the ``ClimbInfo`` object, w
 
 Next, we need to know how to add to the end of a list.
 
-.. mchoicemf:: frcca_2
+.. mchoice:: frcca_2
    :answer_a: climbList.add(infoObj);
    :answer_b: climbList[nextIndex] = infoObj;
    :answer_c: climbList.add(0, infoObj);

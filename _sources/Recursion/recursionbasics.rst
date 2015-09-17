@@ -80,7 +80,7 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
 
 **Check your understanding**
     
-.. mchoicemf:: qrb_1
+.. mchoice:: qrb_1
    :answer_a: Yes 
    :answer_b: No
    :correct: b
@@ -101,7 +101,7 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
          return total;
       } 
       
-.. mchoicemf:: qrb_2
+.. mchoice:: qrb_2
    :answer_a: Yes 
    :answer_b: No
    :correct: a
@@ -118,7 +118,7 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
          else return x + mystery2(x-1);
       }
       
-.. mchoicemf:: qrb_3
+.. mchoice:: qrb_3
    :answer_a: 0 
    :answer_b: 1
    :answer_c: 2
@@ -139,7 +139,7 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
             return n * product(n - 2); 
       } 
       
-.. mchoicemf:: qrb_4
+.. mchoice:: qrb_4
    :answer_a: 0
    :answer_b: 1
    :answer_c: Both 0 and 1

@@ -61,7 +61,7 @@ How to solve this problem
 
 In order to find the index of the horse with the same name we are looking for, we will need to loop through the array ``spaces``. As we loop, we will comapre the name we are looking for with the ``Horse`` object's name at the current index.
 
-.. mchoicemf:: frhba_1
+.. mchoice:: frhba_1
    :answer_a: spaces[index].name;
    :answer_b: spaces[index].getName();
    :answer_c: spaces.get(index).getName();
@@ -74,7 +74,7 @@ In order to find the index of the horse with the same name we are looking for, w
 
 Once we have the name of the current ``Horse`` object, we need to compare this name to the name we are looking for.
 
-.. mchoicemf:: frhba_2
+.. mchoice:: frhba_2
    :answer_a: str.compareTo(anotherString);
    :answer_b: str == anotherString;
    :answer_c: str.equals(anotherString);

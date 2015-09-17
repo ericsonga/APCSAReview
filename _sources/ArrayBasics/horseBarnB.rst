@@ -60,7 +60,7 @@ How to solve this problem
 
 One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array.  
 
-.. mchoicemf:: frhbb_1
+.. mchoice:: frhbb_1
    :answer_a: for 
    :answer_b: for each
    :answer_c: while
@@ -73,7 +73,7 @@ One way to solve this problem is to create a temporary array the same size as ``
 
 While we are looping through the ``spaces`` array, we need to check for non-null positions.
 
-.. mchoicemf:: frhbb_2
+.. mchoice:: frhbb_2
    :answer_a: if (spaces.get(index) != null)
    :answer_b: if (!spaces[index].null())
    :answer_c: if (spaces[index] != null)

@@ -68,7 +68,7 @@ When arrays are created their contents are automatically initialized to 0 for nu
   
 **Check your understanding**
 
-.. mchoicemf:: qa2db_1
+.. mchoice:: qa2db_1
    :answer_a: nums[3][2] = 5;
    :answer_b: nums[1][2] = 5;
    :answer_c: nums[2][1] = 5;
@@ -111,7 +111,7 @@ To get the value in a 2D array give the name of the array followed by the row an
   
 **Check your understanding**
 
-.. mchoicemf:: qa2db_2
+.. mchoice:: qa2db_2
    :answer_a: Jamal
    :answer_b: Maria
    :answer_c: Jake

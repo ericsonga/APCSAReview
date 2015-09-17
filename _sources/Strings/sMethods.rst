@@ -75,7 +75,7 @@ Strings are **immutable** which means that they can't change. Anything that you 
 
 **Check your understanding**
 
-.. mchoicemf:: qsb_1
+.. mchoice:: qsb_1
    :answer_a: Hi
    :answer_b: hi
    :answer_c: H
@@ -94,7 +94,7 @@ Strings are **immutable** which means that they can't change. Anything that you 
      String s2 = s1.substring(0,1);
      String s3 = s2.toLowerCase();
     
-.. mchoicemf:: qsb_2
+.. mchoice:: qsb_2
    :answer_a: Hi
    :answer_b: hi
    :answer_c: H
@@ -113,7 +113,7 @@ Strings are **immutable** which means that they can't change. Anything that you 
      String s2 = s1.substring(0,1);
      String s3 = s2.toLowerCase();
      
-.. mchoicemf:: qsb_3
+.. mchoice:: qsb_3
    :answer_a: 2
    :answer_b: 1
    :answer_c: 4
@@ -131,7 +131,7 @@ Strings are **immutable** which means that they can't change. Anything that you 
      String s1 = "abccba";
      int pos = s1.indexOf("b");
      
-.. mchoicemf:: qsb_4
+.. mchoice:: qsb_4
    :answer_a: 7
    :answer_b: 8
    :answer_c: 9
@@ -147,7 +147,7 @@ Strings are **immutable** which means that they can't change. Anything that you 
      String s1 = "Miss you!";
      int len = s1.length();
      
-.. mchoicemf:: qsb_5
+.. mchoice:: qsb_5
    :answer_a: hi th
    :answer_b: hi the
    :answer_c: hi ther

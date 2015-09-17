@@ -7,7 +7,7 @@ Easy Multiple Choice Questions
 
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
-.. mchoicemf:: qale_1
+.. mchoice:: qale_1
    :answer_a: nums.length
    :answer_b: nums.length - 1
    :answer_c: nums.size()
@@ -20,7 +20,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which index is the last element in a list called ``nums`` at?
    
-.. mchoicemf:: qale_2
+.. mchoice:: qale_2
    :answer_a: An array has faster access to its elements than a list does.
    :answer_b: An array knows it length, but a list doesn't know its length.  
    :answer_c: An ArrayList can allocate more space than it needs.  
@@ -31,7 +31,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which of the following is a reason to use an array instead of an ArrayList?  
    
-.. mchoicemf:: qale_3
+.. mchoice:: qale_3
    :answer_a: An ArrayList can grow or shrink as needed, while an array is always the same size.   
    :answer_b: You can use a for-each loop on an ArrayList, but not in an array.  
    :answer_c: You can store objects in an ArrayList, but not in an array.  

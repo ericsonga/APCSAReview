@@ -8,7 +8,7 @@ Easy Multiple Choice Questions
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
 
-.. mchoicemf:: qre_1
+.. mchoice:: qre_1
    :answer_a: 1
    :answer_b: 3
    :answer_c: 4
@@ -31,7 +31,7 @@ These problems are easier than most of those that you will usually see on the AP
          else return n * factorial(n-1);
       }
     
-.. mchoicemf:: qre_2
+.. mchoice:: qre_2
    :answer_a: 1
    :answer_b: 3
    :answer_c: 4
@@ -58,7 +58,7 @@ These problems are easier than most of those that you will usually see on the AP
          }
       }
       
-.. mchoicemf:: qre_3
+.. mchoice:: qre_3
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2
@@ -83,7 +83,7 @@ These problems are easier than most of those that you will usually see on the AP
          else return fibonacci(n-1) + fibonacci(n-2);
   	  }
 
-.. mchoicemf:: qre_4
+.. mchoice:: qre_4
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2

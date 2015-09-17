@@ -37,7 +37,7 @@ Is the result of 1.0 divided by 3 what you expected?  Java limits the number of 
 
 **Check your understanding**
 
-.. mchoicemf:: q2_5
+.. mchoice:: q2_5
    :answer_a: true
    :answer_b: false
    :correct: b
@@ -46,7 +46,7 @@ Is the result of 1.0 divided by 3 what you expected?  Java limits the number of 
 
    True or false: Java rounds up automatically when you do integer division.  
    
-.. mchoicemf:: q2_6
+.. mchoice:: q2_6
    :answer_a: true
    :answer_b: false
    :correct: b
@@ -55,7 +55,7 @@ Is the result of 1.0 divided by 3 what you expected?  Java limits the number of 
 
    True or false: casting always results in a double type.  
    
-.. mchoicemf:: q2_7
+.. mchoice:: q2_7
    :answer_a: (double) (total / 3);
    :answer_b: total / 3;
    :answer_c: (double) total /  3;

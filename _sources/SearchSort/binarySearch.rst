@@ -55,7 +55,7 @@ The code for ``binarySearch`` below is from the AP CS A course description.
    
 To see this executing using the Java Visualizer click on this `link <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0>`_
    
-.. mchoicemf:: qbs_1
+.. mchoice:: qbs_1
    :answer_a: The value is the first one in the array
    :answer_b: The value is in the middle of the array
    :answer_c: The value is the last one in the array 
@@ -68,7 +68,7 @@ To see this executing using the Java Visualizer click on this `link <http://csci
    
    Which will cause the *shortest* execution of a binary search looking for a value in an array of integers?
    
-.. mchoicemf:: qbs_2
+.. mchoice:: qbs_2
    :answer_a: I only
    :answer_b: I and II
    :answer_c: II only
@@ -87,7 +87,7 @@ To see this executing using the Java Visualizer click on this `link <http://csci
       II. The values in the array must be in sorted order.
       III. The array must not contain duplicate values.
       
-.. mchoicemf:: qbs_3
+.. mchoice:: qbs_3
    :answer_a: 2
    :answer_b: 1
    :answer_c: 3 

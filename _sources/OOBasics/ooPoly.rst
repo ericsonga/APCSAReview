@@ -36,7 +36,7 @@ Any object variable can refer to an object of the declared type or *any descenda
 
 **Check your understanding**
 
-.. mchoicemf:: qoo_10
+.. mchoice:: qoo_10
    :answer_a: Shape Shape Shape Shape
    :answer_b: Shape Rectangle Square Circle
    :answer_c: There will be a compile time error
@@ -84,7 +84,7 @@ Any object variable can refer to an object of the declared type or *any descenda
       
 **Check your understanding**
 
-.. mchoicemf:: qoo_11
+.. mchoice:: qoo_11
    :answer_a: Pizza
    :answer_b: Taco
    :answer_c: You will get a compile time error
@@ -120,7 +120,7 @@ Any object variable can refer to an object of the declared type or *any descenda
         }
       }
  
-.. mchoicemf:: qoo_12
+.. mchoice:: qoo_12
    :answer_a: 5 6 10 11
    :answer_b: 5 6 5 6
    :answer_c: 10 11 10 11
@@ -163,7 +163,7 @@ Any object variable can refer to an object of the declared type or *any descenda
         }
       } 
       
-.. mchoicemf:: qoo_13
+.. mchoice:: qoo_13
    :answer_a: b.getISBN();
    :answer_b: b.getDefintion();
    :answer_c: ((Dictionary) b).getDefinition();
@@ -194,7 +194,7 @@ Any object variable can refer to an object of the declared type or *any descenda
          }
       } 
       
-.. mchoicemf:: qoo_14
+.. mchoice:: qoo_14
    :answer_a: ABDC
    :answer_b: AB
    :answer_c: ABCD

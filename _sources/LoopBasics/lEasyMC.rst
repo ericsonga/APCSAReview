@@ -7,7 +7,7 @@ Easy Multiple Choice Questions
 
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
-.. mchoicemf:: qle_1
+.. mchoice:: qle_1
    :answer_a: 5 6 7 8 9
    :answer_b: 4 5 6 7 8 9 10 11 12 
    :answer_c: 3 5 7 9 11
@@ -27,7 +27,7 @@ These problems are easier than most of those that you will usually see on the AP
         System.out.print(i + " ");
      }
 
-.. mchoicemf:: qle_2
+.. mchoice:: qle_2
    :answer_a: 9
    :answer_b: 7
    :answer_c: 6
@@ -47,7 +47,7 @@ These problems are easier than most of those that you will usually see on the AP
         System.out.print("*"); 
      }
 
-.. mchoicemf:: qle_3
+.. mchoice:: qle_3
    :answer_a: 5 4 3 2 1
    :answer_b: -5 -4 -3 -2 -1
    :answer_c: -4 -3 -2 -1 0

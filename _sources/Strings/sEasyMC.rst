@@ -10,7 +10,7 @@ Easy Multiple Choice Questions
 
 These problems are mostly easier than what you will see on the AP CS A exam.
 
-.. mchoicemf:: qse_1
+.. mchoice:: qse_1
    :answer_a: xyz
    :answer_b: xyxyz
    :answer_c: xy xy z
@@ -31,7 +31,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      String s2 = s1;
      s1 = s1 + s2 + "z";
 
-.. mchoicemf:: qse_2
+.. mchoice:: qse_2
    :answer_a: 8
    :answer_b: 10
    :answer_c: 11
@@ -47,7 +47,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      String s1 = "Hey, buddy!";
      int len = s1.length();
 
-.. mchoicemf:: qse_3
+.. mchoice:: qse_3
    :answer_a: 3
    :answer_b: 4
    :answer_c: 5
@@ -65,7 +65,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      String s1 = "ac ded ca";
      int pos = s1.indexOf("d");
 
-.. mchoicemf:: qse_4
+.. mchoice:: qse_4
    :answer_a: Hey
    :answer_b: he
    :answer_c: H

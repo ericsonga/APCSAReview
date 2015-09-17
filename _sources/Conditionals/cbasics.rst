@@ -74,7 +74,7 @@ You can even pick between 3 or more possibilites. Just add **else if** for each 
   
 **Check your understanding**
 
-.. mchoicemf:: qcb_1
+.. mchoice:: qcb_1
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -91,7 +91,7 @@ You can even pick between 3 or more possibilites. Just add **else if** for each 
      else if (x == 0) System.out.println("x is zero"); 
      else System.out.println("x is positive"); 
      
-.. mchoicemf:: qcb_2
+.. mchoice:: qcb_2
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -108,7 +108,7 @@ You can even pick between 3 or more possibilites. Just add **else if** for each 
      else if (x == 0) System.out.println("x is zero"); 
      else System.out.println("x is positive"); 
      
-.. mchoicemf:: qcb_3
+.. mchoice:: qcb_3
    :answer_a: A
    :answer_b: B
    :answer_c: C
@@ -131,7 +131,7 @@ You can even pick between 3 or more possibilites. Just add **else if** for each 
      if (score >= 60) grade = "D";
      else grade = "E";
      
-.. mchoicemf:: qcb_4
+.. mchoice:: qcb_4
    :answer_a: x = 0;
    :answer_b: if (x > 2) x *= 2;
    :answer_c: if (x > 2) x = 0;

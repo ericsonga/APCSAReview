@@ -51,7 +51,7 @@ Sometimes you want the child class to do more than what a parent method is doing
       
 When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and it return return the string ``"Hamburger and Taco"``. 
 
-.. mchoicemf:: qoo_6s
+.. mchoice:: qoo_6s
    :answer_a: AB
    :answer_b: ABDC
    :answer_c: ABCD

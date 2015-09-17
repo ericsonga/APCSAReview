@@ -53,7 +53,7 @@ The number times a loop executes can be calculated by (largestValue - smallestVa
 
 **Check your understanding**
 
-.. mchoicemf:: qlb_5
+.. mchoice:: qlb_5
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8 
    :answer_c: 8 8 8 8 8 
@@ -73,7 +73,7 @@ The number times a loop executes can be calculated by (largestValue - smallestVa
         System.out.print(i + " ");
      }
      
-.. mchoicemf:: qlb_6
+.. mchoice:: qlb_6
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8 9 
    :answer_c: 1 2 3 4 5 6 7 8 9 10
@@ -93,7 +93,7 @@ The number times a loop executes can be calculated by (largestValue - smallestVa
         System.out.print(i + " ");
      }
      
-.. mchoicemf:: qlb_7
+.. mchoice:: qlb_7
    :answer_a: 10
    :answer_b: 6
    :answer_c: 7

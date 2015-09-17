@@ -42,7 +42,7 @@ You can set one variable's value to a *copy* of the value of another variable.  
    
 **Check your understanding**
    
-.. mchoicemf:: q2_1
+.. mchoice:: q2_1
    :answer_a: x = 0, y = 1, z = 2
    :answer_b: x = 1, y = 2, z = 3
    :answer_c: x = 2, y = 2, z = 3

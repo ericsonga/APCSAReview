@@ -65,7 +65,7 @@ The code above is a no-argument constructor for the ``Person`` class.  Remember 
 If a subclass has no call to 
 a superclass constructor using ``super`` as the first line in a subclass constructor then the compiler will automatically add a ``super()`` call as the first line in a constructor.  So, be sure to provide no-argument constructors in parent classes or be sure to use an explicit call to ``super`` as the first line in the constructors of subclasses.
 
-.. mchoicemf:: qoo_8
+.. mchoice:: qoo_8
    :answer_a: II only
    :answer_b: III only 
    :answer_c: I and II only
@@ -114,7 +114,7 @@ a superclass constructor using ``super`` as the first line in a subclass constru
               this.z = 0;
            }
            
-.. mchoicemf:: qoo_9
+.. mchoice:: qoo_9
    :answer_a: I only
    :answer_b: I and III
    :answer_c: II only 

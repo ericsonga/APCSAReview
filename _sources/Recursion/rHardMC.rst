@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are about the same or harder than those that you will typically see on the AP CS A exam.
 
-.. mchoicemf:: qrh_1
+.. mchoice:: qrh_1
    :answer_a: The string <code>s</code> contains two or more of the same characters.
    :answer_b: The string <code>s</code> starts with two or more of the same characters.
    :answer_c: The string <code>s</code> contains two or more of the same character that are next to each other.
@@ -27,7 +27,7 @@ These problems are about the same or harder than those that you will typically s
          return s.length() >= 2 && (s.charAt(0) == s.charAt(1) || check(s.substring(1)));
       }
       
-.. mchoicemf:: qrh_2
+.. mchoice:: qrh_2
    :answer_a: 5
    :answer_b: 4
    :answer_c: 6

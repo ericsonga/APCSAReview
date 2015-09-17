@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those you will see on the AP CS A exam.
 
-.. mchoicemf:: qcm_1
+.. mchoice:: qcm_1
    :answer_a: (!c) && (!d)
    :answer_b: (c || d)
    :answer_c: (c && d)
@@ -22,7 +22,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
    Which of the following expressions is equivalent to !(c || d) ?  
    
-.. mchoicemf:: qcm_2
+.. mchoice:: qcm_2
    :answer_a: x = 0;
    :answer_b: if (x > 2) x *= 2;
    :answer_c: if (x > 2) x = 0;
@@ -40,7 +40,7 @@ These problems are similar to those you will see on the AP CS A exam.
      if (x > 2) x = x * 2;
      if (x > 4) x = 0;
 
-.. mchoicemf:: qcm_3
+.. mchoice:: qcm_3
    :answer_a: x = 0;
    :answer_b: if (x > 0) x = 0;
    :answer_c: if (x < 0) x = 0;
@@ -60,7 +60,7 @@ These problems are similar to those you will see on the AP CS A exam.
      if (x > 0) x = -x;
      if (x < 0) x = 0;
 
-.. mchoicemf:: qcm_4
+.. mchoice:: qcm_4
    :answer_a: I and III only
    :answer_b: II only
    :answer_c: III only

@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are harder than most of those that you will usually see on the AP CS A exam.  
 
-.. mchoicemf:: qsh_1
+.. mchoice:: qsh_1
    :answer_a: II and IV
    :answer_b: II, III, and IV
    :answer_c: I, II, III, IV
@@ -33,7 +33,7 @@ These problems are harder than most of those that you will usually see on the AP
      III. (s1 == s3)
      IV.  (s2.equals(s3))
      
-.. mchoicemf:: qsh_2
+.. mchoice:: qsh_2
    :answer_a: 21
    :answer_b: 1353
    :answer_c: It will give a run-time error

@@ -87,7 +87,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
       }
    }
    
-.. mchoicemf:: qab_8
+.. mchoice:: qab_8
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 32}
    :answer_c: {-20, -15, 2, 16, 32, 66}
@@ -113,7 +113,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
          }
       }
       
-.. mchoicemf:: qab_9
+.. mchoice:: qab_9
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 33}
    :answer_c: {-20, -15, 2, 16, 32, 66}

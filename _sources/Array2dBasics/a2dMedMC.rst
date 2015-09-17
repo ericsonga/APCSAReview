@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those you will see on the AP CS A exam.
 
-.. mchoicemf:: qa2dm_1
+.. mchoice:: qa2dm_1
    :answer_a: 4
    :answer_b: 8
    :answer_c: 9
@@ -33,7 +33,7 @@ These problems are similar to those you will see on the AP CS A exam.
          sum = sum + matrix[row][col];
       }
       
-.. mchoicemf:: qa2dm_2
+.. mchoice:: qa2dm_2
    :answer_a: {{2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}} 
    :answer_b: {{2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}} 
    :answer_c: {{2 1 1 1}, {3 2 1 1}, {3 3 2 1}} 

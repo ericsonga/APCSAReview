@@ -107,7 +107,7 @@ Since ``values`` is an object field and the method ``getAverage`` is in the same
    
 Some examples of finding the largest value in an array start by setting the largest variable to 0.  But, what happens if the array only contains negative numbers?  What value could you set largest to and still have it work correctly even if the field **values** contained only negative numbers?
 
-.. mchoicemf:: qab_3
+.. mchoice:: qab_3
    :answer_a: Whenever the first element in a is equal to val.
    :answer_b: Whenever a contains any element which equals val.
    :answer_c: Whenever the last element in a is equal to val.
@@ -129,7 +129,7 @@ Some examples of finding the largest value in an array start by setting the larg
      }
      return temp;
      
-.. mchoicemf:: qab_4
+.. mchoice:: qab_4
    :answer_a: All values in positions m+1 through myStuff.length-1 are greater than or equal to n.
    :answer_b: All values in position 0 through m are less than n.
    :answer_c: All values in position m+1 through myStuff.length-1 are less than n.
@@ -162,7 +162,7 @@ Some examples of finding the largest value in an array start by setting the larg
         return -1;
       }
       
-.. mchoicemf:: qab_5
+.. mchoice:: qab_5
    :answer_a: The values don't matter this will always cause an infinite loop.
    :answer_b: Whenever a includes a value that is less than or equal to zero.
    :answer_c: Whenever a has values larger then temp.

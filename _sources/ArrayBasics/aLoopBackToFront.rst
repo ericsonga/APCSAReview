@@ -39,7 +39,7 @@ You don't have to loop through an array from the front to the back.  You can loo
       }
    }
    
-.. mchoicemf:: qab_6
+.. mchoice:: qab_6
    :answer_a: -1
    :answer_b: -15
    :answer_c: 1
@@ -65,7 +65,7 @@ You don't have to loop through an array from the front to the back.  You can loo
          return -1; // to show none found
       }
 
-.. mchoicemf:: qab_7
+.. mchoice:: qab_7
    :answer_a: -1
    :answer_b: 1
    :answer_c: 2

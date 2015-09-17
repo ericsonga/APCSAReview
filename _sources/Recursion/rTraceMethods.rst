@@ -89,7 +89,7 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
 
 **Check your understanding**
 
-.. mchoicemf:: qrb_5
+.. mchoice:: qrb_5
    :answer_a: 1 
    :answer_b: 120
    :answer_c: 720
@@ -112,7 +112,7 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
            return n * factorial(n-1);
      } 
      
-.. mchoicemf:: qrb_6
+.. mchoice:: qrb_6
    :answer_a: 10 
    :answer_b: 32
    :answer_c: 16
@@ -135,7 +135,7 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
            return 2 * mystery (n - 1); 
      } 
      
-.. mchoicemf:: qrb_7
+.. mchoice:: qrb_7
    :answer_a: 12 
    :answer_b: 81
    :answer_c: 64
@@ -194,7 +194,7 @@ So ``bunnyEars(5)`` returns 10.
   
 **Check your understanding**
     
-.. mchoicemf:: qrb_8
+.. mchoice:: qrb_8
    :answer_a: 12344321 
    :answer_b: 1234
    :answer_c: 4321
@@ -220,7 +220,7 @@ So ``bunnyEars(5)`` returns 10.
         System.out.print(x % 10); 
      } 
      
-.. mchoicemf:: qrb_9
+.. mchoice:: qrb_9
    :answer_a: 7 
    :answer_b: 2
    :answer_c: 1
@@ -248,7 +248,7 @@ So ``bunnyEars(5)`` returns 10.
         }
      }
      
-.. mchoicemf:: qrb_10
+.. mchoice:: qrb_10
    :answer_a: 7 
    :answer_b: 2
    :answer_c: 1

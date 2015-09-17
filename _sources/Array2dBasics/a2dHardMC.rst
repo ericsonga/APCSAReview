@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are harder than those that you will typically see on the AP CS A exam.
       
-.. mchoicemf:: qa2dm_2
+.. mchoice:: qa2dm_2
    :answer_a: {{6, 4, 2}, {2, 4, 6}}
    :answer_b: {{3, 2, 1}, {1, 4, 6}}
    :answer_c: {{3, 2, 1}, {1, 4, 8}}

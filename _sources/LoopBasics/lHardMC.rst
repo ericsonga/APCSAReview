@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are harder than most of those that you will usually see on the AP CS A exam. 
 
-.. mchoicemf:: qlh_1
+.. mchoice:: qlh_1
    :answer_a: [0, 0, 4, 2, 5, 0, 3, 0]
    :answer_b: [3, 5, 2, 4, 0, 0, 0, 0]
    :answer_c: [0, 0, 0, 0, 4, 2, 5, 3]
@@ -38,7 +38,7 @@ These problems are harder than most of those that you will usually see on the AP
         }
      }
 
-.. mchoicemf:: qlh_2
+.. mchoice:: qlh_2
    :answer_a: O(log n)
    :answer_b: O(n log n)
    :answer_c: O(n)

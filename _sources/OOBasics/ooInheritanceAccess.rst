@@ -44,7 +44,7 @@ For example, if a parent has a private field, ``name``, then the parent typicall
   
 **Check your understanding**
   
-.. mchoicemf:: qoo_7
+.. mchoice:: qoo_7
    :answer_a: currItem.setX(3);
    :answer_b: currItem.setY(2);
    :answer_c: currItem.x = 3;

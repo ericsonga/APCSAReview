@@ -87,7 +87,7 @@ How to solve this problem
 
 Once again, this problem starts with looping through the array of pixels, using a nested for loop for the 2D array. As we loop we will need to subtract pixel values from one another.
 
-.. mchoicemf:: frgib_1
+.. mchoice:: frgib_1
    :answer_a: result = int1 - int2;
    :answer_b: int1 -= int2;
    :answer_c: int1.subtract(int2);

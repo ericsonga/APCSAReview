@@ -7,7 +7,7 @@ Easy Multiple Choice Questions
 
 These problems are easier than most of those that you will usually see on the AP CS A exam. 
 
-.. mchoicemf:: qve_1
+.. mchoice:: qve_1
    :answer_a: 2
    :answer_b: 0
    :answer_c: 3
@@ -24,7 +24,7 @@ These problems are easier than most of those that you will usually see on the AP
 
      System.out.println(2 % 3);
      
-.. mchoicemf:: qve_2
+.. mchoice:: qve_2
    :answer_a: 3
    :answer_b: 0
    :answer_c: 4
@@ -41,7 +41,7 @@ These problems are easier than most of those that you will usually see on the AP
 
      System.out.println(19 % 5);
      
-.. mchoicemf:: qve_3
+.. mchoice:: qve_3
    :answer_a: 0.3333333333333333
    :answer_b: 0
    :answer_c: It will give a run-time error
@@ -60,7 +60,7 @@ These problems are easier than most of those that you will usually see on the AP
 
      System.out.println(1 / 3);
      
-.. mchoicemf:: qve_4
+.. mchoice:: qve_4
    :answer_a: 24
    :answer_b: 14
    :answer_c: This will give a compile time error.
@@ -77,7 +77,7 @@ These problems are easier than most of those that you will usually see on the AP
 
     System.out.println(2 + 3 * 5 - 1);
      
-.. mchoicemf:: qve_5
+.. mchoice:: qve_5
    :answer_a: 9.6982
    :answer_b: 12 
    :answer_c: 10
@@ -96,7 +96,7 @@ These problems are easier than most of those that you will usually see on the AP
       int b = 12;
       b = (int) a;
      
-.. mchoicemf:: qve_6
+.. mchoice:: qve_6
    :answer_a: 75   
    :answer_b: 67
    :answer_c: 150
@@ -111,7 +111,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which of the following is the decimal value for the binary number 1001011?
    
-.. mchoicemf:: qve_7
+.. mchoice:: qve_7
    :answer_a: 5   
    :answer_b: 4
    :answer_c: 6
@@ -122,7 +122,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    How many bits would you need to represent 25 distinct values?
    
-.. mchoicemf:: qve_8
+.. mchoice:: qve_8
    :answer_a: 34   
    :answer_b: 52
    :answer_c: 64
@@ -137,7 +137,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    What is the hexadecimal equivalent of the following binary number: 110100?
    
-.. mchoicemf:: qve_9
+.. mchoice:: qve_9
    :answer_a: 11011101
    :answer_b: 1011001  
    :answer_c: 10111011

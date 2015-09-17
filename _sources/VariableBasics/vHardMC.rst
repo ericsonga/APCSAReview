@@ -7,7 +7,7 @@ Hard Multiple Choice Questions
 
 These problems are harder than most of those that you will usually see on the AP CS A exam.
      
-.. mchoicemf:: qvh_1
+.. mchoice:: qvh_1
    :answer_a: 186
    :answer_b: 123
    :answer_c: 125
@@ -25,7 +25,7 @@ These problems are harder than most of those that you will usually see on the AP
    
 The following question assumes you know about arrays and methods.  You can skip it if you haven't covered these yet and come back when you have.
    
-.. mchoicemf:: qvh_2
+.. mchoice:: qvh_2
    :answer_a: itemArray = {0, 1, 2, 3} and val = 3;
    :answer_b: itemArray = {0, 1, 2, 3} and val = 5;
    :answer_c: itemArray = {0, 0, 0, 0} and val = 0;

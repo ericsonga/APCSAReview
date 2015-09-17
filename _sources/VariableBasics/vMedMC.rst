@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those you will see on the AP CS A exam.
 
-.. mchoicemf:: qvm_1
+.. mchoice:: qvm_1
    :answer_a: 222
    :answer_b: 120
    :answer_c: 118
@@ -22,7 +22,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
    Which of the following would be the correct result from the following expression: 123 (decimal) - 12 (octal) + 111 (binary)?
 
-.. mchoicemf:: qvm_2
+.. mchoice:: qvm_2
    :answer_a: 2147483647
    :answer_b: 0
    :answer_c: There will be a compile time error

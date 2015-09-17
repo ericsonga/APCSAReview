@@ -108,7 +108,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
 **Check your understanding**
 
-.. mchoicemf:: qab_1
+.. mchoice:: qab_1
    :answer_a: 0
    :answer_b: 1
    :correct: a
@@ -117,7 +117,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
    What index is the first element in an array at?
    
-.. mchoicemf:: qab_2
+.. mchoice:: qab_2
    :answer_a: highScores.length
    :answer_b: highScores.length - 1
    :correct: b

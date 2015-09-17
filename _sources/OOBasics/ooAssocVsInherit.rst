@@ -23,7 +23,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
 
 **Check your understanding**
 
-.. mchoicemf:: qoo_1
+.. mchoice:: qoo_1
    :answer_a: Create one class PublishedMaterial with the requested fields plus type
    :answer_b: Create classes Book and Movie and each class has the requested fields
    :answer_c: Create the class PublishedMaterial and have Book and Movie inherit from it all the listed fields
@@ -38,7 +38,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
 
     A bookstore is working on an on-line ordering system. For each type of published material (books and movies) they need to track the id, title, author(s), date published, and price. Which of the following would be the best design?
 
-.. mchoicemf:: qoo_2
+.. mchoice:: qoo_2
    :answer_a: The MovieShowing class should be a subclass of the Movie class.  
    :answer_b: The Movie class should be a subclass of the MovieShowing class.
    :answer_c: A MovieShowing has a movie associated with it, so it should have a Movie field. 
@@ -49,7 +49,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
     
     A movie theater has multiple showings of a movie each day.  What should the relationship be between the Movie class and the MovieShowing class?   
     
-.. mchoicemf:: qoo_3
+.. mchoice:: qoo_3
    :answer_a: superclass
    :answer_b: parent
    :answer_c: extends
@@ -62,7 +62,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
     
     What Java keyword is used to specify the parent class?   
 
-.. mchoicemf:: qoo_4
+.. mchoice:: qoo_4
    :answer_a: V
    :answer_b: IV
    :answer_c: I and II
