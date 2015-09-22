@@ -5,10 +5,10 @@
 Practice Exam 2 for the AP CS A Exam
 -------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Submit Answers" button at the end only when you are done.  It will display the number correct, number wrong, and number skipped after the "Submit Answers" button.
+The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button at the end only when you are done.  It will display the number correct, number wrong, and number skipped after the "Finish Exam" button.
 
 .. timed:: postexam2
-    :timelimit: 38
+    :timelimit: 45
     
     .. mchoice:: qt2_1-14
        :answer_a: The value you are searching for is the first element in the array.

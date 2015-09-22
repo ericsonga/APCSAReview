@@ -5,8 +5,8 @@
 Pretest for the AP CS A Exam
 ------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  The AP CS A exam is timed and you only have 75 minutes to answer 40 questions, which is less than 2 minutes a question.  We are giving you 60 minutes to take this 20 question pretest.  We don't expect you to know all of these concepts
-yet, but want to see what you do know.  Please answer each to the best of your ability.   Answer all the questions and then click the "Submit Answers" button.  You will see what you got right and wrong after you submit your answers.  
+The following problems are similar to what you might see on the AP CS A exam.  The AP CS A exam is timed and you have 90 minutes to answer 40 questions, which is 2.25 minutes a question.  We are giving you 60 minutes to take this 20 question pretest.  We don't expect you to know all of these concepts
+yet, but want to see what you do know.  Please answer each to the best of your ability.   Answer all the questions and then click the "Finish Exam" button.  You will see what you got right and wrong after you submit your answers.  
 
 .. timed:: pretest1
     :timelimit: 60
