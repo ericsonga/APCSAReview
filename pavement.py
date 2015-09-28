@@ -17,13 +17,13 @@ options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/Java-Review",
+        builddir="./build/JavaReview-RU",
         sourcedir="_sources",
-        outdir="./build/Java-Review",
+        outdir="./build/JavaReview-RU",
         confdir=".",
-        project_name = "Java-Review",
-        template_args={'course_id': 'Java-Review',
-                       'login_required':'false',
+        project_name = "JavaReview-RU",
+        template_args={'course_id': 'JavaReview-RU',
+                       'login_required':'true',
                        'appname':master_app,
                        'loglevel': 0,
                        'course_url':master_url,

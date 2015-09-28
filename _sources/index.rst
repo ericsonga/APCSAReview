@@ -128,6 +128,7 @@ Arrays
    ArrayBasics/aEasyMC.rst
    ArrayBasics/aMedMC.rst
    ArrayBasics/aHardMC.rst  
+   ArrayBasics/arrayExam.rst
    ArrayBasics/selfDivisorB.rst
    
 List and ArrayList
@@ -213,20 +214,13 @@ Searching and Sorting
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
    
-Practice Multiple-Choice Exams
-:::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   Tests/test1.rst
-   
 Timed Multiple-Choice Exams
 :::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
 
+   Tests/test1.rst
    Tests/test2.rst
    Tests/test3.rst
    Tests/test4.rst
