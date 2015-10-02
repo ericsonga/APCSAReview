@@ -16,9 +16,39 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``).  Java uses (``==``) to test if the value on the left is equal to the value on the right and (``!=``) to test if two items are not equal.  But, the percent sign operator (``%``) is the **modulus** or remainder operator.
+Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``).  Java uses (``==``) to test if the value on the left is equal to the value on the right and (``!=``) to test if two items are not equal.  
 
 .. activecode:: lcop1
+   :language: java
+   
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        System.out.println(2 + 3);
+        System.out.println(2 - 3);
+        System.out.println(2 * 3);
+        System.out.println(2 / 3);
+        System.out.println(2 == 3);
+        System.out.println(2 != 3);
+      }
+   }
+   
+Do all of those operators do what you expected?  What about ``2 / 3`` prints ``0``?  When Java sees you doing integer division it assumes you want an integer result so it throws away anything after the decimal point in the answer.  
+
+Modulus
+-----------
+
+The percent sign operator (``%``) is the **modulus** or remainder operator.  The **modulus** operator (``%``) returns the remainder after you divide the first number by the second number.  Remember long division when you had to specify how many times one number when into another evenly and the remainder?  That remainder is what is returned by the modulus operator.
+
+.. figure:: Figures/mod-py.png
+    :width: 150px
+    :align: center
+    :figclass: align-center
+    
+    Figure 1: Long division showing the whole number result and the remainder
+    
+.. activecode:: lcop2
    :language: java
    
    public class Test1
@@ -31,34 +61,15 @@ Java uses the standard mathematical operators for addition (``+``), subtraction 
         System.out.println(9 % 2);
       }
    }
+    
+.. note::
+   The result of ``x % y`` when ``x`` is smaller than ``y`` is always ``x``.  The value ``y`` can't go into ``x`` at all, since ``x`` is smaller than ``y``, so the result is just ``x``.  So if you see ``2 % 3`` the result is ``2``.  
   
 ..	index::
 	single: modulus
 	single: remainder
 	pair: operators; modulus
-
-The **modulus** operator (``%``) returns the remainder after you divide the first number by the second number.  The **modulus** operator has been used quite a bit on the AP CS A exam, so you should be familiar with it.
-    
-    -  Use it to check for odd or even numbers (``num % 2 == 1 is odd and num % 2 == 0 is even``).  Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``)
-
-    -  Use it to get the last digit from an integer number (``num % 10 = last digit on right``).  This approach could be used on the free response question Self Divisor (Question 1 from 2007).  See http://coweb.cc.gatech.edu/ice-gt/1277 for starter code and testing code.
-    
-    -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278.  
-
-In addition, the **Math** class provides us with multiple methods that can be useful within our own Java classes. The random() method returns a number greater than or equal to 0.0, and less than 1.0. Try out the following code.
-
-.. activecode:: lcop3
-   :language: java
-   
-   public class Test3
-   {
-      public static void main(String[] args)
-      {
-        System.out.println(Math.random());
-        System.out.println(Math.random());
-      }
-   }
-   
+	
 .. mchoice:: q3_4_1
    :answer_a: 15
    :answer_b: 16
@@ -80,6 +91,22 @@ In addition, the **Math** class provides us with multiple methods that can be us
    :feedback_c: What is the remainder after you divide 3 by 8?  
 
    What is the result of 3 % 8?
+	
+
+Modulus on Past Exams
+------------------------
+
+The **modulus** operator has been used quite a bit on the AP CS A exam, so you should be familiar with it.
+    
+    -  Use it to check for odd or even numbers (``num % 2 == 1 is odd and num % 2 == 0 is even``).  Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``)
+
+    -  Use it to get the last digit from an integer number (``num % 10 = last digit on right``).  This approach could be used on the free response question Self Divisor (Question 1 from 2007).  See http://coweb.cc.gatech.edu/ice-gt/1277 for starter code and testing code.
+    
+    -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278. 
+   
+   
+Shortcut Operators
+------------------------
    
 You are also expected to know the double plus operator (``++``) and the double minus operator (``--``).  The ``++`` operator is used to add one to the current value: ``x++`` is the same as ``x = x + 1``.  The ``--`` operator is used to subtract one from the current value: ``y--`` is the same as ``y = y - 1``.  
 You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the same as ``x = x - y``, ``x *= y`` is the same as ``x = x * y``, and ``x /= y`` is the same as ``x = x / y``.  
