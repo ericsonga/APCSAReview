@@ -85,6 +85,7 @@ Conditionals
    Conditionals/cEasyMC.rst
    Conditionals/cMedMC.rst
    Conditionals/cHardMC.rst
+   Conditionals/timeFRQ.rst
    
 Magpie Chatbot Lab
 ::::::::::::::::::::
@@ -92,7 +93,10 @@ Magpie Chatbot Lab
 .. toctree::
    :maxdepth: 2
 
-   Labs/magpie.rst
+   Labs/magpie1.rst
+   Labs/magpie2.rst
+   Labs/magpie3.rst
+   Labs/magpie4.rst
    
 Loops
 ::::::::::::::::::::

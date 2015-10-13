@@ -24,13 +24,16 @@ Strings can be **appended** to each other which creates a new string using the `
       }
    }
   
-Note that spaces are not added between strings automatically.  If you want a space between two strings then add one. 
+.. note::
+   Note that spaces are not added between strings automatically.  If you want a space between two strings then add one. 
 
 ..	index::
 	single: toString
 	pair: Object; toString
 
-You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.  If you are appending number to a string it will be converted to a string first before being appended.  What do you think the following will print?   
+You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.  
+   
+What do you think the following will print?   
 
 .. activecode:: lcso2
    :language: java
@@ -43,5 +46,8 @@ You can even add other items to a string using the ``+`` operator.  The other it
         System.out.println(message);
       }
    }
+   
+.. note::
+   If you are appending number to a string it will be converted to a string first before being appended.  
   
 Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string.

@@ -9,7 +9,7 @@ String Equality
 	pair: String; equality
 	pair: String; equals
 
-When the operator ``==`` is used with object variables it returns true when the two variables refer to the same object.  With strings this happens when one string variable is set to another or when strings are set to the same string literal.  
+When the operator ``==`` is used with object variables it returns true when the two variables *refer to the same object*.  With strings this happens when one string variable is set to another or when strings are set to the same string literal.  
 
 If you run the following, what will be printed?
 

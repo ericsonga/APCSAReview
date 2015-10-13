@@ -16,7 +16,7 @@ For the AP CS A exam there are only a few things that you have to know about str
 
     -  the ``int length()`` method returns the number of characters in the string, including spaces
     
-    -  the ``String substring(int from, int to)`` method returns a string with the characters in the current string starting with the character at the ``from`` index and ending at the character before the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).  
+    -  the ``String substring(int from, int to)`` method returns a string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).  
     
     -  the ``int indexOf(String str)`` method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.  
     
@@ -24,6 +24,19 @@ For the AP CS A exam there are only a few things that you have to know about str
     
     -  the ``boolean equals(String other)`` returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.  
     
+A string holds characters in a sequence.  Each character is at a position or **index** which starts with 0 as shown below.  An **index** is a number associated with a position in a collection of values like a string.
+
+.. figure:: Figures/stringIndicies.png
+    :width: 400px
+    :align: center
+    :alt: a string with the position (index) shown above each character
+    :figclass: align-center
+
+    Figure 1: A string with the position (index) shown above each character
+    
+.. note::
+   The first character in a string is at index 0 and the last characters is at the length - 1. 
+
 Run the code below to see the output from ``length``, ``substring``, and ``indexOf``.
 
 .. activecode:: lcsm1
@@ -33,20 +46,23 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
    {
       public static void main(String[] args)
       {
-        String message1 = "Happy Birthday";
+        String message1 = "This is a test";
         String message2 = "Hello Class";
         
         System.out.println(message1.length());
         System.out.println(message2.length());
         
-        System.out.println(message1.substring(0,5));
-        System.out.println(message1.substring(6));
+        System.out.println(message1.substring(0,3));
+        System.out.println(message1.substring(5));
         
-        System.out.println(message1.indexOf("day"));
+        System.out.println(message1.indexOf("is"));
         System.out.println(message1.indexOf("Hello"));
         System.out.println(message2.indexOf("Hello"));
       }
    }
+   
+.. note::
+   Did you notice that ``message1.substring(0,3)`` includes all the characters from position 0 to 2 and doesn't include the character at position 3?   
    
 Run the example below to see the output from ``compareTo`` and ``equals``.
 
@@ -71,7 +87,8 @@ Run the example below to see the output from ``compareTo`` and ``equals``.
 
 There are lots of other methods in the String class.  See the Java documentation for the String class at http://docs.oracle.com/javase/6/docs/api/java/lang/String.html.  You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
 
-Strings are **immutable** which means that they can't change. Anything that you do to modify a string (like creating a substring or appending strings) returns a new string.
+.. note::
+   Strings are **immutable** which means that they can't change. Anything that you do to modify a string (like creating a substring or appending strings) returns a new string.
 
 **Check your understanding**
 
