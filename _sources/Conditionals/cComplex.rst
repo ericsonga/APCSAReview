@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 5-2-
+   :prefix: 5-3-
    :start: 1
 
 Complex Conditionals
@@ -54,10 +54,18 @@ The following table (also called a **truth table**) shows the result for P && Q 
 +-------+-------+-----------+
 | false | true  | false     |
 +-------+-------+-----------+
-| true  | false | false     |
+| true  | false | ?         |
 +-------+-------+-----------+
 | false | false | false     |
 +-------+-------+-----------+
+
+.. fillintheblank:: 5_3_1_trueAndFalse
+
+    .. blank:: 5_3_1_And
+        :correct: ^false$
+        :feedback1: ('.*','Try it and see')
+ 
+        The truth table above is missing one result.  What is the result of P && Q when ``P=true`` and ``Q=false``?  
 
 The following table shows the result for P || Q when P and Q are both expressions that can be true or false.  As you can see below the result of P || Q is true if either P or Q is true.  It is also true when both of them are true.
 
@@ -66,12 +74,20 @@ The following table shows the result for P || Q when P and Q are both expression
 +=======+=======+===========+
 | true  | true  | true      |
 +-------+-------+-----------+
-| false | true  | true      |
+| false | true  | ?         |
 +-------+-------+-----------+
 | true  | false | true      |
 +-------+-------+-----------+
 | false | false | false     |
 +-------+-------+-----------+
+
+.. fillintheblank:: 5_3_2_falseOrTrue
+
+    .. blank:: 5_3_2_Or
+        :correct: ^true$
+        :feedback1: ('.*','Try it and see')
+ 
+        The truth table above is missing one result.  What is the result of ``P || Q`` when ``P=false`` and ``Q=true``? 
 
 **Check your understanding**
 

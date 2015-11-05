@@ -16,9 +16,9 @@ Conditionals
 	pair: boolean; variable
 	pair: conditional; if
 
-Java statements normally execute one at a time from top to bottom.  If you want a statement to only execute when something is true use a **conditional**. Something that can only be true or false is called a **Boolean**.  A conditional uses the keyword **if** followed by Boolean expression inside of an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a statement or block of statements.  A block of statements is enclosed by an open curly brace ``{`` and a close curly brace ``}``.  
+Java statements normally execute one at a time from top to bottom.  If you want a statement to only execute when something is true use a **conditional**. Something that can only be true or false is called a **Boolean**.  A conditional uses the keyword **if** followed by Boolean expression inside of an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  A block of statements is enclosed by an open curly brace ``{`` and a close curly brace ``}``.  
 
-Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI).  
+Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).  
 
 .. activecode:: lccb1
    :language: java
@@ -33,9 +33,22 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
       }
    }
   
-The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``.  If it is false, execution continues with the next statement which will print ``Drive carefully``.
+The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code above to see this.
+
+
+.. fillintheblank:: 5_1_1_falseOuptut
+
+    .. blank:: 5_1_1_false
+        :correct: ^Drive carefully$
+        :feedback1: ('.*','Try it and see')
+        
+        Try changing the code above to ``boolean isRaining = false;``.  What will it print?
   
 What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might do one thing if a coin flip is heads and another if it is tails.  In this case use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.  
+
+.. note::
+
+   The else will only execute if the condition is false.   
 
 .. activecode:: lccb2
    :language: java
@@ -50,65 +63,39 @@ What if you want to pick between two possibilities?  If you are trying to decide
       }
    } 
 
-If ``isHeads`` is true it will print ``Let's go to the game``, otherwise it will print ``Let's watch a movie``.
+If ``isHeads`` is true it will print ``Let's go to the game``.  Run the code above to see this.
 
-..	index::
-	single: else if
-	pair: conditional; else if
+.. fillintheblank:: 5_1_2_falseElse
 
-You can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if** and before the last possibility, the **else**.  
+    .. blank:: 5_1_2_else
+        :correct: ^Let's watch a movie$
+        :feedback1: ('.*','Try it and see')
+        
+        Try changing the code above to ``boolean isHeads = true;``.  What will it print?
+        
+.. note::
 
-.. activecode:: lccb3
+   An if will only execute one single statement following it unless there is a block of statements enclosed in a pair of open and closed curly braces ``{`` and ``}``.  Java doesn't care if you indent the code to show what you intend!
+   
+.. activecode:: lccb2-indent
    :language: java
    
-   public class Test3
+   public class Test
    {
       public static void main(String[] args)
       {
-        int x = 2;
-        if (x < 0) System.out.println("x is negative");
-        else if (x == 0) System.out.println("x is 0");
-        else System.out.println("x is positive");
+        boolean isCold = true;
+        if (isCold) 
+            System.out.println("Wear a coat");
+            System.out.println("Wear gloves");
+        System.out.println("Bye");
       }
    }
-  
+
+	
 **Check your understanding**
-
-.. mchoice:: qcb_1
-   :answer_a: x is negative
-   :answer_b: x is zero
-   :answer_c: x is positive
-   :correct: a
-   :feedback_a: When x is equal to -5 the condition of x < 0 is true. 
-   :feedback_b: This will only print if x has been set to 0.  Has it?
-   :feedback_c: This will only print if x is greater than zero.  Is it?
-
-   What does the following code print when x has been set to -5?
-   
-   .. code-block:: java 
-
-     if (x < 0) System.out.println("x is negative");
-     else if (x == 0) System.out.println("x is zero"); 
-     else System.out.println("x is positive"); 
-     
-.. mchoice:: qcb_2
-   :answer_a: x is negative
-   :answer_b: x is zero
-   :answer_c: x is positive
-   :correct: c
-   :feedback_a: This will only print if x has been set to a number less than zero. Has it? 
-   :feedback_b: This will only print if x has been set to 0.  Has it?
-   :feedback_c: The first condition is false and x is not equal to zero so the else will execute.  
-
-   What does the following code print when x has been set to 2000?
-   
-   .. code-block:: java 
-
-     if (x < 0) System.out.println("x is negative");
-     else if (x == 0) System.out.println("x is zero"); 
-     else System.out.println("x is positive"); 
-     
-.. mchoice:: qcb_3
+	
+.. mchoice:: qcb1_1
    :answer_a: A
    :answer_b: B
    :answer_c: C
@@ -131,7 +118,7 @@ You can even pick between 3 or more possibilites. Just add **else if** for each 
      if (score >= 60) grade = "D";
      else grade = "E";
      
-.. mchoice:: qcb_4
+.. mchoice:: qcb1_2
    :answer_a: x = 0;
    :answer_b: if (x > 2) x *= 2;
    :answer_c: if (x > 2) x = 0;
@@ -148,11 +135,4 @@ You can even pick between 3 or more possibilites. Just add **else if** for each 
 
      if (x > 2) x = x * 2;
      if (x > 4) x = 0;
-  
-
-     
-
-
-     
-
- 
+	

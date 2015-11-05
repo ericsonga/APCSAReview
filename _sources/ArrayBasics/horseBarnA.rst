@@ -89,7 +89,7 @@ Try to write the code for the method ``findHorseSpace``. When you are ready clic
    
 .. activecode:: lcfrhba1
    :language: java
-   :datafile: HorseBarn.java
+   :datafile: Horse.java
    
    public class HorseBarn 
    { 

@@ -77,6 +77,7 @@ Conditionals
    :maxdepth: 2
 
    Conditionals/cbasics.rst
+   Conditionals/threeOrMore.rst
    Conditionals/cComplex.rst
    Conditionals/cShortCircuit.rst
    Conditionals/cDeMorgans.rst

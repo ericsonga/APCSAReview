@@ -3,7 +3,7 @@
    :start: 1
         
 While Loops
------------
+============
 
 ..	index::
 	single: while
@@ -32,7 +32,7 @@ A **while** loop is typically used when you don't know how many times the loop w
       }
    }
   
-The while loop starts on line 9 in the code above.  Statements 11 and 12 are in the body of the loop (between the opening parenthesis on line 6 and the closing one on line 9).  Please note that Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what
+The while loop starts on line 9 in the code above.  Statements 10 through 13 are the body of the loop (from the opening parenthesis on line 10 to the closing one on line 13).  Please note that Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what
 statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.  
 
 ..	index::
@@ -50,6 +50,45 @@ One thing to be careful about with while loops is making sure that you don't end
    }
    
 The infinite loop above is pretty obvious.  But, most infinite loops are accidental.  They usually occur because you forget to change the thing you are checking in the condition.  
+
+Tracing Variables in Loops
+----------------------------
+
+A really important skill to develop is the ability to trace the values of variables and how they change during each time through a loop. You can step through the code below using the Java Visualizer `here <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A+++%7B%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A++++++%0A+++++++++int+var1+%3D+3%3B%0A+++++++++int+var2+%3D+2%3B%0A+++%0A+++++++++while+((var2+!%3D+0)+%26%26+((var1+/+var2)+%3E%3D+0))%0A+++++++++%7B%0A++++++++++++var1+%3D+var1+%2B+1%3B%0A++++++++++++var2+%3D+var2+-+1%3B%0A+++++++++%7D%0A++++++%7D%0A+++%7D&mode=display&curInstr=13>`_.
+
+You can create a table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
+
+.. figure:: Figures/whileLoopTrace.png
+    :width: 150px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
+    
+You can also add ``System.out.println(varaible)`` to print the value of a variable.  In the code below I am printing the values of all of the variables before the loop and at the end of the loop body.
+
+.. activecode:: lclw2
+   :language: java
+   
+   public class Test
+   {
+      public static void main(String[] args)
+      {
+      
+         int var1 = 3;
+         int var2 = 2;
+   
+         System.out.println("var1: " + var1 + " var2: " + var2);
+         
+         while ((var2 != 0) && ((var1 / var2) >= 0))
+         {
+            var1 = var1 + 1;
+            var2 = var2 - 1;
+            System.out.println("var1: " + var1 + " var2: " + var2);
+         }
+      }
+   }
+  
 
 **Check your understanding**
 
@@ -156,7 +195,7 @@ The infinite loop above is pretty obvious.  But, most infinite loops are acciden
 
 .. parsonsprob:: plb_1
 
-   The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.  The code
+   The following method has the correct code to return a string with all a's removed, but the code is mixed up.  **Drag the blocks from the left into the correct order on the right and indent them correctly.** You will be told if any of the blocks are in the wrong order or not indented correctly.  The code
    will need to be correctly indented for your solution to be correct.  To indent just drag the block to the right.  
    -----
    public static String remA(String s)

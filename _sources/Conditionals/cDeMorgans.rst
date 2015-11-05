@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 5-4-
+   :prefix: 5-5-
    :start: 1
    
 DeMorgan's Laws
@@ -17,7 +17,7 @@ DeMorgan's laws were developed by Augustus De Morgan in the 1800s.  They show ho
     
 Notice that an ``and`` is changed to an ``or`` by negation and an ``or`` to an ``and``.  
 
-Java uses ``!`` to indicate negation.  Applying DeMorgan's Laws to ``!(x < 3 && y > 2)`` means that this complex conditional will be true when ``(x >= 3 || y <= 2) and !(x < 3 || y > 2)`` is the same as ``(x >= 3 && y <= 2)``.  
+Java uses ``!`` to indicate negation.  Applying DeMorgan's Laws to ``!(x < 3 && y > 2)`` means that this complex conditional will be true when ``(x >= 3 || y <= 2)`` and ``!(x < 3 || y > 2)`` is the same as ``(x >= 3 && y <= 2)``.  
 
 For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_Morgan's_laws.  
 
@@ -26,7 +26,7 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
    :answer_b: second case 
    :correct: b
    :feedback_a: This will print if x is greater than or equal 3 and y is less than or equal 2.  In this case x is greater than 3 but y is not less than or equal 2.  
-   :feedback_b: This will print if x is less than 3 or y is greater than 2. 
+   :feedback_b: This will print if x is less than 3 or y is greater than 2.  Think of it as the negation of the negation which cancels the negation.
 
    What is printed when the following code executes and x equals 4 and y equals 3?   
    

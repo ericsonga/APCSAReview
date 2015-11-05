@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 5-9-
+   :prefix: 5-10-
    :start: 1
    
 Hard Multiple Choice Questions
@@ -69,4 +69,53 @@ These problems are harder than most of those that you will usually see on the AP
    .. code-block:: java
 
      (x > 15 && x < 18) || (x > 10 || y < 20)
+     
+.. mchoice:: qch_4
+   :answer_a: first
+   :answer_b: first second
+   :answer_c: first second third
+   :answer_d: first third 
+   :answer_e: third
+   :correct: d
+   :feedback_a: This will print, but so will something else.
+   :feedback_b: Are you sure about the "second"?  This only prints if y is less than 3, and while it was originally, it changes.
+   :feedback_c: Are you sure about the "second"?  This only prints if y is less than 3, and while it was originally, it changes.
+   :feedback_d: The first will print since x will be greater than 2 and the second won't print since y is equal to 3 and not less than it.  The third will always print.
+   :feedback_e: This will print, but so will something else.
+   
+   What would the following print?  
+   
+   .. code-block:: java
+   
+      int x = 3;
+      int y = 2;
+      if (x > 2) x++;
+      if (y > 1) y++;
+      if (x > 2) System.out.print("first ");
+      if (y < 3) System.out.print("second ");
+      System.out.print("third");
+   
+.. mchoice:: qch_5
+   :answer_a: first 
+   :answer_b: second
+   :answer_c: first second 
+   :answer_d: Nothing will be printed
+   :correct: b
+   :feedback_a: When you do integer division you get an integer result so y / x == 0 and is not greater than 0.   
+   :feedback_b: The first will not print because integer division will mean that y / x is 0.  The second will print since it is not in the body of the if (it would be if there were curly braces around it).  
+   :feedback_c: Do you see any curly braces?  Indention does not matter in Java. 
+   :feedback_d: This would be true if there were curly braces around the two indented statements.  Indention does not matter in Java.  If you don't have curly braces then only the first statement following an if is executed if the condition is true.
+   
+   What would the following print?  
+   
+   .. code-block:: java
+   
+      int x = 3;
+      int y = 2;
+      if (y / x > 0) 
+         System.out.print("first ");
+         System.out.print("second ");
+   
+   
+   
 

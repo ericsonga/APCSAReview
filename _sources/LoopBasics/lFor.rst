@@ -9,13 +9,26 @@ For Loops
 	single: for loop
 	pair: loop; for
 
-A **for** loop is usually used when you know how many times you want the loop to execute. A for loop has 3 parts: initialization, condition, and change.  The parts are separated by semicolons (``;``).  Each of the three parts is optional, but the semicolons are not optional.  
+A **for** loop is usually used when you know how many times you want the loop to execute. A for loop has 3 parts: initialization, condition, and change.  The parts are separated by semicolons (``;``).  
+
+.. note::
+
+   Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.  
 
 .. code-block:: java
 
   for (initialization; condition; change)
   
-The code in the initialization area is executed before the first execution of the loop, the condition is checked each time through the loop and the loop continues as long as the condition is true, at the end of each execution of the body of the loop the changes are done.   
+One of the strange things about a ``for`` loop is that the code doesn't actually execute where you see it in the declaration.  The code in the initialization area is executed only one time before the loop begins, the condition is checked each time through the loop and the loop continues as long as the condition is true, at the end of each execution of the body of the loop the changes are done.  When the loop condition is false execution will continue at the next statement after the body of the loop.
+
+.. figure:: Figures/ForLoopFlow.png
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: Flow in a for loop
+    
+What do you think will happen when you run the code below?  How would it change if you changed line 11 to  ``i = 3``?
 
 .. activecode:: lcfc1
    :language: java
@@ -29,7 +42,7 @@ The code in the initialization area is executed before the first execution of th
          String line2 = " bottles of pop";  
          String line3 = "Take one down and pass it around";  
   
-         // while more 1's in the message
+         // loop 5 times (5, 4, 3, 2, 1)
          for (int i = 5; i > 0; i--)
          {
             System.out.println(i + line1);
@@ -48,8 +61,9 @@ The code in the initialization area is executed before the first execution of th
   
 The method **printPopSong** prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.  
 
-The number times a loop executes can be calculated by (largestValue - smallestValue + 1).  So in this case the smallest value is 1 and the largest is 5 so this loop executes (5 - 1 + 1) 5 times.  
-
+.. note::
+   
+   The number of times a loop executes can be calculated by (largestValue - smallestValue + 1).  By the largest value I mean the largest value that allows the loop to execute and by the smallest value I mean the smallest value that allows the loop to execute.  So in the code above the largest value is 5 and the smallest value that allows the loop to execute is 1 so this loop executes (5 - 1 + 1 = 5 times) Here are all the values of i (5, 4, 3, 2, 1) that allow the loop to run.  When i is 0 the condition is false and execution continues after the body of the loop.
 
 **Check your understanding**
 
@@ -117,7 +131,7 @@ The number times a loop executes can be calculated by (largestValue - smallestVa
 
 .. parsonsprob:: plb_2
 
-   The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or not indented correctly.
+   The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  **Drag the blocks from the left into the correct order on the right and indent them correctly**. You will be told if any of the blocks are in the wrong order or not indented correctly.
    -----
    public static void printEvens()
    {
