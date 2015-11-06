@@ -16,7 +16,18 @@ Conditionals
 	pair: boolean; variable
 	pair: conditional; if
 
-Java statements normally execute one at a time from top to bottom.  If you want a statement to only execute when something is true use a **conditional**. Something that can only be true or false is called a **Boolean**.  A conditional uses the keyword **if** followed by Boolean expression inside of an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  A block of statements is enclosed by an open curly brace ``{`` and a close curly brace ``}``.  
+Java statements normally execute one at a time from top to bottom.  If you want a statement to only execute when something is true use a **conditional**. Something that can only be true or false is called a **Boolean**.  If the condition is true then the next statement or a block of statements will execute.  If the condition is false then the next statement or block of statements is skipped.
+
+.. figure:: Figures/Condition.png
+    :width: 200px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: The order that statements execute in a conditional
+    
+.. note::
+
+   A conditional uses the keyword ``if`` followed by Boolean expression inside of an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  The single statement or block of statements are only executed if the condition is true.  A block of statements is enclosed by an open curly brace ``{`` and a close curly brace ``}``.  
 
 Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).  
 
@@ -46,6 +57,13 @@ The variable ``isRaining`` is a boolean variable that is either true or false. I
   
 What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might do one thing if a coin flip is heads and another if it is tails.  In this case use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.  
 
+.. figure:: Figures/Condition-two.png
+    :width: 350px
+    :align: center
+    :figclass: align-center
+
+    Figure 2: The order that statements execute in a conditional with 2 options: if and else
+
 .. note::
 
    The else will only execute if the condition is false.   
@@ -60,10 +78,11 @@ What if you want to pick between two possibilities?  If you are trying to decide
         boolean isHeads = true;
         if (isHeads) System.out.println("Let's go to the game");
         else System.out.println("Let's watch a movie");
+        System.out.println("after conditional");
       }
    } 
 
-If ``isHeads`` is true it will print ``Let's go to the game``.  Run the code above to see this.
+If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after conditional``.  Run the code above to see this.
 
 .. fillintheblank:: 5_1_2_falseElse
 
@@ -71,11 +90,13 @@ If ``isHeads`` is true it will print ``Let's go to the game``.  Run the code abo
         :correct: ^Let's watch a movie$
         :feedback1: ('.*','Try it and see')
         
-        Try changing the code above to ``boolean isHeads = true;``.  What will it print?
+        Try changing the code above to ``boolean isHeads = true;``.  What line will be printed before the ``after conditional``?
         
 .. note::
 
    An if will only execute one single statement following it unless there is a block of statements enclosed in a pair of open and closed curly braces ``{`` and ``}``.  Java doesn't care if you indent the code to show what you intend!
+   
+The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
    
 .. activecode:: lccb2-indent
    :language: java
@@ -84,7 +105,7 @@ If ``isHeads`` is true it will print ``Let's go to the game``.  Run the code abo
    {
       public static void main(String[] args)
       {
-        boolean isCold = true;
+        boolean isCold = false;
         if (isCold) 
             System.out.println("Wear a coat");
             System.out.println("Wear gloves");
