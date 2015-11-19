@@ -31,7 +31,7 @@ Here is an example of a while loop that doesn't ever change the value in the loo
    
 Here is an example of going past the bounds of a string.  This code should double all by the first and last letter in message.  Fix the code so that it doesn't cause an error.
 
- .. activecode:: while_loop_mistake1
+ .. activecode:: while_loop_mistake2
    :language: java
    
    public class Test

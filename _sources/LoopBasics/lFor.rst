@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 6-2-
+   :prefix: 6-3-
    :start: 1
 
 For Loops
@@ -27,6 +27,16 @@ One of the strange things about a ``for`` loop is that the code doesn't actually
     :figclass: align-center
 
     Figure 1: Flow in a for loop
+    
+    
+You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` loop actually executes like a ``while`` loop does if you use the ``while`` loop to repeat the body of the loop a specific number of times. 
+
+.. figure:: Figures/compareForAndWhile.png
+    :width: 600px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: Showing how a for loop maps to a while loop
     
 What do you think will happen when you run the code below?  How would it change if you changed line 11 to  ``i = 3``?
 
@@ -67,7 +77,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
 
 **Check your understanding**
 
-.. mchoice:: qlb_5
+.. mchoice:: qlb_3_1
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8 
    :answer_c: 8 8 8 8 8 
@@ -87,7 +97,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
         System.out.print(i + " ");
      }
      
-.. mchoice:: qlb_6
+.. mchoice:: qlb_3_2
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8 9 
    :answer_c: 1 2 3 4 5 6 7 8 9 10
@@ -107,7 +117,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
         System.out.print(i + " ");
      }
      
-.. mchoice:: qlb_7
+.. mchoice:: qlb_3_3
    :answer_a: 10
    :answer_b: 6
    :answer_c: 7
@@ -129,7 +139,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
      
 **Mixed up programs**
 
-.. parsonsprob:: plb_2
+.. parsonsprob:: print_evens
 
    The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  **Drag the blocks from the left into the correct order on the right and indent them correctly**. You will be told if any of the blocks are in the wrong order or not indented correctly.
    -----

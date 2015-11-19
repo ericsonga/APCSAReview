@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 6-3-
+   :prefix: 6-2-
    :start: 1
         
 While Loops
@@ -8,8 +8,21 @@ While Loops
 ..	index::
 	single: while
 	pair: loop; while
+	
+A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false execution continues after the body of the ``while`` loop.  
+
+.. note:: 
+
+   If the condition is false the first time you check it the body of the loop will not execute.  
+
+.. figure:: Figures/WhileLoopFlow.png
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: Flow in a while loop
     
-A **while** loop is typically used when you don't know how many times the loop will execute.  You might use it while processing a string.  Google has been scanning old books and then using software to read the scanned text.  But, the software can get things mixed up like using 1 for l.  The following code loops through a string replacing all 1's with l's.  
+You can use a ``while`` loop to repeat the body of the loop a certain number of times as shown above.  However, a ``while`` loop is typically used when you don't know how many times the loop will execute.  You might use it while processing a string.  Google has been scanning old books and then using software to read the scanned text.  But, the software can get things mixed up like using 1 for l.  The following code loops through a string replacing all 1's with l's.  
 
 .. activecode:: lclw1
    :language: java
@@ -67,7 +80,7 @@ You can create a table that keeps track of the variable values each time through
     
 You can also add ``System.out.println(varaible)`` to print the value of a variable.  In the code below I am printing the values of all of the variables before the loop and at the end of the loop body.
 
-.. activecode:: lclw2
+.. activecode:: while_ex2vars
    :language: java
    
    public class Test
@@ -92,7 +105,7 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
 
 **Check your understanding**
 
-.. mchoice:: qlb_1
+.. mchoice:: qlb_2_1
    :answer_a: 5 4 3 2 1
    :answer_b: -5 -4 -3 -2 -1
    :answer_c: -4 -3 -2 -1 0
@@ -112,7 +125,7 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
         System.out.print(x + " ");
      }
    
-.. mchoice:: qlb_2
+.. mchoice:: qlb_2_2
    :answer_a: var1 = 1, var2 = 1
    :answer_b: var1 = 2, var2 = 0
    :answer_c: var1 = 3, var2 = -1
@@ -138,7 +151,7 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
         var2 = var2 -1;
      }
   
-.. mchoice:: qlb_3
+.. mchoice:: qlb_2_3
    :answer_a: {1, 3, -5, -2}
    :answer_b: {3, 9, -15, -6}
    :answer_c: {2, 6, -10, -4}
@@ -165,7 +178,7 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
         } // end while
      } // end method  
      
-.. mchoice:: qlb_4
+.. mchoice:: qlb_2_4
    :answer_a: {1, 3, -5, -2}
    :answer_b: {3, 9, -15, -6}
    :answer_c: {2, 6, -10, -4}
@@ -193,7 +206,7 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
      
 **Mixed up programs**
 
-.. parsonsprob:: plb_1
+.. parsonsprob:: removeA
 
    The following method has the correct code to return a string with all a's removed, but the code is mixed up.  **Drag the blocks from the left into the correct order on the right and indent them correctly.** You will be told if any of the blocks are in the wrong order or not indented correctly.  The code
    will need to be correctly indented for your solution to be correct.  To indent just drag the block to the right.  

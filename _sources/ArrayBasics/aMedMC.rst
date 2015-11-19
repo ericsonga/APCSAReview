@@ -7,7 +7,7 @@ Medium Multiple Choice Questions
 
 These problems are similar to those you will see on the AP CS A exam.
 
-.. mchoice:: qcb_1
+.. mchoice:: qamed_1
    :answer_a: The value in b[0] does not occur anywhere else in the array
    :answer_b: Array b is sorted
    :answer_c: Array b is not sorted
@@ -26,7 +26,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
      b[0] != b[k] for all k such that 1 <= k
 
-.. mchoice:: qcb_2
+.. mchoice:: qamed_2
    :answer_a: whenever the first element in a is equal to val
    :answer_b: Whenever a contains any element which equals val
    :answer_c: Whenever the last element in a is equal to val
@@ -39,7 +39,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_d: Because temp is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for just the last value to be equal to val.
    :feedback_e: Because temp is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for several elements to be equal to val.
 
-   Consider the following code segment. Which of the following statements best describes the conditions need for temp = true? 
+   Consider the following code segment. Which of the following statements best describes the conditions need for temp to be true? 
    
    .. code-block:: java
 
@@ -48,8 +48,10 @@ These problems are similar to those you will see on the AP CS A exam.
         temp = (a[i] == val);
      }
      return temp;
+     
+You can step through this code with the Java Visualizer `here <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+test(int%5B%5D+a,int+val)+%7B%0A++++++boolean+temp+%3D+false%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+a.length%3B+i%2B%2B)+%7B%0A++++++++temp+%3D+(a%5Bi%5D+%3D%3D+val)%3B%0A+++++%7D%0A+++++return(temp)%3B%0A+++%7D%0A++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+myArray+%3D+%7B9,+-3,+81,+-3028,+5%7D%3B%0A++++++System.out.println(test(myArray,9))%3B%0A++++++System.out.println(test(myArray,5))%3B%0A++++++System.out.println(test(myArray,0))%3B%0A++++++System.out.println(test(myArray,-3))%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
-.. mchoice:: qcb_3
+.. mchoice:: qamed_3
    :answer_a: It is the length of the shortest consecutive block of the value target in nums
    :answer_b: It is the length of the array nums
    :answer_c: It is the length of the first consecutive block of the value target in nums
@@ -62,7 +64,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_d: The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.
    :feedback_e: It doesn't reset the count ever, so it just counts all the times the target value appears in the array.
 
-   Consider the following data field and method findLongest. Mehtod findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, finLongest does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the loength of the longest consecutive block of 10s. Which of the following best describes the value return by a call to findLongest?
+   Consider the following data field and method findLongest. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the loength of the longest consecutive block of 10s. Which of the following best describes the value returned by a call to findLongest?
    
    .. code-block:: java
 
@@ -80,8 +82,10 @@ These problems are similar to those you will see on the AP CS A exam.
         if (lenCount > maxLen) {
            maxLen = lenCount;
         }
+        return maxLen;
+     }
 
-.. mchoice:: qcb_4
+.. mchoice:: qamed_4
    :answer_a: All values in positions m+1 through myStuff.length-1 are greater than or equal to n.
    :answer_b: All values in position 0 through m are less than n.
    :answer_c: All values in position m+1 through myStuff.length-1 are less than n.
@@ -111,7 +115,28 @@ These problems are similar to those you will see on the AP CS A exam.
         return -1;
      }
 
-
-
      int m = mystery(n)
+     
+.. mchoice:: qamed_5
+   :answer_a: When all values in a are larger than temp.
+   :answer_b: The values don't matter. This will always cause an infinite loop.
+   :answer_c: Whenever a has values larger than temp.
+   :answer_d: Whenever a includes a value that is less than or equal to zero.
+   :answer_e: Whenever a includes a value equal to temp.
+   :correct: d
+   :feedback_a: Values larger than temp will not cause an infinite loop.
+   :feedback_b: An infinite loop will not always occur in this program segment. It occurs when at least one value in a is less than or equal to 0.
+   :feedback_c: Values larger than temp will not cause an infinite loop.
+   :feedback_d: When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
+   :feedback_e: Values equal to temp will not cause the infinite loop.
+
+   Assume that temp is an int variable intialized to be greater than zero and that a is an array of ints. What scenario will cause an infinite loop in the following code?  
+   
+   .. code-block:: java
+
+     for (int k = 0; k < a.length; k++) {
+        while (a[k] < temp) {
+           a[k] *= 2;
+        }
+     }
 

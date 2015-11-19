@@ -106,8 +106,8 @@ Loops
    :maxdepth: 2
 
    LoopBasics/lbasics.rst
-   LoopBasics/lFor.rst
    LoopBasics/lWhile.rst
+   LoopBasics/lFor.rst
    LoopBasics/lMistakes.rst
    LoopBasics/lPractice.rst
    LoopBasics/lEasyMC.rst

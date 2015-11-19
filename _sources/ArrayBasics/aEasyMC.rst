@@ -7,7 +7,7 @@ Easy Multiple Choice Questions
 
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
-.. mchoice:: qcb_1
+.. mchoice:: qaeasy_1
    :answer_a: nums.length
    :answer_b: nums.length - 1
    :correct: b
@@ -16,7 +16,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which index is the last element in an array called nums at?
    
-.. mchoice:: qcb_2
+.. mchoice:: qaeasy_2
    :answer_a: The values don't matter this will always cause an infinite loop.
    :answer_b: Whenever a includes a value that is less than or equal to zero.
    :answer_c: Whenever a has values larger then temp.
@@ -41,7 +41,7 @@ These problems are easier than most of those that you will usually see on the AP
          }
       }
 
-.. mchoice:: qcb_3
+.. mchoice:: qaeasy_3
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 32}
    :answer_c: {-20, -15, 2, 16, 32, 66}
