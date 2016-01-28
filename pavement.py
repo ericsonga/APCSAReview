@@ -25,10 +25,11 @@ options(
         template_args={'course_id': 'JavaReview-RU',
                        'login_required':'true',
                        'appname':master_app,
-                       'loglevel': 0,
+                       'loglevel': 10,
                        'course_url':master_url,
                        'use_services': 'true',
-                       'python3': 'false'
+                       'python3': 'false',
+                       'basecourse': 'javareview'
                         }
     )
 )
