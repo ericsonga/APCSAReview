@@ -76,7 +76,11 @@ Here is another method that calculates the **factorial** of a number.  The **fac
     single: base case
     pair: recursion; base case
   
-The factorial method has a way to stop  The recursion stops when n is equal to 0.  The thing that stops a recursive method from calling itself is called the **base case**.  A method can have more than one **base case** (way to stop the recursion).  
+The factorial method has a way to stop.  The recursion stops when n is equal to 0.  
+
+.. note ::
+
+   The thing that stops a recursive method from calling itself is called the **base case**.  A method can have more than one **base case** (way to stop the recursion).  
 
 **Check your understanding**
     
@@ -90,6 +94,7 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
 	Is the following method recursive? 
     
     .. code-block:: java
+      :linenos:
    
       public static int mystery() 
       { 
@@ -111,6 +116,7 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
    Is the following method recursive? 
     
     .. code-block:: java 
+      :linenos:
    
       public static int mystery2(int x)
       { 
@@ -130,6 +136,7 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
    What is the value of n when this method stops calling itself (when it reaches the base case)? 
     
     .. code-block:: java 
+      :linenos:
    
       public static int product(int n) 
       {
@@ -148,9 +155,10 @@ The factorial method has a way to stop  The recursion stops when n is equal to 0
    :feedback_b: This method also stops for another value of n. 
    :feedback_c: This method stops calling itself when n is either 0 or 1.   
    
-   What is/are the values of n when this method stops calling itself (when it reaches the base case)? 
+   What is/are the values of the variable bunnies when this method stops calling itself (when it reaches the base case)? 
     
     .. code-block:: java 
+      :linenos:
     
       public static int bunnyEars(int bunnies) 
       {

@@ -414,13 +414,25 @@
         </span>
         
         </p>
-            <p id="index-3">The factorial method has a way to stop  The recursion stops when n is equal to 0.  The thing that stops a recursive method from calling itself is called the <strong>base case</strong>.  A method can have more than one <strong>base case</strong> (way to stop the recursion).</p>
+            <p id="index-3">The factorial method has a way to stop.  The recursion stops when n is equal to 0.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The thing that stops a recursive method from calling itself is called the <strong>base case</strong>.  A method can have more than one <strong>base case</strong> (way to stop the recursion).</p>
+</div>
 <p><strong>Check your understanding</strong></p>
 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_1">
             <p>11-1-1:      Is the following method recursive?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">()</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">()</span>
 <span class="o">{</span>
    <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span>
@@ -430,7 +442,7 @@
    <span class="k">return</span> <span class="n">total</span><span class="o">;</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_1_opt_a">Yes</li><li data-component="feedback" id="qrb_1_opt_a">Where is the call to the same method?</li>
@@ -443,13 +455,17 @@
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_2">
             <p>11-1-2: Is the following method recursive?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery2</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery2</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
    <span class="k">else</span> <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">mystery2</span><span class="o">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer" data-correct id="qrb_2_opt_a">Yes</li><li data-component="feedback" id="qrb_2_opt_a">Yes, any method that contains at least one call to the same method is recursive.</li>
@@ -462,7 +478,13 @@
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_3">
             <p>11-1-3: What is the value of n when this method stops calling itself (when it reaches the base case)?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">product</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">product</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>
       <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
@@ -470,7 +492,7 @@
       <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">product</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_3_opt_a">0</li><li data-component="feedback" id="qrb_3_opt_a">Look again.  What is the value of n when this method returns a value, without doing a recursive call?</li>
@@ -483,16 +505,21 @@
             </ul>
             
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_4">
-            <p>11-1-4: What is/are the values of n when this method stops calling itself (when it reaches the base case)?</p>
+            <p>11-1-4: What is/are the values of the variable bunnies when this method stops calling itself (when it reaches the base case)?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">bunnyEars</span><span class="o">(</span><span class="kt">int</span> <span class="n">bunnies</span><span class="o">)</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">bunnyEars</span><span class="o">(</span><span class="kt">int</span> <span class="n">bunnies</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">bunnies</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
    <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">bunnies</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="mi">2</span><span class="o">;</span>
    <span class="k">else</span> <span class="k">return</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="n">bunnies</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_4_opt_a">0</li><li data-component="feedback" id="qrb_4_opt_a">This method also stops for another value of n.</li>

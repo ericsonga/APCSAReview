@@ -27,3 +27,4 @@ Could you actually create a Shape object?  What would it look like?  In this cas
 
     Figure 3: An abstract SimpleShape class with an abstract draw method
     
+You can download a zip file with all the code for the shapes example by clicking on the following `link <https://www.dropbox.com/s/2lmkd1m2sfh3xqc/ShapeExample.zip?dl=0>`_

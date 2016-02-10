@@ -1,13 +1,13 @@
-function TimedMC (opts) {
+function TimedParsons (opts) {
     if (opts) {
         this.timedinit(opts);
     }
 }
 
-TimedMC.prototype = new MultipleChoice();
+TimedParsons.prototype = new Parsons();
 
-TimedMC.prototype.timedinit = function (opts) {
-    this.init(opts); // Construct the MC object
+TimedParsons.prototype.timedinit = function (opts) {
+    this.init(opts); // Construct the Parsons object
     this.renderTimedIcon(this.MCContainer);
     this.hideButtons(); // Don't show per-question buttons in a timed assessment
 };
@@ -133,13 +133,13 @@ TimedMC.prototype.hideFeedback = function () {
     }
 };
 
-TimedMC.prototype.processTimedSubmission = function (logFlag) {
+TimedMC.prototype.processTimedSubmission = function () {
     for (var i = 0; i < this.optionArray.length; i++) {
         this.optionArray[i]["input"].disabled = true;
     }
     if (this.multipleanswers) {
-        this.processMCMASubmission(logFlag);
+        this.processMCMASubmission();
     } else {
-        this.processMCMFSubmission(logFlag);
+        this.processMCMFSubmission();
     }
 };

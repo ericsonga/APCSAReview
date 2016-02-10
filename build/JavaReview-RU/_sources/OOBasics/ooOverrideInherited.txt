@@ -8,7 +8,9 @@ Overriding an Inherited Method
 ..	index::
     single: override
   
-If a parent class isn't specified using the **extends** keyword, the class will inherit from the ``Object`` class.  What does a class inherit from the ``Object`` class?  One of the important things that gets inherited is the ``equals(Object obj)`` method.  This method is used to test if the current object and the passed object called ``obj`` are equal.  The ``equals`` method that is inherited from the ``Object`` class only returns true if the two objects (actually two object references) are really the same object (refer to the same object).  The ``String`` class **overrides** the inherited equals method to return true when the two objects have the same characters in the same order.   **Overriding** an inherited method means providing a method in a child class with the same method signature (method name and parameter type list) and return type as a method in the parent class.  The method in the child class will be called instead of the method in the parent class.  This is different from **overloading** a method which is creating several methods of the same name as long as the parameter types, order, or number are different. 
+If a parent class isn't specified using the **extends** keyword, the class will inherit from the ``Object`` class.  What does a class inherit from the ``Object`` class?  One of the important things that gets inherited is the ``equals(Object obj)`` method.  This method is used to test if the current object and the passed object called ``obj`` are equal.  The ``equals`` method that is inherited from the ``Object`` class only returns true if the two objects (actually two object references) are really the same object (refer to the same object).  The ``String`` class **overrides** the inherited equals method to return true when the two objects have the same characters in the same order.   
+
+**Overriding** an inherited method means providing a method in a child class with the same method signature (method name and parameter type list) and return type as a method in the parent class.  The method in the child class will be called instead of the method in the parent class.  This is different from **overloading** a method which is creating several methods of the same name as long as the parameter types, order, or number are different. 
   
 **Check your understanding**
 
@@ -52,7 +54,8 @@ If a parent class isn't specified using the **extends** keyword, the class will 
            nextId++;
          }
          
-         public int getId(return id);
+         public int getId() {return id;}
+         
          public int setId (int theId) 
          {
             this.id = theId;
@@ -99,7 +102,7 @@ If a parent class isn't specified using the **extends** keyword, the class will 
            nextId++;
          }
          
-         public int getId(return id);
+         public int getId() {return id;}
          public int setId (int theId) 
          {
             this.id = theId;

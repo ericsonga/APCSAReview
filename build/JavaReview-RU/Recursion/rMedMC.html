@@ -337,8 +337,18 @@
 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_1">
             <p>11-7-1: Given the following method declaration, which of the following is printed as the result of the call <code class="docutils literal"><span class="pre">mystery(1234)</span></code>?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="c1">//precondition:  x &gt;=0</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">mystery</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">//precondition:  x &gt;=0</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mystery</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">10</span><span class="o">);</span>
 
@@ -349,7 +359,7 @@
    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">10</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 
             <li data-component="answer"  id="qrm_1_opt_a">1441</li><li data-component="feedback" id="qrm_1_opt_a">The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means modulus or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.</li>
             
@@ -363,10 +373,17 @@
             
 
             </ul>
-            
+            <p>You can step through the code using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+void+mystery+(int+x)%0A+++%7B%0A+++++++++System.out.print(x+%25+10)%3B%0A%0A+++++++++if+((x+/+10)+!%3D+0)%0A+++++++++%7B%0A++++++++++++mystery(x+/+10)%3B%0A+++++++++%7D%0A+++++++++System.out.print(x+%25+10)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q1</a>.</p>
+
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_2">
             <p>11-7-2: Given the following method declaration, what value is returned as the result of the call <code class="docutils literal"><span class="pre">mystery(5)</span></code>?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
       <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
@@ -374,7 +391,7 @@
       <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">mystery</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 
             <li data-component="answer" data-correct id="qrm_2_opt_a">243</li><li data-component="feedback" id="qrm_2_opt_a">For the call <code>mystery(5)</code>, <code>n != 0</code> so the <code>else</code> statement is executed. This results in the next recursive call of <code>mystery(4)</code>. This will continue until the call <code>mystery(0)</code> is executed. At this point, the value 1 will be returned. Then each call of <code>mystery</code> can return with the 3 * the result of the recursive call. So this method will compute 3 to the given power.</li>
             
@@ -388,10 +405,17 @@
             
 
             </ul>
-            
+            <p>You can step through the code using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+mystery(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+3+*+mystery+(n+-+1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q2</a>.</p>
+
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_3">
             <p>11-7-3: Given the following method declaration, what value is returned as the result of the call <code class="docutils literal"><span class="pre">product(5)</span></code>?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kt">int</span> <span class="nf">product</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">product</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="o">)</span>
       <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
@@ -399,7 +423,7 @@
       <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">product</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 
             <li data-component="answer"  id="qrm_3_opt_a">1</li><li data-component="feedback" id="qrm_3_opt_a">The value 1 will only be returned when the initial call to product is less than or equal to 1.</li>
             
@@ -413,10 +437,18 @@
             
 
             </ul>
-            
+            <p>You can step through the code using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+product(int+n)+%0A+++%7B%0A+++++++++if+(n+%3C%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+n+*+product(n+-+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(product(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q3</a>.</p>
+
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrm_4">
             <p>11-7-4: Given the following method declaration, what value is returned as the result of the call <code class="docutils literal"><span class="pre">f(5)</span></code>?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
       <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
@@ -425,7 +457,7 @@
    <span class="k">else</span> <span class="k">return</span> <span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 
             <li data-component="answer"  id="qrm_4_opt_a">8</li><li data-component="feedback" id="qrm_4_opt_a">This would be true if it was <code>f(6)</code> not <code>f(5)</code>.</li>
             
@@ -439,7 +471,8 @@
             
 
             </ul>
-            </div>
+            <p>You can step through the code using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+f(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+0%3B%0A+++++++++else+if+(n+%3D%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else+return+f(n-1)+%2B+f(n-2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(f(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q4</a>.</p>
+</div>
 
 
   

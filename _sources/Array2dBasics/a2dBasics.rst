@@ -56,3 +56,18 @@ Java actually stores two-dimensional arrays as arrays of arrays.  Each element o
     
 On the exam assume that any 2 dimensional (2D) array is in row-major order.  The outer array can be thought of as the rows and the inner arrays the columns.  On the exam all inner arrays will have the same length even though it is possible in Java to have inner arrays of different lengths (also called **ragged arrays**).  
 
+.. clickablearea:: clicktimed1
+   :question: Click on the value in row 3 and column 2
+   :feedback: Rows are horizontal and columns are vertical and both start with index 0.
+   :table:
+   :correct: 1,1;1,4;2,3;2,4
+   :incorrect: 2,1;2,2;3,0
+
+   +------------------------+------------+----------+----------+
+   |        correct         |    N-A     |    N-A   | correct  |
+   +========================+============+==========+==========+
+   | Incorrect              | incorrect  | correct  | correct  |
+   +------------------------+------------+----------+----------+
+   | This row is incorrect  |   ...      |   ...    |   ...    |
+   +------------------------+------------+----------+----------+
+

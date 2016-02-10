@@ -8,14 +8,16 @@ Polymorphism
 ..	index::
     single: polymorphism
     
-**Polymorphism** is a big word that you can break down into "poly" which means many and "morphism" which means form.  So, it just means many forms.  In Java it means that the method that gets called at **run-time** (when the code is run) depends on the type of the object at **run-time**.  This is simliar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal. 
+**Polymorphism** is a big word that you can break down into "poly" which means many and "morphism" which means form.  So, it just means many forms.  In Java it means that the method that gets called at **run-time** (when the code is run) depends on the type of the object at **run-time**.  
+
+This is simliar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal. 
 
 .. image:: http://www.toysrus.com/graphics/product_images/pTRU1-5452971_alternate1_dt.jpg
    :alt: Picture of a See N Say toy 
    :align: center
    :width: 300
    
-If you were simulating this toy in software you could create an Animal class that had an abstract makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  
+If you were simulating this toy in software you could create an Animal class that had an abstract makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
 
 ..	index::
     single: declared type
@@ -25,13 +27,29 @@ If you were simulating this toy in software you could create an Animal class tha
     pair: type; actual
     pair: type; run-time
 
-In Java an object variable has both a **declared type** and a **run-time type** or **actual type**.  The *declared type* of a variable is the type that is used in the declaration.  The *run-time type* or *actual type* is the class that actually creates the object.  The ``nameList`` variable declared below has a declared type of ``List`` and an actual or run-time type of ``ArrayList``.  
+.. note ::
+
+   In Java an object variable has both a **declared type** and a **run-time type** or **actual type**.  The *declared type* of a variable is the type that is used in the declaration.  The *run-time type* or *actual type* is the class that actually creates the object.  
+   
+The variable ``nameList`` declared below has a **declared type** of ``List`` and an **actual** or **run-time type** of ``ArrayList``.  The complier will check if the declared type has the methods or inherits the methods being used in the code and give an error if it doesn't find the method(s).  The List interface does have a ``add`` method so this code will compile.  At run-time the execution environment will first look for the ``add`` method in the ``ArrayList`` class since that is the actual or run-time type. If it doesn't find it there it will look in the parent class and keep looking up the inheritance tree till it finds the method.  The method will be found, since otherwise the code would not have compiled.
 
 .. code-block:: java 
 
   List<String> nameList = new ArrayList<String>(); 
+  nameList.add("Hi");
+  
+The variable ``message`` declared below has a **declared type** of ``Object`` and an **actual** or **run-time type** of ``String``.  Since the declared type of ``message`` is ``Object`` thie code ``message.indexOf("h");`` will cause a compiler error since the ``Object`` class does not have an ``indexOf`` method.
+  
+.. code-block:: java 
 
-Any object variable can refer to an object of the declared type or *any descendant (subclass) of the declared type* at run-time.  At compile time the compiler uses the declared type to check that the methods you are trying to use are available to an object of that type.  The code won't compile if the methods don't exist in that class or some parent class of that class.  At run-time the actual method that is called depends on the actual type of the object.  Remember that an object keeps a reference to the class that created it (an object of the class called ``Class``).  When a method is called at run-time the first place that is checked for that method is the class that created the object.  If the method is found there it will be executed.  If not, the parent of that class will be checked and so on until the method is found.  
+  Object message = new String("hi");
+  message.indexOf("h");
+  
+.. note ::
+
+   Any object variable can refer to an object of the declared type or *any descendant (subclass) of the declared type* at run-time. The class ``String`` inherits from the class ``Object`` so an ``Object`` variable can hold a reference to a ``String`` object.  But, you can only call methods that are available in the ``Object`` class unless you cast it back to the ``String`` class.
+
+At compile time the compiler uses the declared type to check that the methods you are trying to use are available to an object of that type.  The code won't compile if the methods don't exist in that class or some parent class of that class.  At run-time the actual method that is called depends on the actual type of the object.  Remember that an object keeps a reference to the class that created it (an object of the class called ``Class``).  When a method is called at run-time the first place that is checked for that method is the class that created the object.  If the method is found there it will be executed.  If not, the parent of that class will be checked and so on until the method is found.  
 
 
 **Check your understanding**

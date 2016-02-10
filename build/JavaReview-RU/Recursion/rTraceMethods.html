@@ -361,7 +361,7 @@
 </pre></div>
 </div>
 <p>What happens when we call <code class="docutils literal"><span class="pre">factorial(0)</span></code>?  It will return 1 (line 4) since n is equal to 0.  How about <code class="docutils literal"><span class="pre">factorial(1)</span></code>?  It will return <code class="docutils literal"><span class="pre">1</span> <span class="pre">*</span> <span class="pre">factorial(0)</span></code>.  We already know that <code class="docutils literal"><span class="pre">factorial(0)</span></code> returns 1, but the computer won&#8217;t <em>remember</em> that.  It will execute <code class="docutils literal"><span class="pre">factorial(0)</span></code> and return the result (1).   So  <code class="docutils literal"><span class="pre">factorial(1)</span></code> returns <code class="docutils literal"><span class="pre">1</span> <span class="pre">*</span> <span class="pre">1</span> <span class="pre">which</span> <span class="pre">is</span> <span class="pre">1</span></code>.</p>
-<p>How can you show what is happening in a recursive call?  Here is one way to do it.  The lines below show the call stack (from the bottom of the stack, or the beginning, to the top of the stack, or the most recent call) for a call to <code class="docutils literal"><span class="pre">factorial(5)</span></code>.</p>
+<p>How can you show what is happening in a recursive call?  Here is one way to do it.  The lines below show the call stack upside down (with the bottom of the stack, or the beginning at the top and the most recent call at the bottom) for a call to <code class="docutils literal"><span class="pre">factorial(5)</span></code>.  This is a handy way to trace a recursive method on the exam and you will do much better on recursive problems if you practice doing it this way.</p>
 <div class="highlight-java"><div class="highlight"><pre><span class="n">factorial</span><span class="o">(</span><span class="mi">5</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">factorial</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
 <span class="n">factorial</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">factorial</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
 <span class="n">factorial</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">factorial</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
@@ -380,7 +380,8 @@
 </pre></div>
 </div>
 <p>So <code class="docutils literal"><span class="pre">factorial(5)</span></code> returns 120.</p>
-<p>A great way to see the call stack in action is to use Jeloit (see <a class="reference external" href="http://cs.joensuu.fi/jeliot/">http://cs.joensuu.fi/jeliot/</a> for the software and <a class="reference external" href="http://ice-web.cc.gatech.edu/dl/?q=node/729">http://ice-web.cc.gatech.edu/dl/?q=node/729</a> for a step by step tutorial about how to use Jeliot).</p>
+<p>You can step through this code using the Java Visualizer by clicking on this link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+factorial(int+n)%0A+++%7B%0A+++++if+(n+%3D%3D+0)%0A+++++++return+1%3B%0A+++++else%0A+++++++return+n+*+factorial(n-1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(factorial(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">factorial</a>.</p>
+<p>Another way to see the call stack in action is to use Jeloit (see <a class="reference external" href="http://cs.joensuu.fi/jeliot/">http://cs.joensuu.fi/jeliot/</a> for the software and <a class="reference external" href="http://ice-web.cc.gatech.edu/dl/?q=node/729">http://ice-web.cc.gatech.edu/dl/?q=node/729</a> for a step by step tutorial about how to use Jeliot).</p>
 <div class="align-center figure" id="id4">
 <a class="reference internal image-reference" href="../_images/callTree.png"><img alt="../_images/callTree.png" src="../_images/callTree.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-text">Figure 5: A call tree in Jeliot</span></p>
@@ -390,7 +391,13 @@
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_5">
             <p>11-3-1:      Given the method defined below what does the following return: factorial(6)?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">factorial</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">factorial</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
       <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
@@ -398,7 +405,7 @@
       <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_5_opt_a">1</li><li data-component="feedback" id="qrb_5_opt_a">This would be correct if it was factorial(0), but don't forget the recursive calls.</li>
@@ -415,7 +422,13 @@
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_6">
             <p>11-3-2:      Given the method defined below what does the following return: mystery(5)?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
       <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
@@ -423,7 +436,7 @@
       <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mystery</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_6_opt_a">10</li><li data-component="feedback" id="qrb_6_opt_a">This would be correct if it addition instead of multiplication.</li>
@@ -436,17 +449,22 @@
             
 
             </ul>
-            
+            <p>You can step through the code above using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q2</a>.</p>
+
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_7">
             <p>11-3-3:      Given the method defined below what does the following print: mystery(4,3)?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">)</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">)</span>
 <span class="o">{</span>
   <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">a</span><span class="o">;</span>
   <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">mystery</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="n">a</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_7_opt_a">12</li><li data-component="feedback" id="qrb_7_opt_a">This would be correct if it added instead of multiplied.</li>
@@ -461,38 +479,59 @@
             
 
             </ul>
-            <p>Let&#8217;s trace the execution of the bunny ears method defined below.</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">bunnyEars</span><span class="o">(</span><span class="kt">int</span> <span class="n">bunnies</span><span class="o">)</span>
+            <p>You can step through the code above using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q3</a>.</p>
+<p>Let&#8217;s trace the execution of the bunny ears method defined below.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">bunnyEars</span><span class="o">(</span><span class="kt">int</span> <span class="n">bunnies</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">bunnies</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
    <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">bunnies</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="mi">2</span><span class="o">;</span>
    <span class="k">else</span> <span class="k">return</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="n">bunnies</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p>What happens when we call <code class="docutils literal"><span class="pre">bunnyEars(0)</span></code>?  It will return 0 since n is equal to 0 (line 3).  How about <code class="docutils literal"><span class="pre">bunnyEars(1)</span></code>?  It will return 2 since n is equal to 1 (line 4). What about <code class="docutils literal"><span class="pre">bunnyEars(5)</span></code>?</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="n">bunnyEars</span><span class="o">(</span><span class="mi">5</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">bunnyEars</span><span class="o">(</span><span class="mi">5</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <p>This approach shows the call stack from bottom to top.  Once bunnyEars(1) executes and returns 2 that value can be substituted back into the previous method call, starting at the top and working our way back toward the bottom (or beginning) of the call stack.</p>
-<div class="highlight-java"><div class="highlight"><pre><span class="n">bunnyEars</span><span class="o">(</span><span class="mi">5</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">bunnyEars</span><span class="o">(</span><span class="mi">5</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">bunnyEars</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="n">returns</span> <span class="mi">2</span>
 </pre></div>
-</div>
-<p>So <code class="docutils literal"><span class="pre">bunnyEars(5)</span></code> returns 10.</p>
+</td></tr></table></div>
+<p>So <code class="docutils literal"><span class="pre">bunnyEars(5)</span></code> returns 10.  You can step through this code using the Java Visualizer by clicking on this link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A++public+static+int+bunnyEars(int+bunnies)+%0A++%7B%0A+++++if+(bunnies+%3D%3D+0)+return+0%3B%0A+++++else+if+(bunnies+%3D%3D+1)+return+2%3B%0A+++++else+return+2+%2B+bunnyEars(bunnies+-+1)%3B+%0A++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(bunnyEars(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">bunnyEars</a>.</p>
 <p><strong>Check your understanding</strong></p>
 
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_8">
             <p>11-3-4:      Given the method defined below what does the following print: mystery(1234)?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mystery</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mystery</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">10</span><span class="o">);</span>
 
    <span class="k">if</span> <span class="o">((</span><span class="n">x</span> <span class="o">/</span> <span class="mi">10</span><span class="o">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
@@ -501,7 +540,7 @@
    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">10</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_8_opt_a">12344321</li><li data-component="feedback" id="qrb_8_opt_a">Remember that 1234 % 10 returns the rightmost digit.</li>
@@ -516,11 +555,21 @@
             
 
             </ul>
-            
+            <p>You can step through the code above using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+mystery+(int+x)+%0A+++%7B%0A++++++++System.out.print(x+%25+10)%3B+%0A%0A++++++++if+((x+/+10)+!%3D+0)+%7B%0A+++++++++++mystery(x+/+10)%3B+%0A++++++++%7D+%0A++++++++System.out.print(x+%25+10)%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q4</a>.</p>
+
             <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_9">
             <p>11-3-5:      Given the method defined below what does the following return: mystery(&#8220;xyzxyxy&#8221;)?</p>
 <blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span>
+<div><div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span>
 <span class="o">{</span>
    <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
    <span class="k">else</span>
@@ -531,7 +580,7 @@
    <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 </div></blockquote>
 
             <li data-component="answer"  id="qrb_9_opt_a">7</li><li data-component="feedback" id="qrb_9_opt_a">This would be correct if was counting the number of characters in the string, but that isn't what it is doing.</li>
@@ -546,37 +595,8 @@
             
 
             </ul>
-            
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qrb_10">
-            <p>11-3-6:      Given the method defined below what does the following return: mystery(&#8220;xyzxyxy&#8221;)?</p>
-<blockquote>
-<div><div class="highlight-java"><div class="highlight"><pre><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span>
-<span class="o">{</span>
-   <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
-   <span class="k">else</span>
-   <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="s">&quot;y&quot;</span><span class="o">))</span> <span class="k">return</span> <span class="mi">1</span> <span class="o">+</span>
-                           <span class="n">mystery</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
-      <span class="k">else</span> <span class="k">return</span> <span class="n">mystery</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
-   <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
+            <p>You can step through the code above using the Java Visualizer by clicking on the following link: <a class="reference external" href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Q5</a></p>
 </div>
-</div></blockquote>
-
-            <li data-component="answer"  id="qrb_10_opt_a">7</li><li data-component="feedback" id="qrb_10_opt_a">This would be correct if was counting the number of characters in the string, but that isn't what it is doing.</li>
-            
-            <li data-component="answer" data-correct id="qrb_10_opt_b">2</li><li data-component="feedback" id="qrb_10_opt_b">This method seems to be counting the number of y's in the string, but fails to check if a single character is a y.</li>
-            
-            <li data-component="answer"  id="qrb_10_opt_c">1</li><li data-component="feedback" id="qrb_10_opt_c">Don't forget that there are recursive calls too.</li>
-            
-            <li data-component="answer"  id="qrb_10_opt_d">3</li><li data-component="feedback" id="qrb_10_opt_d">This would be correct if the base case returned 1 if the single character was a y.</li>
-            
-            <li data-component="answer"  id="qrb_10_opt_e">0</li><li data-component="feedback" id="qrb_10_opt_e">Don't forget about the recursive calls.</li>
-            
-
-            </ul>
-            </div>
 
 
   

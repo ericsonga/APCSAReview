@@ -54,7 +54,7 @@ Let's trace the execution of the factorial method defined below.
 
 What happens when we call ``factorial(0)``?  It will return 1 (line 4) since n is equal to 0.  How about ``factorial(1)``?  It will return ``1 * factorial(0)``.  We already know that ``factorial(0)`` returns 1, but the computer won't *remember* that.  It will execute ``factorial(0)`` and return the result (1).   So  ``factorial(1)`` returns ``1 * 1 which is 1``.
 
-How can you show what is happening in a recursive call?  Here is one way to do it.  The lines below show the call stack (from the bottom of the stack, or the beginning, to the top of the stack, or the most recent call) for a call to ``factorial(5)``.
+How can you show what is happening in a recursive call?  Here is one way to do it.  The lines below show the call stack upside down (with the bottom of the stack, or the beginning at the top and the most recent call at the bottom) for a call to ``factorial(5)``.  This is a handy way to trace a recursive method on the exam and you will do much better on recursive problems if you practice doing it this way.
 
 .. code-block:: java 
 
@@ -78,7 +78,9 @@ Once factorial(0) executes and returns 1 that value can be substituted back into
   
 So ``factorial(5)`` returns 120. 
 
-A great way to see the call stack in action is to use Jeloit (see http://cs.joensuu.fi/jeliot/ for the software and http://ice-web.cc.gatech.edu/dl/?q=node/729 for a step by step tutorial about how to use Jeliot).
+You can step through this code using the Java Visualizer by clicking on this link: `factorial <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+factorial(int+n)%0A+++%7B%0A+++++if+(n+%3D%3D+0)%0A+++++++return+1%3B%0A+++++else%0A+++++++return+n+*+factorial(n-1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(factorial(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+Another way to see the call stack in action is to use Jeloit (see http://cs.joensuu.fi/jeliot/ for the software and http://ice-web.cc.gatech.edu/dl/?q=node/729 for a step by step tutorial about how to use Jeliot).
 
 .. figure:: Figures/callTree.png
     :width: 300px
@@ -103,6 +105,7 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
 	Given the method defined below what does the following return: factorial(6)?
     
     .. code-block:: java 
+     :linenos:
    
      public static int factorial(int n)
      {
@@ -126,6 +129,7 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
 	Given the method defined below what does the following return: mystery(5)?
     
     .. code-block:: java 
+     :linenos:
    
      public static int mystery(int n) 
      { 
@@ -134,6 +138,8 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
         else 
            return 2 * mystery (n - 1); 
      } 
+     
+You can step through the code above using the Java Visualizer by clicking on the following link: `Q2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
      
 .. mchoice:: qrb_7
    :answer_a: 12 
@@ -151,6 +157,7 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
 	Given the method defined below what does the following print: mystery(4,3)?
     
     .. code-block:: java 
+     :linenos:
    
      public static int mystery(int n, int a)
      {
@@ -158,10 +165,13 @@ A great way to see the call stack in action is to use Jeloit (see http://cs.joen
        return a * mystery(n-1,a);
      }
      
+You can step through the code above using the Java Visualizer by clicking on the following link: `Q3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+     
 
 Let's trace the execution of the bunny ears method defined below.  
 
 .. code-block:: java 
+  :linenos:
 
   public static int bunnyEars(int bunnies) 
   {
@@ -173,6 +183,7 @@ Let's trace the execution of the bunny ears method defined below.
 What happens when we call ``bunnyEars(0)``?  It will return 0 since n is equal to 0 (line 3).  How about ``bunnyEars(1)``?  It will return 2 since n is equal to 1 (line 4). What about ``bunnyEars(5)``?
 
 .. code-block:: java 
+  :linenos:
 
   bunnyEars(5) returns 2 + bunnyEars(4)
   bunnyEars(4) returns 2 + bunnyEars(3) 
@@ -183,6 +194,7 @@ What happens when we call ``bunnyEars(0)``?  It will return 0 since n is equal t
 This approach shows the call stack from bottom to top.  Once bunnyEars(1) executes and returns 2 that value can be substituted back into the previous method call, starting at the top and working our way back toward the bottom (or beginning) of the call stack.
 
 .. code-block:: java 
+  :linenos:
 
   bunnyEars(5) returns 2 + bunnyEars(4) = 2 + 8 = 10
   bunnyEars(4) returns 2 + bunnyEars(3) = 2 + 6 = 8
@@ -190,7 +202,7 @@ This approach shows the call stack from bottom to top.  Once bunnyEars(1) execut
   bunnyEars(2) returns 2 + bunnyEars(1) = 2 + 2 = 4
   bunnyEars(1) returns 2
   
-So ``bunnyEars(5)`` returns 10.  
+So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java Visualizer by clicking on this link: `bunnyEars <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A++public+static+int+bunnyEars(int+bunnies)+%0A++%7B%0A+++++if+(bunnies+%3D%3D+0)+return+0%3B%0A+++++else+if+(bunnies+%3D%3D+1)+return+2%3B%0A+++++else+return+2+%2B+bunnyEars(bunnies+-+1)%3B+%0A++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(bunnyEars(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
   
 **Check your understanding**
     
@@ -210,6 +222,7 @@ So ``bunnyEars(5)`` returns 10.
 	Given the method defined below what does the following print: mystery(1234)?
     
     .. code-block:: java 
+     :linenos:
    
      public static void mystery (int x) {
         System.out.print(x % 10); 
@@ -219,6 +232,8 @@ So ``bunnyEars(5)`` returns 10.
         } 
         System.out.print(x % 10); 
      } 
+     
+You can step through the code above using the Java Visualizer by clicking on the following link: `Q4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+mystery+(int+x)+%0A+++%7B%0A++++++++System.out.print(x+%25+10)%3B+%0A%0A++++++++if+((x+/+10)+!%3D+0)+%7B%0A+++++++++++mystery(x+/+10)%3B+%0A++++++++%7D+%0A++++++++System.out.print(x+%25+10)%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
      
 .. mchoice:: qrb_9
    :answer_a: 7 
@@ -236,6 +251,7 @@ So ``bunnyEars(5)`` returns 10.
 	Given the method defined below what does the following return: mystery("xyzxyxy")?
     
     .. code-block:: java 
+     :linenos:
    
      public static int mystery(String str) 
      {
@@ -248,32 +264,8 @@ So ``bunnyEars(5)`` returns 10.
         }
      }
      
-.. mchoice:: qrb_10
-   :answer_a: 7 
-   :answer_b: 2
-   :answer_c: 1
-   :answer_d: 3
-   :answer_e: 0
-   :correct: b
-   :feedback_a: This would be correct if was counting the number of characters in the string, but that isn't what it is doing.
-   :feedback_b: This method seems to be counting the number of y's in the string, but fails to check if a single character is a y.   
-   :feedback_c: Don't forget that there are recursive calls too.  
-   :feedback_d: This would be correct if the base case returned 1 if the single character was a y. 
-   :feedback_e: Don't forget about the recursive calls. 
-    
-	Given the method defined below what does the following return: mystery("xyzxyxy")?
-    
-    .. code-block:: java 
-   
-     public static int mystery(String str) 
-     {
-        if (str.length() == 1) return 0;
-        else
-        {
-           if (str.substring(0,1).equals("y")) return 1 + 
-                                mystery(str.substring(1));
-           else return mystery(str.substring(1));
-        }
-     }
+You can step through the code above using the Java Visualizer by clicking on the following link: `Q5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_
+     
+
      
  
