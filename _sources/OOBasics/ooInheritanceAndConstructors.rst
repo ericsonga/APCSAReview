@@ -8,49 +8,62 @@ Inheritance and Constructors
 ..	index::
     pair: constructor; super
 
-How do you initialize inherited fields if you don't have direct access to them in the subclass?  In Java you can put a call to the parent constructor as the first line in a subclass constructor to initialize inherited fields. 
+How do you initialize inherited private fields if you don't have direct access to them in the subclass?  In Java you can put a call to the parent constructor using the keyword ``super`` as the first line in a subclass constructor to initialize inherited fields.  See the constructor in Employee below for an example.
 
-.. code-block:: java 
+.. activecode:: InitInherited
+  :language: java
 
-  public class Person 
+  class Person 
   {
-  	private String name; 
+     private String name; 
   	
-  	public Person (String aName)
-  	{
-  	   this.setName(aName);
-  	}
+     public Person(String theName)
+     {
+        this.name = theName;
+     }
   	
-  	public String getName()
-  	{	
-  	   return name;
-  	}
-  	public boolean setName(String theNewName) 
-  	{
-  	    // only allow a name with alphabetic characters and spaces
-  		if (Pattern.matches("([a-zA-Z]+ +)*[a-zA-Z]+",theNewName)
-  		{
-  		   name = theNewName;
-  		   return true;
-  		}
-  		return false;
-  	}
+     public String getName()
+     {	
+        return name;
+     }
+  	
+     public boolean setName(String theNewName) 
+     {
+        if (theNewName != null)
+        {
+           this.name = theNewName;
+           return true;
+        }
+        return false;
+     }
   }
   
   public class Employee extends Person
   {
-  	private int id; 
+    
+     private static int nextId = 1;
+     private int id; 
   	
-  	public Employee(String theName)
-  	{
-  	   super(theName);
-  	}
-  	
-  	public int getId() 
-  	{
-  		return id;
-  	}
+     public Employee(String theName)
+     {
+        super(theName);
+        id = nextId;
+        nextId++;
+     }
+    
+     public int getId() 
+     {
+        return id;
+     }
+     
+     public static void main(String[] args)
+     {
+        Employee emp = new Employee("Mark");
+        System.out.println(emp.getName());
+        System.out.println(emp.getId());
+     }
   }
+
   
 The ``super(theName)`` in the ``Employee`` constructor will call the constructor that takes a ``String`` object in the ``Person`` class to set the name.
 
@@ -80,7 +93,7 @@ a superclass constructor using ``super`` as the first line in a subclass constru
 
    .. code-block:: java 
    
-      public class Point2D {
+      class Point2D {
          public int x;
          public int y;
 
@@ -114,6 +127,8 @@ a superclass constructor using ``super`` as the first line in a subclass constru
               this.z = 0;
            }
            
+You can step through this code in the Java Visualizer by clicking on the following link `Constructor Test1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Point2D+%7B%0A+++%0A+++public+int+x%3B%0A+++public+int+y%3B%0A%0A+++public+Point2D()+%7B%7D%0A%0A+++public+Point2D(int+x,int+y)+%7B%0A++++++this.x+%3D+x%3B%0A++++++this.y+%3D+y%3B%0A+++%7D%0A+++%0A+++%0A++++++++%0A++++++++%0A+++++%0A%7D%0A%0Apublic+class+Point3D+extends+Point2D%0A%7B%0A+++public+int+z%3B%0A+++%0A+++//+I.%0A+++public+Point3D()+%7B%7D%3B%0A+++%0A+++//+II.%0A+++//public+Point3D(int+x,+int+y,+int+z)%0A+++//%7B%0A+++//++++super(x,y)%3B%0A+++//++++this.z+%3D+z%3B%0A+++//%7D%0A+++%0A+++//+III.%0A+++//public+Point3D(int+x,+int+y)%0A+++//%7B%0A+++//++++this.x+%3D+x%3B%0A+++//++++this.y+%3D+y%3B%0A+++//++++this.z+%3D+0%3B%0A+++//%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Point3D+p3+%3D+new+Point3D()%3B%0A++++++//Point3D+p3+%3D+new+Point3D(3,+5,+8)%3B%0A++++++//Point3D+p3+%3D+new+Point3D(2,+4)%3B%0A+++%7D%0A+++%0A%7D&mode=display&curInstr=0>`_.
+           
 .. mchoice:: qoo_9
    :answer_a: I only
    :answer_b: I and III
@@ -130,18 +145,18 @@ a superclass constructor using ``super`` as the first line in a subclass constru
    .. code-block:: java 
    
       
-      public class Point
+      class MPoint
       {
          private int myX; // coordinates
          private int myY;
 
-         public Point( )
+         public MPoint( )
          {
             myX = 0;
             myY = 0;
          }
 
-         public Point(int a, int b)
+         public MPoint(int a, int b)
          {
             myX = a;
             myY = b;
@@ -151,7 +166,7 @@ a superclass constructor using ``super`` as the first line in a subclass constru
 
       }
       
-      public class NamedPoint extends Point
+      public class NamedPoint extends MPoint
       {
          private String myName;
          // constructors go here
@@ -175,4 +190,5 @@ a superclass constructor using ``super`` as the first line in a subclass constru
               myName = name;
            }
 
+You can step through this code using the Java Visualizer by clicking the following link `Named Point <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+MPoint%0A%7B%0A+++private+int+myX%3B+//+coordinates%0A+++private+int+myY%3B%0A%0A+++public+MPoint(+)%0A+++%7B%0A++++++myX+%3D+0%3B%0A++++++myY+%3D+0%3B%0A+++%7D%0A%0A+++public+MPoint(int+a,+int+b)%0A+++%7B%0A++++++myX+%3D+a%3B%0A++++++myY+%3D+b%3B%0A+++%7D%0A%0A+++//+...+other+methods+not+shown%0A%0A%7D%0A++++++%0Apublic+class+NamedPoint+extends+MPoint%0A%7B%0A+++private+String+myName%3B%0A+++%0A+++//+constructors+go+here%0A+++//+I.%0A+++public+NamedPoint()%0A+++%7B%0A++++++myName+%3D+%22%22%3B%0A+++%7D%0A+++%0A+++//+II.%0A+++//+public+NamedPoint(int+d1,+int+d2,+String+name)%0A+++//+%7B%0A+++//++++myX+%3D+d1%3B%0A+++//++++myY+%3D+d2%3B%0A+++//++++myName+%3D+name%3B%0A+++//+%7D%0A+++%0A+++//+III.%0A+++//+public+NamedPoint(int+d1,+int+d2,+String+name)%0A+++//+%7B%0A+++//++++super(d1,+d2)%3B%0A+++//++++myName+%3D+name%3B%0A+++//+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++NamedPoint+nPt+%3D+new+NamedPoint()%3B%0A++++++//+NamedPoint+nPt+%3D+new+NamedPoint(3,+2,+%22home%22)%3B%0A++++++//+NamedPoint+nPt+%3D+new+NamedPoint(5,+4,+%22work%22)%3B%0A+++%7D%0A%0A%7D&mode=display&curInstr=0>`_.
        

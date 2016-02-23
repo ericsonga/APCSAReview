@@ -10,14 +10,31 @@ Association vs Inheritance
     single: association
     pair: relationships; association
 
-Another type of relationship between classes is the *has-a* relationship or *association* relationship.  Use this when the object of one class contains a reference to one or more of another class.  For example, a course can have many course sections (periods) associated with it as shown below.  The ``1`` near the ``Course`` means that ``1`` course object is associated with the number shown near the other class.  In this case it is ``*`` which means 0 to many.  So one course is associated with 0 to many course sections.
+Another type of relationship between classes is the *has-a* relationship or *association* relationship.  Use this when the object of one class contains a reference to one or more of another class.  For example, a course can have many course periods associated with it as shown below.  The ``1`` near the ``Course`` means that ``1`` course object is associated with the number shown near the other class.  In this case it is ``*`` which means 0 to many.  So one course is associated with 0 to many course periods.
 
-.. figure:: Figures/course.png
+.. figure:: Figures/assoc.png
     :width: 300px
     :align: center
     :figclass: align-center
 
     Figure 2: A UML Class Diagram showing Association
+    
+This would typically translate into a field in the ``Course`` class that has an array or list of ``CoursePeriod`` objects.  The ``CoursePeriod`` class would have a field that is of type ``Course`` as shown below.  
+
+.. code-block:: java 
+
+  public class Course
+  {
+     private List<CoursePeriod> periodList;
+  }
+  
+  public class CoursePeriod
+  {
+     private Course myCourse;
+  }
+  
+Substitution Test for Inheritance
+----------------------------------
   
 If you aren't sure if a class should inherit from another class ask yourself if you can substitute the child class type for the parent class type.  For example, if you have a ``Book`` class and it has a subclass of ``ComicBook`` does that make sense?  Is a comic book a kind of book?  Yes, a comic book is a kind of book so inheritance makes sense.  If it doesn't make sense use *association* or the *has-a* relationship instead.
 

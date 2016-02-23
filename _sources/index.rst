@@ -177,13 +177,17 @@ Object-Oriented Concepts
    :maxdepth: 2
 
    OOBasics/objectObasics.rst
+   OOBasics/objects&Classes.rst
+   OOBasics/ooInheritance.rst
    OOBasics/ooAssocVsInherit.rst
    OOBasics/ooOverrideInherited.rst
+   OOBasics/ooOverrideVsOverload.rst
    OOBasics/ooSuper.rst
    OOBasics/ooInheritanceAccess.rst
    OOBasics/ooInheritanceAndConstructors.rst
    OOBasics/ooAbstract.rst
    OOBasics/ooInheritanceAndInterfaces.rst
+   OOBasics/ooComparable.rst
    OOBasics/ooPoly.rst
    OOBasics/ooMistakes.rst
    OOBasics/ooPractice.rst

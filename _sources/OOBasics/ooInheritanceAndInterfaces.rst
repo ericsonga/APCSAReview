@@ -73,4 +73,6 @@ The following are the ``List`` methods that you need to know for the AP CS A exa
     
     -   ``E remove(int index)`` removes the item at the index and shifts remaining items to the left (to a lower index)
     
-Interfaces make it easy to write general methods that use the methods defined in the interface.  For example, in Java, you can sort objects of any class that implements the ``Comparable`` interface.  The ``Comparable`` interface just specifies the ``int compareTo(T o)`` method which will return a negative number if the current object is less than the passed one, 0 if they are equal, and a positive number if the current object is greater than the passed one.  How do you compare two objects of any class?  It really depends on both the class and the context.  How do you compare two people for example?  In one context you might use last name and then first name.  In other context you might use age.  The class that implements the interface defines how to compare the objects when it provides the method body for the method defined in the interface.
+    
+Interfaces make it easy to write general methods that use the methods defined in the interface.  
+

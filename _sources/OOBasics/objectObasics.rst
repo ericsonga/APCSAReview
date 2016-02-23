@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 10-1-
+   :prefix: OO-Intro-
    :start: 1
 
 Object-Oriented Programming Concepts
@@ -11,91 +11,34 @@ Object-Oriented Programming Concepts
     single: polymorphism
     single: Unified Modeling Language
    
-Object-oriented programming has three main features: **objects**, **inheritance**, and **polymorphism**.  **Objects** have data (fields) and behavior (methods) and do the work in an object-oriented program.  Objects are created by classes.  A class is the definition of the data (fields) and behavior (methods) for all objects of a type.   **Inheritance** allows for cleaner code since a class can inherit fields and behavior from another class instead of copying code to many classes.  **Polymorphism** allows for specific behavior based on the run-time type.  It also removes the need for conditional execution based on the type.  This section will explain the ideas of inheritance and polymorphism in more depth.
+Object-oriented programming has three main features: **objects**, **inheritance**, and **polymorphism**.  
 
-Inheritance
-============
+**Objects** have data (fields) and behavior (methods) and do the work in an object-oriented program.  Objects are created by classes.  A class defines the data (fields) and behavior (methods) for all objects of that class.  You can create many objects from the same class.  In the video below hundreds of Ant objects are created in Greenfoot. Greenfoot is a free Java development environment that makes it easy to create 2D simulations and games.  For more information about Greenfoot see http://greenfoot.org.  
 
-One of the really useful features of Object-Oriented programming is **inheritance**.  You may have heard of someone coming into an inheritance, which often means they were left something from a relative that died.  Or, you might hear someone say that they have inherited musical ability from a parent.  In Java all classes can **inherit** object fields and methods from another class.  The class being inherited from is called the **parent class** or **superclass**.  The class that is inheriting is called the **child class** or **subclass**.  
+.. video:: ants
+   :controls:
+   :thumb: ../_static/videoStart.png
 
-When one class inherits from another, we can say that it is the *same kind of thing* as the **parent class** (the class it inherits from).  For example, a car is a kind of vehicle.  This is sometimes called the *is-a* relationship, but I prefer *is-a kind of*.  A motorcycle is another kind of vehicle.  All vehicles have a make, model, and year that they were created.  All vehicles can go forward, backward, turn left and turn right.  
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/introToAnts.mov
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/introToAnts.webm
 
-.. figure:: Figures/vehicle.png
-    :width: 300px
-    :align: center
-    :figclass: align-center
+**Inheritance** allows for cleaner code since a class can inherit fields and behavior from another class instead of copying code from class to class.  The **parent** class is specified using the ``extends`` keyword in the class declaration.  The class that is extending the parent class is called the **child** class.   In the ants scenario the ``Ant`` class inherits from the ``Actor`` class.  The ``Ant`` class is the **child** class and the ``Actor`` class is the **parent** class.  The ``Ant`` class inherits the ``act`` method from the ``Actor`` class, but **overrides** it by creating a method with the same signature that will be executed instead of the parent's method.  This allows the ``Ant`` class to modify what an ``Ant`` object does when it acts.  
 
-    Figure 1: A UML Class Diagram Showing Inheritance
-    
-A UML (Unified Modeling Language) class diagram shows classes and the relationships between the classes as seen in Figure 1.  An open triangle points to the parent class.  The parent class for ``Car`` and ``Motorcycle`` is ``Vehicle``. The ``Vehicle`` class has two child classes or subclasses: ``Car`` and ``Motorcycle``.  
+.. video:: inheritance
+   :controls:
+   :thumb: ../_static/videoStart.png
 
-Specifying the Parent Class
-=============================
-    
-How is a parent class specified?  Use the Java keyword **extends** after the class name and then followed by the parent class name to specify the parent class as shown below. 
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/inheritance.mov
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/inheritance.webm
 
-.. code-block:: java 
+**Polymorphism** allows for specialized behavior based on the run-time type.  It also removes the need for conditional execution based on the type. Java uses **inheritance-based polymorphism** where a parent class has a method that the children classes override to provide specialized behavior.  In the Ant scenario the ``Balloon`` and ``Bomb`` classes inherit from the Actor class and both override the ``act`` method. The world contains a list of all Actor objects in the world and tells each to act.  What happens when an Actor object acts depends on the class that created it (the run-time type).
 
-  public class Car extends Vehicle 
-  
-..	index::
-    single: extends
-    
-.. note::
-  
-   While a person has two parents, a Java class can only inherit from one parent class.  If you leave off the **extends** keyword when you declare a class then the class will inherit from the ``Object`` class.  The ``Person`` class declared below will inherit from the ``Object`` class.
+.. video:: polymorphism
+   :controls:
+   :thumb: ../_static/videoStart.png
 
-.. code-block:: java 
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/polymorphism.mov
+   http://ice-web.cc.gatech.edu/ce21/1/static/video/polymorphism.webm 
 
-  public class Person
-  
-Why Use Inheritance?
-=====================
-
-..	index::
-    single: generalization
-    single: specialization
-    
-Inheritance allows you to reuse data and behavior from the parent class.  It is useful for **generalization** in which case you may notice that several classes share the same data and/or behavior and you pull that out into a parent class.  Customers and Employees are both people so it makes sense use the general Person class.  It is also useful for **specialization** which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  An example of specialization is the Employee class below.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.
-
-.. figure:: Figures/person.png
-    :width: 300px
-    :align: center
-    :figclass: align-center
-
-    Figure 2: A UML Class Diagram Showing Inheritance
-    
-**Test Your Understanding**
-    
-.. mchoice:: qoo10-1-1
-   :answer_a: It doesn't have a parent class.
-   :answer_b: It inherits from the Object class.
-   :answer_c: It inherits from the Default class.
-   :answer_d: It inherits from the Parent class.
-   :correct: b
-   :feedback_a: If no parent class is specified using the extends keyword, the current class will still have a parent class.
-   :feedback_b: If no parent class is specified using the extends keyword, the parent class will be Object.
-   :feedback_c: There isn't a class named Default.
-   :feedback_d: There isn't a class named Parent.
-
-   If you don't specify the parent class in a class declaration which of the following is true?
-   
-.. mchoice:: qoo10-1-2
-   :answer_a: Yes
-   :answer_b: No
-   :correct: a
-   :feedback_a: Yes, a child class inherits all the parent class object field and methods.  
-   :feedback_b: Why would inheritance be useful if you didn't actually get anything from the parent class?
-
-   If the class Vehicle has object fields of make and model and the class Car inherits from the class vehicle will a car object have a make and model?  
-   
-.. mchoice:: qoo10-1-3
-   :answer_a: Yes
-   :answer_b: No
-   :correct: b
-   :feedback_a: Is a parking garage a kind of vehicle?
-   :feedback_b: No, a parking garage is not a kind of vehicle.  Instead it has vehicles in it which implies that the ParkingGarage class would have a field that tracks the vehicles in it.
-
-   If I had a class ParkingGarage should it inherit from the class Vehicle?  
-  
+The following sections will explain the ideas of inheritance and polymorphism in more depth.
 

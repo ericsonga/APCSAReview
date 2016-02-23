@@ -74,31 +74,35 @@ At compile time the compiler uses the declared type to check that the methods yo
       public class Shape {
          public void what() { System.out.print("Shape ");}
          
-         public static void main(String[] args)
+         public static void main(String[] args) {
          
             Shape[] shapes = {new Shape(), new Rectangle(), new Square(), 
                               new Circle()};
             for (Shape s : shapes)
             {
-               System.out.print(s.what() + " ");
+               s.what();
+               System.out.print(" ");
             }
+         }
 
       } 
 
-      public class Rectangle extends Shape {
+      class Rectangle extends Shape {
          public void what() { System.out.print("Rectangle "); }
       }
 
-      public class Square extends Rectangle {
+      class Square extends Rectangle {
       }
       
-      public class Oval extends Shape {
+      class Oval extends Shape {
          public void what() { System.out.print("Oval "); }
       }
 
-      public class Circle extends Oval {
+      class Circle extends Oval {
          public void what() { System.out.print("Circle ");}
       }
+      
+You can step through this code using the Java Visualizer by clicking on the following link `Shape Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Shape+%22)%3B%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++++++%0A++++++Shape%5B%5D+shapes+%3D+%7Bnew+Shape(),+new+Rectangle(),+new+Square(),+%0A++++++++++++++++++++++++++++++new+Circle()%7D%3B%0A++++++for+(Shape+s+%3A+shapes)%0A++++++%7B%0A+++++++++s.what()%3B%0A+++++++++System.out.print(%22+%22)%3B%0A++++++%7D%0A+++%7D%0A%0A%7D+%0A%0Aclass+Rectangle+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Rectangle+%22)%3B+%7D%0A%7D%0A%0Aclass+Square+extends+Rectangle+%7B%0A%7D%0A++++++%0Aclass+Oval+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Oval+%22)%3B+%7D%0A%7D%0A%0Aclass+Circle+extends+Oval+%7B%0A+++public+void+what()+%7B+System.out.print(%22Circle+%22)%3B%7D%0A%7D%0A%0A&mode=display&curInstr=38>`_.
       
 **Check your understanding**
 
@@ -118,25 +122,31 @@ At compile time the compiler uses the declared type to check that the methods yo
    .. code-block:: java 
    
       public class Student {
+      
          public String getFood() {
             return "Pizza";
          }
+         
          public String getInfo()  { 
            return this.getFood(); 
          }
+         
+         public static void main(String[] args)
+         {
+           Student s1 = new GradStudent();
+           s1.getInfo();
+         }
       }
 
-      public class GradStudent extends Student {
+      class GradStudent extends Student {
+      
         public String getFood() {
            return "Taco";
         }
         
-        public static void main(String[] args)
-        {
-           Student s1 = new GradStudent();
-           s1.getInfo();
-        }
       }
+      
+You can step through this code using the Java Visualizer by clicking on the following link `Student Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A+++%0A+++public+String+getInfo()++%7B+%0A++++++return+this.getFood()%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Student+s1+%3D+new+GradStudent()%3B%0A++++++System.out.println(s1.getInfo())%3B%0A+++%7D%0A%7D%0A%0Aclass+GradStudent+extends+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Taco%22%3B%0A+++%7D%0A++++++++%0A+++%0A%7D%0A&mode=display&curInstr=10>`_.
  
 .. mchoice:: qoo_12
    :answer_a: 5 6 10 11
@@ -162,24 +172,27 @@ At compile time the compiler uses the declared type to check that the methods yo
 
         public void addFuel() { fuel++; }
         public void display() { System.out.print(fuel + " "); }
-      }
-
-      public class RaceCar extends Car
-      {
-        public RaceCar(int g) { super(2*g); }
         
         public static void main(String[] args)
         {
            Car car = new Car(5);
            Car fastCar = new RaceCar(5);
-           car.display()
+           car.display();
            car.addFuel();
            car.display();
            fastCar.display();
            fastCar.addFuel();
            fastCar.display();
         }
+        
+      }
+
+      class RaceCar extends Car
+      {
+        public RaceCar(int g) { super(2*g); }
       } 
+      
+You can step through the code using the Java Visualizer by clicking on the following link: `Car Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&mode=display&curInstr=0>`_.
       
 .. mchoice:: qoo_13
    :answer_a: b.getISBN();
@@ -239,9 +252,15 @@ At compile time the compiler uses the declared type to check that the methods yo
          {
             System.out.print("B");
          }
+         
+         public static void main(String[] args)
+         {
+            Base b = new Derived();
+            b.methodOne();
+         }
       }
 
-      public class Derived extends Base
+      class Derived extends Base
       {
          public void methodOne()
          {
@@ -256,5 +275,5 @@ At compile time the compiler uses the declared type to check that the methods yo
          }
       }
 
-
+You can step through this code using the Java Visulaizer by clicking on the following link: `Base Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++System.out.print(%22A%22)%3B%0A++++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A++++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A++++++super.methodTwo()%3B%0A++++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
 

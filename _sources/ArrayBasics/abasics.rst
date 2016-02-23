@@ -143,11 +143,11 @@ Arrays know their length (how many elements they can store).  It is a public rea
         :feedback: Remember that the first value is at index 0.  Click on an area again to unselect it and try again.
         :table:
         :correct: 1,2;1,4
-        :incorrect: 1,1;1,3
+        :incorrect: 1,1;1,3;
         
-        +---+---+---+----+
-        | 3 | 2 | 1 | -3 |
-        +---+---+---+----+
+        +----+----+----+----+
+        | 3  | 2  | 1  | -3 |
+        +----+----+----+----+
 
 .. mchoice:: qab_1
    :answer_a: 0
@@ -157,6 +157,17 @@ Arrays know their length (how many elements they can store).  It is a public rea
    :feedback_b: While this matches with how we number some things, the first item in an array is at index 0.
 
    What index is the first element in an array at?
+   
+.. clickablearea:: arrayClick2
+        :question: Click on the values at index 0 and 2 in the following array.
+        :feedback: Remember that the first value is at index 0.  Click on an area again to unselect it and try again.
+        :table:
+        :correct: 1,1;1,3
+        :incorrect: 1,2;1,4;
+        
+        +----+----+----+----+
+        | 4  | -2 |  8 | 7  |
+        +----+----+----+----+
    
 .. mchoice:: qab_2
    :answer_a: highScores.length

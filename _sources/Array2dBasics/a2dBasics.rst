@@ -44,6 +44,9 @@ Many programming languages actually store two-dimensional array data in a one-di
     :figclass: align-center
 
     Figure 1: A 2D array stored in row-major order or column-major order as a 1D array.
+    
+How Java Stores 2D Arrays
+---------------------------
 
 Java actually stores two-dimensional arrays as arrays of arrays.  Each element of the outer array has a reference to each inner array.  The picture below shows a 2D array that has 3 rows and 7 columns.  Notice that the array indices start at 0 and end at the length - 1.  
 
@@ -56,18 +59,84 @@ Java actually stores two-dimensional arrays as arrays of arrays.  Each element o
     
 On the exam assume that any 2 dimensional (2D) array is in row-major order.  The outer array can be thought of as the rows and the inner arrays the columns.  On the exam all inner arrays will have the same length even though it is possible in Java to have inner arrays of different lengths (also called **ragged arrays**).  
 
-.. clickablearea:: clicktimed1
-   :question: Click on the value in row 3 and column 2
+**Check your understanding**
+
+Try to answer the following questions.  Click on the value or values to select them.  Click again to unselect a value.
+
+.. clickablearea:: clicktd1
+   :question: Click on all the values in the row at index 2
    :feedback: Rows are horizontal and columns are vertical and both start with index 0.
    :table:
-   :correct: 1,1;1,4;2,3;2,4
-   :incorrect: 2,1;2,2;3,0
+   :correct: 3,1;3,2;3,3;3,4;
+   :incorrect: 1,1;1,2;1,3;1,4;2,1;2,2;2,3;2,4;
 
-   +------------------------+------------+----------+----------+
-   |        correct         |    N-A     |    N-A   | correct  |
-   +========================+============+==========+==========+
-   | Incorrect              | incorrect  | correct  | correct  |
-   +------------------------+------------+----------+----------+
-   | This row is incorrect  |   ...      |   ...    |   ...    |
-   +------------------------+------------+----------+----------+
+   +----+----+----+----+
+   | 8  | -2 | 3  | -1 |
+   +----+----+----+----+
+   | 4  |  5 | 0  | -7 |
+   +----+----+----+----+
+   | 2  | -3 | -4 | -5 |
+   +----+----+----+----+
+   
+.. clickablearea:: clicktd2
+   :question: Click on all the values in the column at index 1
+   :feedback: Rows are horizontal and columns are vertical and both start with index 0.
+   :table:
+   :correct: 1,2;2,2;3,2;
+   :incorrect: 1,1;1,3;1,4;2,1;2,3;2,4;3,1;3,3;3,4;
+
+   +----+----+----+----+
+   | 8  | -2 | 3  | -1 |
+   +----+----+----+----+
+   | 4  |  5 | 0  | -7 |
+   +----+----+----+----+
+   | 2  | -3 | -4 | -5 |
+   +----+----+----+----+
+
+.. clickablearea:: clicktd3
+   :question: Click on the value at row index 2 and column index 1
+   :feedback: Rows are horizontal and columns are vertical and both start with index 0.
+   :table:
+   :correct: 3,2
+   :incorrect: 1,1;1,2;1,3;1,4;2,1;2,2;2,3;2,4;3,1;3,3;3,4;
+
+   +----+----+----+----+
+   | 8  | -2 | 3  | -1 |
+   +----+----+----+----+
+   | 4  |  5 | 0  | -7 |
+   +----+----+----+----+
+   | 2  | -3 | -4 | -5 |
+   +----+----+----+----+
+   
+.. clickablearea:: clicktd4
+   :question: Click on the value at row index 0 and column index 2
+   :feedback: Rows are horizontal and columns are vertical and both start with index 0.
+   :table:
+   :correct: 1,3
+   :incorrect: 1,1;1,2;1,4;2,1;2,2;2,3;2,4;3,1;3,2;3,3;3,4;
+
+   +----+----+----+----+
+   | 8  | -2 | 3  | -1 |
+   +----+----+----+----+
+   | 4  |  5 | 0  | -7 |
+   +----+----+----+----+
+   | 2  | -3 | -4 | -5 |
+   +----+----+----+----+
+   
+.. clickablearea:: clicktd5
+   :question: Click on the value at row index 1 and column index 1
+   :feedback: Rows are horizontal and columns are vertical and both start with index 0.
+   :table:
+   :correct: 2,2
+   :incorrect: 1,1;1,2;1,3;1,4;2,1;2,3;2,4;3,1;3,2;3,3;3,4;
+
+   +----+----+----+----+
+   | 8  | -2 | 3  | -1 |
+   +----+----+----+----+
+   | 4  |  5 | 0  | -7 |
+   +----+----+----+----+
+   | 2  | -3 | -4 | -5 |
+   +----+----+----+----+
+   
+
 

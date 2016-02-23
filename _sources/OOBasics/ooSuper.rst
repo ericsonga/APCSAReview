@@ -7,7 +7,8 @@ Using Super to call an Overridden Method
 
 Sometimes you want the child class to do more than what a parent method is doing.  You want to still execute the parent method, but then do also do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.     
 
-.. code-block:: java 
+.. activecode:: SuperEx
+   :language: java
 
       public class Person 
       {
@@ -22,9 +23,15 @@ Sometimes you want the child class to do more than what a parent method is doing
          {
             return "Hamburger";
          }
+         
+         public static void main(String[] args)
+         {
+            Person p = new Student("Javier");
+            System.out.println(p.getFood());
+         }
       }
         
-      public class Student extends Person
+      class Student extends Person
       {
          private int id;
          private static int nextId = 0;
@@ -42,12 +49,14 @@ Sometimes you want the child class to do more than what a parent method is doing
             return output + " and Taco";
          }
          
-         public int getId(return id);
-         public int setId (int theId) 
+         public int getId() {return this.id;}
+         public void setId (int theId) 
          {
             this.id = theId;
          }
       } 
+      
+How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method.  The method has to be there, or else the code would not have compiled. 
       
 When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and it return return the string ``"Hamburger and Taco"``. 
 
@@ -96,3 +105,5 @@ When the student ``getFood()`` method is executed it will start executing the ``
           System.out.print("D");
         }
      }
+     
+You can step through this example using the Java Visualizer by clicking on the following link: `Super Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
