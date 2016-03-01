@@ -84,11 +84,40 @@ While we are looping through the ``spaces`` array, we need to check for non-null
 
    How do we check if the space at the current index isn't null? 
    
-Try to write the code for the method ``consolidate``. When you are ready click "Run" to test your solution.   
+Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.   
    
 .. activecode:: lcfrhbb1
    :language: java
-   :datafile: HorseBarn.java
+   
+   interface Horse
+   {
+      /** @return the horse's name */
+      String getName();
+
+      /** @return the horse's weight */
+      int getWeight();
+   }
+   
+   class Horsey implements Horse
+   {
+      private String name;
+      private int weight;
+  
+      public Horsey(String theName, int theWeight)
+      {
+         this.name = theName;
+         this.weight = theWeight;
+      }
+  
+      public String getName() { return this.name;}
+  
+      public int getWeight() { return this.weight; }
+  
+      public String toString()
+      {
+         return "name: " + this.name + " weight: " + this.weight;
+      }
+   }
    
    public class HorseBarn 
    { 
@@ -129,7 +158,7 @@ Try to write the code for the method ``consolidate``. When you are ready click "
   
       public static void main (String[] args)
       {
-        barn = new HorseBarn(7);
+        HorseBarn barn = new HorseBarn(7);
         barn.spaces[0] = new Horsey("Trigger", 1340);
         barn.spaces[2] = new Horsey("Silver",1210);
         barn.spaces[5] = new Horsey("Patches", 1350);

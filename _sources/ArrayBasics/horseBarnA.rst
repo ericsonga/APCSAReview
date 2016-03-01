@@ -59,7 +59,8 @@ A horse barn consists of N numbered spaces. Each space can hold at most one hors
 How to solve this problem
 ===========================
 
-In order to find the index of the horse with the same name we are looking for, we will need to loop through the array ``spaces``. As we loop, we will comapre the name we are looking for with the ``Horse`` object's name at the current index.
+In order to find the index of the horse with the same name we are looking for, we will need to loop through the array ``spaces``. As we loop, we will compare the name we are looking for with the ``Horse`` object's name at the current index.
+We will have to watch out for spaces that are empty (are null).  
 
 .. mchoice:: frhba_1
    :answer_a: spaces[index].name;
@@ -85,10 +86,43 @@ Once we have the name of the current ``Horse`` object, we need to compare this n
 
    What is the best way to compare two strings for equality?  
    
-Try to write the code for the method ``findHorseSpace``. When you are ready click "Run" to test your solution.   
+Try It!
+========
+   
+Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.  There are 3 tests so if you only see output for 1 or 2 check for errors below the code.
    
 .. activecode:: lcfrhba1
    :language: java
+   
+   interface Horse
+   {
+      /** @return the horse's name */
+      String getName();
+
+      /** @return the horse's weight */
+      int getWeight();
+   }
+   
+   class Horsey implements Horse
+   {
+      private String name;
+      private int weight;
+  
+      public Horsey(String theName, int theWeight)
+      {
+         this.name = theName;
+         this.weight = theWeight;
+      }
+  
+      public String getName() { return this.name;}
+  
+      public int getWeight() { return this.weight; }
+  
+      public String toString()
+      {
+         return "name: " + this.name + " weight: " + this.weight;
+      }
+   }
 
    
    public class HorseBarn 
@@ -136,7 +170,7 @@ Try to write the code for the method ``findHorseSpace``. When you are ready clic
         barn.spaces[5] = new Horsey("Patches", 1350);
         barn.spaces[6] = new Horsey("Duke", 1410);
         
-        // show what is in the barn
+        // print out what is in the barn
         System.out.println(barn);
         
         // test

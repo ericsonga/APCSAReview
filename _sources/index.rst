@@ -135,6 +135,8 @@ Arrays
    ArrayBasics/aHardMC.rst  
    ArrayBasics/arrayExam.rst
    ArrayBasics/selfDivisorB.rst
+   ArrayBasics/horseBarnA.rst
+   ArrayBasics/horseBarnB.rst
    
 List and ArrayList
 ::::::::::::::::::::
@@ -151,6 +153,10 @@ List and ArrayList
    ListBasics/listEasyMC.rst
    ListBasics/listMedMC.rst
    ListBasics/listHardMC.rst
+   ListBasics/stringScrambleB.rst
+   ListBasics/climbClubA.rst
+   ListBasics/climbClubB.rst
+   ListBasics/climbClubC.rst
    
 Two-dimensional Arrays
 :::::::::::::::::::::::
