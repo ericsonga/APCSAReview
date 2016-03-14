@@ -108,7 +108,7 @@ Which of the two loops above takes less code?  While you can write any loop with
     :click-incorrect:String message2b = "miss ";:endclick:
     :click-incorrect:for (int x = 1; x < 4; x++):endclick:
     :click-incorrect:{:endclick:
-    :click-correct:System.out.println(message1 + message2a + message3);:endclick:
-    :click-correct:System.out.println(message1 + message2b + message3);:endclick:
+        :click-correct:System.out.println(message1 + message2a + message3);:endclick:
+        :click-correct:System.out.println(message1 + message2b + message3);:endclick:
     :click-incorrect:}:endclick:
     

@@ -49,7 +49,13 @@ You can't create a new object of an abstract class.  If you try you will get an 
 Abstract Classes Exist to be Subclassed
 -----------------------------------------
 
-What is an abstract class good for if you can't create any objects from it?  You can use it as a parent class for subclasses.  Abstract classes often have at least one abstract method (a method that has the keyword ``abstract`` in the declaration and no method body), but they don't have to. Abstract classes can have fields and methods with bodies.  An abstract ``SimpleShape`` class could have fields to track the points and methods that calculate the width and height of the shape.  
+What is an abstract class good for if you can't create any objects from it?  You can use it as a parent class for subclasses.  
+
+.. note::
+
+   Abstract classes often have at least one abstract method (a method that has the keyword ``abstract`` in the declaration and no method body), but they don't have to. Abstract classes can have fields and methods with bodies.  
+   
+An abstract ``SimpleShape`` class could have fields to track the points and methods that calculate the width and height of the shape.  
 
 Abstract classes are typically used when you want to put some data and/or behavior in a parent class, but at least one method needs to be abstract and overridden by the child class(es).  The ``SimpleShape`` class can have an abstract ``draw`` method and then the children classes can specify what ``draw`` does.
 

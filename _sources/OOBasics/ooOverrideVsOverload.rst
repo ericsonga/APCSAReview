@@ -34,6 +34,10 @@ Overriding vs Overloading
       }
    }
    
+.. note::
+
+    To override an inherited method, the method in the child class must have the same name, parameter list, and return type (or a subclass of the return type) as the parent method.
+   
 
 **Overloading** a method is when several methods have the same name but the parameter types, order, or number are different. In the example below the ``greet(String who)`` method overloads the ``greet()`` method of ``Greeter``.  Notice that ``MeanGreeter`` inherits this method and it isn't overriden.
    
@@ -68,6 +72,10 @@ Overriding vs Overloading
          return "Go Away";
       }
    }
+   
+.. note::
+   
+   To overload a method the method must have the same name, but the parameter list must be different in some way.  It can have a different number of parameters, different types of parameters, and/or a different order for the parameter types.  The return type can also be different.
   
 **Check your understanding**
 

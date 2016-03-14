@@ -200,6 +200,10 @@ Object-Oriented Concepts
    OOBasics/ooEasyMC.rst
    OOBasics/ooMedMC.rst
    OOBasics/ooHardMC.rst
+   OOBasics/TrioA.rst
+   OOBasics/TrioScore1.rst
+   OOBasics/TrioScore2.rst
+   OOBasics/TrioScore3.rst
    
 Recursion
 :::::::::
@@ -239,6 +243,7 @@ Timed Multiple-Choice Exams
    Tests/test2.rst
    Tests/test3.rst
    Tests/test4.rst
+   Tests/test5.rst
    
 Appendix 1 
 ::::::::::::::::::::::::::::

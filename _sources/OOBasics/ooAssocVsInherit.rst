@@ -38,6 +38,10 @@ Substitution Test for Inheritance
   
 If you aren't sure if a class should inherit from another class ask yourself if you can substitute the child class type for the parent class type.  For example, if you have a ``Book`` class and it has a subclass of ``ComicBook`` does that make sense?  Is a comic book a kind of book?  Yes, a comic book is a kind of book so inheritance makes sense.  If it doesn't make sense use *association* or the *has-a* relationship instead.
 
+.. note::
+
+   Only use inheritance when the child class is really a type of the parent class, otherwise use association.
+
 **Check your understanding**
 
 .. mchoice:: qoo_1

@@ -38,3 +38,34 @@ To step through this code in the Java Visualizer click on the following link: `H
 
 
    
+.. mchoice:: qa2hard_2
+   :answer_a: The maximum brightness value for all pixels in imagePixel
+   :answer_b: The column with the greatest brightness sum
+   :answer_c: The most frequent brightness value in imagePixels
+   :answer_d: The row with the greatest brightness sum
+   :answer_e: The sum of the total brightness of imagePixels
+   :correct: a
+   :feedback_a: The method works by scanning all the pixels in imagePixels and comparing them to the current iMax value. If the current is greater, it replaces iMax and becomes the new maximum brightness. This is the value that is returned.
+   :feedback_b: This could be accomplished by adding the brightness in the second loop and comparing the sum to iMax after the second loop finishes and before the first loop starts again.
+   :feedback_c: To do this you would need a third loop and an array, 256 in size. In the second loop you would track how many pixels of a certain brightness had occurred using, countBright[i]++, and then in the third loop find the item in countBright with the highest value.
+   :feedback_d: Firstly, you would need to traverse the 2D array in the opposite order, going through the rows instead of the columns. Then, you would sum each row's brightness in the second loop and compare it to the max in the first loop.
+   :feedback_e: This would be accomplished by instead of having an if statement to track the currentmax, simply using, sum += imagePixels[r][c];
+
+   A two-dimensional array, ``imagePixels``, holds the brightness values for the pixels in an image. The brightness can range from 0 to 255. What does the following method compute?
+   
+   .. code-block:: java
+     :linenos:
+
+     public int findMax(int[][] imagePixels) {
+        int r, c;
+        int i, iMax = 0;
+
+        for (r = 0; r < imagePixels.length; r++) {
+           for (c = 0; c < imagePixels[0].length; c++) {
+              i = image[r][c];
+              if (i > iMax)
+                 iMax = i;
+            }
+         }
+         return iMax;
+      }

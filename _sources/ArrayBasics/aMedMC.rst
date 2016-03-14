@@ -55,7 +55,7 @@ You can step through this code with the Java Visualizer `here <http://cscircles.
    :answer_a: It is the length of the shortest consecutive block of the value target in nums
    :answer_b: It is the length of the array nums
    :answer_c: It is the length of the first consecutive block of the value target in nums
-   :answer_d: It is the number of occurrences of the value target in nms
+   :answer_d: It is the number of occurrences of the value target in nums
    :answer_e: It is the length of the last consecutive block of the value target in nums
    :correct: d
    :feedback_a: It doesn't reset the count ever, so it just counts all the times the target value appears in the array.
@@ -64,7 +64,7 @@ You can step through this code with the Java Visualizer `here <http://cscircles.
    :feedback_d: The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.
    :feedback_e: It doesn't reset the count ever, so it just counts all the times the target value appears in the array.
 
-   Consider the following data field and method findLongest. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the loength of the longest consecutive block of 10s. Which of the following best describes the value returned by a call to findLongest?
+   Consider the following data field and method findLongest. Method findLongest is intended to find the longest consecutive block of the value target occurring in the array nums; however, findLongest does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value returned by a call to findLongest?
    
    .. code-block:: java
 

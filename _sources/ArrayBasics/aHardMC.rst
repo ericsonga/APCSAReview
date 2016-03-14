@@ -50,66 +50,6 @@ These problems are harder than most of those that you will usually see on the AP
         for (int k = 0; k <= j; k++)
            sum[j] = sum [j] + arr[k];
 
-.. mchoice:: qahard_2
-   :answer_a: The maximum brightness value for all pixels in imagePixel
-   :answer_b: The column with the greatest brightness sum
-   :answer_c: The most frequent brightness value in imagePixels
-   :answer_d: The row with the greatest brightness sum
-   :answer_e: The sum of the total brightness of imagePixels
-   :correct: a
-   :feedback_a: The method works by scanning all the pixels in imagePixels and comparing them to the current iMax value. If the current is greater, it replaces iMax and becomes the new maximum brightness. This is the value that is returned.
-   :feedback_b: This could be accomplished by adding the brightness in the second loop and comparing the sum to iMax after the second loop finishes and before the first loop starts again.
-   :feedback_c: To do this you would need a third loop and an array, 256 in size. In the second loop you would track how many pixels of a certain brightness had occurred using, countBright[i]++, and then in the third loop find the item in countBright with the highest value.
-   :feedback_d: Firstly, you would need to traverse the 2D array in the opposite order, going through the rows instead of the columns. Then, you would sum each row's brightness in the second loop and compare it to the max in the first loop.
-   :feedback_e: This would be accomplished by instead of having an if statement to track the currentmax, simply using, sum += imagePixels[r][c];
 
-   A two-dimensional array, ``imagePixels``, holds the brightness values for the pixels in an image. The brightness can range from 0 to 255. What does the following method compute?
-   
-   .. code-block:: java
-     :linenos:
-
-     public int findMax(int[][] imagePixels) {
-        int r, c;
-        int i, iMax = 0;
-
-        for (r = 0; r < imagePixels.length; r++) {
-           for (c = 0; c < imagePixels[0].length; c++) {
-              i = image[r][c];
-              if (i > iMax)
-                 iMax = i;
-            }
-         }
-         return iMax;
-      }
       
-.. mchoice:: qahard_3
-   :answer_a: [0, 0, 4, 2, 5, 0, 3, 0]
-   :answer_b: [3, 5, 2, 4, 0, 0, 0, 0]
-   :answer_c: [0, 0, 0, 0, 4, 2, 5, 3]
-   :answer_d: [4, 2, 5, 3]
-   :answer_e: [0, 4, 2, 5, 3]
-   :correct: e
-   :feedback_a: This shows the original values but this code does remove some zeros so this can't be right.
-   :feedback_b: This shows all zeros at the end, but this code removes 0's so this can't be right.
-   :feedback_c: This shows all zeros at the beginning, but this code removes zeros so this can't be right.
-   :feedback_d: This shows all zeros removed. This would be correct if k was only incremented if a value wasn't removed.
-   :feedback_e: This code will loop through the array list and if the current value at the current index (k) is 0, it will remove it. When you remove a value from an array list, it moves all values to the right of that down one. So the first 0 will be deleted but the second one will not since k is incremented even if you remove something. You should only increment k if you didn't remove something and then you would remove all 0's from the list.
-
-   Assume that nums has been created as an ArrayList object and initially contains the following Integer values: [o, 0, 4, 2, 5, 0, 3, 0]. What will nums contain as a result of executing the following method numQuest?
-   
-   .. code-block:: java
-
-     private List<Integer> nums;
-
-     //precondition: nums.size() > 0
-     //nums contains Integer objects
-     public void numQuest() {
-        int k = 0;
-        Integer zero = new Integer(0);
-        while (k < nums.size()) {
-           if (nums.get(k).equals(zero))
-              nums.remove(k);
-           k++;
-        }
-     }
 
