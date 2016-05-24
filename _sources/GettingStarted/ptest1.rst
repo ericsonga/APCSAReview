@@ -6,7 +6,9 @@ Pretest for the AP CS A Exam
 ------------------------------
 
 The following problems are similar to what you might see on the AP CS A exam.  The AP CS A exam is timed and you have 90 minutes to answer 40 questions, which is 2.25 minutes a question.  We are giving you 60 minutes to take this 20 question pretest.  We don't expect you to know all of these concepts
-yet, but want to see what you do know.  Please answer each to the best of your ability.   Answer all the questions and then click the "Finish Exam" button.  You will see what you got right and wrong after you submit your answers.  
+yet, but want to see what you do know.  
+
+Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the "Next" button to go to the next question.  Click on the "Prev" button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 .. timed:: pretest1
     :timelimit: 60
@@ -175,15 +177,15 @@ yet, but want to see what you do know.  Please answer each to the best of your a
         :answer_a: (s == m - 5) && (s - 3 == 2 * (m - 3))
         :answer_b: (s == (m + 5)) && ((s + 3) == (2 * m + 3))
         :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3) 
-        :answer_d: None of the above is correct
-        :answer_e: s == m + 5 && s + 3 == 2 * m + 6  
-        :correct: e
+        :answer_d: s == m + 5 && s + 3 == 2 * m + 6  
+        :answer_e: None of the answers are correct
+        :correct: d
         :feedback_a: This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?
         :feedback_b: This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won't be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).
         :feedback_c: This can't be right because Susan is 5 years older than Matt, so the first part is wrong. It has susan equal to Matt's age minus 5 which would have Matt older than Susan.
-        :feedback_d: The answer is s == m + 5 && s + 3 == 2 * m + 6.
-        :feedback_e: Susan is 5 years older than Matt so s == m + 5 should be true and in 3 years she will be twice as old so s + 3 = 2 * (m + 3) = 2 * m + 6.
-       
+        :feedback_d: Susan is 5 years older than Matt so s == m + 5 should be true and in 3 years she will be twice as old so s + 3 = 2 * (m + 3) = 2 * m + 6.
+        :feedback_e: The answer is s == m + 5 && s + 3 == 2 * m + 6.
+        
         Susan is 5 years older than Matt. Three years from now Susan's age will be twice Matt's age.  What should be in place of ``condition`` in the code segment below to solve this problem?
        
         .. code-block:: java

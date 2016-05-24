@@ -130,7 +130,7 @@ Apply the grading rubric shown above as you answer the following questions.
    :feedback_a: This solution contains correct declarations for <code>public String getName()</code> and <code>public double getPrice()</code>.
    :feedback_b: To implement an interface the class must have a getName and getPrice method as defined by the MenuItem interface.  
 
-   Should the student earn 1 point for correctly implementing the methods in the ``MenuItem`` interface (``getName`` and ``getPrice``)?
+   Should the student earn 1 point for correctly declaring the methods in the ``MenuItem`` interface (``getName`` and ``getPrice``)?
    
 .. mchoice:: qtrio1_6
    :answer_a: Yes

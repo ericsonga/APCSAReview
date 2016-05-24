@@ -1,11 +1,13 @@
 .. qnum::
-   :prefix: 14-4-
+   :prefix: 15-4-
    :start: 1
    
 Practice Exam 4 for the AP CS A Exam
 -------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button only when you are done.  It will display the number correct, number wrong, and number skipped after the "Finish Exam" button.
+The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  
+
+Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the "Next" button to go to the next question.  Click on the "Prev" button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 .. timed:: postexam4
     :timelimit: 45
@@ -413,7 +415,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
        :feedback_d: This would be true if Pig had a speak method that returned "Oink", but it does not.  
        :feedback_e: Both Pig and Bird do not have a speak method so the one in Animal will be used.  
        
-       Given the following array declaration and the fact that Animal is the parent class for Bird, Dog, Pig, and Cow, what is output from looping through this array of animals and asking each object to speak()? 
+       Given the following array declaration and the fact that Animal is the parent class for Bird, Dog, Pig, Cat, and Cow, what is output from looping through this array of animals and asking each object to speak()? 
        
        .. code-block:: java
 
@@ -424,6 +426,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           Dog has a speak method that returns “Woof”
           Pig doesn’t have a speak method
           Cow has a speak method that returns “Moo”
+          Cat has a speak method that returns "Meow"
 
          
     .. mchoice:: pe4_17

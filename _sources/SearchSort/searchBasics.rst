@@ -24,6 +24,8 @@ Computers store vast amounts of data. One of the strengths of computers is their
 * Sequential search typically starts at the first element in an array or list and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1. 
 * Binary search **can only be used on data that has been sorted or stored in order**.  It checks the middle of the data to see if that middle value is less than, equal, or greater than the desired value and then based on the results of that it narrows the search. It cuts the search space in half each time.
 
+
+
 If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms.  The three that you need to know for the AP CS A exam are:
 
 ..	index::

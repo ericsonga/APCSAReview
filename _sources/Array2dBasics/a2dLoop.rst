@@ -19,6 +19,10 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
   ticketInfo.length // returns the number of rows
   ticketInfo[0].length // returns the number of columns
+  
+.. note::
+
+   Since for the AP CS A exam all two-dimensional arrays are rectangular arrays (arrays that have the same number of columns in each row) you can just use the length of the first inner array as the number of columns as shown by ``ticketInfo[0].length``.
 
 **Check your understanding**
 
@@ -100,17 +104,25 @@ You can step through the code by clicking on this `link1 <http://cscircles.cemc.
    The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or have the wrong indention.
    -----
    public static int getLargest(int[][] arr)  {
+   =====
     int largest = arr[0][0];
     int current = 0;
-    for (int row = 0; row < arr.length; row++)  {
-      for (int col = 0; col < arr[0].length; col++)  {
-        current = arr[row][col];
+    for (int r = 0; r < arr.length; r++)  {
+    =====
+      for (int c = 0; c < arr[0].length; c++)  {
+    =====
+        current = arr[r][c];
         if (current > largest)  {
+    =====
           largest = current;
+    =====
         } // end if
+    =====
       } // end column loop
+    =====
     } // end row loop
     return largest;
+   =====
    } // end method
    
 You can step through this code using the Java Visualizer by clicking on the following `link2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&mode=display&curInstr=40>`_
@@ -121,7 +133,7 @@ Use a For-Each to Loop Through an Array
 ..	index::
 	pair: 2D Array; for-each loop
 
-Since 2D arrays are really arrays of arrays you can also use a nested for-each loop to loop through all elements in an array.
+Since 2D arrays are really arrays of arrays you can also use a nested for-each loop to loop through all elements in an array.  Loop through each of the inner arrays and loop through all the values in each inner array.
 
 .. activecode:: getAvgForEach
    :language: java
@@ -132,9 +144,9 @@ Since 2D arrays are really arrays of arrays you can also use a nested for-each l
       public static double getAvg(int[][] a)
       {
          double total = 0;
-         for (int[] colArray : a)
+         for (int[] innerArray : a)
          {
-            for (int val : colArray)
+            for (int val : innerArray)
             {
                total = total + val;
             }

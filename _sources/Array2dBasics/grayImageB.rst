@@ -92,8 +92,8 @@ Once again, this problem starts with looping through the array of pixels, using 
    :answer_b: int1 -= int2;
    :answer_c: int1.subtract(int2);
    :correct: b
-   :feedback_a: While the syntax here is correct, there's an even simpler way to execute subtraction.
-   :feedback_b: The "-=" syntax correct subtracts int2 from int1, without creating an additional, which is ideal in our solution for this problem.
+   :feedback_a: While the syntax here is correct, there's an even simpler way to execute subtraction that doesn't create a new variable.
+   :feedback_b: The "-=" syntax correct subtracts int2 from int1, without creating an additional variable, which is ideal in our solution for this problem.
    :feedback_c: Because the pixels are of primitive type "int,"  there is not subtract() method which can be executed in this case.
 
    Which is the simplest way to subtract one integer value from another integer value?
@@ -122,6 +122,8 @@ When comparing our pixel values to values deeper in the array, we need to be car
         }
       }
    } 
+   
+You can step through the code above using the Java Visualizer by clicking on the following link `<http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A%7B%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D%5B%5D+values+%3D+%7B%7B9,+8,+7,+6,+5%7D,%0A+++++++++++++++++++++++%7B7,+6,+5,+4,+3%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D%7D%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+values.length%3B+i%2B%2B)%0A+++++%7B%0A+++++++for+(int+j+%3D+0%3B+j+%3C+values%5Bi%5D.length%3B+j%2B%2B)%0A+++++++%7B%0A+++++++++System.out.print(values%5Bi%5D%5Bj%5D+-+values%5Bi%2B2%5D%5Bj%2B2%5D)%3B%0A+++++++%7D%0A+++++++System.out.println()%3B%0A+++++%7D%0A+++%7D%0A%7D&mode=display&curInstr=6>_`.
    
 Try to write the code for the method ``processImage``. When you are ready click "Run" to test your solution.   
    

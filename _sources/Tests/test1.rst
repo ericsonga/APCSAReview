@@ -1,18 +1,18 @@
 .. qnum::
-   :prefix: 14-1-
+   :prefix: 15-1-
    :start: 1
    
 Practice Exam 1 for the AP CS A Exam
 -------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  
+The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  
 
-Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button at the end only when you are done.  It will display the number correct, number wrong, and number skipped after the "Finish Exam" button.
+Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the "Next" button to go to the next question.  Click on the "Prev" button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 .. timed:: postexam1
    :timelimit: 45
 
-   .. mchoice:: qt3_1
+   .. mchoice:: pe1_1
       :answer_a: 50
       :answer_b: 20
       :answer_c: 60
@@ -38,7 +38,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
         }
 
 
-   .. mchoice:: qt3_2
+   .. mchoice:: pe1_2
       :answer_a: 1 2 3 2 4 6
       :answer_b: 1 2 3 2 4 6 3 6 9
       :answer_c: 1 2 2 4 3 6
@@ -60,7 +60,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
               System.out.print(j * k + " "); 
         } 
 
-   .. mchoice:: qt3_3
+   .. mchoice:: pe1_3
       :answer_a: 128
       :answer_b: 256
       :answer_c: 64
@@ -84,7 +84,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
         } 
 
 
-   .. mchoice:: qt3_4
+   .. mchoice:: pe1_4
       :answer_a: I and II only
       :answer_b: I, II, III, and V
       :answer_c: All will return true
@@ -111,7 +111,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
         IV. (int1 == int2)
         V. (int2 == int3)
      
-   .. mchoice:: qt3_5
+   .. mchoice:: pe1_5
       :answer_a: The search value is not in the array 
       :answer_b: The search value is the last element in the array  
       :answer_c: The value is in the middle of the array. 
@@ -126,7 +126,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
       Under which of these conditions will a sequential search be faster than a binary search?
    
-   .. mchoice:: qt3_6
+   .. mchoice:: pe1_6
       :answer_a: Data set 1 since it has more test cases.
       :answer_b: Data set 2 since it only contains strings with lower case characters.  
       :answer_c: There are no advantages.
@@ -148,7 +148,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
      
    
-   .. mchoice:: qt3_7
+   .. mchoice:: pe1_7
       :answer_a: I
       :answer_b: II
       :answer_c: III
@@ -215,7 +215,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             System.out.println();
          }
     
-   .. mchoice:: qt3_8
+   .. mchoice:: pe1_8
       :answer_a: [0, 1, 2, 3, 4, 5]
       :answer_b: [0, 1, 2, 4, 5]
       :answer_c: [5, 4, 1, 0]
@@ -241,7 +241,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
          list1.add(new Integer(0));
          System.out.println(list1);
       
-   .. mchoice:: qt3_9
+   .. mchoice:: pe1_9
       :answer_a: I and III
       :answer_b: I only
       :answer_c: II only
@@ -307,7 +307,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
                 myName = name;
              }
           
-   .. mchoice:: qt3_10
+   .. mchoice:: pe1_10
       :answer_a: I
       :answer_b: II
       :answer_c: III
@@ -389,7 +389,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
          V. 
             timeCards[k].advance(timeCards[k].getHours(), timeCards[k].getMinutes());
          
-   .. mchoice:: qt3_11
+   .. mchoice:: pe1_11
       :answer_a: I
       :answer_b: II
       :answer_c: III
@@ -456,7 +456,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             super(theName,thePhoneNumber);
             this.nickname = theNickname;
          
-   .. mchoice:: qt3_12
+   .. mchoice:: pe1_12
       :answer_a: The value is the first one in the array
       :answer_b: The value is in the middle of the array
       :answer_c: The value is at position 3 in the array
@@ -471,7 +471,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
       Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?  
    
-   .. mchoice:: qt3_13
+   .. mchoice:: pe1_13
       :answer_a: IV
       :answer_b: V
       :answer_c: I and II
@@ -496,7 +496,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
          IV.  All of the above
          V.   None of the above
       
-   .. mchoice:: qt3_14
+   .. mchoice:: pe1_14
       :answer_a: 4
       :answer_b: 16
       :answer_c: 7
@@ -519,7 +519,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             return (a[1] * 2);
          }
    
-   .. mchoice:: qt3_15
+   .. mchoice:: pe1_15
       :answer_a: a = 6 and b = 7
       :answer_b: a = 6 and b = 13   
       :answer_c: a = 13 and b = 0   
@@ -544,7 +544,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             b = t - i;
          }
       
-   .. mchoice:: qt3_16
+   .. mchoice:: pe1_16
       :answer_a: hi there  
       :answer_b: HI THERE
       :answer_c: Hi There
@@ -569,7 +569,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
          s3 = s3.toUpperCase();
          s4 = null;
       
-   .. mchoice:: qt3_17
+   .. mchoice:: pe1_17
       :answer_a: 4
       :answer_b: 8
       :answer_c: 9
@@ -595,7 +595,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
              sum = sum + matrix[row][col];
           }
        
-   .. mchoice:: qt3_18
+   .. mchoice:: pe1_18
       :answer_a: { { 2, 1, 1, 1 }, { 2, 2, 1, 1 }, { 2, 2, 2, 1 } }
       :answer_b: { { 2, 3, 3, 3 }, { 1, 2, 3, 3 }, { 1, 1, 2, 3 } }
       :answer_c: { { 2, 1, 1 }, { 2, 2, 1 }, { 2, 2, 2 }, { 2, 2, 2 } }
@@ -626,7 +626,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             } 
          }
       
-   .. mchoice:: qt3_19
+   .. mchoice:: pe1_19
       :answer_a: The values don't matter, this will always cause an infinite loop.         
       :answer_b: Whenever a has a value larger then temp.
       :answer_c: When all values in a are larger than temp.
@@ -652,7 +652,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
          }
 
    
-   .. mchoice:: qt3_20
+   .. mchoice:: pe1_20
       :answer_a: A
       :answer_b: B
       :answer_c: C

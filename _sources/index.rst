@@ -32,6 +32,10 @@ Java Basics: Classes and Objects
    JavaBasics/whatIsJava.rst
    JavaBasics/introClassObject.rst
    JavaBasics/firstClass.rst
+   JavaBasics/compileTimeErrors.rst
+   JavaBasics/firstOOClass.rst
+   JavaBasics/runClass.rst
+   JavaBasics/partsOfAClass.rst
 
 
 Variables
@@ -233,6 +237,14 @@ Searching and Sorting
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
    
+Multiple-Choice Exams (not timed)
+:::::::::::::::::::::::::::::::::
+.. toctree::
+   :maxdepth: 2
+
+   Tests/test1nt.rst
+
+   
 Timed Multiple-Choice Exams
 :::::::::::::::::::::::::::::::::
 
@@ -243,7 +255,6 @@ Timed Multiple-Choice Exams
    Tests/test2.rst
    Tests/test3.rst
    Tests/test4.rst
-   Tests/test5.rst
    
 Appendix 1 
 ::::::::::::::::::::::::::::

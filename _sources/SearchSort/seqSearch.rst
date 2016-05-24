@@ -18,36 +18,39 @@ The code for ``sequentialSearch`` below is from the AP CS A course description.
 .. activecode:: seqSearch
   :language: java
   
-  public class SearchTest
+  public class ArraySearcher
   {
-
-     public static int sequentialSearch(int[] elements, int target)
-     {
-        for (int j = 0; j < elements.length; j++)
-        {
-           if (elements[j] == target)
-           {
-              return j;
-           } 
-       }
-       return -1;
+  
+     /** Finds the index of a value in an array of integers.
+       * @param elements an array containing the items to be searched. 
+       * @param target the item to be found in elements. 
+       * @return an index of target in elements if found; -1 otherwise. 
+       */
+     public static int sequentialSearch(int[] elements, int target) 
+     { 
+       for (int j = 0; j < elements.length; j++) 
+       { 
+         if (elements[j] == target) 
+         { 
+           return j; 
+         } 
+       } 
+       return -1; 
      }
-     
+  
      public static void main(String[] args)
      {
-        int[] arr1 = {81, 3, -20, 15, 432};
-        
-        // test when the target is in the array
-        int index = sequentialSearch(arr1,-20);
-        System.out.println(index);
-        
-        // test when the target is not in the array
-        index = sequentialSearch(arr1,53);
-        System.out.println(index);
+       int[] numArray = {3, -2, 9, 38, -23};
+       System.out.println("Tests of sequentialSearch");
+       System.out.println(sequentialSearch(numArray,3));
+       System.out.println(sequentialSearch(numArray,9));
+       System.out.println(sequentialSearch(numArray,-23));
+       System.out.println(sequentialSearch(numArray,99));
      }
+  
   }
    
-To see this executing using the Java Visualizer click on this `link1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=+public+class+SearchTest%0A++%7B%0A%0A+++++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)%0A+++++%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++++%7B%0A+++++++++++if+(elements%5Bj%5D+%3D%3D+target)%0A+++++++++++%7B%0A++++++++++++++return+j%3B%0A+++++++++++%7D+%0A+++++++%7D%0A+++++++return+-1%3B%0A+++++%7D%0A+++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B81,+3,+-20,+15,+432%7D%3B%0A++++++++%0A++++++++//+test+when+the+target+is+in+the+array%0A++++++++int+index+%3D+sequentialSearch(arr1,-20)%3B%0A++++++++System.out.println(index)%3B%0A++++++++%0A++++++++//+test+when+the+target+is+not+in+the+array%0A++++++++index+%3D+sequentialSearch(arr1,53)%3B%0A++++++++System.out.println(index)%3B%0A+++++%7D%0A+++%7D&mode=display&curInstr=0>`_
+To see this executing using the Java Visualizer click on the following link `Sequential Search <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ArraySearcher%0A%7B%0A++%0A++/**+Finds+the+index+of+a+value+in+an+array+of+integers.%0A++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+%0A++++*+%40param+target+the+item+to+be+found+in+elements.+%0A++++*+%40return+an+index+of+target+in+elements+if+found%3B+-1+otherwise.+%0A++++*/%0A++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)+%0A++%7B+%0A++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)+%0A++++%7B+%0A++++++if+(elements%5Bj%5D+%3D%3D+target)+%0A++++++%7B+%0A++++++++return+j%3B+%0A++++++%7D+%0A++++%7D+%0A++++return+-1%3B+%0A++%7D%0A++%0A++public+static+void+main(String%5B%5D+args)%0A++%7B%0A++++int%5B%5D+numArray+%3D+%7B3,+-2,+9,+38,+-23%7D%3B%0A++++System.out.println(%22Tests+of+sequentialSearch%22)%3B%0A++++System.out.println(sequentialSearch(numArray,3))%3B%0A++++System.out.println(sequentialSearch(numArray,9))%3B%0A++++System.out.println(sequentialSearch(numArray,-23))%3B%0A++++System.out.println(sequentialSearch(numArray,99))%3B%0A++%7D%0A++%0A%7D&mode=display&curInstr=3>`_
            
 .. mchoice:: qss_1
    :answer_a: The value is the first one in the array

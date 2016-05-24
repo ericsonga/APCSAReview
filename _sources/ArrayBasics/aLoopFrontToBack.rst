@@ -2,7 +2,7 @@
    :prefix: 7-3-
    :start: 1
 
-Using a For Loop to Loop Trough an Array
+Using a For Loop to Loop Through an Array
 ==========================================
 
 ..	index::

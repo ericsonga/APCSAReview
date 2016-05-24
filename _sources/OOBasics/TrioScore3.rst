@@ -130,7 +130,7 @@ Apply the grading rubric shown above as you answer the following questions.
    :feedback_a: To implement an interface the class must have both a <code>getName</code> and <code>getPrice</code> method.
    :feedback_b: This class is missing both the interface methods.  
    
-   Should the student earn 1 point for correctly implementing the methods in the ``MenuItem`` interface (getName and getPrice)?
+   Should the student earn 1 point for correctly declaring the methods in the ``MenuItem`` interface (getName and getPrice)?
    
 .. mchoice:: qtrio3_6
    :answer_a: Yes

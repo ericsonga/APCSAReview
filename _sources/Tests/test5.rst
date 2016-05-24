@@ -36,7 +36,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: b
    :feedback_a: This would be true if we called mystery(2).
    :feedback_b: The argument is 4 so will have 4 recursive calls and then return 3 when we get to mystery(1). Each call will multiply our result by 3, so you can think of this as 3^n where n is this functions' argument.  
-   :feedback_c: This value will only get returned when we call mystery(1), since we won't have recursive calls.
+   :feedback_c: This value will only get returned when we call mystery(1), since we won't have any recursive calls.
    :feedback_d: This value will only get returned when we call mystery(5). 
    :feedback_e: This value will only get return when we called mystery(3). If you got this value you probably did an extra recursive call. 
 
@@ -54,33 +54,33 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
 
 
-.. mchoice:: qt5_4
+.. mchoice:: qt5_3
    :answer_a: II only
    :answer_b: I only
    :answer_c: I and II only
    :answer_d: II and III only
    :answer_e: III only
    :correct: a
-   :feedback_a: If an array is already sorted then we do not need to move anything in the array and we would only need to go through each element at most once, resulting a very efficient performance from insertion sort. 
-   :feedback_b: An array in reverse order is actually the worst case for insertion sort because we would need to keep on checking parts of the array which are already sorted. 
+   :feedback_a: If an array is already sorted from smallest to largest then we do not need to move anything in the array and we would only need to go through each element at most once, resulting a very efficient performance from insertion sort. 
+   :feedback_b: An array in reverse order is actually the worst case for insertion sort because we would need to move everything to make it in order from smallest to largest.  
    :feedback_c: II is correct, but number I will actually be the worst case scenario for insertion sort since we will have an array in reverse order and we would need to keep on checking parts of the array which are already sorted. 
-   :feedback_d: While II is the correct anwser, a randomly sorted array when sorted with insertion will have an average run for the algoritm.
-   :feedback_e: When the array is already in randomly sorted order this will produce the average run time for insertion sort.
+   :feedback_d: While II is the correct anwser, a randomly order array when sorted with insertion sort will have an average runtime.
+   :feedback_e: When the array is not sorted this will produce the average run time for insertion sort.
 
    In which of these cases will insertion sort perform best?
 
    .. code-block:: java
    
-      I.   An array that is in reverse order. 
-      II.  An array that is in sorted order already. 
-      III. An array that is sorted in random order.
+      I.   An array that is in reverse order (from largest to smallest). 
+      II.  An array that is in sorted order already (from smallest to largest). 
+      III. An array that is in random order (not already sorted).
 
-.. mchoice:: qt5_5
-   :answer_a: Only loop III will produce this output.
-   :answer_b: Only loop I will produce this output. 
-   :answer_c: Only loops III and II will print this out.
-   :answer_d: Only loops I and II print this out. 
-   :answer_e: All of these loops will produce the same correct output. 
+.. mchoice:: qt5_4
+   :answer_a: I only
+   :answer_b: II only
+   :answer_c: II and III only
+   :answer_d: I and II only
+   :answer_e: I, II, and III
    :correct: d
    :feedback_a: Loop III will have the reverse output from the one we desire. This is due to the fact that we are decrementing from the max value down to 0 instead of incrementing from 0 until we get to max.
    :feedback_b: Loop I will produce this output, but it is not the only loop to output this.  
@@ -115,7 +115,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          System.out.print(i);
       }
 
-.. mchoice:: qt5_6
+.. mchoice:: qt5_5
    :answer_a: First: 15 Last: 29
    :answer_b: First: 15 Last: 30
    :answer_c: First: 16 Last: 29
@@ -138,7 +138,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           System.out.println(value);
       }
 
-.. mchoice:: qt5_7
+.. mchoice:: qt5_6
    :answer_a: 25
    :answer_b: 15
    :answer_c: 125
@@ -146,8 +146,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: 625
    :correct: c
    :feedback_a: This would be correct if we only had one inner for loop, but there are two.
-   :feedback_b: Each call to the the last inner loop will add 5 to s. Since it is called more than 3 times, s will not be 15. 
-   :feedback_c: The 3 nested for loops act will end up looking like powers of a number, in this case 5. So the result will be 5 * 5 * 5. 
+   :feedback_b: Each call to the the innermost loop will add 5 to s. Since it is called more than 3 times, s will not be 15. 
+   :feedback_c: The number of times a loop executes is (largest value in loop - smallest value in loop + 1) each loop executes (5 - 1 + 1 = 5) times.  When you have nested loops you multiply the number of times each loop executes.  So the result is 5 for the outer loop * 5 for the middle loop * 5 for the innermost loop.
    :feedback_d: This would be correct if we called solution(4) or the conditions to stop each loop were just less than, and not less than or equal to. 
    :feedback_e: If you got this value you probably made one extra call to the each of the loops, notice that the loops start at 1 and not 0. 
 
@@ -168,7 +168,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         return s;
       }
 
-.. mchoice:: qt5_8
+.. mchoice:: qt5_7
    :answer_a: I and II are exactly equivalent for all input values n. 
    :answer_b: I and II are only equivalent when n is an even number. 
    :answer_c: I and II are only equivalent when n = 0 
@@ -177,7 +177,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: e
    :feedback_a: I and II will never be equivalent because because count is incremented after it is printed in Code block I and before it is printed in Code block II.
    :feedback_b: I and II are not equivalent when n is even.
-   :feedback_c: When n = 0  Code block I will print out 0 while code block 2 will print out 1. 
+   :feedback_c: When n = 0  Code block I will print out 0 while Code block 2 will print out 1. 
    :feedback_d: The code blocks never output the same value.
    :feedback_e: I and II will never be equivalent because count is incremented after it is printed in Code block I and before it is printed in Code block II.
 
@@ -197,7 +197,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           System.out.println(count);
       }
 
-.. mchoice:: qt5_9
+.. mchoice:: qt5_8
    :answer_a: I only
    :answer_b: II only
    :answer_c: III only 
@@ -226,7 +226,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      II. Cat cannot add new methods and private instance variables that Animal does not have. 
      III. Cat can override existing public methods of Animal
 
-.. mchoice:: qt5_10
+.. mchoice:: qt5_9
    :answer_a: k
    :answer_b: k + 1
    :answer_c: k - 1
@@ -249,7 +249,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
       }
 
-.. mchoice:: qt5_11
+.. mchoice:: qt5_10
    :answer_a: It will never produce a runtime error. 
    :answer_b: It will always produce a runtime error. 
    :answer_c: Only when the length of the input string is greater than or equal to 16.
@@ -274,24 +274,23 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         stringRecursion(s + "*");
       }
 
-.. mchoice:: qt5_12
+.. mchoice:: qt5_11
    :answer_a: I only
    :answer_b: II only
    :answer_c: II and III only
    :answer_d: III only
    :answer_e: I, II and III
-   :correct: C
-   :feedback_a: This method call works because classC inherits all the methods of classB. This will not produce an error. 
-   :feedback_b: This method will produce an error because classB (the superclass) does no inherit the methods of classC due to the fact that classC is its subclass. 
-   :feedback_c: Method II will produce an error because classB (the superclass) does no inherit the methods of classC due to the fact that classC is its subclass. Method III will produce an error because of the parameter it takes in. objectB is not a classC type object which is what the method definition for method III required. 
+   :correct: c
+   :feedback_a: This method call works because class C inherits all the methods of class B. This will not produce an error. 
+   :feedback_b: This method will produce an error because class B (the superclass) does not inherit the methods of class C due to the fact that class C is its subclass. 
+   :feedback_c: Method II will produce an error because class B (the superclass) does not inherit the methods of class C due to the fact that class C is its subclass. Method III will produce an error because of the parameter it takes in. objectB is not a class C type object which is what the method definition for method III required. 
    :feedback_d: This method produces an errror but method II will also produce an error.
-   :feedback_e: Methods II and III will both produce errors but method I works because classC inherits all the methods of classB. This will not produce an error. 
+   :feedback_e: Methods II and III will both produce errors but method I works because class C inherits all the methods of class B. This will not produce an error.
 
-  Consider the following interface and class definitions. Which of I, II and III would cause an error when used in place of the missing code in the main method?
+   Consider the following interface and class definitions. Which of I, II and III would cause an error when used in place of the missing code in the main method?
     
 
-  Which of the following method calls would produce an error?  
-
+   Which of the following method calls would produce an error when used to replace "//Missing code" in the main method?
    .. code-block:: java
 
       public interface A {
@@ -322,22 +321,26 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         }
       }
 
+      /* Options
+
       I objectC.method1();
       II objectB.method2(objectC);
       III objectC.method2(objectB);
 
-.. mchoice:: qt5_13
+      */
+
+.. mchoice:: qt5_12
    :answer_a: I only
    :answer_b: II only
    :answer_c: III only
    :answer_d: II and III
    :answer_e: I and II 
    :correct: c
-   :feedback_a: Because List is an abstract class it cannot be instantiated like we are trying to do here. 
+   :feedback_a: Because List is an abstract class you can not create a new object of the type List. 
    :feedback_b: The type parameter in a generic ArrayList must be a class type, not a primitive. int is a primitive.
    :feedback_c: Since an ArrayList is a List, we can make a List object be an ArrayList object. In this case we would end up with an ArrayList of String elements. 
    :feedback_d: III is correct but II will cause an error since we cannot use a primitive (int) as the type parameter in a generic ArrayList.
-   :feedback_e: Both of the solutions will cause an error. 
+   :feedback_e: Both of these solutions will cause an error. 
 
    Which of these declarations will not cause an error? 
 
@@ -347,7 +350,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       II List<int> intList = new ArrayList<int>();
       III List<String> stringList = new ArrayList<String>();
 
-.. mchoice:: qt5_14
+.. mchoice:: qt5_13
    :answer_a: In a program that uses A, more than one instance of A can be created. 
    :answer_b: A program that uses A must have another class that is a subclass of A. 
    :answer_c: A needs to have a constructor with two parameters in order to initialize v1 and v2.
@@ -371,7 +374,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         //methods of the class
       }
 
-.. mchoice:: qt5_15
+.. mchoice:: qt5_14
    :answer_a: Matrix 1
    :answer_b: Matrix 2 
    :answer_c: Matrix 3
@@ -405,7 +408,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         }
       }
 
-      * Possible Matrices that will be printed out.
+      /* Possible Matrices that will be printed out.
 
       Matrix 1:
 
@@ -436,10 +439,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       */
 
 
-
-
-
-.. mchoice:: qt5_16
+.. mchoice:: qt5_15
    :answer_a: [0, 1, 2, 3, 5, 7]
    :answer_b: [0, 1, 4, 3, 5, 7]
    :answer_c: [0, 8, 3, 4, 5, 7]
@@ -453,16 +453,193 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: This is what we would have happened if we thought the add method would add elements to the beggining of the ArrayList and not the end.
 
    
-   If randomList is an ArrayList of integers is initally equal to {0, 1, 2, 3}, what will randomList look like after the following code is executed? 
+   If randomList is an ArrayList of integers is initally equal to {0, 1, 2, 3}, what will randomList look like after the following code is executed?
+
+   .. code-block:: java
+
+     randomList.add(5);
+     randomList.add(7);
+     int randomNum = randomList.get(2);
+     randomList.remove(2);
+     randomList.add(randomNum, 4);
+     randomList.set(1, 8);
+
+
+.. mchoice:: qt5_16
+   :answer_a: edcba
+   :answer_b: edcb
+   :answer_c: Nothing is printed because an IndexOutOfBoundsException is thrown.
+   :answer_d: feeddccbba
+   :answer_e: fededcdcbcba
+   :correct: a
+   :feedback_a: The substring method takes in two arguments, a beggining index (which is inclusive) and an ending index (which is exclusive). The first substring is called is from index 1 (counter + 1) index 2 (counter + 2). However the second index is not included so its just index 1 which is e. We then simply keep getting every indidual element from the string one by one until the end of the string. 
+   :feedback_b: This substring is mostly correct but it ends early and is missing the a character at the end.  
+   :feedback_c: This will not happen because, even though we try to do a substring at index counter + 2, because the index counter + 2 will never be included and the final element included in the substring will be "a" which is the last element in the string.  
+   :feedback_d: The first substring element will be called at index 1 (which is when counter = 0  and we begin the substring at counter + 1) and so f will not be printed out. Also because our substring will have a length of 1, we can see that no character will be repeated in the substring. 
+   :feedback_e: This is what we would have happened if the substring had started at index counter (and not counter + 1).
+
+   
+   Consider the following code segment. What will be printed as a result of executing the code below? 
+
    .. code-block:: java
      
-      randomList.add(5);
-      randomList.add(7);
-      int randomNum = randomList.get(2);
-      randomList.remove(2);
-      randomList.add(randomNum, 4);
-      randomList.set(1, 8);
+      String str = "fedcba";
+      int counter = 0;
+      while(counter < str.length() - 1) {
+        System.out.print(str.substring(counter + 1, counter + 2));
+        counter++;
+      }
+
+.. mchoice:: qt5_17
+   :answer_a: C c1 = new C();
+   :answer_b: B b1 = new B();
+   :answer_c: B c2 = new C();
+   :answer_d: B b3 = new B(10);
+   :answer_e: C c3 = new C(24);
+   :correct: e
+   :feedback_a: Here we are simply creating a new instance of class C by calling the appropiate constructor. Nothing is wrong here.  
+   :feedback_b: Here we are simply creating a new instance of class B by calling the appropiate constructor. Nothing is wrong here.
+   :feedback_c: Since class C is a subclass of class B this is a valid way of creating a new B object. 
+   :feedback_d: This statement is creating a new object using the second constructor of the B class. This is also a valid way to create a B object. 
+   :feedback_e: Even though class C has a super class with a constructor that takes in a single int argument, class C does not have this type of constructor and as such cannot create a new object when taking it a single paramete (class C objects may only be initiliazed with no arguments)
+
+   
+   Consider the following class declarations. Which of the following statements will not compile? 
+
+   .. code-block:: java
+
+      public class B {
+
+       public int myValue;
+
+       public B() {
+         myValue = 0;
+       }
+
+       public B(int x) {
+         myValue = x;
+       }
+
+      }
+
+      public class C extends B { 
+
+        public C() {
+          super(0);
+        }
+      }
+
+.. mchoice:: qt5_18
+   :answer_a: C c1 = new C();
+   :answer_b: B b1 = new B();
+   :answer_c: B c2 = new Sub();
+   :answer_d: B b3 = new B(10);
+   :answer_e: C c3 = new C(24);
+   :correct: e
+   :feedback_a: Here we are simply creating a new instance of class C by calling the appropiate constructor. Nothing is wrong here.  
+   :feedback_b: Here we are simply creating a new instance of class B by calling the appropiate constructor. Nothing is wrong here.
+   :feedback_c: Since class C is a subclass of class B this is a totally valid way of creating a new B object. 
+   :feedback_d: This statement is creating a new object using the second constructor of the B class. This is also a valid way to create a B object. 
+   :feedback_e: Even though class C has a super class with a constructor that takes in a single int argument, class C does not have this type of constructor and as such cannot create a new object when taking it a single parameter (class C objects may only be initiliazed with no arguments)
+
+   
+   Consider the following method. This method is an example of..? 
+
+   .. code-block:: java
      
+      /* PRECONDITION: every element in the array contains integers */ 
 
+      public static int someMethod(int[] a, int n, int value) {
 
+        if (n == 0) {
+          return -1;
+        } else {
 
+            if (a[n - 1] == value) {
+              return n - 1;
+            } else {
+              return someMethod(a, n - 1, value);
+            }
+        }
+      }
+
+.. mchoice:: qt5_19
+   :answer_a: I only
+   :answer_b: II only
+   :answer_c: III only
+   :answer_d: I and III
+   :answer_e: II and III
+   :correct: e
+   :feedback_a: Merge sort utilizes a temporary array when merging arrays, which means it actually uses more storage space than insertion sort. 
+   :feedback_b: Insertion sort is more efficient for a small array because merge sort has extra overhead from the recursive function calls that cause it to take longer. 
+   :feedback_c: Merge sort uses the "divide and conquer" approach to sort an array. This will end up being more efficient than insertion sort in the case where we have long unordered lists or arrays. 
+   :feedback_d: Statement III is true but statement I is false since mergesort utilizes a temporary array and will actually require more storage space than insertion sort. 
+   :feedback_e: Merge sort uses the "divide and conquer" approach to sort an array. This will end up being more efficient than insertion sort in the case where we have long unordered lists or arrays. However if we have a very small almost sorted array, then insertion sort will outperform merge sort. 
+
+   
+   Which of the following are true about using insertion sort versus using merge sort?
+
+   .. code-block:: java
+     
+      I. Insertion sort requires more storage space than mergesort.  
+      II. Insertion is only more efficient than mergesort in the case that we have a very small and nearly sorted array. 
+      III. Insertion sort is almost always less efficient than mergesort.
+
+.. mchoice:: qt5_20
+   :answer_a: I
+   :answer_b: II
+   :answer_c: III
+   :answer_d: IV
+   :answer_e: V
+   :correct: e
+   :feedback_a: The method alter shifts all the columns starting at column c + 1 and shifting back to entry to the left of c + 1. This matrix is what would result if c was three and we were shifitng the number there to the two spots before it. 
+   :feedback_b: Although some numbers are overwriten in the matrix, the matrix will still be 3x4 matrix.  
+   :feedback_c: Although some numbers are overwriten in the matrix, the matrix will still be 3x4 matrix.
+   :feedback_d: This is what would happen if we were shifting rows instead of columns in the alter method. 
+   :feedback_e: Method alter shifts all the columns, starting at column c + 1, one column to the left. It also overwrites column c. Here are the replacements made for the method call alter(1): matrix[0][1] = matrix[0][2], matrix[0][2] = matrix[0][3], matrix[1][1] = matrix[1][2], matrix[1][2] = matrix[1][3], matrix[2][1] = matrix[2][2], matrix[2][2] = matrix[2][3]
+
+   
+   What would the contents of matrix, a 2-D array of integers, be after a call to alter(1)? The method alter is defined below. 
+ 
+
+   .. code-block:: java
+     
+      private int[][] matrix;
+
+      /* matrix looks like this initially
+      1 3 5 7
+      2 4 6 8
+      3 5 7 9
+      */
+
+      public void alter(int number) {
+        for (int i = 0; i < matrix.length; i++) {
+          for (int j = c + 1; j < matrix[0].length; j++) {
+            matrix[i][j - 1] = matrix[i][j];
+          }
+        }
+      }
+
+    /*Possible ways matrix will look after the alter(1) call:
+
+    I. 1 7 7 7
+       2 8 8 8
+       3 9 9 9
+
+    II. 1 5 7
+        2 6 8
+        3 7 9
+
+    III. 1 3 5 7
+         3 5 7 9
+    
+    IV. 1 3 5 7
+        3 5 7 9
+        3 5 7 9
+
+    V. 1 5 5 7
+       2 6 8 8
+       3 7 9 9
+
+    */
+     

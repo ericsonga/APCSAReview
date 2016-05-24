@@ -1,11 +1,13 @@
 .. qnum::
-   :prefix: 14-3-
+   :prefix: 15-3-
    :start: 1
    
 Practice Exam 3 for the AP CS A Exam
 -------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button only when you are done.  It will display the number correct, number wrong, and number skipped after the "Finish Exam" button.
+The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  
+
+Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the "Next" button to go to the next question.  Click on the "Prev" button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 .. timed:: postexam3
     :timelimit: 45
