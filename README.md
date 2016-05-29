@@ -19,4 +19,5 @@ Several students have also been involved in the creation of content for the eBoo
 * Nicole Guobadia - created videos explaining concepts (recursion)
 * Daniel Boaitey - created free response videos from 2014 questions.
 * Christy Zachary - created free response videos and Java examples
+* Javier Rodriguez - created questions for test 5
 
