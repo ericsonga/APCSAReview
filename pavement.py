@@ -11,19 +11,19 @@ sys.path.append(os.getcwd())
 home_dir = os.getcwd()
 master_url = 'http://127.0.0.1:8000'
 master_app = 'runestone'
-serving_dir = "./build/Java-Review"
+serving_dir = "./build/JavaReview"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/JavaReview-RU",
+        builddir="./build/JavaReviewRU",
         sourcedir="_sources",
-        outdir="./build/JavaReview-RU",
+        outdir="./build/JavaReviewRU",
         confdir=".",
-        project_name = "JavaReview-RU",
-        template_args={'course_id': 'JavaReview-RU',
-                       'login_required':'true',
+        project_name = "JavaReviewRU",
+        template_args={'course_id': 'JavaReviewRU',
+                       'login_required':'false',
                        'appname':master_app,
                        'loglevel': 10,
                        'course_url':master_url,
