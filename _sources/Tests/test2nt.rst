@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 14-2-
+   :prefix: 14-3-
    :start: 1
    
 Exam 2 for the AP CS A Exam (not timed)
@@ -155,13 +155,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: II and III only
    :answer_e: I, II, III, and IV
    :correct: d
-   :feedback_a: Remember that sub classes do not inherit constructors from the parent class.
+   :feedback_a: Remember that subclasses do not inherit constructors from the parent class.
    :feedback_b: II is correct, but constructors are not inherited.
-   :feedback_c: III is correct, but remember that all mutator and accessor methods are inherited by the sub class.
-   :feedback_d: Sub classes inherit mutator and accessor methods from the parent class, but they do not inherit constructors or instance variables.
-   :feedback_e: Constructors and private instance variables are not inherited from the parent class. II and III are correct, but GoldenRetriever would not inherit the constructor and the instance variables.
+   :feedback_c: III is correct, but remember that all public methods are inherited by the subclass.
+   :feedback_d: Subclasses inherit mutator and accessor methods from the parent class, but they do not inherit constructors or private instance variables (don't have direct access to these).
+   :feedback_e: Constructors and private instance variables are not inherited from the parent class. II and III are correct, but GoldenRetriever would not inherit the constructor and the private instance variables (would not have direct access to these).
 
-   The Dog class is shown below. The GoldenRetriever class inherits from the Dog class. Which methods and variables are passed to the GoldenRetriever class?
+   The Dog class is shown below. The GoldenRetriever class inherits from the Dog class. Which methods and variables does the GoldenRetriever class inherit?
 
    .. code-block:: java
    
@@ -269,8 +269,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: The code results in an error.
    :correct: c
    :feedback_a: This would be the case if obj was a Cat at run-time. At run-time, obj is a FluffyCat, so the overwritten method in the Cat class is used.
-   :feedback_b: This would be the case if the display method in FluffyCat used 'super' to call on the display method in the Cat class before it printed " Cool!".
-   :feedback_c: Although obj is a Cat at compile time, at run-time obj is a FluffyCat. The compiler will will use the overwritten display method defined in the FluffyCat class. 
+   :feedback_b: This would be the case if the display method in FluffyCat used 'super' to call on the display method in the Cat class before it printed "Cool!".
+   :feedback_c: Although obj is declared to be a Cat at compile time, at run-time it is actually a FluffyCat. The overwritten display method defined in the FluffyCat class will be called. 
    :feedback_d: The method has been overwritten in FluffyCat, so the display method present in the Cat Class ("Cats! ") will not be printed.
    :feedback_e: This code compiles and runs correctly. A FluffyCat IS-A Cat object, so the code will compile and run without issue.
    
@@ -304,7 +304,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: 1 2 3 4 5 6 7 8 9 10 
    :answer_e: 10
    :correct: a
-   :feedback_a: After the recursive call reaches the base case (where arg = 1), the compiler prints "1 ". Because the method is void, and because the print statement is located in the base case, no value is returned to the previous cases.
+   :feedback_a: After the recursive call reaches the base case (where arg = 1), the compiler prints "1". The recursive calls all just return and don't print anything.
    :feedback_b: This would be correct if the recursive call specified that arg >= 1 or arg > 0. Because the code ends when arg reaches a value of 1, the code will not print out 0.
    :feedback_c: This would be correct if the method printed out arg + " " before going to the recursive call. Because the print statement is located at the end of the base case and not the recursive call, not every value is printed.
    :feedback_d: This would be correct if the method printed arg + " " after the recursive call in the if statement. Because the method does not return any values or strings, and because only the base case has a print statement, only the last value of arg is printed.
@@ -363,7 +363,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: II and III
    :answer_e: I, II, and III
    :correct: d
-   :feedback_a: I is a very good method to add every value in the matrix, but it does not find the sum of a specific row. II and III add only the values in the specified row.
+   :feedback_a: I will find the sum of all the values in the matrix, but it does not find the sum of a specific row. 
    :feedback_b: II is correct, but III is also correct. This method can be completed by using a while loop or a for loop.
    :feedback_c: III is correct, but II is also correct. This method can be completed by using a for loop or a while loop.
    :feedback_d: II and III both correctly add the values in the specified row.
@@ -373,7 +373,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    .. code-block:: java
      
-      public int sumRow (int row, int [][] values)
+      public int sumRow (int row, int[][] values)
       {
          int sum = 0;
         
@@ -382,8 +382,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       	 return sum;
       }
       
-      //Segment I
-      for (int [] rowValues : values)
+      // I
+      for (int[] rowValues : values)
       {
          for (int x : rowValues)
          {
@@ -391,17 +391,17 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
       }
       
-      //Segment II
+      // II
       for (int i = 0; i < values[0].length;i++)
       {
-         sum += values [row][i];
+         sum += values[row][i];
       }
       
-      //Segment III
+      // III
       int col = 0;
       while (col < values[0].length)
       {
-         sum += values [row][col];
+         sum += values[row][col];
          col++;
       }
 
@@ -427,10 +427,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: 3
    :answer_e: 18
    :correct: c
-   :feedback_a: The base case is reached by mystery(5364). Eventually, the recursive calls will reach mystery(4). 4 is less than 10, so the base case has been reached and the method will end.
+   :feedback_a: Eventually, the recursive calls will reach mystery(5). 5 is less than 10, so the base case will have been reached and the method will end.
    :feedback_b: This would be correct if the method found the sum of the digits in the given value, with an extra 1. Instead, the method finds the number of digits.											
-   :feedback_c: This method finds the number of decimal places contained in a value. 
-   :feedback_d: This method finds the number of decimal places in the given value. Check your recursive call to make sure you reached the base case correctly.
+   :feedback_c: This method finds the number of digits in num.
+   :feedback_d: This method finds the number of digits in num. Check your recursive call to make sure you reached the base case correctly.
    :feedback_e: This would be correct if the method added the digits in the value. Instead, the method simply finds the number of digits. Check the recursive call again.
 
    Given the following code, what is returned by mystery(5364)?
@@ -460,29 +460,27 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: [4, 6, 8, 12, 13, 29, 7]
    :answer_e: [4, 6, 7, 8, 12, 13, 29]
    :correct: d
-   :feedback_a: This is what would happen with two passes of selection sort. Remember that selection sort only swaps two elements at a time, while insertion sort places elements into a pre-sorted array.
-   :feedback_b: This is what would happen if selection sort was used instead of insertion sort. Remember that selection sort only swaps two elements at a time, while insertion sort places elements into a pre-sorted array.
-   :feedback_c: This is what the array looks like after the second element is switched. Use insertion sort one more time.
+   :feedback_a: This is what would happen with two iterations of selection sort. Remember that selection sort only swaps two elements at a time, while insertion sort places elements in order in the sorted part of the array.
+   :feedback_b: This is what would happen if selection sort was used instead of insertion sort. Remember that selection sort only swaps two elements at a time, while insertion sort places elements in order in the sorted part of the array.
+   :feedback_c: This is what the array looks like after the second iteration. Do one more iteration.
    :feedback_d: Using insertion sort, we start at the first index and sort the first two values to create a sorted array at the left side of the array. We repeat this step for the second index, creating a sorted array of three elements, and again for the third index, creating a sorted array of four elements.
-   :feedback_e: This is the final sorted array. Instead of three passes, you must make seven passes to reach this step.
+   :feedback_e: This is the final sorted array. Instead of three passes, it takes seven iterations to reach this state.
 
    
-   Consider an array of integers that contains ``[12, 8, 4, 6, 13, 29, 7]``. If the array is sorted from smallest to largest using an insertion sort method, what will be the order of the array after the third pass of the sorting method?
+   Consider an array of integers that contains ``[12, 8, 4, 6, 13, 29, 7]``. If the array is sorted from smallest to largest using an insertion sort method, what will be the order of the array after the third iteration of the sorting method?
    
 
 .. mchoice:: qtnt2_16
-   :answer_a: Vroom vroom!
-              Let's go!
+   :answer_a: Vroom vroom! Let's go!
    :answer_b: Vroom vroom!
    :answer_c: Let's go!
-   :answer_d: Let's go!
-              Vroom vroom!
+   :answer_d: Let's go! Vroom vroom!
    :answer_e: This would result in a compile-time error.
    :correct: a
-   :feedback_a: The method drive has been overwritten in the Minivan class. Since obj is of type Minivan, the compiler will use the overwritten method. The overwritten method uses super() to call to the method of the parent class, so "Vroom vroom!" is printed. Then, the overwritten method prints out "Let's go!".
+   :feedback_a: The method drive has been overwritten in the Minivan class. Since obj is of type Minivan, the compiler will use the overwritten method. The overwritten method uses super() to call to the method of the parent class, so "Vroom vroom! " is printed. Then, the overwritten method prints out "Let's go! ".
    :feedback_b: Although the overwritten method has a call to the method in the parent class, there is another line of code that must be printed. The drive method has been overwritten for the Minivan class.
-   :feedback_c: This would be the case if the overwritten method did not make a call to the class in the parent class. Because the method has a call to the parent class before it does anything else, "Vroom vroom!" is printed.
-   :feedback_d: This would be the case if the parent method had been called after "Let's go!" had been printed.
+   :feedback_c: This would be the case if the overwritten method did not make a call to the class in the parent class. Because the method has a call to the parent class before it does anything else, "Vroom vroom! " is printed.
+   :feedback_d: This would be the case if the parent method had been called after "Let's go! " had been printed.
    :feedback_e: This code correctly compiles, so there are no errors present. The Minivan class can make a call to a method in the Car class using super, because the Minivan class extends the Car class.
 
    
@@ -494,7 +492,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
          public void drive()
          {
-            System.out.print("Vroom vroom!");
+            System.out.print("Vroom vroom! ");
          }
       }
       
@@ -503,7 +501,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          public void drive()
          {
             super.drive();
-            System.out.print(" Let's go!");
+            System.out.print(" Let's go! ");
          }
       }
 
@@ -520,7 +518,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: The indexing of this method is correct. The for-loop begins at the last index and ends at the second index, and the method does not access any values other than the ones specified.
    :feedback_e: This method starts at the second-to-last index of the array and adds the value of the previous element to the element at index k - 1.
    
-   Consider the following code. An array ``list`` is created that contains ``[2, 8, 10, 9, 6]``. What are the contents of ``list`` after the ``changeArray`` method is used?
+   Consider the following code. An array is created that contains ``[2, 8, 10, 9, 6]`` and is passed to ``changeArray``. What are the contents of the array after the ``changeArray`` method executes?
 
    .. code-block:: java
 
@@ -537,9 +535,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: (x > 7) && (y >= 12)
    :answer_e: (x <= 7) || (y >= 12)
    :correct: b
-   :feedback_a: !(A && B) is NOT equivalent to (!A && !B). The AND needs to be changed to an OR.
-   :feedback_b: Using DeMorgan's law, !(A && B) is equivalent to !A || !B. So, the negation of (x > 7) is (x <= 7), and the negation of !(y < 12) is (y < 12).
-   :feedback_c: !(A && B) is NOT equivalent to (A || B). A and B need to become !A && !B. Also, (y >= 12) is equivalent to !(y < 12).
+   :feedback_a: The AND needs to be changed to an OR.
+   :feedback_b: Using DeMorgan's law, !(A && B) is equivalent to !A || !B. The negation of (x > 7) is (x <= 7), and the negation of !(y < 12) is (y < 12).
+   :feedback_c: !(A && B) is NOT equivalent to (A || B). It should be (!A || !B). Also, (y >= 12) is equivalent to !(y < 12).
    :feedback_d: !(A && B) is NOT equivalent to (A && B). !(y < 12) and (y >=12) mean the same thing; changing this does not make the statement the opposite.
    :feedback_e: !(A && B) is NOT equivalent to (!A && B). Changing !(y < 12) to (y >= 12) does not negate the statement; these two are equivalent.
    
@@ -552,7 +550,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: I and II only
    :answer_e: II and IV only
    :correct: a
-   :feedback_a: The modulus operator (%) can be used to find if numbers are even or odd. By checking if x % 2 == 0, I makes sure that x is always even. x divided by two leaves a remainder of 0.
+   :feedback_a: The modulus operator (%) can be used to find if numbers are even or odd. I checks that x is even correctly using x % 2 == 0.
    :feedback_b: II uses the modulus operator to count the number of odd numbers in the array. If x % 2 == 1, then the number is odd, not even.
    :feedback_c: III and IV use the division operator, not the modulus operator. This does not check if the number is even. 
    :feedback_d: I is correct, but II increments the counter for odd numbers, not even numbers.
@@ -575,19 +573,19 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         return count;
      }
     
-     //Segment I
+     // I
      if (x % 2 == 0)
         count++;
      
-     //Segment II
+     // II
      if (x % 2 == 1)
         count++;
        
-     //Segment III
+     // III
      if (x / 2 == 0)
         count++;
        
-     //Segment IV
+     // IV
      if (x / 2 == 1)
         count++;
      
@@ -603,7 +601,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_b: Although this might present a problem if EVERY value in the array is less than 0, the compiler will move on to the next index without issue if the first value in the array is less than 0.  
    :feedback_c: This will not present a problem, as the if-statement has not been met and the for-loop will simply continue to the second element.
    :feedback_d: If every value in the array is greater than 0, the method will work properly. 
-   :feedback_e: maxVal begins at zero, so if every number in the array is less than 0, the maxVal will remain 0. A better idea would be to set maxVal to the value of the first element in the array.
+   :feedback_e: maxVal is set to zero, so if every number in the array is less than 0, the maxVal will remain 0. A better idea would be to set maxVal to the value of the first element in the array.
 
    
    Consider the method ``findMax``, which uses sequential search to find the index of the largest value of an array. In which case would ``findMax`` not work properly?
