@@ -244,6 +244,7 @@ Preparing for the Exam
 
    Tests/testPractice.rst
    Tests/test1nt.rst
+   Tests/test2nt.rst
 
    
 Timed Multiple-Choice Exams
