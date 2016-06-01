@@ -243,7 +243,6 @@ Multiple-Choice Exams (not timed)
    :maxdepth: 2
 
    Tests/test1nt.rst
-   Tests/test2nt.rst
 
    
 Timed Multiple-Choice Exams
