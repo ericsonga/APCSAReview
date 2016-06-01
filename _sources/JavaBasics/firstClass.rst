@@ -45,6 +45,7 @@ When you ask the Java run-time to *run* a class (java ClassName) it will start e
 
 .. activecode:: lcfc1
    :language: java
+   :tour_1: "Line-by-line Tour"; 1: scline1; 2: scline2; 3: scline3; 4: scline4; 5: scline5; 6: scline6; 7: scline7;
 
    public class SecondClass
    {

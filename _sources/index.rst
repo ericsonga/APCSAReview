@@ -237,12 +237,14 @@ Searching and Sorting
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
    
-Multiple-Choice Exams (not timed)
+Preparing for the Exam
 :::::::::::::::::::::::::::::::::
 .. toctree::
    :maxdepth: 2
 
+   Tests/testPractice.rst
    Tests/test1nt.rst
+   Tests/test2nt.rst
 
    
 Timed Multiple-Choice Exams

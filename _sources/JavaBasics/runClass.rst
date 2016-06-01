@@ -1,6 +1,11 @@
 .. qnum::
    :prefix: 2-6-
    :start: 1
+   
+.. |runbutton| image:: Figures/run-button.png
+    :height: 20px
+    :align: top
+    :alt: run button
 
 Running a Java Program
 ==============================
