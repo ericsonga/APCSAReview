@@ -109,7 +109,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       list.add(3);
       
 
-.. mchoice:: qtnt1_4
+.. mchoice:: qtnt3_4
    :answer_a: arr [i][j] = ans [i];
    :answer_b: ans [i] += arr [i][j];
    :answer_c: ans [i][j] += arr [i][j];
@@ -128,16 +128,17 @@ The following problems are similar to what you might see on the AP CS A exam.  P
     
       public int[] rowSums(int [][] arr)
       {
-      		int [] ans = new int[arr.length];
-      		for (int i = 0; i < arr.length; i++)
-      		{
-      				for (int j = 0; j < arr[0].length; j++)
-      				{
-      						/* to be determined */
-      				}
-      		}
+          int [] ans = new int[arr.length];
+          
+      	  for (int i = 0; i < arr.length; i++)
+      	  {
+      	      for (int j = 0; j < arr[0].length; j++)
+      		  {
+      		       /* to be determined */
+      		  }
+      	  }
       		
-      		return ans;
+      	  return ans;
       } 
       
 .. mchoice:: qtnt3_5
@@ -159,20 +160,24 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    
       public static int binSearch(int key, int [] arr)
       {
-      		int low = 0;
-      		int high = arr.length - 1;
-      		while (low <= high)
-      		{
-      				int mid = (low + high) / 2;
-      				if (arr[mid] == key)
-      						return mid;
-      				else if (arr[mid] < key)
-      						low = mid + 1;
-      				else
-      						high = mid - 1;
-      		}
+          int low = 0;
+          int high = arr.length - 1;
+          
+      	  while (low <= high)
+      	  {
+      	      int mid = (low + high) / 2;
+      	      
+      		  if (arr[mid] == key)
+      		      return mid;
+      		      
+      		  else if (arr[mid] < key)
+      			  low = mid + 1;
+      			  
+      		  else
+      			  high = mid - 1;
+      	  }
       		
-      		return -1;
+      	 return -1;
       }
 
 .. mchoice:: qtnt3_6
@@ -190,17 +195,16 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    The ``wordScramble`` class is shown below. What is returned as a result of ``wordScramble("hello")``?
    
-   .. code-block:: java  
+   .. code-block:: java
    
-   public static String wordScramble (String str)
-   {
-   	    if (str.length() == 0)
-     			return "!";
-   		else
-     			return wordScramble(str.substring(1)) + str.substring(0,1);
-   }
-      
-
+      public static String wordScramble (String str)
+      {
+           if (str.length() == 0)
+                return "!";
+                
+   	       else
+                return wordScramble(str.substring(1)) + str.substring(0,1);
+      }
 
 .. mchoice:: qtnt3_7
    :answer_a: I only 
@@ -249,30 +253,29 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: II is correct, but I uses instance variables found in the Person class. Instance variables are not inherited and cannot be modified by sub classes.
    :feedback_e: I and III modify private instance variables in the Person class. Instance variables from the super class cannot be used by the sub class.
    
-   The ''Person'' and ''Student'' classes are found below. Which of the following correctly replaces ''/* to be completed */ in the Student class?
+   The ``Person`` and ``Student`` classes are found below. Which of the following correctly replaces ``/* to be completed */`` in the Student class?
 
    .. code-block:: java
      
       public class Person
       {
-      		private String name;
-      		private int age;
+           private String name;
+           private int age;
       		
-      		public Person(String theName, int theAge)
-      		{
-      				name = theName;
-      				age = theAge;
-      				
-      		}
+      	   public Person(String theName, int theAge)
+      	   {
+      	       name = theName;
+      	       age = theAge;
+      	   }
       }
       
       public class Student extends Person
       {
-      		private int grade;
+      	   private int grade;
       
-      		public Student(String theName, int theAge, int theGrade)
+           public Student(String theName, int theAge, int theGrade)
       		{
-      				/* to be completed */
+      		     /* to be completed */
       		}
       }
       
@@ -301,179 +304,204 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: This is the result after 4 passes of selection sort. Check your steps and try again.
    :feedback_e: This is the result after one pass of merge sort. Remember that in selection sort, only two values swap postions at every pass.
    
-   A list of integers containing [12, 8, 7, 30, 62, 45, 10, 3] is sorted from largest to smallest using a selection sort method. After three passes, what does the list look like?
+   A list of integers containing ``[12, 8, 7, 30, 62, 45, 10, 3]`` is sorted from largest to smallest using a selection sort method. After three passes, what does the list look like?
 
 .. mchoice:: qtnt3_10
-   :answer_a: 1 
-   :answer_b: 0
-   :answer_c: 10 9 8 7 6 5 4 3 2 1 
-   :answer_d: 1 2 3 4 5 6 7 8 9 10 
-   :answer_e: 10
+   :answer_a: "My name is Piglet!"
+   :answer_b: "Piglet"
+   :answer_c: "My name is Animal!"
+   :answer_d: "Animal" 
+   :answer_e: "Oink"
    :correct: a
-   :feedback_a: After the recursive call reaches the base case (where arg = 1), the compiler prints "1". The recursive calls all just return and don't print anything.
-   :feedback_b: This would be correct if the recursive call specified that arg >= 1 or arg > 0. Because the code ends when arg reaches a value of 1, the code will not print out 0.
-   :feedback_c: This would be correct if the method printed out arg + " " before going to the recursive call. Because the print statement is located at the end of the base case and not the recursive call, not every value is printed.
-   :feedback_d: This would be correct if the method printed arg + " " after the recursive call in the if statement. Because the method does not return any values or strings, and because only the base case has a print statement, only the last value of arg is printed.
-   :feedback_e: This would be correct if the method returned an integer that was the sum of the previous calls. The method does not add any values.
+   :feedback_a: At run-time, piglet is a Pig object. The compiler uses the overwritten getName method located in the Pig class, which prints out "My name is " before calling on the getName method in the Animal class.
+   :feedback_b: This would be correct if the getName method had not been overwritten in the Pig class. Because piglet is a Pig object at run-time, the compiler uses the getName method from the Pig class.
+   :feedback_c: Check the constructor method in the Pig class. The Pig class constructor uses the Animal class constructor that has one String parameter, not the default Animal constructor.
+   :feedback_d: The constructor in the Pig class uses the Animal class constructor that takes in a string parameter, not the default parameter. The getName method has been overwritten in the Pig class, so "My name is " is printed before the name of the object.
+   :feedback_e: Check which method has been used. This is what is returned by the makeNoise method.
    
-   What is printed as a result of ``showMe(10)``?
-
+   Consider the classes ``Animal`` and ``Pig`` shown below. What is printed as a result of executing the code below?
+   
    .. code-block:: java
      
-      public static void showMe(int arg)
+      public abstract class Animal
       {
-         if (arg > 1)
-         {
-            showMe(arg - 1);
-         }
-        
-         else
-         {
-            System.out.print(arg + " ");
-         }
+           private String name;
+      		
+           public Animal(String theName)
+      	   {
+      	        name = theName;
+      	   }
+      		
+      	   public Animal()
+      	   {
+      	        name = "Animal";
+      	   }
+      		
+           public abstract String makeNoise();
+      		
+      	   public String getName()
+      	   {
+      		    return name;
+      	   }
       }
-
+      
+      public class Pig extends Animal
+      {
+           public Pig(String theName)
+      	   {
+      	       super(theName);
+      	   }
+      		
+      	   public String makeNoise()
+      	   {
+      	       return "Oink!";
+      	   }
+      		
+      	   public String getName()
+      	   {
+      		   return "My name is " + super.getName() + "!";
+      	   }
+      
+      
+      //later in the class
+      
+      Animal piglet = new Pig("Piglet");
+      System.out.print(piglet.getName());
+      
+      }
+      		
+      		
 .. mchoice:: qtnt3_11
-   :answer_a: 25
-   :answer_b: 15
-   :answer_c: 21
-   :answer_d: 36
-   :answer_e: 10
-   :correct: b
-   :feedback_a: This would be correct if at the beginning of the second for loop, y was equal to 0, not to x. The starting value of y changes every time that x increases.
-   :feedback_b: The code loops 15 times, and sum is incremented by 1 each time.
-   :feedback_c: This would be correct if the for-loops both continued when the values were less than or equal to 5, not when the values were less than 5.
-   :feedback_d: This would be correct if the for-loops both began at 0 and looped until the values were less than or equal to 5. Check the for loop structures.
-   :feedback_e: This would be correct if the first for-loop began at 1, not at 0.
+   :answer_a: arr [i] / 2 = 2
+   :answer_b: arr [i] % 2 == 1
+   :answer_c: arr [i] / 2 == 1
+   :answer_d: arr [i] % 2 == 0
+   :answer_e: arr [i] / 2 == 0
+   :correct: d
+   :feedback_a: To check if a number is even, the modulus operator (%) should be used.
+   :feedback_b: This method checks to see if a number is odd, not even. Because this method changes even numbers, not odd numbers, we do not need to find odd numbers.
+   :feedback_c: To check if a number is even, the modulus operator (%) should be used.
+   :feedback_d: If the value at arr[i] divided by two leaves a remainder of 0, then the number is even and should be reassigned.
+   :feedback_e: To check if a number is even, the modulus operator (%) should be used.
 
-   Consider the following code. What is printed as a result of executing this code?
+   Consider the following method oddArray, which assigns 0 to every even number in the array. By the end of the method, only odd numbers will be present in the array. Which line correctly completes  ``/* to be determined */`` to make the code work as intended?
    
    .. code-block:: java
-
-      int sum = 0;
-      
-      for (int x = 0; x < 5; x++)
+   
+      public void oddArray (int [] arr)
       {
-         for (int y = x; y < 5; y++)
-         {
-            sum++;
-         }
+           for (int i = 0; i < arr.length; i++)
+      	   {
+      		  //if the number at arr [i] is even, it becomes 0
+      				
+      		  if( /* to be determined */)
+      			  arr [i] = 0;
+      	   }
       }
-      
-      System.out.println(sum);
 
 .. mchoice:: qtnt3_12
-   :answer_a: I only
-   :answer_b: II only
-   :answer_c: III only
-   :answer_d: II and III
-   :answer_e: I, II, and III
-   :correct: d
-   :feedback_a: I will find the sum of all the values in the matrix, but it does not find the sum of a specific row. 
-   :feedback_b: II is correct, but III is also correct. This method can be completed by using a while loop or a for loop.
-   :feedback_c: III is correct, but II is also correct. This method can be completed by using a for loop or a while loop.
-   :feedback_d: II and III both correctly add the values in the specified row.
-   :feedback_e: II and III are correct, but I adds every value in the matrix, not just the specified row.
+   :answer_a: 4
+   :answer_b: 5
+   :answer_c: 0
+   :answer_d: 13
+   :answer_e: 14
+   :correct: e
+   :feedback_a: Examine the recursive call and the return statements. This method adds the values of digits in a number; it does not find the number of digits.
+   :feedback_b: Examine the recursive call and the return statements. This method adds the values of digits in a number; it does not find the number of digits.
+   :feedback_c: Examine the return statements. Although the last digit of the number is 0, 0 is returned to the previous calls, where it is added to the other digits.
+   :feedback_d: Try tracing the recursive calls again.
+   :feedback_e: The method divides the number by 10 until it reaches the first dight. Then, it adds the values of all of the digits together.
 
-   You are trying to write a method ``sumRow`` that finds the sum of the values in a specified row of a 2-D matrix. Which of the following code segments could replace ``/* to be determined */`` to make the code work correctly? 
-
+   The method ``numFun`` is below. What is returned as a result of ``numFun(21560)``?
+   
    .. code-block:: java
      
-      public int sumRow (int row, int[][] values)
+      public int numFum(int num)
       {
-         int sum = 0;
-        
-      	 /* to be determined */
-      	
-      	 return sum;
-      }
-      
-      // I
-      for (int[] rowValues : values)
-      {
-         for (int x : rowValues)
-         {
-            sum += x;
-         }
-      }
-      
-      // II
-      for (int i = 0; i < values[0].length;i++)
-      {
-         sum += values[row][i];
-      }
-      
-      // III
-      int col = 0;
-      while (col < values[0].length)
-      {
-         sum += values[row][col];
-         col++;
+           if (num / 10 == 0)
+      	        return num;
+      		
+           else
+                return (num % 10) + sums(num / 10);
       }
 
 .. mchoice:: qtnt3_13
-   :answer_a: (int) (Math.random() + 1) * 50
-   :answer_b: (int) (Math.random() * 50) + 1 
-   :answer_c: (int) (Math.random() + 1 * 50)
-   :answer_d: (int) Math.random() * 50
-   :answer_e: (int) (Math.random() * 50)
-   :correct: e
-   :feedback_a: This always returns 50. Math.random() + 1 calculates a value between 1 and 1.9, and when this value is cast as an int it becomes 1. 1 * 50 always returns 50.
-   :feedback_b: This calculates a random number between 1 and 50, but indexes of arrays start at 0 and end at array.length - 1.
-   :feedback_c: This always returns 50. 1 * 50 returns 50 since multiplication takes precedence befores addition. The value of Math.random() + 50 always falls between 50.0 and 50.9, and this value becomes 50 when it is cast as an int.
-   :feedback_d: This always returns 0, since Math.random() returns a value between 0 and 0.9. When the value of Math.random() is cast an int, its value becomes 0. 0 * 50 returns 0.
-   :feedback_e: This correctly calculates a random index between 0 and 49 for the array.
+   :answer_a: I only
+   :answer_b: II only
+   :answer_c: III only
+   :answer_d: I and II only
+   :answer_e: II and III only
+   :correct: a
+   :feedback_a: This answer checks every index in the list, correctly selects the values in the list and compares them to zero. If a value is not equal to zero, the method returns false, and the array is NOT empty. Otherwise, the method returns true.
+   :feedback_b: The variable list is a List, not an array. List values are not directly accessible, so list.get(i) should be used instead of list [i].
+   :feedback_c: This method returns true if the list is NOT empty and false if the list is empty. The boolean values need to be reversed.
+   :feedback_d: I is correct, but II does not correctly access the value in the list located at index i.
+   :feedback_e: II does not correctly access the values in the list. III would be correct if the boolean values were reversed.
 
-   You have an array ``values`` filled with 50 integers. Which of the following correctly produces a random index of ``values``?
-
-.. mchoice:: qtnt3_14
-   :answer_a: The method will produce an infinite loop.
-   :answer_b: 19
-   :answer_c: 4
-   :answer_d: 3
-   :answer_e: 18
-   :correct: c
-   :feedback_a: Eventually, the recursive calls will reach mystery(5). 5 is less than 10, so the base case will have been reached and the method will end.
-   :feedback_b: This would be correct if the method found the sum of the digits in the given value, with an extra 1. Instead, the method finds the number of digits.											
-   :feedback_c: This method finds the number of digits in num.
-   :feedback_d: This method finds the number of digits in num. Check your recursive call to make sure you reached the base case correctly.
-   :feedback_e: This would be correct if the method added the digits in the value. Instead, the method simply finds the number of digits. Check the recursive call again.
-
-   Given the following code, what is returned by mystery(5364)?
+   Consider the method ``emptyArray``, shown below. The method returns true if an array of integers is filled with zeros, false otherwise. Which of the following replaces ``/* to be completed */`` so the method will work as intended?
    
    .. code-block:: java
+     
+      public boolean emptyArray (List <Integer> list)
+      {
+           /* to be completed */
+      }
       
-      /** Precondition: num ≥ 0 */
-     public static int mystery(int num)
-     { 
-        if (num < 10) 
-        { 
-           return 1; 
-        } 
+      //Segment I
+      for (int i = 0; i < list.size(); i++)
+      {
+          if (list.get(i) != 0)
+              return false;
+      }
+      return true;
       
-        else 
-        { 
-           return 1 + mystery(num / 10); 
-        } 
-     }
+      //Segment II
+      for (int i = 0; i < list.size(); i++)
+      {
+          if (list[i] != 0)
+              return false;
+      }
+      return true;
+      
+      //Segment III
+      for (int i = 0; i < list.size(); i++)
+      {
+          if (list.get(i) != 0)
+            return true;
+      }
+      return false;
+      
+.. mchoice:: qtnt3_14
+   :answer_a: (int) (Math.random() * 25) * 1
+   :answer_b: (int) (Math.random() + 1) * 25
+   :answer_c: (int) (Math.random() + 25) * 1
+   :answer_d: (int) (Math.random()) * 25 + 1
+   :answer_e: (int) (Math.random() * 25) + 1
+   :correct: e
+   :feedback_a: This returns a value between 0 and 24, not 1 and 25. This would be correct if the last part of the expression added by 1 instead of multiplying by 1.
+   :feedback_b: This always returns 25. Math.random() + 1 becomes 1 when it is cast to an integer, and 1 * 25 becomes 25.				
+   :feedback_c: This always returns 25. Math.random() produces a number between 0 and 1, so when it is added to 25 and cast as an integer, the number always stays 25.
+   :feedback_d: This always returns 1. Math.random() produces a value between 0 and 1, so casting Math.random() to an int results in 0. 0 * 25 remains 0, and 0 + 1 becomes 1.
+   :feedback_e: Math.random() * 25 finds a random double value between 0 and 24.9999. This is cast to an integer, and 1 is added so the range becomes 1 to 25.
 
+   You want to find a random integer in the range 1 to 25, inclusive. Which of the following always returns a value that satisfies this condition? 
 
 
 .. mchoice:: qtnt3_15
-   :answer_a: [4, 6, 12, 8, 13, 29, 7]
-   :answer_b: [4, 6, 7, 8, 13, 29, 12]
-   :answer_c: [4, 8, 12, 6, 13, 29, 7]
-   :answer_d: [4, 6, 8, 12, 13, 29, 7]
-   :answer_e: [4, 6, 7, 8, 12, 13, 29]
-   :correct: d
-   :feedback_a: This is what would happen with two iterations of selection sort. Remember that selection sort only swaps two elements at a time, while insertion sort places elements in order in the sorted part of the array.
-   :feedback_b: This is what would happen if selection sort was used instead of insertion sort. Remember that selection sort only swaps two elements at a time, while insertion sort places elements in order in the sorted part of the array.
-   :feedback_c: This is what the array looks like after the second iteration. Do one more iteration.
-   :feedback_d: Using insertion sort, we start at the first index and sort the first two values to create a sorted array at the left side of the array. We repeat this step for the second index, creating a sorted array of three elements, and again for the third index, creating a sorted array of four elements.
-   :feedback_e: This is the final sorted array. Instead of three passes, it takes seven iterations to reach this state.
+   :answer_a: 5
+   :answer_b: 7
+   :answer_c: 10
+   :answer_d: 12
+   :answer_e: 128
+   :correct: b
+   :feedback_a: This is not enough passes to guarantee that a name is present. 2 ^ 5, is 32, which is not enough elements. Remember that binary search takes log2 (number of elements) passes to find an item.
+   :feedback_b: 2 ^ 7 is 128, which is enough passes to guarantee finding the name or confirming that it is not in the list. Binary search requires log2 (number of elements) to find an item.
+   :feedback_c: The item will be found in 10 passes, but there is a better answer. Remember that binary search takes log2 (number of elements) passes to find an item.
+   :feedback_d: The item will be found in 12 passes, but not all 12 passes are required. Remember that binary search takes log2 (number of elements) passes to find an item.
+   :feedback_e: This would be true if the list was searched using sequential search. Binary search only requires log2 (number of elements) to find an item.
 
    
-   Consider an array of integers that contains ``[12, 8, 4, 6, 13, 29, 7]``. If the array is sorted from smallest to largest using an insertion sort method, what will be the order of the array after the third iteration of the sorting method?
+   A list of 120 names has been sorted in alphabetical order. Using a binary search method, what is the minimum number of passes needed to find a specified name or confirm that it is not in the list?
    
 
 .. mchoice:: qtnt3_16
