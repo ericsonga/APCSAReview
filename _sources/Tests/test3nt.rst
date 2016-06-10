@@ -26,10 +26,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
      public int t(int n)
      {
-          if (n == 1 || n == 2)
-    			return 2 * n;
-    		else
-    			return t(n - 1) - t(n - 2);
+         if (n == 1 || n == 2)
+    	     return 2 * n;
+    	 else
+    		 return t(n - 1) - t(n - 2);
      }
         
 .. mchoice:: qtnt3_2
@@ -51,27 +51,27 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
       public class Bird
       {
-           private String color;
+          private String color;
          
-           public Bird(String theColor)
-           {
-           	   /* implementation not shown */
-           }
+          public Bird(String theColor)
+          {
+              /* implementation not shown */
+          }
            
-           public void makeNoise()
-           {
-           	   /* implementation not shown */
-           }
+          public void makeNoise()
+          {
+           	  /* implementation not shown */
+          }
            
-           public void eat()
-           {
-           	   /* implementation not shown */
-           }
+          public void eat()
+          {
+           	  /* implementation not shown */
+          }
            
-           public string showFeathers()
-           {
-           	   return color;
-           }
+          public string showFeathers()
+          {
+           	  return color;
+          }
       }
       
       public class Swan extends Bird
@@ -134,7 +134,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       	  {
       	      for (int j = 0; j < arr[0].length; j++)
       		  {
-      		       /* to be determined */
+      		      /* to be determined */
       		  }
       	  }
       		
@@ -199,11 +199,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    
       public static String wordScramble (String str)
       {
-           if (str.length() == 0)
-                return "!";
+          if (str.length() == 0)
+              return "!";
                 
-   	       else
-                return wordScramble(str.substring(1)) + str.substring(0,1);
+   	      else
+              return wordScramble(str.substring(1)) + str.substring(0,1);
       }
 
 .. mchoice:: qtnt3_7
@@ -229,6 +229,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
 
       II. int i = 0;
+      
           while (i <= 10)
           {
              System.out.print(i * 10 + " ");
@@ -325,24 +326,24 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      
       public abstract class Animal
       {
-           private String name;
+          private String name;
       		
-           public Animal(String theName)
-      	   {
-      	        name = theName;
-      	   }
+          public Animal(String theName)
+      	  {
+      	      name = theName;
+      	  }
       		
-      	   public Animal()
-      	   {
-      	        name = "Animal";
-      	   }
+      	  public Animal()
+      	  {
+      	      name = "Animal";
+      	  }
       		
-           public abstract String makeNoise();
+          public abstract String makeNoise();
       		
-      	   public String getName()
-      	   {
-      		    return name;
-      	   }
+      	  public String getName()
+      	  {
+      		  return name;
+      	  }
       }
       
       public class Pig extends Animal
@@ -505,158 +506,161 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    
 
 .. mchoice:: qtnt3_16
-   :answer_a: Vroom vroom! Let's go!
-   :answer_b: Vroom vroom!
-   :answer_c: Let's go!
-   :answer_d: Let's go! Vroom vroom!
-   :answer_e: This would result in a compile-time error.
-   :correct: a
-   :feedback_a: The method drive has been overwritten in the Minivan class. Since obj is of type Minivan, the compiler will use the overwritten method. The overwritten method uses super() to call to the method of the parent class, so "Vroom vroom! " is printed. Then, the overwritten method prints out "Let's go! ".
-   :feedback_b: Although the overwritten method has a call to the method in the parent class, there is another line of code that must be printed. The drive method has been overwritten for the Minivan class.
-   :feedback_c: This would be the case if the overwritten method did not make a call to the class in the parent class. Because the method has a call to the parent class before it does anything else, "Vroom vroom! " is printed.
-   :feedback_d: This would be the case if the parent method had been called after "Let's go! " had been printed.
-   :feedback_e: This code correctly compiles, so there are no errors present. The Minivan class can make a call to a method in the Car class using super, because the Minivan class extends the Car class.
+   :answer_a: When the length of the input string is less than 15
+   :answer_b: When the length of the input string is greater than or equal to 15
+   :answer_c: When the length of the input string is equal to 0
+   :answer_d: For all string inputs
+   :answer_e: For no string inputs
+   :correct: e
+   :feedback_a: If the string length is less than 15, "s" will be printed, but the recursive call will still be made.
+   :feedback_b: This would be correct if the recursive call was located in an else statement. If the string length is 15 or greater, "s" will not be printed, but the recursive call will still occur.
+   :feedback_c: If the string has length 0, the if statement will occur and "s" will be printed, but the recursive call will still occur.
+   :feedback_d: Check the recursive call. The method is always called recursively, regardless of the string length.
+   :feedback_e: There is no base case present in this method that stops the recursive call.
 
    
-   Consider the following code segment. If ``obj`` has been instantiated later in the class as a ``Minivan``, what is printed as a result of ``obj.drive()``?
+   The method ``recur`` is shown below. In which case will ``recur`` terminate without error?
 
    .. code-block:: java
      
-      public class Car
+      public void recur (String str)
       {
-         public void drive()
-         {
-            System.out.print("Vroom vroom! ");
-         }
-      }
-      
-      public class Minivan extends Car
-      {
-         public void drive()
-         {
-            super.drive();
-            System.out.print(" Let's go! ");
-         }
+           if (str.length() < 15)
+               System.out.print("s");
+          
+           recur(str + "!");
       }
 
 .. mchoice:: qtnt3_17
-   :answer_a: [2, 6, 2, -1, -3]
-   :answer_b: [-23, -21, -13, -3, 6]
-   :answer_c: [10, 18, 19, 15, 6]
-   :answer_d: This method creates an IndexOutOfBounds exception.
-   :answer_e: [35, 33, 25, 15, 6]
-   :correct: e
-   :feedback_a: This would be correct if data[k] was modified in the for-loop. In this for-loop, data[k - 1] is the element that changes.
-   :feedback_b: This would be correct if data[k - 1] was subtracted from data[k]. Notice that for every instance of the for-loop, data[k] and data[k - 1] are added together and assigned to the index at data[k - 1].
-   :feedback_c: This would be correct if the for-loop began at 1 and continued to data.length - 1. Notice the for-loop indexing.
-   :feedback_d: The indexing of this method is correct. The for-loop begins at the last index and ends at the second index, and the method does not access any values other than the ones specified.
-   :feedback_e: This method starts at the second-to-last index of the array and adds the value of the previous element to the element at index k - 1.
-   
-   Consider the following code. An array is created that contains ``[2, 8, 10, 9, 6]`` and is passed to ``changeArray``. What are the contents of the array after the ``changeArray`` method executes?
-
-   .. code-block:: java
-
-      public void changeArray(int[] data)
-      {
-         for (int k = data.length - 1; k > 0; k--)
-            data[k - 1] = data[k] + data[k - 1];
-      }
-
-.. mchoice:: qtnt3_18
-   :answer_a: (x <= 7) && (y < 12)
-   :answer_b: (x <= 7) || (y < 12)
-   :answer_c: (x > 7) || (y >= 12)
-   :answer_d: (x > 7) && (y >= 12)
-   :answer_e: (x <= 7) || (y >= 12)
-   :correct: b
-   :feedback_a: The AND needs to be changed to an OR.
-   :feedback_b: Using DeMorgan's law, !(A && B) is equivalent to !A || !B. The negation of (x > 7) is (x <= 7), and the negation of !(y < 12) is (y < 12).
-   :feedback_c: !(A && B) is NOT equivalent to (A || B). It should be (!A || !B). Also, (y >= 12) is equivalent to !(y < 12).
-   :feedback_d: !(A && B) is NOT equivalent to (A && B). !(y < 12) and (y >=12) mean the same thing; changing this does not make the statement the opposite.
-   :feedback_e: !(A && B) is NOT equivalent to (!A && B). Changing !(y < 12) to (y >= 12) does not negate the statement; these two are equivalent.
-   
-   Which statement is equivalent to ``!( (x > 7) && !(y < 12) )``? 
-
-.. mchoice:: qtnt3_19
    :answer_a: I only
    :answer_b: II only
-   :answer_c: III and IV only
-   :answer_d: I and II only
-   :answer_e: II and IV only
+   :answer_c: III only
+   :answer_d: IV only
+   :answer_e: I and IV only
    :correct: a
-   :feedback_a: The modulus operator (%) can be used to find if numbers are even or odd. I checks that x is even correctly using x % 2 == 0.
-   :feedback_b: II uses the modulus operator to count the number of odd numbers in the array. If x % 2 == 1, then the number is odd, not even.
-   :feedback_c: III and IV use the division operator, not the modulus operator. This does not check if the number is even. 
-   :feedback_d: I is correct, but II increments the counter for odd numbers, not even numbers.
-   :feedback_e: II counts the odd numbers instead of the even numbers. If x % 2 == 1, the number is odd, not even. IV does not use the modulus operator (%), which checks if numbers are even or odd.
-
-   
-   Consider the following method ``evens``, which finds the number of even numbers present in an array. Which of the following segments of code would correctly replace ``/* to be completed */``?
-
-   .. code-block:: java
-     
-     public int evens(int [] arr)
-     {
-        int count = 0;
-      
-        for (int x : arr)
-        {
-           /* to be completed */
-        }
-      
-        return count;
-     }
+   :feedback_a: A SeedlessGrape IS-A fruit, so the inheritance relationship is correct. The constructor for the SeedlessGrape class has two string parameters.
+   :feedback_b: The Grape class constructor has two parameters. Although a Grape IS-A fruit, the Grape constructor must have two string parameters to compile without error.
+   :feedback_c: A Grape is NOT a SeedlessGrape. The inheritance relationship is incorrect.
+   :feedback_d: The Fruit class is an abstract class, so an object cannot be declared a Fruit object at compile-time.
+   :feedback_e: I is correct, but a Fruit object cannot be instantiated. The Fruit class is an abstract class, and abstract class objects cannot be instantiated. In I, the Fruit object is a Grape at run-time.
     
-     // I
-     if (x % 2 == 0)
-        count++;
-     
-     // II
-     if (x % 2 == 1)
-        count++;
-       
-     // III
-     if (x / 2 == 0)
-        count++;
-       
-     // IV
-     if (x / 2 == 1)
-        count++;
-     
+    Consider the ``Fruit``, ``Grape``, and ``SeedlessGrape`` classes shown below. Which of the following object declarations will compile without error?
+    
+   .. code-block:: java
+
+      public abstract class Fruit
+      {
+          private String name;
+          private boolean seeds;
+          
+          public Fruit(String theName)
+          {
+              name = theName;
+              seeds = true;
+          }
+          
+          public void setSeeds()
+          {
+              seeds = !seeds;
+          }
+      
+      }
+      
+      public class Grape extends Fruit
+      {
+          private String color;
+          
+          public Grape(String theName, String theColor)
+          {
+              super(theName);
+              color = theColor;
+          }
+      }
+      
+      public class SeedlessGrape extends Grape
+      {     
+          public SeedlessGrape(String theName, String theColor)
+          {
+              super(theName, theColor);
+              setSeeds();
+          }
+      }
+      
+      I. Fruit a = new SeedlessGrape("grape", "red");
+      II. Grape b = new Grape("grape");
+      III. SeedlessGrape c = new Grape("grape", "green");
+      IV. Fruit d = new Fruit("strawberry");
+      
+
+.. mchoice:: qtnt3_18
+   :answer_a: System.out.print(arr[x] + " ");
+   :answer_b: System.out.print(x + " ");
+   :answer_c: System.out.print(x.toString() + " ");
+   :answer_d: System.out.print(row[x] + " ");
+   :answer_e: System.out.print(row.get(x) + " ");
+   :correct: b
+   :feedback_a: x refers to a String object, not an index in the array. x can be printed directly, because the second for-loop individually selects Strings in each row of the array.
+   :feedback_b: This method uses two abbreviated for-loops. The variable x refers to a single String located in the array, so only x needs to be printed. This method will loop through the entire 2-D array, printing out all the names
+   :feedback_c: This will compile without error, but the toString is unnecessary. x is already a String and can be printed directly.
+   :feedback_d: x refers to a String object, not an index in the array row. x can be printed directly.
+   :feedback_e: x is a String, not an integer. The parameters include 2-D arrays, not Lists. Array elements can be accessed directly, without an accessor method. For this method, you can print x directly.
+   
+   The method ``printNames`` is located below. It prints out all the names in a 2-D matrix. Which of the following correctly replaces ``/* to be determined */`` to make the method work as intended?
+   
+   .. code-block:: java
+   
+      public void printNames (String [][] arr)
+      {
+           for (String [] row : arr)
+           {
+               for (String x : row)
+               {
+                   /* to be determined */
+               }
+           
+               System.out.println();
+           }
+      }
+
+.. mchoice:: qtnt3_19
+   :answer_a: (x < 10) && (x > 5)
+   :answer_b: (x > 10) && (x <=5)
+   :answer_c: (x <= 10) && (x > 5)
+   :answer_d: (x <= 10) || (x > 5)
+   :answer_e: (x > 10) || (x <= 5)
+   :correct: d
+   :feedback_a: Use A and B to represent the expressions -- A == (x > 10), B == (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). Also, (x > 10) is not correct negation for (x < 10); the correct negation is (x >= 10).
+   :feedback_b: Use A and B to represent the expressions -- A == (x > 10), B == (x <= 5). ! (A && B) is NOT equivalent to (A && B).
+   :feedback_c: Use A and B to represent the expressions -- A == (x > 10), B == (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). The AND should be changed to an OR.
+   :feedback_d: Use A and B to represent the expressions -- A == (x > 10), B == (x <= 5). ! (A && B) is equivalent to (!A && !B), according to DeMorgan's principle. The negation of (x > 10) is (x <= 10), and the negation of (x <= 5) is (x > 5).
+   :feedback_e: Use A and B to represent the expressions -- A == (x > 10), B == (x <= 5). ! (A && B) is NOT equivalent to (A && B). Both A and B should be negations.
+      
+   Which of the following is equivalent to ``! ( (x > 10) && (x <= 5) )``?
 
 .. mchoice:: qtnt3_20
-   :answer_a: This method will work correctly for all arrays.
-   :answer_b: The first value in the array is less than 0.
-   :answer_c: The first value in the array is equal to 0.
-   :answer_d: Every value in the array is greater than 0.
-   :answer_e: Every value in the array is less than 0.
-   :correct: e
-   :feedback_a: This method will not work correctly for all arrays. Look at the starting value for maxVal, and how maxVal is compared to all the values of the array. What happens if every value in the array is less than maxVal?
-   :feedback_b: Although this might present a problem if EVERY value in the array is less than 0, the compiler will move on to the next index without issue if the first value in the array is less than 0.  
-   :feedback_c: This will not present a problem, as the if-statement has not been met and the for-loop will simply continue to the second element.
-   :feedback_d: If every value in the array is greater than 0, the method will work properly. 
-   :feedback_e: maxVal is set to zero, so if every number in the array is less than 0, the maxVal will remain 0. A better idea would be to set maxVal to the value of the first element in the array.
+   :answer_a: 12
+   :answer_b: 243
+   :answer_c: 81
+   :answer_d: 15
+   :answer_e: 27
+   :correct: c
+   :feedback_a: This would be correct if the recursive method called 3 + mystery (num - 1). Check the base case and try again.
+   :feedback_b: This method calculates 3 ^ num. 3 ^ 4 is not equal to 243, so check your tracing and try again.
+   :feedback_c: This method calculates 3 ^ num. It goes through the recursive calls until num reaches 1, then 3 is returned. The method has been called four times, and 3 ^ 4 is 81.
+   :feedback_d: This would be correct if the recursive method called 3 + mystery (num - 1), and num was equal to 5. Check the base case and the parameter and try again. 
+   :feedback_e: This method calculates 3 ^ num. 3 ^ 4 is not equal to 27, so check your tracing and try again.
 
    
-   Consider the method ``findMax``, which uses sequential search to find the index of the largest value of an array. In which case would ``findMax`` not work properly?
- 
+   Consider the method ``mystery``. What is returned as a result of ``mystery(4)``?
 
    .. code-block:: java
      
-     public int findMax(int[] arr)
+     public int mystery (int num)
      {
-        int maxVal = 0;
-        int index = 0;
-       
-        for (int i = 0; i < arr.length; i++)
-        {
-           if (arr[i] > maxVal)
-           {
-              index = i;
-              maxVal = arr[i];
-           }
-        }
-        return index;
+         if (num == 1)
+             return 3;
+         else
+             return 3 * mystery (num - 1);
      }
 
      
