@@ -179,6 +179,7 @@ Two-dimensional Arrays
    Array2dBasics/a2dHardMC.rst
    Array2dBasics/grayImageA.rst
    Array2dBasics/grayImageB.rst
+   Array2dBasics/2015freeresponseQ1.rst
    
 Object-Oriented Concepts
 ::::::::::::::::::::::::
