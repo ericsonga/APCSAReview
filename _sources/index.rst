@@ -236,6 +236,8 @@ Searching and Sorting
    SearchSort/selSort.rst
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
+   SearchSort/ssEasyMC.rst
+   
    
 Preparing for the Exam
 :::::::::::::::::::::::::::::::::
