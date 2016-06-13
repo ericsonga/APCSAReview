@@ -25,6 +25,10 @@ An **array** is consecutive storage for multiple items of the same type.  You ca
     :figclass: align-center
 
     Figure 1: A row of lockers
+    
+.. shortanswer:: arrayAnalogy
+
+   Can you think of another example of something that is like an array (like a row of lockers)?
    
 Arrays are useful whenever you have several elements of data of the same type that you want to keep track of, but you don't need to name each one.  If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two arrays.  
 
@@ -135,6 +139,10 @@ Arrays know their length (how many elements they can store).  It is a public rea
         System.out.println(highScores.length);
       }
    }
+   
+.. shortanswer:: arrayQuestions
+
+   What questions do you have about arrays?
 
 **Check your understanding**
 
