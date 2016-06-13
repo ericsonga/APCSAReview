@@ -90,7 +90,7 @@ If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after c
         :correct: ^Let's watch a movie$
         :feedback1: ('.*','Try it and see')
         
-        Try changing the code above to ``boolean isHeads = true;``.  What line will be printed before the ``after conditional``?
+        Try changing the code above to ``boolean isHeads = false;``.  What line will be printed before the ``after conditional``?
         
 .. note::
 

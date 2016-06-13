@@ -11,7 +11,7 @@ Sequential Search
 	pair: search; sequential
 	pair: search; linear
 
-Sequential search is the only method that can be used to find a value on unsorted or unordered data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns the index it found it at, or it loops until the end of the array or list and then it returns a -1 to show that it didn't find the value in the array or list.
+Sequential search is the only method that can be used to find a value in unsorted data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns the index it found it at, or it loops until the end of the array or list and then it returns a -1 to show that it didn't find the value in the array or list.
 
 The code for ``sequentialSearch`` below is from the AP CS A course description. 
 
