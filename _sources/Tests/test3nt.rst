@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 14-3-
+   :prefix: 14-4-
    :start: 1
    
 Exam 3 for the AP CS A Exam (not timed)
@@ -16,7 +16,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: c
    :feedback_a: The method makes more than 13 calls. Remember that the method must make a call to check every value of n, even if n is the value in the base case.
    :feedback_b: This would be correct if t(6) was used. Remember to include the original call in your tracing.
-   :feedback_c: t(7) returns t(6) and t(5). t(6) returns t(5) - t(4), while t(5) returns t(4) - t(3). t(4) returns t(3) - t(2). t(3) returns t(2) - t(1). If you trace the code throughout the calls, t is used 25 times.
+   :feedback_c: t(7) returns t(6) and t(5). t(6) returns t(5) - t(4), while t(5) returns t(4) - t(3). t(4) returns t(3) - t(2). t(3) returns t(2) - t(1). If you trace the code throughout the calls, t is called 25 times.
    :feedback_d: This would be correct if t(6) was used, without the original call. Remember to include the original call in your tracing. Try to draw the code tracing on paper.
    :feedback_e: This would be correct if the method reached the base case when n equaled 1 or 0, not 1 or 2. Check the code to see when a recursive call is made. 
    
@@ -29,7 +29,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          if (n == 1 || n == 2)
     	     return 2 * n;
     	 else
-    		 return t(n - 1) - t(n - 2);
+             return t(n - 1) - t(n - 2);
      }
         
 .. mchoice:: qtnt3_2
@@ -39,13 +39,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: I and II only
    :answer_e: I, II, and III
    :correct: b
-   :feedback_a: This is a private instance variable. Private variables from parent classes are not inherited by sub classes.
-   :feedback_b: The eat method can be accessed by every class that extends the Bird class. When a sub class extends a parent class, the parent class methods can be used by the sub class.
-   :feedback_c: Constructors are not inherited by sub classes. Only accessor and mutator methods are inherited by sub classes.
-   :feedback_d: II is correct, but I is incorrect. Private instance variables are not passed down from parent classes to child classes and cannot be directly accessed by the child class.
-   :feedback_e: II is correct, but I and III are incorrect. Constructors and instance variables are NOT passed from the super class to the sub class.
+   :feedback_a: The color is a private instance variable in Bird. Children classes do not have direct access to private variables.  They must use the public getter and setter methods to access the private variables.
+   :feedback_b: The public eat method was inherited from the Bird class and can be called from code in the Swan class.
+   :feedback_c: Constructors are not inherited by sub classes. Only public accessor and mutator methods are inherited by sub classes.
+   :feedback_d: II is correct, but I is incorrect. Private instance variables cannot be directly accessed by the child class.
+   :feedback_e: II is correct, but I and III are incorrect. Constructors are not inherited and subclasses do not have direct access to private instance variables.
    
-   Consider the following code. Which of the following can be used by the ``Swan`` class?
+   Consider the following class declarations. Which of the following code can be executed in the ``Swan`` class?
    
    .. code-block:: java
 
@@ -76,14 +76,15 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       
       public class Swan extends Bird
       {
+          /* no constructors or other methods have been declared */
       }
       
       
-      I. private String color
+      I. this.color = "blue";
       
-      II. public void eat()
+      II. eat();
       
-      III. public Bird(String theColor)
+      III. Swan s = new Swan("blue");
 
 .. mchoice:: qtnt3_3
    :answer_a: [7, 1, 4, 8, 3]
@@ -98,7 +99,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: Remember that in ArrayLists, indexing starts at 0, not at 1.
    :feedback_e: 4 is added to the end of the ArrayList, then 8 is added at index one between 7 and 3. The 3 in index two is removed, then the 2 in the second index is replaced with 1. Finally, 3 is added to the end of the ArrayList, which contains [7, 8, 1, 4, 3].
    
-   Consider the following code. Assume that ``list`` an ArrayList of integers that contains ``[7, 3, 2]``. What will the contents of ``list`` be after the following code is executed?
+   Consider the following code. Assume that ``list`` is an ArrayList of integers that contains ``[7, 3, 2]``. What will the contents of ``list`` be after the following code is executed?
    
    .. code-block:: java
     
@@ -110,25 +111,25 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       
 
 .. mchoice:: qtnt3_4
-   :answer_a: arr [i][j] = ans [i];
-   :answer_b: ans [i] += arr [i][j];
-   :answer_c: ans [i][j] += arr [i][j];
-   :answer_d: ans [i] = arr [i][j];
-   :answer_e: arr [i][j] += ans [i];
+   :answer_a: arr[i][j] = ans[i];
+   :answer_b: ans[i] += arr[i][j];
+   :answer_c: ans[i][j] += arr[i][j];
+   :answer_d: ans[i] = arr[i][j];
+   :answer_e: arr[i][j] += ans[i];
    :correct: b
    :feedback_a: In Java, assignments work from right to left. This answer assigns the value of element [i] in the 1-D array to the value of the 2-D array. Instead, we want to add the values of the row i in the 2-D array and assign this sum to element i in the 1-D array.
    :feedback_b: In order to return the right array, the value at the index [i] of ans must contain the sums of every element in row i of the 2-D array. The second for-loop adds the value of every element in row i of the 2-D array and assigns these values to element i of the returned array.
    :feedback_c: Notice that ans is a 1-D array, not a 2-D array. There cannot be two indexes for an element of ans, because ans is only a 1-D array.
-   :feedback_d: This line reassigns the value of arr[i][j] to ans[i], but it does not add the values. This line only records the value in the last column of each row.
+   :feedback_d: This line reassigns the value of arr[i][j] to ans[i], but it does not sum all the values in the row. This line would return an array with the value in the last column of each row.
    :feedback_e: Remember that assignment works from right to left in Java. This line adds the value of element i 1-D array to the value of element [i][j] in the 2-D array. In this method, the values of the 2-D matrix should not be altered.
 
    The method ``rowSums`` returns an array of integers. Each element of the array holds the sum of the corresponding row of a 2-D matrix. Which line correctly fills in ``\* to be determined *\`` in ``rowSums``?
 
    .. code-block:: java
     
-      public int[] rowSums(int [][] arr)
+      public int[] rowSums(int[][] arr)
       {
-          int [] ans = new int[arr.length];
+          int[] ans = new int[arr.length];
           
       	  for (int i = 0; i < arr.length; i++)
       	  {
@@ -152,7 +153,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_b: 30 would not have been located in 2 iterations of the while loop. After two iterations, mid would equal 5. Because list[5] is equal to 24, not 30, low would increase, and the while-loop would run again. Try one more iteration of the while loop.
    :feedback_c: 30 would be found in 3 iterations. After the third iteration of the while loop, mid would equal 6. mid[6] equals 30, so 6 is returned and the while-loop is exited.
    :feedback_d: 4 iterations is too many iterations. Only 3 iterations are needed to find 30 in the array. After 4 iterations for an array with 7 elements, either the key is not present in the array or the key is at the first or last index of the array.
-   :feedback_e: Only 3 iterations of the while loop are needed to find 30 in the array. After 5 iterations for an array with seven elements, the key must not be present in the array.
+   :feedback_e: Only 3 iterations of the while loop are needed to find 30 in the array. After 5 iterations for an array with seven elements, it must be that the key was not found.
 
    Consider the following method ``binSearch``, which uses binary search to locate an element ``key`` in an array of integers ``arr``. If ``list`` is an array of integers containing ``{4, 7, 9, 11, 20, 24, 30, 41}``, how many iterations of the while loop occur in ``binSearch(30, list)``? 
 
@@ -165,16 +166,16 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           
       	  while (low <= high)
       	  {
-      	      int mid = (low + high) / 2;
+              int mid = (low + high) / 2;
       	      
-      		  if (arr[mid] == key)
-      		      return mid;
+              if (arr[mid] == key)
+                  return mid;
       		      
-      		  else if (arr[mid] < key)
-      			  low = mid + 1;
+              else if (arr[mid] < key)
+                  low = mid + 1;
       			  
-      		  else
-      			  high = mid - 1;
+              else
+                  high = mid - 1;
       	  }
       		
       	 return -1;
@@ -201,8 +202,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
           if (str.length() == 0)
               return "!";
-                
-   	      else
+          else
               return wordScramble(str.substring(1)) + str.substring(0,1);
       }
 
@@ -448,7 +448,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            /* to be completed */
       }
       
-      //Segment I
+      // I.
       for (int i = 0; i < list.size(); i++)
       {
           if (list.get(i) != 0)
@@ -456,7 +456,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
       return true;
       
-      //Segment II
+      // II.
       for (int i = 0; i < list.size(); i++)
       {
           if (list[i] != 0)
@@ -464,7 +464,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
       return true;
       
-      //Segment III
+      // III.
       for (int i = 0; i < list.size(); i++)
       {
           if (list.get(i) != 0)
