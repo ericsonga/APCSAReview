@@ -209,8 +209,7 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
 .. parsonsprob:: removeA
    :noindent:
 
-   The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly. You will be told if any of the blocks are in the wrong order or not indented correctly.  The code
-   will need to be correctly indented for your solution to be correct.  To indent just drag the block to the right.  
+   The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.    
    -----
    public static String remA(String s)
    {
@@ -222,8 +221,8 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
       {
          index = s.indexOf("a");
          s = s.substring(0,index) + 
-            s.substring(index+1);
-      } // end while
+             s.substring(index+1);
+      } 
    =====
       return s;
    =====
