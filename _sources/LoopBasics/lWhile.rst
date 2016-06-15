@@ -13,7 +13,7 @@ A ``while`` loop executes the body of the loop as long as (or while) a Boolean c
 
 .. note:: 
 
-   If the condition is false the first time you check it the body of the loop will not execute.  
+   If the condition is false the first time you check it, the body of the loop will not execute.  
 
 .. figure:: Figures/WhileLoopFlow.png
     :width: 300px
@@ -45,8 +45,11 @@ You can use a ``while`` loop to repeat the body of the loop a certain number of 
       }
    }
   
-The while loop starts on line 9 in the code above.  Statements 10 through 13 are the body of the loop (from the opening parenthesis on line 10 to the closing one on line 13).  Please note that Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what
-statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.  
+The while loop starts on line 9 in the code above.  Statements 10 through 13 are the body of the loop (from the opening parenthesis on line 10 to the closing one on line 13).  
+
+.. note:: 
+
+   Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.  
 
 ..	index::
 	single: infinite loop
@@ -59,7 +62,7 @@ One thing to be careful about with while loops is making sure that you don't end
    // an infinite loop
    while (true)
    {
-      System.out.println("This is the loop that never ends");
+      System.out.println("This is a loop that never ends");
    }
    
 The infinite loop above is pretty obvious.  But, most infinite loops are accidental.  They usually occur because you forget to change the thing you are checking in the condition.  
@@ -67,7 +70,9 @@ The infinite loop above is pretty obvious.  But, most infinite loops are acciden
 Tracing Variables in Loops
 ----------------------------
 
-A really important skill to develop is the ability to trace the values of variables and how they change during each time through a loop. You can step through the code below using the Java Visualizer `here <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A+++%7B%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A++++++%0A+++++++++int+var1+%3D+3%3B%0A+++++++++int+var2+%3D+2%3B%0A+++%0A+++++++++while+((var2+!%3D+0)+%26%26+((var1+/+var2)+%3E%3D+0))%0A+++++++++%7B%0A++++++++++++var1+%3D+var1+%2B+1%3B%0A++++++++++++var2+%3D+var2+-+1%3B%0A+++++++++%7D%0A++++++%7D%0A+++%7D&mode=display&curInstr=13>`_.
+A really important skill to develop is the ability to trace the values of variables and how they change during each time through a loop.  Click on the Forward button to execute the current line and see how the values of the variables change each time through the loop.
+
+<iframe style="width: 100%; height: 480;" src="http://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22public%20class%20Test%5Cn%20%20%20%7B%5Cn%20%20%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%5Cn%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%20%20%20int%20var1%20%3D%203%3B%5Cn%20%20%20%20%20%20%20%20%20int%20var2%20%3D%202%3B%5Cn%20%20%20%5Cn%20%20%20%20%20%20%20%20%20while%20((var2%20!%3D%200)%20%26%26%20((var1%20%2F%20var2)%20%3E%3D%200))%5Cn%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20var1%20%3D%20var1%20%2B%201%3B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20var2%20%3D%20var2%20-%201%3B%5Cn%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
 
 You can create a table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
 
