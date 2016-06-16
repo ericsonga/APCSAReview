@@ -13,7 +13,11 @@ What is a Class and an Object?
 	pair: class; List
 	pair: class; ArrayList
 
-In Java, a class doesn't mean the same thing as the classes you take in school. A **class** is used to define a type (classify something).  The class defines what objects of the class need to know (data or fields) and do (behaviors or methods).  There are many classes that are part of the Java langague, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  The real power of Java is the ability to create your own classes (define your own types) as shown in the video below. This video was created using the free software Greenfoot which is at http://greenfoot.org.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial to get you started in Greenfoot.
+In Java, a class doesn't mean the same thing as the classes you take in school. A **class** is used to define a type (classify something).  The class defines what objects of the class need to know (data or fields) and do (behaviors or methods).  
+
+There are many classes that are part of the Java langague, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  
+
+The real power of Java is the ability to create your own classes (define your own types) as shown in the video below. This video was created using the free software Greenfoot which is at http://greenfoot.org.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial to get you started in Greenfoot.
 
 .. video:: ants
    :controls:

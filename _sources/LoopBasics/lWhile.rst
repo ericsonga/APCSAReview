@@ -72,8 +72,12 @@ Tracing Variables in Loops
 
 A really important skill to develop is the ability to trace the values of variables and how they change during each time through a loop.  Click on the Forward button to execute the current line and see how the values of the variables change each time through the loop.
 
-<iframe style="width: 100%; height: 480;" src="http://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22public%20class%20Test%5Cn%20%20%20%7B%5Cn%20%20%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%5Cn%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%20%20%20int%20var1%20%3D%203%3B%5Cn%20%20%20%20%20%20%20%20%20int%20var2%20%3D%202%3B%5Cn%20%20%20%5Cn%20%20%20%20%20%20%20%20%20while%20((var2%20!%3D%200)%20%26%26%20((var1%20%2F%20var2)%20%3E%3D%200))%5Cn%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20var1%20%3D%20var1%20%2B%201%3B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20var2%20%3D%20var2%20-%201%3B%5Cn%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="no"></iframe>
+.. raw:: html
 
+   <div style="max-width: none; width: 600px; height: 500px;">
+   <iframe style="max-width: none; width: 600px; height: 500px;" src="http://cscircles.cemc.uwaterloo.ca/java_visualize/iframe-embed.html?faking_cpp=false#data=%7B%22user_script%22%3A%22public%20class%20Test%5Cn%20%20%20%7B%5Cn%20%20%20%20%20%20public%20static%20void%20main(String%5B%5D%20args)%5Cn%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%5Cn%20%20%20%20%20%20%20%20%20int%20var1%20%3D%203%3B%5Cn%20%20%20%20%20%20%20%20%20int%20var2%20%3D%202%3B%5Cn%20%20%20%5Cn%20%20%20%20%20%20%20%20%20while%20((var2%20!%3D%200)%20%26%26%20((var1%20%2F%20var2)%20%3E%3D%200))%5Cn%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20var1%20%3D%20var1%20%2B%201%3B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20var2%20%3D%20var2%20-%201%3B%5Cn%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%7D%22%2C%22options%22%3A%7B%22showStringsAsValues%22%3Atrue%2C%22showAllFields%22%3Afalse%7D%2C%22args%22%3A%5B%5D%2C%22stdin%22%3A%22%22%7D&cumulative=false&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0&resizeContainer=true&highlightLines=true&rightStdout=true" frameborder="0" scrolling="yes"></iframe>
+   </div>
+   
 You can create a table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
 
 .. figure:: Figures/whileLoopTrace.png
@@ -214,7 +218,7 @@ You can also add ``System.out.println(varaible)`` to print the value of a variab
 .. parsonsprob:: removeA
    :noindent:
 
-   The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.    
+   The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
    -----
    public static String remA(String s)
    {
