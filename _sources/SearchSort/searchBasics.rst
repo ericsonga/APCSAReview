@@ -36,7 +36,7 @@ If binary search requires the values in an array or list to be sorted, how can y
 	pair: sort; insertion
 	pair: sort; merge
 
-* Selection Sort - Selected the smallest item from the current location on to the end of the array and swap it with the current position.  Do this from index 0 to the array length - 2.  You don't have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.
+* Selection Sort - Select the smallest item from the current location on to the end of the array and swap it with the value at the current position.  Do this from index 0 to the array length - 2.  You don't have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.
 * Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right.  Start at index 1 and loop through the entire array.
 * Merge sort - Break the elements into two parts and recursively sort each part.  An array of one item is sorted (base case).  Then merge the two sorted arrays into one.
 
