@@ -18,8 +18,8 @@ When you go shopping, you might create a **list**. As you shop you might check t
 
     Figure 1: A couple of lists
     
-Lists in Java
-=============
+The List Interface
+=====================
 
 ..	index::
 	single: interface

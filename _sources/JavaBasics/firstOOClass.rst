@@ -66,3 +66,63 @@ Go ahead and click the |runbutton| button to see what gets printed.
   
    }
    
+.. note::
+
+   A class declaration typically starts with ``public`` then ``class`` then the name of the class.  The body of the class is defined inside a ``{`` and a ``}``.  
+   
+**Check Your Understanding**
+
+A person's name can actually be broken into parts.  We can create a name class to handle this.
+
+.. clickablearea:: name_class
+    :question: Click on the class declaration in the following class definition.
+    :iscode:
+    :feedback: The class declaration starts the class.  It contains the keyword class in it.
+
+    :click-correct:public class Name {:endclick:
+    
+        :click-incorrect:private String first;:endclick:
+        :click-incorrect:private String last;:endclick:
+        
+        :click-incorrect:public Name(String theFirst, String theLast):endclick:
+            :click-incorrect:first = theFirst;:endclick:
+            :click-incorrect:last = theLast;:endclick:
+         :click-incorrect:}:endclick:
+         
+         :click-incorrect:public void setFirst(String theFirst):endclick:
+            :click-incorrect:first = theFirst;:endclick:
+         :click-incorrect:}:endclick:
+         
+         :click-incorrect:public void setLast(String theLast):endclick:
+            :click-incorrect:first = theLast;:endclick:
+         :click-incorrect:}:endclick:
+         
+    :click-incorrect:}:endclick: 
+
+   
+.. clickablearea:: phone_class
+    :question: Click on the class declaration in the following class definition.
+    :iscode:
+    :feedback: The class declaration starts the class.  It contains the keyword class in it.
+
+    :click-correct:public class PhoneNumber {:endclick:
+    
+        :click-incorrect:private String country;:endclick:
+        :click-incorrect:private String areaCode:endclick:
+        :click-incorrect:private String number:endclick:
+        
+        :click-incorrect:public PhoneNumber(String theCountry, theArea, theNumber):endclick:
+            :click-incorrect:country = theCountry;:endclick:
+            :click-incorrect:areaCode = theArea;:endclick:
+            :click-incorrect:number = theNumber;:endclick:
+         :click-incorrect:}:endclick:
+         
+         :click-incorrect:public String getNumber() {:endclick:
+            :click-incorrect:return number;:endclick:
+         
+         
+         :click-incorrect:public void setNumber(String theNumber):endclick:
+            :click-incorrect:number = theNumber;
+         :click-incorrect:}:endclick:
+         
+    :click-incorrect:}:endclick: 

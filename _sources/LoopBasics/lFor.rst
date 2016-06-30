@@ -38,7 +38,9 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
 
     Figure 1: Showing how a for loop maps to a while loop
     
-What do you think will happen when you run the code below?  How would it change if you changed line 11 to  ``i = 3``?
+.. shortanswer:: songTestPred
+
+   What do you think will happen when you run the code below?  How would it change if you changed line 11 to <code>i = 3</code>?
 
 .. activecode:: lcfc1
    :language: java
@@ -141,7 +143,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
 
 .. parsonsprob:: print_evens
 
-   The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  **Drag the blocks from the left into the correct order on the right and indent them correctly**. You will be told if any of the blocks are in the wrong order or not indented correctly.
+   The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn't require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the "Check Me" button.
    -----
    public static void printEvens()
    {

@@ -10,7 +10,9 @@
 Compiler Errors
 ----------------
 
-Remember that the Java source file has to be translated into a class file before it can be run.  The compiler tries to make sense of your code, but if your code is incorrect, which means it has **syntax errors**, you will see error messages displayed below the code.  A **syntax error** is an error in the specification of the program.  An example would be if the code had a open curly brace ``{``, but no close curly brace ``}``.  The error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the complier says is the problem.  This section has code that causes complier errors to show you the types of error messages you might see and help you learn how to fix the errors. 
+Remember that the Java source file has to be translated into a class file before it can be run.  The compiler tries to make sense of your code, but if your code is incorrect, which means it has **syntax errors**, you will see error messages displayed below the code.  A **syntax error** is an error in the specification of the program.  An example of a syntax error is if the code has a open curly brace ``{``, but no close curly brace ``}``.  
+
+The error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the complier says is the problem.  This section has code that causes complier errors to show you the types of error messages you might see and help you learn how to fix the errors. 
 
 
 Compile Time Error 1
