@@ -13,8 +13,8 @@ Java Review for the AP CS A Exam
 
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
-   
-Preface and Getting Setup 
+
+Preface and Getting Setup
 :::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
@@ -22,7 +22,7 @@ Preface and Getting Setup
 
    GettingStarted/preface.rst
    GettingStarted/ptest1.rst
-   
+
 Java Basics: Classes and Objects
 :::::::::::::::::::::::::::::::::::::::::::
 
@@ -72,7 +72,7 @@ Strings
    Strings/sEasyMC.rst
    Strings/sMedMC.rst
    Strings/sHardMC.rst
-    
+
 
 Conditionals
 ::::::::::::::::::::
@@ -91,7 +91,7 @@ Conditionals
    Conditionals/cMedMC.rst
    Conditionals/cHardMC.rst
    Conditionals/timeFRQ.rst
-   
+
 Magpie Chatbot Lab
 ::::::::::::::::::::
 
@@ -102,7 +102,7 @@ Magpie Chatbot Lab
    Labs/magpie2.rst
    Labs/magpie3.rst
    Labs/magpie4.rst
-   
+
 Loops
 ::::::::::::::::::::
 
@@ -119,7 +119,7 @@ Loops
    LoopBasics/lHardMC.rst
    LoopBasics/selfDivisorA.rst
    LoopBasics/stringScrambleA.rst
-   
+
 Arrays
 ::::::::::::::::::::
 
@@ -136,12 +136,15 @@ Arrays
    ArrayBasics/aPractice.rst
    ArrayBasics/aEasyMC.rst
    ArrayBasics/aMedMC.rst
-   ArrayBasics/aHardMC.rst  
+   ArrayBasics/aHardMC.rst
    ArrayBasics/arrayExam.rst
    ArrayBasics/selfDivisorB.rst
    ArrayBasics/horseBarnA.rst
    ArrayBasics/horseBarnB.rst
-   
+   ArrayBasics/numberCube.rst
+   ArrayBasics/sound.rst
+   ArrayBasics/batteryCharger.rst
+
 List and ArrayList
 ::::::::::::::::::::
 
@@ -161,13 +164,19 @@ List and ArrayList
    ListBasics/climbClubA.rst
    ListBasics/climbClubB.rst
    ListBasics/climbClubC.rst
-   
+   ListBasics/cookieOrder.rst
+   ListBasics/fuelDepot.rst
+   ListBasics/tileGame.rst
+   ListBasics/flightList.rst
+   ListBasics/stringCoder.rst
+   ListBasics/checker.rst
+
 Two-dimensional Arrays
 :::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
-   
+
    Array2dBasics/a2dBasics.rst
    Array2dBasics/a2dDAS.rst
    Array2dBasics/a2dLoop.rst
@@ -179,7 +188,8 @@ Two-dimensional Arrays
    Array2dBasics/a2dHardMC.rst
    Array2dBasics/grayImageA.rst
    Array2dBasics/grayImageB.rst
-   
+   Array2dBasics/routeCipher.rst
+
 Object-Oriented Concepts
 ::::::::::::::::::::::::
 
@@ -208,7 +218,10 @@ Object-Oriented Concepts
    OOBasics/TrioScore1.rst
    OOBasics/TrioScore2.rst
    OOBasics/TrioScore3.rst
-   
+   OOBasics/APLine.rst
+   OOBasics/gameState.rst
+   OOBasics/pet.rst
+
 Recursion
 :::::::::
 
@@ -223,24 +236,25 @@ Recursion
    Recursion/rEasyMC.rst
    Recursion/rMedMC.rst
    Recursion/rHardMC.rst
-   
+
 Searching and Sorting
 ::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 2
-   
+
    SearchSort/searchBasics.rst
-   SearchSort/seqSearch.rst  
+   SearchSort/seqSearch.rst
    SearchSort/binarySearch.rst
    SearchSort/selSort.rst
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
    SearchSort/ssEasyMC.rst
-   
-   
+
+
 Preparing for the Exam
 :::::::::::::::::::::::::::::::::
+
 .. toctree::
    :maxdepth: 2
 
@@ -250,7 +264,6 @@ Preparing for the Exam
    Tests/test3nt.rst
    Tests/test4nt.rst
 
-   
 Timed Multiple-Choice Exams
 :::::::::::::::::::::::::::::::::
 
@@ -261,8 +274,8 @@ Timed Multiple-Choice Exams
    Tests/test2.rst
    Tests/test3.rst
    Tests/test4.rst
-   
-Appendix 1 
+
+Appendix 1
 ::::::::::::::::::::::::::::
 
 .. toctree::
@@ -270,16 +283,9 @@ Appendix 1
 
    Appendix/DrJava.rst
    Appendix/gridWorld.rst
-   
+
 Indices
 ::::::::::::::::::
 
 * :ref:`genindex`
 * :ref:`search`
-   
-
-
-
-
-
-
