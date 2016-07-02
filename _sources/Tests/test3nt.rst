@@ -113,7 +113,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 .. mchoice:: qtnt3_4
    :answer_a: arr[i][j] = ans[i];
    :answer_b: ans[i] += arr[i][j];
-   :answer_c: ans[i][j] += arr[i][j];
+   :answer_c: ans[i ][j] += arr[i][j];
    :answer_d: ans[i] = arr[i][j];
    :answer_e: arr[i][j] += ans[i];
    :correct: b
@@ -166,16 +166,16 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           
       	  while (low <= high)
       	  {
-              int mid = (low + high) / 2;
-      	  
-              if (arr[mid] == key)
-                  return mid;
-      		      
-              else if (arr[mid] < key)
-                  low = mid + 1;
-      			  
-              else
-                  high = mid - 1;
+      	      int mid = (low + high) / 2;
+      	      
+      	      if (arr[mid] == key)
+      	          return mid;
+      	          
+      	      else if (arr[mid] < key)
+      	          low = mid + 1;
+      	          
+      	      else
+      	          high = mid - 1;
       	  }
       		
       	 return -1;
@@ -464,7 +464,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
       return true;
       
-
       // III.
       for (int i = 0; i < list.size(); i++)
       {
