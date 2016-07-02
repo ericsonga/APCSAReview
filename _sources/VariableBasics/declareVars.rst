@@ -22,10 +22,23 @@ When you declare a variable, a memory location (sequential number of bits) is se
     :width: 500px
     :figclass: align-center
     
-    Figure 2: Examples of variables with names and values.  Notice that the different types get a different amount of space.
+    Figure 1: Examples of variables with names and values.  Notice that the different types get a different amount of space.
 
-To **declare** (create) a variable, you will specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).  If you try to run this code you will get an error when you try to print the value of these variables.  They haven't been initialized to any value yet.  
- 
+To **declare** (create) a variable, you will specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).  You can set the value of the variable after you declare it as shown below.
+
+.. figure:: Figures/typeName.png
+    :width: 100px
+    :figclass: align-center
+    
+    Figure 2: How to Declare a Variable
+    
+Here is an example declaration of a variable called score.
+
+.. code-block:: java
+
+  int score;
+  
+The value of score can be set later as shown below.  Run the following code to see what is printed.
  
 .. activecode:: lcdv1
    :language: java
@@ -35,17 +48,36 @@ To **declare** (create) a variable, you will specify the type, leave at least on
       public static void main(String[] args)
       {
         int score; 
+        score = 0;
         System.out.println(score);
         double price;
+        price = 2.55;
         System.out.println(price);
         boolean won;
+        won = false;
         System.out.println(won);
       }
    }
 
-Think of the semicolon in Java like a period (``.``) in English.  It is how you show the end of a sentence.  You use a semicolon (``;``) to show the end of a Java statement.  You will not be penalized on the exam if you forget the semicolon.  
+.. note ::
+
+   Think of the semicolon in Java like a period (``.``) in English.  It is how you show the end of a sentence.  You use a semicolon (``;``) to show the end of a Java statement.  You will not be penalized on the exam if you forget the semicolon.  
 
 You can also optionally specify an initial value for the variable by adding an equals sign ``=`` followed by the value. 
+
+.. figure:: Figures/typeNameValue.png
+    :width: 150px
+    :figclass: align-center
+    
+    Figure 2: How to Declare and Initialize the Value of a Variable
+    
+Here is an example declaration of a variable with a setting of its initial value.
+
+.. code-block:: java
+
+  int score = 4;
+  
+Run the following code to see what is printed.
 
 .. activecode:: lcdv2
    :language: java
@@ -63,10 +95,11 @@ You can also optionally specify an initial value for the variable by adding an e
       }
    }
 
-The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the space (box) associated with the name on the left to the value on the right. The first line above sets the value in the box called score to 4. See Figure 2 for what value each variable holds after this code executes.
+.. note ::
 
-Note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.   Can you fix the code below so that it compiles and prints the value of score?
+   The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the space (box) associated with the name on the left to the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.   Can you fix the code below so that it compiles and prints the value of score?
 
+This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
 
 .. activecode:: lcdv3
    :language: java
