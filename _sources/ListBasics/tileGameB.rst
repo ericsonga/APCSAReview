@@ -1,12 +1,12 @@
 .. qnum::
-   :prefix:  8-16-
+   :prefix:  8-17-
    :start: 1
 
-Free Response - Tile Game
-=========================
+Free Response - Tile Game B
+===========================
 
 ..	index::
-	single: tilegame
+	single: tilegameb
     single: free response
 
 The following is a free response question from 2009.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
@@ -97,41 +97,6 @@ A partial definition of the *TileGame* class is given below.
 
     // There may be instance variables, constructors, and methods that are not shown.
    }
-
-Solve Part A
-------------
-
-(a) Write the *TileGame* method *getIndexForFit* that determines where a given tile, in its current
-    orientation, fits on the game board. A tile can be inserted at either end of a game board or between two
-    existing tiles if the side(s) of the new tile match the adjacent side(s) of the tile(s) currently on the game
-    board. If there are no tiles on the game board, the position for the insert is 0. The method returns the position
-    that the new tile will occupy on the game board after it has been inserted. If there are multiple possible
-    positions for the tile, the method will return any one of them. If the given tile does not fit anywhere on the
-    game board, the method returns -1.
-
-For example, the following diagram shows a game board and two potential tiles to be placed. The call
-*getIndexForFit(tile1)* can return either 3 or 4 because *tile1* can be inserted between the
-tiles at positions 2 and 3, or between the tiles at positions 3 and 4. The call *getIndexForFit(tile2)*
-returns -1 because *tile2*, in its current orientation, does not fit anywhere on the game board.
-
-.. figure:: Figures/tileGameDiagram4.png
-   :width: 651px
-   :align: center
-   :figclass: align-center
-
-Complete method `getIndexForFit` below.
-
-.. activecode:: FRQTileGameA
-   :language: java
-
-   /** Determines where to insert tile, in its current orientation, into game board
-   *   @param  tile the tile to be placed on the game board
-   *   @return the position of tile where tile is to be inserted:
-   *            0 if the board is empty;
-   *           -1 if tile does not fit in front, at end, or between any existing tiles;
-   *           otherwise, 0 <= position returned <= board.size()
-   */
-   private int getIndexForFit(NumberTile tile)
 
 Solve Part B
 ------------
