@@ -18,7 +18,7 @@ The following is a free response question from 2009.  It was question 1 on the e
     :align: center
     :figclass: align-center
 
-The tiles are represented by the *NumberTile* class, as given below.
+The tiles are represented by the ``NumberTile`` class, as given below.
 
 .. code-block:: java
 
@@ -61,7 +61,7 @@ the right, and the new tile is inserted at position 3, as shown below.
     :align: center
     :figclass: align-center
 
-A partial definition of the *TileGame* class is given below.
+A partial definition of the ``TileGame`` class is given below.
 
 .. code-block:: java
 
@@ -77,20 +77,24 @@ A partial definition of the *TileGame* class is given below.
      *  @param tile the tile to be placed on the game board
      *  @return the position of tile where tile is to be inserted:
      *          0 if the board is empty;
-     *         -1 if tile does not fit in front, at end, or between any existing files;
+     *         -1 if tile does not fit in front, at end,
+     *            or between any existing files;
      *         otherwise, 0 <= position returned <= board.size()
      */
     private int getIndexForFit(NumberTile tile)
     { /* to be implemented in part (a) */ }
 
-    /** Places tile on the game board if it fits (checking all possible tile orientations if necessary).
+    /** Places tile on the game board if it fits
+     *  (checking all possible tile orientations if necessary).
      *  If there are no tiles on the game board, the tile is placed at position 0.
      *  The tile should be placed at most 1 time.
      *  Precondition: board is not null
      *  @param tile the tile to be placed on the game board
      *  @return true if tile is placed successfully; false otherwise
-     *  Postcondition: the orientations of the other tiles on the board are not changed
-     *  Postcondition: the order of the other tiles on the board relative to each other is not changed
+     *  Postcondition: the orientations of the other tiles
+     *                 on the board are not changed
+     *  Postcondition: the order of the other tiles on the board relative to each
+     *                 other is not changed
      */
     public boolean insertTile(NumberTile tile)
     { /* to be implemented in part (b) */ }
@@ -98,14 +102,22 @@ A partial definition of the *TileGame* class is given below.
     // There may be instance variables, constructors, and methods that are not shown.
    }
 
+**Part b.**
+Write the ``TileGame`` method ``insertTile`` that attempts to insert the given tile on the game board.
+The method returns ``true`` if the tile is inserted successfully and ``false`` only if the tile cannot be placed
+on the board in any orientation.
+
+How to Solve This
+--------------------
+
+The Algorithm
+-------------------
+
 Solve Part B
 ------------
 
-(b) Write the *TileGame* method *insertTile* that attempts to insert the given tile on the game board.
-    The method returns *true* if the tile is inserted successfully and *false* only if the tile cannot be placed
-    on the board in any orientation.
-
-Assume that *getIndexForFit* works as specified, regardless of what you wrote in part (a).
+Complete the method ``insertTile`` below.
+Assume that ``getIndexForFit`` works as specified, regardless of what you wrote in part (a).
 
 .. activecode:: FRQTileGameB
    :language: java
