@@ -248,6 +248,7 @@ Preparing for the Exam
    Tests/test1nt.rst
    Tests/test2nt.rst
    Tests/test3nt.rst
+   Tests/test4nt.rst
 
    
 Timed Multiple-Choice Exams
