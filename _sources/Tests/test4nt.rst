@@ -14,13 +14,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: -1
    :answer_e: 1
    :correct: b
-   :feedback_a: Notice where min is instantiated in the code. At the time that min is instantiated, i and j have not been instantiated and cannot be used. This choice will create a compile-time error.
+   :feedback_a: Notice where min is set in the code. At the time that min is set, i and j have not been delcared and cannot be used. This choice will create a compile-time error.
    :feedback_b: Using the first value in the array guarantees that the correct minimum value will be found and returned, regardless of the range of numbers in the array.
-   :feedback_c: Setting min equal to 0 might find the minimum value in some cases. However, if every number in the array is positive, then min will remain 0 and the minimum value in the array will not have been found.
-   :feedback_d: If min equaled -1, the method would only work correctly if there was a value in the array that was smaller than -1. If all of the values in the array are greater than -1, then the correct minimum value will not be found.
+   :feedback_c: Setting min equal to 0 might find the minimum value in some cases. However, if every number in the array is positive, then min will remain 0 and it will not find the minimum value in the array.
+   :feedback_d: If min is set to -1, the method would only work correctly if there was a value in the array that was equal to or smaller than -1. If all of the values in the array are greater than -1, then the correct minimum value will not be found.
    :feedback_e: This value would only work correctly if there was a value in the array that was less than 1. If the array is filled with positive numbers, 1 will remain the minimum and the correct minimum may not be found.
    
-   Consider the method ``minVal``, shown below. ``minVal`` compares every value in the given array to ``min`` to find the smallest value, which is then returned. At the beginning of the code, ``min`` is instantiated to 1. Which of the following is the best value to instantiate ``min`` so the method will compile and work as intended?
+   Consider the method ``minVal``, shown below. ``minVal`` compares every value in the given array to ``min`` to find the smallest value, which is then returned. At the beginning of the code, ``min`` is set to 1. Which of the following is the best value to set ``min`` so that the method will compile and work as intended?
    
    .. code-block:: java
 
@@ -92,7 +92,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: d
    :feedback_a: This loop is correct, but the loop in II is also correct. This method may be completed using a for loop or a while loop.
    :feedback_b: This loop is correct, but the loop in I is also correct. This method may be completed using a for loop or a while loop.
-   :feedback_c: This method cannot be completed using a for-each loop. The format of a for-each loop requires a list or array to be completed. 
+   :feedback_c: This method cannot be completed using a for-each loop. The for-each loop only loops through elements of a collection like a list or array.
    :feedback_d: Both of these loops multiply num by itself exactly ten times.
    :feedback_e: This method cannot be completed using a for-each loop. The format of a for-each loop requires a list or array to be completed. 
    
@@ -100,28 +100,28 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    .. code-block:: java
     
-      //I.
-      
+      // I.
+      int total = 1;
       for (int i = 0; i < 10; i++)
       {
-          num = num * num;
+          total = total * num;
       }
           
-      //II.
-      
+      // II.
       int count = 0;
+      int total = 1;
       
       while (count < 10)
       {
           count++;
-          num = num * num;
+          total = total * num;
       }
       
-      //III.
-      
+      // III.
+      int total = 1;
       for (int i : 10)
       {
-          num = num * 10;
+          total = total * num;
       }
       
 .. mchoice:: qtnt4_5
@@ -131,11 +131,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: I and II only
    :answer_e: II and III only
    :correct: e
-   :feedback_a: Color is a private instance variable located in the Animal class. Private instance variables are not passed from parent classes to children classes and cannot be accessed by children classes.
-   :feedback_b: getWeight and makeNoise are abstract methods in the Animal class, but they are defined in the Cat class and can be used by Cat objects. Although this answer is correct, III is correct as well.
-   :feedback_c: getWeight and makeNoise are abstract methods in the Animal class, but they are defined in the Cat class and can be used by Cat objects. Although this answer is correct, II is correct as well.
-   :feedback_d: Color is a private instance variable located in the Animal class. Private instance variables are not passed from parent classes to children classes and cannot be accessed by children classes.
-   :feedback_e: getWeight and makeNoise are both defined in the Cat class. They can be used by Cat objects.
+   :feedback_a: Color is a private instance variable located in the Animal class. Private instance variables cannot be directly accessed using dot notation in external classes.
+   :feedback_b: getWeight and makeNoise are abstract methods in the Animal class, so they can both be used by anything declared to be of the type Animal.
+   :feedback_c: getWeight and makeNoise are abstract methods in the Animal class, so they can both be used by anything declared to be of the type Animal.  
+   :feedback_d: Color is a private instance variable located in the Animal class. Private instance variables cannot be directly accessed using dot notation in external classes.
+   :feedback_e: getWeight and makeNoise are both defined in the Animal class, so they can both be used by anything declare to be of the type Animal.
    
    Consider the ``Animal`` and ``Cat`` classes, shown below. In another class, the line ``Animal fluffy = new Cat ("orange", "Fluffy", 11)`` appears. Which of the following declarations will compile without error?
 
@@ -192,7 +192,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: This method results in an infinite loop.
    :correct: b
    :feedback_a: This is the value returned for mysteryNum(6). Try tracing the recursive calls again.
-   :feedback_b: Correct! This method calculates n! (n factorial) by subtracting 1 from n until n equals 1. Then, it works through the calls, multiplying each value of n by the previous values. 5 * 4 * 3 * 2 * 1 equals 120.
+   :feedback_b: This method calculates n! (n factorial) by subtracting 1 from n until n equals 1. Then, it works through the calls, multiplying each value of n by the previous values. 5 * 4 * 3 * 2 * 1 equals 120.
    :feedback_c: This is the value returned for mysteryNum(4). Trace the calls again.
    :feedback_d: Notice the recursive call. This would be correct if the code added n to the value returned by the recursive call. Instead, the returned value is multiplied by n.
    :feedback_e: Notice the precondition for the method. Because every value will be greater than 1, the method will always reach its base case.
@@ -202,7 +202,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    .. code-block:: java
    
       /** Precondition: all values of n are greater than 1 **/
-      
       public int mysteryNum (int n)
       {
           if (n == 1)
@@ -222,7 +221,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_a: The number 0011 0101 has values at 2 ^ 0, 2 ^ 2, 2 ^ 4, and 2 ^ 5. These values equal 1, 2, 16, and 32 in the decimal number system. 1 + 2 + 16 + 32 equals 53.
    :feedback_b: Remember that the binary number system starts at 2 ^ 0, not 2 ^ 1. The first digit in binary represents 1, not 2.
    :feedback_c: Remember that the binary number system starts at 2 ^ 0. The first digit in a binary number represents 1, not 0.
-   :feedback_d: If the last digit of a binary number is 1, then the number must be even. Check your calculations again.
+   :feedback_d: If the last digit of a binary number is 1, then the result must be odd. Check your calculations again.
    :feedback_e: Remember that the binary number system starts at 2 ^ 0, not 2 ^ 1. The first digit in binary represents 1, not 2. Check your calculations and try again.
 
    Convert ``0011 0101`` from binary to decimal.
@@ -274,8 +273,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: 5!
    :answer_e: This method will result in an infinite loop.
    :correct: c
-   :feedback_a: This would be correct if the recursive call contained a return to n + "! " in addition to the call to numList. Notice the recursive call in this problem. Only the value of n - 1 is returned, with nothing else added.
-   :feedback_b: This would be correct if the recursive call contained a call to numList AND a return of n + "! ". Notice the recursive call in this problem. Only the value of n - 1 is returned, with nothing else added.
+   :feedback_a: This would be correct if the recursive call contained a return to n + "! " in addition to the call to numList. Notice the recursive call in this problem. Only the value of numList(n - 1) is returned, with nothing else added.
+   :feedback_b: This would be correct if the recursive call contained a call to numList AND a return of n + "! ". Notice the recursive call in this problem. Only the value of numList(n - 1) is returned, with nothing else added.
    :feedback_c: The method makes recursive calls until 0 is reached, then "0! " is returned. None of the recursive calls modify the returned response, so only "0! " is returned.
    :feedback_d: Notice the if-statement. When n + "! " is returned, n equals the base case found in the if-statement. This occurs ONLY when n == 0, not 5.
    :feedback_e: An infinite loop will not occur in this method, because of the precondition. After a certain number of calls, n will reach the base case and the method will end.
@@ -285,7 +284,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    .. code-block:: java
      
        /** Precondition: all values of n are greater than 1 **/
-     
        public String numList (int n)
        {
            if (n == 0)
@@ -302,11 +300,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: [7, 2, 8, 1, 6, 5, 9] 
    :answer_e: [7, 2, 8, 1, 5]
    :correct: a
-   :feedback_a: 8 is added at index 2, then index 4 is set to equal 1. The value at index 3 is erased, and 9 is added to the end of the array. Finally, the value at index 5 is set to equal 5.
+   :feedback_a: 8 is added at index 2, then index 4 is set to equal 1. The value at index 3 is removed, and 9 is added to the end of the array. Finally, the value at index 5 is set to equal 5.
    :feedback_b: Remember that for ArrayLists, indexing starts at 0, not 1.
-   :feedback_c: When the add method has two parameters, the first parameter index is set to the value of the second parameter. The two parameters are not added to the end of the array.
-   :feedback_d: The set method differs from the add method in that it erases the original value of the specified index. The set method does NOT shift the numbers to the right of the specified index, and the original value is deleted.
-   :feedback_e: The add method adds the specified value at the specified index and shifts every index to the right of the specified value by 1. It does NOT delete the value at the original index.
+   :feedback_c: When the add method has two parameters, the first parameter specifies the index and the second is the value to add at that index which moves any existing values to the right. The two parameters are not added to the end of the array.
+   :feedback_d: The set method differs from the add method in that it replaces the original value at the specified index. The set method does NOT shift the numbers to the right of the specified index.
+   :feedback_e: The add method adds the specified value at the specified index and shifts every index to the right of the current index. It does NOT delete the value at the original index.
    
    An ArrayList of integers ``numbers`` contains the values ``[7, 2, 4, 6, 3]``. What are the contents of ``numbers`` after the following code has been executed?
    
@@ -319,17 +317,17 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       numbers.set(5, 5);      
       		
 .. mchoice:: qtnt4_11
-   :answer_a: Change the Meal class from an abstract class.
-   :answer_b: Change the Meal class from an abstract class and change all the methods from abstract methods.
+   :answer_a: Remove the abstract keyword from the Meal class declaration.
+   :answer_b: Remove the abstract keyword from the Meal class and method declarations.
    :answer_c: Create a constructor for the Meal class.
-   :answer_d: Change the addToMenu method from an abstract method in the Meal class.
+   :answer_d: Remove the abstract keyword from the addToMenu method in the Meal class.
    :answer_e: Define the addToMenu method in the Breakfast class.
    :correct: e
    :feedback_a: Abstract methods cannot be placed in classes that are not abstract. In addition, the Meal class should remain an abstract class. Abstract classes can have many derived classes, so the Meal class can have multiple subclasses other than Breakfast.
    :feedback_b: Although this answer will allow the classes to compile, it is not the best solution. The Meal class should remain an abstract class. Abstract classes can have many derived classes, so the Meal class can have multiple subclasses other than Breakfast.
-   :feedback_c: Creating a constructor for the Meal class will not help the classes compile. The problem with these classes lies in the methods, not the constructors. 
-   :feedback_d: In order for this to compile, the addToMenu method would also have to be defined in the Meal class. Otherwise, the method is not abstract and not defined, and the Meal class would not compile.
-   :feedback_e: Because Meal is an abstract class and addToMenu is an abstract method, addToMenu MUST be defined in the Breakfast class. Abstract methods must be defined in the classes that inherit them.
+   :feedback_c: Creating a constructor for the Meal class will not make the classes compile. The problem with these classes lies in the methods, not the constructors. 
+   :feedback_d: In order for this to compile, the addToMenu method would also have to be defined in the Meal class - would have to have a body.
+   :feedback_e: Because Meal is an abstract class and Breakfast is not, addToMenu MUST be defined in the Breakfast class. Abstract methods must be defined in the classes that implement them, if that class is not also abstract.  
 
    Consider the ``Breakfast`` and ``Meal`` classes shown below. Currently, the ``Breakfast`` class will not compile. Which of the following is the BEST solution to make ``Meal`` and ``Breakfast`` compile and run as intended?
    
@@ -339,7 +337,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
           public abstract String getMealTime;
           
-          public abstract List <String> getMenu();
+          public abstract List<String> getMenu();
           
           public abstract void addToMenu (String food);
           
@@ -352,7 +350,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           private String time;
           private List<String> menu;
           
-          public Breakfast (double theCalories, String theTime, ArrayList<String> theMenu)
+          public Breakfast (double theCalories, String theTime, 
+                            ArrayList<String> theMenu)
           {
               calories = theCalories;
               time = theTime;
@@ -426,11 +425,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: I and IV only
    :answer_e: II and III only
    :correct: e
-   :feedback_a: getColor and numOfWheels are both methods that are inherited by the Bike and Car classes. Both II and III are correct.
-   :feedback_b: color is an instance variable located in the Vehicle class. Instance variables are not passed to children classes from parent classes, and children classes cannot access them.
-   :feedback_c: wheels is an instance variable located in the Vehicle class. Instance variables are not passed to children classes from parent classes, and children classes cannot access them. getColor is a method that is accessible to children classes.
-   :feedback_d: wheels and color are both instance variables from the Vehicle class. Instance variables are not passed to children classes from parent classes, and children classes cannot access them.
-   :feedback_e: getColor and numOfWheels are both methods that are inherited by the Bike and Car classes.
+   :feedback_a: getColor and numOfWheels are both public methods of the Vehicle class and so the code will compile.
+   :feedback_b: color is a private instance variable located in the Vehicle class. Private instance variables can not be directly accessed using dot notation in external classes.
+   :feedback_c: wheels is a private instance variable located in the Vehicle class. Private instance variables can not be directly accessed using dot notation in external classes.
+   :feedback_d: wheels and color are both private instance variables in the Vehicle class. Private instance variables can not be directly accessed using dot notation in external classes.
+   :feedback_e: getColor and numOfWheels are both public methods in the Vehicle class and can be invoked in any class on a variable of type Vehicle. 
    
    The ``Vehicle``, ``Bike``, and ``Car`` classes are shown. The objects ``a`` and ``b`` have been declared in a different class. Which of the following lines will compile without error? 
 
@@ -499,7 +498,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: b
    :feedback_a: This would be correct if s.substring(0, 1) was returned BEFORE the recursive call. Because the recursive call is placed before s.substring(1), the compiler loops through the entire word and returns the last character of the word before any other character.
    :feedback_b: This code removes the first character from the string s until the length of s equals 1. Then, the letters are returned in reverse order.
-   :feedback_c: Notice the substrings in this method. s.substring(1), not s.substring(0, 1) is used in the recursive call. s.substring(1) starts at the first index, taking off the first letter of a String and returning the rest of the characters.
+   :feedback_c: Notice the substrings in this method. s.substring(1), not s.substring(0, 1) is used in the recursive call. s.substring(1) starts at the first index, taking off the first letter of a string and returning the rest of the characters.
    :feedback_d: Notice the substrings in this method. s.substring(0, 1), not s.substring(1) is returned. s.substring(0, 1) only returns one character, so only one character at a time is returned to the method.
    :feedback_e: This would be correct if the last line returned s.substring(1) and wordMixer(s.substring(0, 1)). Because the first substring is used to make a call to the string with only the first character removed, the code will loop through all of the letters before it returns a character. 
 
@@ -524,9 +523,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: x / y == 1
    :answer_e: x / y == 0
    :correct: a
-   :feedback_a: The modulus operator (%) returns the remainder left by integer division. If x % y == 0, x is divisible by y, leaving no remainder.
-   :feedback_b: The modulus operator (%) returns the remainder left by integer division. If x % y == 1, x is not divisible by y, as there is a remainder of 1 left over.
-   :feedback_c: The modulus operator (%) returns the remainder left by integer division. If x % y == 2, x is not divisible by y, because there is a remainder of 2 left after the division.
+   :feedback_a: The modulus operator (%) returns the remainder left by integer division. If x % y == 0, x is evenly divisible by y, leaving no remainder.
+   :feedback_b: The modulus operator (%) returns the remainder left by integer division. If x % y == 1, x is not evenly divisible by y, as there is a remainder of 1 left over.
+   :feedback_c: The modulus operator (%) returns the remainder left by integer division. If x % y == 2, x is not evenly divisible by y, because there is a remainder of 2 left after the division.
    :feedback_d: The modulus operator (%) is used to check if numbers are divisible by each other. The division operator (/) should be replaced with a %.
    :feedback_e: The division operator does not check if one number is divisible by another. In integer division, remainders are calculated by the modulus operator (%).
 
@@ -537,7 +536,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      
      
      /* Precondition: x and y are both integers greater than 0 */
-     
       public boolean divisible (int x, int y)
       {
           if ( /* to be completed */)
@@ -562,17 +560,17 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    A database containing 2,000 sorted integers must be searched using a binary search algorithm. What is the maximum number of iterations of the binary search method that   must occur in order to find a specified value or guarantee that it is not in the database?
 
 .. mchoice:: qtnt4_18
-   :answer_a: I only
-   :answer_b: II only
-   :answer_c: III only
-   :answer_d: IV only
+   :answer_a: Having a constructor in the Student class that has a different parameter list than the constructor in the Person class. 
+   :answer_b: Having a sayName() method in Person and in Student.  
+   :answer_c: Having sayName() and sayName(String nickname) in the Student class.
+   :answer_d: Having the changeGrade() method in the Student class.
    :answer_e: None of the above
    :correct: c
-   :feedback_a: This is not an example of method overloading. In this constructor method, the parent constructor is called, but the method is not overloaded. Method overloading occurs when a class has two or more methods with the same name and different parameters.
-   :feedback_b: This is an example of method overwriting, not method overloading. Method overwriting occurs when a method is redefined in a subclass, and the method keeps the same parameters. Method overloading occurs when there are two or more methods with the same name and different parameters in the same class.
-   :feedback_c: In the Student class, there are two different sayName methods. The second sayName method has the same name and same return type, but the parameters differ. This is an example of method overloading.
-   :feedback_d: This is not an example of method overloading. Method overloading occurs when a class has two or more methods with the same name and different parameters.
-   :feedback_e: Method overloading occurs when a class has two or more methods with the same name and different parameters. There is a method in the Student class with the same name and two different sets of parameters.
+   :feedback_a: This is not an example of method overloading. In this constructor method, the parent constructor is called, but the method is not overloaded. Method overloading occurs when a class has two or more methods with the same name and a different parameter list (like a different number of parameters). 
+   :feedback_b: This is an example of method overridding, not method overloading. Method overridding occurs when a method is redefined in a subclass, and the method has the same parameter list. Method overloading occurs when there are two or more methods with the same name and different parameter lists in the same class.
+   :feedback_c: In the Student class, there are two different sayName methods. The second sayName method has the same name and same return type, but the parameter lists differ. This is an example of method overloading.
+   :feedback_d: This is just an example of adding new methods to the child class, that were not inherited from the parent class. 
+   :feedback_e: Method overloading occurs when a class has two or more methods with the same name and different parameters. There is a method in the Student class with the same name and two different parameter lists.
    
    The ``Person`` and ``Student`` classes are located below. Which of the following methods contains an example of method overloading?
    
@@ -583,13 +581,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           private String name;
           private int age;
          
-          public Person (String theName, int theAge)
+          public Person(String theName, int theAge)
           {
               name = theName;
               age = theAge;
           }
           
-          public String sayName ()
+          public String sayName()
           {
               return name;
           }
@@ -604,7 +602,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
           private int grade;
           
-          public Student (String theName, int theAge, int theGrade)
+          public Student(String theName, int theAge, int theGrade)
           {
               super (theName, theAge);
               grade = theGrade;
@@ -631,33 +629,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           }
       }
       
-      // I. 
-      public Student (String theName, int theAge, int theGrade)
-      {
-          /* implementation shown above */
-      }
-          
-      // II.
-      public String sayName()
-      {
-          /* implementation shown above */
-      }
       
-      // III.
-      public String sayName(String nickname)
-      {
-          /* implementation shown above */
-      }
-      
-      // IV.
-      public void changeGrade()
-      {
-          /* implementation shown above */
-      }
-       
-       
-          
-          
 
 .. mchoice:: qtnt4_19
    :answer_a: I only
@@ -666,25 +638,23 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: I and II only
    :answer_e: I and III only
    :correct: d
-   :feedback_a: This method may be completed using a while lop or a for loop. There are two correct answers.
-   :feedback_b: This method may be completed using a while lop or a for loop. There are two correct answers.
-   :feedback_c: An abbreviated for-loop would not be a good choice for this method. In the loop, num is decremented. Variables cannot be modified in abbreviated for-loops. Also, because num refers to a single integer, not a list or an array of integers, the loop will not compile.
-   :feedback_d: Both of these loops print out the value of num, then decrement by 1 and print on each iteration of the loop.
-   :feedback_e: An abbreviated for-loop may not be used for this method. In the loop, num is decremented. Variables, like num, cannot be modified in abbreviated for-loops.
+   :feedback_a: This is correct, but there is another answer that is also correct.
+   :feedback_b: This is correct, but there is another answer that is also correct.
+   :feedback_c: The for-each loop would not compile.  The variable num is not an array or list.
+   :feedback_d: Both I and II print out the value of num and then decrement it by 1.
+   :feedback_e: The for-each loop would not compile.  The variable num is not an array or list.
       
    You are trying to write the ``countDown`` method. The ``countDown`` method takes a parameter ``num`` and decrements it by 1, printing every time until ``num`` equals 0. Which of the following loops will make the ``countDown`` method compile and work as intended?
    
    .. code-block:: java
      
      // I.
-     
      for (int i = num; num > 0; i--;)
      {
          System.out.print (i + " ");
      }
      
      // II.
-     
      while (num > 0)
      {
          System.out.print (num + " ");
@@ -692,7 +662,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      }
      
      /// III.
-     
      for (int i : num)
      {
          System.out.print(i + " ");

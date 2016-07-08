@@ -74,6 +74,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               return color;
           }
       } 
+      
       public class Swan extends Bird
       {
           /* no constructors or other methods have been declared */
@@ -122,7 +123,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_c: Notice that ans is a 1-D array, not a 2-D array. There cannot be two indexes for an element of ans, because ans is only a 1-D array.
    :feedback_d: This line reassigns the value of arr[i][j] to ans[i], but it does not sum all the values in the row. This line would return an array with the value in the last column of each row.
    :feedback_e: Remember that assignment works from right to left in Java. This line adds the value of ans[i] in the 1-D array to the value of arr[i][j] in the 2-D array. The 2-D array should not be modified by this method.
-   
+
    The method ``rowSums`` returns an array of integers. Each element of the array holds the sum of the corresponding row of a 2-D matrix. Which line correctly fills in ``\* to be determined *\`` in ``rowSums``?
 
    .. code-block:: java
@@ -134,9 +135,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       	  for (int i = 0; i < arr.length; i++)
       	  {
       	      for (int j = 0; j < arr[0].length; j++)
-      		  {
+      	      {
       		      /* to be determined */
-      		  }
+              }
       	  }
       		
       	  return ans;
@@ -154,7 +155,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_c: 30 would be found in 3 iterations. After the third iteration of the while loop, mid would equal 6. list[6] equals 30, so 6 is returned and the while-loop is exited.
    :feedback_d: 4 iterations is too many iterations. Only 3 iterations are needed to find 30 in the array. After 4 iterations for an array with 7 elements, either the key is not present in the array or the key is at the first or last index of the array.
    :feedback_e: Only 3 iterations of the while loop are needed to find 30 in the array. After 5 iterations for an array with seven elements, it must be that the key was not found.
-   
+
    Consider the following method ``binSearch``, which uses binary search to locate an element ``key`` in an array of integers ``arr``. If ``list`` is an array of integers containing ``{4, 7, 9, 11, 20, 24, 30, 41}``, how many iterations of the while loop occur in ``binSearch(30, list)``? 
 
    .. code-block:: java
@@ -176,7 +177,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       	          
       	      else
       	          high = mid - 1;
-      	          
       	  }
       		
       	 return -1;
@@ -203,7 +203,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
           if (str.length() == 0)
               return "!";
-              
           else
               return wordScramble(str.substring(1)) + str.substring(0,1);
       }
@@ -345,7 +344,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       	  public String getName()
       	  {
       	      return name;
-      	  }
+          }
       }
       
       public class Pig extends Animal
@@ -365,13 +364,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       	       return "My name is " + super.getName() + "!";
       	   }
       
-      
-      //later in the class
-      
-      Animal piglet = new Pig("Piglet");
-      System.out.print(piglet.getName());
-      
+           public static void main(String[] args)
+           {
+              Animal piglet = new Pig("Piglet");
+              System.out.print(piglet.getName());
+           }
       }
+    
       		
       		
 .. mchoice:: qtnt3_11
@@ -393,13 +392,12 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    
       public void oddArray (int[] arr)
       {
-           for (int i = 0; i < arr.length; i++)
-      	   {
-      		  //if the number at arr[i] is even, it becomes 0
-      				
-      		  if( /* to be determined */ )
-      			  arr[i] = 0;
-      	   }
+          for (int i = 0; i < arr.length; i++)
+      	  {
+              //if the number at arr[i] is even, it becomes 0
+              if( /* to be determined */ )
+                  arr[i] = 0;
+      	  }
       }
 
 .. mchoice:: qtnt3_12
@@ -409,8 +407,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: 13
    :answer_e: 14
    :correct: e
-   :feedback_a: Examine the recursive call and the return statements. This method adds the values of digits in a number; it does not find the number of digits.
-   :feedback_b: Examine the recursive call and the return statements. This method adds the values of digits in a number; it does not find the number of digits.
+   :feedback_a: Trace the recursive call and the return statements. 
+   :feedback_b: Examine the recursive call and the return statements. This method adds the values of the digits in a number; it does not find the number of digits.
    :feedback_c: Examine the return statements. Although the last digit of the number is 0, 0 is returned to the previous calls, where it is added to the other digits.
    :feedback_d: Try tracing the recursive calls again.
    :feedback_e: The method divides the number by 10 until it reaches the first dight. Then, it adds the values of all of the digits together.
@@ -419,13 +417,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    
    .. code-block:: java
      
-      public int numFum(int num)
+      public static int numFun(int num)
       {
            if (num / 10 == 0)
       	        return num;
       		
            else
-                return (num % 10) + sums(num / 10);
+                return (num % 10) + numFun(num / 10);
       }
 
 .. mchoice:: qtnt3_13
@@ -437,11 +435,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: a
    :feedback_a: This answer checks every index in the list, correctly selects the values in the list and compares them to zero. If a value is not equal to zero, the method returns false, and the array is NOT empty. Otherwise, the method returns true.
    :feedback_b: The variable list is a List, not an array. List values are not directly accessible, so list.get(i) should be used instead of list[i].
-   :feedback_c: This method returns true if the list is NOT empty and false if the list is empty. The boolean values need to be reversed.
+   :feedback_c: This method returns true if the list has at least one value in it that is not zero.  
    :feedback_d: I is correct, but II is incorrect. Because list is not an array, the get method must be used to find the value at a certain index.
-   :feedback_e: list is not an array, so the get method must be used to return the value at a specified index. If the value at index i is not zero, false should be returned, not true.
+   :feedback_e: You can not use list[i] to get a value from a list so II is incorrect.  III would return true if at least one value in the list is not zero.
 
-   Consider the method ``emptyList``, shown below. The method returns true if a ``List`` of integers is filled with zeros, false otherwise. Which of the following replaces ``/* to be completed */`` so the method will work as intended?
+   Consider the method ``emptyList``, shown below. The method returns true if a ``List`` of integers is filled with zeros and false otherwise. Which of the following should replace ``/* to be completed */`` so that the method will work as intended?
    
    .. code-block:: java
      
@@ -450,7 +448,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            /* to be completed */
       }
       
-      //I.
+      // I.
       for (int i = 0; i < list.size(); i++)
       {
           if (list.get(i) != 0)
@@ -458,8 +456,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
       return true;
       
-      
-      //II.
+      // II.
       for (int i = 0; i < list.size(); i++)
       {
           if (list[i] != 0)
@@ -467,8 +464,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
       return true;
       
-      
-      //III.
+      // III.
       for (int i = 0; i < list.size(); i++)
       {
           if (list.get(i) != 0)
@@ -501,8 +497,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: b
    :feedback_a: This is not enough passes to guarantee that a name is present. 2 ^ 5, is 32, which is not enough elements. Remember that binary search takes log2 (number of elements) passes to find an item.
    :feedback_b: 2 ^ 7 is 128, which is greater than 120. 120 passes will guarantee that the name is found or that the name is not present in the list. Binary search takes log2 (number of elements) to find an item.
-   :feedback_c: The item will be found in 10 passes, but there is a better answer. Remember that binary search takes log2 (number of elements) passes to find an item.
-   :feedback_d: The item will be found in 12 passes, but not all 12 passes are required. Remember that binary search takes log2 (number of elements) passes to find an item.
+   :feedback_c: The item will certainly be found in 10 passes, but there is a better answer. Remember that binary search takes log2 (number of elements) passes to find an item.
+   :feedback_d: The item will certainly be found in 12 passes, but not all 12 passes are required. Remember that binary search takes log2 (number of elements) passes to find an item.
    :feedback_e: This would be true if the list was searched using sequential search. Binary search only requires log2 (number of elements) to find an item.
 
    
@@ -544,9 +540,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: a
    :feedback_a: A SeedlessGrape IS-A fruit, so the inheritance relationship is correct. The constructor for the SeedlessGrape class has two string parameters.
    :feedback_b: The Grape class constructor has two parameters. Although a Grape IS-A fruit, the Grape constructor must have two string parameters to compile without error.
-   :feedback_c: A Grape is NOT a SeedlessGrape. The inheritance relationship is incorrect, and object c does not compile. Object a is a Fruit at compile-time and a SeedlessGrape at run-time. A SeedlessGrape IS-A Fruit, so the object compiles.
-   :feedback_d: The Fruit class is an abstract class, so an object cannot be declared a Fruit object at compile-time. Abstract classes cannot have instantiated objects.
-   :feedback_e: I is correct, but a Fruit object cannot be instantiated. The Fruit class is an abstract class, and abstract class objects cannot be instantiated.
+   :feedback_c: A Grape is NOT a SeedlessGrape. The inheritance relationship is incorrect, and III does not compile. Object a is a Fruit at compile-time and a SeedlessGrape at run-time. A SeedlessGrape IS-A Fruit, so the code compiles.
+   :feedback_d: The Fruit class is an abstract class.  You can not create an object of an abstract class type.
+   :feedback_e: I is correct, but a Fruit object cannot be instantiated. The Fruit class is an abstract class, and you can not create an object of an abstract class type.
     
     Consider the ``Fruit``, ``Grape``, and ``SeedlessGrape`` classes shown below. Which of the following object declarations will compile without error?
     
@@ -604,10 +600,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: System.out.print(row.get(x) + " ");
    :correct: b
    :feedback_a: x refers to a String object, not an index in the array. x can be printed directly, because the second for-loop individually selects Strings in each row of the array.
-   :feedback_b: This method uses two abbreviated for-loops. The variable x refers to a single String located in the array, so only x needs to be printed. This method will loop through the entire 2-D array, printing out all the names in the matrix.
+   :feedback_b: This method uses two for-each loops. The variable x refers to a single String located in the array, so only x needs to be printed. This method will loop through the entire 2-D array, printing out all the names in the matrix.
    :feedback_c: This will compile without error, but the toString is unnecessary. x is already a String and can be printed directly.
    :feedback_d: x refers to a String object, not an index in the array row. x can be printed directly.
-   :feedback_e: x is a String, not an integer. The parameters include 2-D arrays, not Lists. Array elements can be accessed directly, without an accessor method. Because x is a String, not an integer, x can be printed directly.
+   :feedback_e: x is a String, not an index.
    
    The method ``printNames`` is located below. It prints out all the names in a 2-D matrix. Which of the following correctly replaces ``/* to be determined */`` to make the method work as intended?
    
@@ -633,11 +629,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: (x <= 10) || (x > 5)
    :answer_e: (x > 10) || (x <= 5)
    :correct: d
-   :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). Also, (x > 10) is not correct negation for (x < 10); the correct negation is (x >= 10).
+   :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). Also, (x < 10) is not correct negation for (x > 10); the correct negation is (x <= 10).
    :feedback_b: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A && B).
    :feedback_c: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). The AND should be changed to an OR.
-   :feedback_d: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is equivalent to (!A && !B), according to DeMorgan's principle. The negation of (x > 10) is (x <= 10), and the negation of (x <= 5) is (x > 5).
-   :feedback_e: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A && B). Both A and B should be negations.
+   :feedback_d: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is equivalent to (!A || !B), according to DeMorgan's principle. The negation of (x > 10) is (x <= 10), and the negation of (x <= 5) is (x > 5).
+   :feedback_e: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A || B). Both A and B should also be negated.
       
    Which of the following is equivalent to ``! ( (x > 10) && (x <= 5) )``?
 

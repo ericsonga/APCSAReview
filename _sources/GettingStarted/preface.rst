@@ -54,7 +54,8 @@ Several students have also been involved in the creation of content for the eBoo
 * Daniel Boaitey - created free response videos from 2014 questions.
 * Christy Zachary - created free response videos and Java executable examples
 * Javier Rodriguez - added a new exam (non-timed #1)
-* Gabby Jackson - added a new exam (non-timed #2)
+* Gabby Jackson - added new exams (non-timed #2, #3, and #4)
+* Sofia Moin - added a video on variables
 
 License
 ---------
