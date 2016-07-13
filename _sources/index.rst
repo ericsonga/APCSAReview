@@ -166,7 +166,8 @@ List and ArrayList
    ListBasics/climbClubC.rst
    ListBasics/cookieOrder.rst
    ListBasics/fuelDepot.rst
-   ListBasics/tileGame.rst
+   ListBasics/tileGameA.rst
+   ListBasics/tileGameB.rst
    ListBasics/flightList.rst
    ListBasics/stringCoder.rst
    ListBasics/checker.rst
