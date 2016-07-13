@@ -12,8 +12,11 @@ Random Numbers
 
 Games would be boring if the same thing happened each time you played the game.  Games often use random numbers
 to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number. There are lots of mathematical methods
-that you might want to use in your programs like Math.abs (absolute value).  These methods are in the Math class and are **static** (**class**) methods so that you can call them by just using ``ClassName.methodName``.  **Class** or **static**
-methods live in the object that defines the class (an object of a class named ``Class``) and can be accessed directly from the class.  You do not need to create an object of the class to use them. 
+that you might want to use in your programs like Math.abs (absolute value).  These methods are in the Math class and are **static** (**class**) methods so that you can call them by just using ``ClassName.methodName``.  
+
+.. note::
+
+   **Class** or **static** methods are in the object that defines the class (an object of a class named ``Class``) and can be accessed directly from the class.  You do not need to create an object of the class to use them. 
 
 The random() method returns a number greater than or equal to 0.0, and less than 1.0. Try out the following code.
 

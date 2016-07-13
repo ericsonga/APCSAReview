@@ -21,7 +21,11 @@ What is a String?
 Declaring and Creating Strings
 ==============================
 
-You can declare a variable to be of type ``String``. Notice that class names in Java, like ``String``, begin with a capital letter.  All primitive types: ``int``, ``double``, and ``boolean``, begin with a lowercase letter.  This is one easy way to tell the difference between primitive types and class types. Try the following.
+You can declare a variable to be of type ``String``. 
+
+.. note::
+
+   Class names in Java, like ``String``, begin with a capital letter.  All primitive types: ``int``, ``double``, and ``boolean``, begin with a lowercase letter.  This is one easy way to tell the difference between primitive types and class types. Try the following.
 
 .. activecode:: lcsb1
    :language: java
