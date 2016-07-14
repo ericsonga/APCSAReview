@@ -141,9 +141,6 @@ Arrays
    ArrayBasics/selfDivisorB.rst
    ArrayBasics/horseBarnA.rst
    ArrayBasics/horseBarnB.rst
-   ArrayBasics/numberCube.rst
-   ArrayBasics/sound.rst
-   ArrayBasics/batteryCharger.rst
 
 List and ArrayList
 ::::::::::::::::::::
@@ -164,13 +161,8 @@ List and ArrayList
    ListBasics/climbClubA.rst
    ListBasics/climbClubB.rst
    ListBasics/climbClubC.rst
-   ListBasics/cookieOrder.rst
-   ListBasics/fuelDepot.rst
    ListBasics/tileGameA.rst
    ListBasics/tileGameB.rst
-   ListBasics/flightList.rst
-   ListBasics/stringCoder.rst
-   ListBasics/checker.rst
 
 Two-dimensional Arrays
 :::::::::::::::::::::::
@@ -189,7 +181,6 @@ Two-dimensional Arrays
    Array2dBasics/a2dHardMC.rst
    Array2dBasics/grayImageA.rst
    Array2dBasics/grayImageB.rst
-   Array2dBasics/routeCipher.rst
 
 Object-Oriented Concepts
 ::::::::::::::::::::::::
@@ -219,9 +210,6 @@ Object-Oriented Concepts
    OOBasics/TrioScore1.rst
    OOBasics/TrioScore2.rst
    OOBasics/TrioScore3.rst
-   OOBasics/APLine.rst
-   OOBasics/gameState.rst
-   OOBasics/pet.rst
 
 Recursion
 :::::::::

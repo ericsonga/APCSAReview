@@ -14,19 +14,19 @@ if master_url is None:
         master_url = 'http://127.0.0.1:8000'
 
 master_app = 'runestone'
-serving_dir = "./build/JavaReview-RU"
+serving_dir = "./build/JavaReview"
 dest = '../../static'
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/JavaReview-RU",
+        builddir="./build/JavaReview",
         sourcedir="_sources",
-        outdir="./build/JavaReview-RU",
+        outdir="./build/JavaReview",
         confdir=".",
-        project_name = "JavaReview-RU",
-        template_args={'course_id': 'JavaReview-RU',
+        project_name = "JavaReview",
+        template_args={'course_id': 'JavaReview',
                        'login_required':'true',
                        'appname':master_app,
                        'loglevel': 10,
