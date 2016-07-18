@@ -164,7 +164,8 @@ List and ArrayList
    ListBasics/climbClubA.rst
    ListBasics/climbClubB.rst
    ListBasics/climbClubC.rst
-   ListBasics/cookieOrder.rst
+   ListBasics/cookieOrderA.rst
+   ListBasics/cookieOrderB.rst
    ListBasics/fuelDepot.rst
    ListBasics/tileGameA.rst
    ListBasics/tileGameB.rst
