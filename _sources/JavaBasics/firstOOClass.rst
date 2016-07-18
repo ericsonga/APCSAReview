@@ -10,7 +10,7 @@
 An Object Oriented Class Example
 ----------------------------------
    
-Let's create a class where each object of the class represents a person.  Every person has a name and a cell phone number.  We can store this data in **fields** in a Person object.  We provide **methods** to get and set the data.  We provide a **constructor** to initialize the data when the object is first created.
+Let's create a class where each object of the class represents a person.  Every person has a name and a cell phone number which we will store in String variables.  A string is a sequence of characters like in "Hello".  We can store the name and cell phone number in **fields** in a Person object.  We provide **methods** to get and set the data.  We provide a **constructor** to initialize the data when the object is first created.
 
 Go ahead and click the |runbutton| button to see what gets printed.  
 
@@ -75,7 +75,7 @@ Go ahead and click the |runbutton| button to see what gets printed.
 A person's name can actually be broken into parts.  We can create a name class to handle this.
 
 .. clickablearea:: name_class
-    :question: Click on the class declaration in the following class definition.
+    :question: Click on the class declaration in the following class definition.  Then click the "Check Me" button to see if you are correct or not.
     :iscode:
     :feedback: The class declaration starts the class.  It contains the keyword class in it.
 
@@ -101,7 +101,7 @@ A person's name can actually be broken into parts.  We can create a name class t
 
    
 .. clickablearea:: phone_class
-    :question: Click on the class declaration in the following class definition.
+    :question: Click on the class declaration in the following class definition.  Then click the "Check Me" button to see if you are correct or not.
     :iscode:
     :feedback: The class declaration starts the class.  It contains the keyword class in it.
 

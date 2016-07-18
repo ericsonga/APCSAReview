@@ -22,12 +22,13 @@ First Example Classes
 
 ..	index::
 	single: class
+	single: keyword
 	pair: class; field
 	pair: class; constructor
 	pair: class; method
 	pair: class; main method
 	
-To define a class in Java use the **keywords** ``public class`` followed by a *ClassName*.  Then the body of the class is enclosed in a starting ``{`` and ending ``}`` as shown below.
+To define a class in Java use the **keywords** (words that Java already understands) ``public class`` followed by a *ClassName*.  Then the body of the class is enclosed in a starting ``{`` and ending ``}`` as shown below.
 
 .. code-block:: java 
 

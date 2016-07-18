@@ -21,27 +21,17 @@ Remember that a variable holds a value and that value can change or vary.  If yo
       }
    }
    
-You can set one variable's value to a *copy* of the value of another variable.  This won't change the value of the variable that you are copying from.  You can step through this code (and some additional code) by clicking on the following link `link1 <http://www.pythontutor.com/java.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0>`_.
+You can set one variable's value to a *copy* of the value of another variable.  This won't change the value of the variable that you are copying from.  Step through the code below by clicking the "Forward" button to see how the values of the variables change.
 
-.. activecode:: lccv2
-   :language: java
-   
-   public class Test2
-   {
-      public static void main(String[] args)
-      {
-        int x = 3;
-        int y = 2;
-        System.out.println(x);
-        System.out.println(y);
-        x = y;
-        System.out.println(x);
-        System.out.println(y);
-      }
-   }
+
+.. raw:: html
+
+   <div>
+   <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
+   </div>
    
 **Check your understanding**
-   
+
 .. mchoice:: q2_1
    :answer_a: x = 0, y = 1, z = 2
    :answer_b: x = 1, y = 2, z = 3
@@ -53,18 +43,18 @@ You can set one variable's value to a *copy* of the value of another variable.  
    :feedback_c: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
    :feedback_d: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
 
-   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on the following link `link2 <http://www.pythontutor.com/java.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=11>`_.
-   
+   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on the following `link <http://www.pythontutor.com/java.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0/>`_
+
    .. code-block:: java 
 
-     int x = 0;
-     int y = 1;
-     int z = 2;
-     x = y;
-     y = y * 2;
-     z = 3;
-   
-   
+       int x = 0;
+       int y = 1;
+       int z = 2;
+       x = y;
+       y = y * 2;
+       z = 3;
+
+      
 **Mixed up programs**
 
 .. parsonsprob:: 2_swap

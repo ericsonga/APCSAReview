@@ -97,7 +97,7 @@ Run the following code to see what is printed.
 
 .. note ::
 
-   The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the space (box) associated with the name on the left to the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
+   The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a copy of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
    
 This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
 
@@ -112,4 +112,23 @@ This is an example of *assignment dyslexia*, when the student has put the value 
         System.out.println(score);
       }
    }
+   
+**Mixed up Code Problems**
+   
+.. parsonsprob:: declareVars1
+   :noindent:
+
+   The following method has the code to declare and initialize variables for storing a number of visits, a person's temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
+   -----
+   int numVisits = 5;
+   =====
+   Int numVisits = 5; #paired
+   =====
+   double temp = 101.2;
+   =====
+   Double temp = 101.2;  #paired
+   =====
+   boolean hasInsurance = false;
+   =====
+   Boolean hasInsurance = false; #paired
    
