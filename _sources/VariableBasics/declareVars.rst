@@ -58,6 +58,50 @@ The value of score can be set later as shown below.  Run the following code to s
         System.out.println(won);
       }
    }
+   
+**Check Your Understanding**
+   
+.. clickablearea:: var_declare
+    :question: Click on all of the variable declarations in the following code.
+    :iscode:
+    :feedback: Variable declarations start with a type and then a name.  
+    
+    :click-incorrect:public class Test2:endclick:
+    :click-incorrect:{:endclick:
+        :click-incorrect:public static void main(String[] args):endclick:
+        :click-incorrect:{:endclick:
+            :click-correct:int numLives;:endclick:
+            :click-incorrect:numLives = 0;:endclick:
+            :click-incorrect:System.out.println(numLives);:endclick:
+            :click-correct:double health;:endclick:
+            :click-incorrect:health = 8.5;:endclick:
+            :click-incorrect:System.out.println(health);:endclick:
+            :click-correct:boolean powerUp;:endclick:
+            :click-incorrect:powerUp = true;:endclick:
+            :click-incorrect:System.out.println(powerUp);:endclick:
+        :click-incorrect:}:endclick:
+    :click-incorrect:}:endclick:
+    
+.. clickablearea:: var_init
+    :question: Click on all of the variable initializations (fist time the variable is set to a value) in the following code.
+    :iscode:
+    :feedback: Variables are initialized using name = value;  
+    
+    :click-incorrect:public class Test2:endclick:
+    :click-incorrect:{:endclick:
+        :click-incorrect:public static void main(String[] args):endclick:
+        :click-incorrect:{:endclick:
+            :click-incorrect:int numLives;:endclick:
+            :click-correct:numLives = 0;:endclick:
+            :click-incorrect:System.out.println(numLives);:endclick:
+            :click-incorrect:double health;:endclick:
+            :click-correct:health = 8.5;:endclick:
+            :click-incorrect:System.out.println(health);:endclick:
+            :click-incorrect:boolean powerUp;:endclick:
+            :click-correct:powerUp = true;:endclick:
+            :click-incorrect:System.out.println(powerUp);:endclick:
+        :click-incorrect:}:endclick:
+    :click-incorrect:}:endclick:
 
 .. note ::
 
@@ -71,7 +115,7 @@ You can also optionally specify an initial value for the variable by adding an e
     
     Figure 2: How to Declare and Initialize the Value of a Variable
     
-Here is an example declaration of a variable with a setting of its initial value.
+Here is an example that shows declaring a variable and initializing it all in a single statement.  
 
 .. code-block:: java
 
@@ -94,10 +138,30 @@ Run the following code to see what is printed.
         System.out.println(won);
       }
    }
+   
+**Check Your Understanding**
+
+.. clickablearea:: var_declar_and_init
+    :question: Click on all of the statements that both declare and initialize a variable in one statement.
+    :iscode:
+    :feedback: Variables are initialized using name = value;  
+    
+    :click-incorrect:public class Test2:endclick:
+    :click-incorrect:{:endclick:
+        :click-incorrect:public static void main(String[] args):endclick:
+        :click-incorrect:{:endclick:
+            :click-correct:int numLives = 0;:endclick:
+            :click-incorrect:System.out.println(numLives);:endclick:
+            :click-correct:double health = 8.5;:endclick:
+            :click-incorrect:System.out.println(health);:endclick:
+            :click-correct:boolean powerUp = true;:endclick:
+            :click-incorrect:System.out.println(powerUp);:endclick:
+        :click-incorrect:}:endclick:
+    :click-incorrect:}:endclick:
 
 .. note ::
 
-   The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a copy of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
+   The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
    
 This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
 
@@ -113,12 +177,44 @@ This is an example of *assignment dyslexia*, when the student has put the value 
       }
    }
    
+**Check Your Understanding**
+
+.. fillintheblank:: fillDecVar1
+
+        .. blank:: blankdecvar3-2-1a
+            :correct: ^\s*int$
+            :feedback1: (".*", "Remember that Java uses just the first 3 letters of integer")
+
+            Fill in the blanks to declare a variable called ``age`` of type integer and initialize it to 5. 
+
+        .. blank:: blankvar3-2-1b
+            :correct: ^\s*5;$
+            :feedback1: (".*", "Use 5 in the second blank followed by ;")
+
+            age =
+            
+.. fillintheblank:: fillDecVar2
+
+        .. blank:: blankdecvar3-2-2
+            :correct: ^\s*double$
+            :feedback1: (".*", "What type allows for a decimal value?")
+
+            What type should you use for a shoe size like 8.5?  
+            
+.. fillintheblank:: fillDecVar3
+
+        .. blank:: blankdecvar3-2-3
+            :correct: ^\s*int$
+            :feedback1: (".*", "Use a type that representes whole numbers like 1, 2, 3, etc")
+
+            What type should you use for a number of tickets? 
+   
 **Mixed up Code Problems**
    
 .. parsonsprob:: declareVars1
    :noindent:
 
-   The following method has the code to declare and initialize variables for storing a number of visits, a person's temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
+   The following method has the code to declare and initialize variables for storing a number of visits, a person's temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the "Check Me" button to check your solution.
    -----
    int numVisits = 5;
    =====

@@ -34,7 +34,11 @@ Java uses the standard mathematical operators for addition (``+``), subtraction 
       }
    }
    
-Do all of those operators do what you expected?  What about ``2 / 3`` prints ``0``?  When Java sees you doing integer division it assumes you want an integer result so it throws away anything after the decimal point in the answer.  
+Do all of those operators do what you expected?  What about ``2 / 3`` prints ``0``?  
+
+.. note::
+
+   When Java sees you doing integer division it assumes you want an integer result so it throws away anything after the decimal point in the answer.  
 
 Modulus
 -----------
@@ -69,6 +73,8 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
 	single: modulus
 	single: remainder
 	pair: operators; modulus
+	
+**Check Your Understanding**
 	
 .. mchoice:: q3_4_1
    :answer_a: 15
@@ -148,4 +154,28 @@ You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the 
      x--; // x followed bythe double minus sign
      y++;
      z+=y;
+     
+.. mchoice:: q3_4_4
+   :answer_a: x = 6, y = 2.5, z = 2
+   :answer_b: x = 4, y = 2.5, z = 2
+   :answer_c: x = 6, y = 2, z = 3
+   :answer_d: x = 4, y = 2.5, z = 3
+   :answer_e: x = 4, y = 2, z = 3
+   :correct: e
+   :feedback_a: This code sets x to z * 2 (4), y to y divided by 2 (5 / 2 = 2) and z = to z + 1 (2 + 1 = 3).
+   :feedback_b: This code sets x to z * 2 (4), y to y divided by 2 (5 / 2 = 2) and z = to z + 1 (2 + 1 = 3).
+   :feedback_c: This code sets x to z * 2 (4), y to y divided by 2 (5 / 2 = 2) and z = to z + 1 (2 + 1 = 3).
+   :feedback_d: This code sets x to z * 2 (4), y to y divided by 2 (5 / 2 = 2) and z = to z + 1 (2 + 1 = 3).
+   :feedback_e: This code sets x to z * 2 (4), y to y divided by 2 (5 / 2 = 2) and z = to z + 1 (2 + 1 = 3).
+
+   What are the values of x, y, and z after the following code executes?
+   
+   .. code-block:: java 
+
+     int x = 3;
+     int y = 5;
+     int z = 2;
+     x = z * 2;
+     y = y / 2;
+     z++;
      

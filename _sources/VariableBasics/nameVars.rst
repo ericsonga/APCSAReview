@@ -37,3 +37,31 @@ The convention in Java is to always start a variable name with a lower case lett
         System.out.println(playerScore);
       }
    }
+   
+**Check Your Understanding**
+            
+.. fillintheblank:: fillName1
+
+        .. blank:: blankvar3-3-1
+            :correct: ^\s*shoeSize$
+            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word")
+
+            What is the camel case variable name for a variable that represents a shoe size?
+            
+.. fillintheblank:: fillName2
+
+        .. blank:: blankvar3-3-2
+            :correct: ^\s*topScore$
+            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word")
+
+            What is the camel case variable name for a variable that represents the top score?
+            
+.. fillintheblank:: fillName3
+
+        .. blank:: blankvar3-3-3
+            :correct: ^\s*playerTopScore$
+            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word.  This would be playerTopScore")
+
+            What is the camel case variable name for a variable that represents the player's top score?
+
+       

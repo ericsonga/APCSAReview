@@ -75,7 +75,7 @@ Go ahead and click the |runbutton| button to see what gets printed.
 A person's name can actually be broken into parts.  We can create a name class to handle this.
 
 .. clickablearea:: name_class
-    :question: Click on the class declaration in the following class definition.  Then click the "Check Me" button to see if you are correct or not.
+    :question: Click on the class declaration (not the body of the class) in the following class definition.  Then click the "Check Me" button to see if you are correct or not.
     :iscode:
     :feedback: The class declaration starts the class.  It contains the keyword class in it.
 
@@ -101,7 +101,7 @@ A person's name can actually be broken into parts.  We can create a name class t
 
    
 .. clickablearea:: phone_class
-    :question: Click on the class declaration in the following class definition.  Then click the "Check Me" button to see if you are correct or not.
+    :question: Click on the class declaration (not the body of the class) in the following class definition.  Then click the "Check Me" button to see if you are correct or not.
     :iscode:
     :feedback: The class declaration starts the class.  It contains the keyword class in it.
 

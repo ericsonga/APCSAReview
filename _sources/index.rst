@@ -36,6 +36,7 @@ Java Basics: Classes and Objects
    JavaBasics/firstOOClass.rst
    JavaBasics/runClass.rst
    JavaBasics/partsOfAClass.rst
+   JavaBasics/JavaBasicsSummary.rst
 
 
 Variables
@@ -56,6 +57,7 @@ Variables
    VariableBasics/vEasyMC.rst
    VariableBasics/vMedMC.rst
    VariableBasics/vHardMC.rst
+   VariableBasics/VariableSummary.rst
 
 Strings
 ::::::::::::::::::::

@@ -40,6 +40,17 @@ The following is the ``main`` method for the Person class.  It shows two variabl
    Some books show having a main method in another class which is often called a runner class, but this is not required. 
     
 I like to have a ``main`` method in each of my classes that tests the methods in that class.  The ``main`` method in the ``Person`` class creates two ``Person`` objects and prints their values out using the ``toString`` method.  The ``toString`` method is what is called on an object when you execute ``System.out.println(object)``. 
+
+
+..  index::
+	single: static
+	single: void
+	pair: keyword; static
+	pair: keyword; void
+	
+.. note::
+
+   The ``main`` method must be declared as ``public static void main(String[] args)``.  The only part of this that you can change is the ``args``.  You can use a different name instead if you wish.  The ``public`` keyword is necessary since this method needs to be executed from outside the current class.  The ``static`` keyword means that you can execute this method on the class (not on an object), which is important since no objects of this class have been created yet when the main method starts.  The ``void`` keyword says that this method doesn't return anything.  The ``(String[] args)`` says that this method can take some information when you execute it which will be passed to the method as an array of strings called args.  An array is like a list and you will learn more about arrays in a later chapter.  
    
 Try changing the code in the main method below (``public static void main(String[] args)`` that creates as new Person object ``new Person("Deja", "555 132-3253")`` to create an object to represent you and one of your friends (but don't use your actual phone numbers).  Click the |runbutton| button to test your code.
 
@@ -93,4 +104,4 @@ Try changing the code in the main method below (``public static void main(String
      }
   
    }
-
+   
