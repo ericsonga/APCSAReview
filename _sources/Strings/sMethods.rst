@@ -35,6 +35,7 @@ A string holds characters in a sequence.  Each character is at a position or **i
     Figure 1: A string with the position (index) shown above each character
     
 .. note::
+
    The first character in a string is at index 0 and the last characters is at the length - 1. 
 
 Run the code below to see the output from ``length``, ``substring``, and ``indexOf``.
@@ -62,6 +63,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
    }
    
 .. note::
+
    Did you notice that ``message1.substring(0,3)`` includes all the characters from position 0 to 2 and doesn't include the character at position 3?   
    
 Run the example below to see the output from ``compareTo`` and ``equals``.
@@ -88,6 +90,7 @@ Run the example below to see the output from ``compareTo`` and ``equals``.
 There are lots of other methods in the String class.  See the Java documentation for the String class at http://docs.oracle.com/javase/6/docs/api/java/lang/String.html.  You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
 
 .. note::
+
    Strings are **immutable** which means that they can't change. Anything that you do to modify a string (like creating a substring or appending strings) returns a new string.
 
 **Check your understanding**
@@ -107,9 +110,9 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-     String s1 = "Hi"; 
-     String s2 = s1.substring(0,1);
-     String s3 = s2.toLowerCase();
+      String s1 = "Hi"; 
+      String s2 = s1.substring(0,1);
+      String s3 = s2.toLowerCase();
     
 .. mchoice:: qsb_2
    :answer_a: Hi
@@ -126,9 +129,9 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java
 
-     String s1 = "Hi"; 
-     String s2 = s1.substring(0,1);
-     String s3 = s2.toLowerCase();
+      String s1 = "Hi"; 
+      String s2 = s1.substring(0,1);
+      String s3 = s2.toLowerCase();
      
 .. mchoice:: qsb_3
    :answer_a: 2
@@ -145,8 +148,8 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-     String s1 = "abccba";
-     int pos = s1.indexOf("b");
+      String s1 = "abccba";
+      int pos = s1.indexOf("b");
      
 .. mchoice:: qsb_4
    :answer_a: 7
@@ -161,8 +164,8 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-     String s1 = "Miss you!";
-     int len = s1.length();
+      String s1 = "Miss you!";
+      int len = s1.length();
      
 .. mchoice:: qsb_5
    :answer_a: hi th
@@ -179,6 +182,6 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-     String s1 = new String("hi there");
-     int pos = s1.indexOf("e");
-     String s2 = s1.substring(0,pos);
+      String s1 = new String("hi there");
+      int pos = s1.indexOf("e");
+      String s2 = s1.substring(0,pos);

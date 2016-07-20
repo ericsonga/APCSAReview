@@ -5,7 +5,7 @@
 Variables - Summary
 -------------------------
 
-In this chapter you learned the three primitive types on the exam: ``int``, ``double``, and ``boolean``.  You also learned how to declare, change, and name variables.  You learned about operators, casting, and integer constants for the min and max integer values.  You also learned how to create a random number.
+In this chapter you learned about the three primitive types on the exam: ``int``, ``double``, and ``boolean``.  You also learned how to declare (name) and change the value of variables.  You learned about operators, casting, and integer constants for the min and max integer values.  You also learned how to create a random number.
 
 ..	index::
     single: static
@@ -44,7 +44,7 @@ Concept Summary
 Java Keyword Summary
 =========================
 
-- **boolean** - used to declare a variable that can only have the value true or false.
+- **boolean** - used to declare a variable that can only have the value ``true`` or ``false``.
 - **double** - used to declare a variable of type double (a decimal number like 3.25).
 - **false** - one possible value for a boolean variable.
 - **int** - used to declare a variable of type integer (a whole number like -3 or 235).
