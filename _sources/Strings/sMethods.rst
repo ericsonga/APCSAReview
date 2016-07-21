@@ -110,9 +110,9 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-      String s1 = "Hi"; 
-      String s2 = s1.substring(0,1);
-      String s3 = s2.toLowerCase();
+     String s1 = "Hi"; 
+     String s2 = s1.substring(0,1);
+     String s3 = s2.toLowerCase();
     
 .. mchoice:: qsb_2
    :answer_a: Hi
@@ -129,9 +129,9 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java
 
-      String s1 = "Hi"; 
-      String s2 = s1.substring(0,1);
-      String s3 = s2.toLowerCase();
+     String s1 = "Hi"; 
+     String s2 = s1.substring(0,1);
+     String s3 = s2.toLowerCase();
      
 .. mchoice:: qsb_3
    :answer_a: 2
@@ -148,8 +148,8 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-      String s1 = "abccba";
-      int pos = s1.indexOf("b");
+     String s1 = "abccba";
+     int pos = s1.indexOf("b");
      
 .. mchoice:: qsb_4
    :answer_a: 7
@@ -164,8 +164,8 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-      String s1 = "Miss you!";
-      int len = s1.length();
+     String s1 = "Miss you!";
+     int len = s1.length();
      
 .. mchoice:: qsb_5
    :answer_a: hi th
@@ -182,6 +182,6 @@ There are lots of other methods in the String class.  See the Java documentation
    
    .. code-block:: java 
 
-      String s1 = new String("hi there");
-      int pos = s1.indexOf("e");
-      String s2 = s1.substring(0,pos);
+     String s1 = new String("hi there");
+     int pos = s1.indexOf("e");
+     String s2 = s1.substring(0,pos);

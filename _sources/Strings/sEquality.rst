@@ -28,7 +28,7 @@ If you run the following, what will be printed?
    }
   
   
-It will print ``Bye`` since s3 has been assigned to the value in s2 which is an object reference to the String object that has the characters "Bye" in it.  
+It will print ``Bye`` since s3 has been assigned to a copy of the value in s2 which is an object reference to the String object that has the characters "Bye" in it.  
 In addition, ``s2 == s3`` will be true since the two variables refer to the same object.  Also, ``s2.equals(s3)`` will also be true, again since the two variables refer to the same object, of course the characters will be the same.  
 
 .. figure:: Figures/stringRefExamplev2.png
