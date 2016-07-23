@@ -58,6 +58,7 @@ Variables
    VariableBasics/vMedMC.rst
    VariableBasics/vHardMC.rst
    VariableBasics/VariableSummary.rst
+   VariableBasics/VariablePractice.rst
 
 Strings
 ::::::::::::::::::::
