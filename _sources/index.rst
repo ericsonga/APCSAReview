@@ -142,7 +142,8 @@ Arrays
    ArrayBasics/horseBarnA.rst
    ArrayBasics/horseBarnB.rst
    ArrayBasics/numberCube.rst
-   ArrayBasics/sound.rst
+   ArrayBasics/soundA.rst
+   ArrayBasics/soundB.rst
    ArrayBasics/batteryCharger.rst
 
 List and ArrayList
