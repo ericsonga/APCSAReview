@@ -82,7 +82,8 @@ The Algorithm
  =====
    } // end while
  =====
-   int[] newSamples = new int[this.samples.length - i];
+   int samplesLen = this.samples.length;
+   int[] newSamples = new int[samplesLen - i];
  =====
    for (int j = 0; j < newSamples.length; j++) {
  =====
