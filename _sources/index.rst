@@ -191,7 +191,8 @@ Two-dimensional Arrays
    Array2dBasics/a2dHardMC.rst
    Array2dBasics/grayImageA.rst
    Array2dBasics/grayImageB.rst
-   Array2dBasics/routeCipher.rst
+   Array2dBasics/routeCipherA.rst
+   Array2dBasics/routeCipherB.rst
 
 Object-Oriented Concepts
 ::::::::::::::::::::::::
