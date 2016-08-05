@@ -76,6 +76,7 @@ Strings
    Strings/sMedMC.rst
    Strings/sHardMC.rst
    Strings/StringSummary.rst
+   Strings/StringPractice.rst
 
 
 Conditionals

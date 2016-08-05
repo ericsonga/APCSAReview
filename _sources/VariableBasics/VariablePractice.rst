@@ -2,8 +2,8 @@
    :prefix: 3-14-
    :start: 1
    
-Practice with Variables
----------------------------
+Code Practice with Variables
+------------------------------
 
 .. tabbed:: ch3Ex1
 
@@ -339,7 +339,7 @@ Practice with Variables
 
         .. tab:: Question
   
-           Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in an hour and 24 hours in a day.
+           Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.
            
            .. activecode::  ch3Ex8q
               :language: java
@@ -364,9 +364,10 @@ Practice with Variables
               {
                   public static void main(String[] args)
                   {
-                      int secondsInHour = 60;
+                      int secondsInMinute = 60;
+                      int minutesInHour = 60;
                       int hoursInDay = 24;
-                      int secondsInDay = secondsInHour * hoursInDay;
+                      int secondsInDay = secondsInMinute * minutesInHour * hoursInDay;
                       int secondsInThreeDays = secondsInDay * 3;
                       System.out.println(secondsInThreeDays);
                   }
@@ -398,7 +399,7 @@ Practice with Variables
 
         .. tab:: Answer
         
-           First multiply the output from Math.random() times 100 and then cast it to an integer.  This will result in a random number from 0 to 99.  So add one to make it from 1 to 100.  
+           First multiply the output from Math.random() times 100 and then cast it to an integer.  This will result in a random number from 0 to 99.  Add one to make it from 1 to 100.  
            
            .. activecode::  ch3Ex9a
               :language: java
