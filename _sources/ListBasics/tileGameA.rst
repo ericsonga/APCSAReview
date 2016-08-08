@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix:  8-16-
+   :prefix:  8-17-
    :start: 1
 
 Free Response - Tile Game A
@@ -136,10 +136,11 @@ The Algorithm
   The method getIndexForFit below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
   -----
   private int getIndexForFit(NumberTile tile) {
+    boolean empty = this.board.size() == 0;
+    boolean firstTile = tile.getRight() == this.board.get(0).getLeft();
   =====
-    if ((this.board.size() == 0) ||
-      (tile.getRight() == this.board.get(0).getLeft()))
-    return 0;
+    if (empty || firstTile)
+      return 0;
   =====
     for (int i = 1; i < this.board.size(); i++)
     {
@@ -150,7 +151,8 @@ The Algorithm
   =====
     } // end for
   =====
-    if (tile.getLeft() == this.board.get(this.board.size() - 1).getRight())
+    NumberTile lastTile = this.board.get(this.board.size() - 1);
+    if (tile.getLeft() == lastTile.getRight())
         return this.board.size();
   =====
     return -1;
@@ -249,19 +251,27 @@ Complete method ``getIndexForFit`` below.
 
       if(board.getIndexForFit(new NumberTile(8, 8)) == 2)
         test1 = true;
+      else
+        System.out.println("Oops! Looks like your code doesn't check to see whether the tile can fit on the board properly.\n");
 
       if(board.getIndexForFit(new NumberTile(1, 1)) == 0)
         test2 = true;
+      else
+        System.out.println("Oops! Looks like your code doesn't check to see if the tile can fit at the beginning of the board.\n");
 
       if(board.getIndexForFit(new NumberTile(1, 8)) == 4)
         test3 = true;
+      else
+        System.out.println("Oops! Looks like your code doesn't check to see if the tile can fit at the end of the board.\n");
 
       if(board.getIndexForFit(new NumberTile(0, 11)) == -1)
         test4 = true;
+      else
+        System.out.println("Oops! Looks like your code doesn't properly check for tiles that don't fit on the board.\n");
 
       if(test1 && test2 && test3 && test4)
         System.out.println("Looks like your code works well!");
       else
-        System.out.println("Oops! Looks like your code doesn't work properly.");
+        System.out.println("Make a few changes, please.");
     }
    }

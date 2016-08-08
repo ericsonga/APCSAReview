@@ -11,9 +11,9 @@ Free Response - APLine
 
 The following is a free response question from 2010.  It was question 2 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
 
-**Question 2.**  An `APLine` is a line defined by the equation *ax* + *by* + *c* = 0,where *a* is not equal to zero,*b* is not equal to
-zero, and *a*, *b*, and *c* are all integers. The slope of an `APLine` is defined to be the double value *-a* / *b* . A point (represented by integers x and y) is on an `APLine` if the equation of the `APLine` is satisfied when those x and y values are substituted into the equation. That is, a point represented by x and y is on the line if
-*ax* + *by* + *c* is equal to 0. Examples of two `APLine` equations are shown in the following table.
+**Question 2.**  An ``APLine`` is a line defined by the equation *ax* + *by* + *c* = 0,where *a* is not equal to zero,*b* is not equal to
+zero, and *a*, *b*, and *c* are all integers. The slope of an ``APLine`` is defined to be the double value *-a* / *b* . A point (represented by integers x and y) is on an ``APLine`` if the equation of the ``APLine`` is satisfied when those x and y values are substituted into the equation. That is, a point represented by x and y is on the line if
+*ax* + *by* + *c* is equal to 0. Examples of two ``APLine`` equations are shown in the following table.
 
 .. figure:: Figures/apLineTable.png
     :width: 850px
@@ -35,22 +35,22 @@ Assume that the following code segment appears in a class other than `APLine`. T
 Try and Solve It
 ----------------
 
-Write the `APLine` class. Your implementation must include a constructor that has three integer parameters that represent *a*, *b*, and *c*, in that order.
-You may assume that the values of the parameters representing *a* and *b* are not zero.
-It must also include a method `getSlope` that calculates and returns the slope of the line, and a method `isOnLine` that returns `true` if the point represented by its two parameters (x and y, in that order) is on the `APLine` and returns `false` otherwise.
+Write the ``APLine`` class. Your implementation must include a constructor that has three integer parameters that represent ``a``, ``b``, and ``c``, in that order.
+You may assume that the values of the parameters representing ``a`` and ``b`` are not zero.
+It must also include a method ``getSlope`` that calculates and returns the slope of the line, and a method ``isOnLine`` that returns ``true`` if the point represented by its two parameters (*x* and *y*, in that order) is on the ``APLine`` and returns ``false`` otherwise.
 Your class must produce the indicated results when invoked by the code segment given above.
 You may ignore any issues related to integer overflow.
 
 .. activecode:: APLineFRQ
    :language: java
 
-   // Declare the APLine class
+   // Declare the APLine class.
    {
     /** State variables. Any numeric type; object or primitive. */
 
     /** Constructor with 3 int parameters. */
 
-    /** Determine the slope of this APLine. */
+    /** getSlope method */
 
-    /** Determine if coordinates represent a point on this APLine. */
+    /** isOnLine method */
    }

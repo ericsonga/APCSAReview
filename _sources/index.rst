@@ -142,7 +142,8 @@ Arrays
    ArrayBasics/horseBarnA.rst
    ArrayBasics/horseBarnB.rst
    ArrayBasics/numberCube.rst
-   ArrayBasics/sound.rst
+   ArrayBasics/soundA.rst
+   ArrayBasics/soundB.rst
    ArrayBasics/batteryCharger.rst
 
 List and ArrayList
@@ -164,7 +165,8 @@ List and ArrayList
    ListBasics/climbClubA.rst
    ListBasics/climbClubB.rst
    ListBasics/climbClubC.rst
-   ListBasics/cookieOrder.rst
+   ListBasics/cookieOrderA.rst
+   ListBasics/cookieOrderB.rst
    ListBasics/fuelDepot.rst
    ListBasics/tileGameA.rst
    ListBasics/tileGameB.rst
@@ -189,7 +191,8 @@ Two-dimensional Arrays
    Array2dBasics/a2dHardMC.rst
    Array2dBasics/grayImageA.rst
    Array2dBasics/grayImageB.rst
-   Array2dBasics/routeCipher.rst
+   Array2dBasics/routeCipherA.rst
+   Array2dBasics/routeCipherB.rst
 
 Object-Oriented Concepts
 ::::::::::::::::::::::::
