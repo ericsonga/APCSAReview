@@ -146,6 +146,8 @@ Arrays
    ArrayBasics/selfDivisorB.rst
    ArrayBasics/horseBarnA.rst
    ArrayBasics/horseBarnB.rst
+   ArrayBasics/soundA.rst
+   ArrayBasics/soundB.rst
 
 List and ArrayList
 ::::::::::::::::::::
@@ -168,6 +170,9 @@ List and ArrayList
    ListBasics/climbClubC.rst
    ListBasics/tileGameA.rst
    ListBasics/tileGameB.rst
+   ListBasics/cookieOrderA.rst
+   ListBasics/cookieOrderB.rst
+   ListBasics/2016freeresponseQ4A.rst
 
 Two-dimensional Arrays
 :::::::::::::::::::::::
@@ -186,6 +191,8 @@ Two-dimensional Arrays
    Array2dBasics/a2dHardMC.rst
    Array2dBasics/grayImageA.rst
    Array2dBasics/grayImageB.rst
+   Array2dBasics/routeCipherA.rst
+   Array2dBasics/routeCipherB.rst
 
 Object-Oriented Concepts
 ::::::::::::::::::::::::

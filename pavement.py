@@ -27,7 +27,7 @@ options(
         confdir=".",
         project_name = "JavaReview",
         template_args={'course_id': 'JavaReview',
-                       'login_required':'true',
+                       'login_required':'false',
                        'appname':master_app,
                        'loglevel': 10,
                        'course_url':master_url,
