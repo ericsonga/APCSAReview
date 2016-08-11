@@ -135,6 +135,7 @@ is updated to refer to the new array.
 .. activecode:: FRQSoundB
    :language: java
 
+   import java.util.Arrays;
    public class Sound
    {
        /** the array of values in this sound; guaranteed not to be null */
