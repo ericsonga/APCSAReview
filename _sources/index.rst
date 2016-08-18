@@ -168,11 +168,8 @@ List and ArrayList
    ListBasics/climbClubA.rst
    ListBasics/climbClubB.rst
    ListBasics/climbClubC.rst
-   ListBasics/tileGameA.rst
-   ListBasics/tileGameB.rst
-   ListBasics/cookieOrderA.rst
-   ListBasics/cookieOrderB.rst
    ListBasics/2016freeresponseQ4A.rst
+   ListBasics/2016freeresponseQ4B.rst
 
 Two-dimensional Arrays
 :::::::::::::::::::::::
