@@ -190,10 +190,21 @@ Complete method ``encryptMessage`` below.
      public static void main(String[] args){
 
       RouteCipher ciph = new RouteCipher(2, 3);
-      if(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea")){
-        System.out.println("Looks like your code works well!");
+      String encryptedMsg = ciph.encryptMessage("Meet at midnight");
+      if(encryptedMsg.length() < ("Mte ea").length()){
+
+          System.out.println("Oops!\n");
+          System.out.println("Looks like the encrypted message is too short. Remember that you need to keep adding columns of the encrypt block to the String that you will be returning.\n");
+          System.out.println("Make a few changes to your code, please.");
+
+      }else if(!encryptedMsg.substring(0, 6).equals("Mte ea")){
+
+          System.out.println("Oops!\n");
+          System.out.println("Looks like the message is not encrypted properly. Read the directions again and keep an eye on how exactly the message is supposed to be encrypted.\n");
+          System.out.println("Make a few changes to your code, please.");
+
       }else{
-        System.out.println("Oops! Make a few changes to your code, please.");
+        System.out.println("Looks like your code works well!");
       }
      }
    }
