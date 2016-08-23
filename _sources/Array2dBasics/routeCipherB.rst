@@ -79,8 +79,18 @@ Assume that ``fillBlock`` and ``encryptBlock`` methods work as specified. Soluti
 
 How to Solve This
 --------------------
-1. You will need to loop through the message. What type of loop will you use?
-2. Remember that you will need to call the ``encryptBlock`` method.
+You will need to loop through the message. What type of loop will you use?
+
+.. mchoice:: routecipherb_1
+   :answer_a: encryptBlock
+   :answer_b: decodeBlock
+   :answer_c: clearBlock
+   :correct: a
+   :feedback_a: Be sure to read the directions carefully; at times, some methods will have very similar names.
+   :feedback_b: Be sure to read the directions carefully; at times, some methods will have very similar names.
+   :feedback_c: Be sure to read the directions carefully; at times, some methods will have very similar names.
+
+   What is the name of the method that you will need to call?
 
 The Algorithm
 -------------------
@@ -180,9 +190,10 @@ Complete method ``encryptMessage`` below.
      public static void main(String[] args){
 
       RouteCipher ciph = new RouteCipher(2, 3);
-      if(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea"))
+      if(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea")){
         System.out.println("Looks like your code works well!");
-      else
+      }else{
         System.out.println("Oops! Make a few changes to your code, please.");
+      }
      }
    }

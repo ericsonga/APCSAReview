@@ -184,8 +184,7 @@ Complete the method ``fillBlock`` below.
         test1 = true;
       }else{
         System.out.println("Oops! Looks like your code doesn't properly insert the given String.\n");
-        // Why/ how they messsed up
-        System.out.println("Make sure that that you are inserting the String in row-major order.\n")
+        System.out.println("Make sure that that you are inserting the String in row-major order.\n");
       }
 
       if(test1)
