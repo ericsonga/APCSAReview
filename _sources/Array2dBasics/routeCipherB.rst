@@ -122,6 +122,19 @@ The Algorithm
 
 Solve Part B
 ------------
+Write the method ``encryptMessage`` that encrypts its string parameter message. The method builds an encrypted version of message by repeatedly calling ``fillBlock`` with consecutive, non-overlapping substrings of ``message`` and concatenating the results returned by a call to ``encryptBlock`` after each call to ``fillBlock``. When all of ``message`` has been processed, the concatenated string is returned. Note that if ``message`` is the empty string, ``encryptMessage`` returns an empty string.
+
+The following example shows the process carried out if ``letterBlock`` has 2 rows and 3 columns and ``encryptMessage("Meet at midnight")`` is executed.
+
+.. figure:: Figures/routeCipherFig2.png
+   :width: 482px
+   :align: center
+   :figclass: align-center
+
+In this example, the method returns the string "Mte eati dmnitgAhA".
+
+Assume that ``fillBlock`` and ``encryptBlock`` methods work as specified. Solutions that reimplement the functionality of one or both of these methods will not receive full credit.
+
 Complete method ``encryptMessage`` below.
 
 .. activecode:: FRQRouteCipherB

@@ -126,6 +126,33 @@ The Algorithm
 
 Solve Part A
 ------------
+Write the method ``fillBlock`` that fills the two-dimensional array ``letterBlock`` with one-character strings from the string passed as parameter ``str``.
+
+The array must be filled in row-major order the first row is filled from left to right, then the second row is filled from left to right, and so on, until all rows are filled.
+
+If the length of the parameter ``str`` is smaller than the number of elements of the array, the string "A" is placed in each of the unfilled cells. If the length of ``str`` is larger than the number of elements in the array, the trailing characters are ignored.
+
+For example, if ``letterBlock`` has 3 rows and 5 columns and ``str`` is the string "Meet at noon", the resulting contents of ``letterBlock`` would be as shown in the following table.
+
+.. figure:: Figures/routeCipherTable.png
+  :width: 158px
+  :align: center
+  :figclass: align-center
+
+If ``letterBlock`` has 3 rows and 5 columns and ``str`` is the string "Meet at midnight", the resulting contents of ``letterBlock`` would be as shown in the following table.
+
+.. figure:: Figures/routeCipherTable2.png
+  :width: 158px
+  :align: center
+  :figclass: align-center
+
+
+The following expression may be used to obtain a single-character string at position ``k`` of the string ``str``.
+
+.. code-block:: java
+  str.substring(k, k + 1)
+
+
 Complete the method ``fillBlock`` below.
 
 .. activecode:: FRQRouteCipherA

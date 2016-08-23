@@ -22,7 +22,7 @@ for each day. Each hourly cost is a positive integer. A sample rate table is giv
    :align: center
    :figclass: align-center
 
-The class *BatteryCharger* below uses a rate table to determine the most economic time to charge the battery. You will write two of the methods for the *BatteryCharger* class.
+The class ``BatteryCharger`` below uses a rate table to determine the most economic time to charge the battery. You will write two of the methods for the ``BatteryCharger`` class.
 
 .. code-block:: java
 

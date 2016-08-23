@@ -1,3 +1,7 @@
+.. qnum::
+   :prefix:  7-16-
+   :start: 1
+
 Free Response - Battery Charger B
 =================================
 
@@ -18,7 +22,7 @@ for each day. Each hourly cost is a positive integer. A sample rate table is giv
    :align: center
    :figclass: align-center
 
-The class *BatteryCharger* below uses a rate table to determine the most economic time to charge the battery. You will write two of the methods for the *BatteryCharger* class.
+The class ``BatteryCharger`` below uses a rate table to determine the most economic time to charge the battery. You will write two of the methods for the ``BatteryCharger`` class.
 
 .. code-block:: java
 
@@ -51,7 +55,7 @@ The class *BatteryCharger* below uses a rate table to determine the most economi
 Solve Part B
 ------------
 
-(b) Write the *BatteryCharger* method *getChargeStartTime* that returns the start time that will allow the battery to be charged at minimal cost. If there is more than one possible start time that produces the minimal cost, any of those start times can be returned.
+(b) Write the ``BatteryCharger`` method ``getChargeStartTime`` that returns the start time that will allow the battery to be charged at minimal cost. If there is more than one possible start time that produces the minimal cost, any of those start times can be returned.
 
 For example, using the rate table given at the beginning of the question, the following table shows the resulting minimal costs and optimal starting hour of several possible charges.
 
@@ -60,9 +64,9 @@ For example, using the rate table given at the beginning of the question, the fo
    :align: center
    :figclass: align-center
 
-Assume that *getChargingCost* works as specified, regardless of what you wrote in part (a).
+Assume that ``getChargingCost`` works as specified, regardless of what you wrote in part (a).
 
-Complete method *getChargeStartTime* below.
+Complete method ``getChargeStartTime`` below.
 
 .. activecode:: FRQBatteryChargerB
    :language: java
