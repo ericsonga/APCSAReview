@@ -144,7 +144,8 @@ Arrays
    ArrayBasics/numberCube.rst
    ArrayBasics/soundA.rst
    ArrayBasics/soundB.rst
-   ArrayBasics/batteryCharger.rst
+   ArrayBasics/batteryChargerA.rst
+   ArrayBasics/batteryChargerB.rst
 
 List and ArrayList
 ::::::::::::::::::::
