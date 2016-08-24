@@ -64,29 +64,29 @@ For example, using the rate table given at the beginning of the question, the fo
 
 Note that a charging method consists of consecutive hours that may extend over more than one day.
 
+How to Solve
+------------
+1.
+
+The Algorithm
+-------------
 .. parsonsprob:: BatteryChargerA
 
     The method getChargingCost below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
     -----
-    public void trimSilenceFromBeginning() {
-        int i = 0;
+    private int getChargingCost(int startHour,
+                               int chargeTime)
+    {
     =====
-        while (this.samples[i] == 0) {
-            i++;
+      int cost = 0;
     =====
-        } // end while
+      boolean test = hour < startHour + chargeTime;
+      for(int hour = startHour; test; hour++)
     =====
-        int samplesLen = this.samples.length;
-        int[] newSamples = new int[samplesLen - i];
+        int addVal = hour % rateTable.length;
+        cost += rateTable[addVal];
     =====
-
-        for (int j = 0; j < newSamples.length; j++) {
-    =====
-            newSamples[j] = this.samples[j+i];
-    =====
-        } // end for
-    =====
-        this.samples = newSamples;
+      return cost;
     =====
     } // end method
 
@@ -111,26 +111,13 @@ Complete method ``getChargingCost`` below.
 
    public class BatteryCharger
    {
-    /** rateTable has 24 entries representing the charging costs for hours 0 through 23. */
     private int[] rateTable;
 
-    /** Determines the total cost to charge the battery starting at the beginning of startHour.
-     *  @param startHour the hour at which the charging period begins
-     *         Precondition: 0 <= startHour <= 23
-     *  @param chargeTime the number ofhours the battery needs to be charged
-     *         Precondition: chargeTime > 0
-     *  @return the total cost to charge the battery
-     */
     private int getChargingCost(int startHour, int chargeTime)
     {
-        // Complete this method
+      // Complete this method
     }
 
-    /** Determines start time to charge the battery at the lowest cost for the given charge time.
-     *  @param chargeTime the number of hours the battery needs to be charged
-     *         Precondition: chargeTime > 0
-     *  @return an optimal start time, with 0 <= returned value <= 23
-     */
     public int getChargeStartTime(int chargeTime)
     { /* to be implemented in part (b) */ }
 

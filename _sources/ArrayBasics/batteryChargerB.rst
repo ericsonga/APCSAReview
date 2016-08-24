@@ -64,29 +64,37 @@ For example, using the rate table given at the beginning of the question, the fo
 
 Assume that ``getChargingCost`` works as specified, regardless of what you wrote in part (a).
 
+How to Solve
+------------
+1.
+2.
+
+The Algorithm
+-------------
 .. parsonsprob:: BatteryChargerB
 
     The method getChargeStartTime below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
     -----
-    public void trimSilenceFromBeginning() {
-        int i = 0;
+    public void trimSilenceFromBeginning()
+		{
+		=====
+      int i = 0;
     =====
-        while (this.samples[i] == 0) {
-            i++;
+      while (this.samples[i] == 0) {
+        i++;
     =====
-        } // end while
+      } // end while
     =====
-        int samplesLen = this.samples.length;
-        int[] newSamples = new int[samplesLen - i];
+      int samplesLen = this.samples.length;
+      int[] newSamples = new int[samplesLen - i];
     =====
-
-        for (int j = 0; j < newSamples.length; j++) {
+      for (int j = 0; j < newSamples.length; j++) {
     =====
-            newSamples[j] = this.samples[j+i];
+        newSamples[j] = this.samples[j+i];
     =====
-        } // end for
+      } // end for
     =====
-        this.samples = newSamples;
+      this.samples = newSamples;
     =====
     } // end method
 
@@ -108,32 +116,23 @@ Complete method ``getChargeStartTime`` below.
 .. activecode:: FRQBatteryChargerB
    :language: java
 
-		public class BatteryCharger
+    public class BatteryCharger
     {
-     /** rateTable has 24 entries representing the charging costs for hours 0 through 23. */
-     private int[] rateTable;
+      private int[] rateTable;
 
-     /** Determines the total cost to charge the battery starting at the beginning of startHour.
-      *  @param startHour the hour at which the charging period begins
-      *         Precondition: 0 <= startHour <= 23
-      *  @param chargeTime the number ofhours the battery needs to be charged
-      *         Precondition: chargeTime > 0
-      *  @return the total cost to charge the battery
-      */
-     private int getChargingCost(int startHour, int chargeTime)
-     { /* to be implemented in part (a) */ }
+      private int getChargingCost(int startHour, int chargeTime){
+        int cost = 0;
+        for(int hour = startHour; hour < startHour + chargeTime; hour++)
+            cost += rateTable[hour % rateTable.length];
+        return cost;
+      }
 
-     /** Determines start time to charge the battery at the lowest cost for the given charge time.
-      *  @param chargeTime the number of hours the battery needs to be charged
-      *         Precondition: chargeTime > 0
-      *  @return an optimal start time, with 0 <= returned value <= 23
-      */
-     public int getChargeStartTime(int chargeTime)
-     {
-		     // Complete this method
-		 }
+      public int getChargeStartTime(int chargeTime)
+      {
+          // Complete this method
+      }
 
      public static void main(String[] args){
-		     // Tests
-		 }
+        // Tests
+      }
     }
