@@ -66,7 +66,7 @@ Note that a charging method consists of consecutive hours that may extend over m
 
 How to Solve
 ------------
-1.
+1. You will need to use a type of loop in order to add the charge for each hour. Which type would be the most efficient in this case?
 
 The Algorithm
 -------------
@@ -111,17 +111,29 @@ Complete method ``getChargingCost`` below.
 
    public class BatteryCharger
    {
-    private int[] rateTable;
+    private int[] rateTable = {50,60,160,60,80,100,100,120,150,150,150,200,40,240,220,220,200,200,180,180,140,100,80,60};
 
-    private int getChargingCost(int startHour, int chargeTime)
+    public BatteryCharger()
+    {}
+
+    public int getChargingCost(int startHour, int chargeTime)
     {
       // Complete this method
     }
 
     public int getChargeStartTime(int chargeTime)
-    { /* to be implemented in part (b) */ }
+    { return 0; }
 
     public static void main(String[] args){
-        // Tests
+        BatteryCharger b = new BatteryCharger();
+
+        if(b.getChargingCost(0, 4) == 330 && b.getChargingCost(13, 4) == 880 && b.getChargingCost(22, 4) == 250){
+            System.out.println("Looks like your code works well!");
+        }else{
+            System.out.println("Oops");
+            if(b.getChargingCost(13, 4) == 360)
+                System.out.println("Looks like you're not properly using the modulus operator");
+            System.out.println("Make a few changes to your code, please.");
+        }
     }
    }
