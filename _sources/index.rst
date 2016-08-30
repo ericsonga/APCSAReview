@@ -59,6 +59,7 @@ Variables
    VariableBasics/vHardMC.rst
    VariableBasics/VariableSummary.rst
    VariableBasics/VariablePractice.rst
+   VariableBasics/VariablePracticeParsons.rst
 
 Strings
 ::::::::::::::::::::

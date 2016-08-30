@@ -418,38 +418,49 @@ Code Practice with Variables
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex9d
                 
-                
-.. parsonsprob:: ch3ex10p
+.. tabbed:: ch3Ex10
 
-   The following program segment should figure out the cost for each shirt if they are buy 2 and get the third free and they are originally $45 each.  But the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   double price = 45;
-   =====
-   double totalCost = price * 2;
-   =====
-   double pricePerShirt = totalCost / 3;
-   =====
-   System.out.println(pricePerShirt);
-           
-      
-.. parsonsprob:: ch3ex11p
-
-   The following program segment should figure out the cost per person for a dinner including the tip. But the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   double bill = 89.23;
-   =====
-   double tip = bill * 0.20;
-   =====
-   double total = bill + tip;
-   =====
-   int numPeople = 3;
-   double perPersonCost = total / numPeople;
-   =====
-   print(perPersonCost);
-   =====
-   print(perpersoncost); #distractor
+        .. tab:: Question
   
+           Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can't buy part of a wing. 
+           
+           .. activecode::  ch3Ex10q
+              :language: java
    
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Divide the amount of money you have by the cost of each wing and set the result to an integer since you can't buy a part of a wing.
+           
+           .. activecode::  ch3Ex10a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      double money = 4.5;
+                      double pricePer = 0.75;
+                      int num = money / pricePer;
+                      System.out.println(num);
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch3ex10d
+                
+
 
 
    
