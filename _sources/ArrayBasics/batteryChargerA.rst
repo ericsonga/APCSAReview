@@ -131,8 +131,10 @@ Complete method ``getChargingCost`` below.
             System.out.println("Looks like your code works well!");
         }else{
             System.out.println("Oops");
+
             if(b.getChargingCost(13, 4) == 360)
                 System.out.println("Looks like you're not properly using the modulus operator");
+            
             System.out.println("Make a few changes to your code, please.");
         }
     }

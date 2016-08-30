@@ -66,8 +66,7 @@ Assume that ``getChargingCost`` works as specified, regardless of what you wrote
 
 How to Solve
 ------------
-1.
-2.
+1. Remember to keep an eye on the given rate table in order to determine what values should be returned with each input.
 
 The Algorithm
 -------------
@@ -118,7 +117,10 @@ Complete method ``getChargeStartTime`` below.
 
     public class BatteryCharger
     {
-      private int[] rateTable;
+      private int[] rateTable = {50,60,160,60,80,100,100,120,150,150,150,200,40,240,220,220,200,200,180,180,140,100,80,60};
+
+			public BatteryCharger()
+			{}
 
       private int getChargingCost(int startHour, int chargeTime){
         int cost = 0;
@@ -132,7 +134,19 @@ Complete method ``getChargeStartTime`` below.
           // Complete this method
       }
 
-     public static void main(String[] args){
-        // Tests
+      public static void main(String[] args){
+        BatteryCharger b = new BatteryCharger();
+        if(b.getChargeStartTime(4) == 22 && b.getChargeStartTime(11) == 21 && b.getChargeStartTime(0) == 0){
+
+          System.out.println("Looks like your code works well!");
+
+        }else{
+          System.out.println("Oops\n");
+
+          if(b.getChargeStartTime(1) == 0)
+            System.out.println("Looks like you 're not properly updating the variable that is returned.\n");
+
+          System.out.println("Make a few changes to your code, please.");
+        }
       }
     }
