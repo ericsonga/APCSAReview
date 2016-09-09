@@ -25,12 +25,36 @@ Assume that the following code segment appears in a class other than `APLine`. T
 .. code-block:: java
 
    APLine line1 = new APLine(5, 4, -17);
-   double slope1 = line1.getSlope();        // slope1 is assigned -1.25
-   boolean onLine1 = line1.isOnLine(5, -2); // true because 5(5) + 4(-2) + (-17) = 0
+   double slope1 = line1.getSlope();       // slope1 is assigned -1.25
+   boolean onLine1 = line1.isOnLine(5, -2);// true because 5(5) + 4(-2) + (-17) = 0
 
    APLine line2 = new APLine(-25, 40, 30);
-   double slope2 = line2.getSlope();        // slope2 is assigned 0.625
-   boolean onLine2 = line2.isOnLine(5, -2); // false because -25(5) + 40(-2) + 30 != 0
+   double slope2 = line2.getSlope();       // slope2 is assigned 0.625
+   boolean onLine2 = line2.isOnLine(5, -2);// false because -25(5) + 40(-2) + 30 != 0
+
+How to Solve
+----------------
+.. mchoice:: apline_1
+   :answer_a: public interface MyClass
+   :answer_b: public class MyClass
+   :answer_c: public static void main(String[] args)
+   :correct: b
+   :feedback_a: This is the declaration of an interface. A proper class definition will not have the word "interface" included.
+   :feedback_b: A valid class declaration always uses the reserved word "class" before the name of the class.
+   :feedback_c: This is a method declaration. Classes in Java cannot be declared void, as they cannot return values. They also cannot have parameters.
+
+   How do you declare a class in Java?
+
+.. mchoice:: apline_2
+   :answer_a: public MyClass(int a, int b, int c)
+   :answer_b: public String MyClass(int a, int b, int c)
+   :answer_c: public class MyClass(int a, int b, int c)
+   :correct: a
+   :feedback_a: Constructor methods have the same name as the class, do not return values, and do not contain the reserved word "class".
+   :feedback_b: Constructor methods do not return values.
+   :feedback_c: Although constructor declarations may appear to be similar to class declarations, constructors never use the "class" reserved word.
+
+   How do you declare a constructor method that requires three parameters?
 
 Try and Solve It
 ----------------
@@ -49,8 +73,33 @@ You may ignore any issues related to integer overflow.
     /** State variables. Any numeric type; object or primitive. */
 
     /** Constructor with 3 int parameters. */
+    {}
 
     /** getSlope method */
+    {}
 
     /** isOnLine method */
+    {}
+
+    public static void main(String[] args){
+      APLine lineOne = new APLine(5, 4, -17);
+      APLine lineTwo = new APLine(-25, 40, 30);
+
+      boolean test1 = lineOne.isOnLine(5, -2) && !(lineTwo.isOnLine(5, -2));
+      boolean test2 = (lineOne.getSlope() == -1.25) && (lineTwo.getSlope() == 0.625);
+
+      if(test1 && test2){
+        System.out.println("Looks like your code works well!");
+      } else {
+        System.out.println("Oops!");
+        if(!test1)
+          System.out.println("Looks like your isOnLine method doesn't work properly.\n");
+
+        if(!test2)
+          System.out.println("Looks like your getSlope method doesn't work properly.\n");
+
+        System.out.println("Make a few changes to your code, please.");
+      }
+    }
+
    }
