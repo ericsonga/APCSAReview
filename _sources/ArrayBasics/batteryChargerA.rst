@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix:  7-15-
+   :prefix:  7-19-
    :start: 1
 
 Free Response - Battery Charger A
@@ -134,7 +134,7 @@ Complete method ``getChargingCost`` below.
 
             if(b.getChargingCost(13, 4) == 360)
                 System.out.println("Looks like you're not properly using the modulus operator");
-            
+
             System.out.println("Make a few changes to your code, please.");
         }
     }

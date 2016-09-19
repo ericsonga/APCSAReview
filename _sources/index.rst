@@ -141,9 +141,10 @@ Arrays
    ArrayBasics/selfDivisorB.rst
    ArrayBasics/horseBarnA.rst
    ArrayBasics/horseBarnB.rst
-   ArrayBasics/numberCube.rst
    ArrayBasics/soundA.rst
    ArrayBasics/soundB.rst
+   ArrayBasics/numberCubeA.rst
+   ArrayBasics/numberCubeB.rst
    ArrayBasics/batteryChargerA.rst
    ArrayBasics/batteryChargerB.rst
 
