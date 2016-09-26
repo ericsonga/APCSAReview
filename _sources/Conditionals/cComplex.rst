@@ -106,8 +106,6 @@ The following table shows the result for P || Q when P and Q are both expression
 
      if (x > 0 && (y / x) == 3) System.out.println("first case");
      else System.out.println("second case");
-     
-**Check your understanding**
 
 .. mchoice:: qcb_6
    :answer_a: first case

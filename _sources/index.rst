@@ -78,6 +78,7 @@ Strings
    Strings/sHardMC.rst
    Strings/StringSummary.rst
    Strings/StringPractice.rst
+   Strings/StringPracticeParsons.rst
 
 
 Conditionals
