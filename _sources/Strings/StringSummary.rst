@@ -35,7 +35,7 @@ Concept Summary
 - **override** - A child class can provide the same method as one it inherits from a parent class and in that case the child method will execute instead of the parent method.  The child method overrides the parent method.
 - **parent class** - A class in Java has a parent class and it inherits object fields and public methods from the parent class.  The ``Object`` class is the parent class of the ``String`` class.
 - **reference** - A reference is a way to find an object in memory.  A reference is similar to a package tracking number since it helps you find the package.   
-- **string** -  A string is an object of the ``String`` class which holds sequences of characters.  The ``String`` class also defines methods that you can execute on a string object like getting its length or getting a substring (copy of part of the string).
+- **string** -  A string is an object of the ``String`` class which holds sequences of characters.  The ``String`` class also defines methods that you can execute on a string object like getting its length or getting a substring (copy of part of the string).  Notice that the String class starts with an uppercase letter.  All class names in Java start with an uppercase letter.
 - **substring** - A new string that contains a copy of part of the original string.   
 
 Java Keyword Summary
@@ -72,7 +72,7 @@ Practice
     :feedback: Review the summaries above.
     :match_1: Returns true if the characters in two strings are the same|||equals
     :match_2: Returns the position of one string in another or -1|||indexOf
-    :match_3: Returns a new string with 0 to all characters copied from another string|||substring
-    :match_4: Returns a number to indicate if one string is less than, equal to, or greater than another|||compareTo
+    :match_3: Returns a number to indicate if one string is less than, equal to, or greater than another|||compareTo
+    :match_4: Returns a string representing the object that is passed to this method|||toString
     
     Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.

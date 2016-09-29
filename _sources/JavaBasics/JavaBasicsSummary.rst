@@ -5,7 +5,7 @@
 Intro to Java - Summary
 -------------------------
 
-In this chapter you started to learn a bit about Java - the programming language that you will use on the AP CS A exam.  
+In this chapter you started to learn a bit about Java - the programming language that you will use on the AP CS A exam.  You were also introduced to the concept of a class or classification.  A class in Java defines the properties of an object, which are called fields, and what an object can do, which are called methods.  Classes also have constructors which initialize the values of the fields and can have a main method which is where execution will start.  
 
 ..	index::
     single: class
@@ -40,6 +40,27 @@ Java Keyword Summary
 - **class** - used to define a new class
 - **public** - a visibility keyword which is used to control the classes that have access.  The keyword public means the code in any class has direct access.
 - **private** - a visibility keyword which is used to control the classes that have access.  The keyword private means that only the code in the current class has direct access.  
+
+Example Class Diagram and Class 
+=================================
+
+You can create a diagram that shows the fields and methods for a class. The figure below shows one way to do this for a Vehicle class. 
+
+.. figure:: Figures/vehicleDiag.png  
+    :width: 600px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: An example diagram of the fields and methods for a Vehicle class
+    
+The code for this class would look as follows.
+
+.. figure:: Figures/classVehicleExample.png
+    :width: 700px
+    :align: center
+    :figclass: align-center
+
+    Figure 2: An example class with fields, a constructor, methods, and a main method for testing 
 
 Practice
 ===========

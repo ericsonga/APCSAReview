@@ -98,7 +98,9 @@ Conditionals
    Conditionals/cMedMC.rst
    Conditionals/cHardMC.rst
    Conditionals/timeFRQ.rst
-
+   Conditionals/CondSummary.rst
+   Conditionals/CondPractice.rst
+   
 Magpie Chatbot Lab
 ::::::::::::::::::::
 

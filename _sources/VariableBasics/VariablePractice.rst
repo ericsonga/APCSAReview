@@ -10,7 +10,7 @@ Code Practice with Variables
         .. tab:: Question
 
            
-           The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+           The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.  
            
            .. activecode::  ch3Ex1q
               :language: java
@@ -60,7 +60,7 @@ Code Practice with Variables
         .. tab:: Question
 
            
-           The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+           The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``. Fix the code so that it compiles and runs correctly.  
            
            .. activecode::  ch3Ex2q
               :language: java
