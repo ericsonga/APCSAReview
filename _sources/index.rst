@@ -100,6 +100,7 @@ Conditionals
    Conditionals/timeFRQ.rst
    Conditionals/CondSummary.rst
    Conditionals/CondPractice.rst
+   Conditionals/CondParsonsPractice.rst
    
 Magpie Chatbot Lab
 ::::::::::::::::::::
