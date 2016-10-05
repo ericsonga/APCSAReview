@@ -512,7 +512,8 @@ Code Practice with Strings
                       String message = "I am very happy!";
                       String target = "very ";
                       int pos = message.indexOf(target);
-                      String newMessage = message.substring(0,pos) + message.substring(pos+target.length());
+                      String newMessage = message.substring(0,pos) + 
+                                          message.substring(pos+target.length());
                       System.out.println(newMessage);
                   }
               }
@@ -556,7 +557,9 @@ Code Practice with Strings
                       String message = "That was great - lol.";
                       String target = "lol";
                       int pos = message.indexOf(target);
-                      String newMessage = message.substring(0,pos) + "laugh out loud" + message.substring(pos + target.length());
+                      String newMessage = message.substring(0,pos) + 
+                                          "laugh out loud" + 
+                                          message.substring(pos + target.length());
                       System.out.println(newMessage);
                   }
               }
