@@ -478,6 +478,95 @@ Code Practice with Strings
                 :shortname: cslearn4u
                 :identifier: javareview_ch4Ex10d
                 
+.. tabbed:: ch4Ex11
+
+        .. tab:: Question
+  
+           The following code should remove the word "very " (and following space) from the message and print the new message.  You can use ``indexOf`` to find the position of a substring in your string.  You can use ``substring`` to create a new string removing the word. 
+           
+           .. activecode::  ch4Ex11q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String message = "I am very happy!";
+                      String target = "very ";
+                      
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Use ``indexOf`` to find the position and then create a new message up to the pos and again after the target string.
+          
+           .. activecode::  ch4Ex11a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String message = "I am very happy!";
+                      String target = "very ";
+                      int pos = message.indexOf(target);
+                      String newMessage = message.substring(0,pos) + message.substring(pos+target.length());
+                      System.out.println(newMessage);
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex11d
+                
+.. tabbed:: ch4Ex12
+
+        .. tab:: Question
+  
+           The following code should replace ``lol`` in the message with ``laugh out loud`` and print the new message.  
+           
+           .. activecode::  ch4Ex12q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String message = "That was great - lol.";
+                      
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Use ``indexOf`` to find the position of the "lol" then create a new string from up to that position and append the "laugh out loud" and the substring after it.  
+           
+           .. activecode::  ch4Ex12a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String message = "That was great - lol.";
+                      String target = "lol";
+                      int pos = message.indexOf(target);
+                      String newMessage = message.substring(0,pos) + "laugh out loud" + message.substring(pos + target.length());
+                      System.out.println(newMessage);
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex12d
+                
                 
 
   

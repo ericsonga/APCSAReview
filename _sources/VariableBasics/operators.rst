@@ -43,7 +43,7 @@ Do all of those operators do what you expected?  What about ``2 / 3`` prints ``0
 Modulus
 -----------
 
-The percent sign operator (``%``) is the **modulus** or remainder operator.  The **modulus** operator (``%``) returns the remainder after you divide the first number by the second number.  Remember long division when you had to specify how many times one number when into another evenly and the remainder?  That remainder is what is returned by the modulus operator.
+The percent sign operator (``%``) is the **modulus** or remainder operator.  The **modulus** operator (``x % y``) returns the remainder after you divide ``x`` (first number) by ``y`` (second number) so ``5 % 2`` will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number when into another evenly and the remainder?  That remainder is what is returned by the modulus operator.
 
 .. figure:: Figures/mod-py.png
     :width: 150px
@@ -67,7 +67,7 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
    }
     
 .. note::
-   The result of ``x % y`` when ``x`` is smaller than ``y`` is always ``x``.  The value ``y`` can't go into ``x`` at all, since ``x`` is smaller than ``y``, so the result is just ``x``.  So if you see ``2 % 3`` the result is ``2``.  
+   The result of ``x % y`` when ``x`` is smaller than ``y`` is always ``x``.  The value ``y`` can't go into ``x`` at all (goes in 0 times), since ``x`` is smaller than ``y``, so the result is just ``x``.  So if you see ``2 % 3`` the result is ``2``.  
   
 ..	index::
 	single: modulus

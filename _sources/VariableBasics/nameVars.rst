@@ -58,10 +58,10 @@ The convention in Java is to always start a variable name with a lower case lett
             
 .. fillintheblank:: fillName3
 
-        .. blank:: blankvar3-3-3
-            :correct: ^\s*playerTopScore$
-            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word.  This would be playerTopScore")
+        .. blank:: blankvar3-3-3a
+            :correct: ^\s*lastScore$
+            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word.  This would be lastScore")
 
-            What is the camel case variable name for a variable that represents the player's top score?
+            What is the camel case variable name for a variable that represents the last score?
 
        
