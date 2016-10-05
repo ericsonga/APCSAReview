@@ -48,6 +48,6 @@ What do you think the following will print?
    }
    
 .. note::
-   If you are appending number to a string it will be converted to a string first before being appended.  
+   If you are appending a number to a string it will be converted to a string first before being appended.  
   
 Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string.
