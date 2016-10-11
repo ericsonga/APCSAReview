@@ -6,7 +6,7 @@ Free Response - Number Cube A
 =============================
 
 ..	index::
-	single: self divisor
+	single: numbercubea
     single: free response
 
 The following is a free response question from 2009.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
@@ -27,102 +27,84 @@ The following is a free response question from 2009.  It was question 1 on the e
      public int toss()
      { /* implementation not shown */ }
 
-     // There may be instance variables, constructors, and methods that are not shown.
+     // There may be instance variables, constructors, and methods not shown.
    }
 
-You will implement a method that collects the results of several tosses of a number cube and another method that calculates the longest run found in a sequence of tosses.
+You will implement a method ``getCubeTosses`` that collects the results of several tosses of a number cube.
 
 How to Solve
 ----------------
 .. mchoice:: numbercubea_1
-   :answer_a: public interface MyClass
-   :answer_b: public class MyClass
-   :answer_c: public static void main(String[] args)
-   :correct: b
-   :feedback_a: This is the declaration of an interface. A proper class definition will not have the word "interface" included.
-   :feedback_b: A valid class declaration always uses the reserved word "class" before the name of the class.
-   :feedback_c: This is a method declaration. Classes in Java cannot be declared void, as they cannot return values. They also cannot have parameters.
-
-   How do you declare a class in Java?
-
-.. mchoice:: numbercubea_2
-   :answer_a: public MyClass(int a, int b, int c)
-   :answer_b: public String MyClass(int a, int b, int c)
-   :answer_c: public class MyClass(int a, int b, int c)
+   :answer_a: Math.random();
+   :answer_b: int randomNum;
+   :answer_c: new String();
    :correct: a
-   :feedback_a: Constructor methods have the same name as the class, do not return values, and do not contain the reserved word "class".
-   :feedback_b: Constructor methods do not return values.
-   :feedback_c: Although constructor declarations may appear to be similar to class declarations, constructors never use the "class" reserved word.
+   :feedback_a: This expression correctly generates a random number.
+   :feedback_b: This expression simply declares an integer and does not generate a value.
+   :feedback_c: This expression creates a String object and does not generate a numeric value.
 
-   How do you declare a constructor method that requires three parameters?
+   Which Java expression correctly generates a random number?
 
 The Algorithm
 -------------------
 .. parsonsprob:: NumberCubeA
 
-  The method getIndexForFit below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+  The method getCubeTosses below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
   -----
-  private int getIndexForFit(NumberTile tile) {
-   boolean empty = this.board.size() == 0;
-   boolean firstTile = tile.getRight() == this.board.get(0).getLeft();
- =====
-   if (empty || firstTile)
-     return 0;
- =====
-   for (int i = 1; i < this.board.size(); i++)
-   {
- =====
-     if (tile.getLeft() == this.board.get(i-1).getRight() &&
-       tile.getRight() == this.board.get(i).getLeft())
-     return i;
- =====
-   } // end for
- =====
-   NumberTile lastTile = this.board.get(this.board.size() - 1);
-   if (tile.getLeft() == lastTile.getRight())
-       return this.board.size();
- =====
-   return -1;
- =====
- } // end method
+  public static int[] getCubeTosses(NumberCube cube,
+  int numTosses)
+  {
+  =====
+      int[] cubeTosses = new int[numTosses];
+  =====
+      for (int i = 0; i < numTosses; i++)
+      {
+  =====
+          cubeTosses[i] = cube.toss();
+  =====
+      } // end for
+  =====
+      return cubeTosses;
+  =====
+  } // end method
+
 
 Try and Solve Part A
 --------------------
 
-(a) Write the method ``getCubeTosses`` that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.
+Write the method ``getCubeTosses`` that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.
 
 .. activecode:: FRQNumberCubeA
    :language: java
 
-   public class NumberCube
-   {
-    /** @return an integer value between 1 and 6, inclusive
-     */
-     public int toss()
-     { /* implementation not shown */ }
+    public class NumberCube
+    {
+        public NumberCube()
+        {
 
-      public static int[] getCubeTosses(NumberCube cube, int numTosses){
-        // Complete this method
-      }
+        }
 
-      public static void main(String[] args){
+        public int toss()
+        {
+            return (int)( (Math.random() * 6) + 1 );
+        }
 
-      }
-   }
+        public static int[] getCubeTosses(NumberCube cube, int numTosses)
+        {
+            // Complete this method
+        }
 
-Try and Solve Part B
---------------------
+        public static void main(String[] args){
+            NumberCube cube = new NumberCube();
+            int numTosses = 9;
+            int[] tosses = getCubeTosses(cube, numTosses);
 
-(b) Write the method ``getLongestRun`` that takes as its parameter an array of integer values representing a series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A run is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.
-
-.. activecode:: FRQNumberCubeB
-   :language: java
-
-   /** Returns the starting index of a longest run of two or more consecutive repeated values
-    *  in the array values.
-    *  @param values an array of integer values representing a series of number cube tosses
-    *         Precondition: values.length > 0
-    *  @return the starting index of a run of maximum size;
-    *          -1 if there is no run
-    */
-    public static int getLongestRun(int[] values)
+            if(tosses.length < numTosses){
+              System.out.println("It looks like youre not returning the correct \n" +
+                                                "amount of tosses.\n" +
+                                  "\nRemember that your array should be of length\nnumTosses.");
+            } else {
+              System.out.println("Looks like your code works well!");
+            }
+        }
+    }
