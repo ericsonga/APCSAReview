@@ -22,6 +22,32 @@ For more information on the exam see https://apstudent.collegeboard.org/apcourse
 
 The exam has two parts and takes 3 hours.  The first part has 40 multiple-choice questions.  The second part has 4 free response questions were you have to write Java code by hand.  In the past the multiple choice question part was 1 hour and 15 minutes, but as of spring 2016 it will be 1 hour and 30 minutes.  The free response part will also be 1 hour and 30 minutes as of spring 2016.
 
+Acknowledgements
+-------------------
+
+We gratefully acknowledge the use of the Jobe server from the University of Canterbury, New Zealand.  The Java programs in this eBook are actually sent to New Zealand to execute on the Jobe server.  
+
+Special thanks also to the following people that we have collaborated with:
+
+* Jeff (Jochen) Rick made great contributions to the Parsons problems (mixed up code problems). 
+
+* Philip Guo who created the Java Visualizer, which we both link to and have embedded in this eBook.
+
+* Paul Resnick at the University of Michigan for hosting us all at the summer 2016 hackathon for Runestone Interactive and for his input into the design of the instructor dashboard.
+
+* Brad Miller and David Ranum and the students at Luther College, who created the Runestone Interactive platform and keep it going.   Brad is amazing!
+
+Thank you also to the National Science Foundation for supporting our ebook work through several grants: Grant No. 1432300, 1138378, and 1228352.  	
+
+Any opinions, findings, and conclusions or recommendations expressed in this material
+are those of the authors and do not necessarily reflect the views of the National Science Foundation.
+
+Google has supported this work through their Google RISE Awards: TFR14-03256, 	TFR14-00363, and 	TFR-16-01052.  They have also supported our efforts
+to help more under-represented students succeed in their AP CS A courses and on the exam.
+
+Any opinions, findings, and conclusions or recommendations expressed in this material
+are those of the authors and do not necessarily reflect the views of the Google.  
+
 
 Contributors
 -------------
