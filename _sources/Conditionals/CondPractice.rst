@@ -231,7 +231,7 @@ Code Practice with Conditionals
 
         .. tab:: Answer
         
-           Add the ``else if`` and the print out if x is equal to 0 and the ``else`` to print that x is greater than 0 as shown below.
+           One way to solve this is to add an ``else if`` and then print out if x is equal to 0 and an ``else`` to print that x is greater than 0 as shown below.
         
            .. activecode::  ch5Ex5a
               :language: java
@@ -281,7 +281,7 @@ Code Practice with Conditionals
 
         .. tab:: Answer
         
-           Add an if statement and use a logical or to join the conditions and print the one message.  Also add an else statement and print the other message.
+           Add an ``if`` statement and use a logical or (``||``) to join the conditions and print the one message.  Also add an ``else`` statement and print the other message.
         
            .. activecode::  ch5Ex6a
               :language: java

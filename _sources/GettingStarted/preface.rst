@@ -35,7 +35,7 @@ Special thanks also to the following people that we have collaborated with:
 
 * Paul Resnick at the University of Michigan for hosting us all at the summer 2016 hackathon for Runestone Interactive and for his input into the design of the instructor dashboard.
 
-* Brad Miller and David Ranum and the students at Luther College, who created the Runestone Interactive platform and keep it going.   Brad is amazing!
+* Brad Miller and David Ranum and the students at Luther College, who created the Runestone Interactive platform and who keep it going.   
 
 Thank you also to the National Science Foundation for supporting our ebook work through several grants: Grant No. 1432300, 1138378, and 1228352.  	
 
