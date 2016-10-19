@@ -1,0 +1,119 @@
+.. qnum::
+   :prefix: 7-18-
+   :start: 1
+
+Free Response - Number Cube B
+=============================
+
+..	index::
+	single: numbercubeb
+    single: free response
+
+The following is a free response question from 2009.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+
+**Question 1.**  A statistician is studying sequences of numbers obtained by repeatedly tossing a six-sided number cube. On each side of the number cube is a single number in the range of 1 to 6, inclusive, and no number is repeated on the cube. The statistician is particularly interested in runs of numbers. A run occurs when two or more consecutive tosses of the cube produce the same value. For example, in the following sequence of cube tosses, there are runs starting at positions 1, 6, 12, and 14.
+
+.. figure:: Figures/numberLine.png
+    :width: 757px
+    :align: center
+    :figclass: align-center
+
+.. code-block:: java
+
+   public class NumberCube
+   {
+    /** @return an integer value between 1 and 6, inclusive
+     */
+     public int toss()
+     { /* implementation not shown */ }
+
+     // There may be instance variables, constructors, and methods that are not shown.
+   }
+
+You will implement a method ``getLongestRun`` that calculates the longest run found in a sequence of tosses.
+
+How to Solve
+----------------
+1. Remember that you will need to keep track of the length of the longest run of tosses and the starting index of that run.
+
+The Algorithm
+-------------------
+.. parsonsprob:: NumberCubeB
+
+  The method getLongestRun below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+  -----
+  public static int getLongestRun(int[] values)
+  {
+      int currentLen = 0;
+      int maxLen = 0;
+      int maxStart = -1;
+  =====
+      for (int i = 0; i < values.length-1; i++)
+      {
+  =====
+          if (values[i] == values[i+1])
+          {
+  =====
+              currentLen++;
+              if (currentLen > maxLen)
+              {
+                  maxLen = currentLen;
+                  maxStart = i - currentLen + 1;
+              }
+  =====
+          } else {
+              currentLen = 0;
+          }
+  =====
+      } // end for
+      return maxStart;
+  =====
+  } // end method
+
+
+Try and Solve Part B
+--------------------
+
+Write the method ``getLongestRun`` that takes as its parameter an array of integer values representing a series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A run is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.
+
+.. activecode:: FRQNumberCubeB
+   :language: java
+
+   public class NumberCube
+   {
+       public NumberCube()
+       {
+
+       }
+
+       /** True implementation not shown
+        */
+       public int toss()
+       { return 0; }
+
+       /** True implementation not shown
+        */
+       public static int[] getCubeTosses(NumberCube cube, int numTosses)
+       { return new int[1]; }
+
+       public static int getLongestRun(int[] values)
+       {
+           // Complete this method
+       }
+
+       public static void main(String[] args){
+           int[] values = {3, 5, 6, 6, 3, 6, 4, 4, 4, 2, 6, 4, 1, 1, 1, 1};
+           int longestRunIdx = getLongestRun(values);
+
+           if(longestRunIdx != 12){
+              System.out.println("Your code does not return the correct index.\n");
+
+              if(longestRunIdx == 2 || longestRunIdx == 6)
+                  System.out.println("It is returning the start index of a run, but that run is not the longest.\n");
+
+              System.out.println("Remember that your code must return the start index of the longest run of tosses.");
+           } else {
+              System.out.println("Looks like your code works well!");
+           }
+       }
+   }

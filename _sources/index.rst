@@ -141,10 +141,12 @@ Arrays
    ArrayBasics/selfDivisorB.rst
    ArrayBasics/horseBarnA.rst
    ArrayBasics/horseBarnB.rst
-   ArrayBasics/numberCube.rst
    ArrayBasics/soundA.rst
    ArrayBasics/soundB.rst
-   ArrayBasics/batteryCharger.rst
+   ArrayBasics/numberCubeA.rst
+   ArrayBasics/numberCubeB.rst
+   ArrayBasics/batteryChargerA.rst
+   ArrayBasics/batteryChargerB.rst
 
 List and ArrayList
 ::::::::::::::::::::
@@ -167,7 +169,8 @@ List and ArrayList
    ListBasics/climbClubC.rst
    ListBasics/cookieOrderA.rst
    ListBasics/cookieOrderB.rst
-   ListBasics/fuelDepot.rst
+   ListBasics/fuelDepotA.rst
+   ListBasics/fuelDepotB.rst
    ListBasics/tileGameA.rst
    ListBasics/tileGameB.rst
    ListBasics/flightList.rst

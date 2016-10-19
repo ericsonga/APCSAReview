@@ -67,7 +67,7 @@ An incomplete implementation of the ``RouteCipher`` class is shown below.
 **Part a.**
 Write the method ``fillBlock`` that fills the two-dimensional array ``letterBlock`` with one-character strings from the string passed as parameter ``str``.
 
-The array must be filled in row-major order—the first row is filled from left to right, then the second row is filled from left to right, and so on, until all rows are filled.
+The array must be filled in row-major order the first row is filled from left to right, then the second row is filled from left to right, and so on, until all rows are filled.
 
 If the length of the parameter ``str`` is smaller than the number of elements of the array, the string "A" is placed in each of the unfilled cells. If the length of ``str`` is larger than the number of elements in the array, the trailing characters are ignored.
 
@@ -101,33 +101,60 @@ The Algorithm
 -------------------
 .. parsonsprob:: RouteCipherA
 
-  The method fillBlock below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-  -----
-  private void fillBlock(String str) {
-    int pos = 0;
-  =====
-    for (int r = 0; r < this.numRows; r++ ) {
-  =====
-    for (int c = 0; c < this.numCols; c++ ) {
-  =====
-      if (pos < str.length()) {
-  =====
-        String subStr = str.substring(pos, pos+1);
-        this.letterBlock[r][c] = subStr;
-        pos++;
-  =====
-      } else {
-        this.letterBlock[r][c] = "A";
-      } // end else block
-  =====
-    } // end inner for
-  =====
-    } // end outer for
-  =====
-  } // end method
+    The method fillBlock below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+    -----
+    private void fillBlock(String str)
+    {
+    =====
+      int pos = 0;
+    =====
+      for (int r = 0; r < this.numRows;r++){
+        for (int c = 0; c < this.numCols;c++){
+    =====
+        if(pos < str.length()) {
+    =====
+          String subStr = str.substring(pos,pos+1);
+          this.letterBlock[r][c] = subStr;
+          pos++;
+    =====
+        } else {
+          this.letterBlock[r][c] = "A";
+        } // end else block
+    =====
+      } // end inner for
+      } // end outer for
+    =====
+    } // end method
 
 Solve Part A
 ------------
+Write the method ``fillBlock`` that fills the two-dimensional array ``letterBlock`` with one-character strings from the string passed as parameter ``str``.
+
+The array must be filled in row-major order the first row is filled from left to right, then the second row is filled from left to right, and so on, until all rows are filled.
+
+If the length of the parameter ``str`` is smaller than the number of elements of the array, the string "A" is placed in each of the unfilled cells. If the length of ``str`` is larger than the number of elements in the array, the trailing characters are ignored.
+
+For example, if ``letterBlock`` has 3 rows and 5 columns and ``str`` is the string "Meet at noon", the resulting contents of ``letterBlock`` would be as shown in the following table.
+
+.. figure:: Figures/routeCipherTable.png
+  :width: 158px
+  :align: center
+  :figclass: align-center
+
+If ``letterBlock`` has 3 rows and 5 columns and ``str`` is the string "Meet at midnight", the resulting contents of ``letterBlock`` would be as shown in the following table.
+
+.. figure:: Figures/routeCipherTable2.png
+  :width: 158px
+  :align: center
+  :figclass: align-center
+
+
+The following expression may be used to obtain a single-character string at position ``k`` of the string ``str``.
+
+.. code-block:: java
+  str.substring(k, k + 1)
+
+
 Complete the method ``fillBlock`` below.
 
 .. activecode:: FRQRouteCipherA
@@ -182,10 +209,12 @@ Complete the method ``fillBlock`` below.
 
       ciph.fillBlock("There's 1");
 
-      if((ciph.letterBlock[0][2]).equals("e") && (ciph.letterBlock[2][1]).equals(" "))
+      if((ciph.letterBlock[0][2]).equals("e") && (ciph.letterBlock[2][1]).equals(" ")){
         test1 = true;
-      else
+      }else{
         System.out.println("Oops! Looks like your code doesn't properly insert the given String.\n");
+        System.out.println("Make sure that that you are inserting the String in row-major order.\n");
+      }
 
       if(test1)
         System.out.println("Looks like your code works well!");

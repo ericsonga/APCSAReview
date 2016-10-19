@@ -79,8 +79,18 @@ Assume that ``fillBlock`` and ``encryptBlock`` methods work as specified. Soluti
 
 How to Solve This
 --------------------
-1. You will need to loop through the message. What type of loop will you use?
-2. Remember that you will need to call the ``encryptBlock`` method.
+You will need to loop through the message. What type of loop will you use?
+
+.. mchoice:: routecipherb_1
+   :answer_a: encryptBlock
+   :answer_b: decodeBlock
+   :answer_c: clearBlock
+   :correct: a
+   :feedback_a: Be sure to read the directions carefully; at times, some methods will have very similar names.
+   :feedback_b: Be sure to read the directions carefully; at times, some methods will have very similar names.
+   :feedback_c: Be sure to read the directions carefully; at times, some methods will have very similar names.
+
+   What is the name of the method that you will need to call?
 
 The Algorithm
 -------------------
@@ -88,7 +98,9 @@ The Algorithm
 
   The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
   -----
-  public String encryptMessage(String message) {
+  public String encryptMessage(String message)
+  {
+  =====
     String encryptedMessage = "";
     int chunkSize = this.numRows * this.numCols;
   =====
@@ -112,6 +124,19 @@ The Algorithm
 
 Solve Part B
 ------------
+Write the method ``encryptMessage`` that encrypts its string parameter message. The method builds an encrypted version of message by repeatedly calling ``fillBlock`` with consecutive, non-overlapping substrings of ``message`` and concatenating the results returned by a call to ``encryptBlock`` after each call to ``fillBlock``. When all of ``message`` has been processed, the concatenated string is returned. Note that if ``message`` is the empty string, ``encryptMessage`` returns an empty string.
+
+The following example shows the process carried out if ``letterBlock`` has 2 rows and 3 columns and ``encryptMessage("Meet at midnight")`` is executed.
+
+.. figure:: Figures/routeCipherFig2.png
+   :width: 482px
+   :align: center
+   :figclass: align-center
+
+In this example, the method returns the string "Mte eati dmnitgAhA".
+
+Assume that ``fillBlock`` and ``encryptBlock`` methods work as specified. Solutions that reimplement the functionality of one or both of these methods will not receive full credit.
+
 Complete method ``encryptMessage`` below.
 
 .. activecode:: FRQRouteCipherB
@@ -180,9 +205,21 @@ Complete method ``encryptMessage`` below.
      public static void main(String[] args){
 
       RouteCipher ciph = new RouteCipher(2, 3);
-      if(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea"))
+      String encryptedMsg = ciph.encryptMessage("Meet at midnight");
+      if(encryptedMsg.length() < ("Mte ea").length()){
+
+          System.out.println("Oops!\n");
+          System.out.println("Looks like the encrypted message is too short. Remember that you need to keep adding columns of the encrypt block to the String that you will be returning.\n");
+          System.out.println("Make a few changes to your code, please.");
+
+      }else if(!encryptedMsg.substring(0, 6).equals("Mte ea")){
+
+          System.out.println("Oops!\n");
+          System.out.println("Looks like the message is not encrypted properly. Read the directions again and keep an eye on how exactly the message is supposed to be encrypted.\n");
+          System.out.println("Make a few changes to your code, please.");
+
+      }else{
         System.out.println("Looks like your code works well!");
-      else
-        System.out.println("Oops! Make a few changes to your code, please.");
+      }
      }
    }
