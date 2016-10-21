@@ -34,6 +34,8 @@ Run the code below and try changing the value of x to get each of the three poss
         System.out.println("after conditional");
       }
    }
+   
+.. note:: Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.
   
 **Check your understanding**
 

@@ -197,7 +197,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch5ex8muc
    :noindent:
 
-   The main method in the following class should print if you can text now.  You can text if you are not driving or eating. But, the blocks have been mixed up and includes <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The main method in the following class should print if you can text now.  You can text if you are not driving and not eating. But, the blocks have been mixed up and includes <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public class Test1
    {
@@ -208,9 +208,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            boolean driving = true;
            boolean eating = false;
    =====
-           if (!driving || !eating)
+           if (!driving && !eating)
    =====
-           if (!driving || eating) #paired     
+           if (!driving || !eating) #paired     
    =====
                System.out.println("Can text now");
    =====
@@ -224,7 +224,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch5ex9muc
    :noindent:
 
-   The main method in the following class should print if your name starts with a vowel or not. But, the blocks have been mixed up and includes <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The main method in the following class should print if your name starts with a vowel or not. But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public class Test1
    {

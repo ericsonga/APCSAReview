@@ -356,7 +356,7 @@ Code Practice with Conditionals
 
         .. tab:: Question
   
-           Finish the following code so that it prints ``You have a fever`` if you temperature is above 100 and otherwise prints "You don't have a fever".
+           Finish the following code so that it prints ``You have a fever`` if your temperature is above 100 and otherwise prints ``You don't have a fever``.
            
            .. activecode::  ch5Ex8q
               :language: java
@@ -372,7 +372,7 @@ Code Practice with Conditionals
 
         .. tab:: Answer
         
-           Add a conditional and print the message if the temp is above 100 and otherwise print the other message.
+           Add a conditional and print the first message if the temp is above 100 and otherwise print the other message.
           
            .. activecode::  ch5Ex8a
               :language: java

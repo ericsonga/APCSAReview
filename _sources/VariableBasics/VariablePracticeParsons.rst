@@ -8,6 +8,7 @@ Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
                 
 .. parsonsprob:: ch3ex1muc
+   :noindent:
 
    The following program segment should figure out the cost for each shirt if they are buy 2 and get the third free and they are originally $45 each.  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
@@ -21,6 +22,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            
       
 .. parsonsprob:: ch3ex2muc
+   :noindent:
 
    The following program segment should figure out the cost per person for a dinner including the tip. But the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
