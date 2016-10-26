@@ -7,6 +7,9 @@ Hard Multiple Choice Questions
 
 These problems are harder than most of those that you will usually see on the AP CS A exam. 
 
+This problem is about big O notation which is not covered on the A exam.  It used to be covered on the AB exam, but they
+stopped offering that exam several years ago.
+
 .. mchoice:: qlh_1n
    :answer_a: O(log n)
    :answer_b: O(n log n)

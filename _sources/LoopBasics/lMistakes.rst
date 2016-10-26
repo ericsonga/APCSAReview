@@ -7,7 +7,7 @@ Common Mistakes
 
   -  Forgetting to change the thing you are testing in a ``while`` loop and ending up with an infinite loop.  
   
-  -  Getting the start and end conditions wrong on the ``for`` loop. This will often result in you getting an out of bounds error.
+  -  Getting the start and end conditions wrong on the ``for`` loop. This will often result in you getting an **out of bounds error**.  An **out of bounds** error occurs when you try to access past the end of a string.  
   
   -  Jumping out of a loop too early by using one or more return statements inside of the loop.    
  
@@ -26,27 +26,6 @@ Here is an example of a while loop that doesn't ever change the value in the loo
           {
              System.out.println(x);
           }
-      }
-   }
-   
-Here is an example of going past the bounds of a string.  This code should double all but the first and last letter in message.  Fix the code so that it doesn't cause an error.
-
- .. activecode:: while_loop_mistake2
-   :language: java
-   
-   public class Test
-   {
-      public static void main(String[] args)
-      {
-          String result = "";
-          String message = "watch out";
-          int pos = 0;
-          while (pos < message.length())
-          {
-             result = result + message.substring(pos,pos+2);   
-             pos = pos + 1;       
-          }
-          System.out.println(result);
       }
    }
    

@@ -130,6 +130,10 @@ You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the 
         System.out.println(num);
       }
    }
+   
+.. note::
+
+   On the exam you can use ``x++`` or ``++x`` to both add one to the value of ``x``.  These two shortcuts only have different results if you assign the value of ``x`` to another variable as in ``int y = ++x;`` or ``int y = x++;``.  In ``int y = ++x;`` the value of x would be incremented before y's value is set to a copy of x's value.  In ``int y = x++;`` the value of y would be set to a copy of x's value before x is incremented.  The exam will never use a shortcut in an assignment statement, so you don't need to worry about the difference between ``++x`` or ``x++``.  
 
 .. mchoice:: q3_4_3
    :answer_a: x = -1, y = 1, z = 4
