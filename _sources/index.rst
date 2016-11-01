@@ -129,6 +129,8 @@ Loops
    LoopBasics/lHardMC.rst
    LoopBasics/selfDivisorA.rst
    LoopBasics/stringScrambleA.rst
+   LoopBascis/LoopSummary.rst
+   LoopBasics/LoopPractice.rst
 
 Arrays
 ::::::::::::::::::::

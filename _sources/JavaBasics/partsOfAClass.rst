@@ -42,16 +42,16 @@ a person.
         :click-correct:private String first;:endclick:
         :click-correct:private String last;:endclick:
         
-        :click-incorrect:public Name(String theFirst, String theLast):endclick:
+        :click-incorrect:public Name(String theFirst, String theLast) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
          
-         :click-incorrect:public void setFirst(String theFirst):endclick:
+         :click-incorrect:public void setFirst(String theFirst) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
          :click-incorrect:}:endclick:
          
-         :click-incorrect:public void setLast(String theLast):endclick:
+         :click-incorrect:public void setLast(String theLast) {:endclick:
             :click-incorrect:first = theLast;:endclick:
          :click-incorrect:}:endclick:
          
@@ -91,16 +91,16 @@ The ``Person`` class has one constructor that takes two values: a string that is
         :click-incorrect:private String first;:endclick:
         :click-incorrect:private String last;:endclick:
         
-        :click-correct:public Name(String theFirst, String theLast):endclick:
+        :click-correct:public Name(String theFirst, String theLast) {:endclick:
             :click-correct:first = theFirst;:endclick:
             :click-correct:last = theLast;:endclick:
          :click-correct:}:endclick:
          
-         :click-incorrect:public void setFirst(String theFirst):endclick:
+         :click-incorrect:public void setFirst(String theFirst) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
          :click-incorrect:}:endclick:
          
-         :click-incorrect:public void setLast(String theLast):endclick:
+         :click-incorrect:public void setLast(String theLast) {:endclick:
             :click-incorrect:first = theLast;:endclick:
          :click-incorrect:}:endclick:
          
@@ -158,16 +158,16 @@ The ``Person`` class has methods for getting the name and cell phone and for set
         :click-incorrect:private String first;:endclick:
         :click-incorrect:private String last;:endclick:
         
-        :click-incorrect:public Name(String theFirst, String theLast):endclick:
+        :click-incorrect:public Name(String theFirst, String theLast) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
          
-         :click-correct:public void setFirst(String theFirst):endclick:
+         :click-correct:public void setFirst(String theFirst) {:endclick:
             :click-correct:first = theFirst;:endclick:
          :click-correct:}:endclick:
          
-         :click-correct:public void setLast(String theLast):endclick:
+         :click-correct:public void setLast(String theLast) {:endclick:
             :click-correct:first = theLast;:endclick:
          :click-correct:}:endclick:
          

@@ -1,49 +1,142 @@
 .. qnum::
-   :prefix: 5-13-
+   :prefix: 7-12-
    :start: 1
    
-Code Practice with Conditionals
+Code Practice with Loops
 ------------------------------------
 
-.. tabbed:: ch5Ex1
+.. tabbed:: ch7Ex1
 
         .. tab:: Question
 
            
-           The following code should print ``X is greater than 0``.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+           Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 1 (inclusive).  
            
-           .. activecode::  ch5Ex1q
+           .. activecode::  ch7Ex1q
               :language: java
    
-              public class Test1
+              public class Test
               {
                   public static void main(String[] args)
                   {
-                      int x = 3;
-                      if (x > 0
-                          System.out.println("x is greater than 0")
-                      else 
-                          System.out.println(x is less than or equal 0");
+                      int x = 5;
+                      while (x > 0)
+                      {
+                          System.out.println(x);
+                          x = x - 1;
+                      }
                   }
               }
 
 
         .. tab:: Answer
         
-           Line 6 is missing a final ``)``.  Line 7 is missing a semicolon at the end.  Line 9 is missing the starting ``"``.
+           In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
         
-           .. activecode::  ch5Ex1a
+           .. activecode::  ch7Ex1a
+              :language: java
+   
+              public class Test
+              {
+                  public static void main(String[] args)
+                  {
+                      for (int x = 5; x > 0; x = x - 1)
+                          System.out.println(x);
+                  }
+              }
+
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex1d
+                
+.. tabbed:: ch7Ex2
+
+        .. tab:: Question
+
+           
+           Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 1 to 10 (inclusive).
+           
+           .. activecode::  ch7Ex2q
+              :language: java
+   
+              public class Test
+              {
+                  public static void main(String[] args)
+                  {
+                      for (int x = 1; x <= 10; x++)
+                          System.out.println(x);
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.  
+           
+           .. activecode::  ch7Ex2a
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      int x = 3;
-                      if (x > 0)
-                          System.out.println("x is greater than 0");
-                      else 
-                          System.out.println("x is less than or equal 0");
+                      int x = 1;
+                      while (x <= 10)
+                      {
+                          System.out.println(x);
+                          x++;
+                      }
+                  }  
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex2d
+                
+.. tabbed:: ch7Ex3
+
+        .. tab:: Question
+
+           
+           Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 15 (inclusive).    
+           
+           .. activecode::  ch7Ex3q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      int x = 5;
+                      while (x <= 15)
+                      {
+                          System.out.println(x);
+                          x = x + 1;
+                      }
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
+           
+           .. activecode::  ch7Ex3a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      for (int x = 5; x <= 15; x++)
+                      {
+                          System.out.println(x);
+                      }
                   }
               }
               
@@ -51,151 +144,45 @@ Code Practice with Conditionals
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch5Ex1d
+                :identifier: javareview_ch7Ex3d
                 
-.. tabbed:: ch5Ex2
+.. tabbed:: ch7Ex4
 
         .. tab:: Question
 
            
-           The following code should check your guess against the answer and print that it is too low, correct, or too high.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+           Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 10 to 100 by 10's (inclusive).
            
-           .. activecode::  ch5Ex2q
+           .. activecode::  ch7Ex4q
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      int guess = 7;
-                      int answer = 9;
-                      if guess < answer)
-                          System.out.println("Your guess is too low);
-                      else if (guess = answer)
-                          System.out.println("You are right!");
-                      else 
-                          System.println("Your guess is too high");
+                      for (int x = 10; x <= 100; x=x+10)
+                          System.out.println(x);
                   }
               }
 
 
         .. tab:: Answer
         
-           Line 7 is missing the starting ``(``.  Line 8 is missing the closing ``"``.  Line 9 should be ``==`` rather than ``=`` to test for equality.  Line 12 should be ``System.out.println``.
+           You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.  		
            
-           .. activecode::  ch5Ex2a
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      int guess = 7;
-                      int answer = 9;
-                      if (guess < answer)
-                          System.out.println("Your guess is too low");
-                      else if (guess == answer)
-                          System.out.println("You are right!");
-                      else 
-                          System.out.println("Your guess is too high");
-                  }
-              }
-              
-        .. tab:: Discussion 
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: javareview_ch5Ex2d
-                
-.. tabbed:: ch5Ex3
-
-        .. tab:: Question
-
-           
-           The following code should print if you can go out or not.  You can go out if you have done your homework and cleaned your room. However, the code has errors.  Fix the code so that it compiles and runs correctly.  
-           
-           .. activecode::  ch5Ex3q
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      boolean doneHomework = True;
-                      boolean cleanedRoom = true;
-                      if (doneHomework && cleanedRoom)
-                           System.out.println("You can not go out");
-                      else 
-                          System.out.println("You can go out");
-                  }
-              }
-
-
-        .. tab:: Answer
-        
-           Line 5 should be ``true`` not ``True``.  Lines 10 and 8 should be swapped.
-           
-           .. activecode::  ch5Ex3a
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      boolean doneHomework = true;
-                      boolean cleanedRoom = true;
-                      if (doneHomework && cleanedRoom)
-                          System.out.println("You can go out");
-                      else 
-                          System.out.println("You can not go out");
-                  }
-              }
-              
-        .. tab:: Discussion 
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: javareview_ch5Ex3d
-                
-.. tabbed:: ch5Ex4
-
-        .. tab:: Question
-
-           
-           The following code should print if x is in the range of 0 to 10 (including 0 and 10). However, the code has errors.  Fix the errors so that the code runs as intended.
-           
-           .. activecode::  ch5Ex4q
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      int x = 3
-                      if (x > 0 && x <= 10)
-                          System.out.println("x is between 0 and 10 inclusive");
-                      otherwise 
-                          System.out.println("x is either less than 0 or greater than 10");
-                  }
-              }
-
-
-        .. tab:: Answer
-        
-           Line 5 is missing an end  ``;``.  Line 6 should be ``x >= 0``.  Line 8 should be ``else`` instead of ``otherwise``.		
-           
-           .. activecode::  ch5Ex4a
+           .. activecode::  ch7Ex4a
               :language: java
    
                public class Test1
                {
                   public static void main(String[] args)
                   {
-                      int x = 3;
-                      if (x >= 0 && x <= 10)
-                          System.out.println("x is between 0 and 10 inclusive");
-                      else 
-                          System.out.println("x is either less than 0 or greater than 10");
+                      int x = 10;
+                      while (x <= 100)
+                      {
+                          System.out.println(x);
+                          x = x + 10;
+                      }
                   }
               }
               
@@ -203,123 +190,77 @@ Code Practice with Conditionals
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch5Ex4d
+                :identifier: javareview_ch7Ex4d
                 
                 
-.. tabbed:: ch5Ex5
+.. tabbed:: ch7Ex5
 
         .. tab:: Question
 
            
-           The following code should print if x is less than 0, equal to 0, or greater than 0.  Finish it to work correctly.  
+           The following code should print the values from 1 to 10 (inclusive) but has errors.  Fix the errors so that the code works as intended. If the code is in an infinite loop you can refresh the page to stop the loop. 
            
-           .. activecode::  ch5Ex5q
+           .. activecode::  ch7Ex5q
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      int x = -3;
-                      if (x > 0) 
-                          System.out.prinln("x is less than 0");
-                      
-                  }
-                      
+                      int x = 1;
+                      while (x < 10)
+                      {
+                          System.out.println(x);
+                      } 
+                  }    
               }
 
 
         .. tab:: Answer
         
-           One way to solve this is to add an ``else if`` and then print out if x is equal to 0 and an ``else`` to print that x is greater than 0 as shown below.
+           On line 6 it should be ``while (x <= 10)``.  Add line 9 at the end of the loop body to increment ``x`` so that the loop ends (isn't an infinite loop).    
         
-           .. activecode::  ch5Ex5a
+           .. activecode::  ch7Ex5a
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      int x = -3;
-                      if (x < 0) 
-                          System.out.println("x is less than 0");
-                      else if (x == 0)
-                          System.out.println("x is equal to 0");
-                      else 
-                          System.out.println("x is greater than 0");
-                      
-                  }
-                      
+                      int x = 1;
+                      while (x <= 10)
+                      {
+                          System.out.println(x);
+                          x++;
+                      } 
+                  }    
               }
               
         .. tab:: Discussion 
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch5Ex5d
+                :identifier: javareview_ch7Ex5d
                 
-.. tabbed:: ch5Ex6
+.. tabbed:: ch7Ex6
 
         .. tab:: Question
 
            
-           Finish the code below so that it prints ``You can go out`` if you have a ride or if you can walk and otherwise prints ``You can't go out``.  Use a logical or to create a complex conditional.
+           The following code should print the values from 10 to 5, but it has errors.  Fix the errors so that the code works as intended.
            
-           .. activecode::  ch5Ex6q
+           .. activecode::  ch7Ex6q
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      boolean canWalk = true;
-                      boolean haveRide = false;
-                      
-                  }
-              }
-
-
-        .. tab:: Answer
-        
-           Add an ``if`` statement and use a logical or (``||``) to join the conditions and print the one message.  Also add an ``else`` statement and print the other message.
-        
-           .. activecode::  ch5Ex6a
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      boolean canWalk = true;
-                      boolean haveRide = false;
-                      if (canWalk || haveRide)
-                          System.out.println("You can go out");
-                      else
-                          System.out.println("You can't go out"); 
-                  }
-              }
-              
-        .. tab:: Discussion 
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: javareview_ch5Ex6d
-                
-.. tabbed:: ch5Ex7
-
-        .. tab:: Question
-  
-           Finish the code below to print you can go out if you don't have homework and you have done the dishes.  
-           
-           .. activecode::  ch5Ex7q
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      boolean haveHomework = false;
-                      boolean didDishes = true;
+                      for (int x = 10; x >= 5; x--)
+                      {
+                         System.out.println(x);
+                         x--;
+                      }
                       
                   }
               }
@@ -327,21 +268,19 @@ Code Practice with Conditionals
 
         .. tab:: Answer
         
-           Add a conditional with a negation ``!`` for haveHomework and a logical and to create a complex conditional.   
-           
-           .. activecode::  ch5Ex7a
+           Remove the ``x--;`` at the end of the body of the loop.  The change area in the for loop decrements ``x`` by 1, so this line isn't needed. 
+        
+           .. activecode::  ch7Ex6a
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      boolean haveHomework = false;
-                      boolean didDishes = true;
-                      if (!haveHomework && didDishes)
-                          System.out.println("You can go out");
-                      else
-                          System.out.println("You can't go out");
+                      for (int x = 10; x >= 5; x--)
+                      {
+                         System.out.println(x);
+                      }
                       
                   }
               }
@@ -350,42 +289,83 @@ Code Practice with Conditionals
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch5Ex7d
+                :identifier: javareview_ch7Ex6d
                 
-.. tabbed:: ch5Ex8
+.. tabbed:: ch7Ex7
 
         .. tab:: Question
   
-           Finish the following code so that it prints ``You have a fever`` if your temperature is above 100 and otherwise prints ``You don't have a fever``.
+           Finish the code below to print a countdown from 100 to 0 by 10's.
            
-           .. activecode::  ch5Ex8q
+           .. activecode::  ch7Ex7q
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      double temp = 103.5;
+                      
+                      
                   }
               }
 
 
         .. tab:: Answer
         
-           Add a conditional and print the first message if the temp is above 100 and otherwise print the other message.
+           Use a ``for`` loop as shown below. Start ``x`` at 100, loop while it is greater or equal to 0, and subtract 10 each time after the body of the loop executes.
+           
+           .. activecode::  ch7Ex7a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      for (int x = 100; x >= 0; x = x - 10)
+                          System.out.println(x);
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex7d
+                
+.. tabbed:: ch7Ex8
+
+        .. tab:: Question
+  
+           Finish the following code so that it prints a string minus the last character each time through the loop until there are no more characters in the string.
+           
+           .. activecode::  ch7Ex8q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Add a ``while`` loop and loop while there is still at least one character in the string. At the end of the body of the loop reset the message to all characters except the last one.   
           
-           .. activecode::  ch5Ex8a
+           .. activecode::  ch7Ex8a
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      double temp = 103.5;
-                      if (temp > 100)
-                          System.out.println("You have a fever");
-                      else
-                          System.out.println("You don't have a fever");
+                      String message = "help";
+                      while (message.length() > 0)
+                      {
+                          System.out.println(message);
+                          message = message.substring(0,message.length() - 1);
+                      }
                   }
               }
 
@@ -394,22 +374,21 @@ Code Practice with Conditionals
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch5Ex8d
+                :identifier: javareview_ch7Ex8d
                 
-.. tabbed:: ch5Ex9
+.. tabbed:: ch7Ex9
 
         .. tab:: Question
   
-           Finish the code to print ``It is freezing`` if the temperature is below 30, ``It is cold`` if it is below 50, ``It is nice out`` if it is below 90, or ``It is hot``. 
+           Finish the code to print the value of ``x`` and ``" is even"`` if ``x`` is even and ``" is odd"`` if it is odd for all values from 10 to 1.   
            
-           .. activecode::  ch5Ex9q
+           .. activecode::  ch7Ex9q
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      int temp = 100;
                       
                   }
               }
@@ -417,24 +396,22 @@ Code Practice with Conditionals
 
         .. tab:: Answer
         
-           Add a conditional with two ``else if`` statements and a final ``else``.
+           Use a ``for`` loop to loop from 10 to 1.  Use a conditional to test if x is even (x % 2 == 0).  
            
-           .. activecode::  ch5Ex9a
+           .. activecode::  ch7Ex9a
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      int temp = 100;
-                      if (temp < 30)
-                          System.out.println("It is freezing");
-                      else if (temp < 50)
-                          System.out.println("It is cold");
-                      else if (temp < 90)
-                          System.out.println("It is nice out");
-                      else 
-                          System.out.println("It is hot");
+                      for (int x = 10; x >= 1; x--)
+                      {
+                          if (x % 2 == 0)
+                              System.out.println(x + " is even");
+                          else
+                              System.out.println(x + " is odd");
+                      }
                   }
               }
               
@@ -442,22 +419,21 @@ Code Practice with Conditionals
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch5Ex9d
+                :identifier: javareview_ch7Ex9d
                 
-.. tabbed:: ch5Ex10
+.. tabbed:: ch7Ex10
 
         .. tab:: Question
   
-           Finish the code below to print your grade based on your score.  The score is an A if you scored 92 or higher, a B if you scored 82 to 91, a C if you scored 72 to 81, a D if you scored a 62 to 71, or an E. 
+           Finish the code below to print the values for ``10 * x`` where ``x`` changes from 0 to 10.  
            
-           .. activecode::  ch5Ex10q
+           .. activecode::  ch7Ex10q
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      double score = 67;
                       
                   }
               }
@@ -465,27 +441,17 @@ Code Practice with Conditionals
 
         .. tab:: Answer
         
-           Add a conditional with three ``else if`` statements and a final ``else``.  
+           Use a ``for`` loop with ``x`` changing from 0 to 10 and print the value of ``x`` and ``10 * x``.  Use parentheses around ``x * 10`` to make sure it is evaluated before it is turned into a string.
            
-           .. activecode::  ch5Ex10a
+           .. activecode::  ch7Ex10a
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      double score = 67;
-                      if (score >= 92)
-                          System.out.println("A");
-                      else if (score >= 82)
-                          System.out.println("B");
-                      else if (score >= 72)
-                          System.out.println("C");
-                      else if (score >= 62)
-                          System.out.println("D");
-                      else 
-                          System.out.println("E");
-                      
+                      for (int x = 0; x <= 10; x++)
+                         System.out.println(x + " times 10 is " + (x * 10));                      
                   }
               }
               
@@ -493,7 +459,54 @@ Code Practice with Conditionals
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch5Ex10d
+                :identifier: javareview_ch7Ex10d
+                
+.. tabbed:: ch7Ex11
+
+        .. tab:: Question
+  
+           Finish the code to loop printing the message each time through the loop and remove an ``x`` from the message until all the ``x``'s are gone.   
+           
+           .. activecode::  ch7Ex11q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String message = "Ix lovex youxxx";
+                      
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Use a ``while`` loop.  Loop while ``x`` has been found in the message (using ``indexOf``).  Remove the ``x`` (using substring). Use indexOf again to get the position of the next ``x`` or -1 if there are none left in the message. 
+           
+           .. activecode::  ch7Ex11a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String message = "Ix lovex youxxx";
+                      int pos = message.indexOf("x");
+                      while (pos >= 0)
+                      {
+                         System.out.println(message);
+                         message = message.substring(0,pos) + message.substring(pos+1);
+                         pos = message.indexOf("x");
+                      }
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex9d
                 
 
                 
