@@ -122,6 +122,7 @@ Loops
    LoopBasics/lbasics.rst
    LoopBasics/lWhile.rst
    LoopBasics/lFor.rst
+   LoopBasics/lNested.rst
    LoopBasics/lMistakes.rst
    LoopBasics/lPractice.rst
    LoopBasics/lEasyMC.rst
@@ -129,7 +130,7 @@ Loops
    LoopBasics/lHardMC.rst
    LoopBasics/selfDivisorA.rst
    LoopBasics/stringScrambleA.rst
-   LoopBascis/LoopSummary.rst
+   LoopBasics/LoopSummary.rst
    LoopBasics/LoopPractice.rst
 
 Arrays

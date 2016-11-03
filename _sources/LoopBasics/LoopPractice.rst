@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 7-12-
+   :prefix: 7-13-
    :start: 1
    
 Code Practice with Loops
@@ -506,8 +506,192 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex9d
+                :identifier: javareview_ch7Ex11d
                 
+.. tabbed:: ch7Ex12
+
+        .. tab:: Question
+  
+           Write the code below to print 55555, 4444, 333, 22, with each on a different line.  
+           
+           .. activecode::  ch7Ex12q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Use nested ``for`` loops. The outer loop controls what is printed on each row and the number of rows.  The inner loop controls the number of values printer per row. 
+           
+           .. activecode::  ch7Ex12a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      for (int x = 5; x >= 1; x--)
+                      {
+                         for (int y = x; y > 0; y--)
+                         {
+                             System.out.print(x);
+                         }
+                         System.out.println();
+                      }
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex12d
+                
+.. tabbed:: ch7Ex13
+
+        .. tab:: Question
+  
+           Write the code below to print a rectangle of stars (``*``) with 5 rows of stars and 3 stars per row. 
+           
+           .. activecode::  ch7Ex13q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row. 
+           
+           .. activecode::  ch7Ex13a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      for (int row = 0; row < 5; row++)
+                      {
+                         for (int col = 0; col < 3; col++)
+                         {
+                             System.out.print("*");
+                         }
+                         System.out.println();
+                      }
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex13d
+                
+                
+.. tabbed:: ch7Ex14
+
+        .. tab:: Question
+  
+           Write the code below to print a rectangle of stars (``*``) with 3 rows of stars and 5 stars per row. 
+           
+           .. activecode::  ch7Ex14q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row. 
+           
+           .. activecode::  ch7Ex14a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      for (int row = 0; row < 3; row++)
+                      {
+                         for (int col = 0; col < 5; col++)
+                         {
+                             System.out.print("*");
+                         }
+                         System.out.println();
+                      }
+                  }
+              }
+              
+        .. tab:: Discussion 
+        
+           .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex14d
+                
+.. tabbed:: ch7Ex15
+
+        .. tab:: Question
+  
+           Write the code below to print the number of ``x``'s in the string message.
+           
+           .. activecode::  ch7Ex15q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String message = "xyxxzax";
+                  }
+              }
+
+
+        .. tab:: Answer
+        
+           Use indexOf to find the next ``x``.  Loop while pos is greater than or equal to 0.  Use substring to reset message beyond the next ``x``.   
+           
+           .. activecode::  ch7Ex15a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      
+                      String message = "xyxxzax";
+                      int pos = message.indexOf("x");
+                      int count = 0;
+                      while (pos >= 0)
+                      {
+                          count++;
+                          message = message.substring(pos+1);
+                          pos = message.indexOf("x");
+                      }
+                      System.out.println("There were " + count + " x's");
+                  }
+              }
+              
+        .. tab:: Discussion 
+        
+           .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch7Ex15d
 
                 
                 

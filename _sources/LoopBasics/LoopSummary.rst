@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 7-11-
+   :prefix: 7-12-
    :start: 1
    
 Loops - Summary
@@ -11,6 +11,7 @@ In this chapter you learned about **loops**.  **Loops** are used to repeat a sta
     single: loop
     single: body of a loop
     single: while loop
+    single: nested loop
     single: for loop
     single: for each loop
     single: trace code
@@ -27,6 +28,7 @@ Concept Summary
 - **For Each Loop** - Used to loop through all the elements of a collection (like a list or an array) and each time through the loop set a variable to the next item from the collection
 - **Infinite Loop** - A loop that never ends. 
 - **Loop** - A way to repeat one or more statements in a program.
+- **Nested Loop** - One loop inside of another.  
 - **Out of Bounds error** - A run-time error that occurs when you try to access past the end of a string or list in a loop.  
 - **Trace Code** - Writing down the values of the variables and how they change each time the body of the loop executes.
 - **While Loop** - A loop that repeats while a Boolean expression is true.
@@ -46,6 +48,7 @@ Practice
     :match_1: a loop that repeats while a Boolean condition is true|||while loop
     :match_2: a loop that has three parts: initialization, condition, and change|||for loop
     :match_3: a loop that repeats one or more statements for each item in a collection like a list|||for each loop
+    :match_4: one loop inside of another|||nested loop
     
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
     
