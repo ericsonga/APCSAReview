@@ -49,7 +49,7 @@ To declare an array specify the type of elements that will be stored in the arra
       }
    }
 
-To create an array use the **new** keyword, followed by a space, then the type, and then in square brackets the size of the array (number of elements to store).  
+To create an array use the **new** keyword, followed by a space, then the type, and then in square brackets the size of the array (the number of elements it can hold).  
 
 .. code-block:: java 
 
@@ -106,7 +106,7 @@ To put a value in an array you give the name of the array and the index number i
       }
    }
 
-You can also initialize (set) the values in the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the values you give.  
+You can also initialize (set) the values in the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the number of values you specify.  
 
 .. code-block:: java 
 
@@ -126,7 +126,11 @@ When you create an array of a **primitive type** (like ``int``) with initial val
     single: dot-notation
 	pair: array; length
 
-Arrays know their length (how many elements they can store).  It is a public read-only field so you can use ``dot-notation`` to access the field (``arrayName.length``).  **Note that length is a field and not a method, so you don't add parentheses after length**.  However, if you use parentheses after length during the exam, you won't lose any points.
+Arrays know their length (how many elements they can store).  It is a public read-only field so you can use ``dot-notation`` to access the field (``arrayName.length``).  
+
+.. note::
+
+   Note that length is a field and not a method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points.
 
 .. activecode:: lcab2
    :language: java

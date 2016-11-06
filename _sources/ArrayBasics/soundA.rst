@@ -5,8 +5,8 @@
 Free Response - Sound A
 =======================
 
-..	index::
-	single: sounda
+..    index::
+    single: sounda
     single: free response
 
 The following is a free response question from 2011.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
@@ -108,12 +108,12 @@ We will have to return the count of values changed.
    Which is the correct code for changing the current value to the negative of the limit?
 
 
-The Algorithm
+Mixed Up Code
 -------------------
 
 .. parsonsprob:: SoundA
 
-   The method limitAmplitude below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.
+   The method limitAmplitude below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.
    -----
    public int limitAmplitude(int limit) 
    { 
@@ -124,10 +124,11 @@ The Algorithm
    =====
            if (samples[i] > limit) 
            {
+   =====
                samples[i] = limit;
                numChanged++;
-           } // end first if
    =====
+           } // end first if
            if (samples[i] < -limit) 
            {
    =====

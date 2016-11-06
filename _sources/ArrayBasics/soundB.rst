@@ -94,7 +94,7 @@ How to Solve This
 
    Which is the correct code for creating an integer array variable named ``samples2`` and setting to to refer to an array of integers of size ``count``?
 
-The Algorithm
+Mixed Up Code
 -------------------
 .. parsonsprob:: SoundB
 

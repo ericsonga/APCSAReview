@@ -9,7 +9,7 @@ Looping through Part of an Array
 ..	index::
 	pair: loop; range
 	
-You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (&&) on line 7 to make sure that the loop doesn't go beyond the bounds of the array.
+You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (``&&``) on line 7 to make sure that the loop doesn't go beyond the bounds of the array.
 
 .. activecode:: lclp1
    :language: java

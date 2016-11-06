@@ -82,7 +82,7 @@ Several students have also been involved in the creation of content for the eBoo
 * Javier Rodriguez - added a new exam (non-timed #1)
 * Gabby Jackson - added new exams (non-timed #2, #3, and #4)
 * Sofia Moin - added a video on variables
-* Gerald Nash - added free response questions - sound in arrays
+* Gerald Nash - added many free response questions for arrays, 2D arrays, and lists
 * Sabrina Seibel - added free response question 4 from 2016 - StringFormatter
 
 License

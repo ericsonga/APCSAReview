@@ -156,6 +156,8 @@ Arrays
    ArrayBasics/horseBarnB.rst
    ArrayBasics/soundA.rst
    ArrayBasics/soundB.rst
+   ArrayBasics/numberCubeA.rst
+   ArrayBasics/numberCubeB.rst
 
 List and ArrayList
 ::::::::::::::::::::
@@ -176,6 +178,8 @@ List and ArrayList
    ListBasics/climbClubA.rst
    ListBasics/climbClubB.rst
    ListBasics/climbClubC.rst
+   ListBasics/cookieOrderA.rst
+   ListBasics/cookieOrderB.rst
    ListBasics/2016freeresponseQ4A.rst
    ListBasics/2016freeresponseQ4B.rst
 
@@ -227,6 +231,7 @@ Object-Oriented Concepts
    OOBasics/TrioScore1.rst
    OOBasics/TrioScore2.rst
    OOBasics/TrioScore3.rst
+   OOBasics/APLine.rst
 
 Recursion
 :::::::::
