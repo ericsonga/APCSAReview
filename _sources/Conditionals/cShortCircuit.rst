@@ -9,7 +9,11 @@ Short Circuit Evaluation
 	single: short circuit evaluation
 	pair: conditional; short circuit evaluation
   
-Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second condition isn't necessarily checked.  If the code uses ``&&`` and the first condition is false, the second condition won't be executed since the result will already be false.  If the code uses ``||`` and the first condition is true then the second condition won't be executed since only one of the conditions needs to be true.    
+Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second condition isn't necessarily checked if the result from the first condition is enough to tell if the result is true or false.   In a complex conditional with a logical and (``&&``) both conditions must be true, so if the first is false, then the second doesn't have to be evaluated.  If the complex conditional uses a logical or (``||``) and the first condition is true, then the second condition won't be executed, since only one of the conditions needs to be true.    
+
+.. note::
+
+   In a complex conditional using a logical and (``&&``) the evaluation will short circuit (not execute the second condition) if the first condition is false.  In a complex conditional using a logical or (``||``) the evaluation will short circuit if the first condition is true.  
  
 **Check your understanding**
 
