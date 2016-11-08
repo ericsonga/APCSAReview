@@ -48,7 +48,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_a: Notice that each of the first 4 statements start with an if.  What will actually be printed?  Try it.  
    :feedback_b: Each of the first 4 if statements will execute.
    :feedback_c: Check this in DrJava.
-   :feedback_d: Each of the if statements will be executed. So grade will be set to A, then B then C and finally D.  
+   :feedback_d: Each of the if statements will be executed. So grade will be set to B then C and finally D.  
    :feedback_e: This will only be true when score is less than 60.   
 
    What is the value of grade when the following code executes and score is 80?  
@@ -70,7 +70,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_b: This will print if both of the conditions are false.  But, an error will occur when testing the second condition.   
    :feedback_c: The first condition will be false so the second one will be executed and lead to an error since you can't divide by zero.
 
-   What is printed when the following code executes and x has been set to zero?  
+   What is printed when the following code executes and x has been set to zero and y is set to 3?  
    
    .. code-block:: java 
 
