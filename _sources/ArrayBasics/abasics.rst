@@ -3,7 +3,7 @@
    :start: 1
 
 Arrays in Java
-=================
+-------------------
 
 .. video:: v_array
    :controls:
@@ -17,7 +17,7 @@ Arrays in Java
 	single: index
 	pair: array; index
 
-An **array** is consecutive storage for multiple items of the same type.  You can store a value in an array using an **index** (location in the array).  You can get a value from an array using an index.  An array is like a row of lockers, except that you can't cram lots of stuff into it.  You can only store one value at an array index.  An array index is like a locker number.  It helps you find a particular place to store your stuff.  
+An **array** is consecutive storage for multiple items of the same type.  You can store a value in an array using an **index** (location in the array).  You can get a value from an array using an index.  An array is like a row of lockers, except that you can't cram lots of stuff into it.  You can only store one value at an array index.  An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.  
 
 .. figure:: Figures/rowLockers.jpg
     :width: 400px
@@ -30,7 +30,10 @@ An **array** is consecutive storage for multiple items of the same type.  You ca
 
    Can you think of another example of something that is like an array (like a row of lockers)?
    
-Arrays are useful whenever you have several elements of data of the same type that you want to keep track of, but you don't need to name each one.  If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two arrays.  
+Arrays are useful whenever you have several elements of data of the same type that you want to keep track of, but you don't need to name each one.  If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two arrays.  One array could keep track of the scores and the other the names.
+
+Declaring an Array
+=====================
 
 To declare an array specify the type of elements that will be stored in the array, then (``[ ]``) to show that it is an array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).  Try the the following.
 
@@ -41,6 +44,7 @@ To declare an array specify the type of elements that will be stored in the arra
    {
       public static void main(String[] args)
       {
+        // declare the arrays
         int[ ] highScores = null;
         String[ ] names = null;
         
@@ -48,6 +52,9 @@ To declare an array specify the type of elements that will be stored in the arra
         System.out.println(names);
       }
    }
+   
+Creating an Array
+==================
 
 To create an array use the **new** keyword, followed by a space, then the type, and then in square brackets the size of the array (the number of elements it can hold).  
 
@@ -56,10 +63,13 @@ To create an array use the **new** keyword, followed by a space, then the type, 
   highScores = new int[5]; 
   names = new String[5];
   
+  
 ..	index::
 	pair: array; initialization
+	
+.. note::
   
-Array elements are initialized to 0 if they are a numeric type (int or double), ``false`` if they are of type ``boolean``, or ``null`` if they are an object type.  
+   Array elements are initialized to 0 if they are a numeric type (``int`` or ``double``), ``false`` if they are of type ``boolean``, or ``null`` if they are an object type like ``String``.  
 
 .. figure:: Figures/arrayIndicies.png
     :width: 200px
@@ -71,6 +81,9 @@ Array elements are initialized to 0 if they are a numeric type (int or double), 
 .. note::
 
     The first value in an array is stored at index 0 and the index of the last value is the length of the array minus 1.  
+    
+Setting Array Values
+=======================
 
 To put a value in an array you give the name of the array and the index number in brackets ([0]).  The first item in an array is at index 0.  
 
@@ -81,15 +94,19 @@ To put a value in an array you give the name of the array and the index number i
    {
       public static void main(String[] args)
       {
+        // declare arrays
         int[ ] highScores = null;
         String[ ] names = null;
         
+        // create the arrays
         highScores = new int[5];
         names = new String[5];
         
+        // print the initial values at index 0
         System.out.println(highScores[0]);
         System.out.println(names[0]);
         
+        // set the values in the highScores array
         highScores[0] =  99;
         highScores[1] =  98;
         highScores[2] =  98;
@@ -97,6 +114,7 @@ To put a value in an array you give the name of the array and the index number i
         highScores[4] =  68;
         System.out.println(highScores[0]);
         
+        // set the values in the names array
         names[0] = "Jamal";
         names[1] = "Emily";
         names[2] = "Destiny"; 
@@ -105,6 +123,9 @@ To put a value in an array you give the name of the array and the index number i
         System.out.println(names[0]);
       }
    }
+   
+Initializing Array Values
+============================
 
 You can also initialize (set) the values in the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the number of values you specify.  
 
@@ -125,6 +146,9 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 ..	index::
     single: dot-notation
 	pair: array; length
+	
+Array Length
+===============
 
 Arrays know their length (how many elements they can store).  It is a public read-only field so you can use ``dot-notation`` to access the field (``arrayName.length``).  
 
