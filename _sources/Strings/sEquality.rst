@@ -38,6 +38,10 @@ In addition, ``s2 == s3`` will be true since the two variables refer to the same
 
     Figure 1: Several String variables with references to objects of the String class. 
     
+.. note::
+
+   Use ``equals`` to test if two strings have the same characters in the same order.  Only use ``==`` to test if two strings refer to the same object.  Most of the time you will want to use ``equals`` and not ``==`` with strings.
+    
 Using the New Keyword
 =======================
     
@@ -85,7 +89,7 @@ What do you think the following code will print?  Run it to check.
       }
    }
   
-Since we used string literals this time rather than the ``new`` keyword, the Java run-time will check if that string literal already exists as an object in memory, and if so reuse it.  So ``s1`` and ``s2`` will refer to the same string literal.  That means that both ``==`` and ``equals`` will be true.
+Since we used string literals this time rather than the ``new`` keyword, the Java run-time will check if that string literal already exists as an object in memory, and if so reuse it.  So ``s1`` and ``s2`` will refer to the same string object.  That means that both ``==`` and ``equals`` will be true.
 
 .. figure:: Figures/twoStringRefsLiteral.png
     :width: 175px
