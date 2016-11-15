@@ -92,7 +92,7 @@ How to Solve This
    :feedback_b: The new keyword is not used to create an array.
    :feedback_c: This will create an array of integers of size count and a variable named samples2 which will refer to that array.
 
-   Which is the correct code for creating an integer array variable named ``samples2`` and setting to to refer to an array of integers of size ``count``?
+   Which is the correct code for creating an integer array variable named ``samples2`` and setting it to refer to an array of integers of size ``count``?
 
 Mixed Up Code
 -------------------

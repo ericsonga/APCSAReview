@@ -40,7 +40,7 @@ These problems are harder than most of those that you will usually see on the AP
 
      Implementation 1
 
-     for (int j = 0; j < arr.lenth; j++)
+     for (int j = 0; j < arr.length; j++)
          sum[j] = sum[j - 1] + arr[j];
 
 
