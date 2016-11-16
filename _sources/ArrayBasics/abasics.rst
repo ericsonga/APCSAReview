@@ -80,9 +80,7 @@ To create an array use the **new** keyword, followed by a space, then the type, 
 
 .. note::
 
-    The first value in an array is stored at index 0 and the index of the last value is the length of the array minus 1.  
-    
-Setting Array Values
+    The first value in an array is stored at index 0 and the index of the last value is the length of the array m
 =======================
 
 To put a value in an array you give the name of the array and the index number in brackets ([0]).  The first item in an array is at index 0.  

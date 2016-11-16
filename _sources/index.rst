@@ -132,6 +132,7 @@ Loops
    LoopBasics/stringScrambleA.rst
    LoopBasics/LoopSummary.rst
    LoopBasics/LoopPractice.rst
+   LoopBasics/LoopParsonsPractice.rst
 
 Arrays
 ::::::::::::::::::::

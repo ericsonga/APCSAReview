@@ -84,6 +84,7 @@ Several students have also been involved in the creation of content for the eBoo
 * Sofia Moin - added a video on variables
 * Gerald Nash - added many free response questions for arrays, 2D arrays, and lists
 * Sabrina Seibel - added free response question 4 from 2016 - StringFormatter
+* Julian Hamelberg - worked on free response questions - seating chart A and B
 
 License
 ---------
