@@ -163,6 +163,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                    System.out.println("*");
    =====
+               }
+           }   
        }
    }
 
@@ -184,9 +186,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                for (int y = 0; y < x; y++) {
    =====
-                   System.out.println(x);
+                   System.out.print(x);
    =====
-               } 
+               }
+               System.out.println(); 
            }
    =====
        }
@@ -195,7 +198,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch7ex9muc
    :noindent:
 
-   The main method in the following class should print 11111, 22222, 33333, 44444, and 55555. But, the blocks have been mixed up and contain <code>two extra blocks</code> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The main method in the following class should print 11111, 22222, 33333, 44444, and 55555. But, the blocks have been mixed up and contain <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public class Test1
    {
@@ -209,13 +212,14 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                for (int y = 0; y < 5; y++) {
    =====
-                   System.out.println(x);
+                   System.out.print(x);
    =====
-                   System.out.println(y); #paired
+                   System.out.print(y); #paired
    =====
-               } 
+               } //end inner loop
+               System.out.println(); 
    =====
-           }
+           } //end outer loop
    =====
        }
    }
@@ -225,7 +229,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch7ex10muc
    :noindent:
 
-   The main method in the following class should print 11111, 2222, 333, 44, 5.  But, the blocks have been mixed up and include <code>one extra block</code> that isn't needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The main method in the following class should print 11111, 2222, 333, 44, 5.  But, the blocks have been mixed up and include <b>one extra block</b> that isn't needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public class Test1
    {
@@ -237,13 +241,14 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                for (int y = 5; y > x; y--) {
    =====
-                   System.out.println(x+1);
+                   System.out.print(x+1);
    =====
-                   System.out.println(x); #paired
+                   System.out.print(x); #paired
    =====
-               } 
+               } //end inner loop
+               System.out.println(); 
    =====
-           }
+           } //end outer loop
    =====
        }
    }

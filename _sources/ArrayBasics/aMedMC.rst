@@ -116,27 +116,3 @@ You can step through this code with the Java Visualizer `here <http://cscircles.
      }
 
      int m = mystery(n)
-     
-.. mchoice:: qamed_5
-   :answer_a: When all values in a are larger than temp.
-   :answer_b: The values don't matter. This will always cause an infinite loop.
-   :answer_c: Whenever a has values larger than temp.
-   :answer_d: Whenever a includes a value that is less than or equal to zero.
-   :answer_e: Whenever a includes a value equal to temp.
-   :correct: d
-   :feedback_a: Values larger than temp will not cause an infinite loop.
-   :feedback_b: An infinite loop will not always occur in this program segment. It occurs when at least one value in a is less than or equal to 0.
-   :feedback_c: Values larger than temp will not cause an infinite loop.
-   :feedback_d: When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
-   :feedback_e: Values equal to temp will not cause the infinite loop.
-
-   Assume that temp is an int variable intialized to be greater than zero and that a is an array of ints. What scenario will cause an infinite loop in the following code?  
-   
-   .. code-block:: java
-
-     for (int k = 0; k < a.length; k++) {
-        while (a[k] < temp) {
-           a[k] *= 2;
-        }
-     }
-
