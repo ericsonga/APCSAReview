@@ -41,14 +41,14 @@ You don't have to loop through all of the elements of an array.  You can loop th
       
       public static void main(String[] args)
       {
-        int[] numArray = {3,8,-3, 2};
+        int[] numArray = {3, 8, -3, 2, 20, 5, 33, 1};
         ArrayWorker worker = new ArrayWorker(numArray);
         worker.doubleFirstFive();
         worker.printArray();
       }
    }
    
-You can even start in the middle and loop through the rest of the array.  Does this work for arrays that have an even number of elements?  Does it work for arrays that have an odd number of elements?
+You can even start in the middle and loop through the rest of the array.  Does this work for arrays that have an even number of elements?  Does it work for arrays that have an odd number of elements?  Modify the main code below to test with both arrays with an even number of items and an odd number.
 
 .. activecode:: lclp2
    :language: java

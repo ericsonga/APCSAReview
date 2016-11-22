@@ -159,6 +159,7 @@ Arrays
    ArrayBasics/soundB.rst
    ArrayBasics/numberCubeA.rst
    ArrayBasics/numberCubeB.rst
+   ArrayBasics/ArrayPractice.rst
 
 List and ArrayList
 ::::::::::::::::::::

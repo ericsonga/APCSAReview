@@ -1,18 +1,18 @@
 .. qnum::
-   :prefix: 7-13-
+   :prefix: 6-13-
    :start: 1
    
 Code Practice with Loops
 ------------------------------------
 
-.. tabbed:: ch7Ex1
+.. tabbed:: ch6ex1
 
         .. tab:: Question
 
            
            Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 1 (inclusive).  
            
-           .. activecode::  ch7Ex1q
+           .. activecode::  ch6ex1q
               :language: java
    
               public class Test
@@ -33,7 +33,7 @@ Code Practice with Loops
         
            In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
         
-           .. activecode::  ch7Ex1a
+           .. activecode::  ch6ex1a
               :language: java
    
               public class Test
@@ -50,16 +50,16 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex1d
+                :identifier: javareview_ch6ex1d
                 
-.. tabbed:: ch7Ex2
+.. tabbed:: ch6ex2
 
         .. tab:: Question
 
            
            Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 1 to 10 (inclusive).
            
-           .. activecode::  ch7Ex2q
+           .. activecode::  ch6ex2q
               :language: java
    
               public class Test
@@ -76,7 +76,7 @@ Code Practice with Loops
         
            You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.  
            
-           .. activecode::  ch7Ex2a
+           .. activecode::  ch6ex2a
               :language: java
    
               public class Test1
@@ -96,16 +96,16 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex2d
+                :identifier: javareview_ch6ex2d
                 
-.. tabbed:: ch7Ex3
+.. tabbed:: ch6ex3
 
         .. tab:: Question
 
            
            Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 15 (inclusive).    
            
-           .. activecode::  ch7Ex3q
+           .. activecode::  ch6ex3q
               :language: java
    
               public class Test1
@@ -126,7 +126,7 @@ Code Practice with Loops
         
            In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
            
-           .. activecode::  ch7Ex3a
+           .. activecode::  ch6ex3a
               :language: java
    
               public class Test1
@@ -144,16 +144,16 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex3d
+                :identifier: javareview_ch6ex3d
                 
-.. tabbed:: ch7Ex4
+.. tabbed:: ch6ex4
 
         .. tab:: Question
 
            
            Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 10 to 100 by 10's (inclusive).
            
-           .. activecode::  ch7Ex4q
+           .. activecode::  ch6ex4q
               :language: java
    
               public class Test1
@@ -170,7 +170,7 @@ Code Practice with Loops
         
            You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.  		
            
-           .. activecode::  ch7Ex4a
+           .. activecode::  ch6ex4a
               :language: java
    
                public class Test1
@@ -190,17 +190,17 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex4d
+                :identifier: javareview_ch6ex4d
                 
                 
-.. tabbed:: ch7Ex5
+.. tabbed:: ch6ex5
 
         .. tab:: Question
 
            
            The following code should print the values from 1 to 10 (inclusive) but has errors.  Fix the errors so that the code works as intended. If the code is in an infinite loop you can refresh the page to stop the loop. 
            
-           .. activecode::  ch7Ex5q
+           .. activecode::  ch6ex5q
               :language: java
    
               public class Test1
@@ -220,7 +220,7 @@ Code Practice with Loops
         
            On line 6 it should be ``while (x <= 10)``.  Add line 9 at the end of the loop body to increment ``x`` so that the loop ends (isn't an infinite loop).    
         
-           .. activecode::  ch7Ex5a
+           .. activecode::  ch6ex5a
               :language: java
    
               public class Test1
@@ -240,16 +240,16 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex5d
+                :identifier: javareview_ch6ex5d
                 
-.. tabbed:: ch7Ex6
+.. tabbed:: ch6ex6
 
         .. tab:: Question
 
            
            The following code should print the values from 10 to 5, but it has errors.  Fix the errors so that the code works as intended.
            
-           .. activecode::  ch7Ex6q
+           .. activecode::  ch6ex6q
               :language: java
    
               public class Test1
@@ -270,7 +270,7 @@ Code Practice with Loops
         
            Remove the ``x--;`` at the end of the body of the loop.  The change area in the for loop decrements ``x`` by 1, so this line isn't needed. 
         
-           .. activecode::  ch7Ex6a
+           .. activecode::  ch6ex6a
               :language: java
    
               public class Test1
@@ -289,16 +289,16 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex6d
+                :identifier: javareview_ch6ex6d
                 
-.. tabbed:: ch7Ex7n
+.. tabbed:: ch6ex7n
 
         .. tab:: Question
 
            
            The following code should print the values from 10 to 1, but it has errors.  Fix the errors so that the code works as intended.
            
-           .. activecode::  ch7Ex7nq
+           .. activecode::  ch6ex7nq
               :language: java
    
               public class Test1
@@ -319,7 +319,7 @@ Code Practice with Loops
         
            Move the ``x--;`` to the end of the loop body (after the ``System.out.println``.  Change the ``while`` to ``x > 0``.
            
-           .. activecode::  ch7Ex7na
+           .. activecode::  ch6ex7na
               :language: java
    
               public class Test1
@@ -339,15 +339,15 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex7nd
+                :identifier: javareview_ch6ex7nd
                 
-.. tabbed:: ch7Ex8n
+.. tabbed:: ch6ex8n
 
         .. tab:: Question
   
            Finish the code below to print a countdown from 100 to 0 by 10's.
            
-           .. activecode::  ch7Ex8nq
+           .. activecode::  ch6ex8nq
               :language: java
    
               public class Test1
@@ -364,7 +364,7 @@ Code Practice with Loops
         
            Use a ``for`` loop as shown below. Start ``x`` at 100, loop while it is greater or equal to 0, and subtract 10 each time after the body of the loop executes.
            
-           .. activecode::  ch7Ex8na
+           .. activecode::  ch6ex8na
               :language: java
    
               public class Test1
@@ -380,15 +380,15 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex8nd
+                :identifier: javareview_ch6ex8nd
                 
-.. tabbed:: ch7Ex9n
+.. tabbed:: ch6ex9n
 
         .. tab:: Question
   
            Finish the following code so that it prints a string minus the last character each time through the loop until there are no more characters in the string.
            
-           .. activecode::  ch7Ex9nq
+           .. activecode::  ch6ex9nq
               :language: java
    
               public class Test1
@@ -403,7 +403,7 @@ Code Practice with Loops
         
            Add a ``while`` loop and loop while there is still at least one character in the string. At the end of the body of the loop reset the message to all characters except the last one.   
           
-           .. activecode::  ch7Ex9na
+           .. activecode::  ch6ex9na
               :language: java
    
               public class Test1
@@ -424,15 +424,15 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex9nd
+                :identifier: javareview_ch6ex9nd
                 
-.. tabbed:: ch7Ex10n
+.. tabbed:: ch6ex10n
 
         .. tab:: Question
   
            Finish the code to print the value of ``x`` and ``" is even"`` if ``x`` is even and ``" is odd"`` if it is odd for all values from 10 to 1.   
            
-           .. activecode::  ch7Ex10nq
+           .. activecode::  ch6ex10nq
               :language: java
    
               public class Test1
@@ -448,7 +448,7 @@ Code Practice with Loops
         
            Use a ``for`` loop to loop from 10 to 1.  Use a conditional to test if x is even (x % 2 == 0).  
            
-           .. activecode::  ch7Ex10na
+           .. activecode::  ch6ex10na
               :language: java
    
               public class Test1
@@ -469,15 +469,15 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex10nd
+                :identifier: javareview_ch6ex10nd
                 
-.. tabbed:: ch7Ex11n
+.. tabbed:: ch6ex11n
 
         .. tab:: Question
   
            Finish the code below to print the values for ``10 * x`` where ``x`` changes from 0 to 10.  
            
-           .. activecode::  ch7Ex11nq
+           .. activecode::  ch6ex11nq
               :language: java
    
               public class Test1
@@ -493,7 +493,7 @@ Code Practice with Loops
         
            Use a ``for`` loop with ``x`` changing from 0 to 10 and print the value of ``x`` and ``10 * x``.  Use parentheses around ``x * 10`` to make sure it is evaluated before it is turned into a string.
            
-           .. activecode::  ch7Ex11na
+           .. activecode::  ch6ex11na
               :language: java
    
               public class Test1
@@ -509,15 +509,15 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex11nd
+                :identifier: javareview_ch6ex11nd
                 
-.. tabbed:: ch7Ex12n
+.. tabbed:: ch6ex12n
 
         .. tab:: Question
   
            Finish the code to loop printing the message each time through the loop and remove an ``x`` from the message until all the ``x``'s are gone.   
            
-           .. activecode::  ch7Ex12nq
+           .. activecode::  ch6ex12nq
               :language: java
    
               public class Test1
@@ -534,7 +534,7 @@ Code Practice with Loops
         
            Use a ``while`` loop.  Loop while ``x`` has been found in the message (using ``indexOf``).  Remove the ``x`` (using substring). Use indexOf again to get the position of the next ``x`` or -1 if there are none left in the message. 
            
-           .. activecode::  ch7Ex12na
+           .. activecode::  ch6ex12na
               :language: java
    
               public class Test1
@@ -556,15 +556,15 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex12nd
+                :identifier: javareview_ch6ex12nd
                 
-.. tabbed:: ch7Ex13n
+.. tabbed:: ch6ex13n
 
         .. tab:: Question
   
            Write the code below to print 55555, 4444, 333, 22, with each on a different line.  
            
-           .. activecode::  ch7Ex13nq
+           .. activecode::  ch6ex13nq
               :language: java
    
               public class Test1
@@ -579,7 +579,7 @@ Code Practice with Loops
         
            Use nested ``for`` loops. The outer loop controls what is printed on each row and the number of rows.  The inner loop controls the number of values printer per row. 
            
-           .. activecode::  ch7Ex13na
+           .. activecode::  ch6ex13na
               :language: java
    
               public class Test1
@@ -601,15 +601,15 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex13nd
+                :identifier: javareview_ch6ex13nd
                 
-.. tabbed:: ch7Ex14n
+.. tabbed:: ch6ex14n
 
         .. tab:: Question
   
            Write the code below to print a rectangle of stars (``*``) with 5 rows of stars and 3 stars per row. 
            
-           .. activecode::  ch7Ex14nq
+           .. activecode::  ch6ex14nq
               :language: java
    
               public class Test1
@@ -624,7 +624,7 @@ Code Practice with Loops
         
            Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row. 
            
-           .. activecode::  ch7Ex14na
+           .. activecode::  ch6ex14na
               :language: java
    
               public class Test1
@@ -646,16 +646,16 @@ Code Practice with Loops
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex14nd
+                :identifier: javareview_ch6ex14nd
                 
                 
-.. tabbed:: ch7Ex15n
+.. tabbed:: ch6ex15n
 
         .. tab:: Question
   
            Write the code below to print a rectangle of stars (``*``) with 3 rows of stars and 5 stars per row. 
            
-           .. activecode::  ch7Ex15nq
+           .. activecode::  ch6ex15nq
               :language: java
    
               public class Test1
@@ -670,7 +670,7 @@ Code Practice with Loops
         
            Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row. 
            
-           .. activecode::  ch7Ex15na
+           .. activecode::  ch6ex15na
               :language: java
    
               public class Test1
@@ -692,15 +692,15 @@ Code Practice with Loops
         
            .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex15nd
+                :identifier: javareview_ch6ex15nd
                 
-.. tabbed:: ch7Ex16n
+.. tabbed:: ch6ex16n
 
         .. tab:: Question
   
            Write the code below to print the number of ``x``'s in the string message.  Use the ``indexOf`` and ``substring`` methods.
            
-           .. activecode::  ch7Ex16nq
+           .. activecode::  ch6ex16nq
               :language: java
    
               public class Test1
@@ -716,7 +716,7 @@ Code Practice with Loops
         
            Use indexOf to find the next ``x``.  Loop while pos is greater than or equal to 0.  Use substring to reset message beyond the next ``x``.   
            
-           .. activecode::  ch7Ex16na
+           .. activecode::  ch6ex16na
               :language: java
    
               public class Test1
@@ -741,7 +741,7 @@ Code Practice with Loops
         
            .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch7Ex16nd
+                :identifier: javareview_ch6ex16nd
 
                 
                 

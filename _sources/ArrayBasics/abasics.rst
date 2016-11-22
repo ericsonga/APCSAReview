@@ -17,7 +17,7 @@ Arrays in Java
 	single: index
 	pair: array; index
 
-An **array** is consecutive storage for multiple items of the same type.  You can store a value in an array using an **index** (location in the array).  You can get a value from an array using an index.  An array is like a row of lockers, except that you can't cram lots of stuff into it.  You can only store one value at an array index.  An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.  
+An **array** is consecutive storage for multiple items of the same type.  You can store a value in an array using an **index** (location in the array).  You can get a value from an array using an index.  An array is like a row of lockers, except that you can't cram lots of stuff into it.  Except that you can only store one value at an array index.  An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.  
 
 .. figure:: Figures/rowLockers.jpg
     :width: 400px
@@ -125,7 +125,7 @@ To put a value in an array you give the name of the array and the index number i
 Initializing Array Values
 ============================
 
-You can also initialize (set) the values in the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the number of values you specify.  
+You can also initialize (set) the values in the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the number of values that you specify.  
 
 .. code-block:: java 
 
@@ -152,7 +152,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
 .. note::
 
-   Note that length is a field and not a method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points.
+   Note that length is a field and not a method, unlike the String ``length()`` method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points.
 
 .. activecode:: lcab2
    :language: java

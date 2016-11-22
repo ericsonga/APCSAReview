@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 7-14-
+   :prefix: 6-14-
    :start: 1
    
 Mixed Up Code Practice
@@ -7,7 +7,7 @@ Mixed Up Code Practice
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
                 
-.. parsonsprob:: ch7ex1muc
+.. parsonsprob:: ch6ex1muc
    :noindent:
 
    The following program segment should print out all the values from 20 to 30 (20, 21, 22, ... 30). But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -23,7 +23,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
                    
       
-.. parsonsprob:: ch7ex2muc
+.. parsonsprob:: ch6ex2muc
    :noindent:
 
    The following program segment should print a countdown from 15 to 0 (15, 14, 13, ... 0).  But the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -45,7 +45,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
 
    
-.. parsonsprob:: ch7ex3muc
+.. parsonsprob:: ch6ex3muc
    :noindent:
 
    The main method in the following class should print up from 0 to 50 by 5 (0, 5, 10, 15 ... 50). But, the blocks have been mixed up and include <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -72,7 +72,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
            
   
-.. parsonsprob:: ch7ex4muc
+.. parsonsprob:: ch6ex4muc
    :noindent:
 
    The main method in the following class should print out the values from 0 to 100 by 20's (0, 20, 40, .. 100). But, the blocks have been mixed up and include <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -94,7 +94,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
         
    
-.. parsonsprob:: ch7ex5muc
+.. parsonsprob:: ch6ex5muc
    :noindent:
 
    The main method in the following class should print out the values from 100 to 0 by 10's (100, 90, 80, ... 0). But, the blocks have been mixed up and include <b>an extra block</b> that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -116,7 +116,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
            
                
-.. parsonsprob:: ch7ex6muc
+.. parsonsprob:: ch6ex6muc
    :noindent:
 
    The main method in the following class should print 10 rows with 5 <code>*</code> in each row.   But, the blocks have been mixed up and include <b>one extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -142,7 +142,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
 
            
-.. parsonsprob:: ch7ex7muc
+.. parsonsprob:: ch6ex7muc
    :noindent:
 
    The main method in the following class should print 3 rows with 6 <code>*</code> in each row.  But, the blocks have been mixed up and include <b>two extra blocks</b> that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -167,7 +167,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
 
        
-.. parsonsprob:: ch7ex8muc
+.. parsonsprob:: ch6ex8muc
    :noindent:
 
    The main method in the following class should print 1, then 22, and then 333.  But, the blocks have been mixed up and include <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -192,7 +192,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        }
    }
           
-.. parsonsprob:: ch7ex9muc
+.. parsonsprob:: ch6ex9muc
    :noindent:
 
    The main method in the following class should print 11111, 22222, 33333, 44444, and 55555. But, the blocks have been mixed up and contain <code>two extra blocks</code> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -222,7 +222,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   
 
           
-.. parsonsprob:: ch7ex10muc
+.. parsonsprob:: ch6ex10muc
    :noindent:
 
    The main method in the following class should print 11111, 2222, 333, 44, 5.  But, the blocks have been mixed up and include <code>one extra block</code> that isn't needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
