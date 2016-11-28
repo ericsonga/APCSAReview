@@ -160,6 +160,7 @@ Arrays
    ArrayBasics/numberCubeA.rst
    ArrayBasics/numberCubeB.rst
    ArrayBasics/ArrayPractice.rst
+   ArrayBasics/aSummary.rst
 
 List and ArrayList
 ::::::::::::::::::::
