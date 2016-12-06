@@ -80,12 +80,12 @@ To create an array use the **new** keyword, followed by a space, then the type, 
 
 .. note::
 
-    The first value in an array is stored at index 0 and the index of the last value is one less than the length of the array.
+    The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0).
     
 Putting Values in an Array 
 =============================
 
-To put a value in an array you give the name of the array and the index number in brackets ([0]).  The first item in an array is at index 0.  
+To put a value in an array you give the name of the array and the index number in brackets and then an ``=`` and finally the value and a semicolon (``highScores[0] = 99;``).  The first item in an array is at index 0.  
 
 .. activecode:: array-set
    :language: java
@@ -127,7 +127,7 @@ To put a value in an array you give the name of the array and the index number i
 Initializing Array Values
 ============================
 
-You can also initialize (set) the values in the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the number of values that you specify.  
+You can also initialize (set) the values in the array when you create it.  In this case you don't specify the size of the array, it will be determined from the number of values that you specify.  
 
 .. code-block:: java 
 
@@ -150,7 +150,7 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 Array Length
 ===============
 
-Arrays know their length (how many elements they can store).  It is a public read-only field so you can use **dot-notation** to access the field (``arrayName.length``).  **Dot-notation** is using variable name followed by a ``.`` and then the field (property) name.
+Arrays know their length (how many elements they can store).  It is a public read-only field so you can use **dot-notation** to access the field (``arrayName.length``).  **Dot-notation** is using variable name followed by a ``.`` and then the field (property) name or a method name.
 
 .. note::
 
