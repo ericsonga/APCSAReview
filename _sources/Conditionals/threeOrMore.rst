@@ -35,7 +35,7 @@ Run the code below and try changing the value of x to get each of the three poss
       }
    }
    
-.. note:: Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.
+.. note:: Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
   
 **Check your understanding**
 

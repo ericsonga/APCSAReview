@@ -54,3 +54,9 @@ Here is folk dance for merge sort.
 
 .. youtube:: XaqR3G_NVoo
     :align: center
+    
+Here is another video that talks about bubble sort, insertion sort, and quick sort.  Of these only insertion sort is on the exam.
+
+
+.. youtube:: WaNLJf8xzC4
+    :align: center

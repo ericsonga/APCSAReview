@@ -123,7 +123,7 @@ Some examples of finding the largest value in an array start by setting the larg
    :feedback_c: The variable temp is assigned to the result of checking if the current element in the array is equal to val.  The last time through the loop it will check if the last element is equal to val.
    :feedback_d: There is no count of the number of times the array element is equal to value.  
 
-   Given that a is an array of integers, which of the following best describes the conditions under which the following code segment will return true?
+   Given that ``a`` is an array of integers and ``val`` is an integer value, which of the following best describes the conditions under which the following code segment will return true?
    
    .. code-block:: java 
 
