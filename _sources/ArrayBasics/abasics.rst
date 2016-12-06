@@ -80,7 +80,7 @@ To create an array use the **new** keyword, followed by a space, then the type, 
 
 .. note::
 
-    The first value in an array is stored at index 0 and the index of the last value is the length of the array m
+    The first value in an array is stored at **index** 0 and the index of the last value is one less than the length of the array.
 =======================
 
 To put a value in an array you give the name of the array and the index number in brackets ([0]).  The first item in an array is at index 0.  
@@ -148,7 +148,7 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 Array Length
 ===============
 
-Arrays know their length (how many elements they can store).  It is a public read-only field so you can use ``dot-notation`` to access the field (``arrayName.length``).  
+Arrays know their length (how many elements they can store).  It is a public read-only field so you can use **dot-notation** to access the field (``arrayName.length``).  
 
 .. note::
 
@@ -204,13 +204,13 @@ Arrays know their length (how many elements they can store).  It is a public rea
         +----+----+----+----+
    
 .. mchoice:: qab_2
-   :answer_a: highScores.length
-   :answer_b: highScores.length - 1
+   :answer_a: <i>highScores.length</i>
+   :answer_b: <i>highScores.length - 1</i>
    :correct: b
-   :feedback_a: Look at the example above when we were setting the values for the highScore array.  
+   :feedback_a: Look at the example above when we were setting the values for the <i>highScore</i> array.  
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
 
-   Which index is the last element in an array called highScores at?
+   Which index is the last element in an array called ``highScores`` at?
    
  
   
