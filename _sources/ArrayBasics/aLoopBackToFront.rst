@@ -56,7 +56,7 @@ You don't have to loop through an array from the front to the back.  You can loo
    
 .. note:: 
    
-   Notice that if the array is a field of the ArrayWorker class you must create an ArrayWorker object in the main method.  You don't have to pass the array to the ``getIndexLastSmaller`` method like you do if the method is static.  The object already has the array as a field and any object method has access to it.
+   Notice that if the array is a field of the ``ArrayWorker`` class you must create an ``ArrayWorker`` object in the ``main`` method.  You don't have to pass the array to the ``getIndexLastSmaller`` method like you do if the method is static.  The object already has the array as a field and any object method has access to it.
    
 You can step through execution of this code using the Java Visualizer by clicking on the following `link1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+void+multAll(int+amt)%0A+++%7B%0A+++++for+(int+i+%3D+0%3B+i+%3C+values.length%3B+i%2B%2B)%0A+++++%7B%0A+++++++values%5Bi%5D+%3D+values%5Bi%5D+*+amt%3B%0A+++++%7D+//+end+for+loop%0A+++%7D+//+end+method%0A%0A+++public+void+printValues()%0A+++%7B%0A+++++for+(int+val+%3A+values+)%0A+++++%7B%0A+++++++System.out.print(val+%2B+%22,+%22)%3B%0A+++++%7D%0A+++++System.out.println()%3B%0A+++%7D%0A+++%0A+++public+static+void+main+(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+theArray+%3D+%7B1,2,3,-1,-2%7D%3B%0A++++++ArrayWorker+worker+%3D+new+ArrayWorker(theArray)%3B%0A++++++worker.printValues()%3B%0A++++++worker.multAll(2)%3B%0A++++++worker.printValues()%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_
 
@@ -69,9 +69,9 @@ You can step through execution of this code using the Java Visualizer by clickin
    :feedback_a: The method will only return -1 if no value in the array is less than the passed value.  
    :feedback_b: The method returns the index of the first item in the array that is less than the value, not the value.
    :feedback_c: Since the method loops from the back towards the front -15 is the last value in the array that is less than -13 and it is at index 1. 
-   :feedback_d: No, the method correctly starts the index at values.length - 1 and continues as long as i is greater than or equal to 0.  
+   :feedback_d: No, the method correctly starts the index at <code>values.length - 1</code> and continues as long as i is greater than or equal to 0.  
 
-   Given the following code segment what will be returned when you execute: getIndexLastSmaller(-13);
+   Given the following code segment what will be returned when you execute: ``getIndexLastSmaller(-13)``;
    
    .. code-block:: java 
    
@@ -97,7 +97,7 @@ You can step through execution of this code using the Java Visualizer by clickin
    :feedback_c: Check the starting index.   Is it correct?
    :feedback_d: You can not start the index at the length of the array.  You must start at the length of the array minus one.  This is a common mistake.
 
-   Given the following code segment what will be returned when you execute: getIndexLastSmaller(7);
+   Given the following code segment what will be returned when you execute: ``getIndexLastSmaller(7)``;
    
    .. code-block:: java
    

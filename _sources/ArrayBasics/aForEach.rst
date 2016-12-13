@@ -87,7 +87,7 @@ Notice that we have to create an object of the class now in the ``main`` method.
 
 .. parsonsprob:: pab_2
 
-   The following method has the correct code to return the largest value in an integer array called <i>vals</i> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
+   The following method has the correct code to return the largest value in an integer array called <code>vals</code> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
    -----
    public int getLargest()
    {
@@ -113,15 +113,15 @@ If you want to step through the correct code to see what it does in the Java Vis
 Some examples of finding the largest value in an array start by setting the largest variable to 0.  But, what happens if the array only contains negative numbers?  What value could you set largest to and still have it work correctly even if the field ``vals`` contained only negative numbers?
 
 .. mchoice:: qab_3
-   :answer_a: Whenever the first element in <i>a</i> is equal to <i>val</i>.
-   :answer_b: Whenever <i>a</i> contains any element which equals <i>val</i>.
-   :answer_c: Whenever the last element in <i>a</i> is equal to <i>val</i>.
-   :answer_d: Whenever only 1 element in <i>a</i> is equal to <i>val</i>.
+   :answer_a: Whenever the first element in <code>a</code> is equal to <code>val</code>.
+   :answer_b: Whenever <code>a</code> contains any element which equals <code>val</code>.
+   :answer_c: Whenever the last element in <code>a</code> is equal to <code>val</code>.
+   :answer_d: Whenever only 1 element in <code>a</code> is equal to <code>val</code>.
    :correct: c
    :feedback_a: This would be true if the loop started at the end of the array and moved toward the beginning.  But, it will loop from the first element to the last.  
-   :feedback_b: This would be true if temp was only set to the result of checking if the current element in the array is equal to <i>val</i> when it is <i>false</i>.  But, it is reset each time through the loop.
-   :feedback_c: The variable <i>temp</i> is assigned to the result of checking if the current element in the array is equal to <i>val</i>.  The last time through the loop it will check if the last element is equal to <i>val</i>.
-   :feedback_d: There is no count of the number of times the array element is equal to <i>val</i>.  
+   :feedback_b: This would be true if temp was only set to the result of checking if the current element in the array is equal to <code>val</code> when it is <code>false</code>.  But, it is reset each time through the loop.
+   :feedback_c: The variable <code>temp</code> is assigned to the result of checking if the current element in the array is equal to <code>val</code>.  The last time through the loop it will check if the last element is equal to <code>val</code>.
+   :feedback_d: There is no count of the number of times the array element is equal to <code>val</code>.  
 
 
    Given that ``a`` is an array of integers and ``val`` is an integer value, which of the following best describes the conditions under which the following code segment will return true?
@@ -136,14 +136,14 @@ Some examples of finding the largest value in an array start by setting the larg
      return temp;
      
 .. mchoice:: qab_4
-   :answer_a: All values in positions <i>m+1</i> through <i>myStuff.length-1</i> are greater than or equal to <i>n</i>.
-   :answer_b: All values in position 0 through <i>m</i> are less than <i>n</i>.
-   :answer_c: All values in position <i>m+1</i> through <i>myStuff.length-1</i> are less than <i>n</i>.
-   :answer_d: The smallest value is at position <i>m</i>.
+   :answer_a: All values in positions <code>m+1</code> through <code>myStuff.length-1</code> are greater than or equal to <code>n</code>.
+   :answer_b: All values in position 0 through <code>m</code> are less than <code>n</code>.
+   :answer_c: All values in position <code>m+1</code> through <code>myStuff.length-1</code> are less than <code>n</code>.
+   :answer_d: The smallest value is at position <code>m</code>.
    :correct: a
-   :feedback_a: Mystery steps backwards through the array until the first value less than the passed num (<i>n</i>) is found and then it returns the index where this value is found.
-   :feedback_b: This would be true if mystery looped forward through the array and returned when it found a value greater than the passed num (<i>n</i>).
-   :feedback_c: This would be true if it returned when it found a value at the current index that was greater than num (<i>n</i>).
+   :feedback_a: Mystery steps backwards through the array until the first value less than the passed num (<code>n</code>) is found and then it returns the index where this value is found.
+   :feedback_b: This would be true if mystery looped forward through the array and returned when it found a value greater than the passed num (<code>n</code>).
+   :feedback_c: This would be true if it returned when it found a value at the current index that was greater than num (<code>n</code>).
    :feedback_d: It returns the first time the condition is met so nothing is known about the values which are unchecked. 
 
    Given the following field and method, which of the following best describes the contents of ``myStuff`` after (``int m = mystery(n);``) has been executed?
@@ -170,16 +170,16 @@ Some examples of finding the largest value in an array start by setting the larg
       
 .. mchoice:: qab_5
    :answer_a: The values don't matter this will always cause an infinite loop.
-   :answer_b: Whenever <i>a</i> includes a value that is less than or equal to zero.
-   :answer_c: Whenever <i>a</i> has values larger then <i>temp</i>.
-   :answer_d: When all values in <i>a</i> are larger than <i>temp</i>.
-   :answer_e: Whenever <i>a</i> includes a value equal to <i>temp</i>.
+   :answer_b: Whenever <code>a</code> includes a value that is less than or equal to zero.
+   :answer_c: Whenever <code>a</code> has values larger then <code>temp</code>.
+   :answer_d: When all values in <code>a</code> are larger than <code>temp</code>.
+   :answer_e: Whenever <code>a</code> includes a value equal to <code>temp</code>.
    :correct: b
    :feedback_a: An infinite loop will not always occur in this code segment.
-   :feedback_b: When <i>a</i> contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the <i>temp</i> value (which was set to some value > 0), so an infinite loop will occur.
-   :feedback_c: Values larger then <i>temp</i> will not cause an infinite loop.
-   :feedback_d: Values larger then <i>temp</i> will not cause an infinite loop.
-   :feedback_e: Values equal to <i>temp</i> will not cause the infinite loop.
+   :feedback_b: When <code>a</code> contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the <code>temp</code> value (which was set to some value > 0), so an infinite loop will occur.
+   :feedback_c: Values larger then <code>temp</code> will not cause an infinite loop.
+   :feedback_d: Values larger then <code>temp</code> will not cause an infinite loop.
+   :feedback_e: Values equal to <code>temp</code> will not cause the infinite loop.
 
    Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an int variable initialized to be greater than zero and that ``a`` is an array of integers.
    
