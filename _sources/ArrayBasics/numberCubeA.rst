@@ -39,9 +39,9 @@ How to Solve
 You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call ``toss``.  You will need to loop that number of times and each time set the value of the array at that index to the result of the ``toss``.  Return the array.   
 
 .. mchoice:: numbercubea_1
-   :answer_a: (int) (Math.random() * 6) + 1)
-   :answer_b: (int) (Math.random() * 6)
-   :answer_c: Math.random(6);
+   :answer_a: <code>(int) (Math.random() * 6) + 1)</code>
+   :answer_b: <code>(int) (Math.random() * 6)</code>
+   :answer_c: <code>Math.random(6);</code>
    :correct: a
    :feedback_a: This expression correctly generates a random number between 1 and 6.
    :feedback_b: This expression generates a random number from 0 to 5.  
@@ -50,33 +50,33 @@ You will need to create an array to hold the results of each cube toss.  The siz
    Which Java expression correctly generates a random number between 1 and 6?
    
 .. mchoice:: numbercubea_2
-   :answer_a: int[] tossArray = new int[];
-   :answer_b: int[] tossArray = new int(numTosses);
-   :answer_c: int[] tossArray = new int[numTosses];
+   :answer_a: <code>int[] tossArray = new int[];</code>
+   :answer_b: <code>int[] tossArray = new int(numTosses);</code>
+   :answer_c: <code>int[] tossArray = new int[numTosses];</code>
    :correct: c
    :feedback_a: You need to specify the size of the array when you create it.
-   :feedback_b: It should be new int[numTosses].
-   :feedback_c: This will create an array of size numTosses.
+   :feedback_b: It should be <code>new int[numTosses]</code>.
+   :feedback_c: This will create an array of size <code>numTosses</code>.
 
-   Which of the following correctly creates an array of size numTosses?
+   Which of the following correctly creates an array of size ``numTosses``?
    
 .. mchoice:: numbercubea_3
-   :answer_a: for (int i = 0; i <= numTosses; i++)
-   :answer_b: for (int i = 1; i < numTosses; i++)
-   :answer_c: for (int i = 0; i < numTosses; i++)
+   :answer_a: <code>for (int i = 0; i <= numTosses; i++)</code>
+   :answer_b: <code>for (int i = 1; i < numTosses; i++)</code>
+   :answer_c: <code>for (int i = 0; i < numTosses; i++)</code>
    :correct: c
-   :feedback_a: This will execute numTosses + 1 times.
-   :feedback_b: This will execute numTosses - 1 times.
-   :feedback_c: This will execute numTosses times.
+   :feedback_a: This will execute <code>numTosses + 1</code> times.
+   :feedback_b: This will execute <code>numTosses - 1</code> times.
+   :feedback_c: This will execute <code>numTosses</code> times.
 
-   Which of the following correctly loops numTosses number of times?
+   Which of the following correctly loops ``numTosses`` number of times?
    
 
 Mixed Up Code
 -------------------
 .. parsonsprob:: NumberCubeA
 
-  The method getCubeTosses below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+  The method <code>getCubeTosses</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
   -----
   public static int[] getCubeTosses(NumberCube cube,
                                     int numTosses)

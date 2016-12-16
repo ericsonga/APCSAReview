@@ -24,9 +24,9 @@ The following is part a of a free response question from 2012.  It was question 
       int getWeight();
    }
 
-A horse barn consists of N numbered spaces. Each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the HorseBarn class is shown below.
+A horse barn consists of N numbered spaces. Each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the ``HorseBarn`` class is shown below.
 
-**Part b.**  Write the HorseBarn method consolidate. This method consolidates the barn by moving horses so that the horses are in adjacent spaces, starting at index 0, with no empty spaces between any two horses. After the barn is consolidated, the horses are in the same order as they were before the consolidation.
+**Part b.**  Write the ``HorseBarn`` method ``consolidate``. This method consolidates the barn by moving horses so that the horses are in adjacent spaces, starting at index 0, with no empty spaces between any two horses. After the barn is consolidated, the horses are in the same order as they were before the consolidation.
 
 .. figure:: Figures/horseBarnB.png
     :width: 700px
@@ -74,9 +74,9 @@ One way to solve this problem is to create a temporary array the same size as ``
 While we are looping through the ``spaces`` array, we need to check for non-null positions.
 
 .. mchoice:: frhbb_2
-   :answer_a: if (spaces.get(index) != null)
-   :answer_b: if (!spaces[index].null())
-   :answer_c: if (spaces[index] != null)
+   :answer_a: <code>if (spaces.get(index) != null)</code>
+   :answer_b: <code>if (!spaces[index].null())</code>
+   :answer_c: <code>if (spaces[index] != null)</code>
    :correct: c
    :feedback_a: This is the syntax for checking an element within an ArrayList.
    :feedback_b: Is null() a standard Java method? Comparing an object with a null value is simpler.

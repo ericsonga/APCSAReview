@@ -20,10 +20,10 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :answer_c: 2
       :answer_d: 3
       :correct: c
-      :feedback_a: While i is set to 0 initially it does change.  
-      :feedback_b: This would be true if i was incremented after the sum was changed instead of before.  
-      :feedback_c: This will loop twice and increment i each time so at the end i is 2.  
-      :feedback_d: This would be true if it was asking for the value of limit.
+      :feedback_a: ``TEST``While i is set to 0 initially it does change.  
+      :feedback_b: <code>TEST</code>This would be true if i was incremented after the sum was changed instead of before.  
+      :feedback_c: **TEST**This will loop twice and increment i each time so at the end i is 2.  
+      :feedback_d: *TEST*This would be true if it was asking for the value of limit.
 
       What is the value of ``i`` after the following code has executed?
 
