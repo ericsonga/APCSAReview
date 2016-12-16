@@ -209,7 +209,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
    :answer_a: <code>highScores.length</code>
    :answer_b: <code>highScores.length - 1</code>
    :correct: b
-   :feedback_a: Look at the example above when we were setting the values for the <i>highScore</i> array.  
+   :feedback_a: Look at the example above when we were setting the values for the <code>highScore</code> array.  
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
 
    Which index is the last element in an array called ``highScores`` at?

@@ -9,7 +9,7 @@ Using a For Loop to Loop Through an Array
     single: for loop
 	pair: loop; from front to back
 	
-You can also use a ``for`` loop to loop through all the elements of an array.  Just start the index at 0 and loop while the index is less than the length of the array.
+You can also use a **for** loop to loop through all the elements of an array.  Just start the index at 0 and loop while the index is less than the length of the array.
 
 .. activecode:: lcal1
    :language: java
@@ -53,7 +53,7 @@ You can also use a ``for`` loop to loop through all the elements of an array.  J
 
 .. parsonsprob:: pab_1r
 
-   The following method has the correct code to subtract amt from all the values in the array <b>values</b> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly. You will be told if any of the blocks are in the wrong order or not indented correctly.
+   The following method has the correct code to subtract <code>amt</code> from all the values in the array <code>values</code> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly. You will be told if any of the blocks are in the wrong order or not indented correctly.
    -----
    public void subAll(int amt)
    {

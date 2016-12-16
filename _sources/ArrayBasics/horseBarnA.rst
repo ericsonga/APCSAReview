@@ -24,9 +24,9 @@ The following is part a of a free response question from 2012.  It was question 
       int getWeight();
    }
 
-A horse barn consists of N numbered spaces. Each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the HorseBarn class is shown below.
+A horse barn consists of N numbered spaces. Each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the ``HorseBarn`` class is shown below.
 
-**Part a.**  Write the HorseBarn method findHorseSpace. This method returns the index of the space in which the horse with the specified name is located. If there is no horse with the specified name in the barn, the method returns -1.
+**Part a.**  Write the ``HorseBarn`` method ``findHorseSpace``. This method returns the index of the space in which the horse with the specified name is located. If there is no horse with the specified name in the barn, the method returns -1.
 
 .. figure:: Figures/horseBarnA.png
     :width: 700px
@@ -63,22 +63,22 @@ In order to find the index of the horse with the same name we are looking for, w
 We will have to watch out for spaces that are empty (are null).  
 
 .. mchoice:: frhba_1
-   :answer_a: spaces[index].name;
-   :answer_b: spaces[index].getName();
-   :answer_c: spaces.get(index).getName();
+   :answer_a: <code>spaces[index].name;</code>
+   :answer_b: <code>spaces[index].getName();</code>
+   :answer_c: <code>spaces.get(index).getName();</code>
    :correct: b
    :feedback_a: Getter methods are needed to access private class variables.
    :feedback_b: This is the syntax for getting the value of an element in an array.  
    :feedback_c: This is the syntax for getting the value of an element in an arrayList.   
 
-   Which of the following correctly retrieves the name of a "Horse" object from the "spaces" array?
+   Which of the following correctly retrieves the name of a ``Horse`` object from the ``spaces`` array?
 
 Once we have the name of the current ``Horse`` object, we need to compare this name to the name we are looking for.
 
 .. mchoice:: frhba_2
-   :answer_a: str.compareTo(anotherString);
-   :answer_b: str == anotherString;
-   :answer_c: str.equals(anotherString);
+   :answer_a: <code>str.compareTo(anotherString);</code>
+   :answer_b: <code>str == anotherString;</code>
+   :answer_c: <code>str.equals(anotherString);</code>
    :correct: c
    :feedback_a: This String method is used for comparing two strings alphabetically. It returns 0 if they are equal so you would need to check the return value.
    :feedback_b: This would only return true if the two variables refer to the same object.  

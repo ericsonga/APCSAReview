@@ -11,7 +11,7 @@ Free Response - Sound A
 
 The following is a free response question from 2011.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
 
-**Question 1.**  Digital sounds can be represented as an array of integer values. For this question, you will write two unrelated methods of the *Sound* class.
+**Question 1.**  Digital sounds can be represented as an array of integer values. For this question, you will write two unrelated methods of the ``Sound`` class.
 
 A partial declaration of the ``Sound`` class is shown below.
 
@@ -76,12 +76,12 @@ is executed, the value of ``numChanges`` will be 5, and the array ``samples`` wi
 How to Solve This
 --------------------
 
-We will have to loop through each value in the array and compare the value to the limit. We will need to keep track of the number of values changed.  
+We will have to loop through each value in the array and compare the value to ``limit``. We will need to keep track of the number of values changed.  
 
-If the current value is greater than the 
-limit, it should be reset to the limit and the count of the values changed should be incremented. 
+If the current value is greater than 
+``limit``, it should be reset to ``limit`` and the count of the values changed should be incremented. 
 
-If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.   
+If the current value is less than the negative of ``limit``, then it should be reset to the negative of ``limit`` and the count of values should be incremented.   
 
 We will have to return the count of values changed.
 
@@ -97,15 +97,15 @@ We will have to return the count of values changed.
    Which loop would be best for this problem?
    
 .. mchoice:: fr_sounda_2
-   :answer_a: samples[i].set(-limit);
-   :answer_b: samples[i] = limit;
-   :answer_c: samples[i] = -limit;
+   :answer_a: <code>samples[i].set(-limit);</code>
+   :answer_b: <code>samples[i] = limit;</code>
+   :answer_c: <code>samples[i] = -limit;</code>
    :correct: c
-   :feedback_a: There is no set method on arrays.
-   :feedback_b: This would set the value at index i to limit rather than the negative of the limit.  
-   :feedback_c: This will set the value at index i to the negative of the limit.
+   :feedback_a: There is no <code>set</code> method on arrays.
+   :feedback_b: This would set the value at index <code>i</code> to <code>limit</code> rather than the negative of <code>limit</code>.  
+   :feedback_c: This will set the value at index <code>i</code> to the negative of <code>limit</code>.
 
-   Which is the correct code for changing the current value to the negative of the limit?
+   Which is the correct code for changing the current value to the negative of ``limit``?
 
 
 Mixed Up Code
@@ -113,7 +113,7 @@ Mixed Up Code
 
 .. parsonsprob:: SoundA
 
-   The method limitAmplitude below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.
+   The method <code>limitAmplitude</code> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.
    -----
    public int limitAmplitude(int limit) 
    { 
@@ -147,7 +147,7 @@ Try and Solve Part A
 --------------------
 
 Write the method ``limitAmplitude`` that will change any value that has an amplitude greater than the
-given limit. Values that are greater than ``limit`` are replaced with ``limit``, and values that are less than
+given ``limit``. Values that are greater than ``limit`` are replaced with ``limit``, and values that are less than
 ``-limit`` are replaced with ``–limit``. The method returns the total number of values that were changed in
 the array.  The ``main`` method has code to test your solution.
 

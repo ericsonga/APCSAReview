@@ -103,7 +103,7 @@ Code Practice with Arrays
         .. tab:: Question
 
            
-           Rewrite the following code so that it prints all the values in an array ``arr1`` using a for-each loop instead of a ``for`` loop.
+           Rewrite the following code so that it prints all the values in the array named ``arr1`` using a **for-each** loop instead of a **for** loop.
            
            .. activecode::  ch7Ex1q
               :language: java
@@ -171,7 +171,7 @@ Code Practice with Arrays
 
         .. tab:: Answer
         
-           If the remainder of the value divided by 2 is 1 then it is odd so print it out followed by a space (to keep the values separated).  
+           If the remainder of ``value`` divided by 2 is 1 then it is odd so print it out followed by a space (to keep the values separated).  
            
            .. activecode::  ch7Ex4a
               :language: java
@@ -519,7 +519,7 @@ Code Practice with Arrays
 
         .. tab:: Answer
         
-           Declare a variable to hold the ``total`` and it should be of type ``double`` so that the average is a ``double``.  Initialize it to 0.  Loop through all the values in the array and add each to the ``total``.  Return the ``total`` divided by the length of the array.  
+           Declare a variable to hold the ``total`` and it should be of type ``double`` since the average may not be a whole number.  Initialize it to 0.  Loop through all the values in the array and add each to the ``total``.  Return the ``total`` divided by the length of the array.  
            
            .. activecode::  ch7Ex10na
               :language: java
