@@ -16,34 +16,66 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which index is the last element in an array called ``nums`` at?
    
-.. mchoice:: qaeasy_2
-   :answer_a: The values don't matter this will always cause an infinite loop.
-   :answer_b: Whenever <code>a</code> includes a value that is less than or equal to zero.
-   :answer_c: Whenever <code>a</code> has values larger then <code>temp</code>.
-   :answer_d: When all values in <code>a</code> are larger than <code>temp</code>.
-   :answer_e: Whenever <code>a</code> includes a value equal to <code>temp</code>.
-   :correct: b
-   :feedback_a: An infinite loop will not always occur in this code segment.
-   :feedback_b: When <code>a</code> contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than <code>temp</code> (which was set to some value > 0), so an infinite loop will occur.
-   :feedback_c: Values larger then <code>temp</code> will not cause an infinite loop.
-   :feedback_d: Values larger then <code>temp</code> will not cause an infinite loop.
-   :feedback_e: Values equal to <code>temp</code> will not cause the infinite loop.
+.. mchoice:: qaeasy_2new
+   :answer_a: <code>int[] scores = null;</code>
+   :answer_b: <code>int[] scoreArray = {50,90,85};</code>
+   :answer_c: <code>String[] nameArray = new String[10];</code>
+   :answer_d: <code>String[] nameArray = {5, 3, 2};</code>
+   :answer_e: <code>int[] scores = new int[5];</code>
+   :correct: d
+   :feedback_a: You can initialize an array reference to null to show that it doesn't refer to any array yet.
+   :feedback_b: You can provide the values for an array when you declare it.
+   :feedback_c: You can declare and array and create the array using the <code>new</code> operator in the same statement.
+   :feedback_d: You can not put integers into an array of String objects.
+   :feedback_e: You can declare and array and create it in the same statement.  Use the <code>new</code> operator to create the array and specify the size in square brackets.  
 
-   Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an ``int`` variable initialized to be greater than zero and that ``a`` is an array of ints.
+   Which of the following declarations will cause a compile time error?
    
-   .. code-block:: java 
+.. mchoice:: qaeasy_3
+   :answer_a: 1
+   :answer_b: 2
+   :answer_c: 3
+   :answer_d: 6
+   :answer_e: 4
+   :correct: b
+   :feedback_a: This would be returned from <code>arr[2]</code>.
+   :feedback_b: This returns the value in <code>arr</code> at index 3.  Remember that the first item in an array is at index 0. 
+   :feedback_c: This would be returned from <code>arr[1]</code>.
+   :feedback_d: This would be returned from <code>arr[0]</code>.
+   :feedback_e: This would be returned from <code>arr.length</code>
 
-      for ( int k = 0; k < a.length; k++ )
+   What is returned from ``arr[3]`` if ``arr={6, 3, 1, 2}``?  
+   
+.. mchoice:: qaeasy_4
+   :answer_a: 17.5
+   :answer_b: 30.0
+   :answer_c: 130
+   :answer_d: 32
+   :answer_e: 32.5
+   :correct: e
+   :feedback_a: This would be true if the loop stopped at <code>arr.length - 1</code>.  
+   :feedback_b: This would be true if the loop started at 1 instead of 0.  
+   :feedback_c: This would be true if it returned <code>output</code> rather than <code>output / arr.length</code> 
+   :feedback_d: This would be true if <code>output</code> was declared to be an int rather than a double. 
+   :feedback_e: This sums all the values in the array and then returns the sum divided by the number of items in the array.  This is the average.  
+
+   What is returned from ``mystery`` when it is passed ``{10, 30, 30, 60}``?
+   
+   .. code-block:: java
+   
+      public static double mystery(int[] arr)
       {
-         while ( a[ k ] < temp )
+      	 double output = 0;
+         for (int i = 0; i < arr.length; i++)
          {
-            a[ k ] *= 2;
+            output = output + arr[i];
          }
+         return output / arr.length;
       }
       
-You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+a+%3D+%7B1,+5,+2,+-1,+3%7D%3B%0A++++++int+temp+%3D+10%3B%0A++++++%0A++++++for+(+int+k+%3D+0%3B+k+%3C+a.length%3B+k%2B%2B+)%0A++++++%7B%0A+++++++++while+(+a%5B+k+%5D+%3C+temp+)%0A+++++++++%7B%0A++++++++++++a%5B+k+%5D+*%3D+2%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_. Can you fix the code so that it won't result in an infinite loop?
+You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+double+mystery(int%5B%5D+arr)%0A+++%7B%0A++++++double+output+%3D+0%3B%0A++++++for+(int+i+%3D+0%3B+i+%3C+arr.length%3B+i%2B%2B)%0A++++++%7B%0A+++++++++output+%3D+output+%2B+arr%5Bi%5D%3B%0A++++++%7D%0A++++++return+output+/+arr.length%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+test+%3D+%7B10,+30,+30,+60%7D%3B%0A++++++System.out.println(mystery(test))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
-.. mchoice:: qaeasy_3
+.. mchoice:: qaeasy_5old3
    :answer_a: {-20, -10, 2, 8, 16, 60}
    :answer_b: {-20, -10, 2, 4, 8, 30}
    :answer_c: {-10, -5, 1, 8, 16, 60}
@@ -69,4 +101,6 @@ You can step through the code above using the Java Visualizer by clicking on the
          }
       }
       
-You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++private+int%5B+%5D+a+%3D+%7B-10,+-5,+1,+4,+8,+30%7D%3B%0A%0A+++public+void+doubleLast()%0A+++%7B%0A++++%0A+++++++for+(int+i+%3D+a.length+/+2%3B+i+%3C+a.length%3B+i%2B%2B)%0A+++++++%7B%0A+++++++++++a%5Bi%5D+%3D+a%5Bi%5D+*+2%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++Test+myTest+%3D+new+Test()%3B%0A++++++myTest.doubleLast()%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++private+int%5B+%5D+a+%3D+%7B-10,+-5,+1,+4,+8,+30%7D%3B%0A%0A+++public+void+doubleLast()%0A+++%7B%0A++++%0A+++++++for+(int+i+%3D+a.length+/+2%3B+i+%3C+a.length%3B+i%2B%2B)%0A+++++++%7B%0A+++++++++++a%5Bi%5D+%3D+a%5Bi%5D+*+2%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++Test+myTest+%3D+new+Test()%3B%0A++++++myTest.doubleLast()%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+

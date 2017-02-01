@@ -121,3 +121,171 @@ You can step through the code above with the Java Visualizer by clicking the fol
      int m = mystery(n)
      
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ArrayWorker+%7B%0A+++%0A++++private+int%5B%5D+myStuff%3B%0A+++%0A++++public+ArrayWorker(int%5B%5D+theStuff)%0A++++%7B%0A+++++++myStuff+%3D+theStuff%3B%0A++++%7D%0A%0A+++++//precondition%3A+myStuff+contains%0A+++++//+++integers+in+no+particular+order%0A+++++public+int+mystery(int+num)+%7B%0A++++++++for+(int+k+%3D+myStuff.length+-+1%3B+k+%3E%3D+0%3B+k--)+%7B%0A+++++++++++if+(myStuff%5Bk%5D+%3C+num)+%7B%0A+++++++++++++++return+k%3B%0A+++++++++++%7D%0A++++++++%7D%0A++++++++return+-1%3B%0A+++++%7D%0A%0A+++++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B-3,+1,+3,+2,+6%7D%3B%0A++++++ArrayWorker+arrayWorker+%3D+new+ArrayWorker(temp)%3B%0A++++++int+m+%3D+arrayWorker.mystery(2)%3B%0A++++++System.out.println(m)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+
+.. mchoice:: qamed_5
+   :answer_a: Returns the index of the largest value in array <code>arr</code>.
+   :answer_b: Returns the index of the first element in array <code>arr</code> whose value is greater than <code>arr[loc]</code>.
+   :answer_c: Returns the index of the last element in array <code>arr</code> whose value is greater than <code>arr[loc]</code>.
+   :answer_d: Returns the largest value in array <code>arr</code>.
+   :answer_e: Returns the index of the largest value in the second half of array <code>arr</code>.
+   :correct: a
+   :feedback_a: This code sets <code>loc</code> to the middle of the array and then loops through all the array elements.  If the value at the current index is greater than the value at <code>loc</code> then it changes <code>loc</code> to the current index.  It returns <code>loc</code>, which is the index of the largest value in the array.
+   :feedback_b: This would be true if there was a <code>return loc</code> after <code>loc = k</code> if the <code>if</code> block.
+   :feedback_c: This would be true if it returned <code>loc</code> after setting <code>loc = k</code> and if it started at the end of the array and looped toward the beginning of the array.
+   :feedback_d: It returns the <i>index</i> to the largest value in array <code>arr</code>, not the largest value.
+   :feedback_e: <code>k</code> loops from 0 to <code>length - 1</code>.  So it checks all of the elements in the array.
+
+   Consider the following field ``arr`` and method ``checkArray``.  Which of the following best describes what ``checkArray`` returns?
+   
+   .. code-block:: java
+
+     private int[] arr;
+
+     // precondition: arr.length != 0
+     public int checkArray()
+     {
+         int loc = arr.length / 2;
+         for (int k = 0; k < arr.length; k++)
+         {
+             if (arr[k] > arr[loc])
+             {
+                 loc = k;
+             }
+         }
+         return loc;
+     }
+     
+You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++private+int%5B%5D+arr+%3D+null%3B%0A+++%0A+++public+Test(int%5B%5D+theArr)%0A+++%7B%0A++++++arr+%3D+theArr%3B%0A+++%7D%0A%0A+++//+precondition%3A+arr.length+!%3D+0%0A+++public+int+checkArray()%0A+++%7B%0A++++++int+loc+%3D+arr.length+/+2%3B%0A++++++for+(int+k+%3D+0%3B+k+%3C+arr.length%3B+k%2B%2B)%0A++++++%7B%0A++++++++if+(arr%5Bk%5D+%3E+arr%5Bloc%5D)%0A++++++++%7B%0A++++++++++++loc+%3D+k%3B%0A++++++++%7D%0A++++++%7D%0A++++++return+loc%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B20,+5,+3,+42,+81%7D%3B%0A++++++Test+myTest+%3D+new+Test(temp)%3B%0A++++++System.out.println(myTest.checkArray())%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+     
+.. mchoice:: qamed_6
+        :answer_a: 4
+        :answer_b: 2
+        :answer_c: 12 
+        :answer_d: 6
+        :answer_e: 3
+        :correct: b
+        :feedback_a: This would be true if it was <code>return (a[1] *= 2);</code>, which would change the value at <code>a[1]</code>. 
+        :feedback_b: The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to 2.  The return (a[1] * 2) does not change the value at a[1].  
+        :feedback_c: This would be true if array indicies started at 0 instead of 1 and if the code changed the value at index 1 to the current value times two.  
+        :feedback_d: This would be true if array indices started at 0 rather than 1.   
+        :feedback_e: This can't be true because <code>a[1]--;</code>  means the same as <code>a[1] = a[1] - 1;</code>  so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.
+       
+        Given the following method declaration, and ``int[] a = {7, 3, -1}``, what is the value in ``a[1]`` after ``m1(a);`` is run?
+       
+        .. code-block:: java
+       
+            public static int m1(int[] a)
+            {
+               a[1]--;
+               return (a[1] * 2);
+            }
+            
+You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-6 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+int+m1(int%5B%5D+a)%0A+++%7B%0A++++++a%5B1%5D--%3B%0A++++++return+(a%5B1%5D+*+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+3,+-1%7D%3B%0A++++++System.out.println(temp%5B1%5D)%3B%0A++++++m1(temp)%3B%0A++++++System.out.println(temp%5B1%5D)%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+.. mchoice:: qamed_7
+   :answer_a: k - 1
+   :answer_b: k + 1
+   :answer_c: k 
+   :answer_d: 1
+   :answer_e: 0
+   :correct: a
+   :feedback_a: This loop will start at 1 and continue until <code>k</code> is reached as long as <code>arr[i] < someValue</code> is true.  The last time the loop executes, <code>i</code> will equal <code>k-1</code>, if the condition is always true.  The number of times a loop executes is equal to the largest value when the loop executes minus the smallest value plus one.  In this case that is <code>(k - 1) - 1 + 1</code> which equals <code>k - 1</code>.  
+   :feedback_b: This would be true if <code>arr[i] < someValue</code> was always true and the loop started at 0 instead of 1 and continued while it was less than or equal to <code>k</code>.
+   :feedback_c: This would be true if <code>arr[i] < someValue</code> was always true and the loop started at 0 instead of 1.  
+   :feedback_d: This would be the case if only one element in the array would fulfill the condition that <code>arr[i] < someValue</code>.
+   :feedback_e: This is the minimum number of times that HELLO could be executed.  This would be true if <code>k</code> was less than <code>i</code> initially.  
+
+   Consider the following code. What is the *maximum* amount of times that ``HELLO`` could possibly be printed?
+
+   .. code-block:: java
+     
+      for (int i = 1; i < k; i++) 
+      {
+         if (arr[i] < someValue) 
+         {
+           System.out.print("HELLO")
+         }
+      }
+      
+You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-7 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+arr+%3D+%7B1,+5,+3%7D%3B%0A++++++int+someValue+%3D+10%3B%0A++++++int+k+%3D+3%3B%0A++++++%0A++++++for+(int+i+%3D+1%3B+i+%3C+k%3B+i%2B%2B)%0A++++++%7B%0A+++++++++if+(arr%5Bi%5D+%3C+someValue)%0A+++++++++%7B%0A++++++++++++System.out.print(%22HELLO%22)%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+.. mchoice:: qamed_8
+   :answer_a: [2, 6, 2, -1, -3]
+   :answer_b: [-23, -21, -13, -3, 6]
+   :answer_c: [10, 18, 19, 15, 6]
+   :answer_d: This method results in an IndexOutOfBounds exception.
+   :answer_e: [35, 33, 25, 15, 6]
+   :correct: e
+   :feedback_a: This would be correct if <code>data[k]</code> was modified in the for-loop. In this for-loop, <code>data[k - 1]</code> is the element that changes.
+   :feedback_b: This would be correct if <code>data[k - 1]</code> was subtracted from <code>data[k]</code>. Notice that for every instance of the for-loop, <code>data[k]</code> and <code>data[k - 1]</code> are added together and <code>data[k - 1]</code> is set to that value.
+   :feedback_c: This would be correct if the for-loop began at 1 and continued to <code>data.length - 1</code>. Notice the for-loop indexing.
+   :feedback_d: The indexing of this method is correct. The for-loop begins at the last valid index and ends when <code>k</code> is equal to 0, and the method does not access any values other than the ones specified.
+   :feedback_e: This method starts at the last valid index of the array and adds the value of the previous element to the element at index <code>k - 1</code>.
+   
+   Consider the following method ``changeArray``. An array is created that contains ``[2, 8, 10, 9, 6]`` and is passed to ``changeArray``. What are the contents of the array after the ``changeArray`` method executes?
+
+   .. code-block:: java
+
+      public static void changeArray(int[] data)
+      {
+         for (int k = data.length - 1; k > 0; k--)
+            data[k - 1] = data[k] + data[k - 1];
+      }
+      
+You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-8 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+changeArray(int%5B%5D+data)%0A+++%7B%0A++++++for+(int+k+%3D+data.length+-+1%3B+k+%3E+0%3B+k--)%0A+++++++++data%5Bk+-+1%5D+%3D+data%5Bk%5D+%2B+data%5Bk+-+1%5D%3B%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+temp+%3D+%7B2,+8,+10,+9,+6%7D%3B%0A++++++changeArray(temp)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+.. mchoice:: qamed_9
+   :answer_a: [-2, -1, -5, 3, -4]
+   :answer_b: [-2, -1, 3, -8, 6]
+   :answer_c: [1, 5, -5, 3, -4]
+   :answer_d: [1, 5, 3, -8, 6]
+   :answer_e: [1, 5, -2, -5, 2]
+   :correct: c
+   :feedback_a: This would be true if <code>i</code> started at 0 instead of <code>arr2.length / 2</code>.  
+   :feedback_b: This would be true if <code>i</code> started at 0 and ended when it reached <code>arr2.length / 2</code>.
+   :feedback_c: This loop starts at <code>arr2.length / 2</code> which is 2 and loops to the end of the array copying from <code>arr2</code> to <code>arr1</code>.
+   :feedback_d: This would be correct if this loop didn't change <code>arr1</code>, but it does.  
+   :feedback_e: This would be correct if it set <code>arr1[i] = arr[i] + arr[2]</code> instead.  
+   
+   Assume that ``arr1={1, 5, 3, -8, 6}`` and ``arr2={-2, -1, -5, 3, -4}`` what will the contents of ``arr1`` be after ``copyArray`` finishes executing?
+
+   .. code-block:: java
+
+      public static void copyArray(int[] arr1, int[] arr2)
+      {
+         for (int i = arr1.length / 2; i < arr1.length; i++)
+         {
+            arr1[i] = arr2[i];
+         }
+      }
+      
+You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-9 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+void+copyArray(int%5B%5D+arr1,+int%5B%5D+arr2)%0A+++%7B%0A+++++++++for+(int+i+%3D+arr1.length+/+2%3B+i+%3C+arr1.length%3B+i%2B%2B)%0A+++++++++%7B%0A++++++++++++arr1%5Bi%5D+%3D+arr2%5Bi%5D%3B%0A+++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp1+%3D+%7B1,+5,+3,+-8,+6%7D%3B%0A++++++int%5B%5D+temp2+%3D+%7B-2,+-1,+-5,+3,+-4%7D%3B%0A++++++copyArray(temp1,temp2)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+.. mchoice:: qamed_10
+   :answer_a: The values don't matter this will always cause an infinite loop.
+   :answer_b: Whenever <code>a</code> includes a value that is less than or equal to zero.
+   :answer_c: Whenever <code>a</code> has values larger then <code>temp</code>.
+   :answer_d: When all values in <code>a</code> are larger than <code>temp</code>.
+   :answer_e: Whenever <code>a</code> includes a value equal to <code>temp</code>.
+   :correct: b
+   :feedback_a: An infinite loop will not always occur in this code segment.
+   :feedback_b: When <code>a</code> contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than <code>temp</code> (which was set to some value > 0), so an infinite loop will occur.
+   :feedback_c: Values larger then <code>temp</code> will not cause an infinite loop.
+   :feedback_d: Values larger then <code>temp</code> will not cause an infinite loop.
+   :feedback_e: Values equal to <code>temp</code> will not cause the infinite loop.
+
+   Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an ``int`` variable initialized to be greater than zero and that ``a`` is an array of ints.
+   
+   .. code-block:: java 
+
+      for ( int k = 0; k < a.length; k++ )
+      {
+         while ( a[ k ] < temp )
+         {
+            a[ k ] *= 2;
+         }
+      }
+      
+You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-10-10 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+a+%3D+%7B1,+5,+2,+-1,+3%7D%3B%0A++++++int+temp+%3D+10%3B%0A++++++%0A++++++for+(+int+k+%3D+0%3B+k+%3C+a.length%3B+k%2B%2B+)%0A++++++%7B%0A+++++++++while+(+a%5B+k+%5D+%3C+temp+)%0A+++++++++%7B%0A++++++++++++a%5B+k+%5D+*%3D+2%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_. Can you fix the code so that it won't result in an infinite loop?
+     
