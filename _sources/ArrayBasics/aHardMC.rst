@@ -18,7 +18,11 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_b: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException.
    :feedback_c: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException. If it did work, it would be faster than 2.
    :feedback_d: When <code>j</code> is 0, <code>sum[j-1]</code> will be <code>sum[-1]</code> which will cause an ArrayIndexOutOfBoundsException.
+<<<<<<< HEAD
    :feedback_e: Implementation 2 does not cause an ArrayIndexOutOfBoundsException.
+=======
+   :feedback_e: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException.
+>>>>>>> upstream/master
 
    Consider the following data field and incomplete method, ``partialSum``, which is intended to return an integer array ``sum`` such that for all ``i``, ``sum[i]`` is equal to ``arr[0] + arr[1] + ... + arr[i]``. For instance, if ``arr`` contains the values ``{1, 4, 1, 3}``, the array ``sum`` will contain the values ``{1, 5, 6, 9}``. Which of the following is true about the two implementations of the ``missing code`` on line 9 that are proposed?
    
