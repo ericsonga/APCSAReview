@@ -161,6 +161,8 @@ Arrays
    ArrayBasics/numberCubeB.rst
    ArrayBasics/aSummary.rst
    ArrayBasics/ArrayPractice.rst
+   ArrayBasics/ArrayParsonsPractice.rst
+   
    
 List and ArrayList
 ::::::::::::::::::::
