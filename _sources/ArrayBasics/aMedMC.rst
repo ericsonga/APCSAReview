@@ -16,11 +16,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :correct: a
    :feedback_a: The assertion denotes that <code>b[0]</code> occurs only once, regardless of the order or value of the other array values.
    :feedback_b: The array does not necessarily need to be in order for the assertion to be true.
-<<<<<<< HEAD
-   :feedback_c: The array does not necessarily need to be in order for the assertion to be true.
-=======
    :feedback_c: We can't tell if it is sorted or not from this assertion.
->>>>>>> upstream/master
    :feedback_d: The only value that must not have a duplicate is <code>b[0]</code>
    :feedback_e: <code>b[0]</code> can be any value, so long as no other array element is equal to it.
 
@@ -38,21 +34,12 @@ These problems are similar to those you will see on the AP CS A exam.
    :answer_e: Whenever exactly 1 element in <code>a</code> is equal to <code>val</code>
    :correct: c
    :feedback_a: It is the last value in <code>a</code> that controls the final state of <code>temp</code>, as the loop is progressing through the array from 0 to the end.
-<<<<<<< HEAD
-   :feedback_b: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is <code>true</code> or <code>false</code>.
-   :feedback_c: Because each time through the loop <code>temp</code> is reset, it will only be returned as true if the last value in <code>a</code> is equal to <code>val</code>.  
-   :feedback_d: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is <code>true</code> or <code>false</code>, so it is possible for just the last value to be equal to <code>val</code>.
-   :feedback_e: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is <code>true</code> or <code>false</code>, so it is possible for several elements to be equal to <code>val</code>.
-
-   Consider the following code segment. Which of the following statements best describes the conditions need for ``temp`` to be true? 
-=======
    :feedback_b: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false.
    :feedback_c: Because each time through the loop <code>temp</code> is reset, it will only be returned as true if the last value in a is equal to <code>val</code>.  
    :feedback_d: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for just the last value to be equal to <code>val</code>.
    :feedback_e: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for several elements to be equal to <code>val</code>.
 
    Consider the following code segment. Which of the following statements best describes the condition when it returns true?
->>>>>>> upstream/master
    
    .. code-block:: java
 
@@ -65,21 +52,6 @@ These problems are similar to those you will see on the AP CS A exam.
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+test(int%5B%5D+a,int+val)+%7B%0A++++++boolean+temp+%3D+false%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+a.length%3B+i%2B%2B)+%7B%0A++++++++temp+%3D+(a%5Bi%5D+%3D%3D+val)%3B%0A+++++%7D%0A+++++return(temp)%3B%0A+++%7D%0A++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+myArray+%3D+%7B9,+-3,+81,+-3028,+5%7D%3B%0A++++++System.out.println(test(myArray,9))%3B%0A++++++System.out.println(test(myArray,5))%3B%0A++++++System.out.println(test(myArray,0))%3B%0A++++++System.out.println(test(myArray,-3))%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qamed_3
-<<<<<<< HEAD
-   :answer_a: It is the length of the shortest consecutive block of the value <code>target</code> in <code>nums</code>
-   :answer_b: It is the length of the array <code>nums</code>
-   :answer_c: It is the length of the first consecutive block of the value <code>target</code> in <code>nums</code>
-   :answer_d: It is the number of occurrences of the value <code>target</code> in <code>nums</code>
-   :answer_e: It is the length of the last consecutive block of the value <code>target</code> in <code>nums</code>
-   :correct: d
-   :feedback_a: It doesn't ever reset the count, so it just counts all the times the <code>target</code> value appears in the array.
-   :feedback_b: This can't be true. There is no <code>nums.length</code> in the code and the only count happens <code>lenCount</code> is incremented when <code>nums[k] == target</code>.
-   :feedback_c: It doesn't ever reset the count, so it just counts all the times the <code>target</code> value appears in the array.
-   :feedback_d: The variable <code>lenCount</code> is incremented each time the current array element is the same value as the <code>target</code>. It is never reset so it counts the number of occurrences of the value <code>target</code> in <code>nums</code>. The method returns <code>maxLen</code> which is set to <code>lenCount</code> after the loop finishes if <code>lenCount</code> is greater than <code>maxLen</code>.
-   :feedback_e: It doesn't ever reset the count, so it just counts all the times the <code>target</code> value appears in the array.
-
-   Consider the following data field and method ``findLongest``. Method ``findLongest`` is intended to find the longest consecutive block of the value target occurring in the array ``nums``; however, ``findLongest`` does not work as intended. For example, if the array ``nums`` contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value returned by a call to ``findLongest``?
-=======
    :answer_a: It is the length of the shortest consecutive block of the value <code>target</code>  in <code>nums</code> 
    :answer_b: It is the length of the array <code>nums</code> 
    :answer_c: It is the length of the first consecutive block of the value <code>target</code>  in <code>nums</code> 
@@ -92,16 +64,15 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_d: The variable <code>lenCount</code> is incremented each time the current array element is the same value as the <code>target</code>. It is never reset so it counts the number of occurrences of the value <code>target</code> in <code>nums</code>. The method returns <code>maxLen</code> which is set to <code>lenCount</code> after the loop finishes if <code>lenCount</code> is greater than <code>maxLen</code>.
    :feedback_e: It doesn't reset <code>lenCount</code> ever, so it just counts all the times the <code>target</code> value appears in the array.
 
-   Consider the following data field and method findLongest. Method ``findLongest`` is intended to find the longest consecutive block of the value ``target`` occurring in the array ``nums``; however, ``findLongest`` does not work as intended. For example, if the array ``nums`` contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call findLongest(10) should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value returned by a call to ``findLongest``?
->>>>>>> upstream/master
+   Consider the following data field and method findLongest. Method ``findLongest`` is intended to find the longest consecutive block of the value ``target`` occurring in the array ``nums``; however, ``findLongest`` does not work as intended. For example given the code below the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value actually returned by a call to ``findLongest``?
    
    .. code-block:: java
 
-     private int[] nums;
+     private int[] nums = {7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10};
      
      public int findLongest(int target) {
-        int lenCount = 0;
-        int maxLen = 0;
+        int lenCount = 0; // length of current consecutive numbers
+        int maxLen = 0;   // max length of consecutive numbers 
         for (int k = 0; k < nums.length; k++) {
            if (nums[k] == target) {
               lenCount++;
@@ -128,15 +99,9 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_b: Mystery steps backwards through the array and quits the first time the value at the current index is less than the passed <code>num</code> (<code>n</code>). This would be true if we went forward through the array and returned when it found a value greater than the passed <code>num</code> (<code>n</code>).
    :feedback_c: This would be true if it returned when it found a value at the current index that was greater than <code>num</code> (<code>n</code>).
    :feedback_d: The condition compares the value at the current index of the array to the passed <code>num</code>. It returns the first time the condition is met so nothing is known about the values which are unchecked. One of the unchecked values could be smaller.
-<<<<<<< HEAD
-   :feedback_e: The condition checks for any value that is smaller than the passed <code>num</code> and returns from mystery the first time that the condition is encountered. The values are not ordered so we don't know if this is the largest value smaller than <code>n</code>.
-
-   Consider the following data field and method. Which of the following best describes the contents of ``myStuff`` after the following statement has been executed?
-=======
    :feedback_e: The condition checks for any value that is smaller than the passed <code>num</code> and returns from <code>mystery</code> the first time that the condition is encountered. The values are not ordered so we don't know if this is the largest value smaller than <code>n</code>.
 
    Consider the following data field and method. Which of the following best describes the contents of ``myStuff`` in terms of ``m`` and ``n`` after the following statement has been executed?
->>>>>>> upstream/master
    
    .. code-block:: java
 
@@ -191,7 +156,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
          return loc;
      }
      
-You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++private+int%5B%5D+arr+%3D+null%3B%0A+++%0A+++public+Test(int%5B%5D+theArr)%0A+++%7B%0A++++++arr+%3D+theArr%3B%0A+++%7D%0A%0A+++//+precondition%3A+arr.length+!%3D+0%0A+++public+int+checkArray()%0A+++%7B%0A++++++int+loc+%3D+arr.length+/+2%3B%0A++++++for+(int+k+%3D+0%3B+k+%3C+arr.length%3B+k%2B%2B)%0A++++++%7B%0A++++++++if+(arr%5Bk%5D+%3E+arr%5Bloc%5D)%0A++++++++%7B%0A++++++++++++loc+%3D+k%3B%0A++++++++%7D%0A++++++%7D%0A++++++return+loc%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B20,+5,+3,+42,+81%7D%3B%0A++++++Test+myTest+%3D+new+Test(temp)%3B%0A++++++System.out.println(myTest.checkArray())%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++private+int%5B%5D+arr+%3D+null%3B%0A+++%0A+++public+Test(int%5B%5D+theArr)%0A+++%7B%0A++++++arr+%3D+theArr%3B%0A+++%7D%0A%0A+++//+precondition%3A+arr.length+!%3D+0%0A+++public+int+checkArray()%0A+++%7B%0A++++++int+loc+%3D+arr.length+/+2%3B%0A++++++for+(int+k+%3D+0%3B+k+%3C+arr.length%3B+k%2B%2B)%0A++++++%7B%0A++++++++if+(arr%5Bk%5D+%3E+arr%5Bloc%5D)%0A++++++++%7B%0A++++++++++++loc+%3D+k%3B%0A++++++++%7D%0A++++++%7D%0A++++++return+loc%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B5,+93,+3,+20,+81%7D%3B%0A++++++Test+myTest+%3D+new+Test(temp)%3B%0A++++++System.out.println(myTest.checkArray())%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
      
 .. mchoice:: qamed_6
         :answer_a: 4
@@ -202,8 +167,8 @@ You can step through the code above with the Java Visualizer by clicking the fol
         :correct: b
         :feedback_a: This would be true if it was <code>return (a[1] *= 2);</code>, which would change the value at <code>a[1]</code>. 
         :feedback_b: The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to 2.  The return (a[1] * 2) does not change the value at a[1].  
-        :feedback_c: This would be true if array indicies started at 0 instead of 1 and if the code changed the value at index 1 to the current value times two.  
-        :feedback_d: This would be true if array indices started at 0 rather than 1.   
+        :feedback_c: This would be true if array indicies started at 1 instead of 0 and if the code changed the value at index 1 to the current value times two.  
+        :feedback_d: This would be true if array indices started at 1 rather than 0.   
         :feedback_e: This can't be true because <code>a[1]--;</code>  means the same as <code>a[1] = a[1] - 1;</code>  so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.
        
         Given the following method declaration, and ``int[] a = {7, 3, -1}``, what is the value in ``a[1]`` after ``m1(a);`` is run?

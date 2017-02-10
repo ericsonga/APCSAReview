@@ -88,17 +88,17 @@ You can even start in the middle and loop through the rest of the array.  Does t
    }
    
 .. mchoice:: qab_8
-   :answer_a: <code>{-40, -30, 4, 16, 32, 66}</code>
-   :answer_b: <code>{-40, -30, 4, 8, 16, 32}</code>
-   :answer_c: <code>{-20, -15, 2, 16, 32, 66}</code>
-   :answer_d: <code>{-20, -15, 2, 8, 16, 33}</code> 
+   :answer_a: {-40, -30, 4, 16, 32, 66}
+   :answer_b: {-40, -30, 4, 8, 16, 32}
+   :answer_c: {-20, -15, 2, 16, 32, 66}
+   :answer_d: {-20, -15, 2, 8, 16, 33} 
    :correct: c
    :feedback_a: This would true if it looped through the whole array.  Does it?
    :feedback_b: This would be true if it looped from the beginning to the middle.  Does it?
    :feedback_c: It loops from the middle to the end doubling each value. Since there are 6 elements it will start at index 3.  
    :feedback_d: This would be true if array elements didn't change, but they do.  
 
-   Given the following values of ``a`` and the method ``doubleLast`` what will the values of ``a`` be after you execute: ``doubleLast()``?
+   Given the following values of a and the method doubleLast what will the values of a be after you execute: doubleLast()?
    
    .. code-block:: java 
    
@@ -114,19 +114,19 @@ You can even start in the middle and loop through the rest of the array.  Does t
       }
       
 .. mchoice:: qab_9
-   :answer_a: <code>{-40, -30, 4, 16, 32, 66}</code>
-   :answer_b: <code>{-40, -30, 4, 8, 16, 33}</code>
-   :answer_c: <code>{-20, -15, 2, 16, 32, 66}</code>
-   :answer_d: <code>{-40, -15, 4, 8, 16, 33}</code>
-   :answer_e: <code>{-40, -15, 4, 8, 32, 33}</code>
+   :answer_a: {-40, -30, 4, 16, 32, 66}
+   :answer_b: {-40, -30, 4, 8, 16, 33}
+   :answer_c: {-20, -15, 2, 16, 32, 66}
+   :answer_d: {-40, -15, 4, 8, 16, 33}
+   :answer_e: {-40, -15, 4, 8, 32, 33}
    :correct: d
    :feedback_a: This would true if it looped through the whole array and doubled each.  Does it?
    :feedback_b: This would be true if it looped from the beginning to the middle and doubled each.  Does it?
    :feedback_c: This would be true if it looped from the middle to the end and doubled each.  Does it?  
-   :feedback_d: This loops from the beginning to the middle and doubles every other element (<code>i+=2</code> is the same as <code>i = i + 2</code>). 
+   :feedback_d: This loops from the beginning to the middle and doubles every other element (i+=2 is the same as i = i + 2). 
    :feedback_e: This would be true if it looped through the whole array and doubled every other element.  Does it?
 
-   Given the following values of ``a`` and the method ``mystery`` what will the values of ``a`` be after you execute: ``mystery()``?
+   Given the following values of a and the method mystery what will the values of a be after you execute: mystery()?
    
    .. code-block:: java
    
@@ -145,7 +145,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
 
 .. parsonsprob:: pab_3
 
-   The following program has the correct code to reverse the elements in an array, <code>a</code>,  but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.</p>
+   The following program has the correct code to reverse the elements in an array, a,  but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.</p>
    -----
    public void reverse()
    {
@@ -170,7 +170,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
    
 .. parsonsprob:: pab_4
 
-   The following program has the correct code to return the average of the first 3 items in the array <code>a</code>, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.</p>
+   The following program has the correct code to return the average of the first 3 items in the array a, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.</p>
    -----
    public double avg3()
    {

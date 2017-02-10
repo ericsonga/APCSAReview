@@ -40,5 +40,5 @@ Also, be careful not to jump out of loop too early when you are looking for a va
       }
    }
    
-What is wrong with the code above?  The first time through the loop it will start with the element at ``index = 0`` and check if the item at the array ``index`` equals the passed ``target`` string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)?  
+What is wrong with the code above?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)?  
    

@@ -11,31 +11,11 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_a: <code>nums.length</code>
    :answer_b: <code>nums.length - 1</code>
    :correct: b
-<<<<<<< HEAD
-   :feedback_a: <code>nums.length</code> would result in an OutOfBoundsException
-=======
    :feedback_a: Since the first element in an array is at index 0 the last element is the length minus 1.
->>>>>>> upstream/master
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
 
    Which index is the last element in an array called ``nums`` at?
    
-<<<<<<< HEAD
-.. mchoice:: qaeasy_2
-   :answer_a: The values don't matter this will always cause an infinite loop.
-   :answer_b: Whenever <code>a</code> includes a value that is less than or equal to zero.
-   :answer_c: Whenever <code>a</code> has values larger then <code>temp</code>.
-   :answer_d: When all values in <code>a</code> are larger than <code>temp</code>.
-   :answer_e: Whenever <code>a</code> includes a value equal to <code>temp</code>.
-   :correct: b
-   :feedback_a: An infinite loop will not always occur in this code segment.
-   :feedback_b: When <code>a</code> contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the <code>temp</code> value (which was set to some value > 0), so an infinite loop will occur.
-   :feedback_c: Values larger then <code>temp</code> will not cause an infinite loop.
-   :feedback_d: Values larger then <code>temp</code> will not cause an infinite loop.
-   :feedback_e: Values equal to <code>temp</code> will not cause an infinite loop.
-
-   Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an integer initialized to be greater than zero and that ``a`` is an array of integers.
-=======
 .. mchoice:: qaeasy_2new
    :answer_a: <code>int[] scores = null;</code>
    :answer_b: <code>int[] scoreArray = {50,90,85};</code>
@@ -65,7 +45,6 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: This would be returned from <code>arr.length</code>
 
    What is returned from ``arr[3]`` if ``arr={6, 3, 1, 2}``?  
->>>>>>> upstream/master
    
 .. mchoice:: qaeasy_4
    :answer_a: 17.5
@@ -96,19 +75,11 @@ These problems are easier than most of those that you will usually see on the AP
       
 You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+double+mystery(int%5B%5D+arr)%0A+++%7B%0A++++++double+output+%3D+0%3B%0A++++++for+(int+i+%3D+0%3B+i+%3C+arr.length%3B+i%2B%2B)%0A++++++%7B%0A+++++++++output+%3D+output+%2B+arr%5Bi%5D%3B%0A++++++%7D%0A++++++return+output+/+arr.length%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+test+%3D+%7B10,+30,+30,+60%7D%3B%0A++++++System.out.println(mystery(test))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
-<<<<<<< HEAD
-.. mchoice:: qaeasy_3
-   :answer_a: <code>{-20, -10, 2, 8, 16, 60}</code>
-   :answer_b: <code>{-20, -10, 2, 4, 8, 30}</code>
-   :answer_c: <code>{-10, -5, 1, 8, 16, 60}</code>
-   :answer_d: <code>{-10, -5, 1, 4, 8, 30}</code>
-=======
 .. mchoice:: qaeasy_5old3
    :answer_a: {-20, -10, 2, 8, 16, 60}
    :answer_b: {-20, -10, 2, 4, 8, 30}
    :answer_c: {-10, -5, 1, 8, 16, 60}
    :answer_d: {-10, -5, 1, 4, 8, 30} 
->>>>>>> upstream/master
    :correct: c
    :feedback_a: This would true if it looped through the whole array.  Does it?
    :feedback_b: This would be true if it looped from the beginning to the middle.  Does it?

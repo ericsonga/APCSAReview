@@ -11,7 +11,7 @@ Free Response - Sound B
 
 The following is a free response question from 2011.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
 
-**Question 1.**  Digital sounds can be represented as an array of integer values. For this question, you will write two unrelated methods of the ``Sound`` class.
+**Question 1.**  Digital sounds can be represented as an array of integer values. For this question, you will write two unrelated methods of the *Sound* class.
 
 A partial declaration of the ``Sound`` class is shown below.
 
@@ -84,13 +84,13 @@ How to Solve This
    Which loop would be best for this problem?
    
 .. mchoice:: fr_soundb_2
-   :answer_a: <code>int[] samples2;</code>
-   :answer_b: <code>int[] samples2 = new Array(count);</code>
-   :answer_c: <code>int[] samples2 = new int[count];</code>
+   :answer_a: int[] samples2;
+   :answer_b: int[] samples2 = new Array(count);
+   :answer_c: int[] samples2 = new int[count];
    :correct: c
-   :feedback_a: This only declares the variable <code>samples2</code> which will refer to an array of integers, it doesn't create the array object.
-   :feedback_b: The <code>new</code> keyword is not used to create an array.
-   :feedback_c: This will create an array of integers of size <code>count</code> and a variable named <code>samples2</code> which will refer to that array.
+   :feedback_a: This only declares the variable samples2 which will refer to an array of integers, it doesn't create the array object.
+   :feedback_b: The new keyword is not used to create an array.
+   :feedback_c: This will create an array of integers of size count and a variable named samples2 which will refer to that array.
 
    Which is the correct code for creating an integer array variable named ``samples2`` and setting it to refer to an array of integers of size ``count``?
 
@@ -98,7 +98,7 @@ Mixed Up Code
 -------------------
 .. parsonsprob:: SoundB
 
- The method <code>trimSilenceFromBeginning</code> below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.
+ The method ``trimSilenceFromBeginning`` below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.
  -----
  public void trimSilenceFromBeginning() 
  {
