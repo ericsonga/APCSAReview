@@ -148,6 +148,7 @@ Arrays
    ArrayBasics/aProcessAll.rst
    ArrayBasics/aMistakes.rst
    ArrayBasics/aPractice.rst
+   ArrayBasics/aEasyMC.rst
    ArrayBasics/aMedMC.rst
    ArrayBasics/aHardMC.rst
    ArrayBasics/arrayExam.rst
