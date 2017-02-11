@@ -161,7 +161,6 @@ Arrays
    ArrayBasics/numberCubeB.rst
    ArrayBasics/aSummary.rst
    ArrayBasics/ArrayPractice.rst
-   ArrayBasics/ArrayParsonsPractice.rst
    
    
 List and ArrayList
@@ -173,7 +172,11 @@ List and ArrayList
    ListBasics/listbasics.rst
    ListBasics/listInterface.rst
    ListBasics/listArrayList.rst
+   ListBasics/listDeclareAndCreate.rst
+   ListBasics/listAdd.rst
+   ListBasics/listMethods.rst
    ListBasics/listLoop.rst
+   ListBasics/listVsArray.rst
    ListBasics/listMistakes.rst
    ListBasics/listPractice.rst
    ListBasics/listEasyMC.rst

@@ -2,8 +2,8 @@
    :prefix: 8-2-
    :start: 1
       
-The List Interface
-===================
+What is an Interface?
+======================
 
 You have probably seen a device with a **USB interface**.  It is used by a wide variety of devices like memory sticks, external drives, cameras, etc.  The USB interface allows you to connect a device to a computer.  The computer can work with the device through the USB interface.  You can unplug one USB device and plug in another instead.   
 
@@ -20,6 +20,15 @@ You have probably seen a device with a **USB interface**.  It is used by a wide 
 	pair: method; abstract
 
 A Java **interface** is a special type of class.  The only type of methods it can contain are **public abstract methods**.  An **abstract** method is one that only has a method header and no body (no code). You define interfaces to define what a class needs to be able to do to **implement** an interface. So, to **implement** the ``List`` interface a class needs to allow you to add to the list, remove an item from the list, get an item at an index and more.  The idea is to separate what you want an object of a class to be able to *do*, from *who (which Class)* actually does it. That way you can create a variety of classes that implement the same interface and use whatever one works for your situation.  You can plug in different implementing classes just as you can plug in different USB devices.
+
+Interfaces are like Contracts
+===============================
+
+.. raw:: html
+
+   <img align='middle' src='http://www.clker.com/cliparts/6/5/f/a/124916619545519187signed-document-contract.svg.thumb.png' alt='Signed Document Contract clip art'/>
+
+You can also think of an interface as a contract.  Classes that implement the interface agree to provide code for the methods that are defined in the interface.  You could imagine a company creating an interface for the functionality that they want a particular product to have like the ability to store objects in an order, get an object at an index, and remove an object at an index and then vendors can come up with different solutions that all have that same functionality.  You can try out different vendors solutions because they have the same set of methods.  You can switch out one for another based on which one works best in a particular situation. This ability to substitute one class for another without changing lots of code is what makes interfaces so useful. 
 
 List Methods on the Exam
 =========================
@@ -44,8 +53,15 @@ The following are the ``List`` methods that you need to know for the AP CS A exa
     -   ``E set(int index, E obj)`` replaces the item at index with obj
     
     -   ``E remove(int index)`` removes the item at the index and shifts remaining items to the left (to a lower index)
+    
+.. note::
 
-Why don't you just use an array instead of a list?  Well to do that you would have to know how many items you want in your list.  Say you create an array of 5 elements.  What happens when you want to add a 6th one?  You will have to create another bigger array and copy over the items from the old array and then add the new value at the end. What length should the new array be?  If you just create an array for 6 elements you won't waste any space, but you will have to create a new array again if you want to add another item.  If you create a larger array than you need (usually about twice as big), you will also have to keep track of how many items are actually in the list, since the length of the array isn't the same thing as the number of items in the list. 
+   Notice that the ``add`` methods for the ``List`` interface take objects to add to the list.  Lists can only hold objects, not primitive values.  All primitive types much be **wrapped** in objects before they are added to a list.  For example, ``int`` values can be wrapped in ``Integer`` objects, ``double`` values can be wrapped in ``Double`` objects. 
+    
+Why Use a List?
+=================
+
+Why don't you just use an array instead of a list?  Well to do that you would have to know how many items you want to store.  Say you create an array of 5 elements.  What happens when you want to add a 6th one?  You will have to create another bigger array and copy over the items from the old array and then add the new value at the end. What length should the new array be?  If you just create an array for 6 elements you won't waste any space, but you will have to create a new array again if you want to add another item.  If you create a larger array than you need (usually about twice as big), you will also have to keep track of how many items are actually in the list, since the length of the array isn't the same thing as the number of items in the list. 
 
 .. figure:: Figures/whyLists.png
     :width: 400px

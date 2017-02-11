@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 8-4-
+   :prefix: 8-7-
    :start: 1
 
 Looping Through a List
@@ -8,48 +8,91 @@ Looping Through a List
 ..	index::
 	pair: list; for-each loop
 
-You can use a for-each loop to loop through all items of a list, just like you do with an array.  
+You can use a for-each loop to loop through all of the items in a list, just like you do with an array as shown in the ``main`` method below.  
 
-.. code-block:: java 
+.. activecode:: listForEachLoop
+   :language: java
+   
+   import java.util.*;  // import all classes in this package.
+   public class Test
+   {  
+       public static void main(String[] args)
+       {
+           List<Integer> myList = new ArrayList<Integer>();
+           myList.add(50);
+           myList.add(30);
+           myList.add(20);
+           int total = 0;
+           for (Integer value: myList)
+           {
+               total = total + value;
+           }
+           System.out.println(total);
+       }
+   }
+   
+.. note::
 
-  private List<String> nameList; 
+   The above example isn't object-oriented since all work was done in the ``main`` method.  In an object-oriented approach the list would be a field of the current object and you would use an object method rather than a class (static) method to loop through the list. 
+   
+You can also use a 	``while`` or ``for`` loop to process list elements.  Remember that you can use the ``get(index)`` to get the value at the index.  You can also use ``remove(index)`` to remove the value at the index.  
+   
+.. note::
+
+   Be careful when you remove items from a list as you loop through it.  Remember that removing an item from a list will shift the remaining items to the left.  
+
+.. activecode:: listForEachLoop
+   :language: java
+   
+   import java.util.*;  // import all classes in this package.
+   public class ListWorker
+   {
+      private List<String> nameList; 
+      
+      public ListWorker(List<String> theNames)
+      {
+          nameList = theNames;
+      }
   
-  public boolean findName(String name)
-  {
-     for (String currName: nameList)
-     {
-        if (currName.equals(name)) return true;
-     }
-     return false;
-  }
-        
-The code above loops through the nameList looking for the passed name.  If it is found it returns true, otherwise it will return false.  Note the use of the equals method to compare strings.  This is the correct way to check if two strings have the same characters in the same order.  
-
-Be careful when you remove items from a list as you loop through it.  Remember that removing an item from a list will shift the remaining items to the left.  
-
-.. code-block:: java 
-
-  private List<String> nameList; 
+      public boolean removeName(String name)
+      {
+          boolean found = false;
+          int index = 0;
+          while (index < nameList.size())
+          {
+              if (name.equals(nameList.get(index)))
+              { 
+                  nameList.remove(index);
+                  found = true;
+              }
+              else index++;
+          }
+          return found;
+       }
+       
+       public static void main(String[] args)
+       {
+           List<String> myList = new ArrayList<String>();
+           myList.add("Amun");
+           myList.add("Ethan");
+           myList.add("Donnie");
+           myList.add("Ethan");
+           ListWorker listWorker = new ListWorker(myList);
+           System.out.println(listWorker.nameList);
+           listWorker.removeName("Ethan");
+           System.out.println(listWorker.nameList);
+       }
+   }
   
-  public boolean removeName(String name)
-  {
-     boolean found = false;
-     int index = 0;
-     while (index < nameList.size())
-     {
-        if (name.equals(nameList.get(index))
-        { 
-           remove(index);
-           found = true;
-        }
-        else index++;
-     }
-     return found;
-  }
-  
-Notice that the method above only increments the current index if an item was removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the items shift left.  
+.. note::
 
-.. mchoice:: qlib_5
+   Notice that the method above only increments the current index if an item was removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the rest of the items shift left when you remove one. 
+   
+Can you change the code above so that it only removes the first name it finds in the list that matches?  Can you change it to only remove the last one in the list that matches?
+
+**Check your understanding**
+
+.. mchoice:: qloopList_1
    :answer_a: [0, 4, 2, 5, 3]
    :answer_b: [3, 5, 2, 4, 0, 0, 0, 0]
    :answer_c: [0, 0, 0, 0, 4, 2, 5, 3]
@@ -60,7 +103,7 @@ Notice that the method above only increments the current index if an item was re
    :feedback_c: This would be true if the code moved the zeros to the font, but that is not what it does.
    :feedback_d: This would be correct if k was only incremented when an item was not removed from the list.
 
-   Assume that nums has been created as an ArrayList object and it initially contains the following Integer values. [0, 0, 4, 2, 5, 0, 3, 0] What will nums contain as a result of executing numQuest?
+   Assume that ``nums`` has been created as an ``ArrayList`` object and it initially contains the following ``Integer`` values. [0, 0, 4, 2, 5, 0, 3, 0] What will ``nums`` contain as a result of executing ``numQuest``?
    
    .. code-block:: java 
    
@@ -81,7 +124,9 @@ Notice that the method above only increments the current index if an item was re
          }
       }
       
-.. mchoice:: qlib_6
+You can step through the code above by clicking on the following `Example-8-7-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0A%0Apublic+class+ListWorker+%7B%0A%0A+++private+List%3CInteger%3E+nums%3B%0A+++%0A+++public+ListWorker(List%3CInteger%3E+theNums)%0A+++%7B%0A++++++nums+%3D+theNums%3B%0A+++%7D%0A%0A+++//+precondition%3A+nums.size()+%3E+0%3B%0A+++//+nums+contains+Integer+objects%0A+++public+void+numQuest()%0A+++%7B%0A++++++int+k+%3D+0%3B%0A++++++Integer+zero+%3D+new+Integer(0)%3B%0A++++++while+(k+%3C+nums.size())%0A++++++%7B%0A+++++++++if+(nums.get(k).equals(zero))%0A++++++++++++nums.remove(k)%3B%0A+++++++++k%2B%2B%3B%0A++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+numList+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(4)%3B%0A++++++numList.add(2)%3B%0A++++++numList.add(5)%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(3)%3B%0A++++++numList.add(0)%3B%0A++++++System.out.println(numList)%3B%0A++++++ListWorker+listW+%3D+new+ListWorker(numList)%3B%0A++++++listW.numQuest()%3B%0A++++++System.out.println(numList)%3B%0A+++++%0A+++%7D%0A%7D&mode=display&curInstr=11>`_.
+      
+.. mchoice:: qloopList_2
    :answer_a: A list will always use less memory than an array.
    :answer_b: A list can store objects, but arrays can only store primitive types.
    :answer_c: A list has faster access to the last element than an array.
@@ -98,13 +143,13 @@ Notice that the method above only increments the current index if an item was re
 
 .. parsonsprob:: list_1
 
-   The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.
+   The following has the correct code for the method <code>getScore</code> plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in <code>wordList</code> and if the length of the current word is 3 it should add one to the <code>score</code>, if the length of the word is 4 it should add 2 to the <code>score</code>, and if the length is greater than 4 it should add 3 to the <code>score</code>.  The method should return the <code>score</code>.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
    -----
    public static int getScore(List<String> wordList)
    {
    =====
      int score = 0;
-   =====
+
      for (String word : wordList) 
      {
    =====
@@ -119,7 +164,7 @@ Notice that the method above only increments the current index if an item was re
          score = score + 2;
        } // end if == 4
    =====
-       else if (word.length() > 4)
+       else 
        {
          score = score + 3;
        } // end if > 4
@@ -127,14 +172,14 @@ Notice that the method above only increments the current index if an item was re
      } // end for
    =====
      return score;
-   =====
+
    } // end method
    =====
    if (word.length == 3) #distractor
    
 .. parsonsprob:: list_2
 
-   The following has the correct code for a method called insertInOrder plus at least one extra unneeded code statement. This method should add the passed name in alphabetic order to a private list field called nameList.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.
+   The following has the correct code for a method called <code>insertInOrder</code> plus at least one extra unneeded code statement. This method should add the passed <code>name</code> in alphabetic order to a private list field called <code>nameList</code>.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
    -----
    public void insertInOrder(String name)
    {
