@@ -161,4 +161,35 @@ You can step through the code above by clicking on the link `Example-8-12-4 <htt
      
 You can step through the code above by clicking on the link `Example-8-12-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CInteger%3E+aList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++aList.add(new+Integer(1))%3B+%0A+++++System.out.println(aList)%3B+%0A+++++aList.add(new+Integer(2))%3B+%0A+++++System.out.println(aList)%3B+%0A+++++aList.remove(1)%3B%0A+++++System.out.println(aList)%3B+%0A+++++aList.add(1,+new+Integer(3))%3B+%0A+++++System.out.println(aList)%3B+%0A+++++aList.set(1,+new+Integer(4))%3B%0A+++++System.out.println(aList)%3B+%0A+++++aList.add(new+Integer(5))%3B+%0A+++++System.out.println(aList)%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
+.. mchoice:: qalm_6
+   :answer_a: [c, d, e, b]
+   :answer_b: [c, d, e, b, f]
+   :answer_c: [c, a, e, b, f]
+   :answer_d: [c, d, e, a, b, f]
+   :answer_e: [c, a, e, d, b, f]
+   :correct: b
+   :feedback_a: What happened to the f?
+   :feedback_b: This list is [a], then [a, b], then [c, a, b], then [c, d, a, b], then [c, d, e, b], then [c, d, e, b, f]
+   :feedback_c: The a is pushed to position 2 and then replaced with the e.  
+   :feedback_d: This would be true if it was <code>list1.add(2,"e")</code>
+   :feedback_e: Remember that the set will replace the value at index 2.
+
+   What is printed as a result of executing the following code segment?
+   
+   .. code-block:: java
+   
+     List<String> list1 = new ArrayList<String>();
+     list1.add("a");
+     list1.add("b");
+     list1.add(0,"c");
+     list1.add(1, "d");
+     list1.set(2, "e");
+     list1.add("f");
+     System.out.println(list1);
+
+     What is printed as a result of executing the following code segment?
+     
+You can step through the code above by clicking on the link `Example-8-12-6 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A+++++list1.add(%22a%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22b%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(0,%22c%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(1,+%22d%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.set(2,+%22e%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22f%22)%3B%0A+++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+
+
 
