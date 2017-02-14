@@ -1,4 +1,6 @@
-mchoice
+.. qnum::
+   :prefix: 8-3-
+   :start: 1
      
 The ArrayList Class
 ===================
@@ -8,118 +10,52 @@ The ArrayList Class
     single: implements
 	pair: list; ArrayList
 
-Luckily Java has a class that handles this type of thing.  It is called **ArrayList**.  It **implements** the ``List`` interface using an array.  This means that it contains or inherits the code for the methods defined in the ``List`` interface.  I will describe what inheritance means in more detail later.  Java actually has several classes that **implement** the ``List`` interface (provide method bodies for the abstract methods defined in the interface).  See the Java documentation above for all the classes that implement the ``List`` interface (``ArrayList``, ``LinkedList``, ``Stack``, ``Vector``, etc).    
+Luckily Java has a class that handles when you run out of room in an array and want to add more items to it or when the amount of space reserved for an array is much larger than what you actually need.  It is called **ArrayList**.   It **implements** the ``List`` interface using an array and allows the underlying array to grow or shrink as needed.  This also means that the ``ArrayList`` class contains the code for the methods defined in the ``List`` interface. 
 
-To be able to plug in different implementing classes, you should declare the variable type to be ``List`` and the only place you should use the class ``ArrayList`` is when you actually create the list as shown below.  This minimizes the number of places you have to change your code if you change your mind and use a different implementing class in the future.  
- 
-.. activecode:: lcalastr
-   :language: java
+Java actually has several classes that **implement** the ``List`` interface (provide method bodies for the abstract methods defined in the interface).  These are just some of the classes that implement the ``List`` interface: ``ArrayList``, ``LinkedList``, ``Stack``, and ``Vector``.  You only need to learn about the ``ArrayList`` class for the exam.  
 
-   import java.util.*;  // import all classes in this package.
-   public class Test
-   {
-      public static void main(String[] arts)
-      {
-         List nameList = new ArrayList();
-         nameList.add("Diego");
-         nameList.add("Grace");
-         nameList.add("Deja"); 
-         System.out.println(nameList);
-      }
-   }
+The Import Statement
+====================
 
-This code creates an object variable called nameList that will refer to a List of objects and sets its reference to an object of the ArrayList class.  
+..	index::
+	single: import statement
+	
+The ``List`` interface and ``ArrayList`` class are both in the ``java.util`` **package**.  A **package** is a set of related classes.  If you want to use any class other than those in ``java.lang`` (like ``System`` or ``Math``) you will need to either use the full name (packageName.ClassName) like (``java.util.List`` and ``java.util.ArrayList``) or use one or more import statements. 
 
-You can also create lists of integer values.
+Import statements have to be the first code in a Java source file.  An import statement tells Java which class you mean when you use a short name (like ``List``).  It tells Java where to find the definition of that class. 
 
-.. activecode:: lcalaint
-   :language: java
+You can import just the classes you need from a package as shown below.  Just provide an ``import`` statement for each class that you want to use.    
 
-   import java.util.*;  // import all classes in this package.
-   public class Test
-   {
-      public static void main(String[] arts)
-      {
-         List list1 = new ArrayList();
-         list1.add(new Integer(1));
-         list1.add(new Integer(2));
-         list1.set(1, new Integer(3));
-         list1.add(1, new Integer(4));
-         list1.add(new Integer(5));
-         System.out.println(list1);
-      }
-   }
+.. code-block:: java 
 
-
-**Check your understanding**
-
-.. mchoice:: qlib_2
-   :answer_a: [1, 2, 3, 4, 5]
-   :answer_b: [1, 2, 4, 5, 6]
-   :answer_c: [1, 2, 5, 4, 6]
-   :answer_d: [1, 5, 2, 4, 6]
-   :correct: c
-   :feedback_a: The set will replace the item at index 2 so this can not be right.
-   :feedback_b: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.
-   :feedback_c: The set will change the item at index 2 to 4.  The add of 5 at index 2 will move everything else to the right and insert 5.  The last add will be at the end of the list.
-   :feedback_d: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.
-
-   What will print when the following code executes?
-   
-   .. code-block:: java 
-   
-      List<Integer> list1 = new ArrayList<Integer>();
-      list1.add(new Integer(1));
-      list1.add(new Integer(2));
-      list1.add(new Integer(3));
-      list1.set(2, new Integer(4));
-      list1.add(2, new Integer(5));
-      list1.add(new Integer(6));
-      System.out.println(list1);
-   
-.. mchoice:: qlib_3
-   :answer_a: [2, 3]
-   :answer_b: [1, 2, 3]
-   :answer_c: [1, 2]
-   :answer_d: [1, 3]
-   :correct: d
-   :feedback_a: The remove will remove the item at the given index.  
-   :feedback_b: The item at index 1 will be removed and all the other values shifted left.
-   :feedback_c: The 3 is at index 2.  The item at index 1 will be removed. 
-   :feedback_d: The item at index 1 is removed and the 3 is moved left.  
-
-   What will print when the following code executes?
-   
-   .. code-block:: java 
-   
-      List<Integer> list1 = new ArrayList<Integer>();
-      list1.add(new Integer(1));
-      list1.add(new Integer(2));
-      list1.add(new Integer(3));
-      list1.remove(1);
-      System.out.println(list1);
-      
-.. mchoice:: qlib_4
-   :answer_a: [1, 2, 3, 4, 5]
-   :answer_b: [1, 2, 4, 5, 6]
-   :answer_c: [1, 2, 5, 4, 6]
-   :answer_d: [1, 5, 2, 4, 6]
-   :correct: d
-   :feedback_a: The set will replace the 3 at index 2 so this isn't correct.
-   :feedback_b: The add with an index of 1 and a value of 5 adds the 5 at index 1 not 3. Remember that the first index is 0.
-   :feedback_c: The set will change the item at index 2 to 4.  The add of 5 at index 1 will move everything else to the right and insert 5.  The last add will be at the end of the list.
-   :feedback_d: Add without a index adds at the end, set will replace the item at that index, add with an index will move all current values at that index or beyond to the right.
+  import java.util.List; // import just the List interface
+  import java.util.ArrayList; // import just the ArrayList class
   
-   What will print when the following code executes?
+..	index::
+	single: package
+	pair: statement; import
+  
+Another option is to import everything at the same level in a package using ``import packageName.*``.
+  
+
+.. code-block:: java 
+
+  import java.util.*; // import everything including List and ArrayList
+  
+.. note::
+
+   Don't worry about adding import statements on the AP CS A exam.  Any that you need will be provided for you.
+  
+.. mchoice:: qlib_1
+   :answer_a: You can only have one import statement in a source file.
+   :answer_b: You must specify the class to import.
+   :answer_c: Import statements must be before other code in a Java source file.  
+   :answer_d: You must import java.lang.String to use the short name of String.
+   :correct: c
+   :feedback_a: You can have an many import statements as you need.
+   :feedback_b: You can use * to import all classes at the specified level.
+   :feedback_c: Import statements have to be the first Java statements in a source file.  
+   :feedback_d: You do not have to import any classes that are in the java.lang package.
    
-   .. code-block:: java
-   
-      List<Integer> numList = new ArrayList<Integer>();
-      numList.add(new Integer(1));
-      numList.add(new Integer(2));
-      numList.add(new Integer(3));
-      numList.set(2,new Integer(4));
-      numList.add(1, new Integer(5));
-      numList.add(new Integer(6));
-      System.out.println(numList);
-      
+   Which of the following is true about import statements?
+
