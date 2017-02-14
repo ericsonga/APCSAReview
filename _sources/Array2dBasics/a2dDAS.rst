@@ -27,7 +27,11 @@ To declare a 2D array, specify the type of elements that will be stored in the a
 ..	index::
 	pair: 2D Array; creation
 	
-To create an array use the **new** keyword, followed by a space, then the type, and then the number of rows in square brackets followed by the number of columns in square brackets.  The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo`` and a 2D array with 3 rows and 2 columns named ``seatingChart``.  
+To create an array use the **new** keyword, followed by a space, then the type, and then the number of rows in square brackets followed by the number of columns in square brackets, like this ``new int[numRows][numCols]``. 
+
+The number of elements in a 2D  array is the number of rows times the number of columns. 
+
+The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo`` and a 2D array with 3 rows and 2 columns named ``seatingChart``.  
 
 .. code-block:: java 
 

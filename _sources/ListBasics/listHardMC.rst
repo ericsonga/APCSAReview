@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 8-9-
+   :prefix: 8-13-
    :start: 1
    
 Hard Multiple Choice Questions
@@ -27,6 +27,8 @@ These problems are about the same or harder than those you will see on the AP CS
       nums.add(6);
       nums.add(0,4);
       nums.remove(1);
+      
+You can step through the code above by clicking on the following `Example-8-13-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+nums+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++nums.add(5)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(3)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(1)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(6)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(0,4)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.remove(1)%3B%0A++++++System.out.println(nums)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
       
 .. mchoice:: qalh_2
    :answer_a: [0, 0, 4, 2, 5, 0, 3, 0]
@@ -58,5 +60,7 @@ These problems are about the same or harder than those you will see on the AP CS
            k++;
         }
      }
+     
+You can step through the code above by clicking on the following `Example-8-13-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+ListWorker+%7B%0A+++%0A+++private+List%3CInteger%3E+nums%3B%0A+++%0A+++public+ListWorker(List%3CInteger%3E+theNums)%0A+++%7B%0A++++++nums+%3D+theNums%3B%0A+++%7D%0A%0A+++//+precondition%3A+nums.size()+%3E+0%3B%0A+++//+nums+contains+Integer+objects%0A+++public+void+numQuest()%0A+++%7B%0A+++++++int+k+%3D+0%3B%0A+++++++Integer+zero+%3D+new+Integer(0)%3B%0A+++++++while+(k+%3C+nums.size())%0A+++++++%7B%0A+++++++++System.out.println(%22List%3A+%22+%2B+nums+%2B+%22+and+k+is+%22+%2B+k)%3B%0A+++++++++if+(nums.get(k).equals(zero))%0A+++++++++++nums.remove(k)%3B%0A+++++++++k%2B%2B%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++List%3CInteger%3E+myList+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++myList.add(0)%3B%0A++++++myList.add(0)%3B%0A++++++myList.add(4)%3B%0A++++++myList.add(2)%3B%0A++++++myList.add(5)%3B%0A++++++myList.add(0)%3B%0A++++++myList.add(3)%3B%0A++++++ListWorker+lWorker+%3D+new+ListWorker(myList)%3B%0A++++++lWorker.numQuest()%3B%0A++++++System.out.println(myList)%3B+%0A++++++%0A+++%7D%0A+++%0A%7D&mode=display&curInstr=0>`_.
 
 
