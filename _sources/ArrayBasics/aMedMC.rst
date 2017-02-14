@@ -35,7 +35,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :correct: c
    :feedback_a: It is the last value in <code>a</code> that controls the final state of <code>temp</code>, as the loop is progressing through the array from 0 to the end.
    :feedback_b: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false.
-   :feedback_c: Because each time through the loop <code>temp</code> is reset, it will only be returned as true if the last value in a is equal to <code>val</code>.  
+   :feedback_c: Because each time through the loop <code>temp</code> is reset, it will only be returned as true if the last value in <code>a</code> is equal to <code>val</code>.  
    :feedback_d: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for just the last value to be equal to <code>val</code>.
    :feedback_e: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for several elements to be equal to <code>val</code>.
 
@@ -59,12 +59,12 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :answer_e: It is the length of the last consecutive block of the value <code>target</code>  in <code>nums</code> 
    :correct: d
    :feedback_a: It doesn't reset <code>lenCount</code> ever, so it just counts all the times the <code>target</code> value appears in the array.
-   :feedback_b: This can't be true. There is no <code>nums.length</code> in the code and the only count happens <code>lenCount</code> is incremented when <code>nums[k] == target</code>.
+   :feedback_b: The only count happens when <code>lenCount</code> is incremented when <code>nums[k] == target</code>. <code>nums.length</code> is only used to stop the loop.
    :feedback_c: It doesn't reset <code>lenCount</code> ever, so it just counts all the times the <code>target</code> value appears in the array.
    :feedback_d: The variable <code>lenCount</code> is incremented each time the current array element is the same value as the <code>target</code>. It is never reset so it counts the number of occurrences of the value <code>target</code> in <code>nums</code>. The method returns <code>maxLen</code> which is set to <code>lenCount</code> after the loop finishes if <code>lenCount</code> is greater than <code>maxLen</code>.
    :feedback_e: It doesn't reset <code>lenCount</code> ever, so it just counts all the times the <code>target</code> value appears in the array.
 
-   Consider the following data field and method findLongest. Method ``findLongest`` is intended to find the longest consecutive block of the value ``target`` occurring in the array ``nums``; however, ``findLongest`` does not work as intended. For example given the code below the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value actually returned by a call to ``findLongest``?
+   Consider the following data field and method ``findLongest``. Method ``findLongest`` is intended to find the longest consecutive block of the value ``target`` occurring in the array ``nums``; however, ``findLongest`` does not work as intended. For example given the code below the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value actually returned by a call to ``findLongest``?
    
    .. code-block:: java
 
@@ -131,10 +131,10 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :answer_e: Returns the index of the largest value in the second half of array <code>arr</code>.
    :correct: a
    :feedback_a: This code sets <code>loc</code> to the middle of the array and then loops through all the array elements.  If the value at the current index is greater than the value at <code>loc</code> then it changes <code>loc</code> to the current index.  It returns <code>loc</code>, which is the index of the largest value in the array.
-   :feedback_b: This would be true if there was a <code>return loc</code> after <code>loc = k</code> if the <code>if</code> block.
+   :feedback_b: This would be true if there was a <code>return loc</code> after <code>loc = k</code> in the <code>if</code> block.
    :feedback_c: This would be true if it returned <code>loc</code> after setting <code>loc = k</code> and if it started at the end of the array and looped toward the beginning of the array.
    :feedback_d: It returns the <i>index</i> to the largest value in array <code>arr</code>, not the largest value.
-   :feedback_e: <code>k</code> loops from 0 to <code>length - 1</code>.  So it checks all of the elements in the array.
+   :feedback_e: <code>k</code> loops from 0 to <code>arr.length - 1</code>.  So it checks all of the elements in the array.
 
    Consider the following field ``arr`` and method ``checkArray``.  Which of the following best describes what ``checkArray`` returns?
    
@@ -166,15 +166,17 @@ You can step through the code above with the Java Visualizer by clicking the fol
         :answer_e: 3
         :correct: b
         :feedback_a: This would be true if it was <code>return (a[1] *= 2);</code>, which would change the value at <code>a[1]</code>. 
-        :feedback_b: The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to 2.  The return (a[1] * 2) does not change the value at a[1].  
+        :feedback_b: The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to 2.  The <code>return (a[1] * 2)</code> does not change the value at <code>a[1]</code>.  
         :feedback_c: This would be true if array indicies started at 1 instead of 0 and if the code changed the value at index 1 to the current value times two.  
         :feedback_d: This would be true if array indices started at 1 rather than 0.   
         :feedback_e: This can't be true because <code>a[1]--;</code>  means the same as <code>a[1] = a[1] - 1;</code>  so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.
        
-        Given the following method declaration, and ``int[] a = {7, 3, -1}``, what is the value in ``a[1]`` after ``m1(a);`` is run?
+        Given the following field and method declaration, what is the value in ``a[1]`` when ``m1(a)`` is run?
        
         .. code-block:: java
-       
+
+       	    int[] a = {7, 3, -1};
+
             public static int m1(int[] a)
             {
                a[1]--;
@@ -194,7 +196,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_b: This would be true if <code>arr[i] < someValue</code> was always true and the loop started at 0 instead of 1 and continued while it was less than or equal to <code>k</code>.
    :feedback_c: This would be true if <code>arr[i] < someValue</code> was always true and the loop started at 0 instead of 1.  
    :feedback_d: This would be the case if only one element in the array would fulfill the condition that <code>arr[i] < someValue</code>.
-   :feedback_e: This is the minimum number of times that HELLO could be executed.  This would be true if <code>k</code> was less than <code>i</code> initially.  
+   :feedback_e: This is the minimum number of times that <code>HELLO</code> could be executed.  This would be true if <code>k</code> was less than <code>i</code> initially.  
 
    Consider the following code. What is the *maximum* amount of times that ``HELLO`` could possibly be printed?
 
@@ -211,11 +213,11 @@ You can step through the code above with the Java Visualizer by clicking the fol
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-7 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+arr+%3D+%7B1,+5,+3%7D%3B%0A++++++int+someValue+%3D+10%3B%0A++++++int+k+%3D+3%3B%0A++++++%0A++++++for+(int+i+%3D+1%3B+i+%3C+k%3B+i%2B%2B)%0A++++++%7B%0A+++++++++if+(arr%5Bi%5D+%3C+someValue)%0A+++++++++%7B%0A++++++++++++System.out.print(%22HELLO%22)%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qamed_8
-   :answer_a: [2, 6, 2, -1, -3]
-   :answer_b: [-23, -21, -13, -3, 6]
-   :answer_c: [10, 18, 19, 15, 6]
+   :answer_a: {2, 6, 2, -1, -3}
+   :answer_b: {-23, -21, -13, -3, 6}
+   :answer_c: {10, 18, 19, 15, 6}
    :answer_d: This method results in an IndexOutOfBounds exception.
-   :answer_e: [35, 33, 25, 15, 6]
+   :answer_e: {35, 33, 25, 15, 6}
    :correct: e
    :feedback_a: This would be correct if <code>data[k]</code> was modified in the for-loop. In this for-loop, <code>data[k - 1]</code> is the element that changes.
    :feedback_b: This would be correct if <code>data[k - 1]</code> was subtracted from <code>data[k]</code>. Notice that for every instance of the for-loop, <code>data[k]</code> and <code>data[k - 1]</code> are added together and <code>data[k - 1]</code> is set to that value.
@@ -223,7 +225,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_d: The indexing of this method is correct. The for-loop begins at the last valid index and ends when <code>k</code> is equal to 0, and the method does not access any values other than the ones specified.
    :feedback_e: This method starts at the last valid index of the array and adds the value of the previous element to the element at index <code>k - 1</code>.
    
-   Consider the following method ``changeArray``. An array is created that contains ``[2, 8, 10, 9, 6]`` and is passed to ``changeArray``. What are the contents of the array after the ``changeArray`` method executes?
+   Consider the following method ``changeArray``. An array is created that contains ``{2, 8, 10, 9, 6}`` and is passed to ``changeArray``. What are the contents of the array after the ``changeArray`` method executes?
 
    .. code-block:: java
 
@@ -242,11 +244,11 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :answer_d: [1, 5, 3, -8, 6]
    :answer_e: [1, 5, -2, -5, 2]
    :correct: c
-   :feedback_a: This would be true if <code>i</code> started at 0 instead of <code>arr2.length / 2</code>.  
-   :feedback_b: This would be true if <code>i</code> started at 0 and ended when it reached <code>arr2.length / 2</code>.
+   :feedback_a: This would be true if <code>i</code> started at 0 instead of <code>arr1.length / 2</code>.  
+   :feedback_b: This would be true if <code>i</code> started at 0 and ended when it reached <code>arr1.length / 2</code>.
    :feedback_c: This loop starts at <code>arr2.length / 2</code> which is 2 and loops to the end of the array copying from <code>arr2</code> to <code>arr1</code>.
    :feedback_d: This would be correct if this loop didn't change <code>arr1</code>, but it does.  
-   :feedback_e: This would be correct if it set <code>arr1[i] = arr[i] + arr[2]</code> instead.  
+   :feedback_e: This would be correct if it set <code>arr1[i]</code> equal to <code>arr[i] + arr[2]</code> instead.  
    
    Assume that ``arr1={1, 5, 3, -8, 6}`` and ``arr2={-2, -1, -5, 3, -4}`` what will the contents of ``arr1`` be after ``copyArray`` finishes executing?
 

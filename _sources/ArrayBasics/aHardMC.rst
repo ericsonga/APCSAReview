@@ -14,7 +14,7 @@ These problems are harder than most of those that you will usually see on the AP
    :answer_d: Implementation 1 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException.
    :answer_e: Implementation 2 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException.
    :correct: d
-   :feedback_a: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException. If implementation was correct, it would be faster.
+   :feedback_a: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException. If Implementation 1 was correct, it would be faster.
    :feedback_b: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException.
    :feedback_c: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException. If it did work, it would be faster than 2.
    :feedback_d: When <code>j</code> is 0, <code>sum[j-1]</code> will be <code>sum[-1]</code> which will cause an ArrayIndexOutOfBoundsException.
