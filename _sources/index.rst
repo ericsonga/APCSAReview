@@ -101,7 +101,7 @@ Conditionals
    Conditionals/CondSummary.rst
    Conditionals/CondPractice.rst
    Conditionals/CondParsonsPractice.rst
-   
+
 Magpie Chatbot Lab
 ::::::::::::::::::::
 
@@ -161,7 +161,8 @@ Arrays
    ArrayBasics/numberCubeB.rst
    ArrayBasics/aSummary.rst
    ArrayBasics/ArrayPractice.rst
-   
+   ArrayBasics/ArrayParsonsPractice.rst
+
 List and ArrayList
 ::::::::::::::::::::
 
