@@ -7,7 +7,7 @@ Comparing Arrays and Lists
 
 This section compares arrays and lists.  It explains when to use each, how to declare each, how to create each, how to set the value at an index in each, how to get the value at an index in each, and more.
 
-When to Use a List or an Array
+When to use a List or an Array
 -----------------------------------
 
 Use an array when you want to store several items of the same type and you know how many items will be in the array and the items in the array won't change in order or number.  Use a list when you want to store several items of the same type and you don't know how many items you will need in the list or when you want to remove items from the list or add items to the list.
@@ -69,7 +69,7 @@ To create a list use ``new ArrayList<Type>();``.  You can do this when you decla
 
    Note that you don't have to specify the size of the ``ArrayList`` like you do with an array.
    
-Setting the Value at An Index in an Array or List
+Setting the value at an index in an Array or List
 ---------------------------------------------------
 
 ..	index::
@@ -90,7 +90,7 @@ To set the value at an index in a list use ``name.set(index,value);``.
 
    highScoreList.set(0,80);
    
-Getting the Value at An Index in an Array or List
+Getting the value at an index in an Array or List
 ---------------------------------------------------
 
 ..	index::

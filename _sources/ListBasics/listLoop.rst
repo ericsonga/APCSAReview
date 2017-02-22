@@ -101,9 +101,9 @@ Can you change the code above so that it only removes the first name it finds in
    :feedback_a: Incrementing the index each time through the loop will miss when there are two zeros in a row.
    :feedback_b: This would be true if the code moved the zeros to the end, but that is not what it does.
    :feedback_c: This would be true if the code moved the zeros to the font, but that is not what it does.
-   :feedback_d: This would be correct if k was only incremented when an item was not removed from the list.
+   :feedback_d: This would be correct if <code>k</code> was only incremented when an item was not removed from the list.
 
-   Assume that ``nums`` has been created as an ``ArrayList`` object and it initially contains the following ``Integer`` values. [0, 0, 4, 2, 5, 0, 3, 0] What will ``nums`` contain as a result of executing ``numQuest``?
+   Assume that ``nums`` has been created as an ``ArrayList`` object and it initially contains the following ``Integer`` values [0, 0, 4, 2, 5, 0, 3, 0]. What will ``nums`` contain as a result of executing ``numQuest``?
    
    .. code-block:: java 
    
@@ -157,17 +157,17 @@ You can step through the code above by clicking on the following `Example-8-7-1 
    =====
        {
          score++;
-       } // end if == 3
+       }
    =====
        else if (word.length() == 4)
        {
          score = score + 2;
-       } // end if == 4
+       }
    =====
        else 
        {
          score = score + 3;
-       } // end if > 4
+       }
    =====  
      } // end for
    =====
