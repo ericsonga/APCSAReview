@@ -72,7 +72,7 @@ Several students at Georgia Tech have helped review the eBook:
 * Bhavika Devnani
 * Stephanie Remy
 
-Several students have also been involved in the creation of content for the eBook.
+Many students have been involved in the creation of content for the eBook.
 
 * Atiba Nkosi Kee
 * Robert McKenzie - created videos explaining concepts (arrays, interfaces, searching)
@@ -85,6 +85,8 @@ Several students have also been involved in the creation of content for the eBoo
 * Gerald Nash - added many free response questions for arrays, 2D arrays, and lists
 * Sabrina Seibel - added free response question 4 from 2016 - StringFormatter
 * Julian Hamelberg - worked on free response questions - seating chart A and B
+* Christine Hsieh - added mixed up code problems at the end of the array chapter
+* Carlos Diaz - fixed problems and added code highlights
 
 License
 ---------

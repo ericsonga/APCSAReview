@@ -190,6 +190,8 @@ List and ArrayList
    ListBasics/cookieOrderB.rst
    ListBasics/2016freeresponseQ4A.rst
    ListBasics/2016freeresponseQ4B.rst
+   ListBasics/listSummary.rst
+   
 
 Two-dimensional Arrays
 :::::::::::::::::::::::

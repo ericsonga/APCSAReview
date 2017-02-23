@@ -53,9 +53,9 @@ What is an abstract class good for if you can't create any objects from it?  You
 
 .. note::
 
-   Abstract classes often have at least one abstract method (a method that has the keyword ``abstract`` in the declaration and no method body), but they don't have to. Abstract classes can have fields and methods with bodies.  
+   Abstract classes often have at least one abstract method (a method that has the keyword ``abstract`` in the declaration and no method body), but they don't have to. Abstract classes can have constructors, fields, and methods with bodies (non-abstract methods). If you create a class with at least one abstract method, the class has to be declared to be an abstract class. 
    
-An abstract ``SimpleShape`` class could have fields to track the points and methods that calculate the width and height of the shape.  
+An abstract ``SimpleShape`` class could have constructors and fields to track the points and methods that calculate the width and height of the shape.  The only method that has to be abstract is the ``draw`` method, since we don't know how to draw a ``SimpleShape``.  
 
 Abstract classes are typically used when you want to put some data and/or behavior in a parent class, but at least one method needs to be abstract and overridden by the child class(es).  The ``SimpleShape`` class can have an abstract ``draw`` method and then the children classes can specify what ``draw`` does.
 
@@ -66,4 +66,4 @@ Abstract classes are typically used when you want to put some data and/or behavi
 
     Figure 3: An abstract SimpleShape class with an abstract draw method
     
-You can download a zip file with all the code for the shapes example by clicking on the following `link <https://www.dropbox.com/s/2lmkd1m2sfh3xqc/ShapeExample.zip?dl=0>`_  Look at ``Shape`` class fields and methods.  Look at the Rectangle and Oval classes as well.  Can you create a new Line class?  Also add "Line" to ButtonPanel.java's array of shapeNames.
+You can download a zip file with all the code for the shapes example by clicking on the following `link <https://www.dropbox.com/s/2lmkd1m2sfh3xqc/ShapeExample.zip?dl=0>`_  Look at the ``Shape`` class.  Notice that it has constructors, fields, and non-abstract methods as well as the abstract ``draw`` method.  Look at the Rectangle and Oval classes as well.  Can you create a new Line class?  Also add "Line" to ButtonPanel.java's array of shapeNames.

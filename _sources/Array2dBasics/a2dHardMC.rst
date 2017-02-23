@@ -62,7 +62,7 @@ To step through this code in the Java Visualizer click on the following link: `H
 
         for (r = 0; r < imagePixels.length; r++) {
            for (c = 0; c < imagePixels[0].length; c++) {
-              i = image[r][c];
+              i = imagePixels[r][c];
               if (i > iMax)
                  iMax = i;
             }

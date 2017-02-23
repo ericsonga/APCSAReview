@@ -13,11 +13,13 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_b: 4
    :answer_c: 8
    :correct: b
-   :feedback_a: The size of outer list is the number of rows.
-   :feedback_b: The size of the inner list is the number of columns.
+   :feedback_a: The size of outer array is the number of rows.  Remember that two-dimensional arrays are actually an array of arrays in Java.
+   :feedback_b: The size of the inner array is the number of columns.
    :feedback_c: This is the total number of items in the array.
 
    How many columns does ``a`` have if it is created as follows ``int[][] a = {{2, 4, 6, 8}, {1, 2, 3, 4}};``?	
+   
+You can see how the array looks by clicking on the following `Ex-9-7-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D%5B%5D+a+%3D+%7B%7B2,+4,+6,+8%7D,+%7B1,+2,+3,+4%7D%7D%3B%0A++++++System.out.println(a%5B0%5D%5B0%5D)%3B%0A++++++System.out.println(a%5B0%5D%5B1%5D)%3B%0A++++++System.out.println(a%5B0%5D%5B2%5D)%3B%0A++++++System.out.println(a%5B0%5D%5B3%5D)%3B%0A++++++System.out.println(a%5B1%5D%5B0%5D)%3B%0A++++++System.out.println(a%5B1%5D%5B1%5D)%3B%0A++++++System.out.println(a%5B1%5D%5B2%5D)%3B%0A++++++System.out.println(a%5B1%5D%5B3%5D)%3B%0A++++++%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qa2de_2
    :answer_a: <code>strGrid[0][2] = "S";</code>
