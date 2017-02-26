@@ -191,5 +191,108 @@ You can step through the code above by clicking on the link `Example-8-12-5 <htt
      
 You can step through the code above by clicking on the link `Example-8-12-6 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A+++++list1.add(%22a%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22b%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(0,%22c%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(1,+%22d%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.set(2,+%22e%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22f%22)%3B%0A+++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
+.. mchoice:: qalm_7
+   :answer_a: [2, 3, 4, 5]
+   :answer_b: [2, 3, 5]
+   :answer_c: [4, 2, 3, 5]
+   :answer_d: [4, 2, 3, 4]
+   :correct: d
+   :feedback_a: This would be true if it removed the first 4 but it removes the value at index 4.  
+   :feedback_b: This would be true if it removed all the 4 values, but it removes the value at index 4.
+   :feedback_c: This would be true if it removed the value at index 3.  
+   :feedback_d: This removes the value at index 4 which is 5.  
 
+   Given the list ``nums = [4, 2, 3, 4, 5]`` what is the result after executing ``nums.remove(4)``?
+   
+You can step through the code above by clicking on the following `Example-8-12-7 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(4)%3B%0A++++++list1.add(2)%3B%0A++++++list1.add(3)%3B%0A++++++list1.add(4)%3B%0A++++++list1.add(5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(4)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+   
+.. mchoice:: qalm_8
+   :answer_a: [e, d, b]
+   :answer_b: [e, d, b, b]
+   :answer_c: [e, d, a, b, b]
+   :answer_d: [e, d, a, b]
+   :correct: b
+   :feedback_a: This would be true if you couldn't add a duplicate object to a list, but you can.
+   :feedback_b: The list is [a], [a, b], [c, a, b], [c, d, b], [e, d, b], and then [e, d, b, b]
+   :feedback_c: This would be true it <code>list1.set(1,"d");</code> was <code>list1.add(1,"d");</code> 
+   :feedback_d: This would be true it <code>list1.set(1,"d");</code> was <code>list1.add(1,"d");</code> and if lists didn't allow duplicate objects.  
+
+   What is printed as a result of executing the following code segment?
+   
+   .. code-block:: java
+   
+     List<String> list1 = new ArrayList<String>();
+     list1.add("a");
+     list1.add("b");
+     list1.add(0,"c");
+     list1.set(1, "d");
+     list1.set(0, "e");
+     list1.add("b");
+     System.out.println(list1);
+
+     What is printed as a result of executing the following code segment?
+     
+You can step through the code above by clicking on the following `Example-8-12-8 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A+++++list1.add(%22a%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22b%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(0,%22c%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.set(1,+%22d%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.set(0,+%22e%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22b%22)%3B%0A+++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=15>`_.
+
+.. mchoice:: qalm_9
+   :answer_a: [4, 3, 2, 1, 0]
+   :answer_b: [1, 2, 3, 4, 0]
+   :answer_c: [0, 1, 2, 3, 4]
+   :answer_d: [2, 3, 4, 0, 1]
+   :answer_e: [4, 0, 1, 2, 3]
+   :correct: c
+   :feedback_a: This would be true if it was <code>numList.add(numList.size() - i, obj)</code>
+   :feedback_b: This would be true if it was <code>mystery(1)</code>   
+   :feedback_c: Each value is removed one at a time and added to the end of the list which results in the same list.
+   :feedback_d: This would be true if it was <code>mystery(2)</code>  
+   :feedback_e: This would be true if it was <code>mystery(4)</code>  
+   
+   Assume that ``numList`` has been initialized with the following Integer objects: [0, 1, 2, 3, 4].  What is the value of ``numList`` after ``mystery(5)`` executes?
+   
+   .. code-block:: java
+   
+     private List<Integer> numList;
+     public void mystery(int n)
+     {
+         for (int i = 0; i < n; i++)
+         { 
+             Integer obj = numList.remove(0);
+             numList.add(obj);
+         }
+     }
+     
+You can step through the code above by clicking on the following `Example-8-12-9 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A+++%0Apublic+class+ListTester%0A%7B%0A+++%0A++++private+List%3CInteger%3E+numList+%3D+null%3B%0A+++%0A++++public+ListTester(List%3CInteger%3E+myList)%0A++++%7B%0A+++++++numList+%3D+myList%3B%0A++++%7D%0A+++%0A++++public+void+mystery(int+n)%0A++++%7B%0A++++++++for+(int+i+%3D+0%3B+i+%3C+n%3B+i%2B%2B)%0A++++++++%7B%0A++++++++++++Integer+obj+%3D+numList.remove(0)%3B%0A++++++++++++numList.add(obj)%3B%0A++++++++%7D%0A++++%7D%0A++++++%0A++++public+static+void+main(String%5B%5D+args)+%0A++++%7B%0A+++++++List%3CInteger%3E+aList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++++aList.add(0)%3B%0A+++++++aList.add(1)%3B%0A+++++++aList.add(2)%3B%0A+++++++aList.add(3)%3B%0A+++++++aList.add(4)%3B%0A+++++++ListTester+tester+%3D+new+ListTester(aList)%3B%0A+++++++System.out.println(tester.numList)%3B%0A+++++++tester.mystery(5)%3B%0A+++++++System.out.println(tester.numList)%3B%0A+++%0A++++%7D%0A%7D&mode=display&curInstr=0>`_.
+	 
+.. mchoice:: qalm_10
+   :answer_a: [5, 7, 8, 12]
+   :answer_b: [5, 7, 8, 11, 12]
+   :answer_c: [11, 5, 7, 8, 12]
+   :answer_d: [5, 7, 8, 12, 11]
+   :answer_e: [5, 7, 11, 8, 12]
+   :correct: b
+   :feedback_a: What about the 11?
+   :feedback_b: This will add the value at the correct location in a list in ascending order.
+   :feedback_c: This would be true if it was <code>numList.add(0, value)</code>
+   :feedback_d: This would be true if the while loop was from 0 to one less than the size of the list.
+   :feedback_e: This would be true if it was <code>numList.add(i-1, value)</code> 
+   
+   Assume that ``numList`` has been initialized with the following Integer objects: [5, 7, 8, 12].  Which of the following shows the values in ``numList`` after a call to ``mystery(11)``?
+   
+   .. code-block:: java
+   
+     private List<Integer> numList; 
+     public void mystery(int value)
+     {
+         int i = 0;
+         while (i < numList.size() && numList.get(i) < value)
+         { 
+             i++;
+         }
+         numList.add(i, value);
+     }
+
+     
+     
+You can step through the code above by clicking on the following `Example-8-12-10 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A+++%0Apublic+class+ListTester%0A%7B%0A+++%0A++++private+List%3CInteger%3E+numList+%3D+null%3B%0A+++%0A++++public+ListTester(List%3CInteger%3E+myList)%0A++++%7B%0A+++++++numList+%3D+myList%3B%0A++++%7D%0A+++%0A++++public+void+mystery(int+value)%0A++++%7B%0A++++++++int+i+%3D+0%3B%0A++++++++while+(i+%3C+numList.size()+%26%26+numList.get(i)+%3C+value)%0A++++++++%7B+%0A++++++++++++i%2B%2B%3B%0A++++++++%7D%0A++++++++numList.add(i,+value)%3B%0A++++%7D%0A++++++%0A++++public+static+void+main(String%5B%5D+args)+%0A++++%7B%0A+++++++List%3CInteger%3E+aList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++++aList.add(5)%3B%0A+++++++aList.add(7)%3B%0A+++++++aList.add(8)%3B%0A+++++++aList.add(12)%3B%0A+++++++ListTester+tester+%3D+new+ListTester(aList)%3B%0A+++++++System.out.println(tester.numList)%3B%0A+++++++tester.mystery(11)%3B%0A+++++++System.out.println(tester.numList)%3B%0A+++%0A++++%7D%0A%7D&mode=display&curInstr=0>`_.
+     
 

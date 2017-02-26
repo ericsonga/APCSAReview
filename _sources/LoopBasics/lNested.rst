@@ -46,7 +46,8 @@ A **nested loop** has one loop inside of another.  These are typically used for 
    :feedback_b: The outer loop executes 7-3+1=5 times and the inner 4-1+1=4 so this will print 5 * 4 = 20 stars.  
    :feedback_c: This would be true if the outer loop executed 6 times such as if it was <code>i <= 8</code>. 
    :feedback_d: This would be true if the inner loop executed 5 times such as if it was <code>y <= 5</code>.  
-   How many times does the following code print a <code>*</code>?
+   
+   How many times does the following code print a ``*``?
    
    .. code-block:: java 
 

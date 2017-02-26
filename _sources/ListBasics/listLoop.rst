@@ -41,7 +41,7 @@ You can also use a 	``while`` or ``for`` loop to process list elements.  Remembe
 
    Be careful when you remove items from a list as you loop through it.  Remember that removing an item from a list will shift the remaining items to the left.  
 
-.. activecode:: listForEachLoop
+.. activecode:: listForEachLoopObj
    :language: java
    
    import java.util.*;  // import all classes in this package.
