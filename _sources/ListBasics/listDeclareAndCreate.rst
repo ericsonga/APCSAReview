@@ -27,9 +27,9 @@ In the code below we are declaring a variable called ``nameList`` that can refer
 Creating Lists
 ===============
 
-Declaring a list doesn't actually create a list. It only creates a variable that can refer to a list.  To actually create a list use ``new ArrayList<Type>()``.  
+Declaring a list doesn't actually create a list. It only creates a variable that can refer to a list.  To actually create a list use ``new ArrayList<Type>()``. If you leave off the ``<Type>`` it will default to ``Object``.   
 
-When you first create a new list it is empty, meaning that it doesn't contain any items yet.  You can get the number of items in a list using the ``size()`` method.
+When you first create a new list it is empty, meaning that it doesn't contain any items yet.  You can get the number of items in a list using the ``size()`` method.  Notice that an empty list has a size of 0.  Also notice that you can't get the size of a list that is currently set to ``null`` on line 9.  You will get a ``NullPointerException`` instead, which means that you tried to do something on an object reference that was ``null`` meaning that it doesn't reference an object.
 
 .. activecode:: listCreateStr
    :language: java
@@ -39,16 +39,16 @@ When you first create a new list it is empty, meaning that it doesn't contain an
    {
        public static void main(String[] args)
        {
-          List<String> nameList = null;
-          System.out.println(nameList);
-          nameList = new ArrayList<String>();
-          System.out.println(nameList.size());
+          List<String> nameList = new ArrayList<String>();
+          System.out.println("The size of nameList is: " + nameList.size());
+          List<String> list2 = null;
+          System.out.println("The size of list2 is: " + list2.size());
        }
    }
    
 .. note:: 
 
-   You use the ``length`` field to get the number of items in an array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the list. 
+   You use the ``length`` field to get the number of items in an array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the list. The number of items in an empty list is 0.  You can't get the size of a list that is set to ``null``.  You will get a ``NullPointerException`` instead.
   
 You can also create lists of integer values.  However, you have to use ``Integer`` as the type.  ``Integer`` objects can hold an ``int`` value.
 

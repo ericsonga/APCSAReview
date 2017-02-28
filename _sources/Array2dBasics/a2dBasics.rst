@@ -14,7 +14,7 @@ Introduction to 2D Arrays
 	pair: 2D Array; row
 	pair: 2D Array; column
 
-Arrays in Java can store many items of the same type.  You can even store items in **two-dimensional** (2D) arrays which are arrays that have both **rows** and **columns**.  A **row** has horizontal elements.  A **column** has vertical elements.
+Arrays in Java can store many items of the same type.  You can even store items in **two-dimensional** (2D) arrays which are arrays that have both **rows** and **columns**.  A **row** has horizontal elements.  A **column** has vertical elements.  In the picture below there are 3 rows of lockers and 6 columns.  
 
 .. figure:: Figures/2DLockers.jpg
     :width: 400px

@@ -43,7 +43,7 @@ You don't have to loop through an array from the front to the back.  You can loo
    
       public static void main (String[] args)
       {
-         int[] theArray = {-30, -5, 8, 23, 46}
+         int[] theArray = {-30, -5, 8, 23, 46};
          ArrayWorker worker = new ArrayWorker(theArray);
          System.out.println(worker.getIndexLastSmaller(50));
          System.out.println(worker.getIndexLastSmaller(30));

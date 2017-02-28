@@ -76,10 +76,10 @@ You can also remove an object at an index in a list using ``remove(index)`` whic
    :answer_c: [1, 2, 5, 4, 6]
    :answer_d: [1, 5, 2, 4, 6]
    :correct: c
-   :feedback_a: The set will replace the item at index 2 so this can not be right.
-   :feedback_b: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.
-   :feedback_c: The set will change the item at index 2 to 4.  The add of 5 at index 2 will move everything else to the right and insert 5.  The last add will be at the end of the list.
-   :feedback_d: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.
+   :feedback_a: The <code>set</code> will replace the item at index 2 so this can not be right.
+   :feedback_b: The <code>add</code> with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.
+   :feedback_c: The <code>set</code> will change the item at index 2 to 4.  The add of 5 at index 2 will move everything else to the right and insert 5.  The last <code>add</code> will be at the end of the list.
+   :feedback_d: The <code>add</code> with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.
 
    What will print when the following code executes?
    
@@ -103,8 +103,8 @@ You can step through the code above by clicking on the following `Example-8-6-1 
    :answer_d: ["Anaya", "Sarah", "Destini", "Sharrie"]
    :correct: d
    :feedback_a: Remember that the first index is 0 not 1.
-   :feedback_b: Set changes the value and the first index is 0 not 1.
-   :feedback_c: Add at index 1 adds the new value at that index but moves right any existing values.
+   :feedback_b: <code>set</code> changes the value and the first index is 0 not 1.
+   :feedback_c: <code>add</code> at index 1 adds the new value at that index but moves right any existing values.
    :feedback_d: The list is first ["Anaya", "Layla", "Sharrie"] and then changes to ["Anaya", Destini", "Sharrie"] and then to ["Anaya", "Sarah", "Destini", "Sharrie"]
    
    What will print when the following code executes?
@@ -127,10 +127,10 @@ You can step through the code above by clicking on the following `Example-8-6-2 
    :answer_c: [1, 2, 5, 4, 6]
    :answer_d: [1, 5, 2, 4, 6]
    :correct: d
-   :feedback_a: The set will replace the 3 at index 2 so this isn't correct.
-   :feedback_b: The add with an index of 1 and a value of 5 adds the 5 at index 1 not 3. Remember that the first index is 0.
-   :feedback_c: The set will change the item at index 2 to 4.  The add of 5 at index 1 will move everything else to the right and insert 5.  The last add will be at the end of the list.
-   :feedback_d: Add without an index adds at the end, set will replace the item at that index, add with an index will move all current values at that index or beyond to the right.
+   :feedback_a: The <code>set</code> will replace the 3 at index 2 so this isn't correct.
+   :feedback_b: The <code>add</code> with an index of 1 and a value of 5 adds the 5 at index 1 not 3. Remember that the first index is 0.
+   :feedback_c: The <code>set</code> will change the item at index 2 to 4.  The <code>add</code> of 5 at index 1 will move everything else to the right and insert 5.  The last <code>add</code> will be at the end of the list.
+   :feedback_d: <code>add</code> without an index adds at the end, <code>set</code> will replace the item at that index, <code>add</code> with an index will move all current values at that index or beyond to the right.
   
    What will print when the following code executes?
    
@@ -153,7 +153,7 @@ You can step through the code above by clicking on the following `Example-8-6-3 
    :answer_c: [1, 2]
    :answer_d: [1, 3]
    :correct: d
-   :feedback_a: The remove will remove the item at the given index.  
+   :feedback_a: The <code>remove</code> will remove the item at the given index.  
    :feedback_b: The item at index 1 will be removed and all the other values shifted left.
    :feedback_c: The 3 is at index 2.  The item at index 1 will be removed. 
    :feedback_d: The item at index 1 is removed and the 3 is moved left.  
@@ -177,10 +177,10 @@ You can step through the code above by clicking on the following `Example-8-6-4 
    :answer_c: [1, 2]
    :answer_d: [1, 3]
    :correct: c
-   :feedback_a: This would be true if it was remove(0) 
-   :feedback_b: The remove will remove a value from the list, so this can't be correct.
+   :feedback_a: This would be true if it was <code>remove(0)</code>
+   :feedback_b: The <code>remove</code> will remove a value from the list, so this can't be correct.
    :feedback_c: The 3 (at index 2) is removed
-   :feedback_d: This would be true if it was remove(1)
+   :feedback_d: This would be true if it was <code>remove(1)</code>
 
    What will print when the following code executes?
    

@@ -23,11 +23,15 @@ You can add values to a list.  If you use ``add(obj)`` it will add the passed ob
          System.out.println(nameList);
          nameList.add("Grace");
          System.out.println(nameList);
-         nameList.add("Deja"); 
+         nameList.add("Diego"); 
          System.out.println(nameList);
          System.out.println(nameList.size());
       }
    }
+   
+.. note::
+
+   Notice that we added the same string to the list more than once.  Lists can hold duplicate objects. 
  
 There are actually two different ``add`` methods in the ``List`` interface.  The ``add(obj)`` method adds the passed object to the end of the list.
 The ``add(index,obj)`` method adds the passed object at the passed index, but first moves over any existing values to higher indicies to make room for the new object.  
@@ -161,4 +165,24 @@ You can step through the code above by clicking on the following `Example-8-5-2 
       
 You can step through the code above by clicking on the following `Example-8-5-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+2)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
       
-      
+.. mchoice:: qalAdd4
+   :answer_a: [1, 3, 2]
+   :answer_b: [1, 3, 2, 1]
+   :answer_c: [1, 1, 2, 3]
+   :answer_d: [1, 2, 3]
+   :correct: b
+   :feedback_a: You can add duplicate objects to a list so this list will have two 1's.  
+   :feedback_b: The add method adds each object to the end of the list and lists can hold duplicate objects.
+   :feedback_c: This would be true if the list was sorted as you add to it, but this is not true.
+   :feedback_d: This would be true if the list was sorted and you couldn't add duplicate objects, but lists are not sorted and you can add duplicate objects.  
+
+   What will print when the following code executes?
+   
+   .. code-block:: java 
+   
+      List<Integer> list1 = new ArrayList<Integer>();
+      list1.add(1);
+      list1.add(3);
+      list1.add(2);
+      list1.add(1);
+      System.out.println(list1);
