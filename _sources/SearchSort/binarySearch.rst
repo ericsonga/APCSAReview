@@ -9,7 +9,7 @@ Binary Search
 	single: binary search
 	pair: search; binary
 	
-A binary search looks for a value in the middle of the search area and it eliminates half the values in the search area during each step until either the value is found or there is no more data to look at.  Click on this `Binary Search Animation <http://cs.armstrong.edu/liang/animation/web/BinarySearch.html>`_ to see how it works.
+A binary search can only be used if the data is sorted.  It starts by comparing the value in the middle of the search area to the target and if it doesn't find the value there it will determine if the value in the middle is smaller or larger than the target value.  If the target value is smaller it will look in the range from 0 to the middle index - 1.  If the target value is larger it will look in the range from the middle index + 1 to the end.  Each time through the loop it eliminates half the values in the search area until either the value is found or there is no more data to look at.  Click on this `Binary Search Animation <http://cs.armstrong.edu/liang/animation/web/BinarySearch.html>`_ to see how it works.
 
 Binary search calculates the middle index as ``left + right / 2`` where left starts out at 0 and right starts out at the array length - 1 (the index of the last element).  It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one.  If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index.    It also stops when left is greater than right which indicates that the value wasn't found and it returns -1.
 
@@ -45,8 +45,12 @@ The code for ``binarySearch`` below is from the AP CS A course description.
      {
         int[] arr1 = {-20, 3, 15, 81, 432};
         
-        // test when the target is in the array
-        int index = binarySearch(arr1,-20);
+        // test when the target is in the middle
+        int index = binarySearch(arr1,15);
+        System.out.println(index);
+        
+        // test when the target is the first item in the array
+        index = binarySearch(arr1,-20);
         System.out.println(index);
         
         // test when the target is in the array - last

@@ -65,7 +65,7 @@ How can you show what is happening in a recursive call?  Here is one way to do i
   factorial(1) returns 1 * factorial(0)
   factorial(0) returns 1
 
-Once factorial(0) executes and returns 1 that value can be substituted back into the previous method call, starting at the top of the stack and working our way back to the bottom of the stack (beginning).
+Once factorial(0) executes and returns 1 that value can be substituted back into the previous method call, starting at the top of the stack (shown at the bottom here) and working our way back to the bottom of the stack (shown at the top here).
 
 .. code-block:: java 
 
