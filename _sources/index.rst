@@ -191,7 +191,7 @@ List and ArrayList
    ListBasics/2016freeresponseQ4A.rst
    ListBasics/2016freeresponseQ4B.rst
    ListBasics/listSummary.rst
-   
+   ListBasics/ListParsonsPractice.rst
 
 Two-dimensional Arrays
 :::::::::::::::::::::::
