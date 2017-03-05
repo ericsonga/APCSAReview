@@ -271,6 +271,7 @@ Searching and Sorting
    SearchSort/insertionSort.rst
    SearchSort/mergeSort.rst
    SearchSort/ssEasyMC.rst
+   SearchSort/ssMedMC.rst
 
 
 Preparing for the Exam
