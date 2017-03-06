@@ -33,7 +33,7 @@ You can step through an insertion sort with this data by clicking on the followi
    :correct: c
    :feedback_a: This would be true if the third value was something that wasn't in the array.
    :feedback_b: This would be true if the third value was 1
-   :feedback_c: This is a binary search and it returns the index of the third value which is 1 in this case.
+   :feedback_c: This is a binary search and it returns the index of the value 3, which is 1.
    :feedback_d: This would be true if the third value was 5.
    :feedback_e: This would be true if the third value was 8.  
 
@@ -90,7 +90,7 @@ You can step through the code above by clicking on the folloiwng `Ex-12-8-3 <htt
    :answer_e: int k = j - 1; k > 0; k--
    :correct: b
    :feedback_a: The inner loop starts at the outer loop value plus one, not minus one.  
-   :feedback_b: The inner loop starts as the outer loop value plus one and ends at the last element.
+   :feedback_b: The inner loop starts at the outer loop value plus one and ends at the last element.
    :feedback_c: The inner loop should start at the outer loop value plus one.
    :feedback_d: The inner loop should start at the outer loop value plus one and increment.
    :feedback_e: The inner loop should start at the outer loop value plus one and increment.
