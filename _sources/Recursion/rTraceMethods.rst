@@ -139,7 +139,7 @@ Another way to see the call stack in action is to use Jeloit (see http://cs.joen
            return 2 * mystery (n - 1); 
      } 
      
-You can step through the code above using the Java Visualizer by clicking on the following link: `Q2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
      
 .. mchoice:: qrb_7
    :answer_a: 12 
@@ -165,7 +165,7 @@ You can step through the code above using the Java Visualizer by clicking on the
        return a * mystery(n-1,a);
      }
      
-You can step through the code above using the Java Visualizer by clicking on the following link: `Q3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
      
 
 Let's trace the execution of the bunny ears method defined below.  
@@ -233,7 +233,7 @@ So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java V
         System.out.print(x % 10); 
      } 
      
-You can step through the code above using the Java Visualizer by clicking on the following link: `Q4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+mystery+(int+x)+%0A+++%7B%0A++++++++System.out.print(x+%25+10)%3B+%0A%0A++++++++if+((x+/+10)+!%3D+0)+%7B%0A+++++++++++mystery(x+/+10)%3B+%0A++++++++%7D+%0A++++++++System.out.print(x+%25+10)%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+mystery+(int+x)+%0A+++%7B%0A++++++++System.out.print(x+%25+10)%3B+%0A%0A++++++++if+((x+/+10)+!%3D+0)+%7B%0A+++++++++++mystery(x+/+10)%3B+%0A++++++++%7D+%0A++++++++System.out.print(x+%25+10)%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
      
 .. mchoice:: qrb_9
    :answer_a: 7 
@@ -264,7 +264,7 @@ You can step through the code above using the Java Visualizer by clicking on the
         }
      }
      
-You can step through the code above using the Java Visualizer by clicking on the following link: `Q5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_
+You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_
      
 
      

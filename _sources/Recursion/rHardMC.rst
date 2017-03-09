@@ -24,7 +24,9 @@ These problems are about the same or harder than those that you will typically s
 
       public boolean check(String s)
       {
-         return s.length() >= 2 && (s.charAt(0) == s.charAt(1) || check(s.substring(1)));
+         return s.length() >= 2 && 
+                (s.charAt(0) == s.charAt(1) || 
+                 check(s.substring(1)));
       }
       
 .. mchoice:: qrh_2
