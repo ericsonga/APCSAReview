@@ -87,6 +87,7 @@ Many students have been involved in the creation of content for the eBook.
 * Julian Hamelberg - worked on free response questions - seating chart A and B
 * Christine Hsieh - added mixed up code problems at the end of the array chapter
 * Carlos Diaz - fixed problems and added code highlights
+* Avery Rosh - found an error in one of the 2D array questions
 
 License
 ---------
