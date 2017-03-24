@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Easy Multiple Choice Questions &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/livecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="../index.html" />
+    <link rel="next" title="Medium Multiple Choice Questions" href="ooMedMC.html" />
+    <link rel="prev" title="More Practice" href="ooPractice.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'JavaReview';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'javareview';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Java Review</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/JavaReview/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/JavaReview/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Easy Multiple Choice Questions</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - More Practice" data-toggle="tooltip">
+    <a href="ooPractice.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Medium Multiple Choice Questions' data-toggle="tooltip" >
+    <a href="ooMedMC.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="easy-multiple-choice-questions">
+<h1>Easy Multiple Choice Questions<a class="headerlink" href="#easy-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
+<p>These problems are easier than most of those that you will usually see on the AP CS A exam.</p>
+
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooe_1">
+            10-12-1: What best describes the purpose of a class&#8217;s constructor?
+            <li data-component="answer" data-correct id="qooe_1_opt_a">(A) Initialize the fields in the object.</li><li data-component="feedback" id="qooe_1_opt_a">A constructor is often used to initialize the fields to their default values or in the case of a parameterized constructor, to the values passed in to the constructor.</li>
+            
+            <li data-component="answer"  id="qooe_1_opt_b">(B) Determines the amount of space needed for an object and creates the object.</li><li data-component="feedback" id="qooe_1_opt_b">The object is already created before the constructor is called.</li>
+            
+            <li data-component="answer"  id="qooe_1_opt_c">(C) Names the new object.</li><li data-component="feedback" id="qooe_1_opt_c">Constructors do not name the object.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooe_2">
+            10-12-2: Under which of these conditions is it appropriate to overload a method (ie: the class will contain two methods with the same name)?
+            <li data-component="answer"  id="qooe_2_opt_a">(A) The methods do different things.</li><li data-component="feedback" id="qooe_2_opt_a">Methods that do different things should be named differently.</li>
+            
+            <li data-component="answer"  id="qooe_2_opt_b">(B) The methods have different parameter names.</li><li data-component="feedback" id="qooe_2_opt_b">There is no reason the parameter names ought to be different if the two methods are performing the same action.</li>
+            
+            <li data-component="answer"  id="qooe_2_opt_c">(C) The methods have different post-conditions.</li><li data-component="feedback" id="qooe_2_opt_c">If the methods have different post-conditions, they are performing different functions, and should be named differently.</li>
+            
+            <li data-component="answer"  id="qooe_2_opt_d">(D) Two methods with the same name can never be included in the same class.</li><li data-component="feedback" id="qooe_2_opt_d">If two methods perform the same function, they can be named the same.  However, the number of parameters, type of parameters, or order of parameter types must be different.</li>
+            
+            <li data-component="answer" data-correct id="qooe_2_opt_e">(E) The methods have different numbers of parameters</li><li data-component="feedback" id="qooe_2_opt_e">Overloading occurs when two methods perform the same essential operation, but take a different number and/or type of parameters.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooe_3">
+            <p>10-12-3: Which of the following statements about a class that contains an abstract method is (are) true?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span>I. You can&#39;t have any constructors in this class.
+II.  This class must be declared as abstract.
+III.  You can&#39;t declare any fields in this class.
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qooe_3_opt_a">(A) I and II only</li><li data-component="feedback" id="qooe_3_opt_a">An abstract class can have constructors. A class with an abstract method must also be declared as abstract.</li>
+            
+            <li data-component="answer" data-correct id="qooe_3_opt_b">(B) II only</li><li data-component="feedback" id="qooe_3_opt_b">A class with an abstract method must also be declared abstract. You can have constructors and fields in an abstract class.</li>
+            
+            <li data-component="answer"  id="qooe_3_opt_c">(C) I, II and III</li><li data-component="feedback" id="qooe_3_opt_c">A class with an abstract method must also be abstract. You can have constructors and fields in an abstract class.</li>
+            
+            <li data-component="answer"  id="qooe_3_opt_d">(D) I only</li><li data-component="feedback" id="qooe_3_opt_d">Only II is true. You can have constructors in an abstract class. A class with an abstract method must also be declared abstract.</li>
+            
+            <li data-component="answer"  id="qooe_3_opt_e">(E) III only</li><li data-component="feedback" id="qooe_3_opt_e">Only II is true. You can have fields in an abstract class. A class with an abstract method must also be declared abstract.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooe_4">
+            10-12-4: Which of the following is true about abstract classes?
+            <li data-component="answer" data-correct id="qooe_4_opt_a">(A) Abstract classes cannot be instantiated, but they can be sub-classed.</li><li data-component="feedback" id="qooe_4_opt_a">Sub-classes must implement the abstract methods declared in the abstract class or also be declared abstract.</li>
+            
+            <li data-component="answer"  id="qooe_4_opt_b">(B) Abstract classes can be instantiated, but they cannot be sub-classed.</li><li data-component="feedback" id="qooe_4_opt_b">You can not create an object of an abstract class type.  You can only create objects from concrete (not abstract) classes.</li>
+            
+            <li data-component="answer"  id="qooe_4_opt_c">(C) Abstract classes can only contain abstract methods.  They can be sub-classed.</li><li data-component="feedback" id="qooe_4_opt_c">Abstract classes can contain fields and non-abstract methods.</li>
+            
+            <li data-component="answer"  id="qooe_4_opt_d">(D) Abstract classes can only contain abstract methods.  They cannot be sub-classed.</li><li data-component="feedback" id="qooe_4_opt_d">Abstract classes can contain fields and non-abstract methods.  They can also be sub-classed.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooe_5">
+            10-12-5:  A car dealership needs a program to store information about the cars for sale. For each car, they want to keep track of the following information: number of doors (2 or 4), whether the car has air conditioning, and its average number of miles per gallon. Which of the following is the best design?
+            <li data-component="answer"  id="qooe_5_opt_a">(A) Use four unrelated classes: <code>Car</code>, <code>Doors</code>, <code>AirConditioning</code>, and <code>MilesPerGallon</code>.</li><li data-component="feedback" id="qooe_5_opt_a">Only <code>Car</code> should be a class. The number of doors, flag if it has air conditioning, and the average number of miles per gallon are attributes of a car so they belong in a <code>Car</code> class.</li>
+            
+            <li data-component="answer"  id="qooe_5_opt_b">(B) Use a class <code>Car</code> with three subclasses: <code>Doors</code>, <code>AirConditioning</code>, and <code>MilesPerGallon</code>.</li><li data-component="feedback" id="qooe_5_opt_b">Doors, air conditioning, and miles per gallon are not a kind of car. Child classes need to be able to be substituted for the parent class.</li>
+            
+            <li data-component="answer" data-correct id="qooe_5_opt_c">(C) Use a class <code>Car</code>, with fields: <code>numDoors</code>, <code>hasAir</code>, and <code>milesPerGallon</code>.</li><li data-component="feedback" id="qooe_5_opt_c">The number of doors, flag if it has air conditioning, and the average number of miles per gallon are attributes of a car. Each of these is a simple value so they can just be fields of a <code>Car</code> class.</li>
+            
+            <li data-component="answer"  id="qooe_5_opt_d">(D) Use a class <code>Car</code>, with subclasses of <code>Doors</code>, <code>AirConditioning</code>, and <code>MilesPerGallon</code>.</li><li data-component="feedback" id="qooe_5_opt_d">A door is not a type of car. A flag for air conditioning is not a type of door, and a miles per gallon is not a type of air conditioning flag. Child classes need to be able to be substituted for the parent class.</li>
+            
+            <li data-component="answer"  id="qooe_5_opt_e">(E) Use classes: <code>Doors</code>, <code>AirConditioning</code>, and <code>MilesPerGallon</code>, each with a subclass <code>Car</code>.</li><li data-component="feedback" id="qooe_5_opt_e">A class <code>Car</code> can't be a subclass of three different classes. Each class can only have one parent class. Also a car is not a type of door, air conditioning flag, or miles per gallon. Child classes need to be able to be substituted for the parent class.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooe_6">
+            10-12-6:  A program is being written by a team of programmers. One programmer is implementing a class called <code class="docutils literal"><span class="pre">Employee</span></code>; another programmer is writing code that will use the <code class="docutils literal"><span class="pre">Employee</span></code> class. Which of the following aspects of the public methods and fields of the <code class="docutils literal"><span class="pre">Employee</span></code> class does not need to be known by both programmers?
+            <li data-component="answer" data-correct id="qooe_6_opt_a">(A) How the methods are implemented.</li><li data-component="feedback" id="qooe_6_opt_a">Only the programmer of the <code>Employee</code> class must know how the public methods work. The programmer that is using the <code>Employee</code> class can just use the public methods and not worry about how they are implemented.</li>
+            
+            <li data-component="answer"  id="qooe_6_opt_b">(B) The method names.</li><li data-component="feedback" id="qooe_6_opt_b">The programmer who writes the methods will need to know what the names are. The programmer who will use the public methods will also need to know the names of the methods in order to invoke them.</li>
+            
+            <li data-component="answer"  id="qooe_6_opt_c">(C) The method return types.</li><li data-component="feedback" id="qooe_6_opt_c">In order to use the public methods of the <code>Employee</code> class, a programmer must know the method return types.</li>
+            
+            <li data-component="answer"  id="qooe_6_opt_d">(D) Constants</li><li data-component="feedback" id="qooe_6_opt_d">Constants are public fields and are meant to be used by people using a class.</li>
+            
+            <li data-component="answer"  id="qooe_6_opt_e">(E) The number and types of the method parameters.</li><li data-component="feedback" id="qooe_6_opt_e">In order to use the public methods of the <code>Employee</code> class, a programmer must know the number of parameters and the type for each parameter.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qooe_7">
+            10-12-7: A bookstore is working on an on-line ordering system. For each type of published material (books, movies, audio tapes) they need to track the id, title, author(s), date published, and price. Which of the following would be the best design?
+            <li data-component="answer"  id="qooe_7_opt_a">(A) Create one class <code>PublishedMaterial</code> with the requested fields plus type.</li><li data-component="feedback" id="qooe_7_opt_a">This will complicate the process of retrieving objects based on their type. Also if we need to add information that is specific to <code>Book</code> or <code>Movie</code> or <code>AudioTape</code> it would be best if these were subclasses of <code>PublishedMaterial</code>.</li>
+            
+            <li data-component="answer"  id="qooe_7_opt_b">(B) Create classes <code>Book</code>, <code>Movie</code>, and <code>AudioTape</code> with the requested fields.</li><li data-component="feedback" id="qooe_7_opt_b">This involves writing more code than is necessary (usually people copy and paste the shared code) and makes it harder to fix errors. It would be better to put common fields and methods in the superclass <code>PublishedMaterial</code> and have <code>Book</code>, <code>Movie</code>, and <code>AudioTape</code> be subclasses.</li>
+            
+            <li data-component="answer"  id="qooe_7_opt_c">(C) Create one class <code>BookStore</code> with the requested fields plus type.</li><li data-component="feedback" id="qooe_7_opt_c">The class name, <code>BookStore</code>, seems to imply the thing that keeps track of the store. This would be an appropriate class name for an object that handles the items in the <code>Bookstore</code>. However, for the published material, it would be better to use a superclass <code>PublishedMaterial</code> and subclasses for <code>Book</code>, <code>Movie</code> and <code>AudioTape</code>.</li>
+            
+            <li data-component="answer"  id="qooe_7_opt_d">(D) Create classes for each.</li><li data-component="feedback" id="qooe_7_opt_d">This is more classes than is necessary. Items such as <code>Title</code>, <code>Price</code>, <code>ID</code>, <code>Author</code> and <code>DatePublished</code> are simple variables that do not need a class of their own but should be fields in a <code>PublishedMaterial</code> superclass, with <code>Movie</code>, <code>AudioTape</code> and <code>Book</code> as subclasses.</li>
+            
+            <li data-component="answer" data-correct id="qooe_7_opt_e">(E) Create the class <code>PublishedMaterial</code> with children classes of <code>Book</code>, <code>Movie</code>, and <code>AudioTape</code>.</li><li data-component="feedback" id="qooe_7_opt_e">We will need to get objects based on their type so we should create classes for <code>Book</code>, <code>Movie</code>, and <code>AudioTape</code>. They have common fields so we should put these in a common superclass <code>PublishedMaterial</code>.</li>
+            
+
+            </ul>
+            </div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - More Practice' data-toggle="tooltip">
+    <a href="ooPractice.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="ooPractice.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Medium Multiple Choice Questions' data-toggle="tooltip" >
+    <a href="ooMedMC.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ooMedMC.html" >Next Section - Medium Multiple Choice Questions</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 barb.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.5.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
