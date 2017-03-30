@@ -72,7 +72,7 @@ Several students at Georgia Tech have helped review the eBook:
 * Bhavika Devnani
 * Stephanie Remy
 
-Many students have been involved in the creation of content for the eBook.
+Many others have been involved in the creation of content for the eBook (including high school students).
 
 * Atiba Nkosi Kee
 * Robert McKenzie - created videos explaining concepts (arrays, interfaces, searching)
@@ -88,6 +88,7 @@ Many students have been involved in the creation of content for the eBook.
 * Christine Hsieh - added mixed up code problems at the end of the array chapter
 * Carlos Diaz - fixed problems and added code highlights
 * Avery Rosh - found an error in one of the 2D array questions
+* JP Fasano - found an erorr in one of the non-timed exams 
 
 License
 ---------

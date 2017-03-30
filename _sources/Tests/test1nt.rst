@@ -621,7 +621,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       3 5 7 9
       */
 
-      public void alter(int number) 
+      public void alter(int c) 
       {
         for (int i = 0; i < matrix.length; i++) 
         {
@@ -648,7 +648,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         3 5 7 9
         3 5 7 9
 
-    V. 1 5 5 7
+    V. 1 5 7 7
        2 6 8 8
        3 7 9 9
 
