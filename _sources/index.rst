@@ -178,7 +178,7 @@ List and ArrayList
    ListBasics/listLoop.rst
    ListBasics/listVsArray.rst
    ListBasics/listMistakes.rst
-   ListBasics/listPractice.rst
+   ListBasics/lPractice.rst
    ListBasics/listEasyMC.rst
    ListBasics/listMedMC.rst
    ListBasics/listHardMC.rst
@@ -191,6 +191,7 @@ List and ArrayList
    ListBasics/2016freeresponseQ4A.rst
    ListBasics/2016freeresponseQ4B.rst
    ListBasics/listSummary.rst
+   ListBasics/listPractice.rst
    ListBasics/ListParsonsPractice.rst
 
 Two-dimensional Arrays
