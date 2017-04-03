@@ -175,7 +175,7 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
 Video - One way to code the solution
 =====================================
 
-.. video:: v_interfaces
+.. video:: v_horseBarnBSol
    :controls:
    :thumb: ../_static/codeVideo.png
    

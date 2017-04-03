@@ -86,7 +86,7 @@ You can also use a 	``while`` or ``for`` loop to process list elements.  Remembe
   
 .. note::
 
-   Notice that the method above only increments the current index if an item was removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the rest of the items shift left when you remove one. 
+   Notice that the method above only increments the current index if an item was not removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the rest of the items shift left when you remove one. 
    
 Can you change the code above so that it only removes the first name it finds in the list that matches?  Can you change it to only remove the last one in the list that matches?
 

@@ -159,7 +159,7 @@ Video - One way to code the solution
 
 There are many possible solutions to this problem.  The video below shows one solution.
 
-.. video:: v_interfaces
+.. video:: v_selfDivBSol
    :controls:
    :thumb: ../_static/codeVideo.png
 

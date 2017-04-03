@@ -522,6 +522,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
     
 
     .. mchoice:: pe2_19-8
+       :answer_a: hours = hours + minutes % 60; minutes = minutes / 60;
        :answer_b: minutes = minutes % 60;
        :answer_c: minutes = minutes + hours % 60; 
        :answer_d: hours = hours + minutes / 60; minutes = minutes % 60;

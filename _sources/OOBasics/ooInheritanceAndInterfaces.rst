@@ -5,7 +5,7 @@
 Inheritance and Interfaces
 ==========================
 
-.. video:: v_interfaces
+.. video:: v_interfacesAndInherit
    :controls:
    :thumb: ../_static/videoStart.png
 

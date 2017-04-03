@@ -192,7 +192,7 @@ Try to write the code for the method ``processImage``. When you are ready click 
 Video - One way to code the solution
 =====================================
 
-.. video:: v_interfaces
+.. video:: v_grayImageBSol
    :controls:
    :thumb: ../_static/codeVideo.png
 

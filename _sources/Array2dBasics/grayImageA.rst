@@ -152,7 +152,7 @@ Try to write the code for the method ``countWhitePixels``. When you are ready cl
 Video - One way to code the solution
 =====================================
 
-.. video:: v_interfaces
+.. video:: v_grayImageASol
    :controls:
    :thumb: ../_static/codeVideo.png
    

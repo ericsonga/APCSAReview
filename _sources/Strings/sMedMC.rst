@@ -79,5 +79,29 @@ These problems are similar to those that you will see on the AP CS A exam.
      s2 = s2.toLowerCase();
      s3 = s3.toUpperCase();
      s4 = null;
+     
+.. mchoice:: qsm_4
+   :answer_a: Data Set 2 contains one string which should return true and one that should return false.
+   :answer_b: All strings in Data Set 2 have the same number of characters.
+   :answer_c: The strings in Data Set 2 are all lowercase
+   :answer_d: Data Set 2 contains fewer values than Data Set 1.
+   :answer_e: There are no advantages.
+   :correct: a
+   :feedback_a: All of the strings in Data Set 1 should return true, so the false condition is never tested.
+   :feedback_b: Variety is always good in testing, so this is not an advantage.
+   :feedback_c: It would be better to include both upper and lower case for testing, so this is not an advantage.
+   :feedback_d: More test conditions is usually better, so this is not an advantage.
+   :feedback_e: All the values in Data Set 1 are true, so the false condition is not tested.
+
+   There is a method called checkString that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method. What advantage does Data Set 2 have over Data Set 1?
+   
+   .. code-block:: java
+
+      Data Set 1    Data Set 2
+      aba	        bcb
+      abba	        bcd
+      aBa
+     
+
 
 
