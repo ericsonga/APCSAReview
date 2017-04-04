@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Easy Multiple Choice Questions &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/livecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="../index.html" />
+    <link rel="next" title="Medium Multiple Choice Questions" href="vMedMC.html" />
+    <link rel="prev" title="Common Mistakes" href="commonMistakes.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'JavaReview';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'javareview';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Java Review</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/JavaReview/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/JavaReview/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Easy Multiple Choice Questions</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Common Mistakes" data-toggle="tooltip">
+    <a href="commonMistakes.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Medium Multiple Choice Questions' data-toggle="tooltip" >
+    <a href="vMedMC.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="easy-multiple-choice-questions">
+<h1>Easy Multiple Choice Questions<a class="headerlink" href="#easy-multiple-choice-questions" title="Permalink to this headline">¶</a></h1>
+<p>These problems are easier than most of those that you will usually see on the AP CS A exam.</p>
+
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_1">
+            <p>3-9-1: What does the following code print?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span> <span class="o">%</span> <span class="mi">3</span><span class="o">);</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="qve_1_opt_a">(A) 2</li><li data-component="feedback" id="qve_1_opt_a">Whenever the first number is smaller than the second, the remainder is the first number.  Remember that % is the remainder and 3 goes into 2 0 times with a remainder of 2.</li>
+            
+            <li data-component="answer"  id="qve_1_opt_b">(B) 0</li><li data-component="feedback" id="qve_1_opt_b">This is the number of times that 3 goes into 2 but the % operator gives you the remainder.</li>
+            
+            <li data-component="answer"  id="qve_1_opt_c">(C) 3</li><li data-component="feedback" id="qve_1_opt_c">Try it.  Remember that % gives you the remainder after you divide the first number by the second one.</li>
+            
+            <li data-component="answer"  id="qve_1_opt_d">(D) 1</li><li data-component="feedback" id="qve_1_opt_d">This would be correct if it was 3 % 2 since 2 would go into 3 one time with a remainder of 1.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_2">
+            <p>3-9-2: What does the following code print?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">19</span> <span class="o">%</span> <span class="mi">5</span><span class="o">);</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qve_2_opt_a">(A) 3</li><li data-component="feedback" id="qve_2_opt_a">This is the number of times that 5 goes into 19, but % is the remainder.</li>
+            
+            <li data-component="answer"  id="qve_2_opt_b">(B) 0</li><li data-component="feedback" id="qve_2_opt_b">This would only be true if the first number was evenly divisible by the second number.</li>
+            
+            <li data-component="answer" data-correct id="qve_2_opt_c">(C) 4</li><li data-component="feedback" id="qve_2_opt_c">5 goes into 19 3 times (15) with a remainder of 4 (19-15=4)</li>
+            
+            <li data-component="answer"  id="qve_2_opt_d">(D) 1</li><li data-component="feedback" id="qve_2_opt_d">This would be correct if it was 19 % 2, but here we are dividing by 5.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_3">
+            <p>3-9-3: What does the following code print?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="o">);</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qve_3_opt_a">(A) 0.3333333333333333</li><li data-component="feedback" id="qve_3_opt_a">This would be correct if it was 1.0 / 3 or 1 / 3.0.</li>
+            
+            <li data-component="answer" data-correct id="qve_3_opt_b">(B) 0</li><li data-component="feedback" id="qve_3_opt_b">When two integers are divided the results will also be integer and the fractional part is thrown away.</li>
+            
+            <li data-component="answer"  id="qve_3_opt_c">(C) It will give a run-time error</li><li data-component="feedback" id="qve_3_opt_c">You would get a run-time error if it was 1 / 0, because you can not divide by zero.</li>
+            
+            <li data-component="answer"  id="qve_3_opt_d">(D) 0.3</li><li data-component="feedback" id="qve_3_opt_d">Try it. Is this what you get?</li>
+            
+            <li data-component="answer"  id="qve_3_opt_e">(E) It will give a compile-time error</li><li data-component="feedback" id="qve_3_opt_e">Integer division is allowed in Java.  It gives an integer result.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_4">
+            <p>3-9-4: What does the following code print?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qve_4_opt_a">(A) 24</li><li data-component="feedback" id="qve_4_opt_a">This would be true if it was System.out.println(((2 + 3) * 5) - 1), but without the parentheses the multiplication is done first.</li>
+            
+            <li data-component="answer"  id="qve_4_opt_b">(B) 14</li><li data-component="feedback" id="qve_4_opt_b">This would be true if it was System.out.println(2 + (3 * (5 - 1))), but without the parentheses the multiplication is done first and the addition and subtraction are handled from left to right.</li>
+            
+            <li data-component="answer"  id="qve_4_opt_c">(C) This will give a compile time error.</li><li data-component="feedback" id="qve_4_opt_c">This will compile and run.  Try it in DrJava.  Look up operator precedence in Java.</li>
+            
+            <li data-component="answer" data-correct id="qve_4_opt_d">(D) 16</li><li data-component="feedback" id="qve_4_opt_d">The multiplication is done first (3 * 5 = 15) and then the addition (2 + 15 = 17) and finally the subtraction (17 - 1 = 16).</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_5">
+            <p>3-9-5: Given the following code segment, what is the value of b when it finishes executing?</p>
+<blockquote>
+<div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">9.6982</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">a</span><span class="o">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="qve_5_opt_a">(A) 9.6982</li><li data-component="feedback" id="qve_5_opt_a">This would be true if it was b = a.  What does the (int) do?</li>
+            
+            <li data-component="answer"  id="qve_5_opt_b">(B) 12</li><li data-component="feedback" id="qve_5_opt_b">This is the initial value of b, but then b is assigned to be the result of casting the value in a to an integer. Casting to an integer from a double will truncate (throw away) the digits after the decimal.</li>
+            
+            <li data-component="answer"  id="qve_5_opt_c">(C) 10</li><li data-component="feedback" id="qve_5_opt_c">Java does not round when converting from a double to an integer.</li>
+            
+            <li data-component="answer" data-correct id="qve_5_opt_d">(D) 9</li><li data-component="feedback" id="qve_5_opt_d">When a double is converted into an integer in Java, it truncates (throws away) the digits after the decimal.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_new6">
+            <p>3-9-6: Given the following code segment, what is the value of <code class="docutils literal"><span class="pre">num</span></code> when it finishes executing?</p>
+<blockquote>
+<div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">value</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">value</span> <span class="o">*</span> <span class="mi">5</span><span class="o">)</span> <span class="o">+</span> <span class="mi">5</span><span class="o">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="qve_new6_opt_a">(A) a random number from 0 to 4</li><li data-component="feedback" id="qve_new6_opt_a">This would be true if it was (int) (Math.random * 5)</li>
+            
+            <li data-component="answer"  id="qve_new6_opt_b">(B) a random number from 1 to 5</li><li data-component="feedback" id="qve_new6_opt_b">This would be true if it was ((int) (Math.random * 5)) + 1</li>
+            
+            <li data-component="answer" data-correct id="qve_new6_opt_c">(C) a random number from 5 to 9</li><li data-component="feedback" id="qve_new6_opt_c">Math.random returns a value from 0 to not quite 1.  When you multiply it by 5 you get a value from 0 to not quite 5.  When you cast to int you get a value from 0 to 4.  Adding 5 gives a value from 5 to 9.</li>
+            
+            <li data-component="answer"  id="qve_new6_opt_d">(D) a random number from 5 to 10</li><li data-component="feedback" id="qve_new6_opt_d">This would be true if Math.random returned a value between 0 and 1, but it won't ever return 1.  The cast to int results in a number from 0 to 4.  Adding 5 gives a value from 5 to 9.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_new7">
+            <p>3-9-7: What does the follow code do when it is executed?</p>
+<blockquote>
+<div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">5</span> <span class="o">/</span> <span class="mi">0</span><span class="o">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="qve_new7_opt_a">(A) It will print 0</li><li data-component="feedback" id="qve_new7_opt_a">This would be true if it was System.out.println(0 / 5)</li>
+            
+            <li data-component="answer" data-correct id="qve_new7_opt_b">(B) It will give a run-time error</li><li data-component="feedback" id="qve_new7_opt_b">You can't divide by 0 so this cause a run-time error.</li>
+            
+            <li data-component="answer"  id="qve_new7_opt_c">(C) It will give a compile-time error (won't compile)</li><li data-component="feedback" id="qve_new7_opt_c">You might think that this would be caught at compile time, but it isn't.</li>
+            
+            <li data-component="answer"  id="qve_new7_opt_d">(D) It will print 5</li><li data-component="feedback" id="qve_new7_opt_d">This would be true if it was System.out.println(5 / 1)</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_new8">
+            <p>3-9-8: Given the following code segment, what is the value of <code class="docutils literal"><span class="pre">num</span></code> when it finishes executing?</p>
+<blockquote>
+<div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="n">value</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="o">(</span><span class="n">value</span> <span class="o">*</span> <span class="mi">11</span><span class="o">)</span> <span class="o">-</span> <span class="mi">5</span><span class="o">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="qve_new8_opt_a">(A) a random number from 0 to 10</li><li data-component="feedback" id="qve_new8_opt_a">This would be true if it was (int) (value * 11)</li>
+            
+            <li data-component="answer"  id="qve_new8_opt_b">(B) a random number from 0 to 9</li><li data-component="feedback" id="qve_new8_opt_b">This would be true if it was (int) (value * 10)</li>
+            
+            <li data-component="answer"  id="qve_new8_opt_c">(C) a random number from -5 to 4</li><li data-component="feedback" id="qve_new8_opt_c">This would be true if it was (int) (value * 10) - 5</li>
+            
+            <li data-component="answer" data-correct id="qve_new8_opt_d">(D) a random number from -5 to 5</li><li data-component="feedback" id="qve_new8_opt_d">Math.random returns a random value from 0 to not quite 1.  After it is multipied by 11 and cast to integer it will be a value from 0 to 10.  Subtracting 5 means it will range from -5 to 5.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_new9">
+            <p>3-9-9: What will the following code print?</p>
+<blockquote>
+<div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">3</span><span class="o">);</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="qve_new9_opt_a">(A) 0</li><li data-component="feedback" id="qve_new9_opt_a">This would be true if it was (1 / 3).</li>
+            
+            <li data-component="answer"  id="qve_new9_opt_b">(B) .3</li><li data-component="feedback" id="qve_new9_opt_b">It will give you more than just one digit after the decimal sign.</li>
+            
+            <li data-component="answer" data-correct id="qve_new9_opt_c">(C) 0.3333333333333333</li><li data-component="feedback" id="qve_new9_opt_c">The computer can not represent an infinite number of 3's after the decimal point so it only keeps 14 to 15 significant digits.</li>
+            
+            <li data-component="answer"  id="qve_new9_opt_d">(D) 0.3 with an infinite number of 3's following the decimal point</li><li data-component="feedback" id="qve_new9_opt_d">The computer can not represent an infinite number of 3's after the decimal point.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_new10">
+            <p>3-9-10: What are the values of x, y, and z after the following code executes?</p>
+<blockquote>
+<div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="o">;</span>
+<span class="n">x</span><span class="o">++;</span>
+</pre></div>
+</div>
+</div></blockquote>
+
+            <li data-component="answer"  id="qve_new10_opt_a">(A) x = 3, y = 3, z = 9</li><li data-component="feedback" id="qve_new10_opt_a">This would be true if the x++ wasn't there.</li>
+            
+            <li data-component="answer" data-correct id="qve_new10_opt_b">(B) x = 4, y = 3, z = 9</li><li data-component="feedback" id="qve_new10_opt_b">Fist x is set to 3, then y is also set to 3, and next z is set to 3 * 3 = 9.  Finally x is incremented to 4.</li>
+            
+            <li data-component="answer"  id="qve_new10_opt_c">(C) x = 0, y = 3, z = 0</li><li data-component="feedback" id="qve_new10_opt_c">You might think that y = x means that y takes x's value, but y is set to a copy of x's value.</li>
+            
+            <li data-component="answer"  id="qve_new10_opt_d">(D) x = 4, y = 4, z = 9</li><li data-component="feedback" id="qve_new10_opt_d">You might think that y = x means that if x is incremented that y will also be incremented, but y = x only sets y to a copy of x's value and doesn't keep them in sync.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_old6">
+            3-9-11: Which of the following is the decimal value for the binary number 1001011?
+            <li data-component="answer" data-correct id="qve_old6_opt_a">(A) 75</li><li data-component="feedback" id="qve_old6_opt_a">To convert from binary to decimal use the powers of 2 starting with 2 raised to the 0 power which is 1.  So 1001011 is 1 + 2 + 8 + 64 = 75.</li>
+            
+            <li data-component="answer"  id="qve_old6_opt_b">(B) 67</li><li data-component="feedback" id="qve_old6_opt_b">This would be true if the binary number was 1000011.  This would be 1 + 2 + 64 = 67.</li>
+            
+            <li data-component="answer"  id="qve_old6_opt_c">(C) 150</li><li data-component="feedback" id="qve_old6_opt_c">This would be true if we started at the right hand side with 2, but we start with 1 (2 raised to the 0 power is 1).</li>
+            
+            <li data-component="answer"  id="qve_old6_opt_d">(D) 43</li><li data-component="feedback" id="qve_old6_opt_d">This would be true if the binary number was 101011.</li>
+            
+            <li data-component="answer"  id="qve_old6_opt_e">(E) 74</li><li data-component="feedback" id="qve_old6_opt_e">This would be true if the binary number was 1001010.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_old7">
+            3-9-12: How many bits would you need to represent 25 distinct values?
+            <li data-component="answer" data-correct id="qve_old7_opt_a">(A) 5</li><li data-component="feedback" id="qve_old7_opt_a">This would be enough to represent 32 distinct values, so that is more then enough to represent 25 distinct values.</li>
+            
+            <li data-component="answer"  id="qve_old7_opt_b">(B) 4</li><li data-component="feedback" id="qve_old7_opt_b">This would only be enough to represent 16 distinct values (2 to the 4th).</li>
+            
+            <li data-component="answer"  id="qve_old7_opt_c">(C) 6</li><li data-component="feedback" id="qve_old7_opt_c">This is more than you need.  2 to the 6th is 64.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_old8">
+            3-9-13: What is the hexadecimal equivalent of the following binary number: 110100?
+            <li data-component="answer" data-correct id="qve_old8_opt_a">(A) 34</li><li data-component="feedback" id="qve_old8_opt_a">To convert from binary to hexadecimal (base 16) convert groups of 4 bits from the right to the left to hexadecimal.  The rightmost 4 bits is 0100 which is 4 in hex.  The leftmost 4 bits would be 0011 which is 3 in hex.</li>
+            
+            <li data-component="answer"  id="qve_old8_opt_b">(B) 52</li><li data-component="feedback" id="qve_old8_opt_b">This would be correct if the question had asked for the value in decimal, but it asked for it in hexadecimal (base 16).</li>
+            
+            <li data-component="answer"  id="qve_old8_opt_c">(C) 64</li><li data-component="feedback" id="qve_old8_opt_c">This would be correct if the question had asked for the value in octal, but it asked for it in hexadecimal (base 16).</li>
+            
+            <li data-component="answer"  id="qve_old8_opt_d">(D) 6</li><li data-component="feedback" id="qve_old8_opt_d">This is the length of this binary number.  Can you convert it to hexadecimal (base 16)?</li>
+            
+            <li data-component="answer"  id="qve_old8_opt_e">(E) B4</li><li data-component="feedback" id="qve_old8_opt_e">This would be correct if the binary number was 10110100 instead of 110100.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qve_9">
+            3-9-14: What is the binary equivalent of the following base 10 number: 187?
+            <li data-component="answer"  id="qve_9_opt_a">(A) 11011101</li><li data-component="feedback" id="qve_9_opt_a">This has an extra one in the front.</li>
+            
+            <li data-component="answer"  id="qve_9_opt_b">(B) 1011001</li><li data-component="feedback" id="qve_9_opt_b">The decimal value of 1011001 is (1*64)+ (0 * 32) + (1 * 16) + (1 * 8) + (0 * 4) + (0 * 2) + (1*1) = which is 89 base 10 (decimal)</li>
+            
+            <li data-component="answer" data-correct id="qve_9_opt_c">(C) 10111011</li><li data-component="feedback" id="qve_9_opt_c">Using base 2 the value of 10111011 is:  128+32+16+8+2+1 = 187</li>
+            
+
+            </ul>
+            </div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Common Mistakes' data-toggle="tooltip">
+    <a href="commonMistakes.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="commonMistakes.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Medium Multiple Choice Questions' data-toggle="tooltip" >
+    <a href="vMedMC.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="vMedMC.html" >Next Section - Medium Multiple Choice Questions</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 barb.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.5.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

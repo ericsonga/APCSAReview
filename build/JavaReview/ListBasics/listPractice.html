@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Code Practice with ArrayLists &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/livecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="../index.html" />
+    <link rel="next" title="Mixed Up Code Practice" href="ListParsonsPractice.html" />
+    <link rel="prev" title="List - Summary" href="listSummary.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'JavaReview';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'javareview';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Java Review</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/JavaReview/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/JavaReview/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Code Practice with ArrayLists</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - List - Summary" data-toggle="tooltip">
+    <a href="listSummary.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Mixed Up Code Practice' data-toggle="tooltip" >
+    <a href="ListParsonsPractice.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="code-practice-with-arraylists">
+<h1>Code Practice with ArrayLists<a class="headerlink" href="#code-practice-with-arraylists" title="Permalink to this headline">¶</a></h1>
+<div id='ch8Ex1' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Fix the following code so that it compiles. The code should instantiate an ArrayList of Strings <code class="docutils literal"><span class="pre">names</span></code> and fill it with the Strings from the array <code class="docutils literal"><span class="pre">friends</span></code>. It should then print out <code class="docutils literal"><span class="pre">names</span></code>.</p>
+
+<div data-childcomponent="ch8Ex1q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex1q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.Arraylist;
+
+public class Test
+{
+    public static void main(String[] args)
+    {
+        List<String> names = new ArrayList<String>();
+        String[] friends = {"Sam", "Jessica", "Mark", "Alexis"};
+        for (int i = 0; i <= friends.length; i++)
+        {
+            names.add(friends[i]);
+        }
+        System.out.println(names);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>In line 2, capitalize the <code class="docutils literal"><span class="pre">l</span></code> in <code class="docutils literal"><span class="pre">Arraylist</span></code> so that the proper library is imported.  In line 10, change the terminating condition to <code class="docutils literal"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">friends.length</span></code> so that you don&#8217;t go out of bounds of the array.</p>
+
+<div data-childcomponent="ch8Ex1a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex1a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void main(String[] args)
+    {
+        List<String> names = new ArrayList<String>();
+        String[] friends = {"Sam", "Jessica", "Mark", "Alexis"};
+        for (int i = 0; i < friends.length; i++)
+        {
+            names.add(friends[i]);
+        }
+        System.out.println(names);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex1d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex1d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex1d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex1d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex1d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex1d" onclick="javareview_ch8Ex1d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex1d']").attr('data-disqus-identifier', 'javareview_ch8Ex1d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex2' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Fix the following class so that it will compile and the method <code class="docutils literal"><span class="pre">reverse</span></code> will return an ArrayList containing Integers in the reversed order of the ArrayList parameter <code class="docutils literal"><span class="pre">list</span></code>. Hint: for this solution, only one line needs to be added to the for-loop inside of the <code class="docutils literal"><span class="pre">reverse</span></code> method.</p>
+
+<div data-childcomponent="ch8Ex2q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex2q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.list;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static ArrayList reverse(ArrayList<Integer> list)
+    {
+        ArrayList<int> reversed = new ArrayList<int>();
+        for (Integer element: list)
+        {
+
+        }
+        return reversed;
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 5, 7, 9, -2, 3, 2};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        ArrayList<Integer> result = reverse(values);
+        System.out.println("Expected Result:\t [2, 3, -2, 9, 7, 5, 1]");
+        System.out.println("Your Result:\t\t " + result);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>In line 1, capitalize the``l`` in <code class="docutils literal"><span class="pre">list</span></code> so that the proper library is imported.  Change line 8 <code class="docutils literal"><span class="pre">int</span></code> to <code class="docutils literal"><span class="pre">Integer</span></code> because ArrayLists only store objects and int is a primitive.  Add in line 11 <code class="docutils literal"><span class="pre">reversed.add(0,</span> <span class="pre">element);</span></code> so that each element of the ArrayList <code class="docutils literal"><span class="pre">list</span></code>, the parameter, is added in front of the previously added element (thereby reversing the order).</p>
+<p>Note that there are other equally correct ways to reverse the order of the ArrayList without creating a new Array or by traversing through it backwards.</p>
+
+<div data-childcomponent="ch8Ex2a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex2a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static ArrayList reverse(ArrayList<Integer> list)
+    {
+        ArrayList<Integer> reversed = new ArrayList<Integer>();
+        for (Integer element: list)
+        {
+            reversed.add(0, element);
+        }
+        return reversed;
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 5, 7, 9, -2, 3, 2};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        ArrayList<Integer> result = reverse(values);
+        System.out.println("Expected Result:\t [2, 3, -2, 9, 7, 5, 1]");
+        System.out.println("Your Result:\t\t " + result);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex2d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex2d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex2d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex2d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex2d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex2d" onclick="javareview_ch8Ex2d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex2d']").attr('data-disqus-identifier', 'javareview_ch8Ex2d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex3' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Fix the following method <code class="docutils literal"><span class="pre">printEvenIndex</span></code> so that it will print out the Integers at even indices of the passed-in ArrayList <code class="docutils literal"><span class="pre">list</span></code>.</p>
+
+<div data-childcomponent="ch8Ex3q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex3q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void printEvenIndex(ArrayList list)
+    {
+        for (int i)
+        {
+            if (i % 2 == 1)
+            {
+                System.out.print(list.get(i) + ", ");
+            }
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 5, 7, 9, -2, 3, 2};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        System.out.println("Expected Result:\t 1, 7, -2, 2,");
+        System.out.print("Your Result:\t\t ");
+        printEvenIndex(values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>In line 8, the for loop should be written as <code class="docutils literal"><span class="pre">for</span> <span class="pre">(int</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">0;</span> <span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">list.size();</span> <span class="pre">i++)</span></code> so that the method will traverse through all elements of the ArrayList <code class="docutils literal"><span class="pre">list</span></code>.  In the line 10 conditional, it should be checking when the index, <code class="docutils literal"><span class="pre">i</span></code> is even - in other words, checking if it is divisible by 2 with no remainder: <code class="docutils literal"><span class="pre">i</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p>
+
+<div data-childcomponent="ch8Ex3a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex3a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void printEvenIndex(ArrayList list)
+    {
+        for (int i = 0; i < list.size(); i++)
+        {
+            if (i % 2 == 0)
+            {
+                System.out.print(list.get(i) + ", ");
+            }
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 5, 7, 9, -2, 3, 2};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        System.out.println("Expected Result:\t 1, 7, -2, 2,");
+        System.out.print("Your Result:\t\t ");
+        printEvenIndex(values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex3d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex3d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex3d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex3d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex3d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex3d" onclick="javareview_ch8Ex3d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex3d']").attr('data-disqus-identifier', 'javareview_ch8Ex3d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex4' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Fix the following method <code class="docutils literal"><span class="pre">printEvenElements</span></code> so that it will print out all of the even Integers that are in the passed-in ArrayList <code class="docutils literal"><span class="pre">list</span></code>.</p>
+
+<div data-childcomponent="ch8Ex4q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex4q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void printEvenElements(ArrayList list)
+    {
+        for (int i = 0; i < list.length; i++)
+        {
+            if (list.get(i) % 2 == 0)
+            {
+                System.out.print(list.get(i) + ", ");
+            }
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 44, 7, 9, -16, 3, 2};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        System.out.println("Expected Result:\t 44, -16, 2,");
+        System.out.print("Your Result:\t\t ");
+        printEvenElements(values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>In line 7, ArrayLists do not have a length property; instead, call the <code class="docutils literal"><span class="pre">size()</span></code> method to find out how long an ArrayList is.  In line 9, there must be an <code class="docutils literal"><span class="pre">(int)</span></code> cast to the get() method since <code class="docutils literal"><span class="pre">values</span></code> holds Integers.</p>
+
+<div data-childcomponent="ch8Ex4a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex4a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void printEvenElements(ArrayList list)
+    {
+        for (int i = 0; i < list.size(); i++)
+        {
+            if ((int) list.get(i) % 2 == 0)
+            {
+                System.out.print(list.get(i) + ", ");
+            }
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 44, 7, 9, -16, 3, 2};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        System.out.println("Expected Result:\t 44, -16, 2,");
+        System.out.print("Your Result:\t\t ");
+        printEvenElements(values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex4d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex4d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex4d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex4d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex4d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex4d" onclick="javareview_ch8Ex4d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex4d']").attr('data-disqus-identifier', 'javareview_ch8Ex4d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex5' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Rewrite the following code so that it fills the ArrayList <code class="docutils literal"><span class="pre">values</span></code> with the elements of the array <code class="docutils literal"><span class="pre">nums</span></code> using a for-each loop instead of a <code class="docutils literal"><span class="pre">for</span></code> loop.</p>
+
+<div data-childcomponent="ch8Ex5q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex5q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 44, 7, 9, -16, 3};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        System.out.println("Expected Result:\t [1, 44, 7, 9, -16, 3]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>In a for-each loop you specify the type of the values in the array, a name for the current value, and then a <code class="docutils literal"><span class="pre">:</span></code> and then the name of the array.  You then want to <code class="docutils literal"><span class="pre">add</span></code> each element to the <code class="docutils literal"><span class="pre">values</span></code> ArrayList.</p>
+
+<div data-childcomponent="ch8Ex5a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex5a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 44, 7, 9, -16, 3};
+        for (int element: nums)
+        {
+            values.add(element);
+        }
+        System.out.println("Expected Result:\t [1, 44, 7, 9, -16, 3]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex5d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex5d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex5d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex5d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex5d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex5d" onclick="javareview_ch8Ex5d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex5d']").attr('data-disqus-identifier', 'javareview_ch8Ex5d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex6' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Finish the following method <code class="docutils literal"><span class="pre">sumNegVal</span></code> to return the sum of all of the negative numbers in the ArrayList <code class="docutils literal"><span class="pre">list</span></code>, the parameter.</p>
+
+<div data-childcomponent="ch8Ex6q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex6q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static int sumNegValues(ArrayList<Integer> list)
+    {
+        //code here
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {-2, 34, -11, 9, -6, 3};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        System.out.println("Expected Result:\t -19");
+        System.out.print("Your Result:\t\t ");
+        System.out.println(sumNegValues(values));
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Declare a variable to hold the <code class="docutils literal"><span class="pre">sum</span></code> and initialize it to zero.  Loop through all the values in the ArrayList.  If the current value is negative (less than 0) then add it to the <code class="docutils literal"><span class="pre">sum</span></code>.  Return the <code class="docutils literal"><span class="pre">sum</span></code>.</p>
+<blockquote>
+<div>
+<div data-childcomponent="ch8Ex6a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex6a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static int sumNegValues(ArrayList<Integer> list)
+    {
+        int sum = 0;
+        for(Integer element: list)
+        {
+            if (element < 0) {
+                sum += element;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {-2, 34, -11, 9, -6, 3};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        System.out.println("Expected Result:\t -19");
+        System.out.print("Your Result:\t\t ");
+        System.out.println(sumNegValues(values));
+    }
+}
+</textarea>
+</div>
+</div></blockquote>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex6d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex6d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex6d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex6d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex6d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex6d" onclick="javareview_ch8Ex6d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex6d']").attr('data-disqus-identifier', 'javareview_ch8Ex6d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex7' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Finish the following method &#8216;&#8217;removeLongStrings&#8217;&#8217; that checks each element of the passed in ArrayList <code class="docutils literal"><span class="pre">list</span></code> and removes any that are strictly longer than 4 characters.</p>
+
+<div data-childcomponent="ch8Ex7q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex7q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void removeLongStrings(ArrayList<String> list)
+    {
+        //code here
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<String> values = new ArrayList<String>();
+        String[] words = {"bathtub", "fish", "computer", "cat", "foo"};
+        for (int i = 0; i < words.length; i ++)
+        {
+            values.add(words[i]);
+        }
+        removeLongStrings(values);
+        System.out.println("Expected Result:\t [fish, cat, foo]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Loop through all of the elements of the ArrayList <code class="docutils literal"><span class="pre">list</span></code>. In each iteration, check if the length of each element is strictly greater <code class="docutils literal"><span class="pre">&gt;</span></code> than 4; if it is, remove that element.</p>
+
+<div data-childcomponent="ch8Ex7a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex7a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void removeLongStrings(ArrayList<String> list)
+    {
+        int count = 0;
+        while(count < list.size())
+        {
+            if (list.get(count).length() > 4)
+            {
+                list.remove(count);
+
+            }
+            count++;
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<String> values = new ArrayList<String>();
+        String[] words = {"bathtub", "fish", "computer", "cat", "foo"};
+        for (int i = 0; i < words.length; i ++)
+        {
+            values.add(words[i]);
+        }
+        removeLongStrings(values);
+        System.out.println("Expected Result:\t [fish, cat, foo]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex7d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex7d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex7d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex7d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex7d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex7d" onclick="javareview_ch8Ex7d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex7d']").attr('data-disqus-identifier', 'javareview_ch8Ex7d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex8' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Fill in the method <code class="docutils literal"><span class="pre">shiftLeftOne</span></code> below to shift all of the elements of the passed-in ArrayList <code class="docutils literal"><span class="pre">list</span></code> left by one. The original first element should be wrapped to the back of the list after the shift. Ex: {1, 2, 3, 4} should turn turn into {2, 3, 4, 1}</p>
+
+<div data-childcomponent="ch8Ex8q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex8q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void shiftLeftOne(ArrayList<Integer> list)
+    {
+        //code here
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 2, 3, 4, 5};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        shiftLeftOne(values);
+        System.out.println("Expected Result:\t [2, 3, 4, 5, 1]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Remove the first element of <code class="docutils literal"><span class="pre">list</span></code> and save it to a new variable of type <code class="docutils literal"><span class="pre">Integer</span></code>. Because of the nature of remove, everything else in the ArrayList will shift left accordingly. The only thing left to do after that is add this value to the back of the ArrayList.</p>
+
+<div data-childcomponent="ch8Ex8a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex8a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void shiftLeftOne(ArrayList<Integer> list)
+    {
+        Integer firstVal = list.remove(0);
+        list.add(firstVal);
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {1, 2, 3, 4, 5};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        shiftLeftOne(values);
+        System.out.println("Expected Result:\t [2, 3, 4, 5, 1]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex8d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex8d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex8d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex8d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex8d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex8d" onclick="javareview_ch8Ex8d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex8d']").attr('data-disqus-identifier', 'javareview_ch8Ex8d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex9' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Finish the method <code class="docutils literal"><span class="pre">moveSmallest</span></code> so that it finds the smallest value in the passed-in ArrayList <code class="docutils literal"><span class="pre">list</span></code> and moves it to the front of the list.</p>
+
+<div data-childcomponent="ch8Ex9q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex9q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void moveSmallest(ArrayList<Integer> list)
+    {
+        int smallestIndex = 0;
+        for ()
+        {
+            if ()
+            {
+                smallestIndex = i;
+            }
+        }
+        //move smallest to front
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {3, 11, 54, 7, 1, 22};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        moveSmallest(values);
+        System.out.println("Expected Result:\t [1, 3, 11, 54, 7, 22]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Fill-in the for loop so that it will traverse through the entire ArrayList. The conditional should check if the current element at index <code class="docutils literal"><span class="pre">i</span></code> is less than the element at <code class="docutils literal"><span class="pre">smallestIndex</span></code>. After the for-loop has completed, the method must remove the value at <code class="docutils literal"><span class="pre">smallestIndex</span></code> and save it to a variable, and then add it to the front of the ArrayList</p>
+
+<div data-childcomponent="ch8Ex9a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex9a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test
+{
+    public static void moveSmallest(ArrayList<Integer> list)
+    {
+        int smallestIndex = 0;
+        for (int i = 0; i < list.size(); i++)
+        {
+            if (list.get(i) < list.get(smallestIndex))
+            {
+                smallestIndex = i;
+            }
+        }
+        Integer smallest = list.remove(smallestIndex);
+        list.add(0, smallest);
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<Integer> values = new ArrayList<Integer>();
+        int[] nums = {3, 11, 54, 7, 1, 22};
+        for (int i = 0; i < nums.length; i ++)
+        {
+            values.add(nums[i]);
+        }
+        moveSmallest(values);
+        System.out.println("Expected Result:\t [1, 3, 11, 54, 7, 22]");
+        System.out.println("Your Result:\t\t " + values);
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex9d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex9d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex9d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex9d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex9d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex9d" onclick="javareview_ch8Ex9d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex9d']").attr('data-disqus-identifier', 'javareview_ch8Ex9d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+<div id='ch8Ex10' data-component="tabbedStuff" ><div data-component="tab" data-tabname="Question" >
+<p>Finish the method <code class="docutils literal"><span class="pre">findLongest</span></code> to find and return the longest String in the ArrayList of Strings <code class="docutils literal"><span class="pre">list</span></code>.</p>
+
+<div data-childcomponent="ch8Ex10q" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex10q data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+
+public class Test {
+    public static String findLongest(ArrayList<String> list)
+    {
+        //code here
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<String> values = new ArrayList<String>();
+        String[] words = {"singapore", "cattle", "metropolitan", "turnstile"};
+        for (int i = 0; i < words.length; i ++)
+        {
+            values.add(words[i]);
+        }
+        System.out.println("Expected Result:\t metropolitan");
+        System.out.print("Your Result:\t\t ");
+        System.out.println(findLongest(values));
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Answer" >
+<p>Declare a variable to hold the <code class="docutils literal"><span class="pre">longest</span></code> String. Initialize it to the empty string <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>.  Loop through all the values in the ArrayList and compare its length to the length of <code class="docutils literal"><span class="pre">longest</span></code>. Return <code class="docutils literal"><span class="pre">longest</span></code>.</p>
+
+<div data-childcomponent="ch8Ex10a" class="explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=ch8Ex10a data-lang="java"    data-timelimit=25000   data-audio=''     >
+import java.util.List;
+import java.util.ArrayList;
+public class Test {
+    public static String findLongest(ArrayList<String> list)
+    {
+        String longest = "";
+        for (String element: list)
+        {
+            if (element.length() > longest.length())
+            {
+                longest = element;
+            }
+        }
+        return longest;
+    }
+
+    public static void main(String[] args)
+    {
+        //instantiate ArrayList and fill with Integers
+        ArrayList<String> values = new ArrayList<String>();
+        String[] words = {"singapore", "cattle", "metropolitan", "turnstile"};
+        for (int i = 0; i < words.length; i ++)
+        {
+            values.add(words[i]);
+        }
+        System.out.println("Expected Result:\t metropolitan");
+        System.out.print("Your Result:\t\t ");
+        System.out.println(findLongest(values));
+    }
+}
+</textarea>
+</div>
+</div><div data-component="tab" data-tabname="Discussion" >
+<script type="text/javascript">
+    function javareview_ch8Ex10d_disqus(source) { 
+        if (window.DISQUS) {
+
+            $('#disqus_thread').insertAfter(source); //put the DIV for the Disqus box after the link
+
+            //if Disqus exists, call it's reset method with new parameters
+            DISQUS.reset({
+                reload: true,
+                config: function () {
+                    this.page.identifier = 'javareview_ch8Ex10d_' + eBookConfig.course;
+                    this.page.url = 'http://javareview_ch8Ex10d_'+eBookConfig.course+'.interactivepython.com/#!';
+                }
+            });
+
+        } else {
+            //insert a wrapper in HTML after the relevant "show comments" link
+            $('<div id="disqus_thread"></div>').insertAfter(source);
+
+            // set Disqus required vars
+            disqus_shortname = 'cslearn4u';    
+            disqus_identifier = 'javareview_ch8Ex10d_' + eBookConfig.course;
+            disqus_url = 'http://javareview_ch8Ex10d_'+eBookConfig.course+'.interactivepython.com/#!';
+
+            //append the Disqus embed script to HTML
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            $('head').append(dsq);
+
+        }
+    }
+</script>
+
+<a href="#disqus_thread" class='disqus_thread_link' data-disqus-identifier="javareview_ch8Ex10d" onclick="javareview_ch8Ex10d_disqus(this);">Show Comments</a>
+<script type='text/javascript'>
+    $("a[data-disqus-identifier='javareview_ch8Ex10d']").attr('data-disqus-identifier', 'javareview_ch8Ex10d_' + eBookConfig.course);
+</script>
+</div>
+    </div>
+
+</div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - List - Summary' data-toggle="tooltip">
+    <a href="listSummary.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="listSummary.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Mixed Up Code Practice' data-toggle="tooltip" >
+    <a href="ListParsonsPractice.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="ListParsonsPractice.html" >Next Section - Mixed Up Code Practice</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 barb.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.5.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
