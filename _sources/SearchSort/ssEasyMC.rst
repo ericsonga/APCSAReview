@@ -28,7 +28,7 @@ These problems are easier than most of those that you will usually see on the AP
       {
         for (int j = 0; j < elements.length; j++)
         {
-           if (elements[j].equals(target))
+           if (elements[j] == target)
            {
               return j;
            } 
@@ -59,7 +59,7 @@ You can step through the code above by clicking on the following `Ex-12-7-1 <htt
       {
         for (int j = 0; j < elements.length; j++)
         {
-           if (elements[j].equals(target))
+           if (elements[j] == target)
            {
               return j;
            } 
