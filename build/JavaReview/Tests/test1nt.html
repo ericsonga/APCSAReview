@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Exam 1 for the AP CS A Exam (not timed) &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/livecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="../index.html" />
+    <link rel="next" title="Exam 2 for the AP CS A Exam (not timed)" href="test2nt.html" />
+    <link rel="prev" title="Preparing for the AP CS A Exam" href="testPractice.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'JavaReview';
+  eBookConfig.logLevel = 10;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = true;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'javareview';
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Java Review</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/JavaReview/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- user account dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-user" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><span class='loggedinuser'></span></li>
+            <li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/initiateGroup' id="joinGroupLink">Join a Study Group</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/schedule' id="groupScheduleLink">Group Schedule</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/newschedule' id="newChapterLink">Schedule New Chapter</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/mygroup/manageGroup' id="manageGroupLink">Manage Group</a></li>
+			<li class="divider"></li>
+            <li><a href='http://127.0.0.1:8000/runestone/admin/index'>Instructor's Page</a></li>
+            <li><a href='http://127.0.0.1:8000/runestone/assignments/index'>Progress Page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/profile" id="profilelink">Edit Profile</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/change_password" id="passwordlink">Change Password</a></li>
+            <li><a href="http://127.0.0.1:8000/runestone/default/user/register" id="registerlink">Register</a></li>
+            <li class='loginout'><a href='#'>Login</a></li> <!-- correct link populated by addNavbarLoginLink() -->
+          </ul>
+        </li>
+        <!-- end user account dropdown -->
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/JavaReview/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Exam 1 for the AP CS A Exam (not timed)</a></li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - Preparing for the AP CS A Exam" data-toggle="tooltip">
+    <a href="testPractice.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Exam 2 for the AP CS A Exam (not timed)' data-toggle="tooltip" >
+    <a href="test2nt.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="exam-1-for-the-ap-cs-a-exam-not-timed">
+<h1>Exam 1 for the AP CS A Exam (not timed)<a class="headerlink" href="#exam-1-for-the-ap-cs-a-exam-not-timed" title="Permalink to this headline">¶</a></h1>
+<p>The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.</p>
+
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_1">
+            <p>14-2-1: Which of the following is equivalent to the statement below? Recall DeMorgan&#8217;s Law.</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">!((</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="o">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">))</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_1_opt_a">(A) (a >= b) && (b >= 0)</li><li data-component="feedback" id="qtnt1_1_opt_a">The "!" would negate everything inside the parentheses. There are a few mistakes here. The opposite of <= is not >= and the opposite of AND is OR.</li>
+            
+            <li data-component="answer"  id="qtnt1_1_opt_b">(B) !(a > b) || !(b >= 0)</li><li data-component="feedback" id="qtnt1_1_opt_b">Both of the expressions inside the parentheses were altered. If we wanted to distribute the negation symbol "!" then we would leave the expressions inside the parentheses alone.</li>
+            
+            <li data-component="answer"  id="qtnt1_1_opt_c">(C) (a >= b) || (b > 0)</li><li data-component="feedback" id="qtnt1_1_opt_c">Negating less than or equals (<=) results in greater than (>). In addition, less than (<) in the second argument should have been changed to greater than or equals (>=).</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_1_opt_d">(D) (a > b) || (b >= 0)</li><li data-component="feedback" id="qtnt1_1_opt_d">Using DeMorgan's Law we negate everything.  This includes our AND statement (which becomes an OR) and everything inside both parentheses.</li>
+            
+            <li data-component="answer"  id="qtnt1_1_opt_e">(E) (a > b) && (b >= 0)</li><li data-component="feedback" id="qtnt1_1_opt_e">Here we forgot to negate our AND (&&) into an OR (||).</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_2">
+            <p>14-2-2: Consider the following recursive method. What does <code class="docutils literal"><span class="pre">mystery(4)</span></code> return?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">mystery</span><span class="o">(</span><span class="kt">int</span> <span class="n">m</span><span class="o">)</span>
+<span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">m</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>
+  <span class="o">{</span>
+      <span class="k">return</span> <span class="mi">3</span><span class="o">;</span>
+  <span class="o">}</span> <span class="k">else</span>
+  <span class="o">{</span>
+      <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">mystery</span><span class="o">(</span><span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_2_opt_a">(A) 9</li><li data-component="feedback" id="qtnt1_2_opt_a">This would be true if we called mystery(2).</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_2_opt_b">(B) 81</li><li data-component="feedback" id="qtnt1_2_opt_b">The argument is 4 so will have 4 recursive calls and then return 3 when we get to mystery(1). Each call will multiply our result by 3, so you can think of this as 3 raised to the 4th power (or 3 * 3 * 3 * 3 = 81).</li>
+            
+            <li data-component="answer"  id="qtnt1_2_opt_c">(C) 3</li><li data-component="feedback" id="qtnt1_2_opt_c">This value is returned when we call mystery(1), since 1 is the base case and doesn't result in a recursive call.</li>
+            
+            <li data-component="answer"  id="qtnt1_2_opt_d">(D) 243</li><li data-component="feedback" id="qtnt1_2_opt_d">This value would be returned from mystery(5).</li>
+            
+            <li data-component="answer"  id="qtnt1_2_opt_e">(E) 27</li><li data-component="feedback" id="qtnt1_2_opt_e">This value would be returned from mystery(3).</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_3">
+            <p>14-2-3: In which of these cases will an ascending order (from smallest to largest) insertion sort have the fastest run time?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">I</span><span class="o">.</span>   <span class="n">An</span> <span class="n">array</span> <span class="n">that</span> <span class="n">is</span> <span class="n">in</span> <span class="n">reverse</span> <span class="nf">order</span> <span class="o">(</span><span class="n">from</span> <span class="n">largest</span> <span class="n">to</span> <span class="n">smallest</span><span class="o">).</span>
+<span class="n">II</span><span class="o">.</span>  <span class="n">An</span> <span class="n">array</span> <span class="n">that</span> <span class="n">is</span> <span class="n">in</span> <span class="n">sorted</span> <span class="n">order</span> <span class="nf">already</span> <span class="o">(</span><span class="n">from</span> <span class="n">smallest</span> <span class="n">to</span> <span class="n">largest</span><span class="o">).</span>
+<span class="n">III</span><span class="o">.</span> <span class="n">An</span> <span class="n">array</span> <span class="n">that</span> <span class="n">is</span> <span class="n">in</span> <span class="n">random</span> <span class="nf">order</span> <span class="o">(</span><span class="n">not</span> <span class="n">already</span> <span class="n">sorted</span><span class="o">).</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="qtnt1_3_opt_a">(A) II only</li><li data-component="feedback" id="qtnt1_3_opt_a">If an array is already sorted from smallest to largest then we do not need to move anything in the array and we would only need to go through each element at most once, so this is fastest run time for insertion sort.</li>
+            
+            <li data-component="answer"  id="qtnt1_3_opt_b">(B) I only</li><li data-component="feedback" id="qtnt1_3_opt_b">An array in reverse order is actually the worst run time for insertion sort because we would need to move everything to make it in order from smallest to largest.</li>
+            
+            <li data-component="answer"  id="qtnt1_3_opt_c">(C) I and II only</li><li data-component="feedback" id="qtnt1_3_opt_c">II is correct, but number I will actually be the worst run time for insertion sort since all values will have to be moved each time through the loop.</li>
+            
+            <li data-component="answer"  id="qtnt1_3_opt_d">(D) II and III only</li><li data-component="feedback" id="qtnt1_3_opt_d">While II is the correct anwser, an array in random order will have average run time.</li>
+            
+            <li data-component="answer"  id="qtnt1_3_opt_e">(E) III only</li><li data-component="feedback" id="qtnt1_3_opt_e">When the array is not sorted the run time will be average.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_4">
+            <p>14-2-4: Which of these loops will output <code class="docutils literal"><span class="pre">01234</span></code>?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+<span class="c1">//Loop I</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">max</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+<span class="o">{</span>
+   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+
+
+<span class="c1">//Loop II</span>
+<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">max</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">j</span><span class="o">);</span>
+   <span class="n">j</span><span class="o">++;</span>
+<span class="o">}</span>
+
+
+<span class="c1">//Loop III</span>
+<span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">max</span><span class="o">;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">--)</span>
+<span class="o">{</span>
+   <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_4_opt_a">(A) I only</li><li data-component="feedback" id="qtnt1_4_opt_a">Loop I will produce this output, but it is not the only loop that will output these values.</li>
+            
+            <li data-component="answer"  id="qtnt1_4_opt_b">(B) II only</li><li data-component="feedback" id="qtnt1_4_opt_b">Loop II will produce this output, but it is not the only loop that will output these values.</li>
+            
+            <li data-component="answer"  id="qtnt1_4_opt_c">(C) II and III only</li><li data-component="feedback" id="qtnt1_4_opt_c">Loop II is correct, but loop III will produce the reverse output, 43210.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_4_opt_d">(D) I and II only</li><li data-component="feedback" id="qtnt1_4_opt_d">Both of these loops will have the correct output. They iterate (and print each value) starting from 0 until the max value which we defined earlier in our code.</li>
+            
+            <li data-component="answer"  id="qtnt1_4_opt_e">(E) I, II, and III</li><li data-component="feedback" id="qtnt1_4_opt_e">While loop I and II will produce the correct output, loop III will actually produce the reverse of the correct output.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_5">
+            <p>14-2-5: Consider the following block of code. What are the first and last numbers printed after running the code?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">15</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="n">value</span><span class="o">++;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_5_opt_a">(A) First: 15 Last: 29</li><li data-component="feedback" id="qtnt1_5_opt_a">We add 1 to value before actually printing it, so the first value printed will be 16. The last time through the loop the value will be 29 (less than 30) but then the code will add one so it will print 30.</li>
+            
+            <li data-component="answer"  id="qtnt1_5_opt_b">(B) First: 15 Last: 30</li><li data-component="feedback" id="qtnt1_5_opt_b">We add 1 to value before actually printing it, so the first value printed will be 16.</li>
+            
+            <li data-component="answer"  id="qtnt1_5_opt_c">(C) First: 16 Last: 29</li><li data-component="feedback" id="qtnt1_5_opt_c">The last time through the loop the value will be 29 (less than 30) but then the code will add one so it will print 30.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_5_opt_d">(D) First: 16 Last: 30</li><li data-component="feedback" id="qtnt1_5_opt_d">The code adds one to value before the value is printed so 16 will be the first value printed.   The last time through the loop the value will be 29 (less than 30) but then the code will add one so it will print 30.</li>
+            
+            <li data-component="answer"  id="qtnt1_5_opt_e">(E) First: 16 Last: 28</li><li data-component="feedback" id="qtnt1_5_opt_e">The last time through the loop the value will be 29 (less than 30) but then the code will add one so it will print 30.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_6">
+            <p>14-2-6: Consider the following block of code. What value is returned from <code class="docutils literal"><span class="pre">solution(5)</span></code>?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">int</span> <span class="nf">solution</span><span class="o">(</span><span class="kt">int</span> <span class="n">limit</span><span class="o">)</span>
+<span class="o">{</span>
+  <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">outside</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">outside</span> <span class="o">&lt;=</span> <span class="n">limit</span><span class="o">;</span> <span class="n">outside</span><span class="o">++)</span>
+  <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">middle</span> <span class="o">&lt;=</span> <span class="n">limit</span><span class="o">;</span> <span class="n">middle</span><span class="o">++)</span>
+      <span class="o">{</span>
+          <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">inside</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">inside</span> <span class="o">&lt;=</span> <span class="n">limit</span><span class="o">;</span> <span class="n">inside</span><span class="o">++)</span>
+          <span class="o">{</span>
+              <span class="n">s</span><span class="o">++;</span>
+          <span class="o">}</span>
+      <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">s</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_6_opt_a">(A) 25</li><li data-component="feedback" id="qtnt1_6_opt_a">This would be correct if we only had one inner for loop, but there are two.</li>
+            
+            <li data-component="answer"  id="qtnt1_6_opt_b">(B) 15</li><li data-component="feedback" id="qtnt1_6_opt_b">The outer loop will execute 5 times, each time the outer loop executes the middle loop will execute 5 times, and each time the middle loop executes the inner loop will execute 5 times.  So the answer is 5 * 5 * 5 = 125.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_6_opt_c">(C) 125</li><li data-component="feedback" id="qtnt1_6_opt_c">The number of times a loop executes is (largest value in loop - smallest value in loop + 1) each loop executes (5 - 1 + 1 = 5) times.  When you have nested loops you multiply the number of times each loop executes.  So the result is 5 for the outer loop * 5 for the middle loop * 5 for the innermost loop.</li>
+            
+            <li data-component="answer"  id="qtnt1_6_opt_d">(D) 64</li><li data-component="feedback" id="qtnt1_6_opt_d">This would be correct if we called solution(4) or the conditions to stop each loop were just less than, and not less than or equal to.</li>
+            
+            <li data-component="answer"  id="qtnt1_6_opt_e">(E) 625</li><li data-component="feedback" id="qtnt1_6_opt_e">If you got this value you probably made one extra call to the each of the loops, notice that the loops start at 1 and not 0.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_7">
+            <p>14-2-7: Given that both <code class="docutils literal"><span class="pre">count</span></code> and <code class="docutils literal"><span class="pre">n</span></code> are integer values, which of the following statements is true about both code blocks?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// Code block I</span>
+<span class="k">for</span> <span class="o">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">;</span> <span class="n">count</span><span class="o">++)</span>
+<span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">//Code block II</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">count</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_7_opt_a">(A) I and II are exactly equivalent for all input values n.</li><li data-component="feedback" id="qtnt1_7_opt_a">I and II will never be equivalent because because count is incremented after it is printed in Code block I and before it is printed in Code block II.</li>
+            
+            <li data-component="answer"  id="qtnt1_7_opt_b">(B) I and II are only equivalent when n is an even number.</li><li data-component="feedback" id="qtnt1_7_opt_b">I and II are not equivalent when n is even.</li>
+            
+            <li data-component="answer"  id="qtnt1_7_opt_c">(C) I and II are only equivalent when n = 0</li><li data-component="feedback" id="qtnt1_7_opt_c">When n = 0, Code block I will print out 0, while Code block 2 will print out 1.</li>
+            
+            <li data-component="answer"  id="qtnt1_7_opt_d">(D) I and II are equivalent for all values except when n = 0</li><li data-component="feedback" id="qtnt1_7_opt_d">The code blocks never output the same value.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_7_opt_e">(E) I and II are never going to have the exact same outputs.</li><li data-component="feedback" id="qtnt1_7_opt_e">I and II will never be equivalent because count is incremented after it is printed in Code block I and before it is printed in Code block II.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_8">
+            <p>14-2-8: Consider the following class declarations. Which statements are true?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span>
+ <span class="o">{</span>
+  <span class="cm">/* Some code */</span>
+ <span class="o">}</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span>
+ <span class="o">{</span>
+    <span class="cm">/* Some code */</span>
+ <span class="o">}</span>
+
+<span class="n">I</span><span class="o">.</span> <span class="n">Cat</span> <span class="n">inherits</span> <span class="n">the</span> <span class="n">constructors</span> <span class="n">of</span> <span class="n">Animal</span>
+<span class="n">II</span><span class="o">.</span> <span class="n">Cat</span> <span class="n">cannot</span> <span class="n">add</span> <span class="k">new</span> <span class="n">methods</span> <span class="n">and</span> <span class="kd">private</span> <span class="n">instance</span> <span class="n">variables</span> <span class="n">that</span> <span class="n">Animal</span> <span class="n">does</span> <span class="n">not</span> <span class="n">have</span><span class="o">.</span>
+<span class="n">III</span><span class="o">.</span> <span class="n">Cat</span> <span class="n">can</span> <span class="n">override</span> <span class="n">existing</span> <span class="kd">public</span> <span class="n">methods</span> <span class="n">of</span> <span class="n">Animal</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_8_opt_a">(A) I only</li><li data-component="feedback" id="qtnt1_8_opt_a">A subclass needs to specify its own constructors.</li>
+            
+            <li data-component="answer"  id="qtnt1_8_opt_b">(B) II only</li><li data-component="feedback" id="qtnt1_8_opt_b">A subclass has the ability to add new methods and variables that are unique to it (meaning its parent class dosen't contain them)</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_8_opt_c">(C) III only</li><li data-component="feedback" id="qtnt1_8_opt_c">Subclasses can overide public methods from their parent classes to specialize behavior.</li>
+            
+            <li data-component="answer"  id="qtnt1_8_opt_d">(D) I and II</li><li data-component="feedback" id="qtnt1_8_opt_d">Neither of these statements are true.</li>
+            
+            <li data-component="answer"  id="qtnt1_8_opt_e">(E) II and III</li><li data-component="feedback" id="qtnt1_8_opt_e">Statement III is correct, but not statement II.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_9">
+            <p>14-2-9: Consider the following code. What is the maximum amount of times that <code class="docutils literal"><span class="pre">HELLO</span></code> could possibly be printed?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+<span class="o">{</span>
+   <span class="k">if</span> <span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">someValue</span><span class="o">)</span>
+   <span class="o">{</span>
+     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;HELLO&quot;</span><span class="o">)</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_9_opt_a">(A) k</li><li data-component="feedback" id="qtnt1_9_opt_a">This would be the case if i had the initial value 1 and arr[i] < someValue would be true for all i values.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_9_opt_b">(B) k + 1</li><li data-component="feedback" id="qtnt1_9_opt_b">If arr[i] < someValue for all i from 0 to k, HELLO will be printed on each iteration of the for loop. The number of times a loop executes is the biggest value in the loop - the smallest value in the loop + 1 (k - 0 + 1 is k + 1).</li>
+            
+            <li data-component="answer"  id="qtnt1_9_opt_c">(C) k - 1</li><li data-component="feedback" id="qtnt1_9_opt_c">This would be the case if i had the initial value 2 and arr[i] < someValue would be true for all i values.</li>
+            
+            <li data-component="answer"  id="qtnt1_9_opt_d">(D) 1</li><li data-component="feedback" id="qtnt1_9_opt_d">This would be the case if only one element in the array would fulfill the condition that arr[i] < someValue.</li>
+            
+            <li data-component="answer"  id="qtnt1_9_opt_e">(E) 0</li><li data-component="feedback" id="qtnt1_9_opt_e">This is the minimum number of times that HELLO could be executed.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_10">
+            <p>14-2-10: When will the method <code class="docutils literal"><span class="pre">stringRecursion</span></code> produce a run time error?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">stringRecursion</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span>
+<span class="o">{</span>
+
+  <span class="k">if</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="o">)</span>
+  <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="n">stringRecursion</span><span class="o">(</span><span class="n">s</span> <span class="o">+</span> <span class="s">&quot;*&quot;</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_10_opt_a">(A) It will never produce a run time error.</li><li data-component="feedback" id="qtnt1_10_opt_a">Since there is no terminating condition surrounding our recursive method call (because the call lies outside of the if statement), it will keep doing recursive calls until we eventually get a run time error.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_10_opt_b">(B) It will always produce a run time error.</li><li data-component="feedback" id="qtnt1_10_opt_b">Since there is no statement that terminates the recursive call to stringRecursion (the length of the string s will increase until it is greater than 16, but the recursive call will keep happening because the recursive call is outside the if statement) the computer will keep doing recurisve calls until it runs out of memory and a run time error will happen.</li>
+            
+            <li data-component="answer"  id="qtnt1_10_opt_c">(C) Only when the length of the input string is greater than or equal to 16.</li><li data-component="feedback" id="qtnt1_10_opt_c">Since the recursive call is outside the condition and the conditional doesn't include a return then this will result in infinite recursion and eventually a run time error.</li>
+            
+            <li data-component="answer"  id="qtnt1_10_opt_d">(D) Only when an empty string is input.</li><li data-component="feedback" id="qtnt1_10_opt_d">The length of the string will not matter in this case because the recursive call to stringRecursion will always happen, since the recursive call lies outside the body of the conditional. The string length will only determine if the string s is printed out to the console or not.</li>
+            
+            <li data-component="answer"  id="qtnt1_10_opt_e">(E) Whenever the input string length is less than 16.</li><li data-component="feedback" id="qtnt1_10_opt_e">We will get run time errors regardless of the length of the string s. This is due to the fact that the recursive call lies outside the body of the conditional. If the length of the string s is less than 16 then we will get something printed out to the console until the length of s becomes greater than 16, and then we will continue in a infinite recursion.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_11">
+            <p>14-2-11: Consider the following interface and class definitions. Which of I, II and III below would cause an error when used in place of the missing code in the main method?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">A</span>
+<span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">method1</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">B</span> <span class="kd">implements</span> <span class="n">A</span>
+<span class="o">{</span>
+    <span class="c1">// Instance variables and other methods not shown</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method1</span><span class="o">()</span>
+    <span class="o">{</span>
+      <span class="cm">/* implementation not shown */</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">C</span> <span class="kd">extends</span> <span class="n">B</span>
+<span class="o">{</span>
+  <span class="c1">//Instance variables and other methods not shown</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method2</span><span class="o">(</span><span class="n">C</span> <span class="n">o</span><span class="o">)</span>
+  <span class="o">{</span>
+     <span class="cm">/* implementation not shown */</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span>
+  <span class="o">{</span>
+    <span class="n">C</span> <span class="n">objectC</span> <span class="o">=</span> <span class="k">new</span> <span class="n">C</span><span class="o">();</span>
+    <span class="n">B</span> <span class="n">objectB</span> <span class="o">=</span> <span class="k">new</span> <span class="n">B</span><span class="o">();</span>
+    <span class="c1">// Missing code</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">I</span> <span class="n">objectC</span><span class="o">.</span><span class="na">method1</span><span class="o">();</span>
+<span class="n">II</span> <span class="n">objectB</span><span class="o">.</span><span class="na">method2</span><span class="o">(</span><span class="n">objectC</span><span class="o">);</span>
+<span class="n">III</span> <span class="n">objectC</span><span class="o">.</span><span class="na">method2</span><span class="o">(</span><span class="n">objectB</span><span class="o">);</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_11_opt_a">(A) I only</li><li data-component="feedback" id="qtnt1_11_opt_a">This method call compiles because class C inherits all the public methods in class B. This will not produce an error.</li>
+            
+            <li data-component="answer"  id="qtnt1_11_opt_b">(B) II only</li><li data-component="feedback" id="qtnt1_11_opt_b">Method II will produce a compile time error because class B (the superclass) does not inherit the methods of class C due to the fact that class C is its subclass. But, it is not the only call that will result in a compile time error.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_11_opt_c">(C) II and III only</li><li data-component="feedback" id="qtnt1_11_opt_c">Method II will produce a compile time error because class B (the superclass) does not inherit the methods of class C due to the fact that class C is its subclass. Method III will produce an error because of the parameter it takes in. objectB is not a class C type object which is what the method definition for method III required.</li>
+            
+            <li data-component="answer"  id="qtnt1_11_opt_d">(D) III only</li><li data-component="feedback" id="qtnt1_11_opt_d">This method produces a compile time error, but method II will also produce a compile time error.</li>
+            
+            <li data-component="answer"  id="qtnt1_11_opt_e">(E) I, II and III</li><li data-component="feedback" id="qtnt1_11_opt_e">Methods II and III will both produce compile time errors, but method I works because class C inherits all the public methods of class B.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_12">
+            <p>14-2-12: Which of these declarations will <em>not</em> cause an error?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">stringList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+<span class="n">II</span> <span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">intList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;();</span>
+<span class="n">III</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">stringList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_12_opt_a">(A) I only</li><li data-component="feedback" id="qtnt1_12_opt_a">Because List is an abstract class you can not create a new object of the type List.</li>
+            
+            <li data-component="answer"  id="qtnt1_12_opt_b">(B) II only</li><li data-component="feedback" id="qtnt1_12_opt_b">The type parameter in a generic ArrayList must be a class type, not a primitive type. int is a primitive type.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_12_opt_c">(C) III only</li><li data-component="feedback" id="qtnt1_12_opt_c">Since an ArrayList is a List (implements the List interface), we can declare an ArrayList object as a List object.  This is called upcasting since we are casting it to the parent type.</li>
+            
+            <li data-component="answer"  id="qtnt1_12_opt_d">(D) II and III</li><li data-component="feedback" id="qtnt1_12_opt_d">III is correct, but II will cause a compile time error since we cannot use a primitive (int) as the type parameter in a generic ArrayList.</li>
+            
+            <li data-component="answer"  id="qtnt1_12_opt_e">(E) I and II</li><li data-component="feedback" id="qtnt1_12_opt_e">Both of these solutions will cause an error.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_13">
+            <p>14-2-13: What of the following is true about class <code class="docutils literal"><span class="pre">A</span></code> below?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">A</span>
+<span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="n">v1</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="n">v2</span><span class="o">;</span>
+
+  <span class="c1">//methods of the class</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_13_opt_a">(A) In a program that uses A, more than one instance (object) of type A can be created.</li><li data-component="feedback" id="qtnt1_13_opt_a">Instances of abstract classes cannot be created.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_13_opt_b">(B) If a program has an object of type A that it calls methods on, then the class A must have a subclass that is not abstract.</li><li data-component="feedback" id="qtnt1_13_opt_b">Abstract classes can not be instantiated, so if a program has an object of type A the class A must have a subclass that is not abstract.</li>
+            
+            <li data-component="answer"  id="qtnt1_13_opt_c">(C) The class A needs to have a constructor that takes two parameters in order to initialize v1 and v2.</li><li data-component="feedback" id="qtnt1_13_opt_c">The fields v1 and v2 could be initiliazed in a default constructor that takes in no parameters.</li>
+            
+            <li data-component="answer"  id="qtnt1_13_opt_d">(D) Any program that uses class A will have an error since abstract classes cannot contain public instance variables.</li><li data-component="feedback" id="qtnt1_13_opt_d">An abstract class can contain any number of public, private, and protected instance variables.</li>
+            
+            <li data-component="answer"  id="qtnt1_13_opt_e">(E) One or more methods in A must be declared abstract.</li><li data-component="feedback" id="qtnt1_13_opt_e">The purpose behind abstract classes is having a class that cannot be instantiated. An abstract class is not required to have any abstract methods.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_14">
+            <p>14-2-14: Suppose that the following method takes in a two dimensional array called <code class="docutils literal"><span class="pre">matrix</span></code>. After the method call <code class="docutils literal"><span class="pre">printMatrix(matrix)</span></code> what will the output be? Possible options are listed below the method definition.</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="cm">/* assume that matrix has the following values */</span>
+<span class="mi">7654</span>
+<span class="mi">3210</span>
+<span class="mi">4567</span>
+<span class="mo">0123</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printMatrix</span><span class="o">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix</span><span class="o">)</span>
+<span class="o">{</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+  <span class="o">{</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">;</span> <span class="n">t</span><span class="o">++)</span>
+    <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">matrix</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">t</span><span class="o">]);</span>
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">Possible</span> <span class="n">output</span><span class="o">:</span>
+
+<span class="n">I</span><span class="o">.</span>
+<span class="mi">7654</span>
+<span class="mi">3210</span>
+<span class="mi">4567</span>
+<span class="mo">0123</span>
+
+<span class="n">II</span><span class="o">.</span>
+<span class="mi">7</span>
+<span class="mi">32</span>
+<span class="mi">456</span>
+<span class="mo">0123</span>
+
+<span class="n">III</span><span class="o">.</span>
+<span class="mi">3</span>
+<span class="mi">45</span>
+<span class="mo">012</span>
+
+<span class="n">IV</span><span class="o">.</span>
+<span class="mi">7</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">0</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_14_opt_a">(A) I</li><li data-component="feedback" id="qtnt1_14_opt_a">Since the inside for loop starts with t = 0  and continues while t < i (and i begins at 0) it will not be print out every single element of the 4x4 matrix.</li>
+            
+            <li data-component="answer"  id="qtnt1_14_opt_b">(B) II</li><li data-component="feedback" id="qtnt1_14_opt_b">This anwser is not correct because our inside for loop will start with t = 0 and loop while t < i and, as such, the entire first row of our matrix will be ignored, since both t and i = 0 and t is not less than i.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_14_opt_c">(C) III</li><li data-component="feedback" id="qtnt1_14_opt_c">When i = 0, the inner for loop does not get executed and the entire first row of the matrix is ignored. When i = 1 t goes from 0 to 0 and the element matrix[1][0] will be printed out. Similarly, when i = 2 we will print out elements matrix[2][0] and matrix[2][1]. Finally, when i = 3, we will print out matrix[3][0], matrix[3][1] and matrix[3][2].</li>
+            
+            <li data-component="answer"  id="qtnt1_14_opt_d">(D) IV</li><li data-component="feedback" id="qtnt1_14_opt_d">This would be the correct anwser if we kept incrementing i by one (the outer for loop) but the inner for variable t would always be 0. We would get the first element of each row.</li>
+            
+            <li data-component="answer"  id="qtnt1_14_opt_e">(E) An ArrayIndexOutOfBoundsException will be thrown.</li><li data-component="feedback" id="qtnt1_14_opt_e">We will not get an index out of bounds exception since we made sure to increment i only until the max length of the array and the other variable we use to index, t, will only increase while it is still less than i.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_15">
+            <p>14-2-15: If randomList is an <code class="docutils literal"><span class="pre">ArrayList</span></code> of <code class="docutils literal"><span class="pre">Integer</span></code> objects and is initially set to {0, 1, 2, 3}, what will randomList look like after the following code is executed?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">randomList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+<span class="n">randomList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">7</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">randomNum</span> <span class="o">=</span> <span class="n">randomList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="n">randomList</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="n">randomList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">randomNum</span><span class="o">,</span> <span class="mi">4</span><span class="o">);</span>
+<span class="n">randomList</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_15_opt_a">(A) [0, 1, 2, 3, 5, 7]</li><li data-component="feedback" id="qtnt1_15_opt_a">This is what the ArrayList will look like after the first two operations in the code.</li>
+            
+            <li data-component="answer"  id="qtnt1_15_opt_b">(B) [0, 1, 4, 3, 5, 7]</li><li data-component="feedback" id="qtnt1_15_opt_b">This is what the ArrayList will look like before we set the element at index 1 to be 8.</li>
+            
+            <li data-component="answer"  id="qtnt1_15_opt_c">(C) [0, 8, 3, 4, 5, 7]</li><li data-component="feedback" id="qtnt1_15_opt_c">This is what would have happened if we thought randomNum was actually 3 and we added the number 4 at the incorrect index.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_15_opt_d">(D) [0, 8, 4, 3, 5, 7]</li><li data-component="feedback" id="qtnt1_15_opt_d">After we add 5 and 7 to the end of the array we remove the element at index 2 (which was 2). Then we use the index we had previously obtained (also 2) to add a new element 4. This pushes the element already at that index (and the ones after it) one space to the right. Fianlly, we set the element at index 1 to be 8. This sets the value at index 1 to 8.</li>
+            
+            <li data-component="answer"  id="qtnt1_15_opt_e">(E) [5, 7, 0, 8, 4, 3]</li><li data-component="feedback" id="qtnt1_15_opt_e">This is what we would have happened if we thought the add method would add elements to the beggining of the ArrayList and not the end.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_16">
+            <p>14-2-16: Consider the following code segment. What will be printed as a result of executing the code below?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">&quot;fedcba&quot;</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span><span class="o">(</span><span class="n">counter</span> <span class="o">&lt;</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span>
+<span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">2</span><span class="o">));</span>
+  <span class="n">counter</span><span class="o">++;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer" data-correct id="qtnt1_16_opt_a">(A) edcba</li><li data-component="feedback" id="qtnt1_16_opt_a">The substring method takes two arguments, a start index (which is inclusive) and an end index (which is exclusive). The first substring is from index 1 (counter + 1) to index 2 (counter + 2). However the second index is not included so its just index 1 which is e. We then simply keep getting every indidual element from the string one by one until the end of the string.</li>
+            
+            <li data-component="answer"  id="qtnt1_16_opt_b">(B) edcb</li><li data-component="feedback" id="qtnt1_16_opt_b">This substring is mostly correct but it ends early and is missing the a character at the end.</li>
+            
+            <li data-component="answer"  id="qtnt1_16_opt_c">(C) Nothing is printed because an IndexOutOfBoundsException is thrown.</li><li data-component="feedback" id="qtnt1_16_opt_c">Even though the end of the substring is specified as index counter + 2, which will be past the end of the string the last time through the loop, substring doesn't include the value at the end index, so the code will execute.</li>
+            
+            <li data-component="answer"  id="qtnt1_16_opt_d">(D) feeddccbba</li><li data-component="feedback" id="qtnt1_16_opt_d">The first substring element has a start value of index 1 and so f will not be printed out. Also because each substring is a single character, no character will be repeated in the substring.</li>
+            
+            <li data-component="answer"  id="qtnt1_16_opt_e">(E) fededcdcbcba</li><li data-component="feedback" id="qtnt1_16_opt_e">This is what we would have happened if the substring had started at index counter (and not index counter + 1).</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_17">
+            <p>14-2-17: Consider the following class declarations. Which of the following statements will not compile?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">B</span>
+<span class="o">{</span>
+
+   <span class="kd">public</span> <span class="kt">int</span> <span class="n">myValue</span><span class="o">;</span>
+
+   <span class="kd">public</span> <span class="nf">B</span><span class="o">()</span>
+   <span class="o">{</span>
+      <span class="n">myValue</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="nf">B</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span>
+   <span class="o">{</span>
+      <span class="n">myValue</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">C</span> <span class="kd">extends</span> <span class="n">B</span>
+<span class="o">{</span>
+
+   <span class="kd">public</span> <span class="nf">C</span><span class="o">()</span>
+   <span class="o">{</span>
+      <span class="kd">super</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_17_opt_a">(A) C c1 = new C();</li><li data-component="feedback" id="qtnt1_17_opt_a">Here we are simply creating a new instance of class C by calling the appropiate constructor. Nothing is wrong here.</li>
+            
+            <li data-component="answer"  id="qtnt1_17_opt_b">(B) B b1 = new B();</li><li data-component="feedback" id="qtnt1_17_opt_b">Here we are simply creating a new instance of class B by calling the appropiate constructor. Nothing is wrong here.</li>
+            
+            <li data-component="answer"  id="qtnt1_17_opt_c">(C) B c2 = new C();</li><li data-component="feedback" id="qtnt1_17_opt_c">Since class C is a subclass of class B, you can upcast an object of type C to be of type B.</li>
+            
+            <li data-component="answer"  id="qtnt1_17_opt_d">(D) B b3 = new B(10);</li><li data-component="feedback" id="qtnt1_17_opt_d">This statement is creating a new object using the second constructor of the B class. This is also a valid way to create a B object.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_17_opt_e">(E) C c3 = new C(24);</li><li data-component="feedback" id="qtnt1_17_opt_e">Even though class C has a super class with a constructor that takes in a single int argument, class C does not have a constructor that takes an int value.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_18">
+            <p>14-2-18: Consider the following method.  Assume that <code class="docutils literal"><span class="pre">String</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">&quot;rain&quot;;</span></code> and <code class="docutils literal"><span class="pre">int</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">4;</span></code> have been executed.  What are the values of <code class="docutils literal"><span class="pre">s</span></code> and <code class="docutils literal"><span class="pre">b</span></code> after <code class="docutils literal"><span class="pre">test(s,b)</span></code> is executed?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span>
+<span class="o">{</span>
+   <span class="n">str</span> <span class="o">=</span> <span class="n">str</span> <span class="o">+</span> <span class="s">&quot;bow&quot;</span><span class="o">;</span>
+   <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="mi">2</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_18_opt_a">(A) s="rainbow"; b=8;</li><li data-component="feedback" id="qtnt1_18_opt_a">Strings are immutable so changing str doesn't affect the string that s refers to.  The value of b also will not change since Java passes a copy of the value.</li>
+            
+            <li data-component="answer"  id="qtnt1_18_opt_b">(B) s="rain";  b=8;</li><li data-component="feedback" id="qtnt1_18_opt_b">Java copies the value of primitive types when they are passed to methods so nothing done in the method test affects the value of b.</li>
+            
+            <li data-component="answer"  id="qtnt1_18_opt_c">(C) s="rainbow"; b=4;</li><li data-component="feedback" id="qtnt1_18_opt_c">Strings are immutable so changing str doesn't affect the string that s refers to.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_18_opt_d">(D) s="rain"; b=4;</li><li data-component="feedback" id="qtnt1_18_opt_d">Since strings are immutable any change returns a new string and doesn't affect what s refers to.  Also the value of primitive types are copied and nothing done in test affects the orignal primitive value.</li>
+            
+            <li data-component="answer"  id="qtnt1_18_opt_e">(E) s="bow";  b=4;</li><li data-component="feedback" id="qtnt1_18_opt_e">The string that s refers to is not changed by the test method.  All changes to string result in a new string object.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_19">
+            <p>14-2-19: Which of the following is/are true about using insertion sort versus using merge sort?</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">I</span><span class="o">.</span> <span class="n">Insertion</span> <span class="n">sort</span> <span class="n">requires</span> <span class="n">more</span> <span class="n">storage</span> <span class="n">space</span> <span class="n">than</span> <span class="n">mergesort</span><span class="o">.</span>
+<span class="n">II</span><span class="o">.</span> <span class="n">Insertion</span> <span class="n">sort</span> <span class="n">is</span> <span class="n">only</span> <span class="n">more</span> <span class="n">efficient</span> <span class="n">than</span> <span class="n">mergesort</span> <span class="n">in</span> <span class="n">the</span> <span class="k">case</span> <span class="n">that</span> <span class="n">we</span> <span class="n">have</span> <span class="n">a</span> <span class="n">very</span> <span class="n">small</span> <span class="n">and</span> <span class="n">nearly</span> <span class="n">sorted</span> <span class="n">array</span><span class="o">.</span>
+<span class="n">III</span><span class="o">.</span> <span class="n">Insertion</span> <span class="n">sort</span> <span class="n">is</span> <span class="n">almost</span> <span class="n">always</span> <span class="n">less</span> <span class="n">efficient</span> <span class="n">than</span> <span class="n">mergesort</span><span class="o">.</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_19_opt_a">(A) I only</li><li data-component="feedback" id="qtnt1_19_opt_a">Merge sort often uses a temporary array when merging arrays, which means it actually uses more storage space than insertion sort.</li>
+            
+            <li data-component="answer"  id="qtnt1_19_opt_b">(B) II only</li><li data-component="feedback" id="qtnt1_19_opt_b">Insertion sort is more efficient for a small array because merge sort has extra overhead from the recursive function calls that cause it to take longer.</li>
+            
+            <li data-component="answer"  id="qtnt1_19_opt_c">(C) III only</li><li data-component="feedback" id="qtnt1_19_opt_c">Merge sort uses the "divide and conquer" approach to sort an array. This will end up being more efficient than insertion sort in the case where we have a long unordered array.</li>
+            
+            <li data-component="answer"  id="qtnt1_19_opt_d">(D) I and III</li><li data-component="feedback" id="qtnt1_19_opt_d">Statement III is true but statement I is false since mergesort often utilizes a temporary array and will actually require more storage space than insertion sort.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_19_opt_e">(E) II and III</li><li data-component="feedback" id="qtnt1_19_opt_e">Merge sort uses the "divide and conquer" approach to sort an array. This will end up being more efficient than insertion sort in the case where we have long unordered array. However if we have a very small almost sorted array, then insertion sort will outperform merge sort.</li>
+            
+
+            </ul>
+            
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="qtnt1_20">
+            <p>14-2-20: What would the contents of <code class="docutils literal"><span class="pre">matrix</span></code>, a 2-D array of integers, be after a call to <code class="docutils literal"><span class="pre">alter(1)</span></code>? The method alter is defined below.</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span>  <span class="kd">private</span> <span class="kt">int</span><span class="o">[][]</span> <span class="n">matrix</span><span class="o">;</span>
+
+  <span class="cm">/* matrix looks like this initially</span>
+<span class="cm">  1 3 5 7</span>
+<span class="cm">  2 4 6 8</span>
+<span class="cm">  3 5 7 9</span>
+<span class="cm">  */</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">alter</span><span class="o">(</span><span class="kt">int</span> <span class="n">c</span><span class="o">)</span>
+  <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+    <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">matrix</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span>
+      <span class="o">{</span>
+        <span class="n">matrix</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">];</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+
+<span class="n">I</span><span class="o">.</span> <span class="mi">1</span> <span class="mi">7</span> <span class="mi">7</span> <span class="mi">7</span>
+   <span class="mi">2</span> <span class="mi">8</span> <span class="mi">8</span> <span class="mi">8</span>
+   <span class="mi">3</span> <span class="mi">9</span> <span class="mi">9</span> <span class="mi">9</span>
+
+<span class="n">II</span><span class="o">.</span> <span class="mi">1</span> <span class="mi">5</span> <span class="mi">7</span>
+    <span class="mi">2</span> <span class="mi">6</span> <span class="mi">8</span>
+    <span class="mi">3</span> <span class="mi">7</span> <span class="mi">9</span>
+
+<span class="n">III</span><span class="o">.</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span>
+     <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">9</span>
+
+<span class="n">IV</span><span class="o">.</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span>
+    <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">9</span>
+    <span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">9</span>
+
+<span class="n">V</span><span class="o">.</span> <span class="mi">1</span> <span class="mi">5</span> <span class="mi">7</span> <span class="mi">7</span>
+   <span class="mi">2</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">8</span>
+   <span class="mi">3</span> <span class="mi">7</span> <span class="mi">9</span> <span class="mi">9</span>
+</pre></div>
+</div>
+
+            <li data-component="answer"  id="qtnt1_20_opt_a">(A) I</li><li data-component="feedback" id="qtnt1_20_opt_a">The method alter shifts the values in the columns starting at column c + 1 and shifting back to entry to the left of c + 1. This matrix is what would result if c was three and we were shifitng the number there to the two spots before it.</li>
+            
+            <li data-component="answer"  id="qtnt1_20_opt_b">(B) II</li><li data-component="feedback" id="qtnt1_20_opt_b">Although some numbers are overwriten in the matrix, the matrix will still be 3x4 matrix.</li>
+            
+            <li data-component="answer"  id="qtnt1_20_opt_c">(C) III</li><li data-component="feedback" id="qtnt1_20_opt_c">Although some numbers are overwriten in the matrix, the matrix will still be 3x4 matrix.</li>
+            
+            <li data-component="answer"  id="qtnt1_20_opt_d">(D) IV</li><li data-component="feedback" id="qtnt1_20_opt_d">This is what would happen if we were shifting rows instead of columns in the alter method.</li>
+            
+            <li data-component="answer" data-correct id="qtnt1_20_opt_e">(E) V</li><li data-component="feedback" id="qtnt1_20_opt_e">Method alter shifts the values in the columns, starting at column c + 1, one column to the left. It also overwrites column c. Here are the replacements made for the method call alter(1): matrix[0][1] = matrix[0][2], matrix[0][2] = matrix[0][3], matrix[1][1] = matrix[1][2], matrix[1][2] = matrix[1][3], matrix[2][1] = matrix[2][2], matrix[2][2] = matrix[2][3]</li>
+            
+
+            </ul>
+            </div>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - Preparing for the AP CS A Exam' data-toggle="tooltip">
+    <a href="testPractice.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="testPractice.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Exam 2 for the AP CS A Exam (not timed)' data-toggle="tooltip" >
+    <a href="test2nt.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="test2nt.html" >Next Section - Exam 2 for the AP CS A Exam (not timed)</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      <span id='numuserspan'></span> readers online now | <span class='loggedinuser'></span>
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 barb.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.5.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
