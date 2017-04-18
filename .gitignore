@@ -1,14 +1,16 @@
-
+# Ignore unique build info
 build_info
 
+# Miscellaneous source files
 _sources/Tests/test6.rst
-
 _sources/Tests/test5.rst
-
 _sources copy/Appendix/DrJava.rst
-
 _sources copy/Appendix/DrJava.rst
-
 _sources copy/Appendix/Figures/AddJarToPrefs.png
-
 _sources copy/Appendix/DrJava.rst
+
+# Compiled Python files
+*.pyc
+
+# Machine specific files
+.DS_Store
