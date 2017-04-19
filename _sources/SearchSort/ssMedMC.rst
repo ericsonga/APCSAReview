@@ -137,11 +137,11 @@ You can step through the code above (with answer a in place of the missing code)
    :answer_d: 2
    :answer_e: The code will not compile 
    :correct: e
-   :feedback_a: This would be true if the code was okay and v was a value that wasn't in the array.
+   :feedback_a: This would be true if the sequential search code was okay and v was a value that wasn't in the array, but the code is incorrect.  The <code>return -1</code> should be outside of the for loop.
    :feedback_b: This would be true if v was 1 and the code was correct for a sequential search.
    :feedback_c: This would be true if v was 2 and the code was correct for a sequential search.
-   :feedback_d: This would be true if the code was correct for a sequential search.
-   :feedback_e: If the for loop is never entered this method wouldn't return anything, so it won't compile.
+   :feedback_d: This would be true if the code was correct for a sequential search, but it returns -1 inside the for loop instead of outside of it.
+   :feedback_e: This method won't compile because it is supposed to return an integer and if the for loop doesn't execute it will not return anything.  The <code>return -1</code> should be outside the for loop to make this sequential search work as intended.
    
    What would test return if a = {1,2,3,4} and v =  3?
    
@@ -157,6 +157,6 @@ You can step through the code above (with answer a in place of the missing code)
           }
       }
       
-You can see this code at the following `Ex-12-8-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+Example%0A%7B%0A%0A+++public+static+int+test(int%5B%5D+a,+int+v)%0A+++%7B++%0A++++++for+(int+i+%3D+0%3B+i+%3C+a.length%3B+i%2B%2B)%0A++++++%7B++%0A+++++++++if+(a%5Bi%5D+%3D%3D+v)%0A++++++++++++return+i%3B%0A+++++++++else+return+-1%3B%0A++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%0A+++%7B%0A++++++int%5B%5D+nums+%3D+%7B1,2,3,4%7D%3B%0A++++++System.out.println(Example.test(nums,3))%3B%0A+++%7D%0A%7D&mode=edit>`_.
+You can see this code at the following `Ex-12-8-5 <https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+test(int%5B%5D+a,+int+v)%0A%7B%0A++++for+(int+i+%3D+0%3B+i+%3C+a.length%3B+i%2B%2B)%0A++++%7B%0A++++++++if+(a%5Bi%5D+%3D%3D+v)%0A++++++++++++return+i%3B%0A++++++++//+this+jumps+out+of+the+loop+too+early+so+comment+it+out%0A++++++++//else+return+-1%3B%0A++++%7D%0A++++//+Move+the+return+out+of+the+loop+to+get+it+to+compile%0A++++return+-1%3B%0A%7D%0A%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+nums+%3D+%7B1,2,3,4%7D%3B%0A++++++System.out.println(test(nums,3))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
    
