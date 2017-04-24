@@ -1,0 +1,290 @@
+.. qnum::
+   :prefix: 9-22-
+   :start: 1
+
+Mixed Up Code Practice
+------------------------------
+
+Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
+
+
+.. parsonsprob:: ch9ex1muc
+   :noindent:
+
+   The following program segment should create a 10 by 10 two-dimensional int array. It should fill this array with numbers 0 to 99 from left to right, top row to bottom row and print the output (in row-column order).  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   int[][] table = new int[10][10];
+   =====
+   for (int i = 0; i < table.length; i++) {
+       for (int j = 0; j < table[i].length; j++) {
+   =====
+           table[i][j] = j + 10 * i;
+   =====
+           System.out.print(table[i][j] + "\t");
+   =====
+       } //end inner for loop
+   } //end outer for loop
+
+
+.. parsonsprob:: ch9ex2muc
+   :noindent:
+
+   The following program segment should create a 8 by 8 two-dimensional int array. It should fill this array with a checkered pattern of 0s and 1s -- starting with a 1 in the top left corner and print the output (in row-column order).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   int[][] checkerboard = new int[8][8];
+   =====
+   for (int i = 0; i < checkerboard.length; i++) {
+       for (int j = 0; j < checkerboard[i].length; j++) {
+   =====
+           if ( (i + j) % 2 == 0) {
+   =====
+           if ( (i + j) % 2 == 1) { #distractor
+   =====
+               checkerboard[i][j] = 1;
+   =====
+           } //end if
+   =====
+           System.out.print(checkerboard[i][j] + " ");
+   =====
+       } //end inner for loop
+   } //end outer for loop
+
+
+.. parsonsprob:: ch9ex3muc
+
+   The following program segment is a method that should accept a two-dimensional int array and return the sum of all of its values.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static int sumVals(int[][] nums) {
+   =====
+      int sum = 0;
+   =====
+      int sum; #distractor
+   =====
+      for (int i = 0; i < nums.length; i++) {
+   =====
+            for (int j = 0; j < nums[i].length; j++) {
+   =====
+                sum += nums[i][j];
+   =====
+            } //end inner for loop
+   =====
+      } //end outer for loop
+      return sum;
+   =====
+   } //end method
+
+
+.. parsonsprob:: ch9ex4muc
+   :noindent:
+
+   The following program segment is a method that should accept a two-dimensional String array "image" and flip the "image" 180 degrees vertically. For example:  </br>
+
+   1 2 3 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 3 2 1 </br>
+   1 2 3 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 3 2 1 </br>
+   1 2 3 4&nbsp;&nbsp;->&nbsp;&nbsp;4 3 2 1 </br>
+   1 2 3 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 3 2 1 </br>
+
+   But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static void flipImage(String[][] image) {
+   =====
+       for (int i = 0; i < image.length; i++) {
+   =====
+           for (int j = 0; j < image[i].length / 2; j++) {
+   =====
+               String temp = image[i][j];
+               image[i][j] = image[i][image.length - 1 - j];
+               image[i][image.length - 1 - j] = temp;
+   =====
+               image[i][j] = image[i][image.length - 1 - j]; #distractor
+               image[i][image.length - 1 - j] = image[i][j];
+   =====
+           } //end inner for loop
+       } //end outer for loop
+   } //end method
+
+
+.. parsonsprob:: ch9ex5muc
+   :noindent:
+
+   The following program segment is a method that should accept a two-dimensional array of ints and edit it such that all even numbers are replaced by zero.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static void makeEvenNumsZero(int[][] nums) {
+   =====
+       for (int i = 0; i < nums.length; i++) {
+   =====
+           for (int j = 0; j < nums[i].length; j++) {
+   =====
+           for (int j = 0; j < nums[i].length(); j++) { #distractor
+   =====
+               if (nums[i][j] % 2 == 0) {
+                   nums[i][j] = 0;
+               } //end if
+   =====
+               if (nums[i][j] % 2 == 1) { #distractor
+                   nums[i][j] = 0;
+               } //end if
+   =====
+           } //end inner for loop
+   =====
+       } //end outer for loop
+   } //end method
+
+
+.. parsonsprob:: ch9ex6muc
+   :noindent:
+
+   The following program segment is a method that should accept a two-dimensional array of ints and a desired int and return the number of occurrences of the desired int in the two-dimensional array.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static int numOccurrences(int[][] nums, int desired) {
+   =====
+       int occurrences = 0;
+   =====
+       int occurrences; #distractor
+   =====
+       for (int i = 0; i < nums.length; i++) {
+           for (int j = 0; j < nums[i].length; j++) {
+   =====
+               if (nums[i][j] == desired) {
+                   occurrences++;
+               }
+   =====
+               if (nums[i][j] != desired) { #distractor
+                   occurrences++;
+               }
+   =====
+           } //end inner for loop
+       } //end outer for loop
+   =====
+       return occurrences;
+   } //end method
+
+
+.. parsonsprob:: ch9ex7muc
+   :noindent:
+
+   The following program segment is a method that should accept a two-dimensional int array and return a single dimensional (normal) int array containing the average of each of the columns.  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static int[] averageCols(int[][] nums) {
+   =====
+       int[] averages = new int[nums.length]; #distractor
+   =====
+       int[] averages = new int[nums[0].length];
+   =====
+       for (int i = 0; i < nums.length; i++) {
+   =====
+           int colSum = 0;
+   =====
+           for (int j = 0; j < nums[i].length; j++) {
+               colSum += nums[j][i];
+           } //end inner for loop
+   =====
+           for (int j = 0; j < nums[i].length; j++) { #distractor
+               colSum += nums[i][j];
+           } //end inner for loop
+   =====
+           averages[i] = colSum / nums.length;
+   =====
+           averages[i] = colSum / nums.length(); #distractor
+   =====
+       } //end outer for loop
+       return averages;
+   } //end method
+
+
+.. parsonsprob:: ch9ex8muc
+   :noindent:
+
+   The following program segment is a method that should accept a two-dimensional int array and return a new two-dimensional int array containing only the odd index rows.  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static int[][] oddRows(int[][] nums) {
+   =====
+   public static int[] oddRows(int[][] nums) { #distractor
+   =====
+       int[][] odds = new int[nums.length / 2][nums[0].length];
+   =====
+       int[][] odds = new int[nums.length][nums[0].length]; #distractor
+   =====
+       int index = 0;
+       for (int i = 0; i < nums.length; i++) {
+   =====
+           if (i % 2 == 1) {
+   =====
+               for (int j = 0; j < nums[i].length; j++) {
+                   odds[index][j] = nums[i][j];
+               }
+   =====
+               for (int j = 0; j < nums[i].length; j++) { #distractor
+                   odds[index][j] = nums[j][i];
+               }
+   =====
+               index++;
+   =====
+           } //end if
+   =====
+       } //end outer for loop
+       return odds;
+   } //end method
+
+
+.. parsonsprob:: ch9ex9muc
+
+   The following program segment is a method that should accept a two-dimensional String array, in which each row contains the characters of a word.  The method should return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array.
+
+   Take for example, the input 2d array: {{"b", "a", "t", "h"},
+                                          {"t", "e", "n", "s"},
+                                          {"j", "a", "c", "k"},
+                                          {"l", "a", "z", "y"}}
+
+   Resulting array: {"bath", "tens", "jack", "lazy"}
+
+   But, the blocks have been mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static String[] breakIntoLetters(String[][] words) {
+   =====
+      String[] result = new String[words.length];
+   =====
+      for (int i = 0; i < words.length; i++) {
+   =====
+          String word = "";
+   =====
+          for (int j = 0; j < words[i].length; j++) {
+              word += words[i][j];
+          }
+   =====
+          result[i] = word;
+   =====
+      } //end for loop
+      return result;
+   =====
+   } //end method
+
+
+.. parsonsprob:: ch9ex10muc
+
+   The following program segment is a method that should accept a two-dimensional int array, and return a single-dimensional (normal) int array containing the max of each row.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public static int[] maxEachRow(int[][] nums) {
+   =====
+      int[] max = new int[nums.length];
+   =====
+      for (int i = 0; i < nums.length; i++) {
+   =====
+          int maxVal = nums[i][0];
+          for (int j = 1; j < nums[i].length; j++) {
+   =====
+              if (maxVal < nums[i][j]) {
+                  maxVal = nums[i][j];
+              }
+   =====
+              if (maxVal > nums[i][j]) { #distractor
+                  maxVal = nums[i][j];
+              }
+   =====
+          } //end inner for loop
+          max[i] = maxVal;
+   =====
+      } //end outer for loop
+      return max;
+   } //end method
+
