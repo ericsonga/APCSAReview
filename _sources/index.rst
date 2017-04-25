@@ -213,6 +213,7 @@ Two-dimensional Arrays
    Array2dBasics/grayImageB.rst
    Array2dBasics/routeCipherA.rst
    Array2dBasics/routeCipherB.rst
+   Array2dBasics/Array2dParsonsPractice.rst
 
 Object-Oriented Concepts
 ::::::::::::::::::::::::
