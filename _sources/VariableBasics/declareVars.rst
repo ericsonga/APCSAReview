@@ -212,6 +212,7 @@ This is an example of *assignment dyslexia*, when the student has put the value 
 **Mixed up Code Problems**
    
 .. parsonsprob:: declareVars1
+   :adaptive:
    :noindent:
 
    The following method has the code to declare and initialize variables for storing a number of visits, a person's temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the "Check Me" button to check your solution.

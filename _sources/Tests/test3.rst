@@ -141,13 +141,13 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           
     .. mchoice:: pe3_5
        :answer_a: return 9 * y;
-       :answer_b: return 6 * y;
+       :answer_b: return 7 * y;
        :answer_c: return y; 
        :answer_d: return 3 * y;
        :answer_e: return 4 * y;
        :correct: a
        :feedback_a: The first line is the same as 3y.  Then you have to substitute in the new value of y in the second line (2 * 3y + 3y) = 6y + 3y = 9y.
-       :feedback_b: This would be true if the second line was just y = 2 * y.  Remember that the second line is using the value of y calculated in the first line.
+       :feedback_b: Remember that the second line is using the value of y calculated in the first line for both places y appears.
        :feedback_c: This would be true if the body only had the last line in it.  What do the first 2 lines do?
        :feedback_d: This would be true if the it was missing the second line.  What does that line do?
        :feedback_e: Remember that 2 * y + y is the same as 3 * y.
