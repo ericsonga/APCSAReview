@@ -78,6 +78,7 @@ Try to change the code above to print your name.  Be sure to keep the starting `
 **Mixed up programs**
 
 .. parsonsprob:: thirdClass
+   :adaptive:
    :noindent:
 
    The following has all the correct code to print out "Hi my friend!" when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the "Check Me" button to check your solution.
@@ -95,6 +96,7 @@ Try to change the code above to print your name.  Be sure to keep the starting `
    }
    
 .. parsonsprob:: fourthClass
+   :adaptive:
    :noindent:
 
    The following has all the correct code to print out "Hi there!" when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the "Check Me" button to check your solution.

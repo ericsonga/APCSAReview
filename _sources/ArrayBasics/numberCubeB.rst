@@ -47,36 +47,37 @@ are not equal then reset the current run length to 0.  Return the starting index
 Mixed Up Code
 -------------------
 .. parsonsprob:: NumberCubeB
+   :adaptive:
 
-  The method getLongestRun below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-  -----
-  public static int getLongestRun(int[] values)
-  {
-      int currentLen = 0;
-      int maxLen = 0;
-      int maxStart = -1;
-  =====
-      for (int i = 0; i < values.length-1; i++)
-      {
-  =====
-          if (values[i] == values[i+1])
-          {
-  =====
-              currentLen++;
-              if (currentLen > maxLen)
-              {
-                  maxLen = currentLen;
-                  maxStart = i - currentLen + 1;
-              }
-  =====
-          } else {
-              currentLen = 0;
-          }
-  =====
-      } // end for
-      return maxStart;
-  =====
-  } // end method
+   The method getLongestRun below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+   -----
+   public static int getLongestRun(int[] values)
+   {
+       int currentLen = 0;
+       int maxLen = 0;
+       int maxStart = -1;
+   =====
+       for (int i = 0; i < values.length-1; i++)
+       {
+   =====
+           if (values[i] == values[i+1])
+           {
+   =====
+               currentLen++;
+               if (currentLen > maxLen)
+               {
+                   maxLen = currentLen;
+                   maxStart = i - currentLen + 1;
+               }
+   =====
+           } else {
+               currentLen = 0;
+           }
+   =====
+       } // end for
+       return maxStart;
+   =====
+   } // end method
 
 
 Try and Solve Part B

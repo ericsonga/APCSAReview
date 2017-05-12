@@ -75,25 +75,26 @@ You will need to create an array to hold the results of each cube toss.  The siz
 Mixed Up Code
 -------------------
 .. parsonsprob:: NumberCubeA
+   :adaptive:
 
-  The method getCubeTosses below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-  -----
-  public static int[] getCubeTosses(NumberCube cube,
-                                    int numTosses)
-  {
-  =====
-      int[] cubeTosses = new int[numTosses];
-  =====
-      for (int i = 0; i < numTosses; i++)
-      {
-  =====
-          cubeTosses[i] = cube.toss();
-  =====
-      } // end for
-  =====
-      return cubeTosses;
-  =====
-  } // end method
+   The method getCubeTosses below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+   -----
+   public static int[] getCubeTosses(NumberCube cube,
+                                     int numTosses)
+   {
+   =====
+       int[] cubeTosses = new int[numTosses];
+   =====
+       for (int i = 0; i < numTosses; i++)
+       {
+   =====
+           cubeTosses[i] = cube.toss();
+   =====
+       } // end for
+   =====
+       return cubeTosses;
+   =====
+   } // end method
 
 
 Try and Solve Part A

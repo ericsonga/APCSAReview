@@ -8,6 +8,7 @@ Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
                 
 .. parsonsprob:: ch4ex1muc
+   :adaptive:
    :noindent:
 
    The following program segment should print Maria's first name on one line and her last name on the next line.  But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -23,6 +24,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            
       
 .. parsonsprob:: ch4ex2muc
+   :adaptive:
    :noindent:
 
    The following program segment should print the words to a famous poem. But the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -37,6 +39,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    
 .. parsonsprob:: ch4ex3muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print Marcus's name on one line and his favorite color on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -63,6 +66,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            
   
 .. parsonsprob:: ch4ex4muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print the first 2 characters of the message followed by the last 2 characters of the message. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -88,6 +92,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    
 .. parsonsprob:: ch4ex5muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print the name on one line followed by the age on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -113,6 +118,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        
        
 .. parsonsprob:: ch4ex6muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print the name on one line and the favorite food on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -138,6 +144,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.println("Your name is " + name); #distractor
            
 .. parsonsprob:: ch4ex7muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print the initials in lowercase letters. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -169,6 +176,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.out.println(initials); #distractor
        
 .. parsonsprob:: ch4ex8muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print the message in all uppercase letters. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -193,6 +201,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
           System.print(upperMessage); #distractor
           
 .. parsonsprob:: ch4ex9muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print the first 3 letters of message in uppercase letters. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -219,6 +228,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            String part = message.substring(0,4); #distractor
           
 .. parsonsprob:: ch4ex10muc
+   :adaptive:
    :noindent:
 
    The main method in the following class should print the part of the message starting with the word "nice".  But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>

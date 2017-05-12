@@ -86,6 +86,7 @@ Notice that we have to create an object of the class now in the ``main`` method.
 **Mixed up programs**
 
 .. parsonsprob:: pab_2
+   :adaptive:
 
    The following method has the correct code to return the largest value in an integer array called <i>vals</i> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
    -----

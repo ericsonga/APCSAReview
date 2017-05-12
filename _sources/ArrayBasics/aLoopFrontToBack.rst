@@ -52,6 +52,7 @@ You can also use a ``for`` loop to loop through all the elements of an array.  J
 **Mixed up programs**
 
 .. parsonsprob:: pab_1r
+   :adaptive:
 
    The following method has the correct code to subtract amt from all the values in the array <b>values</b> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly. You will be told if any of the blocks are in the wrong order or not indented correctly.
    -----

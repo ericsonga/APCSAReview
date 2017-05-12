@@ -217,6 +217,7 @@ You can also add ``System.out.println(variable)`` to print the value of a variab
 **Mixed up programs**
 
 .. parsonsprob:: removeA
+   :adaptive:
    :noindent:
 
    The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
