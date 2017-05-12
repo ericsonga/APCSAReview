@@ -8,6 +8,8 @@ Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
 .. parsonsprob:: ch8ex1muc
+   :adaptive:
+   :noindent:
 
    The following program segment should be a class that adds some Strings of conversational phrases to List and then prints them out.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
@@ -39,6 +41,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex2muc
+   :adaptive:
    :noindent:
 
    The following program segment should be a method that traverses through an ArrayList of Strings (the parameter) and print out the elements in reverse order -- so  {"cat", "dog", "mouse"} should print "mouse, dog, cat, " as output.  Assume the ArrayList "myList" has been instantiated and filled with Strings.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -58,6 +61,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex3muc
+   :adaptive:
    :noindent:
 
    The following program segment should remove all the zeros from an ArrayList of Integers.  Assume the ArrayList "listOfNums" has been instantiated and filled with Integers.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -85,6 +89,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex4muc
+   :adaptive:
    :noindent:
 
    The following program segment is a method that should return the smallest int given an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -110,6 +115,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end findSmallest method
 
 .. parsonsprob:: ch8ex5muc
+   :adaptive:
    :noindent:
 
    The following program segment is a method that should remove all the positive and negative odd values in an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -136,6 +142,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex6muc
+   :adaptive:
 
    The following program segment should be method that calculates the average from an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
@@ -157,7 +164,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex7muc
-   :noindent:
+   :adaptive:
 
    The following program segment is a method that should find the largest value given an ArrayList of Integers (the parameter) and move it to the back of the list.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
    -----
@@ -186,6 +193,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex8muc
+   :adaptive:
 
    The following program segment should be method that removes all the Strings that have length 3 or shorter from an ArrayList of Strings (the parameter) -- so {"catch", "dog", "tree", "me"} should return {"catch", "tree"}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
@@ -211,7 +219,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex9muc
-   :noindent:
+   :adaptive:
 
    The following program segment is a method that should take each String from an ArrayList of Strings (the parameter) and add it again to the list -- so {"cat", "ribbon", "house"} should become {"cat", "cat", "ribbon", "ribbon", "house", "house"}.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
    -----
@@ -236,10 +244,12 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex10muc
+   :adaptive:
 
    The following program segment should be method that removes a specific Integer (specified in parameter) whenever it occurs in a given ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
-   public static void removeElement(ArrayList<Integer> nums, int toRemove) {
+   public static void removeElement(ArrayList<Integer> nums, 
+                                    int toRemove) {
    =====
       int i = 0;
    =====
