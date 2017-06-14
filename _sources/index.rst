@@ -214,6 +214,7 @@ Two-dimensional Arrays
    Array2dBasics/routeCipherA.rst
    Array2dBasics/routeCipherB.rst
    Array2dBasics/Array2dParsonsPractice.rst
+   Array2dBasics/Array2dCodePractice.rst
 
 Object-Oriented Concepts
 ::::::::::::::::::::::::
@@ -239,6 +240,8 @@ Object-Oriented Concepts
    OOBasics/ooEasyMC.rst
    OOBasics/ooMedMC.rst
    OOBasics/ooHardMC.rst
+   OOBasics/ooParsonsPractice.rst
+   OOBasics/ooCodePractice.rst
    OOBasics/TrioA.rst
    OOBasics/TrioScore1.rst
    OOBasics/TrioScore2.rst
