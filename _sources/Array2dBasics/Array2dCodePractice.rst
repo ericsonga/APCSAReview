@@ -9,7 +9,7 @@ Code Practice with 2D Arrays
 
         .. tab:: Question
 
-           Declare and instantiate a 3 by 3 two-dimensional int array named **table**. It should print the numbers 0 through 8.
+           Replace the "ADD CODE HERE" below with the code to declare and create a 3 by 3 two-dimensional int array named ``table``. The finished code will print the values 0 to 8.
            
            .. activecode::  arr2DEx1q
               :language: java
@@ -23,11 +23,11 @@ Code Practice with 2D Arrays
                       
                       // Should print the values in table
                       int count = 0;
-                      for (int i = 0; i < table.length; i++) {
-                     	 for (int j = 0; j < table.length; j++) {
-                     	 	table[i][j] = count;
+                      for (int row = 0; row < table.length; row++) {
+                     	 for (int col = 0; col < table.length; col++) {
+                     	 	table[row][col] = count;
                      	 	count++;
-                     	 	System.out.print(table[i][j] + " ");
+                     	 	System.out.print(table[row][col] + " ");
                       	}
                       }
                   }
@@ -36,8 +36,7 @@ Code Practice with 2D Arrays
 
         .. tab:: Answer
         
-           Instantiating a 3 by 3 two-dimensional int array only takes one line. First you declare the type of the data you're going to put in the array. Then you put brackets, one set for a one-dimensional array, two sets for a two-dimensional array. 
-           You name that and then set it equal to the key word **new**, followed by the same amount of brackets as before but with the size of the array inside. See below for clarification.
+           Declaring and creating a 3 by 3 two-dimensional int array only takes one line.  To declare the array specify the type of values in the array followed by ``[][]`` to indicate a 2D array and then provide a name for the array. To create the array add an ``= new``, followed by the same type as before and ``[num rows][num cols]``.
         
            .. activecode::  arr2DEx1a
               :language: java
@@ -50,11 +49,11 @@ Code Practice with 2D Arrays
                       int[][] table = new int[3][3];
                       
                       int count = 0;
-                      for (int i = 0; i < table.length; i++) {
-                     	 for (int j = 0; j < table.length; j++) {
-                     	 	table[i][j] = count;
+                      for (int row = 0; row < table.length; row++) {
+                     	 for (int col = 0; col < table[0].length; col++) {
+                     	 	table[row][col] = count;
                      	 	count++;
-                     	 	System.out.print(table[i][j] + " ");
+                     	 	System.out.print(table[row][col] + " ");
                       	}
                       }
                   }
@@ -72,7 +71,7 @@ Code Practice with 2D Arrays
         .. tab:: Question
 
            
-           Create a two-dimensional String array called **students** that holds the names "Bobby, Jordan, Anna" in an array and "blue, green, red" in a separate array. 
+          Replace the "ADD CODE HERE" below with the code to declare and initialize a two-dimensional String array called ``students`` with the names "Brice, Marvin, Anna" in the first row and "Kamal, Maria, Elissa" in the second. The finished code will print all the names in the array starting with all in the first row followed by all in the second row. 
            
            .. activecode::  arr2DEx2q
               :language: java
@@ -85,9 +84,9 @@ Code Practice with 2D Arrays
                       
                       
                       // Should print the values in students in order
-                      for (int i = 0; i <= students.length; i++) {
-                     	 for (int j = 0; j <= students.length; j++) {
-                     	 	System.out.print(students[i][j] + " ");
+                      for (int row = 0; row <= students.length; row++) {
+                     	 for (int col = 0; col <= students.length; col++) {
+                     	 	System.out.print(students[row][col] + " ");
                      	 }
                      }
                   }
@@ -97,9 +96,9 @@ Code Practice with 2D Arrays
 
         .. tab:: Answer
         
-           Instantiating a 3 by 3 two-dimensional int array only takes one line. First you declare the type of the data you're going to put in the array. Then you put brackets, one set for a one-dimensional array, two sets for a two-dimensional array. 
-           You name that and then set it equal to the key word ``new``, followed by the same amount of brackets as before but with the size of the array inside.
-        
+           You can declare, create, and initialize a 3 by 3 two-dimensional String array on one line as shown below.  Declare the array with ``type[][] name``.  Create and initialize an array with two rows and three columns
+           using ``={{item1, item2, item3}, {item4, item5, item6}};``.  Be sure to separate the items with commas.  Also separate the rows with a comma.
+           
            .. activecode::  arr2DEx2a
               :language: java
    
@@ -107,20 +106,12 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                  	// Can be assigned all at once
-                      String[][] students = {{"Bobby","Jordan","Anna"},{"blue","green","red"}};
-                      
-                      // OR Can be assigned one value at a time
-                      students[0][0] = "Bobby";
-                      students[0][1] = "Jordan";
-                      students[0][2] = "Anna";
-                      students[1][0] = "blue";
-                      students[1][1] = "green";
-                      students[1][2] = "red";
-					  
-                      for (int i = 0; i < students.length; i++) {
-                     	 for (int j = 0; j < students[i].length; j++) {
-                     	 	System.out.print(students[i][j] + " ");
+                      // Can declare and initialize in one line
+                      String[][] students = {{"Brice", "Marvin", "Anna"}, {"Kamal", "Maria", "Elissa"}};
+           
+                      for (int row = 0; row < students.length; row++) {
+                     	 for (int col = 0; col < students[0].length; col++) {
+                     	 	System.out.print(students[row][col] + " ");
                      	 }
                      }
                   }
@@ -137,7 +128,7 @@ Code Practice with 2D Arrays
 
         .. tab:: Question
 
-           Print the values 47, 51, and 20 from the given two-dimensional array.
+           Print the values 47, 51, and 20 by accessing them in the  the given two-dimensional array.
            
            .. activecode::  arr2DEx3q
               :language: java
@@ -157,11 +148,8 @@ Code Practice with 2D Arrays
 
         .. tab:: Answer
            
-           Indexing in Java starts at zero, so to reach 47, the first item in the first array, we index ``arr[0][0]``. 
-           To change which array in the array we want to access, we change the number in the first bracket.
-           To reach 51, the first element in the second array, we index ``arr[1][0]``. To access different 
-           elements within the array, we change the number in the second set of brackets. To access 
-           20, the third number in the second array, we would index ``arr[1][2]``.
+           Use ``arr[row][col]`` to get the value at a particular row and column.
+           Remember that the index for the first row is 0 and the index for the first column is also 0. 
  
            .. activecode::  arr2DEx3a
               :language: java
@@ -189,7 +177,7 @@ Code Practice with 2D Arrays
 
         .. tab:: Question
 
-           Print the values 8, 3, 87, and 34 from the given two-dimensional array.
+           Print the values 8, 3, 87, and 34 by accessing them from the given two-dimensional array.
            
            .. activecode::  arr2DEx4q
               :language: java
@@ -209,12 +197,8 @@ Code Practice with 2D Arrays
 
         .. tab:: Answer
            
-           Indexing in Java starts at zero, so to reach the first item in the first array, we index ``arr[0][0]``. 
-           To change which array in the array we want to access, we change the number in the first bracket.
-           To reach 3, the first element in the second array, we index ``arr[1][0]``. To access different 
-           elements within the array, we change the number in the second set of brackets. To access 8,
-           the third number in the first array, we would index ``arr[0][2]``. By the same logic, 87, the 2nd number 
-           in the third array can be accessed with ``arr[2][1]``. 34, the first number in the fifth array can be reached with ``arr[4][0]``.
+           Use ``arr[row][col]`` to get the value at a particular row and column.
+           Remember that the index for the first row is 0 and the index for the first column is also 0.
  
            .. activecode::  arr2DEx4a
               :language: java
@@ -244,19 +228,13 @@ Code Practice with 2D Arrays
 
         .. tab:: Question
 
-           Print the number of rows of the given two-dimensional array, or the length of the outer array, using the length function. Then print the number of columns, or the length of each inner array, using the length function. 
+           Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array. 
            
-           **Ex.** The array {{"red","green"},{"blue"}} should print:
+           **Ex.** The array {{"hello","there","world"},{"how","are","you"}} should print:
            
-           Rows: 
+           Rows: 2
            
-           2
-           
-           Columns: 
-           
-           2
-           
-           1
+           Columns: 3
            
            .. activecode::  arr2DEx5q
               :language: java
@@ -264,7 +242,7 @@ Code Practice with 2D Arrays
               public class Test1 {
                   public static void main(String[] args)
                   {
-                  	String[][] arr = {{"hello","world"},{"how","are","you"},{"hey!"}};
+                  	String[][] arr = {{"hello","there","world"},{"how","are","you"}};
                   	
                   	System.out.println("Rows:");
                   	// ADD CODE TO PRINT NUMBER OF ROWS HERE // 
@@ -278,9 +256,7 @@ Code Practice with 2D Arrays
         .. tab:: Answer
            
           To get the number of rows, or the length of the outer array, use ``arrayName.length`` . 
-          To get the number of columns, or the length of an inner array, do ``arrayName[number].length``. 
-          The number you put in the brackets depends on which inner array you want to access. 
-          Since we asked for the length of each inner array, use ``arrayName[number].length`` from 0 to the length of the array - 1.  
+          To get the number of columns, or the length of an inner array, use ``arrayName[0].length``. 
  
           .. activecode::  arr2DEx5a
               :language: java
@@ -288,16 +264,11 @@ Code Practice with 2D Arrays
               public class Test1 {
                   public static void main(String[] args)
                   {
-                  	String[][] arr = {{"hello","world"},{"how","are","you"},{"hey!"}};
+                  	String[][] arr = {{"hello","there","world"},{"how","are","you"}};
                   	
-                  	System.out.println("Rows:");
-                  	System.out.println(arr.length);
-                  	
-                  	System.out.println("Columns:");
-                  	System.out.println(arr[0].length);
-                  	System.out.println(arr[1].length);
-                  	System.out.println(arr[2].length);
-                  	
+                  	System.out.println("Rows:" + arr.length);
+                  	System.out.println();
+                  	System.out.println("Columns:" + arr[0].length);
                   }
               }
               
@@ -311,9 +282,7 @@ Code Practice with 2D Arrays
 
         .. tab:: Question
 
-           Loop through the given two-dimensional array, printing out the values in order.
-           
-           **HINT:** Remember the length function!
+           Loop through the given two-dimensional array, printing out the values in the first row followed by those in the second row and so on.
            
            .. activecode::  arr2DEx6q
               :language: java
@@ -322,7 +291,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                  	String[][] arr = {{"hey ", "there!"},{"I ", "hope ", "you're "}, {"having ","a ", "great "}, {"day! "}};
+                  	String[][] arr = {{"Hey ", "there! "},{"I ", "hope "}, {"you ", "are "}, {"doing ", well"}};
                   	
                   	// ADD CODE HERE // 
                   	
@@ -331,10 +300,8 @@ Code Practice with 2D Arrays
 
         .. tab:: Answer
            
-           First we want to create a loop that iterates through all of the outer arrays, or the rows using ``arrayName.length``.
-           
-           Then to iterate through the inner arrays, or columns, we use ``arrayName[number].length`` and set number to the place in the outer array we are looking at.
-           This is important because the loop will iterate up until the length of each inner array.
+           Create a loop that iterates through all of the outer arrays, or the rows using ``arrayName.length``.
+           Then iterate through the inner arrays, or columns, using ``arrayName[0].length``.
  
            .. activecode::  arr2DEx6a
               :language: java
@@ -343,11 +310,11 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                  	String[][] arr = {{"hey ", "there!"},{"I ", "hope ", "you're "}, {"having ","a ", "great "}, {"day! "}};
+                  	String[][] arr = {{"Hey ", "there! "},{"I ", "hope "}, {"you ", "are "}, {"doing ", "well"}};
                   	
-                  	for (int i = 0; i < arr.length; i++) {
-                  		for (int j = 0; j < arr[i].length; j++) {
-                  			System.out.println(arr[i][j]);
+                  	for (int row = 0; row < arr.length; row++) {
+                  		for (int col = 0; col < arr[0].length; col++) {
+                  			System.out.println(arr[row][col]);
                   		}
                   	}
                   }
@@ -363,8 +330,7 @@ Code Practice with 2D Arrays
 
         .. tab:: Question
 
-           Instantiate a two-dimensional array named **colors** that contains the colors of the rainbow (red, orange, yellow, green, blue, purple) in an inner array,
-           the primary colors (red, yellow, blue) in another inner array, and secondary colors (orange, green, purple) in another inner array. Then print every value in the array.
+           Declare and create a two-dimensional array of strings named ``colors``.  Put the colors ("red", "yellow", "blue") in the first row, and the colors ("orange", "green", "purple") in the second row. Then print every value in the array.
            
            .. activecode::  arr2DEx7q
               :language: java
@@ -379,10 +345,7 @@ Code Practice with 2D Arrays
 
         .. tab:: Answer
            
-           Instantiating a 3 by 3 two-dimensional int array only takes one line. First you declare the type of the data you're going to put in the array. Then you put brackets, one set for a one-dimensional array, two sets for a two-dimensional array. 
-           You name that and then set it equal to the key word ``new``, followed by the same amount of brackets as before but with the size of the array inside.
-           Then to iterate through the inner arrays, or columns, we use ``arrayName[number].length`` and set number to the place in the outer array we are looking at.
-           This is important because the loop will iterate up until the length of each inner array.
+           Declare and initialize the array in one statement as shown below.  Loop through the rows and columns and print each value.
  
            .. activecode::  arr2DEx7a
               :language: java
@@ -391,11 +354,11 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {         
-                    String[][] colors = {{"red", "orange", "yellow", "green", "blue", "purple"},{"red","blue","yellow"},{"orange","green", "purple"}};
+                    String[][] colors = {{"red","yellow","blue"},{"orange","green","purple"}};
                     
-                    for (int i = 0; i < colors.length; i++) {
-                    	for (int j = 0; j < colors[i].length; j++) {
-                    		System.out.println(colors[i][j]);
+                    for (int row = 0; row < colors.length; row++) {
+                    	for (int col = 0; col < colors[0].length; col++) {
+                    		System.out.println(colors[row][col]);
                     	}
                     }
                   }
