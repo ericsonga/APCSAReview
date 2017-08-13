@@ -75,7 +75,7 @@ Using String Literals
 
 What do you think the following code will print?  Run it to check.
     
-.. activecode:: lcse2
+.. activecode:: lcse3
    :language: java
    
    public class Test2

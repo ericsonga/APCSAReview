@@ -3,7 +3,7 @@
    :start: 1
 
 Code Practice with ArrayLists
----------------------------
+--------------------------------
 
 .. tabbed:: ch8Ex1
 

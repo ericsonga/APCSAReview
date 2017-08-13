@@ -18,11 +18,10 @@ To declare a 2D array, specify the type of elements that will be stored in the a
 
 .. fillintheblank:: 2darrayNullfill
 
-    .. blank:: 2darrayNullblank
-        :correct: null$
-        :feedback1: ('.*','Did you actually try this?')
-
-        What is printed when you type System.out.println(ticketInfo); after you do the above declarations? 
+   What is printed when you type System.out.println(ticketInfo); after you do the above declarations?
+   
+   -    :null$: Correct.  The array hasn't actually been created yet so it prints null.
+        :.*: Did you actually try this?
 
 ..	index::
 	pair: 2D Array; creation
@@ -40,11 +39,10 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
   
 .. fillintheblank:: 2daNumElfill
 
-    .. blank:: 2daNumElblank
-        :correct: 6$
-        :feedback1: ('.*','Multiply the number of rows and the number of columns')
+   How many elements are in ticketInfo? 
 
-        How many elements are in ticketInfo? 
+   -    :6$: Correct.  2 * 3 = 6
+        :.*: Multiply the number of rows and the number of columns
   
 Set Value(s) in a 2D Array
 ===========================
@@ -118,11 +116,12 @@ You can also initialize (set) the values for the array when you create it.  In t
   
 .. fillintheblank:: 2daGetElfill
 
-    .. blank:: 2daNumElblank
-        :correct: Luke$
-        :feedback1:  ('.*','Indicies start at 0 and the row is first then the column')
+   What is the value at ``seatingInfo[2][1]`` after the code above exectues?
 
-        What is the value at ``seatingInfo[2][1]`` after the code above exectues?
+   -    :Luke$: Correct.  The string at row index 2 and column index 1 is Luke.
+        :.*: Indicies start at 0 and the row is first then the column
+
+        
   
 Get a Value from a 2D Array
 ============================

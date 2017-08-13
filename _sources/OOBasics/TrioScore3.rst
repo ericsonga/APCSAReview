@@ -170,11 +170,12 @@ Apply the grading rubric shown above as you answer the following questions.
    
 .. fillintheblank:: qtrio3_total
 
-    .. blank:: trio3_total
-        :correct: ^2$
-        :feedback1: ('.*','Add 1 point for each yes response')
+   What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3).
 
-        What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3).
+   -    :^2$: Correct.  This solution only got 2 points
+        :.*: Add 1 point for each yes response
+
+        
         
         
 

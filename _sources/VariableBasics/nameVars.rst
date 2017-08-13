@@ -42,26 +42,27 @@ The convention in Java is to always start a variable name with a lower case lett
             
 .. fillintheblank:: fillName1
 
-        .. blank:: blankvar3-3-1
-            :correct: ^\s*shoeSize$
-            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word")
+   What is the camel case variable name for a variable that represents a shoe size?
 
-            What is the camel case variable name for a variable that represents a shoe size?
+   -    :^\s*shoeSize$: Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word
+        :.*: In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word
+
+            
             
 .. fillintheblank:: fillName2
 
-        .. blank:: blankvar3-3-2
-            :correct: ^\s*topScore$
-            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word")
+   What is the camel case variable name for a variable that represents the top score?
 
-            What is the camel case variable name for a variable that represents the top score?
+   -    :^\s*topScore$: Correct.
+        :.*: In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word
             
 .. fillintheblank:: fillName3
 
-        .. blank:: blankvar3-3-3a
-            :correct: ^\s*lastScore$
-            :feedback1: (".*", "In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word.  This would be lastScore")
+   What is the camel case variable name for a variable that represents the last score?
 
-            What is the camel case variable name for a variable that represents the last score?
+   -    :^\s*lastScore$: Correct.
+        :.*: In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word.  This would be lastScore
+
+            
 
        

@@ -169,12 +169,13 @@ Apply the grading rubric shown above as you answer the following questions.
    Should the student earn 1 point for returning the calculated price in ``getPrice``?
    
 .. fillintheblank:: qtrio1_total
+    
+   What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3).
+        
+   -    :^8$: Correct.  This solution lost one point
+        :.*: Subtract 1 point for each no response from the 9 possible points
 
-    .. blank:: trio1_total
-        :correct: ^8$
-        :feedback1: ('.*','Subtract 1 point for each no response from the 9 possible points')
-
-        What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3).
+        
         
 
 

@@ -42,12 +42,12 @@ This method will print out "This is the method that never ends!" and then call i
 
 .. fillintheblank:: recurb1fill
 
-    .. blank:: recurb1blank
-        :correct: 4$
-        :feedback1:  ('.*','Look for the call to the same method name')
-
-        Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? 
+   Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? 
    
+   -    :4$: Correct.  This line contains a call to the same method, which makes it a recursive method.
+        :.*: Look for a call to the same method name
+
+        
 ..	index::
     single: factorial
 
@@ -65,12 +65,12 @@ Here is another method that calculates the **factorial** of a number.  The **fac
   }
   
 .. fillintheblank:: recurb2fill
+ 
+   Which line in the method factorial contains the recursive call (the call to the same method)?
 
-    .. blank:: recurb1blank
-        :correct: 6$
-        :feedback1:  ('.*','Look for the call to the same method name')
+   -    :6$: Correct.  This line contains a call to the same method, which makes it a recursive method.
+        :.*: Look for a call to the same method name
 
-        Which line in the method factorial contains the recursive call (the call to the same method)?
    
 ..	index::
     single: base case

@@ -3,7 +3,7 @@
    :start: 1			
    
 Code Practice with Object Oriented Concepts
-------------------------------
+---------------------------------------------
 
 .. tabbed:: ooEx1
 

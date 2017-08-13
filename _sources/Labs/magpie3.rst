@@ -54,11 +54,12 @@ Open the API for String in the Java documentation (http://docs.oracle.com/javase
 
 .. fillintheblank:: fill-lab1b1
 
-    .. blank:: blanklab1b1
-        :correct: \\-1\\b
-        :feedback2: (".*", "Check the documentation or try it out in the ActiveCode window")
+   What value is returned by ``indexOf`` if the substring does not occur in the string?
 
-        What value is returned by ``indexOf`` if the substring does not occur in the string?
+   -    :-1: Correct.  If the substring isn't found it returns -1
+        :.*: Check the documentation or try it out in the ActiveCode window
+
+        
         
 Copy the following lines to ``StringExplorer`` in the ActiveCode above in the ``main`` method above to see for yourself that ``indexOf`` behaves as
 specified:

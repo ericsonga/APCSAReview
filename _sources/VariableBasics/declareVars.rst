@@ -181,33 +181,27 @@ This is an example of *assignment dyslexia*, when the student has put the value 
 
 .. fillintheblank:: fillDecVar1
 
-        .. blank:: blankdecvar3-2-1a
-            :correct: ^\s*int$
-            :feedback1: (".*", "Remember that Java uses just the first 3 letters of integer")
+   Fill in the following blanks: |blank| age = |blank| to declare age to be an integer and set its value to 5.
 
-            Fill in the blanks to declare a variable called ``age`` of type integer and initialize it to 5. 
-
-        .. blank:: blankvar3-2-1b
-            :correct: ^\s*5;$
-            :feedback1: (".*", "Use 5 in the second blank followed by ;")
-
-            age =
+   -    :int: Correct.  You typically use whole numbers for ages after age 1.  
+        :.*: Remember that Java uses just the first 3 letters of integer
+   -    :5: Correct.  You can initialize to a value.  Don't forget the ; at the end of the assignment.
+        :.*: Use 5 in the second blank followed by ;
             
 .. fillintheblank:: fillDecVar2
 
-        .. blank:: blankdecvar3-2-2
-            :correct: ^\s*double$
-            :feedback1: (".*", "What type allows for a decimal value?")
+   What type should you use for a shoe size like 8.5?  
 
-            What type should you use for a shoe size like 8.5?  
+   -    :^\s*double$: Correct.  Any variable that needs to values after the decimal point should be declared as a double.
+        :.*: What type allows for a decimal value  
             
 .. fillintheblank:: fillDecVar3
 
-        .. blank:: blankdecvar3-2-3
-            :correct: ^\s*int$
-            :feedback1: (".*", "Use a type that representes whole numbers like 1, 2, 3, etc")
+   What type should you use for a number of tickets? 
 
-            What type should you use for a number of tickets? 
+   -    :^\s*int$: Correct. You can't buy half a ticket so this will be an integer.
+        :.*: Use a type that representes whole numbers like 1, 2, 3, etc
+            
    
 **Mixed up Code Problems**
    

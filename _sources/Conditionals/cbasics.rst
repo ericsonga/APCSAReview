@@ -49,11 +49,12 @@ The variable ``isRaining`` is a boolean variable that is either true or false. I
 
 .. fillintheblank:: 5_1_1_falseOuptut
 
-    .. blank:: 5_1_1_false
-        :correct: ^Drive carefully$
-        :feedback1: ('.*','Try it and see')
+   Try changing the code above to ``boolean isRaining = false;``.  What will it print?
+
+   -    :^Drive carefully$: Correct.  If the boolean is false, it will skip executing the print statement after the if.
+        :.*: Try it and see
         
-        Try changing the code above to ``boolean isRaining = false;``.  What will it print?
+        
   
 What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might do one thing if a coin flip is heads and another if it is tails.  In this case use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.  
 
@@ -86,11 +87,11 @@ If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after c
 
 .. fillintheblank:: 5_1_2_falseElse
 
-    .. blank:: 5_1_2_else
-        :correct: ^Let's watch a movie$
-        :feedback1: ('.*','Try it and see')
+   Try changing the code above to ``boolean isHeads = false;``.  What line will be printed before the ``after conditional``?
+
+   -    :^Let's watch a movie$: Correct.  If the boolean value is false, the statement following the else will execute
+        :.*: Try it and see
         
-        Try changing the code above to ``boolean isHeads = false;``.  What line will be printed before the ``after conditional``?
         
 .. note::
 

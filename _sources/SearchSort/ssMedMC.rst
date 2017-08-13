@@ -95,7 +95,7 @@ You can step through the code above by clicking on the folloiwng `Ex-12-8-3 <htt
    :feedback_d: The inner loop should start at the outer loop value plus one and increment.
    :feedback_e: The inner loop should start at the outer loop value plus one and increment.
 
-   Which of the following could be used to replace /* missing code */ in the code so that the method always sorts the array ``elem`` in ascending order?
+   Which of the following could be used to replace // missing code // in the code so that the method always sorts the array ``elem`` in ascending order?
    
    .. code-block:: java 
    
@@ -108,7 +108,7 @@ You can step through the code above by clicking on the folloiwng `Ex-12-8-3 <htt
               {
                   int minIndex = j;
 
-                  for (/* missing code */)
+                  for (// missing code //)
                   {
                       if (elem [k] < elem [minIndex])
                       {

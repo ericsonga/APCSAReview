@@ -177,11 +177,12 @@ Apply the grading rubric shown above as you answer the following questions.
    
 .. fillintheblank:: qtrio2_total
 
-    .. blank:: trio2_total
-        :correct: ^6$
-        :feedback1: ('.*','Subtract 1 point for each no response from the 9 possible points')
+   What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3).
 
-        What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3).
+   -    :^6$: Correct.  The answer lost a total of 3 points.
+        :.*: Subtract 1 point for each no response from the 9 possible points
+
+        
         
         
 

@@ -61,12 +61,11 @@ The following table (also called a **truth table**) shows the result for P && Q 
 
 .. fillintheblank:: 5_3_1_trueAndFalse
 
-    .. blank:: 5_3_1_And
-        :correct: ^false$
-        :feedback1: ('.*','Try it and see')
- 
-        The truth table above is missing one result.  What is the result of P && Q when ``P=true`` and ``Q=false``?  
+   The truth table above is missing one result.  What is the result of P && Q when ``P=true`` and ``Q=false``?  
 
+   -    :^false$: Correct.  Both values must be true for && to return true.
+        :.*: Try it and see
+ 
 The following table shows the result for P || Q when P and Q are both expressions that can be true or false.  As you can see below the result of P || Q is true if either P or Q is true.  It is also true when both of them are true.
 
 +-------+-------+-----------+
@@ -83,11 +82,12 @@ The following table shows the result for P || Q when P and Q are both expression
 
 .. fillintheblank:: 5_3_2_falseOrTrue
 
-    .. blank:: 5_3_2_Or
-        :correct: ^true$
-        :feedback1: ('.*','Try it and see')
+   The truth table above is missing one result.  What is the result of ``P || Q`` when ``P=false`` and ``Q=true``? 
+
+   -    :^true$: Correct.  Only one of the two has to be true with || so this will print true.
+        :.*: Try it and see
  
-        The truth table above is missing one result.  What is the result of ``P || Q`` when ``P=false`` and ``Q=true``? 
+        
 
 **Check your understanding**
 
