@@ -555,3 +555,157 @@ Code Practice with 2D Arrays
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_arr2Dex10d
+                
+.. tabbed:: arr2DEx11
+
+        .. tab:: Question
+
+           Replace the “ADD CODE HERE” below with the code to declare and create a two-dimensional array of integers ``numbers`` with the numbers (1,2,3) in the first row, and the numbers (4,5,6) in the second row. Then loop through the two-dimensional array, printing out the values in the first row followed by those in the second row.
+
+           .. activecode::  arr2DEx11q
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      // ADD CODE HERE //
+                  }
+              }
+
+        .. tab:: Answer
+
+           Declare and initialize the array in one statement as shown below. Loop through the rows and columns and print each value.
+
+           .. activecode::  arr2DEx11a
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args) 
+                  {
+                      int[][] arr = {{1,2,3}, {4,5,6}};
+                      
+                      for (int row = 0; row < arr.length; row++) 
+                      {
+                          for (int col = 0; col < arr[0].length; col++) 
+                          {
+                              System.out.println(arr[row][col]);
+                          }
+                      }
+                  }
+              }
+
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_arr2Dex11d
+
+.. tabbed:: arr2DEx12
+
+        .. tab:: Question
+
+           Replace the “ADD CODE HERE” below with the code to declare and create a two-dimensional array of integers ``numbers`` with the numbers (1,2,3) in the first row, the numbers (4,5,6) in the second row, and the numbers (7,8,9) in the third row. Then loop through the two-dimensional array, printing out the values in the first row followed by those in the second row and so on.
+
+           .. activecode::  arr2DEx12q
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      // ADD CODE HERE //
+                  }
+              }
+
+        .. tab:: Answer
+
+           Declare and initialize the array in one statement as shown below. Loop through the rows and columns and print each value.
+
+           .. activecode::  arr2DEx12a
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      int[][] arr = {{1,2,3}, {4,5,6}, {7,8,9}};
+                      for (int row = 0; row < arr.length; row++) 
+                      {
+                          for (int col = 0; col < arr[1].length; col++) 
+                          {
+                              System.out.println(arr[row][col]);
+                          }
+                      }
+                  }
+              }
+
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_arr2Dex12d
+
+
+.. tabbed:: arr2DEx13
+
+        .. tab:: Question
+
+           Given the following array, replace the “ADD CODE HERE” below with the code to replace the word "purple" with "yellow".
+
+           .. activecode::  arr2DEx13q
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String[][] arr = {{"red","orange", "purple"}, {"green","blue", "indigo"}};
+                      
+                      // ADD CODE HERE //
+                      
+                      for (int row = 0; row < arr.length; row++)
+                      {
+                          for (int col = 0; col < arr[1].length; col++)
+                          {
+                              System.out.println(arr[row][col]);
+                          }
+                      }
+                  }
+              }
+
+        .. tab:: Answer
+        
+           Use arr[row][col] = value; to set the value at a particular row and column.  Remember the index of the first row is 0 and the index of the first column is also 0.
+
+
+           .. activecode::  arr2DEx13a
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String[][] arr = {{"red","orange", "purple"}, {"green","blue", "indigo"}};
+                      
+                      arr[0][2] = "yellow";
+                      
+                      for (int row = 0; row < arr.length; row++) 
+                      {
+                          for (int col = 0; col < arr[1].length; col++) 
+                          {
+                              System.out.println(arr[row][col]);
+                          }
+                      }
+                  }
+              }
+
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_arr2Dex13d

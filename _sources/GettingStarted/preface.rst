@@ -83,12 +83,13 @@ Many others have been involved in the creation of content for the eBook (includi
 * Gabby Jackson - added new exams (non-timed #2, #3, and #4)
 * Sofia Moin - added a video on variables
 * Gerald Nash - added many free response questions for arrays, 2D arrays, and lists
-* Sabrina Seibel - added free response question 4 from 2016 - StringFormatter
+* Sabrina Seibel - added free response question 4 from 2016 - StringFormatter and added questions to the code practice problems at the end of the 2d array chapter and the OO chapter.
 * Julian Hamelberg - worked on free response questions - seating chart A and B
 * Christine Hsieh - added mixed up code problems at the end of the array chapter and code practice problems
 * Carlos Diaz - fixed problems and added code highlights
 * Avery Rosh - found an error in one of the 2D array questions
 * JP Fasano - found an erorr in one of the non-timed exams 
+* Srikar Yendapally - added code problems to the 2D array chapter
 
 License
 ---------
