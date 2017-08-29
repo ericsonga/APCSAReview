@@ -17,5 +17,6 @@ Two-dimensional Arrays
    grayImageB.rst
    routeCipherA.rst
    routeCipherB.rst
-   Array2dParsonsPractice.rst
    Array2dCodePractice.rst
+   Array2dParsonsPractice.rst
+   
