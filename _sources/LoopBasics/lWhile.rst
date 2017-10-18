@@ -70,15 +70,31 @@ The infinite loop above is pretty obvious.  But, most infinite loops are acciden
 Tracing Variables in Loops
 ----------------------------
 
-A really important skill to develop is the ability to trace the values of variables and how they change during each time through a loop.  Click on the Forward button to execute the current line and see how the values of the variables change each time through the loop.
+A really important skill to develop is the ability to trace the values of variables and how they change during each time through a loop.  
 
+Here is a complex loop.  See if you can trace the code on paper to predict what it will do when you run it.
 
-.. raw:: html
-
-   <div>
-      <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public%20class%20Test%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%0A%20%20%20%20%20%20int%20var1%20%3D%203%3B%0A%20%20%20%20%20%20int%20var2%20%3D%202%3B%0A%0A%20%20%20%20%20%20while%20%28%28var2%20!%3D%200%29%20%26%26%20%28%28var1%20/%20var2%29%20%3E%3D%200%29%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20var1%20%3D%20var1%20%2B%201%3B%0A%20%20%20%20%20%20%20%20%20var2%20%3D%20var2%20-%201%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=3&heapPrimitives=false&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
-   </div>
+.. activecode:: example_trace_loop
+   :language: java
    
+   public class Test
+   {
+       public static void main(String[] args)
+       {
+           int var1 = 3;
+           int var2 = 2;
+    
+           while ((var2 != 0) && ((var1 / var2) >= 0))
+           {
+               var1 = var1 + 1;
+               var2 = var2 - 1;
+           }
+       }
+   }
+
+
+Click on the following link to step through the code above with the Java Visualizer - `Click here <https://goo.gl/qEHnpg>`_.
+
 You can create a table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
 
 .. figure:: Figures/whileLoopTrace.png
