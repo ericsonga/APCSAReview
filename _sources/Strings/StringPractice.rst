@@ -32,6 +32,7 @@ Code Practice with Strings
 
         .. tab:: Answer
         
+        
            Line 5 has an ending ``'`` instead of ``"``.  Line 7 is missing a ``=``.  Line 8 has ``firstname``, but it should be ``firstName``.  Remember that you should uppercase the first letter of each new word, after the first word, to make the variable name easier to read (use camel case).  Line 9 has ``subString``, but the method name is ``substring``.  Line 11 is missing a ``)``.
         
            .. activecode::  ch4Ex1a

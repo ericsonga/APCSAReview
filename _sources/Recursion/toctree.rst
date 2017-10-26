@@ -13,3 +13,4 @@ Recursion
    rMedMC.rst
    rHardMC.rst
    rParsonsPractice.rst
+   recursionCodePractice.rst

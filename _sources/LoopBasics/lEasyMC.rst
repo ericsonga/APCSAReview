@@ -16,7 +16,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_a: What is i set to in the initialization area? 
    :feedback_b: What is i set to in the initialization area? 
    :feedback_c: This loop changes i by 1 each time in the change area.  
-   :feedback_d: The value of i starts at 3 and this loop will execute until i equals 12.  The last time through the loop the value of i is 12.  
+   :feedback_d: The value of i starts at 3 and this loop will execute until i equals 12.  The last time through the loop the value of i is 12 at the begininng and then it will be incremented to 13 which stops the loop since 13 is not less than or equal to 12.  
 
    What does the following code print?
    
