@@ -104,3 +104,60 @@ You can step through the code above using the Java Visualizer by clicking on the
 You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-5 <http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++private+int%5B+%5D+a+%3D+%7B-10,+-5,+1,+4,+8,+30%7D%3B%0A%0A+++public+void+doubleLast()%0A+++%7B%0A++++%0A+++++++for+(int+i+%3D+a.length+/+2%3B+i+%3C+a.length%3B+i%2B%2B)%0A+++++++%7B%0A+++++++++++a%5Bi%5D+%3D+a%5Bi%5D+*+2%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++Test+myTest+%3D+new+Test()%3B%0A++++++myTest.doubleLast()%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 
+.. mchoice:: qaeasy_6
+   :answer_a: {1, 3, -5, -2}
+   :answer_b: {3, 9, -15, -6}
+   :answer_c: {2, 6, -10, -4}
+   :answer_d: The code will never stop executing due to an infinite loop
+   :correct: b
+   :feedback_a: This would be true if the contents of arrays could not be changed but they can. 
+   :feedback_b: This code multiplies each value in a by the passed amt which is 3 in this case.
+   :feedback_c: This would be correct if we called multAll(2) instead of multAll(3).
+   :feedback_d: The variable i starts at 0 and increments each time through the loop and stops when it equals the number of items in a.  
+
+   What are the values in a after multAll(3) executes?
+   
+   .. code-block:: java 
+
+     private int[ ] a = {1, 3, -5, -2};
+     
+     public void multAll(int amt)
+     {
+        int i = 0;
+        while (i < a.length)
+        {
+           a[i] = a[i] * amt;
+           i++;
+        } // end while
+     } // end method  
+     
+.. mchoice:: qaeasy
+   :answer_a: {1, 3, -5, -2}
+   :answer_b: {3, 9, -15, -6}
+   :answer_c: {2, 6, -10, -4}
+   :answer_d: The code will never stop executing due to an infinite loop
+   :correct: d
+   :feedback_a: Does the value of i ever change inside the loop?
+   :feedback_b: Does the value of i ever change inside the loop?
+   :feedback_c: Does the value of i ever change inside the loop?
+   :feedback_d: The value of i is initialized to 0 and then never changes inside the body of the loop, so this loop will never stop.  It is an infinite loop.   
+
+   What are the values in a after mult(2) executes?
+   
+   .. code-block:: java 
+
+     private int[ ] a = {1, 3, -5, -2};
+     
+     public void mult(int amt)
+     {
+        int i = 0;
+        while (i < a.length)
+        {
+           a[i] = a[i] * amt;
+        } // end while
+     } // end method  
+     
+
+     
+
+

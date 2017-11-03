@@ -176,60 +176,33 @@ You can also add ``System.out.println(variable)`` to print the value of a variab
         var1 = var1 + 1;
         var2 = var2 -1;
      }
-  
+     
 .. mchoice:: qlb_2_3
-   :answer_a: {1, 3, -5, -2}
-   :answer_b: {3, 9, -15, -6}
-   :answer_c: {2, 6, -10, -4}
-   :answer_d: The code will never stop executing due to an infinite loop
-   :correct: b
-   :feedback_a: This would be true if the contents of arrays could not be changed but they can. 
-   :feedback_b: This code multiplies each value in a by the passed amt which is 3 in this case.
-   :feedback_c: This would be correct if we called multAll(2) instead of multAll(3).
-   :feedback_d: The variable i starts at 0 and increments each time through the loop and stops when it equals the number of items in a.  
+   :answer_a: x = 5, y = 2
+   :answer_b: x = 2, y = 5
+   :answer_c: x = 5, y = 2
+   :answer_d: x = 3, y = 4
+   :answer_e: x = 4, y = 3
+   :correct: e
+   :feedback_a: This would be true if the and (&&) was an or (||) instead.  But in a complex conditional joined with and (&&) both conditions must be true for the condition to be true.
+   :feedback_b: This would be true if the loop never executed, but both conditions are true so the loop will execute.
+   :feedback_c: This would be true if the values were swapped, but they are not.
+   :feedback_d: This would be true the loop only executed one time, but it will execute twice.
+   :feedback_e: The first time the loop changes to x = 3, y = 4, the second time x = 4, y = 3 then the loop will stop since x is not less than y anymore.  
 
-   What are the values in a after multAll(3) executes?
+   What are the values of x and y when the code finishes executing?
    
    .. code-block:: java 
 
-     private int[ ] a = {1, 3, -5, -2};
-     
-     public void multAll(int amt)
-     {
-        int i = 0;
-        while (i < a.length)
-        {
-           a[i] = a[i] * amt;
-           i++;
-        } // end while
-     } // end method  
-     
-.. mchoice:: qlb_2_4
-   :answer_a: {1, 3, -5, -2}
-   :answer_b: {3, 9, -15, -6}
-   :answer_c: {2, 6, -10, -4}
-   :answer_d: The code will never stop executing due to an infinite loop
-   :correct: d
-   :feedback_a: Does the value of i ever change inside the loop?
-   :feedback_b: Does the value of i ever change inside the loop?
-   :feedback_c: Does the value of i ever change inside the loop?
-   :feedback_d: The value of i is initialized to 0 and then never changes inside the body of the loop, so this loop will never stop.  It is an infinite loop.   
-
-   What are the values in a after mult(2) executes?
+     int x = 2;
+     int y = 5;
    
-   .. code-block:: java 
-
-     private int[ ] a = {1, 3, -5, -2};
-     
-     public void mult(int amt)
+     while (y > 2 && x < y)
      {
-        int i = 0;
-        while (i < a.length)
-        {
-           a[i] = a[i] * amt;
-        } // end while
-     } // end method  
-     
+        x = x + 1;
+        y = y - 1;
+     }
+  
 **Mixed up programs**
 
 .. parsonsprob:: removeA

@@ -55,14 +55,49 @@ How could you change the code above to return a random number from 1 to 10?  Mod
 
 **Check your understanding**
 
-.. mchoice:: q2_8
+.. mchoice:: qrand_1
    :answer_a: Math.random() < 0.4
    :answer_b: Math.random() > 0.4
    :answer_c: Math.random() == 0.4
    :correct: a
-   :feedback_a: This is about 40% of the range from 0 to not quite 1 (which is what the Math.random method returns).   
-   :feedback_b: This will be about a 60% chance.  
+   :feedback_a: This is true about 40% of the time since Math.random returns a value from 0 to not quite 1.
+   :feedback_b: This will be true about 60% of the time. 
    :feedback_c: Do not use == with double values!  Remember that Math.random can return any number between 0 and not quite 1 (about .99999999).  
 
-   Which of the following is a correct test for a 40% possibility?
+   Which of the following would be true about 40% of the time?
+   
+.. mchoice:: qrand_2
+   :answer_a: ((int) (Math.random() * 5))
+   :answer_b: ((int) (Math.random() * 6))
+   :answer_c: ((int) Math.random() * 5) + 1
+   :correct: c
+   :feedback_a: This would be a number between 0 and 4. 
+   :feedback_b: This would be a number between 0 and 5.
+   :feedback_c: The first part would return a number between 0 and 4 and when you add 1 you get a number from 1 to 5 inclusive. 
+
+   Which of the following would return a random number from 1 to 5 inclusive?
+   
+.. mchoice:: qrand_2
+   :answer_a: ((int) (Math.random() * 10))
+   :answer_b: ((int) (Math.random() * 11))
+   :answer_c: ((int) Math.random() * 10) + 1
+   :correct: b
+   :feedback_a: This would be a number between 0 and 9.
+   :feedback_b: This would be a number between 0 and 10.
+   :feedback_c: The first part would return a number between 0 and 9 and when you add 1 you get a number from 1 to 10 inclusive. 
+
+   Which of the following would return a random number from 0 to 10 inclusive?
+   
+.. mchoice:: qrand_4
+   :answer_a: Math.random() < 0.25
+   :answer_b: Math.random() > 0.25
+   :answer_c: Math.random() == 0.25
+   :correct: a
+   :feedback_a: This is true about 25% of the time, since it will be a number from 0 to not quite 1.
+   :feedback_b: This is true about 75% of the time, since it will be a number from 0 to not quite 1.
+   :feedback_c: Do not use == with double values!  Remember that Math.random can return any number between 0 and not quite 1 (about .99999999).  
+
+   Which of the following would be true about 75% of the time?
+   
+
    
