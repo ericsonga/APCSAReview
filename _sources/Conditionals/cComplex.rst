@@ -107,6 +107,34 @@ The following table shows the result for P || Q when P and Q are both expression
      if (x > 0 && (y / x) == 3) System.out.println("first case");
      else System.out.println("second case");
 
+.. mchoice:: qcb_7
+   :answer_a: first case
+   :answer_b: second case
+   :correct: a
+   :feedback_a: This will print if both of the conditions are true and they are.  
+   :feedback_b: This will print either of the conditions are false. 
+
+   What is printed when the following code executes and x has been set to 3 and y has been set to 9?  
+   
+   .. code-block:: java 
+
+     if (x > 0 && (y / x) == 3) System.out.println("first case");
+     else System.out.println("second case");
+     
+.. mchoice:: qcb_8
+   :answer_a: first case
+   :answer_b: second case
+   :correct: b
+   :feedback_a: This will print if both of the conditions are true, but the second is not. 
+   :feedback_b: This will print if either of the conditions are false and the second one is (6 / 3 == 2).
+
+   What is printed when the following code executes and x has been set to 3 and y has been set to 6?  
+   
+   .. code-block:: java 
+
+     if (x > 0 && (y / x) == 3) System.out.println("first case");
+     else System.out.println("second case");
+     
 .. mchoice:: qcb_6
    :answer_a: first case
    :answer_b: second case
@@ -116,7 +144,7 @@ The following table shows the result for P || Q when P and Q are both expression
    :feedback_b: This will print if both of the conditions are false.  But, an error will occur when testing the second condition.   
    :feedback_c: The first condition will be false so the second one will be executed and lead to an error since you can't divide by zero.
 
-   What is printed when the following code executes and x has been set to zero?  
+   What is printed when the following code executes and x has been set to zero?  Notice that it is now a logical or rather than an and.
    
    .. code-block:: java 
 
