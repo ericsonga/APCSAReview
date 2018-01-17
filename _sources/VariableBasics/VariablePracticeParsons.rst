@@ -139,7 +139,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            double numGalls = miles / mpg;
    =====
-           double cost = numGalls * price;
+           double totalCost = numGalls * price;
    =====
            System.out.println(totalCost); 
    =====
