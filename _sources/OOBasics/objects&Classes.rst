@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: OO-Intro-
+   :prefix: 10-2-
    :start: 1
 
 Objects and Classes
@@ -100,6 +100,69 @@ What if you wanted to represent a die which has 6 sides and you can roll it?  Yo
    }
    
 Can you modify the ``Die`` class to keep a record of all the values this dice has rolled?  How would you do that?
+
+Coin Class
+------------
+
+What if you just wanted to simulate flipping a coin?  What would you need the objects of the class to know and do?  You
+would want to flip the coin (set it randomly to heads or tails) and ask if the value is heads or tails.  See the class
+below for one way to do this.  Notice the use of a constant for HEADS.  Any field that is declared to be ``static`` can't be changed and so is a constant.
+
+.. activecode:: CoinExample
+  :language: java
+
+  public class Coin 
+  {
+   
+     // constant to represent heads
+     private static int HEADS = 1;
+   
+     // current value of the coin
+     private int value = 0;
+   
+     // method to randomly set the value of the coin to heads or tails
+     public void flip()
+     {
+        if (Math.random() < 0.5)
+        {
+            value = 0;
+        }
+        else
+        {
+           value = 1;
+        } 
+     }
+   
+     // return true if the value is heads or false otherwise
+     public boolean isHeads()
+     {
+        return value == HEADS;
+     }
+   
+     // convert the value to a string
+     public String toString()
+     {
+        if (value == HEADS) return "Heads";
+        else return "Tails";
+     }
+   
+     // test the class
+     public static void main(String[] args) 
+     {
+      
+        Coin myCoin = new Coin();
+        for (int i = 0; i < 10; i++)
+        {
+           myCoin.flip();
+           System.out.println(myCoin);
+           System.out.println(myCoin.isHeads());
+        } 
+     }
+  }
+  
+Modify the class to add a isTails method that returns true when the value is not heads.
+
+
    
 
 

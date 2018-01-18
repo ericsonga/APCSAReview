@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 10-8-
+   :prefix: 10-12-
    :start: 1
 
 The Comparable Interface

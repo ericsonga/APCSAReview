@@ -75,7 +75,41 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
 
 .. note::
    
-   The number of times a loop executes can be calculated by (largestValue - smallestValue + 1).  By the largest value I mean the largest value that allows the loop to execute and by the smallest value I mean the smallest value that allows the loop to execute.  So in the code above the largest value is 5 and the smallest value that allows the loop to execute is 1 so this loop executes (5 - 1 + 1 = 5 times) Here are all the values of i (5, 4, 3, 2, 1) that allow the loop to run.  When i is 0 the condition is false and execution continues after the body of the loop.
+   The number of times a loop executes can be calculated by (largestValue - smallestValue + 1).  By the largest value I mean the largest value that allows the loop to execute and by the smallest value I mean the smallest value that allows the loop to execute.  So in the code above the largest value is 5 and the smallest value that allows the loop to execute is 1 so this loop executes (5 - 1 + 1 = 5 times).  
+   
+.. activecode:: lcfc2
+   :language: java
+   
+   public class SongTest2
+   {
+
+      public static void printPopSong()
+      {
+         String line1 = " bottles of pop on the wall";
+         String line2 = " bottles of pop";  
+         String line3 = "Take one down and pass it around";  
+  
+         for (int i = 0; i < 3; i++)
+         {
+            System.out.println(i + line1);
+            System.out.println(i + line2); 
+            System.out.println(line3); 
+            System.out.println((i - 1) + line1);
+            System.out.println();
+         }
+      }
+      
+      public static void main(String[] args)
+      {
+         SongTest.printPopSong();
+      }
+   }
+   
+How many times does the code above print the lines to the song?
+   
+.. note::
+   
+   You can also calculate the number of times a loop executes as the value that ends the loop minus the starting value.  In this case the loop ends when i is 3 so (3 - 0 = 3).  
 
 **Check your understanding**
 

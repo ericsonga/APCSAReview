@@ -12,3 +12,4 @@ Searching and Sorting
    mergeSort.rst
    ssEasyMC.rst
    ssMedMC.rst
+   ssHardMC.rst

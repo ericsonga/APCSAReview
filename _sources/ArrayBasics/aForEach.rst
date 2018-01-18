@@ -41,6 +41,10 @@ You will often loop through all of the elements of an array (to get the average 
 
 The **for-each** loop is shown on line 6 above.  It says to loop through the array called ``values`` and each time through the loop set the variable ``val`` to the next item in the array.  We have to specify the type of ``val`` first since this declares a variable.  The type must match the type of objects in the array.
 
+.. note ::
+
+   Only use the for-each loop when you want to loop through **all** the values in an array or list.  If you only want to loop through part of an array or list use a for loop instead.  Also use a for loop instead of a for-each loop if you want to **change** any of the values in the array or list.  
+
 The code above wasn't object-oriented.  You may have noticed that it was declared to be **static**.  This means that it is a **class method** not an **object method**.  It is a **class method** since it doesn't operate on any object fields - all data that it needs has been passed in to the method.  Class methods can be called using ``ClassName.methodName()``.  They can also be called on an object of the class.  Object methods can only be called on an object of the class.  
     
 A more object-oriented way of doing this would be if the array was a field called ``values`` in the same class as the ``getAverage`` method.  Then you don't need to pass the array ``values`` to the method and the method is an object (instance) method since it operates on the fields of the object.  You will typically initialize fields in the constructor as shown below.  
