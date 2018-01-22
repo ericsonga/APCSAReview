@@ -109,7 +109,7 @@ Alter the code above to do the following.
 * What happens when more than one keyword appears in a string? Consider the string “My mother has a dog but no cat.” Explain how to prioritize responses in the reply method.
 
 .. shortanswer:: short-lab1b1
-   :optional
+   :optional:
 
    What happens when a keyword is included in another word? Consider statements like “I know all the state capitals” and “I like vegetables smothered in cheese.” Explain the problem with the responses to these statements.
 
