@@ -12,16 +12,18 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should create a 10 by 10 two-dimensional int array. It should fill this array with numbers 0 to 99 from left to right, top row to bottom row and print the output (in row-column order).  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following program segment should create a 10 by 10 two-dimensional int array. It should fill this array with numbers 0 to 99 from left to right, top row to bottom row and print the output (in row-column order).  But, the blocks have been mixed up and contain an extra block that is not needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    int[][] table = new int[10][10];
    =====
-   for (int i = 0; i < table.length; i++) {
-       for (int j = 0; j < table[i].length; j++) {
+   for (int row = 0; row < table.length; row++) {
+       for (int col = 0; col < table[row].length; col++) {
    =====
-           table[i][j] = j + 10 * i;
+           table[row][col] = col + 10 * row;
+   ===== 
+           table[row][col] = row + 10 * col; #paired
    =====
-           System.out.print(table[i][j] + "\t");
+           System.out.print(table[row][col] + "\t");
    =====
        } //end inner for loop
    } //end outer for loop
@@ -35,18 +37,18 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    int[][] checkerboard = new int[8][8];
    =====
-   for (int i = 0; i < checkerboard.length; i++) {
-       for (int j = 0; j < checkerboard[i].length; j++) {
+   for (int row = 0; row < checkerboard.length; row++) {
+       for (int col = 0; col < checkerboard[row].length; col++) {
    =====
-           if ( (i + j) % 2 == 0) {
+           if ( (row + col) % 2 == 0) {
    =====
-           if ( (i + j) % 2 == 1) { #distractor
+           if ( (row + col) % 2 == 1) { #paired
    =====
-               checkerboard[i][j] = 1;
+               checkerboard[row][col] = 1;
    =====
            } //end if
    =====
-           System.out.print(checkerboard[i][j] + " ");
+           System.out.print(checkerboard[row][col] + " ");
    =====
        } //end inner for loop
    } //end outer for loop
@@ -56,7 +58,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment is a method that should accept a two-dimensional int array and return the sum of all of its values.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following program segment is a method that should accept a two-dimensional int array and return the sum of all of its values.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public static int sumVals(int[][] nums) {
    =====
@@ -64,11 +66,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
       int sum; #distractor
    =====
-      for (int i = 0; i < nums.length; i++) {
+      for (int row = 0; row < nums.length; row++) {
    =====
-            for (int j = 0; j < nums[i].length; j++) {
+      for (int row = 0; row < nums.length(); row++) { #paired
    =====
-                sum += nums[i][j];
+            for (int col = 0; col < nums[row].length; col++) {
+   =====
+                sum += nums[row][col];
+   =====
+                sum = nums[row][col]; #paired
    =====
             } //end inner for loop
    =====
@@ -93,16 +99,16 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    public static void flipImage(String[][] image) {
    =====
-       for (int i = 0; i < image.length; i++) {
+       for (int row = 0; row < image.length; row++) {
    =====
-           for (int j = 0; j < image[i].length / 2; j++) {
+           for (int col = 0; col < image[0].length / 2; col++) {
    =====
-               String temp = image[i][j];
-               image[i][j] = image[i][image.length - 1 - j];
-               image[i][image.length - 1 - j] = temp;
+               String temp = image[row][col];
+               image[row][col] = image[row][image.length - 1 - col];
+               image[row][image.length - 1 - col] = temp;
    =====
-               image[i][j] = image[i][image.length - 1 - j]; #distractor
-               image[i][image.length - 1 - j] = image[i][j];
+               image[row][col] = image[row][image.length - 1 - col]; #paired
+               image[row][image.length - 1 - col] = image[row][col];
    =====
            } //end inner for loop
        } //end outer for loop
@@ -117,18 +123,18 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    public static void makeEvenNumsZero(int[][] nums) {
    =====
-       for (int i = 0; i < nums.length; i++) {
+       for (int row = 0; row < nums.length; row++) {
    =====
-           for (int j = 0; j < nums[i].length; j++) {
+           for (int col = 0; col < nums[row].length; col++) {
    =====
-           for (int j = 0; j < nums[i].length(); j++) { #distractor
+           for (int col = 0; col < nums[row].length(); col++) { #distractor
    =====
-               if (nums[i][j] % 2 == 0) {
-                   nums[i][j] = 0;
+               if (nums[row][col] % 2 == 0) {
+                   nums[row][col] = 0;
                } //end if
    =====
-               if (nums[i][j] % 2 == 1) { #distractor
-                   nums[i][j] = 0;
+               if (nums[row][col] % 2 == 1) { #distractor
+                   nums[row][col] = 0;
                } //end if
    =====
            } //end inner for loop
@@ -178,21 +184,21 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        int[] averages = new int[nums[0].length];
    =====
-       for (int i = 0; i < nums.length; i++) {
+       for (int col = 0; col < nums[0].length; col++) {
    =====
            int colSum = 0;
    =====
-           for (int j = 0; j < nums[i].length; j++) {
-               colSum += nums[j][i];
+           for (int row = 0; row < nums.length; row++) {
+               colSum += nums[row][col];
            } //end inner for loop
    =====
-           for (int j = 0; j < nums[i].length; j++) { #distractor
-               colSum += nums[i][j];
+           for (int row = 0; row < nums.length; row++) { #distractor
+               colSum += nums[col][row];
            } //end inner for loop
    =====
-           averages[i] = colSum / nums.length;
+           averages[col] = colSum / nums.length;
    =====
-           averages[i] = colSum / nums.length(); #distractor
+           averages[col] = colSum / nums.length(); #distractor
    =====
        } //end outer for loop
        return averages;
