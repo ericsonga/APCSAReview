@@ -449,7 +449,7 @@ Code Practice with Variables
                   {
                       double money = 4.5;
                       double pricePer = 0.75;
-                      int num = money / pricePer;
+                      int num = (int) (money / pricePer);
                       System.out.println(num);
                   }
               }

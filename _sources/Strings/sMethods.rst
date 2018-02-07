@@ -11,23 +11,11 @@ String Methods on the Exam
 	pair: String; indexOf
 	pair: String; compareTo
 	pair: String; equals
-
-For the AP CS A exam there are only a few things that you have to know about strings.  All of the following are included in the quick reference that you get during the exam so you don't have to memorize these.  I recommend printing a copy of the quick reference and using it when you practice for the exam.  You can get it at https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf.  
-
-    -  the ``int length()`` method returns the number of characters in the string, including spaces
-    
-    -  the ``String substring(int from, int to)`` method returns a string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).  
-    
-    -  the ``int indexOf(String str)`` method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.  
-    
-    -  the ``int compareTo(String other)`` returns a negative value if the current string is less than the ``other`` string, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string.     
-    
-    -  the ``boolean equals(String other)`` returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.  
-    
-A string holds characters in a sequence.  Each character is at a position or **index** which starts with 0 as shown below.  An **index** is a number associated with a position in a collection of values like a string.
+	
+A string holds characters in a sequence.  Each character is at a position or **index** which starts with 0 as shown below.  An **index** is a number associated with a position in a string.  The length of a string is the number of characters in it including any spaces or special characters.  The string below has a length of 14.
 
 .. figure:: Figures/stringIndicies.png
-    :width: 400px
+    :width: 500px
     :align: center
     :alt: a string with the position (index) shown above each character
     :figclass: align-center
@@ -37,6 +25,18 @@ A string holds characters in a sequence.  Each character is at a position or **i
 .. note::
 
    The first character in a string is at index 0 and the last characters is at the length - 1. 
+
+For the AP CS A exam there are only a few things that you have to know about strings.  All of the following are included in the quick reference that you get during the exam so you don't have to memorize these.  I recommend printing a copy of the quick reference and using it when you practice for the exam.  You can get it at https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf.  
+
+    -  the ``int length()`` method returns the number of characters in the string, including spaces and special characters like punctuation.  
+    
+    -  the ``String substring(int from, int to)`` method returns a string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).  
+    
+    -  the ``int indexOf(String str)`` method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.  
+    
+    -  the ``int compareTo(String other)`` returns a negative value if the current string is less than the ``other`` string, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string.     
+    
+    -  the ``boolean equals(String other)`` returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.  
 
 Run the code below to see the output from ``length``, ``substring``, and ``indexOf``.
 
@@ -64,7 +64,100 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
    
 .. note::
 
-   Did you notice that ``message1.substring(0,3)`` includes all the characters from position 0 to 2 and doesn't include the character at position 3?   
+   Did you notice that ``message1.substring(0,3)`` includes all the characters from position 0 to 2 and doesn't include the character at position 3?  
+   
+**Check your understanding** 
+
+.. mchoice:: qsb_3
+   :answer_a: 2
+   :answer_b: 1
+   :answer_c: 4
+   :answer_d: -1
+   :correct: b
+   :feedback_a: The first character is at index 0 in a string.  
+   :feedback_b: The method indexOf returns the first position of the passed str in the current string starting from the left (from 0).  
+   :feedback_c: Does indexOf start from the left or right? 
+   :feedback_d: Does the string contain a b?  
+
+   What is the value of pos after the following code executes?
+   
+   .. code-block:: java 
+
+     String s1 = "abccba";
+     int pos = s1.indexOf("b");
+
+.. mchoice:: qsb_3b
+   :answer_a: 2
+   :answer_b: 3
+   :answer_c: 4
+   :answer_d: -1
+   :correct: c
+   :feedback_a: Length returns the number of characters in the string, not the number of characters in the name of the string.
+   :feedback_b: The position of the last character is 3, but the length is 4. 
+   :feedback_c: Length returns the number of characters in the string.
+   :feedback_d: Length is never negative.
+
+   What is the value of len after the following code executes?
+   
+   .. code-block:: java 
+
+     String s1 = "baby";
+     int len = s1.length();
+     
+.. mchoice:: qsb_3c
+   :answer_a: baby
+   :answer_b: b
+   :answer_c: ba
+   :answer_d: bab
+   :correct: d
+   :feedback_a: This would be true if substring returned all the characters from the first index to the last inclusive, but it does not include the character at the last index.
+   :feedback_b: This would be true if it was s1.substring(0,1)
+   :feedback_c: This would be true if it was s1.substring(0,2)
+   :feedback_d: Substring returns all the characters from the starting index to the last index - 1.  
+
+   What is the value of str2 after the following code executes?
+   
+   .. code-block:: java 
+
+     String s1 = "baby";
+     String s2 = s1.substring(0,3);
+
+.. mchoice:: qsb_4
+   :answer_a: 7
+   :answer_b: 8
+   :answer_c: 9
+   :correct: c
+   :feedback_a: Count spaces and punctuation in the length. 
+   :feedback_b: Did you forget to count a space or punctuation?  
+   :feedback_c: The length method returns the number of characters including spaces and punctuation.   
+
+   What is the value of len after the following executes?
+   
+   .. code-block:: java 
+
+     String s1 = "Miss you!";
+     int len = s1.length();
+     
+.. mchoice:: qsb_4b
+   :answer_a: by
+   :answer_b: aby
+   :answer_c: a
+   :answer_d: b
+   :answer_e: ba
+   :correct: a
+   :feedback_a: The method substring(index) will return all characters starting the index to the end of the string.
+   :feedback_b: This would be true if it was substring(1);
+   :feedback_c: This would be true if it was substring(1,2);
+   :feedback_d: This would be true if it was substring(2,3); 
+   :feedback_e: This would be ture if it was substring(0,2);
+
+   What is the value of str2 after the following code executes?
+   
+   .. code-block:: java 
+
+     String s1 = "baby";
+     String s2 = s1.substring(2);
+     
    
 Run the example below to see the output from ``compareTo`` and ``equals``.
 
@@ -95,78 +188,6 @@ There are lots of other methods in the String class.  See the Java documentation
 
 **Check your understanding**
 
-.. mchoice:: qsb_1
-   :answer_a: Hi
-   :answer_b: hi
-   :answer_c: H
-   :answer_d: h
-   :correct: a
-   :feedback_a: Strings are immutable, meaning they don't change.  Any method that changes a string returns a new string.  So s1 never changes.  
-   :feedback_b: This would be true if the question was what is the value of s2 and it was substring(0,2) not (0,1)
-   :feedback_c: This would be true if the question was what is the value of s2, not s1.  
-   :feedback_d: This would be true if the question was what is the value of s3, not s1. 
-
-   What is the value of s1 after the following code executes?
-   
-   .. code-block:: java 
-
-     String s1 = "Hi"; 
-     String s2 = s1.substring(0,1);
-     String s3 = s2.toLowerCase();
-    
-.. mchoice:: qsb_2
-   :answer_a: Hi
-   :answer_b: hi
-   :answer_c: H
-   :answer_d: h
-   :correct: d
-   :feedback_a: Is this the value of s3?  What does toLowerCase do?
-   :feedback_b: How does substring work?  Does it include the character at the end index?
-   :feedback_c: What does toLowerCase do?
-   :feedback_d: s2 is set to just "H" and s3 is set to changing all characters in s2 to lower case.
-
-   What is the value of s3 after the following code executes?
-   
-   .. code-block:: java
-
-     String s1 = "Hi"; 
-     String s2 = s1.substring(0,1);
-     String s3 = s2.toLowerCase();
-     
-.. mchoice:: qsb_3
-   :answer_a: 2
-   :answer_b: 1
-   :answer_c: 4
-   :answer_d: -1
-   :correct: b
-   :feedback_a: The first character is at index 0 in a string.  
-   :feedback_b: The method indexOf returns the first position of the passed str in the current string starting from the left (from 0).  
-   :feedback_c: Does indexOf start from the left or right? 
-   :feedback_d: Does the string contain a b?  
-
-   What is the value of pos after the following code executes?
-   
-   .. code-block:: java 
-
-     String s1 = "abccba";
-     int pos = s1.indexOf("b");
-     
-.. mchoice:: qsb_4
-   :answer_a: 7
-   :answer_b: 8
-   :answer_c: 9
-   :correct: c
-   :feedback_a: Count spaces and punctuation in the length. 
-   :feedback_b: Did you forget to count a space or punctuation?  
-   :feedback_c: The length method returns the number of characters including spaces and punctuation.   
-
-   What is the value of len after the following executes?
-   
-   .. code-block:: java 
-
-     String s1 = "Miss you!";
-     int len = s1.length();
-     
 .. mchoice:: qsb_5
    :answer_a: hi th
    :answer_b: hi the
@@ -185,3 +206,61 @@ There are lots of other methods in the String class.  See the Java documentation
      String s1 = new String("hi there");
      int pos = s1.indexOf("e");
      String s2 = s1.substring(0,pos);
+
+.. mchoice:: qsb_6-old1
+   :answer_a: Hi
+   :answer_b: hi
+   :answer_c: H
+   :answer_d: h
+   :correct: a
+   :feedback_a: Strings are immutable, meaning they don't change.  Any method that changes a string returns a new string.  So s1 never changes.  
+   :feedback_b: This would be true if the question was what is the value of s2 and it was substring(0,2) not (0,1)
+   :feedback_c: This would be true if the question was what is the value of s2, not s1.  
+   :feedback_d: This would be true if the question was what is the value of s3, not s1. 
+
+   What is the value of s1 after the following code executes?
+   
+   .. code-block:: java 
+
+     String s1 = "Hi"; 
+     String s2 = s1.substring(0,1);
+     String s3 = s2.toLowerCase();
+    
+.. mchoice:: qsb_7-old24
+   :answer_a: Hi
+   :answer_b: hi
+   :answer_c: H
+   :answer_d: h
+   :correct: d
+   :feedback_a: Is this the value of s3?  What does toLowerCase do?
+   :feedback_b: How does substring work?  Does it include the character at the end index?
+   :feedback_c: What does toLowerCase do?
+   :feedback_d: s2 is set to just "H" and s3 is set to changing all characters in s2 to lower case.
+
+   What is the value of s3 after the following code executes?
+   
+   .. code-block:: java
+
+     String s1 = "Hi"; 
+     String s2 = s1.substring(0,1);
+     String s3 = s2.toLowerCase();
+     
+.. mchoice:: qsb_8-new
+   :answer_a: positive (> 0)
+   :answer_b: 0
+   :answer_c: negative (< 0)
+   :correct: a
+   :feedback_a: H is after B in the alphabet so s1 is greater than s2.
+   :feedback_b: The method compareTo will only return 0 if the strings have the same characters in the same order.
+   :feedback_c: This would be true if it was s2.compareTo(s1)
+
+   What is the value of s3 after the following code executes?
+   
+   .. code-block:: java
+
+     String s1 = "Hi"; 
+     String s2 = "Bye";
+     int answer = s1.compareTo(s2);
+     
+
+     
