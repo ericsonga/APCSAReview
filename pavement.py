@@ -1,8 +1,16 @@
 import paver
 from paver.easy import *
+import paver.setuputils
+paver.setuputils.install_distutils_tasks()
 from socket import gethostname
 import os, sys
 from os import environ
+
+from sphinxcontrib import paverutils
+
+sys.path.append(os.getcwd())
+
+home_dir = os.getcwd()
 
 
 
@@ -10,7 +18,7 @@ master_url = None
 if master_url is None:
     if 'RSHOST' in environ:
         master_url = environ['RSHOST']
-    elif gethostname() in  ['web407.webfaction.com', 'rsbuilder']:
+    elif gethostname() in  ['web608.webfaction.com', 'rsbuilder']:
         master_url = 'http://interactivepython.org'
     elif gethostname() == 'runestone-deploy':
         master_url = 'https://runestone.academy'
@@ -20,6 +28,7 @@ if master_url is None:
 master_app = 'runestone'
 serving_dir = "./build/apcsareview"
 dest = '../../static'
+project_name = "apcsareview"
 
 options(
     sphinx = Bunch(docroot=".",),
