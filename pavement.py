@@ -26,20 +26,20 @@ if master_url is None:
         master_url = 'http://127.0.0.1:8000'
 
 master_app = 'runestone'
-serving_dir = "./build/apcsareview"
+serving_dir = "./build/JavaReview"
 dest = '../../static'
-project_name = "apcsareview"
+project_name = "JavaReview"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/apcsareview",
+        builddir="./build/JavaReview",
         sourcedir="_sources",
-        outdir="./build/apcsareview",
+        outdir="./build/JavaReview",
         confdir=".",
-        project_name = "apcsareview",
-        template_args={'course_id': 'apcsareview',
+        project_name = "JavaReview",
+        template_args={'course_id': 'JavaReview',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 10,
@@ -47,7 +47,7 @@ options(
                        'use_services': 'true',
                        'python3': 'false',
                        'dburl': 'postgresql://runestone@localhost/runestone',
-                       'basecourse': 'apcsareview'
+                       'basecourse': 'JavaReview'
                         }
     )
 )
