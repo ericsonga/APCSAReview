@@ -59,7 +59,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           int x = 5;
+           int x = 0;
    =====
            while (x <= 50) {
    =====
