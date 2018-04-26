@@ -91,7 +91,7 @@ The following table shows the result for P || Q when P and Q are both expression
 
 **Check your understanding**
 
-.. mchoice:: qcb_5
+.. mchoice:: qcbc_5
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  
@@ -107,7 +107,7 @@ The following table shows the result for P || Q when P and Q are both expression
      if (x > 0 && (y / x) == 3) System.out.println("first case");
      else System.out.println("second case");
 
-.. mchoice:: qcb_7
+.. mchoice:: qcbc_7
    :answer_a: first case
    :answer_b: second case
    :correct: a
@@ -121,7 +121,7 @@ The following table shows the result for P || Q when P and Q are both expression
      if (x > 0 && (y / x) == 3) System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoice:: qcb_8
+.. mchoice:: qcbc_8
    :answer_a: first case
    :answer_b: second case
    :correct: b
@@ -135,7 +135,7 @@ The following table shows the result for P || Q when P and Q are both expression
      if (x > 0 && (y / x) == 3) System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoice:: qcb_6
+.. mchoice:: qcbc_6
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  

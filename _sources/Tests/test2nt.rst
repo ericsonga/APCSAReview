@@ -83,7 +83,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    A sorted array of integers containing 2000 elements is to be searched for ``key`` using a binary search method. Assuming ``key`` is in the array, what is the maximum number of iterations needed to find ``key``?
 
 
-.. mchoice:: qtnt1_4
+.. mchoice:: qtnt2_4
    :answer_a: I only
    :answer_b: II only
    :answer_c: II and III only

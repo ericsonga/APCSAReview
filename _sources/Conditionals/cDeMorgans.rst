@@ -47,7 +47,7 @@ See the example below.  For what values of x and y will it print true?  Try out 
 
 For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_Morgan's_laws.  
 
-.. mchoice:: qcb_8
+.. mchoice:: qcbdm1_8
    :answer_a: first case
    :answer_b: second case 
    :correct: b
@@ -61,7 +61,7 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
      if (!(x < 3 || y > 2)) System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoice:: qcb_9
+.. mchoice:: qcbdm2_9
    :answer_a: first case
    :answer_b: second case 
    :correct: a
@@ -75,7 +75,7 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
      if (!(x < 3 && y > 2)) System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoice:: qcbdm_1
+.. mchoice:: qcbdm3_1
    :answer_a: (x < 2) || (y > 4)
    :answer_b: (x < 2) && (y > 4)
    :answer_c: (x <= 2) || (y >= 4)
@@ -92,7 +92,7 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
 
      !(x > 2 && y < 4)
      
-.. mchoice:: qcbdm_2
+.. mchoice:: qcbdm4_2
    :answer_a: (x != 2) || (y < 4)
    :answer_b: (x != 2) && (y < 4)
    :answer_c: (x != 2) && (y <= 4)
@@ -109,7 +109,7 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
 
      !(x == 2 && y > 4)
      
-.. mchoice:: qcbdm_3
+.. mchoice:: qcbdm5_3
    :answer_a: (x == 5) || (y == 7)
    :answer_b: (x == 5) && (y == 7)
    :answer_c: (x != 5) || (y != 7) 
@@ -126,7 +126,7 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
 
      !(x!=5 && y!=7)
      
-.. mchoice:: qcbdm_4
+.. mchoice:: qcbdm6_4
    :answer_a: (x > 5) && (y < 7)
    :answer_b: (x > 5) || (y < 7)
    :answer_c: (x > 5) && (y <= 7)

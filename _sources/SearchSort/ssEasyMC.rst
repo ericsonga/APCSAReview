@@ -7,7 +7,7 @@ Easy Multiple Choice Questions
 
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
-.. mchoice:: qsse_1
+.. mchoice:: qsearchse_1
    :answer_a: -1
    :answer_b: 0
    :answer_c: 1
@@ -38,7 +38,7 @@ These problems are easier than most of those that you will usually see on the AP
      
 You can step through the code above by clicking on the following `Ex-12-7-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int%5B%5D+elements,+int+target)%0A+++%7B%0A++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++%7B%0A+++++++++if+(elements%5Bj%5D+%3D%3D+target)%0A+++++++++%7B%0A++++++++++++return+j%3B%0A+++++++++%7D%0A++++++%7D%0A++++++return+-1%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+nums+%3D+%7B90,+-30,+50%7D%3B%0A++++++int+found+%3D+mystery(nums,+50)%3B%0A++++++System.out.println(found)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
     
-.. mchoice:: qsse_2
+.. mchoice:: qsearchse_2
    :answer_a: -1
    :answer_b: 0
    :answer_c: 1
@@ -69,7 +69,7 @@ You can step through the code above by clicking on the following `Ex-12-7-1 <htt
      
 You can step through the code above by clicking on the following `Ex-12-7-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int%5B%5D+elements,+int+target)%0A+++%7B%0A++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++%7B%0A+++++++++if+(elements%5Bj%5D+%3D%3D+target)%0A+++++++++%7B%0A++++++++++++return+j%3B%0A+++++++++%7D%0A++++++%7D%0A++++++return+-1%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+nums+%3D+%7B90,+-30,+50%7D%3B%0A++++++int+found+%3D+mystery(nums,+-20)%3B%0A++++++System.out.println(found)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
       
-.. mchoice:: qsse_3
+.. mchoice:: qsearchse_3
    :answer_a: 1
    :answer_b: 2
    :answer_c: 3 
@@ -105,7 +105,7 @@ You can step through the code above by clicking on the following `Ex-12-7-2 <htt
       
 You can step through the code above by clicking on the following `Ex-12-7-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+SearchTest%0A%7B%0A+++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++int+left+%3D+0%3B%0A++++++int+right+%3D+elements.length+-+1%3B%0A++++++int+count+%3D+0%3B%0A++++++while+(left+%3C%3D+right)%0A++++++%7B%0A+++++++++count%2B%2B%3B%0A+++++++++System.out.println(%22count%3A+%22+%2B+count)%3B%0A+++++++++%0A+++++++++int+middle+%3D+(left+%2B+right)+/+2%3B%0A+++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++%7B%0A++++++++++++right+%3D+middle+-+1%3B%0A+++++++++%7D%0A+++++++++else+if+(target+%3E+elements%5Bmiddle%5D)%0A+++++++++%7B%0A++++++++++++left+%3D+middle+%2B+1%3B%0A+++++++++%7D%0A+++++++++else+%7B%0A++++++++++++return+middle%3B%0A+++++++++%7D%0A+++++++%7D%0A+++++++return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+arr+%3D+%7B2,+10,+23,+31,+55,+86%7D%3B%0A%0A++++++//+test+when+the+target+is+in+the+middle%0A++++++int+index+%3D+binarySearch(arr,2)%3B%0A++++++System.out.println(index)%3B%0A+++%7D%0A%7D%0A%0A&mode=display&curInstr=0>`_.
    
-.. mchoice:: qsse_4
+.. mchoice:: qsearchse_4
    :answer_a: selection sort
    :answer_b: insertion sort
    :answer_c: merge sort
@@ -116,7 +116,7 @@ You can step through the code above by clicking on the following `Ex-12-7-3 <htt
 
    Which sort contains a recursive call?
    
-.. mchoice:: qsse_5
+.. mchoice:: qsearchse_5
    :answer_a: If the data is already sorted in ascending order
    :answer_b: If the data is already sorted in descending order
    :answer_c: It will always take the same amount of time to execute

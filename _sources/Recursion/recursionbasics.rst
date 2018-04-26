@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 11-1-
+   :prefix: 12-2-
    :start: 1
    
 .. highlight:: java
@@ -51,32 +51,55 @@ This method will print out "This is the method that never ends!" and then call i
 ..	index::
     single: factorial
 
-Here is another method that calculates the **factorial** of a number.  The **factorial** of a number is defined as 1 for 0 and n * factorial (n-1) for any other number.  
+See the method `factorial` below that calculates the **factorial** of a number.  The **factorial** of a number is defined as 1 for 0 and n * factorial (n-1) for any other number.  
 
 .. code-block:: java 
-  :linenos:
+   :linenos:
 
-  public static int factorial(int n)
-  {
-    if (n == 0)
-      return 1;
-    else 
-      return n * factorial(n-1);
-  }
-  
+   public static int factorial(int n)
+   {
+       if (n == 0)
+           return 1;
+       else 
+           return n * factorial(n-1);
+   }
+   
 .. fillintheblank:: recurb2fill
  
    Which line in the method factorial contains the recursive call (the call to the same method)?
 
    -    :6$: Correct.  This line contains a call to the same method, which makes it a recursive method.
         :.*: Look for a call to the same method name
+   
+Run the code below to test the factorial method.
 
+.. activecode:: FactorialTest
+   :language: java
+  
+   public class FactorialTest
+   {
+
+       public static int factorial(int n)
+       {
+           if (n == 0)
+               return 1;
+           else 
+               return n * factorial(n-1);
+       }
+      
+       public static void main(String[] args)
+       {
+           System.out.println("factorial of 3 is: " + factorial(3));
+           System.out.println("factorial of 4 is: " +factorial(4));
+           System.out.println("factorial of 5 is: " +factorial(5));
+       }
+   }
    
 ..	index::
     single: base case
     pair: recursion; base case
   
-The factorial method has a way to stop.  The recursion stops when n is equal to 0.  
+The factorial method has a way to stop the recursion (not call itself).  It stops when n is equal to 0, since it just returns 1.
 
 .. note ::
 
@@ -165,6 +188,28 @@ The factorial method has a way to stop.  The recursion stops when n is equal to 
          if (bunnies == 0) return 0;
          else if (bunnies == 1) return 2;
          else return 2 + bunnyEars(bunnies - 1); 
+      }
+      
+.. mchoice:: qrb_5-new
+   :answer_a: yes
+   :answer_b: no
+   :correct: b
+   :feedback_a: Where is the call to the same method?
+   :feedback_b: There is no call to the same method, so it is not recursive. 
+   
+   Is the following method recursive?
+    
+    .. code-block:: java 
+      :linenos:
+    
+      public static int bunnyEars(int bunnies) 
+      {
+         int total = 0;
+         for (int i = 0; i < bunnies; i++)
+         {
+            total = total + 2;
+         }
+         return total;
       }
 
 

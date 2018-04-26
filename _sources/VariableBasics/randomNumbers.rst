@@ -77,7 +77,7 @@ How could you change the code above to return a random number from 1 to 10?  Mod
 
    Which of the following would return a random number from 1 to 5 inclusive?
    
-.. mchoice:: qrand_2
+.. mchoice:: qrand_3
    :answer_a: ((int) (Math.random() * 10))
    :answer_b: ((int) (Math.random() * 11))
    :answer_c: ((int) Math.random() * 10) + 1

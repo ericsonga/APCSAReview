@@ -26,7 +26,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
 **Check your understanding**
 
-.. mchoice:: qa2db_2
+.. mchoice:: qa2ldb_2
    :answer_a: 2
    :answer_b: 4
    :answer_c: 8
@@ -37,7 +37,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
    How many rows does ``a`` have if it is created as follows ``int[][] a = {{2, 4, 6, 8}, {1, 2, 3, 4}};``?	
    
-.. mchoice:: qa2db_3
+.. mchoice:: qa2ldb_3
    :answer_a: nums[3][2]
    :answer_b: nums[2][3]
    :answer_c: nums[2][1]

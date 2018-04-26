@@ -56,7 +56,7 @@ String Overrides Equals
    
 If you want to change how the inherited ``equals`` method works you can **override** it so that the new method is called instead of the inherited one.  The ``String`` class **overrides** the inherited equals method to return true when the two objects have the same characters in the same order as shown in the code below.  
 
-.. activecode:: StringEquals
+.. activecode:: StringTest1
    :language: java
 
    public class StringTest

@@ -12,10 +12,13 @@ Polymorphism
 
 This is simliar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal. 
 
-.. image:: http://www.toysrus.com/graphics/product_images/pTRU1-5452971_alternate1_dt.jpg
-   :alt: Picture of a See N Say toy 
-   :align: center
-   :width: 300
+.. figure:: Figures/SeeNSay.jpg
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: A see n say toy
+
    
 If you were simulating this toy in software you could create an Animal class that had an abstract makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
 

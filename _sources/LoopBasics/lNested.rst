@@ -11,7 +11,7 @@ Nested For Loops
 
 A **nested loop** has one loop inside of another.  These are typically used for working with two dimensions such as printing stars in rows and columns as shown below.  
 
-.. activecode:: lcfc1
+.. activecode:: lcfcnl1
    :language: java
    
    public class NestedLoops

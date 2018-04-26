@@ -42,7 +42,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
 
    What do you think will happen when you run the code below?  How would it change if you changed line 11 to <code>i = 3</code>?
 
-.. activecode:: lcfc1
+.. activecode:: lcfcp1
    :language: java
    
    public class SongTest
@@ -77,7 +77,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
    
    The number of times a loop executes can be calculated by (largestValue - smallestValue + 1).  By the largest value I mean the largest value that allows the loop to execute and by the smallest value I mean the smallest value that allows the loop to execute.  So in the code above the largest value is 5 and the smallest value that allows the loop to execute is 1 so this loop executes (5 - 1 + 1 = 5 times).  
    
-.. activecode:: lcfc2
+.. activecode:: lcfcp2
    :language: java
    
    public class SongTest2

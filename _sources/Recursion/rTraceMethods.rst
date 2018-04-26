@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 11-3-
+   :prefix: 12-4-
    :start: 1
 
 Tracing Recursive Methods
@@ -91,7 +91,7 @@ Another way to see the call stack in action is to use Jeloit (see http://cs.joen
 
 **Check your understanding**
 
-.. mchoice:: qrb_5
+.. mchoice:: qrb_5-old
    :answer_a: 1 
    :answer_b: 120
    :answer_c: 720

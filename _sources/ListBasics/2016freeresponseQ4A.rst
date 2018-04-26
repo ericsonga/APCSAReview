@@ -89,7 +89,7 @@ Write the Code
 
 Finish writing the ``totalLetters`` method below so that it returns the number of letters for all the strings in ``wordList``.  The ``main`` method below will test your code to check that you solved it correctly.
    
-.. activecode:: lcfrsda5
+.. activecode:: lcfrsTotalLetters
    :language: java 
    
    import java.util.*;

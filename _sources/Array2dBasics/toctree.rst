@@ -13,10 +13,8 @@ Two-dimensional Arrays
    a2dEasyMC.rst
    a2dMedMC.rst
    a2dHardMC.rst
-   grayImageA.rst
-   grayImageB.rst
-   routeCipherA.rst
-   routeCipherB.rst
+   freeResponse.rst
+   a2dSummary.rst
    Array2dCodePractice.rst
    Array2dParsonsPractice.rst
    

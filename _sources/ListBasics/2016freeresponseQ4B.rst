@@ -92,7 +92,7 @@ Write the Code
 
 Finish writing the ``basicGapWidth`` method below so that it returns the size that the gap should be.  The ``main`` method below will test your code to check that you solved it correctly.
    
-.. activecode:: lcfrsda5
+.. activecode:: lcfrsbasicGapWidth
    :language: java 
    
    import java.util.*;

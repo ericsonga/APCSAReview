@@ -580,7 +580,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_d: II is not true.  Since s1 and s2 were created using the new operator they do not refer to the same object so s1 == s2 is false.
        :feedback_e: These are both true, but one more is also true.
 
-       Assume that list has been initialized with the following Integer objects: [9, 3, 17, 2, 16, 4, 1].  Which of the following shows the values in list after a call of mystery(4)?
+       Given the following code.
        
        .. code-block:: java
        

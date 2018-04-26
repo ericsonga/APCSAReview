@@ -132,7 +132,7 @@ Complete the method ``addClimb`` in the ``ClimbingClub`` class in the code below
 
 
    
-.. activecode:: ClimbClubA
+.. activecode:: ClimbClubB
    :language: java
    
    import java.util.List;

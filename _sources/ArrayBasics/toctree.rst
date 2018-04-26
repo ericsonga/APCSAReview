@@ -16,13 +16,7 @@ Arrays
    aMedMC.rst
    aHardMC.rst
    arrayExam.rst
-   selfDivisorB.rst
-   horseBarnA.rst
-   horseBarnB.rst
-   soundA.rst
-   soundB.rst
-   numberCubeA.rst
-   numberCubeB.rst
+   freeResponse.rst
    aSummary.rst
    ArrayPractice.rst
    ArrayParsonsPractice.rst

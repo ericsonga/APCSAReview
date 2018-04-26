@@ -181,12 +181,12 @@ This is an example of *assignment dyslexia*, when the student has put the value 
 
 .. fillintheblank:: fillDecVar1
 
-   Fill in the following blanks: |blank| age = |blank| to declare age to be an integer and set its value to 5.
+   Fill in the following: [blank] age = [blank]; to declare age to be an integer and set its value to 5.
 
    -    :int: Correct.  You typically use whole numbers for ages after age 1.  
         :.*: Remember that Java uses just the first 3 letters of integer
-   -    :5: Correct.  You can initialize to a value.  Don't forget the ; at the end of the assignment.
-        :.*: Use 5 in the second blank followed by ;
+   -    :5: Correct.  You can initialize to a value.  
+        :.*: Use 5 in the second blank 
             
 .. fillintheblank:: fillDecVar2
 

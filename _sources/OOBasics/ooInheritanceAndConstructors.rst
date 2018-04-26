@@ -10,7 +10,7 @@ Inheritance and Constructors
 
 How do you initialize inherited private fields if you don't have direct access to them in the subclass?  In Java you can put a call to the parent constructor using the keyword ``super`` as the first line in a subclass constructor to initialize inherited fields.  See the constructor in Employee below for an example.
 
-.. activecode:: InitInherited
+.. activecode:: InitPrivateInherited
   :language: java
 
   class Person 

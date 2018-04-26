@@ -45,6 +45,7 @@ Table of Contents
    SearchSort/toctree.rst
    Tests/toctree.rst
    TimedTests/toctree.rst
+   FreeResponse/toctree.rst
 
 Appendix 1
 ::::::::::::::::::::::::::::

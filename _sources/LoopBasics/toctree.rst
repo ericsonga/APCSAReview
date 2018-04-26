@@ -13,8 +13,7 @@ Loops
    lEasyMC.rst
    lMedMC.rst
    lHardMC.rst
-   selfDivisorA.rst
-   stringScrambleA.rst
+   freeResponse.rst
    LoopSummary.rst
    LoopPractice.rst
    LoopParsonsPractice.rst

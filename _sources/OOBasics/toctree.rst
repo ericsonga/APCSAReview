@@ -22,11 +22,8 @@ Object-Oriented Concepts
    ooEasyMC.rst
    ooMedMC.rst
    ooHardMC.rst
-   TrioA.rst
-   TrioScore1.rst
-   TrioScore2.rst
-   TrioScore3.rst
-   APLine.rst
+   freeResponse.rst
+   ooSummary.rst
    ooCodePractice.rst
    ooParsonsPractice.rst
    

@@ -14,3 +14,4 @@ Recursion
    rHardMC.rst
    rParsonsPractice.rst
    recursionCodePractice.rst
+   rMixedUpCodePractice.rst

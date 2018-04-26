@@ -17,14 +17,7 @@ List and ArrayList
    listEasyMC.rst
    listMedMC.rst
    listHardMC.rst
-   stringScrambleB.rst
-   climbClubA.rst
-   climbClubB.rst
-   climbClubC.rst
-   cookieOrderA.rst
-   cookieOrderB.rst
-   2016freeresponseQ4A.rst
-   2016freeresponseQ4B.rst
+   freeResponse.rst
    listSummary.rst
    listPractice.rst
    ListParsonsPractice.rst
