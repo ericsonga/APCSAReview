@@ -8,11 +8,13 @@
 Recursion
 ==========
 
-.. video:: v_recursion
-   :controls:
-   :thumb: ../_static/videoStart.png
+.. the video is Recursion.mov
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/Recursion.mov
+The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It introduces the concept of recursion.
+
+.. youtube:: V2S_8E_ubBY
+    :width: 800
+    :align: center
    
 The AP CS A exam usually has about 4-6 recursion problems.  You only need to know how to trace recursive methods (figure out what they return or print).  You will *not* be asked to write a recursive method on the exam.    
 

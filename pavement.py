@@ -47,7 +47,7 @@ options(
                        'use_services': 'true',
                        'python3': 'false',
                        'dburl': 'postgresql://runestone@localhost/runestone',
-                       'basecourse': 'JavaReview'
+                       'basecourse': 'javareview'
                         }
     )
 )

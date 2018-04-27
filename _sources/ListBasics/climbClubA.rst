@@ -207,10 +207,12 @@ Video - One way to code the solution
 
 There are many possible solutions to this problem.  The video below shows one solution.
 
-.. video:: v_climbClubA
-   :controls:
-   :thumb: ../_static/codeVideo.png
+.. the video is 2012Q1A.mov
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q1A.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q1A.webm
+The following video is also on YouTube at https://youtu.be/dAbU9_Qn92I.  It walks through coding a solution.
+
+.. youtube:: dAbU9_Qn92I
+    :width: 800
+    :align: center
+
    

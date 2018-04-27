@@ -224,10 +224,13 @@ Video - One way to code the solution
 
 There are many possible solutions to this problem.  The video below shows one solution.
 
-.. video:: v_climbClubB
-   :controls:
-   :thumb: ../_static/codeVideo.png
+.. the video is 2012Q1B.mov
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q1B.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q1B.webm
+The following video is also on YouTube at https://youtu.be/Fye33yPQk-g.  It walks through coding a solution.
+
+.. youtube:: Fye33yPQk-g
+    :width: 800
+    :align: center
+
+
    

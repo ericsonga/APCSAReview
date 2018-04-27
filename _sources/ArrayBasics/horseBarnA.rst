@@ -187,9 +187,12 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
 Video - One way to code the solution
 =====================================
 
-.. video:: v_horseBarnASol
-   :controls:
-   :thumb: ../_static/codeVideo.png
-   
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q3A.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q3A.webm
+.. the video is 2012Q3A.mov
+
+The following video is also on YouTube at https://youtu.be/sk9i_mhrc5M.  It walks through coding a solution.
+
+.. youtube:: sk9i_mhrc5M
+    :width: 800
+    :align: center
+
+

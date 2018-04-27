@@ -175,9 +175,12 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
 Video - One way to code the solution
 =====================================
 
-.. video:: v_horseBarnBSol
-   :controls:
-   :thumb: ../_static/codeVideo.png
-   
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q3B.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q3B.webm
+.. the video is 2012Q3B.mov
+
+The following video is also on YouTube at https://youtu.be/3HytvgdLCNI.  It walks through coding a solution.
+
+.. youtube:: 3HytvgdLCNI
+    :width: 800
+    :align: center
+
+

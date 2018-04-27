@@ -192,9 +192,12 @@ Try to write the code for the method ``processImage``. When you are ready click 
 Video - One way to code the solution
 =====================================
 
-.. video:: v_grayImageBSol
-   :controls:
-   :thumb: ../_static/codeVideo.png
+.. the video is 2012Q4B2.mov  
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B2.mov 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4B2.webm
+The following video is also on YouTube at https://youtu.be/8j34xQkjsJI.  It walks through coding a solution.
+
+.. youtube:: 8j34xQkjsJI
+    :width: 800
+    :align: center
+
+

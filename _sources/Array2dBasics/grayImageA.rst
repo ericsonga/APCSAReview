@@ -152,10 +152,12 @@ Try to write the code for the method ``countWhitePixels``. When you are ready cl
 Video - One way to code the solution
 =====================================
 
-.. video:: v_grayImageASol
-   :controls:
-   :thumb: ../_static/codeVideo.png
-   
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4A.mov 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q4A.webm
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/2012Q3B.webm
+.. the video is 2012Q4A.mov 
+
+The following video is also on YouTube at https://youtu.be/Rx4bPs0wkxU.  It walks through coding a solution.
+
+.. youtube:: Rx4bPs0wkxU
+    :width: 800
+    :align: center
+
+
