@@ -141,17 +141,6 @@ In this case since we didn't swap any characters we only increment the index by 
 
 The code will need to loop through the characters in the string and compare two adjacent characters.  There are two ways to compare two adjacent characters without going beyond the bounds of the loop.  One way is to start the index at 0 and loop while the index is less than one less than the length of the string and then get the characters at the index and at the index plus one. Another way is to start the index at 1 and loop while the index is less than the length of the string and then get the characters at one less than the index and at the index.  If the first character is an "A" and the second is not an "A" then swap them and increment the index to make sure that you don't check characters that have already been swapped.  Each time through the loop also increment the index.  
 
-Video - The algorithm
-=========================
-
-The video below explains the algorithm to use in solving the problem.
-
-.. video:: v_stringScrableAAlg
-   :controls:
-   :thumb: ../_static/algorithmVideo.png
-   
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/20141a.mov
-   
 Write the Code
 ===================
 
@@ -200,13 +189,15 @@ Write the method scrambleWord below.
 Video - One way to code the solution
 =====================================
 
-There are many possible solutions to this problem.  The video below shows one solution.
+There are many possible solutions to this problem. 
 
-.. video:: v_stringScrambleASol
-   :controls:
-   :thumb: ../_static/codeVideo.png
-   
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/20141-a.mov
+.. the video is 20141-a.mov
+
+The following video is also on YouTube at https://youtu.be/HlVdo9Nij44.  It walks through coding a solution.
+
+.. youtube:: HlVdo9Nij44
+    :width: 800
+    :align: center
 
 
 

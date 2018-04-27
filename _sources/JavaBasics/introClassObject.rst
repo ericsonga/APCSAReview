@@ -18,13 +18,14 @@ In Java, a class doesn't mean the same thing as the classes you take in school. 
 There are many classes that are part of the Java langague, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  
 
 The real power of Java is the ability to create your own classes (define your own types) as shown in the video below. This video was created using the free software Greenfoot which is at http://greenfoot.org.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial to get you started in Greenfoot.
+   
+.. the video is introToAnts.mov
 
-.. video:: ants
-   :controls:
-   :thumb: ../_static/videoStart.png
+The following video is also on YouTube at https://youtu.be/7G93HDuqXzY.  It shows objects doing actions in Greenfoot.
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/introToAnts.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/introToAnts.webm
+.. youtube:: 7G93HDuqXzY
+    :width: 640
+    :align: center
 
 ..	index::
 	single: object

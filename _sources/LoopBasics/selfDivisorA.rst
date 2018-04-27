@@ -152,15 +152,17 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
 Video - One way to code the solution
 =====================================
 
-There are many possible solutions to this problem.  The video below shows one solution.
+There are many possible solutions to this problem. 
 
-.. video:: v_selfDivASol
-   :controls:
-   :thumb: ../_static/codeVideo.png
+.. the video is selfDivisorCodeA.mov 
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/selfDivisorCodeA.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/selfDivisorCodeA.webm
-   
+The following video is also on YouTube at https://youtu.be/oK1hDTmR3AE.  It walks through creating a solution.
+
+.. youtube:: oK1hDTmR3AE
+    :width: 800
+    :align: center
+
+
 
      
   

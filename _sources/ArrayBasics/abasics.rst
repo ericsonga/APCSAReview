@@ -5,17 +5,18 @@
 Arrays in Java
 -------------------
 
-.. video:: v_array
-   :controls:
-   :thumb: ../_static/videoStart.png
-
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/Arrays.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/Arrays.webm
-   
 ..	index::
 	single: array
 	single: index
 	pair: array; index
+
+.. the video is Arrays.mov 
+
+The following video is also on YouTube at https://youtu.be/G7aF-OuLfl4.  It introduces the concept of an array and gives an example.
+
+.. youtube:: G7aF-OuLfl4
+    :width: 640
+    :align: center
 
 An **array** is consecutive storage for multiple items of the same type.  You can store a value in an array using an **index** (location in the array).  You can get a value from an array using an index.  An array is like a row of lockers, except that you can't cram lots of stuff into it.  Except that you can only store one value at an array index.  An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.  
 

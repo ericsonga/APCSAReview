@@ -11,12 +11,13 @@ What is a Variable?
 ..	index::
 	single: variable
 	
-.. video:: v_variables
-   :controls:
-   :thumb: ../_static/videoStart.png
+.. the video is variables.mov 
 
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/variables.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/variables.webm
+The following video is also on YouTube at https://youtu.be/pHgYlVjagmA.  It explains what a variable is and gives a couple of real word examples of variables.
+
+.. youtube:: pHgYlVjagmA
+    :width: 800
+    :align: center
 
 A **variable** is a name associated with a memory location in the computer.  Computer memory can store a value and that value can change or vary.  When you play a game, it will often have a score.  Scores often start at 0 and increase.  A score is a variable.  
 
