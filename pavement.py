@@ -58,15 +58,4 @@ if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBN
     options.build.template_args['dburl'] = 'postgresql://{DBUSER}:{DBPASS}@{DBHOST}/{DBNAME}'.format(**environ)
 
 from runestone import build  # build is called implicitly by the paver driver.
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
+
