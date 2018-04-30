@@ -12,65 +12,61 @@ sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()
 
-######## CHANGE THIS ##########
-project_name = "javareview"
-###############################
-
 
 
 master_url = None
-doctrees = None
 if master_url is None:
-    if gethostname() in ['web608.webfaction.com', 'rsbuilder']:
+    if 'RSHOST' in environ:
+        master_url = environ['RSHOST']
+    elif gethostname() in  ['web608.webfaction.com', 'rsbuilder']:
         master_url = 'http://interactivepython.org'
-        if os.path.exists('../../custom_courses/{}'.format(project_name)):
-            doctrees = '../../custom_courses/{}/doctrees'.format(project_name)
-        else:
-            doctrees = './build/{}/doctrees'.format(project_name)
+    elif gethostname() == 'runestone-deploy':
+        master_url = 'https://runestone.academy'
     else:
         master_url = 'http://127.0.0.1:8000'
-        doctrees = './build/{}/doctrees'.format(project_name)
 
 master_app = 'runestone'
 serving_dir = "./build/JavaReview"
-dest = "../../static"
+dest = '../../static'
+project_name = "javareview"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/"+project_name,
-        sourcedir="./_sources/",
-        outdir="./build/"+project_name,
+        builddir="./build/JavaReview",
+        sourcedir="_sources",
+        outdir="./build/JavaReview",
         confdir=".",
-        project_name = project_name,
-        doctrees = doctrees,
-        template_args = {
-            'course_id':project_name,
-            'login_required':'false',
-            'appname':master_app,
-            'loglevel':10,
-            'course_url':master_url,
-            'use_services': 'true',
-            'python3': 'true',
-            'dburl': 'postgresql://bmiller@localhost/runestone',
-            'basecourse': 'javareview',
-            'downloads_enabled': 'false',
-            'default_ac_lang': 'python',
-        }
-
+        project_name = "javareview",
+        template_args={'course_id': 'javareview',
+                       'login_required':'false',
+                       'appname':master_app,
+                       'loglevel': 10,
+                       'course_url':master_url,
+                       'use_services': 'true',
+                       'python3': 'false',
+                       'dburl': 'postgresql://runestone@localhost/runestone',
+                       'basecourse': 'javareview'
+                        }
     )
 )
 
-if project_name == "<project_name>":
-  print("Please edit pavement.py and give your project a name")
-  exit()
-
-version = pkg_resources.require("runestone")[0].version
-options.build.template_args['runestone_version'] = version
-
+# Check to see if we are building on our Jenkins build server, if so use the environment variables
+# to update the DB information for this build
 if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBNAME' in environ:
     options.build.template_args['dburl'] = 'postgresql://{DBUSER}:{DBPASS}@{DBHOST}/{DBNAME}'.format(**environ)
 
-from runestone import build
-# build is called implicitly by the paver driver.
+from runestone import build  # build is called implicitly by the paver driver.
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
