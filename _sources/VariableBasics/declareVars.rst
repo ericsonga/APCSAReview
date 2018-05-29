@@ -24,7 +24,7 @@ When you declare a variable, a memory location (sequential number of bits) is se
     
     Figure 1: Examples of variables with names and values.  Notice that the different types get a different amount of space.
 
-To **declare** (create) a variable, you will specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).  You can set the value of the variable after you declare it as shown below.
+To **declare** (create) a variable, you will specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).  
 
 .. figure:: Figures/typeName.png
     :width: 100px

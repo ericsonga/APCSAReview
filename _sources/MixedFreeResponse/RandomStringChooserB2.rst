@@ -2,8 +2,8 @@
    :prefix:  16-2-
    :start: 1
 
-RandomStringChooser - Part B
-===============================
+RandomStringChooser - Part B - 2nd time
+===============================================
 
 ..	index::
 	single: RandomLetterChooser
@@ -61,50 +61,15 @@ Complete the ``RandomLetterChooser`` constructor below.  The following code bloc
      */ 
     public RandomLetterChooser(String str)
 
-Try and Solve It
-----------------
+Try and Solve It - Again
+-----------------------------
 
 Complete the ``RandomLetterChooser`` constructor below.
 
 The code below has a main method for testing.  Write the constructor for the ``RandomLetterChooser`` class and use the main method to test it.  
 
-.. datafile:: RandomStringChooser.java
-   :hide:
-
-   public class RandomStringChooser
-   {
-       /* field */
-       private List<String> words;
-       
-       /* constructor */
-       public RandomStringChooser(String[] wordArray) 
-       { 
-           words = new ArrayList<String>();
-           
-           for (String singleWord : wordArray)
-           {
-               words.add(singleWord);
-           } 
-       }
-       
-       /* getNext method */
-       public String getNext() 
-       { 
-           int pos = 0;
-           
-           if (words.size() > 0)
-           {
-               pos = (int) (Math.random() * words.size());
-               
-               return words.remove(pos);
-           }
-           return "NONE"; 
-        }
-   }
-
-.. activecode:: RandomStrChooserB1
+.. activecode:: RandomStrChooserB1-2
    :language: java
-   :datafile: RandomStringChooser.java
    
    import java.util.List;
    import java.util.ArrayList;
@@ -146,7 +111,36 @@ The code below has a main method for testing.  Write the constructor for the ``R
         }
    }
    
-   
+   class RandomStringChooser
+   {
+       /* field */
+       private List<String> words;
+       
+       /* constructor */
+       public RandomStringChooser(String[] wordArray) 
+       { 
+           words = new ArrayList<String>();
+           
+           for (String singleWord : wordArray)
+           {
+               words.add(singleWord);
+           } 
+       }
+       
+       /* getNext method */
+       public String getNext() 
+       { 
+           int pos = 0;
+           
+           if (words.size() > 0)
+           {
+               pos = (int) (Math.random() * words.size());
+               
+               return words.remove(pos);
+           }
+           return "NONE"; 
+        }
+   }
        
 
 

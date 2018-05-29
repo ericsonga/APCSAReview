@@ -46,6 +46,9 @@ Table of Contents
    Tests/toctree.rst
    TimedTests/toctree.rst
    FreeResponse/toctree.rst
+   MixedFreeResponse/toctree.rst
+   PictureLab/imageBasics.rst
+   TurtleGraphics/turtleBasics.rst
 
 Appendix 1
 ::::::::::::::::::::::::::::
