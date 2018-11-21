@@ -649,7 +649,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    .. code-block:: java
 
      // I.
-     for (int i = num; num > 0; i--)
+     for (int i = num; i > 0; i--)
      {
          System.out.print (i + " ");
      }
