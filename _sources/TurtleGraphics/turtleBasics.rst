@@ -788,8 +788,9 @@ Try clicking the |runbutton| button below to see what the following program does
       import java.awt.geom.*;
 
       import java.io.ByteArrayOutputStream;
-      import javax.xml.bind.DatatypeConverter;
-
+    //  import javax.xml.bind.DatatypeConverter;
+      // Using java.util.Base64 instead of javax.xml.bind
+	import java.util.Base64;
       import java.util.Scanner;
 
       /**
@@ -1151,8 +1152,12 @@ Try clicking the |runbutton| button below to see what the following program does
            try {
                ByteArrayOutputStream output = new ByteArrayOutputStream();
                ImageIO.write(this.bufferedImage, "png", output);
-               String result = DatatypeConverter.printBase64Binary(output.toByteArray());
-               System.out.println("&ltimg src=\"data:image/" + this.extension + ";base64," + result + "\"/>");
+               String result = 
+	       // DatatypeConverter.printBase64Binary(output.toByteArray());
+               //BH: using java.util.Base64 instead of java.xml.bind.DataTypeConverter
+            	Base64.getEncoder().encodeToString(output.toByteArray());
+                    
+	       System.out.println("&ltimg src=\"data:image/" + this.extension + ";base64," + result + "\"/>");
            } catch (IOException e) {
                System.out.println("Errors occured in image conversion");
            }
@@ -2408,7 +2413,9 @@ Try clicking the |runbutton| button below to see what the following program does
 
       import java.net.*;
       import java.io.*;
-      import javax.xml.bind.DatatypeConverter;
+ //     import javax.xml.bind.DatatypeConverter;
+ 	// Using java.util.Base64 instead of javax.xml.bind
+	import java.util.Base64;
       import javax.imageio.*;
       import java.awt.image.*;
       import javax.imageio.stream.*;
@@ -2631,8 +2638,12 @@ Try clicking the |runbutton| button below to see what the following program does
                     URL url = history.toURI().toURL();
 
                     byte[] imageBytes = downloadUrl(url);
-                    String result = DatatypeConverter.printBase64Binary(imageBytes);
-                    System.gc();
+                    String result = 
+		    //DatatypeConverter.printBase64Binary(imageBytes);
+                     //BH: using java.util.Base64 instead of javax.xml.bind.DataTypeConverter
+                    Base64.getEncoder().encodeToString(imageBytes);
+                    
+		    System.gc();
                     history.delete();
                     double rand = Math.random();
                     System.out.println("&ltimg src=\"data:image/gif;base64," + result + "\"/>");
