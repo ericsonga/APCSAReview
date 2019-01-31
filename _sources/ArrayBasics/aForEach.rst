@@ -49,6 +49,27 @@ The code above wasn't object-oriented.  You may have noticed that it was declare
     
 A more object-oriented way of doing this would be if the array was a field called ``values`` in the same class as the ``getAverage`` method.  Then you don't need to pass the array ``values`` to the method and the method is an object (instance) method since it operates on the fields of the object.  You will typically initialize fields in the constructor as shown below.  
 
+.. mchoice:: qab_6A
+   :answer_a: Only I.
+   :answer_b: I and III only.
+   :answer_c: II and III only.
+   :answer_d: All of the Above.
+   :correct: b
+   :feedback_a: This style of loop does access every element of the array, but using a for-each loop also means the user can access elements through the variable name.
+   :feedback_b: Correct! For-each loops access all elements and enable users to use a variable name to refer to array elements, but do not allow users to modify elements directly.
+   :feedback_c: For-each loops, as well as allowing users to refer to array elements, run through every element. For-each loops also do not allow users to modify elements directly.
+   :feedback_d: For-each loops access all of an array's elements and allow users to refer to elements through a variable, but do not allow users to modify elements directly.  
+
+
+   What are some of the reasons you would use a for-each loop instead of a for loop?
+   
+   .. code-block:: java
+
+      I: If you wish to access every element of an array.
+      II: If you wish to modify elements of the array.
+      III: If you wish to refer to elements through a variable name instead of an array index. 
+     
+
 .. activecode:: lcaf2
    :language: java
    

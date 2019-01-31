@@ -12,5 +12,8 @@ Free Response Practice Exam
    StudentAnswerSheetB.rst
    SkyViewA.rst
    SkyViewB.rst
-   
-   
+   ArrayTesterA.rst
+   ArrayTesterB.rst
+   NumberGroupA.rst
+   NumberGroupB.rst
+   NumberGroupC.rst

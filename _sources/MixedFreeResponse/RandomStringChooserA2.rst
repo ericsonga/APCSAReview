@@ -36,7 +36,7 @@ One possible output is shown below.  Because ``sChooser`` has only four strings,
    bus the wheels on NONE NONE
    
 
-Try and Solve It - Again
+Try and Write It
 ----------------------------
 
 Now that you have had practice with the mixed up code, write the entire ``RandomStringChooser`` class again. Your implementation must include an appropriate constructor and any necessary methods.  Any instance variables must be ``private``.  The code segment in the example above should have the indicated behavior (that is, it must compile and produce a result like the possible output shown.  Neither the constructor or any of the methods should alter the parameter passed to the constructor, but your implementation may copy the contents of the array.

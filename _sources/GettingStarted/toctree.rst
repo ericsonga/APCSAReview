@@ -1,8 +1,8 @@
-Preface and Getting Setup
+Preface and Getting Set up
 :::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Preface and Getting Setup
+   :caption: Preface and Getting Set up
    :maxdepth: 3
 
    preface.rst

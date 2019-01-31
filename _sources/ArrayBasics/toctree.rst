@@ -16,7 +16,9 @@ Arrays
    aMedMC.rst
    aHardMC.rst
    arrayExam.rst
+   aMidterm.rst
    freeResponse.rst
    aSummary.rst
    ArrayPractice.rst
    ArrayParsonsPractice.rst
+   
