@@ -36,7 +36,7 @@ In the 1960s, an educational programming language called Logo was developed. It 
 	pair: programming; comment
 	pair: program; comment
 
-Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtles objects.
+Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
 Try clicking the |runbutton| button below to see what the following program does.
 
 .. reveal:: TurtleClasses
