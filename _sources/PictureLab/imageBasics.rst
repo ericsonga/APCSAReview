@@ -479,7 +479,8 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
         import java.awt.geom.*;
 
         import java.io.ByteArrayOutputStream;
-        import javax.xml.bind.DatatypeConverter;
+        //import javax.xml.bind.DatatypeConverter;
+        import java.util.Base64;
 
         import java.util.Scanner;
 
@@ -842,9 +843,10 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
              try {
                  ByteArrayOutputStream output = new ByteArrayOutputStream();
                  ImageIO.write(this.bufferedImage, "png", output);
-                 String result = DatatypeConverter.printBase64Binary(output.toByteArray());
+                 String result = Base64.getEncoder().encodeToString(output.toByteArray());
+                 //BH: using Base64 instead of DatatypeConverter.printBase64Binary(output.toByteArray());
 
-                 System.out.println("&ltimg src=\"data:image/" + this.extension + ";base64," + result + "\"/&gt");
+                 System.out.println("<img src=\"data:image/" + this.extension + ";base64," + result + "\"/&gt");
              } catch (IOException e) {
                  System.out.println("Errors occured in image conversion");
              }

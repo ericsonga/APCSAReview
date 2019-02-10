@@ -6,27 +6,26 @@
     no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
     is included in the section entitled "GNU Free Documentation License".
 
-..  shortname:: Chapter: What You Can Do with a Computer
-..  description:: Some tidbits of what you can do with a computer
+..  shortname:: Chapter: Compute with Turtles
+..  description:: Intro to classes and objects with turtles
 
 .. |runbutton| image:: Figures/run-button.png
-    :height: 20px
+    :height: 30px
     :align: top
     :alt: run button
 
-Compute with Turtles
+Compute with Turtles: Intro to Objects
 =====================
 
-A turtle here is not an animal.
-We are working with a virtual turtle, an idea that dates back to the 1960's.  The original robot turtle had a physical pen in it.  The student-programmers would steer the robot around using programs, and create drawings with the pen.
+In the 1960s, an educational programming language called Logo was developed. It is best known for teaching programming with turtles! The turtles were graphical or robotic turtles that were controlled with simple commands like go forward or turn right. Here's a photo of a robot turtle from the 1960s.  The turtle had a pen attached to it. The student-programmers would steer the robot around using simple commands to create drawings with their code.
 
 .. figure:: Figures/mindstorms_turtle.jpg
-    :width: 200px
+    :width: 400px
     :align: center
     :alt: Children playing with a Logo turtle robot that can draw with a pen
     :figclass: align-center
 
-    Figure 3: Children playing with a Logo turtle robot that could draw with a pen
+    Figure 1: Children playing with a Logo turtle robot that could draw with a pen
 
 ..	index::
 	single: comment
@@ -37,7 +36,7 @@ We are working with a virtual turtle, an idea that dates back to the 1960's.  Th
 	pair: programming; comment
 	pair: program; comment
 
-Today, we can play with virtual turtles in a fully-graphical and non-robotic way. Below is a sample Java program that works with Turtles.
+Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtles objects.
 Try clicking the |runbutton| button below to see what the following program does.
 
 .. reveal:: TurtleClasses
@@ -45,11 +44,11 @@ Try clicking the |runbutton| button below to see what the following program does
    :hidetitle: Hide
 
    .. raw:: html
-
+        
       <pre id="turtleClasses" class="javaFiles">
       import java.awt.Image;
       import java.awt.image.BufferedImage;
-
+      
       /**
        * Interface to describe a digital picture.  A digital picture can have an
        * associated file name.  It can have a title.  It has pixels
@@ -80,7 +79,7 @@ Try clicking the |runbutton| button below to see what the following program does
         public boolean write(String fileName); // write out a file
       }
       import java.awt.Graphics;
-
+      
       /**
        * Interface to used to communicate between a model
        * and its display
@@ -109,17 +108,17 @@ Try clicking the |runbutton| button below to see what the following program does
          * @return the graphics context
          */
         public Graphics getGraphics();
-
+        
         /**
          * Method to clear the background
          */
         public void clearBackground();
-
+        
         /** Method to get the width of the display
          * @return the width in pixels of the display
          */
         public int getWidth();
-
+        
         /** Method to get the height of the display
          * @return the height in pixels of the display
          */
@@ -127,7 +126,7 @@ Try clicking the |runbutton| button below to see what the following program does
       }
       import java.awt.*;
       import java.awt.geom.*;
-
+      
       /**
        * This class represents a displayable path segment
        * it has a color, width, and a Line2D object
@@ -140,9 +139,9 @@ Try clicking the |runbutton| button below to see what the following program does
         private Color color;
         private int width;
         private Line2D.Float line;
-
+        
         //////////////// constructors ///////////////
-
+        
         /**
          * Constructor that takes the color, width,
          * and line
@@ -154,9 +153,9 @@ Try clicking the |runbutton| button below to see what the following program does
           this.width = theWidth;
           this.line = theLine;
         }
-
+        
         //////////////// methods ////////////////////
-
+        
         /**
          * Method to paint this path segment
          * @param g the graphics context
@@ -169,7 +168,7 @@ Try clicking the |runbutton| button below to see what the following program does
           g2.setColor(this.color);
           g2.draw(this.line);
         }
-
+        
       } // end of class
       import java.awt.*;
       import java.awt.geom.*;
@@ -177,7 +176,7 @@ Try clicking the |runbutton| button below to see what the following program does
       import java.util.List;
       import java.util.ArrayList;
       import java.util.Iterator;
-
+      
       /**
        * Class to represent a pen which has a color, width,
        * and a list of path segments that it should draw.
@@ -186,30 +185,31 @@ Try clicking the |runbutton| button below to see what the following program does
        * Copyright Georgia Institute of Technology 2004
        * @author Barb Ericson ericson@cc.gatech.edu
        */
+      @SuppressWarnings("unchecked")
       public class Pen
       {
         ////////////////// fields //////////////////////
 
         /** track if up or down */
         private boolean penDown = true;
-
+        
         /** color of ink */
         private Color color = Color.green;
-
+        
         /** width of stroke */
         private int width = 1;
-
+        
         /** list of path segment objects to draw */
         private List<PathSegment> pathSegmentList =
           new ArrayList<PathSegment>();
-
+          
         //////////////// constructors ///////////////////
-
+        
         /**
          * Constructor that takes no arguments
          */
         public Pen() { }
-
+        
         /**
          * Constructor that takes all the ink color, and width
          * @param color the ink color
@@ -220,7 +220,7 @@ Try clicking the |runbutton| button below to see what the following program does
           this.color = color;
           this.width = width;
         }
-
+        
         /**
          * Constructor that takes the ink color, width, and penDown flag
          * @param color the ink color
@@ -231,25 +231,25 @@ Try clicking the |runbutton| button below to see what the following program does
         {
           // use the other constructor to set these
           this(color,width);
-
+          
           // set the pen down flag
           this.penDown = penDown;
         }
-
+        
         ////////////////// methods ///////////////////////
-
+        
         /**
          * Method to get pen down status
          * @return true if the pen is down else false
          */
         public boolean isPenDown() { return penDown; }
-
+        
         /**
          * Method to set the pen down value
          * @param value the new value to use
          */
         public void setPenDown(boolean value) { penDown = value; }
-
+            
         /**
          * Method to get the pen (ink) color
          * @return the ink color
@@ -261,19 +261,19 @@ Try clicking the |runbutton| button below to see what the following program does
          * @param color the color to use
          */
         public void setColor(Color color) { this.color = color;}
-
+        
         /**
          * Method to get the width of the pen
          * @return the width in pixels
          */
         public int getWidth() { return width; }
-
+        
         /**
          * Method to set the width of the pen
          * @param width the width to use in pixels
          */
         public void setWidth(int width) { this.width = width; }
-
+        
         /**
          * Method to add a path segment if the pen is down
          * @param x1 the first x
@@ -291,7 +291,7 @@ Try clicking the |runbutton| button below to see what the following program does
             pathSegmentList.add(pathSeg);
           }
         }
-
+        
         /**
          * Method to clear the path stored for this pen
          */
@@ -299,30 +299,30 @@ Try clicking the |runbutton| button below to see what the following program does
         {
           pathSegmentList.clear();
         }
-
+        
         /**
          * Metod to paint the pen path
          * @param g the graphics context
          */
         public synchronized void paintComponent(Graphics g)
         {
-
+        
           Color oldcolor = g.getColor();
-
+          
           // loop through path segment list and
           Iterator iterator = pathSegmentList.iterator();
           PathSegment pathSeg = null;
-
+          
           // loop through path segments
           while (iterator.hasNext())
           {
             pathSeg = (PathSegment) iterator.next();
             pathSeg.paintComponent(g);
           }
-
+          
           g.setColor(oldcolor);
         }
-
+        
       } // end of class
       import java.awt.*;
       import java.awt.font.*;
@@ -331,7 +331,7 @@ Try clicking the |runbutton| button below to see what the following program does
       import java.text.*;
       import java.util.*;
       import java.util.List; // resolves problem with java.awt.List and java.util.List
-
+      
       /**
        * A class that represents a picture.  This class inherits from
        * SimplePicture and allows the student to add functionality to
@@ -342,7 +342,7 @@ Try clicking the |runbutton| button below to see what the following program does
       public class Picture extends SimplePicture
       {
         ///////////////////// constructors //////////////////////////////////
-
+        
         /**
          * Constructor that takes no arguments
          */
@@ -353,7 +353,7 @@ Try clicking the |runbutton| button below to see what the following program does
            */
           super();
         }
-
+        
         /**
          * Constructor that takes a file name and creates the picture
          * @param fileName the name of the file to create the picture from
@@ -363,7 +363,7 @@ Try clicking the |runbutton| button below to see what the following program does
           // let the parent class handle this fileName
           super(fileName);
         }
-
+        
         /**
          * Constructor that takes the height and width
          * @param height the height of the desired picture
@@ -374,7 +374,7 @@ Try clicking the |runbutton| button below to see what the following program does
           // let the parent class handle this width and height
           super(width,height);
         }
-
+        
         /**
          * Constructor that takes a picture and creates a
          * copy of that picture
@@ -385,7 +385,7 @@ Try clicking the |runbutton| button below to see what the following program does
           // let the parent class do the copy
           super(copyPicture);
         }
-
+        
         /**
          * Constructor that takes a buffered image
          * @param image the buffered image to use
@@ -394,9 +394,9 @@ Try clicking the |runbutton| button below to see what the following program does
         {
           super(image);
         }
-
+        
         ////////////////////// methods ///////////////////////////////////////
-
+        
         /**
          * Method to return a string with information about this picture.
          * @return a string with information about the picture such as fileName,
@@ -410,11 +410,11 @@ Try clicking the |runbutton| button below to see what the following program does
           return output;
 
         }
-
+        
       } // this } is the end of class Picture, put all new methods before this
       
       import java.awt.Color;
-
+      
       /**
        * Class that references a pixel in a picture. Pixel
        * stands for picture element where picture is
@@ -428,20 +428,20 @@ Try clicking the |runbutton| button below to see what the following program does
        */
       public class Pixel
       {
-
+      
         ////////////////////////// fields ///////////////////////////////////
-
+        
         /** the digital picture this pixel belongs to */
         private DigitalPicture picture;
-
+        
         /** the x (column) location of this pixel in the picture; (0,0) is top left */
         private int x;
-
+        
         /** the y (row) location of this pixel in the picture; (0,0) is top left */
         private int y;
-
+        
         ////////////////////// constructors /////////////////////////////////
-
+        
         /**
          * A constructor that takes the x and y location for the pixel and
          * the picture the pixel is coming from
@@ -453,23 +453,23 @@ Try clicking the |runbutton| button below to see what the following program does
         {
           // set the picture
           this.picture = picture;
-
+          
           // set the x location
           this.x = x;
-
+          
           // set the y location
           this.y = y;
-
+          
         }
-
+        
         ///////////////////////// methods //////////////////////////////
-
+        
         /**
          * Method to get the x location of this pixel.
          * @return the x location of the pixel in the picture
          */
         public int getX() { return x; }
-
+        
         /**
          * Method to get the y location of this pixel.
          * @return the y location of the pixel in the picture
@@ -1154,12 +1154,12 @@ Try clicking the |runbutton| button below to see what the following program does
                ImageIO.write(this.bufferedImage, "png", output);
                String result = 
 	       // DatatypeConverter.printBase64Binary(output.toByteArray());
-               //BH: using java.util.Base64 instead of java.xml.bind.DataTypeConverter
+               // using java.util.Base64 instead of java.xml.bind.DataTypeConverter
             	Base64.getEncoder().encodeToString(output.toByteArray());
                     
-	       System.out.println("&ltimg src=\"data:image/" + this.extension + ";base64," + result + "\"/>");
+	       System.out.println("<img src=\"data:image/" + this.extension + ";base64," + result + "\"/>");
            } catch (IOException e) {
-               System.out.println("Errors occured in image conversion");
+               System.out.println("Erros occured in image conversion");
            }
        }
 
@@ -2413,9 +2413,9 @@ Try clicking the |runbutton| button below to see what the following program does
 
       import java.net.*;
       import java.io.*;
- //     import javax.xml.bind.DatatypeConverter;
- 	// Using java.util.Base64 instead of javax.xml.bind
-	import java.util.Base64;
+      // import javax.xml.bind.DatatypeConverter;
+      // Using java.util.Base64 instead of javax.xml.bind
+      import java.util.Base64;
       import javax.imageio.*;
       import java.awt.image.*;
       import javax.imageio.stream.*;
@@ -2639,11 +2639,11 @@ Try clicking the |runbutton| button below to see what the following program does
 
                     byte[] imageBytes = downloadUrl(url);
                     String result = 
-		    //DatatypeConverter.printBase64Binary(imageBytes);
-                     //BH: using java.util.Base64 instead of javax.xml.bind.DataTypeConverter
+		            //DatatypeConverter.printBase64Binary(imageBytes);
+                    //BH: using java.util.Base64 instead of javax.xml.bind.DataTypeConverter
                     Base64.getEncoder().encodeToString(imageBytes);
                     
-		    System.gc();
+		            System.gc();
                     history.delete();
                     double rand = Math.random();
                     System.out.println("&ltimg src=\"data:image/gif;base64," + result + "\"/>");
@@ -2719,10 +2719,114 @@ Try clicking the |runbutton| button below to see what the following program does
       public static void main(String[] args)
       {
           World world = new World(300,300);
-          Turtle timmy = new Turtle(world);
-          timmy.forward(100);
-          timmy.turnLeft();
-          timmy.forward(75);
-          world.show(true); //delete true for no GIF
+          Turtle yertle = new Turtle(world);
+          Turtle myrtle = new Turtle(world);
+          
+          yertle.forward(100);
+          yertle.turnLeft();
+          yertle.forward(75);
+          
+          myrtle.turnRight();
+          myrtle.forward(100);
+          
+          world.show(true); 
       }
     }
+
+In the program above there were two turtle objects yertle and myrtle. The hidden Java code defined a complicated class called Turtle. A **class** in programming defines a new abstract type.   When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
+
+Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method: 
+
+.. code-block:: java 
+
+    Turtle *yourTurtleName* = new Turtle(world);
+
+The class Turtle defines **fields** (data or properties) and **methods** (behaviors or functions) that each turtle can use. The dot operator (.) is used to run an object's method. You can think of the . as an 's, for example run yertle's forward method. The parentheses () after method names are there in case you need to give the method **arguments** (some data) to do its job, for example go forward 100 pixels.
+
+Here is a class diagram that shows some of the fields and methods inherited from the SimpleTurtle class in the class Turtle. 
+
+.. figure:: Figures/turtleClassDiagram.png
+    :width: 300px
+    :align: center
+    :alt: Turtle class diagram
+    :figclass: align-center
+
+    Figure 2: Turtle Class Diagram
+    
+.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
+
+Try some of the methods above. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java. Can you make yertle draw a square? How about a triangle? You'll need 60 degree angles for a equilateral triangle.  Then, try drawing a letter A using the code below.
+
+.. figure:: Figures/turtleA.png
+    :width: 200px
+    :align: center
+    :alt: turtle drawing A
+    :figclass: align-center
+    
+.. parsonsprob:: DrawABH
+   :adaptive:
+   :noindent:
+   
+   The following code uses a turtle to draw a capital A, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to draw the A in the order shown by the numbers in the picture above.  Click on the "Check Me" button to check your solution. It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up. You can also try this code in the Java program above to see what the turtle will do.
+   -----
+   public class TurtleDrawA
+   {
+   =====
+      public static void main(String[] args)
+      {
+      =====
+         World world = new World(300,300);
+         =====
+         Turtle yertle = new Turtle(world);
+         =====
+         yertle.turn(15);
+         yertle.forward(100);
+         =====
+         yertle.turnRight();
+         yertle.turn(55);
+         yertle.forward(100);
+         =====
+         yertle.penUp();
+         yertle.backward(50);
+         yertle.penDown();
+         =====
+         yertle.turnRight();
+         yertle.turn(20);
+         yertle.forward(30);
+         =====
+         world.show(true);
+         =====
+      }
+      =====
+   }
+   
+Use the area below to have a turtle draw your initials with two different colors. Be patient with yourself because this may take a lot of trial and error to get the correct angle values.
+
+.. activecode:: Turtle_Initials
+    :language: java
+    :datafile: turtleClasses
+
+    import java.util.*;
+
+    public class TurtleInitials
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          
+          
+          
+          world.show(true); 
+      }
+    }
+
+**Vocabulary:**
+
+Make sure you know the following vocabulary words after this lesson:
+
+- class
+- object
+- methods
+- fields
+- arguments
+
