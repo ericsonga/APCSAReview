@@ -1,6 +1,6 @@
-.. qnum::
-   :prefix: 1-1-
-   :start: 1
+.. .. qnum::
+   :prefix: 0-1-
+   :start: 0
 
 Preface
 ===============
@@ -8,22 +8,11 @@ Preface
 ..	index::
 	single: license
 	
-I, Barbara Ericson, a senior research scientist at Georgia Tech published this book using a modified BSD license to
-encourage you to use it, change it, and modify it for your own purposes.
-I would appreciate knowing what you think if you do use this book, and I
-would love to see any modifications or additions you make.
+This AP CS A Java 2019 course was adapted from the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. Barbara Ericson would appreciate knowing what you think if you do use this book, and would love to see any modifications or additions you make. 
 
-About the Exam
-----------------
-    
-This book is intended to help you review for the Advanced Placement Computer Science A Exam.  I hope to eventually make it a complete textbook for the course as well.  
+The 2019 version of this book is being modified by the Mobile CSP project (https://www.mobile-csp.org), primarily by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA. We hope that CSP teachers and students can use this interactive book to transition to AP CS A.
 
-For more information on the exam see https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice. 
-
-The exam has two parts and takes 3 hours.  The first part has 40 multiple-choice questions.  The second part has 4 free response questions were you have to write Java code by hand.  In the past the multiple choice question part was 1 hour and 15 minutes, but as of spring 2016 it will be 1 hour and 30 minutes.  The free response part will also be 1 hour and 30 minutes as of spring 2016.
-
-Acknowledgements
--------------------
+**Acknowledgements**
 
 We gratefully acknowledge the use of the Jobe server from the University of Canterbury, New Zealand.  The Java programs in this eBook are actually sent to New Zealand to execute on the Jobe server.  
 
@@ -49,8 +38,8 @@ Any opinions, findings, and conclusions or recommendations expressed in this mat
 are those of the authors and do not necessarily reflect the views of the Google.  
 
 
-Contributors
--------------
+**Contributors**
+
 
 The following people have contributed to this ebook: 
 
@@ -91,8 +80,8 @@ Many others have been involved in the creation of content for the eBook (includi
 * JP Fasano - found an erorr in one of the non-timed exams 
 * Srikar Yendapally - added code problems to the 2D array chapter
 
-License
----------
+**License**
+
 
 Barbara Ericson `ericson@cc.gatech.edu <mailto://ericson@cc.gatech.edu>`_ January,
 2014

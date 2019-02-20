@@ -1,11 +1,15 @@
-Java Basics: Classes and Objects
+What is Java?
 :::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Java Basics: Class and Objects
+   :caption: What is Java?
    :maxdepth: 3
 
-   whatIsJava.rst
+   whatIsJava2019.rst
+
+
+.. Old TOC
+    whatIsJava.rst
    introClassObject.rst
    firstClass.rst
    compileTimeErrors.rst

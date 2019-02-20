@@ -1,9 +1,10 @@
-Preface and Getting Setup
+Getting Started
 :::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Preface and Getting Setup
-   :maxdepth: 3
+   :caption: Getting Started
+   :maxdepth: 2
 
    preface.rst
+   aboutcsa.rst
    ptest1.rst

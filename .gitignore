@@ -1,5 +1,6 @@
 # Ignore unique build info
 build_info
+build
 
 # Miscellaneous source files
 _sources/Tests/test6.rst

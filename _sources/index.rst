@@ -1,9 +1,12 @@
-
+.. image:: java.jpg
+    :width: 100
+    :align: left
+    
 ==========================================
-Java Review for the AP CS A Exam
+AP CS A Java Course - 2019
 ==========================================
 
-.. Here is were you specify the content and order of your new book.
+.. Here is where you specify the content and order of your new book.
 
 .. Each section heading (e.g. "SECTION 1: A Random Section") will be
    a heading in the table of contents. Source files that should be
@@ -13,6 +16,8 @@ Java Review for the AP CS A Exam
 
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
+   
+.. Moving GettingStarted/toctree.rst into Java Basics
    
 Assignments
 :::::::::::::::::
@@ -30,8 +35,23 @@ Table of Contents
    :numbered:
    :maxdepth: 3
 
-   GettingStarted/toctree.rst
-   JavaBasics/toctree.rst
+   Unit1-Getting-Started/toctree.rst
+   Unit2-Using-Objects/toctree.rst
+   Unit3-If-Statements/toctree.rst
+   Unit4-Iteration/toctree.rst
+   OOBasics/toctree.rst
+   ArrayBasics/toctree.rst
+   ListBasics/toctree.rst
+   Array2dBasics/toctree.rst
+   OOBasics/toctree.rst
+   Recursion/toctree.rst
+   Tests/toctree.rst
+   TimedTests/toctree.rst
+   FreeResponse/toctree.rst
+   MixedFreeResponse/toctree.rst
+   
+.. Old TOC
+    JavaBasics/toctree.rst
    VariableBasics/toctree.rst
    Strings/toctree.rst
    Conditionals/toctree.rst
@@ -50,10 +70,10 @@ Table of Contents
    PictureLab/imageBasics.rst
    TurtleGraphics/turtleBasics.rst
 
-Appendix 1
-::::::::::::::::::::::::::::
+.. Appendix 1
+.. ::::::::::::::::::::::::::::
 
-.. toctree::
+.. .. toctree::
    :maxdepth: 2
 
    Appendix/DrJava.rst
