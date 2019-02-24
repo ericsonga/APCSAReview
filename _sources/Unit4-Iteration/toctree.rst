@@ -1,4 +1,4 @@
-Loops
+Iteration (Loops)
 ::::::::::::::::::::
 
 .. toctree::

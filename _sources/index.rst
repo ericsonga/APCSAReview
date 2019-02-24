@@ -39,12 +39,12 @@ Table of Contents
    Unit2-Using-Objects/toctree.rst
    Unit3-If-Statements/toctree.rst
    Unit4-Iteration/toctree.rst
-   OOBasics/toctree.rst
-   ArrayBasics/toctree.rst
-   ListBasics/toctree.rst
-   Array2dBasics/toctree.rst
-   OOBasics/toctree.rst
-   Recursion/toctree.rst
+   Unit5-Writing-Classes/toctree.rst
+   Unit6-Arrays/toctree.rst
+   Unit7-ArrayList/toctree.rst
+   Unit8-2DArray/toctree.rst
+   Unit9-Inheritance/toctree.rst
+   Unit10-Recursion/toctree.rst
    Tests/toctree.rst
    TimedTests/toctree.rst
    FreeResponse/toctree.rst

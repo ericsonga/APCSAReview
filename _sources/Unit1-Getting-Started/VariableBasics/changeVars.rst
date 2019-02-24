@@ -2,10 +2,18 @@
    :prefix: 3-3-
    :start: 1
    
-Changing Variables in Java
----------------------------
+Assignment Statements
+---------------------
 
-Remember that a variable holds a value and that value can change or vary.  If you use a variable to keep score you would probably increment it (add one to the current value).  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below.
+Remember that a variable holds a value and that value can change or vary.  **Assignment statements** set variables to new values. These values can be complex **expressions** that contain math operators and other variables like in the example below. 
+
+.. code-block:: java 
+
+    // Assignment statement: 
+    // variable = expression;
+    score = (10 * points) + 5;
+
+If you use a variable to keep score you would probably increment it (add one to the current value).  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below. 
 
 .. activecode:: lccv1
    :language: java
@@ -74,3 +82,5 @@ You can set one variable's value to a *copy* of the value of another variable.  
    y = temp;
    =====
    y = x; #distractor
+   
+   

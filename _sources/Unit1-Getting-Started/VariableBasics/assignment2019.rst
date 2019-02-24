@@ -5,6 +5,7 @@ Expressions and Assignment Statements
    :maxdepth: 3
 
    changeVars.rst
+   input.rst
    operators.rst
    
 ..   

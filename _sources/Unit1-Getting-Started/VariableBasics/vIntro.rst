@@ -1,4 +1,4 @@
-.. qnum::
+.. .. qnum::
    :prefix: 3-1-
    :start: 1
    
@@ -28,8 +28,8 @@ A **variable** is a name associated with a memory location in the computer.  Com
     
     Figure 1: A pong game in `Scratch <http://scratch.mit.edu>`_ with a score shown in the upper left.
 
-Variable Types on the Exam
-------------------------------------
+Data Types
+----------
 
 ..	index::
 	single: integer

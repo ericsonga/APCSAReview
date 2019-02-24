@@ -1,5 +1,5 @@
-Conditionals
-::::::::::::::::::::
+Boolean Expressions and If Statements
+:::::::::::::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 3

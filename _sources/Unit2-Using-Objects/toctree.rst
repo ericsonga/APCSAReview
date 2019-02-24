@@ -9,10 +9,12 @@ Exam coverage: 7.5% of AP CS A multiple-choice questions
    :caption: Using Objects
    :maxdepth: 3
 
-   JavaBasics/introClassObject.rst
-   JavaBasics/firstOOClass.rst
-   JavaBasics/partsOfAClass.rst
-   JavaBasics/JavaBasicsSummary.rst
+   ObjectsIntro-2-1.rst
+   Constructors-2-2.rst
+   TurtleGraphics/turtleMethods.rst
+   Strings/toctree.rst
+   minAndMax.rst
+   randomNumbers.rst
    
 .. Old TOC
     whatIsJava.rst
