@@ -18,3 +18,4 @@ Boolean Expressions and If Statements
    CondSummary.rst
    CondPractice.rst
    CondParsonsPractice.rst
+   ../Labs/toctree.rst

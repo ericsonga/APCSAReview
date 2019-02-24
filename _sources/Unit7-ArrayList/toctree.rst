@@ -21,3 +21,4 @@ List and ArrayList
    listSummary.rst
    listPractice.rst
    ListParsonsPractice.rst
+   SearchSort/toctree.rst
