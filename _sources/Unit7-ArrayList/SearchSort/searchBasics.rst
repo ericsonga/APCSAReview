@@ -42,23 +42,23 @@ If binary search requires the values in an array or list to be sorted, how can y
 * Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right.  Start at index 1 and loop through the entire array.
 * Merge sort - Break the elements into two parts and recursively sort each part.  An array of one item is sorted (base case).  Then merge the two sorted arrays into one.
 
-There are many videos on YouTube that show these sorts.  Here is a folk dance for selection sort.
+The next lessons will explain these sorting algorithms.
 
-.. youtube:: Ns4TPTC8whw
+.. There are many videos on YouTube that show these sorts.  Here is a folk dance for selection sort.
+.. .. youtube:: Ns4TPTC8whw
     :align: center
     
-Here is folk dance for insertion sort.
+.. Here is folk dance for insertion sort.
 
-.. youtube:: ROalU379l3U
+.. .. youtube:: ROalU379l3U
     :align: center
     
-Here is folk dance for merge sort.
+.. Here is folk dance for merge sort.
 
-.. youtube:: XaqR3G_NVoo
+.. .. youtube:: XaqR3G_NVoo
     :align: center
     
-Here is another video that talks about bubble sort, insertion sort, and quick sort.  Of these only insertion sort is on the exam.
+.. Here is another video that talks about bubble sort, insertion sort, and quick sort.  Of these only insertion sort is on the exam.
 
-
-.. youtube:: WaNLJf8xzC4
+.. .. youtube:: WaNLJf8xzC4
     :align: center

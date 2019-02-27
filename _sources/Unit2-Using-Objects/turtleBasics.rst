@@ -6,6 +6,8 @@
     no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
     is included in the section entitled "GNU Free Documentation License".
 
+Objects - Instances of Classes
+==============================
 
 .. |runbutton| image:: Figures/run-button.png
     :height: 30px
@@ -3092,7 +3094,7 @@ Let's try another TurtleTest that has the World class embedded in the activecode
       } // end of World class
     
     
-In the program above there were two turtle objects yertle and myrtle. The hidden Java code is defined a complicated class called Turtle. A **class** in programming defines a new abstract data type.   When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
+In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
 
 Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method: 
 
@@ -3117,3 +3119,96 @@ Here is a class diagram that shows some of the fields and methods inherited from
 .. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
 
 Try some of the methods above in the Active Code window. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a square using different colors.
+
+What are Classes and Objects?
+-----------------------------
+
+In Java, a **class** is used to define a new data type (classify something).  The class defines what objects of the class need to know (data or fields) and do (behaviors or methods).  
+
+There are many classes that are part of the Java languge, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  
+
+The real power of Java is the ability to create your own classes (define your own types). You will also learn how to create your own classes in Unit 5. 
+
+In the video below, which was created using the free software Greenfoot (http://greenfoot.org), you can see ant objects doing actions like moving and eating.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial if you are interested in learning more about Greenfoot.
+   
+.. the video is introToAnts.mov
+
+The following video is also on YouTube at https://youtu.be/7G93HDuqXzY.  It shows objects doing actions in Greenfoot.
+
+.. youtube:: 7G93HDuqXzY
+    :width: 640
+    :align: center
+
+..	index::
+	single: object
+	single: Greenfoot
+..	single: Alice 3
+	
+.. Another free environment, Alice 3, allows you to easily create animations or 3D movies.  You can create 3D objects and program them using drag and drop programming that can help you get started in Java.  See http://www.alice.org for more information.  Also see http://ice-dl.cc.gatech.edu/?q=node/848 for an example starting project in Alice 3.
+	
+Classes create **objects**, and the objects do the actual work in an **object-oriented program**. Java and many modern programming languages are object-oriented programming languages.
+
+You can think of a class like a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  A class can also be thought of as a factory that produces objects.  
+
+.. figure:: Figures/cookieCutter.jpg
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure: Using a cookie cutter to make cookies
+    
+You can think of a class as the type or classification.  The following picture has lots of cats (objects of the type cat).  
+
+.. figure:: Figures/cats2.png
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure: Pictures of cats (cat objects)
+
+If you go to a restaurant, you will be seated by the greeter, the waiter will take your order, and the chef will cook your food.  What do we mean by a greeter, waiter, and chef?  Those are classifications or types of workers in a restaurant.  Java has this same concept.  When we create a new class we are defining a new type (a new classification) to the computer.  Each type can have abilities or behaviors (called **methods** in Java) and properties (called **fields** in Java). After you define a type, you can use it to create **objects** of that type.  All objects created from a class will have the properties and abilities/behaviors defined in that class.  For example, all turtle objects will know how to move forward and turn.
+
+**Check your understanding**
+   
+.. mchoice:: q2_2_1
+   :answer_a: 1
+   :answer_b: 10
+   :answer_c: 1000
+   :answer_d: As many as you need
+   :correct: d
+   :feedback_a: There is one definition of a class, but the class can create as many objects as are needed.
+   :feedback_b: There is no limit on the number of objects you can create from a class.
+   :feedback_c: There is no limit on the number of objects you can create from a class.
+   :feedback_d: You can create as many objects as you need from one class.
+   
+   How many objects can you create from a class in Java?
+   
+.. mchoice:: q2_2_2
+   :answer_a: fields
+   :answer_b: methods
+   :answer_c: class
+   :answer_d: object
+   :correct: b
+   :feedback_a: Fields specify the data that an object keeps track of.
+   :feedback_b: Methods specify the behavior of all objects of a class.
+   :feedback_c: While the class does specify the behavior of all objects created by that class, what part of a class specifies the behavior?
+   :feedback_d: The object behavior is specified by the methods in the class that created the object.
+   
+   What specifies the behavior for objects of a class in Java?
+   
+.. mchoice:: q2_2_3
+   :answer_a: fields
+   :answer_b: methods
+   :answer_c: class
+   :answer_d: object
+   :correct: a
+   :feedback_a: Fields specify the data that an object keeps track of.
+   :feedback_b: Methods specify the behavior of all objects of a class.
+   :feedback_c: While the class does specify the data or state that all objects of the class keep track of, what part of the class stores the data?
+   :feedback_d: The object data or state is stored in the fields of the object.  The fields are defined in the class.  
+   
+   What specifies the data or state for an object in Java?
+   
+   
+ 
+   

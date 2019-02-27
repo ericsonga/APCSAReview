@@ -1,4 +1,4 @@
-.. qnum::
+.. .. qnum::
    :prefix: 2-5-
    :start: 1
    
@@ -8,7 +8,7 @@
     :alt: run button
 
 An Object Oriented Class Example
-----------------------------------
+--------------------------------
    
 Let's create a class where each object of the class represents a person.  Every person has a name and a cell phone number which we will store in String variables.  A string is a sequence of characters like in "Hello".  We can store the name and cell phone number in **fields** in a Person object.  We provide **methods** to get and set the data.  We provide a **constructor** to initialize the data when the object is first created.
 

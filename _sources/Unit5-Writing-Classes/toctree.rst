@@ -7,10 +7,10 @@ Writing Classes
 .. toctree::
    :maxdepth: 3
    
-   JavaBasics/firstOOClass.rst
-   JavaBasics/partsOfAClass.rst
-   JavaBasics/runClass.rst
-   JavaBasics/JavaBasicsSummary.rst
+   firstOOClass.rst
+   partsOfAClass.rst
+   runClass.rst
+   JavaBasicsSummary.rst
    objectObasics.rst
    objects&Classes.rst
    

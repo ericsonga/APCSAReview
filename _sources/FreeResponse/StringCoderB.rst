@@ -23,7 +23,7 @@ Complete method ``encodeString`` below.
 
 The code below has a main method for testing your method. 
 
-.. activecode:: StringCoderA
+.. activecode:: StringCoderB
    :language: java
    
    import java.util.*;

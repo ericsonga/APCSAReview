@@ -43,20 +43,16 @@ Here is the Turtle class diagram again that shows some of the fields and methods
 Try some of the methods above in the turtle code below.
 
 
-**Exercises:** Can you make yertle draw a square? How about a triangle? You'll need 60 degree angles for a equilateral triangle. Use the turn method with the parameter for angles. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java. 
+**Exercises:** Can you make yertle draw a square? How about a triangle? You'll need 60 degree angles for a equilateral triangle. Use the turn method with the parameter for angles. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java. ...
 
 
-
-    
-
-
-.. activecode:: TurtleTestMethods
+.. activecode:: TurtleTestMethods1
     :language: java
     :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
 
     import java.util.*;
 
-    public class TurtleTestMethods
+    public class TurtleTestMethods1
     {
       public static void main(String[] args)
       {
@@ -73,7 +69,7 @@ Try some of the methods above in the turtle code below.
 
 
      
- Try drawing a letter A using the mixed up code below.
+Try drawing a letter A using the mixed up code below.
 
 .. figure:: Figures/turtleA.png
     :width: 200px
@@ -148,22 +144,22 @@ Group Work: In groups or pairs, use the area below to have a turtle draw the let
 Calling Methods that Return Values
 ----------------------------------
 
-Some methods return a value back. These are called non-void methods. 
+Some methods return a value back. These are non-void methods, because void methods do not return anything. 
 For example, the java.lang.Math.random() method returns a pseudorandom  decimal number greater than or equal to 0.0 and less than 1.0. We often move it into a range we want by multiplying it. For example, Math.random()*10 saved into an int variable (which will cut off the decimal part) will return a value between 0 and 9. 
 
 When you call a method that returns a value, you should do something with that value like saving it into a variable or printing it out.
 
 Try running the program below a couple times to see that it makes the turtle move a random number of steps. Can you change the program so that it takes a random number from 100 to 500?
 
-.. activecode:: TurtleTestMethods
+
+.. activecode:: TurtleTestMethods2
     :language: java
     :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
-
 
     import java.util.*;
     import java.lang.Math; 
     
-    public class TurtleTestMethods
+    public class TurtleTestMethods2
     {
       public static void main(String[] args)
       {

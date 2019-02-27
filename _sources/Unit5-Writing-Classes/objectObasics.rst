@@ -13,18 +13,9 @@ Object-Oriented Programming Concepts
    
 Object-oriented programming has three main features: **objects**, **inheritance**, and **polymorphism**.  
 
-**Objects** have data (fields) and behavior (methods) and do the work in an object-oriented program.  Objects are created by classes.  A class defines the data (fields) and behavior (methods) for all objects of that class.  You can create many objects from the same class.  In the video below hundreds of Ant objects are created in Greenfoot. Greenfoot is a free Java development environment that makes it easy to create 2D simulations and games.  For more information about Greenfoot see http://greenfoot.org.  
+**Objects** have data (fields) and behavior (methods) and do the work in an object-oriented program.  Objects are created by classes.  A class defines the data (fields) and behavior (methods) for all objects of that class.  You can create many objects from the same class.  
 
-
-.. the video is introToAnts.mov
-
-The following video is also on YouTube at https://youtu.be/7G93HDuqXzY.  It introduces the concepts of objects and classes using Greenfoot.
-
-.. youtube:: 7G93HDuqXzY
-    :width: 800
-    :align: center
-
-**Inheritance** allows for cleaner code since a class can inherit fields and behavior from another class instead of copying code from class to class.  The **parent** class is specified using the ``extends`` keyword in the class declaration.  The class that is extending the parent class is called the **child** class.   In the ants scenario the ``Ant`` class inherits from the ``Actor`` class.  The ``Ant`` class is the **child** class and the ``Actor`` class is the **parent** class.  The ``Ant`` class inherits the ``act`` method from the ``Actor`` class, but **overrides** it by creating a method with the same signature that will be executed instead of the parent's method.  This allows the ``Ant`` class to modify what an ``Ant`` object does when it acts.  
+**Inheritance** allows for cleaner code since a class can inherit fields and behavior from another class instead of copying code from class to class.  The **parent** class is specified using the ``extends`` keyword in the class declaration.  The class that is extending the parent class is called the **child** class.   In the ants scenario in Greenfoot below, the ``Ant`` class inherits from the ``Actor`` class.  The ``Ant`` class is the **child** class and the ``Actor`` class is the **parent** class.  The ``Ant`` class inherits the ``act`` method from the ``Actor`` class, but **overrides** it by creating a method with the same signature that will be executed instead of the parent's method.  This allows the ``Ant`` class to modify what an ``Ant`` object does when it acts.  
 
 .. the video is inheritance.mov
 
