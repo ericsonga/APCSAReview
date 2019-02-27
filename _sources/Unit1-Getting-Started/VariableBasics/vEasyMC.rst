@@ -186,7 +186,8 @@ These problems are easier than most of those that you will usually see on the AP
       int z = x * y;
       x++;
      
-.. mchoice:: qve_old6
+.. Binary/Hex conversion no longer on the AP CS A 2020.
+    .. mchoice:: qve_old6
    :answer_a: 75   
    :answer_b: 67
    :answer_c: 150
@@ -201,7 +202,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which of the following is the decimal value for the binary number 1001011?
    
-.. mchoice:: qve_old7
+   .. mchoice:: qve_old7
    :answer_a: 5   
    :answer_b: 4
    :answer_c: 6
@@ -212,7 +213,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    How many bits would you need to represent 25 distinct values?
    
-.. mchoice:: qve_old8
+   .. mchoice:: qve_old8
    :answer_a: 34   
    :answer_b: 52
    :answer_c: 64
@@ -227,7 +228,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    What is the hexadecimal equivalent of the following binary number: 110100?
    
-.. mchoice:: qve_9
+   .. mchoice:: qve_9
    :answer_a: 11011101
    :answer_b: 1011001  
    :answer_c: 10111011
