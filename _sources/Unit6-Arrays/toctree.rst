@@ -1,6 +1,11 @@
 Arrays
 ::::::::::::::::::::
 
+Instructional Periods: 6-10 days
+
+Exam coverage: 15% of AP CS A multiple-choice questions
+
+
 .. toctree::
    :maxdepth: 3
 
@@ -20,3 +25,4 @@ Arrays
    aSummary.rst
    ArrayPractice.rst
    ArrayParsonsPractice.rst
+   Exercises.rst

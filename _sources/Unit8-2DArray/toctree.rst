@@ -1,6 +1,12 @@
 Two-dimensional Arrays
 :::::::::::::::::::::::
 
+Instructional Periods: 5 days
+
+Lab Periods: 7 days
+
+Exam coverage: 7.5% of AP CS A multiple-choice questions
+
 .. toctree::
    :maxdepth: 3
 
@@ -17,4 +23,5 @@ Two-dimensional Arrays
    a2dSummary.rst
    Array2dCodePractice.rst
    Array2dParsonsPractice.rst
+   Exercises.rst
    

@@ -1,6 +1,12 @@
 Iteration (Loops)
 ::::::::::::::::::::
 
+Instructional Periods: 9-13 days
+
+Lab Periods: 6 days
+
+Exam coverage: 20% of AP CS A multiple-choice questions
+
 .. toctree::
    :maxdepth: 3
 
@@ -17,3 +23,4 @@ Iteration (Loops)
    LoopSummary.rst
    LoopPractice.rst
    LoopParsonsPractice.rst
+   Exercises.rst

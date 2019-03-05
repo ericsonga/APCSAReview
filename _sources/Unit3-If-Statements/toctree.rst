@@ -1,6 +1,11 @@
 Boolean Expressions and If Statements
 :::::::::::::::::::::::::::::::::::::
 
+Instructional Periods: 11-15 days
+
+Exam coverage: 15% of AP CS A multiple-choice questions
+
+
 .. toctree::
    :maxdepth: 3
 
@@ -19,3 +24,4 @@ Boolean Expressions and If Statements
    CondPractice.rst
    CondParsonsPractice.rst
    ../Labs/toctree.rst
+   Exercises.rst

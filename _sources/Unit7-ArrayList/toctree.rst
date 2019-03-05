@@ -1,5 +1,10 @@
-List and ArrayList
+ArrayList
 ::::::::::::::::::::
+
+Instructional Periods: 10-14 days
+
+Exam coverage: 7.5% of AP CS A multiple-choice questions
+
 
 .. toctree::
    :maxdepth: 3
@@ -22,3 +27,4 @@ List and ArrayList
    listPractice.rst
    ListParsonsPractice.rst
    SearchSort/toctree.rst
+   Exercises.rst

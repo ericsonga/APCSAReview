@@ -16,6 +16,7 @@ Exam coverage: 5% of AP CS A multiple-choice questions
    VariableBasics/shortcutoperators2019.rst
    VariableBasics/casting.rst
    VariableBasics/practice2019.rst
+   Exercises.rst
    
 .. Old TOC
     whatIsJava.rst

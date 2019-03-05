@@ -15,6 +15,7 @@ Exam coverage: 7.5% of AP CS A multiple-choice questions
    Strings/toctree.rst
    minAndMax.rst
    randomNumbers.rst
+   Exercises.rst
    
 .. Old TOC
     whatIsJava.rst

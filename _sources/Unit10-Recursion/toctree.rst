@@ -1,6 +1,10 @@
 Recursion
 :::::::::
 
+Instructional Periods: 3-7 days
+
+Exam coverage: 7.5% of AP CS A multiple-choice questions
+
 .. toctree::
    :maxdepth: 3
 
@@ -15,3 +19,4 @@ Recursion
    rParsonsPractice.rst
    recursionCodePractice.rst
    rMixedUpCodePractice.rst
+   Exercises.rst

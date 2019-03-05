@@ -1,6 +1,10 @@
 Inheritance
 ::::::::::::
 
+Instructional Periods: 9-13 days
+
+Exam coverage: 7.5% of AP CS A multiple-choice questions
+
 .. Moving first 2 lessons to Unit 5
    objectObasics.rst
    objects&Classes.rst
@@ -28,4 +32,5 @@ Inheritance
    ooSummary.rst
    ooCodePractice.rst
    ooParsonsPractice.rst
+   Exercises.rst
    
