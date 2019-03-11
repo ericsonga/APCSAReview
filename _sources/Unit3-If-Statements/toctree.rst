@@ -23,5 +23,5 @@ Exam coverage: 15% of AP CS A multiple-choice questions
    CondSummary.rst
    CondPractice.rst
    CondParsonsPractice.rst
-   ../Labs/toctree.rst
+   MagpieLab/toctree.rst
    Exercises.rst

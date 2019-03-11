@@ -40,39 +40,11 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
 Try clicking the |runbutton| button below to see what the following program does.
 
 
-    
-
-
-.. activecode:: TurtleTest
-    :language: java
-    :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
-
-    import java.util.*;
-
-    public class TurtleTest
-    {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
-          Turtle myrtle = new Turtle(world);
-          
-          yertle.forward(100);
-          yertle.turnLeft();
-          yertle.forward(75);
-          
-          myrtle.turnRight();
-          myrtle.forward(100);
-          
-          world.show(true); 
-      }
-    }
-
 .. reveal:: TurtleClasses
    :showtitle: Show Turtle Classes
    :hidetitle: Hide
 
-   .. datafile:: SimpleTurtle
+   .. datafile:: SimpleTurtle.java
 
       import javax.swing.*;
       import java.awt.*;
@@ -777,7 +749,7 @@ Try clicking the |runbutton| button below to see what the following program does
       } // end of class
       
       
-   .. datafile:: Turtle
+   .. datafile:: Turtle.java
 
       import java.util.*;
       import java.awt.*;
@@ -853,7 +825,7 @@ Try clicking the |runbutton| button below to see what the following program does
       
 
 
-   .. datafile:: DigitalPicture
+   .. datafile:: DigitalPicture.java
       
       import java.awt.Image;
       import java.awt.image.BufferedImage;
@@ -887,6 +859,9 @@ Try clicking the |runbutton| button below to see what the following program does
         public void show(); // show the picture
         public boolean write(String fileName); // write out a file
       }
+      
+  .. datafile:: ModelDisplay.java
+  
       import java.awt.Graphics;
       
       /**
@@ -935,7 +910,7 @@ Try clicking the |runbutton| button below to see what the following program does
       }
       
       
-   .. datafile:: PathSegment
+   .. datafile:: PathSegment.java
    
       import java.awt.*;
       import java.awt.geom.*;
@@ -986,7 +961,7 @@ Try clicking the |runbutton| button below to see what the following program does
       } // end of class
     
     
-   .. datafile:: Pen
+   .. datafile:: Pen.java
     
       import java.awt.*;
       import java.awt.geom.*;
@@ -1141,7 +1116,7 @@ Try clicking the |runbutton| button below to see what the following program does
         }
       } // end of class
       
-   .. datafile:: Pixel
+   .. datafile:: Pixel.java
        
       import java.awt.Color;
       
@@ -1511,7 +1486,7 @@ Try clicking the |runbutton| button below to see what the following program does
         }
       } //end of Pixel
 
-   .. datafile:: PictureClass
+   .. datafile:: PictureClass.java
        
       import java.awt.*;
       import java.awt.font.*;
@@ -1605,7 +1580,7 @@ Try clicking the |runbutton| button below to see what the following program does
       //put all new methods before this
 
 
-   .. datafile:: SimplePicture
+   .. datafile:: SimplePicture.java
      
       import javax.imageio.ImageIO;
       import java.awt.image.BufferedImage;
@@ -2282,7 +2257,7 @@ Try clicking the |runbutton| button below to see what the following program does
 
       } // end of SimplePicture class
       
-   .. datafile:: Giffer 
+   .. datafile:: Giffer.java
      
       /**
        * https://github.com/ha-shine/Giffer
@@ -2466,7 +2441,7 @@ Try clicking the |runbutton| button below to see what the following program does
       	}
       }
     
-   .. datafile:: World
+   .. datafile:: World.java
        
       import javax.swing.*;
       import java.util.List;
@@ -2775,7 +2750,7 @@ Let's try another TurtleTest that has the World class embedded in the activecode
 
 .. activecode:: TurtleTest2
     :language: java
-    :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
+    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, PictureClass.java, Pen.java, Giffer.java, PathSegment.java
 
     import java.util.*;
       import javax.swing.*;
@@ -3093,8 +3068,34 @@ Let's try another TurtleTest that has the World class embedded in the activecode
         }
       } // end of World class
     
+
+
+.. activecode:: TurtleTest
+    :language: java
+    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, PictureClass.java, Pen.java, Giffer.java, PathSegment.java
+
+    import java.util.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          Turtle yertle = new Turtle(world);
+          Turtle myrtle = new Turtle(world);
+          
+          yertle.forward(100);
+          yertle.turnLeft();
+          yertle.forward(75);
+          
+          myrtle.turnRight();
+          myrtle.forward(100);
+          
+          world.show(true); 
+      }
+    }
     
-In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
+In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle, World, and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
 
 Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method: 
 

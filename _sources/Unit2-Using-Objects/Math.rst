@@ -7,11 +7,14 @@ Using the Math Class
 ====================
 
 ..	index::
+    single: Math methods
 	single: random method
 	pair: Math; random method
 
 Games would be boring if the same thing happened each time you played the game.  Games often use random numbers
-to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number. There are lots of mathematical methods
+to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number.
+
+There are lots of mathematical methods
 that you might want to use in your programs like ``Math.abs`` (absolute value).  These methods are in the ``Math`` class and are **static** (**class**) methods so that you can call them by just using ``ClassName.methodName``.  
 
 .. note::
@@ -101,3 +104,19 @@ How could you change the code above to return a random number from 1 to 10?  Mod
    
 
    
+Other Math functions that you can use are:
+
+
+- int abs(int) : Returns the absolute value of an int value (which just removes any negative signs).
+
+- double abs(double) : Returns the absolute value of a double value.
+
+- double pow(double, double) : Returns the value of the first parameter raised to the power of the second parameter.
+
+= double sqrt(double) :  Returns the positive square root of a double value.
+
+- double random() :  Returns a double value greater than or equal to 0.0 and less than 1.0.
+
+
+
+These are all listed in the Java Quick Reference guide that you can use during the exam: https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf.  

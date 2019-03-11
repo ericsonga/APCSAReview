@@ -1,5 +1,5 @@
-Strings
-::::::::::::::::::::
+String Objects and Methods
+::::::::::::::::::::::::::
 
 .. toctree::
    :maxdepth: 3

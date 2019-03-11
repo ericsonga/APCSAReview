@@ -1,14 +1,13 @@
-.. qnum::
+.. .. qnum::
    :prefix: 4-1-
    :start: 1
 
-What is a String?
-======================
+
 
 .. highlight:: java
    :linenothreshold: 4
    
-.. qnum::
+.. .. qnum::
    :prefix: trl-
    :start: 1
    
@@ -18,10 +17,11 @@ What is a String?
 	single: reference
 	pair: String; definition
 
+Strings
+-------
+
 **Strings** in Java are objects of the ``String`` class that hold sequences of characters (a, b, c, $, etc). Remember that a class (or classification) in Java defines the data that all objects of the class have (the fields) and the behaviors, the things that objects know how to do (the methods). 
 
-Declaring and Creating Strings
-==============================
 
 You can declare a variable to be of type ``String``. 
 

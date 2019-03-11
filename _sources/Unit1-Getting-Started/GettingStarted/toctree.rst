@@ -7,4 +7,6 @@ Getting Started
 
    preface.rst
    aboutcsa.rst
+   csptransition.rst
+   javaIDEs.rst
    ptest1.rst

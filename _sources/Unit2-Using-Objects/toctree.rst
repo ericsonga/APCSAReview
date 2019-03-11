@@ -13,8 +13,8 @@ Exam coverage: 7.5% of AP CS A multiple-choice questions
    Constructors-2-2.rst
    turtleMethods.rst
    Strings/toctree.rst
-   minAndMax.rst
-   randomNumbers.rst
+   IntegerDouble.rst
+   Math.rst
    Exercises.rst
    
 .. Old TOC

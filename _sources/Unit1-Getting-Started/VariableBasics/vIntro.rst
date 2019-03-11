@@ -6,7 +6,7 @@
 ..  description:: An introduction primitive variables in Java
 
 What is a Variable?
-====================
+-------------------
 
 ..	index::
 	single: variable

@@ -9,6 +9,12 @@
     :align: top
     :alt: run button
 
+.. datafile:: TurtleClassesFile
+   :fromfile: TurtleClassesFile
+   :hide:
+   
+
+
 
 Calling Methods with and without Parameters in the Turtle World
 ---------------------------------------------------------------
@@ -49,7 +55,7 @@ Try some of the methods above in the turtle code below.
 
 .. activecode:: TurtleTestMethods1
     :language: java
-    :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
+    :datafile: TurtleClassesFile
 
     import java.util.*;
 
@@ -122,7 +128,7 @@ Group Work: In groups or pairs, use the area below to have a turtle draw the let
 
 .. activecode:: Turtle_Initials
     :language: java
-    :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
+    :datafile: TurtleClassesFile2
 
 
     import java.util.*;
@@ -162,10 +168,9 @@ When you call a method that returns a value, you should do something with that v
 Try running the program below a couple
 times to see that it makes the turtle move a random number of steps. Can you change the program so that it takes a random number from 100 to 500?
 
-
 .. activecode:: TurtleTestMethods2
     :language: java
-    :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
+    :datafile: TurtleClassesFile
 
     import java.util.*;
     import java.lang.Math; 

@@ -12,5 +12,6 @@ Free Response Practice Exam
    StudentAnswerSheetB.rst
    SkyViewA.rst
    SkyViewB.rst
+   Exercises.rst
    
    

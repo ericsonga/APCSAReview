@@ -62,7 +62,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
    :showtitle: Show Image Classes
    :hidetitle: Hide
 
-   .. datafile:: DigitalPicture.java
+   .. datafile:: PictureClasses
 
         import java.awt.Image;
         import java.awt.image.BufferedImage;
@@ -98,7 +98,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
         }
 
 
-   .. datafile:: Pixel.java
+        //.. datafile:: Pixel.java
 
         import java.awt.Color;
 
@@ -469,7 +469,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
         }
 
 
-   .. datafile:: SimplePicture.java
+        //.. datafile:: SimplePicture.java
 
         import javax.imageio.ImageIO;
         import java.awt.image.BufferedImage;
@@ -845,7 +845,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
                  ImageIO.write(this.bufferedImage, "png", output);
                  String result = Base64.getEncoder().encodeToString(output.toByteArray());
                  //BH: using Base64 instead of DatatypeConverter.printBase64Binary(output.toByteArray());
-                 System.out.println("<img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
+                 System.out.println("&lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
              } catch (IOException e) {
                  System.out.println("Errors occured in image conversion");
              }
@@ -1172,7 +1172,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
 .. activecode:: Picture
     :language: java
-    :datafile: DigitalPicture.java, Pixel.java, SimplePicture.java, arch.jpg
+    :datafile: PictureClasses, arch.jpg
 
     import java.awt.*;
     import java.awt.font.*;
@@ -1297,7 +1297,7 @@ Let's try another activecode with the SimplePicture class included:
 
 .. activecode:: PictureLab2
     :language: java
-    :datafile: DigitalPicture.java, Pixel.java, arch.jpg
+    :datafile: PictureClasses, arch.jpg
 
     import java.awt.*;
     import java.awt.font.*;
@@ -1787,7 +1787,7 @@ Let's try another activecode with the SimplePicture class included:
                  ImageIO.write(this.bufferedImage, "png", output);
                  String result = Base64.getEncoder().encodeToString(output.toByteArray());
                  //BH: using Base64 instead of DatatypeConverter.printBase64Binary(output.toByteArray());
-                 System.out.println("<img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
+                 System.out.println("&lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
              } catch (IOException e) {
                  System.out.println("Errors occured in image conversion");
              }

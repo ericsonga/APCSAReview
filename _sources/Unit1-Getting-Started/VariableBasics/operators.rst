@@ -34,7 +34,7 @@ Java uses the standard mathematical operators for addition (``+``), subtraction 
       }
    }
    
-Do all of those operators do what you expected?  What about ``2 / 3`` prints ``0``?  
+Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
 
 .. note::
 

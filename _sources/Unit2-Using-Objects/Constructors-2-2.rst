@@ -25,7 +25,7 @@ There can be more than one constructor defined in a class. If the constructor ta
     World world1 = new World(); // creates a 640x480 world
     World wordl2 = new World(300,400); // creates a 300x400 world
     
-The Turtle class also has multiple constructors, although it always requires a world as an argument to know where to draw the turtle. The default location for the turtle is right in the middle of the world. There is another Turtle constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below. The coordinate (0,0) is at the top left of the world. Notice that the order of the arguments matter. This constructor always take (x,y,world) as arguments in that order. 
+The Turtle class also has multiple constructors, although it always requires a world as an argument to know where to draw the turtle. The default location for the turtle is right in the middle of the world. There is another Turtle constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below. The coordinate (0,0) is at the top left of the world. Notice that the order of the arguments matter. This constructor always takes (x,y,world) as arguments in that order. Try  mixing up the order of the arguments and you will see it causes an error because the arguments will not be the data types that it expects. This is one reason why programming languages have data types -- for better error-checking.
 
 .. code-block:: java
     
@@ -34,9 +34,15 @@ The Turtle class also has multiple constructors, although it always requires a w
     
 Try changing the code below to create a World of 300x400. What arguments do you need to give the Turtle constructor to place the turtle in the top right corner? Experiment and find out.
 
+
+.. datafile:: TurtleClassesFileConstructor
+   :fromfile: TurtleClassesFile
+   :hide:
+
+
 .. activecode:: TurtleConstructorTest
     :language: java
-    :datafile: DigitalPicture, Pixel, SimplePicture, Turtle, SimpleTurtle, World, PictureClass, Pen, Giffer, PathSegment
+    :datafile: TurtleClassesFileConstructor
 
     import java.util.*;
 

@@ -24,9 +24,7 @@ If you have the Java development environment loaded on your computer you can use
 
     Figure 1: Compiling Java source (Person.java) into a class file (Person.class) 
     
-You can copy the Java source code shown in this book into a file and save it if you want to run it locally on your computer.  Be sure to name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be part of a **class** (defined inside a class) in a source file and the name of the class must match the file name. 
-    
-You can also use an integrated development environment on your local computer.  We recommend Dr Java at http://www.drjava.org (see the appendix for more information), but there are many good ones such as JGrasp, BlueJ, Greenfoot, and Eclipse.  
+You can copy the Java source code shown in this book into a file and save it if you want to run it locally on your computer.  Be sure to name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be part of a **class** (defined inside a class) in a source file and the name of the class must match the file name. You can also use an integrated development environment (IDE) installed on your local computer (see the last section for ideas).
 
 .. |runbutton| image:: Figures/run-button.png
     :height: 20px

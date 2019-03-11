@@ -107,7 +107,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: Math.random returns a value from 0 to not quite 1.  When you multiply it by 5 you get a value from 0 to not quite 5.  When you cast to int you get a value from 0 to 4.  Adding 5 gives a value from 5 to 9.
    :feedback_d: This would be true if Math.random returned a value between 0 and 1, but it won't ever return 1.  The cast to int results in a number from 0 to 4.  Adding 5 gives a value from 5 to 9.  
 
-   Given the following code segment, what is the value of ``num`` when it finishes executing?
+   Given the following code segment, what is the value of ``num`` when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.
    
     .. code-block:: java 
 
@@ -142,7 +142,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: This would be true if it was (int) (value * 10) - 5
    :feedback_d: Math.random returns a random value from 0 to not quite 1.  After it is multipied by 11 and cast to integer it will be a value from 0 to 10.  Subtracting 5 means it will range from -5 to 5.  
 
-   Given the following code segment, what is the value of ``num`` when it finishes executing?
+   Given the following code segment, what is the value of ``num`` when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.
    
     .. code-block:: java 
 
