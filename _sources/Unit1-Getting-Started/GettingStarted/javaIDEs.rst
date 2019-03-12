@@ -16,7 +16,7 @@ You can learn Java by just using the interactive coding panels in this e-book. H
 
 repl.it
 -------
-If you are using a Chromebook or you cannot install software on your computer, you can use an online development environment like https://repl.it/ where you can login with a Google account or make an account. You can create new projects and all of your code will be kept online in your account.  One limitation of repl.it is that it cannot create Java code that uses a graphical user interface. It can only do input and output as text (which is fine for CS A code but not as much fun) This is a limitation of online development environments. 
+If you are using a Chromebook or you cannot install software on your computer, you can use an online development environment like https://repl.it/ where you can login with a Google account or make an account. You can create new projects and all of your code will be kept online in your account.  One limitation of online environments is that they usually cannot create Java code that uses a graphical user interface, and they only do input and output as text (which is fine for CS A code but not as much fun). However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! 
 
 Dr. Java
 --------

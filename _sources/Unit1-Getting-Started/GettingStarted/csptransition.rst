@@ -9,4 +9,4 @@ Here is a comparison of some blocks to AP CSP pseudocode and Java code used in A
  
 .. raw:: html
 
-    <iframe src="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/edit?usp=sharing" width="900px" height="600px"></iframe>
+    <iframe src="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/edit?usp=sharing" style="max-width:100%" width="100%" height="600px"></iframe>
