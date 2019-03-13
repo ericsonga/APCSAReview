@@ -9,4 +9,5 @@ Getting Started
    aboutcsa.rst
    csptransition.rst
    javaIDEs.rst
+   growthMindset.rst
    ptest1.rst

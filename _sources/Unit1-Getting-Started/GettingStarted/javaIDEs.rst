@@ -33,10 +33,13 @@ DrJava (from http://DrJava.org) is a free, simple, easy to install and use devel
 BlueJ
 -----
 
-BlueJ https://www.bluej.org/ is a free Java IDE designed for beginners. It is built to explore objects and object-oriented programming and has a teachers' community as well as a playlist of videos online https://www.youtube.com/playlist?list=PLYPWr4ErjcnzWB95MVvlKArO6PIfv1fHd to go with the BlueJ Object-First Java book.
+BlueJ (https://www.bluej.org/) is a free Java IDE designed for beginners. It is built to explore objects and object-oriented programming and has a teachers' community as well as a playlist of videos online https://www.youtube.com/playlist?list=PLYPWr4ErjcnzWB95MVvlKArO6PIfv1fHd to go with the BlueJ Object-First Java book.
 
+IntelliJ
+--------
+IntelliJ (https://www.jetbrains.com/idea/) is a free Java IDE from JetBrains which many professionals use. It is a little easier to configure than Eclipse below. Here is a guide on how to set up IntelliJ: https://www.jetbrains.com/help/idea/install-and-set-up-product.html.
 
 Eclipse
 -------
 
-Eclipse (https://www.eclipse.org/downloads/packages/installer) is what many professional Java programmers use. It may be a little complex for beginners. 
+Eclipse (https://www.eclipse.org/downloads/packages/installer) is what many professional Java programmers use. It may be a little complex for beginners. Here are some installation and configuration instructions for Eclipse for CS A Java: http://skylit.com/javamethods/faqs/Eclipse.pdf .
