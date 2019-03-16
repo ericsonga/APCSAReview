@@ -1,47 +1,69 @@
-..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
-    Permission is granted to copy, distribute and/or modify this document
-    under the terms of the GNU Free Documentation License, Version 1.3 or
-    any later version published by the Free Software Foundation; with
-    Invariant Sections being Forward, Prefaces, and Contributor List,
-    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
-    is included in the section entitled "GNU Free Documentation License".
 
-Objects - Instances of Classes
-==============================
+..	index::
+	single: method
+    single: parameter
+    single: argument
 
+    
 .. |runbutton| image:: Figures/run-button.png
     :height: 30px
     :align: top
     :alt: run button
+   
 
-Intro to Objects with Turtles
------------------------------
 
-In the 1960s, an educational programming language called Logo was developed. It is best known for teaching programming with turtles! The turtles were graphical or robotic turtles that were controlled with simple commands like go forward or turn right. Here's a photo of a robot turtle from the 1960s.  The turtle had a pen attached to it. The student-programmers would steer the robot around using simple commands to create drawings with their code.
 
-.. figure:: Figures/mindstorms_turtle.jpg
-    :width: 300px
+Calling Methods with and without parameters
+===========================================
+
+**Methods** define the behaviors or functions for objects. For example, in the Turtle class, methods like *forward(100)* and *turnRight()* made the turtle objects move that way. 
+
+To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, yertle.forward(); calls yertle's forward method to move the turtle forward. Each method call is followed by parentheses. The parentheses () after method names are there in case you need to give the method **actual parameters** or **arguments** (some data) to do its job, for example the argument 100 in forward(100) makes the turtle go forward 100 pixels. You must always put in the parentheses even if the method has no parameters. 
+
+
+.. note::
+
+    object.method(); is used to call an object's method. Some methods take parameters/arguments that are placed inside the parentheses.
+
+
+.. Although some people use the words parameters and arguments interchangibly, there is a subtle difference. When you define a method, the variables you define for it are called *parameters* or *formal parameters*. When you call the method to do its job, you give or pass in *arguments* or *actual parameters* to it that are then saved in the parameter variables. So, in the definition of the forward method, it has a parameter variable called pixels, but in the call to forward(100), the argument is the value 100 which will get saved in the parameter variable pixels... code-block:: java 
+    // Method call
+    yertle.forward(100); // argument is 100
+    ...
+    // Method definition
+    public void forward(int pixels) // parameter pixels
+    ...
+
+
+
+	
+Here is the Turtle class diagram again that shows some of the fields and methods inherited from the SimpleTurtle class in the class Turtle. 
+
+.. figure:: Figures/turtleUMLClassDiagram.png
+    :width: 400px
     :align: center
-    :alt: Children playing with a Logo turtle robot that can draw with a pen
+    :alt: Turtle class diagram
     :figclass: align-center
 
-    Figure 1: Children playing with a Logo turtle robot that could draw with a pen
+    Figure 2: Turtle Class Diagram
+    
+.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
 
-..	index::
-	single: comment
-	single: library
-	single: screen
-	pair: turtle; screen
-	pair: turtle; library
-	pair: programming; comment
-	pair: program; comment
-
-Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
-Try clicking the |runbutton| button below to see what the following program does.
+Try some of the methods above in the turtle code below.
 
 
-.. reveal:: TurtleClasses
-   :showtitle: Show Turtle Classes
+**Exercises:** 
+
+
+- Can you make yertle draw a square? 
+
+- Can you change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the Color_ class in Java which has some colors predefined. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
+
+- Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. There is another turn method which has a parameter for the angle of the turn in degrees that you can use. For example, turn(90) is the same as turnRight(). 
+
+
+.. reveal:: TurtleClassesIndividual
+   :showtitle: Hidden Turtle Classes
    :hidetitle: Hide
 
    .. datafile:: SimpleTurtle.java
@@ -823,8 +845,7 @@ Try clicking the |runbutton| button below to see what the following program does
         //put all new methods before this
       } // this is the end of class Turtle
       
-
-
+      
    .. datafile:: DigitalPicture.java
       
       import java.awt.Image;
@@ -860,7 +881,8 @@ Try clicking the |runbutton| button below to see what the following program does
         public boolean write(String fileName); // write out a file
       }
       
-  .. datafile:: ModelDisplay.java
+      
+   .. datafile:: ModelDisplay.java
   
       import java.awt.Graphics;
       
@@ -907,9 +929,9 @@ Try clicking the |runbutton| button below to see what the following program does
          * @return the height in pixels of the display
          */
         public int getHeight();
-      }
-      
-      
+      } // end of ModelDisplay
+                
+                
    .. datafile:: PathSegment.java
    
       import java.awt.*;
@@ -959,8 +981,8 @@ Try clicking the |runbutton| button below to see what the following program does
         }
         
       } // end of class
-    
-    
+
+
    .. datafile:: Pen.java
     
       import java.awt.*;
@@ -1115,7 +1137,8 @@ Try clicking the |runbutton| button below to see what the following program does
           g.setColor(oldcolor);
         }
       } // end of class
-      
+
+
    .. datafile:: Pixel.java
        
       import java.awt.Color;
@@ -1486,6 +1509,7 @@ Try clicking the |runbutton| button below to see what the following program does
         }
       } //end of Pixel
 
+
    .. datafile:: PictureClass.java
        
       import java.awt.*;
@@ -1578,8 +1602,8 @@ Try clicking the |runbutton| button below to see what the following program does
         
       } // this } is the end of class Picture
       //put all new methods before this
-
-
+      
+      
    .. datafile:: SimplePicture.java
      
       import javax.imageio.ImageIO;
@@ -2256,7 +2280,8 @@ Try clicking the |runbutton| button below to see what the following program does
        }
 
       } // end of SimplePicture class
-      
+     
+     
    .. datafile:: Giffer.java
      
       /**
@@ -2440,6 +2465,7 @@ Try clicking the |runbutton| button below to see what the following program does
       		return node;
       	}
       }
+      
     
    .. datafile:: World.java
        
@@ -2745,471 +2771,99 @@ Try clicking the |runbutton| button below to see what the following program does
 
       } // end of World class
       
-Let's try another TurtleTest that has the World class embedded in the activecode.
 
 
-.. activecode:: TurtleTest2
-    :language: java
-    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, PictureClass.java, Pen.java, Giffer.java, PathSegment.java
 
-    import java.util.*;
-      import javax.swing.*;
-      import java.util.List;
-      import java.util.ArrayList;
-      import java.util.Iterator;
-      import java.util.Observer;
-      import java.awt.*;
-      import java.net.*;
-      import java.io.*;
-      import java.util.Base64;
-      import javax.imageio.*;
-      import java.awt.image.*;
-      import javax.imageio.stream.*;
-      
-    public class TurtleTest2
-    {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
-          Turtle myrtle = new Turtle(world);
-          
-          yertle.forward(100);
-          yertle.turnLeft();
-          yertle.forward(75);
-          
-          myrtle.turnRight();
-          myrtle.forward(100);
-          
-          world.show(true); 
-      }
-    }
-      /**
-       * Class to represent a 2d world that can hold turtles and
-       * display them
-       *
-       * Copyright Georgia Institute of Technology 2004
-       * @author Barb Ericson ericson@cc.gatech.edu
-       */
-      @SuppressWarnings("unchecked")   
-      class World implements ModelDisplay
-      {
-        ////////////////// fields ///////////////////////
-
-        /** should automatically repaint when model changed */
-        private boolean autoRepaint = true;
-
-        /** the background color for the world */
-        private Color background = Color.white;
-
-        /** the width of the world */
-        private int width = 640;
-
-        /** the height of the world */
-        private int height = 480;
-
-        /** the list of turtles in the world */
-        private List<Turtle> turtleList = new ArrayList<Turtle>();
-
-        /** background picture */
-        private Picture picture = null;
-
-        /* All world changes*/
-        private List<Picture> worldHistory = new ArrayList<Picture>();
-
-
-        ////////////////// the constructors ///////////////
-
-        /**
-         * Constructor that takes no arguments
-         */
-        public World()
-        {
-          // set up the world and make it visible
-          initWorld(true);
-        }
-
-        /**
-         * Constructor that takes a boolean to
-         * say if this world should be visible
-         * or not
-         * @param visibleFlag if true will be visible
-         * else if false will not be visible
-         */
-        public World(boolean visibleFlag)
-        {
-          initWorld(visibleFlag);
-        }
-
-        /**
-         * Constructor that takes a width and height for this
-         * world
-         * @param w the width for the world
-         * @param h the height for the world
-         */
-        public World(int w, int h)
-        {
-          width = w;
-          height = h;
-
-          // set up the world and make it visible
-          initWorld(true);
-        }
-
-        ///////////////// methods ///////////////////////////
-
-        /**
-         * Method to initialize the world
-         * @param visibleFlag the flag to make the world
-         * visible or not
-         */
-        private void initWorld(boolean visibleFlag)
-        {
-          // create the background picture
-          picture = new Picture(width,height);
-          this.modelChanged();
-        }
-
-        /**
-         * Method to get the graphics context for drawing on
-         * @return the graphics context of the background picture
-         */
-        public Graphics getGraphics() { return picture.getGraphics(); }
-
-        /**
-         * Method to clear the background picture
-         */
-        public void clearBackground() { picture = new Picture(width,height); }
-
-        /**
-         * Method to get the background picture
-         * @return the background picture
-         */
-        public Picture getPicture() { return picture; }
-
-        /**
-         * Method to set the background picture
-         * @param pict the background picture to use
-         */
-        public void setPicture(Picture pict) { picture = pict; }
-
-        /**
-         * Method to paint this component
-         * @param g the graphics context
-         */
-        public synchronized void paintComponent(Graphics g)
-        {
-          Turtle turtle = null;
-
-          // draw the background image
-          g.drawImage(picture.getImage(),0,0,null);
-
-          // loop drawing each turtle on the background image
-          Iterator iterator = turtleList.iterator();
-          while (iterator.hasNext())
-          {
-            turtle = (Turtle) iterator.next();
-            turtle.paintComponent(g);
-          }
-        }
-
-        /**
-         * Method to get the last turtle in this world
-         * @return the last turtle added to this world
-         */
-        public Turtle getLastTurtle()
-        {
-          return (Turtle) turtleList.get(turtleList.size() - 1);
-        }
-
-
-        /**
-         * Method to add a model to this model displayer
-         * @param model the model object to add
-         */
-        public void addModel(Object model)
-        {
-          turtleList.add((Turtle) model);
-        }
-
-        /**
-         * Method to check if this world contains the passed
-         * turtle
-         * @return true if there else false
-         */
-        public boolean containsTurtle(Turtle turtle)
-        {
-          return (turtleList.contains(turtle));
-        }
-
-        /**
-         * Method to remove the passed object from the world
-         * @param model the model object to remove
-         */
-        public void remove(Object model)
-        {
-          turtleList.remove(model);
-        }
-
-        /**
-         * Method to get the width in pixels
-         * @return the width in pixels
-         */
-        public int getWidth() { return width; }
-
-        /**
-         * Method to get the height in pixels
-         * @return the height in pixels
-         */
-        public int getHeight() { return height; }
-
-        /**
-         * Method that allows the model to notify the display
-         */
-        public void modelChanged()
-        {
-           Picture p = new Picture(this.width, this.height);
-           this.paintComponent(p.getGraphics());
-           this.worldHistory.add(p);
-        }
-
-        /**
-         * Method to set the automatically repaint flag
-         * @param value if true will auto repaint
-         */
-        public void setAutoRepaint(boolean value) { autoRepaint = value; }
-
-        /**
-         * Method to show the frame
-         */
-        public void show()
-       {
-          this.show(false);
-        }
-
-        public void show(boolean showHistory) {
-            this.paintComponent(this.picture.getGraphics());
-            if(showHistory) {
-                try {
-                    BufferedImage[] images = new BufferedImage[this.worldHistory.size()];
-                    for(int i = 0; i < this.worldHistory.size(); i++) {
-                        images[i] = ((Picture) this.worldHistory.get(i)).getBufferedImage();
-                    }
-                    Giffer.generateFromBI(images, "history.gif", 100, false);
-
-                    File history = new File("history.gif");
-
-                    URL url = history.toURI().toURL();
-
-                    byte[] imageBytes = downloadUrl(url);
-                    String result = 
-		            //DatatypeConverter.printBase64Binary(imageBytes);
-                    //BH: using java.util.Base64 instead of javax.xml.bind.DataTypeConverter
-                    Base64.getEncoder().encodeToString(imageBytes);
-                    
-		            System.gc();
-                    history.delete();
-                    double rand = Math.random();
-                    System.out.println("<img src=\'data:image/gif;base64," + result + "\'/>");
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            } else {
-                this.picture.show();
-            }
-        }
-
-        private byte[] downloadUrl(URL toDownload) {
-          ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-          try {
-              byte[] chunk = new byte[4096];
-              int bytesRead;
-              InputStream stream = toDownload.openStream();
-
-              while ((bytesRead = stream.read(chunk)) > 0) {
-                  outputStream.write(chunk, 0, bytesRead);
-              }
-              //toDownload.close();
-
-          } catch (IOException e) {
-              e.printStackTrace();
-              return null;
-          }
-
-          return outputStream.toByteArray();
-      }
-
-        /**
-         * Method to get the list of turtles in the world
-         * @return a list of turtles in the world
-         */
-        public List getTurtleList()
-        { return turtleList;}
-
-        /**
-         * Method to get an iterator on the list of turtles
-         * @return an iterator for the list of turtles
-         */
-        public Iterator getTurtleIterator()
-        { return turtleList.iterator();}
-
-        /**
-         * Method that returns information about this world
-         * in the form of a string
-         * @return a string of information about this world
-         */
-        public String toString()
-        {
-          return "A " + getWidth() + " by " + getHeight() +
-            " world with " + turtleList.size() + " turtles in it.";
-        }
-      } // end of World class
-    
-
-
-.. activecode:: TurtleTest
+.. activecode:: TurtleTestMethods1
     :language: java
     :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, PictureClass.java, Pen.java, Giffer.java, PathSegment.java
 
     import java.util.*;
 
-    public class TurtleTest
+    public class TurtleTestMethods1
     {
       public static void main(String[] args)
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
-          Turtle myrtle = new Turtle(world);
           
           yertle.forward(100);
           yertle.turnLeft();
           yertle.forward(75);
           
-          myrtle.turnRight();
-          myrtle.forward(100);
-          
           world.show(true); 
       }
     }
-    
-In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle, World, and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
 
-Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method: 
 
-.. code-block:: java 
-
-    // To create or declare a new object, write:
-    // ClassName variableName = new ClassName(arguments);  
-    Turtle yourTurtleName = new Turtle(world);
      
-The class Turtle defines **fields** (data or properties) and **methods** (behaviors or functions) that each turtle can use. The dot operator (.) is used to run an object's method. You can think of the . as an apostrophe s ('s), for example run yertle's forward method. The parentheses () after method names are there in case you need to give the method **arguments** (some data) to do its job, for example go forward 100 pixels.
+Try drawing a letter A using the mixed up code below.
 
-Here is a class diagram that shows some of the fields and methods inherited from the SimpleTurtle class in the class Turtle. 
-
-.. figure:: Figures/turtleUMLClassDiagram.png
-    :width: 400px
+.. figure:: Figures/turtleA.png
+    :width: 200px
     :align: center
-    :alt: Turtle class diagram
+    :alt: turtle drawing A
     :figclass: align-center
-
-    Figure 2: Turtle Class Diagram
     
-.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
-
-Try some of the methods above in the Active Code window. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a square using different colors.
-
-What are Classes and Objects?
------------------------------
-
-In Java, a **class** is used to define a new data type (classify something).  The class defines what objects of the class need to know (data or fields) and do (behaviors or methods).  
-
-There are many classes that are part of the Java languge, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  
-
-The real power of Java is the ability to create your own classes (define your own types). You will also learn how to create your own classes in Unit 5. 
-
-In the video below, which was created using the free software Greenfoot (http://greenfoot.org), you can see ant objects doing actions like moving and eating.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial if you are interested in learning more about Greenfoot.
-   
-.. the video is introToAnts.mov
-
-The following video is also on YouTube at https://youtu.be/7G93HDuqXzY.  It shows objects doing actions in Greenfoot.
-
-.. youtube:: 7G93HDuqXzY
-    :width: 640
-    :align: center
-
-..	index::
-	single: object
-	single: Greenfoot
-..	single: Alice 3
-	
-.. Another free environment, Alice 3, allows you to easily create animations or 3D movies.  You can create 3D objects and program them using drag and drop programming that can help you get started in Java.  See http://www.alice.org for more information.  Also see http://ice-dl.cc.gatech.edu/?q=node/848 for an example starting project in Alice 3.
-	
-Classes create **objects**, and the objects do the actual work in an **object-oriented program**. Java and many modern programming languages are object-oriented programming languages.
-
-You can think of a class like a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  A class can also be thought of as a factory that produces objects.  
-
-.. figure:: Figures/cookieCutter.jpg
-    :width: 300px
-    :align: center
-    :figclass: align-center
-
-    Figure: Using a cookie cutter to make cookies
+    Figure 3: Turtle drawing A
     
-You can think of a class as the type or classification.  The following picture has lots of cats (objects of the type cat).  
+.. parsonsprob:: DrawABH
+   :adaptive:
+   :noindent:
+   
+   The following code uses a turtle to draw a capital A, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to draw the A in the order shown by the numbers in the picture above.  Click on the "Check Me" button to check your solution. It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up. You can also try this code in the Java program above to see what the turtle will do.
+   -----
+   public class TurtleDrawA
+   {
+   =====
+      public static void main(String[] args)
+      {
+      =====
+         World world = new World(300,300);
+         =====
+         Turtle yertle = new Turtle(world);
+         =====
+         yertle.turn(15);
+         yertle.forward(100);
+         =====
+         yertle.turnRight();
+         yertle.turn(55);
+         yertle.forward(100);
+         =====
+         yertle.penUp();
+         yertle.backward(50);
+         yertle.penDown();
+         =====
+         yertle.turnRight();
+         yertle.turn(20);
+         yertle.forward(30);
+         =====
+         world.show(true);
+         =====
+      }
+      =====
+   }
+   
 
-.. figure:: Figures/cats2.png
-    :width: 300px
-    :align: center
-    :figclass: align-center
+Group Work: In groups or pairs, use the area below to have a turtle draw the letters J A V A with different colors. Make the J as a block letter without curves. If you don't have a lot of time, just do 1 letter. Be patient with yourself because this may take a lot of trial and error to get the correct angle values.
 
-    Figure: Pictures of cats (cat objects)
+.. activecode:: Turtle_Initials
+    :language: java
+    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, PictureClass.java, Pen.java, Giffer.java, PathSegment.java
 
-If you go to a restaurant, you will be seated by the greeter, the waiter will take your order, and the chef will cook your food.  What do we mean by a greeter, waiter, and chef?  Those are classifications or types of workers in a restaurant.  Java has this same concept.  When we create a new class we are defining a new type (a new classification) to the computer.  Each type can have abilities or behaviors (called **methods** in Java) and properties (called **fields** in Java). After you define a type, you can use it to create **objects** of that type.  All objects created from a class will have the properties and abilities/behaviors defined in that class.  For example, all turtle objects will know how to move forward and turn.
 
-**Check your understanding**
-   
-.. mchoice:: q2_2_1
-   :answer_a: 1
-   :answer_b: 10
-   :answer_c: 1000
-   :answer_d: As many as you need
-   :correct: d
-   :feedback_a: There is one definition of a class, but the class can create as many objects as are needed.
-   :feedback_b: There is no limit on the number of objects you can create from a class.
-   :feedback_c: There is no limit on the number of objects you can create from a class.
-   :feedback_d: You can create as many objects as you need from one class.
-   
-   How many objects can you create from a class in Java?
-   
-.. mchoice:: q2_2_2
-   :answer_a: fields
-   :answer_b: methods
-   :answer_c: class
-   :answer_d: object
-   :correct: b
-   :feedback_a: Fields specify the data that an object keeps track of.
-   :feedback_b: Methods specify the behavior of all objects of a class.
-   :feedback_c: While the class does specify the behavior of all objects created by that class, what part of a class specifies the behavior?
-   :feedback_d: The object behavior is specified by the methods in the class that created the object.
-   
-   What specifies the behavior for objects of a class in Java?
-   
-.. mchoice:: q2_2_3
-   :answer_a: fields
-   :answer_b: methods
-   :answer_c: class
-   :answer_d: object
-   :correct: a
-   :feedback_a: Fields specify the data that an object keeps track of.
-   :feedback_b: Methods specify the behavior of all objects of a class.
-   :feedback_c: While the class does specify the data or state that all objects of the class keep track of, what part of the class stores the data?
-   :feedback_d: The object data or state is stored in the fields of the object.  The fields are defined in the class.  
-   
-   What specifies the data or state for an object in Java?
-   
-   
- 
-   
+    import java.util.*;
+
+    public class TurtleInitials
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          
+          
+          
+          world.show(true); 
+      }
+    }
+
+

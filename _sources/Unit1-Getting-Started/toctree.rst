@@ -10,12 +10,12 @@ Exam coverage: 5% of AP CS A multiple-choice questions
    :maxdepth: 3
 
    GettingStarted/toctree.rst
-   whatIsJava2019.rst
-   VariableBasics/toctree.rst
-   VariableBasics/assignment2019.rst
-   VariableBasics/shortcutoperators2019.rst
-   VariableBasics/casting.rst
-   VariableBasics/practice2019.rst
+   topic-1-2-java-intro.rst
+   topic-1-3-variables.rst
+   topic-1-4-assignment.rst
+   topic-1-5-shortcutoperators.rst
+   topic-1-6-casting.rst
+   VariablePractice/toctree.rst
    Exercises.rst
    
 .. Old TOC

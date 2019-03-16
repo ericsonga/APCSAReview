@@ -9,12 +9,15 @@ Exam coverage: 7.5% of AP CS A multiple-choice questions
    :caption: Using Objects
    :maxdepth: 3
 
-   turtleBasics.rst
-   Constructors-2-2.rst
-   turtleMethods.rst
+   topic-2-1-objects-intro-turtles.rst
+   topic-2-2-constructors.rst
+   topic-2-3-methods.rst
+   topic-2-4-methods-return.rst
+   topic-2-5-strings.rst
+   topic-2-6-string-methods.rst
+   topic-2-7-IntegerDouble.rst
+   topic-2-8-Math.rst
    Strings/toctree.rst
-   IntegerDouble.rst
-   Math.rst
    Exercises.rst
    
 .. Old TOC

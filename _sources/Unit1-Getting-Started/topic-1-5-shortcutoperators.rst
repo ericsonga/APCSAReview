@@ -1,8 +1,3 @@
-.. .. qnum::
-   :prefix: 3-4-
-   :start: 1
-
-
 ..	index::
 	single: operators
 	pair: math; operators
@@ -15,7 +10,7 @@
 
 
 Compound Assignment Operators 
------------------------------
+=============================
    
 Compound assignment operators are shortcuts that do a math operation and assignment in one step. For example, ``x += 1`` adds 1 to x and assigns the sum to x. It is the same as ``x = x + 1``. This pattern is possible with any operator put in front of the = sign. You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the same as ``x = x - y``, ``x *= y`` is the same as ``x = x * y``, and ``x /= y`` is the same as ``x = x / y``.   
 

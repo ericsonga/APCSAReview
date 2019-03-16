@@ -56,6 +56,19 @@ Run the code below several times to see how the value changes each time.
    
 How could you change the code above to return a random number from 1 to 10?  Modify the code above and see if your answer is correct.  
 
+Here are some other examples that move a random number into a specific range.
+
+
+.. code-block:: java 
+
+    // Math.random() returns a random number between 0.0-0.99.
+    // Math.random()*10 moves it into the range 0-9.
+    int rnd = (int)(Math.random()*10);
+    // rnd2 is in the range 5-9.
+    int rnd2 = (int)(Math.random()*10 + 5);
+
+
+
 **Check your understanding**
 
 .. mchoice:: qrand_1
@@ -113,7 +126,7 @@ Other Math functions that you can use are:
 
 - double pow(double, double) : Returns the value of the first parameter raised to the power of the second parameter.
 
-= double sqrt(double) :  Returns the positive square root of a double value.
+- double sqrt(double) :  Returns the positive square root of a double value.
 
 - double random() :  Returns a double value greater than or equal to 0.0 and less than 1.0.
 

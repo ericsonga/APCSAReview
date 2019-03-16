@@ -58,11 +58,11 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
     </script>
 
 
-.. reveal:: JavaClasses
+.. reveal:: JavaPictureClasses
    :showtitle: Show Image Classes
    :hidetitle: Hide
 
-   .. datafile:: PictureClasses
+   .. datafile:: DigitalPicture
 
         import java.awt.Image;
         import java.awt.image.BufferedImage;
@@ -98,7 +98,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
         }
 
 
-        //.. datafile:: Pixel.java
+   .. datafile:: Pixel
 
         import java.awt.Color;
 
@@ -469,7 +469,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
         }
 
 
-        //.. datafile:: SimplePicture.java
+   .. datafile:: SimplePicture
 
         import javax.imageio.ImageIO;
         import java.awt.image.BufferedImage;
@@ -1172,7 +1172,7 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
 
 .. activecode:: Picture
     :language: java
-    :datafile: PictureClasses, arch.jpg
+    :datafile: DigitalPicture, Pixel, SimplePicture, arch.jpg
 
     import java.awt.*;
     import java.awt.font.*;
@@ -1297,7 +1297,7 @@ Let's try another activecode with the SimplePicture class included:
 
 .. activecode:: PictureLab2
     :language: java
-    :datafile: PictureClasses, arch.jpg
+    :datafile: DigitalPicture, Pixel, arch.jpg
 
     import java.awt.*;
     import java.awt.font.*;
@@ -1787,7 +1787,7 @@ Let's try another activecode with the SimplePicture class included:
                  ImageIO.write(this.bufferedImage, "png", output);
                  String result = Base64.getEncoder().encodeToString(output.toByteArray());
                  //BH: using Base64 instead of DatatypeConverter.printBase64Binary(output.toByteArray());
-                 System.out.println("&lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
+                 System.out.println("<img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
              } catch (IOException e) {
                  System.out.println("Errors occured in image conversion");
              }
