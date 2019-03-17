@@ -1510,7 +1510,7 @@ Try some of the methods above in the turtle code below.
       } //end of Pixel
 
 
-   .. datafile:: PictureClass.java
+   .. datafile:: Picture.java
        
       import java.awt.*;
       import java.awt.font.*;
@@ -2776,7 +2776,7 @@ Try some of the methods above in the turtle code below.
 
 .. activecode:: TurtleTestMethods1
     :language: java
-    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, PictureClass.java, Pen.java, Giffer.java, PathSegment.java
+    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, Picture.java, Pen.java, Giffer.java, PathSegment.java
 
     import java.util.*;
 
@@ -2849,7 +2849,7 @@ Group Work: In groups or pairs, use the area below to have a turtle draw the let
 
 .. activecode:: Turtle_Initials
     :language: java
-    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, PictureClass.java, Pen.java, Giffer.java, PathSegment.java
+    :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, Picture.java, Pen.java, Giffer.java, PathSegment.java
 
 
     import java.util.*;

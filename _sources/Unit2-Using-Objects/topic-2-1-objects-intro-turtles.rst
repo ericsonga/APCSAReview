@@ -41,7 +41,7 @@ In the 1960s, an educational programming language called Logo was developed. It 
 Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
 Try clicking the |runbutton| button below to see what the following program does.
 
-.. reveal:: TurtleClasses
+.. reveal:: tClasses
    :showtitle: Hidden Turtle Classes
    :hidetitle: Hide
 
@@ -2719,7 +2719,7 @@ Try clicking the |runbutton| button below to see what the following program does
 
 .. activecode:: TurtleTest
     :language: java
-    :datafile: TurtleClasses
+    :datafile: turtleClasses
 
     import java.util.*;
 
@@ -2748,7 +2748,7 @@ BH testing Turtle classes: another TurtleTest that has the World class embedded 
 
 .. activecode:: TurtleTest2
     :language: java
-    :datafile: TurtleClasses
+    :datafile: turtleClasses
 
     import java.util.*;
       import javax.swing.*;

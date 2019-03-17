@@ -52,7 +52,7 @@ Try some of the get methods and the toString() method in the program below. Note
 
 .. activecode:: TurtleTestMethods2
     :language: java
-    :datafile: TurtleClassesReturn
+    :datafile: turtleClassesReturn
 
     import java.util.*;
     import java.lang.Math; 
@@ -80,8 +80,9 @@ Try some of the get methods and the toString() method in the program below. Note
 
 
 
-.. datafile:: TurtleClassesReturn
-   :hide:
+.. raw:: html
+    
+      <pre id="turtleClassesReturn" class="javaFiles" style="display:none;">
    
       import java.awt.Image;
       import java.awt.image.BufferedImage;
@@ -2748,3 +2749,4 @@ Try some of the get methods and the toString() method in the program below. Note
         }
 
       } // end of World class
+      </pre>
