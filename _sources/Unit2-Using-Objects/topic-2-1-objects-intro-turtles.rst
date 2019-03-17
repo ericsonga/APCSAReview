@@ -9,6 +9,8 @@
 Objects - Instances of Classes
 ==============================
 
+In this unit, you will learn to use objects (variables of a class type) that have been designed by other programmers. Later on, in Unit 5, you will learn to create your own classes and objects.
+
 .. |runbutton| image:: Figures/run-button.png
     :height: 30px
     :align: top
