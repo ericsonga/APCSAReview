@@ -4,7 +4,7 @@ Preparing for the Exam
 .. toctree::
    :maxdepth: 3
 
-   testPractice.rst
+   Exercises.rst
    test1nt.rst
    test2nt.rst
    test3nt.rst

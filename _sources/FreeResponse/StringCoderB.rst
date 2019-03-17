@@ -21,52 +21,52 @@ Try and Solve It
 
 Complete method ``encodeString`` below.
 
-The code below has a main method for testing your method. 
+The code below has a main method for testing your method.
 
-.. activecode:: StringCoderA
+.. activecode:: StringCoderB
    :language: java
-   
+
    import java.util.*;
-   
+
    class StringPart
    {
       private int start;
       private int len;
-  
+
       public StringPart(int theStart, int theLen)
       {
          // initialise instance variables
          start = theStart;
          len=theLen;
       }
-      
+
       public StringPart()
       {
          start = 0;
          len = 0;
       }
-  
+
       public int getStart()
       {
          return start;
       }
-  
+
       public int getLength()
       {
         return len;
       }
-      
+
       public String toString()
       {
         return "(" + getStart() + ", " + getLength() + ")";
       }
    }
-   
+
    public class StringCoder
    {
-  
+
       private String masterString;
-  
+
       /**
         * Constructor for objects of class StringCoder
         */
@@ -74,26 +74,26 @@ The code below has a main method for testing your method.
       {
          masterString="sixtyzipperswerequicklypickedfromthewovenjutebag";
       }
-      
+
       public StringCoder(String master)
       {
          masterString=master;
       }
-  
-      /** @param parts an ArrayList of string parts that are 
+
+      /** @param parts an ArrayList of string parts that are
         * valid in the master string
         * Precondition: parts.size() > 0
-        * @return the string obtained by concatenating the parts 
+        * @return the string obtained by concatenating the parts
         * of the master string
         */
       public String decodeString(ArrayList<StringPart> parts)
       {
          String s = "";
-         for (StringPart part : parts)  
+         for (StringPart part : parts)
              s = s + masterString.substring(part.getStart(), part.getStart() + part.getLength());
          return s;
       }
-      
+
       private StringPart findPart(String str)
       {
          int start=0;
@@ -109,21 +109,21 @@ The code below has a main method for testing your method.
           }
           return new StringPart(start, length);
       }
-  
+
       /** @param word the string to be encoded
-        * Precondition: all of the characters in word 
+        * Precondition: all of the characters in word
         * appear in the master string;
         * word.length() > 0
-        * @return an ArrayList of string parts of the master 
-        * string that can be combined 
+        * @return an ArrayList of string parts of the master
+        * string that can be combined
         * to create word
         */
       public ArrayList<StringPart> encodeString(String word)
       {
          //*** Write this method for part b! ***
-   
+
       }
-  
+
       public static void main(String[] args)
       {
          ArrayList<StringPart> overeager = new ArrayList<StringPart>();
@@ -135,7 +135,5 @@ The code below has a main method for testing your method.
          StringCoder key=new StringCoder();
          System.out.println("Testing part b overeager is encoded as " + key.encodeString("overeager"));
       }
-  
-   }
 
-   
+   }

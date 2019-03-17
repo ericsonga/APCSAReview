@@ -1,7 +1,7 @@
 .. qnum::
-   :prefix: 4-9-
+   :prefix: 4-8-
    :start: 1
-   
+
 Medium Multiple Choice Questions
 ----------------------------------
 
@@ -14,14 +14,14 @@ These problems are similar to those that you will see on the AP CS A exam.
    :answer_d: III only
    :answer_e: II and III only
    :correct: a
-   :feedback_a: The "equals" operation on strings returns true when the strings have the same characters.  The == operator returns true when they refer to the same object.  In this case all three references actually refer to the same object so both == and equals will be true.  
-   :feedback_b: This is true, since s1 and s3 contain the same characters since s1 and s3 actually refer to the same string object. But, it isn't the only thing that is true. 
-   :feedback_c: This is true since s2 == s1.  But, it isn't the only thing that is true.  
-   :feedback_d: This is true since s3 == s2, and s2 == s1 so it follows that s1 == s3.  But, it isn't the only thing that is true.  
+   :feedback_a: The "equals" operation on strings returns true when the strings have the same characters.  The == operator returns true when they refer to the same object.  In this case all three references actually refer to the same object so both == and equals will be true.
+   :feedback_b: This is true, since s1 and s3 contain the same characters since s1 and s3 actually refer to the same string object. But, it isn't the only thing that is true.
+   :feedback_c: This is true since s2 == s1.  But, it isn't the only thing that is true.
+   :feedback_d: This is true since s3 == s2, and s2 == s1 so it follows that s1 == s3.  But, it isn't the only thing that is true.
    :feedback_e: This is true since they all refer to the same string object.  But, they also contain the same characters so equals is also true.
 
-   After the following code is executed, which of I, II and/or III will evaluate to true? 
-   
+   After the following code is executed, which of I, II and/or III will evaluate to true?
+
    .. code-block:: java
 
      String s1 = "xyz";
@@ -46,7 +46,7 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_e: This would be true if the starting index was invalid or the ending index was past 2 past the last valid index.
 
    What is output from the following code?
-   
+
    .. code-block:: java
 
      String s = "Georgia Tech";
@@ -69,7 +69,7 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_e: Strings are immutable and so any changes to a string returns a new string.
 
    Given the following code segment, what is the value of s1 after the code executes?
-   
+
    .. code-block:: java
 
      String s1 = "Hi There";
@@ -79,7 +79,7 @@ These problems are similar to those that you will see on the AP CS A exam.
      s2 = s2.toLowerCase();
      s3 = s3.toUpperCase();
      s4 = null;
-     
+
 .. mchoice:: qsm_4
    :answer_a: Data Set 2 contains one string which should return true and one that should return false.
    :answer_b: All strings in Data Set 2 have the same number of characters.
@@ -94,14 +94,10 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_e: All the values in Data Set 1 are true, so the false condition is not tested.
 
    There is a method called checkString that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method. What advantage does Data Set 2 have over Data Set 1?
-   
+
    .. code-block:: java
 
       Data Set 1    Data Set 2
       aba	        bcb
       abba	        bcd
       aBa
-     
-
-
-

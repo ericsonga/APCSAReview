@@ -6,7 +6,7 @@ Medium Multiple Choice Questions
 ----------------------------------
 
 These problems are similar to those you will see on the AP CS A exam.
-           
+
 .. mchoice:: qrm_1
    :answer_a: 1441
    :answer_b: 43211234
@@ -21,8 +21,8 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: When the recursive call to <code>mystery(1)</code> occurs (the 4th call to mystery), the division of x /10 equals .01--this becomes 0 because this is integer division and the remainder is thrown away. Therefore the current call will be completed and all of the previous calls to <code>mystery</code> will be completed.
 
    Given the following method declaration, which of the following is printed as the result of the call ``mystery(1234)``?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
 
       //precondition:  x >=0
@@ -53,8 +53,8 @@ You can step through the code using the Java Visualizer by clicking on the follo
    :feedback_e: This would be true if you called <code>mystery(3)</code>
 
    Given the following method declaration, what value is returned as the result of the call ``mystery(5)``?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
 
       public static int mystery(int n)
@@ -64,9 +64,9 @@ You can step through the code using the Java Visualizer by clicking on the follo
          else
             return 3 * mystery (n - 1);
       }
-      
+
 You can step through the code using the Java Visualizer by clicking on the following link: `Q-11-7-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+mystery(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+3+*+mystery+(n+-+1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
+
 .. mchoice:: qrm_3
    :answer_a: 1
    :answer_b: 10
@@ -81,20 +81,20 @@ You can step through the code using the Java Visualizer by clicking on the follo
    :feedback_e: The result from <code>product(5)</code> is <code>5 * product(3)</code> which is 3 * product(1) which is <code>1</code> so the answer is <code>1 * 3 * 5 = 15</code>.
 
    Given the following method declaration, what value is returned as the result of the call ``product(5)``?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
 
-      public static int product(int n) 
+      public static int product(int n)
       {
          if (n <= 1)
             return 1;
          else
             return n * product(n - 2);
       }
-      
+
 You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+product(int+n)+%0A+++%7B%0A+++++++++if+(n+%3C%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+n+*+product(n+-+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(product(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
+
 .. mchoice:: qrm_4
    :answer_a: 8
    :answer_b: 3
@@ -109,8 +109,8 @@ You can step through the code using the Java Visualizer by clicking on the follo
    :feedback_e: This would be true if it was <code>f(0)</code> not <code>f(5)</code>.
 
    Given the following method declaration, what value is returned as the result of the call ``f(5)``?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
 
       public static int f(int n)
@@ -121,8 +121,5 @@ You can step through the code using the Java Visualizer by clicking on the follo
             return 1;
          else return f(n-1) + f(n-2);
       }
-      
-You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+f(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+0%3B%0A+++++++++else+if+(n+%3D%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else+return+f(n-1)+%2B+f(n-2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(f(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
 
-      
+You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+f(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+0%3B%0A+++++++++else+if+(n+%3D%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else+return+f(n-1)+%2B+f(n-2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(f(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.

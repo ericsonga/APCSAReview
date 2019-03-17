@@ -1,12 +1,12 @@
 .. qnum::
-   :prefix:  16-1-
+   :prefix:  17-2-
    :start: 1
 
 RandomStringChooser - Part A
 ===============================
 
 ..	index::
-	single: RandomStringChooser
+	  single: RandomStringChooser
     single: free response
 
 The following is a free response question from 2016.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
@@ -34,12 +34,12 @@ One possible output is shown below.  Because ``sChooser`` has only four strings,
 .. code-block:: java
 
    bus the wheels on NONE NONE
-   
+
 
 Try and Solve It - Again
 ----------------------------
 
-Now that you have had practice with the mixed up code, write the entire ``RandomStringChooser`` class again. Your implementation must include an appropriate constructor and any necessary methods.  Any instance variables must be ``private``.  The code segment in the example above should have the indicated behavior (that is, it must compile and produce a result like the possible output shown.  Neither the constructor or any of the methods should alter the parameter passed to the constructor, but your implementation may copy the contents of the array.
+Now that you have had practice with mixed up code, write the entire ``RandomStringChooser`` class again. Your implementation must include an appropriate constructor and any necessary methods.  Any instance variables must be ``private``.  The code segment in the example above should have the indicated behavior (that is, it must compile and produce a result like the possible output shown.  Neither the constructor or any of the methods should alter the parameter passed to the constructor, but your implementation may copy the contents of the array.
 
 The code below has comments to help you get started.  It also has a main method for testing.  Finish writing the class and use the main method to test it.
 
@@ -48,17 +48,17 @@ The code below has comments to help you get started.  It also has a main method 
 
    import java.util.List;
    import java.util.ArrayList;
-   
+
    // Declare the RandomStringChooser class
-   
+
    {
-   
+
        /** Declare any fields (instance variables) **/
 
        /** Declare any constructors */
 
        /** Write the getNext method */
-    
+
        /** This is a main method for testing the class */
        public static void main(String[] args)
        {
@@ -69,7 +69,7 @@ The code below has comments to help you get started.  It also has a main method 
            {
               System.out.println(sChooser.getNext() + " ");
            }
-       
+
         } // end of main
 
    } // end of class

@@ -13,7 +13,7 @@ Java Review for the AP CS A Exam
 
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
-   
+
 Assignments
 :::::::::::::::::
 
@@ -21,8 +21,8 @@ Assignments
 
    <ul>
    <li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
-   </ul>   
-   
+   </ul>
+
 Table of Contents
 :::::::::::::::::
 
@@ -47,8 +47,8 @@ Table of Contents
    TimedTests/toctree.rst
    FreeResponse/toctree.rst
    MixedFreeResponse/toctree.rst
-   PictureLab/imageBasics.rst
-   TurtleGraphics/turtleBasics.rst
+   PictureLab/toctree.rst
+   TurtleGraphics/toctree.rst
 
 Appendix 1
 ::::::::::::::::::::::::::::

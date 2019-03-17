@@ -1,7 +1,7 @@
 .. qnum::
    :prefix:  12-7-
    :start: 1
-   
+
 Easy Multiple Choice Questions
 ----------------------------------
 
@@ -20,17 +20,17 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_d: This line contains a call to the same method which makes this method recursive.
 
    Which line has the recursive call?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
-   
+
       public static int factorial(int n)
       {
          if (n == 0)
             return 1;
          else return n * factorial(n-1);
       }
-    
+
 .. mchoice:: qre_2
    :answer_a: 1
    :answer_b: 3
@@ -45,11 +45,11 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: This line contains a call to the same method which makes this method recursive.
 
    Which line has the recursive call?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
-   
-      public String starString(int n) 
+
+      public String starString(int n)
       {
          if (n == 0) {
             return "*";
@@ -57,7 +57,7 @@ These problems are easier than most of those that you will usually see on the AP
             return starString(n - 1) + starString(n - 1);
          }
       }
-      
+
 .. mchoice:: qre_3
    :answer_a: 0
    :answer_b: 1
@@ -70,10 +70,10 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_d: There are not 3 calls to <code>fibonacci</code>.
 
    How many recursive calls does the following method contain?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
-   
+
       public static int fibonacci(int n)
       {
          if (n == 0)
@@ -95,11 +95,11 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_d: Where do you see 3 calls to <code>multiplyEvens</code>?
 
    How many recursive calls does the following method contain?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
       :linenos:
-   
-      public static int multiplyEvens(int n) 
+
+      public static int multiplyEvens(int n)
       {
          if (n == 1) {
             return 2;
@@ -107,12 +107,3 @@ These problems are easier than most of those that you will usually see on the AP
             return 2 * n * multiplyEvens(n - 1);
          }
       }
-
-
-   
-   
-    
-      
-      
-      
-
