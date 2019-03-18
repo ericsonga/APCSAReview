@@ -1,7 +1,3 @@
-.. qnum::
-   :prefix: 12-11-
-   :start: 1
-
 Recursion Summary
 -------------------------
 

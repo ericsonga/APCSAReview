@@ -20,7 +20,7 @@ Exam coverage: 15% of AP CS A multiple-choice questions
    cMedMC.rst
    cHardMC.rst
    timeFRQ.rst
-   Exercises.rst
+   CondSummary.rst
    CondPractice.rst
    CondParsonsPractice.rst
    MagpieLab/toctree.rst
