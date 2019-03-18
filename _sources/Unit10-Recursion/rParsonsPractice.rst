@@ -295,5 +295,3 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        } //end else
    } //end method
-
-

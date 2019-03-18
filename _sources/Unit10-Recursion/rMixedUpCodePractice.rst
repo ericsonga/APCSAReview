@@ -1,12 +1,8 @@
-.. qnum::
-   :prefix: 12-13-
-   :start: 1
-   
 Recursion More Mixed Up Code Practice
 ----------------------------------------
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
-                
+
 .. parsonsprob:: ch12p2ex1muc
    :adaptive:
    :noindent:
@@ -22,10 +18,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        return reverse(str.substring(1)) + str.charAt(0);
    =====
-   }    
+   }
    =====
        return reverse(str.substring(1)); #distractor
-	   
+
 .. parsonsprob:: ch12p2ex2muc
    :adaptive:
    :noindent:
@@ -43,21 +39,21 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            return 1;
    =====
-       else 
+       else
    =====
            return fibonacci(n - 1) + fibonacci(n - 2);
    =====
    }
    =====
         return fibonacci(n - 1); #distractor
-		
+
 .. parsonsprob:: ch12p2ex3muc
    :adaptive:
    :noindent:
 
    The following method should recursively replace all the spaces in the String str with dashes.
    -----
-   public String spaceDash(String str) 
+   public String spaceDash(String str)
    {
    =====
        if(str.length == 0)
@@ -68,7 +64,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            return "-" + spaceDash(str.substring(1));
    =====
-       else 
+       else
    =====
            return str.charAt(0) + spaceDash(str.substring(1));
    =====
@@ -82,7 +78,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following method should recursively count and return the number of 2's that are present in the number.
    -----
-   public int numberOf2s(int n) 
+   public int numberOf2s(int n)
    {
    =====
        if(n == 0)
@@ -93,7 +89,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            return 1 + numberOf2s(n / 10);
    =====
-       else 
+       else
    =====
            return numberOf2s(n / 10);
    =====
@@ -107,7 +103,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following method should recursively find and return the sum of the digits of int n.
    -----
-   public int sum(int n) 
+   public int sum(int n)
    {
    =====
        if(n / 10 == 0)
@@ -120,7 +116,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
    =====
-        return 1 + sum(n % 10); #distractor 
+        return 1 + sum(n % 10); #distractor
 
 .. parsonsprob:: ch12p2ex6muc
    :adaptive:
@@ -128,7 +124,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following method should recursively find and return the the number of even digits in int n.
    -----
-   public int evenDigits(int n) 
+   public int evenDigits(int n)
    {
    =====
        if(n / 10 == 0)
@@ -141,7 +137,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
 						return 0;
    =====
-        else if((n % 10) % 2 == 0) 
+        else if((n % 10) % 2 == 0)
    =====
 			return evenDigits(n / 10) + 1;
    =====
@@ -150,7 +146,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 					return evenDigits(n / 10);
    =====
    }
-   
+
 .. parsonsprob:: ch12p2ex7muc
    :adaptive:
    :noindent:
@@ -170,4 +166,5 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
    =====
-        return 1 + factorial(n % 10); #distractor 
+        return 1 + factorial(n % 10); #distractor
+

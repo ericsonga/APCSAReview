@@ -1,7 +1,7 @@
 .. qnum::
-   :prefix:  16-3-
+   :prefix:  17-3-
    :start: 1
-   
+
 RandomStringChooser - Part B
 ==================================================
 
@@ -16,19 +16,19 @@ RandomStringChooser - Part B
         */
        public RandomLetterChooser (String str)
        { /* to be implemented in part (b) */ }
-       
+
        /** Returns an array of single-letter strings.
         *  Each of these strings consists of a single letter from str.  Element k
         *  of the returned array contains the single letter at position k of str.
-        *  For example, getSingleLetters("cat") return the 
+        *  For example, getSingleLetters("cat") return the
         *  array {"c", "a", "t" }.
         */
        public static String[] getSingleLetters(String str)
        {    /* implementation not shown */ }
    }
-       
 
-The following code segment shows an example of using ``RandomLetterChooser``. 
+
+The following code segment shows an example of using ``RandomLetterChooser``.
 
 
 .. code-block:: java
@@ -38,16 +38,16 @@ The following code segment shows an example of using ``RandomLetterChooser``.
    {
        System.out.print(letterChooser.getNext());
    }
-   
+
 The code segment will print the three letters in ``"cat"`` in one of the possible orders.  Because there are only three letters in the original string, the code segment prints ``"NONE"`` the fourth time through the loop.  One posible output is shown below.
 
-   
+
 .. code-block:: java
- 
+
    actNONE
-   
-Assume that the ``RandomStringChooser`` class that you wrote in part (a) has been implemented correctly and that 
-``getSingleLetters`` works as specified.  You must use ``getSingleLetters``. 
+
+Assume that the ``RandomStringChooser`` class that you wrote in part (a) has been implemented correctly and that
+``getSingleLetters`` works as specified.  You must use ``getSingleLetters``.
 
 
 .. parsonsprob:: ch17RandStr1
@@ -61,7 +61,6 @@ Assume that the ``RandomStringChooser`` class that you wrote in part (a) has bee
    =====
            super(getSingleLetters(str));
    =====
-           super(str); #paired 
+           super(str); #paired
    =====
        } // end constructor
-       

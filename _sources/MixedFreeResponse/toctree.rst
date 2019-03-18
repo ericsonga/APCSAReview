@@ -9,5 +9,4 @@ Mixed Up Code - Free Response Practice
    RandomStringChooserParsonsB.rst
    RandomStringChooserB2.rst
    Exercises.rst
-  
-   
+

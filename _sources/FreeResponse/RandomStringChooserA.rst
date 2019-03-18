@@ -34,7 +34,7 @@ One possible output is shown below.  Because ``sChooser`` has only four strings,
 .. code-block:: java
 
    bus the wheels on NONE NONE
-   
+
 
 Try and Solve It
 ----------------
@@ -48,17 +48,17 @@ The code below has comments to help you get started.  It also has a main method 
 
    import java.util.List;
    import java.util.ArrayList;
-   
+
    // Declare the RandomStringChooser class
-   
+
    {
-   
+
        /** Declare any fields (instance variables) **/
 
        /** Declare any constructors */
 
        /** Write the getNext method */
-    
+
        /** This is a main method for testing the class */
        public static void main(String[] args)
        {
@@ -69,7 +69,7 @@ The code below has comments to help you get started.  It also has a main method 
            {
               System.out.println(sChooser.getNext() + " ");
            }
-       
+
         } // end of main
 
    } // end of class

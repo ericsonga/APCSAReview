@@ -23,8 +23,8 @@ Exam coverage: 7.5% of AP CS A multiple-choice questions
    listMedMC.rst
    listHardMC.rst
    freeResponse.rst
-   listSummary.rst
    listPractice.rst
    ListParsonsPractice.rst
    SearchSort/toctree.rst
    Exercises.rst
+

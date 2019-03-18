@@ -1,4 +1,6 @@
-
+.. qnum::
+   :prefix:  19-1-
+   :start: 1
 
 ..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
     Permission is granted to copy, distribute and/or modify this document
@@ -15,7 +17,6 @@
     :height: 20px
     :align: top
     :alt: run button
-
 
 Compute with Images
 ====================

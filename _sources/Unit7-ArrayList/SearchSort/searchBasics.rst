@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 12-1-
+   :prefix: 13-1-
    :start: 1
 
 Searching and Sorting
@@ -12,7 +12,7 @@ Searching and Sorting
 	pair: search; sequential
 	pair: search; binary
 
-Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **sequential search** and **binary search**. 
+Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **sequential search** and **binary search**.
 
 .. the video is Searching.mov
 
@@ -23,7 +23,7 @@ The following video is also on YouTube at https://youtu.be/DHLCXXX1OtE.  It intr
     :align: center
 
 
-* Sequential search typically starts at the first element in an array or list and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1. 
+* Sequential search typically starts at the first element in an array or list and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1.
 * Binary search **can only be used on data that has been sorted or stored in order**.  It checks the middle of the data to see if that middle value is less than, equal, or greater than the desired value and then based on the results of that it narrows the search. It cuts the search space in half each time.
 
 
@@ -50,15 +50,15 @@ The next lessons will explain these sorting algorithms.
     
 .. Here is folk dance for insertion sort.
 
-.. .. youtube:: ROalU379l3U
-    :align: center
     
 .. Here is folk dance for merge sort.
 
+
 .. .. youtube:: XaqR3G_NVoo
     :align: center
-    
+
 .. Here is another video that talks about bubble sort, insertion sort, and quick sort.  Of these only insertion sort is on the exam.
 
 .. .. youtube:: WaNLJf8xzC4
     :align: center
+

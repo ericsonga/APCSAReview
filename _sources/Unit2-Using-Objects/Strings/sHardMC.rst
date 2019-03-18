@@ -1,11 +1,11 @@
 .. qnum::
-   :prefix: 4-10-
+   :prefix: 4-9-
    :start: 1
-   
+
 Hard Multiple Choice Questions
 ----------------------------------
 
-These problems are harder than most of those that you will usually see on the AP CS A exam.  
+These problems are harder than most of those that you will usually see on the AP CS A exam.
 
 .. mchoice:: qsh_1
    :answer_a: II and IV
@@ -21,18 +21,18 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_e: II and III are also correct.
 
    Given the following code segment, which of the following is true?
-   
+
    .. code-block:: java
 
      String s1 = new String("Hi There");
      String s2 = new String("Hi There");
      String s3 = s1;
-     
+
      I.   (s1 == s2)
      II.  (s1.equals(s2))
      III. (s1 == s3)
      IV.  (s2.equals(s3))
-     
+
 .. mchoice:: qsh_2
    :answer_a: 21
    :answer_b: 1353
@@ -43,11 +43,11 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_a: This would be correct if it was System.out.println(13 + 5 + 3), but the 13 is a string.
    :feedback_b: This is string concatenation.  When you apprend a number to a string it get turned into a string and processing is from left to right.
    :feedback_c: You can append a number to a string in Java. It turns the number into a string and then appends the second string to the first string.
-   :feedback_d: This would be correct if it was System.out.println("13" + (5 + 3)), but the 5 is turned into a string and appended to the 13 and then the same is done with the 3.  
+   :feedback_d: This would be correct if it was System.out.println("13" + (5 + 3)), but the 5 is turned into a string and appended to the 13 and then the same is done with the 3.
    :feedback_e: You can append a number to a string in Java.  It will compile.
 
    What does the following code print?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
 
      System.out.println("13" + 5 + 3);

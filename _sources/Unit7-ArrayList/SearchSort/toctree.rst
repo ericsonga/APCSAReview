@@ -10,6 +10,7 @@ Searching and Sorting
    selSort.rst
    insertionSort.rst
    mergeSort.rst
+   Exercises.rst
    ssEasyMC.rst
    ssMedMC.rst
    ssHardMC.rst
