@@ -2,7 +2,7 @@
    :prefix:  17-1-
    :start: 1
 
-RandomStringChooser - Part A
+RandomStringChooser - Part A (Revisited)
 ==================================================
 
 **Question 1.** This question involves the implementation and extension of a ``RandomStringChooser`` class.
