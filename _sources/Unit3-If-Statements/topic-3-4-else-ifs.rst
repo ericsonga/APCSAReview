@@ -6,8 +6,8 @@
    :linenothreshold: 4
 
 	
-Three or More Options
-===========================
+else-if Statements: Multi-Selection
+===================================
 
 You can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if** and before the last possibility, the **else**.  
 

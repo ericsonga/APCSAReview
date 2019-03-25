@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 5-3-
+   :prefix: 3-5-
    :start: 1
 
-Complex Conditionals
---------------------
+Compound Boolean Expressions
+----------------------------
 
 ..	index::
 	single: and
@@ -24,8 +24,10 @@ What if you want two things to be true before the body of the conditional is exe
       {
         boolean cleanedRoom = true;
         boolean didHomework = false;
-        if (cleanedRoom && didHomework) System.out.println("You can go out");
-        else System.out.println("No, you can't go out");
+        if (cleanedRoom && didHomework) 
+            System.out.println("You can go out");
+        else 
+            System.out.println("No, you can't go out");
       }
    }
 
@@ -40,7 +42,8 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical *o
       {
         boolean walking = true;
         boolean carIsAvailable = false;
-        if (walking || carIsAvailable) System.out.println("You can go out");
+        if (walking || carIsAvailable) 
+           System.out.println("You can go out");
         else System.out.println("No, you can't go out");
       }
    }
@@ -104,7 +107,8 @@ The following table shows the result for P || Q when P and Q are both expression
    
    .. code-block:: java
 
-     if (x > 0 && (y / x) == 3) System.out.println("first case");
+     if (x > 0 && (y / x) == 3) 
+        System.out.println("first case");
      else System.out.println("second case");
 
 .. mchoice:: qcbc_7
@@ -118,7 +122,8 @@ The following table shows the result for P || Q when P and Q are both expression
    
    .. code-block:: java 
 
-     if (x > 0 && (y / x) == 3) System.out.println("first case");
+     if (x > 0 && (y / x) == 3) 
+        System.out.println("first case");
      else System.out.println("second case");
      
 .. mchoice:: qcbc_8
@@ -132,7 +137,8 @@ The following table shows the result for P || Q when P and Q are both expression
    
    .. code-block:: java 
 
-     if (x > 0 && (y / x) == 3) System.out.println("first case");
+     if (x > 0 && (y / x) == 3) 
+        System.out.println("first case");
      else System.out.println("second case");
      
 .. mchoice:: qcbc_6
@@ -148,6 +154,7 @@ The following table shows the result for P || Q when P and Q are both expression
    
    .. code-block:: java 
 
-     if (x > 0 || (y / x) == 3) System.out.println("first case");
+     if (x > 0 || (y / x) == 3) 
+        System.out.println("first case");
      else System.out.println("second case");
   
