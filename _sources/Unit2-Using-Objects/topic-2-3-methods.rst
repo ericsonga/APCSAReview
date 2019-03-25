@@ -37,7 +37,7 @@ To use an object's method, you must use the object name and the dot (.) operator
 
 
 	
-Here is the Turtle class diagram again that shows some of the fields and methods inherited from the SimpleTurtle class in the class Turtle. 
+Here is the Turtle class diagram again that shows some of the variables and methods inherited from the SimpleTurtle class in the class Turtle. 
 
 .. figure:: Figures/turtleUMLClassDiagram.png
     :width: 400px
@@ -55,11 +55,11 @@ Try some of the methods above in the turtle code below.
 **Exercises:** 
 
 
-- Can you make yertle draw a square? 
+1. Can you make yertle draw a square? 
 
-- Can you change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the Color_ class in Java which has some colors predefined. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
+2. Can you change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the Color_ class in Java which has some colors predefined. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
 
-- Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. There is another turn method which has a parameter for the angle of the turn in degrees that you can use. For example, turn(90) is the same as turnRight(). 
+3. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. There is another turn method which has a parameter for the angle of the turn in degrees that you can use. For example, turn(90) is the same as turnRight(). 
 
 
 .. reveal:: TurtleClassesIndividual
@@ -2845,7 +2845,7 @@ Try drawing a letter A using the mixed up code below.
    }
    
 
-Group Work: In groups or pairs, use the area below to have a turtle draw the letters J A V A with different colors. Make the J as a block letter without curves. If you don't have a lot of time, just do 1 letter. Be patient with yourself because this may take a lot of trial and error to get the correct angle values.
+**Group Work**: In groups or pairs, use the area below to have a turtle draw the letters J A V A with different colors. Make the J as a block letter without curves. If you don't have a lot of time, just do 1 letter. Be patient with yourself because this may take a lot of trial and error to get the correct angle values.
 
 .. activecode:: Turtle_Initials
     :language: java

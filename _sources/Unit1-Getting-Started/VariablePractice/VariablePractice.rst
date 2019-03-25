@@ -179,7 +179,7 @@ Code Practice with Variables
 
         .. tab:: Answer
         
-           Lines 5, 6, and 7 should all be ``int`` versus ``double`` so that the decimal portion of the calculation isn't thrown away.
+           Lines 5, 6, and 7 should all be ``double`` versus ``int`` so that the decimal portion of the calculation isn't thrown away.
         
            .. activecode::  ch3Ex4a
               :language: java

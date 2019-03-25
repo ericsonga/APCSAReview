@@ -14,7 +14,7 @@
 Calling Methods that Return Values
 ----------------------------------
 
-Some methods return a value back that the program can use. In the previous lesson, you may have used some set methods with parameters to set the fields of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each field in a class to access and modify that field. The get methods always return back the value of that field, and the set methods modify the value. 
+Some methods return a value back that the program can use. In the previous lesson, you may have used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value. 
 
 
 Here are some examples of using get methods for the turtle object yertle. When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. 
@@ -74,9 +74,9 @@ Try some of the get methods and the toString() method in the program below. Note
     
 **Exercises**:
 
-- The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)? 
+1. The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)? 
 
-- Add another turtle and make both turtles move. Then find the distance between them. You must use the getXPos() and getYPos() methods as well as the getDistance() method.
+2. Add another turtle and make both turtles move. Then find the distance between them. You must use the getXPos() and getYPos() methods as well as the getDistance() method.
 
 
 

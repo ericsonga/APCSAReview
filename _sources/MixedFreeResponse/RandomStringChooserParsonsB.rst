@@ -2,7 +2,7 @@
    :prefix:  17-3-
    :start: 1
 
-RandomStringChooser - Part B
+RandomStringChooser - Part B Parsons
 ==================================================
 
 **Part b.**   The following partially completed ``RandomLetterChooser`` class is a subclass of the ``RandomStringChooser`` class.  You will put blocks in order to create the constructor for the ``RandomLetterChooser`` class.

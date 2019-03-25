@@ -41,13 +41,146 @@ In the 1960s, an educational programming language called Logo was developed. It 
 Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
 Try clicking the |runbutton| button below to see what the following program does.
 
-.. reveal:: tClasses
-   :showtitle: Hidden Turtle Classes
-   :hidetitle: Hide
 
-   .. raw:: html
+.. activecode:: TurtleTest
+    :language: java
+    :datafile: turtleClasses
 
-      <pre id="turtleClasses" class="javaFiles">
+    import java.util.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          Turtle yertle = new Turtle(world);
+          Turtle myrtle = new Turtle(world);
+
+          yertle.forward(100);
+          yertle.turnLeft();
+          yertle.forward(75);
+
+          myrtle.turnRight();
+          myrtle.forward(100);
+
+          world.show(true);
+      }
+    }
+
+
+
+In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle, World, and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
+
+Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method:
+
+.. code-block:: java
+
+    // To create or declare a new object, write:
+    // ClassName variableName = new ClassName(arguments);  
+    Turtle yourTurtleName = new Turtle(world);
+     
+The class Turtle defines **attributes** (properties or variables) and **methods** (behaviors or functions) that each turtle can use. The dot operator (.) is used to run an object's method. You can think of the . as an apostrophe s ('s), for example run yertle's forward method. The parentheses () after method names are there in case you need to give the method **arguments** (some data) to do its job, for example go forward 100 pixels.
+
+Here is a class diagram that shows some of the attributes and methods inherited from the SimpleTurtle class in the class Turtle.
+
+.. creately.com for figure
+
+
+.. figure:: Figures/turtleUMLClassDiagram.png
+    :width: 400px
+    :align: center
+    :alt: Turtle class diagram
+    :figclass: align-center
+
+    Figure 2: Turtle Class Diagram
+
+.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
+
+Try some of the methods above in the Active Code window. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a square using different colors.
+
+What are Classes and Objects?
+-----------------------------
+
+In Java, a **class** is used to define a new data type (classify something).   The class defines what objects of the class need to know (attributes or instance variables) and do (behaviors or methods).  A class is the formal implementation, or blueprint, of the attributes and behaviors of an object. 
+
+There are many classes that are part of the Java languge, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  
+
+The real power of Java is the ability to create your own classes (define your own types). You will also learn how to create your own classes in Unit 5. 
+
+In the video below, which was created using the free software Greenfoot (http://greenfoot.org), you can see ant objects doing actions like moving and eating.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial if you are interested in learning more about Greenfoot.
+   
+.. the video is introToAnts.mov
+
+
+You can think of a class like a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  A class can also be thought of as a factory that produces objects.  
+
+.. figure:: Figures/cookieCutter.jpg
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure: Using a cookie cutter to make cookies
+    
+You can think of a class as the type or classification.  The following picture has lots of cats (objects of the type cat).  
+
+.. figure:: Figures/cats2.png
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure: Pictures of cats (cat objects)
+
+If you go to a restaurant, you will be seated by the greeter, the waiter will take your order, and the chef will cook your food.  What do we mean by a greeter, waiter, and chef?  Those are classifications or types of workers in a restaurant.  Java has this same concept.  When we create a new class we are defining a new type (a new classification) to the computer.  Each type can have abilities or behaviors (called **methods** in Java) and attributes (called **instance variables** in Java). After you define a type, you can use it to create **objects** of that type.  All objects created from a class will have the properties and abilities/behaviors defined in that class.  For example, all turtle objects will know how to move forward and turn.
+
+**Check your understanding**
+   
+.. mchoice:: q2_2_1
+   :answer_a: 1
+   :answer_b: 10
+   :answer_c: 1000
+   :answer_d: As many as you need
+   :correct: d
+   :feedback_a: There is one definition of a class, but the class can create as many objects as are needed.
+   :feedback_b: There is no limit on the number of objects you can create from a class.
+   :feedback_c: There is no limit on the number of objects you can create from a class.
+   :feedback_d: You can create as many objects as you need from one class.
+   
+   How many objects can you create from a class in Java?
+   
+.. mchoice:: q2_2_2
+   :answer_a: attributes
+   :answer_b: methods
+   :answer_c: class
+   :answer_d: object
+   :correct: b
+   :feedback_a: attributes specify the data that an object keeps track of.
+   :feedback_b: Methods specify the behavior of all objects of a class.
+   :feedback_c: While the class does specify the behavior of all objects created by that class, what part of a class specifies the behavior?
+   :feedback_d: The object behavior is specified by the methods in the class that created the object.
+   
+   What specifies the behavior for objects of a class in Java?
+   
+.. mchoice:: q2_2_3
+   :answer_a: attributes
+   :answer_b: methods
+   :answer_c: class
+   :answer_d: object
+   :correct: a
+   :feedback_a: attributes specify the data that an object keeps track of.
+   :feedback_b: Methods specify the behavior of all objects of a class.
+   :feedback_c: While the class does specify the data or state that all objects of the class keep track of, what part of the class stores the data?
+   :feedback_d: The object data or state is stored in the attributes of the object.  The attributes are defined in the class.  
+   
+   What specifies the data or state for an object in Java?
+   
+
+
+
+
+   
+.. raw:: html
+
+      <pre id="turtleClasses" class="javaFiles" style="display:none;">
       import java.awt.Image;
       import java.awt.image.BufferedImage;
 
@@ -2715,456 +2848,3 @@ Try clicking the |runbutton| button below to see what the following program does
 
       </pre>
       
-
-.. activecode:: TurtleTest
-    :language: java
-    :datafile: turtleClasses
-
-    import java.util.*;
-
-    public class TurtleTest
-    {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
-          Turtle myrtle = new Turtle(world);
-
-          yertle.forward(100);
-          yertle.turnLeft();
-          yertle.forward(75);
-
-          myrtle.turnRight();
-          myrtle.forward(100);
-
-          world.show(true);
-      }
-    }
-    
-    
-BH testing Turtle classes: another TurtleTest that has the World class embedded in the activecode.
-
-
-.. activecode:: TurtleTest2
-    :language: java
-    :datafile: turtleClasses
-
-    import java.util.*;
-      import javax.swing.*;
-      import java.util.List;
-      import java.util.ArrayList;
-      import java.util.Iterator;
-      import java.util.Observer;
-      import java.awt.*;
-      import java.net.*;
-      import java.io.*;
-      import java.util.Base64;
-      import javax.imageio.*;
-      import java.awt.image.*;
-      import javax.imageio.stream.*;
-
-    public class TurtleTest2
-    {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
-          Turtle myrtle = new Turtle(world);
-
-          yertle.forward(100);
-          yertle.turnLeft();
-          yertle.forward(75);
-
-          myrtle.turnRight();
-          myrtle.forward(100);
-
-          world.show(true);
-      }
-    }
-      /**
-       * Class to represent a 2d world that can hold turtles and
-       * display them
-       *
-       * Copyright Georgia Institute of Technology 2004
-       * @author Barb Ericson ericson@cc.gatech.edu
-       */
-      @SuppressWarnings("unchecked")
-      class World implements ModelDisplay
-      {
-        ////////////////// fields ///////////////////////
-
-        /** should automatically repaint when model changed */
-        private boolean autoRepaint = true;
-
-        /** the background color for the world */
-        private Color background = Color.white;
-
-        /** the width of the world */
-        private int width = 640;
-
-        /** the height of the world */
-        private int height = 480;
-
-        /** the list of turtles in the world */
-        private List<Turtle> turtleList = new ArrayList<Turtle>();
-
-        /** background picture */
-        private Picture picture = null;
-
-        /* All world changes*/
-        private List<Picture> worldHistory = new ArrayList<Picture>();
-
-
-        ////////////////// the constructors ///////////////
-
-        /**
-         * Constructor that takes no arguments
-         */
-        public World()
-        {
-          // set up the world and make it visible
-          initWorld(true);
-        }
-
-        /**
-         * Constructor that takes a boolean to
-         * say if this world should be visible
-         * or not
-         * @param visibleFlag if true will be visible
-         * else if false will not be visible
-         */
-        public World(boolean visibleFlag)
-        {
-          initWorld(visibleFlag);
-        }
-
-        /**
-         * Constructor that takes a width and height for this
-         * world
-         * @param w the width for the world
-         * @param h the height for the world
-         */
-        public World(int w, int h)
-        {
-          width = w;
-          height = h;
-
-          // set up the world and make it visible
-          initWorld(true);
-        }
-
-        ///////////////// methods ///////////////////////////
-
-        /**
-         * Method to initialize the world
-         * @param visibleFlag the flag to make the world
-         * visible or not
-         */
-        private void initWorld(boolean visibleFlag)
-        {
-          // create the background picture
-          picture = new Picture(width,height);
-          this.modelChanged();
-        }
-
-        /**
-         * Method to get the graphics context for drawing on
-         * @return the graphics context of the background picture
-         */
-        public Graphics getGraphics() { return picture.getGraphics(); }
-
-        /**
-         * Method to clear the background picture
-         */
-        public void clearBackground() { picture = new Picture(width,height); }
-
-        /**
-         * Method to get the background picture
-         * @return the background picture
-         */
-        public Picture getPicture() { return picture; }
-
-        /**
-         * Method to set the background picture
-         * @param pict the background picture to use
-         */
-        public void setPicture(Picture pict) { picture = pict; }
-
-        /**
-         * Method to paint this component
-         * @param g the graphics context
-         */
-        public synchronized void paintComponent(Graphics g)
-        {
-          Turtle turtle = null;
-
-          // draw the background image
-          g.drawImage(picture.getImage(),0,0,null);
-
-          // loop drawing each turtle on the background image
-          Iterator iterator = turtleList.iterator();
-          while (iterator.hasNext())
-          {
-            turtle = (Turtle) iterator.next();
-            turtle.paintComponent(g);
-          }
-        }
-
-        /**
-         * Method to get the last turtle in this world
-         * @return the last turtle added to this world
-         */
-        public Turtle getLastTurtle()
-        {
-          return (Turtle) turtleList.get(turtleList.size() - 1);
-        }
-
-
-        /**
-         * Method to add a model to this model displayer
-         * @param model the model object to add
-         */
-        public void addModel(Object model)
-        {
-          turtleList.add((Turtle) model);
-        }
-
-        /**
-         * Method to check if this world contains the passed
-         * turtle
-         * @return true if there else false
-         */
-        public boolean containsTurtle(Turtle turtle)
-        {
-          return (turtleList.contains(turtle));
-        }
-
-        /**
-         * Method to remove the passed object from the world
-         * @param model the model object to remove
-         */
-        public void remove(Object model)
-        {
-          turtleList.remove(model);
-        }
-
-        /**
-         * Method to get the width in pixels
-         * @return the width in pixels
-         */
-        public int getWidth() { return width; }
-
-        /**
-         * Method to get the height in pixels
-         * @return the height in pixels
-         */
-        public int getHeight() { return height; }
-
-        /**
-         * Method that allows the model to notify the display
-         */
-        public void modelChanged()
-        {
-           Picture p = new Picture(this.width, this.height);
-           this.paintComponent(p.getGraphics());
-           this.worldHistory.add(p);
-        }
-
-        /**
-         * Method to set the automatically repaint flag
-         * @param value if true will auto repaint
-         */
-        public void setAutoRepaint(boolean value) { autoRepaint = value; }
-
-        /**
-         * Method to show the frame
-         */
-        public void show()
-       {
-          this.show(false);
-        }
-
-        public void show(boolean showHistory) {
-            this.paintComponent(this.picture.getGraphics());
-            if(showHistory) {
-                try {
-                    BufferedImage[] images = new BufferedImage[this.worldHistory.size()];
-                    for(int i = 0; i < this.worldHistory.size(); i++) {
-                        images[i] = ((Picture) this.worldHistory.get(i)).getBufferedImage();
-                    }
-                    Giffer.generateFromBI(images, "history.gif", 100, false);
-
-                    File history = new File("history.gif");
-
-                    URL url = history.toURI().toURL();
-
-                    byte[] imageBytes = downloadUrl(url);
-                    String result =
-		            //DatatypeConverter.printBase64Binary(imageBytes);
-                    //BH: using java.util.Base64 instead of javax.xml.bind.DataTypeConverter
-                    Base64.getEncoder().encodeToString(imageBytes);
-
-		            System.gc();
-                    history.delete();
-                    double rand = Math.random();
-                    System.out.println("<img src=\'data:image/gif;base64," + result + "\'/>");
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            } else {
-                this.picture.show();
-            }
-        }
-
-        private byte[] downloadUrl(URL toDownload) {
-          ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-          try {
-              byte[] chunk = new byte[4096];
-              int bytesRead;
-              InputStream stream = toDownload.openStream();
-
-              while ((bytesRead = stream.read(chunk)) > 0) {
-                  outputStream.write(chunk, 0, bytesRead);
-              }
-              //toDownload.close();
-
-          } catch (IOException e) {
-              e.printStackTrace();
-              return null;
-          }
-
-          return outputStream.toByteArray();
-      }
-
-        /**
-         * Method to get the list of turtles in the world
-         * @return a list of turtles in the world
-         */
-        public List getTurtleList()
-        { return turtleList;}
-
-        /**
-         * Method to get an iterator on the list of turtles
-         * @return an iterator for the list of turtles
-         */
-        public Iterator getTurtleIterator()
-        { return turtleList.iterator();}
-
-        /**
-         * Method that returns information about this world
-         * in the form of a string
-         * @return a string of information about this world
-         */
-        public String toString()
-        {
-          return "A " + getWidth() + " by " + getHeight() +
-            " world with " + turtleList.size() + " turtles in it.";
-        }
-      } // end of World class
-
-
-In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle, World, and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
-
-Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method:
-
-.. code-block:: java
-
-    // To create or declare a new object, write:
-    // ClassName variableName = new ClassName(arguments);  
-    Turtle yourTurtleName = new Turtle(world);
-     
-The class Turtle defines **fields** (data or properties) and **methods** (behaviors or functions) that each turtle can use. The dot operator (.) is used to run an object's method. You can think of the . as an apostrophe s ('s), for example run yertle's forward method. The parentheses () after method names are there in case you need to give the method **arguments** (some data) to do its job, for example go forward 100 pixels.
-
-Here is a class diagram that shows some of the fields and methods inherited from the SimpleTurtle class in the class Turtle.
-
-.. figure:: Figures/turtleUMLClassDiagram.png
-    :width: 400px
-    :align: center
-    :alt: Turtle class diagram
-    :figclass: align-center
-
-    Figure 2: Turtle Class Diagram
-
-.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
-
-Try some of the methods above in the Active Code window. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a square using different colors.
-
-What are Classes and Objects?
------------------------------
-
-In Java, a **class** is used to define a new data type (classify something).  The class defines what objects of the class need to know (data or fields) and do (behaviors or methods).  
-
-There are many classes that are part of the Java languge, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  
-
-The real power of Java is the ability to create your own classes (define your own types). You will also learn how to create your own classes in Unit 5. 
-
-In the video below, which was created using the free software Greenfoot (http://greenfoot.org), you can see ant objects doing actions like moving and eating.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial if you are interested in learning more about Greenfoot.
-   
-.. the video is introToAnts.mov
-
-
-You can think of a class like a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  A class can also be thought of as a factory that produces objects.  
-
-.. figure:: Figures/cookieCutter.jpg
-    :width: 300px
-    :align: center
-    :figclass: align-center
-
-    Figure: Using a cookie cutter to make cookies
-    
-You can think of a class as the type or classification.  The following picture has lots of cats (objects of the type cat).  
-
-.. figure:: Figures/cats2.png
-    :width: 300px
-    :align: center
-    :figclass: align-center
-
-    Figure: Pictures of cats (cat objects)
-
-If you go to a restaurant, you will be seated by the greeter, the waiter will take your order, and the chef will cook your food.  What do we mean by a greeter, waiter, and chef?  Those are classifications or types of workers in a restaurant.  Java has this same concept.  When we create a new class we are defining a new type (a new classification) to the computer.  Each type can have abilities or behaviors (called **methods** in Java) and properties (called **fields** in Java). After you define a type, you can use it to create **objects** of that type.  All objects created from a class will have the properties and abilities/behaviors defined in that class.  For example, all turtle objects will know how to move forward and turn.
-
-**Check your understanding**
-   
-.. mchoice:: q2_2_1
-   :answer_a: 1
-   :answer_b: 10
-   :answer_c: 1000
-   :answer_d: As many as you need
-   :correct: d
-   :feedback_a: There is one definition of a class, but the class can create as many objects as are needed.
-   :feedback_b: There is no limit on the number of objects you can create from a class.
-   :feedback_c: There is no limit on the number of objects you can create from a class.
-   :feedback_d: You can create as many objects as you need from one class.
-   
-   How many objects can you create from a class in Java?
-   
-.. mchoice:: q2_2_2
-   :answer_a: fields
-   :answer_b: methods
-   :answer_c: class
-   :answer_d: object
-   :correct: b
-   :feedback_a: Fields specify the data that an object keeps track of.
-   :feedback_b: Methods specify the behavior of all objects of a class.
-   :feedback_c: While the class does specify the behavior of all objects created by that class, what part of a class specifies the behavior?
-   :feedback_d: The object behavior is specified by the methods in the class that created the object.
-   
-   What specifies the behavior for objects of a class in Java?
-   
-.. mchoice:: q2_2_3
-   :answer_a: fields
-   :answer_b: methods
-   :answer_c: class
-   :answer_d: object
-   :correct: a
-   :feedback_a: Fields specify the data that an object keeps track of.
-   :feedback_b: Methods specify the behavior of all objects of a class.
-   :feedback_c: While the class does specify the data or state that all objects of the class keep track of, what part of the class stores the data?
-   :feedback_d: The object data or state is stored in the fields of the object.  The fields are defined in the class.  
-   
-   What specifies the data or state for an object in Java?
-   
-

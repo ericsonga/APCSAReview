@@ -6,12 +6,8 @@
 AP CS A Java Course - 2019
 ==========================================
 
-(revised 3/17/19)
+(revised 3/24/19)
 
-.. raw:: html
-
-   <a href="https://runestone.academy/runestone/static/APCSA/index.html">Click here for the latest revised version of the course.</a>
-   
 
 .. Here is where you specify the content and order of your new book.
 

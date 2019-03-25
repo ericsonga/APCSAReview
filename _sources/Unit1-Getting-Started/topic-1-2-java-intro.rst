@@ -15,7 +15,7 @@ Java is a **programming language**, which means that we can use Java to tell a c
 
 In this book the Java code is actually being sent to a server to compile and run (as long as you have an internet connection) and the output will be shown in the browser, so you won't actually create a source file or class file.  
 
-If you have the Java development environment loaded on your computer you can use the Java command ``javac`` to compile your Java source code at a command line.  You can use ``java ClassName`` to execute the ``main`` method in a Java class.  In Java all source code must be part of a class (defined inside a class).  
+If you have the Java development environment loaded on your computer you can use the Java command ``javac`` to compile your Java source code at a command line (note: this will not work in Chromebooks).  You can use ``java ClassName`` to execute the ``main`` method in a Java class.  In Java all source code must be part of a class (defined inside a class).  
 
 .. figure:: Figures/compile.png
     :width: 300px
@@ -65,7 +65,7 @@ To define a class in Java use the **keywords** (words that Java already understa
 
    In Java every open curly brace ``{`` must have a matched close curly brace ``}``.  These are used to start and end class definitions and method definitions.   
    
-The following is an example class in Java.  A class in Java can have **fields** (data or properties), **constructors** (ways to initialize the fields), **methods** (behaviors), and a **main method** for testing the class. It does 
+The following is an example class in Java.  A class in Java can have **instance variables** (attributes), **constructors** (ways to initialize the instance variables), **methods** (behaviors), and a **main method** for testing the class. It does 
 not have to have *any* of these items.  The following would compile, but what do you think would happen if you tried to have a computer execute it?
    
 .. code-block:: java 

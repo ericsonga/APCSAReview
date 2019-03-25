@@ -21,19 +21,18 @@ If you are using a Chromebook or you cannot install software on your computer, y
 Dr. Java
 --------
 
-DrJava (from http://DrJava.org) is a free, simple, easy to install and use development environment.  One nice feature is the **interactions pane** (the bottom area) which lets you try out Java code without having to create a class first.
+DrJava (from http://DrJava.org) is a free, simple, easy to install and use development environment.  One nice feature is the interactions pane at the bottom which lets you try out Java code without having to create a class first. 
 
-.. figure:: Figures/DrJavaInteractions.png
-    :width: 600px
-    :align: center
-    :figclass: align-center
-
-    Figure 1: DrJava with the interactions pane at the bottom of the window.
 
 BlueJ
 -----
 
 BlueJ (https://www.bluej.org/) is a free Java IDE designed for beginners. It is built to explore objects and object-oriented programming and has a teachers' community as well as a playlist of videos online https://www.youtube.com/playlist?list=PLYPWr4ErjcnzWB95MVvlKArO6PIfv1fHd to go with the BlueJ Object-First Java book.
+
+jGRASP
+------
+
+jGRASP (https://www.jgrasp.org/) is a free lightweight development environment, created specifically to provide automatic generation of software visualizations. jGRASP is implemented in Java, and runs on all platforms with a Java Virtual Machine (Java version 1.5 or higher). jGRASP produces Control Structure Diagrams (CSDs) for Java, C, C++, Objective-C, Python, Ada, and VHDL; Complexity Profile Graphs (CPGs) for Java and Ada; UML class diagrams for Java; and has dynamic object viewers and a viewer canvas that work in conjunction with an integrated debugger and workbench for Java.  The site includes both intro video and PDF tutorials.
 
 IntelliJ
 --------
