@@ -1,12 +1,12 @@
 .. qnum::
-   :prefix: 5-2-
+   :prefix: 3-4-
    :start: 1
    
 .. highlight:: java
    :linenothreshold: 4
 
 	
-else-if Statements: Multi-Selection
+Multi-Selection: else-if Statements
 ===================================
 
 You can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if** and before the last possibility, the **else**.  

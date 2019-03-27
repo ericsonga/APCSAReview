@@ -1,9 +1,9 @@
-.. qnum::
+.. .. qnum::
    :prefix: 5-6-
    :start: 1
 
 Common Mistakes
-===============
+---------------
 
   -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.    
   

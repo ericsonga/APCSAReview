@@ -45,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'AP CS A Java 2019'
-copyright = '2015 barb'
+copyright = '2015 Barb Ericson, 2019 revised by B. Hoffman Mobile CSP'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

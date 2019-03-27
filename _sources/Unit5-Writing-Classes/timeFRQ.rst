@@ -1,7 +1,10 @@
-.. qnum::
+.. .. qnum::
    :prefix: 5-11-
    :start: 1
 
+.. highlight:: java
+   :linenothreshold: 4
+   
 Free Response - Time
 -------------------------------
 
@@ -14,6 +17,7 @@ The following is part a of a free response question that has been studied at col
 You will implement two unrelated methods for a ``Time`` class that keeps track of the time using a 24 hour clock.  Consider the code for the ``Time`` class provided below.
 
 **Part a.**  Write the method ``tick`` which increases the number of seconds by one.  If the number of seconds is 60 it adds one to the number of minutes and resets seconds to 0.  If the number of minutes is 59 it adds one to the number of hours and resets the number of minutes to 0.  If the number of hours reaches 24 it should be reset to 0.
+
 
 .. code-block:: java
 
@@ -41,7 +45,6 @@ You will implement two unrelated methods for a ``Time`` class that keeps track o
          this.minutes = 0;
          this.seconds = 0;
       }
-
       /**
        * Constructor for objects of class Time.
        * Creates a new Time object set to h:m:s.
@@ -56,7 +59,6 @@ You will implement two unrelated methods for a ``Time`` class that keeps track o
          this.minutes = m;
          this.seconds = s;
       }
-
       /**
        * Add one second to the current time.
        * When the seconds value reaches 60, it rolls over to zero.
@@ -71,7 +73,6 @@ You will implement two unrelated methods for a ``Time`` class that keeps track o
       {
          // Part a: complete the tick() method
       }
-
       /**
        * Add an offset to this Time.
        * Rolls over the hours, minutes and seconds fields when needed.
@@ -80,12 +81,10 @@ You will implement two unrelated methods for a ``Time`` class that keeps track o
       {
            // Part b: complete the add method
       }
-
       public String toString()
       {
          return pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
       }
-
       /**
        * Returns a string representing the argument value, adding a leading
        * "0" if needed to make it at least two digits long.
@@ -107,8 +106,9 @@ You will implement two unrelated methods for a ``Time`` class that keeps track o
        }
     }
 
-How to solve this problem
-===========================
+
+**How to solve this problem**
+
 
 The first thing to do is try to solve the examples by hand.  The question tells us that when the value of minutes is 0, and seconds is 59 the method tick should result in minutes = 1 and seconds = 0.  When the value of minutes is 59 and the value of seconds is also 59 and the method tick is called the number of hours should increase and the minutes reset to 0. If the number of hours reaches 24 it should be reset to 0.
 

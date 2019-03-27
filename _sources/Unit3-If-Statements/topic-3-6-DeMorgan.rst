@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 5-5-
+   :prefix: 3-6-
    :start: 1
    
-DeMorgan's Laws
----------------
+Equivalent Boolean Expressions (DeMorgan's Laws)
+================================================
 
 ..	index::
 	single: DeMorgan's Laws

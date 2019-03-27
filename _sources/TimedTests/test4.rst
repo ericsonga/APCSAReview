@@ -2,6 +2,9 @@
    :prefix: 15-4-
    :start: 1
    
+.. highlight:: java
+   :linenothreshold: 4
+   
 .. |start| image:: Figures/start.png
     :height: 24px
     :align: top

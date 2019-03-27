@@ -24,7 +24,7 @@ If you have the Java development environment loaded on your computer you can use
 
     Figure 1: Compiling Java source (Person.java) into a class file (Person.class) 
     
-You can copy the Java source code shown in this book into a file and save it if you want to run it locally on your computer.  Be sure to name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be part of a **class** (defined inside a class) in a source file and the name of the class must match the file name. You can also use an integrated development environment (IDE) installed on your local computer (see the last section for ideas).
+You can copy the Java source code shown in this book into a file and save it if you want to run it locally on your computer.  Be sure to name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be part of a **class** (defined inside a class) in a source file and the name of the class must match the file name. You can also use an integrated development environment (IDE) installed on your local computer (see section 1.1. for different IDEs).
 
 .. |runbutton| image:: Figures/run-button.png
     :height: 20px
@@ -96,7 +96,7 @@ When you ask the Java run-time to *run* a class (java ClassName) it will start e
    
 .. note::
 
-   ``System.out.println`` is just the way that you ask Java to print out the value of something.  In the case above we are just printing the characters between the first ``"`` and the second ``"``.  The ``"Hi there!"`` is called a **string literal**.  A **string literal** can have zero to many characters enclosed in starting and ending double quotes in Java.
+   ``System.out.println`` is just the way that you ask Java to print out the value of something followed by a new line (ln).  In the case above we are just printing the characters between the first ``"`` and the second ``"``.  The ``"Hi there!"`` is called a **string literal** and it can have zero to many characters enclosed in starting and ending double quotes in Java. ``System.out.print`` without the ln will print out something without advancing to the next new line.
    
 Try to change the code above to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code.
 
@@ -207,3 +207,30 @@ Click on the |runbutton| button below to try and run the following code.  Look f
    }
 
 
+Essential Knowledge
+-------------------
+
+- A basic Java program looks like the following:
+
+.. code-block:: java 
+
+   public class MyClass
+   {
+      public static void main(String[] args)
+      {
+         System.out.println("Hi there!");
+      }
+   }
+   
+   
+- A Java program starts with **public class NameOfClass() { }**. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.
+
+- Most Java classes have a main method that will be run automatically. It looks like this: **public static void main(String[] args) { }**.
+
+- The System.out.print() and System.out.println() methods display information given inside the parenthese on the computer monitor. 
+
+- System.out.println moves the cursor to a new line after the information has been displayed, while System.out.print does not.
+
+- A string literal is enclosed in double quotes ('' '').
+
+- A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are matching { }, (), and "". 

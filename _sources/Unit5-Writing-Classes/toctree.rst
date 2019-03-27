@@ -17,5 +17,6 @@ Exam coverage: 7.5% of AP CS A multiple-choice questions
    JavaBasicsSummary.rst
    objectObasics.rst
    objects&Classes.rst
+   timeFRQ.rst
    Exercises.rst
    

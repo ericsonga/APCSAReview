@@ -26,7 +26,7 @@ if master_url is None:
         master_url = 'http://127.0.0.1:8000'
 
 master_app = 'runestone'
-serving_dir = "./build/Java2019"
+serving_dir = "./build/java2019"
 dest = '../../static'
 project_name = "java2019"
 
@@ -34,9 +34,9 @@ options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/Java2019",
+        builddir="./build/java2019",
         sourcedir="_sources",
-        outdir="./build/Java2019",
+        outdir="./build/java2019",
         confdir=".",
         project_name = "java2019",
         template_args={'course_id': 'java2019',
