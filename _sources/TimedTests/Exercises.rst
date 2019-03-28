@@ -1,5 +1,4 @@
-Exercises
-=========
+
 
 .. |start| image:: Figures/start.png
     :height: 24px
@@ -27,7 +26,7 @@ Exercises
     :alt: finish exam
 
 Practice Exam 1 for the first half of the AP CS A Curriculum
-----------------------------------------------------------------
+============================================================
 
 The following 20 questions are similar to what you might see assessing the first half of the AP CS A coursework on the AP Exam.  Please answer each to the best of your ability.
 

@@ -27,7 +27,7 @@
     :align: top
     :alt: finish exam
    
-Practice Exam 3 for the AP CS A Exam
+Practice Exam 2 for the AP CS A Exam
 -------------------------------------
 
 The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  

@@ -33,7 +33,22 @@ Java assumes that if you are doing division with integers that you want an integ
 	pair: double; number of digits
 
 
-Is the result of 1.0 divided by 3 what you expected?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.    
+Is the result of 1.0 divided by 3 what you expected?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits. 
+
+For example, int values are stored in 4 bytes of memory. There is an Integer.MAX_VALUE defined as 2147483647 and an Integer.MIN_VALUE defined as -2147483649. If you try to store any number larger or smaller than these numbers in an int variable, it will result in an error called **integer overflow**. Try it below.
+
+.. activecode:: overfl
+   :language: java
+   
+   public class TestOverflow
+   {
+      public static void main(String[] args)
+      {
+        int id = 2147483650; // overflow error!
+        int negative = -2147483650; // overflow 
+      }
+   }
+
 
 **Check your understanding**
 
@@ -65,3 +80,17 @@ Is the result of 1.0 divided by 3 what you expected?  Java limits the number of 
    :feedback_c: This will convert total to a double value and then divide by 3 to return a double result.
 
    Which of the following returns the correct average when 3 values had been added to an integer total?
+   
+   
+Essential Knowledge
+-------------------
+
+- The casting operators (int) and (double)can be used to create a temporary value converted to a different data type.
+- Casting a double value to an int causes the digits to the right of the decimal point to be truncated. 
+
+- Some programming code causes int values to be automatically cast (widened) to double values.
+- Values of type double can be rounded to the nearest integer by (int)(x + 0.5) or (int)(x – 0.5) for negative numbers.
+
+- Integer values in Java are represented by values of type int, which are stored using a finite amount (4 bytes) of memory. Therefore, an int value must be in the range from Integer.MIN_VALUE to Integer.MAX_VALUE inclusive.
+
+- If an expression would evaluate to an int value outside of the allowed range, an integer overflow occurs. This could result in an incorrect value within the allowed range.

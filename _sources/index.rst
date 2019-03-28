@@ -6,7 +6,7 @@
 AP CS A Java Course - 2019
 ==========================================
 
-(revised 3/24/19)
+(revised 3/28/19)
 
 
 .. Here is where you specify the content and order of your new book.
@@ -46,6 +46,7 @@ Table of Contents
    Unit8-2DArray/toctree.rst
    Unit9-Inheritance/toctree.rst
    Unit10-Recursion/toctree.rst
+   TimedTests/post-test.rst
    Tests/toctree.rst
    TimedTests/toctree.rst
    FreeResponse/toctree.rst

@@ -226,9 +226,7 @@ The value of score can be set later as shown below.  Run the following code to s
         :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
 
-.. note ::
 
-   Think of the semicolon in Java like a period (``.``) in English.  It is how you show the end of a sentence.  You use a semicolon (``;``) to show the end of a Java statement.  You will not be penalized on the exam if you forget the semicolon.  
 
 You can also optionally specify an initial value for the variable by adding an equals sign ``=`` followed by the value. 
 
@@ -244,7 +242,7 @@ Here is an example that shows declaring a variable and initializing it all in a 
 
   int score = 4;
   
-Run the following code to see what is printed.
+Run the following code to see what is printed. Then, change the numbers and run it again.
 
 .. activecode:: lcdv2
    :language: java
@@ -259,9 +257,32 @@ Run the following code to see what is printed.
         System.out.println(price);
         boolean won = false;
         System.out.println(won);
+        won = true;
+        System.out.println(won);
       }
    }
    
+The keyword **final** can be used in front of a variable declaration to make it a constant that cannot be changed. Constants are traditionally capitalized.
+
+.. code-block:: java
+
+  final double PI = 3.14
+
+Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
+
+.. activecode:: Testfn
+   :language: java
+   
+   public class TestFinal
+   {
+      public static void main(String[] args)
+      {
+        final double PI = 3.14;
+        System.out.println(PI);
+        PI = 4.2; // This will cause a syntax error
+      }
+   }
+
 **Check Your Understanding**
 
 .. clickablearea:: var_declar_and_init
@@ -409,4 +430,23 @@ The convention in Java is to always start a variable name with a lower case lett
 
             
 
-       
+Essential Knowledge
+-------------------
+
+- A **variable** is a name for a memory location where you can store a value that can change or vary.
+
+- A variable can be declared and initialized with the following code:
+
+.. code-block:: java
+
+  int score; 
+  double gpa = 3.5;
+  
+  
+- **Data types** can be categorized as either primitive type (like int) or reference type (like String).
+- The three primitive data types used in this course are **int** (whole numbers), **double** (decimal numbers), and **boolean** (true or false).
+- Each variable has associated memory that is used to hold its value.
+- The memory associated with a variable of a primitive type holds an actual primitive value.
+- When a variable is declared final, its value cannot be changed once it is initialized.  
+
+

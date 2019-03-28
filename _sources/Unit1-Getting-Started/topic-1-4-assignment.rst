@@ -64,6 +64,8 @@ You can set one variable's value to a *copy* of the value of another variable.  
       
 **Mixed up programs**
 
+In the mixed up programs below, drag the blocks to the right to put them in the right order.
+
 .. parsonsprob:: 2_swap
    :adaptive:
    :noindent:
@@ -131,8 +133,28 @@ Do all of those operators do what you expected?  What about ``2 / 3``? Isn't sur
 
 .. note::
 
-   When Java sees you doing integer division it assumes you want an integer result so it throws away anything after the decimal point in the answer.  
+   When Java sees you doing integer division it assumes you want an integer result so it throws away anything after the decimal point in the answer, essentially rounding down the answer to a whole number.
+   
+With division, another thing to watch out for is dividing by 0. An attempt to divide an  integer by zero will result in an ArithmeticException to occur. Try it in one of the active code windows above.
 
+Operators can be used to create compound expressions. When they are evaluated, operator precedence rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
+
+In the example below, try to guess what it will print out and then run it to see if you are right.
+
+.. activecode:: compound1
+   :language: java
+   
+   public class TestCompound
+   {
+      public static void main(String[] args)
+      {
+        System.out.println(2 + 3 * 2);
+        System.out.println((2 + 3) * 2);
+        System.out.println(2 + (3 * 2));
+      }
+   }
+   
+   
 Modulus
 -----------
 
@@ -202,3 +224,25 @@ The **modulus** operator has been used quite a bit on the AP CS A exam, so you s
     -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278. 
    
    
+Essential Knowledge
+-------------------
+
+- Arithmetic expressions include expressions of type int and double.
+
+- The arithmetic operators consist of +, -, \* , /, and % (modulus for the remainder in division).
+
+- An arithmetic operation that uses two int values will evaluate to an int value. With integer division, any decimal part in the result will be thrown away, essentially rounding down the answer to a whole number.
+
+- An arithmetic operation that uses at least one double value will evaluate to a double value.
+
+- Operators can be used to construct compound expressions.
+
+- During evaluation, operands are associated with operators according to operator precedence to determine how they are grouped. (\*, /, % have precedence over + and -, unless parentheses are used to group those.)
+
+- An attempt to divide an integer by zero will result in an ArithmeticException to occur. 
+
+- The assignment operator (=) allows a program to initialize or change the value stored in a variable.  The value of the expression on the right is stored in the variable on the left.
+
+- During execution, expressions are evaluated to produce a single value.
+
+- The value of an expression has a type based on the evaluation of the expression.

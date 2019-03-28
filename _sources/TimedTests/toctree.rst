@@ -6,7 +6,6 @@ Timed Multiple-Choice Exams
    :maxdepth: 3
 
    test1.rst
-   test2.rst
    test3.rst
    test4.rst
    Exercises.rst

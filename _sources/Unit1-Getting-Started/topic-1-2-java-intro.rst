@@ -96,6 +96,10 @@ When you ask the Java run-time to *run* a class (java ClassName) it will start e
    
 .. note::
 
+   Think of the semicolon in Java like a period (.) in English.  It is how you show the end of a sentence.  You use a semicolon (``;``) to show the end of a Java statement.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
+
+.. note::
+
    ``System.out.println`` is just the way that you ask Java to print out the value of something followed by a new line (ln).  In the case above we are just printing the characters between the first ``"`` and the second ``"``.  The ``"Hi there!"`` is called a **string literal** and it can have zero to many characters enclosed in starting and ending double quotes in Java. ``System.out.print`` without the ln will print out something without advancing to the next new line.
    
 Try to change the code above to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code.
@@ -206,6 +210,21 @@ Click on the |runbutton| button below to try and run the following code.  Look f
       }
    }
 
+Comments
+--------
+
+In Java and many text-based coding languages, // is used to mark the beginning of a comment. For multi-line comments, use ``/*`` to start the comment and ``*/`` to end the comment. The compiler will skip over comments. However, it is a good idea to use comments to make notes to yourself and other programmers working with you. Here are some examples of good commenting:
+
+.. code-block:: java 
+
+    /* MyClass.java
+       Programmer: My Name
+       Date: 
+    */   
+    
+    int max = 10; // this keeps track of the max score
+    
+
 
 Essential Knowledge
 -------------------
@@ -227,10 +246,12 @@ Essential Knowledge
 
 - Most Java classes have a main method that will be run automatically. It looks like this: **public static void main(String[] args) { }**.
 
-- The System.out.print() and System.out.println() methods display information given inside the parenthese on the computer monitor. 
+- The **System.out.print()** and **System.out.println()** methods display information given inside the parentheses on the computer monitor. 
 
 - System.out.println moves the cursor to a new line after the information has been displayed, while System.out.print does not.
 
-- A string literal is enclosed in double quotes ('' '').
+- A **string literal** is enclosed in double quotes ('' '').
 
-- A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are matching { }, (), and "". 
+- Java command lines end in ; (semicolon). { } are used to enclose blocks of code. // and ``/* */`` are used for comments.
+
+- A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ; at end of command lines, matching { }, (), and "". 
