@@ -13,6 +13,13 @@
     :align: middle
     :alt: exercise
     
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
+    
 Expressions and Assignment Statements
 =====================================
 
@@ -128,7 +135,7 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``).  Java uses (``==``) to test if the value on the left is equal to the value on the right and (``!=``) to test if two items are not equal.  
+Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``).  Java uses (``==``) to test if the value on the left is equal to the value on the right and (``!=``) to test if two items are not equal.  You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.
 
 .. activecode:: lcop1
    :language: java
@@ -244,7 +251,50 @@ The **modulus** operator has been used quite a bit on the AP CS A exam, so you s
     
     -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278. 
    
+
+|Groupwork| Pair Programming Challenge
+--------------------------------------
+
+.. |dog| image:: Figures/dog-free.png
+    :width: 100
+    :align: middle
+    :alt: dog
+    
+|dog| Working in pairs, complete the code below. Type in the current year, the year one of you was born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. Switch drivers (who has control of the keyboard in pair programming) after every line of code. Your teacher may suggest that you use a Java IDE like repl.it for this challenge so that you can use input to get these values.
+
+
+
+.. activecode:: challenge1-4
+   :language: java
+
+   public class Challenge1_4
+   {
+      public static void main(String[] args)
+      {
+         // Fill in values for these variables
+         int currentYear = 
+         int birthYear = 
+         int dogBirthYear = 
+         
+         // Write a formula to calculate your age 
+         // from the currentYear and your birthYear variables 
+         int age = 
+         
+         // Write a formula to calculate your dog's age 
+         // from the currentYear and dogBirthYear variables 
+         int dogAge = 
+         
+         // Calculate the age of your dog in dogYears (7 times a human year)
+         int dogYearsAge =
+         
+         // Print out your age, your dog's age, and your dog's age in dog years. Make sure you print out text too so that the user knows what is being printed out.
+        
+      
+      
+      }
+   }
    
+
 Summary
 -------------------
 

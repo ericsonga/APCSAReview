@@ -1,5 +1,3 @@
-.. Add a Challenge section (group work) and Summary, logo
-
 .. qnum::
    :prefix: 1-3-
    :start: 1
@@ -16,6 +14,11 @@
     :align: middle
     :alt: exercise
     
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
     
 Variables and Data Types
 ========================
@@ -69,7 +72,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
     
     -  boolean - which store Boolean values (either true or false). 
 
-``String`` is one of the object types on the exam and is the name of a class in Java.  A *string* object has a sequence of characters enclosed in a pair of double quotes - like "Hello".  You will learn more about ``String`` objects in another chapter. 
+``String`` is one of the object types on the exam and is the name of a class in Java.  A *string* object has a sequence of characters enclosed in a pair of double quotes - like "Hello".  You will learn more about ``String`` objects in another unit. 
 
 .. note:: 
 
@@ -154,12 +157,10 @@ Declaring Variables in Java
 	pair: variable; declare
   
 
-To create a variable, you must tell Java its type and name.  Creating a variable is also called **declaring a variable**.  When you create a **primitive variable** Java will set aside enough bits in memory for that primitive type and associate that memory location with the name that you used.  
+To create a variable, you must tell Java its data type and its name.  Creating a variable is also called **declaring a variable**.  The type is a keyword like int, double, or boolean, but you get to make up the name for the variable.  When you create a **primitive variable** Java will set aside enough bits in memory for that primitive type and associate that memory location with the name that you used.   
 
 Computers store all values using **bits** (binary digits).  A **bit** can represent two values and we usually say that the value of a bit is either 0 or 1. When you declare a variable, you have to tell Java the type of the variable because Java needs to know how many bits to use and how to represent the value.  The 3 different primitive types
-are all represented using **binary numbers** (numbers that use base 2 with digits 0 and 1), but are represented in different ways.  
-
-When you declare a variable, a memory location (sequential number of bits) is set aside for a variable of that type and the name is associated with that location.  An integer gets 32 bits of space, a double gets 64 bits of space and a boolean could be represented by just one bit, but the amount of space isn't specified by the Java standard. 
+all require different number of bits.  An integer gets 32 bits of space, a double gets 64 bits of space and a boolean could be represented by just one bit. 
 
 .. figure:: Figures/typesAndSpace.png
     :width: 500px
@@ -181,27 +182,49 @@ Here is an example declaration of a variable called score.
 
   int score;
   
-The value of score can be set later as shown below.  Run the following code to see what is printed.
+After declaring a variable, you can give it a value like below using an equals sign ``=`` followed by the value.
+
+.. code-block:: java
+
+  int score;
+  score = 4;
+  
+Or you can set an initial value for the variable in the variable declaration. Here is an example that shows declaring a variable and initializing it all in a single statement.  
+
+.. code-block:: java
+
+  int score = 4;  
+  
+
+|CodingEx| **Coding Exercise:** 
+
+Run the following code to see what is printed. Then, change the values and run it again. Notice that variables are never put into quotes "" because you do not want to print out the variable name, but the value of the variable in memory. If you're not sure what this means, try putting quotes around the variable and see what happens.
  
-.. activecode:: lcdv1
+.. activecode:: lcdv2
    :language: java
    
-   public class Test1
+   public class Test2
    {
       public static void main(String[] args)
       {
         int score; 
         score = 0;
+        System.out.print("The score is ");
         System.out.println(score);
-        double price;
-        price = 2.55;
+        double price = 23.25;
         System.out.println(price);
-        boolean won;
-        won = false;
+        boolean won = false;
+        System.out.println(won);
+        won = true;
         System.out.println(won);
       }
    }
    
+.. note::
+    
+    Variables are never put inside quotes ("") in System.out.print statements.
+    
+    
 |Exercise| **Check Your Understanding**
    
 .. clickablearea:: var_declare
@@ -237,11 +260,9 @@ The value of score can be set later as shown below.  Run the following code to s
             :click-incorrect:int numLives;:endclick:
             :click-correct:numLives = 0;:endclick:
             :click-incorrect:System.out.println(numLives);:endclick:
-            :click-incorrect:double health;:endclick:
-            :click-correct:health = 8.5;:endclick:
+            :click-correct:double health = 8.5;:endclick:
             :click-incorrect:System.out.println(health);:endclick:
-            :click-incorrect:boolean powerUp;:endclick:
-            :click-correct:powerUp = true;:endclick:
+            :click-correct:boolean powerUp = true;:endclick:
             :click-incorrect:System.out.println(powerUp);:endclick:
         :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
@@ -253,57 +274,13 @@ The value of score can be set later as shown below.  Run the following code to s
     
     Figure 3: How to Declare and Initialize the Value of a Variable
     
-You can also optionally specify an initial value for the variable by adding an equals sign ``=`` followed by the value. Here is an example that shows declaring a variable and initializing it all in a single statement.  
 
-.. code-block:: java
-
-  int score = 4;
   
-|CodingEx| **Coding Exercise:** 
-Run the following code to see what is printed. Then, change the numbers and run it again.
 
-.. activecode:: lcdv2
-   :language: java
-   
-   public class Test2
-   {
-      public static void main(String[] args)
-      {
-        int score = 4; 
-        System.out.println(score);
-        double price = 23.25;
-        System.out.println(price);
-        boolean won = false;
-        System.out.println(won);
-        won = true;
-        System.out.println(won);
-      }
-   }
-   
-The keyword **final** can be used in front of a variable declaration to make it a constant that cannot be changed. Constants are traditionally capitalized.
 
-.. code-block:: java
+.. .. |Exercise| **Check Your Understanding**
 
-  final double PI = 3.14
-
-|CodingEx| **Coding Exercise:** Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
-
-.. activecode:: Testfn
-   :language: java
-   
-   public class TestFinal
-   {
-      public static void main(String[] args)
-      {
-        final double PI = 3.14;
-        System.out.println(PI);
-        PI = 4.2; // This will cause a syntax error
-      }
-   }
-
-|Exercise| **Check Your Understanding**
-
-.. clickablearea:: var_declar_and_init
+.. .. clickablearea:: var_declar_and_init
     :question: Click on all of the statements that both declare and initialize a variable in one statement.
     :iscode:
     :feedback: Variables are initialized using name = value;  
@@ -321,9 +298,8 @@ The keyword **final** can be used in front of a variable declaration to make it 
         :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
 
-.. note ::
 
-   The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
+The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
    
 |CodingEx| **Coding Exercise:** This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
 
@@ -334,7 +310,8 @@ The keyword **final** can be used in front of a variable declaration to make it 
    {
       public static void main(String[] args)
       {
-        4 = int score; 
+        int score;
+        4 = score; 
         System.out.println(score);
       }
    }
@@ -386,6 +363,28 @@ The keyword **final** can be used in front of a variable declaration to make it 
    Boolean hasInsurance = false; #paired
    
 
+   
+The keyword **final** can be used in front of a variable declaration to make it a constant that cannot be changed. Constants are traditionally capitalized.
+
+.. code-block:: java
+
+  final double PI = 3.14
+
+|CodingEx| **Coding Exercise:** Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
+
+.. activecode:: Testfn
+   :language: java
+   
+   public class TestFinal
+   {
+      public static void main(String[] args)
+      {
+        final double PI = 3.14;
+        System.out.println(PI);
+        PI = 4.2; // This will cause a syntax error
+      }
+   }
+
 Naming Variables
 --------------------
 
@@ -394,12 +393,12 @@ Naming Variables
 
 While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc).  You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words see http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html.  
 
-The name of the variable should match both the function of the variable and the type of the variable.  A name like ``score`` helps make your code easier to read.  Do not try to be cute on the exam and name
+The name of the variable should match both the function of the variable and the type of the variable.  A name like ``score`` helps make your code easier to read. A name like ``x`` is not a good variable name in programming because it gives no clues as to what kind of data it holds.  Do not try to be cute on the exam and name
 your variables crazy things like ``thisIsAReallyLongName``.  This makes the code very hard to understand.  The free response questions are graded by readers (high school AP CS A teachers and college faculty).  You want to make the readers' job easier, not harder!  
 
 .. note::
 
-    Remember that a reader is reading thousands of exams, you don't want to make this person work harder than necessary, so use good variable names.
+    Use meaningful variable names! Start variable names with a lower case letter and use camelCase. Variable names are case-sensitive and spelling sensitive! Each use of the variable in the code must match the variable name in the declaration exactly. 
 
 ..	index::
     single: camel case
@@ -437,14 +436,41 @@ The convention in Java is to always start a variable name with a lower case lett
    What is the camel case variable name for a variable that represents the top score?
 
    -    :^\s*topScore$: Correct.
-        :.*: In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word
+        :.*: In camel case just put the words after each other but uppercase the first letter of each word after the 1st word. 
             
-.. fillintheblank:: fillName3
+.. .. fillintheblank:: fillName3
 
    What is the camel case variable name for a variable that represents the last score?
 
    -    :^\s*lastScore$: Correct.
-        :.*: In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word.  This would be lastScore
+        :.*: In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.  This would be lastScore
+
+
+|Groupwork| Pair Programming Challenge
+--------------------------------------
+
+Working in pairs, debug the following code. Can you find the all the bugs and get the code to run? 
+
+
+.. activecode:: challenge1-3
+   :language: java
+
+   public class Challenge1_3
+   {
+      public static void main(String[] args)
+      {
+         int temperature = 70.5;
+         double radioChannel = 101;
+         boolean sunny = 1
+         
+         System.out.print("Welcome to the weather report on Channel ")
+         System.out.println(Radiochannel);
+         System.out.print("The temperature today is );
+         System.out.println(tempurature);
+         System.out.print("Is it sunny today? ");
+         System.out.println(sunny);
+      }
+   }
 
             
 

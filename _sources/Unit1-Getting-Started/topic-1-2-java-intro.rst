@@ -12,6 +12,11 @@
     :align: middle
     :alt: exercise
     
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
     
 What is Java?
 ===============
@@ -129,7 +134,7 @@ You can copy the Java source code shown in this book into a file and save it if 
 
 .. note::
 
-   ``System.out.println`` is just the way that you ask Java to print out the value of something followed by a new line (ln).  In the case above we are just printing the characters between the first ``"`` and the second ``"``.  The ``"Hi there!"`` is called a **string literal** and it can have zero to many characters enclosed in starting and ending double quotes in Java. ``System.out.print`` without the ln will print out something without advancing to the next new line.
+   ``System.out.println`` is just the way that you ask Java to print out the value of something followed by a new line (ln).  In the case above we are just printing the characters between the first ``"`` and the second ``"``.  The ``"Hi there!"`` is called a **string literal** and it can have zero to many characters enclosed in starting and ending double quotes in Java. ``System.out.print`` without the ln will print out something without advancing to the next new line. The "System" in System.out.println must be capitalized. And the command line must end with a semicolon (;).
    
 
 
@@ -245,7 +250,7 @@ Click on the |runbutton| button below to try and run the following code.  Look f
     
 |CodingEx| **Coding Exercise: Compile Time Error 3**
 
-Click on the |runbutton| button below to try and run the following code.  Look for an error message after the code. What is wrong this time?  Can you fix it?  One good thing to check is that all ``{`` have a matching ``}`` and all ``(`` have a matching ``)`` and all starting ``"`` have a ending ``"`` as well.
+Click on the |runbutton| button below to try and run the following code.  What is wrong this time?  Can you fix it?  After you fix the first error, you may encounter a 2nd error! Fix that one too! Hints: How do you end a command in Java? Also, check for capitalization. 
 
 .. activecode:: sc2error3
    :language: java
@@ -254,14 +259,12 @@ Click on the |runbutton| button below to try and run the following code.  Look f
    {
       public static void main(String[] args)
       {
-         System.out.println("Hi there!")
+         system.out.println("Hi there!")
       }
    }
 
 
-.. note::
-
-   Think of the semicolon in Java like a period (.) in English.  It is how you show the end of a sentence.  You use a semicolon (``;``) to show the end of a Java statement.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
+Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon? Think of the semicolon (;) in Java like a period (.) in English.  It is how you show the end of a sentence.  You use a semicolon (``;``) to show the end of a Java statement.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
    
    
 Comments
@@ -278,6 +281,28 @@ In Java and many text-based coding languages, // is used to mark the beginning o
     
     int max = 10; // this keeps track of the max score
     
+
+|Groupwork| Pair Programming Challenge
+--------------------------------------
+
+Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently.
+
+Working in pairs, debug the following code. Can you find the all the bugs and get the code to run? 
+
+
+.. activecode:: challenge1-2
+   :language: java
+
+   public class Challenge1_2
+   {
+      public static void main(String[] args)
+      {
+         System.out.print("Good morning! ")
+         system.out.print("Good afternoon!);
+         System.Print "And good evening!";
+      
+   }
+
 
 
 Summary

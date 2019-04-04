@@ -13,6 +13,13 @@
     :align: middle
     :alt: exercise
     
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
+    
 ..	index::
 	single: operators
 	pair: math; operators
@@ -102,7 +109,31 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
      y = y / 2;
      z++;
      
+|Groupwork| Pair Programming Challenge
+--------------------------------------
 
+Working in pairs, use paper and pencil to trace through the following program to determine the values of the variables at the end. 
+
+**Code Tracing** is a technique used to simulate a dry run through the code or pseudocode line by line by hand as if you are the computer executing the code. Tracing can be used for debugging or proving that your program runs correctly or for figuring out what the code actually does. Trace tables can be used to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column in a table and keep track of its value throughout the program. Some trace tables also keep track of the output and the line number you are currently tracing.
+
+== == == ======
+x  y  z  Output
+-- -- -- ------
+== == == ======
+
+ .. code-block:: java 
+
+     int x = 0;
+     int y = 5;
+     int z = 1;
+     x++;
+     y -= 3;
+     z = x + z;
+     x = y * z;
+     y %= 2;
+     z--;
+     
+     
 Summary
 -------------------
 

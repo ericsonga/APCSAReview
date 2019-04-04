@@ -13,10 +13,26 @@
     :align: middle
     :alt: exercise
     
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
+    
 Casting Variables
 =================
 
-In Java, **type casting** is used to convert variables from one type to another.  Run this code to find how Java handles division and what casting can do to the results.
+In Java, **type casting** is used to convert variables from one type to another. By **casting** we don't mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the "shape" (or type) of the variable to the right of the cast to the specified type. 
+
+.. figure:: Figures/casting.jpg
+    :width: 300px
+    :figclass: align-center
+    
+    Figure 1: Casting a pot in clay. 
+
+
+Run this code to find how Java handles division and what casting can do to the results.
 
 .. activecode:: lcct1
    :language: java
@@ -32,19 +48,25 @@ In Java, **type casting** is used to convert variables from one type to another.
       }
    }
 	
-Java assumes that if you are doing division with integers that you want an integer result and it will throw away any fractional part (part after the decimal point).  But, if you use a mixture of integers (int) and floating point (double) numbers Java will assume that you want a floating point result.  If you have integers and you want a floating point result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  By **casting** we don't mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the "shape" (or type) of the variable to the right of the cast to the specified type. 
+Java assumes that if you are doing division with integers that you want an integer result and it will throw away any fractional part (part after the decimal point).  But, if you use a mixture of integers (int) and floating point (double) numbers Java will assume that you want a floating point result.  If you have integers and you want a floating point result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  
 
-.. figure:: Figures/casting.jpg
-    :width: 300px
-    :figclass: align-center
-    
-    Figure 3: Casting a pot in clay.
-    
+Values of type double can be rounded to the nearest integer by formulas like the following. If you have a number like 3.33 and you add 0.5 to it, you get 3.83 and then casting it to an int throws away what's after the decimal point, just leaving 3. 
+
+
+.. code-block:: java 
+
+    double number = 10 / 3;
+    int nearestInt = (int)(number + 0.5); 
+    double negNumber = -10 / 3;
+    int nearestNegInt = (int)(negNumber – 0.5);
+
+
+
 ..	index::
 	pair: double; number of digits
 
 
-Is the result of 1.0 divided by 3 what you expected?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits. 
+What happens to repeating decimal numbers like 3.333333...?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits. 
 
 For example, int values are stored in 4 bytes of memory. There is an Integer.MAX_VALUE defined as 2147483647 and an Integer.MIN_VALUE defined as -2147483649. If you try to store any number larger or smaller than these numbers in an int variable, it will result in an error called **integer overflow**. Try it below.
 
@@ -60,6 +82,24 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
       }
    }
 
+..	index::
+	pair: double; precision format
+    
+Although it's not on the exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:
+
+.. activecode:: double_precision
+   :language: java
+   
+   public class TestFormat
+   {
+      public static void main(String[] args)
+      {
+        double number = 10 / 3;
+        System.out.println(number);
+        System.out.println( String.format("%.02f", number) );
+      }
+   }
+   
 
 |Exercise| **Check your understanding**
 
@@ -92,6 +132,37 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
 
    Which of the following returns the correct average when 3 values had been added to an integer total?
    
+|Groupwork| Pair Programming Challenge
+--------------------------------------
+
+Working in pairs, complete the code below. Type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.
+
+Switch drivers (who has control of the keyboard in pair programming) after every line of code. Your teacher may suggest that you use a Java IDE like repl.it for this challenge so that you can use input to get the variable values.
+
+
+.. activecode:: challenge1-6
+   :language: java
+
+   public class Challenge1_6
+   {
+      public static void main(String[] args)
+      {
+         // 1. Declare 3 int variables for grades and initialize them to 3 values
+         
+         // 2. Declare an int variable for the sum of the grades
+         
+         // 3. Declare a variable for the average of the grades
+         
+         // 4. Write a formula to calculate the sum of the 3 grades (add them up). 
+         
+         // 5. Write a formula to calculate the average of the 3 grades from the sum using division and type casting.
+         
+         // 6. Print out the average
+         
+      
+      }
+   }
+      
    
 Summary
 -------------------
