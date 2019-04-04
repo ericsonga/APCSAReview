@@ -1,6 +1,23 @@
+.. qnum::
+   :prefix: 1-4-
+   :start: 1
+   
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
 Expressions and Assignment Statements
 =====================================
-   
+
+In this lesson, you will learn about assignment statements and expressions that contain math operators and variables. 
+
 Assignment Statements
 ---------------------
 
@@ -12,7 +29,7 @@ Remember that a variable holds a value and that value can change or vary.  **Ass
     // variable = expression;
     score = (10 * points) + 5;
 
-If you use a variable to keep score you would probably increment it (add one to the current value).  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below. 
+If you use a variable to keep score you would probably increment it (add one to the current value) whenever score should go up.  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below. The formula looks a little crazy in math class, but it makes sense in coding because the variable on the left is set to the value of the arithmetic expression on the right. So, the score variable is set to the previous value of score + 1.
 
 .. activecode:: lccv1
    :language: java
@@ -37,7 +54,7 @@ You can set one variable's value to a *copy* of the value of another variable.  
    <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
    </div>
    
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: q2_1
    :answer_a: x = 0, y = 1, z = 2
@@ -50,7 +67,7 @@ You can set one variable's value to a *copy* of the value of another variable.  
    :feedback_c: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
    :feedback_d: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
 
-   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on the following `link <http://www.pythontutor.com/java.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0/>`_
+   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this `link <http://www.pythontutor.com/java.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0/>`_
 
    .. code-block:: java 
 
@@ -62,7 +79,7 @@ You can set one variable's value to a *copy* of the value of another variable.  
        z = 3;
 
       
-**Mixed up programs**
+|Exercise| **Mixed up programs**
 
 In the mixed up programs below, drag the blocks to the right to put them in the right order.
 
@@ -87,11 +104,11 @@ In the mixed up programs below, drag the blocks to the right to put them in the 
 Input with Variables
 --------------------
 
-Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below will say hello to anyone who types in their name for different name values. 
+Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend's name. The code works for any name: behold, the power of variables!
 
 .. raw:: html
 
-    <iframe height="500px" width="100%" style="max-width:100%; margin-left:5%"  src="https://repl.it/@BerylHoffman/JavaIOExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://repl.it/@BerylHoffman/JavaIOExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     
 Although you will not be tested in the AP CS A exam on using the Java System.in and Scanner classes, learning how to do input in Java is still very useful. More information on using the Scanner class can be found here https://www.w3schools.com/java/java_user_input.asp 
 
@@ -135,11 +152,11 @@ Do all of those operators do what you expected?  What about ``2 / 3``? Isn't sur
 
    When Java sees you doing integer division it assumes you want an integer result so it throws away anything after the decimal point in the answer, essentially rounding down the answer to a whole number.
    
-With division, another thing to watch out for is dividing by 0. An attempt to divide an  integer by zero will result in an ArithmeticException to occur. Try it in one of the active code windows above.
+With division, another thing to watch out for is dividing by 0. An attempt to divide an  integer by zero will result in an **ArithmeticException** to occur. Try it in one of the active code windows above.
 
 Operators can be used to create compound expressions. When they are evaluated, operator precedence rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
 
-In the example below, try to guess what it will print out and then run it to see if you are right.
+|CodingEx| **Coding Exercise:** In the example below, try to guess what it will print out and then run it to see if you are right.
 
 .. activecode:: compound1
    :language: java
@@ -167,6 +184,9 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
     
     Figure 1: Long division showing the whole number result and the remainder
     
+
+|CodingEx| **Coding Exercise:** In the example below, try to guess what it will print out and then run it to see if you are right.
+
 .. activecode:: lcop2
    :language: java
    
@@ -181,6 +201,7 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
       }
    }
     
+
 .. note::
    The result of ``x % y`` when ``x`` is smaller than ``y`` is always ``x``.  The value ``y`` can't go into ``x`` at all (goes in 0 times), since ``x`` is smaller than ``y``, so the result is just ``x``.  So if you see ``2 % 3`` the result is ``2``.  
   
@@ -189,7 +210,7 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
 	single: remainder
 	pair: operators; modulus
 	
-**Check Your Understanding**
+|Exercise| **Check Your Understanding**
 	
 .. mchoice:: q3_4_1
    :answer_a: 15
@@ -224,7 +245,7 @@ The **modulus** operator has been used quite a bit on the AP CS A exam, so you s
     -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278. 
    
    
-Essential Knowledge
+Summary
 -------------------
 
 - Arithmetic expressions include expressions of type int and double.

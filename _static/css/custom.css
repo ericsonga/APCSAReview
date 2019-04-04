@@ -1,10 +1,8 @@
-#rainbow {
-    background: red;
-    background: -webkit-linear-gradient(left, red , yellow, green, cyan, blue, violet);
-    background: -o-linear-gradient(right, red, yellow, green, cyan, blue, violet);
-    background: -moz-linear-gradient(right, red, yellow, green, cyan, blue, violet);
-    background: linear-gradient(to right, red , yellow, green, cyan, blue, violet);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 20vw;
-    }
+h1, h2 { 
+    color:  #70d549; 
+    border-bottom: 5px groove #00b3e3;
+}
+
+strong {
+    color:  #00b3e3;
+}

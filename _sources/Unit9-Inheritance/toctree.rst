@@ -1,9 +1,10 @@
 Inheritance
 ::::::::::::
 
-Instructional Periods: 9-13 days
+Class Periods: 14-15
 
-Exam coverage: 7.5% of AP CS A multiple-choice questions
+AP CS A Exam Weighting: 5-10%
+
 
 .. Moving first 2 lessons to Unit 5
    objectObasics.rst

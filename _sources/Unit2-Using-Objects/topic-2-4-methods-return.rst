@@ -55,6 +55,7 @@ Try some of the get methods and the toString() method in the program below. Note
     :datafile: turtleClassesReturn
 
     import java.util.*;
+    import java.awt.*;
     import java.lang.Math; 
     
     public class TurtleTestMethods2
@@ -78,6 +79,12 @@ Try some of the get methods and the toString() method in the program below. Note
 
 2. Add another turtle and make both turtles move. Then find the distance between them. You must use the getXPos() and getYPos() methods as well as the getDistance() method.
 
+
+Summary
+-------------------
+
+- Non-void methods return a value that is the same type as the return type in the signature. 
+- To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression.
 
 
 .. raw:: html

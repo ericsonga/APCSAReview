@@ -172,6 +172,31 @@ What do you think the following will print?
   
 Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string.
 
+What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, you would use a **backslash escape sequence** to print out a real quote. And if you wanted to print out a backslash \, you would have to backslash it too \\. Another useful backslashed character is \n which will put in a newline. Here are the escape sequences that may be used in the AP course:
 
+.. activecode:: bhescape
+   :language: java
+   
+   public class TestEscape
+   {
+      public static void main(String[] args)
+      {
+        String message = "\"Backslash (\\)\" \n it can be used as an escape sequence in Java."; 
+        System.out.println(message);
+      }
+   }
+   
+   
 
-  
+Summary
+-------------------
+
+- **Strings** in Java are objects of the ``String`` class that hold sequences of characters.
+
+- String objects can be created by using string literals (String s = "hi";) or by calling the String class constructor (String t = new String("bye");).
+
+- String objects can be concatenated using the + or += operator, resulting in a new String object.
+
+- Primitive values can be concatenated with a String object. This causes implicit conversion of the values to String objects.
+
+- Escape sequences start with a \ and have a special meaning in Java. Escape sequences used in this course include \”, \\, and  \n.

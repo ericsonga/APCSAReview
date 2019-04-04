@@ -1,9 +1,13 @@
+.. image:: ../../_static/CSAwesomeLogo.png
+    :width: 300
+    :align: center
+    
+
 Getting Started and Primitive Types
 :::::::::::::::::::::::::::::::::::::::::::
 
-Instructional Periods: 8-10 days
-
-Exam coverage: 5% of AP CS A multiple-choice questions
+Class Periods: 8-10
+AP CS A Exam Weighting: 2.5-5%
 
 .. toctree::
    :caption: Getting Started and Primitive Types

@@ -67,7 +67,7 @@ Try to guess what the code below will print out before you run it.
 
 .. note::
 
-    **Essential Knowledge:**
+    **Summary:**
     1. Primitive values and reference values can be compared using relational operators (i.e., == and !=).
     2. Arithmetic expression values can be compared using relational operators (i.e., <, >, <=, >=).
     3. An expression involving relational operators evaluates to a Boolean value.

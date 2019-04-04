@@ -128,8 +128,23 @@ Other Math functions that you can use are:
 
 - double sqrt(double) :  Returns the positive square root of a double value.
 
-- double random() :  Returns a double value greater than or equal to 0.0 and less than 1.0.
+- double random() :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
 
 
 
 These are all listed in the Java Quick Reference guide that you can use during the exam: https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf.  
+
+Summary
+-------------------
+
+- Static Math methods can be called useing Math.method(); for each method.
+
+- The following static Math methods are part of the Java Quick Reference:
+  - int abs(int) — Returns the absolute value of an int value.
+  - double abs(double) — Returns the absolute value of a double value.
+  - double pow(double, double) — Returns the value of the first parameter raised to the power of the second parameter. 
+  - double sqrt(double) —  Returns the positive square root of a double value.
+  - double random()—  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0)!
+  
+- The values returned from Math.random can be manipulated to produce a random int or double in a defined range. For example, to get a number in the range of 5 to 9, use:
+  - int rnd = (int)(Math.random()*10 + 5);

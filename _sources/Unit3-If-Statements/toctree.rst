@@ -1,10 +1,14 @@
+.. image:: ../../_static/CSAwesomeLogo.png
+    :width: 300
+    :align: center
+    
+
 Boolean Expressions and If Statements
 :::::::::::::::::::::::::::::::::::::
 
-Instructional Periods: 11-15 days
+Class Periods: 11-13
 
-Exam coverage: 15% of AP CS A multiple-choice questions
-
+AP CS A Exam Weighting: 15-17.5%
 
 .. toctree::
    :maxdepth: 3

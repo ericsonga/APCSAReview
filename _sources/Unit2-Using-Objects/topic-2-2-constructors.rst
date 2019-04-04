@@ -42,6 +42,7 @@ Try changing the code below to create a World of 300x400. What arguments do you 
     :datafile: turtleClassesConstructor
 
     import java.util.*;
+    import java.awt.*;
 
     public class TurtleConstructorTest
     {
@@ -97,7 +98,16 @@ The GregorianCalendar class also has a constructor that takes a particular year,
 Exercise: Try adding another GregorianCalendar object to the program above for your birthdate and have it print it out! 
 
 
+Summary
+-------------------
 
+- A class contains *constructors* that are invoked to create objects. They have the same name as the class.
+
+- Every object is created using the keyword *new* followed by a call to one of the class’s constructors.
+
+- A constructor with no parameters is called a *default constructor* and will initialize the object's instance variables to default values.
+
+- Parameters allow values to be passed to the constructor to establish the initial state of the object.
 
 
 .. raw:: html

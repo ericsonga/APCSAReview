@@ -275,7 +275,34 @@ Common Mistakes
   -  Thinking that strings can change when they can't.  They are immutable.  
   
   -  Trying to invoke a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
+
+Summary
+-------------------
+
+- A String object has index values from 0 to length – 1. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
+
+- String objects are immutable, meaning that String methods do not change the String object.
+
+- The following String methods and constructors, including what they do and when they are used, are part of the Java Quick Reference in the AP exam:
+
+  - String(String str) : Constructs a new String object that represents the same sequence of characters as str.
   
+  - int length() : returns the number of characters in a String object. 
+
+  - String substring(int from, int to) : returns the substring beginning at index from  and ending at index to – 1.
+
+  - String substring(int from) : returns substring(from, length()).
+  
+  - int indexOf(String str) : returns the index of the first occurrence of str; returns -1 if not found.
+  
+  - boolean equals(String other) : returns true if this (the calling object) is equal to other; returns false otherwise.
+  
+  - int compareTo(String other) : returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other.
+
+- A string identical to the single element substring at position index can be created by calling substring(index, index + 1).
+
+
+
 
 
 Strings - Summary
@@ -322,7 +349,7 @@ In these lessons, you learned about strings which are objects of the ``String`` 
 **Method Summary**:
 
 
-- ``str1.compareTo(str2)`` - returns 0 if they two strings have the same characters, a negative number if str1 is less than str2 and a positive number otherwise.
+- ``str1.compareTo(str2)`` - returns 0 if they two strings have the sasme characters, a negative number if str1 is less than str2 and a positive number otherwise.
 - ``str1.length()`` - returns the number of characters in a string object including any spaces or special characters.
 - ``str1.equals(str2)`` - this method of the ``String`` class will return true if the characters in the two strings are the same.
 - ``str1.indexOf(str2)`` - returns the position that str2 starts in str1 or -1 if str2 isn't in str1.

@@ -15,8 +15,12 @@ In text-based programming like Java, here are some tips to keep in mind when you
 - Many text-based programming languages use curly brackets { } to group together commands. The curly bracket notation may be familiar to you from the AP CSP pseudocode which is very similar to Java notation. 
 
 
-Here is a comparison of some blocks to AP CSP pseudocode and Java code used in AP CS A (https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/edit?usp=sharing)
+.. |open in Google Docs| raw:: html
+
+   <a href="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/view" target="_blank">open in Google Docs</a>
+   
+Here is a comparison of some App Inventor blocks compared to AP CSP pseudocode and Java code used in AP CS A (|open in Google Docs|).
  
 .. raw:: html
 
-    <iframe src="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/edit?usp=sharing" style="max-width:100%" width="100%" height="600px"></iframe>
+    <iframe src="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/view" style="max-width:100%; margin-left:5%; width:90%;"  height="600px"></iframe>

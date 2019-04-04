@@ -166,7 +166,7 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
      
      
  
-Essential Knowledge
+Summary
 -------------------
 
 - Often classes have their own equals method, which can be used to determine whether two objects of the class are equivalent.

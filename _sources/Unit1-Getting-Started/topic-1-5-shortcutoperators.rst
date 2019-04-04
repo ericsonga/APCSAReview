@@ -1,3 +1,18 @@
+.. qnum::
+   :prefix: 1-5-
+   :start: 1
+
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
 ..	index::
 	single: operators
 	pair: math; operators
@@ -34,6 +49,10 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
 .. note::
 
    On the exam you can use ``x++`` or ``++x`` to both add one to the value of ``x``.  These two shortcuts only have different results if you assign the value of ``x`` to another variable as in ``int y = ++x;`` or ``int y = x++;``.  In ``int y = ++x;`` the value of x would be incremented before y's value is set to a copy of x's value.  In ``int y = x++;`` the value of y would be set to a copy of x's value before x is incremented.  The exam will never use a shortcut in an assignment statement, so you don't need to worry about the difference between ``++x`` or ``x++``.  
+
+
+|Exercise| **Check Your Understanding**
+
 
 .. mchoice:: q3_4_3
    :answer_a: x = -1, y = 1, z = 4
@@ -84,7 +103,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
      z++;
      
 
-Essential Knowledge
+Summary
 -------------------
 
 - Compound assignment operators (+=, -=, \*=, /=, %=) can be used in place of the assignment operator.

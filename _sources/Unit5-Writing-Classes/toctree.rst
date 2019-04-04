@@ -2,10 +2,10 @@ Writing Classes
 :::::::::::::::
 
 .. Moving first 2 lessons from Ch. 11 to Unit 5
-   
-Instructional Periods: 12-16 days
+ 
+Class Periods: 11-14
 
-Exam coverage: 7.5% of AP CS A multiple-choice questions
+AP CS A Exam Weighting: 5-7.5%
 
 
 .. toctree::

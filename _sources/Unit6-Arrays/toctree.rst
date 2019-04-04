@@ -1,10 +1,9 @@
 Arrays
 ::::::::::::::::::::
 
-Instructional Periods: 6-10 days
+Class Periods: 6-8
 
-Exam coverage: 15% of AP CS A multiple-choice questions
-
+AP CS A Exam Weighting: 10-15%
 
 .. toctree::
    :maxdepth: 3

@@ -47,6 +47,7 @@ Try clicking the |runbutton| button below to see what the following program does
     :datafile: turtleClasses
 
     import java.util.*;
+    import java.awt.*;
 
     public class TurtleTest
     {
@@ -96,7 +97,7 @@ Here is a class diagram that shows some of the attributes and methods inherited 
 
 .. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
 
-Try some of the methods above in the Active Code window. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a square using different colors.
+Try some of the methods above in the Active Code window. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a shape using different colors.
 
 What are Classes and Objects?
 -----------------------------
@@ -174,7 +175,12 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
    What specifies the data or state for an object in Java?
    
 
+Summary
+-------------------
 
+- A **class** defines a new data type (classify something). It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
+
+- An **object** is a specific instance of a class with defined attributes. Objects are declared as variables of a class type.
 
 
    

@@ -1,21 +1,41 @@
+.. Add a Challenge section (group work) and Summary, logo
+
+.. qnum::
+   :prefix: 1-3-
+   :start: 1
+   
+
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
 Variables and Data Types
 ========================
+
+In this lesson, you will learn about variables and primitive data types.
 
 What is a Variable?
 -------------------
 
 ..	index::
 	single: variable
-	
-.. the video is variables.mov 
 
-The following video is also on YouTube at https://youtu.be/pHgYlVjagmA.  It explains what a variable is and gives a couple of real word examples of variables.
+A **variable** is a name associated with a memory location in the computer.  Computer memory can store a value and that value can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
 
 .. youtube:: pHgYlVjagmA
     :width: 800
     :align: center
 
-A **variable** is a name associated with a memory location in the computer.  Computer memory can store a value and that value can change or vary.  When you play a game, it will often have a score.  Scores often start at 0 and increase.  A score is a variable.  
+
+When you play a game, it will often have a score.  Scores often start at 0 and increase.  A score can be stored in a variable.  
 
 .. figure:: Figures/pongScore.png
     :width: 400px
@@ -41,7 +61,7 @@ Data Types
 	pair: variable; Boolean
 	pair: variable; String
 
-There are two types of variables in Java: **primitive variables that hold primitive types** and **object variables that hold a reference to an object of a class**.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are: 
+There are two types of variables in Java: **primitive variables** that hold primitive types and **object variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are: 
 
     -  int - which store integers (whole numbers like 3, -76, 20393) 
 
@@ -53,9 +73,9 @@ There are two types of variables in Java: **primitive variables that hold primit
 
 .. note:: 
 
-   Some languages use 0 to represent false and 1 to represent true, but Java uses the keywords ``true`` and ``false``.  
+   Some languages use 0 to represent false and 1 to represent true, but Java uses the keywords ``true`` and ``false`` in boolean variables.  
 
-**Check your understanding**
+|Exercise| **Check your understanding**
    
    
 .. mchoice:: q3_1_1
@@ -145,11 +165,11 @@ When you declare a variable, a memory location (sequential number of bits) is se
     :width: 500px
     :figclass: align-center
     
-    Figure 1: Examples of variables with names and values.  Notice that the different types get a different amount of space.
+    Figure 2: Examples of variables with names and values.  Notice that the different types get a different amount of space.
 
-To **declare** (create) a variable, you will specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).  
+To **declare** (create) a variable, you  specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).  
 
-.. figure:: Figures/typeName.png
+.. .. figure:: Figures/typeName.png
     :width: 100px
     :figclass: align-center
     
@@ -182,7 +202,7 @@ The value of score can be set later as shown below.  Run the following code to s
       }
    }
    
-**Check Your Understanding**
+|Exercise| **Check Your Understanding**
    
 .. clickablearea:: var_declare
     :question: Click on all of the variable declarations in the following code.
@@ -227,21 +247,19 @@ The value of score can be set later as shown below.  Run the following code to s
     :click-incorrect:}:endclick:
 
 
-
-You can also optionally specify an initial value for the variable by adding an equals sign ``=`` followed by the value. 
-
-.. figure:: Figures/typeNameValue.png
+.. .. figure:: Figures/typeNameValue.png
     :width: 150px
     :figclass: align-center
     
-    Figure 2: How to Declare and Initialize the Value of a Variable
+    Figure 3: How to Declare and Initialize the Value of a Variable
     
-Here is an example that shows declaring a variable and initializing it all in a single statement.  
+You can also optionally specify an initial value for the variable by adding an equals sign ``=`` followed by the value. Here is an example that shows declaring a variable and initializing it all in a single statement.  
 
 .. code-block:: java
 
   int score = 4;
   
+|CodingEx| **Coding Exercise:** 
 Run the following code to see what is printed. Then, change the numbers and run it again.
 
 .. activecode:: lcdv2
@@ -268,7 +286,7 @@ The keyword **final** can be used in front of a variable declaration to make it 
 
   final double PI = 3.14
 
-Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
+|CodingEx| **Coding Exercise:** Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
 
 .. activecode:: Testfn
    :language: java
@@ -283,7 +301,7 @@ Try the following code and notice the syntax error when we try to change the con
       }
    }
 
-**Check Your Understanding**
+|Exercise| **Check Your Understanding**
 
 .. clickablearea:: var_declar_and_init
     :question: Click on all of the statements that both declare and initialize a variable in one statement.
@@ -307,7 +325,7 @@ Try the following code and notice the syntax error when we try to change the con
 
    The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
    
-This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
+|CodingEx| **Coding Exercise:** This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
 
 .. activecode:: lcdv3
    :language: java
@@ -321,7 +339,7 @@ This is an example of *assignment dyslexia*, when the student has put the value 
       }
    }
    
-**Check Your Understanding**
+|Exercise| **Check Your Understanding**
 
 .. fillintheblank:: fillDecVar1
 
@@ -403,7 +421,7 @@ The convention in Java is to always start a variable name with a lower case lett
       }
    }
    
-**Check Your Understanding**
+|Exercise| **Check Your Understanding**
             
 .. fillintheblank:: fillName1
 
@@ -430,7 +448,7 @@ The convention in Java is to always start a variable name with a lower case lett
 
             
 
-Essential Knowledge
+Summary
 -------------------
 
 - A **variable** is a name for a memory location where you can store a value that can change or vary.

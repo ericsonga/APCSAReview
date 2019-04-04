@@ -71,3 +71,33 @@ Here are some more useful methods in the Integer and  Double classes:
       }
    }
    
+Summary
+-------------------
+
+
+- The Integer class and Double class are **wrapper classes** that create objects from primitive types.
+
+- The following Integer methods and constructors, including what they do and when they are used, are part of the Java Quick Reference.
+  - Integer(int value) —Constructs a new Integer object that represents the specified int value.
+  - Integer.MIN_VALUE—The minimum value represented by an int or Integer.
+  - Integer.MAX_VALUE—The maximum value represented by an int or Integer.
+  - int intValue()— Returns the value of this Integer as an int.
+
+- The following Double methods and constructors, including what they do and when they are used,are part of the Java Quick Reference:
+  - Double(double value) —Constructs a new Double object that represents the specified double value.
+  - double doubleValue()— Returns the value of this Double as a double.
+
+- **Autoboxing** is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes. This includes converting an int to an Integer and a double to a Double.
+
+- The Java compiler applies autoboxing when a primitive value is—
+  - Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+  - Assigned to a variable of the corresponding wrapper class.
+
+- **Unboxing** is the automatic conversion that the Java compiler makes  from the wrapper class to the primitive type. This includes converting an Integer to an int and a Double to a double.
+
+- The Java compiler applies unboxing when a wrapper class object is—
+  - Passed as a parameter to a method that expects a value of the corresponding primitive type.
+  - Assigned to a variable of the corresponding primitive type.
+
+
+

@@ -2779,6 +2779,7 @@ Try some of the methods above in the turtle code below.
     :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, Picture.java, Pen.java, Giffer.java, PathSegment.java
 
     import java.util.*;
+    import java.awt.*;
 
     public class TurtleTestMethods1
     {
@@ -2853,6 +2854,7 @@ Try drawing a letter A using the mixed up code below.
 
 
     import java.util.*;
+    import java.awt.*;
 
     public class TurtleInitials
     {
@@ -2865,5 +2867,20 @@ Try drawing a letter A using the mixed up code below.
           world.show(true); 
       }
     }
+
+
+Summary
+-------------------
+
+- **Methods** define the behaviors or functions for objects. 
+
+- To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example **object.method();** 
+
+- Some methods take parameters/arguments that are placed inside the parentheses.
+
+- Values provided in the parameter list need to correspond to the order and type in the method signature.
+
+
+
 
 

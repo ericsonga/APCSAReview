@@ -1,9 +1,14 @@
+.. image:: ../../_static/CSAwesomeLogo.png
+    :width: 300
+    :align: center
+    
+
 Using Objects
 :::::::::::::::::::::
 
-Instructional Periods: 14-18 days
+Class Periods: 13-15
 
-Exam coverage: 7.5% of AP CS A multiple-choice questions
+AP CS A Exam Weighting: 5-7.5% 
 
 .. toctree::
    :caption: Using Objects

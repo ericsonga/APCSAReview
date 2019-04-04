@@ -1,12 +1,12 @@
-.. image:: java.jpg
-    :width: 100
-    :align: left
+.. image:: ../_static/CSAwesomeLogo.png
+    :width: 300
+    :align: center
     
 ==========================================
 AP CS A Java Course - 2019
 ==========================================
 
-(revised 3/28/19)
+(revised 4/3/19)
 
 
 .. Here is where you specify the content and order of your new book.
@@ -20,8 +20,10 @@ AP CS A Java Course - 2019
 .. Sources can also be included from subfolders of this directory.
    (e.g. "DataStructures/queues.rst").
 
-Assignments
+
+Table of Contents
 :::::::::::::::::
+
 
 .. raw:: html
 
@@ -29,8 +31,6 @@ Assignments
    <li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
    </ul>
 
-Table of Contents
-:::::::::::::::::
 
 .. toctree::
    :numbered:
@@ -81,8 +81,11 @@ Table of Contents
    Appendix/DrJava.rst
    Appendix/gridWorld.rst
 
-Indices
+Index
 ::::::::::::::::::
 
 * :ref:`genindex`
 * :ref:`search`
+
+
+© Copyright 2015 Barb Ericson, 2019 revised by B. Hoffman (`Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.

@@ -1,11 +1,22 @@
 .. qnum::
-   :prefix: 3-5-
+   :prefix: 1-6-
    :start: 1
-   
+
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
 Casting Variables
 =================
 
-Run this code to find how Java handles division and what casting can do to the results.
+In Java, **type casting** is used to convert variables from one type to another.  Run this code to find how Java handles division and what casting can do to the results.
 
 .. activecode:: lcct1
    :language: java
@@ -50,7 +61,7 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
    }
 
 
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: q2_5
    :answer_a: true
@@ -82,9 +93,10 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
    Which of the following returns the correct average when 3 values had been added to an integer total?
    
    
-Essential Knowledge
+Summary
 -------------------
 
+- **Type casting** is used to convert variables from one type to another.
 - The casting operators (int) and (double)can be used to create a temporary value converted to a different data type.
 - Casting a double value to an int causes the digits to the right of the decimal point to be truncated. 
 

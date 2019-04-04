@@ -1,11 +1,12 @@
-Two-dimensional Arrays
+2D Arrays
 :::::::::::::::::::::::
 
-Instructional Periods: 5 days
+Class Periods: 10-12
+
+AP CS A Exam Weighting: 7.5-10%
 
 Lab Periods: 7 days
 
-Exam coverage: 7.5% of AP CS A multiple-choice questions
 
 .. toctree::
    :maxdepth: 3

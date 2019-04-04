@@ -112,7 +112,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "AP CS A Java 2019",
+    'navbar_title': "AP CS Awesome!",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Units",
@@ -158,16 +158,17 @@ html_theme_path = ["_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'AP CS A Java 2019'
+html_title = 'AP CS Awesome'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='AP CS A Java 2019'
+html_short_title ='AP CS Awesome'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 
 # logo is included in layout file
 #html_logo = "../source/_static/logo_small.png"
+
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -211,7 +212,7 @@ html_show_sourcelink = False
 #html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the

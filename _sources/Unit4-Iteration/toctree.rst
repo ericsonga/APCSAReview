@@ -1,11 +1,11 @@
 Iteration (Loops)
 ::::::::::::::::::::
 
-Instructional Periods: 9-13 days
+Class Periods: 14-16
+
+AP CS A Exam Weighting: 17.5-22.5%
 
 Lab Periods: 6 days
-
-Exam coverage: 20% of AP CS A multiple-choice questions
 
 .. toctree::
    :maxdepth: 3

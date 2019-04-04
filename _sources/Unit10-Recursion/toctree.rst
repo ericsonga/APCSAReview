@@ -1,9 +1,9 @@
 Recursion
 :::::::::
 
-Instructional Periods: 3-7 days
+Class Periods: 3-5
 
-Exam coverage: 7.5% of AP CS A multiple-choice questions
+AP CS A Exam Weighting: 5-7.5%
 
 .. toctree::
    :maxdepth: 3
