@@ -1,4 +1,24 @@
+.. qnum::
+   :prefix: 2-4-
+   :start: 1
 
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 ..	index::
 	single: method
     single: parameter
@@ -12,7 +32,7 @@
 
    
 Calling Methods that Return Values
-----------------------------------
+===================================
 
 Some methods return a value back that the program can use. In the previous lesson, you may have used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value. 
 
@@ -35,7 +55,33 @@ Here are some examples of using get methods for the turtle object yertle. When y
 
     A common error is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like saving it into a variable or printing it out.  
 
+|CodingEx| **Coding Exercise:**
 
+Try the code below that changes the turtle's width and height. How big or small can you make yertle?
+
+.. activecode:: TurtleTestGetSet
+    :language: java
+    :datafile: turtleClassesReturn
+
+    import java.util.*;
+    import java.awt.*;
+    import java.lang.Math; 
+    
+    public class TurtleTestGetSet
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          Turtle yertle = new Turtle(world);           
+          System.out.println("Yertle's width is: " + yertle.getWidth()); 
+          yertle.setWidth(200);
+          yertle.setHeight(200);
+          System.out.println("Yertle's width is: " + yertle.getWidth());
+          yertle.turnRight();
+          world.show(true); 
+      }
+    }
+    
 Another common method that returns a value is the toString() method which returns a String description of the turtle. This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement. 
 
 .. code-block:: java 
@@ -47,10 +93,12 @@ Another common method that returns a value is the toString() method which return
     System.out.println(yertle);
 
 
+|CodingEx| **Coding Exercise:**
+
 Try some of the get methods and the toString() method in the program below. Note that you have to print out what the get methods return in order to see what they do!
 
 
-.. activecode:: TurtleTestMethods2
+.. activecode:: TurtleTestMethodsReturn2
     :language: java
     :datafile: turtleClassesReturn
 
@@ -73,18 +121,47 @@ Try some of the get methods and the toString() method in the program below. Note
       }
     }
     
-**Exercises**:
+      
+|Groupwork| Pair Programming Challenge
+--------------------------------------
+
+Working in pairs, work on the following code: 
 
 1. The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)? 
 
 2. Add another turtle and make both turtles move. Then find the distance between them. You must use the getXPos() and getYPos() methods as well as the getDistance() method.
 
+.. activecode:: TurtleMethodsDistChallenge
+    :language: java
+    :datafile: turtleClassesReturn
+
+    import java.util.*;
+    import java.awt.*;
+    import java.lang.Math; 
+    
+    public class TurtleTestDistance
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          Turtle yertle = new Turtle(world);
+           
+          // Can you find yertle's distance from the point (0,0)? 
+          
+          // Can you find the distance between 2 turtles?
+         
+         
+          
+          world.show(true); 
+      }
+    }
+
 
 Summary
 -------------------
 
-- Non-void methods return a value that is the same type as the return type in the signature. 
-- To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression.
+- Some methods return values.
+- To use the return value when calling a method, it must be stored in a variable or used as part of an expression.
 
 
 .. raw:: html

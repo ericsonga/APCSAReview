@@ -1,3 +1,24 @@
+.. qnum::
+   :prefix: 2-1-
+   :start: 1
+
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 ..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
     Permission is granted to copy, distribute and/or modify this document
     under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -72,13 +93,15 @@ Try clicking the |runbutton| button below to see what the following program does
 
 In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle, World, and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
 
-Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method:
+|CodingEx| **Coding Exercise:** 
+Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method and the make it move:
 
 .. code-block:: java
 
     // To create or declare a new object, write:
     // ClassName variableName = new ClassName(arguments);  
     Turtle yourTurtleName = new Turtle(world);
+    yourTurtlename.
      
 The class Turtle defines **attributes** (properties or variables) and **methods** (behaviors or functions) that each turtle can use. The dot operator (.) is used to run an object's method. You can think of the . as an apostrophe s ('s), for example run yertle's forward method. The parentheses () after method names are there in case you need to give the method **arguments** (some data) to do its job, for example go forward 100 pixels.
 
@@ -95,9 +118,6 @@ Here is a class diagram that shows some of the attributes and methods inherited 
 
     Figure 2: Turtle Class Diagram
 
-.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
-
-Try some of the methods above in the Active Code window. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a shape using different colors.
 
 What are Classes and Objects?
 -----------------------------
@@ -133,7 +153,7 @@ You can think of a class as the type or classification.  The following picture h
 
 If you go to a restaurant, you will be seated by the greeter, the waiter will take your order, and the chef will cook your food.  What do we mean by a greeter, waiter, and chef?  Those are classifications or types of workers in a restaurant.  Java has this same concept.  When we create a new class we are defining a new type (a new classification) to the computer.  Each type can have abilities or behaviors (called **methods** in Java) and attributes (called **instance variables** in Java). After you define a type, you can use it to create **objects** of that type.  All objects created from a class will have the properties and abilities/behaviors defined in that class.  For example, all turtle objects will know how to move forward and turn.
 
-**Check your understanding**
+|Exercise| **Check your understanding**
    
 .. mchoice:: q2_2_1
    :answer_a: 1
@@ -174,6 +194,49 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
    
    What specifies the data or state for an object in Java?
    
+|Groupwork| Pair Programming Challenge
+--------------------------------------
+
+.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
+
+Working in pairs, create two Turtle objects below and have them draw a shape together. Each person should write the code for their turtle and draw half the shape. Some shapes you can try are a square or a star. Here are some turtle methods that you could use:
+
+- yertle.forward(100);
+- yertle.turnLeft();
+- myrtle.turnRight();
+- myrtle.turn(30);
+- myrtle.backward(100);
+- myrtle.penUp();
+- yertle.penDown();
+- yertle.setColor(Color.red);
+
+Try some of the methods in the Active Code window below. To change the pen color, try something like: yertle.setColor(Color.red); This uses the Color_ class in Java (https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html). See if you can make your turtle draw a shape using different colors.
+
+.. activecode:: TurtleGroupWork
+    :language: java
+    :datafile: turtleClasses
+
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          // 1. Create 2 Turtle objects in the world
+          
+          // 2. Have the turtles draw a shape together using different colors
+
+          
+
+          myrtle.turnRight();
+          myrtle.forward(100);
+
+          world.show(true);
+      }
+    }
+
 
 Summary
 -------------------

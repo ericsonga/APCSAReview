@@ -1,4 +1,24 @@
+.. qnum::
+   :prefix: 2-3-
+   :start: 1
 
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 ..	index::
 	single: method
     single: parameter
@@ -45,14 +65,14 @@ Here is the Turtle class diagram again that shows some of the variables and meth
     :alt: Turtle class diagram
     :figclass: align-center
 
-    Figure 2: Turtle Class Diagram
+    Figure 1: Turtle Class Diagram
     
 .. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
 
 Try some of the methods above in the turtle code below.
 
 
-**Exercises:** 
+|CodingEx| **Coding Exercises:**
 
 
 1. Can you make yertle draw a square? 
@@ -2797,24 +2817,26 @@ Try some of the methods above in the turtle code below.
     }
 
 
-     
-Try drawing a letter A using the mixed up code below.
+|Exercise| 
 
-.. figure:: Figures/turtleA.png
+Try the following mixed up code to draw a simple house made of a square and a triangle roof.
+
+
+.. figure:: Figures/house.png
     :width: 200px
     :align: center
-    :alt: turtle drawing A
+    :alt: simple house
     :figclass: align-center
     
-    Figure 3: Turtle drawing A
+    Figure 2: Simple House
     
-.. parsonsprob:: DrawABH
+.. parsonsprob:: DrawAHouse
    :adaptive:
    :noindent:
    
-   The following code uses a turtle to draw a capital A, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to draw the A in the order shown by the numbers in the picture above.  Click on the "Check Me" button to check your solution. It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up. You can also try this code in the Java program above to see what the turtle will do.
+   The following code uses a turtle to draw a simple house, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw a square for the house and then a red triangle for the roof.  Click on the "Check Me" button to check your solution.  You can copy and paste this code in the Active Code window above to see it in action.
    -----
-   public class TurtleDrawA
+   public class TurtleDrawHouse
    {
    =====
       public static void main(String[] args)
@@ -2822,22 +2844,27 @@ Try drawing a letter A using the mixed up code below.
       =====
          World world = new World(300,300);
          =====
-         Turtle yertle = new Turtle(world);
+         Turtle builder = new Turtle(world);
          =====
-         yertle.turn(15);
-         yertle.forward(100);
+         // Draw a square
+         builder.turnRight();
+         builder.forward(100);
+         builder.turnRight();
+         builder.forward(100);
+         builder.turnRight();
+         builder.forward(100);
+         builder.turnRight();
+         builder.forward(100);
          =====
-         yertle.turnRight();
-         yertle.turn(55);
-         yertle.forward(100);
+         builder.setColor(Color.red);
          =====
-         yertle.penUp();
-         yertle.backward(50);
-         yertle.penDown();
-         =====
-         yertle.turnRight();
-         yertle.turn(20);
-         yertle.forward(30);
+         // Draw a triangle
+         builder.turn(30);
+         builder.forward(100);
+         builder.turn(120);
+         builder.forward(100);
+         builder.turn(120);
+         builder.forward(100);
          =====
          world.show(true);
          =====
@@ -2846,9 +2873,31 @@ Try drawing a letter A using the mixed up code below.
    }
    
 
-**Group Work**: In groups or pairs, use the area below to have a turtle draw the letters J A V A with different colors. Make the J as a block letter without curves. If you don't have a lot of time, just do 1 letter. Be patient with yourself because this may take a lot of trial and error to get the correct angle values.
+     
+|Groupwork| Pair Programming Challenge
+--------------------------------------
 
-.. activecode:: Turtle_Initials
+Working in pairs, use the area below to have a turtle draw a house of your own design with different colors. Can you add windows and a door? Come up with your own house design.
+
+.. figure:: Figures/houseWithWindows.png
+    :width: 200px
+    :align: center
+    :alt: simple house
+    :figclass: align-center
+    
+    Figure 3: House with windows and doors
+
+To draw a window, you will need to do penUp() to walk the turtle into position, for example:
+
+.. code-block:: java 
+
+   builder.penUp();
+   builder.moveTo(120,200);
+   builder.penDown();
+   
+It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up.
+
+.. activecode:: Turtle_House
     :language: java
     :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, Picture.java, Pen.java, Giffer.java, PathSegment.java
 
@@ -2856,7 +2905,7 @@ Try drawing a letter A using the mixed up code below.
     import java.util.*;
     import java.awt.*;
 
-    public class TurtleInitials
+    public class TurtleHouse
     {
       public static void main(String[] args)
       {

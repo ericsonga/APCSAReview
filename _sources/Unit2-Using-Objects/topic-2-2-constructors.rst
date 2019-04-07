@@ -1,8 +1,31 @@
+.. needs challenge
+
+.. qnum::
+   :prefix: 2-2-
+   :start: 1
+
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 ..	index::
 	pair: class; constructor
     
 Creating and Storing Objects: Constructors
-------------------------------------------
+===========================================
 
 A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  The class also defines how to initialize the attributes in instance variables when the object is first created using a special method called the **constructor**.
 
@@ -32,8 +55,9 @@ The Turtle class also has multiple constructors, although it always requires a w
     Turtle t1 = new Turtle(world1);
     Turtle t2 = new Turtle(50, 100, world1);
     
-Try changing the code below to create a World of 300x400. What arguments do you need to give the Turtle constructor to place the turtle in the top right corner? Experiment and find out.
+|CodingEx| **Coding Exercise:**
 
+Try changing the code below to create a World of 300x400. What arguments do you need to give the Turtle constructor to place the turtle in the top right corner? Experiment and find out.
 
 
 
@@ -95,7 +119,36 @@ The GregorianCalendar class also has a constructor that takes a particular year,
         }
      } 
 
-Exercise: Try adding another GregorianCalendar object to the program above for your birthdate and have it print it out! 
+|CodingEx| **Coding Exercise:**
+
+Try adding another GregorianCalendar object to the program above for your birthdate and have it print it out! 
+
+|Groupwork| Pair Programming Challenge
+--------------------------------------
+
+Working in pairs, debug the following code.
+
+.. activecode:: TurtleConstructorDebug
+    :language: java
+    :datafile: turtleClassesConstructor
+
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleConstructorDebug
+    {
+      public static void main(String[] args)
+      {
+          World w = new World(300,0);
+          turtle t0;
+          Turtle t1 = new Turtle();
+          Turtle t2 = new Turtle(world, 100, 50)
+          t0.forward();
+          t1.turnRight();
+          t2.turnLeft();
+          world.show(true); 
+      }
+    }
 
 
 Summary
