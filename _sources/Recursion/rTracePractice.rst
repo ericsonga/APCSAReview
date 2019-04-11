@@ -22,6 +22,7 @@ Consider the following recursive method:
 The trace of this code for mystery(4) is shown below.
 
 .. code-block:: java
+   :linenos:
 
    mystery(4) returns 3 * mystery(3)
    mystery(3) returns 3 * mystery(2)
@@ -39,6 +40,7 @@ The trace of this code for mystery(4) is shown below.
 Once mystery(0) returns 1 the value for each call to mystery can now be calculated and returned.
 
 .. code-block:: java
+   :linenos:
 
    mystery(4) returns 3 * mystery(3) = 3 * X = Y
    mystery(3) returns 3 * mystery(2) = 3 * 9 = 27
@@ -77,6 +79,7 @@ Consider the following recursive method:
    }
 
 .. code-block:: java
+   :linenos:
 
    strMethod("every") returns 1 + strMethod("very")
    strMethod("very") returns strMethod("ery")
@@ -94,6 +97,7 @@ Consider the following recursive method:
 Once strMethod("y") returns, the value from each recursive call on the stack can be calculated and returned.
 
 .. code-block:: java
+   :linenos:
 
    strMethod("every") returns 1 + strMethod("very") = Z
    strMethod("very") returns strMethod("ery") = Y
