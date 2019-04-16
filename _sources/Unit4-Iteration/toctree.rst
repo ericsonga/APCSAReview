@@ -10,18 +10,11 @@ Lab Periods: 6 days
 .. toctree::
    :maxdepth: 3
 
-   lbasics.rst
-   lWhile.rst
-   lFor.rst
-   lNested.rst
-   lMistakes.rst
-   lPractice.rst
-   lEasyMC.rst
-   lMedMC.rst
-   lHardMC.rst
-   freeResponse.rst
-   LoopSummary.rst
-   LoopPractice.rst
-   LoopParsonsPractice.rst
+   topic-4-1-while-loops.rst
+   topic-4-2-for-loops.rst
+   topic-4-3-strings-loops.rst
+   topic-4-4-nested-loops.rst
+   topic-4-5-loop-analysis.rst
+   SummaryPractice/toctree.rst
    Exercises.rst
 

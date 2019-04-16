@@ -222,7 +222,7 @@ Run the following code to see what is printed. Then, change the values and run i
    
 .. note::
     
-    Variables are never put inside quotes ("") in System.out.print statements.
+    Variables are never put inside quotes ("") in System.out.print statements. This would print the variable name out letter by letter instead of printing its value.
     
     
 |Exercise| **Check Your Understanding**
@@ -398,7 +398,10 @@ your variables crazy things like ``thisIsAReallyLongName``.  This makes the code
 
 .. note::
 
-    Use meaningful variable names! Start variable names with a lower case letter and use camelCase. Variable names are case-sensitive and spelling sensitive! Each use of the variable in the code must match the variable name in the declaration exactly. 
+    
+    - Use meaningful variable names! 
+    - Start variable names with a lower case letter and use camelCase. - Variable names are case-sensitive and spelling sensitive! Each use of the variable in the code must match the variable name in the declaration exactly. 
+    - Never put variables inside quotes (" ").
 
 ..	index::
     single: camel case

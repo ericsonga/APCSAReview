@@ -22,7 +22,7 @@ Loops in Java
 	pair: loop; while
 	pair: loop; for-each
 
-When you play a song, you can set it to **loop**, which means that when it reaches the end it starts over at the beginning.  A **loop** in programming is a way to repeat one or more statements. If you didn't have loops to allow you to repeat code, your programs would get very long very quickly! 
+When you play a song, you can set it to loop, which means that when it reaches the end it starts over at the beginning.  A **loop** in programming is a way to repeat one or more statements. If you didn't have loops to allow you to repeat code, your programs would get very long very quickly! 
 
 The keywords ``while`` or ``for`` both indicate the start of a loop (the header or declaration).  The **body of the loop** will be repeated while the loop condition is true.  
 

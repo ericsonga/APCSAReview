@@ -53,11 +53,13 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
   
 
    
-|CodingEx| **Coding Exercise**
+
 
 You can use ``Math.random`` and a cast to integer to return a random number between some starting and ending value.  The code below will return a random number from 0 to 9. Remember that a casting a double value to integer ``(int)`` will throw away any values after the decimal point.
 
-Run the code below several times to see how the value changes each time. How could you change the code above to return a random number from 1 to 10?  Modify the code and see if your answer is correct.
+|CodingEx| **Coding Exercise**
+
+Run the code below several times to see how the value changes each time. How could you change the code above to return a random number from 1 to 10?  Modify the code and see if your answer is correct. Try removing the parentheses from around (Math.random() * 10) and run the code several times. What happens? The parentheses are necessary because (int) will cast the closest expression, and (int)Math.random() will always be 0 since anything after the decimal point is dropped.
    
 .. activecode:: randomRange
    :language: java
@@ -71,7 +73,11 @@ Run the code below several times to see how the value changes each time. How cou
    }
    
   
+.. note::
 
+    Math.random() returns a random number between 0.0-0.99. 
+    **(int)(Math.random()*range + min)** moves the random number into a range starting from a minimum number.
+    
 Here are some examples that move a random number into a specific range.
 
 
@@ -80,9 +86,10 @@ Here are some examples that move a random number into a specific range.
     // Math.random() returns a random number between 0.0-0.99.
     // Math.random()*10 moves it into the range 0-9.
     int rnd = (int)(Math.random()*10);
-    // rnd2 is in the range 5-9.
+    // rnd2 is in the range 5-9. The parentheses are necessary!
     int rnd2 = (int)(Math.random()*10 + 5);
-
+    // rnd3 is in the range -10 up to 10. The range is doubled and the minimum is -10.
+    int rnd3 = (int)(Math.random()*20 - 10);
 
 
 |Exercise| **Check your understanding**

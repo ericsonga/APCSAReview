@@ -1,17 +1,17 @@
 .. qnum::
-   :prefix: 6-4-
+   :prefix: 4-5-
    :start: 1
 
-Nested For Loops
+Loop Analysis
 ------------------------
 
 ..	index::
-	single: nested for loop
-	pair: loop; nested
+	single: loop analysis
 
-A **nested loop** has one loop inside of another.  These are typically used for working with two dimensions such as printing stars in rows and columns as shown below.  
+ 
+How many stars are printed out by the following loops? How many times do the loops run?
 
-.. activecode:: lcfcnl1
+.. activecode::  countstars
    :language: java
    
    public class NestedLoops
@@ -32,7 +32,9 @@ A **nested loop** has one loop inside of another.  These are typically used for 
    
 .. note::
 
-   The number of times a nested for loop body is executed is the number of times the outer loop executes times the number of times the inner loop executes.  For the example above the outer loop executes 4-0+1= 5 times and the inner 9-0+1=10 times so the total is 5 * 10 = 50.  
+   The number of times a nested for loop body is executed is the number of times the outer loop executes times the number of times the inner loop executes.  
+   
+For the example above the outer loop executes 4-0+1= 5 times and the inner 9-0+1=10 times so the total is 5 * 10 = 50.  
 
 **Check your understanding**
 

@@ -163,18 +163,40 @@ Try the expressions containing the % operator below to see how they can be used 
       }
    }  
    
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge (POGIL)
+-----------------------------------------
 
-A prime number is only divisible by 1 and itself. For example, 3 is a prime number because its only divisible by 1 and 3 and no other numbers, but 4 is not a prime number because it's divisible by 2 as well as 1 and 4. Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don't have the key, it's very hard to guess the factors of a large number. 
+.. |pogil| raw:: html
 
-The following program checks if 5 is a prime number by seeing if it is divisible by the numbers 1 - 5. Run the code, and then answer the following questions. Think, pair, and share your answers to these questions.
+   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank">POGIL</a>
+   
+.. |pogil role| raw:: html
+
+   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank">POGIL role</a>
+   
+.. |Numberphile video| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=M7kEpw1tn50" target="_blank">Numberphile video</a>
+   
+   
+   
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
+
+In this activity, you will use boolean expressions to explore prime numbers. A prime number is an integer number that is only divisible by 1 and itself. For example, 3 is a prime number because it's only divisible by 1 and 3 and no other numbers, but 4 is not a prime number because it's divisible by 2 as well as 1 and 4. 
+
+Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don't have the key, it's very hard to guess the factors of a large number to decode it. If you're curious about this, watch this |Numberphile video|.
+
+The following program checks if 5 is a prime number by seeing if it is divisible by the numbers 1 - 5. Run the code, and then answer the following questions. 
 
 1. Is 5 a prime number? 
 2. What boolean tests determine that a number is prime?
 3. Change the number to 6 and add more boolean expressions to determine if 6 is prime. Is 6 prime?
 4. Change the number to 7 and add more boolean expressions to determine if 7 is prime. Is 7 prime?
-5. Are all odd numbers prime? Can you find one that is not?
+5. If you changed the boolean expressions to use <= instead of ==, would the code still help you to find prime numbers? Why or why not? Experiment and find out.
+6. If you changed the boolean expressions to use >= instead of ==, would the code still help you to find prime numbers? Why or why not? Experiment and find out.
+7. Are all odd numbers prime? Can you find one that is not by using boolean expressions in the code below?
+8. Are all even numbers not prime? Can you find an even prime number?
+
 
 .. activecode:: primeNumbers
    :language: java
@@ -184,6 +206,7 @@ The following program checks if 5 is a prime number by seeing if it is divisible
       public static void main(String[] args)
       {
         int number = 5;
+        System.out.println("Is " + number + " divisible by 1 to " + number + "?");
         System.out.println(number % 1 == 0);
         System.out.println(number % 2 == 0);
         System.out.println(number % 3 == 0);

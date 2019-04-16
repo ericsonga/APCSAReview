@@ -76,6 +76,8 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
 The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code above to see this.
 
 
+|Exercise| **Check your understanding**
+
 .. fillintheblank:: 5_1_1_falseOutput
 
    Try changing the code above to ``boolean isRaining = false;``.  What will it print?
@@ -109,6 +111,41 @@ The code below doesn't work as expected.  Fix it to only print "Wear a coat" and
       }
    }
 
+Most if statements have a boolean condition that uses relational operators like ==, !=, <, >, <=, >=, as we saw in the last lesson. 
+
+
+|CodingEx| **Coding Exercise**
+
+Try the following active code which tests whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.
+
+.. activecode:: if-relational
+   :language: java
+   
+   public class Test
+   {
+      public static void main(String[] args)
+      {
+        // Get a random number from -10 up to 10.
+        int number = (int) Math.random()*20 - 10;
+        System.out.println("The number is " + number);
+        
+        // is it positive?
+        if (number > 0)
+           System.out.println(number + " is positive!");
+          
+        // is it 0?
+        if (number == 0)
+           System.out.println(number + " is zero!");
+          
+      }
+   }
+
+
+.. note::
+
+    A common mistake in if statements is using = instead of == in the condition by mistake. You should always **use ==**, not =, in the condition of an if statement to test a variable. One equal sign (=) assigns a value to a variable, and two equal signs (==) test if a variable has a certain value.
+    
+|Exercise| **Check your understanding**
 
 .. mchoice:: qcb1_2
    :answer_a: x = 0;
@@ -129,17 +166,36 @@ The code below doesn't work as expected.  Fix it to only print "Wear a coat" and
      if (x > 4) x = 0;
 
 
-**More practice with if == and < > Active code.
-Note always use == not = in an if statement! Test not assign.
+.. More practice with if == and < > Active code.
+    Note always use == not = in an if statement! Test not assign.
 
 
 |Groupwork| Programming Challenge
 --------------------------------------
 
-Magic 8 ball - tell your fortune?
+.. image:: Figures/Magic_eight_ball.png
+    :width: 100
+    :align: left
+    :alt: Magic 8 Ball
+    
+Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like "Signs point to yes!", "Very doubtful", etc. 
 
-if (random# == 1)
-    Sunny today
+We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8.
+
+.. activecode:: if-challenge
+   :language: java
+   
+   public class Magic8Ball
+   {
+      public static void main(String[] args)
+      {
+        // Get a random number from 1 to 8
+        
+        // Use if statements to print out 1 of 8 responses
+        
+          
+      }
+   }
    
     
     
