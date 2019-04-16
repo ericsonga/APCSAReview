@@ -252,7 +252,7 @@ The **modulus** operator has been used quite a bit on the AP CS A exam, so you s
     -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278. 
    
 
-|Groupwork| Pair Programming Challenge
+|Groupwork| Programming Challenge
 --------------------------------------
 
 .. |dog| image:: Figures/dog-free.png
@@ -260,7 +260,18 @@ The **modulus** operator has been used quite a bit on the AP CS A exam, so you s
     :align: middle
     :alt: dog
     
-|dog| Working in pairs, complete the code below. Type in the current year, the year one of you was born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. Switch drivers (who has control of the keyboard in pair programming) after every line of code. Your teacher may suggest that you use a Java IDE like repl.it for this challenge so that you can use input to get these values.
+|dog| In this programming challenge, you will calculate your age, your pet's age, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code. 
+
+.. |repl| raw:: html
+
+   <a href="https://repl.it" target="_blank">repl.it</a>
+   
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+   
+Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|.
 
 
 

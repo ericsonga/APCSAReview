@@ -68,7 +68,7 @@ Values of type double can be rounded to the nearest integer by formulas like the
 
 What happens to repeating decimal numbers like 3.333333...?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits. 
 
-For example, int values are stored in 4 bytes of memory. There is an Integer.MAX_VALUE defined as 2147483647 and an Integer.MIN_VALUE defined as -2147483649. If you try to store any number larger or smaller than these numbers in an int variable, it will result in an error called **integer overflow**. Try it below.
+For example, int values are stored in 4 bytes of memory. There is an Integer.MAX_VALUE defined as 2147483647 and an Integer.MIN_VALUE defined as -2147483648. If you try to store any number larger or smaller than these numbers in an int variable, it will result in an error called **integer overflow**. Try it below.
 
 .. activecode:: overfl
    :language: java
@@ -132,12 +132,22 @@ Although it's not on the exam, you can format long decimal numbers to just show 
 
    Which of the following returns the correct average when 3 values had been added to an integer total?
    
-|Groupwork| Pair Programming Challenge
+|Groupwork| Programming Challenge
 --------------------------------------
 
-Working in pairs, complete the code below. Type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.
+This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below. 
 
-Switch drivers (who has control of the keyboard in pair programming) after every line of code. Your teacher may suggest that you use a Java IDE like repl.it for this challenge so that you can use input to get the variable values.
+ 
+.. |repl| raw:: html
+
+   <a href="https://repl.it" target="_blank">repl.it</a>
+   
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+   
+Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|.
 
 
 .. activecode:: challenge1-6
@@ -168,7 +178,7 @@ Summary
 -------------------
 
 - **Type casting** is used to convert variables from one type to another.
-- The casting operators (int) and (double)can be used to create a temporary value converted to a different data type.
+- The casting operators (int) and (double) can be used to create a temporary value converted to a different data type.
 - Casting a double value to an int causes the digits to the right of the decimal point to be truncated. 
 
 - Some programming code causes int values to be automatically cast (widened) to double values.

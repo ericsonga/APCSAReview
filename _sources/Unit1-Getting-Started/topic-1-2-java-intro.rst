@@ -282,10 +282,10 @@ In Java and many text-based coding languages, // is used to mark the beginning o
     int max = 10; // this keeps track of the max score
     
 
-|Groupwork| Pair Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge
+-----------------------------------
 
-Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently.
+In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently.
 
 Working in pairs, debug the following code. Can you find the all the bugs and get the code to run? 
 

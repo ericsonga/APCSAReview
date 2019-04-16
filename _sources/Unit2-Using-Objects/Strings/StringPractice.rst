@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 4-11-
+   :prefix: 2-9-2-
    :start: 1
 
 Code Practice with Strings
@@ -104,7 +104,7 @@ Code Practice with Strings
                 :shortname: cslearn4u
                 :identifier: javareview_ch4Ex2d
 
-.. tabbed:: ch4Ex3
+.. .. tabbed:: ch4Ex3
 
         .. tab:: Question
 
@@ -247,7 +247,7 @@ Code Practice with Strings
                 :shortname: cslearn4u
                 :identifier: javareview_ch4Ex5d
 
-.. tabbed:: ch4Ex6
+.. .. tabbed:: ch4Ex6
 
         .. tab:: Question
 
@@ -389,7 +389,7 @@ Code Practice with Strings
                 :shortname: cslearn4u
                 :identifier: javareview_ch4Ex8d
 
-.. tabbed:: ch4Ex9
+.. .. tabbed:: ch4Ex9
 
         .. tab:: Question
 

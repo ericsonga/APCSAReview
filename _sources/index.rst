@@ -6,7 +6,7 @@
 AP CS A Java Course - 2019
 ==========================================
 
-(revised 4/7/19)
+(revised 4/15/19)
 
 
 .. Here is where you specify the content and order of your new book.
@@ -89,3 +89,8 @@ Index
 
 
 © Copyright 2015 Barb Ericson, 2019 revised by B. Hoffman (`Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.
+
+
+.. raw:: html
+
+    <div style="font-size:small;">Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</div>

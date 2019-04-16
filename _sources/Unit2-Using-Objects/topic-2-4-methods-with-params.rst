@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 2-3-
+   :prefix: 2-4-
    :start: 1
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
@@ -33,31 +33,43 @@
 
 
 
-Calling Methods with and without parameters
+Calling Methods With Parameters
 ===========================================
 
-**Methods** define the behaviors or functions for objects. For example, in the Turtle class, methods like *forward(100)* and *turnRight()* made the turtle objects move that way. 
+In the last lessons, we used simple **methods** like forward() and turnRight() to make the turtle draw lines. You may have noticed that forward() and backward() always move the same number of pixels (100 pixels), and turnRight() and turnLeft() always turn at right angles (90 degrees). This is a little limiting. What if we wanted to draw a triangle or the letter A? These require smaller angles to draw diagonal lines and different length lines. Luckily, there are more complex methods in the Turtle class that let you specify the number of pixels to move forward or the number of degrees to turn. These values that you can give to methods to help them do their job are called **arguments** or **parameters**. 
 
-To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, yertle.forward(); calls yertle's forward method to move the turtle forward. Each method call is followed by parentheses. The parentheses () after method names are there in case you need to give the method **actual parameters** or **arguments** (some data) to do its job, for example the argument 100 in forward(100) makes the turtle go forward 100 pixels. You must always put in the parentheses even if the method has no parameters. 
+The parentheses () after method names are there in case you need to give the method **actual parameters** or **arguments** (some data) to do its job. For example, we can give the argument 100 in forward(100) to make the turtle go forward 100 pixels or the argument 30 in turn(30) to make the turtle turn 30 degrees instead of 90 degrees. 
 
 
 .. note::
 
-    object.method(); is used to call an object's method. Some methods take parameters/arguments that are placed inside the parentheses.
+    object.method(arguments); is used to call an object's method and give it some arguments (actual parameters) to do its job. 
 
 
-.. Although some people use the words parameters and arguments interchangibly, there is a subtle difference. When you define a method, the variables you define for it are called *parameters* or *formal parameters*. When you call the method to do its job, you give or pass in *arguments* or *actual parameters* to it that are then saved in the parameter variables. So, in the definition of the forward method, it has a parameter variable called pixels, but in the call to forward(100), the argument is the value 100 which will get saved in the parameter variable pixels... code-block:: java 
+Although some people use the words parameters and arguments interchangibly, there is a subtle difference. When you create your own method, the variables you define for it are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in the parameter variables. So, in the definition of the forward method, it has a parameter variable called pixels, and in the call to forward(100), the argument is the value 100 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 5. In this unit, you will learn to call methods that are already written for you.
+
+.. code-block:: java 
+
     // Method call
     yertle.forward(100); // argument is 100
-    ...
-    // Method definition
+    
+    // Method definition written for you
     public void forward(int pixels) // parameter pixels
     ...
 
+|Exercise| **Check your understanding**
 
+.. dragndrop:: Params
+    :feedback: Review the vocabulary above.
+    :match_1: an object's behaviors or functions that can be used or called to do its job|||methods
+    :match_2: the values or data passed to an object's method|||arguments or actual parameters
+    :match_3: the variables in a method's definition that hold the arguments|||formal parameters
+    :match_4: asking to run the method|||method call    
+    
+    Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.
 
 	
-Here is the Turtle class diagram again that shows some of the variables and methods inherited from the SimpleTurtle class in the class Turtle. 
+Here is the Turtle class diagram again that shows some of the variables and methods inherited from the SimpleTurtle class in the class Turtle that are written for you. 
 
 .. figure:: Figures/turtleUMLClassDiagram.png
     :width: 400px
@@ -75,11 +87,9 @@ Try some of the methods above in the turtle code below.
 |CodingEx| **Coding Exercises:**
 
 
-1. Can you make yertle draw a square? 
+1. Can you make yertle draw a square and change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the Color_ class in Java which has some colors predefined. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
 
-2. Can you change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the Color_ class in Java which has some colors predefined. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
-
-3. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. There is another turn method which has a parameter for the angle of the turn in degrees that you can use. For example, turn(90) is the same as turnRight(). 
+2. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. Use the turn method which has a parameter for the angle of the turn in degrees. For example, turn(90) is the same as turnRight(). 
 
 
 .. reveal:: TurtleClassesIndividual
@@ -2874,10 +2884,10 @@ Try the following mixed up code to draw a simple house made of a square and a tr
    
 
      
-|Groupwork| Pair Programming Challenge
+|Groupwork| Programming Challenge
 --------------------------------------
 
-Working in pairs, use the area below to have a turtle draw a house of your own design with different colors. Can you add windows and a door? Come up with your own house design.
+This creative challenge is fun to do collaboratively in pairs. Design a house and have the turtle draw it with different colors. Can you add windows and a door? Come up with your own house design as a team.
 
 .. figure:: Figures/houseWithWindows.png
     :width: 200px
@@ -2925,7 +2935,7 @@ Summary
 
 - To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example **object.method();** 
 
-- Some methods take parameters/arguments that are placed inside the parentheses.
+- Some methods take parameters/arguments that are placed inside the parentheses **object.method(arguments)***.
 
 - Values provided in the parameter list need to correspond to the order and type in the method signature.
 

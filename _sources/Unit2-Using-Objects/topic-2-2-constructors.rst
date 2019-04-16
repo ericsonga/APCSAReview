@@ -1,5 +1,3 @@
-.. needs challenge
-
 .. qnum::
    :prefix: 2-2-
    :start: 1
@@ -123,10 +121,10 @@ The GregorianCalendar class also has a constructor that takes a particular year,
 
 Try adding another GregorianCalendar object to the program above for your birthdate and have it print it out! 
 
-|Groupwork| Pair Programming Challenge
+|Groupwork| Programming Challenge
 --------------------------------------
 
-Working in pairs, debug the following code.
+Debug the following code.
 
 .. activecode:: TurtleConstructorDebug
     :language: java

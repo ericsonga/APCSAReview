@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 2-4-
+   :prefix: 2-5-
    :start: 1
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
@@ -122,10 +122,8 @@ Try some of the get methods and the toString() method in the program below. Note
     }
     
       
-|Groupwork| Pair Programming Challenge
+|Groupwork| Programming Challenge
 --------------------------------------
-
-Working in pairs, work on the following code: 
 
 1. The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)? 
 

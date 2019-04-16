@@ -1,4 +1,24 @@
-
+.. qnum::
+   :prefix: 2-7-
+   :start: 1
+   
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 String Methods 
 =================
 
@@ -21,19 +41,20 @@ A string holds characters in a sequence.  Each character is at a position or **i
 
 .. note::
 
-   The first character in a string is at index 0 and the last characters is at the length - 1.
+   The first character in a string is at index 0 and the last characters is at **length** - 1.
 
-For the AP CS A exam there are only a few things that you have to know about strings.  All of the following are included in the quick reference that you get during the exam so you don't have to memorize these.  I recommend printing a copy of the quick reference and using it when you practice for the exam.  You can get it at https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf.
+For the AP CS A exam there are only a few things that you have to know about strings.  All of the following are included in the quick reference that you get during the exam so you don't have to memorize these.  
 
-    -  the ``int length()`` method returns the number of characters in the string, including spaces and special characters like punctuation.
 
-    -  the ``String substring(int from, int to)`` method returns a string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).
+    -  **int length()** method returns the number of characters in the string, including spaces and special characters like punctuation.
 
-    -  the ``int indexOf(String str)`` method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.
+    -  **String substring(int from, int to)** method returns a string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).
 
-    -  the ``int compareTo(String other)`` returns a negative value if the current string is less than the ``other`` string, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string.
+    -  **int indexOf(String str)** method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.
 
-    -  the ``boolean equals(String other)`` returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.
+    -  **int compareTo(String other)** returns a negative value if the current string is less than the ``other`` string, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string.
+
+    -  **boolean equals(String other)** returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.
 
 Run the code below to see the output from ``length``, ``substring``, and ``indexOf``.
 
@@ -56,14 +77,18 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
         System.out.println(message1.indexOf("is"));
         System.out.println(message1.indexOf("Hello"));
         System.out.println(message2.indexOf("Hello"));
+        
+        // lowercase and uppercase are not on the AP exam, but still useful
+        System.out.println(message2.toLowerCase());
+        System.out.println(message2.toUpperCase());
       }
    }
 
 .. note::
 
-   Did you notice that ``message1.substring(0,3)`` includes all the characters from position 0 to 2 and doesn't include the character at position 3?
+   Did you notice that ``message1.substring(0,3)`` includes all the characters from position 0 to 2 and doesn't include the character at position 3? Remember that substring(from,to) does not include the character at the ``to`` index!
 
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: qsb_3
    :answer_a: 2
@@ -119,7 +144,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      String s1 = "baby";
      String s2 = s1.substring(0,3);
 
-.. mchoice:: qsb_4
+.. .. mchoice:: qsb_4
    :answer_a: 7
    :answer_b: 8
    :answer_c: 9
@@ -183,7 +208,25 @@ There are lots of other methods in the String class.  See the Java documentation
 
    Strings are **immutable** which means that they can't change. Anything that you do to modify a string (like creating a substring or appending strings) returns a new string.
 
-**Check your understanding**
+|Exercise| **Check your understanding**
+
+.. dragndrop:: ch4_str1
+    :feedback: Review the vocabulary.
+    :match_1: the position of a character in a string|||index 
+    :match_2: a new string with 0 to all characters copied from another string|||substring
+    :match_3: doesn't change|||immutable
+    :match_4: the number of characters in a string|||length
+    
+    Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
+    
+.. dragndrop:: ch4_str2
+    :feedback: Review the vocabulary.
+    :match_1: Returns true if the characters in two strings are the same|||equals
+    :match_2: Returns the position of one string in another or -1|||indexOf
+    :match_3: Returns a number to indicate if one string is less than, equal to, or greater than another|||compareTo
+    :match_4: Returns a string representing the object that is passed to this method|||toString
+    
+    Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
 
 .. mchoice:: qsb_5
    :answer_a: hi th
@@ -276,28 +319,76 @@ Common Mistakes
   
   -  Trying to invoke a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
 
+
+|Groupwork| Programming Challenge
+--------------------------------------
+
+.. |pig| image:: Figures/pig.png
+    :width: 100
+    :align: middle
+    :alt: pig latin
+    
+|pig| Can you speak Pig Latin? In Pig Latin, you take the first letter and put it at the end of the word and add the letters "ay" to the end. For example, "pig" becomes "igpay". 
+
+Create a program that takes a word and outputs it in Pig Latin using String methods. You may need the word's length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).
+
+.. |repl| raw:: html
+
+   <a href="https://repl.it" target="_blank">repl.it</a>
+   
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+   
+Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the word (see input examples using the |Scanner|).
+
+
+.. activecode:: PigLatin
+   :language: java
+   
+   public class PigLatin
+   {
+      public static void main(String[] args)
+      {
+        String word = 
+
+        // Use word.substring to construct word in pig latin
+        String pigLatin = 
+        
+        System.out.println(word + " in Pig Latin is " + pigLatin);
+      }
+   }
+
+
+
+
 Summary
 -------------------
 
+- **index** - A number that represents the position of a character in a string.  The first character in a string is at index 0.  
+- **length** - The number of characters in a string.  
+- **substring** - A new string that contains a copy of part of the original string.
+
 - A String object has index values from 0 to length – 1. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
 
-- String objects are immutable, meaning that String methods do not change the String object.
+- String objects are **immutable**, meaning that String methods do not change the String object. Any method that seems to change a string actually creates a new string. 
 
 - The following String methods and constructors, including what they do and when they are used, are part of the Java Quick Reference in the AP exam:
 
-  - String(String str) : Constructs a new String object that represents the same sequence of characters as str.
+  - **String(String str)** : Constructs a new String object that represents the same sequence of characters as str.
   
-  - int length() : returns the number of characters in a String object. 
+  - **int length()** : returns the number of characters in a String object. 
 
-  - String substring(int from, int to) : returns the substring beginning at index from  and ending at index to – 1.
+  - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to – 1).
 
-  - String substring(int from) : returns substring(from, length()).
+  - **String substring(int from)** : returns substring(from, length()).
   
-  - int indexOf(String str) : returns the index of the first occurrence of str; returns -1 if not found.
+  - **int indexOf(String str)** : returns the index of the first occurrence of str; returns -1 if not found.
   
-  - boolean equals(String other) : returns true if this (the calling object) is equal to other; returns false otherwise.
+  - **boolean equals(String other)** : returns true if this (the calling object) is equal to other; returns false otherwise.
   
-  - int compareTo(String other) : returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other.
+  - **int compareTo(String other)** : returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other.
 
 - A string identical to the single element substring at position index can be created by calling substring(index, index + 1).
 
@@ -305,20 +396,12 @@ Summary
 
 
 
-Strings - Summary
-------------------
-
-In these lessons, you learned about strings which are objects of the ``String`` class.  Strings hold characters in a sequence.  You learned the ``String`` methods that you will be expected to know on the exam.  You were also introduced to concept of inheritance since the ``String`` class inherits from the ``Object`` class.
-
 ..	index::
     single: append
     single:concatenate
-    single:child class
     single: immutable
     single: index
     single: length
-    single: override
-    single: parent class
     single: reference
     single: substring
     single: string
@@ -326,55 +409,7 @@ In these lessons, you learned about strings which are objects of the ``String`` 
 	single: object reference
 
 
-**Concept Summary**:
-
-- **append** - One string can be appended to another using the ``+`` operator.  This will create a new string with all the characters in the first string followed by all the characters in the second string.  
-- **child class** - A class in Java can inherit object fields and methods from a parent class.  The ``String`` class is a child class of the ``Object`` class.
-- **concatenate** - One string can be concatenated after another which is the same as appending one string after another.
-- **immutable** - Means that something doesn't change.  Strings are immutable.  Any method that seems to change a string actually creates a new string. 
-- **index** - A number that represents the position of a character in a string.  The first character in a string is at index 0.  
-- **length** - The number of characters in a string.  
-- **override** - A child class can provide the same method as one it inherits from a parent class and in that case the child method will execute instead of the parent method.  The child method overrides the parent method.
-- **parent class** - A class in Java has a parent class and it inherits object fields and public methods from the parent class.  The ``Object`` class is the parent class of the ``String`` class.
-- **reference** - A reference is a way to find an object in memory.  A reference is similar to a package tracking number since it helps you find the package.   
-- **string** -  A string is an object of the ``String`` class which holds sequences of characters.  The ``String`` class also defines methods that you can execute on a string object like getting its length or getting a substring (copy of part of the string).  Notice that the String class starts with an uppercase letter.  All class names in Java start with an uppercase letter.
-- **substring** - A new string that contains a copy of part of the original string.   
-
-**Java Keyword Summary**:
 
 
-- **new** - used to create a new object of a class.
-- **null** - used to indicate that an object reference doesn't refer to any object yet.
 
-**Method Summary**:
-
-
-- ``str1.compareTo(str2)`` - returns 0 if they two strings have the sasme characters, a negative number if str1 is less than str2 and a positive number otherwise.
-- ``str1.length()`` - returns the number of characters in a string object including any spaces or special characters.
-- ``str1.equals(str2)`` - this method of the ``String`` class will return true if the characters in the two strings are the same.
-- ``str1.indexOf(str2)`` - returns the position that str2 starts in str1 or -1 if str2 isn't in str1.
-- ``str1.substring(start,end)`` - returns a new string with all the characters in str1 from start to end - 1.
-- ``str1.toLowerCase()`` - returns a new string with the same characters as in str1, but all lowercase.
-- ``str1.toUpperCase()`` - returns a new string with the same characters as in str1, but all uppercase.
-- ``toString(obj)`` - this is a method that all classes inherit from the ``Object`` class.  It can be overriden to print out a string representation of an object.
-
-**Practice**:
-
-.. dragndrop:: ch4_str1
-    :feedback: Review the summaries above.
-    :match_1: the position of a character in a string|||index 
-    :match_2: a new string with 0 to all characters copied from another string|||substring
-    :match_3: doesn't change|||immutable
-    :match_4: the number of characters in a string|||length
-    
-    Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
-    
-.. dragndrop:: ch4_str2
-    :feedback: Review the summaries above.
-    :match_1: Returns true if the characters in two strings are the same|||equals
-    :match_2: Returns the position of one string in another or -1|||indexOf
-    :match_3: Returns a number to indicate if one string is less than, equal to, or greater than another|||compareTo
-    :match_4: Returns a string representing the object that is passed to this method|||toString
-    
-    Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
 

@@ -1,80 +1,25 @@
 .. qnum::
-   :prefix: 3-
+   :prefix: 3-2-
    :start: 1
    
-.. highlight:: java
-   :linenothreshold: 4
-
-Boolean Expressions
-===================
-
-**Boolean** variables or expressions can only have **true** or **false** values.  Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal). Try the code below.
-
-.. note::
-
-    One = sign changes the value of a variable. Two == equal signs are used to compare two things -- not change their values!
-
-.. activecode:: bool1
-   :language: java
    
-   public class BoolTest1
-   {
-      public static void main(String[] args)
-      {
-        int age = 15;
-        int year = 14;
-        // Will this print true or false?
-        System.out.println( age == year );
-        String name1 = "pat";
-        String name2 = name1;
-        // Will these print true or false?
-        System.out.println(name1 == name2);
-        System.out.println(name1 == "Pat");
-      }
-   }
-
-**Relational Operators** can compare numeric values. 
-
-- < Less Than
-- > Greater Than
-- <= Less than or equal to
-- >= Greater than or equal to
-- == Equals
-- != Does not equal
-
-If you have trouble telling < and > apart, think of a number line and think of < and > as arrows; < (less than) points towards 0 and smaller numbers on the number line and > (greater than) points towards the larger numbers on the number line. With <= and >=, remember to write the two symbols in the order that you would say them "less than" followed by "or equal to". 
-
-Try to guess what the code below will print out before you run it.
-
-.. activecode:: bool2
-   :language: java
-   
-   public class BoolTest2
-   {
-      public static void main(String[] args)
-      {
-        int age = 15;
-        int year = 14;
-        // Will these print true or false?
-        System.out.println( age < year );
-        System.out.println( age > year );
-        System.out.println( age <= year+1 );
-        System.out.println( age-1 >= year );
-      }
-   }
-
-
-
-.. note::
-
-    **Summary:**
-    1. Primitive values and reference values can be compared using relational operators (i.e., == and !=).
-    2. Arithmetic expression values can be compared using relational operators (i.e., <, >, <=, >=).
-    3. An expression involving relational operators evaluates to a Boolean value.
-
-
-
- 
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 
 if Statements and Control Flow
 ===============================
@@ -82,12 +27,9 @@ if Statements and Control Flow
 ..	index::
 	single: conditional
 	single: if
-	single: Boolean
-	pair: Variable; boolean
-	pair: boolean; variable
 	pair: conditional; if
 
-Java statements normally execute one at a time from top to bottom.  If you want a statement to only execute when something is true use a **conditional** or **if statement**.   If the condition is true then the next statement or a block of statements will execute.  If the condition is false then the next statement or block of statements is skipped.
+The Java statements in a main method normally run or execute one at a time in the order they are found from top to bottom.  **Conditionals** or **if statements** in programming languages allow us to change the flow of control so that some code is only run when something is true.  In an if statement, if the condition is true then the next statement or a block of statements will execute.  If the condition is false then the next statement or block of statements is skipped.
 
 .. figure:: Figures/Condition.png
     :width: 200px
@@ -146,8 +88,10 @@ The variable ``isRaining`` is a boolean variable that is either true or false. I
 
 .. note::
 
-   An if will only execute one single statement following it unless there is a block of statements enclosed in a pair of open and closed curly braces ``{`` and ``}``.  Java doesn't care if you indent the code to show what you intend!
+   An if will only execute one single statement following it unless there is a block of statements enclosed in a pair of open and closed curly braces ``{`` and ``}``.  Java doesn't care if you indent the code -- it goes by the { }.
    
+|CodingEx| **Coding Exercise**
+
 The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
    
 .. activecode:: lccb2-indent
@@ -185,7 +129,42 @@ The code below doesn't work as expected.  Fix it to only print "Wear a coat" and
      if (x > 4) x = 0;
 
 
+**More practice with if == and < > Active code.
+Note always use == not = in an if statement! Test not assign.
 
-	
-  
+
+|Groupwork| Programming Challenge
+--------------------------------------
+
+Magic 8 ball - tell your fortune?
+
+if (random# == 1)
+    Sunny today
+   
+    
+    
+    
+Summary
+-------------------  
+
+- if statements test a boolean expression and if it is true, go on to execute the following statement or block of statements surrounded by curly brackets { } like below.
+
+.. code-block:: java
+
+    // A single if statement
+    if (boolean expression)
+        do this statement;
+    // A block if statement    
+    if (boolean expression)
+    {
+       Do Statement1;
+       Do Statement2;
+       ...
+       Do StatementN;
+    }
+
+- Java boolean expressions can compare primitive values and reference values with the relational operators == and != and arithmetic expression values with the relational operators (i.e., <, >, <=, >=).
+
+- Conditional (if) statements affect the flow of control by executing different statements based on the value of a Boolean expression.
+
 

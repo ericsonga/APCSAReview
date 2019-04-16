@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 2-4-
+   :prefix: 2-6-
    :start: 1
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
@@ -86,6 +86,8 @@ In Java you can also use just a **string literal**, which is a set of characters
 
 In both cases an object of the ``String`` class will be created in memory and the value of the variable greeting will be set to an object reference, a way to find that object.  
 
+|CodingEx| **Coding Exercise:**
+
 Here is an active code sample that creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings firstname and lastname using the two methods and print them out with the greetings.
 
 .. activecode:: lcsbnew
@@ -128,7 +130,7 @@ Now that greeting refers to an actual object we can ask the object what class cr
 	single: java.lang
 	pair: package; java.lang
 
-The code above will first print ``class java.lang.String`` since ``greeting`` was created by the ``String`` class.  The full name for the ``String`` class is ``java.lang.String``.  The ``java.lang`` part is the **package** name.  Every class in the Java language is in a package and the standard classes like ``String`` are in the ``java.lang`` package.  Every object in Java contains a reference to the class that created it.  Also, every class contains a reference to its **parent** class.  Yes, a class can have a parent class, just as you have parents.  But, in Java a class can only have one parent.  A class can ``inherit`` object fields and methods from a parent class, just like you might inherit musical ability from a parent.  The fourth line will print ``class java.lang.Object`` because the parent class (**superclass**) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.  
+The code above will first print ``class java.lang.String`` since ``greeting`` was created by the ``String`` class.  The full name for the ``String`` class is ``java.lang.String``.  The ``java.lang`` part is the **package** name.  Every class in the Java language is in a package and the standard classes like ``String`` are in the ``java.lang`` package.  Every object in Java contains a reference to the class that created it.  Also, every class contains a reference to its **parent** class.  Yes, a class can have a parent class, just as people have parents.  But, in Java a class can only have one parent.  A class can ``inherit`` object fields and methods from a parent class, just like you might inherit musical ability from a parent.  The fourth line will print ``class java.lang.Object`` because the parent class (**superclass**) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.  
 
 .. figure:: Figures/stringObject.png
     :width: 500px
@@ -148,7 +150,7 @@ String Operators - Concatenation
 ..	index::
 	pair: String; append
 	
-Strings can be **appended** to each other which creates a new string using the ``+`` operator . This is also called **concatenation**. 
+Strings can be **appended** to each other to create a new string using the ``+`` or ``+=`` operator . This is also called **concatenation**. 
 
 .. activecode:: lcso1
    :language: java
@@ -159,13 +161,14 @@ Strings can be **appended** to each other which creates a new string using the `
       {
         String start = "Happy Birthday"; 
         String name = "Jose";
-        String result = start + " " + name;
+        String result = start + " " + name;  // add together strings
+        result += "!"; // add on to the same string
         System.out.println(result);
       }
    }
   
 .. note::
-   Note that spaces are not added between strings automatically.  If you want a space between two strings then add one. 
+   Note that spaces are not added between strings automatically.  If you want a space between two strings then add one using + " " +. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".  
 
 ..	index::
 	single: toString
@@ -173,7 +176,9 @@ Strings can be **appended** to each other which creates a new string using the `
 
 You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.  
    
-What do you think the following will print?   
+|CodingEx| **Coding Exercise:**
+
+What do you think the following will print? Guess before you hit run.
 
 .. activecode:: lcso2
    :language: java
@@ -190,7 +195,11 @@ What do you think the following will print?
 .. note::
    If you are appending a number to a string it will be converted to a string first before being appended.  
   
-Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string.
+Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  
+
+|CodingEx| **Coding Exercise:**
+
+If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string. Hint: you used this to do addition before multiplication in arithmetic expressions.
 
 What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, you would use a **backslash escape sequence** to print out a real quote. And if you wanted to print out a backslash \, you would have to backslash it too \\. Another useful backslashed character is \n which will put in a newline. Here are the escape sequences that may be used in the AP course:
 
@@ -206,7 +215,49 @@ What if you wanted to print out a double quote " character? Since the double quo
       }
    }
    
+|Groupwork| Programming Challenge
+--------------------------------------
+
+Have you ever played MAD LIBS? In this game, you first choose a bunch of words without looking at the story and then those words are filled into the story to make it sound very wacky! Fill in the variables below with Strings for each word, and then run to see the wacky story.
+
+.. |repl| raw:: html
+
+   <a href="https://repl.it" target="_blank">repl.it</a>
    
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+   
+
+Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the words (see input examples using the |Scanner|).
+
+.. activecode:: MadLibs
+   :language: java
+   
+   public class MadLibs1
+   {
+      public static void main(String[] args)
+      {
+        // fill these in with silly words/strings (don't read the poem yet)
+        String pluralnoun1 = 
+        String color1 =
+        String color2 =
+        String food =
+        String pluralnoun2 = 
+        
+        
+        // Run to see the silly poem!
+        System.out.println("Roses are " + color1);
+        System.out.println(pluralnoun1 + " are " + color2);
+        System.out.println("I like " + food);
+        System.out.println("Do " + pluralnoun2 + " like them too?");
+      }
+   }
+
+
+
+
 
 Summary
 -------------------
@@ -214,6 +265,9 @@ Summary
 - **Strings** in Java are objects of the ``String`` class that hold sequences of characters.
 
 - String objects can be created by using string literals (String s = "hi";) or by calling the String class constructor (String t = new String("bye");).
+
+- **new** is used to create a new object of a class.
+- **null** is used to indicate that an object reference doesn't refer to any object yet.
 
 - String objects can be concatenated using the + or += operator, resulting in a new String object.
 

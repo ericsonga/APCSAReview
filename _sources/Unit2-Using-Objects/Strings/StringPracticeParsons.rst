@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 4-12-
+   :prefix: 2-9-1-
    :start: 1
 
 Mixed Up Code Practice
@@ -38,7 +38,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    System.out.println("And so are you");
 
 
-.. parsonsprob:: ch4ex3muc
+.. .. parsonsprob:: ch4ex3muc
    :adaptive:
    :noindent:
 
@@ -91,7 +91,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.out.println(part1 * part2); #distractor
 
 
-.. parsonsprob:: ch4ex5muc
+.. .. parsonsprob:: ch4ex5muc
    :adaptive:
    :noindent:
 
@@ -117,7 +117,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.out.println("Your age is " age); #distractor
 
 
-.. parsonsprob:: ch4ex6muc
+.. .. parsonsprob:: ch4ex6muc
    :adaptive:
    :noindent:
 
@@ -175,7 +175,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            System.out.println(initials); #distractor
 
-.. parsonsprob:: ch4ex8muc
+.. .. parsonsprob:: ch4ex8muc
    :adaptive:
    :noindent:
 

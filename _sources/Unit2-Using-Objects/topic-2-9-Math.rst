@@ -1,7 +1,23 @@
-.. .. qnum::
-   :prefix: 3-7-
+.. qnum::
+   :prefix: 2-9-
    :start: 1
    
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
 
 Using the Math Class
 ====================
@@ -35,13 +51,13 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
       }
    }
   
-You can use ``Math.random`` and a cast to integer to return a random number between some starting and ending value.  The code below will return a random number from 0 to 9.
 
-.. note::
-
-   Remember that a casting a double value to integer ``(int)`` will throw away any values after the decimal point.
    
-Run the code below several times to see how the value changes each time.
+|CodingEx| **Coding Exercise**
+
+You can use ``Math.random`` and a cast to integer to return a random number between some starting and ending value.  The code below will return a random number from 0 to 9. Remember that a casting a double value to integer ``(int)`` will throw away any values after the decimal point.
+
+Run the code below several times to see how the value changes each time. How could you change the code above to return a random number from 1 to 10?  Modify the code and see if your answer is correct.
    
 .. activecode:: randomRange
    :language: java
@@ -54,9 +70,9 @@ Run the code below several times to see how the value changes each time.
       }
    }
    
-How could you change the code above to return a random number from 1 to 10?  Modify the code above and see if your answer is correct.  
+  
 
-Here are some other examples that move a random number into a specific range.
+Here are some examples that move a random number into a specific range.
 
 
 .. code-block:: java 
@@ -69,7 +85,7 @@ Here are some other examples that move a random number into a specific range.
 
 
 
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: qrand_1
    :answer_a: Math.random() < 0.4
@@ -134,17 +150,52 @@ Other Math functions that you can use are:
 
 These are all listed in the Java Quick Reference guide that you can use during the exam: https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf.  
 
+|Groupwork| Programming Challenge
+--------------------------------------
+
+.. image:: Figures/lock.jpg
+    :width: 100
+    :align: left
+    :alt: lock
+    
+You may have a combination lock on your locker at school where you have to spin the dial to 3 separate numbers from 0 up to 40. What if you forgot your combination? Would you be able to guess it? Write code that will generate 3 random numbers from 0 up to 40 (but not including 40) using **Math.random()**. Run it a couple times to see it generate different numbers. How many times would you need to run it to guess your combination correctly? Let's have the code compute that using the **Math.pow(number,exponent)** method. Here is an example using Math.pow().
+
+.. code-block:: java 
+  
+  // this would return the number of combinations to choose 2 numbers between 0-9. 
+  double combinations = Math.pow(10,2);
+ 
+ 
+.. activecode:: mathChallenge
+   :language: java
+   
+   public class MathChallenge
+   {
+      public static void main(String[] args)
+      {
+        // 1. Use Math.random() to generate 3 numbers from 0-40 (not including 40) and print them out.
+        
+        
+        // 2. Calculate the number of combinations to choose 3 numbers between 0-40 (not including 40) using Math.pow() and print it out.
+        
+        
+      }
+   }
+   
+   
 Summary
 -------------------
 
-- Static Math methods can be called useing Math.method(); for each method.
+- Static Math methods can be called using **Math**.method(); for each method.
 
 - The following static Math methods are part of the Java Quick Reference:
-  - int abs(int) — Returns the absolute value of an int value.
-  - double abs(double) — Returns the absolute value of a double value.
-  - double pow(double, double) — Returns the value of the first parameter raised to the power of the second parameter. 
-  - double sqrt(double) —  Returns the positive square root of a double value.
-  - double random()—  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0)!
+
+  - **int abs(int)** : Returns the absolute value of an int value (which means no negatives).
+  - **double abs(double)** : Returns the absolute value of a double value.
+  - **double pow(double, double)** : Returns the value of the first parameter raised to the power of the second parameter. 
+  - **double sqrt(double)** :  Returns the positive square root of a double value.
+  - **double random()** :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0)!
   
 - The values returned from Math.random can be manipulated to produce a random int or double in a defined range. For example, to get a number in the range of 5 to 9, use:
+
   - int rnd = (int)(Math.random()*10 + 5);
