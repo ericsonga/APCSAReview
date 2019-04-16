@@ -33,11 +33,11 @@ Boolean Expressions
 
 .. note::
 
-    One = sign changes the value of a variable. Two == equal signs are used to compare two things -- not change their values!
+    One = sign changes the value of a variable. Two == equal signs are used to test if a variable holds a certain value, without changing its value!
 
 |CodingEx| **Coding Exercise**
 
-What will the code below print out? Try to guess before you run it! Note that 1 equal sign (=) is used to assign a value to a variable, and 2 equal signs (==) are used to test if a variable has a certain value.
+What will the code below print out? Try to guess before you run it! Note that 1 equal sign (=) is used for assigning a value and 2 equal signs (==) for testing values.
 
 .. activecode:: bool1
    :language: java
@@ -60,7 +60,7 @@ What will the code below print out? Try to guess before you run it! Note that 1 
 
 |CodingEx| **Coding Exercise**
 
-We can also use == to test if two reference values refer to the same object. What will the code below print out? Try to guess before you run it! Here we are testing if the String refer to the same object in memory.
+We can also use == to test if two reference values refer to the same object. What will the code below print out? Try to guess before you run it! Here we are testing if the Strings refer to the same object in memory.
 
 .. activecode:: boolRef
    :language: java
@@ -79,7 +79,7 @@ We can also use == to test if two reference values refer to the same object. Wha
       }
    }
    
-**Relational Operators** can compare numeric values or arithmetic expressions in Java. 
+The **Relational Operators** below in Java are used to compare numeric values or arithmetic expressions. Although some programming languages allow using relational operators like < to compare strings, Java only uses these operators for numbers, and uses the string methods compareTo() and equals() for comparing String values.
 
 - < Less Than
 - > Greater Than

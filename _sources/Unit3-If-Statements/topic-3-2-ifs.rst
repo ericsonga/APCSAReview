@@ -116,7 +116,7 @@ Most if statements have a boolean condition that uses relational operators like 
 
 |CodingEx| **Coding Exercise**
 
-Try the following active code which tests whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.
+Run the following active code a couple times until you see all the possible outputs. It prints out whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.
 
 .. activecode:: if-relational
    :language: java
@@ -126,7 +126,7 @@ Try the following active code which tests whether a random number is positive or
       public static void main(String[] args)
       {
         // Get a random number from -10 up to 10.
-        int number = (int) Math.random()*20 - 10;
+        int number = (int) (Math.random()*20 - 10);
         System.out.println("The number is " + number);
         
         // is it positive?

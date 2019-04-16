@@ -26,11 +26,11 @@ Wrapper Classes - Integer and Double
 	pair: integer; minimum
 	pair: integer; maximum 
 
-For every primitive type in Java, there is a built-in object type called a wrapper class. The wrapper class for int is called Integer, and for double it is called Double.   Sometimes you may need to create a wrapped object for a primitive type so that you can give it to a method that is expecting an object. To wrap a value, call the constructor for the wrapper class in earlier versions of Java. In Java 9 on, this is **deprecated** which means it's not the best way to do this anymore, and you should instead just set it equal to a value.
+For every primitive type in Java, there is a built-in object type called a wrapper class. The wrapper class for int is called Integer, and for double it is called Double.   Sometimes you may need to create a wrapped object for a primitive type so that you can give it to a method that is expecting an object. To wrap a value, call the constructor for the wrapper class in earlier versions of Java. In Java 9 on, this is **deprecated** which means it's not the best way to do this anymore, and you should instead just set it equal to a value. The AP CS A Exam covers Java 7 which does allow using the constructor.
 
 .. code-block:: java 
    
-   // in older versions of Java
+   // in older versions of Java (and on the AP exam)
    Integer i = new Integer(2); // create an object with 2 in it
    Double d = new Double(3.5); // create an object with 2.5 in it 
 

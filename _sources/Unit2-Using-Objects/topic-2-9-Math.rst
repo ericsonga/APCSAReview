@@ -59,7 +59,7 @@ You can use ``Math.random`` and a cast to integer to return a random number betw
 
 |CodingEx| **Coding Exercise**
 
-Run the code below several times to see how the value changes each time. How could you change the code above to return a random number from 1 to 10?  Modify the code and see if your answer is correct. Try removing the parentheses from around (Math.random() * 10) and run the code several times. What happens? The parentheses are necessary because (int) will cast the closest expression, and (int)Math.random() will always be 0 since anything after the decimal point is dropped.
+Run the code below several times to see how the value changes each time. How could you change the code to return a random number from 1 to 10?  Modify the code and see if your answer is correct. Try removing the parentheses from around (Math.random() * 10) and run the code several times. What happens? The parentheses are necessary because (int) will cast the closest expression, and (int)Math.random() will always be 0 since anything after the decimal point is dropped.
    
 .. activecode:: randomRange
    :language: java

@@ -2935,7 +2935,7 @@ Summary
 
 - To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example **object.method();** 
 
-- Some methods take parameters/arguments that are placed inside the parentheses **object.method(arguments)***.
+- Some methods take parameters/arguments that are placed inside the parentheses **object.method(arguments)**.
 
 - Values provided in the parameter list need to correspond to the order and type in the method signature.
 
