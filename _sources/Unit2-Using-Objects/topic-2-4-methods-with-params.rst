@@ -2827,12 +2827,16 @@ Try some of the methods above in the turtle code below.
     }
 
 
-|Exercise| 
+|CodingEx| **Coding Exercise**
 
 Try the following mixed up code to draw a simple house made of a square and a triangle roof.
 
-
-.. figure:: Figures/house.png
+.. image:: Figures/house.png
+    :width: 200px
+    :align: left
+    :alt: simple house
+    
+.. .. figure:: Figures/house.png
     :width: 200px
     :align: center
     :alt: simple house
@@ -2887,9 +2891,14 @@ Try the following mixed up code to draw a simple house made of a square and a tr
 |Groupwork| Programming Challenge
 --------------------------------------
 
+.. image:: Figures/houseWithWindows.png
+    :width: 200px
+    :align: left
+    :alt: simple house
+    
 This creative challenge is fun to do collaboratively in pairs. Design a house and have the turtle draw it with different colors. Can you add windows and a door? Come up with your own house design as a team.
 
-.. figure:: Figures/houseWithWindows.png
+.. .. figure:: Figures/houseWithWindows.png
     :width: 200px
     :align: center
     :alt: simple house
@@ -2906,6 +2915,12 @@ To draw a window, you will need to do penUp() to walk the turtle into position, 
    builder.penDown();
    
 It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up.
+
+.. |repl link| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
+
+After writing your code below, if you'd like your own copy, you can open this |repl link|, copy in your code, and save it in your own repl.it account.
 
 .. activecode:: Turtle_House
     :language: java
@@ -2926,6 +2941,7 @@ It may help to act out the code pretending you are the turtle. Remember that the
           world.show(true); 
       }
     }
+    
 
 
 Summary

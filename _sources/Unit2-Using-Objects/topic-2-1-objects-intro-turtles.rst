@@ -18,7 +18,19 @@
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
+.. |repl| raw:: html
+
+   <a href="https://repl.it" target="_blank">repl.it</a>
+   
+.. |repl link| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
+   
+.. |github| raw:: html
+
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank">here</a>   
+      
 ..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
     Permission is granted to copy, distribute and/or modify this document
     under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -60,7 +72,7 @@ In the 1960s, an educational programming language called Logo was developed. It 
 	pair: program; comment
 
 Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
-Try clicking the |runbutton| button below to see what the following program does.
+Try clicking the |runbutton| button below to see what the following program does. (You can also see the Turtle code in action at this |repl link| or download the files |github|.)
 
 
 .. activecode:: TurtleTest
@@ -207,6 +219,7 @@ Working in pairs, create two Turtle objects below and have them draw a shape tog
 - myrtle.penUp();
 - yertle.penDown();
 
+After writing your code below, if you'd like your own copy, you can open this |repl link|, copy in your code, and save it in your own repl.it account.
 
 .. activecode:: TurtleGroupWork
     :language: java
@@ -229,6 +242,7 @@ Working in pairs, create two Turtle objects below and have them draw a shape tog
           world.show(true);
       }
     }
+
 
 
 Summary

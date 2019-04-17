@@ -154,6 +154,11 @@ Here are some simple turtle methods that you could use:
 - myrtle.penUp();
 - yertle.penDown();
 
+.. |repl link| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
+
+After writing your code below, if you'd like your own copy, you can open this |repl link|, copy in your code, and save it in your own repl.it account.
 
 .. activecode:: Turtle_Letter
     :language: java
