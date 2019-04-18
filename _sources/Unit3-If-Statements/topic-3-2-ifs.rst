@@ -29,25 +29,39 @@ if Statements and Control Flow
 	single: if
 	pair: conditional; if
 
-The Java statements in a main method normally run or execute one at a time in the order they are found from top to bottom.  **Conditionals** or **if statements** in programming languages allow us to change the flow of control so that some code is only run when something is true.  In an if statement, if the condition is true then the next statement or a block of statements will execute.  If the condition is false then the next statement or block of statements is skipped.
+If you took an AP CSP course or used a block programming language like Scratch, you've probably seen if blocks or statements before. *If statements* are found in all programming languages as a way to make choices. Here's a comparison of ifs in App Inventor blocks, AP CSP block and pseudocode and Java ifs.
+
+.. figure:: Figures/BlocksIfComparison.png
+    :width: 100%
+    :align: center
+    :figclass: align-center
+
+    Figure 1: Comparison of App Inventor if block, AP CSP ifs, and Java if statements
+
+The statements in a Java main method normally run or execute one at a time in the order they are found from top to bottom.   **If statements** (also called **conditionals** or **selection**) change the flow of control through the program so that some code is only run when something is true.  In an if statement, if the condition is true then the next statement or a block of statements will execute.  If the condition is false then the next statement or block of statements is skipped.
 
 .. figure:: Figures/Condition.png
     :width: 200px
     :align: center
     :figclass: align-center
 
-    Figure 1: The order that statements execute in a conditional
+    Figure 2: The order that statements execute in a conditional
     
 
+A conditional uses the keyword ``if`` followed by Boolean expression inside of  an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  The single statement or block of statements are only executed if the condition is true.  The open curly brace ``{`` and a close curly brace ``}`` are used to group a block of statements together.  It never hurts to put in the curly braces even if you have just one statement under the if statement, so get used to putting them in all the time.
 
-A conditional uses the keyword ``if`` followed by Boolean expression inside of  an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  The single statement or block of statements are only executed if the condition is true.  A block of statements is enclosed by an open curly brace ``{`` and a close curly brace ``}``.  It never hurts to put in the curly brackets even if you have just one statement under the if statement, so get used to putting them in all the time.
 
 .. code-block:: java
 
     // A single if statement
     if (boolean expression)
         do this statement;
-    // A block if statement    
+    // Or a single if with {}
+    if (boolean expression) 
+    {
+       do this statement;
+    }
+    // A block if statement: { } required    
     if (boolean expression)
     {
        Do Statement1;
@@ -56,7 +70,10 @@ A conditional uses the keyword ``if`` followed by Boolean expression inside of  
        Do StatementN;
     }
 
+.. note::
 
+    Note that there is no semicolon (;) at the end of the boolean expression in an if statement even if it is the end of that line. The semicolon goes at the end of the whole if statement, often on the next line. Or { } are used to mark the beginning and end of the block of code under the if condition. 
+    
 Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).  
 
 .. activecode:: lccb1
@@ -90,7 +107,7 @@ The variable ``isRaining`` is a boolean variable that is either true or false. I
 
 .. note::
 
-   An if will only execute one single statement following it unless there is a block of statements enclosed in a pair of open and closed curly braces ``{`` and ``}``.  Java doesn't care if you indent the code -- it goes by the { }.
+   An if will only execute one single statement following it until the semicolon (;) unless there is a block of statements enclosed in a pair of open and closed curly braces ``{`` and ``}``.  Java doesn't care if you indent the code -- it goes by the { }. 
    
 |CodingEx| **Coding Exercise**
 

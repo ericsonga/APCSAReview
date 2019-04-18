@@ -5,22 +5,65 @@
 .. highlight:: java
    :linenothreshold: 4
    
+   
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 Two-way Selection: if-else Statements
 ======================================
 
-What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might do one thing if a coin flip is heads and another if it is tails.  In this case use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.  
+What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might flip a coin and do one thing if it lands as heads and another if it is tails.  In programming, you can use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.  
+
+.. code-block:: java
+
+    // A single if/else statement
+    if (boolean expression)
+        do this statement;
+    else
+        do that statement;
+   
+.. code-block:: java
+
+    // A block if/else statement    
+    if (boolean expression)  {
+       do this statement;
+       and this;
+    }
+    else {
+       do other statement;
+       and this other one;
+    }
+    
+The following flowchart demonstrates that if the condition (the boolean expression) is true, one block of statements is executed, but if the condition is false, a different block of statements inside the else clause is executed.  
 
 .. figure:: Figures/Condition-two.png
     :width: 350px
     :align: center
     :figclass: align-center
 
-    Figure 2: The order that statements execute in a conditional with 2 options: if and else
+    Figure 1: The order that statements execute in a conditional with 2 options: if and else
 
 .. note::
 
    The else will only execute if the condition is false.   
 
+|CodingEx| **Coding Exercise**
+
+Try the following code. If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after conditional``.  
 
 .. activecode:: lccb2
    :language: java
@@ -30,44 +73,206 @@ What if you want to pick between two possibilities?  If you are trying to decide
       public static void main(String[] args)
       {
         boolean isHeads = true;
-        if (isHeads) System.out.println("Let's go to the game");
-        else System.out.println("Let's watch a movie");
+        if (isHeads) 
+            System.out.println("Let's go to the game");
+        else 
+            System.out.println("Let's watch a movie");
+        
         System.out.println("after conditional");
       }
    } 
    
 
-If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after conditional``.  Run the code above to see this.
 
-.. fillintheblank:: 5_1_2_falseElse
+|Exercise| **Check your understanding**
+
+.. fillintheblank:: 3_3_1_falseElse
 
    Try changing the code above to ``boolean isHeads = false;``.  What line will be printed before the ``after conditional``?
 
    -    :^Let's watch a movie$: Correct.  If the boolean value is false, the statement following the else will execute
         :.*: Try it and see
         
-        
 
-.. mchoice:: qcb1_1
-   :answer_a: A
-   :answer_b: B
-   :answer_c: C
-   :answer_d: D
-   :answer_e: E
-   :correct: d
-   :feedback_a: Notice that each of the first 4 statements start with an if so you need to check each one.  What will actually be printed?  Try it in one of the active code windows above.  
-   :feedback_b: Each of the first 4 if statements will execute.
-   :feedback_c: Check this in DrJava.
-   :feedback_d: Each of the if statements will be executed. So grade will be set to A, then B then C and finally D.  
-   :feedback_e: This will only be true when score is less than 60. 	
 
-    What is the value of grade when the following code executes and score is 93?  
+|CodingEx| **Coding Exercise**
+
+If/else statements can also be used with relational operators and numbers like below. Try the following code. Change age to 15 and then run it again. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work! Can you change the code to indicate that you can get a license at age 15 instead of 18? Test both possibilities. Change the boolean expression to match the laws of your state.
+
+.. activecode:: licenseifelse
+   :language: java
    
-   .. code-block:: java 
+   public class DriversLicenseTest
+   {
+      public static void main(String[] args)
+      {
+        int age = 16;
+        if (age >= 16) 
+            System.out.println("You can get a driver's license in most states!");
+        else 
+            System.out.println("Sorry, you need to be older to get a driver's license.");
+      }
+   } 
 
-     if (score >= 90) grade = "A";
-     if (score >= 80) grade = "B";
-     if (score >= 70) grade = "C";
-     if (score >= 60) grade = "D";
-     else grade = "E";
-     
+
+|CodingEx| **Coding Exercise**
+
+Try the following code. Add an else statement to the if statement that prints out "Good job!" if the score is greater than 9. Change the value of score to test it. Can you change the boolean test to only print out "Good job" if the score is greater than 20?
+
+.. activecode:: scoreifelse
+   :language: java
+   
+   public class DriversLicenseTest
+   {
+      public static void main(String[] args)
+      {
+        int score = 8;
+        if (score <= 9) 
+            System.out.println("Try for a higher score!");
+      }
+   } 
+
+
+.. .. parsonsprob:: ifelseevenOdd
+   :adaptive:
+   :noindent:
+   
+   The following program should print out "x is even" if the remainder of x divided by 2 is 0 and "x is odd" otherwise, but the code is mixed up.   Drag the blocks from the left and place them in the correct order on the right.  Click on <i>Check Me</i> to see if you are right. 
+   -----
+   public class EvenOrOdd
+   {
+   =====
+      public static void main(String[] args)
+      {
+      =====
+        int x = 92;
+        =====
+        if (x % 2 == 0) 
+        =====
+            System.out.println("x is even");
+            =====    
+        else
+        =====
+            System.out.println("x is odd");
+            =====
+       }
+       =====
+    }
+
+Nested Ifs and Dangling Else
+----------------------------
+
+If statements can be nested inside other if statements. Sometimes with nested ifs we find a **dangling else** that could potentially belong to either if statement. The rule is that the else clause will always be a part of the closest if statement in the same block of code, regardless of indentation. 
+
+.. code-block:: java
+
+    // Nested if with dangling else
+    if (boolean expression)
+       if (boolean expression)
+          do this;
+       else  // belongs to closest if
+          do that statement;
+        
+        
+|CodingEx| **Coding Exercise**
+
+Try the following code with a dangling else. Notice that the indentation does not matter. How could you get the else to belong to the first if statement?
+
+.. activecode:: danglingelse
+   :language: java
+   
+   public class DanglingElseTest
+   {
+      public static void main(String[] args)
+      {
+         boolean sunny = true;
+         boolean hot = false;
+         if (sunny)
+            if (hot)
+                System.out.println("Head for the beach!");
+          else // Which if is else attached to?? 
+           System.out.println("Bring your umbrella!");
+      }
+   } 
+
+You can use curly brackets { } to enclose a nested if and have the else clause belong to the the top level if clause like below:
+
+.. code-block:: java
+
+    // Nested if with dangling else
+    if (boolean expression) 
+    {
+       if (boolean expression)
+          do this;
+    }
+    else  // belongs to first if
+      do that statement;
+
+
+.. Here's a more complex program that uses nested ifs to guess a number between 1 and 4. This program uses the **divide and conquer** technique called **binary search**, and we will come up with a better way to code this once we learn about loops in the next unit. 
+
+.. .. raw:: html
+
+    <iframe height="500px" width="100%"  style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/GuessingWithIfs?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+
+.. .. fillintheblank:: 3_3_2_test_cases
+
+   How many test cases do you need to test all the different branching possibilities in the program above?  
+   
+   -    :5: That's right. Count all the possible answers. There are 5 different possibilities.
+        :.*: Try it and see
+
+|Groupwork| Programming Challenge 
+----------------------------------
+
+.. image:: Figures/questionmark.jpg
+    :width: 100
+    :align: left
+    :alt: Magic 8 Ball
+    
+    
+.. |Akinator| raw:: html
+
+   <a href="https://en.akinator.com/" target="_blank">Akinator</a>
+
+We encourage you to work in pairs for this challenge which is on repl.it (you will need an account there if you want to save your version).
+
+Have you ever played 20 Questions? There is great online version called |Akinator| that guesses a real or fictional character by asking you questions. This is a simple Artificial Intelligence algorithm that uses a decision tree of yes or no questions to pinpoint the answer. Akinator's decision tree is very large, but we will play with a much smaller guessing game for animals.
+
+1. Try the program below and run it a couple times thinking of an animal and answering the questions with y or n for yes or no. Did it guess your animal? Probably not! It's not very good. It can only guess 3 animals. Let's try to expand it!
+
+2. In the very last else clause, the program knows that it is not a mammal and it guesses a bird. Let's add to that part. (You may want to click on Open in Repl.it on the top right of the window and then click on Sign up or Log in to save your work). Inside that last else clause, ask the user another question that distinguishes between reptiles and birds and get their answer, and then, add another if/else statement that guesses a bird or a frog. Run your code and test both possibilities!
+
+3. Did you notice that when it asked "Is it a pet?" and you said "y", it immediately guessed "dog"? What if you were thinking of a cat? Try to come up with a question that distinguishes dogs from cats and put in code in the correct place to ask the question, get the answer, and use an if/else to guess cat or dog. Run your code and test both possibilities!
+
+4. How many animals can your game now guess? How many test-cases are needed to test all branches of your code?
+
+5. If your class has time, your teacher may ask you to expand this game or to create a similar game to guess something else like singers or athletes. Spend some time planning your questions on paper and drawing out the tree before coding it. 
+
+.. raw:: html
+
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/GuessAnimal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+       
+Summary
+-------
+
+-If statements can be followed by an associated **else** part to form a 2-way branch:
+
+.. code-block:: java
+
+    if (boolean expression) {
+        do this;
+    }
+    else {
+        do that;
+    }
+
+- A two way selection (if/else) is written when there are two sets of statements: one to be executed when the Boolean condition is true, and another set for when the Boolean condition is false. 
+
+- The body of the “if” statement is executed when the Boolean condition is true, and the body of the “else” is executed when the Boolean condition is false.
+
+- Use 2 test-cases to find errors or validate results to try both branches of an if/else statement.
+
+- The else statement attaches to the closest if statement. 

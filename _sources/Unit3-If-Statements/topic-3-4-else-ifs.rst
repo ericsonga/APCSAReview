@@ -98,9 +98,41 @@ Run the code below and try changing the value of x to get each of the three poss
 
   
 
+     .. |Exercise| **Check your understanding**
+
+.. .. mchoice:: qcb1_1
+   :answer_a: A
+   :answer_b: B
+   :answer_c: C
+   :answer_d: D
+   :answer_e: E
+   :correct: d
+   :feedback_a: Notice that each of the first 4 statements start with an if so you need to check each one.  What will actually be printed?  Try it in one of the active code windows above.  
+   :feedback_b: Each of the first 4 if statements will execute.
+   :feedback_c: Check this in active code.
+   :feedback_d: Each of the if statements will be executed. So grade will be set to A, then B then C and finally D.  
+   :feedback_e: This will only be true when score is less than 60. 	
+
+    What is the value of grade when the following code executes and score is 93?  
+   
+   .. code-block:: java 
+
+     if (score >= 90) grade = "A";
+     if (score >= 80) grade = "B";
+     if (score >= 70) grade = "C";
+     if (score >= 60) grade = "D";
+     else grade = "E";
      
 
 
      
-
+Dangling else problem!
  
+Challenge
+
+text-adventure, could be 4 different directions n, s, w, e
+  You are on an island surrounded by water. There is a path to the woods to the north, the sea to the south, and a beach shack to the east. Which way do you want to go?
+  if (left)
+       asdfsadf
+   else 
+       asdfs
