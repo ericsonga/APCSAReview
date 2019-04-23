@@ -8,7 +8,7 @@ Preface
 ..	index::
 	single: license
 
-I, Barbara Ericson, an assistant professor in the school of information at the university of michigan published this book using a modified BSD license to
+I, Barbara Ericson, an assistant professor in the school of information at the University of Michigan published this book using a modified BSD license to
 encourage you to use it, change it, and modify it for your own purposes.
 I would appreciate knowing what you think if you do use this book, and I
 would love to see any modifications or additions you make.
@@ -72,6 +72,7 @@ Several students at Georgia Tech have helped review the eBook:
 * Bhavika Devnani
 * Stephanie Remy
 
+
 Many others have been involved in the creation of content for the eBook (including high school students).
 
 * Atiba Nkosi Kee
@@ -88,14 +89,16 @@ Many others have been involved in the creation of content for the eBook (includi
 * Christine Hsieh - added mixed up code problems at the end of the array chapter and code practice problems
 * Carlos Diaz - fixed problems and added code highlights
 * Avery Rosh - found an error in one of the 2D array questions
-* JP Fasano - found an erorr in one of the non-timed exams
+* JP Fasano - found an error in one of the non-timed exams
 * Srikar Yendapally - added code problems to the 2D array chapter
 * Kiran Ruston - added new questions to the free response problems at the end of the ebook.
+* Rachel Chagon - found an error in one of the hard multiple-choice questions in the conditional chapter.
+* Juan Vega - added a new practice exam
 
 License
 ---------
 
-Barbara Ericson `ericson@cc.gatech.edu <mailto://ericson@cc.gatech.edu>`_ January,
+Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_ January,
 2014
 All rights reserved.
 

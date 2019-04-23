@@ -64,16 +64,13 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should remove all the zeros from an ArrayList of Integers.  Assume the ArrayList "listOfNums" has been instantiated and filled with Integers.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment should remove all the zeros from an ArrayList of Integers.  Assume the ArrayList "listOfNums" has been instantiated and filled with Integers.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
    -----
-   Integer zero = new Integer(0);
    int i = 0;
    =====
    while (i < listOfNums.size()) {
    =====
-       if (listOfNums.get(i).equals(zero)) {
-   =====
-       if (listOfNums.get(i) == 0) { #distractor
+       if (listOfNums.get(i) == 0) {
    =====
            listOfNums.remove(i);
    =====
@@ -248,7 +245,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment should be method that removes a specific Integer (specified in parameter) whenever it occurs in a given ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
-   public static void removeElement(ArrayList<Integer> nums, 
+   public static void removeElement(ArrayList<Integer> nums,
                                     int toRemove) {
    =====
       int i = 0;
@@ -273,8 +270,3 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
       } //end while loop
    } //end average method
-
-
-
-
-
