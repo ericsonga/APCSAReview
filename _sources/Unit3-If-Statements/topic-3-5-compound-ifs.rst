@@ -1,7 +1,28 @@
 .. qnum::
    :prefix: 3-5-
    :start: 1
-
+   
+.. highlight:: java
+   :linenothreshold: 4
+   
+   
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 Compound Boolean Expressions
 ============================
 
@@ -13,10 +34,14 @@ Compound Boolean Expressions
 	pair: logical; or
 	pair: conditional; complex
 
-Ands (&&) and Ors (||)
-----------------------
+And (&&), Or (||), and Not (!)
+--------------------------------
 
-What if you want two things to be true before the body of the conditional is executed?  Use ``&&`` as a logical *and* to join two Boolean expressions and the body of the condition will only be executed only if both are true.  For example, what if you want to go out and your mom said you could if you clean your room and do your homework?  Run the code below and try different values for ``cleanedRoom`` and ``didHomework`` and see what they have to be for it to print ``You can go out``.
+What if you want two things to be true before the body of the conditional is executed?  Use ``&&`` as a logical **and** to join two Boolean expressions and the body of the condition will only be executed only if both are true.  
+
+|CodingEx| **Coding Exercise**
+
+For example, what if you want to go out and your parents say you could if you clean your room and do your homework?  Run the code below and try different values for ``cleanedRoom`` and ``didHomework`` and see what they have to be for it to print ``You can go out``.
 
 .. activecode:: lccc1
    :language: java
@@ -34,7 +59,11 @@ What if you want two things to be true before the body of the conditional is exe
       }
    }
 
-What if it is okay if only one of two things is true? Use ``||`` as a logical *or* to join two Boolean expressions and the body of the condition will be executed if one or both are true.  For example, your Dad might say you can go out if you can walk or he doesn't need the car.  Try different values for ``walking`` and ``carIsAvailable`` and see what the values have to be to print ``You can go out``.
+What if it is okay if only one of two things is true? Use ``||`` as a logical **or** to join two Boolean expressions and the body of the condition will be executed if one or both are true.  
+
+|CodingEx| **Coding Exercise**
+
+For example, your parents might say you can go out if you can walk or they don't need the car.  Try different values for ``walking`` and ``carIsAvailable`` and see what the values have to be to print ``You can go out``.
 
 .. activecode:: lccc2
    :language: java
@@ -51,6 +80,55 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical *o
       }
    }
 
+With numerical values, the or operator is often used to check for error conditions on different ends of the number line, while the and operator is often used to see if a number is in an range. 
+
+|CodingEx| **Coding Exercise**
+
+Explore how && and || are used with numbers below. Try different values for score like -10 and 110 in the code below.
+
+.. activecode:: lcccnum
+   :language: java
+   
+   public class TestNum
+   {
+      public static void main(String[] args)
+      {
+        int score = 10; // Try -10 and 110
+        if (score < 0 || score > 100) 
+            System.out.println("Score has an illegal value.");
+        if (score >= 0 && score <= 100) 
+            System.out.println("Score is in the range 0-100");
+ 
+      }
+   }
+
+
+
+The **not** (!) operator can be used to negate a boolean value. We've seen ! before in != (not equal).  In Java, ! has precedence (is executed before) &&, and && has precedence over ||. Parentheses can be used to force the order of execution in a different way. If you mix ! with && and ||, be careful because the results are often the opposite of what you think it will be at first. We'll see examples of this in the next lesson.  
+
+|CodingEx| **Coding Exercise**
+
+The code below says if homework is not done, you can't go out. Try different values for ``homeworkDone``.
+
+.. activecode:: lcccnot
+   :language: java
+   
+   public class TestNot
+   {
+      public static void main(String[] args)
+      {
+        boolean homeworkDone = false;
+        if (!homeworkDone) 
+            System.out.println("Sorry, you can't go out!");
+      }
+   }
+
+.. note::
+    In Java, ! will be executed before &&, and && will be executed before ||, unless there are parentheses. Anything inside parentheses is executed first.
+
+Truth Tables
+------------
+
 The following table (also called a **truth table**) shows the result for P && Q when P and Q are both expressions that can be true or false. As you can see below the result of P && Q is only true if both P and Q are true. 
 
 +-------+-------+-----------+
@@ -65,7 +143,9 @@ The following table (also called a **truth table**) shows the result for P && Q 
 | false | false | false     |
 +-------+-------+-----------+
 
-.. fillintheblank:: 5_3_1_trueAndFalse
+|Exercise| **Check your understanding**
+
+.. fillintheblank:: 3_5_1_trueAndFalse
 
    The truth table above is missing one result.  What is the result of P && Q when ``P=true`` and ``Q=false``?  
 
@@ -86,7 +166,9 @@ The following table shows the result for P || Q when P and Q are both expression
 | false | false | false     |
 +-------+-------+-----------+
 
-.. fillintheblank:: 5_3_2_falseOrTrue
+|Exercise| **Check your understanding**
+
+.. fillintheblank:: 3_5_2_falseOrTrue
 
    The truth table above is missing one result.  What is the result of ``P || Q`` when ``P=false`` and ``Q=true``? 
 
@@ -95,31 +177,15 @@ The following table shows the result for P || Q when P and Q are both expression
  
         
 
-**Check your understanding**
+|Exercise| **Check your understanding**
 
-.. mchoice:: qcbc_5
-   :answer_a: first case
-   :answer_b: second case
-   :answer_c: You will get a error because you can't divide by zero.  
-   :correct: b
-   :feedback_a: This will only print if x is greater than 0 and it is not.  
-   :feedback_b: This will print if x is less than or equal to zero or if y divided by x is not equal to 3.  
-   :feedback_c: Since the first condition if false when x is equal to zero the second condition won't execute.  Execution moves to the else.    
-
-   What is printed when the following code executes and x has been set to zero?  
-   
-   .. code-block:: java
-
-     if (x > 0 && (y / x) == 3) 
-        System.out.println("first case");
-     else System.out.println("second case");
 
 .. mchoice:: qcbc_7
    :answer_a: first case
    :answer_b: second case
    :correct: a
-   :feedback_a: This will print if both of the conditions are true and they are.  
-   :feedback_b: This will print either of the conditions are false. 
+   :feedback_a: first case will print if both of the conditions are true and they are.  
+   :feedback_b: second case will print either of the conditions are false. 
 
    What is printed when the following code executes and x has been set to 3 and y has been set to 9?  
    
@@ -133,8 +199,8 @@ The following table shows the result for P || Q when P and Q are both expression
    :answer_a: first case
    :answer_b: second case
    :correct: b
-   :feedback_a: This will print if both of the conditions are true, but the second is not. 
-   :feedback_b: This will print if either of the conditions are false and the second one is (6 / 3 == 2).
+   :feedback_a: first case will print if both of the conditions are true, but the second is not. 
+   :feedback_b: second case will print if either of the conditions are false and the second one is (6 / 3 == 2).
 
    What is printed when the following code executes and x has been set to 3 and y has been set to 6?  
    
@@ -144,16 +210,14 @@ The following table shows the result for P || Q when P and Q are both expression
         System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoice:: qcbc_6
+.. mchoice:: qcbc_or
    :answer_a: first case
    :answer_b: second case
-   :answer_c: You will get a error because you can't divide by zero.  
-   :correct: c
-   :feedback_a: This will print if either of the two conditions are true.  The first isn't true but the second will cause an error.
-   :feedback_b: This will print if both of the conditions are false.  But, an error will occur when testing the second condition.   
-   :feedback_c: The first condition will be false so the second one will be executed and lead to an error since you can't divide by zero.
+   :correct: a
+   :feedback_a: first case will print if either of the two conditions are true.  The first condition is true, even though the second one isn't.
+   :feedback_b: second case will print if both of the conditions are false, but the first condition is true.   
 
-   What is printed when the following code executes and x has been set to zero?  Notice that it is now a logical or rather than an and.
+   What is printed when the following code executes and x has been set to 3 and y has been set to 6?  Notice that it is now an **or** (||) instead of and.
    
    .. code-block:: java 
 
@@ -174,8 +238,25 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
 
    In a complex conditional using a logical and (``&&``) the evaluation will short circuit (not execute the second condition) if the first condition is false.  In a complex conditional using a logical or (``||``) the evaluation will short circuit if the first condition is true.  
  
-**Check your understanding**
+|Exercise| **Check your understanding**
 
+.. mchoice:: qcbc_5
+   :answer_a: first case
+   :answer_b: second case
+   :answer_c: You will get a error because you can't divide by zero.  
+   :correct: b
+   :feedback_a: first case will only print if x is greater than 0 and it is not.  
+   :feedback_b: second case will print if x is less than or equal to zero or if y divided by x is not equal to 3.  
+   :feedback_c: Since the first condition if false when x is equal to zero the second condition won't execute.  Execution moves to the else.    
+
+   What is printed when the following code executes and x has been set to 0?  
+   
+   .. code-block:: java
+
+     if (x > 0 && (y / x) == 3) 
+        System.out.println("first case");
+     else System.out.println("second case");
+     
 .. mchoice:: qcb_7sc
    :answer_a: first case
    :answer_b: second case
@@ -192,7 +273,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
      if (x == 0 || (y / x) == 3) System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoice:: qcb_8sc
+.. .. mchoice:: qcb_8sc
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't use a negative index with substring.   
@@ -206,10 +287,10 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    .. code-block:: java 
 
      String message = "help";
-     if (x >= 0 && message.substring(x).equals("help") System.out.println("first case");
+     if (x >= 0 && message.substring(x).equals("help")) System.out.println("first case");
      else System.out.println("second case");
      
-.. mchoice:: qcb_9sc
+.. .. mchoice:: qcb_9sc
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  
@@ -224,3 +305,54 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
 
      if ((y / x) == 3 || x = 0) System.out.println("first case");
      else System.out.println("second case");
+     
+     
+|Groupwork| Programming Challenge : Truth Tables POGIL
+------------------------------------------------------
+
+.. |pogil| raw:: html
+
+   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank">POGIL</a>
+   
+.. |pogil role| raw:: html
+
+   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank">POGIL role</a>
+   
+   
+   
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns. 
+
+Explore the following problems with your group:
+
+1. Write the sentence "If the temperature is greater than 80 and it's sunny, or if it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!".
+
+2. Complete a truth table for the if statement that you wrote in #1 with columns for temperature > 80, sunny, raining, and go to the beach.
+
+3. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly.
+
+.. activecode:: truthtablecode
+   :language: java
+   
+   public class TruthTable
+   {
+      public static void main(String[] args)
+      {
+        
+        
+      }
+   }
+
+Summary
+--------
+
+- Logical operators !(not), &&(and), and ||(or) are used with Boolean values. 
+
+- (A && B) is true if both A and B are true.
+
+- (A || B) is true if either A or B (or both) are true.
+
+- !(A) is true if A is false.
+
+- In Java, ! has precedence (is executed before) && which has precedence over ||. Parentheses can be used to force the order of execution in a different way.
+
+- When the result of a logical expression using && or || can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as short-circuit evaluation.

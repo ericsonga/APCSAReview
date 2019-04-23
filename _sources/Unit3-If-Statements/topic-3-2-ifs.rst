@@ -187,8 +187,8 @@ Run the following active code a couple times until you see all the possible outp
     Note always use == not = in an if statement! Test not assign.
 
 
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Magic 8 Ball
+------------------------------------------------
 
 .. image:: Figures/Magic_eight_ball.png
     :width: 100

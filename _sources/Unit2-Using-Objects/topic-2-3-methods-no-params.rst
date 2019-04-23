@@ -138,8 +138,8 @@ Can you make yertle draw the digital number 8, as 2 squares on top of each other
 
 
      
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Draw a Letter
+-------------------------------------------------
 
 Working in pairs, use the area below to have a turtle draw a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or today's date. 
 

@@ -122,8 +122,8 @@ Try some of the get methods and the toString() method in the program below. Note
     }
     
       
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Turtle Distances
+----------------------------------------------------
 
 1. The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)? 
 

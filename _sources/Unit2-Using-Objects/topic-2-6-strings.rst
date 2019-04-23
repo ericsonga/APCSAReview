@@ -215,8 +215,8 @@ What if you wanted to print out a double quote " character? Since the double quo
       }
    }
    
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Mad Libs
+--------------------------------------------
 
 Have you ever played MAD LIBS? In this game, you first choose a bunch of words without looking at the story and then those words are filled into the story to make it sound very wacky! Fill in the variables below with Strings for each word, and then run to see the wacky story.
 

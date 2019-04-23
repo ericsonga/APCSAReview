@@ -157,8 +157,8 @@ Other Math functions that you can use are:
 
 These are all listed in the Java Quick Reference guide that you can use during the exam: https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf.  
 
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Random Numbers
+--------------------------------------------------
 
 .. image:: Figures/lock.jpg
     :width: 100

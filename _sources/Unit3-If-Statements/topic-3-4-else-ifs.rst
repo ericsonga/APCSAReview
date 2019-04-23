@@ -4,26 +4,49 @@
    
 .. highlight:: java
    :linenothreshold: 4
-
-	
+   
+   
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 Multi-Selection: else-if Statements
 ===================================
 
-You can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if** and before the last possibility, the **else**.  
+Using if/else statements, you can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if** and before the last possibility, the **else**.  
 
-.. figure:: Figures/Condition-three.png
-    :width: 450px
-    :align: center
-    :figclass: align-center
+.. code-block:: java
 
-    Figure 1: The order that statements execute in a conditional with 3 options: if, else if, and else
+    // 3 way choice with else if
+    if (boolean expression)
+       statement1;
+    else if (boolean expression)
+         statement2;
+    else  
+        statement3;
     
+    
+|CodingEx| **Coding Exercise**
+
 Run the code below and try changing the value of x to get each of the three possible lines in the conditional to print.
 
-.. activecode:: lccb3
+.. activecode:: lccbElseIf
    :language: java
    
-   public class Test3
+   public class TestElseIf
    {
       public static void main(String[] args)
       {
@@ -34,12 +57,22 @@ Run the code below and try changing the value of x to get each of the three poss
         System.out.println("after conditional");
       }
    }
-   
-.. note:: Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
-  
-**Check your understanding**
 
-.. mchoice:: qcb2_1
+Here is a flowchart for a conditional with 3 options like in the code above. 
+
+.. figure:: Figures/Condition-three.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: The order that statements execute in a conditional with 3 options: if, else if, and else
+    
+.. note:: Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
+
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: qcb3_4_1
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -56,7 +89,7 @@ Run the code below and try changing the value of x to get each of the three poss
      else if (x == 0) System.out.println("x is zero"); 
      else System.out.println("x is positive"); 
      
-.. mchoice:: qcb2_2
+.. mchoice:: qcb3_4_2
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -73,7 +106,7 @@ Run the code below and try changing the value of x to get each of the three poss
      else if (x == 0) System.out.println("x is zero"); 
      else System.out.println("x is positive"); 
      
-.. mchoice:: qcb2_3
+.. mchoice:: qcb3_4_3
    :answer_a: first quartile
    :answer_b: second quartile
    :answer_c: third quartile
@@ -93,14 +126,37 @@ Run the code below and try changing the value of x to get each of the three poss
      else if (x < .75) System.out.println("third quartile");
      else System.out.println("fourth quartile");
      
+ 
+|CodingEx| **Coding Exercise**
 
-     
+The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Then, fix the code by adding in 4 else's to connect the if statements.
 
-  
+.. activecode:: lccbIfDebug
+   :language: java
+   
+   public class IfDebug
+   {
+      public static void main(String[] args)
+      {
+        int score = 93;
+        String grade = "";
+        
+        if (score >= 90) 
+            grade = "A";
+        if (score >= 80) 
+            grade = "B";
+        if (score >= 70) 
+            grade = "C";
+        if (score >= 60) 
+            grade = "D";
+        else grade = "E";
+        
+        System.out.println(grade);
+      }
+   }
 
-     .. |Exercise| **Check your understanding**
 
-.. .. mchoice:: qcb1_1
+.. .. mchoice:: qcb3_4_4
    :answer_a: A
    :answer_b: B
    :answer_c: C
@@ -123,16 +179,58 @@ Run the code below and try changing the value of x to get each of the three poss
      if (score >= 60) grade = "D";
      else grade = "E";
      
+|Groupwork| Programming Challenge : Adventure
+---------------------------------------------
+
+.. image:: http://www.spitenet.com/cave/images/AdventureMap.jpg
+    :width: 200
+    :align: left
+    :alt: Adventure map
+    
+    
+.. |Colossal Cave Adventure| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" target="_blank">Colossal Cave Adventure</a>
+   
+.. |playing Adventure| raw:: html
+
+   <a href="http://www.web-adventures.org/cgi-bin/webfrotz?s=Adventure" target="_blank">playing Adventure</a>
+   
+.. |walkthrough| raw:: html
+
+   <a href="http://www.sierrahelp.com/Walkthroughs/AdventureWalkthrough.html#in" target="_blank">walkthrough</a>
 
 
-     
-Dangling else problem!
- 
-Challenge
+We encourage you to work in pairs for this challenge which is on repl.it (you will need an account there if you want to save your version).
 
-text-adventure, could be 4 different directions n, s, w, e
-  You are on an island surrounded by water. There is a path to the woods to the north, the sea to the south, and a beach shack to the east. Which way do you want to go?
-  if (left)
-       asdfsadf
-   else 
-       asdfs
+One of the first games coded for early computers in the 1970s was called |Colossal Cave Adventure|. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try |playing adventure| recreated online following some of the commands in this |walkthrough|. Part of the challenge is finding the commands that the code will understand. 
+
+In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.  
+
+1. Try the following program on repl.it. Then, add in **else if** statements to go in the directions of "s" and "e" and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. 
+
+2. How many test-cases are needed to test all branches of your code?
+
+3. If your class has time, your teacher may ask you to expand this game further or to come up with a different adventure location. 
+
+
+.. raw:: html
+
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/Adventure?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+Summary
+--------
+
+- A multi-way selection is written when there are a series of conditions with different statements for each condition. 
+
+- Multi-way selection is performed using if-else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
+
+.. code-block:: java
+
+    // 3 way choice with else if
+    if (boolean expression)
+       statement1;
+    else if (boolean expression)
+         statement2;
+    else  
+        statement3;

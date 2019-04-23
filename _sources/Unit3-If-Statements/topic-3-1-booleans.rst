@@ -163,8 +163,8 @@ Try the expressions containing the % operator below to see how they can be used 
       }
    }  
    
-|Groupwork| Programming Challenge (POGIL)
------------------------------------------
+|Groupwork| Programming Challenge : Prime Numbers POGIL
+-------------------------------------------------------
 
 .. |pogil| raw:: html
 

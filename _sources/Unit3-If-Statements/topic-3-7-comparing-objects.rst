@@ -1,7 +1,29 @@
+.. qnum::
+   :prefix: 3-7-
+   :start: 1 
+   
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 Comparing Objects
 =================
 
-Comparing objects is a little different than comparing primitive typed values like numbers. Objects can be very complex and have many attribute values or instance variables inside them. For example, the turtle objects have many instance variables like name, width, height, xPos, yPos, etc. When comparing two turtle objects, we may need a specially written **equals** method to compare all of these values. 
+Comparing objects is a little different than comparing primitive typed values like numbers. Objects can be very complex and have many attribute values or instance variables inside them. For example, the turtle objects have many instance variables like name, width, height, xPos, yPos, etc. When comparing two turtle objects, we need a specially written **equals** method to compare all of these values. In this lesson, we will take a look at String objects and how they are compared.
+
 
 String Equality
 ---------------
@@ -10,16 +32,34 @@ String Equality
 	pair: String; equality
 	pair: String; equals
 
-With String objects, you must use the ``equals`` method to test if two strings have the same characters in the same order.  
+With String objects, you must use the ``equals`` method to test if two strings have the same characters in the same order instead of ``==`` which is used for primitive types.  
 
-When the operator ``==`` is used with object variables it returns true when the two variables *refer to the same object*. These variables are called **aliases** for the same object. With strings this happens when one string variable is set to another or when strings are set to the same string literal.  Only use ``==`` to test if two strings refer to the same object.  Most of the time you will want to use ``equals`` and not ``==`` with string. 
+When the operator ``==`` is used with object variables it returns true when the two variables *refer to the same object*. These variables are called **aliases** for the same object and **object references**. With strings this happens when one string variable is set to another or when strings are set to the same string literal.  Only use ``==`` to test if two strings refer to the same object.  Most of the time you will want to use ``equals`` and not ``==`` with strings. 
 
-The one common place to use == or != with objects is to see if they exist by comparing them to null.
 
-.. code-block:: java
 
-    if (greeting != null)
-        System.out.println(greeting);
+
+|CodingEx| **Coding Exercise**
+
+The one common place to use == or != with objects is to see if they exist by comparing them to **null**. Sometimes short-circuit evaluation to avoid an error if the object doesn't exist. Try the following code to see the NullPointer error. Since s is null, indexOf throws an error. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
+
+.. activecode:: nullTest
+   :language: java
+   
+   public class NullTest
+   {
+      public static void main(String[] args)
+      {
+        String s = null;
+        if (s.indexOf("a") >= 0)
+            System.out.println(s + " contains an a");
+        if (s != null && s.indexOf("a") >= 0)
+            System.out.println(s + " contains an a");   
+      }
+   }
+     
+
+
 
 
 If you run the following, what will be printed?
@@ -110,7 +150,7 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
 
     Figure 3: Two string variables that refer to the same string literal.  
   
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: qsbeq_1
    :answer_a: s1 == s2 && s1 == s3
@@ -165,13 +205,35 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
      String s3 = new String("hi");
      
      
- 
+|Groupwork| Programming Challenge : Tracing Code 
+------------------------------------------------
+
+What will the following code print out? Trace through the code by drawing diagrams of what is going on in memory like the figures above.
+
+.. code-block:: java
+
+    String s1 = null;
+    String s2 = new String("hi");
+    String s3 = new String("hi");
+    String s4 = "hi";
+    if (s1 == null)
+        s1 = s2;
+    if (s1 == s2)    
+       System.out.println("s1 and s2 refer to the same object");
+    if (s2 == s3)
+       System.out.println("s2 and s3 refer to the same object");
+    if (s3 == s4)
+       System.out.println("s3 and s4 refer to the same object");
+    if (s1.equals(s2) && s2.equals(s3) && s3.equals(s4))
+        System.out.println("s1, s2, s3, s4 are equal");
+      
+
 Summary
 -------------------
 
-- Often classes have their own equals method, which can be used to determine whether two objects of the class are equivalent.
+- Often classes have their own **equals** method, which can be used to determine whether two objects of the class are equivalent.
 
-- Two object references are considered aliases when they both reference the same object. 
+- Two object references are considered **aliases** when they both reference the same object. 
 
 - Object reference values can be compared, using == and !=, to identify aliases.
 

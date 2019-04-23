@@ -121,8 +121,8 @@ The GregorianCalendar class also has a constructor that takes a particular year,
 
 Try adding another GregorianCalendar object to the program above for your birthdate and have it print it out! 
 
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Debugging
+---------------------------------------------
 
 Debug the following code.
 

@@ -206,8 +206,8 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
    
    What specifies the data or state for an object in Java?
    
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Turtle Drawing
+--------------------------------------------------
 
 
 Working in pairs, create two Turtle objects below and have them draw a shape together. Each person should write the code for their turtle and draw half the shape. Here's and idea: see if you can draw squares of different sizes by calling the forward method multiple times. Here are some simple turtle methods that you could use:

@@ -223,8 +223,8 @@ You can use curly brackets { } to enclose a nested if and have the else clause b
    -    :5: That's right. Count all the possible answers. There are 5 different possibilities.
         :.*: Try it and see
 
-|Groupwork| Programming Challenge 
-----------------------------------
+|Groupwork| Programming Challenge : 20 Questions
+------------------------------------------------
 
 .. image:: Figures/questionmark.jpg
     :width: 100
@@ -248,7 +248,7 @@ Have you ever played 20 Questions? There is great online version called |Akinato
 
 4. How many animals can your game now guess? How many test-cases are needed to test all branches of your code?
 
-5. If your class has time, your teacher may ask you to expand this game or to create a similar game to guess something else like singers or athletes. Spend some time planning your questions on paper and drawing out the tree before coding it. 
+5. If your class has time, your teacher may ask you to expand this game or to create a similar game to guess something else like singers or athletes. Spend some time planning your questions on paper and drawing out the decision tree before coding it. 
 
 .. raw:: html
 

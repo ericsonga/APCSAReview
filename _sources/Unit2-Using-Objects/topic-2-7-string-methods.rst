@@ -320,8 +320,8 @@ Common Mistakes
   -  Trying to invoke a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
 
 
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Pig Latin
+----------------------------------------------
 
 .. |pig| image:: Figures/pig.png
     :width: 100

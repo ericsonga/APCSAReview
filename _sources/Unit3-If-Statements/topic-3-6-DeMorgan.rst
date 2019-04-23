@@ -1,7 +1,24 @@
 .. qnum::
    :prefix: 3-6-
-   :start: 1
+   :start: 1 
    
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 Equivalent Boolean Expressions (DeMorgan's Laws)
 ================================================
 
@@ -9,28 +26,46 @@ Equivalent Boolean Expressions (DeMorgan's Laws)
 	single: DeMorgan's Laws
 	single: negation
 	
-DeMorgan's laws were developed by Augustus De Morgan in the 1800s.  They show how to handle the negation of a complex conditional, which is a conditional statement with more than one condition joined by an and (&&) or or (||), such as ``(x < 3) && (y > 2)``.
+DeMorgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to handle the negation of a complex conditional, which is a conditional statement with more than one condition joined by an and (&&) or or (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex conditionals, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state that:
 
     -  not (a and b) is the same as (not a) or (not b).  In Java this is written as !(a && b) == !a || !b 
     
     -  not (a or b) is the same as (not a) and (not b).  In Java this is written as !(a || b) == !a && !b 
 
-Applying DeMorgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)`` which means that this complex conditional will be true when ``(x >= 3 || y <= 2)``.
+Although you do not have to memorize DeMorgan's Laws for the CS A Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) == !a || !b by constructing the truth table below and seeing that they are give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
 
-.. note ::
++-------+-------+-----------+----------+
+| a     | b     | !(a && b) | !a || !b |
++=======+=======+===========+==========+
+| true  | true  | false     | false    |
++-------+-------+-----------+----------+
+| false | true  | true      | true     |
++-------+-------+-----------+----------+
+| true  | false | true      | true     |
++-------+-------+-----------+----------+
+| false | false | true      | true     |
++-------+-------+-----------+----------+
 
-   Notice that the negation is distributed to all parts of a complex conditional.  It negates each part of the conditional and changes and (&&) to or (||) and or (||) to and (&&).
+Often, you can simplify boolean expressions to create equivalent expressions. For example, applying DeMorgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)``. This can then be simplified further by flipping the operators instead of keeping the not operator. So, ``!(x < 3) || !(y > 2)`` is simplified to ``(x >= 3 || y <= 2)`` where the relational operators are flipped and the negation is removed. So,
 
-The negation modifies each conditional as shown below.
+.. code-block:: java 
 
-	- < becomes >=
-	- > becomes <=
-	- == becomes !=
-	- <= becomes >
-	- >= becomes < 
-	- != becomes ==
+    !(x < 3 && y > 2) == !(x < 3) || !(y > 2) == (x >= 3 || y <= 2)
+    
 
-See the example below.  For what values of x and y will it print true?  Try out different values of x and y to check your answer.
+The negation can be removed if you flip the relational operator. For example, not (c equals d) is the same as saying c does not equal d. The not in the relational expressions below is equivalent to flipping the relational operator to its opposite sign. 
+
+  - !(c == d) == (c != d)
+  - !(c != d) == (c == d)
+  - !(c < d) == (c >= d)
+  - !(c > d) == (c <= d)
+  - !(c <= d) == (c > d)
+  - !(c >= d) == (c < d)
+
+
+|CodingEx| **Coding Exercise**
+
+For what values of x and y will the code below print true?  Try out different values of x and y to check your answer.
 
 .. activecode:: lcdmtest
    :language: java
@@ -45,7 +80,8 @@ See the example below.  For what values of x and y will it print true?  Try out 
       }
    }
 
-For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_Morgan's_laws.  
+ 
+|Exercise| **Check your understanding**
 
 .. mchoice:: qcbdm1_8
    :answer_a: first case
@@ -75,6 +111,48 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
      if (!(x < 3 && y > 2)) System.out.println("first case");
      else System.out.println("second case");
      
+
+     
+|Groupwork| Programming Challenge : Truth Tables POGIL
+------------------------------------------------------
+
+.. |pogil| raw:: html
+
+   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank">POGIL</a>
+   
+.. |pogil role| raw:: html
+
+   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank">POGIL role</a>
+   
+   
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns. 
+
+Explore the following problems with your group:
+
+1. Complete a truth table for the boolean expression: !(x == 0 || x >= 1). Is this the set of positive or negative numbers? 
+
+2. Complete a truth table for the boolean expression: !(x == 0) && !(x >= 1). Is this the set of positive or negative numbers?
+
+3. Complete a truth table for the boolean expression: (x != 0) || (x < 1). Is this the set of positive or negative numbers?
+
+4. Are the 3 boolean expressions equivalent? Why or why not?
+
+5. Test your answers using the active code window below.
+
+6. Complete the following exercises 3-6-3 through 3-6-6 in your POGIL groups.
+
+.. activecode:: booleanexp
+   :language: java
+   
+   public class EquivalentExpressions
+   {
+      public static void main(String[] args)
+      {
+        
+        
+      }
+   }
+
 .. mchoice:: qcbdm3_1
    :answer_a: (x < 2) || (y > 4)
    :answer_b: (x < 2) && (y > 4)
@@ -143,3 +221,24 @@ For more information about DeMorgan's laws see http://en.wikipedia.org/wiki/De_M
    .. code-block:: java 
 
      !(x<= 5 && y > 7)
+     
+Summary
+--------
+
+- De Morgan’s Laws can be applied to Boolean expressions to create equivalent ones:
+
+  - !(a && b) == !a || !b 
+  - !(a || b) == !a && !b 
+
+- A negated conditional with a relational operator can be simplified by flipping the relational operator and removing the not. 
+
+  - !(c == d) == (c != d)
+  - !(c != d) == (c == d)
+  - !(c < d) == (c >= d)
+  - !(c > d) == (c <= d)
+  - !(c <= d) == (c > d)
+  - !(c >= d) == (c < d)
+  
+- Truth tables can be used to prove that 2 Boolean expressions are identical.
+
+-Equivalent Boolean expressions will evaluate to the same value in all cases.

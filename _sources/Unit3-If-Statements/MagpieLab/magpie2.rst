@@ -5,6 +5,7 @@
 .. highlight:: java
    :linenothreshold: 4
 
+<Explain main and methods more>
 
 Activity 2: Running Simplified Magpie Code
 ===========================================
@@ -15,8 +16,6 @@ The activity asks you to enter the following as input using the ``Scanner`` clas
 * I said no!
 * The weather is nice.
 * Do you know my brother?
-
-You can also step through this simplified code `here <http://www.pythontutor.com/visualize.html#code=public+class+Magpie2%0A%7B%0A+++public+String+getGreeting(%29%0A+++%7B%0A+++++return+%22Hello,+let's+talk.%22%3B%0A+++%7D%0A%0A+++public+String+getResponse(String+statement%29%0A+++%7B%0A+++++String+response+%3D+%22%22%3B%0A+++++if+(statement.indexOf(%22no%22%29+%3E%3D+0%29+%7B%0A+++++++response+%3D+%22Why+so+negative%3F%22%3B%0A+++++%7D+else+if+(statement.indexOf(%22mother%22%29+%3E%3D+0%0A+++++++++++++++++%7C%7C+statement.indexOf(%22father%22%29+%3E%3D+0%0A+++++++++++++++++%7C%7C+statement.indexOf(%22sister%22%29+%3E%3D+0%0A+++++++++++++++++%7C%7C+statement.indexOf(%22brother%22%29+%3E%3D+0%29+%7B%0A+++++++response+%3D+%22Tell+me+more+about+your+family.%22%3B%0A+++++%7D+else+%7B%0A+++++++response+%3D+getRandomResponse(%29%3B%0A+++++%7D%0A+++++return+response%3B%0A+++%7D%0A%0A+++private+String+getRandomResponse(%29%0A+++%7B%0A+++++final+int+NUMBER_OF_RESPONSES+%3D+4%3B%0A+++++double+r+%3D+Math.random(%29%3B%0A+++++int+whichResponse+%3D+(int%29(r+*+NUMBER_OF_RESPONSES%29%3B%0A+++++String+response+%3D+%22%22%3B%0A%0A+++++if+(whichResponse+%3D%3D+0%29+%7B%0A+++++++response+%3D+%22Interesting,+tell+me+more.%22%3B%0A+++++%7D+else+if+(whichResponse+%3D%3D+1%29+%7B%0A+++++++response+%3D+%22Hmmm.%22%3B%0A+++++%7D+else+if+(whichResponse+%3D%3D+2%29+%7B%0A+++++++response+%3D+%22Do+you+really+think+so%3F%22%3B%0A+++++%7D+else+if+(whichResponse+%3D%3D+3%29+%7B%0A+++++++response+%3D+%22You+don't+say.%22%3B%0A+++++%7D%0A+++++return+response%3B%0A+++++++%7D%0A%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++Magpie2+maggie+%3D+new+Magpie2(%29%3B%0A%0A+++++System.out.println(maggie.getGreeting(%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22My+mother+and+I+talked+last+night.%22%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22I+said+no!%22%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22The+weather+is+nice.%22%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22Do+you+know+my+brother%3F%22%29%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=9>`_.  Use the forward button to execute the next statement.
 
 .. activecode:: lc-magpie2
    :language: java
@@ -68,12 +67,32 @@ You can also step through this simplified code `here <http://www.pythontutor.com
         Magpie2 maggie = new Magpie2();
 
         System.out.println(maggie.getGreeting());
+        System.out.println(">My mother and I talked last night.");
         System.out.println(maggie.getResponse("My mother and I talked last night."));
+        System.out.println(">I said no.");
         System.out.println(maggie.getResponse("I said no!"));
+        System.out.println(">The weather is nice.");
         System.out.println(maggie.getResponse("The weather is nice."));
+        System.out.println(">Do you know my brother?");
         System.out.println(maggie.getResponse("Do you know my brother?"));
       }
    }
+
+.. |chatbots| raw:: html
+
+   <a href="https://sites.google.com/site/webtoolsbox/bots" target="_blank">chatbots here</a>
+
+
+Click on Forward at the bottom to step through the code: 
+
+.. raw:: html
+
+   <div>
+   <iframe width="900" height="680" frameborder="0" src="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Magpie2%0A%7B%0A+++public+String+getGreeting(%29%0A+++%7B%0A+++++return+%22Hello,+let's+talk.%22%3B%0A+++%7D%0A%0A+++public+String+getResponse(String+statement%29%0A+++%7B%0A+++++String+response+%3D+%22%22%3B%0A+++++if+(statement.indexOf(%22no%22%29+%3E%3D+0%29+%7B%0A+++++++response+%3D+%22Why+so+negative%3F%22%3B%0A+++++%7D+else+if+(statement.indexOf(%22mother%22%29+%3E%3D+0%0A+++++++++++++++++%7C%7C+statement.indexOf(%22father%22%29+%3E%3D+0%0A+++++++++++++++++%7C%7C+statement.indexOf(%22sister%22%29+%3E%3D+0%0A+++++++++++++++++%7C%7C+statement.indexOf(%22brother%22%29+%3E%3D+0%29+%7B%0A+++++++response+%3D+%22Tell+me+more+about+your+family.%22%3B%0A+++++%7D+else+%7B%0A+++++++response+%3D+getRandomResponse(%29%3B%0A+++++%7D%0A+++++return+response%3B%0A+++%7D%0A%0A+++private+String+getRandomResponse(%29%0A+++%7B%0A+++++final+int+NUMBER_OF_RESPONSES+%3D+4%3B%0A+++++double+r+%3D+Math.random(%29%3B%0A+++++int+whichResponse+%3D+(int%29(r+*+NUMBER_OF_RESPONSES%29%3B%0A+++++String+response+%3D+%22%22%3B%0A%0A+++++if+(whichResponse+%3D%3D+0%29+%7B%0A+++++++response+%3D+%22Interesting,+tell+me+more.%22%3B%0A+++++%7D+else+if+(whichResponse+%3D%3D+1%29+%7B%0A+++++++response+%3D+%22Hmmm.%22%3B%0A+++++%7D+else+if+(whichResponse+%3D%3D+2%29+%7B%0A+++++++response+%3D+%22Do+you+really+think+so%3F%22%3B%0A+++++%7D+else+if+(whichResponse+%3D%3D+3%29+%7B%0A+++++++response+%3D+%22You+don't+say.%22%3B%0A+++++%7D%0A+++++return+response%3B%0A+++++++%7D%0A%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++Magpie2+maggie+%3D+new+Magpie2(%29%3B%0A%0A+++++System.out.println(maggie.getGreeting(%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22My+mother+and+I+talked+last+night.%22%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22I+said+no!%22%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22The+weather+is+nice.%22%29%29%3B%0A+++++System.out.println(maggie.getResponse(%22Do+you+know+my+brother%3F%22%29%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=9&codeDivWidth=350&codeDivHeight=500"> </iframe>
+   </div>
+   
+.. links  http://cscircles.cemc.uwaterloo.ca/java_visualize/ or http://www.pythontutor.com/visualize.html
+
 
 As you can see the ``getResponse`` method of Magpie2 looks for certain keywords like ``"mother"`` and ``"brother"``.  Why do you think the response to "Do you know my brother?" isn't "Tell me more about your family."?  See if you can modify the code above to respond correctly.
 

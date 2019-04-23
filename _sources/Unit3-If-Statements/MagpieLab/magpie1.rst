@@ -8,21 +8,25 @@
 Lab Requirement
 ======================
 
-As of 2014-2015 the Advanced Placement Computer Science A course must include at least 20 hours of hands-on labs.  Three labs were created as exemplars and can be used to satisfy this requirement, but teachers can do other labs instead of these three. The three labs are Magpie, Picture, and Elevens.  See https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/course-details/lab-requirements for the student guides for each of these labs.  Your teacher will provide the lab code to you. The particular code in each of these labs will not be on the exam, but the concepts covered by the labs will be on the exam.
+As of 2014-2015 the Advanced Placement Computer Science A course must include at least 20 hours of hands-on labs.  In 2014, 3 recommended labs were created, Magpie, Picture, and Elevens, and in 2019-20, 4 more labs were created, Consumer Review, Steganography (an extension of PictureLab), Celebrity, and Data. Teachers can choose to do any of these labs or their own labs to complete at least 20 hours of labs. See https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/course-details/lab-requirements for the student guides for each of these labs.  Your teacher will provide the lab for you. The particular code in each of these labs will not be on the exam, but the concepts covered by the labs will be on the exam.
 
 Magpie Lab
 ===============
 
 The Magpie lab allows the student to work with the ``String`` class and conditionals with a **chatbot**.  A **chatbot** is a computer program that tries to hold a conversation with a user.  This chapter will walk you through the activities in the Magpie chatbot lab.  
 
-The first activity in Magpie is to explore some existing chatbots.  
+The first activity in Magpie is to explore some existing chatbots.  We encourage students to work in pairs or groups on this activity.
 
 Activity 1: Exploring Chatbots
 ===============================
 
-Go to https://sites.google.com/site/webtoolsbox/bots to try out some chatbots.  
+.. |chatbots| raw:: html
+
+   <a href="https://sites.google.com/site/webtoolsbox/bots" target="_blank">chatbots here</a>
    
-Record the chatbot response to each of the following.
+1. Working in pairs or groups, try out some |chatbots|.  
+   
+2. Record the chatbot response to each of the following.
 
 * Where do you come from?
 * asdfghjkl;
@@ -30,15 +34,12 @@ Record the chatbot response to each of the following.
 * The weather is nice.
 * I said no!
 
-Ask the chatbot other questions. 
+3. Ask the chatbot other questions. 
 
 * Record the most interesting response.
 * Record the most peculiar response.  
 
-Work with another student or group to have two chatbots converse with each other.  Type the responses from one chatbot into the input area for the other and vice-versa.  
+4. Work with another student or group to have two chatbots chat with each other.  Type the responses from one chatbot into the input area for the other and vice-versa.  
 
-Keywords
-==========
-
-Some chatbots look for particular keywords and respond based on those keywords.  What are some of the keywords that your chatbot seems to be responding to?  Why do you think it responds to those keywords?  
+5. **Keywords**: Some chatbots look for particular keywords and respond based on those keywords.  What are some of the keywords that your chatbot seems to be responding to?  Why do you think it responds to those keywords?  
 
