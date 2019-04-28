@@ -32,20 +32,20 @@ What if you want to pick between two possibilities?  If you are trying to decide
 
     // A single if/else statement
     if (boolean expression)
-        do this statement;
+        Do statement;
     else
-        do that statement;
+        Do other statement;
    
 .. code-block:: java
 
     // A block if/else statement    
     if (boolean expression)  {
-       do this statement;
-       and this;
+       statement1;
+       statement2;
     }
     else {
        do other statement;
-       and this other one;
+       and another one;
     }
     
 The following flowchart demonstrates that if the condition (the boolean expression) is true, one block of statements is executed, but if the condition is false, a different block of statements inside the else clause is executed.  
@@ -169,9 +169,9 @@ If statements can be nested inside other if statements. Sometimes with nested if
     // Nested if with dangling else
     if (boolean expression)
        if (boolean expression)
-          do this;
+          Do statement;
        else  // belongs to closest if
-          do that statement;
+          Do other statement;
         
         
 |CodingEx| **Coding Exercise**
@@ -263,10 +263,10 @@ Summary
 .. code-block:: java
 
     if (boolean expression) {
-        do this;
+        Do statement;
     }
     else {
-        do that;
+        Do other statement;
     }
 
 - A two way selection (if/else) is written when there are two sets of statements: one to be executed when the Boolean condition is true, and another set for when the Boolean condition is false. 

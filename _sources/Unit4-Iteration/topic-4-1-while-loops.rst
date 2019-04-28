@@ -41,15 +41,15 @@ Notice the while statement looks a lot like an if statement, but it runs more th
 
 .. code-block:: java
 
-    // if statements just run once
+    // if statements just run once if the condition is true
     if (condition)
     {
-        do this;
+        statements;
     }
-    // while statements keep running while condition is true
+    // while statements are repeated while the condition is true
     while (condition)
     {
-      do this;
+      statements;
     }
     
 
@@ -153,7 +153,11 @@ You can use a ``while`` loop to repeat the body of the loop a certain number of 
 
 |CodingEx| **Coding Exercise**
 
-Here's another example with numbers. This code calculates the average of positive numbers but it is missing the condition for the loop on line 14.  Let's use -1 as the **sentinel value**. Add the condition to  the while loop to run while the user does not input -1. What would happen if you forgot step 3 (change the loop variable - get a new input)? Try commenting out line 19 with // to see what happens (note there is a stop button at the top!).
+.. |numbers on repl.it| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Average" target="_blank">numbers on repl.it</a>
+
+Here's another example with |numbers on repl.it|. This code calculates the average of positive numbers, but it is missing the condition for the loop on line 14.  Let's use -1 as the **sentinel value**. Add the condition to  the while loop to run while the user does not input -1. What would happen if you forgot step 3 (change the loop variable - get a new input)? Try commenting out line 19 with // to see what happens (note there is a stop button at the top!).
 
 .. raw:: html
 

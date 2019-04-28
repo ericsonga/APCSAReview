@@ -149,7 +149,7 @@ Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to
         System.out.print("*"); 
      }
      
-**Mixed up programs**
+     
 
 .. parsonsprob:: print_evens
    :adaptive:
@@ -177,7 +177,7 @@ Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to
 
 |CodingEx| **Coding Exercise**
 
-What do you think will happen when you run the code below?  How would it change if you changed line 11 to <code>i = 3</code>?
+What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3?
 
 .. activecode:: lcfcp1
    :language: java
@@ -284,13 +284,13 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
    <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
 
-In the last exercise, you used a for-loop to have yertle the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops.
+In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops.
 
-1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square. What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360. 
+1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360. 
 
-2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What angle should you use for the turns?
+2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What angle should you use for the turns? Remember they have to add up to 360 degrees.
 
-3. Create a variable n that holds the number of sides for any polygon, and use n in your loop. Can you have the loop draw a variety of shapes by just changing the value of the variable n? How about a 9 sided nonagon! 
+3. Create a variable n that holds the number of sides for any polygon, and use n in your loop. Can you have the loop draw a variety of shapes by just changing the value of the variable n? The power of abstraction! Can you draw a 9 sided nonagon? (Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts).
 
 .. activecode:: TurtleShapes
     :language: java
@@ -311,7 +311,7 @@ In the last exercise, you used a for-loop to have yertle the turtle draw a squar
           yertle.setColor(Color.blue); 
           
           // Add your loop here!
-          yertle.forward();
+          yertle.forward(100);
           yertle.turn(90);
           
           world.show(true); 

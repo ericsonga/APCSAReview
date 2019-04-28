@@ -55,11 +55,11 @@ A conditional uses the keyword ``if`` followed by Boolean expression inside of  
 
     // A single if statement
     if (boolean expression)
-        do this statement;
+        Do statement;
     // Or a single if with {}
     if (boolean expression) 
     {
-       do this statement;
+       Do statement;
     }
     // A block if statement: { } required    
     if (boolean expression)
@@ -226,7 +226,7 @@ Summary
 
     // A single if statement
     if (boolean expression)
-        do this statement;
+        Do statement;
     // A block if statement    
     if (boolean expression)
     {

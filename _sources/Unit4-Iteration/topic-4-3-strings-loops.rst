@@ -85,3 +85,11 @@ The while loop starts on line 9 in the code above.  Statements 10 through 13 are
    =====
    } // end method
 
+Summary
+---------
+
+There are standard algorithms that utilize String traversals to:
+
+* Find if one or more substrings has a particular property
+* Determine the number of substrings that meet specific criteria
+* Create a new string with the characters reversed

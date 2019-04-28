@@ -179,7 +179,7 @@ How many stars are printed out by the following loops? How many times do the loo
    
 For the example above the outer loop executes 4-0+1= 5 times and the inner 9-0+1=10 times so the total is 5 * 10 = 50.  
 
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: qln_6_1
    :answer_a: 40
@@ -253,3 +253,6 @@ For the example above the outer loop executes 4-0+1= 5 times and the inner 9-0+1
         System.out.println();
      }
      
+Summary
+-------
+
