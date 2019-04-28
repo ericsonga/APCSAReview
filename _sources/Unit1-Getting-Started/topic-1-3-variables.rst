@@ -407,7 +407,7 @@ your variables crazy things like ``thisIsAReallyLongName``.  This makes the code
     single: camel case
 	pair: variable; naming convention
 	
-The convention in Java is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case**.  Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  
+The convention in Java is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case**.  Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  Run the code below to see the difference.
   
 .. activecode:: lcnv1
    :language: java
@@ -416,10 +416,10 @@ The convention in Java is to always start a variable name with a lower case lett
    {
       public static void main(String[] args)
       {
-        int PlayerScore = 0; // variables names using camel case
-        int playerScore = 1;
-        System.out.println(PlayerScore);
+        int playerScore = 0; // variable name using camel case
+        int playerscore = 1; // this is a different variable
         System.out.println(playerScore);
+        System.out.println(playerscore);
       }
    }
    

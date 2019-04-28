@@ -52,17 +52,30 @@ If you use a variable to keep score you would probably increment it (add one to 
       }
    }
    
-You can set one variable's value to a *copy* of the value of another variable.  This won't change the value of the variable that you are copying from.  Step through the code below by clicking the "Forward" button to see how the values of the variables change.
+You can set one variable's value to a *copy* of the value of another variable.  This won't change the value of the variable that you are copying from.  
 
+
+
+.. |Java visualizer| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank">Java visualizer</a>
+
+Click on this cool |Java visualizer| to step through the code. Click on the Forward button at the bottom of the code to see how the values of the variables change.
+
+.. only works with https
 
 .. raw:: html
 
    <div>
-   <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
+   <iframe width="800" height="600" frameborder="0" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
    </div>
    
 |Exercise| **Check your understanding**
 
+.. |Java visualizer2| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank">Java visualizer</a>
+   
 .. mchoice:: q2_1
    :answer_a: x = 0, y = 1, z = 2
    :answer_b: x = 1, y = 2, z = 3
@@ -74,7 +87,7 @@ You can set one variable's value to a *copy* of the value of another variable.  
    :feedback_c: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
    :feedback_d: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
 
-   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this `link <http://www.pythontutor.com/java.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0/>`_
+   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this |Java visualizer2| link.
 
    .. code-block:: java 
 
@@ -111,7 +124,14 @@ In the mixed up programs below, drag the blocks to the right to put them in the 
 Input with Variables
 --------------------
 
-Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend's name. The code works for any name: behold, the power of variables!
+.. |repl JavaIOExample| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/JavaIOExample" target="_blank">repl JavaIOExample</a>
+
+
+
+
+Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below (|repl JavaIOExample|) will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend's name. The code works for any name: behold, the power of variables!
 
 .. raw:: html
 
@@ -137,6 +157,10 @@ Operators
 
 Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``).  Java uses (``==``) to test if the value on the left is equal to the value on the right and (``!=``) to test if two items are not equal.  You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.
 
+|CodingEx| **Coding Exercise:** 
+
+Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
+
 .. activecode:: lcop1
    :language: java
    
@@ -153,7 +177,7 @@ Java uses the standard mathematical operators for addition (``+``), subtraction 
       }
    }
    
-Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
+
 
 .. note::
 
@@ -163,7 +187,9 @@ With division, another thing to watch out for is dividing by 0. An attempt to di
 
 Operators can be used to create compound expressions. When they are evaluated, operator precedence rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
 
-|CodingEx| **Coding Exercise:** In the example below, try to guess what it will print out and then run it to see if you are right.
+|CodingEx| **Coding Exercise:** 
+
+In the example below, try to guess what it will print out and then run it to see if you are right.
 
 .. activecode:: compound1
    :language: java

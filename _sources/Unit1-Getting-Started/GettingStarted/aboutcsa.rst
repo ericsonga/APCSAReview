@@ -42,4 +42,8 @@ The 4 free response questions allow students to write code to answer a problem a
 - Question 4: 2- Array, where students complete program code that uses 2D arrays.
 
  
-For more information on the exam see https://apstudent.collegeboard.org/apcourse/ap-computer-science-a . Please also note the list of careers that taking CS A can lead to! Learning to code is an increasingly important skill that has applications in many careers!  
+.. |AP CS A site| raw:: html
+
+   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank">AP CS A site</a>
+   
+For more information on the exam see the College Board |AP CS A site|. This site also has a list of careers that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!  

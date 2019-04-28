@@ -7,6 +7,7 @@ Getting Started and Primitive Types
 :::::::::::::::::::::::::::::::::::::::::::
 
 Class Periods: 8-10
+
 AP CS A Exam Weighting: 2.5-5%
 
 .. toctree::

@@ -12,11 +12,11 @@ Java Development Environments
     
 The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs. 
 
-You can learn Java by just using the interactive coding panels in this e-book. However, it's a good idea to also try a Java IDE to build code outside of this e-book. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
+You can learn Java by just using the interactive coding panels called Active Code in this e-book. However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
 
 repl.it
 -------
-If you are using a Chromebook or you cannot install software on your computer, you can use an online development environment like https://repl.it/ where you can login with a Google account or make an account. You can create new projects and all of your code will be kept online in your account.  One limitation of online environments is that they usually cannot create Java code that uses a graphical user interface, and they only do input and output as text (which is fine for CS A code but not as much fun). However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! 
+If you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option, you can use an online development environment like https://repl.it/ where you can login with a Google account or make an account. You can create new projects and all of your code will be kept online in your account.  One limitation of online environments is that they usually cannot create Java code that uses a graphical user interface, and they only do input and output as text (which is fine for CS A code but not as much fun). However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! 
 
 Dr. Java
 --------

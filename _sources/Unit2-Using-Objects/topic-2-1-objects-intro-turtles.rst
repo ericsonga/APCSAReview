@@ -136,14 +136,15 @@ What are Classes and Objects?
 
 In Java, a **class** is used to define a new data type (classify something).   The class defines what objects of the class need to know (attributes or instance variables) and do (behaviors or methods).  A class is the formal implementation, or blueprint, of the attributes and behaviors of an object. 
 
-There are many classes that are part of the Java languge, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``List``, ``ArrayList``).  
+There are many classes that are part of the Java language, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``ArrayList``).  
 
-The real power of Java is the ability to create your own classes (define your own types). You will also learn how to create your own classes in Unit 5. 
+The real power of Java is the ability to create your own classes (define your own types). You will learn how to create your own classes in Unit 5. 
 
-In the video below, which was created using the free software Greenfoot (http://greenfoot.org), you can see ant objects doing actions like moving and eating.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial if you are interested in learning more about Greenfoot.
-   
-.. the video is introToAnts.mov
+.. |Greenfoot video| raw:: html
 
+   <a href="https://youtu.be/7G93HDuqXzY" target="_blank">Greenfoot video</a>
+
+Here's a |Greenfoot video|, which was created using the free software Greenfoot (http://greenfoot.org), where you can see ant objects doing actions like moving and eating.  Greenfoot makes it easy to create 2d simulations and games in Java.  See http://www.greenfoot.org/doc/tut-2 for a tutorial if you are interested in learning more about Greenfoot.
 
 You can think of a class like a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  A class can also be thought of as a factory that produces objects.  
 

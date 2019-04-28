@@ -37,7 +37,7 @@ Compound Assignment Operators
 Compound assignment operators are shortcuts that do a math operation and assignment in one step. For example, ``x += 1`` adds 1 to x and assigns the sum to x. It is the same as ``x = x + 1``. This pattern is possible with any operator put in front of the = sign. You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the same as ``x = x - y``, ``x *= y`` is the same as ``x = x * y``, and ``x /= y`` is the same as ``x = x / y``.   
 
 The most common shortcut ``++``, the plus-plus or increment operator, is used to add one to the current value; ``x++`` is the same as ``x += 1`` and the same as ``x = x + 1``. It is a shortcut that is used a lot in loops. You may have also seen it in the language C++ which is an inside joke that C has been incremented or improved to create C++.
-The ``--`` operator is used to subtract one from the current value: ``y--`` is the same as ``y = y - 1``. These are the only two double operators; this shortcut pattern does not exist with other operators.
+The ``--`` operator is used to subtract one from the current value: ``y--`` is the same as ``y = y - 1``. These are the only two double operators; this shortcut pattern does not exist with other operators. Run the following code to see ++ in action!
 
 .. activecode:: lcpp
    :language: java
@@ -81,7 +81,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
      int x = 0;
      int y = 1;
      int z = 2;
-     x--; // x followed bythe double minus sign
+     x--; // x followed by the double minus sign
      y++;
      z+=y;
      

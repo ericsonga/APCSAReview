@@ -16,5 +16,6 @@ Lab Periods: 6 days
    topic-4-4-nested-loops.rst
    topic-4-5-loop-analysis.rst
    SummaryPractice/toctree.rst
+   ConsumerReviewLab.rst
    Exercises.rst
 

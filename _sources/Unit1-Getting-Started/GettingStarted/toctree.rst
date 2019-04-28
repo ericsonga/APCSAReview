@@ -11,3 +11,4 @@ Getting Started
    javaIDEs.rst
    growthMindset.rst
    ptest1.rst
+   survey.rst
