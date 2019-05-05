@@ -47,7 +47,7 @@ To use an object's method, you must use the object name and the dot (.) operator
 
 
 
-|CodingEx| **Coding Exercise*** 
+|Exercise| **Check Your Understanding**
 
 Try to put the following mixed up code in the right order to draw the digital number 7 with just a line going straight up and then a line going left.
 
@@ -141,7 +141,7 @@ Can you make yertle draw the digital number 8, as 2 squares on top of each other
 |Groupwork| Programming Challenge : Draw a Letter
 -------------------------------------------------
 
-Working in pairs, use the area below to have a turtle draw a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or today's date. 
+Working in pairs, use the area below to have a turtle draw a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or a number from today's date. 
 
 It may help to act out the code pretending you are the turtle. Remember that which way you turn depends on which direction you are facing, and the turtle begins facing up.
 
@@ -158,9 +158,11 @@ Here are some simple turtle methods that you could use:
 
    <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
 
+You may notice that it is challenging to have your turtle draw with these simple methods. In the next lesson, we will use more complex Turtle methods where you can indicate how many steps to take or what angle to turn that will make drawing a lot easier!
+
 After writing your code below, if you'd like your own copy, you can open this |repl link|, copy in your code, and save it in your own repl.it account.
 
-.. activecode:: Turtle_Letter
+.. activecode:: challenge2-3-Turtle_Letter
     :language: java
     :datafile: turtleClassesMethods
 

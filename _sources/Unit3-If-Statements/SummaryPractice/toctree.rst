@@ -1,5 +1,5 @@
-Summary and Practice
-====================
+Unit 3 Practice and Summary
+===========================
 
 .. toctree::
    :maxdepth: 3

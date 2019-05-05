@@ -6,7 +6,7 @@
 AP CS A Java Course - 2019
 ==========================================
 
-(revised 4/28/19)
+(revised 5/5/19 through 5.1)
 
 
 .. Here is where you specify the content and order of your new book.

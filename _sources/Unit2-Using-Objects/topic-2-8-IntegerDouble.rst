@@ -125,7 +125,7 @@ Here are some more useful methods in the Integer and  Double classes:
 
 Can you find and fix all the bugs in the following code?
 
-.. activecode:: wrapperDebug
+.. activecode:: challenge2-8-wrapperDebug
    :language: java
    
    public class Debug
@@ -157,7 +157,7 @@ Summary
   - Integer.MAX_VALUE : The maximum value represented by an int or Integer.
   - int intValue() : Returns the value of this Integer as an int.
 
-- The following Double methods and constructors, including what they do and when they are used,are part of the Java Quick Reference:
+- The following Double methods and constructors, including what they do and when they are used, are part of the Java Quick Reference Guide given during the exam:
 
   - Double(double value) : Constructs a new Double object that represents the specified double value.
   - double doubleValue() : Returns the value of this Double as a double.

@@ -344,7 +344,7 @@ Create a program that takes a word and outputs it in Pig Latin using String meth
 Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the word (see input examples using the |Scanner|).
 
 
-.. activecode:: PigLatin
+.. activecode:: challenge2-7-PigLatin
    :language: java
    
    public class PigLatin

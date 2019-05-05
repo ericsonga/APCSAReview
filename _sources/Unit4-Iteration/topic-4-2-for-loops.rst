@@ -87,6 +87,27 @@ Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to
       }
    }
 
+|CodingEx| **Coding Exercise**
+
+Here is a while loop that counts from 5 to 10. Run it and see what it does. Can you change it to a for-loop? Run your for-loop. Does it do the same thing?
+
+.. activecode:: forloopfromwhile
+   :language: java
+   
+   public class ForLoopFromWhile
+   {
+      public static void main(String[] args)
+      {
+        int count = 5; 
+        while (count <= 10)  
+        {
+           System.out.println(count);
+           count++;
+        }
+ 
+      }
+   }
+   
 |Exercise| **Check your understanding**
 
 .. mchoice:: qlb_3_1
@@ -246,9 +267,25 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
    
    You can also calculate the number of times a loop executes as the value that ends the loop minus the starting value.  In this case the loop ends when i is 3 so (3 - 0 = 3).  
 
+
+.. note::
+   
+   Two common patterns in for-loops are to count from 0 up to an number (using <) or count from 1 to the number including the number (using <=). Remember that if you start at 0 use <, and if you start at 1, use <=. The two loops below using these two patterns both run 10 times. The variable i (for index) is often used as a counter in for-loops.
+   
+   .. code-block:: java 
+   
+      // These loops both run 10 times
+      // If you start at 0, use <
+      for(int i = 0; i < 10; i++)   
+         System.out.println(i);
+      // If you start at 1, use <=
+      for(int i = 1; i <= 10; i++)  
+         System.out.println(i);
+        
+        
 |CodingEx| **Coding Exercise**
 
-Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repetition and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 forward and 1 turn command in the loop. Whenever you find yourself repeating code, try to use a loop instead!
+Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 forward and 1 turn command in the loop. Whenever you find yourself repeating code, try to use a loop instead!
 
 .. activecode:: TurtleSquare
     :language: java
@@ -280,6 +317,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
 |Groupwork| Programming Challenge : Turtles Drawing Shapes
 ----------------------------------------------------------
+
 .. |repl link| raw:: html
 
    <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
@@ -292,7 +330,7 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 
 3. Create a variable n that holds the number of sides for any polygon, and use n in your loop. Can you have the loop draw a variety of shapes by just changing the value of the variable n? The power of abstraction! Can you draw a 9 sided nonagon? (Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts).
 
-.. activecode:: TurtleShapes
+.. activecode:: challenge4-2-TurtleLoopShapes
     :language: java
     :datafile: turtleClassesLoop
 

@@ -79,7 +79,9 @@ Here is the Turtle class diagram again that shows some of the variables and meth
 
     Figure 1: Turtle Class Diagram
     
-.. _Color:      https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html
+.. |Color| raw:: html
+
+   <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
 
 Try some of the methods above in the turtle code below.
 
@@ -87,7 +89,7 @@ Try some of the methods above in the turtle code below.
 |CodingEx| **Coding Exercises:**
 
 
-1. Can you make yertle draw a square and change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the Color_ class in Java which has some colors predefined. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
+1. Can you make yertle draw a square and change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the |Color| class in Java which has some colors predefined. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
 
 2. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. Use the turn method which has a parameter for the angle of the turn in degrees. For example, turn(90) is the same as turnRight(). 
 
@@ -2922,7 +2924,7 @@ It may help to act out the code pretending you are the turtle. Remember that the
 
 After writing your code below, if you'd like your own copy, you can open this |repl link|, copy in your code, and save it in your own repl.it account.
 
-.. activecode:: Turtle_House
+.. activecode:: challenge2-4-TurtleHouse
     :language: java
     :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, Picture.java, Pen.java, Giffer.java, PathSegment.java
 

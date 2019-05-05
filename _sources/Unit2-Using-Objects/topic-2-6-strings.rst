@@ -232,7 +232,7 @@ Have you ever played MAD LIBS? In this game, you first choose a bunch of words w
 
 Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the words (see input examples using the |Scanner|).
 
-.. activecode:: MadLibs
+.. activecode:: challenge2-6-MadLibs
    :language: java
    
    public class MadLibs1

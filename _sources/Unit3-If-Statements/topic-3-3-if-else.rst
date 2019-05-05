@@ -254,7 +254,11 @@ Have you ever played 20 Questions? There is great online version called |Akinato
 
     <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/GuessAnimal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-       
+.. shortanswer:: challenge3-3-IfElse-20Questions
+
+   After you complete your code on repl, paste in a link to it (click on share) or your code here.
+   
+   
 Summary
 -------
 

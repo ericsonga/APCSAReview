@@ -208,7 +208,7 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
 |Groupwork| Programming Challenge : Tracing Code 
 ------------------------------------------------
 
-What will the following code print out? Trace through the code by drawing diagrams of what is going on in memory like the figures above.
+What will the following code print out? Trace through the code by drawing diagrams of what is going on in memory like the figures above, and then write a tracing table for it below that shows the values of s1, s2, s3, s4 and the output after each line of code.
 
 .. code-block:: java
 
@@ -227,7 +227,11 @@ What will the following code print out? Trace through the code by drawing diagra
     if (s1.equals(s2) && s2.equals(s3) && s3.equals(s4))
         System.out.println("s1, s2, s3, s4 are equal");
       
+.. shortanswer:: challenge3-7-tracingStrings
 
+   Write your tracing table here that keeps track of s1, s2, s3, s4 and the output.
+   
+   
 Summary
 -------------------
 

@@ -1,9 +1,8 @@
 Writing Classes
 :::::::::::::::
 
-.. Moving first 2 lessons from Ch. 11 to Unit 5
  
-Class Periods: 11-14
+Class Periods: 12-14
 
 AP CS A Exam Weighting: 5-7.5%
 
@@ -11,12 +10,24 @@ AP CS A Exam Weighting: 5-7.5%
 .. toctree::
    :maxdepth: 3
    
-   firstOOClass.rst
-   partsOfAClass.rst
+   topic-5-1-parts-of-class.rst
+   topic-5-2-writing-constructors.rst
+   topic-5-3-comments-conditions.rst
+   topic-5-4-accessor-methods.rst
+   topic-5-5-mutator-methods.rst
+   topic-5-6-writing-methods.rst
+   topic-5-7-static-vars-methods.rst
+   topic-5-8-scope-access.rst
+   topic-5-9-this.rst
+   topic-5-10-social-impacts.rst
+   PracticeSummary/toctree.rst
+   Exercises.rst
+   
+   
+.. Incorporate things from:  firstOOClass.rst
    runClass.rst
    JavaBasicsSummary.rst
    objectObasics.rst
    objects&Classes.rst
-   timeFRQ.rst
-   Exercises.rst
+  
    

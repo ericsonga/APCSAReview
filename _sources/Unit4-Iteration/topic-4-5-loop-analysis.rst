@@ -23,14 +23,37 @@ Loop Analysis
 ==============
 
 ..	index::
-	single: loop analysis
+	pair: loop; analysis
+    pair: loop; tracing
+    pair: tracing; loop
+    pair: loop; counting iterations
+    
+In this lesson, you will practice tracing through code with loops and analyzing loops to determine how many times they run. 
 
-Tracing Variables in Loops
+Tracing Loops
 ----------------------------
 
-A really important skill to develop is the ability to trace the values of variables and how they change during each time through a loop.  
+A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.  
 
-Here is a complex loop.  See if you can trace the code on paper to predict what it will do when you run it.
+You can create a tracing table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
+
+.. figure:: Figures/traceTable.png
+    :width: 150px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: A trace table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
+    
+.. |Java visualizer| raw:: html
+
+   <a href="https://goo.gl/qEHnpg" target="_blank">Java visualizer</a>
+   
+
+
+|CodingEx| **Coding Exercise**
+
+Here is a complex loop.  See if you can trace the code on paper by making a tracing table like above to predict what the code will do when you run it. Click on the this |Java visualizer| link to help you step through the code. Then, add in output statements like 
+``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop to keep track of the variables and run.
 
 .. activecode:: example_trace_loop
    :language: java
@@ -51,20 +74,19 @@ Here is a complex loop.  See if you can trace the code on paper to predict what 
    }
 
 
-Click on the following link to step through the code above with the Java Visualizer - `Click here <https://goo.gl/qEHnpg>`_.
 
-You can create a table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
+Did you trace table look like the following?
 
 .. figure:: Figures/whileLoopTrace.png
     :width: 150px
     :align: center
     :figclass: align-center
 
-    Figure 1: A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
+    Figure 2: A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
     
-You can also add ``System.out.println(variable)`` to print the value of a variable.  In the code below I am printing the values of all of the variables before the loop and at the end of the loop body.
+.. You can also add ``System.out.println(variable)`` to print the value of a variable.  In the code below the values of all of the variables are printed before the loop and at the end of the loop body.
 
-.. activecode:: while_ex2vars
+.. .. activecode:: while_ex2vars
    :language: java
    
    public class Test
@@ -146,8 +168,35 @@ You can also add ``System.out.println(variable)`` to print the value of a variab
      
 Counting Loop Iterations
 ------------------------
- 
-How many stars are printed out by the following loops? How many times do the loops run?
+
+Loops can be also analyzed to determine how many times they run.  This is called **run-time analysis** or a **statement execution count**.
+
+|CodingEx| **Coding Exercise**
+
+How many stars are printed out in this loop? How many times does the loop run? Figure it out on paper before you run the code.
+
+.. activecode::  countstars1
+   :language: java
+   
+   public class CountLoop
+   {
+
+      public static void main(String[] args)
+      {
+          for (int i = 3; i < 7; i++)
+               System.out.print("*");   
+      }  
+   }
+
+If you made a trace table, you would know that the loop runs when i = 3, 4, 5, 6 but finishes as soon as i becomes 7 since that is not less than 7. So, the loop runs 4 times. Or you can use the shortcut formula in the note below.
+
+.. note::
+   
+   The number of times a loop executes can be calculated by (largestValue - smallestValue + 1).  By the largest value I mean the largest value that allows the loop to execute and by the smallest value I mean the smallest value that allows the loop to execute.  So in the code above the largest value is 6 (which is the largest value < 7) and the smallest value that allows the loop to execute is 3 so this loop executes (6 - 3 + 1 = 4 times).  
+   
+|CodingEx| **Coding Exercise**
+
+How many stars are printed out by the following loops? How many times do the loops run? Calculate on paper before you run the code.
 
 .. activecode::  countstars
    :language: java
@@ -166,20 +215,32 @@ How many stars are printed out by the following loops? How many times do the loo
               System.out.println();
           }      
       }  
-   }
-   
-.. note::
-   
-   The number of times a loop executes can be calculated by (largestValue - smallestValue + 1).  By the largest value I mean the largest value that allows the loop to execute and by the smallest value I mean the smallest value that allows the loop to execute.  So in the code above the largest value is 5 and the smallest value that allows the loop to execute is 1 so this loop executes (5 - 1 + 1 = 5 times).  
-   
+   }   
    
 .. note::
 
-   The number of times a nested for loop body is executed is the number of times the outer loop executes times the number of times the inner loop executes.  
+   The number of times a nested for loop body is executed is the number of times the outer loop runs times the number of times the inner loop runs.  
    
-For the example above the outer loop executes 4-0+1= 5 times and the inner 9-0+1=10 times so the total is 5 * 10 = 50.  
+For the example above, the outer loop executes 4-0+1= 5 times and the inner 9-0+1=10 times so the total is 5 * 10 = 50.  
 
-|Exercise| **Check your understanding**
+
+
+|Groupwork| Programming Challenge : POGIL Analyzing Loops
+----------------------------------------------------------
+
+.. |pogil| raw:: html
+
+   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank">POGIL</a>
+   
+.. |pogil role| raw:: html
+
+   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank">POGIL role</a>
+   
+   
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
+
+Do the following exercises in your group. Make sure you draw the trace tables keeping track of all the variables in the loops. Use the formulas to determine how many times the loops run. If your group finishes early, do some of the multiple-choice problems in the 4.6 Practice and Summary section of this unit.
+
 
 .. mchoice:: qln_6_1
    :answer_a: 40
@@ -253,6 +314,18 @@ For the example above the outer loop executes 4-0+1= 5 times and the inner 9-0+1
         System.out.println();
      }
      
+
+ 
+
+
+
 Summary
 -------
 
+- A trace table can be used to keep track of the variables and their values throughout each iteration of the loop. 
+
+- We can determine the number of times a code segment will execute with a **statement execution count**. This is called **run-time analysis**.
+
+- The number of times a loop executes can be calculated by (largestValue - smallestValue + 1) where these are the largest and smallest values of the loop counter variable possible in the body of the loop.  
+
+- The number of times a nested for-loop runs is the number of times the outer loop runs **times** the number of times the inner loop runs. 

@@ -1,5 +1,5 @@
-Practice and Summary
-:::::::::::::::::::::
+Unit 4 Practice and Summary
+:::::::::::::::::::::::::::
 
 
 
@@ -7,13 +7,13 @@ Practice and Summary
    :maxdepth: 3
 
    lMistakes.rst
-   lPractice.rst
    lEasyMC.rst
    lMedMC.rst
-   lHardMC.rst
-   freeResponse.rst
-   LoopPractice.rst
    LoopParsonsPractice.rst
+   LoopPractice.rst
+   selfDivisorA.rst
+   stringScrambleA.rst
+   lPractice.rst
    LoopSummary.rst
 
 

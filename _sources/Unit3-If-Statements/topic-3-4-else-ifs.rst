@@ -218,6 +218,10 @@ In a game like Adventure, else if statements can be used to respond to commands 
 
     <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/Adventure?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+.. shortanswer:: challenge3-4-ElseIf-20Adventure
+
+   After you complete your code on repl, paste in a link to it (click on share) or your code here.
+   
 Summary
 --------
 

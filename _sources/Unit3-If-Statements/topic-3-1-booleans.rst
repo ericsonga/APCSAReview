@@ -198,7 +198,7 @@ The following program checks if 5 is a prime number by seeing if it is divisible
 8. Are all even numbers not prime? Can you find an even prime number?
 
 
-.. activecode:: primeNumbers
+.. activecode:: challenge3-1-primeNumbers
    :language: java
    
    public class PrimeNumbers

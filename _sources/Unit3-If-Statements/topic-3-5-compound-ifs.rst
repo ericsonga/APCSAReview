@@ -330,7 +330,7 @@ Explore the following problems with your group:
 
 3. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly.
 
-.. activecode:: truthtablecode
+.. activecode:: challenge3-5-truthtables
    :language: java
    
    public class TruthTable

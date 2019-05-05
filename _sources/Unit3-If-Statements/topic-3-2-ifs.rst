@@ -199,7 +199,7 @@ Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake i
 
 We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8.
 
-.. activecode:: if-challenge
+.. activecode:: challenge3-2-if-Magic8ball
    :language: java
    
    public class Magic8Ball

@@ -129,7 +129,7 @@ Try some of the get methods and the toString() method in the program below. Note
 
 2. Add another turtle and make both turtles move. Then find the distance between them. You must use the getXPos() and getYPos() methods as well as the getDistance() method.
 
-.. activecode:: TurtleMethodsDistChallenge
+.. activecode:: challenge2-5-TurtleDistance
     :language: java
     :datafile: turtleClassesReturn
 

@@ -20,8 +20,8 @@
     :alt: groupwork
     
     
-Casting Variables
-=================
+Casting and Ranges of Variables
+===============================
 
 In Java, **type casting** is used to convert variables from one type to another. By **casting** we don't mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the "shape" (or type) of the variable to the right of the cast to the specified type. 
 
@@ -107,7 +107,7 @@ Although it's not on the exam, you can format long decimal numbers to just show 
    :answer_a: true
    :answer_b: false
    :correct: b
-   :feedback_a: Did you try this out in Dr Java?  Does it work that way?
+   :feedback_a: Did you try this out in Active Code?  Does it work that way?
    :feedback_b: Java throws away any values after the decimal point if you do integer division.  It does not round up automatically.  
 
    True or false: Java rounds up automatically when you do integer division.  
@@ -150,7 +150,7 @@ This would be a good project to work together in pairs, and switch drivers (who 
 Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|.
 
 
-.. activecode:: challenge1-6
+.. activecode:: challenge1-6-average
    :language: java
 
    public class Challenge1_6
@@ -172,7 +172,35 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
       
       }
    }
-      
+
+.. |Unicode| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank">Unicode</a>
+   
+.. |Chinese| raw:: html
+
+   <a href="https://unicodelookup.com/#cjk/1" target="_blank">Chinese characters</a> 
+   
+.. |Unicode Lookup| raw:: html
+
+   <a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a>
+   
+If you get done early with this challenge, here's something else fun you can do in Java, although it's not covered in the AP exam. Java was one of the first programming languages to use |UNICODE| for its characters. Unicode is an international standard where each letter in any alphabet is represented by a number.  Unicode uses hex code (a base 16 code that uses the digits 0-9 and the letters A-F for 10-15), but you can give Java an equivalent decimal number and type cast it to the type char (for character) to show the unicode character. Try the following program which prints out |Chinese|. Look up other characters at this |Unicode Lookup| site and print them out in the Active Code window below by using the decimal number (see Dec column in stie) and type casting to char.
+
+.. activecode:: challenge1-6-unicode
+   :language: java
+
+   public class Challenge1-6-Unicode
+   {
+      public static void main(String[] args)
+      {      
+        System.out.println("A in ASCII and Unicode is the decimal number 65: " + (char)65);
+        System.out.println("You can typecast a decimal number to char for the Chinese character for sun: " + (char)11932);
+        System.out.println("Or you can print out the Chinese character for moon using unicode hex: \u2E9D"); 
+        
+       
+      }
+   }
    
 Summary
 -------------------

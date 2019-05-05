@@ -197,6 +197,11 @@ For this project, you will need to use the |Scanner class| for input and |repl.i
 
     <iframe height="600px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/Guessing-Game?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+.. shortanswer:: challenge4-1-loop-GuessingGame
+
+   After you complete your code on repl, paste in a link to it (click on share) or your code here.
+   
+   
 Summary
 -------------------
 

@@ -141,7 +141,7 @@ Explore the following problems with your group:
 
 6. Complete the following exercises 3-6-3 through 3-6-6 in your POGIL groups.
 
-.. activecode:: booleanexp
+.. activecode:: challenge3-6-booleanExpr
    :language: java
    
    public class EquivalentExpressions

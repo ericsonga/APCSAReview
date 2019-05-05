@@ -2,10 +2,10 @@
    :prefix: 2-8-
    :start: 1
    
-Intro to Java - Summary
+Summary
 -------------------------
 
-In this chapter you started to learn a bit about Java - the programming language that you will use on the AP CS A exam.  You were also introduced to the concept of a class or classification.  A class in Java defines the properties of an object, which are called fields, and what an object can do, which are called methods.  Classes also have constructors which initialize the values of the fields and can have a main method which is where execution will start.  
+
 
 ..	index::
     single: class

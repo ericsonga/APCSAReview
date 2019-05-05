@@ -222,7 +222,7 @@ Working in pairs, create two Turtle objects below and have them draw a shape tog
 
 After writing your code below, if you'd like your own copy, you can open this |repl link|, copy in your code, and save it in your own repl.it account.
 
-.. activecode:: TurtleGroupWork
+.. activecode:: challenge2-1-TurtleDraw
     :language: java
     :datafile: turtleClasses
 

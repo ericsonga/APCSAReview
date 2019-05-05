@@ -5,7 +5,7 @@
 .. highlight:: java
    :linenothreshold: 4
 
-<Explain main and methods more>
+
 
 Activity 2: Running Simplified Magpie Code
 ===========================================
