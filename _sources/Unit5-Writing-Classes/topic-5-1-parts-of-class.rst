@@ -28,7 +28,10 @@ Anatomy of a Java Class
 
 In Unit 2, we learned to use **classes** and **objects** that have been designed by other programmers. In this unit, you will learn to write your own classes and objects!
 
-Remember that a **class** in programming defines a new **abstract data type**. When you create **objects**, you create new variables of that class data type. For example in Unit 2, we created yertle and myrtle, 2 turtle objects created from the class Turtle, and we used the Java String class to create different String variables, also called **object references**.
+Creating a Class
+------------------
+
+Remember that a **class** in programming defines a new **abstract data type**. When you create **objects**, you create new variables or instances of that class data type. For example in Unit 2, we created yertle and myrtle, 2 turtle objects created from the class Turtle, and we used the Java String class to create different String variables, also called **object references**.
 
 .. |video| raw:: html
 
@@ -38,7 +41,7 @@ Remember that a **class** in programming defines a new **abstract data type**. W
 Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can think of the class as like a blueprint or a cookie cutter or a factory that produces objects. 
 
 
-.. youtube:: v=1JJL0YszYik
+.. youtube:: 1JJL0YszYik
     :height: 315
     :width: 560
     :align: left
@@ -49,7 +52,7 @@ A class declaration typically starts with ``public`` then ``class`` then the nam
 
 .. code-block:: java
 
-    class House 
+    public class House 
     {
        // define class here - a blueprint
     
@@ -59,10 +62,17 @@ A class declaration typically starts with ``public`` then ``class`` then the nam
     House neighborsHouse = new House();
 
 
-All objects created by the same class have the same **instance variables** and **methods**.   Instance variables hold the data for objects where as the methods code the behaviors or the actions the object can do.   Among these methods, a class has **constructors** which initialize the instance variables when the object is created.  And a class can also have a **main method** which can be used to test the class.  
+All objects created by the same class have the same **instance variables** and **methods**.   Instance variables hold the data for objects where as the methods code the behaviors or the actions the object can do.   A class also has **constructors** which initialize the instance variables when the object is created, for example new House() above.  And a class can also have a **main method** which can be used to test the class.  
 
-Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email. 
-Run the code below to see how it constructs 2 Person objects and fills them with their data. We will explain all parts of this class in the next sections.
+Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email.
+
+Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in that method for that objecct. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
+
+
+.. |Java visualizer| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Person%20%0A%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20construct%20a%20Person%20copying%20in%20the%20data%20into%20the%20instance%20variables%0A%20%20%20%20%20public%20Person%28String%20initName,%20String%20initEmail,%20String%20initPhone%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20phoneNumber%20%3D%20initPhone%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Print%20all%20the%20data%20for%20a%20person%0A%20%20%20%20%20public%20void%20print%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22Name%3A%20%22%20%2B%20name%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Email%3A%20%22%20%2B%20email%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Phone%20Number%3A%20%22%20%2B%20phoneNumber%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20call%20the%20constructor%20to%20create%20a%20new%20person%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22,%20%22sana%40gmail.com%22,%20%22123-456-7890%22%29%3B%0A%20%20%20%20%20%20%20%20//%20call%20p1%27s%20print%20method%0A%20%20%20%20%20%20%20%20p1.print%28%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22,%20%22jean%40gmail.com%22,%20%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20p2.print%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=34&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank">Java visualizer</a>
+
 
 .. activecode:: PersonObjExample
   :language: java
@@ -216,14 +226,14 @@ Methods
 ..	index::
 	pair: class; method
 	
-**Methods** define what an object can do or the behavior of the object.   Most methods you work with  will be ``public``.  
+**Methods** define what an object can do or the behavior of the object.   Most methods are ``public``.  
 
 .. note::
 
    Methods define what the object can do.  They typically start with ``public`` then a type, then the name of the method followed by parentheses for optional parameters. Methods defined for an object can access and use its instance variables!  
 
-The ``Person`` class above has 3 methods, a constructor method which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
-**Void** is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method has access and can use the instance variables in the class, name, email, and phoneNumber.
+The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
+**Void** is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber.
 
 .. code-block:: java
      
@@ -274,7 +284,7 @@ To call a method to do its job, we create an object of the class and then use th
 Object-Oriented Design
 ----------------------
 
-In **Object-Oriented Design**, programmers first spend time to decide which classes are needed and then decide what data and methods need to be in each class. For example, here is the class diagram for the Turtle class that we have seen before. 
+In **Object-Oriented Design** (OOD), programmers first spend time to decide which classes are needed and then decide what data and methods need to be in each class. For example, here is the class diagram for the Turtle class that we have seen before. 
 
 
 .. figure:: Figures/turtleUMLClassDiagram.png
@@ -296,6 +306,14 @@ When you are given a problem specification, look for the **nouns** to identify w
 
 The two nouns in the problem description above, **Student** and **Course** would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!
 
+.. |Creately.com| raw:: html
+
+   <a href="https://creately.com" target="_blank">Creately.com</a> 
+
+If you'd like to draw your own Class Diagrams as you do object-oriented design, |Creately.com| is a good tool to use online for free. 
+
+
+
 
 |Exercise| **Check Your Understanding**
 
@@ -307,16 +325,19 @@ The two nouns in the problem description above, **Student** and **Course** would
 |Groupwork| Programming Challenge : Riddle Class
 ----------------------------------------------------------
 
-
+.. image:: Figures/chicken.png
+    :width: 130
+    :align: left
+    :alt: Chicken
 
 In this project, you will create a class that can tell riddles like the following:
 
 - Riddle Question: Why did the chicken cross the playground?
 - Riddle Answer: To get to the other slide!
 
-1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need?
+1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? You may want to draw a Class Diagram using |Creately.com|.
 
-2. Write a Riddle class below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. If you came up with other instance variables and methods for this class, you can pursue those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below.
+2. Write a Riddle class below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below.
 
 3. Add a main method that constructs at least 3 Riddle objects and calls their methods to ask and answer the riddle. You can look up some good riddles online.
 
@@ -328,10 +349,10 @@ In this project, you will create a class that can tell riddles like the followin
   public class Riddle
   {
      // 2 instance variables: private type variableName;
-     S
+     
      
      // constructor
-     public Riddle(String initQuestion, String intAnswer)
+     public Riddle(String initQuestion, String initAnswer)
      {
         // set the instance variables to the init parameter variables
      
@@ -354,7 +375,7 @@ In this project, you will create a class that can tell riddles like the followin
      // main method for testing
      public static void main(String[] args)
      {
-        // call the constructor to create 3 new riddles
+        // call the constructor to create 3 new Riddle objects
         
         // call their printQuestion() and printAnswer methods
        
@@ -364,19 +385,19 @@ In this project, you will create a class that can tell riddles like the followin
 Summary
 ----------
 
--Programmers use code to represent a physical object or nonphysical concept, real or imagined, by defining a class based on the attributes and/or behaviors of the object or concept.
+- Programmers use code to represent a physical object or nonphysical concept, real or imagined, by defining a class based on the attributes and/or behaviors of the object or concept.
 
--**Data encapsulation** is a technique in which the implementation details of a class are kept hidden from the user. The data is kept private with access only through the public methods that can act on the data in the class.
+- **Instance Variables** define the attributes or data needed for objects, and **methods** define the behaviors or functions of the object.
 
+- **Data encapsulation** is a technique in which the implementation details of a class are kept hidden from the user. The data is kept private with access only through the public methods that can act on the data in the class.
 
+- The keywords **public** and **private** affect the access of classes, data, constructors, and methods.
 
--The keywords **public** and **private** affect the access of classes, data, constructors, and methods.
+- The keyword private restricts access to the declaring class, while the keyword public allows access from classes outside the declaring class.
 
--The keyword private restricts access to the declaring class, while the keyword public allows access from classes outside the declaring class.
+- Instance variables are encapsulated by using the **private access modifier**.
 
--Instance variables are encapsulated by using the **private access modifier**.
-
--Methods can be public or private, but they are usually public.
+- Methods can be public or private, but they are usually public.
 
 
 

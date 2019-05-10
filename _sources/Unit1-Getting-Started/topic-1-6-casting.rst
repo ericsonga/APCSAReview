@@ -185,12 +185,12 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 
    <a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a>
    
-If you get done early with this challenge, here's something else fun you can do in Java, although it's not covered in the AP exam. Java was one of the first programming languages to use |UNICODE| for its characters. Unicode is an international standard where each letter in any alphabet is represented by a number.  Unicode uses hex code (a base 16 code that uses the digits 0-9 and the letters A-F for 10-15), but you can give Java an equivalent decimal number and type cast it to the type char (for character) to show the unicode character. Try the following program which prints out |Chinese|. Look up other characters at this |Unicode Lookup| site and print them out in the Active Code window below by using the decimal number (see Dec column in stie) and type casting to char.
+If you get done early with this challenge, here's something else fun you can do in Java, although it's not covered in the AP exam. Java was one of the first programming languages to use |UNICODE| for its characters. Unicode is an international standard where each letter in any alphabet is represented by a number.  Unicode uses hex code (a base 16 code that uses the digits 0-9 and the letters A-F for 10-15), but you can give Java an equivalent decimal number and type cast it to the type char (for character) to show the unicode character. Try the following program which prints out |Chinese|. Look up other characters at this |Unicode Lookup| site and print them out in the Active Code window below by using the decimal number (see Dec column in site) and type casting to char. Can you print out a letter from 3 different languages?
 
 .. activecode:: challenge1-6-unicode
    :language: java
 
-   public class Challenge1-6-Unicode
+   public class ChallengeUnicode
    {
       public static void main(String[] args)
       {      

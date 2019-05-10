@@ -23,7 +23,9 @@ AP CS A Exam Weighting: 5-7.5%
    topic-2-7-string-methods.rst
    topic-2-8-IntegerDouble.rst
    topic-2-9-Math.rst
-   Strings/toctree.rst
+   topic-2-10-summary.rst
+   topic-2-11-practice-mixed-code.rst
+   topic-2-12-practice-coding.rst
    Exercises.rst
    
 .. Old TOC

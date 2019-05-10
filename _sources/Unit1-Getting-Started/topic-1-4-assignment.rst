@@ -269,13 +269,7 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
 	
     
 
-The **modulus** operator has been used quite a bit on the AP CS A exam, so you should be familiar with it.
-    
-    -  Use it to check for odd or even numbers (``num % 2 == 1 is odd and num % 2 == 0 is even``).  Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``)
 
-    -  Use it to get the last digit from an integer number (``num % 10 = last digit on right``).  This approach could be used on the free response question Self Divisor (Question 1 from 2007).  See http://coweb.cc.gatech.edu/ice-gt/1277 for starter code and testing code.
-    
-    -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. See question 3 at http://coweb.cc.gatech.edu/ice-gt/1278. 
    
 
 |Groupwork| Programming Challenge

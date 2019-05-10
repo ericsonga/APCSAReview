@@ -155,7 +155,7 @@ You can think of a class like a cookie cutter.  It is used to create the cookies
 
     Figure: Using a cookie cutter to make cookies
     
-You can think of a class as the type or classification.  The following picture has lots of cats (objects of the type cat).  
+You can think of a class as the type or classification.  The following picture has lots of cats (objects of the type cat).  They are all different, but they share the same attributes and behaviors that make up a cat.
 
 .. figure:: Figures/cats2.png
     :width: 300px
@@ -163,6 +163,7 @@ You can think of a class as the type or classification.  The following picture h
     :figclass: align-center
 
     Figure: Pictures of cats (cat objects)
+
 
 If you go to a restaurant, you will be seated by the greeter, the waiter will take your order, and the chef will cook your food.  What do we mean by a greeter, waiter, and chef?  Those are classifications or types of workers in a restaurant.  Java has this same concept.  When we create a new class we are defining a new type (a new classification) to the computer.  Each type can have abilities or behaviors (called **methods** in Java) and attributes (called **instance variables** in Java). After you define a type, you can use it to create **objects** of that type.  All objects created from a class will have the properties and abilities/behaviors defined in that class.  For example, all turtle objects will know how to move forward and turn.
 
@@ -207,6 +208,12 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
    
    What specifies the data or state for an object in Java?
    
+
+.. shortanswer:: cats
+
+    What are some attributes of cats? What are some behaviors of cats? (Note that attributes are often nouns or adjectives describing features of cats, and behaviors are often verbs).
+
+
 |Groupwork| Programming Challenge : Turtle Drawing
 --------------------------------------------------
 

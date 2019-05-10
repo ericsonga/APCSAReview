@@ -9,6 +9,7 @@ Java Development Environments
 	single: repl.it
     single: Eclipse
     single: BlueJ
+    single: Netbeans
     
 The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs. 
 
@@ -37,6 +38,12 @@ jGRASP (https://www.jgrasp.org/) is a free lightweight development environment, 
 IntelliJ
 --------
 IntelliJ (https://www.jetbrains.com/idea/) is a free Java IDE from JetBrains which many professionals use. It is a little easier to configure than Eclipse below. Here is a guide on how to set up IntelliJ: https://www.jetbrains.com/help/idea/install-and-set-up-product.html.
+
+Netbeans
+--------
+
+Netbeans (https://netbeans.org/) is one of the original Java IDEs.  Here is a tutorial on how to set it up: https://netbeans.org/kb/docs/java/quickstart.html.
+
 
 Eclipse
 -------

@@ -29,3 +29,5 @@ Summary
 - Within a non-static method or a constructor, the keyword this is a reference to the current object, the object whose method or constructor is being called.
 
 - The keyword this can be used to pass the current object as an actual parameter in a method call.
+
+- Static methods do not have a this reference.

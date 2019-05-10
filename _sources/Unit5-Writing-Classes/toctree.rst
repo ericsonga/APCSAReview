@@ -22,6 +22,7 @@ AP CS A Exam Weighting: 5-7.5%
    topic-5-10-social-impacts.rst
    PracticeSummary/toctree.rst
    Exercises.rst
+   CBLabs.rst
    
    
 .. Incorporate things from:  firstOOClass.rst

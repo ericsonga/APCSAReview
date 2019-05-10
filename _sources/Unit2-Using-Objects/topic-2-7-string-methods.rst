@@ -202,7 +202,12 @@ Run the example below to see the output from ``compareTo`` and ``equals``.
       }
    }
 
-There are lots of other methods in the String class.  See the Java documentation for the String class at http://docs.oracle.com/javase/6/docs/api/java/lang/String.html.  You don't have to know all of these for the exam, but you can use them if you want to on the exam.
+
+.. |String class| raw:: html
+
+   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String class</a>
+   
+There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam.
 
 .. note::
 

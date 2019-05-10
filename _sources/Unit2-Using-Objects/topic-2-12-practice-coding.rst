@@ -1,9 +1,13 @@
 .. qnum::
-   :prefix: 2-9-2-
+   :prefix: 2-12-
    :start: 1
 
-Code Practice with Strings
----------------------------
+Unit 2 Practice Coding
+======================
+
+The coding problems below are all about Strings, but more problems on other topics in this unit will be added in the future.
+
+
 
 .. tabbed:: ch4Ex1
 
@@ -574,8 +578,6 @@ Code Practice with Strings
                 
                 
 
-More Practice 
--------------
 
 For more practice with Strings see problems at http://codingbat.com/java/String-1.  
 

@@ -1,9 +1,13 @@
 .. qnum::
-   :prefix: 2-9-1-
+   :prefix: 2-11-
    :start: 1
 
-Mixed Up Code Practice
-------------------------------
+Unit 2 Practice Mixed Up Code
+===============================
+
+The coding problems below are all about Strings, but more problems on other topics in this unit will be added in the future.
+
+
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
@@ -251,3 +255,6 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
    =====
            int pos = message.indexof("nice"); #distractor
+
+
+
