@@ -41,7 +41,7 @@ When the operator ``==`` is used with object variables it returns true when the 
 
 |CodingEx| **Coding Exercise**
 
-The one common place to use == or != with objects is to see if they exist by comparing them to **null**. Sometimes short-circuit evaluation to avoid an error if the object doesn't exist. Try the following code to see the NullPointer error. Since s is null, indexOf throws an error. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
+The one common place to use == or != with objects is to see if they exist by comparing them to **null**. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Try the following code to see the NullPointer error. Since s is null, indexOf throws an error. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
 
 .. activecode:: nullTest
    :language: java

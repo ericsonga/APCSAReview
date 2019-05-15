@@ -218,7 +218,7 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
              
              // turn 30 degrees before drawing triangle again
           
-          }
+          
           world.show(true); 
       }
     }

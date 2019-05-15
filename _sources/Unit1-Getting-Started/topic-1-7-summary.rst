@@ -27,7 +27,9 @@ In this unit you learned about the three primitive data types on the exam: ``int
 
 Concept Summary
 ---------------
-
+- **Compiler** - Software that translates the Java source code (ends in .java) into the Java class file (ends in .class). 
+- **Compile time error** - An error that is found during the compilation.  These are also called syntax errors.  
+- **Main Method** - Where execution starts in a Java program.
 - **Boolean** - An expression that is either ``true`` or ``false``.
 - **Camel Case** - One way to create a variable name by appending several words together and uppercasing the first letter of each word after the first word (``myScore``).
 - **Casting a Variable** - Changing the type of a variable using *(type) name*. 

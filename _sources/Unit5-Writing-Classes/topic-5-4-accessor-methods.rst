@@ -25,6 +25,28 @@ Accessor Methods
 
 Since the instance variables in a class are usually marked as private to the class, programmers provide public methods that allow safe access to the instance variable values in a class. **Accessor methods**, also called **get methods** or **getters**, allow a way to get the value of each instance variable from outside of the class.
 
+Programmers write get methods for each instance variable that look like the following:
+
+.. code-block:: java
+     
+     // Getter template
+     public returnType getVarName()
+     {
+        return VarName;
+     }
+     
+     /** getName() example
+      *  @return name */
+     public String getName()
+     {
+        return name;
+     }
+     
+     // To call a get method, use objectName.getVarName()
+     Student s = new Student();
+     System.out.println("Name: " + s.getName() );
+     
+     
 |CodingEx| **Coding Exercise**
 
 Try the following code. Note that this active code window has 2 classes! The main method is in a separate **Tester** or **Driver** class. It does not have access to the private instance variables in the other Student class. Change the main method so that it uses the public accessor methods (get methods) to access the values instead.
@@ -77,22 +99,7 @@ Try the following code. Note that this active code window has 2 classes! The mai
 
 Note that when you use multiple classes in an IDE, you usually put them in separate files, and you give the files the same name as the public class in them. You can put 2 classes in 1 file, as demonstrated above, but only 1 of them can be public and have a main method in it.
 
-Programmers write get methods for each instance variable that look like the following:
 
-.. code-block:: java
-     
-     // Getter template
-     public returnType getVarName()
-     {
-        return VarName;
-     }
-     
-     /** getName() example
-      *  @return name */
-     public String getName()
-     {
-        return name;
-     }
 
  
 
@@ -104,11 +111,10 @@ Programmers write get methods for each instance variable that look like the foll
     - Forgetting to use the return keyword to return a value at the end of the method.
     - Forgetting to do something with the value returned from a method (like saving it into a variable or printing it out).
     
-debugging ex?    
 
 There is a subtle difference in methods that return primitive types versus reference/object types. If the method is returning a primitive type like int, it returns a copy of the value. This is called **return by value**. This means the original value is not changed and it is a safe way to access the instance variables. 
 
-However, object variables really hold a reference to the object in memory. This is not the actual value, but it's address in memory. So, if the method is returning an object like String, Java returns a copy of the object reference, not the value itself. Java was especially designed this way because objects tend to be large and we want to avoid copying large objects, so we just pass around references to the objects (their addresses in memory). So, when we call getName(), we actually get back a reference to the String for the name in memory. 
+However, object variables really hold a reference to the object in memory. This is not the actual value, but its address in memory. So, if the method is returning an object like String, Java returns a copy of the object reference, not the value itself. Java was especially designed this way because objects tend to be large and we want to avoid copying large objects, so we just pass around references to the objects (their addresses in memory). So, when we call getName(), we actually get back a reference to the String for the name in memory. 
   
 toString()
 ----------

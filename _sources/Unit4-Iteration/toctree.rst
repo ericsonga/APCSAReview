@@ -15,7 +15,11 @@ Lab Periods: 6 days
    topic-4-3-strings-loops.rst
    topic-4-4-nested-loops.rst
    topic-4-5-loop-analysis.rst
-   SummaryPractice/toctree.rst
-   ConsumerReviewLab.rst
+   topic-4-6-summary.rst
+   topic-4-7-practice-mixed-code.rst
+   topic-4-8-practice-coding.rst
    Exercises.rst
+   FRQselfDivisorA.rst
+   FRQstringScrambleA.rst
+   ConsumerReviewLab.rst
 

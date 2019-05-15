@@ -23,7 +23,7 @@
 Mutator Methods
 =================
 
-Corresponding to each get method, programmers also provide a public **set method** to change the value of a private instance variable in a class. These are called **mutator methods**. They are **void methods** meaning that they do not return a value, but they do take a **parameter**, the new value for the instance variable. Here is a the method header for a set method:
+Corresponding to each get method, programmers also provide a public **set method** to change the value of a private instance variable in a class. These are called **mutator methods**. They are **void methods** meaning that they do not return a value, but they do take a **parameter**, the new value for the instance variable. Here are some examples of how to write a set method for an instance variable:
 
 .. code-block:: java
      
@@ -121,7 +121,7 @@ Try the Student class below which this time has set methods added. You will need
     Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.
 
 
-Explain about parameters as local variables? And how they get filled and only exist there? Bring up data encapsulation again?
+
 
 
 |Groupwork| Programming Challenge : Class Pet Setters
@@ -165,6 +165,7 @@ Explain about parameters as local variables? And how they get filled and only ex
 
 Summary
 --------
+
 - A void method does not return a value. Its header contains the keyword void before the method name.
 
 - A **mutator method** is often a void method that changes the values of instance variables or static variables.

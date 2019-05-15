@@ -64,6 +64,7 @@ public class SimplePicture implements DigitalPicture
   * a picture
   * @param fileName the file name to use in creating the picture
   */
+  /*
  public SimplePicture(String fileName)
  {
    
@@ -399,6 +400,7 @@ public class SimplePicture implements DigitalPicture
  /**
   * Method to open a picture explorer on a copy of this simple picture
   */
+  /*
  public void explore()
  {
    // create a copy of the current picture and explore it
@@ -424,6 +426,7 @@ public class SimplePicture implements DigitalPicture
   * Method to load the picture from the passed file name
   * @param fileName the file name to use to load the picture from
   */
+  /*
  public void loadOrFail(String fileName) throws IOException
  {
     // set the current picture's file name
@@ -453,7 +456,7 @@ public class SimplePicture implements DigitalPicture
    
    bufferedImage = ImageIO.read(file);
  }
-
+*/
 
  /**
   * Method to write the contents of the picture to a file with 
@@ -461,6 +464,7 @@ public class SimplePicture implements DigitalPicture
   * @param fileName the name of the file to write the picture to
   * @return true if success else false
   */
+  /*
  public boolean load(String fileName)
  {
      try {
@@ -484,6 +488,7 @@ public class SimplePicture implements DigitalPicture
   * @param fileName the file name to use to load the picture from
   * @return true if success else false
   */
+  /*
  public boolean loadImage(String fileName)
  {
      return load(fileName);
@@ -584,6 +589,7 @@ public class SimplePicture implements DigitalPicture
   * @param fileName the file name to load the picture from
   * @return true if success else false
   */
+  /*
  public boolean loadPictureAndShowIt(String fileName)
  {
    boolean result = true;  // the default is that it worked
@@ -601,7 +607,7 @@ public class SimplePicture implements DigitalPicture
   * Method to write the contents of the picture to a file with 
   * the passed name
   * @param fileName the name of the file to write the picture to
-  */
+  
  public void writeOrFail(String fileName) throws IOException
  {
    String extension = this.extension; // the default is current
@@ -626,6 +632,7 @@ public class SimplePicture implements DigitalPicture
    ImageIO.write(bufferedImage, extension, file);
      
  }
+*/
 
  /**
   * Method to write the contents of the picture to a file with 
@@ -633,6 +640,7 @@ public class SimplePicture implements DigitalPicture
   * @param fileName the name of the file to write the picture to
   * @return true if success else false
   */
+  /*
  public boolean write(String fileName)
  {
      try {
@@ -644,12 +652,13 @@ public class SimplePicture implements DigitalPicture
      }
          
  }
+*/
 
  /**
   * Method to set the media path by setting the directory to use
   * @param directory the directory to use for the media path
   */
- public static void setMediaPath(String directory) { 
+ /*public static void setMediaPath(String directory) { 
    FileChooser.setMediaPath(directory);
  }
  
@@ -659,10 +668,10 @@ public class SimplePicture implements DigitalPicture
   * @return the full path name by appending
   * the file name to the media directory
   */
- public static String getMediaPath(String fileName) {
+/* public static String getMediaPath(String fileName) {
    return FileChooser.getMediaPath(fileName);
  }
- 
+ */
   /**
    * Method to get the coordinates of the enclosing rectangle after this
    * transformation is applied to the current picture

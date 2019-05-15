@@ -171,8 +171,8 @@ Run the following active code a couple times until you see all the possible outp
    :answer_d: if (x > 2) x = 0; else x *= 2;
    :correct: c
    :feedback_a: If x was set to 1 then it would still equal 1.
-   :feedback_b: What happens in the original when x is greater than 2?  
-   :feedback_c: If x is greater than 2 it will be set to 0.  
+   :feedback_b: What happens in the original when x is greater than 2 and then greater than 4? Do both if statements.  
+   :feedback_c: If x is greater than 2, it's always doubled, and then that result is always greater than 4, so it's set to 0 in the second if statement.  
    :feedback_d: In the original what happens if x is less than 2?  Does this give the same result?
 
    Which of the following is equivalent to the code segment below?  

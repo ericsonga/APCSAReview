@@ -24,7 +24,7 @@ public interface DigitalPicture
  public int getBasicPixel(int x, int y); // get the pixel information as an int   
  public void setBasicPixel(int x, int y, int rgb); // set the pixel information
  public Pixel getPixel(int x, int y); // get the pixel information as an object
- public void load(Image image); // load the image into the picture
- public boolean load(String fileName); // load the picture from a file
+// public void load(Image image); // load the image into the picture
+// public boolean load(String fileName); // load the picture from a file
  public void show(); // show the picture 
 }

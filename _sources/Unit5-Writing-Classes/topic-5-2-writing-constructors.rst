@@ -217,7 +217,7 @@ The following class defines a Car with the instance variables model and year, fo
 
 We encourage you to work in pairs for this challenge to create a Student class with constructors.
 
-1. First, brainstorm in pairs to do the **Object-Oriented Design** for a Student class. What data should we store about Students? Come up with at least 4 different instance variables. What is the data type for the instance variables? 
+1. First, brainstorm in pairs to do the **Object-Oriented Design** for a Student class. What data should we store about Students? Come up with at least 4 different instance variables. What are the data types for the instance variables? 
 
 2. Write a Student class below that has your 4 instance variables and write at least 3 different constructors: one that has no parameters and initializes the instance variables to default values, one that has 4 parameters to set the instance variables, and one that has 1 parameter for the most important instance variable and uses defaults for the others. 
 

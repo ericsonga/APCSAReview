@@ -82,6 +82,9 @@ Notice that there are some special tags that you can use in Java documentation. 
  - @param   Parameter of a method
  - @return  Return value for a method
  
+Preconditions and  Postconditions
+---------------------------------
+
 As you write methods in a class, it is a good idea to keep in mind the **preconditions** and the **postconditions** for the method and write them in the comments. A precondition is a condition that must be true for your method code to work, for example the assumption that the parameters have values and are not null. The methods could check for these preconditions, but they do not have to. The precondition is what the method expects in order to do its job properly.
 
 A postcondition is a condition that is true after running the method. It is what the method promises to do. Postconditions describe the outcome of running the method, for example what is being returned or the changes to the instance variables. These assumptions are very useful to other programmers who want to use your class and get the correct results. 
@@ -130,7 +133,9 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
       }
     }
     
-Determining the preconditions and postconditions also help us to test our code and determine the **validity** of our software. Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use. Good software testers actually try to break the code! They try all kinds of input to see what the software will do because you never know what users will try or what conditions there will be. So, always think what the preconditions of your code are and see what happens when you break them, and then see if you can protect or warn against that.
+Determining the preconditions and postconditions also help us to test our code and determine the **validity** of our software. Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use. 
+
+Good software testers actually try to break the code! They try all kinds of input to see what the software will do because you never know what users will try or what conditions there will be. So, always think what the preconditions of your code are and see what happens when you break them, and then see if you can protect or warn against that.
 
 Preconditions and postconditions can also help us to design better software systems. Software designers often first draw a high-level **Use-Case Diagram** of a system that shows the different ways that a user might interact with a system before they build it. Here is a simple Use-Case Diagram of a restaurant system. It shows 2 actors in the system: the customer and the staff at the restaurant, and 3 use-cases in circles. A **Use-case** is a particular user interaction or situation in the system or software, and they often become methods in the program..
 
@@ -142,7 +147,7 @@ Preconditions and postconditions can also help us to design better software syst
 
     Figure 1: Use-Case Diagram of a Restaurant System
     
-After drawing a Use-Case Diagram, designers write a **Use-Case Narrative** where they write down the preconditions and the postconditions for each Use-Case. Often the successful post-condition for one use-case becomes the preconditions for the next use-case. For example, for the "Order Food" and "Eat Food" Use Cases:
+After drawing a Use-Case Diagram, designers write down the preconditions and the postconditions for each Use-Case. Often the successful post-condition for one use-case becomes the preconditions for the next use-case. For example, for the "Order Food" and "Eat Food" Use Cases:
 
 - Preconditions for "Order Food": Customer enters restaurant. Staff is ready to take the order.
 - Postconditions for "Order Food": Customer orders the food. Staff takes the order.
@@ -154,7 +159,7 @@ After drawing a Use-Case Diagram, designers write a **Use-Case Narrative** where
    What are the preconditions and postconditions of the use-case "Pay for food"? Remember that these are often related to the other use-case conditions "order food" and "eat food". 
 
 
-Software validity, testing, use-case diagrams and narratives are not covered on the AP CS A exam, but they are used by professional programmers. Preconditions and postconditions are covered on the AP CS A exam.
+Software validity, testing, and use-case diagrams are not covered on the AP CS A exam, but they are used by professional programmers. Preconditions and postconditions are covered on the AP CS A exam.
 
 |Groupwork| Programming Challenge : Comments and Conditions
 -----------------------------------------------------------
@@ -163,14 +168,14 @@ Software validity, testing, use-case diagrams and narratives are not covered on 
 
    <a href="https://creately.com" target="_blank">Creately.com</a> 
 
-Working in pairs or groups, draw a Use-Case diagram for an Online Store system where a user can login and purchase a product. Draw at least 4 use-case circles in the system (4 steps a user must do on the system in order to purchase a product). You may want to use an online drawing tool like |Creately.com| (choose Use-Case Diagrams) and pretend to buy something online to come up with the steps. Then, list  the preconditions and postconditions for each use-case.  
+Working in pairs or groups, come up with 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step. You could pretend to buy something online to come up with the steps. (You could use an online drawing tool like |Creately.com| (choose Use-Case Diagrams) to draw a Use-Case diagram for the Online Store System, but it is not required). Don't forget to list  the preconditions and postconditions for each step.  You can type in your answer below.
 
 .. shortanswer:: challenge-5-3-use-case-preconditions
 
-    Write a Use-Case Narrative here that lists at least 4 Use-Cases (the steps a user takes to buy a product on the system) for the Online Store System. List the preconditions and the postconditions for each use-case.
+     Write down 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step.
     
     
-Here is a simple class called User for this system. Add good commenting to this code for the class, instance variables, and methods.
+Here is a simple class called User that could be used in an online store. Add good commenting to this code before the class, the instance variables, and the methods.
 
 .. activecode:: challenge-5-3-comments
     :language: java

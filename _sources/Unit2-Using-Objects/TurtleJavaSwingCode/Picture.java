@@ -33,7 +33,7 @@ public class Picture extends SimplePicture
    * Constructor that takes a file name and creates the picture 
    * @param fileName the name of the file to create the picture from
    */
-  public Picture(String fileName)
+ /* public Picture(String fileName)
   {
     // let the parent class handle this fileName
     super(fileName);
@@ -85,12 +85,7 @@ public class Picture extends SimplePicture
     
   }
  
-  public static void main(String[] args) 
-  {
-     String fileName = FileChooser.pickAFile();
-     Picture pictObj = new Picture(fileName);
-     pictObj.explore();
-  }
+
   
 } // this } is the end of class Picture, put all new methods before this
  

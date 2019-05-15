@@ -19,26 +19,24 @@
     :align: middle
     :alt: groupwork
     
-.. talk about data encapsulation and image of object with data protected
-.. this old man song? But has no data. Bank account or Student class? okay to have parameters? all methods share the instance vars. but those outside have to use get/set. Riddle class. Pick out the objects from a narrative.
-.. Start unit 5 toc with a mention of Unit 2
+
 
 Anatomy of a Java Class
 =======================
 
-In Unit 2, we learned to use **classes** and **objects** that have been designed by other programmers. In this unit, you will learn to write your own classes and objects!
+In Unit 2, we learned to use **classes** and **objects** that are built-in to Java or written by other programmers. In this unit, you will learn to write your own classes and objects!
 
 Creating a Class
 ------------------
 
-Remember that a **class** in programming defines a new **abstract data type**. When you create **objects**, you create new variables or instances of that class data type. For example in Unit 2, we created yertle and myrtle, 2 turtle objects created from the class Turtle, and we used the Java String class to create different String variables, also called **object references**.
+Remember that a **class** in programming defines a new **abstract data type**. When you create **objects**, you create new variables or **instances** of that class data type. For example in Unit 2, we created yertle and myrtle, 2 turtle objects created from the class Turtle, and we used the Java String class to create different String variables, also called **object references**.
 
 .. |video| raw:: html
 
    <a href="https://www.youtube.com/watch?v=1JJL0YszYik" target="_blank">video</a>
 
 
-Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can think of the class as like a blueprint or a cookie cutter or a factory that produces objects. 
+Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. 
 
 
 .. youtube:: 1JJL0YszYik
@@ -48,7 +46,7 @@ Here is a fun |video| demonstrating the difference between the class House which
 
 
 
-A class declaration typically starts with ``public`` then ``class`` then the name of the class.  The body of the class is defined inside a ``{`` and a ``}``. For example, the class House below. Then, we can create objects of that new House type by using ``Classname objectname = new Classname();``
+To write your own class, you typically start a class declaration with ``public`` then ``class`` then the name of the class.  The body of the class is defined inside a ``{`` and a ``}``. For example, the class House below. Then, you can create objects of that new House type by using ``Classname objectname = new Classname();``
 
 .. code-block:: java
 
@@ -62,7 +60,7 @@ A class declaration typically starts with ``public`` then ``class`` then the nam
     House neighborsHouse = new House();
 
 
-All objects created by the same class have the same **instance variables** and **methods**.   Instance variables hold the data for objects where as the methods code the behaviors or the actions the object can do.   A class also has **constructors** which initialize the instance variables when the object is created, for example new House() above.  And a class can also have a **main method** which can be used to test the class.  
+Remember that objects have attributes and behaviors. These correspond to **instance variables** and **methods** in the class definition.   Instance variables hold the data for objects where as the methods code the behaviors or the actions the object can do.   A class also has **constructors** which initialize the instance variables when the object is created, for example new House() above.  And a class can also have a **main method** which can be used to test the class.  
 
 Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email.
 
@@ -74,7 +72,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Person%20%0A%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20construct%20a%20Person%20copying%20in%20the%20data%20into%20the%20instance%20variables%0A%20%20%20%20%20public%20Person%28String%20initName,%20String%20initEmail,%20String%20initPhone%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20phoneNumber%20%3D%20initPhone%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Print%20all%20the%20data%20for%20a%20person%0A%20%20%20%20%20public%20void%20print%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22Name%3A%20%22%20%2B%20name%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Email%3A%20%22%20%2B%20email%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Phone%20Number%3A%20%22%20%2B%20phoneNumber%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20call%20the%20constructor%20to%20create%20a%20new%20person%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22,%20%22sana%40gmail.com%22,%20%22123-456-7890%22%29%3B%0A%20%20%20%20%20%20%20%20//%20call%20p1%27s%20print%20method%0A%20%20%20%20%20%20%20%20p1.print%28%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22,%20%22jean%40gmail.com%22,%20%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20p2.print%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=34&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank">Java visualizer</a>
 
 
-.. activecode:: PersonObjExample
+.. activecode:: PersonClass
   :language: java
 
   public class Person 
@@ -112,49 +110,8 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
      }
   }
   
-.. change to just 1 constructor using initName as arguments and toString. No getters and setters to begin with.
+.. changed to just 1 constructor using initName as arguments and toString. No getters and setters to begin with.
 
-.. .. activecode:: PersonObjExample
-  :language: java
-
-  public class Person 
-  {
-     // instance variables 
-     private String name;
-     private String email;
-     private String phoneNumber;
-     
-     // constructor
-     public Person(String theName)
-     {
-        this.name = theName;
-     }
-     
-     // accessor methods - getters 
-     public String getName() { return this.name;}
-     public String getEmail() { return this.email;}
-     public String getPhoneNumber() { return this.phoneNumber;}
-     
-     // accessor methods - setters
-     public void setName(String theName) { this.name = theName;}
-     public void setEmail(String theEmail) {this.email = theEmail;}
-     public void setPhoneNumber(String thePhoneNumber) { this.phoneNumber = thePhoneNumber;}
-     public String toString()
-     {
-        return this.name + " " + this.email + " " + this.phoneNumber;
-     }
-     
-     // main method for testing
-     public static void main(String[] args)
-     {
-        Person p1 = new Person("Sana");
-        System.out.println(p1);
-        Person p2 = new Person("Jean");
-        p2.setEmail("jean@gmail.com");
-        p2.setPhoneNumber("404 899-9955");
-        System.out.println(p2);
-     }
-  }
   
 
 
@@ -233,7 +190,7 @@ Methods
    Methods define what the object can do.  They typically start with ``public`` then a type, then the name of the method followed by parentheses for optional parameters. Methods defined for an object can access and use its instance variables!  
 
 The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
-**Void** is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber.
+The **void** return type is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber. The instance variables are shared by all the methods of the class.
 
 .. code-block:: java
      
@@ -284,11 +241,20 @@ To call a method to do its job, we create an object of the class and then use th
 Object-Oriented Design
 ----------------------
 
-In **Object-Oriented Design** (OOD), programmers first spend time to decide which classes are needed and then decide what data and methods need to be in each class. For example, here is the class diagram for the Turtle class that we have seen before. 
+.. |tutorial on class diagrams| raw:: html
+
+   <a href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" target="_blank">tutorial on class diagrams</a> 
+
+.. |Creately.com| raw:: html
+
+   <a href="https://creately.com" target="_blank">Creately.com</a> 
+
+
+In **Object-Oriented Design** (OOD), programmers first spend time to decide which classes are needed and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CS A exam). If you want to draw your own, |Creately.com| is a good free online drawing tool for class diagrams.
 
 
 .. figure:: Figures/turtleUMLClassDiagram.png
-    :width: 400px
+    :width: 350px
     :align: center
     :alt: Turtle class diagram
     :figclass: align-center
@@ -306,11 +272,6 @@ When you are given a problem specification, look for the **nouns** to identify w
 
 The two nouns in the problem description above, **Student** and **Course** would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!
 
-.. |Creately.com| raw:: html
-
-   <a href="https://creately.com" target="_blank">Creately.com</a> 
-
-If you'd like to draw your own Class Diagrams as you do object-oriented design, |Creately.com| is a good tool to use online for free. 
 
 
 
@@ -319,7 +280,7 @@ If you'd like to draw your own Class Diagrams as you do object-oriented design, 
 
 .. shortanswer:: OOD2
 
-    Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): "Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything." What classes would you need to create to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables.
+    Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): "Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything." What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables.
     
 
 |Groupwork| Programming Challenge : Riddle Class
@@ -335,9 +296,9 @@ In this project, you will create a class that can tell riddles like the followin
 - Riddle Question: Why did the chicken cross the playground?
 - Riddle Answer: To get to the other slide!
 
-1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? You may want to draw a Class Diagram using |Creately.com|.
+1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |Creately.com|, although it is not required). 
 
-2. Write a Riddle class below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below.
+2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
 3. Add a main method that constructs at least 3 Riddle objects and calls their methods to ask and answer the riddle. You can look up some good riddles online.
 

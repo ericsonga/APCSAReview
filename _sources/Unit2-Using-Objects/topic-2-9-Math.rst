@@ -175,13 +175,23 @@ These are all listed in the Java Quick Reference guide that you can use during t
     :align: left
     :alt: lock
     
-You may have a combination lock on your locker at school where you have to spin the dial to 3 separate numbers from 0 up to 40. What if you forgot your combination? Would you be able to guess it? Write code that will generate 3 random integers from 0 up to 40 (but not including 40) using **Math.random()**. Run it a couple times to see it generate different numbers. How many times would you need to run it to guess your combination correctly? Let's have the code compute that using the **Math.pow(number,exponent)** method. Here is an example using Math.pow().
+You may have a combination lock on your locker at school where you have to spin the dial to 3 separate numbers from 0 up to 40. What if you forgot your combination? Would you be able to guess it? 
 
-.. code-block:: java 
-  
-  // this would return the number of combinations to choose 2 numbers between 0-9. 
-  double combinations = Math.pow(10,2);
- 
+1. Write code that will generate 3 random integers from 0 up to 40 (but not including 40) using **Math.random()** in the Active Code window below. Run it a couple times to see it generate different numbers. 
+
+2. How many times would you need to run it to guess your combination correctly? Let's have the code compute the number of permutations possible in your combination lock using **Math.pow(number,exponent)**. For example, if you had 2 dials on your combination lock where each dial can be set to a digit from 0-9 (10 digits), there are 10\ :sup:`2` possible permutations. In Java, this would be written as **Math.pow(10,2)** which means 10 to the power of 2. If you start listing all the permutations possible, you can tell that there are 10\ :sup:`2` or 100 possible permutations for a 2 dial lock from 0-9.
+
+.. raw:: html
+
+    <pre>
+    00, 01, 02, 03, 04, 05, 06, 07, 08, 09
+    10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+    ...
+    90, 91, 92, 93, 94, 95, 96, 97, 98, 99
+    </pre>
+
+Now what about the combination lock for this challenge? It has 3 dials with 0-40 (not including 40) numbers possible on each dial. In general, the formula to use is NumbersPerDial\ :sup:`numberOfDials`. Write this using the **Math.pow()** method in your code and save it into a variable and print out.
+
  
 .. activecode:: challenge2-9-random-math
    :language: java
@@ -193,7 +203,8 @@ You may have a combination lock on your locker at school where you have to spin 
         // 1. Use Math.random() to generate 3 integers from 0-40 (not including 40) and print them out.
         
         
-        // 2. Calculate the number of combinations to choose 3 numbers between 0-40 (not including 40) using Math.pow() and print it out.
+        // 2. Calculate the number of combinations to choose 3 numbers between 0-40 (not including 40) using Math.pow() and print it out. 
+        // For example, Math.pow(10,2) is 10^2 and the number of permutations to choose 2 numbers between 0-9.
         
         
       }

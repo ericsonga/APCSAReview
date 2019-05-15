@@ -1,4 +1,4 @@
-Unit 1 Practice Multiple Choice
+Multiple Choice Exercises
 =================================
 
 .. qnum::

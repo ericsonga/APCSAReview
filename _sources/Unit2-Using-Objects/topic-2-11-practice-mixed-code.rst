@@ -2,7 +2,7 @@
    :prefix: 2-11-
    :start: 1
 
-Unit 2 Practice Mixed Up Code
+Mixed Up Code Practice
 ===============================
 
 The coding problems below are all about Strings, but more problems on other topics in this unit will be added in the future.

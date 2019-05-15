@@ -56,7 +56,7 @@ For the AP CS A exam there are only a few things that you have to know about str
 
     -  **boolean equals(String other)** returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.
 
-Run the code below to see the output from ``length``, ``substring``, and ``indexOf``.
+Run the code below to see the output from ``length``, ``substring``, and ``indexOf``. Notice that indexOf returns -1 if it cannot find the substring in the message.
 
 .. activecode:: lcsm1
    :language: java
@@ -137,7 +137,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
    :feedback_c: This would be true if it was s1.substring(0,2)
    :feedback_d: Substring returns all the characters from the starting index to the last index - 1.
 
-   What is the value of str2 after the following code executes?
+   What is the value of s2 after the following code executes?
 
    .. code-block:: java
 
@@ -173,7 +173,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
    :feedback_d: This would be true if it was substring(2,3);
    :feedback_e: This would be ture if it was substring(0,2);
 
-   What is the value of str2 after the following code executes?
+   What is the value of s2 after the following code executes?
 
    .. code-block:: java
 
@@ -299,7 +299,7 @@ There are lots of other methods in the String class.  You can look through the J
    :feedback_b: The method compareTo will only return 0 if the strings have the same characters in the same order.
    :feedback_c: This would be true if it was s2.compareTo(s1)
 
-   What is the value of s3 after the following code executes?
+   What is the value of answer after the following code executes?
 
    .. code-block:: java
 

@@ -273,4 +273,4 @@ Summary
 
 - Primitive values can be concatenated with a String object. This causes implicit conversion of the values to String objects.
 
-- Escape sequences start with a \ and have a special meaning in Java. Escape sequences used in this course include \”, \\, and  \n.
+- Escape sequences start with a \ and have a special meaning in Java. Escape sequences used in this course include \", \\, and  \n.

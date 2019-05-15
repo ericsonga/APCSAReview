@@ -242,9 +242,19 @@ Have you ever played 20 Questions? There is great online version called |Akinato
 
 1. Try the program below and run it a couple times thinking of an animal and answering the questions with y or n for yes or no. Did it guess your animal? Probably not! It's not very good. It can only guess 3 animals. Let's try to expand it!
 
-2. In the very last else clause, the program knows that it is not a mammal and it guesses a bird. Let's add to that part. (You may want to click on Open in Repl.it on the top right of the window and then click on Sign up or Log in to save your work). Inside that last else clause, ask the user another question that distinguishes between reptiles and birds and get their answer, and then, add another if/else statement that guesses a bird or a frog. Run your code and test both possibilities!
+2. In the very last else clause, the program knows that it is not a mammal and it guesses a bird. Let's add to that part. (You may want to click on Open in Repl.it on the top right of the window and then click on Sign up or Log in to save your work). Instead of saying "I guess a bird! Click on run to play again.", change it to ask a question that distinguishes between birds and reptiles (for example does it fly?). Then, get their response and use an if statement to guess "bird" or "turtle" (or another reptile). For example, here's how we decided to choose between a dog or an elephant. We asked the question "Is it a pet?", got the response, and then with an if statement on the y/n answer we determined dog or elephant. You would use similar code to distinguish between a bird and a turtle. Run your code and test both possibilities!
 
-3. Did you notice that when it asked "Is it a pet?" and you said "y", it immediately guessed "dog"? What if you were thinking of a cat? Try to come up with a question that distinguishes dogs from cats and put in code in the correct place to ask the question, get the answer, and use an if/else to guess cat or dog. Run your code and test both possibilities!
+.. code-block:: java
+
+      System.out.println("Is it a pet (y/n)?");
+      answer = scan.nextLine();
+      if (answer.equals("y")) 
+           System.out.println("I guess a dog! Click on run to play again.");
+       else 
+           System.out.println("I guess an elephant! Click on run to play again.");
+            
+
+3. Did you notice that when it asked "Is it a pet?" and you said "y", it immediately guessed "dog"? What if you were thinking of a cat? Try to come up with a question that distinguishes dogs from cats and put in code in the correct place (in place of I guess a dog) to ask the question, get the answer, and use an if/else to guess cat or dog. Run your code and test both possibilities!
 
 4. How many animals can your game now guess? How many test-cases are needed to test all branches of your code?
 

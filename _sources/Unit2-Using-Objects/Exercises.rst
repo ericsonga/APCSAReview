@@ -2,7 +2,7 @@
    :prefix: 2-13-
    :start: 1
    
-Unit 2 Practice Multiple Choice
+Multiple Choice Exercises
 =================================
 
 These questions are all about Strings, but more questions on using other objects will be added in the future.

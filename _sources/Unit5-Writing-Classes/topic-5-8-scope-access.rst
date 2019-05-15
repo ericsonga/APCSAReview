@@ -32,5 +32,5 @@ Summary
 
 - Formal parameters and variables declared in a method or constructor can only be used within that method or constructor.
 
-- Through method decomposition, a programmer breaks down a large problem into smaller subproblems by creating methods to solve each individual subproblem.
+
 

@@ -17,7 +17,11 @@ You can learn Java by just using the interactive coding panels called Active Cod
 
 repl.it
 -------
-If you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option, you can use an online development environment like https://repl.it/ where you can login with a Google account or make an account. You can create new projects and all of your code will be kept online in your account.  One limitation of online environments is that they usually cannot create Java code that uses a graphical user interface, and they only do input and output as text (which is fine for CS A code but not as much fun). However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! 
+If you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option, you can use an online development environment like https://repl.it/ where you can login with a Google account or make an account. You can create new projects and all of your code will be kept online in your account. Repl.it also has a free K12 public school plan (https://repl.it/account/checkout/k12_per_seat) where public school teachers can apply to get a repl.it online classroom.
+
+Some of the Active Code samples in this e-book course also include a link to a repl.it project. These projects are public and as soon as you try to change the code, it will make a copy for you in your own repl.it account.
+
+Online IDEs usually cannot use graphical user interfaces and just do input and output as text. However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! You need to choose Java Swing instead of just Java to get this environment when you start a new repl project. 
 
 Dr. Java
 --------
@@ -48,4 +52,4 @@ Netbeans (https://netbeans.org/) is one of the original Java IDEs.  Here is a tu
 Eclipse
 -------
 
-Eclipse (https://www.eclipse.org/downloads/packages/installer) is what many professional Java programmers use. It may be a little complex for beginners. Here are some installation and configuration instructions for Eclipse for CS A Java: http://skylit.com/javamethods/faqs/Eclipse.pdf .
+Eclipse (https://www.eclipse.org/downloads/packages/installer) is what many professional Java programmers use. It may be a little complex for beginners. Here are some installation and configuration instructions for Eclipse for CS A Java: http://skylit.com/javamethods/faqs/Eclipse.pdf.

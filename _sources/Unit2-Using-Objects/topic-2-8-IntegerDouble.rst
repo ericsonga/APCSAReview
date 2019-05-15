@@ -152,7 +152,7 @@ Summary
 
 - The following Integer methods and constructors, including what they do and when they are used, are part of the Java Quick Reference.
 
-  - Intent value) : Constructs a new Integer object that represents the specified int value.
+  - Integer(value): Constructs a new Integer object that represents the specified int value.
   - Integer.MIN_VALUE : The minimum value represented by an int or Integer.
   - Integer.MAX_VALUE : The maximum value represented by an int or Integer.
   - int intValue() : Returns the value of this Integer as an int.

@@ -247,9 +247,9 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    :correct: b
    :feedback_a: first case will only print if x is greater than 0 and it is not.  
    :feedback_b: second case will print if x is less than or equal to zero or if y divided by x is not equal to 3.  
-   :feedback_c: Since the first condition if false when x is equal to zero the second condition won't execute.  Execution moves to the else.    
+   :feedback_c: Since the first condition is false when x is equal to zero the second condition won't execute.  Execution moves to the else.    
 
-   What is printed when the following code executes and x has been set to 0?  
+   What is printed when the following code executes and x has been set to 0 and y to 3?  
    
    .. code-block:: java
 
@@ -324,7 +324,7 @@ We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inqui
 
 Explore the following problems with your group:
 
-1. Write the sentence "If the temperature is greater than 80 and it's sunny, or if it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!".
+1. Write the sentence "If it's sunny, OR if the temperature is greater than 80 and it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!". So, you will go to beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it's not raining.
 
 2. Complete a truth table for the if statement that you wrote in #1 with columns for temperature > 80, sunny, raining, and go to the beach.
 
@@ -355,4 +355,4 @@ Summary
 
 - In Java, ! has precedence (is executed before) && which has precedence over ||. Parentheses can be used to force the order of execution in a different way.
 
-- When the result of a logical expression using && or || can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as short-circuit evaluation.
+- When the result of a logical expression using && or || can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as **short-circuit evaluation**.

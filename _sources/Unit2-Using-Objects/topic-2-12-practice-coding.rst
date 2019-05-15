@@ -2,7 +2,7 @@
    :prefix: 2-12-
    :start: 1
 
-Unit 2 Practice Coding
+Coding Practice
 ======================
 
 The coding problems below are all about Strings, but more problems on other topics in this unit will be added in the future.
