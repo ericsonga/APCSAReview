@@ -1,9 +1,11 @@
 .. qnum::
-   :prefix: 7-2-
+   :prefix: 6-3-
    :start: 1
   
-Looping with the For-Each Loop
-==============================
+.. arrays of objects?
+
+Enhanced For-Loop (For-Each) for Arrays
+=======================================
 
 ..	index::
 	single: for-each

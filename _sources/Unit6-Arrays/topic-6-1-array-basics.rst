@@ -1,9 +1,13 @@
 .. qnum::
-   :prefix: 7-1-
+   :prefix: 6-1-
    :start: 1
 
-Arrays in Java
--------------------
+.. put country images and funny animal images on github. 
+    CodeEx access array - can you print the cat image? pig image? random image? 
+    challenge - set up countries, languages, and capitals arrays, pick one at random and show the info. Also repl.it version using JFrame? Find a simple tutorial online? 
+
+Array Creation and Access
+--------------------------
 
 ..	index::
 	single: array

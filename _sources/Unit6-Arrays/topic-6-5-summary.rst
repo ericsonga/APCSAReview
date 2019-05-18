@@ -1,8 +1,8 @@
 .. qnum::
-   :prefix: 7-20-
+   :prefix: 6-5-
    :start: 1
    
-Arrays - Summary
+Unit 6 Summary
 -------------------------
 
 In this chapter you learned about **Arrays**.  An **array** is consecutive storage for multiple items of the same type like the top five scores in a game.  You learned how to declare arrays, create them, and access array elements.  Array elements are accessed using an index.  The first element in an array is at index 0.
@@ -71,3 +71,16 @@ Practice
     :match_4: Initialize a String array named list1 to contain the first 3 letters of the alphabet as separate strings|||String[] list1 = {"a", "b", "c"};
     
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
+
+
+  
+Common Mistakes
+===============
+
+  -  forgetting to create the array - only declaring it (``int[ ] nums;``)
+  -  using 1 as the first index not 0
+  -  using ``array.length`` as the last valid index in an array, not ``array.length - 1``.
+  -  using ``array.length()`` instead of ``array.length`` (not penalized on the free response)
+  -  using ``array.get(0)`` instead of ``array[0]`` (not penalized on the free response)
+  -  going out of bounds when looping through an array  (using ``index <= array.length``).  You will get an ``ArrayIndexOutOfBoundsException``.  
+  -  jumping out an loop too early by using one or more return statements before every value has been processed.  

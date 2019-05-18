@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 7-21-
+   :prefix: 6-7-
    :start: 1
 
 Code Practice with Arrays
----------------------------
+============================
 
 .. tabbed:: ch7Ex1
 
@@ -557,3 +557,25 @@ Code Practice with Arrays
                 :shortname: cslearn4u
                 :identifier: javareview_ch7Ex10nd
 
+
+More Practice
+---------------
+   
+For practice with simple array manipulation and conditionals, but no loops see http://codingbat.com/java/Array-1. 
+For more practice with loops and arrays go to http://codingbat.com/java/Array-2.
+
+Here are problems without loops
+
+* http://codingbat.com/prob/p167011
+* http://codingbat.com/prob/p191991
+* http://codingbat.com/prob/p146256
+* http://codingbat.com/prob/p199519
+* http://codingbat.com/prob/p109537
+
+Here are problems with loops
+
+* http://codingbat.com/prob/p180920
+* http://codingbat.com/prob/p104627
+* http://codingbat.com/prob/p199612
+* http://codingbat.com/prob/p105031
+* http://codingbat.com/prob/p100246
