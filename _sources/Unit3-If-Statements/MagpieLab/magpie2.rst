@@ -10,7 +10,7 @@
 Activity 2: Running Simplified Magpie Code
 ===========================================
 
-The College Board activity asks you to enter input using the ``Scanner`` class and record the responses.  But, instead you can run this simplified version below and just call the ``getResponse`` method which each string as input as shown in the ``main`` method below. 
+The College Board activity asks you to enter input using the ``Scanner`` class and record the responses.  But, instead you can run this simplified version below and just call the ``getResponse`` method with each string as input as shown in the ``main`` method below. 
 
 Up until now, all our code has been in the main method. In this lab, there are a couple methods. The main method creates a Magpie object called maggie, and calls its methods maggie.getGreeting() and maggie.getResponse(input) giving one of the following strings as input and printing its response.
 

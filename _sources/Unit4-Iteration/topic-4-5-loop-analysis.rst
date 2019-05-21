@@ -46,7 +46,7 @@ You can create a tracing table that keeps track of the variable values each time
     
 .. |Java visualizer| raw:: html
 
-   <a href="https://goo.gl/qEHnpg" target="_blank">Java visualizer</a>
+   <a href="https://goo.gl/qEHnpg" target="_blank"  style="text-decoration:underline">Java visualizer</a>
    
 
 

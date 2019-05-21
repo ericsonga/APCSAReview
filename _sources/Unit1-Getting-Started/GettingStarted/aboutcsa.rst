@@ -3,7 +3,7 @@ About the AP CS A Exam
     
 This course will prepare you for the Advanced Placement Computer Science A Exam. This exam tests your programming skills in Java. 
 
-The AP CS A exam is 3 hours long and has two sections — multiple choice and free-response. You will be given one hour and 30 minutes for each part.  The first part has 40 multiple-choice questions, and the second part has 4 free response questions where you have to write Java code by hand. Each part is worth 50% of your grade.
+The AP CS A exam is 3 hours long and has two sections — multiple choice and free-response. You will be given one hour and 30 minutes for each part.  The first part has 40 multiple-choice questions, and the second part has 4 free response questions where you have to write Java code by hand. Each part is worth 50% of your grade. During the exam, you will have access to the |AP CS A Reference Sheet|.
 
 Starting in 2020, the AP CS A exam will cover the following units and will provide formative assessments called Personal Progress Checks for each unit in the AP portal. 20 hours of lab time is required in AP CS A courses to allow students to practice Java programming. Note that abstract classes, interfaces, and binary/hex conversion have been removed from AP CS A starting in 2020. This course is arranged to follow the AP CS A units and provides many interactive exercises in each unit. 
 
@@ -15,7 +15,7 @@ Unit 1  Primitive Types   2.5–5%      8-10
 ------- ----------------- ----------- ---------- -------
 Unit 2  Using Objects     5–7.5%      13-15
 ------- ----------------- ----------- ---------- -------
-Unit 3  Boolean Exprs/ifs 15–17.5%    11-13
+Unit 3  Boolean Exprs/ifs 15–17.5%    11-13      3 days
 ------- ----------------- ----------- ---------- -------
 Unit 4  Iteration         17.5–22.5%, 14-16      6 days
 ------- ----------------- ----------- ---------- ------- 
@@ -46,4 +46,18 @@ The 4 free response questions allow students to write code to answer a problem a
 
    <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank">AP CS A site</a>
    
-For more information on the exam see the College Board |AP CS A site|. This site also has a list of careers that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!  
+.. |AP CS A CED| raw:: html
+
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP CS A Course and Exam Description (CED)</a>
+   
+.. |CS Careers| raw:: html
+
+   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank">CS Careers</a>
+   
+.. |AP CS A Reference Sheet| raw:: html
+
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   
+For more information on the exam see the College Board |AP CS A site| and the 200+ page |AP CS A CED|. 
+
+Also check out this list of |CS Careers| that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!  
