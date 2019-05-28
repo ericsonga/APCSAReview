@@ -1,9 +1,38 @@
 .. qnum::
    :prefix: 8-5-
    :start: 1
-     
-Adding Values to a List
+
+ArrayList Methods 
 =========================
+
+..	index::
+	pair: list; size
+	pair: list; add
+	pair: list; get
+	pair: list; set
+	pair: list; remove
+
+The following are the ``ArrayList`` methods that you need to know for the AP CS A exam.  These are included on the quick reference that you will receive during the exam.  You can get it at https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-ap/AP_Computer-Science-A-Quick-Reference.pdf. 
+
+    -  ``int size()`` returns the number of elements in the list
+    
+    -  ``boolean add(E obj)`` appends obj to the end of the list and returns true
+    
+    -  ``void add(int index, E obj)``  moves any current objects at index or beyond to the right (to a higher index) and inserts obj at the index
+
+    -   ``E get(int index)`` returns the item in the list at the index
+    
+    -   ``E set(int index, E obj)`` replaces the item at index with obj
+    
+    -   ``E remove(int index)`` removes the item at the index and shifts remaining items to the left (to a lower index)
+    
+.. note::
+
+   Notice that the ``add`` methods for the ``ArrayList`` class take objects to add to the list.  ArrayLists can only hold objects, not primitive values.  All primitive types much be **wrapped** in objects before they are added to a list.  For example, ``int`` values can be wrapped in ``Integer`` objects, ``double`` values can be wrapped in ``Double`` objects. 
+    
+    
+Adding Values to a ArrayList
+-----------------------------
 
 ..	index::
 	pair: list; adding an item
@@ -18,7 +47,7 @@ You can add values to a list.  If you use ``add(obj)`` it will add the passed ob
    {
       public static void main(String[] args)
       {
-         List<String> nameList = new ArrayList<String>();
+         ArrayList<String> nameList = new ArrayList<String>();
          nameList.add("Diego");
          System.out.println(nameList);
          nameList.add("Grace");
@@ -44,7 +73,7 @@ The ``add(index,obj)`` method adds the passed object at the passed index, but fi
    {
       public static void main(String[] arts)
       {
-         List list1 = new ArrayList();
+         ArrayList list1 = new ArrayList();
          list1.add(new Integer(1));
          System.out.println(list1);
          list1.add(new Integer(2));
@@ -63,7 +92,7 @@ The ``add(index,obj)`` method adds the passed object at the passed index, but fi
    
 .. note::
 
-   Lists can only hold objects, not primitive values.  This means that ``int`` values must be wrapped into ``Integer`` objects to be stored in a list.  You can do this using ``new Integer(value)`` as shown above.  You can also just put an ``int`` value in a list and it will be changed into an ``Integer`` object automatically.  This is called **autoboxing**. When you pull an ``int`` value out of a list of ``Integers`` that is called **unboxing**.  
+   ArrayLists can only hold objects, not primitive values.  This means that ``int`` values must be wrapped into ``Integer`` objects to be stored in a list.  You can do this using ``new Integer(value)`` as shown above.  You can also just put an ``int`` value in a list and it will be changed into an ``Integer`` object automatically.  This is called **autoboxing**. When you pull an ``int`` value out of a list of ``Integers`` that is called **unboxing**.  
    
 The code below has the same result as the code above.  The compiler will automatically wrap the ``int`` values in ``Integer`` objects.
    
@@ -75,7 +104,7 @@ The code below has the same result as the code above.  The compiler will automat
    {
       public static void main(String[] arts)
       {
-         List list1 = new ArrayList();
+         ArrayList list1 = new ArrayList();
          list1.add(1);
          System.out.println(list1);
          list1.add(2);
@@ -106,7 +135,7 @@ The code below has the same result as the code above.  The compiler will automat
    
    .. code-block:: java 
    
-      List<Integer> list1 = new ArrayList<Integer>();
+      ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(new Integer(1));
       list1.add(new Integer(2));
       list1.add(new Integer(3));
@@ -131,7 +160,7 @@ You can step through the code above by clicking on the following `Example-8-5-1 
    
    .. code-block:: java 
    
-      List<String> list1 = new ArrayList<String>();
+      ArrayList<String> list1 = new ArrayList<String>();
       list1.add("Anaya");
       list1.add("Layla");
       list1.add("Sharrie");
@@ -156,7 +185,7 @@ You can step through the code above by clicking on the following `Example-8-5-2 
    
    .. code-block:: java 
    
-      List<Integer> list1 = new ArrayList<Integer>();
+      ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(5);
       list1.add(4);
       list1.add(3);
@@ -180,9 +209,77 @@ You can step through the code above by clicking on the following `Example-8-5-3 
    
    .. code-block:: java 
    
-      List<Integer> list1 = new ArrayList<Integer>();
+      ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
       list1.add(3);
       list1.add(2);
       list1.add(1);
       System.out.println(list1);
+
+
+ArrayList get/set Methods
+------------------------------------
+
+..	index::
+	pair: list; getting an item
+    pair: list; setting an item
+
+You can get the object at an index using ``obj = listName.get(index)`` and set the object at an index using ``listName.set(index,obj)``.
+
+.. activecode:: listGetSet
+   :language: java
+
+   import java.util.*;  // import all classes in this package.
+   public class Test
+   {
+      public static void main(String[] args)
+      {
+         List<String> nameList = new ArrayList<String>();
+         nameList.add("Diego");
+         nameList.add("Grace");
+         nameList.add("Deja"); 
+         System.out.println(nameList);
+         System.out.println(nameList.get(0));
+         System.out.println(nameList.get(1));
+         System.out.println(nameList.get(2));
+         nameList.set(1, "John");
+         System.out.println(nameList);
+         
+      }
+   }
+   
+.. note::
+
+   Remember that you can get the value at an array index using ``value = arrayName[index]``.  This is different from how you get the value from a list using ``obj = listName.get(index)``.  You can set the value at an index in an array using ``arrayName[index] = value``, but with lists you use ``listName.set(index, object)``. 
+   
+
+The ArrayList class is part of the java.
+util package. An import statement can be
+used to make this class available for use in the
+program.
+VAR-2.D.7
+The following ArrayList methods—
+including what they do and when they are
+used—are part of the Java Quick Reference:
+§ int size() - Returns the number of
+elements in the list
+§ boolean add(E obj) - Appends
+obj to end of list; returns true
+§ void add(int index, E obj) -
+Inserts obj at position index (0 <=
+index <= size), moving elements at
+position index and higher to the right
+(adds 1 to their indices) and adds 1 to size
+§ E get(int index) - Returns the
+element at position index in the list
+§ E set(int index, E obj) —
+Replaces the element at position index
+with obj;returns the element formerly at
+position index
+
+E remove(int index) — Removes
+element from position index, moving
+elements at position index + 1 and
+higher to the left (subtracts 1 from their
+indices) and subtracts 1 from size; returns
+the element formerly at position index

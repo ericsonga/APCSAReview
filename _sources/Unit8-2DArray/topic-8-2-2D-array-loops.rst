@@ -1,10 +1,13 @@
 .. qnum::
-   :prefix: 9-3-
+   :prefix: 8-2-
    :start: 1
 
-Getting the Number of Rows and Columns
-========================================
+Traversing 2D Arrays (nested loops)
+===================================
 
+
+Getting the Number of Rows and Columns
+---------------------------------------
 ..	index::
 	pair: 2D Array; number of rows
 	pair: 2D Array; number of columns
@@ -52,7 +55,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
    
  
 Looping Through a 2D Array
-============================
+--------------------------
 
 ..	index::
 	pair: 2D Array; looping through
@@ -128,7 +131,7 @@ You can step through the code by clicking on this `link1 <http://cscircles.cemc.
 You can step through this code using the Java Visualizer by clicking on the following `link2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&mode=display&curInstr=40>`_
 
 Use a For-Each to Loop Through an Array
-========================================
+----------------------------------------
 
 ..	index::
 	pair: 2D Array; for-each loop
@@ -164,4 +167,75 @@ Since 2D arrays are really arrays of arrays you can also use a nested for-each l
 In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
 
 You can step through this code using the Java Visualizer by clicking on the following `link3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A+++%7B%0A%0A++++++public+static+double+getAvg(int%5B%5D%5B%5D+a)%0A++++++%7B%0A+++++++++double+total+%3D+0%3B%0A+++++++++for+(int%5B%5D+colArray+%3A+a)%0A+++++++++%7B%0A++++++++++++for+(int+val+%3A+colArray)%0A++++++++++++%7B%0A+++++++++++++++total+%3D+total+%2B+val%3B%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++return+total+/+(a.length+*+a%5B0%5D.length)%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D%5B%5D+theArray+%3D+%7B%7B80,+90,+70%7D,+%7B20,+80,+75%7D%7D%3B%0A+++++++++System.out.println(getAvg(theArray))%3B%0A++++++%7D%0A+++%7D&mode=display&curInstr=0>`_
+
+.. qnum::
+   :prefix: 9-4-
+   :start: 1
+
+Loop Through Part of a 2D Array
+-------------------------------
+
+..	index::
+	pair: 2D Array; loop range
+
+You can loop through just part of a 2D array.  For example, you might want to sum all of the values in a given row.
+
+.. activecode:: lca2dloopPart
+   :language: java 
+ 
+
+   public class Test
+   {
+
+      public static int getTotalForRow(int row, int[][] a)
+      {
+         int total = 0;
+         for (int col = 0; col < a[0].length; col++)
+         {
+            total = total + a[row][col]; 
+         }
+         return total;
+      }
+      
+      public static void main(String[] args)
+      {
+         int[][] matrix = {{1,2,3},{4,5,6}};
+         System.out.println(getTotalForRow(0,matrix));
+      }
+   }
+  
+You can change the starting value and ending value to loop through a subset of a 2D array. 
+
+.. activecode:: lca2dloopPart2
+   :language: java 
+ 
+
+   public class Test
+   {
+   
+      public static int countValues(int value, int[][] a, 
+                                 int rowStart, int rowEnd, 
+                                 int colStart, int colEnd)
+      {
+         int count = 0;
+         for (int row = rowStart; row <= rowEnd; row++)
+         {
+            for (int col = colStart; col <= colEnd; col++)
+            {
+               if (a[row][col] == value) count++;
+            }
+         }
+         return count;
+      } 
+      
+      public static void main(String[] args)
+      {
+         int[][] matrix = {{3,2,3},{4,3,6},{8,9,3},{10,3,3}};
+         System.out.println(countValues(3,matrix,0,2,0,2));
+      }  
+   }
+   
+
+
+      
 

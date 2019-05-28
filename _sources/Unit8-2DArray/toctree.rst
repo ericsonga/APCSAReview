@@ -11,10 +11,8 @@ Lab Periods: 7 days
 .. toctree::
    :maxdepth: 3
 
-   a2dBasics.rst
-   a2dDAS.rst
-   a2dLoop.rst
-   a2dLoopPart.rst
+   topic-8-1-2D-arrays.rst
+   topic-8-2-2D-array-loops.rst
    a2dMistakes.rst
    a2dPractice.rst
    a2dEasyMC.rst

@@ -70,7 +70,7 @@ We can use a **for loop** to loop through all the elements of an array.  Just st
   int[] highScores = { 10, 9, 8, 8};
   for (int i = 0; i < highScores.length; i++)
   {
-      System.out.println(  highScores[index] );
+      System.out.println(  highScores[i] );
   } 
 
 
@@ -484,7 +484,7 @@ The following code has an ArrayIndexOutOfBoundsException. It has 2 common off-by
           // Make this loop print out all the scores! 
           for (int i = 1; i <= scores.length; i++)
           {
-               System.out.println(  scores[index] );
+               System.out.println(  scores[i] );
           }          
       }
     }
@@ -559,11 +559,7 @@ a parameter for the letter as a String. You could use the Java String |startsWit
    
    public class SpellChecker
    {
-      private String[] dictionary;
-      
-      public SpellChecker() {
-         dictionary =     {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"};
-      }
+      private String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"};
 
       // Write your methods here
       

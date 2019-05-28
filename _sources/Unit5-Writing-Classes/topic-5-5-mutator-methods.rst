@@ -81,7 +81,7 @@ Try the Student class below which this time has set methods added. You will need
      { 
        name = newName; 
      }
-     public void setName(String newEmail)
+     public void setEmail(String newEmail)
      { 
        email = newEmail; 
      }

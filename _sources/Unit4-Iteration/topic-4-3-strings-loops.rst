@@ -21,7 +21,9 @@
     :alt: groupwork
 
 
+.. |AP CS A Reference Sheet| raw:: html
 
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
 
 Loops and Strings
 =================
@@ -46,7 +48,7 @@ Remember that strings are a sequence of characters where each character is at a 
 
    The first character in a Java String is at index 0 and the last characters is at **length()** - 1. So loops processing Strings should start at 0!
 
-The String methods (covered in lesson 2.7) that are most often used to process strings are:
+The String methods (covered in lesson 2.7 and given in the |AP CS A Reference Sheet|) that are most often used to process strings are:
 
 - **int length()** : returns the number of characters in a String object. 
   
@@ -67,7 +69,7 @@ Google has been scanning old books and then using software to read the scanned t
 
 |CodingEx| **Coding Exercise**
 
- The following code loops through a string replacing all 1's with l's.  Trace through the code below with a partner and explain how it works on the given message.  You can run it line by line in the |Java visualizer|. Note that indexOf here can work repeatedly to find the next occurence of a 1 because they are replaced as soon as they are found. Change the code to add code for a counter variable to count the number of 1's replaced in the message and print it out. Change the message to have more mistakes with 1's to test it.
+ The following code loops through a string replacing all 1's with l's.  Trace through the code below with a partner and explain how it works on the given message.  You can run it line by line in the |Java visualizer|. Note that indexOf here can work repeatedly to find the next occurrence of a 1 because they are replaced as soon as they are found. Change the code to add code for a counter variable to count the number of 1's replaced in the message and print it out. Change the message to have more mistakes with 1's to test it.
 
 .. activecode:: lclw1
    :language: java
@@ -121,7 +123,8 @@ Google has been scanning old books and then using software to read the scanned t
          // Find the next index for an a
          index = s.indexOf("a");
    =====         
-         // Remove the a at index by concatenating substring up to index and then the rest of the string.
+         // Remove the a at index by concatenating 
+         // substring up to index and then rest of the string.
          s = s.substring(0,index) + 
              s.substring(index+1);
    =====         
@@ -176,7 +179,7 @@ Here is a for-loop from 0 to length() that reverses a string. You can also run t
    public static void main(String[] args)
    {
    =====
-      String message = "The letter e is the most frequent letter in English.";
+      String message = "e is the most frequent English letter.";
       int count = 0;
    =====
       for(int i=0; i < message.length(); i++) 
@@ -203,7 +206,7 @@ Here is a for-loop from 0 to length() that reverses a string. You can also run t
     
 Are you a cat person or a dog person? The code below prints a nice message about cats, but if you're a dog person, you might not agree. 
 
-1. Write some code below that changes every occurence of "cat" to "dog" in the message. This code will be more like the first program in this lesson where we replaced 1's with l's. 
+1. Write some code below that changes every occurrence of "cat" to "dog" in the message. This code will be more like the first program in this lesson where we replaced 1's with l's. 
 
 2. Also, add a counter to count the number of replacements and print it out.
 

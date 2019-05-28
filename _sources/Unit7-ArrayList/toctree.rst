@@ -8,16 +8,14 @@ AP CS A Exam Weighting: 2.5–7.5%
 .. toctree::
    :maxdepth: 3
 
-   listbasics.rst
-   listInterface.rst
-   listArrayList.rst
-   listDeclareAndCreate.rst
-   listAdd.rst
-   listMethods.rst
-   listLoop.rst
-   listVsArray.rst
+   topic-7-1-arraylist-basics.rst
+   topic-7-2-arraylist-methods.rst
+   topic-7-3-arraylist-loops.rst
+   topic-7-4-arraylist-algorithms.rst
+   SearchSort/toctree.rst
    listMistakes.rst
    listSummary.rst
+   listVsArray.rst
    lPractice.rst
    listEasyMC.rst
    listMedMC.rst
@@ -25,6 +23,5 @@ AP CS A Exam Weighting: 2.5–7.5%
    freeResponse.rst
    listPractice.rst
    ListParsonsPractice.rst
-   SearchSort/toctree.rst
    Exercises.rst
 

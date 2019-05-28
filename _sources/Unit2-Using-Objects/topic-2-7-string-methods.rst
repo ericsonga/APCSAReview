@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
     
+.. |AP CS A Reference Sheet| raw:: html
+
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
+    
 String Methods 
 =================
 
@@ -43,7 +47,7 @@ A string holds characters in a sequence.  Each character is at a position or **i
 
    The first character in a string is at index 0 and the last characters is at **length** - 1.
 
-For the AP CS A exam there are only a few things that you have to know about strings.  All of the following are included in the quick reference that you get during the exam so you don't have to memorize these.  
+For the AP CS A exam there are only a few things that you have to know about strings.  All of the following are included in the |AP CS A Reference Sheet| that you get during the exam so you don't have to memorize these.  
 
 
     -  **int length()** method returns the number of characters in the string, including spaces and special characters like punctuation.
@@ -379,7 +383,7 @@ Summary
 
 - String objects are **immutable**, meaning that String methods do not change the String object. Any method that seems to change a string actually creates a new string. 
 
-- The following String methods and constructors, including what they do and when they are used, are part of the Java Quick Reference in the AP exam:
+- The following String methods and constructors, including what they do and when they are used, are part of the |AP CS A Reference Sheet| that you can use during the exam:
 
   - **String(String str)** : Constructs a new String object that represents the same sequence of characters as str.
   

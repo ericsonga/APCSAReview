@@ -1,44 +1,12 @@
 .. qnum::
-   :prefix: 8-6-
+   :prefix: 7-4-
    :start: 1
-
-Getting and Setting Values in a List
-===========================================
-
-..	index::
-	pair: list; getting an item
-    pair: list; setting an item
-
-You can get the object at an index using ``obj = listName.get(index)`` and set the object at an index using ``listName.set(index,obj)``.
-
-.. activecode:: listGetSet
-   :language: java
-
-   import java.util.*;  // import all classes in this package.
-   public class Test
-   {
-      public static void main(String[] args)
-      {
-         List<String> nameList = new ArrayList<String>();
-         nameList.add("Diego");
-         nameList.add("Grace");
-         nameList.add("Deja"); 
-         System.out.println(nameList);
-         System.out.println(nameList.get(0));
-         System.out.println(nameList.get(1));
-         System.out.println(nameList.get(2));
-         nameList.set(1, "John");
-         System.out.println(nameList);
-         
-      }
-   }
-   
-.. note::
-
-   Remember that you can get the value at an array index using ``value = arrayName[index]``.  This is different from how you get the value from a list using ``obj = listName.get(index)``.  You can set the value at an index in an array using ``arrayName[index] = value``, but with lists you use ``listName.set(index, object)``.  
+ 
+ArrayList Algorithms
+=====================
    
 Removing an Object at an Index
-===============================
+------------------------------
 
 ..	index::
 	pair: list; removing an item at an index

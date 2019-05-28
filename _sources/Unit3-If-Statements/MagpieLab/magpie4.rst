@@ -86,11 +86,8 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
             response = transformIWantToStatement(statement);
          }
   
-         // Responses which require transformations
-         else if (findKeyword(statement, "I want", 0) >= 0)
-         {
-            response = transformIWantStatement(statement);
-         }
+         // ADD Responses which require transformations!
+         
 
          else
          {
@@ -133,7 +130,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          return "What would it mean to " + restOfStatement + "?";
       }
  
-      /**
+      /**  ADD COD HERE!
        * Take a statement with "I want <something>." and transform it into 
        * Would you really be happy if you had <something>?
        * @param statement the user statement, assumed to contain "I want"
@@ -141,18 +138,9 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
        */
       private String transformIWantStatement(String statement)
       {
-         //  Remove the final period, if there is one
-         statement = statement.trim();
-         String lastChar = statement.substring(statement
-                                               .length() - 1);
-         if (lastChar.equals("."))
-         {
-            statement = statement.substring(0, statement
-                                               .length() - 1);
-         }
-         int psn = findKeyword (statement, "I want", 0);
-         String restOfStatement = statement.substring(psn + 7);
-         return "Would you really be happy if you had " + restOfStatement + "?";
+         // ADD CODE HERE 
+         
+         return "Would you really be happy if you had ...";
       }
 
       /**
@@ -178,6 +166,18 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
   
          String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
          return "What makes you think that I " + restOfStatement + " you?";
+      }
+
+     /**  ADD THIS
+       * Take a statement with "I <something> you" and transform it into 
+       * "Why do you <something> me?"
+       * @param statement the user statement, assumed to contain "I" followed by something "you"
+       * @return the transformed statement
+       */
+      private String transformIMeStatement(String statement)
+      {
+        // ADD CODE HERE
+        return "Why do you...";
       }
 
       /**
@@ -291,20 +291,24 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 Exercises: 
 -------------
 
+In this activity, the chatbot is altered to look not only for keywords, but also specific phrases.  Magpie4.java adds two new methods, transformIWantToStatement and transformYouMeStatement and getResponse has been modified to add tests to find "I want to something" statements and "You something me" statements.
+
+
 Look at the code. See how it handles “I want to” and you/me statements.
 
 .. |repl.it version 4| raw:: html
 
    <a href="https://repl.it/@BerylHoffman/Magpie-ChatBot-Lab-v4" target="_blank">repl.it version 4</a>
    
-Alter the code either above in the active code window or on |repl.it version 4| or in an IDE of your choice:
 
-* Have it respond to “I want something” statements with “Would you really be happy if you had something?” In doing this, you need to be careful about where you place the check. Be sure you understand why. For example:
+Then add two new methods, transformIWantStatement and transformIYouStatement, and calls to each as described below. Alter the code either above in the active code window or on |repl.it version 4| or in an IDE of your choice:
+
+* In a method transformIWantStatement, have it respond to “I want something” statements with “Would you really be happy if you had something?” You can use the already written transformIWantToStatement method as a guide. In doing this, you need to be careful about where you place the call to the method so it calls the right one. Test with the following:
 
   * Statement: I want fried chicken.
   * Response: Would you really be happy if you had fried chicken?
   
-* Have it respond to statements of the form “I something you” with the restructuring “Why do you something me?” For example:
+* In a method transformIYouStatement, have it respond to statements of the form “I something you” with the restructuring “Why do you something me?”. You can use the transformYouMeStatement method as a guide. Test with the following:
 
   * Statement: I like you.
   * Response: Why do you like me?

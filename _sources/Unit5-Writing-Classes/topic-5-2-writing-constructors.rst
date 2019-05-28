@@ -78,7 +78,7 @@ If there are no constructors written for a class, Java provides a no-argument **
 
      
 .. clickablearea:: name_constructor
-    :question: Click on all the parts of the contsructor
+    :question: Click on all the parts of the constructor
     :iscode:
     :feedback: Constructors are public and have the same name as the class.  
 
@@ -97,7 +97,7 @@ If there are no constructors written for a class, Java provides a no-argument **
          :click-incorrect:}:endclick:
          
          :click-incorrect:public void setLast(String theLast) {:endclick:
-            :click-incorrect:first = theLast;:endclick:
+            :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
          
     :click-incorrect:}:endclick:  
@@ -186,7 +186,7 @@ The following class defines a Car with the instance variables model and year, fo
      }
      
      // constructor: set instance variables to init parameters
-     public Car(String initModel, int intYear)
+     public Car(String initModel, int initYear)
      {
         // 2. set the instance variables to the init parameter variables
      
@@ -228,8 +228,12 @@ We encourage you to work in pairs for this challenge to create a Student class w
 .. activecode:: challenge-5-2-Student-class
   :language: java
 
-  // create a class Student that has at least 4 instance variables and 3 constructors, and a print method, and a main method to test them.
-  // (drag the triangle at the bottom of this window to enlarge the window.)
+  /** class Student 
+   * with 4 instance variables,
+   * 3 constructors, a print method, 
+   * and a main method to test them.
+   * (drag the triangle at the bottom of this window 
+  */ to enlarge the window.)
   
   
 Summary

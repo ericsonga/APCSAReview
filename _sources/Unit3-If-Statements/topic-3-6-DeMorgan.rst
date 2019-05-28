@@ -32,7 +32,7 @@ DeMorgan's Laws were developed by Augustus De Morgan in the 1800s.  They show ho
     
     -  not (a or b) is the same as (not a) and (not b).  In Java this is written as !(a || b) == !a && !b 
 
-Although you do not have to memorize DeMorgan's Laws for the CS A Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) == !a || !b by constructing the truth table below and seeing that they are give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
+Although you do not have to memorize DeMorgan's Laws for the CS A Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) == !a || !b by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
 
 +-------+-------+-----------+----------+
 | a     | b     | !(a && b) | !a || !b |

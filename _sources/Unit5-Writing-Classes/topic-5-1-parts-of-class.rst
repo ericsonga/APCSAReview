@@ -64,7 +64,7 @@ Remember that objects have attributes and behaviors. These correspond to **insta
 
 Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email.
 
-Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in that method for that objecct. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
+Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in that method for that object. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
 
 
 .. |Java visualizer| raw:: html
@@ -267,7 +267,7 @@ When you are given a problem specification, look for the **nouns** to identify w
 
 .. shortanswer:: OOD1
 
-    You've been hired by your school to create a program to keep track of which students are signed up for which classes. Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class. 
+    You've been hired by your school to create a program that keeps track of "students at your school and the courses they are taking". Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class. 
     
 
 The two nouns in the problem description above, **Student** and **Course** would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!

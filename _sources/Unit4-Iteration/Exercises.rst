@@ -317,7 +317,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
      for (int k = 0; k < 20; k+=2) {
         if (k % 3 == 1)
-           System.out.println(k + " ");
+           System.out.print(k + " ");
      }
 
 .. mchoice:: qlm_4

@@ -1,7 +1,7 @@
 Transitioning from AP CSP to AP CS A
 ====================================
     
-You may have taken the AP CSP (Computer Science Principles) course and exam which is an excellent preparation for the AP CS A course. In AP CSP or in other coding expereiences, you may have used a block coding language like App Inventor, Scratch, Snap!, App Lab, etc. Block languages remove syntax errors for beginners so that they can focus on coding without worrying about typing in and spelling the commands exactly right or structuring them with the correct spacing or punctuation. 
+You may have taken the AP CSP (Computer Science Principles) course and exam which is an excellent preparation for the AP CS A course. In AP CSP or in other coding experiences, you may have used a block coding language like App Inventor, Scratch, Snap!, App Lab, etc. Block languages remove syntax errors for beginners so that they can focus on coding without worrying about typing in and spelling the commands exactly right or structuring them with the correct spacing or punctuation. 
 
 In text-based programming like Java, here are some tips to keep in mind when you are typing in commands:
 
