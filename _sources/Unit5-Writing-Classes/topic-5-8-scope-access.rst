@@ -87,7 +87,7 @@ Another way to look at scope is that a variable's scope is where it lives and ex
 
 |CodingEx| **Coding Exercise**
 
-Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using other variables or moving the variable declarations. 
+Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope. 
 
 
 .. activecode:: PersonScope
@@ -110,7 +110,8 @@ Try the following code to see that you cannot access the variables outside of th
           int id = i;
        } 
        // Can you access the blockScope variables i or id?
-       System.out.println("The id is " + id + " or " + i);
+       System.out.prtinln("i at the end of the loop is " + i);
+       System.out.println("The last id is " + id);
        
        // Can toString() access parameter variables in Person()?
        return  initName + ": " + initEmail;
@@ -187,9 +188,9 @@ Debug the following program that has scope violations. Then, add comments that l
      // constructor: set instance variables to default values
      public Fraction()
      {
-        int default = 1;
-        numerator = default;
-        denominator = default;
+        int d = 1;
+        numerator = d;
+        denominator = d;
      }
      
      // constructor: set instance variables to init parameters
@@ -202,8 +203,8 @@ Debug the following program that has scope violations. Then, add comments that l
      public String toString()
      {
        // if the denominator is 1, then just return the numerator
-       if (denominator == default) {
-          int newNumenator = 1;
+       if (denominator == d) {
+          int newNumerator = 1;
        }
        return newNumerator + "/" + denominator;
      }

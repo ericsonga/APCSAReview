@@ -37,7 +37,7 @@ When you play a song, you can set it to loop, which means that when it reaches t
 
 A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false, we exit the loop and continue with the statements that are after the body of the ``while`` loop.  If the condition is false the first time you check it, the body of the loop will not execute.  
 
-Notice the while statement looks a lot like an if statement, but it runs more than once. The curly brackets { } are optional when there is just 1 statement following the condition, but it is a good idea to put them in anyway because loops often have more than 1 statement in the body.
+Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs more than once. The curly brackets { } are optional when there is just 1 statement following the condition, but it is a good idea to put them in anyway because loops often have more than 1 statement in the body.
 
 .. code-block:: java
 
@@ -52,8 +52,19 @@ Notice the while statement looks a lot like an if statement, but it runs more th
       statements;
     }
     
+If you took AP CSP with a block programming language like App Inventor, you may have used a loop block like below that looks very similar to Java while loops (or you may have used a for loop which will be covered in the next lesson). Almost every programming language has a while loop.
 
-Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace. 
+
+.. figure:: Figures/whileInAppInventor.png
+    :width: 100%
+    :align: center
+    :figclass: align-center
+    
+    Figure 1: Comparing App Inventor and Java for while loops
+
+ 
+
+
 
 Here's what the flow of control looks like in a while loop:
 
@@ -62,7 +73,7 @@ Here's what the flow of control looks like in a while loop:
     :align: center
     :figclass: align-center
 
-    Figure 1: Flow in a while loop
+    Figure 2: Flow in a while loop
     
  
 
@@ -121,6 +132,8 @@ Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of wr
         x++; 
         System.out.print(x + " ");
      }
+
+Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.
 
 ..	index::
 	single: infinite loop
@@ -199,7 +212,7 @@ For this project, you will need to use the |Scanner class| for input and |repl.i
 
 .. shortanswer:: challenge4-1-loop-GuessingGame
 
-   After you complete your code on repl, paste in a link to it (click on share) or your code here.
+   After you complete your code on repl, paste in a link to it (click on share) here.
    
    
 Summary

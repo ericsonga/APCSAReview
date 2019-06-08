@@ -11,6 +11,7 @@ AP CS A Exam Weighting: 5-7.5%
    recursionbasics.rst
    rWhyUseIt.rst
    rTraceMethods.rst
+   mergeSort.rst
    rMistakes.rst
    rBasePractice.rst
    rTracePractice.rst

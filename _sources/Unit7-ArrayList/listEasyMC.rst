@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 8-11-
+   :prefix: 7-11-1-
    :start: 1
 
 Easy Multiple Choice Questions
@@ -51,7 +51,7 @@ These problems are easier than most of those that you will usually see on the AP
    :correct: d
    :feedback_a: This is how you get the first value in an array, but not in a list.
    :feedback_b: This is how you get the second value in an array.  Remember that this is a list and that the first item in an array is at index 0.
-   :feedback_c: The <code>List</code> interface doesn't have a <code>first</code> method.
+   :feedback_c: The <code>List</code>  doesn't have a <code>first</code> method.
    :feedback_d: Use the <code>get</code> method to get a value from a list and the first element in a list is at index 0.
    :feedback_e: This would return the second element in a list.  Remember that the first element in a list or array is at index 0.
 
@@ -101,7 +101,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which of the following is the correct way to add 2 between the 1 and 3 in the following list ``nums = [1, 3, 4]``?
 
-.. mchoice:: qale_8
+.. .. mchoice:: qale_8
    :answer_a: It is a type of class.
    :answer_b: The methods in an interface will be public and abstract.
    :answer_c: It is like a contract in that the class that implements the interface must provide the methods defined in the interface.

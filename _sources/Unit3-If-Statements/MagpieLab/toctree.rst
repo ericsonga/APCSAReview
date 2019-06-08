@@ -8,4 +8,4 @@ Magpie Chatbot Lab
    magpie2.rst
    magpie3.rst
    magpie4.rst
-   Exercises.rst
+   magpie-exercises.rst

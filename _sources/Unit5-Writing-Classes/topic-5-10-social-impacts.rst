@@ -63,4 +63,4 @@ Summary
 
 - Legal issues and intellectual property concerns arise when creating programs.
 
-- The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial and/or harmful./
+- The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial and/or harmful.

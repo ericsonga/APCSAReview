@@ -30,7 +30,7 @@ For Loops
 
 Another type of loop in Java is a **for loop**. This is usually used when you know how many times you want the loop to execute. It is often a simple **counter-controlled loop** to do the loop body a set number of times.
 
-If you took AP CSP with a block programming language like App Inventor, you probably used a loop block like below that looks very similar to Java for loops. In fact, almost every programming language has a for loop.
+If you took AP CSP with a block programming language like App Inventor, you probably used a for loop block like below that looks very similar to Java for loops. In fact, almost every programming language has a for loop.
 
 
 .. figure:: Figures/loopAppInv.png

@@ -53,7 +53,7 @@ An array is like a row of small lockers, except that you can't cram lots of stuf
 
     Figure 1: A row of lockers
 
-You can store a value in an array using an **index** (location in the array). An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.    You can get or store a value from or to an array using an index.
+You can store a value in an array using an **index** (location in the array). An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.    You can get or store a value from or to an array using an index. Arrays and lists in most programming languages start counting elements from the number 0, so the first element in an array is at index 0. If you used App Inventor in the past, you might remember that list elements there start at 1 instead of 0, so make sure you remember that in Java, arrays start the index at 0!
 
 .. shortanswer:: arrayAnalogy
 
@@ -107,7 +107,7 @@ To actually create an array after declaring the variable, use the **new** keywor
 
 |CodingEx| **Coding Exercise**
 
-In the following code, add another array declaration that creates an array of 5 doubles called prices and another array of 5 Strings called items.
+In the following code, add another array declaration that creates an array of 5 doubles called prices and another array of 5 Strings called items and corresponding System.out.println commands.
 
 
 .. activecode:: lcab1
@@ -118,12 +118,12 @@ In the following code, add another array declaration that creates an array of 5 
       public static void main(String[] args)
       {
         // Array example
-        int[] highScores = new int[5];
+        int[] highScores = new int[10];
         // Add an array of 5 doubles called prices.
         
         // Add an array of 5 Strings called items.
       
-        
+        System.out.println("Array highScores declared with size " + highScores.length);
       }
    }
 
@@ -339,8 +339,8 @@ Try out the following code which has two parallel arrays, highScores and names. 
         String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"}; 
         
         // Print corresponding names and scores
-        System.out.println(names[0] + " has a score of " + scores[0]);
-        System.out.println(names[1] + " has a score of " + scores[1]);
+        System.out.println(names[0] + " has a score of " + highScores[0]);
+        System.out.println(names[1] + " has a score of " + highScores[1]);
       }
    }
    

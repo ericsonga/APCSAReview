@@ -110,9 +110,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           for (int i = 100; i >= 0; i--) 
+           for (int i = 100; i >= 0; i -= 10) 
    =====
-           for (int i = 0; i <= 100; i++) #paired
+           for (int i = 0; i <= 100; i += 10) #paired
    =====
                System.out.println(i);
    =====

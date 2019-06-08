@@ -266,7 +266,7 @@ Have you ever played 20 Questions? There is great online version called |Akinato
 
 .. shortanswer:: challenge3-3-IfElse-20Questions
 
-   After you complete your code on repl, paste in a link to it (click on share) or your code here.
+   After you complete your code on repl, paste in a link to it (click on share) here.
    
    
 Summary

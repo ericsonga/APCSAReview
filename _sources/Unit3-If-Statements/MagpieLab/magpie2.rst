@@ -109,7 +109,7 @@ The method ``getRandomResponse`` generates a random number and uses that to assi
 
 
 Exercises
-============
+------------
 
 Alter the code above or in your own IDE (see section below) to do the following. We encourage you to work in pairs.
 
@@ -140,8 +140,7 @@ Alter the code above or in your own IDE (see section below) to do the following.
    What happens when a keyword is included in another word? Consider statements like “I know all the state capitals” and “I like vegetables smothered in cheese.” Explain the problem with the responses to these statements.
 
 Activity 2: Actual Code - (Optional)
-====================================
-
+-------------------------------------
 
 You can do all of Activity 2 with the actual code using the Scanner class for input instead if you prefer. 
 

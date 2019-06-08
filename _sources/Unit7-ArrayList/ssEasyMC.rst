@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix:  13-8-
+   :prefix:  7-11-4-
    :start: 1
 
-Easy Multiple Choice Questions
-----------------------------------
+Easy Search/Sort Multiple Choice Questions
+-------------------------------------------
 
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 

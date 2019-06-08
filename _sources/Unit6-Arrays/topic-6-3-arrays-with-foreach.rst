@@ -314,7 +314,7 @@ If you want to step through the correct code to see what it does in the Java Vis
 
    <a href= "https://repl.it/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
    
-Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the print10(), spellcheck(word), and print10(letter) methods to use enhanced for-each loops instead of indexed for-loops.
+Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the spellcheck(word), and printStartsWith(firstLetters) methods to use enhanced for-each loops instead of indexed for-loops.
 
 
 
@@ -335,7 +335,7 @@ Copy the code you used in the Spell Checker Challenge in the last lesson. Re-wri
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
-        checker.print10();
+        checker.printStartsWith("ab");
         String word = "youz";
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");

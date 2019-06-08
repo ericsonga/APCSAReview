@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 7-14-
+   :prefix: 6-4-2-
    :start: 1
 
 Free Response - Horse Barn B
@@ -12,6 +12,8 @@ Free Response - Horse Barn B
 The following is part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.  
 
 **Question 3.**  Consider a software system that models a horse barn. Classes that represent horses implement the following interface.
+(Note that interfaces are no longer covered on the CS A exam, but here the Horse interface just describes the methods that a Horse class must have.)
+
 
 .. code-block:: java 
 

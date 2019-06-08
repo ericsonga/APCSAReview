@@ -41,7 +41,7 @@ When the operator ``==`` is used with object variables it returns true when the 
 
 |CodingEx| **Coding Exercise**
 
-The one common place to use == or != with objects is to see if they exist by comparing them to **null**. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Try the following code to see the NullPointer error. Since s is null, indexOf throws an error. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
+The one common place to use == or != with objects is to see if they exist by comparing them to **null**. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with && in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole && test is false. Try the following code to see a NullPointer error. Since s is null, indexOf throws an NullPointer error for s. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
 
 .. activecode:: nullTest
    :language: java
@@ -208,7 +208,7 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
 |Groupwork| Programming Challenge : Tracing Code 
 ------------------------------------------------
 
-What will the following code print out? Trace through the code by drawing diagrams of what is going on in memory like the figures above, and then write a tracing table for it below that shows the values of s1, s2, s3, s4 and the output after each line of code.
+What will the following code print out? Trace through the code by drawing diagrams of what is going on in memory like the figures above, and then show the values of s1, s2, s3, s4 and the output after each line of code. Remember that you can use trace tables to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column in a table and keep track of its value throughout the program as you go through it line by line.
 
 .. code-block:: java
 

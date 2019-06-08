@@ -19,8 +19,6 @@
     :align: middle
     :alt: groupwork
     
-.. strings are char arrays? hangman? file of words? search findMin/Max
-    histogram? draw with stars? # of m&ms?
 
 Traversing Arrays with For Loops
 ==========================================
@@ -550,8 +548,8 @@ The following Active Code uses a dictionary array of the most common 100 English
 
 2. Write a spellcheck() method that takes a word as a parameter and returns true if it is in the dictionary array. It should return false if it is not found. Test your code below by changing the word sent to the spelcheck() method in main. This algorithm is called a **linear search** where we step through the array one element at a time (here the dictionary one word at a time) looking for a certain element.
 
-3. Write a method that prints out the first 10 words of that start with a certain letter in the dictionary array. Your method should take 
-a parameter for the letter as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the letter is at index 0 of the string.
+3. Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take 
+a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string.
 
 
 .. activecode:: challenge-6-2-spellchecker
@@ -567,6 +565,7 @@ a parameter for the letter as a String. You could use the Java String |startsWit
       {
         SpellChecker checker = new SpellChecker();
         checker.print10();
+        checker.printStartsWith("ab");
         String word = "youz";
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");

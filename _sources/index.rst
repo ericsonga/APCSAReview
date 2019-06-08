@@ -6,8 +6,9 @@
 AP CS A Java Course - 2019
 ==========================================
 
-(revised 5/28/19 Units 1-6)
+(revised 6/8/19, Units 1-7 finished)
 
+This course is adapted from the Java Review course to follow the 2019 College Board unit ordering.
 
 .. Here is where you specify the content and order of your new book.
 

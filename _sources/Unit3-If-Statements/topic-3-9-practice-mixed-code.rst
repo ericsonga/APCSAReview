@@ -90,7 +90,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The main method in the following class should print out if a string has the word "bomb" in it or not. But, the blocks have been mixed up and includes <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The main method in the following class should print out if a string has the word "ringing" in it or not. But, the blocks have been mixed up and includes <b>an extra block</b> that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public class Test1
    {
@@ -98,17 +98,17 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====    
-          String message = "Place the bomb today";
+          String message = "Is that the phone ringing?";
    =====
-          if (message.indexOf(" bomb ") >= 0)
+          if (message.indexOf("ringing") >= 0)
    =====
-          if (message.indexof(" bomb ") >= 0) #paired
+          if (message.indexof("ringing") >= 0) #paired
    =====
-              System.out.println("Possible bomb threat");
+              System.out.println("Answer the phone!");
    =====
           else
    =====
-              System.out.println("No mention of bomb");
+              System.out.println("I don't hear anything.");
    =====
        }
    }
@@ -133,11 +133,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (favPizza && favWings) #paired
    =====
-               System.out.println("You fav is junk food");
+               System.out.println("Your fav is junk food");
    =====
            else
    =====
-               System.out.println("You fav is not junk");
+               System.out.println("Your fav is not junk");
    =====
        } 
    }
