@@ -1,25 +1,170 @@
 .. qnum::
-   :prefix:  19-1-
-   :start: 1
+   :prefix: 8-2-
+   :start: 3
 
-..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
-    Permission is granted to copy, distribute and/or modify this document
-    under the terms of the GNU Free Documentation License, Version 1.3 or
-    any later version published by the Free Software Foundation; with
-    Invariant Sections being Forward, Prefaces, and Contributor List,
-    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
-    is included in the section entitled "GNU Free Documentation License".
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
 
-..  shortname:: Chapter: Picture Lab
-..  description:: Work with pictures as one dimensional arrays and two dimensional arrays
 
-.. |runbutton| image:: Figures/run-button.png
-    :height: 20px
-    :align: top
-    :alt: run button
+Enhanced For-Each Loop for 2D Arrays (Day 2)
+----------------------------------------------------
 
-Compute with Images
-====================
+..	index::
+	pair: 2D Array; for-each loop
+
+Since 2D arrays are really arrays of arrays you can also use a nested for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row!
+
+.. activecode:: getAvgForEach
+   :language: java
+   
+   public class Test
+   {
+
+      public static double getAvg(int[][] a)
+      {
+         double total = 0;
+         for (int[] innerArray : a)
+         {
+            for (int val : innerArray)
+            {
+               total = total + val;
+            }
+         }
+         return total / (a.length * a[0].length);
+      }
+      
+      public static void main(String[] args)
+      {
+         int[][] theArray = {{80, 90, 70}, {20, 80, 75}};
+         System.out.println(getAvg(theArray));
+      }
+   }
+  
+In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
+
+You can step through this code using the Java Visualizer by clicking on the following `link3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A+++%7B%0A%0A++++++public+static+double+getAvg(int%5B%5D%5B%5D+a)%0A++++++%7B%0A+++++++++double+total+%3D+0%3B%0A+++++++++for+(int%5B%5D+colArray+%3A+a)%0A+++++++++%7B%0A++++++++++++for+(int+val+%3A+colArray)%0A++++++++++++%7B%0A+++++++++++++++total+%3D+total+%2B+val%3B%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++return+total+/+(a.length+*+a%5B0%5D.length)%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D%5B%5D+theArray+%3D+%7B%7B80,+90,+70%7D,+%7B20,+80,+75%7D%7D%3B%0A+++++++++System.out.println(getAvg(theArray))%3B%0A++++++%7D%0A+++%7D&mode=display&curInstr=0>`_
+
+
+
+2D Array Algorithms
+-------------------
+
+All of the array algorithms can be applied to 2D arrays too. For example, counting and searching algorithms work very similarly. The following code adds all of the values in a given row. 
+
+|CodingEx| **Coding Exercise**
+
+What will the following code print out? Can you add another method that gets the total for a column? 
+
+.. activecode:: lca2dloopPart
+   :language: java 
+ 
+
+   public class Test
+   {
+
+      public static int getTotalForRow(int row, int[][] a)
+      {
+         int total = 0;
+         for (int col = 0; col < a[0].length; col++)
+         {
+            total = total + a[row][col]; 
+         }
+         return total;
+      }
+      
+      public static void main(String[] args)
+      {
+         int[][] matrix = {{1,2,3},{4,5,6}};
+         System.out.println(getTotalForRow(0,matrix));
+      }
+   }
+  
+..	index::
+	pair: 2D Array; loop range
+
+You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array. 
+
+.. activecode:: lca2dloopPart2
+   :language: java 
+
+   public class Test
+   {
+      public static int countValues(int value, int[][] a, 
+                                 int rowStart, int rowEnd, 
+                                 int colStart, int colEnd)
+      {
+         int count = 0;
+         for (int row = rowStart; row <= rowEnd; row++)
+         {
+            for (int col = colStart; col <= colEnd; col++)
+            {
+               if (a[row][col] == value) count++;
+            }
+         }
+         return count;
+      } 
+      
+      public static void main(String[] args)
+      {
+         int[][] matrix = {{3,2,3},{4,3,6},{8,9,3},{10,3,3}};
+         System.out.println(countValues(3,matrix,0,2,0,2));
+      }  
+   }
+
+
+Here is a linear search algorithm where we access each row and then apply a linear search on it to find an element.
+
+|CodingEx| **Coding Exercise**
+
+What will the following code print? Can you change the code to work for a String 2D array?
+
+.. activecode:: linearSearch2DArrays
+   :language: java 
+ 
+
+   public class Test
+   {
+      public static boolean search(int[][] array, int value)
+      {
+         boolean found = false;
+         for (int row = 0; row < array.length; row++)
+         {
+            for (int col = 0; col < array[0].length; col++)
+            {
+               if (array[row][col] == value)
+                   found = true;
+            }
+         }
+         return found;
+      } 
+      
+      public static void main(String[] args)
+      {
+         int[][] matrix = {{3,2,3},{4,3,6},{8,9,3},{10,3,3}};
+         System.out.println(search(matrix,10));
+         System.out.println(search(matrix,11));
+
+      }  
+   }
+   
+|Groupwork| Programming Challenge : Picture Lab
+---------------------------------------------------
+
 
 ..	index::
 	single: images
@@ -29,24 +174,23 @@ Compute with Images
 
 ..	index::
 	single: pixels
+    
+.. .. figure:: Figures/smiley.png
+    :width: 200px
+    :align: left
+    
+.. |Picture lab| raw:: html
 
-Let's swap the colors in the image.  The program below does that.
+   <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >Picture Lab</a>
+   
+.. |RGB Color Mixer| raw:: html
 
-..	index::
-	single: comment
-	pair: programming; comment
+   <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
 
-**There are lot of lines in the program below. Don't worry if they don't all make sense to you right now.**
-
-  - Especially when we write programs to manipulate images, you can ignore many of the lines.  All the code in the Image Classes container you don't need to worry about. It helps us render and display the image.
-  - Words after the ``\\`` or in ``\* *\`` are ignored by the computer.  They are **comments** to human readers to help them understand a program.
-  - The code in the ``main`` method at the bottom is what important at the moment.
-
-Press the |runbutton| button to run the program and show the changed image.  Please note that processing all those pixels can take a few minutes.
 
 .. raw:: html
 
-    <canvas id="arch.jpg" class="image"  width="180" height="240" style="display: block; margin: 0 auto;">
+    <canvas id="arch.jpg" class="image"  width="180" height="240" style="display: block; margin: 0 auto;align:left; float:left;">
     </canvas>
     <script>
     var context = document.getElementById("arch.jpg").getContext("2d");
@@ -57,15 +201,175 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
     img.src = "../_static/arch.jpg";
 
     </script>
-
-
-.. reveal:: JavaPictureClasses
-   :showtitle: Show Image Classes
-   :hidetitle: Hide
-
-   .. raw:: html
     
-        <pre id="pictureClasses" class="javaFiles">
+Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  The color of a pixel is  represented using the RGB (Red, Green, Blue) color
+model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment? Can you make black? Can you make white? Can you make purple?
+
+
+
+Scroll down to the bottom of the following code and take a look at the 
+switchColors method. Run the code and watch what it does. It switches RGB values of each pixel and the colors change! 
+
+
+
+.. activecode:: challenge-8-2-picture
+    :language: java
+    :datafile: pictureClasses, arch.jpg
+
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; // resolves problem with java.awt.List and java.util.List
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+
+      }
+
+     /** switchColors() traverses the 2D pixel array and 
+      * switches the RGB colors.
+      */
+     public void switchColors()
+     {
+       Pixel[][] pixels = this.getPixels2D();
+       int red, green, blue = 0;
+
+       for (Pixel[] rowArray : pixels)
+        {
+          for (Pixel p: rowArray)
+          {
+           red = p.getRed();
+           green = p.getGreen();
+           blue = p.getBlue();
+           p.setRed(green);
+           p.setGreen(blue);
+           p.setBlue(red);
+         }
+       }
+     }
+
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        Picture arch = new Picture("arch.jpg");
+        arch.show();
+        arch.switchColors();
+        arch.show();
+      }
+    } 
+
+Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. Test it in the active code above to see what it does.  
+
+Here are some more exercises from the |Picture Lab|:
+
+- Write a method keepOnlyBlue that will keep only the blue values, that is, it will set the red and green values to zero. 
+
+- Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
+
+- Write the grayscale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
+
+
+You can continue on with the |Picture Lab| to mirror images and create collages and detect edges as the first step in recognizing objects in images.
+
+Summary
+----------
+
+- We can loop through 2D arrays using nested for loops or nested enhanced for each loops.
+
+- The outer loop for a 2D array usually traverses the rows, while the inner loop traverses the columns in a single row. 
+
+- The 2D array's length gives the number of rows. A row's length array[0].length gives the number of columns. 
+
+- Nested iteration statements can be written to traverse the 2D array in "row-major order" or "column-major order."
+
+- In a enhanced for each loop, the variable of the outer loop must be the type of each row, which is a 1D array. The inner enhanced for loop variable must be the same type as the elements stored in the array.
+
+- All standard 1D array algorithms can be applied to 2D array objects.
+
+- When applying sequential/linear search algorithms to 2D arrays, each row must be accessed then sequential/linear search applied to each row of a 2D array.
+
+
+
+.. raw:: html
+    
+      <pre id="pictureClasses" class="javaFiles" style="display:none;">
         import java.awt.Image;
         import java.awt.image.BufferedImage;
 
@@ -1167,126 +1471,4 @@ Press the |runbutton| button to run the program and show the changed image.  Ple
         </pre>
 
 
-.. activecode:: Picture
-    :language: java
-    :datafile: pictureClasses, arch.jpg
-
-    import java.awt.*;
-    import java.awt.font.*;
-    import java.awt.geom.*;
-    import java.awt.image.BufferedImage;
-    import java.text.*;
-    import java.util.*;
-    import java.util.List; // resolves problem with java.awt.List and java.util.List
-
-    /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
-     *
-     * @author Barbara Ericson ericson@cc.gatech.edu
-     */
-    public class Picture extends SimplePicture
-    {
-      ///////////////////// constructors //////////////////////////////////
-
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
-         */
-        super();
-      }
-
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
-
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
-
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
-
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
-
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
-
-      }
-
-     public void switchColors()
-     {
-       Pixel[][] pixels = this.getPixels2D();
-       int red, green, blue = 0;
-
-       for (Pixel[] rowArray : pixels)
-        {
-          for (Pixel p: rowArray)
-          {
-           red = p.getRed();
-           green = p.getGreen();
-           blue = p.getBlue();
-           p.setRed(green);
-           p.setGreen(blue);
-           p.setBlue(red);
-
-         }
-       }
-     }
-
-      /* Main method for testing - each class in Java can have a main
-       * method
-       */
-      public static void main(String[] args)
-      {
-        Picture arch = new Picture("arch.jpg");
-        arch.show();
-        arch.switchColors();
-        arch.show();
-      }
-
-    } // this } is the end of class Picture, put all new methods before this
 

@@ -1,5 +1,12 @@
-Exercises
-=========
+Multiple-Choice Exercises
+=========================
 
-This is where your teacher may put exercises.
+
+.. toctree::
+   :maxdepth: 3
+
+   a2dEasyMC.rst
+   a2dMedMC.rst
+   a2dHardMC.rst
+
 

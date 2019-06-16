@@ -45,15 +45,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should print each element in the array that is even.  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment should print each element in the array that is even using an enhanced for each loop.  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
    -----
    int[] arr = {14, -5, 2, 17, 29, -8, 36};
    =====
-   for (int i = 0; i < arr.length; i++) {
+   for (int value : arr) {
    =====
-       if (arr[i] % 2 == 0) {
+       if (value % 2 == 0) {
    =====
-           System.out.println(arr[i]);
+           System.out.println(value);
    =====
        } //end conditional
    =====
@@ -91,7 +91,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment is a method that should return average given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return the average given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
    -----
    public static double findAverage(int[] arr) {
    =====
@@ -113,7 +113,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch7ex6muc
    :adaptive:
 
-   The following program segment is a method that should return largest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return the largest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution. </p>
    -----
    public static int findLargest(int[] arr) {
    =====
@@ -152,8 +152,6 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        for (int i = 0; i < arr.length - 1; i++) {
    =====
        for (int i = 0; i < arr.length; i++) { #distractor
-   =====
-           int origVal = result[i + 1];
    =====
            result[i + 1] = arr[i];
    =====
@@ -202,7 +200,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        for (element: arr) { #distractor
    =====
-         result[i--] = element;
+         result[i] = element;
+   =====
+         i--;
    =====
        } //end for loop
    =====
@@ -214,7 +214,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch7ex10muc
    :adaptive:
 
-   The following program segment is a method that should return string array that is in reverse order -- so {"b", "a", "z"} should return {"z", "a", "b"}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program copies the first half of an array given as an argument to the method into a result array which is returned. But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
    -----
    public static int[] firstHalf(int[] arr) {
    =====

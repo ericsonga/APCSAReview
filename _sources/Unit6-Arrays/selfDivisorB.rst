@@ -14,7 +14,7 @@ The following is part b of a free response question from 2007.  It was question 
 **Question 1.**  A positive integer is called a "self-divisor" if every decimal digit of the number is a divisor of the number, that is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a self-divisor because it is evenly divisible by 1, 2, and 8. However, 26 is not a self-divisor because it is not evenly divisible by the digit 6. Note that 0 is not considered to be a divisor of any number, so any number containing a 0 digit is NOT a self-divisor. There are infinitely many self-divisors.
 
 **Part b.**  Write method firstNumSelfDivisors, which takes two positive integers as parameters, representing a start value and a number of values. Method firstNumSelfDivisors returns an array of size num that contains the first num self-divisors that are greater than or equal to start.
-For example, the call firstNumSelfDivisors(10, 3) should return an array containing the values 11, 12, and 15, because the first three self-divisors that are greater than or equal to 10 are 11, 12, and 15.  Be sure to use the method isSelfDivisor in your answer which we wrote in an earlier section.
+For example, the call firstNumSelfDivisors(10, 3) should return an array containing the values 11, 12, and 15, because the first three self-divisors that are greater than or equal to 10 are 11, 12, and 15.  Be sure to use the method isSelfDivisor in your answer which we wrote in a Unit 4.10.
 
 .. code-block:: java 
    
@@ -99,7 +99,7 @@ to loop as long as we haven't found 3 self divisors and try the current value.  
 
    Which of the following correctly declares and creates the array to return?
    
-Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15. 
+Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15, and then 22, 24, 33, 36, and 44.
    
 .. activecode:: lcfrsdb
    :language: java
