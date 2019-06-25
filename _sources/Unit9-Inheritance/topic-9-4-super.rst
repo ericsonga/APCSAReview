@@ -1,8 +1,27 @@
 .. qnum::
-   :prefix: 10-7-
+   :prefix: 9-4-
    :start: 1
+   
 
-Using Super to call an Overridden Method
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
+
+super Keyword
 ============================================
 
 Sometimes you want the child class to do more than what a parent method is doing.  You want to still execute the parent method, but then do also do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.     
@@ -59,6 +78,8 @@ Sometimes you want the child class to do more than what a parent method is doing
 How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method.  The method has to be there, or else the code would not have compiled. 
       
 When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and it return return the string ``"Hamburger and Taco"``. 
+
+|Exercise| **Check your understanding**
 
 .. mchoice:: qoo_6s
    :answer_a: AB

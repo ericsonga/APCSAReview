@@ -1,9 +1,7 @@
-.. qnum::
-   :prefix:  10-23-
-   :start: 1
 
-Free Response - APLine
-======================
+
+Free Response Question - APLine
+================================
 
 ..	index::
 	single: apline

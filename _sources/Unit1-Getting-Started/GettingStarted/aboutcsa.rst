@@ -39,7 +39,7 @@ The 4 free response questions allow students to write code to answer a problem a
 - Question 1: Methods and Control Structures, where students call methods and work with control structures without the added complexity of data structures.
 - Question 2: Class, where students design and implement a described class.
 - Question 3: Array/ArrayList, where students complete program code that uses array or ArrayList objects.
-- Question 4: 2- Array, where students complete program code that uses 2D arrays.
+- Question 4: 2D Array, where students complete program code that uses 2D arrays.
 
  
 .. |AP CS A site| raw:: html

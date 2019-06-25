@@ -1,11 +1,29 @@
 .. qnum::
-   :prefix: 10-3-
+   :prefix: 9-1-
    :start: 1
 
-Inheritance
-============
 
-One of the really useful features of Object-Oriented programming is **inheritance**.  You may have heard of someone coming into an inheritance, which often means they were left something from a relative that died.  Or, you might hear someone say that they have inherited musical ability from a parent.  In Java all classes can **inherit** object fields and methods from another class.  The class being inherited from is called the **parent class** or **superclass**.  The class that is inheriting is called the **child class** or **subclass**.  
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
+Inheritance (Day 1)
+-------------------
+
+One of the really useful features of Object-Oriented programming is **inheritance**.  You may have heard of someone coming into an inheritance, which often means they were left something from a relative that died.  Or, you might hear someone say that they have inherited musical ability from a parent.  In Java all classes can **inherit** attributes (instance variables) and behaviors (methods) from another class.  The class being inherited from is called the **parent class** or **superclass**.  The class that is inheriting is called the **child class** or **subclass**.  
 
 When one class inherits from another, we can say that it is the *same kind of thing* as the **parent class** (the class it inherits from).  For example, a car is a kind of vehicle.  This is sometimes called the *is-a* relationship, but I prefer *is-a kind of*.  A motorcycle is another kind of vehicle.  All vehicles have a make, model, and year that they were created.  All vehicles can go forward, backward, turn left and turn right.  
 
@@ -16,12 +34,12 @@ When one class inherits from another, we can say that it is the *same kind of th
 
     Figure 1: A UML Class Diagram Showing Inheritance
     
-A UML (Unified Modeling Language) class diagram shows classes and the relationships between the classes as seen in Figure 1.  An open triangle points to the parent class.  The parent class for ``Car`` and ``Motorcycle`` is ``Vehicle``. The ``Vehicle`` class has two child classes or subclasses: ``Car`` and ``Motorcycle``.  
+A **UML (Unified Modeling Language) class diagram** shows classes and the relationships between the classes as seen in Figure 1.  An open triangle points to the parent class.  The parent class for ``Car`` and ``Motorcycle`` is ``Vehicle``. The ``Vehicle`` class has two child classes or subclasses: ``Car`` and ``Motorcycle``.  
 
-Specifying the Parent Class
-=============================
+Subclass extends Superclass
+---------------------------
     
-How is a parent class specified?  Use the Java keyword **extends** after the class name and then followed by the parent class name to specify the parent class as shown below. 
+To make a subclass inherit from a superclass, use the Java keyword **extends** with the superclass name when creating a new subclass as shown below. 
 
 .. code-block:: java 
 
@@ -33,20 +51,24 @@ How is a parent class specified?  Use the Java keyword **extends** after the cla
     
 .. note::
   
-   While a person has two parents, a Java class can only inherit from one parent class.  If you leave off the **extends** keyword when you declare a class then the class will inherit from the ``Object`` class.  The ``Person`` class declared below will inherit from the ``Object`` class.
+   While a person can have two parents, a Java class can only inherit from one parent class.  If you leave off the **extends** keyword when you declare a class then the class will inherit from the ``Object`` class that is already defined in Java.  
+   
+.. The ``Person`` class declared below will inherit from the ``Object`` class.
 
-.. code-block:: java 
+.. .. code-block:: java 
 
   public class Person
   
 Why Use Inheritance?
-=====================
+---------------------
 
 ..	index::
     single: generalization
     single: specialization
     
-Inheritance allows you to reuse data and behavior from the parent class.  It is useful for **generalization** in which case you may notice that several classes share the same data and/or behavior and you pull that out into a parent class.  Customers and Employees are both people so it makes sense use the general Person class.  It is also useful for **specialization** which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  An example of specialization is the Employee class below.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.
+Inheritance allows you to reuse data and behavior from the parent class.  You may notice that several classes share the same data and/or behavior and you pull that out into a parent class.  This is called It **generalization**. For example,  Customers and Employees are both people so it makes sense use the general Person class as seen below. 
+
+Inheritance is also useful for **specialization** which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  The example below can also be seen as specialization.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.
 
 .. figure:: Figures/person.png
     :width: 300px
@@ -55,7 +77,7 @@ Inheritance allows you to reuse data and behavior from the parent class.  It is 
 
     Figure 2: A UML Class Diagram Showing Inheritance
     
-**Test Your Understanding**
+|Exercise| **Check your understanding**
     
 .. mchoice:: qoo10-1-1
    :answer_a: It doesn't have a parent class.
@@ -77,7 +99,7 @@ Inheritance allows you to reuse data and behavior from the parent class.  It is 
    :feedback_a: Yes, a child class inherits all the parent class object field and methods.  
    :feedback_b: Why would inheritance be useful if you didn't actually get anything from the parent class?
 
-   If the class Vehicle has object fields of make and model and the class Car inherits from the class vehicle will a car object have a make and model?  
+   If the class Vehicle has the instance fields make and model and the class Car inherits from the class Vehicle, will a car object have a make and model?  
    
 .. mchoice:: qoo10-1-3
    :answer_a: Yes
@@ -101,4 +123,6 @@ Inheritance allows you to reuse data and behavior from the parent class.  It is 
 
    In Java how many parents can a class have? 
   
-
+  
+Code that uses extends?
+Some type of general creative thing here? 

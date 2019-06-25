@@ -1,5 +1,11 @@
-Exercises
-=========
+Multiple-Choice Exercises
+=========================
 
-This is where your teacher may put exercises.
+.. toctree::
+   :maxdepth: 3
+   
+   ooEasyMC.rst
+   ooMedMC.rst
+   ooHardMC.rst
+   ooPractice.rst
 

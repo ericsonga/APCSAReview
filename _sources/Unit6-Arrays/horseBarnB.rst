@@ -60,18 +60,18 @@ A horse barn consists of N numbered spaces. Each space can hold at most one hors
 How to solve this problem
 ===========================
 
-One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array.  
+One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array. What kind of loop should you use? A for loop or an enhanced for loop would work for this problem. You will need an index for at least the temporary array. 
 
-.. mchoice:: frhbb_1
+.. (teachers complained that you could use either because you need a 2nd index anyway) .. mchoice:: frhbb_1
    :answer_a: for 
    :answer_b: for each
    :answer_c: while
    :correct: a
    :feedback_a: Use a for loop when you know how many times a loop needs to execute and need the index.
-   :feedback_b: Use a for each if you want to loop through all the elements in a collection and don't need an index.
-   :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.  
+   :feedback_b: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a for each loop if you want to loop through all the elements in a collection and don't need an index.
+   :feedback_c: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a while loop when you don't know how many times a loop needs to execute.  
 
-   Which loop should you use to solve this problem?
+   Which loop is a good one to use to solve this problem?
 
 While we are looping through the ``spaces`` array, we need to check for non-null positions.
 

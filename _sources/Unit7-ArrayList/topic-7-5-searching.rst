@@ -45,7 +45,7 @@ The following video is also on YouTube at https://youtu.be/DHLCXXX1OtE.  It intr
 
 
 
-If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are coverd in the next lesson. 
+If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are covered in the next lesson. 
 
 
 Sequential Search
@@ -227,6 +227,84 @@ The code for ``binarySearch`` below is from the AP CS A course description. A re
 
 To see this executing using the Java Visualizer click on the following link: `BinarySearch Ex <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0>`_
 
+You can also use binary search with a string array.  But, when you look for a string be sure to use ``compareTo()`` method rather than ``<`` or ``>`` which can only be used with primitive types.  Remember how the String method compareTo() works:
+
+   -  **int compareTo(String other)** returns a negative value if the current string is less than the ``other`` string, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string.
+
+.. activecode:: binSearchStrings
+  :language: java
+  
+  public class BinSearchStrings
+  {
+     public static int binarySearch(String[] elements, String target) {
+        int left = 0;
+        int right = elements.length - 1;
+        while (left <= right)
+        {
+           int middle = (left + right) / 2;
+           if (target.compareTo(elements[middle]) < 0)
+           {
+              right = middle - 1;
+           }
+           else if (target.compareTo(elements[middle]) > 0)
+           {
+              left = middle + 1;
+           }
+           else {
+              return middle;
+           }
+         }
+         return -1;
+     }
+
+     public static void main(String[] args)
+     {
+        String[] arr1 = {"apple","banana","cherry","kiwi","melon"};
+
+        // test when the target is in the middle
+        int index = binarySearch(arr1,"cherry");
+        System.out.println(index);
+
+        // test when the target is the first item in the array
+        index = binarySearch(arr1,"apple");
+        System.out.println(index);
+
+        // test when the target is in the array - last
+        index = binarySearch(arr1,"melon");
+        System.out.println(index);
+
+        // test when the target is not in the array
+        index = binarySearch(arr1,"pear");
+        System.out.println(index);
+     }
+  }
+  
+Runtimes
+--------
+
+How do we choose between two algorithms that solve the same problem? They usually have different characteristics and **runtimes** which measures how fast they run. For the searching problem, it depends on your data. 
+
+Binary search is much faster than linear search, especially on large data sets, but it can only be used on sorted data. Often with runtimes, computer scientist think about the **worst cast behavior**. With searching, the worst case is usually if you cannot find the item. With linear search, you would have to go through the whole array before realizing that it is not there, but binary search is much faster even in this case because it eliminates half the data set in each step. We can measure an informal runtime by just counting the number of steps.
+
+Here is a table that compares the worst case runtime of each search algorithm given an array of n elements. The runtime here is measured as the number of times the loop runs in each algorithm or the number of elements we need to check in the worst case when we don't find the item we are looking for. Notice that with linear search, the worst case runtime is the size of the array n, because it has to look through the whole array. For the binary search runtime, we can calculate the number of times you can divide n in half until you get to 1. So, for example 8 elements can be divided in half to narrow down to 4 elements, which can be further divided in half to narrow down to 2 elements, which can be further divided in half to get down to 1 element, so that is 3 divisions (8->4->2->1). 
+
+==== ============== ==============
+N    Linear Search  Binary Search
+==== ============== ==============
+2    2 comparisons  1 comparison
+---- -------------- --------------
+4    4              2
+---- -------------- --------------
+8    8              3
+---- -------------- --------------
+16   16             4
+---- -------------- --------------
+100  100            7
+==== ============== ==============
+
+Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n. This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log\ :sub:`2`\ n as n, the data size, grows and see that binary search runs much faster for any n.  You don't need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half.
+
+
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: qbs_1
@@ -270,13 +348,23 @@ To see this executing using the Java Visualizer click on the following link: `Bi
    :feedback_b: This would be true if we were looking for 23.
    :feedback_c: This would be true if we were looking for 31.
 
-   How many times would the while loop execute if you first do int[] arr = {2, 10, 23, 31, 55, 86} and then call  binarySearch(arr,55)?
+   How many times would the loop in the binary search run for an array  int[] arr = {2, 10, 23, 31, 55, 86} with binarySearch(arr,55)?
 
+.. mchoice:: qbs_4
+   :answer_a: 15
+   :answer_b: 9
+   :answer_c: 500
+   :correct: b
+   :feedback_a: How many times can you divide 500 in half?
+   :feedback_b: You can divide 500 in half, 9 times (500 -> 250 -> 125 -> 63 -> 32 -> 16 -> 8 -> 4 -> 2 -> 1)   
+   :feedback_c: How many times can you divide 500 in half?
+
+   If you had an ordered array of size 500, what is the maximum number of iterations required to find an element with binary search?
 
 |Groupwork| Programming Challenge : Search Runtimes
 ---------------------------------------------------
 
-How do we choose between two algorithms that solve the same problem? They usually have different characteristics and **runtimes** which measures how fast they run. For the searching problem, it depends on your data. Binary search is much faster, especially on large data sets, but it can only be used on sorted data. Often with runtimes, computer scientist think about the **worst cast behavior**. With searching, the worst case is usually if you cannot find the item. With linear search, you would have to go through the whole array before realizing that it is not there, but binary search is much faster even in this case because it eliminates half the data set in each step. We can measure an informal runtime by just counting the number of steps.
+
 
 .. |repl.it| raw:: html
 
@@ -299,7 +387,7 @@ Here is a version of the spellchecker on |repl.it| that uses an ArrayList for th
 
     <iframe height="600px" width="100%" src="https://repl.it/@BerylHoffman/SpellCheckerArrayListSearches?lite=true" scrolling="no" style="max-width:90%; margin-left:5%"  frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Now, save the |repl.it|  as your own project and add a new method in the SpellChecker.java file to do a binary search. You can look at the binary search code for arrays at the beginning of the lesson and change it to work with ArrayLists instead of arrays. Remember that you will need to use get(i) instead of [i]. Add in a counter that is incremented every time through the loop and print it out before you return from the method. Change Main.java to call the binary search method instead of the linear search, and try all the same test case words again. Record the runtimes for binary search and compare with the linear search times. What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
+Now, save the |repl.it|  as your own project and add a new method in the SpellChecker.java file to do a binary search. You can look at the binary search code for String arrays above and change it to work with ArrayLists instead of arrays. Remember that you will need to use get(i) instead of [i]. Add in a counter that is incremented every time through the loop and print it out before you return from the method. Change Main.java to call the binary search method instead of the linear search, and try all the same test case words again. Record the runtimes for binary search and compare with the linear search times. What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
 
 
 

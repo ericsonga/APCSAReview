@@ -1,8 +1,27 @@
 .. qnum::
-   :prefix: 10-6-
+   :prefix: 9-3-
    :start: 1
    
-Overriding vs Overloading
+
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
+   
+Overriding Methods
 ---------------------------
 
 **Overriding** an inherited method means providing a method in a child class with the same method signature (method name and parameter type list) and return type as a method in the parent class.  The method in the child class will be called *instead of* the method in the parent class.  In the following example the ``MeanGreeter`` inherits the greet method from ``Greeter``, but then overrides it.
@@ -77,7 +96,7 @@ Overriding vs Overloading
    
    To overload a method the method must have the same name, but the parameter list must be different in some way.  It can have a different number of parameters, different types of parameters, and/or a different order for the parameter types.  The return type can also be different.
   
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: qoo_5
    :answer_a: public void getFood()
@@ -128,7 +147,9 @@ Overriding vs Overloading
       }
       
 You can step through an example of this in the Java Visualizer by clicking on the following link `Override Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Student(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood())%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&mode=display&curInstr=19>`_.
-      
+
+|Exercise| **Check your understanding**
+
 .. mchoice:: qoo_6
    :answer_a: public void getFood()
    :answer_b: public String getFood(int quantity)

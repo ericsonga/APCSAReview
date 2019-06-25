@@ -190,7 +190,7 @@ What will the following code print? Can you change the code to work for a String
 
 .. raw:: html
 
-    <canvas id="arch.jpg" class="image"  width="180" height="240" style="display: block; margin: 0 auto;align:left; float:left;">
+    <canvas id="arch.jpg" class="image"  width="150" style="display: block; align:left; float:left;">
     </canvas>
     <script>
     var context = document.getElementById("arch.jpg").getContext("2d");
@@ -203,7 +203,7 @@ What will the following code print? Can you change the code to work for a String
     </script>
     
 Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  The color of a pixel is  represented using the RGB (Red, Green, Blue) color
-model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment? Can you make black? Can you make white? Can you make purple?
+model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple?
 
 
 

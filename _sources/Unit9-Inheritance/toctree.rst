@@ -13,26 +13,19 @@ AP CS A Exam Weighting: 5-10%
 .. toctree::
    :maxdepth: 3
    
-   ooInheritance.rst
-   ooAssocVsInherit.rst
-   ooOverrideInherited.rst
-   ooOverrideVsOverload.rst
-   ooSuper.rst
+   topic-9-1-inheritance.rst
+   topic-9-2-constructors.rst
+   topic-9-3-overriding.rst
    ooInheritanceAccess.rst
-   ooInheritanceAndConstructors.rst
-   ooAbstract.rst
-   ooInheritanceAndInterfaces.rst
-   ooComparable.rst
-   ooPoly.rst
-   ooMistakes.rst
-   ooPractice.rst
-   ooEasyMC.rst
-   ooMedMC.rst
-   ooHardMC.rst
-   freeResponse.rst
+   topic-9-4-super.rst
+   topic-9-5-hierarchies.rst
+   topic-9-6-polymorphism.rst
+   topic-9-7-Object.rst
    ooSummary.rst
-   ooCodePractice.rst
+   ooMistakes.rst
+   freeResponse.rst
    ooParsonsPractice.rst
+   ooCodePractice.rst
    Exercises.rst
    
 
