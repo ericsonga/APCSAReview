@@ -41,6 +41,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
 
 .. timed:: pretest1
     :timelimit: 60
+    :nofeedback:
 
     .. mchoice:: qpret_1
         :answer_a: 112233445566

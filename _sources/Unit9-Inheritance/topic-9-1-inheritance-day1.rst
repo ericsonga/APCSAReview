@@ -66,7 +66,7 @@ Why Use Inheritance?
     single: generalization
     single: specialization
     
-Inheritance allows you to reuse data and behavior from the parent class.  You may notice that several classes share the same data and/or behavior and you pull that out into a parent class.  This is called It **generalization**. For example,  Customers and Employees are both people so it makes sense use the general Person class as seen below. 
+Inheritance allows you to reuse data and behavior from the parent class.  If you notice that several classes share the same data and/or behavior,  you can pull that out into a parent class.  This is called **generalization**. For example,  Customers and Employees are both people so it makes sense use the general Person class as seen below. 
 
 Inheritance is also useful for **specialization** which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  The example below can also be seen as specialization.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.
 
@@ -76,7 +76,7 @@ Inheritance is also useful for **specialization** which is when you want most of
     :figclass: align-center
 
     Figure 2: A UML Class Diagram Showing Inheritance
-    
+
 |Exercise| **Check your understanding**
     
 .. mchoice:: qoo10-1-1
@@ -123,6 +123,28 @@ Inheritance is also useful for **specialization** which is when you want most of
 
    In Java how many parents can a class have? 
   
+
+|CodingEx| **Coding Exercise**
+
+The Student class can also inherit from the class Person just like Employee and Customer because a Student is a type of Person. What do you need to add to the Student class declaration below to make it inherit from type Person? When you fix the code, the **instanceof** operator will return true that Student s is an instance of both the Student and the Person class. What other private instance variables could you add to Person and Student? In which class would you put an address attribute? Where would you put gpa?
+
+.. activecode:: StudentInheritance
+  :language: java
   
-Code that uses extends?
-Some type of general creative thing here? 
+    class Person
+    {
+       private String name;
+    }
+
+    // How can we make the Student class inherit from class Person?
+    public class Student 
+    {
+       private int id;
+
+       public static void main(String[] args)
+       {
+          Student s = new Student();
+          System.out.println(s instanceof Student);
+          System.out.println(s instanceof Person);
+       }
+    }

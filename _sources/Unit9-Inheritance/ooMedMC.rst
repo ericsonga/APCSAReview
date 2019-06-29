@@ -1,6 +1,6 @@
 .. qnum::
-   :prefix: 10-17-
-   :start: 1
+   :prefix: 9-12-
+   :start: 8
 
 Medium Multiple Choice Questions
 ----------------------------------

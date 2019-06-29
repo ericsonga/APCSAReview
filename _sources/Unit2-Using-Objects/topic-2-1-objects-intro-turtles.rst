@@ -21,15 +21,15 @@
 
 .. |repl| raw:: html
 
-   <a href="https://repl.it" target="_blank">repl.it</a>
+   <a href="https://repl.it" target="_blank" style="text-decoration:underline">repl.it</a>
    
 .. |repl link| raw:: html
 
-   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
+   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
    
 .. |github| raw:: html
 
-   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank">here</a>   
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>   
       
 ..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
     Permission is granted to copy, distribute and/or modify this document
@@ -88,33 +88,21 @@ Try clicking the |runbutton| button below to see what the following program does
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
-          Turtle myrtle = new Turtle(world);
 
           yertle.forward();
           yertle.turnLeft();
           yertle.forward();
-
-          myrtle.turnRight();
-          myrtle.forward();
 
           world.show(true);
       }
     }
 
 
+In the program above, there is a Turtle object called yertle.
+The hidden Java code defines a complicated class called Turtle, World, and some other helper classes. 
 
-In the program above there are two turtle objects yertle and myrtle. The hidden Java code defines a complicated class called Turtle, World, and some other helper classes. A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle and myrtle are 2 objects created from the class Turtle. 
+A **class** in programming defines a new abstract data type.  When you create **objects** in coding, you create new variables of that class data type. Here, yertle is an object created from the class Turtle. 
 
-|CodingEx| **Coding Exercise:** 
-Can you add another turtle object to the code above? You can make up a variable name for your turtle and add in a line like the following in the main method and the make it move:
-
-.. code-block:: java
-
-    // To create or declare a new object, write:
-    // ClassName variableName = new ClassName(arguments);  
-    Turtle yourTurtleName = new Turtle(world);
-    yourTurtlename.
-     
 The class Turtle defines **attributes** (properties or variables) and **methods** (behaviors or functions) that each turtle can use. The dot operator (.) is used to run an object's method. You can think of the . as an apostrophe s ('s), for example run yertle's forward method. The parentheses () after method names are there in case you need to give the method **arguments** (some data) to do its job, for example go forward 100 pixels.
 
 Here is a class diagram that shows some of the attributes and methods inherited from the SimpleTurtle class in the class Turtle.
@@ -129,7 +117,74 @@ Here is a class diagram that shows some of the attributes and methods inherited 
     :figclass: align-center
 
     Figure 2: Turtle Class Diagram
+    
+|CodingEx| **Coding Exercise**
 
+In the code below, yertle goes forward and then turns left. Can you change the code to make yertle go forward twice and then turnRight?
+
+.. activecode:: TurtleTest2
+    :language: java
+    :datafile: turtleClasses
+
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest2
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          Turtle yertle = new Turtle(world);
+
+          yertle.forward();
+          yertle.turnLeft();
+
+          world.show(true);
+      }
+    }
+
+When you write a class like the Turtle class, you can declare many object variables of that class type. In the code below, two turtle objects are created.
+
+
+|CodingEx| **Coding Exercise:** 
+
+In the code below, two turtle object variales are created, yertle and myrtle. Can you add another turtle object to the code below? You can make up a variable name for your turtle and add in a line like the following in the main method and the make it move:
+
+.. code-block:: java
+
+    // To create or declare a new object, write:
+    // ClassName variableName = new ClassName(arguments);  
+    Turtle yourTurtleName = new Turtle(world);
+    yourTurtlename.forward();
+    
+.. activecode:: TurtleTest3
+    :language: java
+    :datafile: turtleClasses
+
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest3
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          Turtle yertle = new Turtle(world);
+          Turtle myrtle = new Turtle(world);
+
+          yertle.forward();
+          yertle.turnLeft();
+          yertle.forward();
+
+          myrtle.turnRight();
+          myrtle.forward();
+
+          world.show(true);
+      }
+    }
+
+
+     
 
 What are Classes and Objects?
 -----------------------------
@@ -217,8 +272,9 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
 |Groupwork| Programming Challenge : Turtle Drawing
 --------------------------------------------------
 
+We encourage you to work in pairs for this challenge.
 
-Working in pairs, create two Turtle objects below and have them draw a shape together. Each person should write the code for their turtle and draw half the shape. Here's and idea: see if you can draw squares of different sizes by calling the forward method multiple times. Here are some simple turtle methods that you could use:
+Create a Turtle object below and have it draw a shape.  For example, have it draw a small square and then a large square by calling the forward method multiple times. In the next lessons, we will draw more complicated shapes. Here are some simple turtle methods that you could use:
 
 - yertle.forward();
 - yertle.turnLeft();
@@ -241,9 +297,13 @@ After writing your code below, if you'd like your own copy, you can open this |r
       public static void main(String[] args)
       {
           World world = new World(500,500);
-          // 1. Create 2 Turtle objects in the world
+          // 1. Create a Turtle object in the world
           
-          // 2. Have the turtles draw a shape together 
+          // 2. Have the turtle draw a small square
+          
+          // 3. Have the turtle draw a large square
+          
+          // 4. Play around!
 
           
 

@@ -24,7 +24,18 @@
 super Keyword
 ============================================
 
-Sometimes you want the child class to do more than what a parent method is doing.  You want to still execute the parent method, but then do also do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.     
+Sometimes you want the subclass to do more than what a superclass' method is doing.  You want to still execute the superclass method, but then do also do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.  
+
+We've used super() before to call the superclass' constructor. There are two uses of the keyword super:
+
+1. **super();** or super(arguments); calls the super constructor if put in as the first line of a subclass constructor.
+2. **super.method();** call the superclass' method.
+
+The keyword super is very useful in allowing us to first execute the superclass method and then add on to it in the subclass.
+
+|CodingEx| **Coding Exercise**
+
+In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Pizza". Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
 
 .. activecode:: SuperEx
    :language: java
@@ -75,7 +86,7 @@ Sometimes you want the child class to do more than what a parent method is doing
          }
       } 
       
-How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method.  The method has to be there, or else the code would not have compiled. 
+How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method, all the way up to the Object class.  The method has to be there, or else the code would not have compiled. 
       
 When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and it return return the string ``"Hamburger and Taco"``. 
 
@@ -128,3 +139,66 @@ When the student ``getFood()`` method is executed it will start executing the ``
      }
      
 You can step through this example using the Java Visualizer by clicking on the following link: `Super Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
+
+The toString() method is a common method that is overriden. A subclass can override the superclass toString() method and call the super.toString() before adding on its own instance variables.  
+
+.. code-block:: java
+
+   // overriden toString() in subclass
+   public String toString() 
+   {
+     return super.toString() + "\n" + subclassInstanceVariables;
+   }
+
+|Groupwork| Programming Challenge : Customer Info 
+-------------------------------------------------
+
+The Customer class below keeps track of the names and addresses of customers. It has a toString() method that prints out the name and address of the object.
+
+1. Create a subclass OnlineCustomer that inherits from the Customer class and adds a new instance variable for the email address of a online customer.
+
+2. Override the toString() method in the OnlineCustomer class to call the super class toString() method and then add on the email address. See the example above for help.
+
+3. Test the class by uncommenting the OnlineCustomer objects in the main method.
+
+.. activecode:: challenge-9-4-Customer-super
+   :language: java
+
+    public class Customer
+    {
+       private String name;
+       private String address;
+
+       public Customer(String n, String a)
+       { 
+          name = n;
+          address = a;
+       }
+ 
+       public String toString()
+       {
+          return "Name: " + name + "\nAddress: " + address;
+       }
+
+       public static void main(String[] args)
+       {
+          Customer c = new Customer("Fran Santiago", "123 Main St., Anytown, USA");
+          System.out.println(c);
+         // OnlineCustomer c2 = new OnlineCustomer("Jasper Smith", "456 High St., Anytown, USA", "jsmith456@gmail.com");
+          // System.out.println(c2);
+       }
+    }
+
+    // Complete the OnlineCustomer class to inherit from Customer
+    class OnlineCustomer 
+    {
+       
+    }
+
+
+Summary
+--------
+
+- The keyword super can be used to call a superclass’s constructors and methods.
+
+- The superclass method can be called in a subclass by using the keyword super with the method name and passing appropriate parameters.

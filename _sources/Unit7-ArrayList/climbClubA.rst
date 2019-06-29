@@ -107,7 +107,7 @@ In the ``addClimb`` method you need to create a new ``ClimbInfo`` object and ini
 
 Once you have created the ``ClimbInfo`` object you want to add it in the order they were created.  To do this you can add it to the end of the ``climbList``.  How do you add an object to the end of a list?
 
-.. disqus::
+.. .. disqus::
    :shortname: cslearn4u
    :identifier: apcsa-climbClubAFRQ
 

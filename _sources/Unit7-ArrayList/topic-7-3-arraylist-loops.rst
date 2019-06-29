@@ -92,7 +92,7 @@ The following code will throw an ArrayIndexOutOfBoundsException. Can you fix it?
 While Loop
 ----------------------
 
-The example below demonstrates a while loop and an object-oriented approach to list where the list is a field of the current object and you use an object method rather than a class (static) method to loop through the list. 
+The example below demonstrates a while loop and an object-oriented approach where the list is a field of the current object and you use an object method rather than a class (static) method to loop through the list. 
    
 |CodingEx| **Coding Exercise**
 
@@ -210,7 +210,7 @@ You can step through the code above by clicking on the following `Example <http:
          score = score + 2;
        }
    =====
-       else 
+       else if (word.length() > 4)
        {
          score = score + 3;
        }
@@ -295,7 +295,13 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
 |Groupwork| Programming Challenge : FRQ Word Pairs
 ---------------------------------------------------
 
-This challenge is based on the 2018 Free Response Question #2 WordPair. We encourage you to work in pairs on this challenge.
+.. |2018 Free Response Question #2 WordPair| raw:: html
+
+   <a href="https://secure-media.collegeboard.org/ap/pdf/ap18-frq-computer-science-a.pdf#page=7" target="_blank" style="text-decoration:underline">2018 Free Response Question #2 WordPair</a>
+
+
+
+This challenge is based on the |2018 Free Response Question #2 WordPair|. We encourage you to work in pairs on this challenge.
 
 You are given a class called WordPair that can store pairs of words.
 
@@ -369,9 +375,9 @@ In this FRQ, you are given an array of words and you will create pairs of them b
 In the class WordPairsList below, you will write the constructor which takes the array of words and pairs them up as shown in the figure. You will need nested loops to pair each element with the rest of the elements in the list. Here is the pseudocode.
 
     - Initialize the allPairs list to an empty ArrayList of WordPair objects.
-    - Loop through the words array for the first word in the word pair (for loop from index i = 0 to length)
+    - Loop through the words array for the first word in the word pair (for loop from index i = 0 to length-1)
     
-      - Loop through the rest of the word array starting from index i for the second word in the word pair (for loop from index j = i to length)
+      - Loop through the rest of the word array starting from index i+1 for the second word in the word pair (for loop from index j = i+1 to length)
       
         - Add the new WordPair formed from the ith word and the jth word to the allPairs ArrayList.
 

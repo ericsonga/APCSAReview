@@ -1,11 +1,11 @@
 .. qnum::
-   :prefix: 10-20-
+   :prefix: 9-8-
    :start: 1
    
-Object-Oriented Summary
+Inheritance Summary
 -------------------------
 
-In this chapter you learned about **object oriented programming concepts**.  In an object-oriented program you write classes that define what objects of each class know (fields) and can do (methods).  One class can inherit object fields and methods from another, which makes the amount of code that you have to write smaller and makes the classes easier to test and extend.   
+In this chapter you learned about **inheritance**.  In an object-oriented program you write classes that define what objects of each class know (instance variables) and can do (methods).  One class can inherit object instance variables and methods from another, which makes the amount of code that you have to write smaller and makes the classes easier to test and extend.   
 
 ..	index::
     single: object
@@ -85,3 +85,9 @@ Practice
     :match_4: The class that created the object|||actual type
     
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
+
+Common Mistakes
+===============
+  -  Using inheritance (is a kind of) when you should use association (has a).  A school has classes, it is not a type of class.  A high school is a kind of school.
+  -  Using a type field instead of subclasses.  If you ever find yourself creating conditionals based on the type of object use subclasses instead.
+  -  Copying code instead of creating a subclass or pulling out a common superclass.  If you ever find yourself copying object fields or methods try creating a subclass instead or pull out a common superclass.

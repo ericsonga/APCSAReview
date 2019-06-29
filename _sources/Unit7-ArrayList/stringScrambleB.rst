@@ -76,7 +76,7 @@ Mixed Up Code
 
 .. parsonsprob:: StringScrambleB1
    
-  The method test below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
+  The method test below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
   -----
   public static void test(List<String> wordList) {
   =====
@@ -107,7 +107,7 @@ Another way to solve this problem is to start at the end of the list and loop to
   
 .. parsonsprob:: StringScrambleB2
    
-  The method test below contains the correct code for another solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
+  The method test below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
   -----
   
   public static void test(List<String> wordList) {
@@ -120,11 +120,11 @@ Another way to solve this problem is to start at the end of the list and loop to
   =====
         if (!scrambled.equals(word))
   =====
-           wordList.set(i, scrambled);
+          wordList.set(i, scrambled);
   =====
         else
   =====
-           wordList.remove(i);
+          wordList.remove(i);
   =====
      } // end for
   =====
@@ -132,7 +132,7 @@ Another way to solve this problem is to start at the end of the list and loop to
 
 
 Try and Solve It
-===================
+=================== 
 
 Write the method ``scrambleOrRemove`` below. The main has code to test the result.
 

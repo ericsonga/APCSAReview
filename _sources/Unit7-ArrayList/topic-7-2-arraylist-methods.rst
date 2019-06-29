@@ -104,8 +104,14 @@ Run the code below to see how the list changes as each object is added to the en
 	pair: list; autoboxing
 	pair: list; unboxing 
     
-When adding Integer objects to the list, you can use the Integer constructor like ``add(new Integer(5))``  or you can just add the int value directly like ``add(5)``  and it will be changed into an ``Integer`` object automatically.  This is called **autoboxing**. When you pull an ``int`` value out of a list of ``Integers`` that is called **unboxing**.
+When adding Integer objects to the list, you can use the Integer constructor like ``add(new Integer(5))`` in Java version 7 which is used on the exam (although this is deprecated and no longer used in Java version 9)  or you can just add the int value directly like ``add(5)`` in any Java version and it will be changed into an ``Integer`` object automatically.  This is called **autoboxing**. When you pull an ``int`` value out of a list of ``Integers`` that is called **unboxing**.
 
+.. code-block:: java 
+
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    list.add(new Integer(5)); // this will only work in Java 7
+    list.add(5); // this will work in all Java versions
+    
 You can put any kind of Objects into an ArrayList. Even objects for a class that you wrote. For example, here is an ArrayList of Students.
 
 .. activecode:: StudentArrayList
@@ -164,14 +170,14 @@ What will the code below print out? Try figuring it out before running it. Remem
    {
       public static void main(String[] arts)
       {
-         ArrayList list1 = new ArrayList();
+         ArrayList<Integer> list1 = new ArrayList<Integer>();
          list1.add(1);
          System.out.println(list1);
-         // adds to the end of the list
+         // adds the number 2 to the end of the list
          list1.add(2);
          System.out.println(list1);
          // This will add the number 3 at index 1
-         list1.add(1, new Integer(3));
+         list1.add(1, 3);
          System.out.println(list1);
          // This will add the number 4 at index 1
          list1.add(1, 4);
@@ -193,17 +199,17 @@ What will the code below print out? Try figuring it out before running it. Remem
    :answer_d: [1, 2, 4, 5]
    :correct: c
    :feedback_a: This would be true if all the <code>add</code> method calls were <code>add(value)</code>, but at least one is not.
-   :feedback_b: This would be true if it was <code>add(1, new Integer(4))</code>
-   :feedback_c: The <code>add(2, new Integer(4))</code> will put the 4 at index 2, but first move the 3 to index 3.
-   :feedback_d: This would be true if the <code>add(2, new Integer(4))</code> replaced what was at index 2, but it actually moves the value currently at index 2 to index 3.
+   :feedback_b: This would be true if it was <code>add(1, 4)</code>
+   :feedback_c: The <code>add(2, 4)</code> will put the 4 at index 2, but first move the 3 to index 3.
+   :feedback_d: This would be true if the <code>add(2, 4)</code> replaced what was at index 2, but it actually moves the value currently at index 2 to index 3.
 
    What will print when the following code executes?
    
    .. code-block:: java 
    
       ArrayList<Integer> list1 = new ArrayList<Integer>();
-      list1.add(new Integer(1));
-      list1.add(new Integer(2));
+      list1.add(1);
+      list1.add(2);
       list1.add(3);
       list1.add(2, 4);
       list1.add(5);
@@ -211,7 +217,7 @@ What will the code below print out? Try figuring it out before running it. Remem
 
 .. |Java visualizer 1| raw:: html
 
-   <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,+new+Integer(4))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0" target="_blank">Java Visualizer</a>
+   <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0" target="_blank">Java Visualizer</a>
    
 You can step through the code above by clicking on this |Java Visualizer 1|.
       
@@ -310,10 +316,10 @@ What will the following code print out? Try to guess before you run it. Were you
    {
       public static void main(String[] arts)
       {
-         List list1 = new ArrayList();
-         list1.add(new Integer(1));
-         list1.add(new Integer(2));
-         list1.add(new Integer(3));
+         ArrayList<Integer> list1 = new ArrayList<Integer>();
+         list1.add(1);
+         list1.add(2);
+         list1.add(3);
          System.out.println(list1);
          list1.remove(1);
          System.out.println(list1);
@@ -424,15 +430,15 @@ Try to guess what the code below will print before running it. Can you get the l
    .. code-block:: java 
    
       List<Integer> list1 = new ArrayList<Integer>();
-      list1.add(new Integer(1));
-      list1.add(new Integer(2));
-      list1.add(new Integer(3));
-      list1.set(2, new Integer(4));
-      list1.add(2, new Integer(5));
-      list1.add(new Integer(6));
+      list1.add(1);
+      list1.add(2);
+      list1.add(3);
+      list1.set(2, 4);
+      list1.add(2, 5);
+      list1.add(6);
       System.out.println(list1);
       
-You can step through the code above by clicking on the following `Example1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,+new+Integer(4))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,+new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(6))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
+You can step through the code above by clicking on the following `Example1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++ArrayList%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(1)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(6)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
       
 .. mchoice:: qListRem2
    :answer_a: ["Sarah", "Destini", "Layla", "Sharrie"]

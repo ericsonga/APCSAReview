@@ -122,7 +122,10 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
     ArrayList<String> shoppingList = new ArrayList<String>();
 
 
-In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (is set to ``null``).
+|CodingEx| **Coding Exercise**
+
+In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
+
 
 .. activecode:: ArrayListDeclare
    :language: java

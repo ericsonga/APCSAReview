@@ -196,14 +196,14 @@ Compiler Errors
 
    <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>
    
-A **syntax error** is an error in the program.  An example of a syntax error is if the code has a open curly brace ``{``, but no close curly brace ``}``. Informally, it is called a **bug** and the process of removing errors is called **debugging**. The first bug was a real bug, a moth that flew into a computer in 1947, as documented by an early computer science pioneer |Grace Hopper|!
+A **syntax error** is an error in the program.  An example of a syntax error is if the code has a open curly brace ``{``, but no close curly brace ``}``. Informally, it is called a **bug** and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/8/8a/H96566k.jpg
     :width: 300px
     :align: center
     :figclass: align-center
 
-    Figure 2: Grace Hopper's log showing the first bug, 1947.
+    Figure 2: Grace Hopper's log showing a real bug, 1947.
 
 
 Remember that the Java source file has to be translated into a class file before it can be run.  The compiler tries to make sense of your code, but if your code has **syntax errors**, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.  This section has code that causes compiler errors to show you the types of error messages you might see and help you learn how debug your programs. 

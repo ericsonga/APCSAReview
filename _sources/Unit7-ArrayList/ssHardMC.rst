@@ -177,7 +177,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-4
    :answer_c: 5,3,2,9,3,4
    :answer_d: 2,3,5,9,3
    :correct: a
-   :feedback_a: This is the correct answer. The check method is using a for loop and an if statement to return true if the prameter is prime and false if it is not prime. In the main method, the for loop iterates through every element in the array and checks to see if it is prime. If it is prime, then the program will swap that element with the first element in the array.
+   :feedback_a: This is the correct answer. The check method is using a for loop and an if statement to return true if the parameter is prime and false if it is not prime. In the main method, the for loop iterates through every element in the array and checks to see if it is prime. If it is prime, then the program will swap that element with the first element in the array.
    :feedback_b: This would be true if the if statement had said: if(!check(arr[i])).
    :feedback_c: This would be true if the array had not been modified at all.
    :feedback_d: This would be true if the final for loop did not iterate through every element in the array.
@@ -192,7 +192,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-4
 	      {
 	          for(int i = 2; i < n; i++)
 	          {
-	              if(n % 1 == 0)
+	              if(n % i == 0)
 	                  return false;
 	          }
 	          return true;

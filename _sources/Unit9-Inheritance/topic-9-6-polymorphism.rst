@@ -31,7 +31,7 @@ Polymorphism
 This is simliar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal. 
 
 .. figure:: Figures/SeeNSay.jpg
-    :width: 300px
+    :width: 250px
     :align: center
     :figclass: align-center
 
@@ -48,11 +48,12 @@ If you were simulating this toy in software you could create an Animal class tha
     pair: type; actual
     pair: type; run-time
 
-.. note ::
 
-   In Java an object variable has both a **declared type** or **compile-time type** and a **run-time type** or **actual type**.  The *declared type* or *compile-time type* of a variable is the type that is used in the declaration.  The *run-time type* or *actual type* is the class that actually creates the object.  
+.. note::
+
+   In Java an object variable has both a **declared (compile-time) type** and an **actual (run-time) type**.  The *declared (compile-time) type*  of a variable is the type that is used in the declaration.  The *actual (run-time) type* is the class that actually creates the object using new.  
    
-The variable ``nameList`` declared below has a **declared type** of ``List`` and an **actual** or **run-time type** of ``ArrayList``.  The complier will check if the declared type has the methods or inherits the methods being used in the code and give an error if it doesn't find the method(s).  The List interface does have a ``add`` method so this code will compile.  At run-time the execution environment will first look for the ``add`` method in the ``ArrayList`` class since that is the actual or run-time type. If it doesn't find it there it will look in the parent class and keep looking up the inheritance tree till it finds the method.  The method will be found, since otherwise the code would not have compiled.
+The variable ``nameList`` declared below has a **declared type** of ``List`` and an **actual** or **run-time type** of ``ArrayList``.  The complier will check if the declared type has the methods or inherits the methods being used in the code and give an error if it doesn't find the method(s).  The List interface does have a ``add`` method so this code will compile.  At run-time the execution environment will first look for the ``add`` method in the ``ArrayList`` class since that is the actual or run-time type. If it doesn't find it there it will look in the parent class and keep looking up the inheritance tree until it finds the method. It may go up all the way to the Object class.  The method will be found, since otherwise the code would not have compiled.
 
 .. code-block:: java 
 
@@ -64,14 +65,21 @@ The variable ``message`` declared below has a **declared type** of ``Object`` an
 .. code-block:: java 
 
   Object message = new String("hi");
-  message.indexOf("h");
+  message.indexOf("h"); // ERROR!! Objects don't have indexOf!
   
-.. note ::
+.. .. note::
 
    Any object variable can refer to an object of the declared type or *any descendant (subclass) of the declared type* at run-time. The class ``String`` inherits from the class ``Object`` so an ``Object`` variable can hold a reference to a ``String`` object.  But, you can only call methods that are available in the ``Object`` class unless you cast it back to the ``String`` class.
 
-At compile time the compiler uses the declared type to check that the methods you are trying to use are available to an object of that type.  The code won't compile if the methods don't exist in that class or some parent class of that class.  At run-time the actual method that is called depends on the actual type of the object.  Remember that an object keeps a reference to the class that created it (an object of the class called ``Class``).  When a method is called at run-time the first place that is checked for that method is the class that created the object.  If the method is found there it will be executed.  If not, the parent of that class will be checked and so on until the method is found.  
+At compile time, the compiler uses the declared type to check that the methods you are trying to use are available to an object of that type.  The code won't compile if the methods don't exist in that class or some parent class of that class.  At run-time, the actual method that is called depends on the actual type of the object.  Remember that an object keeps a reference to the class that created it (an object of the class called ``Class``).  When a method is called at run-time the first place that is checked for that method is the class that created the object.  If the method is found there it will be executed.  If not, the parent of that class will be checked and so on until the method is found.  
 
+In the last lesson on inheritance hierarchies, we were actually seeing polymorphic behavior at run-time in the following ways. 
+
+1. Polymorphic assignment statements such as ``Shape s = new Rectangle();``
+2. Polymorphic parameters such as ``print(Shape)`` being called with different subclass types.
+3. Polymorphic array and ArrayList types such as ``Shape[] shapeArray = { new Rectangle(), new Square() };``
+
+In all of these cases, there are no errors at compile-time because the compiler checks that the "subclass is-a superclass" relationship is true. But at run-time, the Java interpreter will use the object's actual subclass type and call the subclass methods for any overriden methods. This is why they are polymorphic -- the same code can have different results depending on the object's actual type at runtime.
 
 |Exercise| **Check your understanding**
 
@@ -297,4 +305,155 @@ You can step through the code using the Java Visualizer by clicking on the follo
       }
 
 You can step through this code using the Java Visulaizer by clicking on the following link: `Base Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++System.out.print(%22A%22)%3B%0A++++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A++++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A++++++super.methodTwo()%3B%0A++++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
+
+|Groupwork| Programming Challenge : Shopping Cart 2
+---------------------------------------------------
+
+.. |repl.it link| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
+   
+.. image:: Figures/shoppingcart.png
+    :width: 100
+    :align: left
+    :alt: Shopping
+
+In the last lesson, you created a class called DiscountedItem as part of a Shopping Cart application. Please copy your solutions from the last lesson into the Active Code window below (or in repl or another IDE) before completing this challenge. 
+
+The ShoppingCart contains a polymorphic ArrayList called order that you can use to add Items or DiscountedItems to the shopping cart. The Item class keeps track of the name and the price of each Item. The DiscountedItem class you wrote in the last lesson adds on a discount amount. 
+
+In this challenge, you will write a method called ``int countDiscountedItems()`` in the ShoppingCart class. 
+
+- This method will use a loop to traverse the ArrayList of Items called order. 
+- In the loop, you will test if each Item is a DiscountedItem by using the ``instanceof`` keyword ((object instanceof Class) returns true or false) similar to its use in the add(Item) method. 
+- If it is a DiscountedItem, then you will count it. 
+- At the end of the loop, the method will return the count. 
+- Make sure you print out the number of discounted items in the main method or in printOrder(), so that you can test your method. Add more items to the order to test it.
+
+
+.. activecode:: challenge-9-6-shopping2
+  :language: java     
+  
+    import java.util.*;
+
+    /** 
+       The ShoppingCart class has an ArrayList of Items.
+       You will write a new class DiscountedItem that extends Item.
+       This code is adapted https://practiceit.cs.washington.edu/problem/view/bjp4/chapter9/e10-DiscountBill
+    */
+
+    public class Tester
+    {
+      public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+        cart.add(new Item("bread", 3.25));
+        cart.add(new Item("milk", 2.50));
+        //cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
+        //cart.add(new DiscountedItem("apples", 1.35, 0.25));
+
+        cart.printOrder();
+      }
+    }
+
+    class DiscountedItem extends Item
+    {
+        // Copy your code from the last lesson's challenge here!
+    }
+    
+    // Add a method called countDiscountedItems()
+    class ShoppingCart 
+    {
+        private ArrayList<Item> order;
+        private double total;
+        private double internalDiscount;
+
+        public ShoppingCart()
+        {
+            order = new ArrayList<Item>();
+            total = 0.0;
+            internalDiscount = 0.0;
+        }
+
+        public void add(Item i) {
+            order.add(i);
+            total += i.getPrice();
+            if (i instanceof DiscountedItem)
+               internalDiscount += ((DiscountedItem) i).getDiscount();
+        }
+
+       /** printOrder() will call toString() to print */
+        public void printOrder() {
+            System.out.println(this);
+        }
+
+        public String toString() {
+            return discountToString(); 
+        }
+
+        public String discountToString() {
+            return orderToString() + "\nSub-total: " + valueToString(total) + "\nDiscount: " + valueToString(internalDiscount) + "\nTotal: " + valueToString(total - internalDiscount);
+        }
+
+        private String valueToString(double value) {
+            value = Math.rint(value * 100) / 100.0;
+            String result = "" + Math.abs(value);
+            if(result.indexOf(".") == result.length() - 2) {
+                result += "0";
+            }
+            result = "$" + result;
+            return result;
+        }
+
+        public String orderToString() {
+            String build = "\nOrder Items:\n";
+            for(int i = 0; i < order.size(); i++) {
+                build += "   " + order.get(i);
+                if(i != order.size() - 1) {
+                    build += "\n";
+                }
+            }
+            return build;
+        }	
+      }
+
+      class Item {
+        private String name;
+        private double price;
+
+        public Item()
+        {
+          this.name = "";
+          this.price = 0.0;
+        }
+
+        public Item(String name, double price) {
+                this.name = name;
+                this.price = price;
+        }
+
+        public double getPrice() {
+                return price;
+        }
+
+        public String valueToString(double value) {
+                String result = "" + Math.abs(value);
+                if(result.indexOf(".") == result.length() - 2) {
+                    result += "0";
+                }
+                result = "$" + result;
+                return result;
+        }
+
+        public String toString() {
+                return name + " " + valueToString(price);
+        }
+       }
+    
+    
+Summary
+----------
+
+- At compile time, methods in or inherited by the declared type determine the correctness of a non-static method call.
+
+- At run-time, the method in the actual object type is executed for a non-static method call.
 
