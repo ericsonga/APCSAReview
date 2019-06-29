@@ -101,7 +101,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        for (int i = 0; i < nums.size(); i++) {
    =====
-           if (nums.get(i) < min) {
+           if (nums.get(i) < smallest) {
    =====
                smallest = nums.get(i);
    =====
