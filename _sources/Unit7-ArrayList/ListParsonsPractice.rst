@@ -11,13 +11,12 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should be a class that adds some Strings of conversational phrases to List and then prints them out.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following program segment should be a class that adds some Strings of conversational phrases to a List and then prints them out.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    import java.util.List;
    import java.util.ArrayList;
    =====
-   import java.util.List;
-   import java.util.Arraylist; #distractor
+   import java.util.List; #distractor 
    =====
    public class ListTest {
    =====
@@ -144,7 +143,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch8ex6muc
    :adaptive:
 
-   The following program segment should be method that calculates the average from an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following method should calculate the average from an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public static double average(ArrayList<Integer> nums) {
    =====
@@ -195,7 +194,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch8ex8muc
    :adaptive:
 
-   The following program segment should be method that removes all the Strings that have length 3 or shorter from an ArrayList of Strings (the parameter) -- so {"catch", "dog", "tree", "me"} should return {"catch", "tree"}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following method should remove all the Strings that have length 3 or shorter from an ArrayList of Strings (the parameter) -- so {"catch", "dog", "tree", "me"} should return {"catch", "tree"}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public static void removeShort(ArrayList<String> words) {
    =====
@@ -246,7 +245,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 .. parsonsprob:: ch8ex10muc
    :adaptive:
 
-   The following program segment should be method that removes a specific Integer (specified in parameter) whenever it occurs in a given ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following method should remove a specific Integer (specified in parameter) whenever it occurs in a given ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public static void removeElement(ArrayList<Integer> nums, 
                                     int toRemove) {
@@ -261,7 +260,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
           if (nums.get(i) == nums(toRemove)) { #distractor
    =====
-              nums.remove(i);
+            nums.remove(i);
    =====
           } //end if
    =====
