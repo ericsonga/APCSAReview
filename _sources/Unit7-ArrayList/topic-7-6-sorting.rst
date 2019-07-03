@@ -27,10 +27,8 @@ There are many sorting algorithms to put an array or list elements in alphabetic
 ..	index::
 	single: selection sort
 	single: insertion sort
-	single: merge sort
 	pair: sort; selection
 	pair: sort; insertion
-	pair: sort; merge
 
 * Selection Sort - Select the smallest item from the current location on to the end of the array and swap it with the value at the current position.  Do this from index 0 to the array length - 2.  You don't have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.
 * Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right.  Start at index 1 and loop through the entire array.
@@ -70,6 +68,11 @@ Here is a folk dance video that shows the selection sort process.
 .. youtube:: Ns4TPTC8whw
     :align: center
 
+And a short video that describes how selection sort works.
+
+.. youtube:: g-PGLbMth_g
+    :align: center
+    
 To identify a selection sort look for the following:
 
 * a nested for loop with the outer loop starting at 0 and ending when the index reaches length - 1 (see line 7 below)
@@ -178,8 +181,19 @@ Insertion Sort
 
 The insertion sort that you need to know for the exam starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.
 
+
+
+Here is a folk dance video that shows the insertion sort process.
+
 .. youtube:: ROalU379l3U
     :align: center
+
+And a short video that describes how insertion sort works.
+
+.. youtube:: JU767SDMDvA
+    :align: center
+    
+
 
 To identify an insertion sort look for the following:
 

@@ -29,7 +29,7 @@ Searching Algorithms
 	pair: search; sequential
 	pair: search; binary
 
-Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **sequential search** and **binary search** algorithms.
+Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
 
 .. the video is Searching.mov
 

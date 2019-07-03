@@ -1,15 +1,32 @@
 .. qnum::
-   :prefix: 12-3-
-   :start: 1
+   :prefix: 10-1-
+   :start: 9
 
-Tracing Recursive Methods
-=========================
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+    
+.. |Exercise| image:: ../../_static/exercise.png
+    :width: 35
+    :align: middle
+    :alt: exercise
+    
+    
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+
+Tracing Recursive Methods (Day 2)
+===================================
 
 ..	index::
     single: call stack
     single: stack
 
-In Java the **call stack** keeps track of the methods that you have called since the main method executes.   A **stack** is a way of organizing data that adds and removes items only from the top of the stack.  An example is a stack of cups.  You can grap a cup from the top of the stack or add more cups at the top of the stack.
+In Java, the **call stack** keeps track of the methods that you have called since the main method executes.   A **stack** is a way of organizing data that adds and removes items only from the top of the stack.  An example is a stack of cups.  You can grap a cup from the top of the stack or add more cups at the top of the stack.
 
 .. figure:: Figures/cupStack.jpg
     :width: 300px
@@ -38,7 +55,10 @@ The code above will cause a run-time error of division by zero when it runs.  Th
 
     Figure 4: A call stack in DrJava with a run-time error
 
-When a method calls itself the new method call gets added to the top of the call stack. Execution of the current method pauses while the recursive call is being processed.
+When a method calls itself the new method call gets added to the top of the call stack. Execution of the current method pauses while the recursive call is being processed. Each recursive call on the stack has its own set of local variables, including the parameter variables. The parameter values progressively change in each recursive call until we reach the base case which stops the recursion.
+
+
+|CodingEx| **Tracing Exercise**
 
 Let's trace the execution of the factorial method defined below.
 
@@ -80,7 +100,9 @@ So ``factorial(5)`` returns 120.
 
 You can step through this code using the Java Visualizer by clicking on this link: `factorial <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+factorial(int+n)%0A+++%7B%0A+++++if+(n+%3D%3D+0)%0A+++++++return+1%3B%0A+++++else%0A+++++++return+n+*+factorial(n-1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(factorial(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
-Another way to see the call stack in action is to use Jeloit (see http://cs.joensuu.fi/jeliot/ for the software and http://ice-web.cc.gatech.edu/dl/?q=node/729 for a step by step tutorial about how to use Jeliot).
+Another way to see the call stack in action is to download and use the Jeloit software (see http://cs.joensuu.fi/jeliot/).
+
+.. broken link: and http://ice-web.cc.gatech.edu/dl/?q=node/729 for a step by step tutorial about how to use Jeliot).
 
 .. figure:: Figures/callTree.png
     :width: 300px
@@ -89,7 +111,7 @@ Another way to see the call stack in action is to use Jeloit (see http://cs.joen
 
     Figure 5: A call tree in Jeliot
 
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: qrb_5-old
    :answer_a: 1
@@ -167,6 +189,7 @@ You can step through the code above using the Java Visualizer by clicking on the
 
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
+|CodingEx| **Tracing Exercise**
 
 Let's trace the execution of the bunny ears method defined below.
 
@@ -204,7 +227,7 @@ This approach shows the call stack from bottom to top.  Once bunnyEars(1) execut
 
 So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java Visualizer by clicking on this link: `bunnyEars <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A++public+static+int+bunnyEars(int+bunnies)+%0A++%7B%0A+++++if+(bunnies+%3D%3D+0)+return+0%3B%0A+++++else+if+(bunnies+%3D%3D+1)+return+2%3B%0A+++++else+return+2+%2B+bunnyEars(bunnies+-+1)%3B+%0A++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(bunnyEars(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
-**Check your understanding**
+|Exercise| **Check your understanding**
 
 .. mchoice:: qrb_8
    :answer_a: 12344321
@@ -248,7 +271,7 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: This would be correct if the base case returned 1 if the single character was a y.
    :feedback_e: Don't forget about the recursive calls.
 
-	Given the method defined below what does the following return: mystery("xyzxyxy")?
+	Given the method defined below what does the following return: mystery("xyzxyxy")? Note that this recursive method traverses a String.
 
     .. code-block:: java
      :linenos:
@@ -265,3 +288,5 @@ You can step through the code above using the Java Visualizer by clicking on the
      }
 
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_
+
+Continue to the next page for the Recursion lesson challenge and summary.

@@ -1,10 +1,16 @@
 .. qnum::
-   :prefix: 12-6-
-   :start: 1
+   :prefix: 10-1-
+   :start: 14
 
+.. |Groupwork| image:: ../../_static/groupwork.png
+    :width: 35
+    :align: middle
+    :alt: groupwork
+    
+|Groupwork| Tracing Challenge : Recursion
+===========================================
 
-Trace Practice
-====================
+Working in pairs, trace through the following recursion problems.
 
 Consider the following recursive method:
 
@@ -122,6 +128,22 @@ Once strMethod("y") returns, the value from each recursive call on the stack can
    -    :^2$: Correct!
         :.*: What is the value returned from strMethod("every")?
 
-Try Writing a Recursive Method
-=================================
-If you would like to try writing recursive methods check out the recursion problems at CodingBat at http://codingbat.com/java/Recursion-1.
+
+Summary
+============
+
+- A recursive method is a method that calls itself.
+
+- Recursive methods contain at least one base case, which halts the recursion, and at least one recursive call.
+
+- Each recursive call has its own set of local variables, including the formal parameters.
+
+- Parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.
+
+- Any recursive solution can be replicated through the use of an iterative approach.
+
+- Writing recursive program code is outside the scope of the course and AP Exam.
+
+- Recursion can be used to traverse String, array, and ArrayList objects.
+
+

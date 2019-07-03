@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 12-5-
+   :prefix: 10-7-1-
    :start: 1
 
 Base Case Practice
@@ -7,19 +7,7 @@ Base Case Practice
 
 A recursive method contains a call to itself.  The recursion stops when a base case test is true and a value is returned.
 
-.. clickablearea:: rec_base1
-    :question: Click on the line or lines that contain the test for the base case
-    :iscode:
-    :feedback: When a base case test is true a value is returned and the recursion stops.
 
-
-    :click-incorrect:public static int factorial(int n):endclick:
-    :click-incorrect:{:endclick:
-        :click-correct:if (n == 0):endclick:
-            :click-incorrect:return 1;:endclick:
-        :click-incorrect:else:endclick:
-            :click-incorrect:return n * factorial(n-1);:endclick:
-    :click-incorrect:}:endclick:
 
 .. clickablearea:: rec_base2
    :question: Click on the line or lines that contain the test for the base case
