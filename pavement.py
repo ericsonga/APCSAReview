@@ -39,7 +39,7 @@ master_app = 'runestone'
 serving_dir = "./build/csawesome"
 
 #new 7/2019 changes
-dynamic_pages = False
+dynamic_pages = True
 
 if dynamic_pages:
     dest = './published'
