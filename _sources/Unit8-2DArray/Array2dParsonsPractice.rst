@@ -245,7 +245,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should accept a two-dimensional String array, in which each row contains the characters of a word.  The method should return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array.
 
-   Take for example, the input 2d array: {{"b", "a", "t", "h"},
+   Take for example, the input 2d array: \{\{"b", "a", "t", "h"},
                                           {"t", "e", "n", "s"},
                                           {"j", "a", "c", "k"},
                                           {"l", "a", "z", "y"}}

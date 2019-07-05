@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 15-3-
+   :prefix: 13-2-
    :start: 1
    
 .. |start| image:: Figures/start.png
@@ -54,7 +54,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        
        .. code-block:: java
 
-           int[][] matrix = {{4, 5, 6, 7}, {0, 1, 2, 3}, {3, 2, 1, 0}, {8, 9, 1, 2}}; 
+           int[][] matrix = \{\{4, 5, 6, 7}, {0, 1, 2, 3}, {3, 2, 1, 0}, {8, 9, 1, 2}}; 
 	       
            int total = 0;
            for (int row = 0; row < len; row++)

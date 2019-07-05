@@ -105,8 +105,8 @@ You can also initialize (set) the values for the array when you create it.  In t
 
 .. code-block:: java 
 
-  int[][] ticketInfo = {{25,20,25}, {25,20,25}};
-  String[][] seatingInfo = {{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
+  int[][] ticketInfo = \{\{25,20,25}, {25,20,25}};
+  String[][] seatingInfo = \{\{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
 
 |Exercise| **Check your understanding**
 
@@ -129,8 +129,8 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 .. code-block:: java 
 
-  int[][] ticketInfo = {{25,20,25}, {25,20,25}};
-  String[][] seatingInfo = {{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
+  int[][] ticketInfo = \{\{25,20,25}, {25,20,25}};
+  String[][] seatingInfo = \{\{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
   int value = ticketInfo[1][0];
   String name = seatingInfo[0][1]; 
   
@@ -162,7 +162,7 @@ Add another row to seatingInfo initialized to your name and a friend's name. Get
   {
      public static void main(String[] args)
      {
-        String[][] seatingInfo = {{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
+        String[][] seatingInfo = \{\{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
         String name = seatingInfo[0][0];
         System.out.println(name + " is at [0,0]");
   
@@ -220,7 +220,7 @@ Summary
 
 - For the purposes of the exam, when accessing the element at arr[first][second], the first index is used for rows, the second index is used for columns.
 
-- The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays. For example, int[][] ticketInfo = {{25,20,25}, {25,20,25}};
+- The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays. For example, int[][] ticketInfo = \{\{25,20,25}, {25,20,25}};
 
 - The square brackets [row][col] are used to access and modify an element in a 2D array.
 

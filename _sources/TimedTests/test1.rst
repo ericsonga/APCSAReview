@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 15-1-
+   :prefix: 13-1-
    :start: 1
   
 .. highlight:: java
@@ -57,12 +57,12 @@ Click the |start| button when you are ready to begin the exam, but only then as 
    
       .. code-block:: java
 
-        public int m1 (int a)
-        {     
-           if (a == 1)          
-              return 10;     
-           else          
-              return 10 + m1 (a – 1);
+        public int m1 (int a)
+        {     
+           if (a == 1)          
+              return 10;     
+           else          
+              return 10 + m1 (a – 1);
         }
 
 
@@ -614,7 +614,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
    
       .. code-block:: java
    
-          int[][] matrix = {{1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
+          int[][] matrix = \{\{1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
        
           int sum = 0;
           int col = matrix[0].length - 2;

@@ -50,7 +50,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested for-each l
       
       public static void main(String[] args)
       {
-         int[][] theArray = {{80, 90, 70}, {20, 80, 75}};
+         int[][] theArray = {  {80, 90, 70}, {20, 80, 75}};
          System.out.println(getAvg(theArray));
       }
    }
@@ -89,7 +89,7 @@ What will the following code print out? Can you add another method that gets the
       
       public static void main(String[] args)
       {
-         int[][] matrix = {{1,2,3},{4,5,6}};
+         int[][] matrix = {  {1,2,3},{4,5,6}};
          System.out.println(getTotalForRow(0,matrix));
       }
    }
@@ -121,7 +121,7 @@ You can loop through just part of a 2D array. You can change the starting value 
       
       public static void main(String[] args)
       {
-         int[][] matrix = {{3,2,3},{4,3,6},{8,9,3},{10,3,3}};
+         int[][] matrix = {  {3,2,3},{4,3,6},{8,9,3},{10,3,3}};
          System.out.println(countValues(3,matrix,0,2,0,2));
       }  
    }
@@ -155,7 +155,7 @@ What will the following code print? Can you change the code to work for a String
       
       public static void main(String[] args)
       {
-         int[][] matrix = {{3,2,3},{4,3,6},{8,9,3},{10,3,3}};
+         int[][] matrix = {  {3,2,3},{4,3,6},{8,9,3},{10,3,3}};
          System.out.println(search(matrix,10));
          System.out.println(search(matrix,11));
 

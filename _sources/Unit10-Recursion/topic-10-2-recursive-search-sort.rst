@@ -247,7 +247,7 @@ You can see this executing using the |Java visualizer for merge sort|.
 You can trace through a merge sort algorithm given an array by using parentheses or curly brackets to show how the array is divided into subarrays and then merged. For example, here is how you could write down the trace of ``mergeSort(arr1)`` where arr1 = {86, 3, 43, 5} like in the example above.
 
 1. Split 1: { {86, 3} , {43, 5} }
-2. Split 2: { {{86},{3}} , {{43},{5}} }
+2. Split 2: { \{\{86},{3}} , \{\{43},{5}} }
 3. Merge 1: { {3, 86} , {5,43} }
 4. Merge 2: { 3, 5, 43, 86 }
 

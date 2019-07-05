@@ -54,7 +54,7 @@ Arrays know their length (how many elements they can store).  The length is a pu
    :feedback_b: The size of the inner list is the number of columns.
    :feedback_c: This is the total number of items in the array.
 
-   How many rows does ``a`` have if it is created as follows ``int[][] a = {{2, 4, 6, 8}, {1, 2, 3, 4}};``?	
+   How many rows does ``a`` have if it is created as follows ``int[][] a = \{\{2, 4, 6, 8}, {1, 2, 3, 4}};``?	
    
 .. mchoice:: qa2ldb_3
    :answer_a: nums[3][2]
@@ -81,7 +81,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
 
 .. code-block:: java 
 
-  int[][] array = {{1,2,3},{4,5,6}};
+  int[][] array = \{\{1,2,3},{4,5,6}};
   for (int row = 0; row < array.length; row++)
   {
       for (int col = 0; col < array[0].length; col++)
@@ -117,7 +117,7 @@ What does the following code do? Add another row of numbers to the matrix. Will 
       
       public static void main(String[] args)
       {
-         int[][] matrix = {{1,2,3},{4,5,6}};
+         int[][] matrix = \{\{1,2,3},{4,5,6}};
          System.out.println(getAverage(matrix));
       }
    }
@@ -184,7 +184,7 @@ What will the following code print out? Try to guess before you run it.
    {
      public static void main(String[] args)
       {
-        int[][] array = {{1,2,3},{4,5,6}};
+        int[][] array = \{\{1,2,3},{4,5,6}};
         for (int col = 0; col < array[0].length; col++)
         {
             for (int row = 0; row < array.length; row++)
