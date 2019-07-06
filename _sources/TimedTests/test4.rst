@@ -153,11 +153,11 @@ Click the |start| button when you are ready to begin the exam, but only then as 
          III. All methods declared in an interface are public methods.
             
     .. mchoice:: pe4_5
-       :answer_a: \{\{4, -5, 6},{-1, -2, 3}}
-       :answer_b: \{\{4, 5, 6},{1, 2, 3}}
-       :answer_c: \{\{1, 2, 3},{4, 5, 6}}
-       :answer_d: \{\{-1, -2, 3},{4, -5, 6}}
-       :answer_e: \{\{1, -2, 3},{4, 5, 6}}
+       :answer_a: { {4, -5, 6},{-1, -2, 3}}
+       :answer_b: { {4, 5, 6},{1, 2, 3}}
+       :answer_c: { {1, 2, 3},{4, 5, 6}}
+       :answer_d: { {-1, -2, 3},{4, -5, 6}}
+       :answer_e: { {1, -2, 3},{4, 5, 6}}
        :correct: e
        :feedback_a: How did the values in row1 change to those in row2 and vice versa?  Why didn't any value change to the absolute value?
        :feedback_b: How did the values in row1 change to those in row2 and vice versa?
@@ -165,7 +165,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_d:  This would be true if none of the values in the matrix were changed.  But, this will change the value to the absolute value when the row and column index are the same. 
        :feedback_e: This only changes the value in the matrix if the row and column index are the same.  So this changes the values at (0,0) and (1,1).
 
-       Consider the following declarations.  If matrix is initialized to be: \{\{-1, -2, 3},{4, -5, 6}}.  What will the values in matrix be after changeMatrix(matrix) is called?
+       Consider the following declarations.  If matrix is initialized to be: { {-1, -2, 3},{4, -5, 6}}.  What will the values in matrix be after changeMatrix(matrix) is called?
        
        .. code-block:: java
 

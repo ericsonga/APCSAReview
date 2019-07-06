@@ -13,13 +13,14 @@ Java Development Environments
     
 The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs. 
 
-You can learn Java by just using the interactive coding panels called Active Code in this e-book. However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
+You can learn Java by just using the interactive coding panels called **Active Code** in this e-book. However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
 
 repl.it
 -------
-If you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option, you can use an online development environment like https://repl.it/ where you can login with a Google account or make an account. You can create new projects and all of your code will be kept online in your account. Repl.it also has a free K12 public school plan (https://repl.it/account/checkout/k12_per_seat) where public school teachers can apply to get a repl.it online classroom.
 
-Some of the Active Code samples in this e-book course also include a link to a repl.it project. These projects are public and as soon as you try to change the code, it will make a copy for you in your own repl.it account.
+Repl.it (https://repl.it/) is a great online development environment that we would recommend using during this course. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Repl is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Repl.it also has a free K12 public school plan (https://repl.it/account/checkout/k12_per_seat) where public school teachers can apply to get a repl.it online classroom.
+
+Some of the Active Code samples in this e-book course also include a link to a repl.it project. These projects are public and as soon as you try to change the code, it will make a copy for you in your own repl.it account. If you are pair programming, there is also a multiplayer icon on the left in repl where you can share your code with another person, and you can both make changes at the same time. 
 
 Online IDEs usually cannot use graphical user interfaces and just do input and output as text. However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! You need to choose Java Swing instead of just Java to get this environment when you start a new repl project. 
 

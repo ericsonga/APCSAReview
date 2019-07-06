@@ -24,6 +24,6 @@ AP CS A Exam Weighting: 15-17.5%
    topic-3-9-practice-mixed-code.rst
    topic-3-10-practice-coding.rst
    Exercises.rst
-   MagpieLab/toctree.rst
+   magpieindex.rst
   
 

@@ -108,7 +108,7 @@ When comparing our pixel values to values deeper in the array, we need to be car
    {
       public static void main(String[] args)
       {
-        int[][] values = \{\{9, 8, 7, 6, 5}, 
+        int[][] values = { {9, 8, 7, 6, 5}, 
                           {7, 6, 5, 4, 3}, 
                           {4, 3, 2, 1, 0}, 
                           {4, 3, 2, 1, 0}};
@@ -177,7 +177,7 @@ Try to write the code for the method ``processImage``. When you are ready click 
       /** main for testing */
       public static void main (String[] args)
       {
-        int[][] values = \{\{221, 184, 178, 84, 135}, 
+        int[][] values = { {221, 184, 178, 84, 135}, 
                           {84, 255, 255, 130, 84}, 
                           {78, 255, 0, 0, 78}, 
                           {84, 130, 255, 130, 84}};

@@ -24,7 +24,7 @@ These problems are similar to those you will see on the AP CS A exam.
    
    .. code-block:: java 
 
-      int[][] matrix = \{\{1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
+      int[][] matrix = { {1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
 
       int sum = 0;
       int col = matrix[0].length - 2;
@@ -36,11 +36,11 @@ These problems are similar to those you will see on the AP CS A exam.
 You can step through this code using the following link `Example-9-8-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D%5B%5D+matrix+%3D+%7B%7B1,1,2,2%7D,%7B1,2,2,4%7D,%7B1,2,3,4%7D,%7B1,4,1,2%7D%7D%3B%0A%0A++++++int+sum+%3D+0%3B%0A++++++int+col+%3D+matrix%5B0%5D.length+-+2%3B%0A++++++for+(int+row+%3D+0%3B+row+%3C+4%3B+row%2B%2B)%0A++++++%7B%0A+++++++++sum+%3D+sum+%2B+matrix%5Brow%5D%5Bcol%5D%3B%0A++++++%7D%0A++++++System.out.println(sum)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=2>`_.
       
 .. mchoice:: qa2dm_2
-   :answer_a: \{\{2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}} 
-   :answer_b: \{\{2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}} 
-   :answer_c: \{\{2 1 1 1}, {3 2 1 1}, {3 3 2 1}} 
-   :answer_d: \{\{2 3 3 3}, {1 2 3 3}, {1 1 2 3}} 
-   :answer_e: \{\{1 1 1 1}, {2 2 2 2}, {3 3 3 3}} 
+   :answer_a: { {2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}} 
+   :answer_b: { {2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}} 
+   :answer_c: { {2 1 1 1}, {3 2 1 1}, {3 3 2 1}} 
+   :answer_d: { {2 3 3 3}, {1 2 3 3}, {1 1 2 3}} 
+   :answer_e: { {1 1 1 1}, {2 2 2 2}, {3 3 3 3}} 
    :correct: b
    :feedback_a: This woud be true if the code put a 3 in the array when the row index is less than the column index and a 2 in the array when the row and column index are the same, and a 1 in the array when the row index is greater than the column index. 
    :feedback_b: This code will put a 1 in the array when the row index is less than the column index and a 2 in the array when the row and column index are the same, and a 3 in the array when the row index is greater than the column index. 
@@ -81,7 +81,7 @@ You can step through this code using the following link `Example-9-8-2 <http://c
    
    .. code-block:: java 
 
-      int[][] m = \{\{1,1,1,1},{1,2,3,4},{2,2,2,2},{2,4,6,8}};
+      int[][] m = { {1,1,1,1},{1,2,3,4},{2,2,2,2},{2,4,6,8}};
 
       int sum = 0;
       for (int k = 0; k < m.length; k++) {

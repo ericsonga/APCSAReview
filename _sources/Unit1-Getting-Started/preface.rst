@@ -10,7 +10,7 @@ Preface
 	
 This AP CS A Java 2019 course was adapted from the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. Barbara Ericson would appreciate knowing what you think if you do use this book, and would love to see any modifications or additions you make. 
 
-The 2019 version of this book is being modified by the Mobile CSP project (https://www.mobile-csp.org), primarily by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA. Special thanks to John Figliulo, Pauline Lake, and Jennifer Rosato for feedback, edits, and ideas. We hope that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
+The 2019 version of this book is being modified by the Mobile CSP project (https://www.mobile-csp.org), primarily by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA. Special thanks to John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, and Rebecca  for feedback, edits, and ideas. We hope that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
 
 **Acknowledgements**
 

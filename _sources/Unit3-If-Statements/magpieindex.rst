@@ -1,5 +1,5 @@
 Magpie Chatbot Lab
-::::::::::::::::::::
+===================
 
 .. toctree::
    :maxdepth: 3

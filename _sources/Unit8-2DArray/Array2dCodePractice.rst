@@ -103,7 +103,7 @@ Code Practice with 2D Arrays
         .. tab:: Answer
         
            You can declare, create, and initialize a 3 by 3 two-dimensional String array on one line as shown below.  Declare the array with ``type[][] name``.  Create and initialize an array with two rows and three columns
-           using ``=\{\{item1, item2, item3}, {item4, item5, item6}};``.  Be sure to separate the items with commas.  Also separate the rows with a comma.
+           using ``={ {item1, item2, item3}, {item4, item5, item6} };``.  Be sure to separate the items with commas.  Also separate the rows with a comma.
            
            .. activecode::  arr2DEx2a
               :language: java
@@ -113,8 +113,8 @@ Code Practice with 2D Arrays
                   public static void main(String[] args)
                   {
                       // Can declare and initialize in one line
-                      String[][] students = {  {"Brice", "Marvin", "Anna"}, 
-                                             {"Kamal", "Maria", "Elissa"}};
+                      String[][] students = { {"Brice", "Marvin", "Anna"}, 
+                                             {"Kamal", "Maria", "Elissa"} };
            
                       for (int row = 0; row < students.length; row++) 
                       {
@@ -146,7 +146,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = {  {47,3,12},{51,74,20}};
+                      int[][] arr = { {47,3,12},{51,74,20} };
                       
                       // ADD CODE HERE //
                       
@@ -167,7 +167,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = {  {47,3,12},{51,74,20}};
+                      int[][] arr = { {47,3,12},{51,74,20} };
                      
                       // Prints 47, 51, 20 in that order
                       System.out.println(arr[0][0]);
@@ -195,7 +195,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-               	      int[][] arr = {  {10,39,8},3,{35,87},22,{34}};
+               	      int[][] arr = { {10,39,8},3,{35,87},22,{34} };
                	      
                	      // ADD CODE HERE //
                      
@@ -216,7 +216,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-               	      int[][] arr = {  {10,39,8},{3},{35,87},{22},{34}};
+               	      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
                		
                	      // Prints 8, 3, 87, and 34 in order
                	      System.out.println(arr[0][2]);  
@@ -239,7 +239,7 @@ Code Practice with 2D Arrays
 
            Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array. 
            
-           **Ex.** The array \{\{"hello","there","world"},{"how","are","you"}} should print:
+           **Ex.** The array { {"hello","there","world"},{"how","are","you"} } should print:
            
            Rows: 2
            
@@ -252,8 +252,8 @@ Code Practice with 2D Arrays
               
                   public static void main(String[] args)
                   {
-                      String[][] arr = {  {"hello","there","world"},
-                                        {"how","are","you"}};
+                      String[][] arr = { {"hello","there","world"},
+                                        {"how","are","you"} };
                                         
                       System.out.println("Rows:");
                       // ADD CODE TO PRINT NUMBER OF ROWS HERE // 
@@ -275,8 +275,8 @@ Code Practice with 2D Arrays
               public class Test1 {
                   public static void main(String[] args)
                   {
-                      String[][] arr = {  {"hello","there","world"},
-                                        {"how","are","you"}};
+                      String[][] arr = { {"hello","there","world"},
+                                        {"how","are","you"} };
                                         
                       System.out.println("Rows:" + arr.length);
                       System.out.println();
@@ -303,8 +303,8 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = {  {"Hey ", "there! "},{"I ", "hope "}, 
-                                        {"you ", "are "}, {"doing ", well"}};
+                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "}, 
+                                        {"you ", "are "}, {"doing ", well"} };
                                         
                       // ADD CODE HERE // 
                   	
@@ -323,8 +323,8 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = {  {"Hey ", "there! "},{"I ", "hope "}, 
-                                        {"you ", "are "}, {"doing ", "well"}};
+                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "}, 
+                                        {"you ", "are "}, {"doing ", "well"} };
                                         
                       for (int row = 0; row < arr.length; row++) 
                       {
@@ -370,8 +370,8 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {         
-                      String[][] colors = {  {"red","yellow","blue"},
-                                           {"orange","green","purple"}};
+                      String[][] colors = { {"red","yellow","blue"},
+                                           {"orange","green","purple"} };
                     
                       for (int row = 0; row < colors.length; row++) 
                       {
@@ -403,7 +403,7 @@ Code Practice with 2D Arrays
               	
                   public static void main(String[] args)
                   {
-                      int[][] array = {  {4,7,8},{8,8,7}};
+                      int[][] array = { {4,7,8},{8,8,7} };
                       
                       //ADD CODE HERE
 					  
@@ -423,7 +423,7 @@ Code Practice with 2D Arrays
               	
                   public static void main(String[] args)
                   {
-                      int[][] array = {  {4,7,8},{8,8,7}};
+                      int[][] array = { {4,7,8},{8,8,7} };
                       
                       int count = 0;
 					  
@@ -462,7 +462,7 @@ Code Practice with 2D Arrays
               	
                   public static void main(String[] args)
                   {
-                      int[][] table = {  {1,4,9},{11,4,3},{2,2,3}};
+                      int[][] table = { {1,4,9},{11,4,3},{2,2,3} };
                       
                       //ADD CODE HERE
  
@@ -482,7 +482,7 @@ Code Practice with 2D Arrays
               	
                   public static void main(String[] args)
                   {
-                       int[][] table = {  {1,4,9},{11,4,3},{2,2,3}};
+                       int[][] table = { {1,4,9},{11,4,3},{2,2,3} };
                        int sum = 0;
 					  
                        for (int col = 0; col < table[0].length; col++) 
@@ -515,7 +515,7 @@ Code Practice with 2D Arrays
               	
                   public static void main(String[] args)
                   {
-                      int[][] array = {  {1,2,3},{-1,-2,-3},{4,5,6}};
+                      int[][] array = { {1,2,3},{-1,-2,-3},{4,5,6} };
                       
                       //ADD CODE HERE
 
@@ -535,7 +535,7 @@ Code Practice with 2D Arrays
               	
                   public static void main(String[] args)
                   {
-                      int[][] array = {  {1,2,3},{-1,-2,-3},{4,5,6}};
+                      int[][] array = { {1,2,3},{-1,-2,-3},{4,5,6} };
                       int total = 0;
                       
                       for (int row = 0; row < array.length; row++)
@@ -584,7 +584,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args) 
                   {
-                      int[][] arr = {  {1,2,3}, {4,5,6}};
+                      int[][] arr = { {1,2,3}, {4,5,6} };
                       
                       for (int row = 0; row < arr.length; row++) 
                       {
@@ -631,7 +631,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = {  {1,2,3}, {4,5,6}, {7,8,9}};
+                      int[][] arr = { {1,2,3}, {4,5,6}, {7,8,9} };
                       for (int row = 0; row < arr.length; row++) 
                       {
                           for (int col = 0; col < arr[1].length; col++) 
@@ -663,7 +663,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = {  {"red","orange", "purple"}, {"green","blue", "indigo"}};
+                      String[][] arr = { {"red","orange", "purple"}, {"green","blue", "indigo"} };
                       
                       // ADD CODE HERE //
                       
@@ -689,7 +689,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = {  {"red","orange", "purple"}, {"green","blue", "indigo"}};
+                      String[][] arr = { {"red","orange", "purple"}, {"green","blue", "indigo"} };
                       
                       arr[0][2] = "yellow";
                       
