@@ -29,7 +29,7 @@ Set Value(s) in a 2D Array (Day 2)
 	pair: 2D Array; initialization
 	pair: 2D Array; set value
 
-When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment stataements with the name of the array followed by the row index in brackets followed by the column index in brackets and then an ``=`` followed by a value.  
+When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in brackets followed by the column index in brackets and then an ``=`` followed by a value.  
 
 .. code-block:: java 
 

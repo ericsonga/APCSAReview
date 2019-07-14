@@ -109,19 +109,19 @@ The Algorithm
   =====
     for (int r = 0; r < this.numRows; r++ ) {
   =====
-    for (int c = 0; c < this.numCols; c++ ) {
+        for (int c = 0; c < this.numCols; c++ ) {
   =====
-      if (pos < str.length()) {
+            if (pos < str.length()) {
   =====
-        String subStr = str.substring(pos, pos+1);
-        this.letterBlock[r][c] = subStr;
-        pos++;
+                String subStr = str.substring(pos, pos+1);
+                this.letterBlock[r][c] = subStr;
+                pos++;
   =====
-      } else {
-        this.letterBlock[r][c] = "A";
-      } // end else block
+            } else {
+                this.letterBlock[r][c] = "A";
+            } // end else block
   =====
-    } // end inner for
+        } // end inner for
   =====
     } // end outer for
   =====

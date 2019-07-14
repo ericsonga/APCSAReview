@@ -1,14 +1,17 @@
 .. image:: ../_static/CSAwesomeLogo.png
-    :width: 300
+    :width: 350
     :align: center
     
 ==========================================
 AP CS A Java Course - 2019
 ==========================================
 
-(revised 7/6/19, Units 1-10 finished)
 
 This course is adapted from the Java Review course to follow the 2019 College Board unit ordering.
+
+.. raw:: html
+
+    <style>th:hover {background-color: #42C0FF;} th {padding:5px;} </style> <table border style="border: 2px solid blue;"><tr><th><a class="reference internal" href="Unit1-Getting-Started/toctree.html">Unit 1</a></th><th><a class="reference internal" href="Unit2-Using-Objects/toctree.html">Unit 2</a></th><th><a class="reference internal" href="Unit3-If-Statements/toctree.html">Unit 3</a></th><th><a class="reference internal" href="Unit4-Iteration/toctree.html">Unit 4</a></th><th><a class="reference internal" href="Unit5-Writing-Classes/toctree.html">Unit 5</a></th><th><a class="reference internal" href="Unit6-Arrays/toctree.html">Unit 6</a></th><th><a class="reference internal" href="Unit7-ArrayList/toctree.html">Unit 7</a></th><th><a class="reference internal" href="Unit8-2DArray/toctree.html">Unit 8</a></th><th><a class="reference internal" href="Unit9-Inheritance/toctree.html">Unit 9</a></th><th><a class="reference internal" href="Unit10-recursion/toctree.html">Unit 10</a></th></tr></table>
 
 .. Here is where you specify the content and order of your new book.
 
@@ -88,6 +91,7 @@ Index
 * :ref:`genindex`
 * :ref:`search`
 
+(revised 7/14/19)
 
 © Copyright 2015 Barb Ericson, 2019 revised by B. Hoffman (`Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.
 

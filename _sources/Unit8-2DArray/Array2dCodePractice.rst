@@ -88,9 +88,9 @@ Code Practice with 2D Arrays
                       
                       
                       // Should print the values in students in order
-                      for (int row = 0; row <= students.length; row++) 
+                      for (int row = 0; row < students.length; row++) 
                       {
-                          for (int col = 0; col <= students.length; col++) 
+                          for (int col = 0; col < students[0].length; col++) 
                           {
                      	      System.out.print(students[row][col] + " ");
                      	  }
@@ -195,7 +195,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-               	      int[][] arr = { {10,39,8},3,{35,87},22,{34} };
+               	      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
                	      
                	      // ADD CODE HERE //
                      
@@ -304,7 +304,7 @@ Code Practice with 2D Arrays
                   public static void main(String[] args)
                   {
                       String[][] arr = { {"Hey ", "there! "},{"I ", "hope "}, 
-                                        {"you ", "are "}, {"doing ", well"} };
+                                        {"you ", "are "}, {"doing ", "well"} };
                                         
                       // ADD CODE HERE // 
                   	

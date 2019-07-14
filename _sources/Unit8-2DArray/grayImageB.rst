@@ -98,8 +98,12 @@ Once again, this problem starts with looping through the array of pixels, using 
 
    Which is the simplest way to subtract one integer value from another integer value?
 
+.. |Java visualizer| raw:: html
 
-When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops. The code below has a mistake in it, can you spot what the problem is and fix it?
+    <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A%7B%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D%5B%5D+values+%3D+%7B%7B9,+8,+7,+6,+5%7D,%0A+++++++++++++++++++++++%7B7,+6,+5,+4,+3%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D%7D%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+values.length%3B+i%2B%2B)%0A+++++%7B%0A+++++++for+(int+j+%3D+0%3B+j+%3C+values%5Bi%5D.length%3B+j%2B%2B)%0A+++++++%7B%0A+++++++++System.out.print(values%5Bi%5D%5Bj%5D+-+values%5Bi%2B2%5D%5Bj%2B2%5D)%3B%0A+++++++%7D%0A+++++++System.out.println()%3B%0A+++++%7D%0A+++%7D%0A%7D&mode=display&curInstr=6" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
+   
+
+When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops. The code below prints out the pixel value at position (row, col) after it is decreased by the value at position (row + 2, col + 2), but what if (row+2,col+2) is beyond the array bounds? Can you fix the terminating conditions of the loops so that we do not go beyond the array bounds? You can step through the code using the |Java Visualizer|.
 
 .. activecode:: lcfrgib3
    :language: java
@@ -123,8 +127,8 @@ When comparing our pixel values to values deeper in the array, we need to be car
       }
    } 
    
-You can step through the code above using the Java Visualizer by clicking on the following link `<http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A%7B%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D%5B%5D+values+%3D+%7B%7B9,+8,+7,+6,+5%7D,%0A+++++++++++++++++++++++%7B7,+6,+5,+4,+3%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D%7D%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+values.length%3B+i%2B%2B)%0A+++++%7B%0A+++++++for+(int+j+%3D+0%3B+j+%3C+values%5Bi%5D.length%3B+j%2B%2B)%0A+++++++%7B%0A+++++++++System.out.print(values%5Bi%5D%5Bj%5D+-+values%5Bi%2B2%5D%5Bj%2B2%5D)%3B%0A+++++++%7D%0A+++++++System.out.println()%3B%0A+++++%7D%0A+++%7D%0A%7D&mode=display&curInstr=6>_`.
-   
+ 
+
 Try to write the code for the method ``processImage``. When you are ready click "Run" to test your solution.   
    
 .. activecode:: lcfrgib4

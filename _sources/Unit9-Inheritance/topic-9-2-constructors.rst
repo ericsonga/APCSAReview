@@ -113,7 +113,7 @@ Regardless of whether the superclass constructor is called implicitly or explici
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: qoo_8
+.. .. mchoice:: qoo_8
    :answer_a: II only
    :answer_b: III only 
    :answer_c: I and II only
@@ -162,9 +162,9 @@ Regardless of whether the superclass constructor is called implicitly or explici
               this.z = 0;
            }
            
-You can step through this code in the Java Visualizer by clicking on the following link `Constructor Test1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Point2D+%7B%0A+++%0A+++public+int+x%3B%0A+++public+int+y%3B%0A%0A+++public+Point2D()+%7B%7D%0A%0A+++public+Point2D(int+x,int+y)+%7B%0A++++++this.x+%3D+x%3B%0A++++++this.y+%3D+y%3B%0A+++%7D%0A+++%0A+++%0A++++++++%0A++++++++%0A+++++%0A%7D%0A%0Apublic+class+Point3D+extends+Point2D%0A%7B%0A+++public+int+z%3B%0A+++%0A+++//+I.%0A+++public+Point3D()+%7B%7D%3B%0A+++%0A+++//+II.%0A+++//public+Point3D(int+x,+int+y,+int+z)%0A+++//%7B%0A+++//++++super(x,y)%3B%0A+++//++++this.z+%3D+z%3B%0A+++//%7D%0A+++%0A+++//+III.%0A+++//public+Point3D(int+x,+int+y)%0A+++//%7B%0A+++//++++this.x+%3D+x%3B%0A+++//++++this.y+%3D+y%3B%0A+++//++++this.z+%3D+0%3B%0A+++//%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Point3D+p3+%3D+new+Point3D()%3B%0A++++++//Point3D+p3+%3D+new+Point3D(3,+5,+8)%3B%0A++++++//Point3D+p3+%3D+new+Point3D(2,+4)%3B%0A+++%7D%0A+++%0A%7D&mode=display&curInstr=0>`_.
+.. You can step through this code in the Java Visualizer by clicking on the following link `Constructor Test1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Point2D+%7B%0A+++%0A+++public+int+x%3B%0A+++public+int+y%3B%0A%0A+++public+Point2D()+%7B%7D%0A%0A+++public+Point2D(int+x,int+y)+%7B%0A++++++this.x+%3D+x%3B%0A++++++this.y+%3D+y%3B%0A+++%7D%0A+++%0A+++%0A++++++++%0A++++++++%0A+++++%0A%7D%0A%0Apublic+class+Point3D+extends+Point2D%0A%7B%0A+++public+int+z%3B%0A+++%0A+++//+I.%0A+++public+Point3D()+%7B%7D%3B%0A+++%0A+++//+II.%0A+++//public+Point3D(int+x,+int+y,+int+z)%0A+++//%7B%0A+++//++++super(x,y)%3B%0A+++//++++this.z+%3D+z%3B%0A+++//%7D%0A+++%0A+++//+III.%0A+++//public+Point3D(int+x,+int+y)%0A+++//%7B%0A+++//++++this.x+%3D+x%3B%0A+++//++++this.y+%3D+y%3B%0A+++//++++this.z+%3D+0%3B%0A+++//%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Point3D+p3+%3D+new+Point3D()%3B%0A++++++//Point3D+p3+%3D+new+Point3D(3,+5,+8)%3B%0A++++++//Point3D+p3+%3D+new+Point3D(2,+4)%3B%0A+++%7D%0A+++%0A%7D&mode=display&curInstr=0>`_.
 
-|Exercise| **Check your understanding**
+
 
 .. mchoice:: qoo_9
    :answer_a: I only

@@ -145,7 +145,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
    :feedback_c: This code will compile.  The student class does have a getInfo method.  
    :feedback_d: There is no problem at run-time. 
 
-   What is the output from running the main method in the GradStudent class?
+   What is the output from running the main method in the Student class?
    
    .. code-block:: java 
    

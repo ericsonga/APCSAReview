@@ -187,6 +187,10 @@ What will the following code print? Can you change the code to work for a String
 
    <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
 
+.. |repl.it project| raw:: html
+
+   <a href= "https://repl.it/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it project</a>
+
 
 .. raw:: html
 
@@ -222,7 +226,7 @@ switchColors method. Run the code and watch what it does. It switches RGB values
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; // resolves problem with java.awt.List and java.util.List
+    import java.util.List; 
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -335,7 +339,7 @@ switchColors method. Run the code and watch what it does. It switches RGB values
       }
     } 
 
-Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. Test it in the active code above to see what it does.  
+Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. Test it in the active code above or on |repl.it project| or your own IDE to see what it does.  
 
 Here are some more exercises from the |Picture Lab|:
 
@@ -895,8 +899,7 @@ Summary
               this.title = new String(copyPicture.title);
            if (copyPicture.bufferedImage != null)
            {
-             this.bufferedImage = new BufferedImage(copyPicture.getWidth(),
-                                                    copyPicture.getHeight(), BufferedImage.TYPE_INT_RGB);
+             this.bufferedImage = new BufferedImage(copyPicture.getWidth(),  copyPicture.getHeight(), BufferedImage.TYPE_INT_RGB);
              this.copyPicture(copyPicture);
            }
          }

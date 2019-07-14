@@ -73,6 +73,12 @@ Please log into Runestone and fill out the following survey.  You do not have to
 
    I have experience with:
 
+.. poll:: qcsp
+   :option_1: Yes, I took AP CSP.
+   :option_2: No, I did not take AP CSP.
+
+   I took AP CSP (Computer Science Principles) before this CSA course.
+   
 .. shortanswer:: qprogrammingtype
 
     If you have taken a programming course before, please tell us what programming language you learned and how long the course was.
