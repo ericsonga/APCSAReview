@@ -94,11 +94,15 @@ Index
 * :ref:`genindex`
 * :ref:`search`
 
-.. |form| raw:: html
+.. |errata form| raw:: html
 
-   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">form</a>
+   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">errata form</a>
    
-If you see errors or bugs, please report them with this |form|.
+.. |interest form| raw:: html
+
+   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN4JKrFnktQakID4sHBHBuBEHCvwv8YsSMBcVm1tB-nYUukA/viewform?usp=sf_link" target="_blank" style="text-decoration:underline">interest form</a>
+   
+If you see errors or bugs, please report them with this |errata form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form|.
 
 (revised 7/20/19)
 
