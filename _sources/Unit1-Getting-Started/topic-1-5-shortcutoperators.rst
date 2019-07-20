@@ -109,7 +109,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
      y = y / 2;
      z++;
      
-|Groupwork| Programming Challenge
+|Groupwork| Code Tracing Challenge
 --------------------------------------
 
 Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end. 

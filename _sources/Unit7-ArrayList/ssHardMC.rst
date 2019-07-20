@@ -172,10 +172,10 @@ You can step through the code above by clicking on the following link `Ex-12-8-3
 You can step through the code above by clicking on the following link `Ex-12-8-4 <https://goo.gl/Rpc4o4>`_.
 
 .. mchoice:: qssm_5
-   :answer_a: 2,3,5,9,3,4
-   :answer_b: 4,5,2,3,9,3
-   :answer_c: 5,3,2,9,3,4
-   :answer_d: 2,3,5,9,3
+   :answer_a: 3,5,3,9,2,4,
+   :answer_b: 4,5,2,3,9,3,
+   :answer_c: 5,3,2,9,3,4,
+   :answer_d: 2,3,5,9,3,
    :correct: a
    :feedback_a: This is the correct answer. The check method is using a for loop and an if statement to return true if the parameter is prime and false if it is not prime. In the main method, the for loop iterates through every element in the array and checks to see if it is prime. If it is prime, then the program will swap that element with the first element in the array.
    :feedback_b: This would be true if the if statement had said: if(!check(arr[i])).
@@ -217,7 +217,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-4
 	      }
 	  }
 
-You can step through the code above by clicking on the following link `Ex-12-8-5 <https://goo.gl/djgkck>`_.
+You can step through the code above by clicking on the following link `Ex-12-8-5 <http://www.pythontutor.com/java.html#code=public%20class%20PrimeOrNot%0A%7B%0A%20%20%20%20private%20static%20boolean%20check%28int%20n%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%28int%20i%20%3D%202%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28n%20%25%20i%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20true%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20arr%20%3D%20%7B5,3,2,9,3,4%7D%3B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20arr.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28check%28arr%5Bi%5D%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20temp%20%3D%20arr%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5B0%5D%20%3D%20arr%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5Bi%5D%20%3D%20temp%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20for%20%28int%20t%20%3D%200%3B%20t%20%3C%20arr.length%3B%20t%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%28arr%5Bt%5D%29%20%2B%20%22,%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=111&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false>`_.
 
 .. mchoice:: qssm_6
    :answer_a: Anna John Billy Bob Roger Dominic

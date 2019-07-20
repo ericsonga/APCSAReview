@@ -449,8 +449,8 @@ The convention in Java is to always start a variable name with a lower case lett
         :.*: In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.  This would be lastScore
 
 
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Debugging Challenge : Weather Report
+------------------------------------------------
 
 Debug the following code. Can you find the all the bugs and get the code to run? 
 

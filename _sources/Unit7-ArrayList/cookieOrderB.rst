@@ -108,7 +108,7 @@ The Algorithm
   int numBoxesRemoved = 0;
  =====
   for (int i = this.orders.size() - 1; i >= 0; i--) {
-  String thisOrder = this.orders.get(i);
+    CookieOrder thisOrder = this.orders.get(i);
  =====
     if(cookieVar.equals(thisOrder.getVariety())) {
  =====

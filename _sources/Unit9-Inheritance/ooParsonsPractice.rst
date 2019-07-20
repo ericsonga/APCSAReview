@@ -8,7 +8,7 @@ Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
 
-.. parsonsprob:: oopex1muc
+.. .. parsonsprob:: oopex1muc
    :adaptive:
    :noindent:
 
@@ -33,7 +33,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    public class Dog extends Animal {
    =====
-   public abstract Animal class Dog { #distractor
+   public Animal class Dog { #distractor
    ===== 
    public class Animal extends Dog { #distractor
    =====
@@ -63,7 +63,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    } // end class
 
-.. parsonsprob:: oopex4muc
+.. .. parsonsprob:: oopex4muc
    :adaptive:
    :noindent:
    

@@ -44,20 +44,35 @@ The 4 free response questions allow students to write code to answer a problem a
  
 .. |AP CS A site| raw:: html
 
-   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank">AP CS A site</a>
+   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CS A site</a>
    
 .. |AP CS A CED| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP CS A Course and Exam Description (CED)</a>
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CS A Course and Exam Description (CED)</a>
    
 .. |CS Careers| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank">CS Careers</a>
+   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank" style="text-decoration:underline">CS Careers</a>
    
 .. |AP CS A Reference Sheet| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CS A Java Quick Reference Sheet</a>
    
-For more information on the exam see the College Board |AP CS A site| and the 200+ page |AP CS A CED|. 
+   
+.. |AP CS A past FRQs| raw:: html
+
+   <a href="https://apcentral-stg.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions" target="_blank" style="text-decoration:underline">AP CS A Past Free Response Questions</a>  
+   
+.. |FRQ resource| raw:: html
+
+   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank" style="text-decoration:underline">FRQ resource</a>  
+ 
+ 
+.. |AP Audit|  raw:: html
+
+   <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank" style="text-decoration:underline">AP Audit</a>
+   
+   
+For more information on the exam see the College Board |AP CS A site| and the 200+ page |AP CS A CED|. The |AP CS A past FRQs| are available online. Here is an |FRQ resource| that categorizes the past FRQs by topic and provides links to their solutions (which are available online in many places). The College Board provides a question bank and formative assessment quizzes for each unit online for registered AP classes (you must complete the |AP Audit| for access to these). 
 
 Also check out this list of |CS Careers| that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!  

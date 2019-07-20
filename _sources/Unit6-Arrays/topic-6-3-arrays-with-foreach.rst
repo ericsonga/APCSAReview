@@ -33,6 +33,7 @@ There is a special kind of loop that can be used with arrays that is called an *
 .. code-block:: java 
  
   int[] highScores = { 10, 9, 8, 8};
+  String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
   // for each loop: for each value in highScores
   // for (type variable : arrayname)
   for (int value : highScores)
@@ -40,8 +41,41 @@ There is a special kind of loop that can be used with arrays that is called an *
       // Notice no index or [ ], just the variable value!
       System.out.println( value );
   }
+  // for each loop with a String array to print each name
+  // the type for variable name is String!
+  for (String name : names)
+  {
+      System.out.println(name); 
+  }
 
-Use the for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don't need to know their index and don't need to change their values.  This type of loop can only be used with collections of items like arrays.  It will loop through the collection and each time through the loop it will use the next item from the collection.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array.  
+Use the enhanced for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don't need to know their index and don't need to change their values.  This type of loop can only be used with collections of items like arrays.  It will loop through the collection and each time through the loop it will use the next item from the collection.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array. 
+
+|CodingEx| **Coding Exercise**
+
+Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.
+
+.. activecode:: foreach1
+   :language: java
+   
+   public class ForEachDemo
+   {      
+      public static void main(String[] args)
+      {
+        int[] highScores = { 10, 9, 8, 8};
+        String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
+        // for each loop with an int array
+        for (int value : highScores)
+        {
+            System.out.println( value );
+        }
+        // for each loop with a String array
+        for (String value : names)
+        {
+            System.out.println(value); // this time it's a name!
+        }
+      }
+    }
+  
 |CodingEx| **Coding Exercise**
 
 Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!

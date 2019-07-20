@@ -76,15 +76,17 @@ The Algorithm
 
  The method getTotalBoxes below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
  -----
- int sum = 0;
+ public int getTotalBoxes() {
  =====
- for (CookieOrder co : this.orders) {
+    int sum = 0;
  =====
-  sum += co.getNumBoxes();
+    for (CookieOrder co : this.orders) {
  =====
- } // end for
+        sum += co.getNumBoxes();
  =====
- return sum;
+    } // end for
+ =====
+    return sum;
  =====
  } // end method
 

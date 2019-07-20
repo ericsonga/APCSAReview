@@ -34,7 +34,7 @@ These problems are easier than most of those that you will usually see on the AP
 
    Under which of these conditions is it appropriate to overload a method (ie: the class will contain two methods with the same name)?
    
-.. mchoice:: qooe_3
+.. .. mchoice:: qooe_3
    :answer_a: I and II only
    :answer_b: II only
    :answer_c: I, II and III
@@ -55,7 +55,7 @@ These problems are easier than most of those that you will usually see on the AP
       II.  This class must be declared as abstract.
       III.  You can't declare any fields in this class. 
       
-.. mchoice:: qooe_4
+.. .. mchoice:: qooe_4
    :answer_a: Abstract classes cannot be instantiated, but they can be sub-classed.  
    :answer_b: Abstract classes can be instantiated, but they cannot be sub-classed.  
    :answer_c: Abstract classes can only contain abstract methods.  They can be sub-classed.

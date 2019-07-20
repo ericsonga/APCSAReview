@@ -120,7 +120,7 @@ How To Solve This
 
 #. How will you find the correct place to add it in the list?  You will need to loop through the ``climbList`` and find the first place that the new ``peakName`` is less than the current list element's ``peakName``.   What type of loop should you use?
 #. You have to watch out for the case when the new peakName is greater than anything else in the list or the list is empty.
-#. Once you find the right place to add the new object how can you add it at that location?  What method of the ``List`` interface lets you add an object at a particular location in a list?
+#. Once you find the right place to add the new object how can you add it at that location?  What method of the ``ArrayList`` class lets you add an object at a particular location in a list?
 #. How can you tell if one string is less than or equal to another?  
 #. How can you get the peakName from the next ``ClimbInfo`` object?  
 #. In the ``addClimb`` method you need to create a new ``ClimbInfo`` object and initialize the ``peakName`` and ``climbTime``.  How do you create a new object of a class and initialize the fields?

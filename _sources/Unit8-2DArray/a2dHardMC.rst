@@ -1,6 +1,6 @@
 .. qnum::
-   :prefix: 9-9-
-   :start: 1
+   :prefix: 8-7-
+   :start: 7
 
 Hard Multiple Choice Questions
 ----------------------------------

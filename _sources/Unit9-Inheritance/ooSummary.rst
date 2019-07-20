@@ -24,8 +24,6 @@ In this chapter you learned about **inheritance**.  In an object-oriented progra
     single: setter
     single: accessor
     single: mutator
-    single: abstract class
-    single: interface
 
 Concept Summary
 =================
@@ -46,8 +44,7 @@ Concept Summary
 - **setter** - A method that sets the value of a field in an object.
 - **accessor** - Another name for a getter method - one that returns the value of a field.
 - **mutator** - Another name for a setter method - one that changes the value of a field.
-- **abstract class** - A class that is used as a common parent for several child classes, that typically has at least one abstract method, but can also have fields and non-abstract methods.  You can not create an object of an abstract class, but must create an object of a concrete (not-abstract) child class.
-- **interface** - A special type of abstract class that can only have public class constants and public abstract methods.  These are useful for separating what a class is from what it does.  
+  
 
 Java Keyword Summary
 =========================
@@ -89,5 +86,5 @@ Practice
 Common Mistakes
 ===============
   -  Using inheritance (is a kind of) when you should use association (has a).  A school has classes, it is not a type of class.  A high school is a kind of school.
-  -  Using a type field instead of subclasses.  If you ever find yourself creating conditionals based on the type of object use subclasses instead.
-  -  Copying code instead of creating a subclass or pulling out a common superclass.  If you ever find yourself copying object fields or methods try creating a subclass instead or pull out a common superclass.
+  -  Using an instance variable for a type of class instead of subclasses.  If you ever find yourself creating conditionals based on the type of object use subclasses instead.
+  -  Copying code instead of creating a subclass or pulling out a common superclass.  If you ever find yourself copying object attributes or methods try creating a subclass instead or pull out a common superclass.
