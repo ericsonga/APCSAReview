@@ -196,7 +196,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            double cost = 0.6;
            double money = 3.5;
    =====
-           int numWings = cost / money;
+           int numWings = money / cost;
    =====
            System.out.println(numWings);
    =====

@@ -109,8 +109,8 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
      y = y / 2;
      z++;
      
-|Groupwork| Code Tracing Challenge
---------------------------------------
+|Groupwork| Code Tracing Challenge and Operators Maze
+-----------------------------------------------------
 
 Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end. 
 
@@ -136,8 +136,15 @@ x  y  z  Output
 .. shortanswer:: challenge1-5
 
    Write your trace table for x, y, and z here showing their results after each line of code.
+
+.. |Operators Maze game| raw:: html
+
+   <a href="https://docs.google.com/document/d/1654HrHMuu4z1L8gOY-1t5JNTp08d2JDTNDdCAkDXHSw/edit?usp=sharing" target="_blank" style="text-decoration:underline">Operators Maze game</a>
    
-   
+
+
+After doing this challenge, play the |Operators Maze game|. See if you and your partner can get the highest score possible!
+
 Summary
 -------------------
 
