@@ -8,11 +8,11 @@ Hard Multiple Choice Questions
 These problems are harder than those that you will typically see on the AP CS A exam.
       
 .. mchoice:: qa2dh_1
-   :answer_a: {{6, 4, 2}, {2, 4, 6}}
-   :answer_b: {{3, 2, 1}, {1, 4, 6}}
-   :answer_c: {{3, 2, 1}, {1, 4, 8}}
-   :answer_d: {{4, 4, 2}, {2, 4, 4}}
-   :answer_e: {{3, 2, 1}, {2, 4, 4}}
+   :answer_a: { {6, 4, 2}, {2, 4, 6} }
+   :answer_b: { {3, 2, 1}, {1, 4, 6} }
+   :answer_c: { {3, 2, 1}, {1, 4, 8} }
+   :answer_d: { {4, 4, 2}, {2, 4, 4} }
+   :answer_e: { {3, 2, 1}, {2, 4, 4} }
    :correct: c
    :feedback_a: Check the starting values on the nested loops.
    :feedback_b: Notice that there are two if's, not an if and else.
@@ -24,7 +24,7 @@ These problems are harder than those that you will typically see on the AP CS A 
    
    .. code-block:: java 
 
-      int[][] arr = {{3,2,1},{1,2,3}};
+      int[][] arr = { {3,2,1},{1,2,3} };
       int value = 0;
       for (int row = 1; row < arr.length; row++) {
          for (int col = 1; col < arr[0].length; col++) {

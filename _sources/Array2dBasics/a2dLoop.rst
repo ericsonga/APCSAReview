@@ -35,7 +35,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
    :feedback_b: The size of the inner list is the number of columns.
    :feedback_c: This is the total number of items in the array.
 
-   How many rows does ``a`` have if it is created as follows ``int[][] a = {{2, 4, 6, 8}, {1, 2, 3, 4}};``?	
+   How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4} };``?	
    
 .. mchoice:: qa2ldb_3
    :answer_a: nums[3][2]
@@ -83,7 +83,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
       
       public static void main(String[] args)
       {
-         int[][] matrix = {{1,2,3},{4,5,6}};
+         int[][] matrix = { {1,2,3},{4,5,6} };
          System.out.println(getAverage(matrix));
       }
    }
@@ -100,6 +100,8 @@ You can step through the code by clicking on this `link1 <http://cscircles.cemc.
 **Mixed up programs**
 
 .. parsonsprob:: 9_largest
+   :numbered: left
+   :adaptive:
 
    The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or have the wrong indention.
    -----
@@ -156,7 +158,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested for-each l
       
       public static void main(String[] args)
       {
-         int[][] theArray = {{80, 90, 70}, {20, 80, 75}};
+         int[][] theArray = { {80, 90, 70}, {20, 80, 75} };
          System.out.println(getAvg(theArray));
       }
    }

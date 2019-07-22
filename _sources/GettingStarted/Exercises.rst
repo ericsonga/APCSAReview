@@ -481,11 +481,11 @@ Click the |start| button when you are ready to begin the exam, but only then as 
             System.out.println(list1);
           
     .. mchoice:: qpret_16
-        :answer_a: {{2 1 1 1}, {3 2 1 1}, {3 3 2 1}}
-        :answer_b: {{2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}}
-        :answer_c: {{2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}}
-        :answer_d: {{2 3 3 3}, {1 2 3 3}, {1 1 2 3}}
-        :answer_e: {{1 1 1 1}, {2 2 2 2}, {3 3 3 3}}
+        :answer_a: { {2 1 1 1}, {3 2 1 1}, {3 3 2 1} }
+        :answer_b: { {2 3 3}, {1 2 3}, {1 1 2}, {1 1 1} }
+        :answer_c: { {2 1 1}, {3 2 1}, {3 3 2}, {3 3 3} }
+        :answer_d: { {2 3 3 3}, {1 2 3 3}, {1 1 2 3} }
+        :answer_e: { {1 1 1 1}, {2 2 2 2}, {3 3 3 3} }
         :correct: a
         :feedback_a: When you create a 2-d array the first value is the number of rows and the second is the number of columns. This code will put a 1 in the array when the row index is less than the column index and a 2 in the array when the row and column index are the same, and a 3 in the array when the row index is greater than the column index.
         :feedback_b: This would be true if the first value when you create a 2-d array was the number of columns and the second was the number of rows. Also you would need to set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.

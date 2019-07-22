@@ -176,6 +176,7 @@ How many times does the code above print the lines to the song?
 **Mixed up programs**
 
 .. parsonsprob:: print_evens
+   :numbered: left
    :adaptive:
 
    The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn't require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the "Check Me" button.
