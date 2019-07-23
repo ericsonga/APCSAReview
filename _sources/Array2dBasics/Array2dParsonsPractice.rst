@@ -9,6 +9,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex1muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -30,6 +31,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex2muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -55,6 +57,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex3muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -85,6 +88,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex4muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -116,6 +120,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex5muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -144,6 +149,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex6muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should accept a two-dimensional array of ints and a desired int and return the number of occurrences of the desired int in the two-dimensional array.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -174,6 +180,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex7muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should accept a two-dimensional int array and return a single dimensional (normal) int array containing the average of each of the columns.  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -206,6 +213,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex8muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should accept a two-dimensional int array and return a new two-dimensional int array containing only the odd index rows.  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -241,14 +249,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex9muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should accept a two-dimensional String array, in which each row contains the characters of a word.  The method should return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array.
 
-   Take for example, the input 2d array: {{"b", "a", "t", "h"},
+   Take for example, the input 2d array: { {"b", "a", "t", "h"},
                                           {"t", "e", "n", "s"},
                                           {"j", "a", "c", "k"},
-                                          {"l", "a", "z", "y"}}
+                                          {"l", "a", "z", "y"} }
 
    Resulting array: {"bath", "tens", "jack", "lazy"}
 
@@ -275,6 +284,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch9ex10muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should accept a two-dimensional int array, and return a single-dimensional (normal) int array containing the max of each row.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>

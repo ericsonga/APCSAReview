@@ -47,6 +47,7 @@ are not equal then reset the current run length to 0.  Return the starting index
 Mixed Up Code
 -------------------
 .. parsonsprob:: NumberCubeB
+   :numbered: left
    :adaptive:
 
    The method getLongestRun below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.

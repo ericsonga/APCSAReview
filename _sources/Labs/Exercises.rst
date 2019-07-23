@@ -10,9 +10,9 @@ Mixed Up Code Practice
 ------------------------------
 
 .. parsonsprob:: chat-labp1
+   :numbered: left
    :adaptive:
    :noindent:
-   :numbered: left
 
    The following program segment should print if your guess is too low, correct, or too high  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----

@@ -206,6 +206,7 @@ You can also add ``System.out.println(variable)`` to print the value of a variab
 **Mixed up programs**
 
 .. parsonsprob:: removeA
+   :numbered: left
    :adaptive:
    :noindent:
 

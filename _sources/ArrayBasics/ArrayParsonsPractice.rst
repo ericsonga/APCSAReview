@@ -8,6 +8,7 @@ Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
 .. parsonsprob:: ch7ex1muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -25,6 +26,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex2muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -42,6 +44,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex3muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -61,6 +64,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex4muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -88,6 +92,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex5muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -111,6 +116,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex6muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should return largest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -139,6 +145,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex7muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should return an integer array that is "right shifted" by one -- so {6, 2, 5, 3} returns {3, 6, 2, 5} (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -165,6 +172,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex8muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) -- so {1,2,3,4} should return {2,3}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -186,6 +194,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex9muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should return string array that is in reverse order -- so {"b", "a", "z"} should return {"z", "a", "b"}.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -212,6 +221,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch7ex10muc
+   :numbered: left
    :adaptive:
 
    The following program segment is a method that should return string array that is in reverse order -- so {"b", "a", "z"} should return {"z", "a", "b"}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
