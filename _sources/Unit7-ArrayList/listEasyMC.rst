@@ -2,7 +2,7 @@
    :prefix: 7-11-1-
    :start: 1
 
-Easy Multiple Choice Questions
+Easier Multiple Choice Questions
 ----------------------------------
 
 These problems are easier than most of those that you will usually see on the AP CS A exam.

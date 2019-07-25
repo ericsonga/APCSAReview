@@ -10,7 +10,7 @@ These questions are all about Strings, but more questions on using other objects
 .. highlight:: java
    :linenothreshold: 3
 
-Easy Multiple Choice Questions
+Easier Multiple Choice Questions
 ------------------------------
 
 These problems are mostly easier than what you will see on the AP CS A exam.

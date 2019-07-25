@@ -24,12 +24,12 @@
 super Keyword
 ============================================
 
-Sometimes you want the subclass to do more than what a superclass' method is doing.  You want to still execute the superclass method, but then do also do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.  
+Sometimes you want the subclass to do more than what a superclass' method is doing.  You want to still execute the superclass method, but you also want to override the method to do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.  
 
 We've used super() before to call the superclass' constructor. There are two uses of the keyword super:
 
-1. **super();** or **super(arguments);** calls the super constructor if put in as the first line of a subclass constructor.
-2. **super.method();** calls the superclass' method.
+1. **super();** or **super(arguments);** calls just the super constructor if put in as the first line of a subclass constructor. 
+2. **super.method();** calls a superclass' method (not constructors).
 
 The keyword super is very useful in allowing us to first execute the superclass method and then add on to it in the subclass.
 
