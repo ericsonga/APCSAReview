@@ -80,6 +80,7 @@ Inheritance is also useful for **specialization** which is when you want most of
 |Exercise| **Check your understanding**
     
 .. mchoice:: qoo10-1-1
+   :practice: T
    :answer_a: It doesn't have a parent class.
    :answer_b: It inherits from the Object class.
    :answer_c: It inherits from the Default class.
@@ -93,6 +94,7 @@ Inheritance is also useful for **specialization** which is when you want most of
    If you don't specify the parent class in a class declaration which of the following is true?
    
 .. mchoice:: qoo10-1-2
+   :practice: T
    :answer_a: Yes
    :answer_b: No
    :correct: a
@@ -102,6 +104,7 @@ Inheritance is also useful for **specialization** which is when you want most of
    If the class Vehicle has the instance fields make and model and the class Car inherits from the class Vehicle, will a car object have a make and model?  
    
 .. mchoice:: qoo10-1-3
+   :practice: T
    :answer_a: Yes
    :answer_b: No
    :correct: b
@@ -111,6 +114,7 @@ Inheritance is also useful for **specialization** which is when you want most of
    If I had a class ParkingGarage should it inherit from the class Vehicle?  
    
 .. mchoice:: qoo10-1-4
+   :practice: T
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2

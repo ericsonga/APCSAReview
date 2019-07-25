@@ -8,6 +8,7 @@ Hard Multiple Choice Questions
 These problems are about the same or harder than those that you will typically see on the AP CS A exam.
 
 .. mchoice:: qrh_1
+   :practice: T
    :answer_a: The string <code>s</code> contains two or more of the same characters.
    :answer_b: The string <code>s</code> starts with two or more of the same characters.
    :answer_c: The string <code>s</code> contains two or more of the same character that are next to each other.
@@ -32,6 +33,7 @@ These problems are about the same or harder than those that you will typically s
 You can step through the code above by clicking on the following link `Ex-11-8-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+check(String+s)%0A+++%7B%0A++++++return+s.length()+%3E%3D+2+%26%26%0A++++++++++(s.charAt(0)+%3D%3D+s.charAt(1)+%7C%7C%0A+++++++++++check(s.substring(1)))%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(check(%22xyyz%22))%3B%0A++++++System.out.println(check(%22xyxyz%22))%3B%0A++++++System.out.println(check(%22zyxzyy%22))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qrh_2
+   :practice: T
    :answer_a: 5
    :answer_b: 4
    :answer_c: 6

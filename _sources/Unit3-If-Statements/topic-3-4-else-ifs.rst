@@ -73,6 +73,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 |Exercise| **Check your understanding**
 
 .. mchoice:: qcb3_4_1
+   :practice: T
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -90,6 +91,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
      else System.out.println("x is positive"); 
      
 .. mchoice:: qcb3_4_2
+   :practice: T
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -107,6 +109,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
      else System.out.println("x is positive"); 
      
 .. mchoice:: qcb3_4_3
+   :practice: T
    :answer_a: first quartile
    :answer_b: second quartile
    :answer_c: third quartile
@@ -157,6 +160,7 @@ The else-if connection is necessary if you want to hook up conditionals together
 
 
 .. .. mchoice:: qcb3_4_4
+   :practice: T
    :answer_a: A
    :answer_b: B
    :answer_c: C

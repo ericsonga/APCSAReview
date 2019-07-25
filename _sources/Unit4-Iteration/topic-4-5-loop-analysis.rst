@@ -115,6 +115,7 @@ Did you trace table look like the following?
 
 
 .. mchoice:: qlb_2_2
+   :practice: T
    :answer_a: var1 = 1, var2 = 1
    :answer_b: var1 = 2, var2 = 0
    :answer_c: var1 = 3, var2 = -1
@@ -141,6 +142,7 @@ Did you trace table look like the following?
      }
      
 .. mchoice:: qlb_2_3
+   :practice: T
    :answer_a: x = 5, y = 2
    :answer_b: x = 2, y = 5
    :answer_c: x = 5, y = 2
@@ -243,6 +245,7 @@ Do the following exercises in your group. Make sure you draw the trace tables ke
 
 
 .. mchoice:: qln_6_1
+   :practice: T
    :answer_a: 40
    :answer_b: 20
    :answer_c: 24
@@ -267,6 +270,7 @@ Do the following exercises in your group. Make sure you draw the trace tables ke
       }
      
 .. mchoice:: qln_6_2
+   :practice: T
    :answer_a: A rectangle of 8 rows with 5 stars per row.
    :answer_b: A rectangle of 8 rows with 4 stars per row.
    :answer_c: A rectangle of 6 rows with 5 stars per row.
@@ -291,6 +295,7 @@ Do the following exercises in your group. Make sure you draw the trace tables ke
      }
      
 .. mchoice:: qln_6_3
+   :practice: T
    :answer_a: A rectangle of 9 rows and 5 stars per row.
    :answer_b: A rectangle of 6 rows and 6 stars per row.
    :answer_c: A rectangle of 7 rows and 5 stars per row.

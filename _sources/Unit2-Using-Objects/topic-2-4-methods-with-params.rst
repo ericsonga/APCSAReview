@@ -2847,6 +2847,8 @@ Try the following mixed up code to draw a simple house made of a square and a tr
     Figure 2: Simple House
     
 .. parsonsprob:: DrawAHouse
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
    

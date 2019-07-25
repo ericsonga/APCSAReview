@@ -8,6 +8,7 @@ Multiple Choice Exercises
 
 
 .. mchoice:: qve_1
+   :practice: T
    :answer_a: 2
    :answer_b: 0
    :answer_c: 3
@@ -25,6 +26,7 @@ Multiple Choice Exercises
      System.out.println(2 % 3);
      
 .. mchoice:: qve_2
+   :practice: T
    :answer_a: 3
    :answer_b: 0
    :answer_c: 4
@@ -42,6 +44,7 @@ Multiple Choice Exercises
      System.out.println(19 % 5);
      
 .. mchoice:: qve_3
+   :practice: T
    :answer_a: 0.3333333333333333
    :answer_b: 0
    :answer_c: It will give a run-time error
@@ -61,6 +64,7 @@ Multiple Choice Exercises
      System.out.println(1 / 3);
      
 .. mchoice:: qve_4
+   :practice: T
    :answer_a: 24
    :answer_b: 14
    :answer_c: This will give a compile time error.
@@ -78,6 +82,7 @@ Multiple Choice Exercises
     System.out.println(2 + 3 * 5 - 1);
      
 .. mchoice:: qve_5
+   :practice: T
    :answer_a: 9.6982
    :answer_b: 12 
    :answer_c: 10
@@ -97,6 +102,7 @@ Multiple Choice Exercises
       b = (int) a;
       
 .. mchoice:: qve_new6
+   :practice: T
    :answer_a: a random number from 0 to 4
    :answer_b: a random number from 1 to 5
    :answer_c: a random number from 5 to 9
@@ -115,6 +121,7 @@ Multiple Choice Exercises
       int num = (int) (value * 5) + 5;
       
 .. mchoice:: qve_new7
+   :practice: T
    :answer_a: It will print 0
    :answer_b: It will give a run-time error
    :answer_c: It will give a compile-time error (won't compile)
@@ -132,6 +139,7 @@ Multiple Choice Exercises
       System.out.println(5 / 0);
       
 .. mchoice:: qve_new8
+   :practice: T
    :answer_a: a random number from 0 to 10
    :answer_b: a random number from 0 to 9
    :answer_c: a random number from -5 to 4
@@ -150,6 +158,7 @@ Multiple Choice Exercises
       int num = (int) (value * 11) - 5;
       
 .. mchoice:: qve_new9
+   :practice: T
    :answer_a: 0
    :answer_b: .3 
    :answer_c: 0.3333333333333333
@@ -167,6 +176,7 @@ Multiple Choice Exercises
       System.out.println(1.0 / 3);
       
 .. mchoice:: qve_new10
+   :practice: T
    :answer_a: x = 3, y = 3, z = 9
    :answer_b: x = 4, y = 3, z = 9
    :answer_c: x = 0, y = 3, z = 0

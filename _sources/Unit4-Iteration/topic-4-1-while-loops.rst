@@ -114,6 +114,7 @@ Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of wr
 |Exercise| **Check your understanding**
 
 .. mchoice:: qlb_2_1
+   :practice: T
    :answer_a: 5 4 3 2 1
    :answer_b: -5 -4 -3 -2 -1
    :answer_c: -4 -3 -2 -1 0

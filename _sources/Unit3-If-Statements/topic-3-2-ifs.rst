@@ -165,6 +165,7 @@ Run the following active code a couple times until you see all the possible outp
 |Exercise| **Check your understanding**
 
 .. mchoice:: qcb1_2
+   :practice: T
    :answer_a: x = 0;
    :answer_b: if (x > 2) x *= 2;
    :answer_c: if (x > 2) x = 0;

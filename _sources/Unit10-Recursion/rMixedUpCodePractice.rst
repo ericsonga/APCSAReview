@@ -4,6 +4,8 @@ More Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
 .. parsonsprob:: ch12p2ex1muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -23,6 +25,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        return reverse(str.substring(1)); #distractor
 
 .. parsonsprob:: ch12p2ex2muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -48,6 +52,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
         return fibonacci(n - 1); #distractor
 
 .. parsonsprob:: ch12p2ex3muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -73,6 +79,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
         return "-" + str.substring(1); #distractor
 
 .. parsonsprob:: ch12p2ex4muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -98,6 +106,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
         return 1 + numberOf2s(n % 10); #distractor
 
 .. parsonsprob:: ch12p2ex5muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -119,6 +129,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
         return 1 + sum(n % 10); #distractor
 
 .. parsonsprob:: ch12p2ex6muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -148,6 +160,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
 
 .. parsonsprob:: ch12p2ex7muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 

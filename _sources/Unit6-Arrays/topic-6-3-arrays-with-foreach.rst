@@ -76,6 +76,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: qab_6A
+   :practice: T
    :answer_a: Only I.
    :answer_b: I and III only.
    :answer_c: II and III only.
@@ -180,6 +181,8 @@ Here is an object-oriented example that has the array as a private instance vari
 |Exercise| **Check Your Understanding**
 
 .. parsonsprob:: pab_2
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method has the correct code to return the largest value in an integer array called <i>vals</i> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
@@ -217,6 +220,7 @@ If you want to step through the correct code to see what it does in the Java Vis
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: qab_3
+   :practice: T
    :answer_a: Whenever the first element in <i>a</i> is equal to <i>val</i>.
    :answer_b: Whenever <i>a</i> contains any element which equals <i>val</i>.
    :answer_c: Whenever the last element in <i>a</i> is equal to <i>val</i>.
@@ -240,6 +244,7 @@ If you want to step through the correct code to see what it does in the Java Vis
      return temp;
      
 .. mchoice:: qab_4
+   :practice: T
    :answer_a: All values in positions <i>m+1</i> through <i>myStuff.length-1</i> are greater than or equal to <i>n</i>.
    :answer_b: All values in position 0 through <i>m</i> are less than <i>n</i>.
    :answer_c: All values in position <i>m+1</i> through <i>myStuff.length-1</i> are less than <i>n</i>.
@@ -273,6 +278,7 @@ If you want to step through the correct code to see what it does in the Java Vis
       }
       
 .. mchoice:: qab_5
+   :practice: T
    :answer_a: The values don't matter this will always cause an infinite loop.
    :answer_b: Whenever <i>a</i> includes a value that is less than or equal to zero.
    :answer_c: Whenever <i>a</i> has values larger then <i>temp</i>.

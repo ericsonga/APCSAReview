@@ -95,6 +95,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
 |Exercise| **Check your understanding**
 
 .. mchoice:: qsb_3
+   :practice: T
    :answer_a: 2
    :answer_b: 1
    :answer_c: 4
@@ -113,6 +114,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      int pos = s1.indexOf("b");
 
 .. mchoice:: qsb_3b
+   :practice: T
    :answer_a: 2
    :answer_b: 3
    :answer_c: 4
@@ -131,6 +133,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      int len = s1.length();
 
 .. mchoice:: qsb_3c
+   :practice: T
    :answer_a: baby
    :answer_b: b
    :answer_c: ba
@@ -149,6 +152,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      String s2 = s1.substring(0,3);
 
 .. .. mchoice:: qsb_4
+   :practice: T
    :answer_a: 7
    :answer_b: 8
    :answer_c: 9
@@ -165,6 +169,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      int len = s1.length();
 
 .. mchoice:: qsb_4b
+   :practice: T
    :answer_a: by
    :answer_b: aby
    :answer_c: a
@@ -238,6 +243,7 @@ There are lots of other methods in the String class.  You can look through the J
     Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
 
 .. mchoice:: qsb_5
+   :practice: T
    :answer_a: hi th
    :answer_b: hi the
    :answer_c: hi ther
@@ -257,6 +263,7 @@ There are lots of other methods in the String class.  You can look through the J
      String s2 = s1.substring(0,pos);
 
 .. mchoice:: qsb_6-old1
+   :practice: T
    :answer_a: Hi
    :answer_b: hi
    :answer_c: H
@@ -276,6 +283,7 @@ There are lots of other methods in the String class.  You can look through the J
      String s3 = s2.toLowerCase();
 
 .. mchoice:: qsb_7-old24
+   :practice: T
    :answer_a: Hi
    :answer_b: hi
    :answer_c: H
@@ -295,6 +303,7 @@ There are lots of other methods in the String class.  You can look through the J
      String s3 = s2.toLowerCase();
 
 .. mchoice:: qsb_8-new
+   :practice: T
    :answer_a: positive (> 0)
    :answer_b: 0
    :answer_c: negative (< 0)

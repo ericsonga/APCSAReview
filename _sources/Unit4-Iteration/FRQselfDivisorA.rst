@@ -96,6 +96,7 @@ How can we loop through all the digits in a number?  We can use x % 10 to get th
    }
 
 .. mchoice:: frsda_1
+   :practice: T
    :answer_a: for
    :answer_b: for each
    :answer_c: while
@@ -109,6 +110,7 @@ How can we loop through all the digits in a number?  We can use x % 10 to get th
 We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.
 
 .. mchoice:: frsda_2
+   :practice: T
    :answer_a: Loop while the current number is greater than 10.
    :answer_b: Loop while the current number is greater than 9.
    :answer_c: Loop while the current number is greater than 0.

@@ -114,6 +114,7 @@ Regardless of whether the superclass constructor is called implicitly or explici
 |Exercise| **Check your understanding**
 
 .. .. mchoice:: qoo_8
+   :practice: T
    :answer_a: II only
    :answer_b: III only 
    :answer_c: I and II only
@@ -167,6 +168,7 @@ Regardless of whether the superclass constructor is called implicitly or explici
 
 
 .. mchoice:: qoo_9
+   :practice: T
    :answer_a: I only
    :answer_b: I and III
    :answer_c: II only 

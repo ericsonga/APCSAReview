@@ -8,6 +8,7 @@ Medium Multiple Choice Questions
 These problems are similar to those you will see on the AP CS A exam.
 
 .. mchoice:: qa2dm_1
+   :practice: T
    :answer_a: 4
    :answer_b: 8
    :answer_c: 9
@@ -36,6 +37,7 @@ These problems are similar to those you will see on the AP CS A exam.
 You can step through this code using the following link `Example-9-8-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D%5B%5D+matrix+%3D+%7B%7B1,1,2,2%7D,%7B1,2,2,4%7D,%7B1,2,3,4%7D,%7B1,4,1,2%7D%7D%3B%0A%0A++++++int+sum+%3D+0%3B%0A++++++int+col+%3D+matrix%5B0%5D.length+-+2%3B%0A++++++for+(int+row+%3D+0%3B+row+%3C+4%3B+row%2B%2B)%0A++++++%7B%0A+++++++++sum+%3D+sum+%2B+matrix%5Brow%5D%5Bcol%5D%3B%0A++++++%7D%0A++++++System.out.println(sum)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=2>`_.
       
 .. mchoice:: qa2dm_2
+   :practice: T
    :answer_a: { {2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}} 
    :answer_b: { {2 1 1}, {3 2 1}, {3 3 2}, {3 3 3}} 
    :answer_c: { {2 1 1 1}, {3 2 1 1}, {3 3 2 1}} 
@@ -65,6 +67,7 @@ You can step through this code using the following link `Example-9-8-1 <http://c
 You can step through this code using the following link `Example-9-8-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int+%5B%5D%5B%5D+mat+%3D+new+int+%5B4%5D%5B3%5D%3B%0A++++++for+(int+row+%3D+0%3B+row+%3C+mat.length%3B+row%2B%2B)+%7B+%0A+++++++++for+(int+col+%3D+0%3B+col+%3C+mat%5B0%5D.length%3B+col%2B%2B)+%7B+%0A++++++++++++if+(row+%3C+col)+%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+1%3B%0A++++++++++++else+if+(row+%3D%3D+col)++++%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+2%3B+%0A++++++++++++else+%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+3%3B+%7D+%7D+%0A++++++%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qa2dm_3
+   :practice: T
    :answer_a: 4
    :answer_b: 6
    :answer_c: 9

@@ -8,6 +8,7 @@ Hard Multiple Choice Questions
 These problems are about the same or harder than those you will see on the AP CS A exam.
 
 .. mchoice:: qalh_1
+   :practice: T
    :answer_a: [5, 3, 1, 6]
    :answer_b: [4, 3, 1, 6]
    :answer_c: [4, 3, 6]
@@ -31,6 +32,7 @@ These problems are about the same or harder than those you will see on the AP CS
 You can step through the code above by clicking on the following `Example-8-13-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+nums+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++nums.add(5)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(3)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(1)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(6)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.add(0,4)%3B%0A++++++System.out.println(nums)%3B%0A++++++nums.remove(1)%3B%0A++++++System.out.println(nums)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
       
 .. mchoice:: qalh_2
+   :practice: T
    :answer_a: [0, 0, 4, 2, 5, 0, 3, 0]
    :answer_b: [3, 5, 2, 4, 0, 0, 0, 0]
    :answer_c: [0, 0, 0, 0, 4, 2, 5, 3]

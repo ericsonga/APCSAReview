@@ -75,6 +75,8 @@ Mixed Up Code
 ================
 
 .. parsonsprob:: StringScrambleB1
+  :numbered: left
+  :adaptive:
    
   The method test below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
   -----
@@ -106,6 +108,8 @@ Mixed Up Code
 Another way to solve this problem is to start at the end of the list and loop towards the front of the list.  That way you don't have to worry about the index being off if you remove an item from the list.
   
 .. parsonsprob:: StringScrambleB2
+  :numbered: left
+  :adaptive:
    
   The method test below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
   -----

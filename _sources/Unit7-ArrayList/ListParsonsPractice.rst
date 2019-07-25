@@ -8,6 +8,8 @@ Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
 .. parsonsprob:: ch8ex1muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -40,6 +42,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex2muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -60,6 +64,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex3muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -88,6 +94,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex4muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -114,6 +122,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end findSmallest method
 
 .. parsonsprob:: ch8ex5muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -141,6 +151,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex6muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method should calculate the average from an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -163,6 +175,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex7muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following program segment is a method that should find the largest value given an ArrayList of Integers (the parameter) and move it to the back of the list.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -192,6 +206,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex8muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method should remove all the Strings that have length 3 or shorter from an ArrayList of Strings (the parameter) -- so {"catch", "dog", "tree", "me"} should return {"catch", "tree"}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -218,6 +234,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex9muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following program segment is a method that should take each String from an ArrayList of Strings (the parameter) and add it again to the list -- so {"cat", "ribbon", "house"} should become {"cat", "cat", "ribbon", "ribbon", "house", "house"}.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
@@ -243,6 +261,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch8ex10muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method should remove a specific Integer (specified in parameter) whenever it occurs in a given ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>

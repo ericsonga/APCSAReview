@@ -9,6 +9,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: oopex1muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -26,6 +28,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: oopex2muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -42,6 +46,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } // end class 
 
 .. parsonsprob:: oopex3muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -64,6 +70,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } // end class
 
 .. parsonsprob:: oopex4muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
    

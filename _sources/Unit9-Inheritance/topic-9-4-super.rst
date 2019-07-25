@@ -93,6 +93,7 @@ When the student ``getFood()`` method is executed it will start executing the ``
 |Exercise| **Check your understanding**
 
 .. mchoice:: qoo_6s
+   :practice: T
    :answer_a: AB
    :answer_b: ABDC
    :answer_c: ABCD

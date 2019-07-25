@@ -8,6 +8,7 @@ Hard Search/Sort Multiple Choice Questions
 These problems are harder than those you will see on the AP CS A exam.
 
 .. mchoice:: qssm_1
+   :practice: T
    :answer_a: A B B C D
    :answer_b: E D C B B A
    :answer_c: A B B C D E
@@ -57,6 +58,7 @@ These problems are harder than those you will see on the AP CS A exam.
 You can step through the code above by clicking on the following link `Ex-12-8-1 <https://goo.gl/zqWPtU>`_.
 
 .. mchoice:: qssm_2
+   :practice: T
    :answer_a: 4
    :answer_b: 2
    :answer_c: 12
@@ -91,6 +93,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-1
 You can step through the code above by clicking on the following link `Ex-12-8-2 <https://goo.gl/MGwTeT>`_.
 
 .. mchoice:: qssm_3
+   :practice: T
    :answer_a: -3
    :answer_b: -4
    :answer_c: 4
@@ -134,6 +137,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-2
 You can step through the code above by clicking on the following link `Ex-12-8-3 <https://goo.gl/MGXSF2>`_.
 
 .. mchoice:: qssm_4
+   :practice: T
    :answer_a: 8,7,7,3,4,1
    :answer_b: 4,7,7,3,8,1
    :answer_c: 4,8,7,1,3,7
@@ -172,6 +176,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-3
 You can step through the code above by clicking on the following link `Ex-12-8-4 <https://goo.gl/Rpc4o4>`_.
 
 .. mchoice:: qssm_5
+   :practice: T
    :answer_a: 2,3,5,9,3,4
    :answer_b: 4,5,2,3,9,3
    :answer_c: 5,3,2,9,3,4
@@ -220,6 +225,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-4
 You can step through the code above by clicking on the following link `Ex-12-8-5 <https://goo.gl/djgkck>`_.
 
 .. mchoice:: qssm_6
+   :practice: T
    :answer_a: Anna John Billy Bob Roger Dominic
    :answer_b: John Dominic Anna Roger Bob Billy
    :answer_c: Billy Bob Roger Anna Dominic John
@@ -267,6 +273,7 @@ You can step through the code above by clicking on the following link `Ex-12-8-5
 You can step through the code above by clicking on the following link `Ex-12-8-6 <https://goo.gl/rXzB1c>`_.
 
 .. mchoice:: qssm_7
+   :practice: T
    :answer_a: 6 7 17 3 2 9 1 5
    :answer_b: 9 6 3 2 3 1 5 17
    :answer_c: 5 1 2 3 6 17 7 9

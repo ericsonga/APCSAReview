@@ -134,6 +134,8 @@ Try the following code. Add an else statement to the if statement that prints ou
 
 
 .. .. parsonsprob:: ifelseevenOdd
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
    

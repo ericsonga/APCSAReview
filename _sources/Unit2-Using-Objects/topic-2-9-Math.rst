@@ -105,6 +105,7 @@ Here are some examples that move a random number into a specific range.
 |Exercise| **Check your understanding**
 
 .. mchoice:: qrand_1
+   :practice: T
    :answer_a: Math.random() < 0.4
    :answer_b: Math.random() > 0.4
    :answer_c: Math.random() == 0.4
@@ -116,6 +117,7 @@ Here are some examples that move a random number into a specific range.
    Which of the following would be true about 40% of the time?
    
 .. mchoice:: qrand_2
+   :practice: T
    :answer_a: ((int) (Math.random() * 5))
    :answer_b: ((int) (Math.random() * 6))
    :answer_c: ((int) (Math.random() * 5) + 1)
@@ -127,6 +129,7 @@ Here are some examples that move a random number into a specific range.
    Which of the following would return a random number from 1 to 5 inclusive?
    
 .. mchoice:: qrand_3
+   :practice: T
    :answer_a: ((int) (Math.random() * 10))
    :answer_b: ((int) (Math.random() * 11))
    :answer_c: ((int) (Math.random() * 10) + 1)
@@ -138,6 +141,7 @@ Here are some examples that move a random number into a specific range.
    Which of the following would return a random number from 0 to 10 inclusive?
    
 .. mchoice:: qrand_4
+   :practice: T
    :answer_a: Math.random() < 0.25
    :answer_b: Math.random() > 0.25
    :answer_c: Math.random() == 0.25

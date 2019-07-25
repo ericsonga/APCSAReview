@@ -93,6 +93,7 @@ To actually create an array after declaring the variable, use the **new** keywor
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: createarray
+   :practice: T
    :answer_a: int[] prices = new int[10];
    :answer_b: double[] prices = new double[10];
    :answer_c: double[] prices;
@@ -198,6 +199,7 @@ Try running the code below to see the length. Try adding another value to the hi
 |Exercise| **Check your understanding**
    
 .. mchoice:: qab_2
+   :practice: T
    :answer_a: <code>highScores.length</code>
    :answer_b: <code>highScores.length - 1</code>
    :correct: b
@@ -268,6 +270,7 @@ To access the items in your array, we use an **indexed array variable** which is
         +----+----+----+----+
 
 .. .. mchoice:: qab_1
+   :practice: T
    :answer_a: 0
    :answer_b: 1
    :correct: a

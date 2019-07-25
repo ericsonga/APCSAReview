@@ -86,6 +86,7 @@ Try the code below. Did it print what you expected?  When you print a two dimens
 |Exercise| **Check your understanding**
 
 .. mchoice:: qa2dab_1
+   :practice: T
    :answer_a: nums[3][2] = 5;
    :answer_b: nums[1][2] = 5;
    :answer_c: nums[2][1] = 5;
@@ -137,6 +138,7 @@ To get the value in a 2D array give the name of the array followed by the row an
 |Exercise| **Check your understanding**
 
 .. mchoice:: qa2dab_2
+   :practice: T
    :answer_a: Jamal
    :answer_b: Maria
    :answer_c: Jake

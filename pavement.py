@@ -12,7 +12,6 @@ from sphinxcontrib import paverutils
 import pkg_resources
 from runestone import get_master_url
 
-
 sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()

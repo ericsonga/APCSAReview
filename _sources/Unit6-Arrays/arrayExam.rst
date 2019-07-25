@@ -15,6 +15,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
    :timelimit: 45
 
    .. mchoice:: arrayEx1
+      :practice: T
       :answer_a: 0
       :answer_b: 1
       :answer_c: 2
@@ -42,6 +43,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
 
    .. mchoice:: arrayEx2
+      :practice: T
       :answer_a: 3
       :answer_b: 2
       :answer_c: 1
@@ -80,6 +82,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
         }
 
    .. mchoice:: arrayEx3
+      :practice: T
       :answer_a: 1
       :answer_b: 2
       :answer_c: 3
@@ -110,6 +113,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
 
    .. mchoice:: arrayEx4
+      :practice: T
       :answer_a: 0
       :answer_b: 1
       :answer_c: 2
@@ -150,6 +154,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
         }
      
    .. mchoice:: arrayEx5
+      :practice: T
       :answer_a: {3,2,2,0}
       :answer_b: {0,1,2,3} 
       :answer_c: {3,2,1,0}
@@ -180,6 +185,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
          }
    
    .. mchoice:: arrayEx6
+      :practice: T
       :answer_a: A
       :answer_b: B
       :answer_c: C
@@ -276,6 +282,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
          }
     
    .. mchoice:: arrayEx8
+      :practice: T
       :answer_a: <code>for (int j=0 ; j < x.length; j++)</code>
       :answer_b: <code>for (int j=0 ; j < x.length - 1; j++)</code>
       :answer_c: <code>for (int j=i+1; j < x.length; j++)</code>
@@ -303,6 +310,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             
       
    .. mchoice:: arrayEx9
+      :practice: T
       :answer_a: A
       :answer_b: B
       :answer_c: C
@@ -375,6 +383,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
           
    .. mchoice:: arrayEx10
+      :practice: T
       :answer_a: {4, 3, 0, 0}
       :answer_b: {4, 1, 3, 0}
       :answer_c: {2, 4, 3, 0}

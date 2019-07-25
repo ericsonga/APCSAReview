@@ -8,6 +8,8 @@ Mixed Up Code Practice
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
 .. parsonsprob:: ch12ex1muc
+   :numbered: left
+   :practice: T
    :noindent:
    :adaptive:
 
@@ -32,6 +34,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex2muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method should multiply the two passed-in positive integers (using the fact that multiplcation is repeated addition) -- so multipy(3, 4) should become 12 (3+3+3+3).  But the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -58,6 +62,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex3muc
+   :numbered: left
+   :practice: T
    :noindent:
    :adaptive:
 
@@ -88,6 +94,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex4muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method should remove any occurrence of an asterisk "*" from a passed-in string -- so "ab*c**d" should become "abcd".  But the blocks have been mixed up.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -115,6 +123,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex5muc
+   :numbered: left
+   :practice: T
    :noindent:
    :adaptive:
 
@@ -141,6 +151,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex6muc
+   :numbered: left
+   :practice: T
    :noindent:
    :adaptive:
 
@@ -175,6 +187,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex7muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method should repeat the passed-in string a set number of times -- so repeatThis("hi", 3) should return "hihihi".  But the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -203,6 +217,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex8muc
+   :numbered: left
+   :practice: T
    :noindent:
    :adaptive:
 
@@ -236,6 +252,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex9muc
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method should return a string counting from 1 to the specified number -- so countTo(4) should return "1...2...3...4...".  But the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
@@ -264,6 +282,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch12ex10muc
+   :numbered: left
+   :practice: T
    :noindent:
    :adaptive:
 

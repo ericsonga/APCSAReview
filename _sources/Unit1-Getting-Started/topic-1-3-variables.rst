@@ -82,6 +82,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
    
    
 .. mchoice:: q3_1_1
+   :practice: T
    :answer_a: int
    :answer_b: double
    :answer_c: boolean
@@ -95,6 +96,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
    What type should you use to represent the average grade for a course?
    
 .. mchoice:: q3_1_2
+   :practice: T
    :answer_a: int
    :answer_b: double
    :answer_c: boolean
@@ -108,6 +110,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
    What type should you use to represent the number of people in a household?
    
 .. mchoice:: q3_1_3
+   :practice: T
    :answer_a: int
    :answer_b: double
    :answer_c: boolean
@@ -121,6 +124,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
    What type should you use to hold the first name of a person?
    
 .. mchoice:: q3_1_4
+   :practice: T
    :answer_a: int
    :answer_b: double
    :answer_c: boolean
@@ -134,6 +138,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
    What type should you use to record if it is raining or not?
    
 .. mchoice:: q3_1_5
+   :practice: T
    :answer_a: int
    :answer_b: double
    :answer_c: boolean
@@ -345,6 +350,7 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
 **Mixed up Code Problems**
    
 .. parsonsprob:: declareVars1
+   :numbered: left
    :adaptive:
    :noindent:
 
