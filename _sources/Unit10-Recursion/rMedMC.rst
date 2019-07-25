@@ -8,6 +8,7 @@ Medium Multiple Choice Questions
 These problems are similar to those you will see on the AP CS A exam.
 
 .. mchoice:: qrm_1
+   :practice: T
    :answer_a: 1441
    :answer_b: 43211234
    :answer_c: 3443
@@ -40,6 +41,7 @@ These problems are similar to those you will see on the AP CS A exam.
 You can step through the code using the Java Visualizer by clicking on the following link: `Q-11-7-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+void+mystery+(int+x)%0A+++%7B%0A+++++++++System.out.print(x+%25+10)%3B%0A%0A+++++++++if+((x+/+10)+!%3D+0)%0A+++++++++%7B%0A++++++++++++mystery(x+/+10)%3B%0A+++++++++%7D%0A+++++++++System.out.print(x+%25+10)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qrm_2
+   :practice: T
    :answer_a: 243
    :answer_b: 0
    :answer_c: 3
@@ -68,6 +70,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
 You can step through the code using the Java Visualizer by clicking on the following link: `Q-11-7-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+mystery(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+3+*+mystery+(n+-+1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qrm_3
+   :practice: T
    :answer_a: 1
    :answer_b: 10
    :answer_c: 25
@@ -96,6 +99,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
 You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+product(int+n)+%0A+++%7B%0A+++++++++if+(n+%3C%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+n+*+product(n+-+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(product(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qrm_4
+   :practice: T
    :answer_a: 8
    :answer_b: 3
    :answer_c: There is no result because of infinite recursion.

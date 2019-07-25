@@ -60,6 +60,7 @@ This method will print out "This is the method that never ends!" and then call i
 
 
 .. mchoice:: qrb_1
+   :practice: T
    :answer_a: Yes
    :answer_b: No
    :correct: b
@@ -82,6 +83,7 @@ This method will print out "This is the method that never ends!" and then call i
       }
 
 .. mchoice:: qrb_2
+   :practice: T
    :answer_a: Yes
    :answer_b: No
    :correct: a
@@ -214,6 +216,7 @@ Every recursive method must have at least one **base case** which halts the recu
     :click-incorrect:}:endclick:
     
 .. mchoice:: qrb_3
+   :practice: T
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2
@@ -236,6 +239,7 @@ Every recursive method must have at least one **base case** which halts the recu
       }
 
 .. mchoice:: qrb_4
+   :practice: T
    :answer_a: 0
    :answer_b: 1
    :answer_c: Both 0 and 1
@@ -258,6 +262,7 @@ Every recursive method must have at least one **base case** which halts the recu
 
 
 .. mchoice:: qrb_5-new
+   :practice: T
    :answer_a: yes
    :answer_b: no
    :correct: b

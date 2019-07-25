@@ -103,6 +103,7 @@ If there are no constructors written for a class, Java provides a no-argument **
     :click-incorrect:}:endclick:  
     
 .. mchoice:: qsse_5
+   :practice: T
    :answer_a: Determines the amount of space needed for an object and creates the object
    :answer_b: Names the new object
    :answer_c: Return to free storage all the memory used by this instance of the class.

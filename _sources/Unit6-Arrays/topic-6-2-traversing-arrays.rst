@@ -123,6 +123,8 @@ What does the following code print out? Trace through it keeping track of the ar
 |Exercise| **Check Your Understanding**
 
 .. parsonsprob:: pab_1r
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method has the correct code to subtract amt from all the values in the array <b>values</b> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly. You will be told if any of the blocks are in the wrong order or not indented correctly.
@@ -210,6 +212,7 @@ What does the following code print out? Trace through it keeping track of the ar
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: qab_6
+   :practice: T
    :answer_a: -1
    :answer_b: -15
    :answer_c: 1
@@ -236,6 +239,7 @@ What does the following code print out? Trace through it keeping track of the ar
       }
 
 .. mchoice:: qab_7
+   :practice: T
    :answer_a: -1
    :answer_b: 1
    :answer_c: 2
@@ -357,6 +361,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
 
 
 .. mchoice:: qab_8
+   :practice: T
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 32}
    :answer_c: {-20, -15, 2, 16, 32, 66}
@@ -383,6 +388,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
       }
       
 .. mchoice:: qab_9
+   :practice: T
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 33}
    :answer_c: {-20, -15, 2, 16, 32, 66}

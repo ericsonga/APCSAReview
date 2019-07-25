@@ -8,6 +8,7 @@ Medium Multiple Choice Questions
 These problems are similar to those you will see on the AP CS A exam.
            
 .. mchoice:: qoom_1
+   :practice: T
    :answer_a: Won't compile since <code>GradStudent</code> doesn't have a <code>getInfo</code> method
    :answer_b: Taco
    :answer_c: Pizza
@@ -40,6 +41,7 @@ These problems are similar to those you will see on the AP CS A exam.
       }
       
 .. mchoice:: qoom_2
+   :practice: T
    :answer_a: I only
    :answer_b: II only
    :answer_c: I and II only
@@ -84,6 +86,7 @@ These problems are similar to those you will see on the AP CS A exam.
       III. enItemObj.setX(52);
       
 .. mchoice:: qoom_3
+   :practice: T
    :answer_a: t1.method1(t1,t1);
    :answer_b: t2.method1(t2,t2);
    :answer_c: t3.method1(t1,t1);
@@ -122,6 +125,7 @@ These problems are similar to those you will see on the AP CS A exam.
       Test3 t3 = new Test3();
       
 .. mchoice:: qoom_4
+   :practice: T
    :answer_a: Meow Moo Woof Awk Awk
    :answer_b: Awk Awk Awk Awk Awk
    :answer_c: This will not compile
@@ -141,6 +145,7 @@ These problems are similar to those you will see on the AP CS A exam.
 	  Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
 	  
 .. mchoice:: qoom_5
+   :practice: T
    :answer_a: The code compiles and runs with no errors, the output is 5 6 5 6
    :answer_b: The code compiles and runs with no errors, the output is: 5 6 10 11
    :answer_c: The code compiles and runs with no errors, the output is 10 11 10 11
@@ -185,6 +190,7 @@ These problems are similar to those you will see on the AP CS A exam.
       fastCar.display();
       
 .. mchoice:: qoom_6
+   :practice: T
    :answer_a: I only
    :answer_b: II only
    :answer_c: I and III only

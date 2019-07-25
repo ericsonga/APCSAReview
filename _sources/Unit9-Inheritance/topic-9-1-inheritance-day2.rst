@@ -112,6 +112,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
 |Exercise| **Check your understanding**
 
 .. mchoice:: qoo_1
+   :practice: T
    :answer_a: Create one class PublishedMaterial with the requested attributes.
    :answer_b: Create classes Book and Movie and each class has the requested attributes.
    :answer_c: Create the class PublishedMaterial and have Book and Movie inherit from it all the listed attributes.
@@ -127,6 +128,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
     An online store is working on an online ordering system for Books and Movies. For each type of Published Material (books and movies) they need to track the id, title, date published, and price. Which of the following would be the best design?
 
 .. mchoice:: qoo_2
+   :practice: T
    :answer_a: An is-a relationship. The Author class should be a subclass of the Book class.
    :answer_b: An is-a relationship. The Book class should be a subclass of the Author class.
    :answer_c: A has-a relationship. The Book class has an Author attribute. 
@@ -149,6 +151,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
     A movie theater has multiple showings of a movie each day. Each movie showing has a start time and location (theater number).  What should the relationship be between the Movie class and the MovieShowing class?
     
 .. mchoice:: qoo_3
+   :practice: T
    :answer_a: superclass
    :answer_b: parent
    :answer_c: extends

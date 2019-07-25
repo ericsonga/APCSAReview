@@ -129,6 +129,7 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
 |Exercise| **Check your understanding**
 
 .. mchoice:: qoo_5
+   :practice: T
    :answer_a: public void getFood()
    :answer_b: public String getFood(int quantity)
    :answer_c: public String getFood()
@@ -181,6 +182,7 @@ You can step through an example of this in the Java Visualizer by clicking on th
 |Exercise| **Check your understanding**
 
 .. mchoice:: qoo_6
+   :practice: T
    :answer_a: public void getFood()
    :answer_b: public String getFood(int quantity)
    :answer_c: public String getFood()
@@ -297,6 +299,7 @@ For example, if a parent has a private instance variables, ``name``, then the pa
 |Exercise| **Check your understanding**
   
 .. mchoice:: qoo_7
+   :practice: T
    :answer_a: currItem.setX(3);
    :answer_b: currItem.setY(2);
    :answer_c: currItem.x = 3;

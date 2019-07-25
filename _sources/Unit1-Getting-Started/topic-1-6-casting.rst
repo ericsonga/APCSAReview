@@ -104,6 +104,7 @@ Although it's not on the exam, you can format long decimal numbers to just show 
 |Exercise| **Check your understanding**
 
 .. mchoice:: q2_5
+   :practice: T
    :answer_a: true
    :answer_b: false
    :correct: b
@@ -113,6 +114,7 @@ Although it's not on the exam, you can format long decimal numbers to just show 
    True or false: Java rounds up automatically when you do integer division.  
    
 .. mchoice:: q2_6
+   :practice: T
    :answer_a: true
    :answer_b: false
    :correct: b
@@ -122,6 +124,7 @@ Although it's not on the exam, you can format long decimal numbers to just show 
    True or false: casting always results in a double type.  
    
 .. mchoice:: q2_7
+   :practice: T
    :answer_a: (double) (total / 3);
    :answer_b: total / 3;
    :answer_c: (double) total /  3;

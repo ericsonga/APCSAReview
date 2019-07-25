@@ -61,6 +61,7 @@ What does the following code print out? Watch the code run in this |Java visuali
 |Exercise| **Check your understanding**
 
 .. mchoice:: nested1
+   :practice: T
    :answer_a: A rectangle of 7 rows with 5 stars per row.
    :answer_b: A rectangle of 7 rows with 4 stars per row.
    :answer_c: A rectangle of 6 rows with 5 stars per row.
@@ -85,6 +86,7 @@ What does the following code print out? Watch the code run in this |Java visuali
      }
      
 .. mchoice:: nested2
+   :practice: T
    :answer_a: A rectangle of 4 rows with 3 star per row.
    :answer_b: A rectangle of 5 rows with 3 stars per row.
    :answer_c: A rectangle of 4 rows with 1 star per row.
@@ -109,6 +111,8 @@ What does the following code print out? Watch the code run in this |Java visuali
      }
 
 .. parsonsprob:: ch6ex6muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 

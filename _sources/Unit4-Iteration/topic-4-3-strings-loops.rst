@@ -106,6 +106,8 @@ Google has been scanning old books and then using software to read the scanned t
   
 
 .. parsonsprob:: removeA
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -171,6 +173,8 @@ Here is a for-loop from 0 to length() that reverses a string. You can also run t
   
 
 .. parsonsprob:: countEs
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 

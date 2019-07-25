@@ -51,6 +51,7 @@ Assume that the ``RandomStringChooser`` class that you wrote in part (a) has bee
 
 
 .. parsonsprob:: ch17RandStr1
+   :numbered: left
    :adaptive:
    :noindent:
 

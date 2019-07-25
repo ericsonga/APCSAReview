@@ -12,6 +12,8 @@ The coding problems below are all about Strings, but more problems on other topi
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
 .. parsonsprob:: ch4ex1muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -28,6 +30,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch4ex2muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -43,6 +47,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. .. parsonsprob:: ch4ex3muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -70,6 +76,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. parsonsprob:: ch4ex4muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -96,6 +104,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. .. parsonsprob:: ch4ex5muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -122,6 +132,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
 
 .. .. parsonsprob:: ch4ex6muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -148,6 +160,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.println("Your name is " + name); #distractor
 
 .. parsonsprob:: ch4ex7muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -179,7 +193,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            System.out.println(initials); #distractor
 
-.. .. parsonsprob:: ch4ex8muc
+.. parsonsprob:: ch4ex8muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -205,6 +221,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
           System.print(upperMessage); #distractor
 
 .. parsonsprob:: ch4ex9muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -232,6 +250,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            String part = message.substring(0,4); #distractor
 
 .. parsonsprob:: ch4ex10muc
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 

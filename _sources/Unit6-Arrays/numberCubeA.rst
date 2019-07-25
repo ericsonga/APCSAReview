@@ -75,6 +75,7 @@ You will need to create an array to hold the results of each cube toss.  The siz
 Mixed Up Code
 -------------------
 .. parsonsprob:: NumberCubeA
+   :numbered: left
    :adaptive:
 
    The method getCubeTosses below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.

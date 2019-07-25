@@ -10,9 +10,10 @@ Mixed Up Code Practice
 ------------------------------
 
 .. parsonsprob:: chat-labp1
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
-   :numbered: left
 
    The following program segment should print 4 random responses using if/else statements,  but the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----

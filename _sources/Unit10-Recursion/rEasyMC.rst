@@ -9,6 +9,7 @@ These problems are easier than most of those that you will usually see on the AP
 
 
 .. mchoice:: qre_1
+   :practice: T
    :answer_a: 1
    :answer_b: 3
    :answer_c: 4
@@ -32,6 +33,7 @@ These problems are easier than most of those that you will usually see on the AP
       }
 
 .. mchoice:: qre_2
+   :practice: T
    :answer_a: 1
    :answer_b: 3
    :answer_c: 4
@@ -59,6 +61,7 @@ These problems are easier than most of those that you will usually see on the AP
       }
 
 .. mchoice:: qre_3
+   :practice: T
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2
@@ -84,6 +87,7 @@ These problems are easier than most of those that you will usually see on the AP
   	  }
 
 .. mchoice:: qre_4
+   :practice: T
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2

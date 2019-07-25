@@ -46,6 +46,7 @@ Arrays know their length (how many elements they can store).  The length is a pu
 |Exercise| **Check your understanding**
 
 .. mchoice:: qa2ldb_2
+   :practice: T
    :answer_a: 2
    :answer_b: 4
    :answer_c: 8
@@ -57,6 +58,7 @@ Arrays know their length (how many elements they can store).  The length is a pu
    How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?	
    
 .. mchoice:: qa2ldb_3
+   :practice: T
    :answer_a: nums[3][2]
    :answer_b: nums[2][3]
    :answer_c: nums[2][1]
@@ -135,6 +137,9 @@ You can step through the code by clicking on this `link1 <http://cscircles.cemc.
 |Exercise| **Mixed up programs**
 
 .. parsonsprob:: 9_largest
+   :numbered: left
+   :practice: T
+   :adaptive:
 
    The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong order or have the wrong indention.
    -----

@@ -84,6 +84,7 @@ For what values of x and y will the code below print true?  Try out different va
 |Exercise| **Check your understanding**
 
 .. mchoice:: qcbdm1_8
+   :practice: T
    :answer_a: first case
    :answer_b: second case 
    :correct: b
@@ -98,6 +99,7 @@ For what values of x and y will the code below print true?  Try out different va
      else System.out.println("second case");
      
 .. mchoice:: qcbdm2_9
+   :practice: T
    :answer_a: first case
    :answer_b: second case 
    :correct: a
@@ -154,6 +156,7 @@ Explore the following problems with your group:
    }
 
 .. mchoice:: qcbdm3_1
+   :practice: T
    :answer_a: (x < 2) || (y > 4)
    :answer_b: (x < 2) && (y > 4)
    :answer_c: (x <= 2) || (y >= 4)
@@ -171,6 +174,7 @@ Explore the following problems with your group:
      !(x > 2 && y < 4)
      
 .. mchoice:: qcbdm4_2
+   :practice: T
    :answer_a: (x != 2) || (y < 4)
    :answer_b: (x != 2) && (y < 4)
    :answer_c: (x != 2) && (y <= 4)
@@ -188,6 +192,7 @@ Explore the following problems with your group:
      !(x == 2 && y > 4)
      
 .. mchoice:: qcbdm5_3
+   :practice: T
    :answer_a: (x == 5) || (y == 7)
    :answer_b: (x == 5) && (y == 7)
    :answer_c: (x != 5) || (y != 7) 
@@ -205,6 +210,7 @@ Explore the following problems with your group:
      !(x!=5 && y!=7)
      
 .. mchoice:: qcbdm6_4
+   :practice: T
    :answer_a: (x > 5) && (y < 7)
    :answer_b: (x > 5) || (y < 7)
    :answer_c: (x > 5) && (y <= 7)

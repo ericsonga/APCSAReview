@@ -142,6 +142,7 @@ You can copy the Java source code shown in this book into a file and save it if 
 
 
 .. parsonsprob:: thirdClass
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -160,6 +161,7 @@ You can copy the Java source code shown in this book into a file and save it if 
    }
    
 .. parsonsprob:: fourthClass
+   :numbered: left
    :adaptive:
    :noindent:
 

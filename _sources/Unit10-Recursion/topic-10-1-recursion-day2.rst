@@ -114,6 +114,7 @@ Another way to see the call stack in action is to download and use the Jeloit so
 |Exercise| **Check your understanding**
 
 .. mchoice:: qrb_5-old
+   :practice: T
    :answer_a: 1
    :answer_b: 120
    :answer_c: 720
@@ -138,6 +139,7 @@ Another way to see the call stack in action is to download and use the Jeloit so
      }
 
 .. mchoice:: qrb_6
+   :practice: T
    :answer_a: 10
    :answer_b: 32
    :answer_c: 16
@@ -164,6 +166,7 @@ Another way to see the call stack in action is to download and use the Jeloit so
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qrb_7
+   :practice: T
    :answer_a: 12
    :answer_b: 81
    :answer_c: 64
@@ -230,6 +233,7 @@ So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java V
 |Exercise| **Check your understanding**
 
 .. mchoice:: qrb_8
+   :practice: T
    :answer_a: 12344321
    :answer_b: 1234
    :answer_c: 4321
@@ -259,6 +263,7 @@ So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java V
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+mystery+(int+x)+%0A+++%7B%0A++++++++System.out.print(x+%25+10)%3B+%0A%0A++++++++if+((x+/+10)+!%3D+0)+%7B%0A+++++++++++mystery(x+/+10)%3B+%0A++++++++%7D+%0A++++++++System.out.print(x+%25+10)%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qrb_9
+   :practice: T
    :answer_a: 7
    :answer_b: 2
    :answer_c: 1

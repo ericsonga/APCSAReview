@@ -84,6 +84,7 @@ In all of these cases, there are no errors at compile-time because the compiler 
 |Exercise| **Check your understanding**
 
 .. mchoice:: qoo_10
+   :practice: T
    :answer_a: Shape Shape Shape Shape
    :answer_b: Shape Rectangle Square Circle
    :answer_c: There will be a compile time error
@@ -135,6 +136,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
       
 
 .. mchoice:: qoo_11
+   :practice: T
    :answer_a: Pizza
    :answer_b: Taco
    :answer_c: You will get a compile time error
@@ -178,6 +180,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
  
  
 .. mchoice:: qoo_12
+   :practice: T
    :answer_a: 5 6 10 11
    :answer_b: 5 6 5 6
    :answer_c: 10 11 10 11
@@ -224,6 +227,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
 You can step through the code using the Java Visualizer by clicking on the following link: `Car Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&mode=display&curInstr=0>`_.
       
 .. mchoice:: qoo_13
+   :practice: T
    :answer_a: b.getISBN();
    :answer_b: b.getDefintion();
    :answer_c: ((Dictionary) b).getDefinition();
@@ -255,6 +259,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
       } 
       
 .. mchoice:: qoo_14
+   :practice: T
    :answer_a: ABDC
    :answer_b: AB
    :answer_c: ABCD
