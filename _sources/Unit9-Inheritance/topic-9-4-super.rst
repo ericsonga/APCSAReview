@@ -28,14 +28,14 @@ Sometimes you want the subclass to do more than what a superclass' method is doi
 
 We've used super() before to call the superclass' constructor. There are two uses of the keyword super:
 
-1. **super();** or super(arguments); calls the super constructor if put in as the first line of a subclass constructor.
-2. **super.method();** call the superclass' method.
+1. **super();** or **super(arguments);** calls the super constructor if put in as the first line of a subclass constructor.
+2. **super.method();** calls the superclass' method.
 
 The keyword super is very useful in allowing us to first execute the superclass method and then add on to it in the subclass.
 
 |CodingEx| **Coding Exercise**
 
-In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Pizza". Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
+In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Taco". Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
 
 .. activecode:: SuperEx
    :language: java
@@ -88,7 +88,7 @@ In the example below, the Student class overrides the getFood() method of the Pe
       
 How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method, all the way up to the Object class.  The method has to be there, or else the code would not have compiled. 
       
-When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and it return return the string ``"Hamburger and Taco"``. 
+When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and  return the string ``"Hamburger and Taco"``. 
 
 |Exercise| **Check your understanding**
 
@@ -98,13 +98,13 @@ When the student ``getFood()`` method is executed it will start executing the ``
    :answer_b: ABDC
    :answer_c: ABCD
    :answer_d: ABC
-   :answer_e: Nothing is printed due to infinite recursion.
+   :answer_e: Nothing is printed.
    :correct: b
    :feedback_a: This would be true if the object was created of type Base using new Base. But the object is really a Derived object. So all methods are looked for starting with the Derived class.
    :feedback_b: Even though b is declared as type Base it is created as an object of the Derived class, so all methods to it will be resolved starting with the Derived class. So the methodOne() in Derived will be called. This method first calls super.methodOne so this will invoke the method in the superclass (which is Base). So next the methodOne in Base will execute. This prints the letter "A" and invokes this.methodTwo(). Since b is really a Derived object, we check there first to see if it has a methodTwo. It does, so execution continues in Derived's methodTwo. This method invokes super.methodTwo. So this will invoke the method in the super class (Base) named methodTwo. This method prints the letter "B" and then returns. Next the execution returns from the call to the super.methodTwo and prints the letter "D". We return to the Base class methodOne and return from that to the Derived class methodOne and print the letter "C".
    :feedback_c: After the call to methodOne in the super class printing "A", the code continues with the implicit this.methodTwo which resolves from the current object's class which is Derived. methodTwo in the Derived class is executed which then calls super.methodTwo which invokes printin "B" from methodTwo in the Base class. Then the "D" in the Derive methodTwo is printed. Finally the program returns to methodOne in the Derived class are prints "C".
    :feedback_d: The call to methodTwo in super.methodOne is to this.methodTwo which is the method from the Derived class. Consequently the "D" is also printed.
-   :feedback_e: This is not an example of recursion. No method is called from within itself.
+   :feedback_e: Remember that it will first look for a method in its own class.
 
    Given the following class declarations, and assuming that the following declaration appears in a client program: ``Base b = new Derived();``, what is the result of the call ``b.methodOne();``?
    

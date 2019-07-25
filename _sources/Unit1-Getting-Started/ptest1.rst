@@ -598,12 +598,12 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :answer_e: Data (fields) are directly accessible by objects in the same package.
         :correct: c
         :feedback_a: Encapsulation is making data private so only code in the same class has direct access.
-        :feedback_b: There is no abstract visibility modfier. The keyword abstract is used on classes and methods. An abstract class is one that can't be instantiated and an abstract method is one that just has a method signature and no method body. You can not use the keyword abstract on field declarations.
-        :feedback_c: This is the definition of encapsulation and this is done in Java using private (a member is direclty accessible only in the class that defines it) and protected (a member is direclty accessible only within code in the same package and in subclasses).
+        :feedback_b: There is no abstract visibility modifier.  You cannot use the keyword abstract on variable declarations.
+        :feedback_c: This is the definition of encapsulation and this is done in Java using private (a member is direclty accessible only in the class that defines it) and protected (a member is directly accessible only within code in the same package and in subclasses).
         :feedback_d: Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives diredct access to code in classes in the same package and subclasses.
         :feedback_e: Encapsulation means that only code in the defining class has direct access. The default package access gives direct access to code in classes in the same package.
        
-        What is encapsulation and how does Java implement it?
+        What is data encapsulation and how does Java implement it?
        
     .. mchoice:: qpret_20
         :answer_a: V.

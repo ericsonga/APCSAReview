@@ -77,12 +77,10 @@ Put the Code in Order
    {
    =====
        int numSpaces = formattedLen - totalLetters(wordList);
-   =====
-       int numSpaces = formattedLen + totalLetters(wordList); #paired
-   =====
        int numGaps = wordList.size() - 1;
    =====
-       int numGaps = wordList.length - 1; #paired
+       int numSpaces = formattedLen + totalLetters(wordList); #paired
+       int numGaps = wordList.length - 1; 
    =====
        return numSpaces / numGaps;
    =====

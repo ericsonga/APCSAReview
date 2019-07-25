@@ -11,7 +11,10 @@ This course is adapted from the Java Review course to follow the 2019 College Bo
 
 .. raw:: html
 
-    <style>th:hover {background-color: #42C0FF;} th {padding:5px;} </style> <table border style="border: 2px solid blue;"><tr><th><a class="reference internal" href="Unit1-Getting-Started/toctree.html">Unit 1</a></th><th><a class="reference internal" href="Unit2-Using-Objects/toctree.html">Unit 2</a></th><th><a class="reference internal" href="Unit3-If-Statements/toctree.html">Unit 3</a></th><th><a class="reference internal" href="Unit4-Iteration/toctree.html">Unit 4</a></th><th><a class="reference internal" href="Unit5-Writing-Classes/toctree.html">Unit 5</a></th><th><a class="reference internal" href="Unit6-Arrays/toctree.html">Unit 6</a></th><th><a class="reference internal" href="Unit7-ArrayList/toctree.html">Unit 7</a></th><th><a class="reference internal" href="Unit8-2DArray/toctree.html">Unit 8</a></th><th><a class="reference internal" href="Unit9-Inheritance/toctree.html">Unit 9</a></th><th><a class="reference internal" href="Unit10-recursion/toctree.html">Unit 10</a></th></tr></table>
+    <ul><li><a class="reference internal" href="Unit1-Getting-Started/toctree.html">Unit 1 Getting Started and Primitive Types</a></li><li><a class="reference internal" href="Unit2-Using-Objects/toctree.html">Unit 2 Using Objects</a></li><li><a class="reference internal" href="Unit3-If-Statements/toctree.html">Unit 3 If Statements</a></li><li><a class="reference internal" href="Unit4-Iteration/toctree.html">Unit 4 Iteration/Loops</a></li><li><a class="reference internal" href="Unit5-Writing-Classes/toctree.html">Unit 5 Writing Classes</a></li><li><a class="reference internal" href="Unit6-Arrays/toctree.html">Unit 6 Arrays</a></li><li><a class="reference internal" href="Unit7-ArrayList/toctree.html">Unit 7 ArrayLists</a></li><li><a class="reference internal" href="Unit8-2DArray/toctree.html">Unit 8 2D Arrays</a></li><li><a class="reference internal" href="Unit9-Inheritance/toctree.html">Unit 9 Inheritance</a></li><li><a class="reference internal" href="Unit10-recursion/toctree.html">Unit 10 Recursion</a></li><li>Practice units: <a class="reference internal" href="post-test.html">11</a>, <a class="reference internal" href="Tests/toctree.html">12</a>, <a class="reference internal" href="TimedTests/toctree.html">13</a>, <a class="reference internal" href="MixedFreeResponse/toctree.html">14</a>, <a class="reference internal" href="FreeResponse/toctree.html">15</a></li></ul>
+    
+   
+   
 
 .. Here is where you specify the content and order of your new book.
 
@@ -53,8 +56,8 @@ Table of Contents
    post-test.rst
    Tests/toctree.rst
    TimedTests/toctree.rst
-   FreeResponse/toctree.rst
    MixedFreeResponse/toctree.rst
+   FreeResponse/toctree.rst
    
 .. Old TOC
     JavaBasics/toctree.rst
@@ -91,7 +94,17 @@ Index
 * :ref:`genindex`
 * :ref:`search`
 
-(revised 7/14/19)
+.. |errata form| raw:: html
+
+   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">errata form</a>
+   
+.. |interest form| raw:: html
+
+   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN4JKrFnktQakID4sHBHBuBEHCvwv8YsSMBcVm1tB-nYUukA/viewform?usp=sf_link" target="_blank" style="text-decoration:underline">interest form</a>
+   
+If you see errors or bugs, please report them with this |errata form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form|.
+
+(revised 7/20/19)
 
 © Copyright 2015 Barb Ericson, 2019 revised by B. Hoffman (`Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.
 

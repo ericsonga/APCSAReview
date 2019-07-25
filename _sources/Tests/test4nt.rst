@@ -132,8 +132,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: II and III only
    :correct: e
    :feedback_a: Color is a private instance variable located in the Animal class. Private instance variables cannot be directly accessed using dot notation in external classes.
-   :feedback_b: getWeight and makeNoise are abstract methods in the Animal class, so they can both be used by anything declared to be of the type Animal.
-   :feedback_c: getWeight and makeNoise are abstract methods in the Animal class, so they can both be used by anything declared to be of the type Animal.
+   :feedback_b: getWeight and makeNoise are methods in the Animal class, so they can both be used by anything declared to be of the type Animal.
+   :feedback_c: getWeight and makeNoise are  methods in the Animal class, so they can both be used by anything declared to be of the type Animal.
    :feedback_d: Color is a private instance variable located in the Animal class. Private instance variables cannot be directly accessed using dot notation in external classes.
    :feedback_e: getWeight and makeNoise are both defined in the Animal class, so they can both be used by anything declare to be of the type Animal.
 
@@ -141,7 +141,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    .. code-block:: java
 
-      public abstract class Animal
+      public class Animal
       {
           private String color;
           private String name;
@@ -152,9 +152,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               color = theColor;
           }
 
-          public abstract String makeNoise();
+          public  String makeNoise() { return ""; }
 
-          public abstract int getWeight();
+          public  int getWeight() { return 0; }
       }
 
       public class Cat extends Animal
@@ -210,21 +210,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           else
               return n * mysteryNum(n - 1);
       }
-
-.. mchoice:: qtnt4_7
-   :answer_a: 53
-   :answer_b: 106
-   :answer_c: 31
-   :answer_d: 52
-   :answer_e: 105
-   :correct: a
-   :feedback_a: The number 0011 0101 has values at 2 ^ 0, 2 ^ 2, 2 ^ 4, and 2 ^ 5. These values equal 1, 2, 16, and 32 in the decimal number system. 1 + 2 + 16 + 32 equals 53.
-   :feedback_b: Remember that the binary number system starts at 2 ^ 0, not 2 ^ 1. The first digit in binary represents 1, not 2.
-   :feedback_c: Remember that the binary number system starts at 2 ^ 0. The first digit in a binary number represents 1, not 0.
-   :feedback_d: If the last digit of a binary number is 1, then the result must be odd. Check your calculations again.
-   :feedback_e: Remember that the binary number system starts at 2 ^ 0, not 2 ^ 1. The first digit in binary represents 1, not 2. Check your calculations and try again.
-
-   Convert ``0011 0101`` from binary to decimal.
 
 .. mchoice:: qtnt4_8
    :answer_a: 1
@@ -316,7 +301,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       numbers.add(9);
       numbers.set(5, 5);
 
-.. mchoice:: qtnt4_11
+.. .. mchoice:: qtnt4_11
    :answer_a: Remove the abstract keyword from the Meal class declaration.
    :answer_b: Remove the abstract keyword from the Meal class and method declarations.
    :answer_c: Create a constructor for the Meal class.
@@ -435,7 +420,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    .. code-block:: java
 
-       public abstract class Vehicle
+       public class Vehicle
        {
            private int wheels;
            private String color;

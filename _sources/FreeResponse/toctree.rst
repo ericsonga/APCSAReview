@@ -1,4 +1,4 @@
-Free Response Practice Exam
+Free Response Practice 
 :::::::::::::::::::::::::::::
 
 .. toctree::
@@ -15,7 +15,6 @@ Free Response Practice Exam
    HiddenWord.rst
    ArrayTesterA.rst
    ArrayTesterB.rst
-   NumberGroupA.rst
    NumberGroupB.rst
    NumberGroupC.rst
    Exercises.rst

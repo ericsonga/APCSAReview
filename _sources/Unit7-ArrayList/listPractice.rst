@@ -79,7 +79,7 @@ Code Practice with ArrayLists
 
               public class Test
               {
-                  public static ArrayList reverse(ArrayList<Integer> list)
+                  public static ArrayList<Integer> reverse(ArrayList<Integer> list)
                   {
                       ArrayList<int> reversed = new ArrayList<int>();
                       for (Integer element: list)
@@ -119,7 +119,7 @@ Code Practice with ArrayLists
 
               public class Test
               {
-                  public static ArrayList reverse(ArrayList<Integer> list)
+                  public static ArrayList<Integer> reverse(ArrayList<Integer> list)
                   {
                       ArrayList<Integer> reversed = new ArrayList<Integer>();
                       for (Integer element: list)
@@ -166,7 +166,7 @@ Code Practice with ArrayLists
 
               public class Test
               {
-                  public static void printEvenIndex(ArrayList list)
+                  public static void printEvenIndex(ArrayList<Integer> list)
                   {
                       for (int i)
                       {
@@ -205,7 +205,7 @@ Code Practice with ArrayLists
 
               public class Test
               {
-                  public static void printEvenIndex(ArrayList list)
+                  public static void printEvenIndex(ArrayList<Integer> list)
                   {
                       for (int i = 0; i < list.size(); i++)
                       {
@@ -252,7 +252,7 @@ Code Practice with ArrayLists
 
               public class Test
               {
-                  public static void printEvenElements(ArrayList list)
+                  public static void printEvenElements(ArrayList<Integer> list)
                   {
                       for (int i = 0; i < list.length; i++)
                       {
@@ -291,7 +291,7 @@ Code Practice with ArrayLists
 
               public class Test
               {
-                  public static void printEvenElements(ArrayList list)
+                  public static void printEvenElements(ArrayList<Integer> list)
                   {
                       for (int i = 0; i < list.size(); i++)
                       {

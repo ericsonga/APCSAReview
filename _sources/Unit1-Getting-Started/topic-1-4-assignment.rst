@@ -277,8 +277,8 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
 
    
 
-|Groupwork| Programming Challenge
---------------------------------------
+|Groupwork| Programming Challenge : Dog Years
+------------------------------------------------
 
 .. |dog| image:: Figures/dog-free.png
     :width: 100

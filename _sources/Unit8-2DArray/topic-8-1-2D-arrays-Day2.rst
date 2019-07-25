@@ -43,7 +43,7 @@ When arrays are created their contents are automatically initialized to 0 for nu
 
 |CodingEx| **Coding Exercise**
 
-Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object.  To see what the values are after this code runs use this |Java visualizer|. Edit the code in the visualizer to add in an extra row to the seatingChart and add your name and a friend's name in the columns of this extra row using assignment statements.
+Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use this |Java visualizer| to see what the values are after this code runs. Edit the code in the visualizer to add in an extra row to the seatingChart and add your name and a friend's name in the columns of this extra row using assignment statements.
 
 .. activecode:: 2DArraySet
   :language: java

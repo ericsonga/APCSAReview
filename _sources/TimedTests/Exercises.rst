@@ -41,21 +41,6 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 .. timed:: midterm1
    :timelimit: 40
 
-   .. mchoice:: mt1_1
-      :answer_a: 10001111
-      :answer_b: 10011011
-      :answer_c: 10111010
-      :answer_d: 10101101
-      :answer_e: 10110001
-      :correct: a
-      :feedback_a: Correct!
-      :feedback_b: This is the binary representation of 155.
-      :feedback_c: This is the binary representation of 186.
-      :feedback_d: This is the binary representation of 173.
-      :feedback_e: This is the binary representation of 177.
-
-      What is the value of 143 (base-10) in binary(base-2)?
-
    .. mchoice:: mt1_2
       :answer_a: 0 3 6 9 12 15
       :answer_b: 0 1 2 3 4 5
@@ -233,21 +218,6 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This will only be true if a is true, or b is false.
 
       Which option will evaluate to true, if and only if both a and b are false?
-
-   .. mchoice:: mt1_9
-      :answer_a: B3DD
-      :answer_b: AC32
-      :answer_c: B6D4
-      :answer_d: B6D9
-      :answer_e: A8E2
-      :correct: c
-      :feedback_a: This is 1011001111011101 in hexadecimal.
-      :feedback_b: This is 1010110000110010 in hexadecimal.
-      :feedback_c: Correct!
-      :feedback_d: This is 1011011011011001 in hexadecimal.
-      :feedback_e: This is 1010100011100010 in hexadecimal.
-
-      What is the number 1011011011010100 (Binary) in hexadecimal?
 
    .. mchoice:: mt1_10
       :answer_a: Prints the string in reverse order

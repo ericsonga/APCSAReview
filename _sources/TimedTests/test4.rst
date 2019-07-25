@@ -130,27 +130,6 @@ Click the |start| button when you are ready to begin the exam, but only then as 
               a[savedIndex] = temp;
             }
          }
-
-            
-    .. mchoice:: pe4_4
-       :answer_a: II only
-       :answer_b: III only
-       :answer_c: I and II only
-       :answer_d: I, II, and III
-       :answer_e: I only
-       :correct: d
-       :feedback_a: Methods in an interface are abstract, but more of these choices are correct.
-       :feedback_b: Methods in an interface are public, but more of these choices are correct.
-       :feedback_c: Can you declare private methods in an interface?
-       :feedback_d: One interface can inherit from another and the methods in an interface are public and abstract. 
-       :feedback_e: One interface can inherit from another, but more of these choices are correct.
-
-       Which of the following statements about interfaces is (are) true?  
-           
-         I.  One interface can inherit from another  
-         II.  All methods declared in an interface are abstract methods 
-              (can’t have a method body).  
-         III. All methods declared in an interface are public methods.
             
     .. mchoice:: pe4_5
        :answer_a: { {4, -5, 6},{-1, -2, 3}}
@@ -359,21 +338,17 @@ Click the |start| button when you are ready to begin the exam, but only then as 
     .. mchoice:: pe4_13
        :answer_a: Book b = new Book();
        :answer_b: Dictionary d = new Book();
-       :answer_c: Comparable c = new Book();
-       :answer_d: Book b = new Dictionary ();
-       :answer_e: Comparable c = new Dictionary();
+       :answer_c: Book b = new Dictionary();
        :correct: b
        :feedback_a: A object can always be declared to be of the type of the class that creates it.
        :feedback_b: The declared type must the the type of the class that creates the object or the type of any parent class.   Dictionary is not a parent of the Book class.
-       :feedback_c: An object can be declared to be of an interface type if the interface type is one of the parent classes of the actual type.
-       :feedback_d: The declared type can be the actual type (the class that creates the object) or any parent of the actual type.  
-       :feedback_e: Since Dictionary inherits from Book and Book implements the Comparable interface, this is allowed.
+       :feedback_c: The declared type can be the actual type (the class that creates the object) or any parent of the actual type.  
        
        Given the following class declarations, which declaration below will result in a compiler error?
        
        .. code-block:: java
 
-         public class Book implements Comparable 
+         public class Book  
          { 
             // code for class 
          }

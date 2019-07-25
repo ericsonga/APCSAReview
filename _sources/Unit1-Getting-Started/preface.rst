@@ -8,9 +8,16 @@ Preface
 ..	index::
 	single: license
 	
-This AP CS A Java 2019 course was adapted from the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. Barbara Ericson would appreciate knowing what you think if you do use this book, and would love to see any modifications or additions you make. 
+This AP CS A Java 2019 course was adapted from the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. 
 
-The 2019 version of this book is being modified by the Mobile CSP project (https://www.mobile-csp.org), primarily by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA. Special thanks to John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, and Rebecca Stacey for feedback, edits, and ideas. We hope that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
+The 2019 version of this book is being modified by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, and Becky Stacey for feedback, edits, and ideas. We hope that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
+
+.. |form| raw:: html
+
+   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">form</a>
+   
+If you see errors or bugs, please report them with this |form|.
+
 
 **Acknowledgements**
 
@@ -85,9 +92,14 @@ Many others have been involved in the creation of content for the eBook (includi
 **License**
 
 
-Barbara Ericson `ericson@cc.gatech.edu <mailto://ericson@cc.gatech.edu>`_ January,
+Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_ 
 2014
 All rights reserved.
+
+Beryl Hoffman hoffmanb@elms.edu <mailto://hoffmanb@elms.edu>`_ 
+2019
+All rights reserved.
+
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:

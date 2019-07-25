@@ -1,3 +1,7 @@
+.. qnum::
+   :prefix:  10-5-
+   :start: 1
+   
 More Mixed Up Code Practice
 ----------------------------------------
 
@@ -93,7 +97,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            return 0;
    =====
-       else if(n % 10 == 8)
+       else if(n % 10 == 2)
    =====
            return 1 + numberOf2s(n / 10);
    =====
@@ -134,7 +138,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following method should recursively find and return the the number of even digits in int n.
+   The following method should recursively find and return the number of even digits in int n.
    -----
    public int evenDigits(int n)
    {
@@ -143,19 +147,17 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if(n % 2 == 0)
    =====
-						return 1;
+            return 1;
    =====
-           else
-   =====
-						return 0;
+            else return 0;
    =====
         else if((n % 10) % 2 == 0)
    =====
-			return evenDigits(n / 10) + 1;
+                return evenDigits(n / 10) + 1;
    =====
 		else
    =====
-					return evenDigits(n / 10);
+                return evenDigits(n / 10);
    =====
    }
 
@@ -165,7 +167,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following method should recursively find and print the factorial of int n.
+   The following method should recursively find and print the factorial of int n. It has 1 extra block of code.
    -----
    public int factorial(int n)
    {

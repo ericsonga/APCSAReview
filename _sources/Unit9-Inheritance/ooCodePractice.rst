@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 10-24-
+   :prefix: 9-11-
    :start: 1			
    
 Code Practice with Object Oriented Concepts
@@ -62,7 +62,7 @@ Code Practice with Object Oriented Concepts
                 :shortname: cslearn4u
                 :identifier: javareview_ooex1d
 
-.. tabbed:: ooEx2
+.. .. tabbed:: ooEx2
 
         .. tab:: Question
 
@@ -256,7 +256,7 @@ Code Practice with Object Oriented Concepts
               {
                   public String taste() 
                   {
-                      return "tastes sweet!"
+                      return "tastes sweet!";
                   }
                   
                   public static void main(String[] args) 
@@ -264,7 +264,7 @@ Code Practice with Object Oriented Concepts
                       Candy c1 = new Candy();
                       System.out.println(c1.taste());
                       Candy c2 = new Chocolate();
-                      System.out.println(c2.taste();
+                      System.out.println(c2.taste());
                   }
               } 
               
@@ -640,17 +640,17 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Question
 
-          Correctly finish the Dog subclass for the following abstract Animal class.  Override the abstract methods.  It should print "woof" and then "num num".
+          Correctly finish the Dog subclass for the following Animal class.  Override the methods speak() to print "woof" and eat() to print "num num".
           
            .. activecode::  ooEx10q
               :language: java
    
-              abstract class Animal 
+              class Animal 
               {
                   public String name;
                   public int numLegs;
-                  public abstract void speak();
-                  public abstract void eat();
+                  public void speak() { System.out.println("sniff");}
+                  public void eat() { System.out.println("crunch"); }
                   
                   public static void main(String[] args)
                   {
@@ -674,17 +674,15 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Answer
         
-           For something to be a proper subclass of an abstract class, the subclass must include non-abstract versions of the methods from the abstract class.
-           
            .. activecode::  ooEx10a
               :language: java
    
-              abstract class Animal 
+              class Animal 
               {
                   public String name;
                   public int numLegs;
-                  public abstract void speak();
-                  public abstract void eat();
+                  public void speak() { System.out.println("sniff");}
+                  public void eat() { System.out.println("crunch"); }
               }
               
               public class Dog extends Animal 

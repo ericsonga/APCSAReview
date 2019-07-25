@@ -304,16 +304,16 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: This method produces a compile time error, but method II will also produce a compile time error.
    :feedback_e: Methods II and III will both produce compile time errors, but method I works because class C inherits all the public methods of class B.
 
-   Consider the following interface and class definitions. Which of I, II and III below would cause an error when used in place of the missing code in the main method?
+   Consider the following class definitions. Which of I, II and III below would cause an error when used in place of the missing code in the main method?
    
    .. code-block:: java
 
-      public interface A 
+      public class A 
       {
-        public abstract void method1();
+        public void method1() { };
       }
 
-      public class B implements A 
+      public class B extends A 
       {
           // Instance variables and other methods not shown
 
@@ -365,31 +365,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       I ArrayList<String> stringList = new List<String>();
       II List<int> intList = new ArrayList<int>();
       III List<String> stringList = new ArrayList<String>();
-
-.. mchoice:: qtnt1_13
-   :answer_a: In a program that uses A, more than one instance (object) of type A can be created. 
-   :answer_b: If a program has an object of type A that it calls methods on, then the class A must have a subclass that is not abstract. 
-   :answer_c: The class A needs to have a constructor that takes two parameters in order to initialize v1 and v2.
-   :answer_d: Any program that uses class A will have an error since abstract classes cannot contain public instance variables.
-   :answer_e: One or more methods in A must be declared abstract.
-   :correct: b
-   :feedback_a: Instances of abstract classes cannot be created. 
-   :feedback_b: Abstract classes can not be instantiated, so if a program has an object of type A the class A must have a subclass that is not abstract.
-   :feedback_c: The fields v1 and v2 could be initiliazed in a default constructor that takes in no parameters.
-   :feedback_d: An abstract class can contain any number of public, private, and protected instance variables. 
-   :feedback_e: The purpose behind abstract classes is having a class that cannot be instantiated. An abstract class is not required to have any abstract methods.
-
-   What of the following is true about class ``A`` below? 
-
-   .. code-block:: java
-     
-      public abstract class A 
-      {
-        public int v1;
-        public int v2;
-
-        //methods of the class
-      }
 
 .. mchoice:: qtnt1_14
    :answer_a: I

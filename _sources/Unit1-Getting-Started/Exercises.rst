@@ -2,7 +2,7 @@ Multiple Choice Exercises
 =================================
 
 .. qnum::
-   :prefix: 1-8-
+   :prefix: 1-9-
    :start: 1
    
 
@@ -196,59 +196,6 @@ Multiple Choice Exercises
       int z = x * y;
       x++;
      
-.. Binary/Hex conversion no longer on the AP CS A 2020.
-    .. mchoice:: qve_old6
-   :answer_a: 75   
-   :answer_b: 67
-   :answer_c: 150
-   :answer_d: 43
-   :answer_e: 74 
-   :correct: a
-   :feedback_a: To convert from binary to decimal use the powers of 2 starting with 2 raised to the 0 power which is 1.  So 1001011 is 1 + 2 + 8 + 64 = 75.  
-   :feedback_b: This would be true if the binary number was 1000011.  This would be 1 + 2 + 64 = 67.
-   :feedback_c: This would be true if we started at the right hand side with 2, but we start with 1 (2 raised to the 0 power is 1).
-   :feedback_d: This would be true if the binary number was 101011. 
-   :feedback_e: This would be true if the binary number was 1001010.
-
-   Which of the following is the decimal value for the binary number 1001011?
-   
-   .. mchoice:: qve_old7
-   :answer_a: 5   
-   :answer_b: 4
-   :answer_c: 6
-   :correct: a
-   :feedback_a: This would be enough to represent 32 distinct values, so that is more then enough to represent 25 distinct values.  
-   :feedback_b: This would only be enough to represent 16 distinct values (2 to the 4th).  
-   :feedback_c: This is more than you need.  2 to the 6th is 64.  
-
-   How many bits would you need to represent 25 distinct values?
-   
-   .. mchoice:: qve_old8
-   :answer_a: 34   
-   :answer_b: 52
-   :answer_c: 64
-   :answer_d: 6
-   :answer_e: B4
-   :correct: a
-   :feedback_a: To convert from binary to hexadecimal (base 16) convert groups of 4 bits from the right to the left to hexadecimal.  The rightmost 4 bits is 0100 which is 4 in hex.  The leftmost 4 bits would be 0011 which is 3 in hex. 
-   :feedback_b: This would be correct if the question had asked for the value in decimal, but it asked for it in hexadecimal (base 16).
-   :feedback_c: This would be correct if the question had asked for the value in octal, but it asked for it in hexadecimal (base 16).
-   :feedback_d: This is the length of this binary number.  Can you convert it to hexadecimal (base 16)?
-   :feedback_e: This would be correct if the binary number was 10110100 instead of 110100.
-
-   What is the hexadecimal equivalent of the following binary number: 110100?
-   
-   .. mchoice:: qve_9
-   :answer_a: 11011101
-   :answer_b: 1011001  
-   :answer_c: 10111011
-   :correct: c
-   :feedback_a: This has an extra one in the front.    
-   :feedback_b: The decimal value of 1011001 is (1*64)+ (0 * 32) + (1 * 16) + (1 * 8) + (0 * 4) + (0 * 2) + (1*1) = which is 89 base 10 (decimal)
-   :feedback_c: Using base 2 the value of 10111011 is:  128+32+16+8+2+1 = 187 
-
-   What is the binary equivalent of the following base 10 number: 187?
-   
 
    
 

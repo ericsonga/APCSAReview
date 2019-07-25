@@ -17,6 +17,8 @@ of the trio is the sum of the two highest-priced menu items in the trio; one ite
 Each menu item has a name and a price. The four types of menu items are represented by the four classes
 ``Sandwich``, ``Salad``, ``Drink``, and ``Trio``. All four classes implement the following ``MenuItem`` interface.
 
+Interfaces are no longer on the AP CSA exam, but you can just treat an interface like a superclass. Just substitute the word class instead of interface below and your TrioClass can extend MenuItem instead of implementing the interface. 
+
 .. code-block:: java 
 
    public interface MenuItem

@@ -35,7 +35,7 @@ The following 20 questions are similar to what you might see on the AP CS A exam
 Click the |start| button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 .. timed:: postexam2
-    :timelimit: 45
+    :timelimit: 60
     
     .. mchoice:: pe2_1-14
        :answer_a: The value you are searching for is the first element in the array.
@@ -79,7 +79,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :answer_e: Data (fields) are directly accessible by objects in the same package.
        :correct: d
        :feedback_a: Encapsulation is making data private so only code in the same class has direct access.
-       :feedback_b: There is no abstract visibility modfier. The keyword abstract is used on classes and methods. An abstract class is one that can't be instantiated and an abstract method is one that just has a method signature and no method body. You can not use the keyword abstract on field declarations.
+       :feedback_b: There is no abstract visibility modfier.  You can not use the keyword abstract on variable declarations.
        :feedback_c: Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives diredct access to code in classes in the same package and subclasses.
        :feedback_e: Encapsulation means that only code in the defining class has direct access. The default package access gives direct access to code in classes in the same package.
        :feedback_d: This is the definition of encapsulation and this is done in Java using private (a member is direclty accessible only in the class that defines it) and protected (a member is direclty accessible only within code in the same package and in subclasses).
@@ -618,4 +618,40 @@ Click the |start| button when you are ready to begin the exam, but only then as 
             }
          }
      
+     
+.. poll:: qprogrammingpost
+   :option_1: beginner programmer
+   :option_2: intermediate programmer
+   :option_3: expert programmer
+   :option_4: prefer not to answer
+           
+   I am now a :
+   
+   
+.. poll:: qenjoy
+   :option_1: strongly agree
+   :option_2: agree
+   :option_3: neither agree or disagree
+   :option_4: disagree
+   :option_5: strongly disagree
+   :option_6: prefer not to answer
+           
+   I enjoyed learning about computer science and Java in this course.
+   
+.. poll:: qcareerpost
+   :option_1: strongly agree
+   :option_2: agree
+   :option_3: neither agree or disagree
+   :option_4: disagree
+   :option_5: strongly disagree
+   :option_6: prefer not to answer
+           
+   I would like to pursue further study or a career in computing.
 
+.. shortanswer:: qbest
+
+    What did you like best about this course?
+
+.. shortanswer:: qimprove
+
+    How could this course be improved?
