@@ -111,6 +111,7 @@ Here is a while loop that counts from 5 to 10. Run it and see what it does. Can 
 |Exercise| **Check your understanding**
 
 .. mchoice:: qlb_3_1
+   :practice: T
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8 
    :answer_c: 8 8 8 8 8 
@@ -131,6 +132,7 @@ Here is a while loop that counts from 5 to 10. Run it and see what it does. Can 
      }
      
 .. mchoice:: qlb_3_2
+   :practice: T
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8 9 
    :answer_c: 1 2 3 4 5 6 7 8 9 10
@@ -151,6 +153,7 @@ Here is a while loop that counts from 5 to 10. Run it and see what it does. Can 
      }
      
 .. mchoice:: qlb_3_3
+   :practice: T
    :answer_a: 10
    :answer_b: 6
    :answer_c: 7
@@ -173,6 +176,8 @@ Here is a while loop that counts from 5 to 10. Run it and see what it does. Can 
      
 
 .. parsonsprob:: print_evens
+   :numbered: left
+   :practice: T
    :adaptive:
 
    The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn't require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the "Check Me" button.

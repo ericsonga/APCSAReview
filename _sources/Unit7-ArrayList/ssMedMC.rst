@@ -8,6 +8,7 @@ Medium Search/Sort Multiple Choice Questions
 These problems are similar to those you will see on the AP CS A exam.
 
 .. mchoice:: qsearchsm_1
+   :practice: T
    :answer_a: {3,7,8,5,2}, {3,7,8,5,2}, {3,5,7,8,2}, {2,3,5,7,8}
    :answer_b: {2,3,8,5,7}, {2,3,8,5,7}, {2,3,5,8,7}, {2,3,5,7,8}
    :answer_c: {3,7,8,5,2}, {3,5,7,8,2}, {2,3,5,7,8}
@@ -25,6 +26,7 @@ These problems are similar to those you will see on the AP CS A exam.
 You can step through an insertion sort with this data by clicking on the following `Ex-12-8-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+SortTest%0A%7B%0A+++public+static+void+insertionSort(int%5B%5D+elements)%0A+++%7B%0A++++++for+(int+j+%3D+1%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++%7B%0A+++++++++int+temp+%3D+elements%5Bj%5D%3B%0A+++++++++int+possibleIndex+%3D+j%3B%0A+++++++++while+(possibleIndex+%3E+0+%26%26+temp+%3C+elements%5BpossibleIndex+-+1%5D)%0A+++++++++%7B%0A++++++++++++elements%5BpossibleIndex%5D+%3D+elements%5BpossibleIndex+-+1%5D%3B%0A++++++++++++possibleIndex--%3B%0A+++++++++%7D%0A+++++++++elements%5BpossibleIndex%5D+%3D+temp%3B%0A+++++++++System.out.println(Arrays.toString(elements))%3B%0A++++++%7D%0A++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+arr1+%3D+%7B7,3,8,5,2%7D%3B%0A++++++insertionSort(arr1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qsearchsm_2
+   :practice: T
    :answer_a: -1
    :answer_b: 0
    :answer_c: 1
@@ -68,6 +70,7 @@ You can step through an insertion sort with this data by clicking on the followi
 You can step through the code above by clicking on the following `Ex-12-8-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0Apublic+class+Searcher%0A%7B%0A+++private+int%5B%5D+arr+%3D+%7B1,3,5,8,9%7D%3B%0A++%0A+++public+int+mystery(int+low,+int+high,+int+num)+%7B+++%0A++++++int+mid+%3D+(low+%2B+high)+/+2%3B+++%0A++++++if+(low+%3E+high)+%7B+++++%0A+++++++++return+-1%3B+++%7D+++%0A++++++else+if+(arr%5Bmid%5D+%3C+num)+%7B+++++%0A+++++++++return+mystery(mid+%2B+1,+high,+num)%3B+++%7D+++%0A++++++else+if+(arr%5Bmid%5D+%3E+num)+%7B+++++%0A+++++++++return+mystery(low,+mid+-+1,+num)%3B+++%7D+++%0A++++++else++++++%0A+++++++++return+mid%3B%0A+++%7D%0A%0A++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Searcher+s+%3D+new+Searcher()%3B%0A++++++System.out.println(s.mystery(0,4,3))%3B%0A+++%7D+%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qsearchsm_3
+   :practice: T
    :answer_a: {6,10,3,2,8}, {3,6,10,2,8}, {2,3,6,10,8}, {2,3,6,8,10}
    :answer_b: {6,10,3,2,8}, {3,6,10,2,8}, {2,3,6,8,10}
    :answer_c: {2,6,3,10,8}, {2,3,6,10,8}, {2,3,6,8,10}
@@ -83,6 +86,7 @@ You can step through the code above by clicking on the following `Ex-12-8-2 <htt
 You can step through the code above by clicking on the folloiwng `Ex-12-8-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+SortTest%0A%7B%0A+++public+static+void+selectionSort(int%5B%5D+elements)%0A+++%7B%0A++++++for+(int+j+%3D+0%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)%0A++++++%7B%0A+++++++++int+minIndex+%3D+j%3B%0A+++++++++for+(int+k+%3D+j+%2B+1%3B+k+%3C+elements.length%3B+k%2B%2B)%0A+++++++++%7B%0A++++++++++++if+(elements%5Bk%5D+%3C+elements%5BminIndex%5D)%0A++++++++++++%7B%0A+++++++++++++++minIndex+%3D+k%3B%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++int+temp+%3D+elements%5Bj%5D%3B%0A+++++++++elements%5Bj%5D+%3D+elements%5BminIndex%5D%3B%0A+++++++++elements%5BminIndex%5D+%3D+temp%3B%0A+++++++++System.out.println(Arrays.toString(elements))%3B%0A+++++++%7D%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+arr1+%3D+%7B10,+6,+3,+2,+8%7D%3B%0A++++++selectionSort(arr1)%3B%0A+++%7D%0A%7D%0A&mode=display&curInstr=0>`_.
 
 .. mchoice:: qsearchsm_4
+   :practice: T
    :answer_a: int k = j - 1; k >= 0; k--
    :answer_b: int k = j + 1; k < elem.length; k++
    :answer_c: int k = j; k < elem.length; k++
@@ -131,6 +135,7 @@ You can step through the code above by clicking on the folloiwng `Ex-12-8-3 <htt
 You can step through the code above (with answer a in place of the missing code) by clicking on the following `Ex-12-8-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+Searcher%0A%7B%0A++%0A+++public+static+void+sort(int%5B%5D+elem)%0A+++%7B%0A++++++for+(int+j+%3D+0%3B+j+%3C+elem.length+-+1%3B+j%2B%2B)%0A++++++%7B%0A+++++++++int+minIndex+%3D+j%3B%0A%0A+++++++++for+(int+k+%3D+j+-+1%3B+k+%3E%3D+0%3B+k--)%0A+++++++++%7B%0A++++++++++++if+(elem+%5Bk%5D+%3C+elem+%5BminIndex%5D)%0A++++++++++++%7B%0A+++++++++++++++minIndex+%3D+k%3B%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++int+temp+%3D+elem%5Bj%5D%3B%0A+++++++++elem%5Bj%5D+%3D+elem%5BminIndex%5D%3B%0A+++++++++elem%5BminIndex%5D+%3D+temp%3B%0A+++++++++System.out.println(Arrays.toString(elem))%3B%0A++++++%7D%0A+++%7D%0A++++++++++++++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+nums+%3D+%7B28,+-3,+2,+14,+30%7D%3B%0A++++++Searcher.sort(nums)%3B%0A+++%7D+%0A%7D++%0A&mode=display&curInstr=0>`_.
 
 .. mchoice:: qsearchsm_5
+   :practice: T
    :answer_a: -1
    :answer_b: 0
    :answer_c: 1

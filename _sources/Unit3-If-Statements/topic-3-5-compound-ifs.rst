@@ -181,6 +181,7 @@ The following table shows the result for P || Q when P and Q are both expression
 
 
 .. mchoice:: qcbc_7
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :correct: a
@@ -196,6 +197,7 @@ The following table shows the result for P || Q when P and Q are both expression
      else System.out.println("second case");
      
 .. mchoice:: qcbc_8
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :correct: b
@@ -211,6 +213,7 @@ The following table shows the result for P || Q when P and Q are both expression
      else System.out.println("second case");
      
 .. mchoice:: qcbc_or
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :correct: a
@@ -241,6 +244,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
 |Exercise| **Check your understanding**
 
 .. mchoice:: qcbc_5
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  
@@ -258,6 +262,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
      else System.out.println("second case");
      
 .. mchoice:: qcb_7sc
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  
@@ -274,6 +279,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
      else System.out.println("second case");
      
 .. .. mchoice:: qcb_8sc
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't use a negative index with substring.   
@@ -291,6 +297,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
      else System.out.println("second case");
      
 .. .. mchoice:: qcb_9sc
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  

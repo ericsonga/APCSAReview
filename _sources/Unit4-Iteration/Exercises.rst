@@ -12,6 +12,7 @@ Easier Multiple Choice Questions
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
 .. mchoice:: qle_1
+   :practice: T
    :answer_a: 5 6 7 8 9
    :answer_b: 4 5 6 7 8 9 10 11 12 
    :answer_c: 3 5 7 9 11
@@ -32,6 +33,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
 
 .. mchoice:: qle_2
+   :practice: T
    :answer_a: 9
    :answer_b: 7
    :answer_c: 6
@@ -52,6 +54,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
 
 .. mchoice:: qle_3
+   :practice: T
    :answer_a: 5 4 3 2 1
    :answer_b: -5 -4 -3 -2 -1
    :answer_c: -4 -3 -2 -1 0
@@ -72,6 +75,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
      
 .. mchoice:: qle_4
+   :practice: T
    :answer_a: 7
    :answer_b: 8
    :answer_c: 12
@@ -92,6 +96,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
      
 .. mchoice:: qle_5
+   :practice: T
    :answer_a: 4
    :answer_b: 5
    :answer_c: 6
@@ -110,6 +115,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
      
 .. mchoice:: qle_6
+   :practice: T
    :answer_a: 7
    :answer_b: 8
    :answer_c: 9
@@ -128,6 +134,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
      
 .. mchoice:: qle_7
+   :practice: T
    :answer_a: 4
    :answer_b: 5
    :answer_c: 6
@@ -146,6 +153,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
      
 .. mchoice:: qle_8
+   :practice: T
    :answer_a: 6
    :answer_b: 7
    :answer_c: 8
@@ -164,6 +172,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
 
 .. mchoice:: qle_9
+   :practice: T
    :answer_a: 1 2 3 4 
    :answer_b: 1 2 3 4 5
    :answer_c: 0 1 2 3 4
@@ -186,6 +195,7 @@ These problems are easier than most of those that you will usually see on the AP
      }
      
 .. mchoice:: qle_10
+   :practice: T
    :answer_a: 3 4 5 6 7 8 
    :answer_b: 3 4 5 6 7 8 9
    :answer_c: 0 1 2 3 4 5 6 7 8
@@ -219,6 +229,7 @@ Medium Multiple Choice Questions
 These problems are similar to those you will see on the AP CS A exam.
 
 .. mchoice:: qlm_1
+   :practice: T
    :answer_a: 10
    :answer_b: 5
    :answer_c: 25
@@ -241,6 +252,7 @@ These problems are similar to those you will see on the AP CS A exam.
      }
 
 .. mchoice:: qlm_2
+   :practice: T
    :answer_a: I
    :answer_b: II
    :answer_c: III
@@ -299,6 +311,7 @@ These problems are similar to those you will see on the AP CS A exam.
           }
 
 .. mchoice:: qlm_3
+   :practice: T
    :answer_a: 0 2 4 6 8 10 12 14 16 18
    :answer_b: 4 16
    :answer_c: 0 6 12 18
@@ -321,6 +334,7 @@ These problems are similar to those you will see on the AP CS A exam.
      }
 
 .. mchoice:: qlm_4
+   :practice: T
    :answer_a: I
    :answer_b: II
    :answer_c: III
@@ -379,6 +393,7 @@ These problems are similar to those you will see on the AP CS A exam.
           }
 
 .. mchoice:: qlm_5n
+   :practice: T
    :answer_a: var1 = 0, var2 = 2
    :answer_b: var1 = 1, var2 = 1
    :answer_c: var1 = 3, var2 = -1
@@ -412,7 +427,8 @@ These problems are similar to those you will see on the AP CS A exam.
 
 .. This problem is about big O notation which is not covered on the A exam.  It used to be covered on the AB exam, but they stopped offering that exam several years ago.
 
-.. .. mchoice:: qlh_1n
+.. mchoice:: qlh_1n
+   :practice: T
    :answer_a: O(log n)
    :answer_b: O(n log n)
    :answer_c: O(n)

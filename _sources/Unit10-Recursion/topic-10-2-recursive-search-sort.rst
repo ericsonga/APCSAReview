@@ -254,6 +254,7 @@ You can trace through a merge sort algorithm given an array by using parentheses
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: qms_1
+   :practice: T
    :answer_a: If the data is already sorted in ascending order
    :answer_b: If the data is already sorted in descending order
    :answer_c: It will always take the same amount of time to execute
@@ -265,6 +266,7 @@ You can trace through a merge sort algorithm given an array by using parentheses
    Under what condition will a merge sort execute faster?
 
 .. mchoice:: qms_2
+   :practice: T
    :answer_a: selection sort
    :answer_b: insertion sort
    :answer_c: merge sort

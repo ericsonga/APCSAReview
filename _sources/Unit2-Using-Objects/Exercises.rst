@@ -16,6 +16,7 @@ Easier Multiple Choice Questions
 These problems are mostly easier than what you will see on the AP CS A exam.
 
 .. mchoice:: qse_1
+   :practice: T
    :answer_a: xyz
    :answer_b: xyxyz
    :answer_c: xy xy z
@@ -37,6 +38,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      s1 = s1 + s2 + "z";
 
 .. mchoice:: qse_2
+   :practice: T
    :answer_a: 8
    :answer_b: 10
    :answer_c: 11
@@ -53,6 +55,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      int len = s1.length();
 
 .. mchoice:: qse_3
+   :practice: T
    :answer_a: 3
    :answer_b: 4
    :answer_c: 5
@@ -71,6 +74,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      int pos = s1.indexOf("d");
 
 .. mchoice:: qse_4
+   :practice: T
    :answer_a: Hey
    :answer_b: he
    :answer_c: H
@@ -96,6 +100,7 @@ Medium Multiple Choice Questions
 These problems are similar to those that you will see on the AP CS A exam.
 
 .. mchoice:: qsm_1
+   :practice: T
    :answer_a: I, II, III
    :answer_b: I only
    :answer_c: II only
@@ -121,6 +126,7 @@ These problems are similar to those that you will see on the AP CS A exam.
      III. s1 == s3
 
 .. mchoice:: qsm_2
+   :practice: T
    :answer_a: org
    :answer_b: eor
    :answer_c: eorg
@@ -144,6 +150,7 @@ These problems are similar to those that you will see on the AP CS A exam.
      System.out.println(s3);
 
 .. mchoice:: qsm_3
+   :practice: T
    :answer_a: null
    :answer_b: hi there
    :answer_c: HI THERE
@@ -169,6 +176,7 @@ These problems are similar to those that you will see on the AP CS A exam.
      s4 = null;
 
 .. mchoice:: qsm_4
+   :practice: T
    :answer_a: Data Set 2 contains one string which should return true and one that should return false.
    :answer_b: All strings in Data Set 2 have the same number of characters.
    :answer_c: The strings in Data Set 2 are all lowercase
@@ -198,6 +206,7 @@ Hard Multiple Choice Questions
 These problems are harder than most of those that you will usually see on the AP CS A exam.
 
 .. mchoice:: qsh_1
+   :practice: T
    :answer_a: II and IV
    :answer_b: II, III, and IV
    :answer_c: I, II, III, IV
@@ -224,6 +233,7 @@ These problems are harder than most of those that you will usually see on the AP
      IV.  (s2.equals(s3))
 
 .. mchoice:: qsh_2
+   :practice: T
    :answer_a: 21
    :answer_b: 1353
    :answer_c: It will give a run-time error

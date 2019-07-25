@@ -77,6 +77,7 @@ Click on this cool |Java visualizer| to step through the code. Click on the Forw
    <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
    
 .. mchoice:: q2_1
+   :practice: T
    :answer_a: x = 0, y = 1, z = 2
    :answer_b: x = 1, y = 2, z = 3
    :answer_c: x = 2, y = 2, z = 3
@@ -104,6 +105,8 @@ Click on this cool |Java visualizer| to step through the code. Click on the Forw
 In the mixed up programs below, drag the blocks to the right to put them in the right order.
 
 .. parsonsprob:: 2_swap
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
 
@@ -246,6 +249,7 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
 |Exercise| **Check Your Understanding**
 	
 .. mchoice:: q3_4_1
+   :practice: T
    :answer_a: 15
    :answer_b: 16
    :answer_c: 8
@@ -257,6 +261,7 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
    What is the result of 158 % 10?
    
 .. mchoice:: q3_4_2
+   :practice: T
    :answer_a: 3
    :answer_b: 2
    :answer_c: 8

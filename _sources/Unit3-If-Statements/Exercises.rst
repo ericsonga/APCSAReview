@@ -12,6 +12,7 @@ Easier Multiple Choice Questions
 These problems are easier than most of those that you will usually see on the AP CS A exam. 
 
 .. mchoice:: qce_1
+   :practice: T
    :answer_a: x is negative
    :answer_b: x is zero
    :answer_c: x is positive
@@ -29,6 +30,7 @@ These problems are easier than most of those that you will usually see on the AP
      else System.out.println("x is positive");
 
 .. mchoice:: qce_2
+   :practice: T
    :answer_a: first case
    :answer_b: second case 
    :correct: b
@@ -43,6 +45,7 @@ These problems are easier than most of those that you will usually see on the AP
      else System.out.println("second case");
 
 .. mchoice:: qce_3
+   :practice: T
    :answer_a: A
    :answer_b: B
    :answer_c: C
@@ -66,6 +69,7 @@ These problems are easier than most of those that you will usually see on the AP
      else grade = "E";
 
 .. mchoice:: qce_4
+   :practice: T
    :answer_a: first case
    :answer_b: second case
    :answer_c: You will get a error because you can't divide by zero.  
@@ -89,6 +93,7 @@ Medium Multiple Choice Questions
 These problems are similar to those you will see on the AP CS A exam.
 
 .. mchoice:: qcm_1
+   :practice: T
    :answer_a: (!c) && (!d)
    :answer_b: (c || d)
    :answer_c: (c && d)
@@ -104,6 +109,7 @@ These problems are similar to those you will see on the AP CS A exam.
    Which of the following expressions is equivalent to !(c || d) ?  
    
 .. mchoice:: qcm_2
+   :practice: T
    :answer_a: x = 0;
    :answer_b: if (x > 2) x *= 2;
    :answer_c: if (x > 2) x = 0;
@@ -122,6 +128,7 @@ These problems are similar to those you will see on the AP CS A exam.
      if (x > 4) x = 0;
 
 .. mchoice:: qcm_3
+   :practice: T
    :answer_a: x = 0;
    :answer_b: if (x > 0) x = 0;
    :answer_c: if (x < 0) x = 0;
@@ -142,6 +149,7 @@ These problems are similar to those you will see on the AP CS A exam.
      if (x < 0) x = 0;
 
 .. mchoice:: qcm_4
+   :practice: T
    :answer_a: I and III only
    :answer_b: II only
    :answer_c: III only
@@ -192,6 +200,7 @@ Hard Multiple Choice Questions
 These problems are harder than most of those that you will usually see on the AP CS A exam.
 
 .. mchoice:: qch_1
+   :practice: T
    :answer_a: s starts with two or more of the same characters
    :answer_b: s contains two or more of the same characters
    :answer_c: s contains two or more of the same character in a row
@@ -214,6 +223,7 @@ These problems are harder than most of those that you will usually see on the AP
      }
     
 .. mchoice:: qch_2
+   :practice: T
    :answer_a: s == (m - 5) && (2 * s + 3) == (m + 3)
    :answer_b: (s == m - 5) && (s - 3 == 2 * (m - 3))
    :answer_c: (s == (m + 5)) && ((s + 3) == (2 * m + 3))
@@ -238,6 +248,7 @@ These problems are harder than most of those that you will usually see on the AP
      }
 
 .. mchoice:: qch_3
+   :practice: T
    :answer_a: (x > 15 && x < 18) && (x > 10)
    :answer_b: (y < 20) || (x > 15 && x < 18)
    :answer_c: ((x > 10) || (x > 15 && x < 18)) || (y < 20)
@@ -255,6 +266,7 @@ These problems are harder than most of those that you will usually see on the AP
      (x > 15 && x < 18) || (x > 10 || y < 20)
      
 .. mchoice:: qch_4
+   :practice: T
    :answer_a: first
    :answer_b: first second
    :answer_c: first second third
@@ -280,6 +292,7 @@ These problems are harder than most of those that you will usually see on the AP
       System.out.print("third");
    
 .. mchoice:: qch_5
+   :practice: T
    :answer_a: first 
    :answer_b: second
    :answer_c: first second 

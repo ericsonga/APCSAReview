@@ -153,6 +153,7 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
 |Exercise| **Check your understanding**
 
 .. mchoice:: qsbeq_1
+   :practice: T
    :answer_a: s1 == s2 && s1 == s3
    :answer_b: s1 == s2 && s1.equals(s3)
    :answer_c: s1 != s2 && s1.equals(s3)
@@ -171,6 +172,7 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
      s2 = s1;
      
 .. mchoice:: qsbeq_2
+   :practice: T
    :answer_a: s1 == s2 && s1 == s3
    :answer_b: s2.equals(s3) && s1.equals(s3)
    :answer_c: s1 != s2 && s1 == s3
@@ -188,6 +190,7 @@ Since we used string literals this time rather than the ``new`` keyword, the Jav
      String s3 = "hi";
      
 .. mchoice:: qsbeq_3
+   :practice: T
    :answer_a: s1 == s3 && s1.equals(s3)
    :answer_b: s2.equals(s3) && s1.equals(s3)
    :answer_c: !(s1 == s2) && !(s1 == s3)

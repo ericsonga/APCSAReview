@@ -53,6 +53,8 @@ Try to put the following mixed up code in the right order to draw the digital nu
 
     
 .. parsonsprob:: Draw7
+   :numbered: left
+   :practice: T
    :adaptive:
    :noindent:
    

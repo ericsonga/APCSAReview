@@ -62,6 +62,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
 
 
 .. mchoice:: q3_4_3
+   :practice: T
    :answer_a: x = -1, y = 1, z = 4
    :answer_b: x = -1, y = 2, z = 3
    :answer_c: x = -1, y = 2, z = 2
@@ -86,6 +87,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
      z+=y;
      
 .. mchoice:: q3_4_4
+   :practice: T
    :answer_a: x = 6, y = 2.5, z = 2
    :answer_b: x = 4, y = 2.5, z = 2
    :answer_c: x = 6, y = 2, z = 3

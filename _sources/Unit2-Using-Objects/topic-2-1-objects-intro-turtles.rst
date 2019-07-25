@@ -225,6 +225,7 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
 |Exercise| **Check your understanding**
    
 .. mchoice:: q2_2_1
+   :practice: T
    :answer_a: 1
    :answer_b: 10
    :answer_c: 1000
@@ -238,6 +239,7 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
    How many objects can you create from a class in Java?
    
 .. mchoice:: q2_2_2
+   :practice: T
    :answer_a: attributes
    :answer_b: methods
    :answer_c: class
@@ -251,6 +253,7 @@ If you go to a restaurant, you will be seated by the greeter, the waiter will ta
    What specifies the behavior for objects of a class in Java?
    
 .. mchoice:: q2_2_3
+   :practice: T
    :answer_a: attributes
    :answer_b: methods
    :answer_c: class

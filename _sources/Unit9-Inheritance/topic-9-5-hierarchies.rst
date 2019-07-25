@@ -71,6 +71,7 @@ Why is using a superclass reference for subclass objects useful? Because now, we
 |Exercise| **Check your understanding**
 
 .. mchoice:: qinherRef
+   :practice: T
    :answer_a: Person p = new Person();
    :answer_b: Person p = new Student();
    :answer_c: Student s = new Student();
@@ -212,6 +213,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
 |Exercise| **Check your understanding**
 
 .. mchoice:: qoo_4
+   :practice: T
    :answer_a: V
    :answer_b: IV
    :answer_c: I and II

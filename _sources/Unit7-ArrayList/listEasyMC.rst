@@ -8,6 +8,7 @@ Easier Multiple Choice Questions
 These problems are easier than most of those that you will usually see on the AP CS A exam.
 
 .. mchoice:: qale_1
+   :practice: T
    :answer_a: nums.length
    :answer_b: nums.length - 1
    :answer_c: nums.size()
@@ -21,6 +22,7 @@ These problems are easier than most of those that you will usually see on the AP
    Which index is the last element in a list called ``nums`` at?
 
 .. mchoice:: qale_2
+   :practice: T
    :answer_a: An array has faster access to its elements than a list does.
    :answer_b: An array knows it length, but a list doesn't know its length.
    :answer_c: An ArrayList can allocate more space than it needs.
@@ -32,6 +34,7 @@ These problems are easier than most of those that you will usually see on the AP
    Which of the following is a reason to use an array instead of an ArrayList?
 
 .. mchoice:: qale_3
+   :practice: T
    :answer_a: An ArrayList can grow or shrink as needed, while an array is always the same size.
    :answer_b: You can use a for-each loop on an ArrayList, but not in an array.
    :answer_c: You can store objects in an ArrayList, but not in an array.
@@ -43,6 +46,7 @@ These problems are easier than most of those that you will usually see on the AP
    Which of the following is a reason to use an ArrayList instead of an array?
 
 .. mchoice:: qale_4
+   :practice: T
    :answer_a: nums[0]
    :answer_b: nums[1]
    :answer_c: nums.first()
@@ -59,6 +63,7 @@ These problems are easier than most of those that you will usually see on the AP
 
 
 .. mchoice:: qale_5
+   :practice: T
    :answer_a: nums[1] = 5;
    :answer_b: nums[2] = 5;
    :answer_c: nums.set(5, 1);
@@ -74,6 +79,7 @@ These problems are easier than most of those that you will usually see on the AP
    Which of the following is the correct way to set the second value in a list called ``nums`` to 5?
 
 .. mchoice:: qale_6
+   :practice: T
    :answer_a: nums.remove(3);
    :answer_b: nums.remove(0);
    :answer_c: nums.remove(1);
@@ -87,6 +93,7 @@ These problems are easier than most of those that you will usually see on the AP
    Which of the following is the correct way to remove the value 3 from the list ``nums = [5, 3, 2, 1]``?
 
 .. mchoice:: qale_7
+   :practice: T
    :answer_a: nums.add(2, 0);
    :answer_b: nums.add(2, 1);
    :answer_c: nums.add(0, 2);
@@ -102,6 +109,7 @@ These problems are easier than most of those that you will usually see on the AP
    Which of the following is the correct way to add 2 between the 1 and 3 in the following list ``nums = [1, 3, 4]``?
 
 .. .. mchoice:: qale_8
+   :practice: T
    :answer_a: It is a type of class.
    :answer_b: The methods in an interface will be public and abstract.
    :answer_c: It is like a contract in that the class that implements the interface must provide the methods defined in the interface.
@@ -115,6 +123,7 @@ These problems are easier than most of those that you will usually see on the AP
    Which of the following is *false* about an interface?
 
 .. mchoice:: qale_9
+   :practice: T
    :answer_a: [2, 3]
    :answer_b: [1, 2, 3]
    :answer_c: [1, 2]
@@ -139,6 +148,7 @@ These problems are easier than most of those that you will usually see on the AP
 You can step through the code above by clicking on the following `Ex-8-11-9 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(1)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qale_10
+   :practice: T
    :answer_a: ["Sarah", "Destini", "Layla", "Sharrie"]
    :answer_b: ["Sarah", "Destini", "Anaya", "Layla", "Sharrie"]
    :answer_c: ["Sarah", "Layla", "Sharrie"]

@@ -8,6 +8,7 @@ Medium Multiple Choice Questions
 These problems are like those you will see on the AP CS A exam.
 
 .. mchoice:: qalm_1
+   :practice: T
    :answer_a: [1, 2, 3, 4, 5]
    :answer_b: [1, 2, 4, 5, 6]
    :answer_c: [1, 2, 5, 4, 6]
@@ -35,6 +36,7 @@ You can step through the code above by clicking on this link `Example-8-12-1 <ht
 
    
 .. mchoice:: qalm_2
+   :practice: T
    :answer_a: [0, 4, 2, 5, 3]   
    :answer_b: [3, 5, 2, 4, 0, 0, 0]   
    :answer_c: [0, 0, 0, 4, 2, 5, 3]  
@@ -71,6 +73,7 @@ You can step through the code above by clicking on this link `Example-8-12-1 <ht
 You can step through the code above by clicking on this link `Example-8-12-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+ListWorker+%7B%0A+++%0A+++private+List%3CInteger%3E+nums%3B%0A+++%0A+++public+ListWorker(List%3CInteger%3E+theNums)%0A+++%7B%0A++++++nums+%3D+theNums%3B%0A+++%7D%0A%0A+++//+precondition%3A+nums.size()+%3E+0%3B%0A+++//+nums+contains+Integer+objects%0A+++public+void+numQuest()%0A+++%7B%0A+++++++int+k+%3D+0%3B%0A+++++++Integer+zero+%3D+new+Integer(0)%3B%0A+++++++while+(k+%3C+nums.size())%0A+++++++%7B%0A+++++++++System.out.println(%22List%3A+%22+%2B+nums+%2B+%22+and+k+is+%22+%2B+k)%3B%0A+++++++++if+(nums.get(k).equals(zero))%0A+++++++++++nums.remove(k)%3B%0A+++++++++else%0A+++++++++++k%2B%2B%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++List%3CInteger%3E+myList+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++myList.add(0)%3B%0A++++++myList.add(0)%3B%0A++++++myList.add(4)%3B%0A++++++myList.add(2)%3B%0A++++++myList.add(5)%3B%0A++++++myList.add(0)%3B%0A++++++myList.add(3)%3B%0A++++++ListWorker+lWorker+%3D+new+ListWorker(myList)%3B%0A++++++lWorker.numQuest()%3B%0A++++++System.out.println(myList)%3B+%0A++++++%0A+++%7D%0A+++%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qalm_3
+   :practice: T
    :answer_a: Both methods produce the same result, and process1 is faster than process2.    
    :answer_b: The two methods produce different results and take the same amount of time.  
    :answer_c: The two methods produce different results, and process1 is faster than process2. 
@@ -106,6 +109,7 @@ You can step through the code above by clicking on this link `Example-8-12-2 <ht
 You can step through the code above by clicking on the link `Example-8-12-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++%0A++++++public+static+List%3CInteger%3E+process1(int+n)%0A++++++%7B%0A+++++++++List%3CInteger%3E+someList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++++++for+(int+k+%3D+0%3B+k+%3C+n%3B+k%2B%2B)%0A+++++++++%7B%0A++++++++++++someList.add(k)%3B%0A++++++++++++System.out.println(someList)%3B%0A+++++++++%7D%0A+++++++++return+someList%3B%0A++++++%7D%0A++++++%0A++++++public+static+List%3CInteger%3E+process2(int+n)%0A++++++%7B%0A+++++++++List%3CInteger%3E+someList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++++++for+(int+k+%3D+0%3B+k+%3C+n%3B+k%2B%2B)%0A+++++++++%7B%0A++++++++++++someList.add(k,+k)%3B%0A++++++++++++System.out.println(someList)%3B%0A+++++++++%7D%0A+++++++++return+someList%3B%0A++++++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+myList+%3D+process1(5)%3B%0A++++++List%3CInteger%3E+myList2+%3D+process2(5)%3B%0A+++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
       
 .. mchoice:: qalm_4
+   :practice: T
    :answer_a: [1, 2, 5, 4, 6, 3]
    :answer_b: [6, 5, 4, 3, 2, 1]
    :answer_c: [1, 2, 3, 4, 5, 6]
@@ -134,6 +138,7 @@ You can step through the code above by clicking on the link `Example-8-12-3 <htt
 You can step through the code above by clicking on the link `Example-8-12-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CInteger%3E+aList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++aList.add(new+Integer(1))%3B+%0A+++++System.out.println(aList)%3B%0A+++++aList.add(new+Integer(2))%3B+%0A+++++System.out.println(aList)%3B%0A+++++aList.add(1,+new+Integer(5))%3B+%0A+++++System.out.println(aList)%3B%0A+++++aList.set(1,+new+Integer(4))%3B%0A+++++System.out.println(aList)%3B%0A+++++aList.add(new+Integer(6))%3B+%0A+++++System.out.println(aList)%3B%0A+++++aList.add(new+Integer(3))%3B%0A+++++System.out.println(aList)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
      
 .. mchoice:: qalm_5
+   :practice: T
    :answer_a: [1, 2, 3, 4, 5]
    :answer_b: [1, 4, 5]
    :answer_c: [1, 4, 3, 5]
@@ -162,6 +167,7 @@ You can step through the code above by clicking on the link `Example-8-12-4 <htt
 You can step through the code above by clicking on the link `Example-8-12-5 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CInteger%3E+aList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++aList.add(new+Integer(1))%3B+%0A+++++System.out.println(aList)%3B+%0A+++++aList.add(new+Integer(2))%3B+%0A+++++System.out.println(aList)%3B+%0A+++++aList.remove(1)%3B%0A+++++System.out.println(aList)%3B+%0A+++++aList.add(1,+new+Integer(3))%3B+%0A+++++System.out.println(aList)%3B+%0A+++++aList.set(1,+new+Integer(4))%3B%0A+++++System.out.println(aList)%3B+%0A+++++aList.add(new+Integer(5))%3B+%0A+++++System.out.println(aList)%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qalm_6
+   :practice: T
    :answer_a: [c, d, e, b]
    :answer_b: [c, d, e, b, f]
    :answer_c: [c, a, e, b, f]
@@ -192,6 +198,7 @@ You can step through the code above by clicking on the link `Example-8-12-5 <htt
 You can step through the code above by clicking on the link `Example-8-12-6 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A+++++list1.add(%22a%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22b%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(0,%22c%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(1,+%22d%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.set(2,+%22e%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22f%22)%3B%0A+++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qalm_7
+   :practice: T
    :answer_a: [2, 3, 4, 5]
    :answer_b: [2, 3, 5]
    :answer_c: [4, 2, 3, 5]
@@ -207,6 +214,7 @@ You can step through the code above by clicking on the link `Example-8-12-6 <htt
 You can step through the code above by clicking on the following `Example-8-12-7 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(4)%3B%0A++++++list1.add(2)%3B%0A++++++list1.add(3)%3B%0A++++++list1.add(4)%3B%0A++++++list1.add(5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(4)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
    
 .. mchoice:: qalm_8
+   :practice: T
    :answer_a: [e, d, b]
    :answer_b: [e, d, b, b]
    :answer_c: [e, d, a, b, b]
@@ -235,6 +243,7 @@ You can step through the code above by clicking on the following `Example-8-12-7
 You can step through the code above by clicking on the following `Example-8-12-8 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A+++++list1.add(%22a%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22b%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(0,%22c%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.set(1,+%22d%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.set(0,+%22e%22)%3B%0A+++++System.out.println(list1)%3B%0A+++++list1.add(%22b%22)%3B%0A+++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=15>`_.
 
 .. mchoice:: qalm_9
+   :practice: T
    :answer_a: [4, 3, 2, 1, 0]
    :answer_b: [1, 2, 3, 4, 0]
    :answer_c: [0, 1, 2, 3, 4]
@@ -264,6 +273,7 @@ You can step through the code above by clicking on the following `Example-8-12-8
 You can step through the code above by clicking on the following `Example-8-12-9 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A+++%0Apublic+class+ListTester%0A%7B%0A+++%0A++++private+List%3CInteger%3E+numList+%3D+null%3B%0A+++%0A++++public+ListTester(List%3CInteger%3E+myList)%0A++++%7B%0A+++++++numList+%3D+myList%3B%0A++++%7D%0A+++%0A++++public+void+mystery(int+n)%0A++++%7B%0A++++++++for+(int+i+%3D+0%3B+i+%3C+n%3B+i%2B%2B)%0A++++++++%7B%0A++++++++++++Integer+obj+%3D+numList.remove(0)%3B%0A++++++++++++numList.add(obj)%3B%0A++++++++%7D%0A++++%7D%0A++++++%0A++++public+static+void+main(String%5B%5D+args)+%0A++++%7B%0A+++++++List%3CInteger%3E+aList+%3D+new+ArrayList%3CInteger%3E()%3B%0A+++++++aList.add(0)%3B%0A+++++++aList.add(1)%3B%0A+++++++aList.add(2)%3B%0A+++++++aList.add(3)%3B%0A+++++++aList.add(4)%3B%0A+++++++ListTester+tester+%3D+new+ListTester(aList)%3B%0A+++++++System.out.println(tester.numList)%3B%0A+++++++tester.mystery(5)%3B%0A+++++++System.out.println(tester.numList)%3B%0A+++%0A++++%7D%0A%7D&mode=display&curInstr=0>`_.
 	 
 .. mchoice:: qalm_10
+   :practice: T
    :answer_a: [5, 7, 8, 12]
    :answer_b: [5, 7, 8, 11, 12]
    :answer_c: [11, 5, 7, 8, 12]
