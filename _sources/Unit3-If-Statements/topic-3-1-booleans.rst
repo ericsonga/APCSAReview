@@ -165,11 +165,13 @@ Try the expressions containing the % operator below to see how they can be used 
    
 The **modulus** operator has been used quite a bit on the AP CS A exam, so you should be familiar with it.
     
-    -  Use it to check for odd or even numbers (``num % 2 == 1 is odd and num % 2 == 0 is even``).  Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``)
+    -  Use it to check for odd or even numbers ``(num % 2 == 1) is odd`` and ``(num % 2 == 0) is even``.  Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``)
 
     -  Use it to get the last digit from an integer number (``num % 10 = last digit on right``).  
     
-    -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  Also whenever you have limited storage and you need to wrap around to the front if the value goes over the limit. 
+    -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  
+    
+    - Use it whenever you have limited storage and you need to wrap around to the front if the value goes over the limit (``num % limit``).
     
     
 .. (This was used for the free response question 3 in 2009 at http://coweb.cc.gatech.edu/ice-gt/1278 ).
@@ -218,12 +220,13 @@ The following program checks if 5 is a prime number by seeing if it is divisible
       public static void main(String[] args)
       {
         int number = 5;
-        System.out.println("Is " + number + " divisible by 1 to " + number + "?");
-        System.out.println(number % 1 == 0);
-        System.out.println(number % 2 == 0);
-        System.out.println(number % 3 == 0);
-        System.out.println(number % 4 == 0);
-        System.out.println(number % 5 == 0);
+        System.out.println("A prime number is only divisible by 1 and itself.");
+        System.out.println("Is " + number + " divisible by 1 up to " + number + "?");
+        System.out.println("Divisible by 1? " + (number % 1 == 0));
+        System.out.println("Divisible by 2? " + (number % 2 == 0));
+        System.out.println("Divisible by 3? " + (number % 3 == 0));
+        System.out.println("Divisible by 4? " + (number % 4 == 0));
+        System.out.println("Divisible by 5? " + (number % 5 == 0));
       }
    }  
  

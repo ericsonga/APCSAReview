@@ -35,12 +35,13 @@
 Pretest for the AP CS A Exam
 ------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  The AP CS A exam is timed and you have 90 minutes to answer 40 questions, which is 2.25 minutes a question.  We are giving you 60 minutes to take this 20 question pretest.  We don't expect you to know these concepts yet, but want to see what you do know before starting the course and how much you learn throughout the course. You will do the same exam at the end to see how much you learned. We hope everyone will see a big improvement!  
+Please try the following pretest. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. If you have no idea on the answer, it is okay to skip questions or to make your best guess.
 
-Please make sure you are logged into Runestone before beginning. Click the |start| button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
+You will take the same test at the end of the class, and the goal is to see how much you improve. We hope that everyone will see a big improvement!  
+
+Please make sure you are logged into Runestone before beginning. Click the |start| button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 .. timed:: pretest1
-    :timelimit: 60
     :nofeedback:
 
     .. mchoice:: qpret_1
@@ -344,13 +345,13 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :answer_a: The values don't matter this will always cause an infinite loop.
         :answer_b: Whenever a has values larger then temp.
         :answer_c: When all values in a are larger than temp.
-        :answer_d: Whenever a includes a value that is less than or equal to zero.
+        :answer_d: Whenever a includes a value that is equal to zero.
         :answer_e: Whenever a includes a value equal to temp.
         :correct: d
         :feedback_a: An infinite loop will not always occur in this program segment. It occurs when at least one value in a is less than or equal to 0.
         :feedback_b: Values larger then temp will not cause an infinite loop.
         :feedback_c: Values larger then temp will not cause an infinite loop.
-        :feedback_d: When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
+        :feedback_d: When a contains a value that is equal to zero then multiplying that value by 2 will always be 0 and will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
         :feedback_e: Values equal to temp will not cause the infinite loop.
        
         Which of the following will cause an infinite loop when ``temp`` is greater than zero and ``a`` is an array of integers.  

@@ -6,7 +6,6 @@
 Getting Started and Primitive Types
 :::::::::::::::::::::::::::::::::::::::::::
 
-Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. To make sure the site saves your answers on questions, please click on the person icon at the top to register or login. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the course!
 
 
 Unit 1 Class Periods: 8-10

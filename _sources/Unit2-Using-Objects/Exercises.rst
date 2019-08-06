@@ -11,7 +11,7 @@ These questions are all about Strings, but more questions on using other objects
    :linenothreshold: 3
 
 Easier Multiple Choice Questions
-------------------------------
+---------------------------------
 
 These problems are mostly easier than what you will see on the AP CS A exam.
 

@@ -13,7 +13,9 @@ Java Development Environments
     
 The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs. 
 
-You can learn Java by just using the interactive coding panels called **Active Code** in this e-book. However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
+You can learn Java by just using the interactive coding panels called **Active Code** in this e-book. If you are logged in, the Active Code will remember your changes and even show you a history of your changes to the code if you click on Load History.  
+
+However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
 
 repl.it
 -------

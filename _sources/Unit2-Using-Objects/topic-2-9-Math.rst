@@ -151,8 +151,25 @@ Here are some examples that move a random number into a specific range.
    :feedback_c: Do not use == with double values!  Remember that Math.random can return any number between 0 and not quite 1 (about .99999999).  
 
    Which of the following would be true about 75% of the time?
-   
 
+|Exercise| **AP CSA Sample Problem**
+
+.. mchoice:: apcsa_sample3
+   :practice: T
+   :answer_a: int rn = (int) (Math.random() * 25) + 36;
+   :answer_b: int rn = (int) (Math.random() * 25) + 60;
+   :answer_c: int rn = (int) (Math.random() * 26) + 60;
+   :answer_d: int rn = (int) (Math.random() * 36) + 25;
+   :answer_e: int rn = (int) (Math.random() * 60) + 25;
+   :correct: d
+   :feedback_a: Remember that (int)(Math.random()*range) + min moves the random number into a range starting from a minimum number. We want the minimum number to be 25, but the minimum number here would be 36. 
+   :feedback_b: Remember that (int)(Math.random()*range) + min moves the random number into a range starting from a minimum number. We want the minimum number to be 25, but the minimum number here would be 60. 
+   :feedback_c: Remember that (int)(Math.random()*range) + min moves the random number into a range starting from a minimum number. Here the min is 25. We want the minimum number to be 25, but the minimum number here would be 60. 
+   :feedback_d: Yes, (int)(Math.random()*36) + 25 moves the random number into a range of 36 numbers starting from a minimum number 25 up to 60. The range is (max number - min number + 1) which is (60-25 +1) = 36.
+   :feedback_e: This would give us random numbers from 25 to 85. Remember that you can compute the range you need with (max number - min number + 1).
+
+   Which of the following statements assigns a random integer between 25 and 60, inclusive, to rn?
+ 
    
 Other Math functions that you can use are:
 

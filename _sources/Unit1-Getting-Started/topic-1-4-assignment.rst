@@ -188,11 +188,11 @@ Run the code below to see all the operators in action. Do all of those operators
    
 With division, another thing to watch out for is dividing by 0. An attempt to divide an  integer by zero will result in an **ArithmeticException** to occur. Try it in one of the active code windows above.
 
-Operators can be used to create compound expressions. When they are evaluated, operator precedence rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
+Operators can be used to create compound expressions. When they are evaluated, **operator precedence** rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
 
 |CodingEx| **Coding Exercise:** 
 
-In the example below, try to guess what it will print out and then run it to see if you are right.
+In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**.
 
 .. activecode:: compound1
    :language: java
@@ -206,6 +206,35 @@ In the example below, try to guess what it will print out and then run it to see
         System.out.println(2 + (3 * 2));
       }
    }
+   
+|Exercise| **AP CSA Sample Question**
+
+The following is a 2019 AP CSA sample question.
+
+.. mchoice:: apcsa_sample1
+   :practice: T
+   :answer_a: 0.666666666666667
+   :answer_b: 9.0
+   :answer_c: 10.0
+   :answer_d: 11.5
+   :answer_e: 14.0
+   :correct: c
+   :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence. 
+   :feedback_b: Don't forget that division and multiplication will be done first due to operator precedence.
+   :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).   
+   :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int result where it is rounded down to the nearest int.
+   :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
+   
+   Consider the following code segment.
+   
+   .. code-block:: java 
+   
+       int a = 5;
+       int b = 2;
+       double c = 3.0;
+       System.out.println(5 + a / b * c - 1);
+   
+   What is printed when the code segment is executed?
    
    
 Modulus
@@ -272,7 +301,7 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
 
    What is the result of 3 % 8?
 	
-    
+
 
 
    
@@ -344,7 +373,7 @@ Summary
 
 - Operators can be used to construct compound expressions.
 
-- During evaluation, operands are associated with operators according to operator precedence to determine how they are grouped. (\*, /, % have precedence over + and -, unless parentheses are used to group those.)
+- During evaluation, operands are associated with operators according to **operator precedence** to determine how they are grouped. (\*, /, % have precedence over + and -, unless parentheses are used to group those.)
 
 - An attempt to divide an integer by zero will result in an ArithmeticException to occur. 
 

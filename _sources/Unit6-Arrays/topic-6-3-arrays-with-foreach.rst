@@ -28,7 +28,17 @@ Enhanced For-Loop (For-Each) for Arrays
 	single: for-each
 	pair: loop; for-each
    
-There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively. To set up a for-each loop, use ``for (type variable : arrayname)`` where the type is the type for elements in the array, and read it as "for each variable value in arrayname". See the example below.
+There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively. To set up a for-each loop, use **for (type variable : arrayname)** where the type is the type for elements in the array, and read it as "for each variable value in arrayname". You may have used a similar loop in AP CSP Pseudocode or App Inventor with lists like below.
+
+
+.. figure:: Figures/appinvForEachComparison.png
+    :width: 100%
+    :align: center
+    :figclass: align-center
+    
+    Figure 2: Comparing App Inventor, AP CSP, and Java for each
+    
+See the examples below in Java that loop through an int and a String array. Notice the type of the loop variable is the type of the array.
 
 .. code-block:: java 
  
@@ -101,7 +111,7 @@ Rewrite the following for loop which prints out the even numbers in the array as
 
    <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
    
-What if we had a loop that incremented all the elements in the array. Would that work with a enhanced for-each loop? Unfortunately not! Because only the new variable changes, not the real array values. We would need an indexed loop for this to work. Try it in the |visualizer| and click on Forward to see why it doesn't work. 
+What if we had a loop that incremented all the elements in the array. Would that work with ans enhanced for-each loop? Unfortunately not! Because only the new variable changes, not the real array values. We would need an indexed loop for this to work. Try it in the |visualizer| and click on Forward to see why it doesn't work. 
 
 .. raw:: html
 

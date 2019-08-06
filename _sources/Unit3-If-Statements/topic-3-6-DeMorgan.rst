@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
     
+.. raw:: html
+
+    <style>    td { text-align: left; } </style>
+    
 Equivalent Boolean Expressions (DeMorgan's Laws)
 ================================================
 
@@ -227,6 +231,28 @@ Explore the following problems with your group:
    .. code-block:: java 
 
      !(x<= 5 && y > 7)
+
+
+**AP CSA Sample Question**
+
+.. mchoice:: apcsa-sample5
+   :practice: T
+   :answer_a: The value is always true.
+   :answer_b: The value is always false.
+   :answer_c: The value is true when a has the value false, and is false otherwise.
+   :answer_d: The value is true when b has the value false, and is false otherwise.
+   :answer_e: The value is true when either a or b has the value true, and is false otherwise.
+   :correct: b
+   :feedback_a: Try simplifying !(b ||a) or consider what happens if a and b are true.
+   :feedback_b: Yes, a && !(b || a) = a && !b && !a. Since (a && !a) can never be true, the result will always be false.
+   :feedback_c: Try the expression with a = false. Is the result true? 
+   :feedback_d: Try the expression with b = false with a = true and then try it with a = false. Is the result ever true?
+   :feedback_e: Try the expression with a = true. Is the result true?
+
+    Which of the following best describes the value of the Boolean expression: a && !(b || a)
+
+
+   
      
 Summary
 --------

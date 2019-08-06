@@ -294,7 +294,7 @@ Work in pairs to do the following tracing problems.
 
 .. shortanswer:: challenge-10-2-binary-search
 
-    Trace through recursiveBinarySearch(sortedArray, 22, 0, 8) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?
+    Trace through recursiveBinarySearch(sortedArray, 22, 0, 8) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?
 
 Summary
 ============

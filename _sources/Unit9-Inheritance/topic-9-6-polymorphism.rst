@@ -53,7 +53,7 @@ If you were simulating this toy in software you could create an Animal class tha
 
    In Java an object variable has both a **declared (compile-time) type** and an **actual (run-time) type**.  The *declared (compile-time) type*  of a variable is the type that is used in the declaration.  The *actual (run-time) type* is the class that actually creates the object using new.  
    
-The variable ``nameList`` declared below has a **declared type** of ``List`` and an **actual** or **run-time type** of ``ArrayList``.  The complier will check if the declared type has the methods or inherits the methods being used in the code and give an error if it doesn't find the method(s).  The List interface does have a ``add`` method so this code will compile.  At run-time the execution environment will first look for the ``add`` method in the ``ArrayList`` class since that is the actual or run-time type. If it doesn't find it there it will look in the parent class and keep looking up the inheritance tree until it finds the method. It may go up all the way to the Object class.  The method will be found, since otherwise the code would not have compiled.
+The variable ``nameList`` declared below has a **declared type** of ``List`` and an **actual** or **run-time type** of ``ArrayList``.  The complier will check if the declared type has the methods or inherits the methods being used in the code and give an error if it doesn't find the method(s).  The List interface does have an ``add`` method so this code will compile.  At run-time the execution environment will first look for the ``add`` method in the ``ArrayList`` class since that is the actual or run-time type. If it doesn't find it there it will look in the parent class and keep looking up the inheritance tree until it finds the method. It may go up all the way to the Object class.  The method will be found, since otherwise the code would not have compiled.
 
 .. code-block:: java 
 
@@ -79,7 +79,7 @@ In the last lesson on inheritance hierarchies, we were actually seeing polymorph
 2. Polymorphic parameters such as ``print(Shape)`` being called with different subclass types.
 3. Polymorphic array and ArrayList types such as ``Shape[] shapeArray = { new Rectangle(), new Square() };``
 
-In all of these cases, there are no errors at compile-time because the compiler checks that the "subclass is-a superclass" relationship is true. But at run-time, the Java interpreter will use the object's actual subclass type and call the subclass methods for any overriden methods. This is why they are polymorphic -- the same code can have different results depending on the object's actual type at runtime.
+In all of these cases, there are no errors at compile-time because the compiler checks that the "subclass is-a superclass" relationship is true. But at run-time, the Java interpreter will use the object's actual subclass type and call the subclass methods for any overriden methods. This is why they are polymorphic -- the same code can have different results depending on the object's actual type at run-time.
 
 |Exercise| **Check your understanding**
 

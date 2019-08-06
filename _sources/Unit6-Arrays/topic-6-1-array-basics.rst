@@ -55,6 +55,13 @@ An array is like a row of small lockers, except that you can't cram lots of stuf
 
 You can store a value in an array using an **index** (location in the array). An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.    You can get or store a value from or to an array using an index. Arrays and lists in most programming languages start counting elements from the number 0, so the first element in an array is at index 0. If you used App Inventor in the past, you might remember that list elements there start at 1 instead of 0, so make sure you remember that in Java, arrays start the index at 0!
 
+.. figure:: Figures/appinvListComparison.png
+    :width: 100%
+    :align: center
+    :figclass: align-center
+    
+    Figure 2: Comparing App Inventor lists and Java arrays
+    
 .. shortanswer:: arrayAnalogy
 
    Can you think of another example of something that is like an array (like a row of lockers)?
@@ -140,7 +147,7 @@ In the following code, add another array declaration that creates an array of 5 
     :align: center
     :figclass: align-center
 
-    Figure 2: Two 5 element arrays with their values set to the default values for integer and object arrays.
+    Figure 3: Two 5 element arrays with their values set to the default values for integer and object arrays.
 
 Initializer Lists
 ============================
@@ -162,7 +169,7 @@ When you create an array of a **primitive type** (like ``int``) with initial val
     :align: center
     :figclass: align-center
 
-    Figure 3: A primitive array and an object array
+    Figure 4: A primitive array and an object array
 
 ..	index::
     single: dot-notation
@@ -212,7 +219,17 @@ Try running the code below to see the length. Try adding another value to the hi
 Accessing Values in an Array 
 =============================
 
-To access the items in your array, we use an **indexed array variable** which is the array name and the index inside of square bracket [ ]. Remember that an **index** is a number that indicates the position of an item in a list, starting at 0. An indexed variable like **arrayname[index]** can be used anywhere a regular variable can be used, for example to assign a new value or to get a value from the array like below.
+To access the items in your array, we use an **indexed array variable** which is the array name and the index inside of square bracket [ ]. Remember that an **index** is a number that indicates the position of an item in a list, starting at 0. Here's a comparison of App Inventor, AP CSP Pseudocode, and Java array access.
+
+
+.. figure:: Figures/appinvSelectComparison.png
+    :width: 100%
+    :align: center
+    :figclass: align-center
+    
+    Figure 5: Comparing Access to App Inventor lists and Java arrays
+
+An indexed variable like **arrayname[index]** can be used anywhere a regular variable can be used, for example to assign a new value or to get a value from the array like below.
 
 
 .. code-block:: java 

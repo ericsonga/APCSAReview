@@ -28,14 +28,13 @@
     :alt: finish exam
    
 Post Test
-:::::::::::
+-------------
 
-The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.  
+The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability, and complete the few survey questions at the bottom too. Please make sure you are logged in on Runestone so that your answers are saved. 
 
-Click the |start| button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
+Click the |start| button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take. Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 .. timed:: postexam2
-    :timelimit: 60
     
     .. mchoice:: pe2_1-14
        :answer_a: The value you are searching for is the first element in the array.
@@ -90,14 +89,14 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :answer_a: The values don't matter this will always cause an infinite loop.
        :answer_b: Whenever a has values larger then temp.
        :answer_c: When all values in a are larger than temp.
-       :answer_d: Whenever a includes a value that is less than or equal to zero.
-       :answer_e: Whenever a includes a value equal to temp.
-       :correct: d
+       :answer_d: Whenever a includes a value equal to temp.
+       :answer_e: Whenever a includes a value that is equal to zero.
+       :correct: e
        :feedback_a: An infinite loop will not always occur in this program segment. It occurs when at least one value in a is less than or equal to 0.
        :feedback_b: Values larger then temp will not cause an infinite loop.
        :feedback_c: Values larger then temp will not cause an infinite loop.
-       :feedback_d: When a contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
-       :feedback_e: Values equal to temp will not cause the infinite loop.
+       :feedback_d: Values equal to temp will not cause the infinite loop.
+       :feedback_e: When a contains a value equal to zero then multiplying that value by 2 will always be 0 and never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
 
        Which of the following will cause an infinite loop when ``temp`` is greater than zero and ``a`` is an array of integers.  
    

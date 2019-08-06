@@ -23,6 +23,10 @@
     :align: middle
     :alt: groupwork
     
+.. raw:: html
+
+    <style>    td { text-align: left; } </style>
+    
 Compound Boolean Expressions
 ============================
 
@@ -134,13 +138,13 @@ The following table (also called a **truth table**) shows the result for P && Q 
 +-------+-------+-----------+
 | P     | Q     | P && Q    |
 +=======+=======+===========+
-| true  | true  | true      |
+|true   |true   |true       |
 +-------+-------+-----------+
-| false | true  | false     |
+|false  |true   |false      |
 +-------+-------+-----------+
-| true  | false | ?         |
+|true   |false  |?          |
 +-------+-------+-----------+
-| false | false | false     |
+|false  |false  |false      |
 +-------+-------+-----------+
 
 |Exercise| **Check your understanding**
@@ -157,13 +161,13 @@ The following table shows the result for P || Q when P and Q are both expression
 +-------+-------+-----------+
 | P     | Q     | P || Q    |
 +=======+=======+===========+
-| true  | true  | true      |
+|true   |true   |true       |
 +-------+-------+-----------+
-| false | true  | ?         |
+|false  |true   |?          |
 +-------+-------+-----------+
-| true  | false | true      |
+|true   |false  |true       |
 +-------+-------+-----------+
-| false | false | false     |
+|false  |false  |false      |
 +-------+-------+-----------+
 
 |Exercise| **Check your understanding**
@@ -331,11 +335,13 @@ We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inqui
 
 Explore the following problems with your group:
 
-1. Write the sentence "If it's sunny, OR if the temperature is greater than 80 and it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!". So, you will go to beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it's not raining.
+1. On a piece of paper, draw a Venn diagram of 4 intersecting circles and put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using ==, <, >, and &&, for example Ada's age > Alan's age && Alan's age == Grace's age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using ==, !=, and &&, for example Ada's movie == Alan's movie && Alan's movie != Grace's movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).
 
-2. Complete a truth table for the if statement that you wrote in #1 with columns for temperature > 80, sunny, raining, and go to the beach.
+2. Write the sentence "If it's sunny, OR if the temperature is greater than 80 and it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!". So, you will go to beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it's not raining.
 
-3. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly.
+3. Complete a truth table for the if statement that you wrote in #1 with columns for temperature > 80, sunny, raining, and go to the beach.
+
+4. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly.
 
 .. activecode:: challenge3-5-truthtables
    :language: java

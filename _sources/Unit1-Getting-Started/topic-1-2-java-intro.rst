@@ -18,8 +18,8 @@
     :alt: groupwork
     
     
-What is Java?
-===============
+Why Programming? Why Java?
+============================
 
 ..	index::
 	single: Java
