@@ -13,12 +13,13 @@
 
 import sys, os
 
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
-
 from runestone import runestone_static_dirs, runestone_extensions
+import pkg_resources
 
 # -- General configuration -----------------------------------------------------
 
@@ -32,7 +33,7 @@ extensions = ['sphinx.ext.mathjax'] + runestone_extensions()
 #,'runestone.video','runestone.reveal','runestone.poll','runestone.tabbedStuff','runestone.disqus','runestone.codelens','runestone.activecode', 'runestone.assess', 'runestone.animation','runestone.meta', 'runestone.parsons', 'runestone.blockly', 'runestone.livecode']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['./_templates']
+templates_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates')]
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -44,7 +45,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'AP CSA Java Review'
+project = 'AP CSA Original'
 copyright = '2015 barb'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -52,7 +53,7 @@ copyright = '2015 barb'
 # built documents.
 #
 # The short X.Y version.
-version = '2018'
+version = '2019'
 # The full version, including alpha/beta/rc tags.
 release = '1.0'
 
@@ -112,7 +113,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "AP CSA - Java Review",
+    'navbar_title': "AP CSA - Original",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Chapters",
@@ -154,11 +155,11 @@ html_theme_options = {
 #html_style = "style.css"
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["_templates/plugin_layouts"]
+html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates/plugin_layouts')]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'AP CSA Java Review'
+html_title = 'AP CSA Original'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title ='Runestone Interactive Overview'
@@ -178,7 +179,8 @@ html_short_title ='Runestone Interactive Overview'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 
-html_static_path = ['_static']  + runestone_static_dirs()
+#html_static_path = ['_static']  + runestone_static_dirs()
+html_static_path = runestone_static_dirs()
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.

@@ -73,6 +73,8 @@ How to Solve This
 The Algorithm
 -------------------
 .. parsonsprob:: CookieOrderA
+ :numbered: left
+ :adaptive:
 
  The method getTotalBoxes below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
  -----

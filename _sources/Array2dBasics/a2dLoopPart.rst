@@ -29,7 +29,7 @@ You can loop through just part of a 2D array.  For example, you might want to su
       
       public static void main(String[] args)
       {
-         int[][] matrix = {{1,2,3},{4,5,6}};
+         int[][] matrix = { {1,2,3},{4,5,6} };
          System.out.println(getTotalForRow(0,matrix));
       }
    }
@@ -60,7 +60,7 @@ You can change the starting value and ending value to loop through a subset of a
       
       public static void main(String[] args)
       {
-         int[][] matrix = {{3,2,3},{4,3,6},{8,9,3},{10,3,3}};
+         int[][] matrix = { {3,2,3},{4,3,6},{8,9,3},{10,3,3} };
          System.out.println(countValues(3,matrix,0,2,0,2));
       }  
    }

@@ -3098,6 +3098,7 @@ Try some of the methods above. To change the pen color, try something like: yert
     Figure 3: Turtle drawing A
 
 .. parsonsprob:: DrawABH
+   :numbered: left
    :adaptive:
    :noindent:
 

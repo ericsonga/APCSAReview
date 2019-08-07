@@ -144,6 +144,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
 **Mixed up programs**
 
 .. parsonsprob:: pab_3
+   :numbered: left
    :adaptive:
 
    The following program has the correct code to reverse the elements in an array, a,  but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.</p>
@@ -170,6 +171,7 @@ You can even start in the middle and loop through the rest of the array.  Does t
    } // end method
    
 .. parsonsprob:: pab_4
+   :numbered: left
    :adaptive:
 
    The following program has the correct code to return the average of the first 3 items in the array a, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.</p>

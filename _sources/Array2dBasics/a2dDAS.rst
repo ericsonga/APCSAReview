@@ -111,8 +111,8 @@ You can also initialize (set) the values for the array when you create it.  In t
 
 .. code-block:: java 
 
-  int[][] ticketInfo = {{25,20,25}, {25,20,25}};
-  String[][] seatingInfo = {{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
+  int[][] ticketInfo = { {25,20,25}, {25,20,25} };
+  String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
   
 .. fillintheblank:: 2daGetElfill
 
@@ -133,8 +133,8 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 .. code-block:: java 
 
-  int[][] ticketInfo = {{25,20,25}, {25,20,25}};
-  String[][] seatingInfo = {{"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"}};
+  int[][] ticketInfo = { {25,20,25}, {25,20,25} };
+  String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
   int value = ticketInfo[1][0];
   String name = seatingInfo[0][1]; 
   

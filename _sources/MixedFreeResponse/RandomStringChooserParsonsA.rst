@@ -35,6 +35,7 @@ Mixed Up Code Practice
 --------------------------
 
 .. parsonsprob:: ch17RandStrA1
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -90,6 +91,7 @@ The mixed up code below uses a different algorithm to solve the same problem.
 More Mixed Up Code Practice
 ------------------------------
 .. parsonsprob:: ch17RandStrA2
+   :numbered: left
    :adaptive:
    :noindent:
 
