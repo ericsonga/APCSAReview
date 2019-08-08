@@ -78,6 +78,7 @@ Try to change the code above to print your name.  Be sure to keep the starting `
 **Mixed up programs**
 
 .. parsonsprob:: thirdClass
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -96,6 +97,7 @@ Try to change the code above to print your name.  Be sure to keep the starting `
    }
    
 .. parsonsprob:: fourthClass
+   :numbered: left
    :adaptive:
    :noindent:
 

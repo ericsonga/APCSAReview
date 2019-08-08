@@ -14,6 +14,6 @@ Loops
    lMedMC.rst
    lHardMC.rst
    freeResponse.rst
-   LoopSummary.rst
+   Exercises.rst
    LoopPractice.rst
    LoopParsonsPractice.rst

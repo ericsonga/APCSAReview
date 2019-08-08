@@ -1,13 +1,14 @@
 .. qnum::
-   :prefix: 4-13-
+   :prefix: 4-12-
    :start: 1
-   
+
 Mixed Up Code Practice
 ------------------------------
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
-                
+
 .. parsonsprob:: ch4ex1muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -21,9 +22,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    System.out.println(lastName);
    =====
    System.out.printlln(firstname); #distractor
-           
-      
+
+
 .. parsonsprob:: ch4ex2muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -37,8 +39,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    System.out.println("And so are you");
 
-   
+
 .. parsonsprob:: ch4ex3muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -46,10 +49,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    public class Test1
    {
-   =====                        
+   =====
        public static void main(String[] args)
        {
-   =====  
+   =====
            String name = "Marcus";
            String color = "Blue";
    =====
@@ -58,14 +61,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.out.println(color);
    =====
        } // end main method
-              
+
    =====
    } // end of class
    =====
            System.out.println(Name); #distractor
-           
-  
+
+
 .. parsonsprob:: ch4ex4muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -76,7 +80,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        public static void main(String[] args)
        {
-   =====    
+   =====
            String message = "I hope this works";
    =====
            String part1 = message.substring(0,2);
@@ -85,13 +89,14 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.out.println(part1 + part2);
    =====
        } // end main method
-   =====          
+   =====
    } // end class
    =====
            System.out.println(part1 * part2); #distractor
 
-   
+
 .. parsonsprob:: ch4ex5muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -115,9 +120,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } // end class
    =====
            System.out.println("Your age is " age); #distractor
-       
-       
+
+
 .. parsonsprob:: ch4ex6muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -142,8 +148,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
    =====
            System.println("Your name is " + name); #distractor
-           
+
 .. parsonsprob:: ch4ex7muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -161,8 +168,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            String last= "Jones";
 
    =====
-           String initials = first.substring(0,1) + 
-                             middle.substring(0,1) + 
+           String initials = first.substring(0,1) +
+                             middle.substring(0,1) +
                              last.substring(0,1);
    =====
            String lowerInitials = initials.toLowerCase();
@@ -174,8 +181,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
    =====
            System.out.println(initials); #distractor
-       
+
 .. parsonsprob:: ch4ex8muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -199,8 +207,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
    =====
           System.print(upperMessage); #distractor
-          
+
 .. parsonsprob:: ch4ex9muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -226,8 +235,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
    =====
            String part = message.substring(0,4); #distractor
-          
+
 .. parsonsprob:: ch4ex10muc
+   :numbered: left
    :adaptive:
    :noindent:
 
@@ -251,7 +261,3 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
    =====
            int pos = message.indexof("nice"); #distractor
-   
-
-
-   

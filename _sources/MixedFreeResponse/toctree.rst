@@ -8,5 +8,4 @@ Mixed Up Code - Free Response Practice
    RandomStringChooserA2.rst
    RandomStringChooserParsonsB.rst
    RandomStringChooserB2.rst
-  
-   
+   Exercises.rst

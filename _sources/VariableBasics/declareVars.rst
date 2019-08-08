@@ -206,6 +206,7 @@ This is an example of *assignment dyslexia*, when the student has put the value 
 **Mixed up Code Problems**
    
 .. parsonsprob:: declareVars1
+   :numbered: left
    :adaptive:
    :noindent:
 

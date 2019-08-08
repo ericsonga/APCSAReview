@@ -58,6 +58,7 @@ You can set one variable's value to a *copy* of the value of another variable.  
 **Mixed up programs**
 
 .. parsonsprob:: 2_swap
+   :numbered: left
    :adaptive:
    :noindent:
 

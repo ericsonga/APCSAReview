@@ -9,3 +9,4 @@ Timed Multiple-Choice Exams
    test2.rst
    test3.rst
    test4.rst
+   Exercises.rst

@@ -14,7 +14,6 @@ Two-dimensional Arrays
    a2dMedMC.rst
    a2dHardMC.rst
    freeResponse.rst
-   a2dSummary.rst
+   Exercises.rst
    Array2dCodePractice.rst
    Array2dParsonsPractice.rst
-   

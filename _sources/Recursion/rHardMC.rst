@@ -19,18 +19,18 @@ These problems are about the same or harder than those that you will typically s
    :feedback_d: It is not neccessary for the adjacent characters to be at the end of the string.
 
    Given the following method declaration, this method will return true if and only if:
-   
-   .. code-block:: java 
+
+   .. code-block:: java
 
       public static boolean check(String s)
       {
-         return s.length() >= 2 && 
-                (s.charAt(0) == s.charAt(1) || 
+         return s.length() >= 2 &&
+                (s.charAt(0) == s.charAt(1) ||
                  check(s.substring(1)));
       }
-      
+
 You can step through the code above by clicking on the following link `Ex-11-8-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+check(String+s)%0A+++%7B%0A++++++return+s.length()+%3E%3D+2+%26%26%0A++++++++++(s.charAt(0)+%3D%3D+s.charAt(1)+%7C%7C%0A+++++++++++check(s.substring(1)))%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(check(%22xyyz%22))%3B%0A++++++System.out.println(check(%22xyxyz%22))%3B%0A++++++System.out.println(check(%22zyxzyy%22))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
+
 .. mchoice:: qrh_2
    :answer_a: 5
    :answer_b: 4
@@ -45,15 +45,15 @@ You can step through the code above by clicking on the following link `Ex-11-8-1
    :feedback_e: Infinite recursion would happen if the method never reached its base case where <code>i</code> is equal to 0. This would be true if the division could result in a constantly shrinking fraction, but integer division truncates the fractional portion of the division.
 
    Given the following method declaration, what will ``redo(82, 3)`` return?
-   
-   .. code-block:: java 
+
+   .. code-block:: java
 
       public static int redo(int i, int j)
       {
          if (i==0)
             return 0;
-         else 
+         else
             return redo(i/j, j)+1;
       }
-      
+
 You can step through the code above by clicking on the following link `Ex-11-8-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+redo(int+i,+int+j)%0A+++%7B%0A++++++if+(i%3D%3D0)%0A+++++++++return+0%3B%0A++++++else+%0A+++++++++return+redo(i/j,+j)%2B1%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(redo(82,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.

@@ -1,10 +1,10 @@
 .. qnum::
    :prefix:  17-1-
    :start: 1
-   
-RandomStringChooser - Part A
+
+RandomStringChooser - Part A (Revisited)
 ==================================================
-   
+
 **Question 1.** This question involves the implementation and extension of a ``RandomStringChooser`` class.
 
 **Part a.**   A ``RandomStringChooser`` object is constructed from an array of non-null ``String`` values.  When the object is first constructed,
@@ -35,12 +35,13 @@ Mixed Up Code Practice
 --------------------------
 
 .. parsonsprob:: ch17RandStrA1
+   :numbered: left
    :adaptive:
    :noindent:
 
-   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In <code>getNext</code> the code below will check if the list length is greater than zero and if it is it will pick a position at random in the list and remove the item from that position and return it.  Otherwise the list is empty so it returns "NONE".  The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In the <code>getNext</code> method, if the list length is greater than zero, it will pick a position at random in the list and remove the item from that position and return it.  Otherwise, if the list is empty, it returns "NONE".  The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
-   public class RandomStringChooser 
+   public class RandomStringChooser
    {
    =====
        /* fields */
@@ -50,8 +51,8 @@ Mixed Up Code Practice
        public List<String> words; #paired
    =====
        /* constructor */
-       public RandomStringChooser(String[] wordArray) 
-       { 
+       public RandomStringChooser(String[] wordArray)
+       {
    =====
            words = new ArrayList<String>();
    =====
@@ -59,13 +60,13 @@ Mixed Up Code Practice
            {
                words.add(singleWord);
            } // end for each word in wordArray
-           
+
        } // end RandomStringChooser Constructor
    =====
 
        /* getNext method */
-       public String getNext() 
-       { 
+       public String getNext()
+       {
            int pos = 0;
    =====
            if (words.size() > 0)
@@ -81,27 +82,30 @@ Mixed Up Code Practice
    =====
            } // end if words.size() > 0
    =====
-           return "NONE"; 
+           return "NONE";
        } // end getNext()
    } // end class
-   
+
 The mixed up code below uses a different algorithm to solve the same problem.
-   
+
+More Mixed Up Code Practice
+------------------------------
 .. parsonsprob:: ch17RandStrA2
+   :numbered: left
    :adaptive:
    :noindent:
 
-   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In <code>getNext</code> it will return "NONE" if the length of the list is 0.  Otherwise it till calculate a random index in the list and remove and return the string at that index. The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In <code>getNext</code> it will return "NONE" if the length of the list is 0.  Otherwise, it will calculate a random index in the list, remove the string at that index, and return it. The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
-   public class RandomStringChooser 
+   public class RandomStringChooser
    {
-   
+
        /* fields */
        private List<String> words;
 
        /* constructor */
-       public RandomStringChooser(String[] wordArray) 
-       { 
+       public RandomStringChooser(String[] wordArray)
+       {
    =====
            words = new ArrayList<String>();
    =====
@@ -110,20 +114,20 @@ The mixed up code below uses a different algorithm to solve the same problem.
            for (int i = 0; i < wordArray.length; i++)
            {
                words.add(wordArray[i]);
-           } // end for loop 
+           } // end for loop
    =====
        } // end RandomStringChooser Constructor
    =====
 
        /* getNext method */
-       public String getNext() 
-       { 
+       public String getNext()
+       {
            int pos = 0;
-           
+
            if (words.size() == 0)
            {
    =====
-               return "NONE"; 
+               return "NONE";
    =====
            } // end if words.size() equals 0
    =====
@@ -135,5 +139,3 @@ The mixed up code below uses a different algorithm to solve the same problem.
    =====
        } // end getNext()
    } // end class
-   
-

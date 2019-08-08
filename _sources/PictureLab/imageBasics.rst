@@ -1,4 +1,6 @@
-
+.. qnum::
+   :prefix:  19-1-
+   :start: 1
 
 ..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
     Permission is granted to copy, distribute and/or modify this document
@@ -15,7 +17,6 @@
     :height: 20px
     :align: top
     :alt: run button
-
 
 Compute with Images
 ====================
@@ -1305,7 +1306,7 @@ Let's try another activecode with the SimplePicture class included:
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
         import javax.imageio.ImageIO;
         import java.awt.image.BufferedImage;
@@ -1425,7 +1426,7 @@ Let's try another activecode with the SimplePicture class included:
       }
 
     } // this } is the end of class Picture, put all new methods before this
-    
+
            /**
          * A class that represents a simple picture.  A simple picture may have
          * an associated file name and a title.  A simple picture has pixels,

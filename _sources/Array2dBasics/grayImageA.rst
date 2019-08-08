@@ -139,10 +139,10 @@ Try to write the code for the method ``countWhitePixels``. When you are ready cl
       /** main for testing */
       public static void main (String[] args)
       {
-        int[][] values = {{255, 184, 178, 84, 129},
+        int[][] values = { {255, 184, 178, 84, 129},
                           {84, 255, 255, 130, 94},
                           {78, 255, 0, 0, 78},
-                          {84, 130, 255, 130, 84}};
+                          {84, 130, 255, 130, 84} };
         GrayImage image = new GrayImage(values);
         System.out.println("count white should be 5 and is " +
                            image.countWhitePixels());

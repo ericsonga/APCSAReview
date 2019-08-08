@@ -15,6 +15,6 @@ Conditionals
    cMedMC.rst
    cHardMC.rst
    timeFRQ.rst
-   CondSummary.rst
+   Exercises.rst
    CondPractice.rst
    CondParsonsPractice.rst
