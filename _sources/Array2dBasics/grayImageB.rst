@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 9-11-
+   :prefix: 9-10-2-
    :start: 1
 
 Free Response - Gray Image B
@@ -8,36 +8,36 @@ Free Response - Gray Image B
 ..	index::
 	single: gray image
     single: free response
-    
-The following is part b of a free response question from 2012.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.  
+
+The following is part b of a free response question from 2012.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
 
 **Question 4.**  A grayscale image is represented by a 2-dimensional rectangular array of pixels (picture elements). A pixel is an integer value that represents a shade of gray. In this question, pixel values can be in the range from 0 through 255, inclusive. A black pixel is represented by 0, and a white pixel is represented by 255. The declaration of the ``GrayImage`` class is shown below.
 
-.. code-block:: java 
+.. code-block:: java
 
    public class GrayImage
    {
       public static final int BLACK = 0;
       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image. 
+      /** The 2-dimensional representation of this image.
        *  Guaranteed not to be null.
-       *  All values in the array are within the range 
+       *  All values in the array are within the range
        *  [BLACK, WHITE], inclusive.
        */
       private int[][] pixelValues;
 
-      /** Processes this image in row-major order and 
-       *  decreases the value of each pixel at position (row, col) 
-       *  by the value of the pixel at position (row + 2, col + 2) 
+      /** Processes this image in row-major order and
+       *  decreases the value of each pixel at position (row, col)
+       *  by the value of the pixel at position (row + 2, col + 2)
        *  if it exists.
-       * Resulting values that would be less than BLACK are replaced 
+       * Resulting values that would be less than BLACK are replaced
        *   by BLACK.
-       * Pixels for which there is no pixel at 
+       * Pixels for which there is no pixel at
        *   position (row + 2, col + 2) are unchanged.
        */
-      public void processImage() 
-      { /* to be implemented in part (b) */ }  
+      public void processImage()
+      { /* to be implemented in part (b) */ }
    }
 
 **Part b.**  Write the method ``processImage`` that modifies the image by changing the values in the instance variable ``pixelValues`` according to the following description. The pixels in the image are processed one at a time in row-major order. Row-major order processes the first row in the array from left to right and then processes the second row from left to right, continuing until all rows are processed from left to right. The first index of ``pixelValues`` represents the row number, and the second index represents the column number.
@@ -55,33 +55,33 @@ grayscale image with 4 rows and 5 columns.
 
     Figure 1: Example before and after a call to processImage
 
-.. code-block:: java 
-   
+.. code-block:: java
+
    public class GrayImage
    {
       public static final int BLACK = 0;
       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image. 
+      /** The 2-dimensional representation of this image.
        *  Guaranteed not to be null.
-       *  All values in the array are within the range 
+       *  All values in the array are within the range
        *  [BLACK, WHITE], inclusive.
        */
       private int[][] pixelValues;
 
-      /** Processes this image in row-major order and 
-       *  decreases the value of each pixel at position (row, col) 
-       *  by the value of the pixel at position (row + 2, col + 2) 
+      /** Processes this image in row-major order and
+       *  decreases the value of each pixel at position (row, col)
+       *  by the value of the pixel at position (row + 2, col + 2)
        *  if it exists.
-       * Resulting values that would be less than BLACK are replaced 
+       * Resulting values that would be less than BLACK are replaced
        *   by BLACK.
-       * Pixels for which there is no pixel at 
+       * Pixels for which there is no pixel at
        *   position (row + 2, col + 2) are unchanged.
        */
-      public void processImage() 
-      { /* to be implemented in part (b) */ }  
+      public void processImage()
+      { /* to be implemented in part (b) */ }
    }
-    
+
 How to solve this problem
 ===========================
 
@@ -103,14 +103,14 @@ When comparing our pixel values to values deeper in the array, we need to be car
 
 .. activecode:: lcfrgib3
    :language: java
-   
+
    public class Test
    {
       public static void main(String[] args)
       {
-        int[][] values = { {9, 8, 7, 6, 5}, 
-                          {7, 6, 5, 4, 3}, 
-                          {4, 3, 2, 1, 0}, 
+        int[][] values = { {9, 8, 7, 6, 5},
+                          {7, 6, 5, 4, 3},
+                          {4, 3, 2, 1, 0},
                           {4, 3, 2, 1, 0} };
         for (int i = 0; i < values.length; i++)
         {
@@ -121,45 +121,45 @@ When comparing our pixel values to values deeper in the array, we need to be car
           System.out.println();
         }
       }
-   } 
-   
+   }
+
 You can step through the code above using the Java Visualizer by clicking on the following link `<http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A%7B%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D%5B%5D+values+%3D+%7B%7B9,+8,+7,+6,+5%7D,%0A+++++++++++++++++++++++%7B7,+6,+5,+4,+3%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D%7D%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+values.length%3B+i%2B%2B)%0A+++++%7B%0A+++++++for+(int+j+%3D+0%3B+j+%3C+values%5Bi%5D.length%3B+j%2B%2B)%0A+++++++%7B%0A+++++++++System.out.print(values%5Bi%5D%5Bj%5D+-+values%5Bi%2B2%5D%5Bj%2B2%5D)%3B%0A+++++++%7D%0A+++++++System.out.println()%3B%0A+++++%7D%0A+++%7D%0A%7D&mode=display&curInstr=6>_`.
-   
-Try to write the code for the method ``processImage``. When you are ready click "Run" to test your solution.   
-   
+
+Try to write the code for the method ``processImage``. When you are ready click "Run" to test your solution.
+
 .. activecode:: lcfrgib4
    :language: java
-   
+
    public class GrayImage
    {
       public static final int BLACK = 0;
       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image. 
+      /** The 2-dimensional representation of this image.
        *  Guaranteed not to be null.
-       *  All values in the array are within the range 
+       *  All values in the array are within the range
        *  [BLACK, WHITE], inclusive.
        */
       private int[][] pixelValues;
-      
+
       /** constructor that takes a 2D array */
       public GrayImage(int[][] theArray)
       {
          pixelValues = theArray;
       }
 
-      /** Processes this image in row-major order and 
-       *  decreases the value of each pixel at position (row, col) 
-       *  by the value of the pixel at position (row + 2, col + 2) 
+      /** Processes this image in row-major order and
+       *  decreases the value of each pixel at position (row, col)
+       *  by the value of the pixel at position (row + 2, col + 2)
        *  if it exists.
-       * Resulting values that would be less than BLACK are replaced 
+       * Resulting values that would be less than BLACK are replaced
        *   by BLACK.
-       * Pixels for which there is no pixel at 
+       * Pixels for which there is no pixel at
        *   position (row + 2, col + 2) are unchanged.
        */
-      public void processImage() 
+      public void processImage()
       {
-        
+
       }
 
       public void printValues()
@@ -177,27 +177,25 @@ Try to write the code for the method ``processImage``. When you are ready click 
       /** main for testing */
       public static void main (String[] args)
       {
-        int[][] values = { {221, 184, 178, 84, 135}, 
-                          {84, 255, 255, 130, 84}, 
-                          {78, 255, 0, 0, 78}, 
+        int[][] values = { {221, 184, 178, 84, 135},
+                          {84, 255, 255, 130, 84},
+                          {78, 255, 0, 0, 78},
                           {84, 130, 255, 130, 84} };
         GrayImage image = new GrayImage(values);
         image.printValues();
         image.processImage();
         System.out.println("after process image");
-        image.printValues(); 
+        image.printValues();
       }
    }
-    
+
 Video - One way to code the solution
 =====================================
 
-.. the video is 2012Q4B2.mov  
+.. the video is 2012Q4B2.mov
 
 The following video is also on YouTube at https://youtu.be/8j34xQkjsJI.  It walks through coding a solution.
 
 .. youtube:: 8j34xQkjsJI
     :width: 800
     :align: center
-
-
