@@ -158,7 +158,9 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``).  Java uses (``==``) to test if the value on the left is equal to the value on the right and (``!=``) to test if two items are not equal.  You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.
+Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.
+
+Java uses the operator ``==`` to test if the value on the left is equal to the value on the right and ``!=`` to test if two items are not equal.   Don't get one equal sign ``=`` confused with two equal signs ``==``! They mean different things in Java. One equal sign is used to assign a value to a variable. Two equal signs are used to test a variable to see if it is a certain value and that returns true or false as you'll see below.  Use == and != only with int values and not doubles because double values are an approximation and 3.3333 will not equal 3.3334 even though they are very close.
 
 |CodingEx| **Coding Exercise:** 
 
@@ -237,10 +239,10 @@ The following is a 2019 AP CSA sample question.
    What is printed when the code segment is executed?
    
    
-Modulus
------------
+The Modulo Operator
+--------------------
 
-The percent sign operator (``%``) is the **modulus** or remainder operator.  The **modulus** operator (``x % y``) returns the remainder after you divide ``x`` (first number) by ``y`` (second number) so ``5 % 2`` will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number when into another evenly and the remainder?  That remainder is what is returned by the modulus operator.
+The percent sign operator (``%``) is the **mod (modulo)** or **remainder** operator.  The mod operator (``x % y``) returns the remainder after you divide ``x`` (first number) by ``y`` (second number) so ``5 % 2`` will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number went into another evenly and the remainder?  That remainder is what is returned by the modulo operator.
 
 .. figure:: Figures/mod-py.png
     :width: 150px
@@ -271,9 +273,9 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
    The result of ``x % y`` when ``x`` is smaller than ``y`` is always ``x``.  The value ``y`` can't go into ``x`` at all (goes in 0 times), since ``x`` is smaller than ``y``, so the result is just ``x``.  So if you see ``2 % 3`` the result is ``2``.  
   
 ..	index::
-	single: modulus
+	single: modulo
 	single: remainder
-	pair: operators; modulus
+	pair: operators; modulo
 	
 |Exercise| **Check Your Understanding**
 	
@@ -283,8 +285,8 @@ The percent sign operator (``%``) is the **modulus** or remainder operator.  The
    :answer_b: 16
    :answer_c: 8
    :correct: c
-   :feedback_a: This would be the result of 158 divided by 10.  Modulus gives you the remainder.
-   :feedback_b: Modulus gives you the remainder after the division.
+   :feedback_a: This would be the result of 158 divided by 10.  modulo gives you the remainder.
+   :feedback_b: modulo gives you the remainder after the division.
    :feedback_c: When you divide 158 by 10 you get a remainder of 8.  
 
    What is the result of 158 % 10?
@@ -365,7 +367,7 @@ Summary
 
 - Arithmetic expressions include expressions of type int and double.
 
-- The arithmetic operators consist of +, -, \* , /, and % (modulus for the remainder in division).
+- The arithmetic operators consist of +, -, \* , /, and % (modulo for the remainder in division).
 
 - An arithmetic operation that uses two int values will evaluate to an int value. With integer division, any decimal part in the result will be thrown away, essentially rounding down the answer to a whole number.
 

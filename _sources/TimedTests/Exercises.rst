@@ -31,39 +31,21 @@
     :align: top
     :alt: finish exam
 
-Practice Exam 1 for the first half of the AP CS A Curriculum
+Practice Exam 
 ============================================================
 
-The following 20 questions are similar to what you might see assessing the first half of the AP CS A coursework on the AP Exam.  Please answer each to the best of your ability.
+.. This said for first half of exam but it includes inheritance and has a lot of errors.
+
+The following  questions are similar to what you might see on the AP Exam.  Please answer each to the best of your ability.
 
 Click the |start| button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
-.. timed:: midterm1
+
+
+
+.. timed:: practiceExamX
    :timelimit: 40
-
-   .. mchoice:: mt1_2
-      :answer_a: 0 3 6 9 12 15
-      :answer_b: 0 1 2 3 4 5
-      :answer_c: 1 4 7 10 13
-      :answer_d: This code will not print anything.
-      :answer_e: 0 3 6 9 12
-      :correct: d
-      :feedback_a: This would be true if this loop had the correct syntax on the print.
-      :feedback_b: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
-      :feedback_c: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
-      :feedback_d: The syntax to output text is System.out.print(), so this code will cause a compiler error.
-      :feedback_e: The program would also output 15, since the loop runs until x <= 15. However, the program does not output anything due to incorrect syntax.
-
-      What will be printed after this code is executed?
-
-      .. code-block:: java
-
-        for (int i = 0; i <= 15; i++) {
-           if (i % 3 == 0) {
-               System.print(i + " ");
-           }
-        }
-
+   
    .. mchoice:: mt1_3
       :answer_a: I only
       :answer_b: II only
@@ -111,8 +93,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              {
                 if(minutes + additionMinutes >= 60)
                 {
-                   hours += 1;
-                   minutes -= 60;
+                   hours += (additionMinutes/60);
+                   minutes += (additionMinutes % 60);
                 }
                 else
                 {
@@ -123,21 +105,21 @@ Click the |start| button when you are ready to begin the exam, but only then as 
         III. public void addMinutes(int additionMinutes)
              {
              	  minutes += additionMinutes;
-                if(minutes >= 60)
-                {
-				            hours++;
-				            minutes -= 60;
-				        }
+                  while(minutes >= 60)
+                  {
+				      hours++;
+				      minutes -= 60;
+				  }
              }
 
         IV.  public void addMinutes(int additionMinutes){
-        	   {
+             {
         	       if(additionMinutes + minutes >= 60)
         	       {
         	           minutes = additionMinutes + minutes - 60;
         	           hours += 1;
         	       }
-        	   }
+             }
 
    .. mchoice:: mt1_4
       :answer_a: int[] nums = [5];
@@ -152,35 +134,6 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
       Which is NOT a correct way to declare an array of 5 integers?
 
-   .. mchoice:: mt1_5
-      :answer_a: numStudents
-      :answer_b: numberOfStudentsInClass
-      :answer_c: numberStudents
-      :answer_d: numStud
-      :answer_e: #students
-      :correct: a
-      :feedback_a: numStudents is brief, but still tells the user what the variable represents. Num is a common shortening of number and is allowed.
-      :feedback_b: While this name gives the user information about what the variable represents, it is too long and therefore should be shorter.
-      :feedback_c: Number is commonly abbreviated as num and should be abbreviated here.
-      :feedback_d: Num is a satisfactory abbreviation of number, but stud is not a common enough abbreviation for student.
-      :feedback_e: Variable names can start with '_', '$', or a letter, but not '#'.
-
-      Which of the following is a good name for an integer variable that represents the number of students in a class?
-
-   .. mchoice:: mt1_6
-      :answer_a: class
-      :answer_b: boolean
-      :answer_c: String
-      :answer_d: static
-      :answer_e: void
-      :correct: c
-      :feedback_a: Class is a reserved keyword.  It is used to declare a class.
-      :feedback_b: Boolean is a reserved keyword and a primitive data type.
-      :feedback_c: Correct! All other options are reserved keywords in Java.
-      :feedback_d: Static is a reserved keyword in Java.
-      :feedback_e: Void is a reserved keyword in Java.
-
-      Which of the following is NOT a reserved keyword in Java
 
    .. mchoice:: mt1_7
       :answer_a: { 1, 2, 5, 4, 3 }
@@ -211,7 +164,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :answer_d: a && b
       :answer_e: a || !b
       :correct: c
-      :feedback_a: This would be true in any case where a and b weren't both true
+      :feedback_a: This would be true if a or b are false using De Morgan's laws: !(a && b) = !a || !b.
       :feedback_b: If b was false, this option would be false.
       :feedback_c: Correct!
       :feedback_d: This will only be true only when both a and b are true.
@@ -324,11 +277,11 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :answer_d: 2
       :answer_e: 3
       :correct: d
-      :feedback_a: This would be true if it was <code>return(a[1]*= 2);</code>.
-      :feedback_b: This would be true if the return statement was <code>return (a[0]*=2);</code>.
-      :feedback_c: This would be true if it was <code>a[0]--;</code>  Or it would be true if array indicies started at 1, but they start with 0.
-      :feedback_d: The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to a 2.  The return <code>(a[1] * 2)</code> does not change the value at <code>a[1]</code>.
-      :feedback_e: This can't be true because <code>a[1]--;</code> means the same as <code>a[1] = a[1] - 1;</code>  So the 3 will become a 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method.  But, since an array is an object a copy of the value is a copy of the reference to the object.  So changes to objects in methods are permanent.
+      :feedback_a: This would be true if it was return(a[1]*= 2);.
+      :feedback_b: This would be true if the return statement was return (a[0]*=2);.
+      :feedback_c: This would be true if it was a[0]--;  Or it would be true if array indicies started at 1, but they start with 0.
+      :feedback_d: The statement a[1]--; is the same as a[1] = a[1] - 1; so this will change the 3 to a 2.  The return (a[1] * 2) does not change the value at a[1].
+      :feedback_e: This can't be true because a[1]--; means the same as a[1] = a[1] - 1;  So the 3 will become a 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method.  But, since an array is an object a copy of the value is a copy of the reference to the object.  So changes to objects in methods are permanent.
 
       Consider the following method and if ``int[] a = {8, 3, 1}``, what is the value in ``a[1]`` after ``m1(a);`` is run?
 
@@ -482,9 +435,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :correct: c
       :feedback_a: This would be true if num1 and num2 were both greater than 0 and num1 was greater than num2.  However, num2 is less than 0.
       :feedback_b: This would be true if num1 and num2 were both greater than 0 and num1 was less than or equal to num2.  However, num2 is less than 0.
-      :feedback_c: The first test is false since num2 is less than 0 and for a complex conditional joined with And (&&) to be true both expressions must be true.  Next, <code>else if ((num2<0) || (num1<0))</code> is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.
-      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code).
-      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code).
+      :feedback_c: The first test is false since num2 is less than 0 and for a complex conditional joined with And (&&) to be true both expressions must be true.  Next, else if ((num2<0) || (num1<0)) is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.
+      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true ((num2<0) || (num1<0))).
+      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true ((num2<0) || (num1<0))).
 
       Consider the following method.  What is the output from ``conditionTest(3,-2);``?
 
@@ -509,3 +462,58 @@ Click the |start| button when you are ready to begin the exam, but only then as 
             }
         }
 
+.. controversial
+   .. mchoice:: mt1_5
+      :answer_a: numStudents
+      :answer_b: numberOfStudentsInClass
+      :answer_c: numberStudents
+      :answer_d: numStud
+      :answer_e: #students
+      :correct: a
+      :feedback_a: numStudents is brief, but still tells the user what the variable represents. Num is a common shortening of number and is allowed.
+      :feedback_b: While this name gives the user information about what the variable represents, it is too long and therefore should be shorter.
+      :feedback_c: Number is commonly abbreviated as num and should be abbreviated here.
+      :feedback_d: Num is a satisfactory abbreviation of number, but stud is not a common enough abbreviation for student.
+      :feedback_e: Variable names can start with '_', '$', or a letter, but not '#'.
+
+      Which of the following is a good name for an integer variable that represents the number of students in a class?
+
+   .. mchoice:: mt1_6
+      :answer_a: class
+      :answer_b: boolean
+      :answer_c: String
+      :answer_d: static
+      :answer_e: void
+      :correct: c
+      :feedback_a: Class is a reserved keyword.  It is used to declare a class.
+      :feedback_b: Boolean is a reserved keyword and a primitive data type.
+      :feedback_c: Correct! All other options are reserved keywords in Java.
+      :feedback_d: Static is a reserved keyword in Java.
+      :feedback_e: Void is a reserved keyword in Java.
+
+      Which of the following is NOT a reserved keyword in Java
+
+
+.. This one is misleading.
+..    .. mchoice:: mt1_2
+      :answer_a: 0 3 6 9 12 15
+      :answer_b: 0 1 2 3 4 5
+      :answer_c: 1 4 7 10 13
+      :answer_d: This code will not print anything.
+      :answer_e: 0 3 6 9 12
+      :correct: d
+      :feedback_a: This would be true if this loop had the correct syntax on the print.
+      :feedback_b: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
+      :feedback_c: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
+      :feedback_d: The syntax to output text is System.out.print(), so this code will cause a compiler error.
+      :feedback_e: The program would also output 15, since the loop runs until x <= 15. However, the program does not output anything due to incorrect syntax.
+
+      What will be printed after this code is executed?
+
+      .. code-block:: java
+
+        for (int i = 0; i <= 15; i++) {
+           if (i % 3 == 0) {
+               System.print(i + " ");
+           }
+        }

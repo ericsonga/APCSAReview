@@ -380,11 +380,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: arr[i] % 2 == 0
    :answer_e: arr[i] / 2 == 0
    :correct: d
-   :feedback_a: To check if a number is even, the modulus operator (%) should be used.
+   :feedback_a: To check if a number is even, the modulo operator (%) should be used.
    :feedback_b: This method checks to see if a number is odd, not even. Because this method changes even numbers, not odd numbers, we do not need to find odd numbers.
-   :feedback_c: To check if a number is even, the modulus operator (%) should be used.
+   :feedback_c: To check if a number is even, the modulo operator (%) should be used.
    :feedback_d: If the value at arr[i] divided by two leaves a remainder of 0, then the number is even and should be reassigned.
-   :feedback_e: To check if a number is even, the modulus operator (%) should be used.
+   :feedback_e: To check if a number is even, the modulo operator (%) should be used.
 
    Consider the following method oddArray, which changes every even number value in the array to 0. By the end of the method, only odd numbers will be present in the array. Which line correctly completes  ``/* to be determined */`` to make the code work as intended?
    

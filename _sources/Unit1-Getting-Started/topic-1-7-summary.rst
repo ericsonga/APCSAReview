@@ -18,10 +18,10 @@ In this unit you learned about the three primitive data types on the exam: ``int
 	single: initializing
 	single: random number
 	single: shortcut operator
-	single: modulus operator
+	single: modulo operator
 	single: casting
 	single: integer
-	single: modulus
+	single: modulo
 	single: true
 	single: false
 
@@ -37,7 +37,7 @@ Concept Summary
 - **Declare a Variable** - Specifying the type and name for a variable.  This sets aside memory for a variable of that type and associates the name with that memory location.
 - **Initializing a Variable** - The first time you set the value of a variable.
 - **Integer** - A whole number like -32 or 6323.
-- **Modulus** - The ``%`` operator which returns the remainder from one number divide by another.
+- **modulo** - The ``%`` operator which returns the remainder from one number divide by another.
 - **Operator** - Common mathematical symbols such as ``+`` for addition and ``*`` for multiplication.  
 - **Random Number** - A random number picked from a range of numbers.  Used in games to make the game more interesting.  
 - **Shortcut Operators** - Operators like ``x++`` which means ``x = x + 1`` or ``x *=y`` which means ``x = x * y``.
@@ -91,4 +91,4 @@ Common Mistakes
   
   -  using ``==`` to compare double values. Remember that double values are often an approximation. You might want to test if the absolute value of the difference between the two values is less than some amount instead.
   
-  -  assuming that some value like 0 will be smaller than other ``int`` values.  Remember that ``int`` values can be negative as well.  If you want to set a value to the smallest possible ``int`` values use ``Integer.MIN_VALUE``
+  -  assuming that some value like 0 will be smaller than other ``int`` values.  Remember that ``int`` values can be negative as well.  If you want to set a value to the smallest possible ``int`` values use ``Integer.MIN_VALUE``.

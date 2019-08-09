@@ -254,7 +254,7 @@ Run the following code to see what is printed. Then, change the values and run i
     :click-incorrect:}:endclick:
     
 .. clickablearea:: var_init
-    :question: Click on all of the variable initializations (fist time the variable is set to a value) in the following code.
+    :question: Click on all of the variable initializations (first time the variable is set to a value) in the following code.
     :iscode:
     :feedback: Variables are initialized using name = value;  
     
@@ -354,7 +354,7 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
    :adaptive:
    :noindent:
 
-   The following method has the code to declare and initialize variables for storing a number of visits, a person's temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the "Check Me" button to check your solution.
+   The following code declares and initializes variables for storing a number of visits, a person's temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the "Check Me" button to check your solution.
    -----
    int numVisits = 5;
    =====

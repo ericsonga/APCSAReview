@@ -554,11 +554,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: I and II only
    :answer_e: II and IV only
    :correct: a
-   :feedback_a: The modulus operator (%) can be used to find if numbers are even or odd. I checks that x is even correctly using x % 2 == 0.
-   :feedback_b: II uses the modulus operator to count the number of odd numbers in the array. If x % 2 == 1, then the number is odd, not even.
-   :feedback_c: III and IV use the division operator, not the modulus operator. This does not check if the number is even. 
+   :feedback_a: The modulo operator (%) can be used to find if numbers are even or odd. I checks that x is even correctly using x % 2 == 0.
+   :feedback_b: II uses the modulo operator to count the number of odd numbers in the array. If x % 2 == 1, then the number is odd, not even.
+   :feedback_c: III and IV use the division operator, not the modulo operator. This does not check if the number is even. 
    :feedback_d: I is correct, but II increments the counter for odd numbers, not even numbers.
-   :feedback_e: II counts the odd numbers instead of the even numbers. If x % 2 == 1, the number is odd, not even. IV does not use the modulus operator (%), which checks if numbers are even or odd.
+   :feedback_e: II counts the odd numbers instead of the even numbers. If x % 2 == 1, the number is odd, not even. IV does not use the modulo operator (%), which checks if numbers are even or odd.
 
    
    Consider the following method ``evens``, which finds the number of even numbers present in an array. Which of the following segments of code would correctly replace ``/* to be completed */``?

@@ -31,7 +31,7 @@ Games would be boring if the same thing happened each time you played the game. 
 to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number.
 
 There are lots of mathematical methods
-that you might want to use in your programs like ``Math.abs`` (absolute value).  These methods are in the ``Math`` class and are **static** (**class**) methods so that you can call them by just using ``ClassName.methodName``.  
+that you might want to use in your programs like ``Math.abs`` (absolute value).  These methods are in the ``Math`` class and are **static** (**class**) methods so that you can call them by just using ``ClassName.methodName()``.  
 
 .. note::
 

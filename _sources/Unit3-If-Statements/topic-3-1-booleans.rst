@@ -163,7 +163,7 @@ Try the expressions containing the % operator below to see how they can be used 
       }
    }  
    
-The **modulus** operator has been used quite a bit on the AP CS A exam, so you should be familiar with it.
+The **modulo** operator has been used quite a bit on the AP CS A exam, so you should be familiar with it.
     
     -  Use it to check for odd or even numbers ``(num % 2 == 1) is odd`` and ``(num % 2 == 0) is even``.  Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``)
 

@@ -10,7 +10,7 @@ Preface
 	
 This AP CS A Java 2019 course was adapted from the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. 
 
-The 2019 version of this book is being modified by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, and Becky Stacey for feedback, edits, and ideas. We hope that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
+The 2019 version of this book is being modified by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, Beth Simon, and Kyle Gillette for feedback, edits, and ideas. We hope that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
 
 .. |form| raw:: html
 
@@ -85,7 +85,7 @@ Many others have been involved in the creation of content for the eBook (includi
 * Christine Hsieh - added mixed up code problems at the end of the array chapter and code practice problems
 * Carlos Diaz - fixed problems and added code highlights
 * Avery Rosh - found an error in one of the 2D array questions
-* JP Fasano - found an erorr in one of the non-timed exams
+* JP Fasano - found an error in one of the non-timed exams
 * Srikar Yendapally - added code problems to the 2D array chapter
 * Kiran Ruston - added new questions to the free response problems at the end of the ebook.
 
@@ -96,7 +96,7 @@ Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_
 2014
 All rights reserved.
 
-Beryl Hoffman hoffmanb@elms.edu <mailto://hoffmanb@elms.edu>`_ 
+Beryl Hoffman `hoffmanb@elms.edu <mailto://hoffmanb@elms.edu>`_ 
 2019
 All rights reserved.
 
