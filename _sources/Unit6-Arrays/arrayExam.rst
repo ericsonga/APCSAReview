@@ -12,7 +12,6 @@ Please answer each to the best of your ability.
 Click the "Start" button when you are ready to begin the exam, but only then as you can only take the exam once.  Click the "Pause" button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the "Finish Exam" button at the end only when you are done.  It will display the number correct, number wrong, and number skipped after the "Finish Exam" button.
 
 .. timed:: arrayExam1
-   :timelimit: 45
 
    .. mchoice:: arrayEx1
       :practice: T

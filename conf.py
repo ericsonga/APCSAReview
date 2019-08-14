@@ -74,7 +74,7 @@ release = 'beta'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['Unit2-Using-Objects/TurtleJavaSwingCode/*', 'Unit2-Using-Objects/TurtleJavaHTMLCode/*']
+exclude_patterns = ['Unit2-Using-Objects/TurtleJavaSwingCode/*', 'Unit2-Using-Objects/TurtleJavaHTMLCode/*', 'Unit4-Iteration/ConsumerReviewLabFiles/*' ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -234,6 +234,10 @@ html_show_copyright = True
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'
+
+# These paths are either relative to html_static_path
+# or fully qualified paths (eg. https://...)
+html_css_files = ['css/custom.css',]
 
 def setup(app):
     app.add_stylesheet('css/custom.css')

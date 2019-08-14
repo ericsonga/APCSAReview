@@ -10,27 +10,27 @@ Starting in 2020, the AP CS A exam will cover the following units and will provi
 .. raw:: html
 
     <style> #csatable th, td { padding-left: 4px; }</style>
-    <table id="csatable" border width="80%" style="border:1px solid black"><thead style="background-color:lightblue;"><tr><th>Unit</th><th>Title</th><th>Exam Weight</th><th>Class Days</th><th>Lab</th></tr></thead>
+    <table id="csatable" border width="80%" style="border:1px solid black"><thead style="background-color:lightblue;"><tr><th>Unit</th><th>Title</th><th>Exam Weight</th><th>Class Days</th><th>Lab Days</th></tr></thead>
     <tbody><tr><td>Unit 1</td><td>Primitive Types</td>
     <td>2.5–5%</td><td>8-10</td><td></td></tr>
     <tr><td>Unit 2 </td><td> Using Objects  </td><td>   5–7.5%     </td><td> 13-15</td><td></td></tr>
-    <tr><td>Unit 3 </td><td> Boolean Exprs/ifs</td><td> 15–17.5%  </td><td>  11-13   </td><td>   3 days
+    <tr><td>Unit 3 </td><td> Boolean Exprs/ifs</td><td> 15–17.5%  </td><td>  11-13   </td><td>3-5
     </td></tr>
-    <tr><td>Unit 4 </td><td> Iteration </td><td>        17.5–22.5%</td><td> 14-16  </td><td>    6 days
+    <tr><td>Unit 4 </td><td> Iteration </td><td>        17.5–22.5%</td><td> 14-16  </td><td>4-6
     </td></tr>
-    <tr><td>Unit 5 </td><td> Writing Classes </td><td>  5-7.5%  </td><td>    12-14<td></td>
+    <tr><td>Unit 5 </td><td> Writing Classes </td><td>  5-7.5%  </td><td>    12-14<td></td>3-6
     </td></tr>
     <tr><td>Unit 6 </td><td> Array  </td><td>           10–15%  </td><td>    6-8<td></td>
     </td></tr>
-    <tr><td>Unit 7 </td><td> ArrayList </td><td>        2.5–7.5%   </td><td> 10-12 <td></td>
+    <tr><td>Unit 7 </td><td> ArrayList </td><td>        2.5–7.5%   </td><td> 10-12 <td>3-6</td>
     </td></tr>
-    <tr><td>Unit 8 </td><td> 2D Array  </td><td>        7.5–10%   </td><td>  10-12   </td><td>   7 days
+    <tr><td>Unit 8 </td><td> 2D Array  </td><td>        7.5–10%   </td><td>  10-12   </td><td>4-7 days
     </td></tr>
-    <tr><td>Unit 9 </td><td> Inheritance </td><td>      5-10%  </td><td>     14-15  </td><td>    6 days
+    <tr><td>Unit 9 </td><td> Inheritance </td><td>      5-10%  </td><td>     14-15  </td><td>3-6 days
     </td></tr>
     <tr><td>Unit 10 </td><td>Recursion  </td><td>       5–7.5%    </td><td>  3-5  <td></td>
     </td></tr>
-    </tbody></table>
+    </tbody></table><p>
 
 
 The 4 free response questions allow students to write code to answer a problem and cover the following areas. 

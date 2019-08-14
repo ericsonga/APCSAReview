@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+    
+.. raw:: html
+
+    <style>    td { text-align: left; } </style>
 
 Searching Algorithms
 ======================
