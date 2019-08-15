@@ -25,28 +25,33 @@
 Creating and Storing Objects: Constructors
 ===========================================
 
-A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  The class also defines how to initialize the attributes in instance variables when the object is first created using a special method called the **constructor**.
+A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  The class also defines how to initialize the attributes in instance variables when the object is first created using a special method called the **constructor**. Constructors are used to construct objects from the class, which is like a blueprint for the objects. 
 
-
-Constructors always have the same name as the class and are used with the keyword new. An object variable is created using the keyword new followed by a call to a constructor. For example, here's how we used the World constructor to create a new graphical world, and the Turtle constructor to create a new Turtle.
+Constructors always have the same name as the class and are used with the keyword **new**. An object variable is created using the keyword new followed by a call to a constructor. For example, here's how we used the World constructor to create a new graphical world, and the Turtle constructor to create a new Turtle.
 
 
 .. code-block:: java 
 
     // To create a new object, write:
-    // ClassName variableName = new ConstructorName(arguments);
+    // ClassName variableName = new ConstructorName(parameters);
     World world = new World();
     Turtle t = new Turtle(world);
 
 
-There can be more than one constructor defined in a class. If the constructor takes no arguments (nothing inside the parentheses following the name of the constructor), it is called the **Default Constructor** and it will usually set the attributes of the object to default values. For example, the World class has 2 constructors. The default World() constructor creates a graphical screen of 640x480 pixels. The World(int w, int h) constructor takes two integer arguments, and initializes the World's width and height to them, for example World(300,400) creates a 300x400 pixel world.
+There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually constructor has no parameters (nothing inside the parentheses following the name of the constructor) like the World() constructor above. This simple constructor usually sets the attributes of the object to default values. There can be other constructors that have parameters like the Turtle(world) constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor and used to initialize the attributes of an object. 
+
+The World class actually has 2 constructors. The default World() constructor creates a graphical screen of 640x480 pixels. The World(int w, int h) constructor takes two integer parameters, and initializes the World's width and height to them, for example World(300,400) creates a 300x400 pixel world.
 
 .. code-block:: java
     
     World world1 = new World(); // creates a 640x480 world
     World world2 = new World(300,400); // creates a 300x400 world
     
-The Turtle class also has multiple constructors, although it always requires a world as an argument to know where to draw the turtle. The default location for the turtle is right in the middle of the world. Try the code below to see this. There is another Turtle constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below. The coordinate (0,0) is at the top left of the world. Notice that the order of the arguments matter. This constructor always takes (x,y,world) as arguments in that order. Try  mixing up the order of the arguments and you will see it causes an error because the arguments will not be the data types that it expects. This is one reason why programming languages have data types -- for better error-checking.
+The Turtle class also has multiple constructors, although it always requires a world as an parameter to know where to draw the turtle. The default location for the turtle is right in the middle of the world. Try the code below to see this. 
+
+There is another Turtle constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below. The coordinate (0,0) is at the top left of the world. 
+
+Notice that the order of the parameters matter. This constructor always takes (x,y,world) as parameters in that order. Try mixing up the order of the parameters and you will see it causes an error because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- for better error-checking. 
 
 .. code-block:: java
     
@@ -55,7 +60,7 @@ The Turtle class also has multiple constructors, although it always requires a w
     
 |CodingEx| **Coding Exercise:**
 
-Try changing the code below to create a World of 300x400. What arguments do you need to give the Turtle constructor to place the turtle in the top right corner? Experiment and find out.
+Try changing the code below to create a World of 300x400. What parameters do you need to give the Turtle constructor to place the turtle in the top right corner? Experiment and find out. What happens if you mix up the order of the parameters?
 
 
 
@@ -79,7 +84,11 @@ Try changing the code below to create a World of 300x400. What arguments do you 
       }
     }
     
-    
+You can also declare object variables without calling a constructor and set them equal to **null** which means that they have no value, for example *Turtle t1 = null;* but usually, you will want to call a constructor with new to create an object and store its memory address (a reference) in the variable.
+
+Calendar Example
+----------------
+
 Here is another example. There is a class called GregorianCalendar in Java that can be used for dates and times. You can use this class by adding the line "import java.util.GregorianCalendar;" which will bring in this class library. Then, you can create an object variable called today that uses the default constructor to initialize it to the current date and time. Run the code below to see what it does. Note that the code below is sent to New Zealand to run, so it will return the current date and time in New Zealand!
 
 .. activecode:: GregorianCalendar1
@@ -97,7 +106,11 @@ Here is another example. There is a class called GregorianCalendar in Java that 
         }
      } 
      
-The GregorianCalendar class also has a constructor that takes a particular year, month (starting January at 0), and day as arguments to set up a specific date. Here's the same program again but with a second variable that initializes the variable to the date 1/1/2020.
+The GregorianCalendar class also has a constructor that takes a particular year, month (starting January at 0), and day as parameters to set up a specific date. Here's the same program again but with a second variable that initializes the variable to the date 1/1/2020.
+
+|CodingEx| **Coding Exercise:**
+
+Run the code below to see the use of both constsructors. Try adding another GregorianCalendar object to the program for your birthdate and have it print it out. Which constructor do you need to use? 
 
 .. activecode:: GregorianCalendar2
     :language: java
@@ -117,9 +130,19 @@ The GregorianCalendar class also has a constructor that takes a particular year,
         }
      } 
 
-|CodingEx| **Coding Exercise:**
+https://docs.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html
 
-Try adding another GregorianCalendar object to the program above for your birthdate and have it print it out! 
+When you use a class that someone has already written for you in a **library** that you can import like the GregorianCalendar class above, you can look up how to use the constructors and methods in the **documentation** for that class.  The documentation will list the **signatures** of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. For example,
+
+- GregorianCalendar() : Constructs a default GregorianCalendar using the current time in the default time zone with the default locale.
+- GregorianCalendar(int year, int month, int dayOfMonth) : Constructs a GregorianCalendar with the given date set in the default time zone with the default locale.
+
+
+These formal parameters (for example year, month, dayOfMonth above) are filled in with copies of the actual parameters (for example your birthdate) when the constructors are called using a process called **call by value** and these in turn are used to initialize the instance variables for the object. 
+
+This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more how this all works in Unit 5 when you write your own classes and constructors. 
+ 
+
 
 |Groupwork| Programming Challenge : Debugging
 ---------------------------------------------
@@ -152,13 +175,13 @@ Debug the following code.
 Summary
 -------------------
 
-- A class contains *constructors* that are invoked to create objects. They have the same name as the class.
+- A class contains **constructors** that are invoked to create objects. They have the same name as the class.
 
-- Every object is created using the keyword *new* followed by a call to one of the class’s constructors.
-
-- A constructor with no parameters is called a *default constructor* and will initialize the object's instance variables to default values.
+- Every object is created using the keyword **new** followed by a call to one of the class’s constructors.
 
 - Parameters allow values to be passed to the constructor to establish the initial state of the object.
+
+- Constructors are said to be **overloaded** when there are multiple constructors with the same name but a different **signature** with different parameters.
 
 
 .. raw:: html
