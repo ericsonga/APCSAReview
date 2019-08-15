@@ -25,7 +25,7 @@
 Creating and Storing Objects: Constructors
 ===========================================
 
-A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  The class also defines how to initialize the attributes in instance variables when the object is first created using a special method called the **constructor**. Constructors are used to construct objects from the class, which is like a blueprint for the objects. 
+A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  The class also defines how to initialize the attributes in instance variables when the object is first created using a special method called the **constructor**. Constructors are used to construct and initialize objects from the class, which is like a blueprint for the objects. 
 
 Constructors always have the same name as the class and are used with the keyword **new**. An object variable is created using the keyword new followed by a call to a constructor. For example, here's how we used the World constructor to create a new graphical world, and the Turtle constructor to create a new Turtle.
 
