@@ -2829,6 +2829,7 @@ Try some of the methods above in the turtle code below.
     }
 
 
+
 |CodingEx| **Coding Exercise**
 
 Try the following mixed up code to draw a simple house made of a square and a triangle roof.
@@ -2891,7 +2892,10 @@ Try the following mixed up code to draw a simple house made of a square and a tr
    }
    
 
-     
+Methods are said to be **overloaded** when there
+are multiple methods with the same name but a
+different **method signature**, where it requires a different number or type of parameters. For example, we have two different forward methods, forward() with no parameters and forward(100) which has a parameter that tells it how much to move forward. If there are more than one parameter, then the values given to the method need to correspond to the order and types in the method signature.
+
 |Groupwork| Programming Challenge : Turtle House
 ------------------------------------------------
 
