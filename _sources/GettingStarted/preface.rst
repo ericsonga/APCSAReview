@@ -13,6 +13,13 @@ encourage you to use it, change it, and modify it for your own purposes.
 I would appreciate knowing what you think if you do use this book, and I
 would love to see any modifications or additions you make.
 
+New Ebook
+----------------
+
+Beryl Hoffman, of the Mobile CSP group, has been creating a new ebook and curricular materials based on this ebook for teachers for the 2019-2020 AP CSA course.  This ebook is a complete textbook for AP CSA.
+Go to https://runestone.academy/runestone/default/user/register and use csawesome as the course name to access the new ebook.  
+
+
 About the Exam
 ----------------
 
