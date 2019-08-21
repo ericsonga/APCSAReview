@@ -16,6 +16,6 @@ Variables
    vEasyMC.rst
    vMedMC.rst
    vHardMC.rst
+   Summary.rst
    Exercises.rst
-   VariablePractice.rst
    VariablePracticeParsons.rst

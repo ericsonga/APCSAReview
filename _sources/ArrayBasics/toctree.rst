@@ -17,6 +17,6 @@ Arrays
    aHardMC.rst
    arrayExam.rst
    freeResponse.rst
+   Summary.rst
    Exercises.rst
-   ArrayPractice.rst
    ArrayParsonsPractice.rst

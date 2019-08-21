@@ -18,6 +18,6 @@ List and ArrayList
    listMedMC.rst
    listHardMC.rst
    freeResponse.rst
+   Summary.rst
    Exercises.rst
-   listPractice.rst
    ListParsonsPractice.rst
