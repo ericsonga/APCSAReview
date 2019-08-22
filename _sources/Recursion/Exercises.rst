@@ -1,29 +1,58 @@
 .. qnum::
-   :prefix: 12-11-
+   :prefix: 12-12-
    :start: 1
 
-Recursion Summary
--------------------------
+Code Practice for Recursion
+---------------------------------------------
 
-In this chapter you learned about **recursion**.  A recursive method calls itself (contains a call to the method from inside of the method).  A recursive method should have at least one way to stop the recursion.  This is called a base case.
+.. tabbed:: recursionCode1
 
-..	index::
-    single: recursion
+        .. tab:: Question
 
-Concept Summary
-=================
 
-- **base case** - A way to stop the recursive calls. This is a return without a recursive call.
-- **call stack** - A class defines what all objects of that class know (fields) and can do (methods).  You can also have data and behavior in the object that represents the class (class fields and methods).  All objects of a class have access to class fields and class methods, but these can also be accessed using ``className.field`` or ``className.method()``.
-- **recursive method** - A method that contains at least one call to itself inside the method.
+           Replace the "ADD CODE HERE" below with the code to complete the findSum method. The method should take the sum of every value that is less than or equal to n. For example, findSum(3) should return 6. The output of the program should be 15.
 
-Practice
-===========
+           .. activecode::  recursionx1q
+              :language: java
 
-.. dragndrop:: ch12rec_match_1
-    :feedback: Review the summaries above.
-    :match_1: A method that calls itself|||recursive method
-    :match_2: The stack of calls to methods|||call stack
-    :match_3: The case when the method doesn't call itself|||base case
+              public class Recursion
+              {
+                  public static int findSum(int n)
+                  {
+                      // write code here
+                  }
 
-    Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
+                  public static void main(String[] args)
+                  {
+                      System.out.println(findSum(5));
+                  }
+              }
+
+        .. tab:: Answer
+
+           In order to find the sum of all the numbers that are less than or equal to n, we can use recursion. When findSum(5) is called, since 5 is not equal to 0, the program will go to the else statement. The method will then return 5 + findsum(4). findSum(4) will return 4 + findSum(3), findSum(3) will return 3 + findSum(2), findSum(2) will return findSum(1), findSum(1) will return 1 + findSum(0). findSum(0) will return 0. Therefore, findSum(5) will be 5+4+3+2+1+0, which is euqal to 15.
+
+           .. activecode::  recursionx1a
+              :language: java
+
+              public class Recursion
+              {
+                  public static int findSum(int n)
+                  {
+                      if (n == 0)
+                          return 0;
+                      else
+                          return n + findSum(n - 1);
+                  }
+
+                  public static void main(String[] args)
+                  {
+                      System.out.println(findSum(5));
+                  }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_recursionx1a

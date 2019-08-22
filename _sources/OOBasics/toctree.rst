@@ -23,6 +23,6 @@ Object-Oriented Concepts
    ooMedMC.rst
    ooHardMC.rst
    freeResponse.rst
+   Summary.rst
    Exercises.rst
-   ooCodePractice.rst
    ooParsonsPractice.rst

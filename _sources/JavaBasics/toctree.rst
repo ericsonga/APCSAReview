@@ -12,4 +12,5 @@ Java Basics: Classes and Objects
    firstOOClass.rst
    runClass.rst
    partsOfAClass.rst
+   Summary.rst
    Exercises.rst

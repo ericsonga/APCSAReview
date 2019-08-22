@@ -13,6 +13,6 @@ Strings
    sEasyMC.rst
    sMedMC.rst
    sHardMC.rst
+   Summary.rst
    Exercises.rst
-   StringPractice.rst
    StringPracticeParsons.rst
