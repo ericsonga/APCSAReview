@@ -273,4 +273,4 @@ Summary
   
 - Truth tables can be used to prove that 2 Boolean expressions are identical.
 
--Equivalent Boolean expressions will evaluate to the same value in all cases.
+- Equivalent Boolean expressions will evaluate to the same value in all cases.

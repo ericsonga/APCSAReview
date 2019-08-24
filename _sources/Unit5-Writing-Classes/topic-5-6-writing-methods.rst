@@ -318,5 +318,5 @@ Summary
 
 - When an actual parameter is a reference to an object, the formal parameter is initialized with a copy of that reference, not a copy of the object. The formal parameter and the actual parameter are then aliases, both refering to the same object.
 
-- If the reference is to a mutable object, the method or constructor can use this reference to alter the state of the object. However, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.
+-  When an actual parameter is a reference to an object, the method or constructor could use this reference to alter the state of the original object. However, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.
 

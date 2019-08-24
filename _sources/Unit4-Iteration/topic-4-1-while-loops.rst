@@ -158,7 +158,7 @@ Another common error with loops is an **off-by-one error** where the loop runs o
 
    <a href="https://repl.it/@BerylHoffman/Magpie-ChatBot-Lab-v2" target="_blank">Magpie chatbot lab on repl.it</a>
    
-You can use a ``while`` loop to repeat the body of the loop a certain number of times as shown above.  However, a ``while`` loop is typically used when you don't know how many times the loop will execute. It is often used for a **input-controlled loop** where the user's input indicates when to stop. For example, in the |Magpie chatbot lab on repl.it|, the while loop stops when you enter in "bye". The stopping value is often called the **sentinel value** for the loop.
+You can use a ``while`` loop to repeat the body of the loop a certain number of times as shown above.  However, a ``while`` loop is typically used when you don't know how many times the loop will execute. It is often used for a **input-controlled loop** where the user's input indicates when to stop. For example, in the |Magpie chatbot lab on repl.it| below, the while loop stops when you type in "Bye". The stopping value is often called the **sentinel value** for the loop. Notice that if you type in "Bye" right away, the loop will never run. If the loop condition evaluates to false initially, the loop body is not executed at all. Another way to stop the loop prematurely is to put in a return statement that makes it immediately return from the method.
 
 .. raw:: html
 
@@ -177,6 +177,8 @@ Here's another example with |numbers on repl.it|. This code calculates the avera
 
     <iframe height="700px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/Average?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+
+There are standard algorithms that use loops to compute the sum or average like above, or determine the minimum or maximum value entered, or the frequency of a certain condition. You can also use loops to identify if some integers are evenly divisible by other integers or identify the individual digits in an integer. We will see a lot more of these algorithms in Unit 6 with loops and arrays.
 
 |Groupwork| Programming Challenge : Guessing Game
 -------------------------------------------------
@@ -234,7 +236,9 @@ Summary
 
 - **Off by one** errors occur when the iteration statement loops one time too many or one time too few.
 
-- **Input-controlled loops** often use a **sentinel value** inputted by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CS A exam, but are very useful to accept data from the user. 
+- If the Boolean expression evaluates to false initially, the loop body is not executed at all.
+
+- **Input-controlled loops** often use a **sentinel value** that is input by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CS A exam, but are very useful to accept data from the user. 
 
 - There are standard algorithms to compute a sum or average.
 

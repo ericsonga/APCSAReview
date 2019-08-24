@@ -343,7 +343,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
          
     .. mchoice:: qpret_10
         :answer_a: The values don't matter this will always cause an infinite loop.
-        :answer_b: Whenever a has values larger then temp.
+        :answer_b: Whenever a has values larger than temp.
         :answer_c: When all values in a are larger than temp.
         :answer_d: Whenever a includes a value that is equal to zero.
         :answer_e: Whenever a includes a value equal to temp.

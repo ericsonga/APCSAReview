@@ -50,7 +50,7 @@ Run this code to find how Java handles division and what casting can do to the r
 	
 Java assumes that if you are doing division with integers that you want an integer result and it will throw away any fractional part (part after the decimal point).  But, if you use a mixture of integers (int) and floating point (double) numbers Java will assume that you want a floating point result.  If you have integers and you want a floating point result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  
 
-Values of type double can be rounded to the nearest integer by formulas like the following. If you have a number like 3.33 and you add 0.5 to it, you get 3.83 and then casting it to an int throws away what's after the decimal point, just leaving 3. 
+Values of type double can be rounded to the nearest integer by formulas like the following. If you have a number like 3.33, the closes int is 4; if you add 0.5 to it, you get 3.83 and then casting it to an int throws away what's after the decimal point, just leaving 3. If you have a number like 3.8, the closest int is 4; if you add 0.5 to it, you get 4.3 and then casting it to an int throws away what's after the decimal point, just leaving 4.  The code below uses the formula to cast a positive and a negative double number to the closest int.
 
 
 .. code-block:: java 
@@ -133,7 +133,7 @@ Although it's not on the exam, you can format long decimal numbers to just show 
    :feedback_b: When you divide an integer by an integer you get an integer result and lose the fractional part.
    :feedback_c: This will convert total to a double value and then divide by 3 to return a double result.
 
-   Which of the following returns the correct average when 3 values had been added to an integer total?
+   Which of the following returns the correct average for a total that is the sum of 3 int values?
    
 |Groupwork| Programming Challenge : Average 3 Numbers
 ------------------------------------------------------
@@ -210,7 +210,7 @@ Summary
 
 - **Type casting** is used to convert variables from one type to another.
 - The casting operators (int) and (double) can be used to create a temporary value converted to a different data type.
-- Casting a double value to an int causes the digits to the right of the decimal point to be truncated. 
+- Casting a double value to an int causes the digits to the right of the decimal point to be truncated (cut off and thrown away).
 
 - Some programming code causes int values to be automatically cast (widened) to double values.
 - Values of type double can be rounded to the nearest integer by (int)(x + 0.5) or (int)(x – 0.5) for negative numbers.

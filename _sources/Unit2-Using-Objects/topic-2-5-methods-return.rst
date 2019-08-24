@@ -37,7 +37,7 @@ Calling Methods that Return Values
 Some methods return a value back that the program can use. In the previous lesson, you may have used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value. 
 
 
-Here are some examples of using get methods for the turtle object yertle. When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. 
+Here are some examples of using get methods for the turtle object yertle. When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()*.
 
 
 .. code-block:: java 
@@ -159,7 +159,7 @@ Summary
 -------------------
 
 - Some methods return values.
-- To use the return value when calling a method, it must be stored in a variable or used as part of an expression.
+- To use the return value when calling a method, it must be stored in a variable or used as part of an expression. The variable data type must match the return type of the method.
 
 
 .. raw:: html

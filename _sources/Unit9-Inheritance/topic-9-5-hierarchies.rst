@@ -272,7 +272,7 @@ In the DiscountedItem subclass,
     /** 
        The ShoppingCart class has an ArrayList of Items.
        You will write a new class DiscountedItem that extends Item.
-       This code is adapted https://practiceit.cs.washington.edu/problem/view/bjp4/chapter9/e10-DiscountBill
+       This code is adapted from https://practiceit.cs.washington.edu/problem/view/bjp4/chapter9/e10-DiscountBill
     */
 
     public class Tester

@@ -51,7 +51,7 @@ In a new class, constructors are usually written after the instance variables an
 
    Constructors must have the same name as the class! Constructors have no return type!
    
-Classes usually have more than one constructor. There is usually at least a constructor that takes no parameters and a constructor that takes all the parameters necessary for initializing all the instance variables. Here are two constructors that could be written for the Person class. Notice that the first one initializes name, email, and phoneNumber to empty string "" as the default values. Most programmers use "" as the default value for String variables and 0 as the default value for int and double variables.
+Classes usually have more than one constructor. There is usuallsy at least a constructor that takes no parameters and a constructor that takes all the parameters necessary for initializing all the instance variables. Here are two constructors that could be written for the Person class. Notice that the first one initializes name, email, and phoneNumber to empty string "" as the default values. Most programmers use "" as the default value for String variables and 0 as the default value for int and double variables.
 
 .. code-block:: java 
 
@@ -212,7 +212,25 @@ The following class defines a Car with the instance variables model and year, fo
         car2.print();
      }
   }
-  
+
+Constructors are used to set the initial state of an object by initializing its instance variables. The examples above have instance variables that are primitive types, but you can have other objects, reference types, as instance variables. For example, a Person class could have an Address object as an instance variable, and the Address class could have String instance variables for the street, city, and state. 
+
+(Advanced Topic Warning) When you pass object references as parameters to constructors or methods, they become aliases for the original object and can change it. If a constructor has an object instance variable, it can copy   the referenced object in the parameter using new and the constructor of the referenced object like below so that it does not change the state of the original object. You will see more examples like this in later lessons.
+
+.. code-block:: java 
+
+     public class Person {
+       private String name;
+       private Address addr;
+       
+     // constructor: initialize instance variable and call Address constructor to make a copy
+     public Person(String initName, Address initAddr)
+     {
+        name = initName;
+        addr = new Address(initAddr.getStreet(), initAddr.getCity(), initAddr.getState());
+     }
+     
+
 |Groupwork| Programming Challenge : Student Class
 --------------------------------------------------
 

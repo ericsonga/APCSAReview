@@ -23,9 +23,18 @@
 Accessor Methods
 =================
 
-Since the instance variables in a class are usually marked as private to the class, programmers provide public methods that allow safe access to the instance variable values in a class. **Accessor methods**, also called **get methods** or **getters**, allow a way to get the value of each instance variable from outside of the class.
+Since the instance variables in a class are usually marked as private to the class, programmers provide public methods that allow safe access to the instance variable values in a class. **Accessor methods**, also called **get methods** or **getters**, allow a way to get the value of each instance variable from outside of the class. In the next lesson, we will see **mutator methods**, also called **set methods** or **setters**, that allow a way to change the values of the instance variables. In Unit 2, we also used set/get methods with the Turtle class to get the Turtle object's width, height, xPosition, etc. or to change them.
 
-Programmers write get methods for each instance variable that look like the following:
+If you used a language like App Inventor in an AP CSP class, you may have used setter and getter blocks. In App Inventor, you cannot make your own classes, but you can declare UI objects like Button1, Button2 from the Button class and use their get/set methods for any property like below. 
+
+.. figure:: Figures/AppInvSetGet.png
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: App Inventor Set and Get blocks for object Button1
+    
+Java programmers write get methods for each instance variable that look like the following:
 
 .. code-block:: java
      

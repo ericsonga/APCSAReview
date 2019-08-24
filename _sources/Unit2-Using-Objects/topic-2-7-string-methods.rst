@@ -56,7 +56,7 @@ For the AP CS A exam there are only a few things that you have to know about str
 
     -  **int indexOf(String str)** method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.
 
-    -  **int compareTo(String other)** returns a negative value if the current string is less than the ``other`` string, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string.
+    -  **int compareTo(String other)** returns a negative value if the current string is less than the ``other`` string alphabetically, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string alphabetically.
 
     -  **boolean equals(String other)** returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.
 
@@ -190,7 +190,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      String s2 = s1.substring(2);
 
 
-Run the example below to see the output from ``compareTo`` and ``equals``.
+Run the example below to see the output from ``compareTo`` and ``equals``. Notice that compareTo tells you how you would order the two string alphabetically. If they are equal, it returns 0. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  And notice that equals is case-sensitive.
 
 .. activecode:: lcsm2
    :language: java
@@ -216,7 +216,10 @@ Run the example below to see the output from ``compareTo`` and ``equals``.
 
    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String class</a>
    
-There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam.
+There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
+
+The String library which is build into the default java.lang library simplifies a lot of complex programming tasks for us. Classes are grouped together into a **package** like java.lang. Many other useful library packages can be imported in. Programmers provide **Application Program Interfaces (APIs)** to allow other programmers to use their code. 
+
 
 .. note::
 
@@ -336,6 +339,8 @@ Common Mistakes
   -  Thinking that strings can change when they can't.  They are immutable.  
   
   -  Trying to invoke a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
+  
+  - Trying to access part of a string that is not between index 0 and length - 1. This will throw an IndexOutOfBoundsException.
 
 
 |Groupwork| Programming Challenge : Pig Latin

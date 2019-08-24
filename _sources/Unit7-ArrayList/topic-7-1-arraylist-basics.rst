@@ -37,7 +37,9 @@ Intro to ArrayLists
 In the last unit, we learned about arrays to hold collections of related data. But arrays have limitations. The size of an array is established at the time of creation and cannot be changed. What if you don't know how big the collection of data will be? What if you want to add and remove items from the collection and change the size of the collection while the program is running? For example, if you wanted to represent a shopping list, you might add to the list throughout the week and remove things from the list while you are shopping. You probably would not know how many items will be on the list at the beginning of the week.
 
     
-Luckily, Java has a class  called **ArrayList** which is a re-sizable array. An ArrayList has an underlying array that grows or shrinks as needed. You can use ArrayList instead of arrays whenever you don't know the size of the array you need or you know that you will add and remove items changing the array's size dynamically during run time.  An ArrayList is often called just a **list** on the CS A exam. In past AP CS A exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
+Luckily, Java has a class  called **ArrayList** which is a re-sizable array. An ArrayList has an underlying array that grows or shrinks as needed. You can use ArrayList instead of arrays whenever you don't know the size of the array you need or you know that you will add and remove items changing the array's size dynamically during run time. An ArrayList is **mutable**, meaning it can change during runtime by adding and removing objects from it.
+
+An ArrayList is often called just a **list** on the CS A exam. In past AP CS A exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
 
 .. mchoice:: qloopList
    :answer_a: A list will always use less memory than an array.

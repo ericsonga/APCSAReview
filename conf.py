@@ -187,9 +187,10 @@ html_short_title ='AP CS Awesome'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 
-#html_static_path = ['_static']  + runestone_static_dirs()
-# new 7/2019 path
-html_static_path = runestone_static_dirs()
+# Including my static images and css files
+html_static_path = ['_static']  + runestone_static_dirs()
+# 
+#html_static_path = runestone_static_dirs()
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.

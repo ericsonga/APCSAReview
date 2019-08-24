@@ -130,15 +130,26 @@ Run the code below to see the use of both constsructors. Try adding another Greg
         }
      } 
 
-https://docs.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html
+.. |documentation| raw:: html
 
-When you use a class that someone has already written for you in a **library** that you can import like the GregorianCalendar class above, you can look up how to use the constructors and methods in the **documentation** for that class.  The documentation will list the **signatures** of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. For example,
+   <a href="https://docs.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html" target="_blank" style="text-decoration:underline">documentation</a>
+
+
+
+When you use a class that someone has already written for you in a **library** that you can import like the GregorianCalendar class above, you can look up how to use the constructors and methods in the |documentation| for that class.  The documentation will list the **signatures** of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. For example,
 
 - GregorianCalendar() : Constructs a default GregorianCalendar using the current time in the default time zone with the default locale.
 - GregorianCalendar(int year, int month, int dayOfMonth) : Constructs a GregorianCalendar with the given date set in the default time zone with the default locale.
 
 
-These formal parameters (for example year, month, dayOfMonth above) are filled in with copies of the actual parameters (for example your birthdate) when the constructors are called using a process called **call by value** and these in turn are used to initialize the instance variables for the object. 
+When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal parameters**, (year, month, dayOfMonth) in this example, are filled in with copies of the  **actual parameters** (or **arguments**), which are (2001,1,1) in this example, using a process called **call by value** that copies values, and these values in turn are used by the constructor to initialize the instance variables for the new object. 
+
+.. image:: Figures/parameterMapping.png
+    :width: 600px
+    :align: center
+    :alt: Parameter Mapping
+
+The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a String when it is expecting an int. And the order of the arguments matters. If you mix up the year and month in the GregorianCalendar constructor, you will get a completely different date!
 
 This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more how this all works in Unit 5 when you write your own classes and constructors. 
  
@@ -175,13 +186,17 @@ Debug the following code.
 Summary
 -------------------
 
-- A class contains **constructors** that are invoked to create objects. They have the same name as the class.
+- A class contains **constructors** that are invoked to create objects. Constructors must have the same name as the class.
 
 - Every object is created using the keyword **new** followed by a call to one of the class’s constructors.
 
-- Parameters allow values to be passed to the constructor to establish the initial state of the object.
+- Parameters allow values to be passed to the constructor to establish the initial state of the object. These values are called the **parameters** or **actual parameters** or **arguments**.
 
-- Constructors are said to be **overloaded** when there are multiple constructors with the same name but a different **signature** with different parameters.
+- Constructors are said to be **overloaded** when there are multiple constructors with the same name but a different **signature** with different **parameters**. A **signature** consists of the constructor name and the parameter list.
+
+- The parameter list, in the header of a constructor, lists the types of the values that are passed and their variable names. These variables are called the **formal parameters**.
+
+- Actual parameters are passed using **call by value** which initializes the formal parameters with copies of the actual parameters. The values passed to a constructor must be compatible with the types identified in the formal parameter list.
 
 
 .. raw:: html

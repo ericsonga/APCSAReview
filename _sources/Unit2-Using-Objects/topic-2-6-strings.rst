@@ -130,7 +130,7 @@ Now that greeting refers to an actual object we can ask the object what class cr
 	single: java.lang
 	pair: package; java.lang
 
-The code above will first print ``class java.lang.String`` since ``greeting`` was created by the ``String`` class.  The full name for the ``String`` class is ``java.lang.String``.  The ``java.lang`` part is the **package** name.  Every class in the Java language is in a package and the standard classes like ``String`` are in the ``java.lang`` package.  Every object in Java contains a reference to the class that created it.  Also, every class contains a reference to its **parent** class.  Yes, a class can have a parent class, just as people have parents.  But, in Java a class can only have one parent.  A class can ``inherit`` object fields and methods from a parent class, just like you might inherit musical ability from a parent.  The fourth line will print ``class java.lang.Object`` because the parent class (**superclass**) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.  
+The code above will first print ``class java.lang.String`` since ``greeting`` was created by the ``String`` class.  The full name for the ``String`` class is ``java.lang.String``.  The ``java.lang`` part is the **package** name.  Every class in the Java language is in a package and the standard classes like ``String`` are in the ``java.lang`` package.  Every object in Java knows the class that created it.  Also, every class knows its **parent** class.  Yes, a class can have a parent class, just as people have parents.  But, in Java a class can only have one parent.  A class can ``inherit`` object fields and methods from a parent class, just like you might inherit musical ability from a parent.  The fourth line will print ``class java.lang.Object`` because the parent class (**superclass**) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.  
 
 .. figure:: Figures/stringObject.png
     :width: 500px
@@ -169,6 +169,31 @@ Strings can be **appended** to each other to create a new string using the ``+``
   
 .. note::
    Note that spaces are not added between strings automatically.  If you want a space between two strings then add one using + " " +. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".  And remember that variables are never put inside the quotes ("") since this would print the variable name out letter by letter instead of its value.
+
+|Exercise| **Check Your Understanding**
+
+.. mchoice:: qse_1
+   :practice: T
+   :answer_a: xyz
+   :answer_b: xyxyz
+   :answer_c: xy xy z
+   :answer_d: xy z
+   :answer_e: z
+   :correct: b
+   :feedback_a: s1 will equal "xy" plus another "xy" then z at the end.
+   :feedback_b: s1 contains the original value, plus itself, plus "z"
+   :feedback_c: No spaces are added during concatenation.
+   :feedback_d: No spaces are added during concatenation, and an additional "xy" should be included at the beginning.
+   :feedback_e: s1 was set to "xy" initially, so the final answer will be "xyxyz"
+
+   Given the following code segment, what is in the string referenced by s1?
+
+   .. code-block:: java
+
+     String s1 = "xy";
+     String s2 = s1;
+     s1 = s1 + s2 + "z";
+     
 
 ..	index::
 	single: toString

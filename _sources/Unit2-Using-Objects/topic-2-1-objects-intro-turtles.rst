@@ -148,7 +148,7 @@ When you write a class like the Turtle class, you can declare many object variab
 
 |CodingEx| **Coding Exercise:** 
 
-In the code below, two turtle object variales are created, yertle and myrtle. Can you add another turtle object to the code below? You can make up a variable name for your turtle and add in a line like the following in the main method and the make it move:
+In the code below, two turtle object variables are created, yertle and myrtle. Can you add another turtle object to the code below? You can make up a variable name for your turtle and add in a line like the following in the main method and the make it move:
 
 .. code-block:: java
 

@@ -145,7 +145,7 @@ Can you make yertle draw the digital number 8, as 2 squares on top of each other
 
 
 
-Before you call a method, you must make sure that you have created and intialized an object using a constructor. Remember that if you just declare a Turtle object with calling its constructor, it will be null and not really reference an object. If you call a method for a variable that is null, you will get an error called **NullPointerException**.
+Before you call a method, you must make sure that you have created and intialized an object using a constructor. Remember that if you just declare a Turtle object without calling its constructor, it will be null and not really reference an object. If you call a method for a variable that is null, you will get an error called **NullPointerException**.
      
 |Groupwork| Programming Challenge : Draw a Letter
 -------------------------------------------------

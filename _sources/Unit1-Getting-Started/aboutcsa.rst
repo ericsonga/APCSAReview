@@ -18,15 +18,15 @@ Starting in 2020, the AP CS A exam will cover the following units and will provi
     </td></tr>
     <tr><td>Unit 4 </td><td> Iteration </td><td>        17.5–22.5%</td><td> 14-16  </td><td>4-6
     </td></tr>
-    <tr><td>Unit 5 </td><td> Writing Classes </td><td>  5-7.5%  </td><td>    12-14<td></td>3-6
+    <tr><td>Unit 5 </td><td> Writing Classes </td><td>  5-7.5%  </td><td>    12-14</td><td>3-6</td>
+    </tr>
+    <tr><td>Unit 6 </td><td> Array  </td><td>           10–15%  </td><td>    6-8</td><td>
     </td></tr>
-    <tr><td>Unit 6 </td><td> Array  </td><td>           10–15%  </td><td>    6-8<td></td>
+    <tr><td>Unit 7 </td><td> ArrayList </td><td>        2.5–7.5%   </td><td> 10-12 </td><td>3-6</td>
+    </tr>
+    <tr><td>Unit 8 </td><td> 2D Array  </td><td>        7.5–10%   </td><td>  10-12   </td><td>4-7 
     </td></tr>
-    <tr><td>Unit 7 </td><td> ArrayList </td><td>        2.5–7.5%   </td><td> 10-12 <td>3-6</td>
-    </td></tr>
-    <tr><td>Unit 8 </td><td> 2D Array  </td><td>        7.5–10%   </td><td>  10-12   </td><td>4-7 days
-    </td></tr>
-    <tr><td>Unit 9 </td><td> Inheritance </td><td>      5-10%  </td><td>     14-15  </td><td>3-6 days
+    <tr><td>Unit 9 </td><td> Inheritance </td><td>      5-10%  </td><td>     14-15  </td><td>3-6 
     </td></tr>
     <tr><td>Unit 10 </td><td>Recursion  </td><td>       5–7.5%    </td><td>  3-5  <td></td>
     </td></tr>

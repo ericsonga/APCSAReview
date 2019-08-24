@@ -26,7 +26,7 @@ Polymorphism
 ..	index::
     single: polymorphism
     
-**Polymorphism** is a big word that you can break down into "poly" which means many and "morphism" which means form.  So, it just means many forms.  In Java it means that the method that gets called at **run-time** (when the code is run) depends on the type of the object at **run-time**.  
+**Polymorphism** is a big word that you can break down into "poly" which means many and "morphism" which means form.  So, it just means many forms.  In Java it means that the method that gets called at **run-time** (when the code is run) depends on the *type* of the object at run-time.  
 
 This is simliar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal. 
 
@@ -458,7 +458,7 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
 Summary
 ----------
 
-- At compile time, methods in or inherited by the declared type determine the correctness of a non-static method call.
+- At compile time, methods in or inherited by the **declared type** determine the correctness of a non-static method call.
 
-- At run-time, the method in the actual object type is executed for a non-static method call.
+- At run-time, the method in the **actual object type** is executed for a non-static method call. This is called **polymorphism**.
 

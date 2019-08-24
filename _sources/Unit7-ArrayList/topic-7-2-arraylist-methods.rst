@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
     
+.. raw:: html
+
+    <style>    td { text-align: left; } </style>
+    
 ArrayList Methods 
 =========================
 
