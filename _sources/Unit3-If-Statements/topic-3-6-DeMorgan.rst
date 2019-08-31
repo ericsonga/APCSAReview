@@ -30,11 +30,31 @@ Equivalent Boolean Expressions (DeMorgan's Laws)
 	single: DeMorgan's Laws
 	single: negation
 	
-DeMorgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to handle the negation of a complex conditional, which is a conditional statement with more than one condition joined by an and (&&) or or (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex conditionals, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state that:
+DeMorgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an and (&&) or or (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state the following equivalencies. Here's an easy way to remember De Morgan's Laws: **move the NOT inside, and becomes or** and **move the NOT inside, or becomes and**.
 
-    -  not (a and b) is the same as (not a) or (not b).  In Java this is written as !(a && b) == !a || !b 
+.. figure:: Figures/demorgan.png
+    :width: 400px
+    :align: center
+    :figclass: align-center
     
-    -  not (a or b) is the same as (not a) and (not b).  In Java this is written as !(a || b) == !a && !b 
+    Figure 1: De Morgan's Laws to simplify complex expressions
+
+
+In Java, De Morgan's Laws are written with the following operators:
+
+    -  **!(a && b)** is equivalent to **!a || !b**
+    
+    -  **!(a || b)** is equivalent to **!a && !b** 
+    
+You can also simplify negated boolean expressions that have relational operators like <, >, ==. You can  remove negation by moving it inside and flipping the relational operator to its opposite sign. For example, not (c equals d) is the same as saying c does not equal d.  An easy way to remember this is **Move the NOT inside, flip the sign** (== becomes !=, < becomes >=, and > becomes <=).
+
+
+  - !(c == d) is equivalent to (c != d)
+  - !(c != d) is equivalent to (c == d)
+  - !(c < d) is equivalent to (c >= d)
+  - !(c > d) is equivalent to (c <= d)
+  - !(c <= d) is equivalent to (c > d)
+  - !(c >= d) is equivalent to (c < d)
 
 Although you do not have to memorize DeMorgan's Laws for the CS A Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) == !a || !b by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
 
@@ -50,21 +70,16 @@ Although you do not have to memorize DeMorgan's Laws for the CS A Exam, you shou
 | false | false | true      | true     |
 +-------+-------+-----------+----------+
 
-Often, you can simplify boolean expressions to create equivalent expressions. For example, applying DeMorgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)``. This can then be simplified further by flipping the operators instead of keeping the not operator. So, ``!(x < 3) || !(y > 2)`` is simplified to ``(x >= 3 || y <= 2)`` where the relational operators are flipped and the negation is removed. So,
+Often, you can simplify boolean expressions to create equivalent expressions. For example, applying DeMorgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)`` as seen in the figure below. This can then be simplified further by moving the not operator inside and flipping the relation operators. So, ``!(x < 3) || !(y > 2)`` is simplified to ``(x >= 3 || y <= 2)`` where the relational operators are flipped and the negation is removed. These two simplification steps are seen below. 
 
-.. code-block:: java 
-
-    !(x < 3 && y > 2) == !(x < 3) || !(y > 2) == (x >= 3 || y <= 2)
+.. figure:: Figures/demorganex.png
+    :width: 400px
+    :align: center
+    :figclass: align-center
     
+    Figure 2: An example boolean expression simplified
 
-The negation can be removed if you flip the relational operator. For example, not (c equals d) is the same as saying c does not equal d. The not in the relational expressions below is equivalent to flipping the relational operator to its opposite sign. 
 
-  - !(c == d) == (c != d)
-  - !(c != d) == (c == d)
-  - !(c < d) == (c >= d)
-  - !(c > d) == (c <= d)
-  - !(c <= d) == (c > d)
-  - !(c >= d) == (c < d)
 
 
 |CodingEx| **Coding Exercise**
@@ -92,13 +107,14 @@ For what values of x and y will the code below print true?  Try out different va
    :answer_a: first case
    :answer_b: second case 
    :correct: b
-   :feedback_a: This will be printed if x is greater or equal to 3 and y is less than or equal to 2.  The first part is true but the second is false.  Since the statements are joined by an and the complex conditional is false.
-   :feedback_b: This will be printed if x is less than 3 or y is greater than 2.  In this case the first will be false, but the second true so since the statements are joined with an or the complex conditional is true.
+   :feedback_a: This will be printed if x is greater or equal to 3 and y is less than or equal to 2.  The first part is true but the second is false.  Since the statements are joined by an and the complex expression is false.
+   :feedback_b: This will be printed if x is less than 3 or y is greater than 2.  In this case the first will be false, but the second true so since the statements are joined with an or the complex expression is true.
 
    What is printed when the following code executes and x equals 4 and y equals 3?   
    
    .. code-block:: java 
 
+     int x = 4, y = 3;         
      if (!(x < 3 || y > 2)) System.out.println("first case");
      else System.out.println("second case");
      
@@ -114,6 +130,7 @@ For what values of x and y will the code below print true?  Try out different va
    
    .. code-block:: java 
 
+     int x = 4, y = 3; 
      if (!(x < 3 && y > 2)) System.out.println("first case");
      else System.out.println("second case");
      
@@ -124,22 +141,26 @@ For what values of x and y will the code below print true?  Try out different va
 
 .. |pogil| raw:: html
 
-   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank">POGIL</a>
+   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank" style="text-decoration:underline">POGIL</a>
    
 .. |pogil role| raw:: html
 
-   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank">POGIL role</a>
-   
+   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank" style="text-decoration:underline">POGIL role</a>
+
+.. |this worksheet| raw:: html
+
+   <a href="https://docs.google.com/document/d/1KI95bHluw3UkloFxlSih_1ed0QGaW9NZ1anEzqQ_RZY/edit?usp=sharing" target="_blank" style="text-decoration:underline">this worksheet</a>
    
 We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns. 
 
-Explore the following problems with your group:
+Explore the following problems with your group. You may use |this worksheet| to complete your truth tables. Assume that x is an integer value, for example -1, 0, or 1. 
 
-1. Complete a truth table for the boolean expression: !(x == 0 || x >= 1). Is this the set of positive or negative numbers? 
+1. Complete a truth table for the boolean expression: !(x == 0 || x >= 1). Is this the set of positive or negative numbers?  Is the expression true when x is positive? Or is it true when x is negative? You can try out the values when x is 1 or -1 or 0. Note that 0 is not positive or negative. You can try running the code below to check your answer.
+
 
 2. Complete a truth table for the boolean expression: !(x == 0) && !(x >= 1). Is this the set of positive or negative numbers?
 
-3. Complete a truth table for the boolean expression: (x != 0) || (x < 1). Is this the set of positive or negative numbers?
+3. Complete a truth table for the boolean expression: (x != 0) && (x < 1). Is this the set of positive or negative numbers?
 
 4. Are the 3 boolean expressions equivalent? Why or why not?
 
@@ -154,7 +175,11 @@ Explore the following problems with your group:
    {
       public static void main(String[] args)
       {
-        
+         int x = -1; // try with x = -1, x = 0, and x = 1
+         System.out.println(!(x == 0 || x >= 1));
+         // add print statements for expressions in #2 and #3
+         // to see if they are equivalent when x = -1, 0, and 1.
+     
         
       }
    }
@@ -259,17 +284,17 @@ Summary
 
 - De Morgan’s Laws can be applied to Boolean expressions to create equivalent ones:
 
-  - !(a && b) == !a || !b 
-  - !(a || b) == !a && !b 
+  - !(a && b) is equivalent to !a || !b 
+  - !(a || b) is equivalent to !a && !b 
 
-- A negated conditional with a relational operator can be simplified by flipping the relational operator and removing the not. 
+- A negated expression with a relational operator can be simplified by flipping the relational operator and removing the not. 
 
-  - !(c == d) == (c != d)
-  - !(c != d) == (c == d)
-  - !(c < d) == (c >= d)
-  - !(c > d) == (c <= d)
-  - !(c <= d) == (c > d)
-  - !(c >= d) == (c < d)
+  - !(c == d) is equivalent to (c != d)
+  - !(c != d) is equivalent to (c == d)
+  - !(c < d) is equivalent to (c >= d)
+  - !(c > d) is equivalent to (c <= d)
+  - !(c <= d) is equivalent to (c > d)
+  - !(c >= d) is equivalent to (c < d)
   
 - Truth tables can be used to prove that 2 Boolean expressions are identical.
 

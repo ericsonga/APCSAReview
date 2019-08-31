@@ -39,13 +39,30 @@ The fields of **AI (Artificial Intelligence)** and **Machine Learning** increasi
 
 Another problem in machine learning is **bias** in algorithms or data. Machine learning software learns from lots of data examples, but the data in our world is often biased, and machines can then learn these biases.
 
-Here are some interesting videos to watch about bias in algorithms:
+
+.. |video1| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=TWWsW1w-BVo" target="_blank" style="text-decoration:underline">Gender Shades video</a>
+   
+.. |Joy Buolamwini| raw:: html
+
+   <a href="https://www.poetofcode.com/" target="_blank" style="text-decoration:underline">Joy Buolamwini</a>
+   
+Watch the following |video1| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League). 
+
+.. youtube:: TWWsW1w-BVo
+    :height: 315
+    :width: 560
+    :align: left
+    
+
+Here are some other interesting videos to watch about bias in algorithms:
 
 .. raw:: html
 
-    <ul>
-    <li>a Ted Talk video on <a href="https://www.youtube.com/watch?v=UG_X_7g63rY" target="_blank">Bias in Facial Recognition</a> by Joy Buolamwini,</li>
-    <li><a href="https://www.youtube.com/watch?v=7lpCWxlRFAw" target="_blank">a report on police crime prediction software and bias</a></li>
+    <ul><li><a href="https://www.youtube.com/watch?v=QxuyfWoVV98" target="_blank">AI, Ain't I a Woman?</a>, a poem by Joy Buolamwini</li>
+    <li>Ted Talk video on <a href="https://www.youtube.com/watch?v=UG_X_7g63rY" target="_blank">Bias in Facial Recognition</a> by Joy Buolamwini,</li>
+    <li><a href="https://www.youtube.com/watch?v=7lpCWxlRFAw" target="_blank">A report on police crime prediction software and bias</a></li>
     </ul>
 
 |Groupwork| POGIL Groupwork: Impacts of CS

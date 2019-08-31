@@ -1,11 +1,10 @@
 2D Arrays
 :::::::::::::::::::::::
 
-Class Periods: 10-12
+Class Periods: 10-12 (including labs)
 
 AP CS A Exam Weighting: 7.5-10%
 
-Lab Periods: 7 days
 
 
 .. toctree::

@@ -25,8 +25,8 @@ Consumer Review Lab
   
 The Consumer Review Lab is a new AP CS A Lab released in 2019 to practice loops and calling methods to prepare for the free response question on control structures and methods. Here is a link to the |student guide|. The teacher guide and the code files are available in the AP Course Audit Portal. The code files are also below.
 
-Activity Analyzing Reviews
----------------------------
+Activity 0 Analyzing Reviews
+-----------------------------
 
 In pairs or groups, pretend you are going to buy something from a shopping site on the internet that also has reviews by other people who have bought that product. We all use reviews on a regular basis, to help us determine which movie to see, which video game to play, or even which pair of headphones to buy. In your group,
 

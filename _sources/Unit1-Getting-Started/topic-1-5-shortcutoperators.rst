@@ -141,7 +141,7 @@ x  y  z  Output
 
 .. |Operators Maze game| raw:: html
 
-   <a href="https://docs.google.com/document/d/1654HrHMuu4z1L8gOY-1t5JNTp08d2JDTNDdCAkDXHSw/edit?usp=sharing" target="_blank" style="text-decoration:underline">Operators Maze game</a>
+   <a href="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing" target="_blank" style="text-decoration:underline">Operators Maze game</a>
    
 
 

@@ -1,11 +1,10 @@
 Iteration (Loops)
 ::::::::::::::::::::
 
-Class Periods: 14-16
+Class Periods: 14-16 (including lab)
 
 AP CS A Exam Weighting: 17.5-22.5%
 
-Lab Periods: 6 days
 
 .. toctree::
    :maxdepth: 3

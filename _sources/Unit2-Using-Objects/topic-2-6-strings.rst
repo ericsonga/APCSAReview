@@ -226,7 +226,7 @@ Since the same operators are processed from left to right this will print ``1243
 
 If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string. Hint: you used this to do addition before multiplication in arithmetic expressions.
 
-What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, you would use a **backslash escape sequence** to print out a real quote. And if you wanted to print out a backslash \, you would have to backslash it too \\. Another useful backslashed character is \n which will put in a newline. Here are the escape sequences that may be used in the AP course:
+What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a **backslash escape sequence**. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \\n which will put in a newline. Here are the escape sequences that may be used in the AP course:
 
 .. activecode:: bhescape
    :language: java
@@ -235,7 +235,9 @@ What if you wanted to print out a double quote " character? Since the double quo
    {
       public static void main(String[] args)
       {
-        String message = "\"Backslash (\\)\" \n it can be used as an escape sequence in Java."; 
+        String message = "Here is a backslash quote \" " +
+          " and a backslashed backslash (\\) " +
+          "Backslash n \n prints out a new line."; 
         System.out.println(message);
       }
    }
@@ -298,4 +300,4 @@ Summary
 
 - Primitive values can be concatenated with a String object. This causes implicit conversion of the values to String objects.
 
-- Escape sequences start with a \ and have a special meaning in Java. Escape sequences used in this course include \", \\, and  \n.
+- Escape sequences start with a backslash \\ and have special meaning in Java. Escape sequences used in this course include \", \\, and  \\n to print out a quote, backslash, and a new line.
