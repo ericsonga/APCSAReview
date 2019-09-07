@@ -44,9 +44,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    int numPeople = 3;
    double perPersonCost = total / numPeople;
    =====
-   print(perPersonCost);
+   System.out.println(perPersonCost);
    =====
-   print(perpersoncost); #distractor
+   System.out.println(perpersoncost); #distractor
    
 .. parsonsprob:: ch3ex3muc
    :numbered: left

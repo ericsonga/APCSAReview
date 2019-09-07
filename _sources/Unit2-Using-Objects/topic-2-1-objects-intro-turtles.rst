@@ -72,7 +72,7 @@ In the 1960s, an educational programming language called Logo was developed. It 
 	pair: program; comment
 
 Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
-Try clicking the |runbutton| button below to see what the following program does. (You can also see the Turtle code in action at this |repl link| or download the files |github|.)
+Try clicking the |runbutton| button below to see what the following program does. (If the code below does not work for you, you can also see the Turtle code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 
 .. activecode:: TurtleTest

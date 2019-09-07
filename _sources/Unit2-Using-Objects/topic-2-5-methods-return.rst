@@ -30,6 +30,13 @@
     :align: top
     :alt: run button
 
+.. |repl link| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
+
+.. |github| raw:: html
+
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
    
 Calling Methods that Return Values
 ===================================
@@ -58,6 +65,8 @@ Here are some examples of using get methods for the turtle object yertle. When y
 |CodingEx| **Coding Exercise:**
 
 Try the code below that changes the turtle's width and height. How big or small can you make yertle?
+
+(If the code below does not work for you, you can also copy in the code below into the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. activecode:: TurtleTestGetSet
     :language: java

@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
     
+.. |github| raw:: html
+
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+    
 For Loops
 =========
 
@@ -26,7 +30,6 @@ For Loops
 	single: for loop
 	pair: loop; for
 
-.. Add turtle code to for loop? To draw a square and then a n-polygon, and then in nested, make a snowflake pattern. Add an image comparing to block lang? 
 
 Another type of loop in Java is a **for loop**. This is usually used when you know how many times you want the loop to execute. It is often a simple **counter-controlled loop** to do the loop body a set number of times.
 
@@ -291,6 +294,8 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
 |CodingEx| **Coding Exercise**
 
 Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 forward and 1 turn command in the loop. Whenever you find yourself repeating code, try to use a loop instead!
+
+(If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. activecode:: TurtleSquare
     :language: java

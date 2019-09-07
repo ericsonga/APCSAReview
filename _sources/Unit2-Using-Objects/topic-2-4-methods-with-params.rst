@@ -24,6 +24,11 @@
     single: parameter
     single: argument
 
+
+.. |github| raw:: html
+
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+
     
 .. |runbutton| image:: Figures/run-button.png
     :height: 30px
@@ -93,6 +98,7 @@ Try some of the methods above in the turtle code below.
 
 2. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. Use the turn method which has a parameter for the angle of the turn in degrees. For example, turn(90) is the same as turnRight(). 
 
+(If the code below does not work for you, you can also use the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. reveal:: TurtleClassesIndividual
    :showtitle: Hidden Turtle Classes

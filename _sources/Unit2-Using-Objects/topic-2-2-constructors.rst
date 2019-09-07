@@ -21,7 +21,15 @@
     
 ..	index::
 	pair: class; constructor
-    
+
+.. |repl link| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
+
+.. |github| raw:: html
+
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+   
 Creating and Storing Objects: Constructors
 ===========================================
 
@@ -62,7 +70,7 @@ Notice that the order of the parameters matter. This constructor always takes (x
 
 Try changing the code below to create a World of 300x400. What parameters do you need to give the Turtle constructor to place the turtle in the top right corner? Experiment and find out. What happens if you mix up the order of the parameters?
 
-
+(If the code below does not work for you, you can also use the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. activecode:: TurtleConstructorTest
     :language: java
@@ -527,7 +535,7 @@ Summary
          * @param height the height of the desired picture
          * @param width the width of the desired picture
          */
-        public Picture(int height, int width)
+        public Picture(int width, int height)
         {
           // let the parent class handle this width and height
           super(width,height);
@@ -1443,8 +1451,9 @@ Summary
           scaleTransform.scale(xFactor,yFactor);
 
           // create a new picture object that is the right size
-          Picture result = new Picture((int) (getHeight() * yFactor),
-                                       (int) (getWidth() * xFactor));
+          Picture result = new Picture((int) (getWidth() * xFactor),
+                                       (int) (getHeight() * yFactor)
+                                       );
 
           // get the graphics 2d object to draw on the result
           Graphics graphics = result.getGraphics();

@@ -143,6 +143,12 @@ What does the following code print out? Watch the code run in this |Java visuali
 
 Our turtles can use nested loops to repeat drawing a shape over and over. The turtle below is trying to draw a square many times to create a snowflake pattern. Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15. 
 
+.. |github| raw:: html
+
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+   
+(If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+
 .. activecode:: TurtleNestedLoop
     :language: java
     :datafile: turtleClassesNestedLoop

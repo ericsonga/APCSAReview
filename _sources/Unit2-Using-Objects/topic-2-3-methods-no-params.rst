@@ -31,7 +31,10 @@
     :alt: run button
    
 
+.. |github| raw:: html
 
+   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+   
 
 Calling Methods Without Parameters
 ===========================================
@@ -86,6 +89,7 @@ Try to put the following mixed up code in the right order to draw the digital nu
 
 After you put the mixed up code in order above, type in the same code below to make the turtle draw a 7 with just a line up and then across.
 
+(If the code below does not work for you, you can also use the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. activecode:: TurtleDraw7
     :language: java
