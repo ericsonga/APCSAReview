@@ -140,7 +140,7 @@ In the following code, add another array declaration that creates an array of 5 
     
 .. note::
   
-   Array elements are initialized to 0 if they are a numeric type (``int`` or ``double``), ``false`` if they are of type ``boolean``, or ``null`` if they are an object type like ``String``.  
+   Array elements are initialized to 0 if they are a numeric type (elements of type ``int`` are initialized to 0 and ``double`` to 0.0), ``false`` if they are of type ``boolean``, or ``null`` if they are an object type like ``String``.  
 
 .. figure:: Figures/arrayIndicies.png
     :width: 200px

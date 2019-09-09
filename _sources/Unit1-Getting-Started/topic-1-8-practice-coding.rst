@@ -48,30 +48,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    System.out.println(perpersoncost); #distractor
    
-.. parsonsprob:: ch3ex3muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
 
-   The main method in the following class should print a random number from 1 to 50. But, the blocks have been mixed up and may include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   public class Test1
-   {
-   =====                        
-       public static void main(String[] args)
-       {
-   =====  
-           int num = Math.random() * 50 + 1;
-   =====
-           System.out.println(num);
-   =====
-       } // end main method
-              
-   =====
-   } // end of class
-   =====
-           int num = Math.random() * 50; #distractor
   
 .. parsonsprob:: ch3ex4muc
    :numbered: left
@@ -663,45 +640,7 @@ Code Practice with Variables
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex8d
                 
-.. tabbed:: ch3Ex9
 
-        .. tab:: Question
-  
-           Write the code to print a random number from 1 to 100.   You can use ``Math.random()`` to get a value between 0 and not quite 1.  
-           
-           .. activecode::  ch3Ex9q
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      
-                  }
-              }
-
-
-        .. tab:: Answer
-        
-           First multiply the output from Math.random() times 100 and then cast it to an integer.  This will result in a random number from 0 to 99.  Add one to make it from 1 to 100.  
-           
-           .. activecode::  ch3Ex9a
-              :language: java
-   
-              public class Test1
-              {
-                  public static void main(String[] args)
-                  {
-                      System.out.println(((int) (Math.random() * 100)) + 1);
-                  }
-              }
-              
-        .. tab:: Discussion 
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: javareview_ch3ex9d
-                
 .. tabbed:: ch3Ex10
 
         .. tab:: Question

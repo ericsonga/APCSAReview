@@ -28,7 +28,7 @@ In this lesson, you will learn about assignment statements and expressions that 
 Assignment Statements
 ---------------------
 
-Remember that a variable holds a value and that value can change or vary.  **Assignment statements** set variables to new values. These values can be complex **expressions** that contain math operators and other variables like in the example below. 
+Remember that a variable holds a value and that value can change or vary.  **Assignment statements** initialize or change the value stored in a variable using the assignment operator =.  The value of the expression on the right of the = sign is stored in the variable on the left. These values can be complex **expressions** that contain math operators and other variables like in the example below. 
 
 .. code-block:: java 
 
@@ -158,7 +158,7 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.
+Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). Arithmetic expressions can be of type int or double. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.  (You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.)
 
 Java uses the operator ``==`` to test if the value on the left is equal to the value on the right and ``!=`` to test if two items are not equal.   Don't get one equal sign ``=`` confused with two equal signs ``==``! They mean different things in Java. One equal sign is used to assign a value to a variable. Two equal signs are used to test a variable to see if it is a certain value and that returns true or false as you'll see below.  Use == and != only with int values and not doubles because double values are an approximation and 3.3333 will not equal 3.3334 even though they are very close.
 
@@ -191,7 +191,7 @@ Run the code below to see all the operators in action. Do all of those operators
    
 With division, another thing to watch out for is dividing by 0. An attempt to divide an  integer by zero will result in an **ArithmeticException** to occur. Try it in one of the active code windows above.
 
-Operators can be used to create compound expressions. When they are evaluated, **operator precedence** rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
+Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
 
 |CodingEx| **Coding Exercise:** 
 

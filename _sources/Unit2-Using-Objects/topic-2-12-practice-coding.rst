@@ -5,9 +5,47 @@
 Coding Practice
 ======================
 
-The coding problems below are all about Strings, but more problems on other topics in this unit will be added in the future.
+The coding problems below are mostly about Strings, but more problems on other topics in this unit will be added in the future.
+
+.. tabbed:: ch3Ex9
+
+        .. tab:: Question
+  
+           Write the code to print a random number from 1 to 100.   You can use ``Math.random()`` to get a value between 0 and not quite 1.  
+           
+           .. activecode::  ch3Ex9q
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      
+                  }
+              }
 
 
+        .. tab:: Answer
+        
+           First multiply the output from Math.random() times 100 and then cast it to an integer.  This will result in a random number from 0 to 99.  Add one to make it from 1 to 100.  
+           
+           .. activecode::  ch3Ex9a
+              :language: java
+   
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      System.out.println(((int) (Math.random() * 100)) + 1);
+                  }
+              }
+              
+        .. tab:: Discussion 
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch3ex9d
+                
 
 .. tabbed:: ch4Ex1
 

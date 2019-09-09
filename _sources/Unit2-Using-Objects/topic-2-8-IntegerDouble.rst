@@ -39,7 +39,7 @@ For every primitive type in Java, there is a built-in object type called a wrapp
    Double d = 3.5;
    
    
-These wrapper classes are also useful because they have some special values (like the minimum and maximum values for the type) and methods that you can use. Try the following code to see the minimum and maximum values possible for the type int.
+These wrapper classes (defined in the java.lang package) are also useful because they have some special values (like the minimum and maximum values for the type) and methods that you can use. Try the following code to see the minimum and maximum values possible for the type int.
  
 
 .. activecode:: lcmm1

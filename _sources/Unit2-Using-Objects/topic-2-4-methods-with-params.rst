@@ -51,7 +51,7 @@ The parentheses () after method names are there in case you need to give the met
     object.method(arguments); is used to call an object's method and give it some arguments (actual parameters) to do its job. 
 
 
-Although some people use the words parameters and arguments interchangibly, there is a subtle difference. When you create your own method, the variables you define for it are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in the parameter variables. So, in the definition of the forward method, it has a parameter variable called pixels, and in the call to forward(100), the argument is the value 100 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 5. In this unit, you will learn to call methods that are already written for you.
+Although some people use the words parameters and arguments interchangeably, there is a subtle difference. When you create your own method, the variables you define for it are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in the parameter variables. So, in the definition of the forward method, it has a parameter variable called pixels, and in the call to forward(100), the argument is the value 100 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 5. In this unit, you will learn to call methods that are already written for you.
 
 .. code-block:: java 
 

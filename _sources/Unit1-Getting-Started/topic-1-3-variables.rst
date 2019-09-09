@@ -74,9 +74,12 @@ There are two types of variables in Java: **primitive variables** that hold prim
 
 ``String`` is one of the object types on the exam and is the name of a class in Java.  A *string* object has a sequence of characters enclosed in a pair of double quotes - like "Hello".  You will learn more about ``String`` objects in another unit. 
 
+
 .. note:: 
 
    Some languages use 0 to represent false and 1 to represent true, but Java uses the keywords ``true`` and ``false`` in boolean variables.  
+
+A type is a set of values (a domain) and a set of operations on them. For example, you can do addition with int's and double's but not with booleans and Strings.
 
 |Exercise| **Check your understanding**
    

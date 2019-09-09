@@ -133,7 +133,7 @@ The code below says if homework is not done, you can't go out. Try different val
 Truth Tables
 ------------
 
-The following table (also called a **truth table**) shows the result for P && Q when P and Q are both expressions that can be true or false. As you can see below the result of P && Q is only true if both P and Q are true. 
+The following table (also called a **truth table**) shows the result for P && Q when P and Q are both expressions that can be true or false. An expression involving logical operators like (P && Q) evaluates to a Boolean value, true or false. As you can see below the result of P && Q is only true if both P and Q are true.  
 
 +-------+-------+-----------+
 | P     | Q     | P && Q    |

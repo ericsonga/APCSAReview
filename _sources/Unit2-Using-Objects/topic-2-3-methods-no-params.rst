@@ -115,7 +115,7 @@ After you put the mixed up code in order above, type in the same code below to m
 **Procedural abstraction** allows a programmer to use a method and abstract away the details of how it exactly works. For example, we know that if we hit the brakes, the car will stop, and we can still use the brakes even if we don't really know how they work. 
 
 
-When we use methods for a class in a library, we can look up the **method signature** in its documentation to see its name and parameters. When we call a method or a constructor, this makes the program go do all the code in that method before continuing on with the next sequential line of code.   Once the last statement in the method has executed, flow of control is returned to the point immediately following where the method was called.
+When we use methods for a class in a library, we can look up the **method signature** in its documentation to see its name and parameters (which can be an empty list for methods without parameters). When we call a method or a constructor, this makes the program go do all the code in that method before continuing on with the next sequential line of code.   Once the last statement in the method has executed, flow of control is returned to the point immediately following where the method was called.
  
 
 

@@ -32,7 +32,7 @@ In Java, **type casting** is used to convert variables from one type to another.
     Figure 1: Casting a pot in clay. 
 
 
-Run this code to find how Java handles division and what casting can do to the results.
+The casting operators (int) and (double) are used right next to a number or variable to create a temporary value converted to a different data type. For example,  ``(double) 1/3`` which will give a double result instead of an int one. Run this code to find how Java handles division and what casting can do to the results. Notice what happens when you divide an int by an int or an int by a double or an int casted to a double divided by an int.
 
 .. activecode:: lcct1
    :language: java
@@ -48,9 +48,9 @@ Run this code to find how Java handles division and what casting can do to the r
       }
    }
 	
-Java assumes that if you are doing division with integers that you want an integer result and it will throw away any fractional part (part after the decimal point).  But, if you use a mixture of integers (int) and floating point (double) numbers Java will assume that you want a floating point result.  If you have integers and you want a floating point result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  
+Java assumes that if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.  But, if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result. If there is at least one double in the operation, Java will widen the type of the other operand to double too and result in a double. If you have integers and you want a double result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  
 
-Values of type double can be rounded to the nearest integer by formulas like the following. If you have a number like 3.33, the closes int is 4; if you add 0.5 to it, you get 3.83 and then casting it to an int throws away what's after the decimal point, just leaving 3. If you have a number like 3.8, the closest int is 4; if you add 0.5 to it, you get 4.3 and then casting it to an int throws away what's after the decimal point, just leaving 4.  The code below uses the formula to cast a positive and a negative double number to the closest int.
+Values of type double can be rounded to the nearest integer by casting with (int) using formulas like the following. If you have a number like 3.33, the closest int is 4; if you add 0.5 to it, you get 3.83 and then casting it to an int throws away what's after the decimal point, just leaving 3. If you have a number like 3.8, the closest int is 4; if you add 0.5 to it, you get 4.3 and then casting it to an int throws away what's after the decimal point, just leaving 4.  The code below uses the formula to cast a positive and a negative double number to the closest int.
 
 
 .. code-block:: java 

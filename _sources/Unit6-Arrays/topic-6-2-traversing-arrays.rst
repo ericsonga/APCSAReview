@@ -61,7 +61,7 @@ What do you think the following code will print out? First trace through it on p
     
 Using variables as the index is a powerful **data abstraction** feature because it allows us to use loops with arrays where the loop counter variable is the index of the array!
 
-We can use a **for loop** to loop through all the elements of an array.  Just start the index at **0** and loop while the index is less than the **length** of the array. Note that the variable **i** (short for index) is often used in loops as the loop counter variable.
+We can use iteration (usually a **for loop**) to loop through all the elements of an array.  This is called **traversing** the array. Just start the index at **0** and loop while the index is less than the **length** of the array. Note that the variable **i** (short for index) is often used in loops as the loop counter variable and is used here to access each element of an array with its index.
 
 .. code-block:: java 
  

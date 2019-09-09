@@ -218,7 +218,7 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Notic
    
 There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
 
-The String library which is build into the default java.lang library simplifies a lot of complex programming tasks for us. Classes are grouped together into a **package** like java.lang. Many other useful library packages can be imported in. Programmers provide **Application Program Interfaces (APIs)** to allow other programmers to use their code. 
+The String library which is build into the default java.lang library simplifies a lot of complex programming tasks for us. Classes are grouped together into a **package** like java.lang. Many other useful library packages can be imported in. Programmers provide **Application Program Interfaces (APIs)** to allow other programmers to use their code. Documentation for APIs and libraries are essential to understanding the attributes and behaviors of an object of a class.
 
 
 .. note::
