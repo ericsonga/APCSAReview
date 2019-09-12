@@ -29,7 +29,8 @@ Inheritance and Constructors
 
 Subclasses inherit all the private instance variables in a superclass that they extend, but they cannot directly access them since they are private. And constructors are not inherited. 
 
-How do you initialize inherited private variables if you don't have direct access to them in the subclass?  In Java you can put a call to the parent constructor using ``super();`` as the first line in a subclass constructor to initialize inherited fields.   Remember that constructors don't have a return type and the constructor name must match the class name.
+How do you initialize inherited private variables if you don't have direct access to them in the subclass?  In Java you can put a call to the parent constructor using  as the first line in a subclass constructor.   In Java, the superclass constructor can be called from the first line of a subclass constructor by using the keyword super and passing appropriate parameters, for example ``super();`` or ``super(theName);`` as in the code below.
+The actual parameters given to super() are used to initialize the inherited instance variables, for example the name instance variable in the Person superclass.
 
 .. code-block:: java
 

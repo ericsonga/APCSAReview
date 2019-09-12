@@ -43,7 +43,7 @@
          * @param height the height of the desired picture
          * @param width the width of the desired picture
          */
-        public Picture(int height, int width)
+        public Picture(int width, int height)
         {
           // let the parent class handle this width and height
           super(width,height);

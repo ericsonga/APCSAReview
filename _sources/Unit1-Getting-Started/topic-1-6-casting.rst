@@ -50,15 +50,32 @@ The casting operators (int) and (double) are used right next to a number or vari
 	
 Java assumes that if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.  But, if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result. If there is at least one double in the operation, Java will widen the type of the other operand to double too and result in a double. If you have integers and you want a double result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  
 
-Values of type double can be rounded to the nearest integer by casting with (int) using formulas like the following. If you have a number like 3.33, the closest int is 4; if you add 0.5 to it, you get 3.83 and then casting it to an int throws away what's after the decimal point, just leaving 3. If you have a number like 3.8, the closest int is 4; if you add 0.5 to it, you get 4.3 and then casting it to an int throws away what's after the decimal point, just leaving 4.  The code below uses the formula to cast a positive and a negative double number to the closest int.
-
+Values of type double can be rounded to the nearest integer by adding or subtracting .5 and casting with (int) using formulas like the following. 
 
 .. code-block:: java 
 
-    double number = 10 / 3;
     int nearestInt = (int)(number + 0.5); 
-    double negNumber = -10 / 3;
     int nearestNegInt = (int)(negNumber – 0.5);
+    
+For example, if you divide 5/3 using integer division, Java will truncate 1.67 to 1 to give an int result. However, we usually round up any answer .5 and above. Using the formula above, if we add 1.67 + 0.50, we get 2.17 and then casting it to an int throws away what's after the decimal point, just leaving 2.  Run the code below to see how the formula of adding or subtracting .5 and then casting with (int) rounds a positive or negative double number to the closest int.
+
+.. activecode:: nearestInt
+   :language: java
+   
+   public class NearestInt
+   {
+      public static void main(String[] args)
+      {
+        double number = 5.0 / 3;
+        int nearestInt = (int)(number + 0.5);
+        System.out.println("5.0/3 = " + number);
+        System.out.println("5/3 truncated: " + (int)number );
+        System.out.println("5.0/3 rounded to nearest int: " + nearestInt);
+        double negNumber = -number;
+        int nearestNegInt = (int)(negNumber - 0.5);
+        System.out.println("-5.0/3 rounded to nearest negative int: " + nearestNegInt);
+      }
+    }
 
 
 

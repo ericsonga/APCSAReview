@@ -134,7 +134,7 @@ All instance variables in general and on the AP CS A exam should be declared **p
 The ``Person`` class above declares 3 instance variables: name, email, and phoneNumber. These are things that you might need to know about
 a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
 
-**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private data. Each time you create a Person object, a new object like the following is created with its own copy of the data and methods. 
+**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables. Each time you create a Person object, a new object like the following is created with its own copy of the data and methods. 
 
 .. figure:: Figures/PersonClass.png
     :width: 250px
@@ -145,6 +145,7 @@ a person.  They are declared at the top of the class and they exist inside the {
     Figure 1: Data encapsulation in Person 
 
 
+When designing a class, programmers make decisions about what data to make accessible and/or modifiable from an external class. The private access modifier is used to encapsulate and protect the data from external access. Private instance variables can only be accessed by methods within the class in which they are defined.
 
 |Exercise| **Check Your Understanding**
 

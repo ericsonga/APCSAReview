@@ -500,8 +500,8 @@ import java.util.Base64;
           scaleTransform.scale(xFactor,yFactor);
 
           // create a new picture object that is the right size
-          Picture result = new Picture((int) (getHeight() * yFactor),
-                                       (int) (getWidth() * xFactor));
+          Picture result = new Picture((int) (getWidth() * xFactor),
+                                       (int) (getHeight() * yFactor));
 
           // get the graphics 2d object to draw on the result
           Graphics graphics = result.getGraphics();

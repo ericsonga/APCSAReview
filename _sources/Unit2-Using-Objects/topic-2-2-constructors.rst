@@ -97,7 +97,7 @@ You can also declare object variables without calling a constructor and set them
 Calendar Example
 ----------------
 
-Here is another example. There is a class called GregorianCalendar in Java that can be used for dates and times. You can use this class by adding the line "import java.util.GregorianCalendar;" which will bring in this class library. Then, you can create an object variable called today that uses the default constructor to initialize it to the current date and time. Run the code below to see what it does. Note that the code below is sent to New Zealand to run, so it will return the current date and time in New Zealand!
+Here is another example. There is a class called GregorianCalendar in Java that can be used for dates and times. You can use this class by adding the line "import java.util.GregorianCalendar;" which will bring in this class library. Then, you can create an object variable called today that uses the default constructor to initialize it to the current date and time. Run the code below to see what it does. Note that the code below will return the current date and time on the server which might be different from the time where you are.
 
 .. activecode:: GregorianCalendar1
     :language: java
@@ -109,7 +109,7 @@ Here is another example. There is a class called GregorianCalendar in Java that 
         public static void main(String[] args)
         {
             GregorianCalendar today = new GregorianCalendar(); 
-            System.out.println("New Zealand current date and time: "
+            System.out.println("Current date and time on server: "
                          + today.getTime());
         }
      } 
@@ -131,7 +131,7 @@ Run the code below to see the use of both constsructors. Try adding another Greg
         {
             GregorianCalendar today = new GregorianCalendar(); 
             GregorianCalendar myDate = new GregorianCalendar(2020, 0, 1); 
-            System.out.println("New Zealand current date and time: "
+            System.out.println("Current date and time on server: "
                          + today.getTime());
             System.out.println("New Year's day: "
                          + myDate.getTime());
