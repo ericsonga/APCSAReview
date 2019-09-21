@@ -148,7 +148,7 @@ When you write a class like the Turtle class, you can declare many object variab
 
 |CodingEx| **Coding Exercise:** 
 
-In the code below, two turtle object variables are created, yertle and myrtle. Can you add another turtle object to the code below? You can make up a variable name for your turtle and add in a line like the following in the main method and the make it move:
+In the code below, two turtle object variables are created, yertle and myrtle. Can you add another turtle object to the code below? You can make up a variable name for your turtle and add in a line like the following in the main method to make it move:
 
 .. code-block:: java
 
@@ -203,12 +203,12 @@ Here's a |Greenfoot video|, which was created using the free software Greenfoot 
 
 You can think of a class like a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  A class can also be thought of as a factory that produces objects.  
 
-.. figure:: Figures/cookieCutter.jpg
+.. figure:: Figures/cookieCutter.png
     :width: 300px
     :align: center
     :figclass: align-center
 
-    Figure: Using a cookie cutter to make cookies
+    Figure 3: Using a cookie cutter to make cookies
     
 You can think of a class as the type or classification.  The following picture has lots of cats (objects of the type cat).  They are all different, but they share the same attributes and behaviors that make up a cat.
 
@@ -217,7 +217,7 @@ You can think of a class as the type or classification.  The following picture h
     :align: center
     :figclass: align-center
 
-    Figure: Pictures of cats (cat objects)
+    Figure 4: Pictures of cats (cat objects)
 
 
 If you go to a restaurant, you will be seated by the greeter, the waiter will take your order, and the chef will cook your food.  What do we mean by a greeter, waiter, and chef?  Those are classifications or types of workers in a restaurant.  Java has this same concept.  When we create a new class we are defining a new type (a new classification) to the computer.  Each type can have abilities or behaviors (called **methods** in Java) and attributes (called **instance variables** in Java). After you define a type, you can use it to create **objects** of that type.  All objects created from a class will have the properties and abilities/behaviors defined in that class.  For example, all turtle objects will know how to move forward and turn.

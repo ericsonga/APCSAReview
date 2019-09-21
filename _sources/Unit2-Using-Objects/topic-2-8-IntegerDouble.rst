@@ -32,7 +32,7 @@ For every primitive type in Java, there is a built-in object type called a wrapp
    
    // in older versions of Java (and on the AP exam)
    Integer i = new Integer(2); // create an object with 2 in it
-   Double d = new Double(3.5); // create an object with 2.5 in it 
+   Double d = new Double(3.5); // create an object with 3.5 in it 
 
    // in newer versions of Java (9+)
    Integer i = 2;
