@@ -113,7 +113,7 @@ You can also declare object variables without calling a constructor and set them
 When you use a class that someone has already written for you in a **library** that you can import like the Turtle class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. Constructors are **overloaded** when there are multiple constructors with the same name but a different signature with different parameters. For example, there are two constructors for the Turtle class that take different parameters:
 
 
-.. figure:: Figures/turtleClassDefn.png
+.. figure:: Figures/TurtleClassDefn.png
     :width: 600px
     :align: center
     :alt: Turtle Class Constructor Signatures and Parameters
@@ -211,7 +211,7 @@ The type of the values being passed in as arguments have to match the type of th
 
 In Unit 5, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called Date, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them. 
 
-.. figure:: Figures/dateClass.png
+.. figure:: Figures/DateClass.png
     :width: 500px
     :align: center
     :alt: A Date class showing attributes and constructors
