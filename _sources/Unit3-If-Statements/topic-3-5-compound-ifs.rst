@@ -339,7 +339,7 @@ Explore the following problems with your group:
 
 2. Write the sentence "If it's sunny, OR if the temperature is greater than 80 and it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!". So, you will go to beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it's not raining.
 
-3. Complete a truth table for the if statement that you wrote in #1 with columns for temperature > 80, sunny, raining, and go to the beach.
+3. Complete a truth table for the if statement that you wrote in #2 with columns for temperature > 80, sunny, raining, and go to the beach.
 
 4. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly.
 
