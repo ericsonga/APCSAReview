@@ -78,6 +78,9 @@ options(
     )
 )
 
+version = pkg_resources.require("runestone")[0].version
+options.build.template_args['runestone_version'] = version
+
 # Check to see if we are building on our Jenkins build server, if so use the environment variables
 # to update the DB information for this build
 if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBNAME' in environ:
