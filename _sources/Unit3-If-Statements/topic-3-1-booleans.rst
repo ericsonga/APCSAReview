@@ -29,7 +29,7 @@
 Boolean Expressions
 ===================
 
-**Boolean** variables or expressions can only have **true** or **false** values.  Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal) to return boolean values. 
+TESTTESTTEST **Boolean** variables or expressions can only have **true** or **false** values.  Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal) to return boolean values. 
 
 .. note::
 
