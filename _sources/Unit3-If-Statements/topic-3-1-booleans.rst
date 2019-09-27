@@ -68,7 +68,7 @@ Boolean Expressions
    :language: java
    :datafile: turtleClassesBooleans   
    
-   We can also use == to test if two reference values refer to the same object. What will the code below print out? Try to guess before you run it! Here we are testing if the Turtles yertle and myrtle refer to the same object in memory. 
+   We can also use == to test if two reference values refer to the same object. What will the code below print out? Try to guess before you run it! Here we are creating two separate Turtle objects called juan and mia. They do not refer to same object or turtle. Then, we create a reference variable called friend that is set to mia. The turtle mia will have two ways (references or aliases) to name her -- she's both mia and friend, and these variables refer to the same object (same Turtle) in memory.
    ~~~~     
    import java.util.*;
    import java.awt.*;
@@ -78,13 +78,13 @@ Boolean Expressions
       public static void main(String[] args)
       {
           World world = new World(300,300);
-          Turtle a = new Turtle(world);
-          Turtle b = new Turtle(world);
+          Turtle juan = new Turtle(world);
+          Turtle mia = new Turtle(world);
      
           // Will these print true or false?
-          System.out.println(a == b);
-          a = b; // set a to refer to object b
-          System.out.println(a == b);
+          System.out.println(juan == mia);
+          Turtle friend = mia; // set friend to be an alias for mia
+          System.out.println(friend == mia);
       }
     }
 
@@ -110,11 +110,12 @@ If you have trouble telling < and > apart, think of a number line and think of <
 
 |CodingEx| **Coding Exercise**
 
-Try to guess what the code below will print out before you run it.
 
 .. activecode:: bool2
    :language: java
    
+   Try to guess what the code below will print out before you run it.
+   ~~~~
    public class BoolTest2
    {
       public static void main(String[] args)
@@ -162,11 +163,13 @@ Here are some boolean expressions that are very useful in coding:
   (number % x == 0)
   
   
-Try the expressions containing the % operator below to see how they can be used to check for even or odd numbers. All even numbers are divisible (with no remainder) by 2.
+
 
 .. activecode:: boolMod
    :language: java
    
+   Try the expressions containing the % operator below to see how they can be used to check for even or odd numbers. All even numbers are divisible (with no remainder) by 2.
+   ~~~~
    public class BoolMod
    {
       public static void main(String[] args)
@@ -220,21 +223,23 @@ Prime numbers are very useful in encryption algorithms because they can be used 
 
 The following program checks if 5 is a prime number by seeing if it is divisible by the numbers 1 - 5. Run the code, and then answer the following questions. 
 
-1. Is 5 a prime number? 
-2. What boolean tests determine that a number is prime?
-3. Change the number to 6 and add more boolean expressions to determine if 6 is prime. Is 6 prime?
-4. Change the number to 7 and add more boolean expressions to determine if 7 is prime. Is 7 prime?
-5. If you changed the boolean expressions to use <= instead of ==, would the code still help you to find prime numbers? Why or why not? Experiment and find out.
-6. If you changed the boolean expressions to use >= instead of ==, would the code still help you to find prime numbers? Why or why not? Experiment and find out.
-7. Are all odd numbers prime? Can you find one that is not by using boolean expressions in the code below?
-8. Are all even numbers not prime? Can you find an even prime number?
-
+    1. Is 5 a prime number? 
+    2. What boolean tests determine that a number is prime?
+    3. Change the number to 6 and add more boolean expressions to determine if 6 is prime. Is 6 prime?
+    4. Change the number to 7 and add more boolean expressions to determine if 7 is prime. Is 7 prime?
+    5. If you changed the boolean expressions to use <= instead of ==, would the code still help you to find prime numbers? Why or why not? Experiment and find out.
+    6. If you changed the boolean expressions to use >= instead of ==, would the code still help you to find prime numbers? Why or why not? Experiment and find out.
+    7. Are all odd numbers prime? Can you find one that is not by using boolean expressions in the code below?
+    8. Are all even numbers not prime? Can you find an even prime number?
 
 .. activecode:: challenge3-1-primeNumbers
    :language: java
    
-   public class PrimeNumbers
-   {
+    Answer the questions above to see if the numbers 5, 6, and 7 are prime.
+    ~~~~
+    
+    public class PrimeNumbers
+    {
       public static void main(String[] args)
       {
         int number = 5;
@@ -246,7 +251,7 @@ The following program checks if 5 is a prime number by seeing if it is divisible
         System.out.println("Divisible by 4? " + (number % 4 == 0));
         System.out.println("Divisible by 5? " + (number % 5 == 0));
       }
-   }  
+    }  
  
     
 Summary
