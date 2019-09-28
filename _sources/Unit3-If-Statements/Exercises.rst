@@ -25,10 +25,19 @@ These problems are easier than most of those that you will usually see on the AP
    
    .. code-block:: java 
 
-     if (x < 0) System.out.println("x is negative");
-     else if (x == 0) System.out.println("x is zero"); 
-     else System.out.println("x is positive");
-
+     if (x < 0)
+     {
+        System.out.println("x is negative");
+     }
+     else if (x == 0) 
+     {
+         System.out.println("x is zero"); 
+     }
+     else 
+     {
+         System.out.println("x is positive");
+     }
+      
 .. mchoice:: qce_2
    :practice: T
    :answer_a: first case
@@ -41,8 +50,10 @@ These problems are easier than most of those that you will usually see on the AP
    
    .. code-block:: java 
 
-     if (!(x < 3 || y > 2)) System.out.println("first case");
-     else System.out.println("second case");
+     if (!(x < 3 || y > 2)) 
+        System.out.println("first case");
+     else 
+        System.out.println("second case");
 
 .. mchoice:: qce_3
    :practice: T
@@ -82,8 +93,10 @@ These problems are easier than most of those that you will usually see on the AP
    
    .. code-block:: java 
 
-     if (x > 0 || (y / x) == 3) System.out.println("first case");
-     else System.out.println("second case");
+     if (x > 0 || (y / x) == 3) 
+        System.out.println("first case");
+     else 
+        System.out.println("second case");
 
 
 
