@@ -137,8 +137,10 @@ These problems are similar to those you will see on the AP CS A exam.
    
    .. code-block:: java
 
-     if (x > 2) x = x * 2;
-     if (x > 4) x = 0;
+     if (x > 2) 
+        x = x * 2;
+     if (x > 4) 
+        x = 0;
 
 .. mchoice:: qcm_3
    :practice: T
@@ -158,8 +160,10 @@ These problems are similar to those you will see on the AP CS A exam.
    
    .. code-block:: java
 
-     if (x > 0) x = -x;
-     if (x < 0) x = 0;
+     if (x > 0) 
+        x = -x;
+     if (x < 0) 
+        x = 0;
 
 .. mchoice:: qcm_4
    :practice: T
@@ -180,31 +184,31 @@ These problems are similar to those you will see on the AP CS A exam.
    .. code-block:: java
 
      I.   if (score >= 93)
-           grade = "A";
+             grade = "A";
           if (score >= 84 && score <=92)
-           grade = "B";
+             grade = "B";
           if (score >=75 && score <= 83)
-           grade = "C";
+             grade = "C";
           if (score < 75)
-           grade = "F";
+             grade = "F";
 
      II.  if (score >= 93)
-           grade = "A";
+             grade = "A";
           if (score >= 84)
-           grade = "B";
+             grade = "B";
           if (score >=75)
-           grade = "C";
+             grade = "C";
           if (score < 75)
-           grade = "F";
+             grade = "F";
 
      III. if (score >= 93)
-           grade = "A";
+             grade = "A";
           else if (score >= 84)
-           grade = "B";
+             grade = "B";
           else if (score >=75)
-           grade = "C";
+             grade = "C";
           else
-           grade = "F";
+             grade = "F";
 
    
 Hard Multiple Choice Questions
@@ -298,10 +302,14 @@ These problems are harder than most of those that you will usually see on the AP
    
       int x = 3;
       int y = 2;
-      if (x > 2) x++;
-      if (y > 1) y++;
-      if (x > 2) System.out.print("first ");
-      if (y < 3) System.out.print("second ");
+      if (x > 2) 
+         x++;
+      if (y > 1) 
+         y++;
+      if (x > 2) 
+         System.out.print("first ");
+      if (y < 3) 
+         System.out.print("second ");
       System.out.print("third");
    
 .. mchoice:: qch_5

@@ -32,20 +32,21 @@ String Equality
 	pair: String; equality
 	pair: String; equals
 
-The **equals** method for Strings compares two strings letter by letter. ``s1.equals(s2)`` is true if s1 and s2 have all the same characters in the same order. With Strings and other objects, you almost always use equals instead of ==. 
+The **equals** method for Strings compares two strings letter by letter. ``s1.equals(s2)`` is true if s1 and s2 have all the same characters in the same order. With Strings and other objects, you almost always use equals instead of == to check their equality. 
 
  
 
-When the operator ``==`` is used to compare object variables, it returns true when the two variables *refer to the same object*. These variables are called **object references** and **aliases** for the same object. With strings this happens when one string variable is set to another or when strings are set to the same string literal. 
+When the operator ``==`` is used to compare object variables, it returns true when the two variables *refer to the same object*. These variables are called **object references** and **aliases** for the same object. With strings this happens when one string variable is set to another. 
 
 
 .. figure:: Figures/stringEquality.png
-    :width: 250px
+    :width: 300px
     :align: center
     :figclass: align-center
 
     Figure 1: String aliases
 
+|CodingEx| **Coding Exercise**
 
 
 .. activecode:: lcse1
@@ -82,7 +83,7 @@ In addition, ``s2 == s3`` will be true since the two variables refer to the same
     
     Only use ``==`` with primitive types like int or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings which will check to see if they are equal  letter by letter.      
     
-The one common place to use == or != with objects is to see if they exist by comparing them to **null**. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with && in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole && test is false. 
+The one common place to use == or != with objects is to compare them to **null** to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with && in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole && test is false. 
 
 |CodingEx| **Coding Exercise**
 
