@@ -165,7 +165,7 @@ The GregorianCalendar class also has a constructor that takes a particular year,
 
 |CodingEx| **Coding Exercise:**
 
-Run the code below to see the use of both constsructors. Try adding another GregorianCalendar object to the program for your birthdate and have it print it out. Which constructor do you need to use? 
+Run the code below to see the use of both constructors. Try adding another GregorianCalendar object to the program for your birthdate and have it print it out. Which constructor do you need to use? 
 
 .. activecode:: GregorianCalendar2
     :language: java
@@ -235,9 +235,9 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
    :feedback_d: This matches the second constructor above with the parameters year, month, day.
    :feedback_e: Make sure the order of the parameters match the constructor signature above.
    
-   Given the Date class in the figure above, which of the following code segments will create a Date object for the date September 20, 2019 using the correct constructor?
+   Given the Date class in the figure above and assuming that months in the Data class are numbered starting at 1, which of the following code segments will create a Date object for the date September 20, 2019 using the correct constructor?
    
-This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more how this all works in Unit 5 when you write your own classes and constructors. 
+This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors. 
  
 
 

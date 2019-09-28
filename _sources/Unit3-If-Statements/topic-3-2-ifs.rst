@@ -48,7 +48,7 @@ The statements in a Java main method normally run or execute one at a time in th
     Figure 2: The order that statements execute in a conditional
     
 
-A conditional uses the keyword ``if`` followed by Boolean expression inside of  an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  The single statement or block of statements are only executed if the condition is true.  The open curly brace ``{`` and a close curly brace ``}`` are used to group a block of statements together.  It never hurts to put in the curly braces even if you have just one statement under the if statement, so get used to putting them in all the time.
+A conditional uses the keyword ``if`` followed by Boolean expression inside of  an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  The single statement or block of statements are only executed if the condition is true.  The open curly brace ``{`` and a close curly brace ``}`` are used to group a block of statements together.  It is recommended to always put in the curly braces even if you have just one statement under the if statement. The questions you will see on the AP exam will use curly braces.
 
 
 .. code-block:: java
@@ -78,19 +78,23 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
 
 .. activecode:: lccb1
    :language: java
-   
+
+   The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code above to see this.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
       {
         boolean isRaining = true;
         if (isRaining) 
+        {
            System.out.println("Take an umbrella!"); 
+        }
         System.out.println("Drive carefully");
       }
    }
   
-The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code above to see this.
+
 
 
 |Exercise| **Check your understanding**
@@ -111,11 +115,13 @@ The variable ``isRaining`` is a boolean variable that is either true or false. I
    
 |CodingEx| **Coding Exercise**
 
-The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
+
    
 .. activecode:: lccb2-indent
    :language: java
-   
+
+   The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
+   ~~~~
    public class Test
    {
       public static void main(String[] args)
@@ -133,11 +139,13 @@ Most if statements have a boolean condition that uses relational operators like 
 
 |CodingEx| **Coding Exercise**
 
-Run the following active code a couple times until you see all the possible outputs. It prints out whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.
+
 
 .. activecode:: if-relational
    :language: java
    
+   Run the following active code a couple times until you see all the possible outputs. It prints out whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.
+   ~~~~
    public class Test
    {
       public static void main(String[] args)
@@ -148,12 +156,14 @@ Run the following active code a couple times until you see all the possible outp
         
         // is it positive?
         if (number > 0)
+        {
            System.out.println(number + " is positive!");
-          
+        }
         // is it 0?
         if (number == 0)
+        {
            System.out.println(number + " is zero!");
-          
+        }
       }
    }
 
@@ -180,9 +190,14 @@ Run the following active code a couple times until you see all the possible outp
    
    .. code-block:: java
 
-     if (x > 2) x = x * 2;
-     if (x > 4) x = 0;
-
+     if (x > 2) 
+     {
+         x = x * 2;
+     }
+     if (x > 4) 
+     {
+        x = 0;
+     }
 
 .. More practice with if == and < > Active code.
     Note always use == not = in an if statement! Test not assign.
@@ -215,8 +230,16 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
       }
    }
    
-    
-    
+.. |repl version| raw:: html
+
+    <a href="https://repl.it/@BerylHoffman/Magic8BallTemplate" target="_blank" style="text-decoration:underline">repl version</a>
+
+
+Here's a |repl version| that uses the Scanner class to first have the user ask a question. You can add your code in from above and try running it. 
+
+.. raw:: html
+
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     
 Summary
 -------------------  
