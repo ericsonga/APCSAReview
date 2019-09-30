@@ -114,13 +114,12 @@ After you put the mixed up code in order above, type in the same code below to m
 |CodingEx| **Coding Exercise:**
 
 
-Can you make yertle draw the digital number 8, as 2 squares on top of each other?
-
-
 .. activecode:: TurtleDraw8
     :language: java
     :datafile: turtleClassesMethods
 
+    Can you make yertle draw the digital number 8, as 2 squares on top of each other?
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -138,9 +137,50 @@ Can you make yertle draw the digital number 8, as 2 squares on top of each other
       }
     }
 
-**Procedural abstraction** allows a programmer to use a method and abstract away the details of how it exactly works. For example, we know that if we hit the brakes, the car will stop, and we can still use the brakes even if we don't really know how they work. When we use methods for a class in a library, we can look up the **method signature** in its documentation to see its name and parameters (which can be an empty list for methods without parameters). 
 
+Procedural Abstraction
+-----------------------
 
+**Procedural abstraction** allows a programmer to use a method and abstract away the details of how it exactly works. For example, we know that if we hit the brakes, the car will stop, and we can still use the brakes even if we don't really know how they work. 
+
+You will learn to write your own methods in Unit 5. In this Unit, you should be able to use methods already written for you and figure out what they do. When we use methods for a class in a library, we can look up the **method signature** in its documentation to see its name and parameters (which can be an empty list for methods without parameters). For example, here is a Student class with a method called print(). Methods are usually put after the instance variables and the constructors in a class.
+
+.. figure:: Figures/StudentClass.png
+    :width: 500px
+    :align: center
+    :alt: A Student class showing instance variables, constructors, and methods
+    :figclass: align-center
+
+    Figure 1: A Student class showing instance variables, constructors, and methods
+
+|Exercise| Check Your Understanding
+
+.. clickablearea:: student_methods
+    :question: Click on the methods headers (signatures) in the following class. Do not click on the constructors.
+    :iscode:
+    :feedback: Methods follow the constructors. The method header is the first line of a method.
+
+    :click-incorrect:public class Student {:endclick:
+    
+        :click-incorrect:private String name;:endclick:
+        :click-incorrect:private String email;:endclick:
+        
+        :click-incorrect:public Student(String initName, String intEmail) :endclick:
+        :click-incorrect:{:endclick:
+            :click-incorrect:name = initName;:endclick:
+            :click-incorrect:email = initEmail;:endclick:
+         :click-incorrect:}:endclick:
+         
+         :click-correct:public String getName() :endclick:
+         :click-incorrect:{:endclick:
+            :click-incorrect:return name;:endclick:
+         :click-incorrect:}:endclick:
+         
+         :click-correct:public void print() :endclick:
+         :click-incorrect:{:endclick:
+            :click-incorrect:System.out.println(name + ":" + email);:endclick:
+         :click-incorrect:}:endclick:       
+    :click-incorrect:}:endclick: 
 
 
 .. |visualization| raw:: html
@@ -154,6 +194,9 @@ This Java |visualization| shows how a song can be divided up into methods. Click
    <div>
    <iframe width="800" height="700" frameborder="0"  style="max-width:95%; margin-left:5%" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
 
+
+    
+    
 |Exercise| **Check your understanding**
    
 .. mchoice:: songMethods
@@ -204,10 +247,13 @@ This Java |visualization| shows how a song can be divided up into methods. Click
 Try this |visualization2| to see this code in action.
 
 
+.. note::
 
+    method(); is used to call a method within the same class, but object.method(); is necessary from  from the main method or from outside the class.
 
 
 Before you call a method from main or outside a class, you must make sure that you have created and initialized an object using a constructor. Remember that if you just declare an object without calling its constructor, it will be null and not really reference an object. If you call a method for a variable that is null, you will get an error called **NullPointerException**.
+
 
      
 |Groupwork| Programming Challenge : Draw a Letter
@@ -238,7 +284,8 @@ After writing your code below, if you'd like your own copy, you can open this |r
     :language: java
     :datafile: turtleClassesMethods
 
-
+    Create a turtle drawing of a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or a number from today's date. 
+    ~~~~
     import java.util.*;
     import java.awt.*;
 

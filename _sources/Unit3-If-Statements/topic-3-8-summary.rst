@@ -62,9 +62,15 @@ Vocabulary Check
 Common Mistakes
 ---------------
 
+  -  Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==. 
+  
+  - Putting a ; at the end of ``if (test);``. Remember that the if statement ends after ``if (test) statement;`` or use curly brackets ``if (test) { statements; }``.
+  
   -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.    
   
   -  Trouble with complex conditionals which are two or more Boolean expressions joined by ``&&`` or ``||``.  
+  
+  - Not understanding that `||` is an inclusive-or where one or *both* conditions must be true.
 
   -  Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.   
   
