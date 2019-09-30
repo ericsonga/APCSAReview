@@ -38,8 +38,8 @@ Java Keyword Summary
 - **else** - used to execute a statement or block of statements if the Boolean expression on the if part was false.  
 - **else if (Boolean expression)** - used to have 3 or more possible outcomes such as if x is equal, x is greater than, or x is less than some value.  It will only execute if the condition in the 'if' was false and the condition in the else if is true.
 
-Vocabulary Check
-----------------
+Vocabulary Practice
+--------------------
 
 .. dragndrop:: ch5_cond1
     :feedback: Review the summaries above.

@@ -36,8 +36,8 @@ Concept Summary
 - **nested for loop** - A for loop inside of another for loop.  These are used to loop through all the elements in a 2d array.  One loop can work through the rows and the other the columns.
 - **out of bounds error** - This happens when a loop goes beyond the last valid index in an array.  Remember that the last valid row index is ``arr.length - 1``.  The last valid column index is ``arr[0].length - 1``.
 
-Practice
------------
+Vocabulary Practice
+----------------------
 
 .. dragndrop:: ch2darr_match_1
     :feedback: Review the summaries above.

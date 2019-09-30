@@ -52,8 +52,8 @@ Java Keyword Summary
 - **for** - starts both a general for loop and a for-each loop.  The syntax for a for each loop is ``for (type variable : array)``.  Each time through the loop the variable will take on the next value in the array.  The first time through the loop it will hold the value at index 0, then the value at index 1, then the value at index 2, etc.  
 - **static** - used to create a class method, which is a method that can be called using the class name like ``Math.abs(-3)``.  
 
-Practice
-===========
+Vocabulary Practice
+=====================
 
 .. dragndrop:: ch7_match_1
     :feedback: Review the summaries above.
