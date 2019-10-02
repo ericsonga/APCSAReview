@@ -190,7 +190,9 @@ Methods
 
    Methods define what the object can do.  They typically start with ``public`` then a type, then the name of the method followed by parentheses for optional parameters. Methods defined for an object can access and use its instance variables!  
 
-The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
+The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  
+
+Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
 The **void** return type is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber. The instance variables are shared by all the methods of the class.
 
 .. code-block:: java
@@ -262,7 +264,7 @@ In **Object-Oriented Design** (OOD), programmers first spend time to decide whic
 
     Figure 2: Turtle Class Diagram
     
-When you are given a problem specification, look for the **nouns** to identify what classes you need to create. For example, say you were hired to create a program that keeps track of "students at your school and the courses they are taking", what classes would you create? 
+When you are given a problem specification, look for the **nouns** to identify what classes you need to create. For an example, try the problem below.
 
 |Exercise| **Check Your Understanding**
 
@@ -299,7 +301,7 @@ In this project, you will create a class that can tell riddles like the followin
 
 1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |Creately.com|, although it is not required). 
 
-2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
+2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Hint:  Don't name your instance variables initQuestion and initAnswer -- we'll explain why shortly. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
 3. Add a main method that constructs at least 3 Riddle objects and calls their methods to ask and answer the riddle. You can look up some good riddles online.
 
