@@ -71,6 +71,13 @@ The Turtle class also has multiple constructors, although it always requires a w
 There is another Turtle constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below. The coordinate (0,0) is at the top left of the world. 
 
 
+.. figure:: Figures/coords.png
+    :width: 200px
+    :align: center
+    :figclass: align-center
+
+    Figure 2: The coordinate (0,0) is at the top left of the Turtle world.
+    
 .. code-block:: java
     
     Turtle t1 = new Turtle(world1);
@@ -120,7 +127,7 @@ When you use a class that someone has already written for you in a **library** t
     :alt: Turtle Class Constructor Signatures and Parameters
     :figclass: align-center
     
-    Figure 2: Turtle Class Constructor Signatures and Parameters
+    Figure 3: Turtle Class Constructor Signatures and Parameters
 
 
 |Exercise| **Check your understanding**
@@ -210,7 +217,7 @@ When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal 
     :alt: Parameter Mapping
     :figclass: align-center
     
-    Figure 3: Parameter Mapping
+    Figure 4: Parameter Mapping
 
 The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a String when it is expecting an int. And the order of the arguments matters. If you mix up the year and month in the GregorianCalendar constructor, you will get a completely different date!
 
@@ -222,7 +229,7 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
     :alt: A Date class showing attributes and constructors
     :figclass: align-center
 
-    Figure 4: A Date class showing attributes and constructors
+    Figure 5: A Date class showing attributes and constructors
 
 
 |Exercise| **Check your understanding**

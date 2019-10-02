@@ -56,6 +56,13 @@ Vocabulary Practice
     :match_4: Initialize a 2d String array named list1 so that it has a,b,c in the first row and d,e,f in the second row.|||String[][] list1 = { {"a","b","c"},{"d","e","f"}};
     
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
+    
+.. |Quizlet| raw:: html
+
+   <a href="https://quizlet.com/434082842/cs-awesome-unit-8-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
 
 Common Mistakes
 ---------------

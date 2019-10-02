@@ -58,7 +58,14 @@ Vocabulary Practice
     :match_4: used to distribute a negation on a complex conditional|||DeMorgan's Laws
     
     Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
-    
+
+.. |Quizlet| raw:: html
+
+   <a href="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
+
 Common Mistakes
 ---------------
 

@@ -39,7 +39,7 @@
 Calling Methods Without Parameters
 ===========================================
 
-**Methods** define the behaviors or functions for objects. For example, in the Turtle class, methods like *forward()* and *turnRight()* made the turtle objects move that way. 
+**Methods** are a set of instructions that define the behaviors or functions for objects. For example, in the Turtle class, methods like *forward()* and *turnRight()* made the turtle objects move that way. 
 
 To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, yertle.forward(); calls yertle's forward method to move the turtle forward. Each method call is followed by parentheses. The parentheses () after method names are there in case you need to give the method parameters, some data, to do its job, which we will see in the next lesson. You must always put in the parentheses after the method name.
 
@@ -50,7 +50,7 @@ To use an object's method, you must use the object name and the dot (.) operator
 
 
 
-|Exercise| **Check Your Understanding**
+|Exercise| **Check Your Understanding: Mixed-up Code**
 
 Try to put the following mixed up code in the right order to draw the digital number 7 with just a line going straight up and then a line going left.
 
@@ -305,7 +305,7 @@ After writing your code below, if you'd like your own copy, you can open this |r
 Summary
 -------------------
 
-- **Methods** define the behaviors or functions for objects. 
+- **Methods** are a set of instructions that define the behaviors or functions for objects. 
 
 - To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example **object.method();** 
 

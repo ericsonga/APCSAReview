@@ -100,7 +100,12 @@ Vocabulary Practice
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.
 
 
-    
+.. |Quizlet| raw:: html
+
+   <a href="https://quizlet.com/434063730/cs-awesome-unit-2-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
     
 Common Mistakes 
 ----------------------------
