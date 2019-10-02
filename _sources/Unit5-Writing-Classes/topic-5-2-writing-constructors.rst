@@ -51,7 +51,12 @@ In a new class, constructors are usually written after the instance variables an
 
    Constructors must have the same name as the class! Constructors have no return type!
    
-Classes usually have more than one constructor. There is usually at least a constructor that takes no parameters and a constructor that takes all the parameters necessary for initializing all the instance variables. The attributes of an object and their values at a given time define that object's state. The constructors initialize the object's state by assigning initial values to the instance variables that the object has as its attributes. 
+Classes usually have more than one constructor. There are usually at least 2 constructors:
+
+- a constructor that takes no parameters  
+- a constructor that takes all the parameters necessary for initializing all the instance variables 
+
+The attributes of an object and their values at a given time define that object's state. The constructors initialize the object's state by assigning initial values to the instance variables that the object has as its attributes. 
 
 Here are two constructors that could be written for the Person class. Notice that the first one initializes name, email, and phoneNumber to empty string "" as the default values. Most programmers use "" as the default value for String variables and 0 as the default value for int and double variables.
 
@@ -121,7 +126,7 @@ If there are no constructors written for a class, Java provides a no-argument **
 
 |CodingEx| **Coding Exercise**
 
-The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Try to guess what it will print before you run it. You can also view it in the |Java visualizer|.
+The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer|.
 
 .. |Java visualizer| raw:: html
 
@@ -223,7 +228,7 @@ Constructors are used to set the initial state of an object by initializing its 
 
      public class Person {
        private String name;
-       private Address addr;
+       private Address addr; //Assumes an Address class is already defined
        
      // constructor: initialize instance variable and call Address constructor to make a copy
      public Person(String initName, Address initAddr)
