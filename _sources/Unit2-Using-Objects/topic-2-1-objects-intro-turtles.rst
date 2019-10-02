@@ -52,9 +52,14 @@ In this unit, you will learn to use objects (variables of a class type) that hav
 Intro to Objects with Turtles
 -----------------------------
 
+.. image:: Figures/mindstorms_turtle.jpg
+    :width: 250
+    :align: left
+    
 In the 1960s, an educational programming language called Logo was developed. It is best known for teaching programming with turtles! The turtles were graphical or robotic turtles that were controlled with simple commands like go forward or turn right. Here's a photo of a robot turtle from the 1960s.  The turtle had a pen attached to it. The student-programmers would steer the robot around using simple commands to create drawings with their code.
 
-.. figure:: Figures/mindstorms_turtle.jpg
+
+.. .. figure:: Figures/mindstorms_turtle.jpg
     :width: 300px
     :align: center
     :alt: Children playing with a Logo turtle robot that can draw with a pen
@@ -72,13 +77,16 @@ In the 1960s, an educational programming language called Logo was developed. It 
 	pair: program; comment
 
 Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
-Try clicking the |runbutton| button below to see what the following program does. (If the code below does not work for you, you can also see the Turtle code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+
 
 
 .. activecode:: TurtleTest
     :language: java
     :datafile: turtleClasses
 
+    Try clicking the |runbutton| button below to see what the following program does. 
+    (If the code below does not work for you, you can also see the Turtle code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -120,12 +128,14 @@ Here is a class diagram that shows some of the attributes and methods inherited 
     
 |CodingEx| **Coding Exercise**
 
-In the code below, yertle goes forward and then turns left. Can you change the code to make yertle go forward twice and then turnRight?
+
 
 .. activecode:: TurtleTest2
     :language: java
     :datafile: turtleClasses
 
+    In the code below, yertle goes forward and then turns left. Can you change the code to make yertle go forward twice and then turnRight?
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -146,9 +156,8 @@ In the code below, yertle goes forward and then turns left. Can you change the c
 When you write a class like the Turtle class, you can declare many object variables of that class type. In the code below, two turtle objects are created.
 
 
-|CodingEx| **Coding Exercise:** 
 
-In the code below, two turtle object variables are created, yertle and myrtle. Can you add another turtle object to the code below? You can make up a variable name for your turtle and add in a line like the following in the main method to make it move:
+In the code below, two turtle object variables are created, yertle and myrtle.  You can make up a variable name for your turtle and add in a line like the following in the main method to make it move:
 
 .. code-block:: java
 
@@ -156,11 +165,15 @@ In the code below, two turtle object variables are created, yertle and myrtle. C
     // ClassName variableName = new ClassName(arguments);  
     Turtle yourTurtleName = new Turtle(world);
     yourTurtlename.forward();
-    
+
+|CodingEx| **Coding Exercise:** 
+
 .. activecode:: TurtleTest3
     :language: java
     :datafile: turtleClasses
 
+    Can you add another turtle object to the code below?
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
