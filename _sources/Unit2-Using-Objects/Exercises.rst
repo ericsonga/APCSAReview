@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 2-13-
    :start: 1
-   
+
 Multiple Choice Exercises
 =================================
 
@@ -73,6 +73,88 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      String s2 = s1.substring(0,1);
      String s3 = s2.toLowerCase();
 
+.. mchoice:: qse_5
+   :practice: T
+   :answer_a: new Person john = Person("John", 16);
+   :answer_b: Person john("John", 16);
+   :answer_c: Person john = ("John", 16);
+   :answer_d: Person john = new Person("John", 16);
+   :correct: d
+   :feedback_a: The new keyword should come before the class to be instantiated
+   :feedback_b: The new keyword is needed to create an object in Java
+   :feedback_c: The new keyword is needed to create an object in Java
+   :feedback_d:
+
+   Which of the following code segments will correctly create an instance of a Person object?
+
+   .. code-block:: java
+
+     public class Person
+     {
+          private String name;
+          private int age;
+
+          public Person(String a, int b)
+          {
+             name = a;
+             age = b;
+          }
+     }
+
+.. mchoice:: qse_6
+   :practice: T
+   :answer_a: 100.00
+   :answer_b: 110.00
+   :answer_c: 90.00
+   :answer_d: 10.00
+   :correct: b
+   :feedback_a: Remember that we have added and withdrawn money
+   :feedback_b: We set total to 100, then subtract 30, then add 40
+   :feedback_c: We added more money than we took out
+   :feedback_d: We set the value of total to be 100 first
+
+   Assume that BankAccount and MainClass are properly defined in seperate files.
+   What is the output of the code ran in main()?
+
+   .. code-block:: java
+
+    public class BankAccount
+    {
+        private int accountID;
+        private double total;
+
+        public BankAccount(int id, double initialDeposit)
+        {
+            accountID = id;
+            total = initialDeposit;
+        }
+
+        public void addMoney(double money)
+        {
+            total = total + money;
+        }
+
+        public void withdrawMoney(double money)
+        {
+            total = total - money;
+        }
+
+        public void printCurrentTotal()
+        {
+            System.out.print(total);
+        }
+    }
+
+    public class MainClass
+    {
+        public static void main(String[] args)
+        {
+            BankAccount newAccount = new BankAccount(12345, 100.00);
+            newAccount.withdrawMoney(30.00);
+            newAccount.addMoney(40.00);
+            newAccount.printCurrentTotal();
+        }
+    }
 
 Medium Multiple Choice Questions
 ----------------------------------
@@ -178,7 +260,97 @@ These problems are similar to those that you will see on the AP CS A exam.
       abba	        bcd
       aBa
 
+.. mchoice:: qsm_5
+   :practice: T
+   :answer_a: Use one class, Car, which has three fields; int numDoors, double mpg, and boolean hasAir.
+   :answer_b: Use four unrelated classes: Car, Doors, MilesPerGallon, and AirConditioning
+   :answer_c: Use a class, Car, which has three subclasses: Doors, MilesPerGallon, and AirConditioning
+   :answer_d: Use a class Car, which has a subclass Doors, with a subclass AC, with a subclass MPG.
+   :answer_e: Use three classes: Doors, AirConditioning, and MilesPerGallon, each with a subclass Car.
+   :correct: a:
+   :feedback_a: Having one class with all the attributes needed is the most efficient design in this case
+   :feedback_b: The point of storing the car information is so we can easily access the attributes related to a car
+   :feedback_c: In this case, the information is only refer to a couple of basic attributes so it is better to store that data as fields within a single class
+   :feedback_d: It doesn't really make sense for AC to be a subclass of MPG, and that being a subset of Doors
+   :feedback_e: A car doesn't really make sense to be a subclass of AC, and so on. It would also be better to confine a couple of pieces of data into a single class
 
+   A car dealership needs a program to store information about the cars for sale.
+   For each car, they want to keep track of the following information: the number of doors (2 or 4),
+   its average number of miles per gallon, and whether the car has air conditioning.
+   Which of the following is the best design?
+
+.. mchoice:: qsm_6
+   :practice: T
+   :answer_a: Hello Bob
+   :answer_b: Hello Hello Bob
+   :answer_c: Hello Bob Hello Bob
+   :answer_d: Hello Bob Hello
+   :correct: b
+   :feedback_a: When making an instance of a class, the constructor always runs first
+   :feedback_b: When making an instance of a class, the constructor always runs first
+   :feedback_c: When making an instance of a class, the constructor always runs first
+   :feedback_d: When making an instance of a class, the constructor always runs first
+
+   Assume that SomeClass and MainClass are properly defined in seperate files. What is the output of the code ran in main()?
+
+   .. code-block:: java
+
+      public class SomeClass
+      {
+          public SomeClass()
+          {
+              System.out.println("Hello ");
+          }
+
+          void printSomething(String name)
+          {
+              System.out.print("Hello " + name + " ");
+          }
+      }
+
+      public class MainClass
+      {
+          public static void main(String[] args)
+          {
+              SomeClass someClass = new SomeClass();
+              someClass.printSomething("Bob");
+          }
+      }
+
+.. mchoice:: qsm_7
+   :practice: T
+   :answer_a: Woo Hoo Hoo Woo
+   :answer_b: Hoo Woo Hoo
+   :answer_c: Woo Hoo Woo Hoo
+   :answer_d: Woo Woo Hoo Hoo
+   :correct: c
+   :feedback_a: 'Woo Hoo' is what gets passed to someOtherFunc()
+   :feedback_b: First prints 'Woo ' then 'Hoo ' then the appended "Woo Hoo"
+   :feedback_c: First prints 'Woo ' then 'Hoo ' then the appended "Woo Hoo"
+   :feedback_d: 'Woo ' gets printed first, then the 'Hoo ' from the second return
+
+   What is the output of the following code?
+
+   .. code-block:: java
+
+     public class test
+     {
+        String someFunc(String str)
+        {
+            return someOtherFunc(str + " Hoo");
+        }
+
+        String someOtherFunc(String str)
+        {
+            return "Hoo " + str;
+        }
+
+        public static void main(String[] args)
+        {
+            Test x = new Test();
+            System.out.print("Woo " + x.someFunc("Woo"));
+        }
+     }
 
 Hard Multiple Choice Questions
 ----------------------------------
@@ -231,3 +403,111 @@ These problems are harder than most of those that you will usually see on the AP
    .. code-block:: java
 
      System.out.println("13" + 5 + 3);
+
+.. mchoice:: qsh_3
+   :practice: T
+   :answer_a: Lasagna Meow Screeech
+   :answer_b: Meow Screeech Lasagna
+   :answer_c: Screeech Meow Lasagna
+   :answer_d: Lasagna Screeech Meow
+   :correct: b
+   :feedback_a: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
+   :feedback_b: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
+   :feedback_c: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
+   :feedback_d: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
+
+   What is the output of the following code?
+
+   .. code-block:: java
+
+    class Animal
+    {
+        void someSound()
+        {
+            System.out.print("Screeech ");
+        }
+    }
+
+    class Cat extends Animal
+    {
+        public Cat()
+        {
+            System.out.print("Meow ");
+            super.someSound();
+        }
+    }
+
+    class Garfield extends Cat
+    {
+        public Cat()
+        {
+            System.out.print("Lasagna ");
+        }
+    }
+    public class MainClass
+    {
+        public static void main(String[] args)
+        {
+            Garfield garfield = new Garfield();
+        }
+    }
+
+.. mchoice:: qsh_4
+   :practice: T
+   :answer_a: garbage value
+   :answer_b: 0
+   :answer_c: compile error
+   :answer_d: runtime error
+   :correct: c
+   :feedback_a: someVar has not been initialized to anything at all yet
+   :feedback_b: someVar has not been initialized to anything at all yet
+   :feedback_c: x is just a reference, and since it hasn't been instantiated yet, there is no value for someVar to print out to the console
+   :feedback_d: x is just a reference to a data type that is SomeClass, it hasn't allocated any memory for it yet so you can't even compile the code yet since there is an error with the data associated with someVar
+
+   Assume that SomeClass and MainClass are properly defined in seperate files. What is the output of main()?
+
+   .. code-block:: java
+
+    public class SomeClass
+    {
+        int someVar;
+    }
+
+    public class MainClass
+    {
+        public static void main(String[] args)
+        {
+            SomeClass x;
+            System.out.println(x.someVar);
+        }
+    }
+
+.. mchoice:: qsh_5
+   :practice: T
+   :answer_a: garbage value
+   :answer_b: 0
+   :answer_c: compile error
+   :answer_d: runtime error
+   :correct: b
+   :feedback_a: Fields of classes and objects that do not have an explicit initializer and elements of arrays are automatically initialized with the default value for their type which is 0 for all numerical types
+   :feedback_b: Ints get initialized to 0 by default if not explicitly initialized
+   :feedback_c: someVar holds the default value of 0
+   :feedback_d: someVar has a value assigned by default
+
+   Assume that SomeClass and MainClass are properly defined in seperate files. What is the output of main()?
+
+   .. code-block:: java
+
+     public class SomeClass
+    {
+        int someVar;
+    }
+
+    public class MainClass
+    {
+        public static void main(String[] args)
+        {
+            SomeClass x = new SomeClass();
+            System.out.println(x.someVar);
+        }
+    }
