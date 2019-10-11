@@ -81,7 +81,7 @@ There is another Turtle constructor that places the turtle at a certain (x,y) lo
 .. code-block:: java
     
     Turtle t1 = new Turtle(world1);
-    Turtle t2 = new Turtle(50, 100, world1
+    Turtle t2 = new Turtle(50, 100, world1);
     
 Notice that the order of the parameters matter. The Turtle constructor always takes (x,y,world) as parameters in that order. Try mixing up the order of the parameters and you will see it causes an error because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- for better error-checking. 
     
