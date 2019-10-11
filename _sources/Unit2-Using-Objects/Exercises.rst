@@ -61,6 +61,35 @@ These problems are mostly easier than what you will see on the AP CS A exam.
     Which of the following descriptions is accurate?
 
 
+.. mchoice:: qse_5
+   :practice: T
+   :answer_a: new Person john = Person("John", 16);
+   :answer_b: Person john("John", 16);
+   :answer_c: Person john = ("John", 16);
+   :answer_d: Person john = new Person("John", 16);
+   :answer_e: Person john = new Person(16, "John");
+   :correct: d
+   :feedback_a: The new keyword should be placed before the call to the Person constructor.
+   :feedback_b: The new keyword is needed to create an object in Java
+   :feedback_c: The new keyword is needed to create an object in Java
+   :feedback_d: Correct!
+   :feedback_e: The Person constructor expects a String and an int parameter in that order.
+
+   Which of the following code segments will correctly create an instance of a Person object?
+
+   .. code-block:: java
+
+     public class Person
+     {
+          private String name;
+          private int age;
+
+          public Person(String a, int b)
+          {
+             name = a;
+             age = b;
+          }
+     }
 
 .. mchoice:: qse_2
    :practice: T
@@ -118,88 +147,8 @@ These problems are mostly easier than what you will see on the AP CS A exam.
      String s2 = s1.substring(0,1);
      String s3 = s2.toLowerCase();
 
-.. mchoice:: qse_5
-   :practice: T
-   :answer_a: new Person john = Person("John", 16);
-   :answer_b: Person john("John", 16);
-   :answer_c: Person john = ("John", 16);
-   :answer_d: Person john = new Person("John", 16);
-   :correct: d
-   :feedback_a: The new keyword should come before the class to be instantiated
-   :feedback_b: The new keyword is needed to create an object in Java
-   :feedback_c: The new keyword is needed to create an object in Java
-   :feedback_d:
 
-   Which of the following code segments will correctly create an instance of a Person object?
 
-   .. code-block:: java
-
-     public class Person
-     {
-          private String name;
-          private int age;
-
-          public Person(String a, int b)
-          {
-             name = a;
-             age = b;
-          }
-     }
-
-.. mchoice:: qse_6
-   :practice: T
-   :answer_a: 100.00
-   :answer_b: 110.00
-   :answer_c: 90.00
-   :answer_d: 10.00
-   :correct: b
-   :feedback_a: Remember that we have added and withdrawn money
-   :feedback_b: We set total to 100, then subtract 30, then add 40
-   :feedback_c: We added more money than we took out
-   :feedback_d: We set the value of total to be 100 first
-
-   Assume that BankAccount and MainClass are properly defined in seperate files.
-   What is the output of the code ran in main()?
-
-   .. code-block:: java
-
-    public class BankAccount
-    {
-        private int accountID;
-        private double total;
-
-        public BankAccount(int id, double initialDeposit)
-        {
-            accountID = id;
-            total = initialDeposit;
-        }
-
-        public void addMoney(double money)
-        {
-            total = total + money;
-        }
-
-        public void withdrawMoney(double money)
-        {
-            total = total - money;
-        }
-
-        public void printCurrentTotal()
-        {
-            System.out.print(total);
-        }
-    }
-
-    public class MainClass
-    {
-        public static void main(String[] args)
-        {
-            BankAccount newAccount = new BankAccount(12345, 100.00);
-            newAccount.withdrawMoney(30.00);
-            newAccount.addMoney(40.00);
-            newAccount.printCurrentTotal();
-        }
-    }
 
 Medium Multiple Choice Questions
 ----------------------------------
@@ -248,7 +197,56 @@ These problems are similar to those that you will see on the AP CS A exam.
             }
         }
  
+.. mchoice:: qse_6
+   :practice: T
+   :answer_a: 100.00
+   :answer_b: 110.00
+   :answer_c: 90.00
+   :answer_d: 10.00
+   :correct: b
+   :feedback_a: Remember that we have added and withdrawn money
+   :feedback_b: The constructor sets the total to 100, the withdraw method subtracts 30, and then the deposit method adds 40.
+   :feedback_c: We added more money than we took out
+   :feedback_d: We set the value of total to be 100 first
 
+   Given the BankAccount class definition below, what is the output of the code in the main method?
+
+   .. code-block:: java
+
+    public class BankAccount
+    {
+        private int accountID;
+        private double total;
+
+        public BankAccount(int id, double initialDeposit)
+        {
+            accountID = id;
+            total = initialDeposit;
+        }
+
+        public void deposit(double money)
+        {
+            total = total + money;
+        }
+
+        public void withdraw(double money)
+        {
+            total = total - money;
+        }
+
+        public void printCurrentTotal()
+        {
+            System.out.print(total);
+        }
+    
+        public static void main(String[] args)
+        {
+            BankAccount newAccount = new BankAccount(12345, 100.00);
+            newAccount.withdraw(30.00);
+            newAccount.deposit(40.00);
+            newAccount.printCurrentTotal();
+        }
+    }
 
 
 
@@ -383,7 +381,7 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_d: More test conditions is usually better, so this is not an advantage.
    :feedback_e: All the values in Data Set 1 are true, so the false condition is not tested.
 
-   There is a method called checkString that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method. What advantage does Data Set 2 have over Data Set 1?
+   There is a method called checkString that determines whether a string is the same forwards and backwards. The following data set inputs can be used for testing the method. What advantage does Data Set 2 have over Data Set 1?
 
    .. code-block:: java
 
@@ -394,22 +392,19 @@ These problems are similar to those that you will see on the AP CS A exam.
 
 .. mchoice:: qsm_5
    :practice: T
-   :answer_a: Use one class, Car, which has three fields; int numDoors, double mpg, and boolean hasAir.
+   :answer_a: Use one class, Car, which has three attributes: int numDoors, double mpg, and boolean hasAir.
    :answer_b: Use four unrelated classes: Car, Doors, MilesPerGallon, and AirConditioning
    :answer_c: Use a class, Car, which has three subclasses: Doors, MilesPerGallon, and AirConditioning
    :answer_d: Use a class Car, which has a subclass Doors, with a subclass AC, with a subclass MPG.
    :answer_e: Use three classes: Doors, AirConditioning, and MilesPerGallon, each with a subclass Car.
-   :correct: a:
-   :feedback_a: Having one class with all the attributes needed is the most efficient design in this case
-   :feedback_b: The point of storing the car information is so we can easily access the attributes related to a car
-   :feedback_c: In this case, the information is only refer to a couple of basic attributes so it is better to store that data as fields within a single class
-   :feedback_d: It doesn't really make sense for AC to be a subclass of MPG, and that being a subset of Doors
-   :feedback_e: A car doesn't really make sense to be a subclass of AC, and so on. It would also be better to confine a couple of pieces of data into a single class
+   :correct: a
+   :feedback_a: Having one class with all the attributes needed is the most efficient design in this case.
+   :feedback_b: The point of storing the car information is so we can easily access the attributes related to a car.
+   :feedback_c: In this case, the information only refers to a couple of basic attributes so it is better to store that data as fields within a single class.
+   :feedback_d: It doesn't really make sense for AC to be a subclass of MPG, and that being a subclass of Doors.
+   :feedback_e: A car doesn't really make sense to be a subclass of AC, and so on. It would also be better to group a couple of pieces of data into a single class.
 
-   A car dealership needs a program to store information about the cars for sale.
-   For each car, they want to keep track of the following information: the number of doors (2 or 4),
-   its average number of miles per gallon, and whether the car has air conditioning.
-   Which of the following is the best design?
+   A car dealership needs a program to store information about the cars for sale.For each car, they want to keep track of the following information: the number of doors (2 or 4),its average number of miles per gallon, and whether the car has air conditioning. Which of the following is the best design?
 
 .. mchoice:: qsm_6
    :practice: T
@@ -418,20 +413,20 @@ These problems are similar to those that you will see on the AP CS A exam.
    :answer_c: Hello Bob Hello Bob
    :answer_d: Hello Bob Hello
    :correct: b
-   :feedback_a: When making an instance of a class, the constructor always runs first
-   :feedback_b: When making an instance of a class, the constructor always runs first
-   :feedback_c: When making an instance of a class, the constructor always runs first
-   :feedback_d: When making an instance of a class, the constructor always runs first
+   :feedback_a: The constructor is called first and prints out one "Hello ".
+   :feedback_b: The constructor is called first and prints out one "Hello " followed by the printSomething() method which prints out "Hello Bob ".
+   :feedback_c: The constructor is called first and prints out one "Hello ".
+   :feedback_d: The constructor is called first and prints out one "Hello " followed by printSomething().
 
-   Assume that SomeClass and MainClass are properly defined in seperate files. What is the output of the code ran in main()?
+   Assume that SomeClass and MainClass are properly defined in separate files. What is the output of the code in main()?
 
    .. code-block:: java
 
-      public class SomeClass
+      class SomeClass
       {
           public SomeClass()
           {
-              System.out.println("Hello ");
+              System.out.print("Hello ");
           }
 
           void printSomething(String name)
@@ -449,6 +444,11 @@ These problems are similar to those that you will see on the AP CS A exam.
           }
       }
 
+Hard Multiple Choice Questions
+----------------------------------
+
+These problems are harder than most of those that you will usually see on the AP CS A exam.
+
 .. mchoice:: qsm_7
    :practice: T
    :answer_a: Woo Hoo Hoo Woo
@@ -457,9 +457,9 @@ These problems are similar to those that you will see on the AP CS A exam.
    :answer_d: Woo Woo Hoo Hoo
    :correct: c
    :feedback_a: 'Woo Hoo' is what gets passed to someOtherFunc()
-   :feedback_b: First prints 'Woo ' then 'Hoo ' then the appended "Woo Hoo"
-   :feedback_c: First prints 'Woo ' then 'Hoo ' then the appended "Woo Hoo"
-   :feedback_d: 'Woo ' gets printed first, then the 'Hoo ' from the second return
+   :feedback_b: 'Woo ' gets printed first.
+   :feedback_c: We first print 'Woo ' then 'Hoo ' then the appended "Woo Hoo"
+   :feedback_d: 'Woo ' gets printed first, then the 'Hoo ' from someOtherFunc().
 
    What is the output of the following code?
 
@@ -484,10 +484,7 @@ These problems are similar to those that you will see on the AP CS A exam.
         }
      }
 
-Hard Multiple Choice Questions
-----------------------------------
 
-These problems are harder than most of those that you will usually see on the AP CS A exam.
 
 .. mchoice:: qsh_1
    :practice: T
@@ -525,7 +522,7 @@ These problems are harder than most of those that you will usually see on the AP
    :answer_e: It will give a compile-time error
    :correct: b
    :feedback_a: This would be correct if it was System.out.println(13 + 5 + 3), but the 13 is a string.
-   :feedback_b: This is string concatenation.  When you apprend a number to a string it get turned into a string and processing is from left to right.
+   :feedback_b: This is string concatenation.  When you append a number to a string it get turned into a string and processing is from left to right.
    :feedback_c: You can append a number to a string in Java. It turns the number into a string and then appends the second string to the first string.
    :feedback_d: This would be correct if it was System.out.println("13" + (5 + 3)), but the 5 is turned into a string and appended to the 13 and then the same is done with the 3.
    :feedback_e: You can append a number to a string in Java.  It will compile.
@@ -536,71 +533,25 @@ These problems are harder than most of those that you will usually see on the AP
 
      System.out.println("13" + 5 + 3);
 
-.. mchoice:: qsh_3
-   :practice: T
-   :answer_a: Lasagna Meow Screeech
-   :answer_b: Meow Screeech Lasagna
-   :answer_c: Screeech Meow Lasagna
-   :answer_d: Lasagna Screeech Meow
-   :correct: b
-   :feedback_a: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
-   :feedback_b: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
-   :feedback_c: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
-   :feedback_d: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
 
-   What is the output of the following code?
-
-   .. code-block:: java
-
-    class Animal
-    {
-        void someSound()
-        {
-            System.out.print("Screeech ");
-        }
-    }
-
-    class Cat extends Animal
-    {
-        public Cat()
-        {
-            System.out.print("Meow ");
-            super.someSound();
-        }
-    }
-
-    class Garfield extends Cat
-    {
-        public Cat()
-        {
-            System.out.print("Lasagna ");
-        }
-    }
-    public class MainClass
-    {
-        public static void main(String[] args)
-        {
-            Garfield garfield = new Garfield();
-        }
-    }
 
 .. mchoice:: qsh_4
    :practice: T
-   :answer_a: garbage value
+   :answer_a: unknown value
    :answer_b: 0
    :answer_c: compile error
    :answer_d: runtime error
    :correct: c
-   :feedback_a: someVar has not been initialized to anything at all yet
-   :feedback_b: someVar has not been initialized to anything at all yet
-   :feedback_c: x is just a reference, and since it hasn't been instantiated yet, there is no value for someVar to print out to the console
-   :feedback_d: x is just a reference to a data type that is SomeClass, it hasn't allocated any memory for it yet so you can't even compile the code yet since there is an error with the data associated with someVar
+   :feedback_a: x needs to be initialized with a call to the SomeClass constructor. 
+   :feedback_b: x and someVar have not been initialized.
+   :feedback_c: This will give an error that x has not been initialized. It needs to be initialized with a call to the SomeClass constructor. 
+   :feedback_d: This code will not run.
 
-   Assume that SomeClass and MainClass are properly defined in seperate files. What is the output of main()?
+   Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?
 
    .. code-block:: java
 
-    public class SomeClass
+    class SomeClass
     {
         int someVar;
     }
@@ -616,21 +567,21 @@ These problems are harder than most of those that you will usually see on the AP
 
 .. mchoice:: qsh_5
    :practice: T
-   :answer_a: garbage value
+   :answer_a: unknown value
    :answer_b: 0
    :answer_c: compile error
    :answer_d: runtime error
    :correct: b
-   :feedback_a: Fields of classes and objects that do not have an explicit initializer and elements of arrays are automatically initialized with the default value for their type which is 0 for all numerical types
-   :feedback_b: Ints get initialized to 0 by default if not explicitly initialized
-   :feedback_c: someVar holds the default value of 0
-   :feedback_d: someVar has a value assigned by default
+   :feedback_a: ints get initialized to 0 by default if not explicitly initialized.
+   :feedback_b: ints get initialized to 0 by default if not explicitly initialized.
+   :feedback_c: This code will compile.
+   :feedback_d: someVar has a value assigned by default.
 
-   Assume that SomeClass and MainClass are properly defined in seperate files. What is the output of main()?
+   Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?
 
    .. code-block:: java
 
-     public class SomeClass
+    class SomeClass
     {
         int someVar;
     }
