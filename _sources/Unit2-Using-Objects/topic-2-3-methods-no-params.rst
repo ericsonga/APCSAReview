@@ -39,7 +39,7 @@
 Calling Methods Without Parameters
 ===========================================
 
-**Methods** define the behaviors or functions for objects. For example, in the Turtle class, methods like *forward()* and *turnRight()* made the turtle objects move that way. 
+**Methods** are a set of instructions that define the behaviors or functions for objects. For example, in the Turtle class, methods like *forward()* and *turnRight()* made the turtle objects move that way. 
 
 To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, yertle.forward(); calls yertle's forward method to move the turtle forward. Each method call is followed by parentheses. The parentheses () after method names are there in case you need to give the method parameters, some data, to do its job, which we will see in the next lesson. You must always put in the parentheses after the method name.
 
@@ -50,7 +50,7 @@ To use an object's method, you must use the object name and the dot (.) operator
 
 
 
-|Exercise| **Check Your Understanding**
+|Exercise| **Check Your Understanding: Mixed-up Code**
 
 Try to put the following mixed up code in the right order to draw the digital number 7 with just a line going straight up and then a line going left.
 
@@ -88,7 +88,6 @@ Try to put the following mixed up code in the right order to draw the digital nu
 
 
 After you put the mixed up code in order above, type in the same code below to make the turtle draw a 7 with just a line up and then across.
-
 (If the code below does not work for you, you can also use the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. activecode:: TurtleDraw7
@@ -112,24 +111,15 @@ After you put the mixed up code in order above, type in the same code below to m
       }
     }
 
-**Procedural abstraction** allows a programmer to use a method and abstract away the details of how it exactly works. For example, we know that if we hit the brakes, the car will stop, and we can still use the brakes even if we don't really know how they work. 
-
-
-When we use methods for a class in a library, we can look up the **method signature** in its documentation to see its name and parameters (which can be an empty list for methods without parameters). When we call a method or a constructor, this makes the program go do all the code in that method before continuing on with the next sequential line of code.   Once the last statement in the method has executed, flow of control is returned to the point immediately following where the method was called.
- 
-
-
-
 |CodingEx| **Coding Exercise:**
-
-
-Can you make yertle draw the digital number 8, as 2 squares on top of each other?
 
 
 .. activecode:: TurtleDraw8
     :language: java
     :datafile: turtleClassesMethods
 
+    Can you make yertle draw the digital number 8, as 2 squares on top of each other?
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -148,8 +138,123 @@ Can you make yertle draw the digital number 8, as 2 squares on top of each other
     }
 
 
+Procedural Abstraction
+-----------------------
 
-Before you call a method, you must make sure that you have created and intialized an object using a constructor. Remember that if you just declare a Turtle object without calling its constructor, it will be null and not really reference an object. If you call a method for a variable that is null, you will get an error called **NullPointerException**.
+**Procedural abstraction** allows a programmer to use a method and abstract away the details of how it exactly works. For example, we know that if we hit the brakes, the car will stop, and we can still use the brakes even if we don't really know how they work. 
+
+You will learn to write your own methods in Unit 5. In this Unit, you should be able to use methods already written for you and figure out what they do. When we use methods for a class in a library, we can look up the **method signature** in its documentation to see its name and parameters (which can be an empty list for methods without parameters). For example, here is a Student class with a method called print(). Methods are usually put after the instance variables and the constructors in a class.
+
+.. figure:: Figures/StudentClass.png
+    :width: 500px
+    :align: center
+    :alt: A Student class showing instance variables, constructors, and methods
+    :figclass: align-center
+
+    Figure 1: A Student class showing instance variables, constructors, and methods
+
+|Exercise| Check Your Understanding
+
+.. clickablearea:: student_methods
+    :question: Click on the methods headers (signatures) in the following class. Do not click on the constructors.
+    :iscode:
+    :feedback: Methods follow the constructors. The method header is the first line of a method.
+
+    :click-incorrect:public class Student {:endclick:
+    
+        :click-incorrect:private String name;:endclick:
+        :click-incorrect:private String email;:endclick:
+        
+        :click-incorrect:public Student(String initName, String intEmail) :endclick:
+        :click-incorrect:{:endclick:
+            :click-incorrect:name = initName;:endclick:
+            :click-incorrect:email = initEmail;:endclick:
+         :click-incorrect:}:endclick:
+         
+         :click-correct:public String getName() :endclick:
+         :click-incorrect:{:endclick:
+            :click-incorrect:return name;:endclick:
+         :click-incorrect:}:endclick:
+         
+         :click-correct:public void print() :endclick:
+         :click-incorrect:{:endclick:
+            :click-incorrect:System.out.println(name + ":" + email);:endclick:
+         :click-incorrect:}:endclick:       
+    :click-incorrect:}:endclick: 
+
+
+.. |visualization| raw:: html
+
+   <a href="http://www.pythontutor.com/java.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+
+This Java |visualization| shows how a song can be divided up into methods. Click on visualize and then the forward button to step through the code. When we call a method or a constructor, this makes the program go do all the code in that method before continuing on with the next sequential line of code.   Once the last statement in the method has executed, flow of control is returned to the point immediately following where the method was called. This example also demonstrates that there are two different ways to call methods. Methods inside the same class can call each other using just the ``methodName()``, but to call methods that belong to a class from outside the class or from a main method, you must first declare an object and then call its methods using ``object.methodName()``. Execution always begins with the main method.
+
+.. raw:: html
+
+   <div>
+   <iframe width="800" height="700" frameborder="0"  style="max-width:95%; margin-left:5%" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
+
+
+    
+    
+|Exercise| **Check your understanding**
+   
+.. mchoice:: songMethods
+   :practice: T
+   :answer_a: I like to eat eat eat.
+   :answer_b: I like to eat eat eat fruit.
+   :answer_c: I like to apples and bananas eat.
+   :answer_d: I like to eat eat eat apples and bananas!
+   :answer_e: Nothing, it does not compile.
+   :correct: d
+   :feedback_a: Try tracing through the print method and see what happens when it calls the other methods.
+   :feedback_b: There is a fruit() method but it does not print out the word fruit.
+   :feedback_c: The order things are printed out depends on the order in which they are called from the print method.
+   :feedback_d: Yes, the print method calls the eat method 3 times and then the fruit method to print this.
+   :feedback_e: Try the code in an active code window to see that it does work.
+   
+   What does the following code print out?
+   
+   .. code-block:: java
+   
+      public class Song {
+  
+        public void print() {
+            System.out.print("I like to ");
+            eat();
+            eat();
+            eat();
+            fruit();
+        }
+        public void fruit()
+        {
+            System.out.println("apples and bananas!");
+        }
+        
+        public void eat() {
+           System.out.print("eat ");
+        }
+        public static void main(String[] args) {
+           Song s = new Song();
+           s.print();
+        }
+    }
+    
+.. |visualization2| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22I%20like%20to%20%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20fruit%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20void%20fruit%28%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22apples%20and%20bananas!%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20public%20void%20eat%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22eat%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+
+Try this |visualization2| to see this code in action.
+
+
+.. note::
+
+    method(); is used to call a method within the same class, but object.method(); is necessary from  from the main method or from outside the class.
+
+
+Before you call a method from main or outside a class, you must make sure that you have created and initialized an object using a constructor. Remember that if you just declare an object without calling its constructor, it will be null and not really reference an object. If you call a method for a variable that is null, you will get an error called **NullPointerException**.
+
+
      
 |Groupwork| Programming Challenge : Draw a Letter
 -------------------------------------------------
@@ -179,7 +284,8 @@ After writing your code below, if you'd like your own copy, you can open this |r
     :language: java
     :datafile: turtleClassesMethods
 
-
+    Create a turtle drawing of a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or a number from today's date. 
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -199,10 +305,17 @@ After writing your code below, if you'd like your own copy, you can open this |r
 Summary
 -------------------
 
-- **Methods** define the behaviors or functions for objects. 
+- **Methods** are a set of instructions that define the behaviors or functions for objects. 
 
 - To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example **object.method();** 
 
+- A method signature for a method without parameters consists of the method name and an empty parameter list.
+
+- Procedural abstraction allows a programmer to use a method by knowing what the method does even if they do not know how the method was written. 
+
+- A method or constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, flow of control is returned to the point immediately following where the method or constructor was called. 
+
+- Using a null reference to call a method or access an instance variable causes a NullPointerException to be thrown.
 
    
 .. raw:: html

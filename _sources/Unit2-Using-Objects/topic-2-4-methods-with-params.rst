@@ -2816,6 +2816,8 @@ Try some of the methods above in the turtle code below.
     :language: java
     :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, Picture.java, Pen.java, Giffer.java, PathSegment.java
 
+    Try drawing a square with different colors. Try drawing a triangle.
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -2901,6 +2903,53 @@ Try the following mixed up code to draw a simple house made of a square and a tr
 Methods are said to be **overloaded** when there
 are multiple methods with the same name but a
 different **method signature**, where it requires a different number or type of parameters. For example, we have two different forward methods, forward() with no parameters and forward(100) which has a parameter that tells it how much to move forward. If there are more than one parameter, then the values given to the method need to correspond to the order and types in the method signature.
+
+You will not write your own methods until Unit 5, but you should be able to trace through method calls like below. 
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: traceMethods
+   :practice: T
+   :answer_a: 25 and 2
+   :answer_b: 25 and .5
+   :answer_c: 2 25
+   :answer_d: 25 2
+   :answer_e: Nothing, it does not compile.
+   :correct: a
+   :feedback_a: Correct.
+   :feedback_b: The order of the arguments to the divide(x,y) method will divide x by y and return an int result.
+   :feedback_c: The square(x) method is called before the divide(x,y) method.
+   :feedback_d: The main method prints out " and " in between the method calls.
+   :feedback_e: Try the code in the visualizer link below.
+   
+   What does the following code print out?
+   
+   .. code-block:: java
+   
+      public class MethodTrace 
+      {
+        public void square(int x)
+        {
+            System.out.print(x*x);
+        }
+        public void divide(int x, int y)
+        {
+            System.out.println(x/y);
+        }
+        public static void main(String[] args) {
+            MethodTrace traceObj = new MethodTrace();
+            traceObj.square(5);
+            System.out.print(" and ");
+            traceObj.divide(4,2);
+        }
+       }
+
+
+.. |visualization| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=%20%20public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20void%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28x*x%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20void%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28x/y%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20traceObj.square%285%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22%20and%20%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20traceObj.divide%284,2%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&cumulative=false&curInstr=18&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
+
+Try this |visualization| to see this code in action.
 
 |Groupwork| Programming Challenge : Turtle House
 ------------------------------------------------

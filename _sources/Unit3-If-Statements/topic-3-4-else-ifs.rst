@@ -26,34 +26,50 @@
 Multi-Selection: else-if Statements
 ===================================
 
-Using if/else statements, you can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if** and before the last possibility, the **else**.  
+Using if/else statements, you can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if**, and **else** before the last possibility.  
 
 .. code-block:: java
 
     // 3 way choice with else if
     if (boolean expression)
+    {
        statement1;
+    }
     else if (boolean expression)
-         statement2;
+    {
+       statement2;
+    }
     else  
-        statement3;
-    
+    {
+       statement3;
+    }
     
 |CodingEx| **Coding Exercise**
 
-Run the code below and try changing the value of x to get each of the three possible lines in the conditional to print.
+
 
 .. activecode:: lccbElseIf
    :language: java
    
+   Run the code below and try changing the value of x to get each of the three possible lines in the conditional to print.
+   ~~~~
    public class TestElseIf
    {
       public static void main(String[] args)
       {
         int x = 2;
-        if (x < 0) System.out.println("x is negative");
-        else if (x == 0) System.out.println("x is 0");
-        else System.out.println("x is positive");
+        if (x < 0) 
+        {
+          System.out.println("x is negative");
+        }
+        else if (x == 0) 
+        {      
+           System.out.println("x is 0");
+        }
+        else 
+        {
+          System.out.println("x is positive");
+        }
         System.out.println("after conditional");
       }
    }
@@ -67,7 +83,9 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
     Figure 1: The order that statements execute in a conditional with 3 options: if, else if, and else
     
-.. note:: Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
+.. note:: 
+
+    Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
 
 
 |Exercise| **Check your understanding**
@@ -86,9 +104,18 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    
    .. code-block:: java 
 
-     if (x < 0) System.out.println("x is negative");
-     else if (x == 0) System.out.println("x is zero"); 
-     else System.out.println("x is positive"); 
+     if (x < 0) 
+     {
+        System.out.println("x is negative");
+     }
+     else if (x == 0) 
+     {
+        System.out.println("x is zero"); 
+     }
+     else
+     {
+        System.out.println("x is positive"); 
+     }
      
 .. mchoice:: qcb3_4_2
    :practice: T
@@ -104,9 +131,18 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    
    .. code-block:: java 
 
-     if (x < 0) System.out.println("x is negative");
-     else if (x == 0) System.out.println("x is zero"); 
-     else System.out.println("x is positive"); 
+     if (x < 0) 
+     {
+        System.out.println("x is negative");
+     }
+     else if (x == 0)
+     {
+        System.out.println("x is zero"); 
+     }
+     else
+     {
+        System.out.println("x is positive"); 
+     }
      
 .. mchoice:: qcb3_4_3
    :practice: T
@@ -118,25 +154,38 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :feedback_a: This will only print if x is less than 0.25.
    :feedback_b: This will only print if x is greater than or equal to 0.25 and less than 0.5.
    :feedback_c: The first only print if x is greater than or equal to 0.5 and less than 0.75.
-   :feedback_d: This will print whenever x is greater than 0.75.
+   :feedback_d: This will print whenever x is greater than or equal to 0.75.
 
    What does the following code print when x has been set to .8?
    
    .. code-block:: java 
 
-     if (x < .25) System.out.println("first quartile");
-     else if (x < .5) System.out.println("second quartile"); 
-     else if (x < .75) System.out.println("third quartile");
-     else System.out.println("fourth quartile");
-     
+     if (x < .25) 
+     {
+         System.out.println("first quartile");
+     }
+     else if (x < .5) 
+     {
+         System.out.println("second quartile"); 
+     }
+     else if (x < .75) 
+     {
+         System.out.println("third quartile");
+     }
+     else 
+     {
+         System.out.println("fourth quartile");
+     }
  
 |CodingEx| **Coding Exercise**
 
-The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Then, fix the code by adding in 4 else's to connect the if statements.
+
 
 .. activecode:: lccbIfDebug
    :language: java
    
+   The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Then, fix the code by adding in 4 else's to connect the if statements and see if it works.
+   ~~~~
    public class IfDebug
    {
       public static void main(String[] args)
@@ -145,14 +194,25 @@ The else-if connection is necessary if you want to hook up conditionals together
         String grade = "";
         
         if (score >= 90) 
+        {
             grade = "A";
+        }
         if (score >= 80) 
+        {
             grade = "B";
+        }
         if (score >= 70) 
-            grade = "C";
+        {
+           grade = "C";
+        }
         if (score >= 60) 
+        {
             grade = "D";
-        else grade = "E";
+        }
+        else
+        {
+          grade = "E";
+        }
         
         System.out.println(grade);
       }
@@ -194,15 +254,19 @@ The else-if connection is necessary if you want to hook up conditionals together
     
 .. |Colossal Cave Adventure| raw:: html
 
-   <a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" target="_blank">Colossal Cave Adventure</a>
+   <a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" target="_blank" style="text-decoration:underline">Colossal Cave Adventure</a>
    
 .. |playing Adventure| raw:: html
 
-   <a href="http://www.web-adventures.org/cgi-bin/webfrotz?s=Adventure" target="_blank">playing Adventure</a>
+   <a href="http://www.web-adventures.org/cgi-bin/webfrotz?s=Adventure" target="_blank" style="text-decoration:underline">playing Adventure</a>
    
 .. |walkthrough| raw:: html
 
-   <a href="http://www.sierrahelp.com/Walkthroughs/AdventureWalkthrough.html#in" target="_blank">walkthrough</a>
+   <a href="http://www.sierrahelp.com/Walkthroughs/AdventureWalkthrough.html#in" target="_blank" style="text-decoration:underline">walkthrough</a>
+
+.. |repl link| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Adventure" target="_blank" style="text-decoration:underline">repl link</a>
 
 
 We encourage you to work in pairs for this challenge which is on repl.it (you will need an account there if you want to save your version).
@@ -211,7 +275,9 @@ One of the first games coded for early computers in the 1970s was called |Coloss
 
 In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.  
 
-1. Try the following program on repl.it. Then, add in **else if** statements to go in the directions of "s" and "e" and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. 
+1. Try the program below or with this |repl link|. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
+
+2. Add in **else if** statements to go in the directions of "s" for south and "e" for east, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. 
 
 2. How many test-cases are needed to test all branches of your code?
 
@@ -237,8 +303,14 @@ Summary
 
     // 3 way choice with else if
     if (boolean expression)
+    {
        statement1;
+    }
     else if (boolean expression)
-         statement2;
+    { 
+       statement2;
+    }
     else  
+    {
         statement3;
+    }

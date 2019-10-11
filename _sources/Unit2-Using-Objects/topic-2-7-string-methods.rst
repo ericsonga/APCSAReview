@@ -78,7 +78,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
         System.out.println(message1.substring(0,3));
         System.out.println(message1.substring(5));
 
-        System.out.println(message1.indexOf("is"));
+        System.out.println(message1.indexOf("is")); // This will match the is in "This"!
         System.out.println(message1.indexOf("Hello"));
         System.out.println(message2.indexOf("Hello"));
         
@@ -190,7 +190,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      String s2 = s1.substring(2);
 
 
-Run the example below to see the output from ``compareTo`` and ``equals``. Notice that compareTo tells you how you would order the two string alphabetically. If they are equal, it returns 0. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  And notice that equals is case-sensitive.
+Run the example below to see the output from ``compareTo`` and ``equals``. Notice that compareTo tells you how you would order the two strings alphabetically. If they are equal, it returns 0. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  And notice that equals is case-sensitive.
 
 .. activecode:: lcsm2
    :language: java
@@ -218,7 +218,7 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Notic
    
 There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
 
-The String library which is build into the default java.lang library simplifies a lot of complex programming tasks for us. Classes are grouped together into a **package** like java.lang. Many other useful library packages can be imported in. Programmers provide **Application Program Interfaces (APIs)** to allow other programmers to use their code. Documentation for APIs and libraries are essential to understanding the attributes and behaviors of an object of a class.
+The String library which is built into the default java.lang library simplifies a lot of complex programming tasks for us. Classes are grouped together into a **package** like java.lang. Many other useful library packages can be imported in. Programmers provide **Application Program Interfaces (APIs)** to allow other programmers to use their code. Documentation for APIs and libraries are essential to understanding the attributes and behaviors of an object of a class.
 
 
 .. note::
