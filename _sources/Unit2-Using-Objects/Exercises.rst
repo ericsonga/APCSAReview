@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 2-13-
+   :prefix: 2-14-
    :start: 1
    
 Multiple Choice Exercises
@@ -14,6 +14,51 @@ Easier Multiple Choice Questions
 ---------------------------------
 
 These problems are mostly easier than what you will see on the AP CS A exam.
+
+.. mchoice:: AP2-1-5
+   :practice: T
+   :answer_a: An attribute of breed is String.
+   :answer_b: color, breed, and age are instances of the Cat class.
+   :answer_c: Cat is an instance of the myCat class.
+   :answer_d: age is an attribute of the myCat object.
+   :answer_e: An attribute of Cat is myCat.
+   :correct: d
+   :feedback_a: The data type of breed is String.  
+   :feedback_b: color, breed, and age are attributes of the Cat class.
+   :feedback_c: myCat is an instance of the Cat class.
+   :feedback_d: Attributes of the Cat class and myCat object are color, breed, age.
+   :feedback_e: Attributes of the Cat class are color, breed, age.
+
+
+    A student has created a Cat class. The class contains variables to represent the following.
+    - A String variable called color to represent the color of the cat
+    - A String variable called breed to represent the breed of the cat
+    - An int variable called age to represent the age of the cat
+
+    The object myCat will be declared as type Cat.
+    Which of the following descriptions is accurate?
+
+.. mchoice:: AP2-1-6
+   :practice: T
+   :answer_a: An attribute of the scaryMovie class is title.
+   :answer_b: scaryMovie is an instance of the Movie class.
+   :answer_c: Title, director, and rating are instances of the scaryMovie object.
+   :answer_d: An attribute of the Movie instance is scaryMovie
+   :answer_e: Movie is an instance of scaryMovie.
+   :correct: b
+   :feedback_a: scaryMovie is an object, not a class. 
+   :feedback_b: scaryMovie is an object which is an instance of the Movie class.
+   :feedback_c: These are attributes of the object or class.
+   :feedback_d: scaryMovie is an instance of the Movie class.
+   :feedback_e: scaryMovie is an instance of the Movie class.
+  
+    A student has created a Movie class. The class contains variables to represent the following.
+    - A String variable called title to represent the title of the movie
+    - A String variable called director to represent the director of the movie
+    - A double variable called rating to represent the rating of the movie
+    
+    The object scaryMovie will be declared as type Movie.
+    Which of the following descriptions is accurate?
 
 
 
@@ -78,6 +123,52 @@ Medium Multiple Choice Questions
 ----------------------------------
 
 These problems are similar to those that you will see on the AP CS A exam.
+
+.. mchoice:: AP2-2-5
+   :practice: T
+   :answer_a: Movie one = new Movie("Harry Potter", "Bob");
+   :answer_b: Movie two = new Movie("Sponge Bob");
+   :answer_c: Movie three = new Movie(title, rating, director);
+   :answer_d: Movie four = new Movie("My Cool Movie", "Steven Spielburg", "4.4");
+   :answer_e: Movie five = new Movie(t);
+   :correct: b
+   :feedback_a: There is no Movie constructor with 2 parameters.  
+   :feedback_b: This creates a Movie object with the title "Sponge Bob". 
+   :feedback_c: It is not clear whether the variables title, rating, and director are the correct types or in the correct order.
+   :feedback_d: The third argument "4.4" is a String because it is in quotes, but the constructor expects a double.
+   :feedback_e: It is not clear whether t is the correct type for this constructor.
+
+    Consider the following class.  Which of the following code segments would successfully create a new Movie object?
+
+    .. code-block:: java 
+    
+        public class Movie
+        {
+            private String title;
+            private String director;
+            private double rating;
+            private boolean inTheaters;
+
+            public Movie(String t, String d, double r)
+            {
+                title = t;
+                director = d;
+                rating = r;
+                inTheaters = false;
+            }
+
+            public Movie(String t)
+            {
+                title = t;
+                director = "unknown";
+                rating = 0.0;
+                inTheaters = false;
+            }
+        }
+ 
+
+
+
 
 .. mchoice:: qve_new6
    :practice: T

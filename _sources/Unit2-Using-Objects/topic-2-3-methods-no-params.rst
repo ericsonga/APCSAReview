@@ -41,7 +41,9 @@ Calling Methods Without Parameters
 
 **Methods** are a set of instructions that define the behaviors or functions for objects. For example, in the Turtle class, methods like *forward()* and *turnRight()* made the turtle objects move that way. 
 
-To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, yertle.forward(); calls yertle's forward method to move the turtle forward. Each method call is followed by parentheses. The parentheses () after method names are there in case you need to give the method parameters, some data, to do its job, which we will see in the next lesson. You must always put in the parentheses after the method name.
+To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, yertle.forward(); calls yertle's forward method to move the turtle forward. These are called **non-static methods** unlike the main method which is a static method. A non-static method belongs to an object of the class and you have to create an instance of the class, an object, to access it.
+
+Each method call is followed by parentheses. The parentheses () after method names are there in case you need to give the method parameters, some data, to do its job, which we will see in the next lesson. You must always put in the parentheses after the method name.
 
 
 .. note::
@@ -317,7 +319,127 @@ Summary
 
 - Using a null reference to call a method or access an instance variable causes a NullPointerException to be thrown.
 
+AP Practice
+------------
+
+.. mchoice:: AP2-3-1
+    :practice: T
+     
+    Consider the following class definition.
+    
+    .. code-block:: java 
+    
+        public class Party
+        {
+            private int numInvited;
+            private boolean partyCancelled;
+
+            public Party()
+            {
+                numInvited = 1;
+                partyCancelled = false;
+            }
+
+            public void inviteFriend()
+            {
+                numInvited++;
+            }
+
+            public void cancelParty()
+            {
+                partyCancelled = true;
+            }
+        }
+
+    Assume that a Party object called myParty has been properly declared and initialized in a class other than Party.  Which of the following statements are valid?
+
+    - myParty.cancelParty();
+    
+      + Correct!
+
+    - myParty.inviteFriend(2);
+    
+      - The method inviteFriend() does not have any parameters.
+        
+    - myParty.endParty();
+        
+      - There is no endParty() method in the class Party.
+    
+    - myParty.numInvited++;
+
+      - This would cause an error because you cannot access the private instance variables of an object outside of the class. 
+        
+    - System.out.println( myParty.cancelParty() );
+        
+      - This would cause an error because the void method cancelParty() does not return a String that could be printed out.
+      
+      
+.. mchoice:: AP2-3-2
+    :practice: T
+     
+    Consider the following class definition.
+
+    .. code-block:: java 
+    
+        public class Cat
+        {
+            public void meow()
+            {
+                System.out.print("Meow ");
+            }
+
+            public void purr()
+            {
+                System.out.print("purr");
+            }
+
+            public void welcomeHome()
+            {
+                purr();
+                meow();
+            }
+            /* Constructors not shown */
+        }
+
+    Which of the following code segments, if located in a method in a class other than Cat, will cause the message "Meow purr" to be printed?
+
+    - .. code-block:: java
+        
+        Cat a = new Cat();
+        Cat.meow();
+        Cat.purr();
+        
+      - You must use the object a, not the class name Cat, to call these methods. 
+    
+    - .. code-block:: java
+        
+        Cat a = new Cat();
+        a.welcomeHome();
+
+      - This would print "purrMeow "
+    
+    - .. code-block:: java
+
+        Cat a = new Cat();
+        a.meow();
+        a.purr();
+
+      + Correct!
+    
+    - .. code-block:: java
+    
+         Cat a = new Cat().welcomeHome();
    
+      - This would cause a syntax error.
+    
+    - .. code-block:: java
+       
+         Cat a = new Cat();
+         a.meow();
+
+      - This would just print "Meow ".
+
+
 .. raw:: html
 
       <pre id="turtleClassesMethods" class="javaFiles" style="display:none;">
