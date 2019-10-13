@@ -3033,9 +3033,9 @@ AP Practice
     
     .. code-block:: java
 
-        public void inchesToCentimeters(double c)
+        public void inchesToCentimeters(double i)
         {
-            double i = c * 2.54;
+            double c = i * 2.54;
             printInCentimeters(i, c);
         }
 
@@ -3056,11 +3056,11 @@ AP Practice
     
     - 25.4 --> 10
     
-      - Centimeters should be printed before inches.
+      - Inches should be printed before centimeters.
     
     - 10 --> 12.54
     
-      - c = 10 * 2.54 = 25.4.
+      - c = 10 * 2.54 = 25.4, not 12.54.
     
     - 10.0 --> 25.4
     
