@@ -24,11 +24,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
        :answer_d: An instance of a Liquid object is hasFrozen.
        :answer_e: An attribute of freezingPoint is liquid1.
        :correct: c
-       :feedback_a:  
-       :feedback_b: 
-       :feedback_c:
-       :feedback_d: 
-       :feedback_e: 
+       :feedback_a: double is a data type, not an attribute.
+       :feedback_b: The classname is Liquid and the object instance is liquid1.
+       :feedback_c: Correct!
+       :feedback_d: The classname is Liquid and the object instance is liquid1.
+       :feedback_e: An attribute of liquid1 is freezingPoint.
 
         A student has created a Liquid class. The class contains variables to represent the following.
         - A double variable called boilingPoint to represent the boiling point of the liquid.
@@ -48,11 +48,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
        :answer_d: painting1 is an instance of the Artwork class.
        :answer_e: Artwork is an instance of three String objects.
        :correct: d
-       :feedback_a:  
-       :feedback_b: 
-       :feedback_c:
-       :feedback_d: 
-       :feedback_e: 
+       :feedback_a: The String variables are attributes of painting1. 
+       :feedback_b: These are attributes.
+       :feedback_c: painting1 is an instance of Artwork.
+       :feedback_d: Correct!
+       :feedback_e: Artwork is the class name.
 
         A student has created an Artwork class. The class contains the following variables.
         - A String variable called artist to represent the artist’s name
@@ -72,11 +72,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
        :answer_d: II and III
        :answer_e: I, II, and III
        :correct: c
-       :feedback_a:   
-       :feedback_b: 
-       :feedback_c:
-       :feedback_d: 
-       :feedback_e: 
+       :feedback_a: I needs to initialize the object variable with a call to new Party().   
+       :feedback_b: I needs to initialize the object variable with a call to new Party(). 
+       :feedback_c: Correct!
+       :feedback_d: III calls the Party constructor with a double parameter instead of an int.
+       :feedback_e: I needs to initialize the object and III needs to use an int instead of a double as the parameter for the constructor.
 
         Which of the following code segments correctly creates an instance of a new Party object? 
 
@@ -400,7 +400,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
             public int anotherThing(int i, int j)
             {
-                return j / i;
+                return i / j;
             }
 
         Which of the following statements, if located in a method in the same class, will initialize the variable x to 22?
