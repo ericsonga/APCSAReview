@@ -132,7 +132,7 @@ mean.  The class defines the data that every turtle knows about itself (called *
 what objects of the class can do (called **methods** or **behaviors**) like ``turnRight`` and move ``forward``.
 
 You can think of a **class** as a classification. A class defines the type of the objects created from it and creates objects of that type.
-Another way to say this is that a **class** in Java defines a new **abstract data type**.  When you create **objects**, you create a new instance (object) of that class data type. Here, ``yertle`` is an object of the class ``Turtle``.
+Another way to say this is that a **class** in Java defines a new **abstract data type**.  When you create **objects**, you create a new **instance** (object) of that class data type. Here, ``yertle`` is an object of the class ``Turtle``.
 
 Also notice that the **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100. Try changing the code above to go forward 50 pixels instead and then run it again.  What happens?
 
@@ -434,7 +434,56 @@ Summary
 
 - An **abstract data type** is a definition of the attributes and methods for all objects of a type (of the same class).
 
-- An **instance variable** is another name for an attribute.
+- An **instance variable** is another name for an attribute, which is data an object knows about itself such as its position. 
+
+
+AP Practice
+------------
+
+
+.. mchoice:: AP2-1-1
+   :practice: T
+   :answer_a: An attribute of the name object is String.
+   :answer_b: An attribute of the pet object is name.
+   :answer_c: An instance of the pet class is Dog.
+   :answer_d: An attribute of the Dog instance is pet.
+   :answer_e: An instance of the Dog object is pet.
+   :correct: b
+   :feedback_a: name is an attribute of the pet object or Dog class.
+   :feedback_b: name is an attribute of the pet object or Dog class.
+   :feedback_c: An instance of the Dog class is pet.
+   :feedback_d: An attribute of the Dog class is name.
+   :feedback_e: An instance of the Dog class is pet.
+
+   A student has created a ``Dog`` class. The class contains variables to represent the following.
+    - A String variable called ``breed`` to represent the breed of the dog
+    - An int variable called ``age`` to represent the age of the dog 
+    - A String variable called ``name`` to represent the name of the dog
+    
+    The object ``pet`` is declared as type Dog.
+    Which of the following descriptions is accurate?
+
+ 
+.. mchoice:: AP2-1-2
+   :practice: T
+   :answer_a: An attribute of the myParty object is boolean.
+   :answer_b: An attribute of the Party class is myParty.
+   :answer_c: An instance of the Party class is myParty.
+   :answer_d: An attribute of the Party instance is myParty.
+   :answer_e: An instance of the Party object is numOfPeople.
+   :correct: c
+   :feedback_a: An attribute of myParty is numOfPeople. 
+   :feedback_b: myParty is an instance of the Party class.
+   :feedback_c: myParty is an object that is an instance of the Party class.
+   :feedback_d: An attribute of the Party class is numOfPeople.
+   :feedback_e: An attribute of the Party class is numOfPeople.
+
+    A student has created a ``Party`` class. The class contains variables to represent the following.
+    - An int variable called ``numOfPeople`` to represent the number of people at the party.
+    - A boolean variable called ``discoLightsOn`` to represent whether the disco ball is on.
+    - A boolean variable called ``partyStarted`` to represent whether the party has started.
+    
+    The object ``myParty`` is declared as type Party. Which of the following descriptions is accurate?
 
 
 .. raw:: html

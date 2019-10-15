@@ -84,11 +84,13 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 
 |CodingEx| **Coding Exercise**
 
-For what values of x and y will the code below print true?  Try out different values of x and y to check your answer.
+
 
 .. activecode:: lcdmtest
    :language: java
    
+   For what values of x and y will the code below print true?  Try out different values of x and y to check your answer.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)

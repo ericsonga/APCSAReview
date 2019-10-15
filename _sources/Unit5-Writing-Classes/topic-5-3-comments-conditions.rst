@@ -74,6 +74,8 @@ The compiler will skip over comments, and they don't affect how your program run
        /* The print() method prints out the max */
        public print() {  System.out.println(max); }
 
+Note that most IDEs will tend to show comments formatted in italics -- to make them easier to spot.
+
 Notice that there are some special tags that you can use in Java documentation. These are not required but many programmers use them. Here are some common tags:
 
  - @author  Author of the program
@@ -143,7 +145,9 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
       }
     }
     
-Determining the preconditions and postconditions also help us to test our code and determine the **validity** of our software. Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use. 
+Even though the Turtle constructor's precondition was documented to say that x and y are between 0 and the width and height of the world, it seems like the constructor checked for values out of that range and set the instance variable to the closest legal value. Preconditions and postconditions are covered on the AP CS A exam. Software validity, testing, and use-case diagrams are not covered on the AP CS A exam, but they are used by professional programmers, and are discussed in the rest of this subsection.
+
+Determining the preconditions and postconditions also help us to test our code and determine the **validity** of our software.  Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use. 
 
 Good software testers actually try to break the code! They try all kinds of input to see what the software will do because you never know what users will try or what conditions there will be. So, always think what the preconditions of your code are and see what happens when you break them, and then see if you can protect or warn against that.
 
@@ -169,7 +173,6 @@ After drawing a Use-Case Diagram, designers write down the preconditions and the
    What are the preconditions and postconditions of the use-case "Pay for food"? Remember that these are often related to the other use-case conditions "order food" and "eat food". 
 
 
-Software validity, testing, and use-case diagrams are not covered on the AP CS A exam, but they are used by professional programmers. Preconditions and postconditions are covered on the AP CS A exam.
 
 |Groupwork| Programming Challenge : Comments and Conditions
 -----------------------------------------------------------
