@@ -424,19 +424,17 @@ After writing your code below, if you'd like your own copy, you can open this |r
 Summary
 -------------------
 
-- A **class** defines a new data type (classify something). It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
+- A **class** defines a new data type (a classification). It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
 
 - An **object** is a specific instance of a class with defined attributes. Objects are declared as variables of a class type.
 
-- An **attribute** is data the object knows such as which direction the turtle object is facing.
+- An **attribute** is data the object knows about itself. For example a turtle object knows the direction it is facing.
 
-- A **method** is something that an object can do such as a turtle object can go forward 100 pixels.
+- A **method** is something that an object can do.  For example a turtle object can go forward 100 pixels.
 
 - An **abstract data type** is a definition of the attributes and methods for all objects of a type (of the same class).
 
-- An **instance variable** is another name for an attribute which is data an object knows about itself such as its position. 
-
-
+- An **instance variable** is another name for an attribute.
 
 
 .. raw:: html
