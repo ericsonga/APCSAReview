@@ -45,8 +45,11 @@ A new object is created with the ``new`` keyword followed by the class name (``n
     World world = new World();    // create a new World object
     Turtle t = new Turtle(world); // create a new Turtle object
 
-There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. There can also be other constructors that take parameters like the ``Turtle(world)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor and used to initialize the attributes of an object.
-The ``World`` class actually has 2 constructors that take different parameters.
+Overloading Constructors, the No-Argument Constructor, and Parameters
+----------------------------------------------------------------------
+
+There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. There can also be other constructors that take parameters like the ``Turtle(world)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
+The ``World`` class actually has 2 constructors.  One doesn't take any parameters and one takes the world's width and height.
 
 
 .. figure:: Figures/worldConstructors.png
@@ -87,8 +90,10 @@ The ``World`` class actually has 2 constructors that take different parameters.
 
    Which of these is valid syntax for creating and initializing a World object?
 
+The World Class Constructors
+----------------------------------------------------------
 
-The ``World()`` constructor creates a graphical window with 640x480 pixels. The ``World(int width, int height)`` constructor takes two integer parameters, and initializes the ``World`` object's width and height to them, for example ``new World(300,400)`` creates a 300x400 pixel world.
+The constructor that doesn't take any parameters, ``World()``, creates a graphical window with 640x480 pixels. The ``World(int width, int height)`` constructor takes two integer parameters, and initializes the ``World`` object's width and height to them, for example ``new World(300,400)`` creates a 300x400 pixel world.
 
 .. code-block:: java
 
@@ -105,9 +110,12 @@ The ``World()`` constructor creates a graphical window with 640x480 pixels. The 
 
     Figure 2: The coordinate (0,0) is at the top left of the Turtle world.
 
+The Turtle Class Constructors
+----------------------------------------------------------
+
 The ``Turtle`` class also has multiple constructors, although it always requires a world as an parameter in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.
 
-There is another ``Turtle constructor`` that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below. The coordinate (0,0) is at the top left corner of the world.
+There is another ``Turtle constructor`` that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.
 
 .. code-block:: java
 
@@ -147,8 +155,24 @@ There is another ``Turtle constructor`` that places the turtle at a certain (x,y
       }
     }
 
-You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. A reference is like a tracking number that you can use to track the location of a package. The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world)``).  However, you will typically declare an object variable and initialize it in the same line of code (``Turtle t1 = new Turtle(world);``).
+Object Variables and References
+---------------------------------
 
+You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. A reference is like a tracking number that you can use to track the location of a package. The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world)``).  However, you will typically declare an object variable and initialize it in the same line of code (``Turtle t2 = new Turtle(world);``).
+
+.. code-block:: java
+
+    World world = new World();
+    Turtle t1 = null;
+    t1 = new Turtle(world);
+    Turtle t2 = new Turtle(world);
+
+.. note ::
+
+   Notice that you only specify the type (class name) for an object reference when you declare it (``Turtle t1 = null``) and not when you assign it a value (``t1 = new Turtle(world)``).
+
+Constructor and Method signatures
+-----------------------------------
 
 .. |turtle documentation| raw:: html
 
@@ -257,8 +281,10 @@ Here is the |documentation| for the GregorianCalendar class which lists two cons
 - GregorianCalendar() : Constructs a default ``GregorianCalendar`` using the current time in the default time zone with the default locale.
 - GregorianCalendar(int year, int month, int dayOfMonth) : Constructs a ``GregorianCalendar`` with the given date set in the default time zone with the default locale.
 
+Formal Parameters, Actual Parameters, and Call by Value
+----------------------------------------------------------
 
-When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal parameters**, (year, month, dayOfMonth) in this example, are filled in with copies of the  **actual parameters** (or **arguments**), which are (2001,1,1) in this example, using a process called **call by value** that copies values, and these values in turn are used by the constructor to initialize the instance variables for the new object.
+When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal parameters**, (year, month, dayOfMonth), are set to copies of the  **actual parameters** (or **arguments**), which are (2001,1,1).  This is also called **call by value** which means that copies of the actual parameter values are passed to the constructor.  These values are used to initialize the object's attributes.
 
 .. figure:: Figures/parameterMapping.png
     :width: 600px
@@ -268,7 +294,35 @@ When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal 
 
     Figure 4: Parameter Mapping
 
-The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. And the order of the arguments matters. If you mix up the year and month in the ``GregorianCalendar`` constructor, you will get a completely different date!
+The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the year and month in the ``GregorianCalendar`` constructor, you will get a completely different date!
+
+.. mchoice:: 2_2_formal_parms
+   :practice: T
+   :answer_a: objects
+   :answer_b: classes
+   :answer_c: formal parameters
+   :answer_d: actual parameters
+   :correct: c
+   :feedback_a: Objects have attributes and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: A formal parameter is in the constructor's signature.
+   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
+
+   In ``public World(int width, int height)`` what are ``width`` and ``height``?
+
+.. mchoice:: 2_2_actual_parms
+   :practice: T
+   :answer_a: objects
+   :answer_b: classes
+   :answer_c: formal parameters
+   :answer_d: actual parameters
+   :correct: d
+   :feedback_a: Objects have attributes and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: A formal parameter is in the constructor's signature.
+   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
+
+   In ``new World(150, 200)`` what are ``150`` and ``200``?
 
 In Unit 5, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called ``Date``, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them.
 
@@ -366,11 +420,13 @@ Summary
 
 - A **no-argument constructor** is a constructor that doesn't take any passed in values (arguments).
 
-- **Parameters** allow values to be passed to the constructor to initialize the newly created object's attributes. These values are called the **parameters** or **actual parameters** or **arguments**.
+- **Parameters** allow values to be passed to the constructor to initialize the newly created object's attributes.
 
 - The **parameter list**, in the header of a constructor, is a list of the type of the value being passed and a variable name. These variables are called the **formal parameters**.
 
-- **Actual parameters** are passed using **call by value** which initializes the formal parameters with copies of the actual parameters' values. The values passed to a constructor must be compatible with the types identified in the formal parameter list.
+- **Actual parameters** are the values being passed to a constructor.  The formal parameters are set to a copy of the value of the actual parameters.
+
+- **Formal parameters** are the specification of the parameters in the constructor header.  In Java this is a list of the type and name for each parameter (``World(int width, int height``).
 
 - **Call by value** means that when you pass a value to a constructor or method it passes a copy of the value.
 
