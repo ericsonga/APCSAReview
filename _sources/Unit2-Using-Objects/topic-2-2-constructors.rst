@@ -125,6 +125,7 @@ There is another ``Turtle constructor`` that places the turtle at a certain (x,y
 .. note ::
    Notice that the order of the parameters matter. The ``Turtle`` constructor takes ``(x,y,world)`` as parameters in that order. If you mix up the order of the parameters it will cause an error, because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- to allow for error-checking.
 
+
 |CodingEx| **Coding Exercise:**
 
 .. activecode:: TurtleConstructorTest
@@ -375,7 +376,6 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
 
 This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors.
 
-
 |Groupwork| Programming Challenge : Debugging
 ---------------------------------------------
 
@@ -430,7 +430,96 @@ Summary
 
 - **Call by value** means that when you pass a value to a constructor or method it passes a copy of the value.
 
+AP Practice
+------------
 
+.. mchoice:: AP2-2-1
+   :practice: T
+   :answer_a: I only
+   :answer_b: I and II 
+   :answer_c: I and III
+   :answer_d: I, II, and III
+   :answer_e: II and III
+   :correct: c
+   :feedback_a: I is one of the correct constructors but the second constructor can also be used. 
+   :feedback_b: II is not correct because there is no Cat constructor that takes 2 parameters.
+   :feedback_c: I and III call the correct constructors.
+   :feedback_d: II is not correct because there is no Cat constructor that takes 2 parameters.
+   :feedback_e: II is not correct because there is no Cat constructor that takes 2 parameters.
+
+    Consider the following class. Which of the following successfully creates a new Cat object? 
+
+    .. code-block:: java 
+    
+        public class Cat
+        {
+            private String color;
+            private String breed;
+            private boolean isHungry;
+
+            public Cat()
+            {
+                color = "unknown";
+                breed = "unknown";
+                isHungry = false;
+            }
+
+            public Cat(String c, String b, boolean h)
+            {
+                color = c;
+                breed = b;
+                isHungry = h;
+            }
+        }
+
+        I.   Cat a = new Cat();
+        II.  Cat b = new Cat("Shorthair", true);
+        III. String color = "orange";
+             boolean hungry = false;
+             Cat c = new Cat(color, "Tabby", hungry);
+ 
+.. mchoice:: AP2-2-2
+   :practice: T
+   :answer_a: Movie m = new Movie(8.0, "Lion King"); 
+   :answer_b: Movie m = Movie("Lion King", 8.0);
+   :answer_c: Movie m = new Movie();
+   :answer_d: Movie m = new Movie("Lion King", "Disney", 8.0);
+   :answer_e: Movie m = new Movie("Lion King");
+   :correct: d
+   :feedback_a: There is no Movie constructor with 2 parameters.  
+   :feedback_b: There is no Movie constructor with 2 parameters. 
+   :feedback_c: This creates a Movie object but it does not have the correct title and rating.
+   :feedback_d: This creates a Movie object with the correct title and rating.
+   :feedback_e: This creates a Movie object but it does not have a rating of 8.0.
+
+   Consider the following class.  Which of the following code segments will construct a Movie object m with a title of "Lion King" and rating of 8.0?
+    
+   .. code-block:: java  
+        
+        public class Movie
+        {
+            private String title;
+            private String director;
+            private double rating;
+            private boolean inTheaters;
+
+            public Movie(String t, String d, double r)
+            {
+                title = t;
+                director = d;
+                rating = r;
+                inTheaters = false;
+            }
+
+            public Movie(String t)
+            {
+                title = t;
+                director = "unknown";
+                rating = 0.0;
+                inTheaters = false;
+            }
+        }
+        
 .. raw:: html
 
       <pre id="turtleClassesConstructor" class="javaFiles" style="display:none;">
