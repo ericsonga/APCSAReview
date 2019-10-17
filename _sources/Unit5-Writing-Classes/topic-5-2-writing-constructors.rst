@@ -25,7 +25,7 @@ Writing Constructors
 ..	index::
 	pair: class; constructor
 	
-Objects are created in programs by declaring a variable of the class and using the keyword new followed by a call to a constructor. **Constructors**  set the initial values for the object's instance variables.    For example, here is how we create World, Turtle, and Person objects.  
+In Unit 2, we learned how to create objects using constructor. Objects are created in programs by declaring a variable of the class and using the keyword new followed by a call to a constructor. **Constructors**  set the initial values for the object's instance variables.    For example, here is how we create World, Turtle, and Person objects.  
 
 .. code-block:: java 
 
@@ -42,10 +42,17 @@ In a new class, constructors are usually written after the instance variables an
 
 .. code-block:: java 
 
-    public ClassName() 
-    {
-    
-    }
+   public class ClassName
+   {
+
+      /* Instance Variable Declarations -- not shown */
+
+      /* Constructor - same name as Class, no return type */
+      public ClassName()
+      {
+        /* Implementation not shown */
+      }
+   }
     
 .. note::
 
@@ -85,7 +92,7 @@ If there are no constructors written for a class, Java provides a no-argument **
 
      
 .. clickablearea:: name_constructor
-    :question: Click on all the parts of the constructor
+    :question: Click on all the lines of code that are part of constructors in the following class.
     :iscode:
     :feedback: Constructors are public and have the same name as the class.  
 
@@ -126,7 +133,7 @@ If there are no constructors written for a class, Java provides a no-argument **
 
 |CodingEx| **Coding Exercise**
 
-The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer|.
+The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Note that this constructor sets the default instance variable values to 1 rather than 0 -- so we don't end up with divide by zero. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer|.
 
 .. |Java visualizer| raw:: html
 
