@@ -107,10 +107,13 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
 
 
 The program above creates a ``World`` object called ``world`` and a ``Turtle`` object called ``yertle`` and places ``yertle`` in the center of the world.  The code
-asks ``yertle`` to go forward, turn left, and then go forward. As the turtle moves it draws with its pen.
-Notice that case matters in Java, so ``world`` and ``World`` are two different things.
+asks ``yertle`` to go forward, turn left, and then go forward.  It didn't tell the turtle how much to go forward, so it goes forward 100 pixels by default. As the turtle moves it draws with its pen.
 There is hidden Java code that defines the ``World`` and ``Turtle`` classes.  Notice that a world was first
 created and then a turtle.  Turtles need to be created in a world.
+
+.. note ::
+
+   Case matters in Java, so ``world`` and ``World`` are two different things.  Also, notice that the **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``.
 
 .. mchoice:: 2_1_turle_dir
    :practice: T
@@ -126,17 +129,8 @@ created and then a turtle.  Turtles need to be created in a world.
 
    Which way does a turtle face when it is first created?
 
-
-A computer doesn't automatically know what we mean by a robot turtle or world.  We have to write Java classes to define what we
-mean.  The class defines the data that every turtle knows about itself (called **fields** or **attributes**) like where it is in the world and which way it is facing.  The class also defines
-what objects of the class can do (called **methods** or **behaviors**) like ``turnRight`` and move ``forward``.
-
-You can think of a **class** as a classification. A class defines the type of the objects created from it and creates objects of that type.
-Another way to say this is that a **class** in Java defines a new **abstract data type**.  When you create **objects**, you create a new instance (object) of that class data type. Here, ``yertle`` is an object of the class ``Turtle``.
-
-Also notice that the **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100. Try changing the code above to go forward 50 pixels instead and then run it again.  What happens?
-
 .. parsonsprob:: 2_1_Turtle_L
+   :practice: T
    :numbered: left
    :adaptive:
    :noindent:
@@ -172,7 +166,52 @@ Also notice that the **dot operator** (.) is used to run an object's method. You
        } // end main
    } // end class
 
-Classes can **inherit** attributes and methods from another class in Java.  Here is a class diagram that shows some of the attributes and methods that the class ``Turtle`` inherits from the ``SimpleTurtle`` class.
+
+A computer doesn't automatically know what we mean by a robot turtle or world.  We have to write Java classes to define what we
+mean.  The class defines the data that every turtle object knows about itself (called **fields** or **attributes**) like where it is in the world and which way it is facing.  The class also defines
+what objects of the class can do (called **methods** or **behaviors**) like ``turnRight`` and move ``forward``.
+
+.. mchoice:: 2_1_type_object
+   :answer_a: object
+   :answer_b: class
+   :answer_c: attribute
+   :answer_d: method
+   :correct: a
+   :feedback_a: Yes, yertle is an object of the Turtle class.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: An attribute is something the object knows about itself.
+   :feedback_d: A method is something an object can do like go forward.
+
+   What type of thing is yertle in the program above?
+
+.. mchoice:: 2_1_type_turn_right
+   :answer_a: object
+   :answer_b: class
+   :answer_c: attribute
+   :answer_d: method
+   :correct: d
+   :feedback_a: An object has data and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: An attribute is something the object knows about itself.
+   :feedback_d: A method is something an object can do like turn right.
+
+   What type of thing is turnRight in the program above?
+
+.. mchoice:: 2_1_type_pos
+   :answer_a: object
+   :answer_b: class
+   :answer_c: attribute
+   :answer_d: method
+   :correct: c
+   :feedback_a: An object has data and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: An attribute is something the object knows about itself like its position.
+   :feedback_d: A method is something an object can do like turn right.
+
+   What type of thing is the position of a turtle in a world?
+
+
+Classes can **inherit** attributes and methods from another class in Java, just like people can inherit money from a relative.  Here is a class diagram that shows some of the attributes and methods that the class ``Turtle`` inherits from the ``SimpleTurtle`` class.
 
 .. creately.com for figure
 
@@ -184,6 +223,20 @@ Classes can **inherit** attributes and methods from another class in Java.  Here
     :figclass: align-center
 
     Figure 2: Turtle Class Diagram
+
+.. mchoice:: 2_1_type_turn
+   :practice: T
+   :answer_a: object
+   :answer_b: class
+   :answer_c: attribute
+   :answer_d: method
+   :correct: d
+   :feedback_a: An object has data and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: An attribute is something the object knows about itself.
+   :feedback_d: A method is something an object can do like turn.
+
+   A turtle object knows how to turn by a specified number of degrees.  What type of thing is turn?
 
 .. parsonsprob:: 2_1_Turtle_Turn
        :numbered: left
@@ -294,7 +347,7 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
 What are Classes and Objects?
 -----------------------------
 
-In Java, a **class** is used to define a new data type (classify something).   The class defines what objects of the class need to know (attributes or instance variables) and do (behaviors or methods).  A class is the formal implementation, or blueprint, of the attributes and behaviors of an object.
+In Java, a **class** is used to define a new **abstract data type** (classify something).   The class defines what objects of the class need to know (attributes or instance variables) and do (behaviors or methods).  A class is the formal implementation, or blueprint, of the attributes and behaviors of an object.
 
 There are many classes that are part of the Java language, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``ArrayList``).
 
