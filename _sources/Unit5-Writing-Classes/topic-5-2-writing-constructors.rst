@@ -281,5 +281,175 @@ Summary
 
 
 
+AP Practice
+------------
+
+
+
+.. mchoice:: AP5-2-1
+    :practice: T
+
+    Consider the definition of the Cat class below. The class uses the instance variable isSenior to indicate whether a cat is old enough to be considered a senior cat or not.
+        
+    .. code-block:: java
+
+        public class Cat
+        {
+            private String name;
+            private int age;
+            private boolean isSenior;
+            public Cat(String n, int a)
+            {
+                name = n;
+                age = a;
+                if (age >= 10)
+                {
+                    isSenior = true;
+                }
+                else
+                {
+                    isSenior = false;
+                }
+            }
+        }
+
+        Which of the following statements will create a Cat object that represents a cat that is considered a senior cat?
+    
+    - Cat c = new Cat ("Oliver", 7);
+
+      - The age 7 is less than 10, so this cat would not be considered a senior cat.
+      
+    - Cat c = new Cat ("Max", "15");
+
+      - An integer should be passed in as the second parameter, not a string.
+      
+    - Cat c = new Cat ("Spots", true);
+
+      - An integer should be passed in as the second parameter, not a boolean.
+      
+    - Cat c = new Cat ("Whiskers", 10);
+
+      + Correct!
+        
+    - Cat c = new Cat ("Bella", isSenior);
+
+      - An integer should be passed in as the second parameter and isSenior would be undefined outside of the class.
+
+
+
+
+.. mchoice:: AP5-2-2
+   :practice: T
+   :answer_a: I only
+   :answer_b: II only
+   :answer_c: III only
+   :answer_d: I and III only
+   :answer_e: I, II and III
+   :correct: d
+   :feedback_a: Option III can also create a correct Cat instance.
+   :feedback_b: Option II will create a cat that is 0 years old with 5 kittens.
+   :feedback_c: Option I can also create a correct Cat instance.
+   :feedback_d: Good job!
+   :feedback_e: Option II will create a cat that is 0 years old with 5 kittens.
+
+   Consider the following class definition. Each object of the class Cat will store the cat’s name as name, the cat’s age as age, and the number of kittens the cat has as kittens. Which of the following code segments, found in a class other than Cat, can be used to create a cat that is 5 years old with no kittens?
    
-   
+   .. code-block:: java
+
+    public class Cat
+    {
+        private String name;
+        private int age;
+        private int kittens;
+
+        public Cat(String n, int a, int k)
+        {
+            name = n;
+            age = a;
+            kittens = k;
+        }
+        public Cat(String n, age a)
+        {
+            name = n;
+            age = a;
+            kittens = 0;
+        }
+        /* Other methods not shown */
+    }
+
+    I.   Cat c = new Cat("Sprinkles", 5, 0);
+    II.  Cat c = new Cat("Lucy", 0, 5);
+    III. Cat c = new Cat("Luna", 5);
+    
+.. mchoice:: AP5-2-3
+    :practice: T
+
+    Consider the following class definition.
+        
+    .. code-block:: java
+
+        public class Cat
+        {
+            private String color;
+            private boolean isHungry;
+            /* missing constructor */
+        }
+
+    The following statement appears in a method in a class other than Cat. It is intended to create a new Cat object c with its attributes set to "black" and true.
+    
+    .. code-block:: java
+  
+        Cat c = new Cat("black", true);
+        
+        Which of the following can be used to replace /* missing constructor */ so that the object c is correctly created?
+        
+    - .. code-block:: java
+    
+        public Cat(String c, boolean h)
+        {
+            c = "black";
+            h = true;
+        }
+
+      - The constructor should be changing the instance variables, not the local variables.
+
+    - .. code-block:: java
+    
+        public Cat(String c, boolean h)
+        {
+            c = "black";
+            h = "true";
+        }
+
+      - The constructor should be changing the instance variables, not the local variables.
+
+    - .. code-block:: java
+    
+        public Cat(String c, boolean h)
+        {
+            c = color;
+            h = isHungry;
+        }
+
+      - The constructor should be changing the instance variables, not the local variables.
+
+    - .. code-block:: java
+    
+        public Cat(String c, boolean h)
+        {
+            color = black;
+            isHungry = true;
+        }
+
+      - The constructor should be using  the local variables to set the instance variables.
+
+    - .. code-block:: java
+    
+        public Cat(String c, boolean h)
+        {
+            color = c;
+            isHungry = h;
+        }
+
+      + Correct!
+
