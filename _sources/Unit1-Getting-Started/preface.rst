@@ -70,6 +70,7 @@ Several students at Georgia Tech have helped review the eBook:
 * Stephanie Remy
 
 Several students at the University of California, San Diego have been involved in creating multiple choice questions for the EBook.
+
 * Matthew Crooks
 * Miranda Go
 * Valerie Hon
