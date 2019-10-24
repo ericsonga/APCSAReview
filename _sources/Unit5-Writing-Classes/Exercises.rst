@@ -332,6 +332,85 @@ Exercises
       
       - Incorrect. This would again result in freezing point being > boiling point which is impossible.
 
+.. mchoice:: AP5-4-4
+   :practice: T
+   :random:
+   :answer_a: The getAge method should be declared as private.
+   :answer_b: The return type of the getAge method should be void.
+   :answer_c: The getAge method should have at least one parameter.
+   :answer_d: The variable age is not declared inside the getAge method.
+   :answer_e: The instance variable age should be returned instead of a, which is local to the constructor.
+   :correct: e
+   :feedback_a: The method should be public so it can be accessed outside of the class.
+   :feedback_b: The method return type should stay as int.
+   :feedback_c: The getAge should not take any parameters.
+   :feedback_d: This is an instance variable and should be declared outside.
+   :feedback_e: The accessor method getAge should return the instance variable age.
+
+    Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?
+    
+    .. code-block:: java
+
+        public class Cat
+        {
+            private int age;
+
+            public Cat(int a)
+            {
+                age = a;
+            }
+
+            public int getAge()
+            {
+                return a;
+            }
+        }
+
+
+.. mchoice:: AP5-4-3
+   :practice: T
+   :random:
+   
+   Consider the following Liquid class. The currentTemperature is stored in the method’s int attribute. The getCurrentTemp method is intended to allow methods in other classes to access a Liquid object’s currentTemperature value; however, it does not work as intended. Which of the following best explains why the getCurrentTemperature method does NOT work as intended?
+   
+   .. code-block:: java
+
+        public class Liquid
+        {
+            private int currentTemperature;
+
+            public Liquid(int ct)
+            {
+                currentTemperature = ct;
+            }
+
+            public void getCurrentTemperature()
+            {
+                return currentTemperature;
+            }
+        }
+
+   - The getCurrentTemperature method should be declared as private.
+    
+     - Incorrect. Getter methods are fine as public methods
+    
+   - The return type of the getCurrentTemperature method should be int.
+    
+     + Correct!
+
+   - The getCurrentTemperature method should have at least one parameter.
+    
+     - Incorrect. Getter’s do not need parameters.
+
+   - The variable currentTemperature is not declared inside of the getCurrentTemperature method.
+    
+     - Incorrect. Simply not true.
+
+   - The instance variable ct should be returned instead of currentTemperature, which is local to the constructor.
+    
+     - Incorrect. Constructor variables should be used simply for initializing the attributes.
+
+
 
 .. mchoice:: qsh_3
    :practice: T
