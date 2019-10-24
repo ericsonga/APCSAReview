@@ -62,7 +62,7 @@ The ``World`` class actually has 2 constructors.  One doesn't take any parameter
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: 2_2_1-overload_const_1
+.. mchoice:: overload_const_1
    :practice: T
    :answer_a: When a constructor takes one parameter.
    :answer_b: When a constructor takes more than one parameter.
@@ -76,7 +76,7 @@ The ``World`` class actually has 2 constructors.  One doesn't take any parameter
 
    Which of these is overloading?
 
-.. mchoice:: 2_2_2-const_world
+.. mchoice:: const_def_1
    :practice: T
    :answer_a: World w = null;
    :answer_b: World w = new World;
@@ -127,7 +127,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: 2_2_3-const_turtle
+.. mchoice:: const_turtle
    :practice: T
    :answer_a: Turtle t = Turtle(world);
    :answer_b: Turtle t = new Turtle();
@@ -207,7 +207,7 @@ When you use a class that someone has already written for you in a **library** t
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: 2_2_4-TurtleClass1
+.. mchoice:: TurtleClass1
    :practice: T
    :answer_a: Turtle t = new Turtle();
    :answer_b: Turtle t = new Turtle(50,150);
@@ -223,7 +223,7 @@ When you use a class that someone has already written for you in a **library** t
 
    Given the Turtle class in the figure above and a World object world1, which of the following code segments will correctly create an instance of a Turtle object at (x,y) coordinates (50,150)?
 
-.. mchoice:: 2_2_5-no_arg_constructor
+.. mchoice:: no_arg_constructor
    :practice: T
    :answer_a: public World(int width, int height)
    :answer_b: public World()
@@ -313,7 +313,7 @@ When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal 
 
 The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the year and month in the ``GregorianCalendar`` constructor, you will get a completely different date!
 
-.. mchoice:: 2_2_6-formal_parms
+.. mchoice:: 2_2_formal_parms
    :practice: T
    :answer_a: objects
    :answer_b: classes
@@ -327,7 +327,7 @@ The type of the values being passed in as arguments have to match the type of th
 
    In ``public World(int width, int height)`` what are ``width`` and ``height``?
 
-.. mchoice:: 2_2_7-actual_parms
+.. mchoice:: 2_2_actual_parms
    :practice: T
    :answer_a: objects
    :answer_b: classes
@@ -353,7 +353,8 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
 
 |Exercise| **Check your understanding**
 
-.. clickablearea:: 2_2_8-date_constructor
+.. clickablearea:: date_constructor
+    :practice: T
     :question: Click on the constructor headers (signatures)
     :iscode:
     :feedback: Constructors are public and have the same name as the class. Click on the constructor headers which are the first line of the constructors showing their name and parameters.
@@ -375,7 +376,7 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
 
     :click-incorrect:}:endclick:
 
-.. mchoice:: 2_2_9-DateClass1
+.. mchoice:: DateClass1
    :practice: T
    :answer_a: Date d = new Date();
    :answer_b: Date d = new Date(9,20);
