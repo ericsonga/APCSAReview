@@ -221,7 +221,7 @@ Let's consider the substring method in Java. This method has a strong preconditi
    :feedback_a: This is true but it could still throw an exception if i is a large value.
    :feedback_b: This is true but it could still throw an exception if i is a negative value.   
    :feedback_c: This is true but a little too restrictive.
-   :feedback_d: + Correct. i can refer to character 0 up to str.length().
+   :feedback_d: Correct. i can refer to character 0 up to str.length().
       
    The following method is intended to return the substring starting at index i until the end of the string. For example, getiToEnd("012",1) should return "12". Which of the following is the most appropriate precondition for the method so that it does not throw an exception?
 

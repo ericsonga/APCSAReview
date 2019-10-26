@@ -81,12 +81,12 @@ The ``World`` class actually has 2 constructors.  One doesn't take any parameter
    :answer_a: World w = null;
    :answer_b: World w = new World;
    :answer_c: World w = new World();
-   :answer_d: World w = make World;
+   :answer_d: World w = World();
    :correct: c
    :feedback_a: This declares a variable w that refers to a World object, but it doesn't create a World object or initialize it.
    :feedback_b: You must include parentheses () to call a constructor.
    :feedback_c: Use the new keyword followed by the classname and parentheses to create a new object and call the constructor.
-   :feedback_d: Use the new keyword followed by the classname and parentheses to create a new object and call the constructor.
+   :feedback_d: You must use the new keyword to create a new object.
 
    Which of these is valid syntax for creating and initializing a World object?
 
@@ -115,7 +115,7 @@ The Turtle Class Constructors
 
 The ``Turtle`` class also has multiple constructors, although it always requires a world as an parameter in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.
 
-There is another ``Turtle constructor`` that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.
+There is another ``Turtle`` constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.
 
 .. code-block:: java
 
@@ -125,6 +125,21 @@ There is another ``Turtle constructor`` that places the turtle at a certain (x,y
 .. note ::
    Notice that the order of the parameters matter. The ``Turtle`` constructor takes ``(x,y,world)`` as parameters in that order. If you mix up the order of the parameters it will cause an error, because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- to allow for error-checking.
 
+|Exercise| **Check your understanding**
+
+.. mchoice:: const_turtle
+   :practice: T
+   :answer_a: Turtle t = Turtle(world);
+   :answer_b: Turtle t = new Turtle();
+   :answer_c: Turtle t = new Turtle(world, 100, 100);
+   :answer_d: Turtle t = new Turtle(100, 100, world);
+   :correct: d
+   :feedback_a: You must use the new keyword to create a new Turtle.
+   :feedback_b: All turtle constructors take a world as a parameter.
+   :feedback_c: The order of the parameters matter.
+   :feedback_d: This creates a new Turtle object in the passed world at location (100,100)
+
+   Which of these is valid syntax for creating and initializing a Turtle object?
 
 |CodingEx| **Coding Exercise:**
 
@@ -294,6 +309,8 @@ When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal 
 
     Figure 4: Parameter Mapping
 
+|Exercise| **Check your understanding**
+
 The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the year and month in the ``GregorianCalendar`` constructor, you will get a completely different date!
 
 .. mchoice:: 2_2_formal_parms
@@ -337,6 +354,7 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
 |Exercise| **Check your understanding**
 
 .. clickablearea:: date_constructor
+    :practice: T
     :question: Click on the constructor headers (signatures)
     :iscode:
     :feedback: Constructors are public and have the same name as the class. Click on the constructor headers which are the first line of the constructors showing their name and parameters.
@@ -409,7 +427,6 @@ Summary
 -------------------
 
 
-
 - **Constructors** initialize the attributes in newly created objects.  They have the same name as the class.
 
 - A **constructor signature** is the constructor name followed by the parameter list which is a list of the types of the parameters and the variable names used to refer to them in the constructor.
@@ -436,21 +453,21 @@ AP Practice
 .. mchoice:: AP2-2-1
    :practice: T
    :answer_a: I only
-   :answer_b: I and II 
+   :answer_b: I and II
    :answer_c: I and III
    :answer_d: I, II, and III
    :answer_e: II and III
    :correct: c
-   :feedback_a: I is one of the correct constructors but the second constructor can also be used. 
+   :feedback_a: I is one of the correct constructors but the second constructor can also be used.
    :feedback_b: II is not correct because there is no Cat constructor that takes 2 parameters.
    :feedback_c: I and III call the correct constructors.
    :feedback_d: II is not correct because there is no Cat constructor that takes 2 parameters.
    :feedback_e: II is not correct because there is no Cat constructor that takes 2 parameters.
 
-    Consider the following class. Which of the following successfully creates a new Cat object? 
+    Consider the following class. Which of the following successfully creates a new Cat object?
 
-    .. code-block:: java 
-    
+    .. code-block:: java
+
         public class Cat
         {
             private String color;
@@ -477,25 +494,25 @@ AP Practice
         III. String color = "orange";
              boolean hungry = false;
              Cat c = new Cat(color, "Tabby", hungry);
- 
+
 .. mchoice:: AP2-2-2
    :practice: T
-   :answer_a: Movie m = new Movie(8.0, "Lion King"); 
+   :answer_a: Movie m = new Movie(8.0, "Lion King");
    :answer_b: Movie m = Movie("Lion King", 8.0);
    :answer_c: Movie m = new Movie();
    :answer_d: Movie m = new Movie("Lion King", "Disney", 8.0);
    :answer_e: Movie m = new Movie("Lion King");
    :correct: d
-   :feedback_a: There is no Movie constructor with 2 parameters.  
-   :feedback_b: There is no Movie constructor with 2 parameters. 
+   :feedback_a: There is no Movie constructor with 2 parameters.
+   :feedback_b: There is no Movie constructor with 2 parameters.
    :feedback_c: This creates a Movie object but it does not have the correct title and rating.
    :feedback_d: This creates a Movie object with the correct title and rating.
    :feedback_e: This creates a Movie object but it does not have a rating of 8.0.
 
    Consider the following class.  Which of the following code segments will construct a Movie object m with a title of "Lion King" and rating of 8.0?
-    
-   .. code-block:: java  
-        
+
+   .. code-block:: java
+
         public class Movie
         {
             private String title;
@@ -519,7 +536,7 @@ AP Practice
                 inTheaters = false;
             }
         }
-        
+
 .. raw:: html
 
       <pre id="turtleClassesConstructor" class="javaFiles" style="display:none;">

@@ -332,53 +332,297 @@ Exercises
       
       - Incorrect. This would again result in freezing point being > boiling point which is impossible.
 
-
-.. mchoice:: qsh_3
+.. mchoice:: AP5-4-4
    :practice: T
    :random:
-   :answer_a: Lasagna Meow Screeech
-   :answer_b: Meow Screeech Lasagna
-   :answer_c: Screeech Meow Lasagna
-   :answer_d: Lasagna Screeech Meow
-   :correct: b
-   :feedback_a: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
-   :feedback_b: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
-   :feedback_c: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
-   :feedback_d: The baseclass constructor runs first so Animal doesn't have one so then it goes to Cat's constructor and then Garfield's constructor
+   :answer_a: The getAge method should be declared as private.
+   :answer_b: The return type of the getAge method should be void.
+   :answer_c: The getAge method should have at least one parameter.
+   :answer_d: The variable age is not declared inside the getAge method.
+   :answer_e: The instance variable age should be returned instead of a, which is local to the constructor.
+   :correct: e
+   :feedback_a: The method should be public so it can be accessed outside of the class.
+   :feedback_b: The method return type should stay as int.
+   :feedback_c: The getAge should not take any parameters.
+   :feedback_d: This is an instance variable and should be declared outside.
+   :feedback_e: The accessor method getAge should return the instance variable age.
 
-   What is the output of the following code?
+    Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?
+    
+    .. code-block:: java
 
+        public class Cat
+        {
+            private int age;
+
+            public Cat(int a)
+            {
+                age = a;
+            }
+
+            public int getAge()
+            {
+                return a;
+            }
+        }
+
+
+.. mchoice:: AP5-4-3
+   :practice: T
+   :random:
+   
+   Consider the following Liquid class. The currentTemperature is stored in the method’s int attribute. The getCurrentTemp method is intended to allow methods in other classes to access a Liquid object’s currentTemperature value; however, it does not work as intended. Which of the following best explains why the getCurrentTemperature method does NOT work as intended?
+   
    .. code-block:: java
 
-    class Animal
-    {
-        void someSound()
+        public class Liquid
         {
-            System.out.print("Screeech ");
-        }
-    }
+            private int currentTemperature;
 
-    class Cat extends Animal
-    {
-        public Cat()
-        {
-            System.out.print("Meow ");
-            super.someSound();
-        }
-    }
+            public Liquid(int ct)
+            {
+                currentTemperature = ct;
+            }
 
-    class Garfield extends Cat
-    {
-        public Garfield()
-        {
-            System.out.print("Lasagna ");
+            public void getCurrentTemperature()
+            {
+                return currentTemperature;
+            }
         }
-    }
-    public class MainClass
-    {
-        public static void main(String[] args)
+
+   - The getCurrentTemperature method should be declared as private.
+    
+     - Accessor methods should be public methods.
+    
+   - The return type of the getCurrentTemperature method should be int.
+    
+     + Correct! The return type should match the type of the variable being returned.
+
+   - The getCurrentTemperature method should have at least one parameter.
+    
+     - Get methods do not need parameters.
+
+   - The variable currentTemperature is not declared inside of the getCurrentTemperature method.
+    
+     - currentTemperature is an instance variable that is shared by all the methods in the class.
+
+   - The instance variable ct should be returned instead of currentTemperature.
+    
+     - The getCurrentTemperature method does not have access to the ct variable which is the parameter for the constructor.
+     
+
+.. mchoice:: AP5-5-3
+    :practice: T
+    :random:
+
+    Consider the following class definition.
+    
+    .. code-block:: java
+
+        public class Liquid
         {
-            Garfield garfield = new Garfield();
+            private int currentTemp;
+
+            public Liquid(int temp)
+            {
+                currentTemp = temp;
+            }
+
+            public int getTemp()
+            {
+              return currentTemp;
+            }
+            
+            public void resetTemp(int new_temp)
+            {
+                currentTemp = new_temp;
+            }
         }
-    }
+
+    Consider the following code segment, which appears in a method in a class other than Liquid. The code segment does not compile.
+    
+    .. code-block:: java
+
+        Liquid liq = new Liquid(50);
+        System.out.println("The temperature of the liquid is " + liq.currentTemp);
+
+    Which of the following best identifies the reason the code segment does not compile?
+    
+    - The Liquid class constructor should not have a parameter.
+        
+      - The constructor does have a parameter.
+      
+    - The resetTemperature method does not return a value that can be printed.
+        
+      - This is a void mutator method.
+      
+    - The private instance variable cannot be accessed from outside the class unless the accessor method is used.
+    
+      + Correct! The currentTemp instance variable is private and cannot be accessed outside of the class but the public accessor method getTemp() can be used instead.
+      
+    - The getTemp method cannot be called from outside the Liquid class.
+      
+      - The getTemp accessor method should be used from outside the class.
+      
+    - currentTemp does not have a value.
+      
+      - currentTemp is initialized to a value by the constructor but it is private and cannot be accessed outside the class.
+
+
+.. mchoice:: AP5-5-4
+    :practice: T
+    :random:
+
+    In the Liquid class below, the raiseTemperature method is intended to increase the value of the instance variable currentTemp by the value of the parameter increase. The method does not work as intended.
+    
+    .. code-block:: java
+
+        public class Liquid
+        {
+            private int currentTemp;
+
+            public Liquid(int ct)
+            {
+                currentTemp = ct;
+            }
+
+            public void raiseTemperature(int increase) // Line 10
+            {
+                return currentTemp + increase; // Line 12
+            }
+        }
+
+    Which of the following changes should be made so that the class definition compiles without error and the method raiseTemperature works as intended?
+    
+    - Replace line 12 with ``currentTemp += increase;``
+    
+      + Correct! This void mutator method should just change the value of currentTemp and not return a value.
+      
+    - Replace line 12 with ``return currentTemp += increase;``
+    
+      - This void mutator method should just change the value of currentTemp and not return a value.
+        
+    - Replace line 12 with  ``increase += currentTemp;``
+    
+      - This method should  change the value of currentTemp, not increase.
+        
+    - Replace line 10 with  ``public raiseTemperature(int increase)``
+        
+      - This mutator method needs a return type of void.
+      
+    - Replace line 10 with  ``public int raiseTemperature(int increase)``
+        
+      - This mutator method should have a void return value and just change the value of currentTemp without returning a value.
+      
+
+.. mchoice:: AP5-6-3
+   :practice: T
+   :random:
+   :answer_a: return (numOfBoxes + priceOfOnePizzaBox) / numOfPeople;
+   :answer_b: return numOfPeople * numOfBoxes * priceOfOnePizzaBox;.
+   :answer_c: return numOfBoxes / priceOfOnePizzaBox / numOfPeople;
+   :answer_d: return numOfPeople / (numOfBoxes * priceOfOnePizzaBox);
+   :answer_e: return (numOfBoxes * priceOfOnePizzaBox) / numOfPeople;
+   :correct: e
+   :feedback_a: Assume you have 5 boxes at $10 each. You would need to multiply them to get a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
+   :feedback_b: Assume you have 5 boxes at $10 each for a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
+   :feedback_c: Assume you have 5 boxes at $10 each. You would need to multiply them to get a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
+   :feedback_d: Assume you have 5 boxes at $10 each for a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
+   :feedback_e: Assume you have 5 boxes at $10 each for a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
+   
+
+   Consider the following class definition. The calculatePizzaCostPerPerson method is intended to calculate the amount each person at the party must pay for pizza. The amount is equal to the total price of all the pizza boxes divided by the number of people at the party. Which of the following code segments should replace *missing code* so that the calculatePizzaCostPerPerson method will work as intended?
+   
+   .. code-block:: java
+
+        public class Party
+        {
+            private int numOfPeople; //number of people at the party
+
+            public Party(int people)
+            {
+                numOfPeople = people;
+            }
+
+            public double calculatePizzaCostPerPerson(int numOfBoxes, double priceOfOnePizzaBox)
+            {
+                /* missing code */
+            }
+        }
+
+
+
+
+.. mchoice:: AP5-6-4
+   :practice: T
+   :random:
+   :answer_a: I only
+   :answer_b: II only
+   :answer_c: III only
+   :answer_d: I and II only
+   :answer_e: I, II, and III
+   :correct: d
+   :feedback_a: I would work but this is not the only code that would work.
+   :feedback_b: II would work but this is not the only code that would work.
+   :feedback_c: You cannot put a shortcut assignment operator in the conditional test of an if statement.
+   :feedback_d: Correct!
+   :feedback_e: III would not work because you cannot put a shortcut assignment operator in the conditional test of an if statement.
+
+   Consider the Party class below.
+    
+   .. code-block:: java
+
+        public class Party
+        {
+            private int numOfPeople; //number of people at the party
+            private int capacity;    //total capacity of people at party
+
+            public Party(int people, int cap)
+            {
+                numOfPeople = people;
+                capacity = cap;
+            }
+
+            public boolean updateNumOfPeople(int additionalPeople)
+            {
+                /* missing code */
+            }
+        }
+    
+   The class contains the updateNumOfPeople method, which is intended to update the instance variable numOfPeople under certain conditions and return a value indicating whether the  update was successful. If adding additionalPeople to the current number of people would lead to the number going over the capacity, then the update would be unsuccessful. Otherwise, if adding the number of additional people is still below or at the capacity, the update is successful. Which of the following code segments can replace *missing code* to ensure that the updateNumOfPeople method works as intended?
+
+   .. code-block:: java
+     
+        I.  if (numOfPeople + additionalPeople > capacity)
+            {
+                return false;
+            }
+            else
+            {
+                numOfPeople += additionalPeople;
+                return true;
+            }
+        II. if (numOfPeople + additionalPeople <= capacity)
+            {
+                numOfPeople += additionalPeople;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        III. if (numOfPeople += additionalPeople <= capacity)
+             {
+                return true;
+             }
+             else
+             {
+                return false;
+             }           
+
+
+
+        
+
+
 
