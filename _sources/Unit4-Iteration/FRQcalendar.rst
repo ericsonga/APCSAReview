@@ -33,7 +33,7 @@ On question 1, you will get points for constructing the loop correctly, calling 
 
 The 2019 FRQ 1 is a good example of what to expect. It is available as question 1 on pages 3-6 of https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf , reproduced below.
 
-**Question 1.**  
+Question 1. 
 
 The APCalendar class contains methods used to calculate information about a calendar. You will write two methods of the class.
 
@@ -248,18 +248,18 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
    If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
 
 
-If we used the formula in exercise 2 for the date in exercise 3 above, we would get 10:
+If we used the formula in exercise 4-10-4 above for the date in exercise 4-10-5 above, we would get 10:
 
 - firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 = 2 + 8 = 10
 
 But there is no 10th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. The FRQ that involves writing an expression will probably use the mod operator. Remember to use the mod operator whenever:
 
 
-- Use it whenever you need to wrap around to the front if the value goes over the limit (num % limit). For example here for weekdays or for hours and minutes.
+- Use mod whenever you need to wrap around to the front if the value goes over the limit (num % limit). For example here for weekdays or for hours and minutes.
 
-- Use it to check for odd or even numbers (num % 2 == 1) is odd and (num % 2 == 0) is even. Actually, you can use it to check if any number is evenly divisible by another (num1 % num2 == 0)
+- Use mod to check for odd or even numbers (num % 2 == 1) is odd and (num % 2 == 0) is even. Actually, you can use it to check if any number is evenly divisible by another (num1 % num2 == 0)
 
-- Use it to get the last digit from an integer number (num % 10 = last digit on right).
+- Use mod to get the last digit from an integer number (num % 10 = last digit on right).
 
 Try the mod operator below.
 
