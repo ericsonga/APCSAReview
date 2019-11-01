@@ -176,20 +176,23 @@ Most if statements have a boolean condition that uses relational operators like 
 
 .. mchoice:: qcb1_2
    :practice: T
-   :answer_a: x = 0;
-   :answer_b: if (x > 2) x *= 2;
-   :answer_c: if (x > 2) x = 0;
-   :answer_d: if (x > 2) x = 0; else x *= 2;
+   :answer_a: 3
+   :answer_b: 6
+   :answer_c: 0
+   :answer_d: 4
+   :answer_e: The code will not compile
    :correct: c
-   :feedback_a: If x was set to 1 then it would still equal 1.
-   :feedback_b: What happens in the original when x is greater than 2 and then greater than 4? Do both if statements.  
+   :feedback_a: x is changed by the if statements.
+   :feedback_b: What happens when x is greater than 2 and then greater than 4? Do both if statements.  
    :feedback_c: If x is greater than 2, it's always doubled, and then that result is always greater than 4, so it's set to 0 in the second if statement.  
-   :feedback_d: In the original what happens if x is less than 2?  Does this give the same result?
+   :feedback_d: x is changed by the if statements.
+   :feedback_e: This code will compile.
 
-   Which of the following is equivalent to the code segment below?  
+   Consider the following code segment. What is printed as a result of executing the code segment?
    
    .. code-block:: java
 
+     int x = 3;
      if (x > 2) 
      {
          x = x * 2;
@@ -198,6 +201,8 @@ Most if statements have a boolean condition that uses relational operators like 
      {
         x = 0;
      }
+     System.out.print(x);
+     
 
 .. More practice with if == and < > Active code.
     Note always use == not = in an if statement! Test not assign.

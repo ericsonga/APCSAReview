@@ -218,7 +218,7 @@ Exercises
         {
             partyHost = name;
             numOfPeople = 0;
-            cap = 0;
+            capacity = cap;
         }
         /* Other methods not shown */
     }
@@ -620,9 +620,205 @@ Exercises
                 return false;
              }           
 
+.. mchoice:: AP5-8-3
+    :practice: T
 
+    Consider the following class definition.
+
+    .. code-block:: java
+
+        public class Liquid
+        {
+            private int currentTemp;
+            private int boilingPoint;
+
+            public Liquid(int ct, int boilingPoint)
+            {
+                currentTemp = ct;
+                boilingPoint = bp;
+            }
+
+            public void changeTemp(int newTemp)
+            {
+                currentTemp = newTemp;
+            }
+
+            public void increaseTemp(int howMuch)
+            {
+                currentTemp = newTemp + howMuch;
+            }
+
+        }
+
+    Which of the following best explains why the class will not compile?
+    
+    - The class is missing an accessor method.
+        
+      - The class does not necessarily need an accessor method.
+      
+    - The instance variables currentTemp and boilingPoint should be  public instead of private.
+    
+      - Instance variables are usually private.
+      
+    - The Liquid constructor needs a return type.
+    
+      - Constructors do not have return types.
+        
+    - The Liquid class is missing a constructor.
+    
+      - The class includes a constructor.
+      
+    - The variable newTemp is not defined in the increaseTemp method.
+    
+      + Correct! newTemp is defined in a different method. The instance variable currentTemp should be used instead.
+      
+
+.. mchoice:: AP5-8-4
+   :practice: T
+   :answer_a: The private variables boxesOfFood and numOfPeople are not properly initialized.
+   :answer_b: The private variables boxesOfFood and numOfPeople should have been declared public.
+   :answer_c: The public method getBoxesOfFood should have been declared private.
+   :answer_d: The variable updatedAmountOfFood in the eatFoodBoxes method is a local variable and different from the one in orderMoreFood.
+   :answer_e: The variables boxesOfFood and numOfPeople in the updatedAmountOfFood method are local variables.
+   :correct: d
+   :feedback_a: The private variables boxesOfFood and numOfPeople are initialized by the constructor.
+   :feedback_b: Instance variables are usually private.
+   :feedback_c: Methods are usually public.
+   :feedback_d: The variable updatedAmountOfFood in the eatFoodBoxes method is a local variable and different from the one in orderMoreFood.
+   :feedback_e: The variables boxesOfFood and numOfPeople are instance variables.
+
+   Consider the following class definition for Party.  The following code segment appears in a method in a class other than Party. The code segment is intended to print the value 30, but does not print the correct value because of an error in the Party class. Which of the following best explains why the correct value isn’t printed?
+    
+   .. code-block:: java
+ 
+       Party p = new Party(20, 15);
+       p.orderMoreFood(20);
+       p.eatFood(5);
+       System.out.println(bob.getBoxesOfFood());
+        
+       public class Party
+       {
+        private int boxesOfFood;
+        private int numOfPeople;
+
+        public Party(int people, int foodBoxes)
+        {
+            numOfPeople = people;
+            boxesOfFood = foodBoxes;
+        }
+
+        public void orderMoreFood(int additionalFoodBoxes)
+        {
+            int updatedAmountOfFood = boxesOfFood + additionalFoodBoxes;
+            boxesOfFood = updatedAmountOfFood;
+        }
+
+        public int getNumOfPeople() {
+            return numOfPeople;
+        }
+
+        public int getBoxesOfFood() {
+            return boxesOfFood;
+        }
+
+        public void eatFood(int eatenBoxes) 
+        {
+            int updatedAmountOfFood = getNumOfPeople();
+            boxesOfFood = updatedAmountOfFood - eatenBoxes;
+        }
 
         
+.. mchoice:: AP5-9-3
+    :practice: T
+
+    Consider the following class definitions. 
+    
+    .. code-block:: java
+
+        public class Party
+        {
+            private String partyHost;
+            private int monthOfParty;
+            private int partyStartTime;
+
+            public Party (String h, int month, int startTime)
+            {
+                partyHost = h;
+                monthOfParty = month;
+                partyStartTime = startTime;
+            }
+
+            public int getMonth()
+            {
+                return monthOfParty;
+            }
+
+            public int getStartTime()
+            {
+                return partyStartTime;
+            }
+
+            public String getHost()
+            {
+                return partyHost;
+            }
+
+            public void addToOptions (PartyOptions p)
+            {
+                p.addParty(this);
+            }
+        }
+
+        public class PartyOptions
+        {
+            private int onlyThisMonth;
+
+            public PartyOptions(int month)
+            {
+                onlyThisMonth = month;
+            }
+
+            /* A Party should only be added to this PartyOption if the party’s month matches onlyThisMonth */
+            public void addParty(Party party)
+            {
+                if (p.GetMonth() == onlyThisMonth)
+                {
+                    System.out.print("Party by " + p.getHost() + " accepted; ");
+                }
+                else
+                {
+                    System.out.print("Party by " + p.getHost() + " rejected; ");
+                }
+            }
+        }
+
+
+    Consider the following code segment, which appears in a class other than Party or PartyOptions.
+    
+    .. code-block:: java
+     
+        Party p1 = new Party("Kerry", 10, 7);
+        Party p2 = new Party("Jules", 9, 6);
+
+        PartyOptions p = new PartyOptions(10);
+        p1.addToOptions(p);
+        p2.addToOptions(p);
+
+    - Party by Kerry rejected; Party by Jules rejected;
+    
+      - Kerry's party is accepted because it is in the 10th month.
+   
+    - Party by Kerry rejected; Party by Jules accepted;
+    
+      - Jules' party is rejected because it is not in the 10th month. 
+   
+    - Party by Kerry accepted; Party by Jules rejected;
+   
+      + Kerry's party is accepted because it is in the 10th month.
+      
+    - Party by Kerry accepted; Party by Jules accepted;
+   
+      - Jules' party is rejected because it is not in the 10th month.    
 
 
 
