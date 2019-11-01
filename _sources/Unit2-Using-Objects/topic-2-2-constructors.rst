@@ -186,7 +186,7 @@ You can also declare an **object variable** and initialize it to **null** (``Tur
 
    Notice that you only specify the type (class name) for an object reference when you declare it (``Turtle t1 = null``) and not when you assign it a value (``t1 = new Turtle(world)``).
 
-Constructor and Method signatures
+Constructor and Method Signatures
 -----------------------------------
 
 .. |turtle documentation| raw:: html
