@@ -164,8 +164,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
           // Change the Turtle constructor to put the turtle in the top right corner
           Turtle t1 = new Turtle(world);
 
-          t1.turn(-45);
-          t1.forward();
+          t1.turnLeft();
           world.show(true);
       }
     }
@@ -186,7 +185,7 @@ You can also declare an **object variable** and initialize it to **null** (``Tur
 
    Notice that you only specify the type (class name) for an object reference when you declare it (``Turtle t1 = null``) and not when you assign it a value (``t1 = new Turtle(world)``).
 
-Constructor and Method signatures
+Constructor and Method Signatures
 -----------------------------------
 
 .. |turtle documentation| raw:: html

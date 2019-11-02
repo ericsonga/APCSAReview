@@ -64,8 +64,8 @@ Remember that objects have attributes and behaviors. These correspond to **insta
 
 Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email. Here's a possible Person class with instance variables, constructor, and methods.
 
-.. figure:: Figures/PersonClassDefn.png
-    :width: 450px
+.. figure:: Figures/personClassDefn.png
+    :width: 500px
     :align: center
     :alt: Person 
     :figclass: align-center
@@ -144,7 +144,7 @@ The ``Person`` class above declares 3 instance variables: name, email, and phone
 **Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables. Each time you create a Person object, a new object like the following is created with its own copy of the data and methods. 
 
 .. figure:: Figures/PersonClass.png
-    :width: 450px
+    :width: 500px
     :align: center
     :alt: Person data encapsulation
     :figclass: align-center
@@ -269,7 +269,7 @@ In **Object-Oriented Design** (OOD), programmers first spend time to decide whic
     :alt: Turtle class diagram
     :figclass: align-center
 
-    Figure 2: Turtle Class Diagram
+    Figure 3: Turtle Class Diagram
     
 When you are given a problem specification, look for the **nouns** to identify what classes you need to create. For an example, try the problem below.
 
