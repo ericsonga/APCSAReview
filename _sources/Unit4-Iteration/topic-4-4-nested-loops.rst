@@ -50,7 +50,7 @@ What does the following code print out? Watch the code run in this |Java visuali
    :language: java
    
    
-   Can you change the code to be a 5x5 square of stars? Can you change it to be a 10x8 rectangle? Try swapping in this print statement for line 9 to see the rows and columns: System.out.print(row + "-" + col + " ");  
+   Can you change the code to be a 5x5 square of stars? Can you change it to be a 10x8 rectangle? Try replacing line 10 with this print statement to see the rows and columns: System.out.print(row + "-" + col + " ");  
    ~~~~
    public class NestedLoops
    {
