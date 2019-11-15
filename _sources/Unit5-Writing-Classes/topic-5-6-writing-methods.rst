@@ -272,7 +272,7 @@ Methods can also return values of any type back to the calling method. The calli
 
 .. |The Ants Go Marching| raw:: html
 
-   <a href="https://www.lingokids.com/english-for-kids/songs/the-ants-go-marching-song" target="_blank">The Ants Go Marching</a>
+   <a href="https://www.lyrics.com/lyric/5526512/The+Ants+Go+Marching" target="_blank">The Ants Go Marching</a>
 
 Here's another song, |The Ants Go Marching|, that is very similar to the This Old Man song in its repetitive structure. 
 
