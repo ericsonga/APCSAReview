@@ -117,12 +117,14 @@ To actually create an array after declaring the variable, use the **new** keywor
 
 |CodingEx| **Coding Exercise**
 
-In the following code, add another array declaration that creates an array of 5 doubles called prices and another array of 5 Strings called items and corresponding System.out.println commands.
+
 
 
 .. activecode:: lcab1
    :language: java
    
+   In the following code, add another array declaration that creates an array of 5 doubles called prices and another array of 5 Strings called names and corresponding System.out.println commands.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -131,7 +133,7 @@ In the following code, add another array declaration that creates an array of 5 
         int[] highScores = new int[10];
         // Add an array of 5 doubles called prices.
         
-        // Add an array of 5 Strings called items.
+        // Add an array of 5 Strings called names.
       
         System.out.println("Array highScores declared with size " + highScores.length);
       }
@@ -142,7 +144,12 @@ In the following code, add another array declaration that creates an array of 5 
     
 .. note::
   
-   Array elements are initialized to 0 if they are a numeric type (elements of type ``int`` are initialized to 0 and ``double`` to 0.0), ``false`` if they are of type ``boolean``, or ``null`` if they are an object type like ``String``.  
+   Array elements are initialized to default values like the following. 
+   
+   - 0 for elements of type ``int`` 
+   - 0.0 for elements of type ``double`` 
+   - false for elements of type ``boolean``
+   - null for elements of type ``String`` 
 
 .. figure:: Figures/arrayIndicies.png
     :width: 200px
@@ -183,11 +190,13 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
 |CodingEx| **Coding Exercise**
 
-Try running the code below to see the length. Try adding another value to the highScores initializer list and run again to see the length value change.
+
 
 .. activecode:: lcab2
    :language: java
    
+   Try running the code below to see the length. Try adding another value to the highScores initializer list and run again to see the length value change.
+   ~~~~
    public class Test2
    {
       public static void main(String[] args)
@@ -215,7 +224,7 @@ Try running the code below to see the length. Try adding another value to the hi
    :feedback_a: Look at the example above when we were setting the values for the <i>highScore</i> array.  
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
 
-   Which index is the last element in an array called ``highScores`` at?
+   Which index is for the last element of an array called ``highScores``?
  
 
 Accessing Values in an Array 
@@ -262,7 +271,7 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
    String v = |blank|;
 
    -   :cars\[1\]: Correct.
-       :x: Use the array name cars with [ ] with a number in it.
+       :x: Use the array name cars with [ ] with a number in it. Don't use spaces in your answer!
        
 .. fillintheblank:: array-access2
 
@@ -275,7 +284,7 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
    |blank|  = "Toyota";  
 
    -   :cars\[0\]: Correct.
-       :x: Use the array name cars with [ ] with a number in it. Remember which index is for the first item in the array.
+       :x: Use the array name cars with [ ] with a number in it. Remember which index is for the first item in the array. Don't use spaces in your answer!
 
 .. .. clickablearea:: arrayClick1
         :question: Click on the values at index 1 and 3 in the following array.
@@ -347,11 +356,13 @@ If you want to keep track of the top 5 highest scores in a game and the names of
 
 |CodingEx| **Coding Exercise**
 
-Try out the following code which has two parallel arrays, highScores and names. Can you print out Mateo's score? Can you change Sofia's score to 97 using an assignment statement in the code? Can you change the arrays so that they have 6 elements and add your name and score and print them out? What happens if you try to access an element that is not there, for example at index 7?
+
 
 .. activecode:: array-set
    :language: java
    
+   Try out the following code which has two parallel arrays, highScores and names. Can you print out Mateo's score? Can you change Sofia's score to 97 using an assignment statement in the code? Can you change the arrays so that they have 6 elements and add your name and score and print them out? 
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -366,7 +377,7 @@ Try out the following code which has two parallel arrays, highScores and names. 
       }
    }
    
-   
+What happens if you try to access an element that is not there? Try to access a highScore or name at index 7 above to see what happens. The index must be between 0 and the length of the array - 1 or it will give an error message called ArrayIndexOutOfBoundsException. 
 
 .. note::
 
@@ -384,11 +395,13 @@ One powerful feature in the array **data abstraction** is that we can use variab
 
 |CodingEx| **Coding Exercise**
 
-Here's a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is "cow.jpg". The images array holds 5 images. Can you change the index variable's value so that it  print out the puppy image? Can you print out the reindeer? Try all of them! What indices did you need to use? Then try using a random number for the index instead. Remember that (int)(Math.random()*max) will return a number from 0 up to max. What's the maximum number it can be for this array?
+Here's a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is "cow.jpg". The images array holds 5 images. 
 
 .. activecode:: imageArray
    :language: java
    
+   Can you change the index variable's value so that it prints out the puppy image? Can you print out the reindeer? Try all of them! What indices did you need to use? Then try using a random number for the index instead. Remember that (int)(Math.random()*max) will return a number from 0 up to max. What's the maximum number it can be for this array?
+   ~~~~
    public class ImageEx
    { 
     public static void main(String[] args)

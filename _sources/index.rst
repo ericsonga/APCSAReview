@@ -114,7 +114,7 @@ Index
    
 If you see errors or bugs, please report them with this |errata form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 11/15/19)
+(last revised 11/22/19)
 
 © Copyright 2015 Barb Ericson, 2019 revised by Beryl Hoffman (`Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.
 
