@@ -197,12 +197,19 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
               {" ", "-", "m", "-", "m", "-", " "},
          };
         
-        // print the asciiArt 
+        //Part 1: Add 2 assignment statements to change "o" to "@"
+
+     
+        // print the asciiArt for Part 1
         for(String[] row : asciiArt) {
           for(String column : row)
             System.out.print(column);
           System.out.println();    
         }
+        
+        //Part 2: Create your own ASCII art array and print it out!
+         
+         
      }
   }
   

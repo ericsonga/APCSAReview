@@ -113,7 +113,7 @@ Multiple Choice Exercises
    :feedback_c: You might think that this would be caught at compile time, but it isn't.  
    :feedback_d: This would be true if it was System.out.println(5 / 1) 
 
-   What does the follow code do when it is executed?
+   What does the following code do when it is executed?
    
     .. code-block:: java 
 

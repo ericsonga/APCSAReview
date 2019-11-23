@@ -211,8 +211,7 @@ model, which stores values for red, green, and blue, each ranging from 0 to 255.
 
 
 
-Scroll down to the bottom of the following code and take a look at the 
-switchColors method. Run the code and watch what it does. It switches RGB values of each pixel and the colors change! 
+Scroll down to the bottom of the following code and take a look at the switchColors method. Run the code and watch what it does. It switches RGB values of each pixel and the colors change! 
 
 
 
@@ -327,7 +326,11 @@ switchColors method. Run the code and watch what it does. It switches RGB values
          }
        }
      }
-
+      
+     /* Add new methods here.
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+     
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -336,6 +339,22 @@ switchColors method. Run the code and watch what it does. It switches RGB values
         arch.show();
         arch.switchColors();
         arch.show();
+        
+        //Uncomment the follow code to test your zeroBlue method.    
+        /*
+        Picture arch2 = new Picture("arch.jpg");
+        System.out.println("Zero blue: "); //using new method
+        arch2.zeroBlue();
+        arch2.show();
+        */ 
+        System.out.println();
+
+        //Uncomment the follow code to test your keepOnlyBlue method.
+        /*   
+        System.out.println("Keep only blue: ");
+        arch.keepOnlyBlue();// using new method
+        arch.show();
+        */  
       }
     } 
 
