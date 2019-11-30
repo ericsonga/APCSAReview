@@ -207,7 +207,7 @@ The **this** variable can be used anywhere you would use an object variable.  Yo
     .. code-block:: java
 
         Pay one = new Pay(20.0);
-        one.getPayWithOvertime();
+        one.calculatePayWithOvertime();
         System.out.println(one.getPay());
 
     What, if anything, is printed as a result of executing the code segment?

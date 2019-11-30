@@ -137,7 +137,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    :feedback_b: Is a Book a type of Author?  Or, does a Book have an Author associated with it?
    :feedback_c: A Book has an Author associated with it. Note that you could also say that an Author has many Books associated with it.
 
-    An online site shows information about Books and Authors. What kind of relationship do these two classes?
+    An online site shows information about Books and Authors. What kind of relationship do these two classes have?
 
 .. This one was confusing to teachers .. mchoice:: qoo_2
    :answer_a: The MovieShowing class should be a subclass of the Movie class.
