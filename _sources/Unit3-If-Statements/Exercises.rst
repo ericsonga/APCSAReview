@@ -218,7 +218,7 @@ These problems are harder than most of those that you will usually see on the AP
 
 
     
-.. mchoice:: qch_2
+.. .. mchoice:: qch_2
    :practice: T
    :answer_a: s == (m - 5) && (2 * s + 3) == (m + 3)
    :answer_b: (s == m - 5) && (s - 3 == 2 * (m - 3))

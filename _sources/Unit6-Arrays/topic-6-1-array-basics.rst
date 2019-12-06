@@ -227,10 +227,10 @@ Arrays know their length (how many elements they can store).  It is a public rea
    Which index is for the last element of an array called ``highScores``?
  
 
-Accessing Values in an Array 
-=============================
+Access and Modify Array Values 
+=====================================
 
-To access the items in your array, we use an **indexed array variable** which is the array name and the index inside of square bracket [ ]. Remember that an **index** is a number that indicates the position of an item in a list, starting at 0. Here's a comparison of App Inventor, AP CSP Pseudocode, and Java array access.
+To access the items in an array, we use an **indexed array variable** which is the array name and the index inside of square bracket [ ]. Remember that an **index** is a number that indicates the position of an item in a list, starting at 0. Here's a comparison of App Inventor, AP CSP Pseudocode, and Java array access.
 
 
 .. figure:: Figures/appinvSelectComparison.png
@@ -252,7 +252,7 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
   
 .. note::
 
-    The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access array items.
+    The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access or modify array items.
     
 
 
@@ -392,11 +392,16 @@ One powerful feature in the array **data abstraction** is that we can use variab
   int index = 3;
   System.out.println(  highScores[index] );
 
-
+.. image:: 6-1-images/cow.jpg
+    :width: 150
+    :align: left
+    
 |CodingEx| **Coding Exercise**
 
 Here's a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is "cow.jpg". The images array holds 5 images. 
 
+
+    
 .. activecode:: imageArray
    :language: java
    
@@ -427,6 +432,10 @@ Here's a fun String array of image filenames. The following code displays an onl
 |Groupwork| Programming Challenge : Countries Array
 ===================================================
 
+.. image:: 6-1-images/US.jpg
+    :width: 200
+    :align: left
+    
 In this challenge, you will create a guide to different countries using arrays. 
 
 1. Use the Active Code window below to create 4 parallel arrays and intialize them using initialization lists that represent the data below. Remember that the order of these arrays has to match so that you can use the same index and get corresponding values out.
@@ -488,6 +497,6 @@ Summary
   
 - Initializer lists can be used to create and initialize arrays.
 
-- Square brackets ([ ]) are used to access and modify an element in a array using an index.
+- Square brackets ([ ]) are used to access and modify an element in an array using an index. The indexed array variable, for example array[index], can be used anywhere a regular variable can be used, for example to get or assign values.
 
 - The valid index values for an array are 0 through one less than the number of elements in the array, inclusive. Using an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown.
