@@ -31,7 +31,7 @@ Array Creation and Access
 To keep track of 10 exam scores, we could declare 10 separate variables:  int score1, score2, score3, … , score10; 
 But what if we had 100 exam scores? That would be a lot of variables! Most programming languages have a simple **data structure** for a collection of related data that makes this easier. In App Inventor, this is called a list. In Java and many programming languages, this is called an **array**.
 
-An **array** is a block of memory that stores a collection of data items of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don't need to name each one. Instead you use the array name and a number (called an **index**) for the position of an item in the array. 
+An **array** is a block of memory that stores a collection of data items of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don't need to name each one. Instead you use the array name and a number (called an **index**) for the position of an item in the array. You can make arrays of ints, doubles, Strings, and even classes that you have written like Students. 
 
 .. |video| raw:: html
 
@@ -205,6 +205,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
         System.out.println(highScores.length);
       }
    }
+
 
 .. note::
 
