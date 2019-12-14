@@ -303,7 +303,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
 .. activecode:: APCalendarFRQPartB
    :language: java
 
-   Write the code for the method numberOfLeapYears below and run to test it. Then, try it with today's date and see if it returns the right value.
+   Write the code for the method dayOfWeek below and run to test it. Then, try it with today's date and see if it returns the right value.
    ~~~~
    import java.util.Calendar;
    import java.util.GregorianCalendar;
