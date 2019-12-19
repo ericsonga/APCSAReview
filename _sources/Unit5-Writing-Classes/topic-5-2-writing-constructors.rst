@@ -35,8 +35,6 @@ In Unit 2, we learned how to create objects using constructor. Objects are creat
     Turtle t = new Turtle(world);
     Person p = new Person("Pat","pat@gmail.com","123-456-7890");
     
- 
-Constructors don't actually construct the objects.  The class makes the object when you declare the object variable and then the constructor initializes the values of the instance variables.  
 
 In a new class, constructors are usually written after the instance variables and before any methods.    They typically start with ``public`` and then the *name* of the class: ``public ClassName()``. Unlike other methods, they do not have a return type, not even void, after the access modifier public.  They can take **parameters** (specified in parentheses) for the data which is used to initialize the instance variables. 
 

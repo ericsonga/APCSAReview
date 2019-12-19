@@ -76,12 +76,12 @@ A while loop can be used with the String indexOf method to find certain characte
 .. code-block:: java 
 
    String s = "example";
-   int index = 0;
+   int i = 0;
    // while there is an a in s
    while (s.indexOf("a") >= 0)
    {
      // Find and save the next index for an a
-     index = s.indexOf("a");
+     i = s.indexOf("a");
      // Process the string at that index
      String ithLetter = s.substring(i,i+1);
      ...
