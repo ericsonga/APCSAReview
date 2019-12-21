@@ -72,7 +72,7 @@ Let's create a class called Person. What would we want to know about a person?  
 
     Figure 1: Person class
 
-Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in that method for that object. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
+Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in the print method for that object. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
 
 
 .. |Java visualizer| raw:: html
@@ -133,24 +133,26 @@ Instance Variables
 
 **Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance Variables are also called **attributes**, **fields**, or **properties**. 
 
-All instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
+Instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
 
 .. note::
  
-   Instance variables are declared right after the class declaration.  They start with ``private`` then the *type* of the variable and then a *name* for the variable. Private means only the code in this class has access to it.
+   Instance variables are declared right after the class declaration.  They usually start with ``private`` then the *type* of the variable and then a *name* for the variable. Private means only the code in this class has access to it.
 
-The ``Person`` class above declares 3 instance variables: name, email, and phoneNumber. These are things that you might need to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
+The ``Person`` class declares 3 private instance variables: name, email, and phoneNumber. These are things that you might want to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
 
-**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables. Each time you create a Person object, a new object like the following is created with its own copy of the data and methods. 
+Once we have created a class like Person, we can have many objects declared of the class.  The class is like a blueprint or cookie cutter that defines the variables and methods for that class. Each object will have their own copies of the same instance variables but with possibly different values in them (as seen in the cookie decorations below). 
 
-.. figure:: Figures/PersonClass.png
-    :width: 500px
+
+.. figure:: Figures/PersonClassWithCookies.png
+    :width: 100%
     :align: center
     :alt: Person data encapsulation
     :figclass: align-center
 
-    Figure 2: Data encapsulation in Person 
+    Figure 2: Person Class and Objects
 
+**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables (encapsulated in the pink box above).  
 
 When designing a class, programmers make decisions about what data to make accessible and/or modifiable from an external class. The private access modifier is used to encapsulate and protect the data from external access. Private instance variables can only be accessed by methods within the class in which they are defined.
 
