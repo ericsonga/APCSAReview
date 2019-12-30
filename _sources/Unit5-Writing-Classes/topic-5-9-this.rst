@@ -306,6 +306,11 @@ AP Practice
         {
             private int totalTemp;
 
+            public LiquidJar()
+            {
+              totalTemp = 0;
+            }
+            
             public void addLiquid(Liquid l)
             {
                 totalTemp += l.getCurrentTemp();
