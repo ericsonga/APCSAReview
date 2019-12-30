@@ -112,7 +112,7 @@ Another way to look at scope is that a variable's scope is where it lives and ex
           int id = i;
        } 
        // Can you access the blockScope variables i or id?
-       System.out.prtinln("i at the end of the loop is " + i);
+       System.out.println("i at the end of the loop is " + i);
        System.out.println("The last id is " + id);
        
        // Can toString() access parameter variables in Person()?
