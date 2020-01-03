@@ -208,10 +208,11 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
 
   public class Song 
   { 
+    // Add a static verse counter variable
+    
+    
     // Change the method(s) to be static
     
-    
-    // Add a static verse counter variable
     
     
     public static void main(String args[]) 
