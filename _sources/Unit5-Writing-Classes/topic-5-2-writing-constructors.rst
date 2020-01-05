@@ -366,7 +366,7 @@ AP Practice
             age = a;
             kittens = k;
         }
-        public Cat(String n, age a)
+        public Cat(String n, int a)
         {
             name = n;
             age = a;
