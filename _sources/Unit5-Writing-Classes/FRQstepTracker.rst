@@ -134,7 +134,7 @@ It may help to first identify the variables that are needed for the constructor 
    :feedback_b: No, addDailySteps(1000) probably adds the given steps to an instance variable as a mutator method.
    :feedback_c: Yes, activeDays() is an accessor method that returns the number of active days (a great instance variable!).
     
-   Which of the following methods is an accessor method that return the value of an instance variable?
+   Which of the following methods is an accessor method that returns the value of an instance variable?
    
 .. mchoice:: steptracker-mutator
    :answer_a: StepTracker tr = new StepTracker(1000)

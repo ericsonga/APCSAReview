@@ -3,7 +3,7 @@
     :align: center
     
 ==========================================
-AP CS A Java Course - 2019
+AP CS A Java Course 
 ==========================================
 
 Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. This course is adapted from the Runestone Java Review course to follow the 2019 College Board unit ordering and learning objectives. If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
