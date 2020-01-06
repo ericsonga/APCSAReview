@@ -186,7 +186,7 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 
 
 
-Arrays know their length (how many elements they can store).  It is a public read-only field so you can use **dot-notation** to access the field (``arrayName.length``).  **Dot-notation** is using variable name followed by a ``.`` and then the field (property) name or a method name. Try the following.
+Arrays know their length (how many elements they can store).  It is a public read-only instance variable so you can use **dot-notation** to access the instance variable (``arrayName.length``).  **Dot-notation** is using variable name followed by a ``.`` and then the instance variable (property) name or a method name. Try the following.
 
 |CodingEx| **Coding Exercise**
 
@@ -209,7 +209,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
 .. note::
 
-   Note that length is a field and not a method, unlike the String ``length()`` method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points.
+   Note that length is an instance variable and not a method, unlike the String ``length()`` method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. The length instance variable is declared as a ``public final int``.  ``public`` means you can access it and ``final`` means the value can't change.
    
 .. .. shortanswer:: arrayQuestions
 
