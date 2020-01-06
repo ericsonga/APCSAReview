@@ -276,7 +276,7 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
        
 .. fillintheblank:: array-access2
 
-    Fill in the blank with code to access the cars array.
+    Fill in the blank with code to access the cars array.  NOTE: The semicolon is provided for you after the box.
     
    String[] cars = {"Honda", "Volvo", "BMW"};
    
