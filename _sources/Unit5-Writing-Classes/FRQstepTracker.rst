@@ -344,7 +344,7 @@ Consider each of your instance variables and whether this method should change t
    :feedback_d: Yes, addDailySteps should add the number of steps taken that day in its parameter to the total.
    :feedback_e: Yes, addDailySteps is called each day and can change the variable for the number of days being tracked.
      
-   Which of the following values does the mutator method addDailySteps need to change?
+   Which of the following values does the mutator method addDailySteps need to change? (check all that apply)
    
 .. activecode:: stepTrackerCode3
    :language: java
