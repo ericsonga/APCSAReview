@@ -51,36 +51,45 @@ This question involves the implementation of a fitness tracking system that is r
 
 - **averageSteps**, which returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked
 
-The following list contains a sample code execution sequence and the corresponding results.
+The following table contains a sample code execution sequence and the corresponding results.
 
-- StepTracker tr = new StepTracker(10000); // Days with at least 10,000 steps are considered active. Assume that the parameter is positive.
+.. raw:: html
 
-- tr.activeDays(); // returns 0. No data have been recorded yet.
-
-- tr.averageSteps(); // returns 0.0. When no step data have been recorded, the averageSteps method returns 0.0.
-
-- tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
-
-- tr.addDailySteps(5000); // This is too few steps for the day to be considered active.
-
-- tr.activeDays(); // returns 0.  No day had at least 10,000 steps.
-
-- tr.averageSteps(); // returns 7000.0 The average number of steps per day is (14000 / 2).
-
-- tr.addDailySteps(13000); // This represents an active day.
-
-- tr.activeDays();  // returns 1. Of the three days for which step data were entered, one day had at least 10,000 steps.
-
-- tr.averageSteps(); // returns 9000.0. The average number of steps per day is (27000 / 3).
-
-- tr.addDailySteps(23000); // This represents an active day.
-
-- tr.addDailySteps(1111); // This is too few steps for the day to be considered active.
-
-- tr.activeDays(); // returns 2. Of the five days for which step data were entered, two days had at least 10,000 steps.
-
-- tr.averageSteps(); // returns 10222.2. The average number of steps per day is (51111 / 5). 
-
+    <style>    th,td { text-align: left;  padding-left: 4px; }
+    table, tr, td, th { border: 1px solid black;} </style>
+    <table border width="100%"><tr><th>Statements and Expressions</th><th width="15%">Value Returned (blank if no value)</th><th>Comment</th> </tr>
+    <tr><td>StepTracker tr = new StepTracker(10000); </td>
+    <td></td><td>Days with at least 10,000 steps are considered active. Assume that the parameter is positive.</td></tr>
+    <tr><td>tr.activeDays(); </td>
+    <td>0</td><td>No data have been recorded yet.</td></tr>
+    <tr><td>tr.averageSteps(); </td>
+    <td>0.0</td><td>When no step data have been recorded, the averageSteps method returns 0.0.</td></tr>
+    <tr><td>tr.addDailySteps(9000);</td>
+    <td></td><td>This is too few steps for the day to be considered active.</td></tr>
+    <tr><td>tr.addDailySteps(5000);</td>
+    <td></td><td>This is too few steps for the day to be considered active.</td></tr>
+    <tr><td>tr.activeDays(); </td>
+    <td>0</td><td>No day had at least 10,000 steps.
+    </td></tr>
+    <tr><td>tr.averageSteps(); </td>
+    <td>7000.0</td><td>The average number of steps per day is (14000 / 2).</td></tr>
+    <tr><td>tr.addDailySteps(13000); </td>
+    <td></td><td>This represents an active day.</td></tr>
+    <tr><td>tr.activeDays();  </td>
+    <td>1</td><td>Of the three days for which step data were entered, one day had at least 10,000 steps.</td></tr>
+    <tr><td>tr.averageSteps(); </td>
+    <td>9000.0</td><td>The average number of steps per day is (27000 / 3).</td></tr>
+    <tr><td>tr.addDailySteps(23000); </td>
+    <td></td><td>This represents an active day.</td></tr>
+    <tr><td>tr.addDailySteps(1111); </td>
+    <td></td><td>This is too few steps for the day to be considered active.</td></tr>
+    <tr><td>tr.activeDays(); </td>
+    <td>2</td><td>Of the five days for which step data were entered, two days had at least 10,000 steps.</td></tr>
+    <tr><td>tr.averageSteps(); </td>
+    <td>10222.2</td><td>The average number of steps per day is (51111 / 5). </td></tr>
+    </table><p>
+    
+    
 This question asks you to write the complete StepTracker class, including the constructor and any required instance variables and
 methods. Your implementation must meet all specifications and conform to the example. 
 
@@ -304,13 +313,21 @@ Remember that mutator methods often look like the following:
    
 The code for this mutator method is a little more complex than the template above, because it needs to change more than 1 instance variable. Notice the comments in the sample code execution:
 
-- tr.addDailySteps(5000); // This is too few steps for the day to be considered active.
+.. raw:: html
 
-- tr.activeDays(); // returns 0.  No day had at least 10,000 steps.
+    <style>    td { text-align: left; } </style>
+    <table border width="100%"><tr><th>Statements and Expressions</th><th width="15%">Value Returned (blank if no value)</th><th>Comment</th> </tr>
+    <tr><td>tr.addDailySteps(5000);</td>
+    <td></td><td>This is too few steps for the day to be considered active.</td></tr>
+    <tr><td>tr.activeDays(); </td>
+    <td>0</td><td>No day had at least 10,000 steps.
+    </td></tr>
+    <tr><td>tr.addDailySteps(13000); </td>
+    <td></td><td>This represents an active day.</td></tr>
+    <tr><td>tr.activeDays();  </td>
+    <td>1</td><td>Of the three days for which step data were entered, one day had at least 10,000 steps.</td></tr>
+    </table><p>
 
-- tr.addDailySteps(13000); // This represents an active day.
-
-- tr.activeDays();  // returns 1. Of the three days for which step data were entered, one day had at least 10,000 steps.
 
 Consider each of your instance variables and whether this method should change them. 
 
@@ -327,7 +344,7 @@ Consider each of your instance variables and whether this method should change t
    :feedback_d: Yes, addDailySteps should add the number of steps taken that day in its parameter to the total.
    :feedback_e: Yes, addDailySteps is called each day and can change the variable for the number of days being tracked.
      
-   Which of the following values does the mutator method addDailySteps need to change?
+   Which of the following values does the mutator method addDailySteps need to change? (check all that apply)
    
 .. activecode:: stepTrackerCode3
    :language: java
@@ -394,7 +411,14 @@ This problem asks you to write a more complex accessor method which uses the ins
    
 The complex accessor method **averageSteps()** must calculate the average number of steps from your instance variables. Notice that the first time it is called in the sample code execution, it returns 0.0 since there are no steps recorded. This avoids a divide by 0 error.
 
-- tr.averageSteps(); // returns 0.0. When no step data have been recorded, the averageSteps method returns 0.0.
+.. raw:: html
+
+    <style>    th,td { text-align: left;  padding-left: 4px; }
+    table, tr, td, th { border: 1px solid black;} </style>
+    <table border width="100%"><tr><th>Statements and Expressions</th><th width="15%">Value Returned (blank if no value)</th><th>Comment</th> </tr>    
+    <tr><td>tr.averageSteps(); </td>
+    <td>0.0</td><td>When no step data have been recorded, the averageSteps method returns 0.0.</td></tr>
+    </table><p>
    
 .. activecode:: stepTrackerCode4
    :language: java
