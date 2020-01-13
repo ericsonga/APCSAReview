@@ -9,13 +9,13 @@ The coding problems below are mostly about Strings, but more problems on other t
 
 .. tabbed:: ch3Ex9
 
-        .. tab:: Question
-  
-           Write the code to print a random number from 1 to 100.   You can use ``Math.random()`` to get a value between 0 and not quite 1.  
+        .. tab:: Question 
            
            .. activecode::  ch3Ex9q
               :language: java
    
+              Write the code to print a random number from 1 to 100.  You can use ``Math.random()`` to get a value between 0 and not quite 1. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -32,6 +32,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch3Ex9a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -51,12 +53,12 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-
-           The following code should get the first letter of the first name, middle name, and last name and append (concatenate) them together and then return them all in lowercase.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
-
            .. activecode::  ch4Ex1q
               :language: java
 
+              
+              The following code should get the first letter of the first name, middle name, and last name and append (concatenate) them together and then return them all in lowercase.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -80,6 +82,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex1a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -104,12 +108,11 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-
-           The following code should print "Mary's favorite color is blue".  However, the code has errors.  Fix the code so that it compiles and runs correctly.
-
            .. activecode::  ch4Ex2q
               :language: java
 
+              The following code should print "Mary's favorite color is blue".  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -129,6 +132,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex2a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -198,12 +203,11 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-
-           The following code should print the first 3 letters of the string ``message`` all in lowercase letters. However, the code has errors.  Fix the errors so that the code runs as intended.
-
            .. activecode::  ch4Ex4q
               :language: java
 
+              The following code should print the first 3 letters of the string ``message`` all in lowercase letters. However, the code has errors.  Fix the errors so that the code runs as intended.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -223,6 +227,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex4a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -245,12 +251,11 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-
-           The following code should print "Your name is Carly and your favorite color is red".  Finish the code so that it prints the output correctly.
-
            .. activecode::  ch4Ex5q
               :language: java
 
+              The following code should print "Your name is Carly and your favorite color is red".  Finish the code so that it prints the output correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -270,6 +275,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex5a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -342,11 +349,11 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-           Write the code to print "Julian's favorite color is green.  His favorite food is pizza.".
-
            .. activecode::  ch4Ex7q
               :language: java
 
+              Write the code to print "Julian's favorite color is green.  His favorite food is pizza.".
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -366,6 +373,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex7a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -388,11 +397,11 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-           Finish the code below to print your favorite animal and food.
-
            .. activecode::  ch4Ex8q
               :language: java
 
+              Finish the code below to print your favorite animal and food.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -412,6 +421,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex8a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -481,11 +492,12 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-           The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do accomplish this task.
-
            .. activecode::  ch4Ex10q
               :language: java
 
+              
+              The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do accomplish this task.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -503,6 +515,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex10a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -525,11 +539,12 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-           The following code should remove the word "very " (and following space) from the message and print the new message.  You can use ``indexOf`` to find the position of a substring in your string.  You can use ``substring`` to create a new string removing the word.
-
            .. activecode::  ch4Ex11q
               :language: java
 
+              
+              The following code should remove the word "very " (and following space) from the message and print the new message.  You can use ``indexOf`` to find the position of a substring in your string.  You can use ``substring`` to create a new string removing the word.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -548,6 +563,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex11a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -571,11 +588,11 @@ The coding problems below are mostly about Strings, but more problems on other t
 
         .. tab:: Question
 
-           The following code should replace ``lol`` in the message with ``laugh out loud`` and print the new message.
-
            .. activecode::  ch4Ex12q
               :language: java
 
+              The following code should replace ``lol`` in the message with ``laugh out loud`` and print the new message.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -593,6 +610,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            .. activecode::  ch4Ex12a
               :language: java
 
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -625,7 +644,7 @@ For more practice with Strings see problems at http://codingbat.com/java/String-
 * http://codingbat.com/prob/p130896
 * http://codingbat.com/prob/p130781
 
-If you have covered how to write a method do free response question 2 from 2008 or question 1 (after also covering lists) from 2013 at http://coweb.cc.gatech.edu/ice-gt/1277.  
+ 
   
    
 

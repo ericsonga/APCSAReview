@@ -187,7 +187,7 @@ The following code demonstrates a loop that changes the values in an array. In t
       
 .. note::
    
-   Arrays in Java are objects. When arrays are passed in as arguments to methods, any changes to the array in the method will affect the original method, since the array name is a reference value refering to the address of the array in memory.
+   Arrays in Java are objects. When arrays are passed in as arguments to methods, any changes to the array in the method will affect the original array, since the array name is a reference value refering to the address of the array in memory.
    
 |Exercise| **Check Your Understanding**
 

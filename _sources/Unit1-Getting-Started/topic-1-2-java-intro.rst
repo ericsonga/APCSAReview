@@ -301,6 +301,8 @@ Working in pairs, debug the following code. Can you find the all the bugs and ge
 .. activecode:: challenge1-2
    :language: java
 
+   Fix the code below.
+   ~~~~
    public class Challenge1_2
    {
       public static void main(String[] args)
