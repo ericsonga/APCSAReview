@@ -243,7 +243,7 @@ The **this** variable can be used anywhere you would use an object variable.  Yo
     :width: 100px
     :align: left
     
-- Create a class called Bank Account below that keeps track of the account holder's name, the account number, and the balance in the account. Make sure you use the appropriate data types for these. 
+- Create a class called BankAccount below that keeps track of the account holder's name, the account number, and the balance in the account. Make sure you use the appropriate data types for these. 
 
 - Write 2 constructors for the class that initialize the instance variables to default values and to given parameters. For the parameters, use the same variable names as your instance variables. Use the **this** keyword to distinguish between the instance variables and the parameter variables.
 
@@ -256,7 +256,13 @@ The **this** variable can be used anywhere you would use an object variable.  Yo
 .. activecode:: challenge-5-9-BankAccount
   :language: java
 
+  Create a class called BankAccount that keeps track of the account holder's name, the account number, and the balance in the account. Create 2 constructors, a toString() method, and withdraw(amount) and deposit(amount) methods. Test your class in a main method.
+  ~~~~
+  public class BankAccount
+  {
   
+  
+  }
    
 
 

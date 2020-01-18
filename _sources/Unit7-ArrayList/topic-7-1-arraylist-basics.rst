@@ -187,12 +187,12 @@ Here's an example of a Integer ArrayList:
 
 .. mchoice:: qArrayListInteger
    :answer_a: ArrayList[int] numbers = new ArrayList();
-   :answer_b: ArrayList&lt;Integer&gt; numbers = new ArrayList();
-   :answer_c: ArrayList&lt;int> numbers = new ArrayList&lt;int&gt;();
+   :answer_b: ArrayList&lt;String&gt; numbers = new ArrayList();
+   :answer_c: ArrayList&lt;int&gt; numbers = new ArrayList&lt;int&gt;();
    :answer_d: ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();
    :correct: d
    :feedback_a: The square brackets [] are only used with arrays, not ArrayLists.
-   :feedback_b: Although the left side of the declaration is right, you must also specify the type on the right side when creating the ArrayList.
+   :feedback_b: String is not the correct type since this is for an array of integers, and the type should be next to ArrayList on both sides.
    :feedback_c: ArrayLists cannot hold primitive types like int. You must use the wrapper class Integer.   
    :feedback_d: The wrapper class Integer is used to hold integers in an ArrayList.
    

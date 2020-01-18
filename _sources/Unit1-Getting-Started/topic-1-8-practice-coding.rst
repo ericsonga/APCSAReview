@@ -268,14 +268,13 @@ Code Practice with Variables
 
 .. tabbed:: ch3Ex1
 
-        .. tab:: Question
-
-           
-           The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch3Ex1q
               :language: java
    
+              The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -297,6 +296,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex1a
               :language: java
    
+              This is the answer for the previous question.
+              ~~~~   
               public class Test1
               {
                   public static void main(String[] args)
@@ -318,14 +319,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex2
 
-        .. tab:: Question
-
-           
-           The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``. Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch3Ex2q
               :language: java
    
+              The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``. Fix the code so that it compiles and runs correctly.
+              ~~~~  
               public class Test1
               {
                   public static void main(String[] args)
@@ -347,6 +347,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex2a
               :language: java
    
+              This is the answer for the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -368,14 +370,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex3
 
-        .. tab:: Question
-
-           
-           The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch3Ex3q
               :language: java
    
+              The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~          
               public class Test1
               {
                   public static void main(String[] args)
@@ -396,7 +397,9 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex3a
               :language: java
-   
+             
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -418,14 +421,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex4
 
-        .. tab:: Question
-
-           
-           The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch3Ex4q
               :language: java
    
+              The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -445,6 +447,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex4a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -465,14 +469,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex5
 
-        .. tab:: Question
-
-           
-           The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question 
            
            .. activecode::  ch3Ex5q
               :language: java
    
+              The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -492,6 +495,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex5a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -512,13 +517,12 @@ Code Practice with Variables
 .. tabbed:: ch3Ex6
 
         .. tab:: Question
-
-           
-           Write the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.
            
            .. activecode::  ch3Ex6q
               :language: java
    
+              Write the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -535,6 +539,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex6a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -555,13 +561,14 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex7
 
-        .. tab:: Question
-  
-           Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon. 
+        .. tab:: Question 
            
            .. activecode::  ch3Ex7q
               :language: java
    
+                
+              Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -578,6 +585,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex7a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -599,12 +608,12 @@ Code Practice with Variables
 .. tabbed:: ch3Ex8
 
         .. tab:: Question
-  
-           Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.
            
            .. activecode::  ch3Ex8q
               :language: java
    
+              Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -621,6 +630,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex8a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -643,13 +654,13 @@ Code Practice with Variables
 
 .. tabbed:: ch3Ex10
 
-        .. tab:: Question
-  
-           Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can't buy part of a wing. 
+        .. tab:: Question 
            
            .. activecode::  ch3Ex10q
               :language: java
    
+              Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can't buy part of a wing.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -666,6 +677,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex10a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)

@@ -320,7 +320,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_c: This will cause an out of bounds error.
       :feedback_d: This increments a2 before copying the value into array2 and so puts it in the wrong place. 
 
-      Which of the following correctly copies all the even numbers from ``array1`` to ``array2`` at the same position as they are in ``array1`` without any errors?  Assume that ``array2`` is large enough for all the copied values.  
+      Which of the following correctly copies all the even numbers from ``array1`` to ``array2`` in the same order as they are in ``array1`` without any errors?  Assume that ``array2`` is large enough for all the copied values.  
    
       .. code-block:: java
       

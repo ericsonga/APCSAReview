@@ -466,12 +466,14 @@ Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same. 
 |Groupwork| Debugging Challenge : Weather Report
 ------------------------------------------------
 
-Debug the following code. Can you find the all the bugs and get the code to run? 
+
 
 
 .. activecode:: challenge1-3
    :language: java
 
+   Debug the following code. Can you find the all the bugs and get the code to run? 
+   ~~~~
    public class Challenge1_3
    {
       public static void main(String[] args)
