@@ -632,7 +632,7 @@ Exercises
             private int currentTemp;
             private int boilingPoint;
 
-            public Liquid(int ct, int boilingPoint)
+            public Liquid(int ct, int bp)
             {
                 currentTemp = ct;
                 boilingPoint = bp;
@@ -678,13 +678,13 @@ Exercises
    :answer_a: The private variables boxesOfFood and numOfPeople are not properly initialized.
    :answer_b: The private variables boxesOfFood and numOfPeople should have been declared public.
    :answer_c: The public method getBoxesOfFood should have been declared private.
-   :answer_d: The variable updatedAmountOfFood in the eatFoodBoxes method is a local variable and different from the one in orderMoreFood.
+   :answer_d: The variable updatedAmountOfFood in the eatFoodBoxes method is not declared in this method.
    :answer_e: The variables boxesOfFood and numOfPeople in the updatedAmountOfFood method are local variables.
    :correct: d
    :feedback_a: The private variables boxesOfFood and numOfPeople are initialized by the constructor.
    :feedback_b: Instance variables are usually private.
    :feedback_c: Methods are usually public.
-   :feedback_d: The variable updatedAmountOfFood in the eatFoodBoxes method is a local variable and different from the one in orderMoreFood.
+   :feedback_d: The variable updatedAmountOfFood in the eatFood method is not declared in this method. It could be replaced by the boxesOfFood instance variable.
    :feedback_e: The variables boxesOfFood and numOfPeople are instance variables.
 
    Consider the following class definition for Party.  The following code segment appears in a method in a class other than Party. The code segment is intended to print the value 30, but does not print the correct value because of an error in the Party class. Which of the following best explains why the correct value isn’t printed?
@@ -694,7 +694,7 @@ Exercises
        Party p = new Party(20, 15);
        p.orderMoreFood(20);
        p.eatFood(5);
-       System.out.println(bob.getBoxesOfFood());
+       System.out.println(p.getBoxesOfFood());
         
        public class Party
        {
@@ -723,9 +723,9 @@ Exercises
 
         public void eatFood(int eatenBoxes) 
         {
-            int updatedAmountOfFood = getNumOfPeople();
             boxesOfFood = updatedAmountOfFood - eatenBoxes;
         }
+       }
 
         
 .. mchoice:: AP5-9-3
@@ -763,9 +763,9 @@ Exercises
                 return partyHost;
             }
 
-            public void addToOptions (PartyOptions p)
+            public void addToOptions(PartyOptions o)
             {
-                p.addParty(this);
+                o.addParty(this);
             }
         }
 
@@ -779,9 +779,9 @@ Exercises
             }
 
             /* A Party should only be added to this PartyOption if the party’s month matches onlyThisMonth */
-            public void addParty(Party party)
+            public void addParty(Party p)
             {
-                if (p.GetMonth() == onlyThisMonth)
+                if (p.getMonth() == onlyThisMonth)
                 {
                     System.out.print("Party by " + p.getHost() + " accepted; ");
                 }
@@ -800,25 +800,25 @@ Exercises
         Party p1 = new Party("Kerry", 10, 7);
         Party p2 = new Party("Jules", 9, 6);
 
-        PartyOptions p = new PartyOptions(10);
-        p1.addToOptions(p);
-        p2.addToOptions(p);
+        PartyOptions options = new PartyOptions(10);
+        p1.addToOptions(options);
+        p2.addToOptions(options);
 
     - Party by Kerry rejected; Party by Jules rejected;
     
-      - Kerry's party is accepted because it is in the 10th month.
+      - Kerry's party should be accepted because it is in the 10th month.
    
     - Party by Kerry rejected; Party by Jules accepted;
     
-      - Jules' party is rejected because it is not in the 10th month. 
+      - Kerry's party should be accepted because it is in the 10th month. Jules' party should be rejected because it is not in the 10th month. 
    
     - Party by Kerry accepted; Party by Jules rejected;
    
-      + Kerry's party is accepted because it is in the 10th month.
+      + Kerry's party is accepted because it is in the 10th month, and Jules' party is not.
       
     - Party by Kerry accepted; Party by Jules accepted;
    
-      - Jules' party is rejected because it is not in the 10th month.    
+      - Jules' party should be rejected because it is not in the 10th month.    
 
 
 

@@ -106,13 +106,15 @@ not have to have *any* of these items.  The following would compile, but what do
 
 The class ``FirstClass`` doesn't have anything inside of it, so the computer wouldn't know what to do if we asked it to execute the class.    
 
-|CodingEx| **Coding Exercise**: Click on the |runbutton| button below to have the computer execute the ``main`` method (starts with ``public static void main(String[] args)``) in the following class.  When you ask the Java run-time to *run* a class (java ClassName) it will always start execution in the ``main`` method. You can also click on the |audiotour| button below to listen to a line by line description of the code.  Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code.
+|CodingEx| **Coding Exercise**: Click on the |runbutton| button below to have the computer execute the ``main`` method (starts with ``public static void main(String[] args)``) in the following class.  When you ask the Java run-time to *run* a class (java ClassName) it will always start execution in the ``main`` method. You can also click on the |audiotour| button below to listen to a line by line description of the code.  Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code. If you revisit this page later and login, all your code changes are saved and can be seen by clicking on Load History and moving the bar above it to replay your changes.
  
 
 .. activecode:: lcfc1
    :language: java
    :tour_1: "Line-by-line Tour"; 1: scline1; 2: scline2; 3: scline3; 4: scline4; 5: scline5; 6: scline6; 7: scline7;
 
+   Run this code to see the output below it. Then change the code to print your name and run again. 
+   ~~~~    
    public class SecondClass
    {
       public static void main(String[] args)
