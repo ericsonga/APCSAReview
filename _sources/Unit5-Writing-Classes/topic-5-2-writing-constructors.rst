@@ -263,8 +263,12 @@ We encourage you to work in pairs for this challenge to create a Student class w
    * with 4 instance variables,
    * 3 constructors, a print method, 
    * and a main method to test them.
-   * (drag the triangle at the bottom of this window 
-  */ to enlarge the window.)
+   */
+   public class Student 
+   {
+   
+   
+   }
   
   
 Summary
