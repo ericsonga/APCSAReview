@@ -687,12 +687,9 @@ We encourage you to work in pairs for this challenge. Make sure you have done th
 
 The following Active Code uses a dictionary array of the most common 100 English words. We can use it as a spelling checker! For a more realistic application, you may want to use this |repl.it| code instead that has a huge dictionary of English words read in from a file and lets you do input with your spell checker. If you use repl, copy in the link for your repl in the Active Code window below to turn it in.
 
+
 1. Write a print10() method that prints out the first 10 words of the dictionary array.
-
 2. Write a spellcheck() method that takes a word as a parameter and returns true if it is in the dictionary array. It should return false if it is not found. Test your code below by changing the word sent to the spellcheck() method in main. This algorithm is called a **linear search** where we step through the array one element at a time (here the dictionary one word at a time) looking for a certain element.
-
-3. Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take 
-a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string.
 
 
 .. activecode:: challenge-6-2-spellchecker
@@ -700,24 +697,38 @@ a parameter for the firstLetters as a String. You could use the Java String |sta
    
    public class SpellChecker
    {
-      private String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"};
+      private String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
 
-      // Write your methods here
-      
+      /* 1. Write a print10() method that prints out the first 
+       * 10 words of the dictionary array.
+       */
+       
+      /* 2. Write a spellcheck() method that takes a word as a 
+       * parameter and returns true if it is in the dictionary array.
+       * Return false if it is not found.
+       */
+       
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
+        /* Uncomment to test your methods
         checker.print10();
-        checker.printStartsWith("ab");
+        
         String word = "catz";
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
         else
             System.out.println(word + " is misspelled!");
+        */
         
+        // 3. optional: 
+        // checker.printStartsWith("ab");
       }
    }
  
+ 
+3. Optional Challenge: Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take 
+a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string.
 
  
 Summary

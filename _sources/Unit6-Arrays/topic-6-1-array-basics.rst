@@ -222,7 +222,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
    :answer_a: <code>highScores.length</code>
    :answer_b: <code>highScores.length - 1</code>
    :correct: b
-   :feedback_a: Look at the example above when we were setting the values for the <i>highScore</i> array.  
+   :feedback_a: Remember that the first element in an array starts at index 0. If the length (the number of elements) of the array is 5, at what index would you find the last element?  
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
 
    Which index is for the last element of an array called ``highScores``?
@@ -460,7 +460,11 @@ In this challenge, you will create a guide to different countries using arrays.
    {
      public static void main(String[] args)
      {
-        // 1. Declare 4 arrays and initialize them to the values above
+        // 1. Declare 4 arrays and initialize them to the given values. 
+        // Countries: China, Egypt, France, Germany, India, Japan, Kenya, Mexico, United Kingdom, United States
+        // Capitals: Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi, Mexico City, London, Washington D.C.
+        // Languages: Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
+        // Filenames for map images: China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
         
         // 2. Pick a random number up to the length of one of the arrays and save in the variable index
         

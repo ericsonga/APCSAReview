@@ -309,7 +309,7 @@ Here is an object-oriented example that has the array as a private instance vari
    :practice: T
    :adaptive:
 
-   The following method has the correct code to return the largest value in an integer array called <i>vals</i> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
+   The following method has the correct code to return the largest value in an integer array called <i>vals</i> (an instance variable of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
    -----
    public int getLargest()
    {
@@ -386,35 +386,39 @@ If you want to step through the correct code to see what it does in the Java Vis
 
    <a href= "https://repl.it/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
    
-Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the print10(), spellcheck(word), and printStartsWith(firstLetters) methods described in the last lesson to use enhanced for-each loops instead of indexed for-loops.
-
-
-
+Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the print10() and spellcheck(word) methods described in the last lesson to use enhanced for-each loops instead of indexed for-loops. If you did the optional printStartsWith(firstLetters) method, re-write that one too.
 
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    
    public class SpellChecker
    {
-      private String[] dictionary;
-      
-      public SpellChecker() {
-         dictionary =     {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"};
-      }
+     private String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
 
-      // Re-write the print10(), spellcheck(word), and printStartsWith(firstLetters) methods to use enhanced for-each loops.
+      // Re-write the print10() and spellcheck(word), printStartsWith(firstLetters) methods to use enhanced for-each loops.
+      /* 1. Write a print10() method that prints out the first 
+       * 10 words of the dictionary array using an enhanced for-each loop.
+       */
+       
+      /* 2. Write a spellcheck() method using an enhanced for-each loop 
+       * that takes a word as a parameter and returns true if it is 
+       * in the dictionary array. Return false if it is not found.
+       */
       
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
-        SpellChecker checker = new SpellChecker();
+        /* Uncomment to test your methods
         checker.print10();
-        checker.printStartsWith("ab");
         String word = "catz";
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
         else
             System.out.println(word + " is misspelled!");
+        */
+
+       // Optional:
+       // checker.printStartsWith("ab");
       }
    }
  
