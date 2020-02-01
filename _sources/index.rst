@@ -6,9 +6,11 @@
 AP CS A Java Course 
 ==========================================
 
-Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. This course is adapted from the Runestone Java Review course to follow the 2019 College Board unit ordering and learning objectives. If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
+Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this course is to type in the url: **course.csawesome.org**
 
-To make sure the site saves your answers on questions, please click on the person icon at the top to register or login. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the course!
+This course is adapted from the Runestone Java Review course to follow the 2019 College Board unit ordering and learning objectives.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
+
+To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the course!
 
 
 .. raw:: html
@@ -114,7 +116,7 @@ Index
    
 If you see errors or bugs, please report them with this |errata form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 1/17/20)
+(last revised 1/31/2020)
 
 © Copyright 2015 Barb Ericson, 2019 revised by Beryl Hoffman (`Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.
 
