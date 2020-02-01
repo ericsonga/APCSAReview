@@ -712,14 +712,20 @@ The following Active Code uses a dictionary array of the most common 100 English
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
-        /* Uncomment to test your methods
+        /* Uncomment to test Part 1 
         checker.print10();
+	*/
         
+	/* Uncomment to test Part 2
         String word = "catz";
         if (checker.spellcheck(word) == true)
+	{
             System.out.println(word + " is spelled correctly!");
+	}
         else
+	{
             System.out.println(word + " is misspelled!");
+	}
         */
         
         // 3. optional: 
