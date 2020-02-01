@@ -386,7 +386,7 @@ If you want to step through the correct code to see what it does in the Java Vis
 
    <a href= "https://repl.it/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
    
-Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the print10() and spellcheck(word) methods described in the last lesson to use enhanced for-each loops instead of indexed for-loops. If you did the optional printStartsWith(firstLetters) method, re-write that one too.
+Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the spellcheck(word) method described in the last lesson to use enhanced for-each loops instead of indexed for-loops. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
 
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
@@ -408,8 +408,7 @@ Copy the code you used in the Spell Checker Challenge in the last lesson. Re-wri
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
-        /* Uncomment to test your methods
-        checker.print10();
+        /* Uncomment to test your method
         String word = "catz";
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
