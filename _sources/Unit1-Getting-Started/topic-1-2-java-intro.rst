@@ -148,7 +148,7 @@ You can copy the Java source code shown in this book into a file and save it if 
    :adaptive:
    :noindent:
 
-   The following has all the correct code to print out "Hi my friend!" when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the "Check Me" button to check your solution.
+   The following has all the correct code to print out "Hi my friend!" when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the "Check Me" button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.
    -----
    public class ThirdClass
    {
@@ -346,3 +346,88 @@ Summary
 - Java command lines end in ; (semicolon). { } are used to enclose blocks of code. // and ``/* */`` are used for comments.
 
 - A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ; at end of command lines, matching { }, (), and "". 
+
+AP Practice
+------------
+
+.. mchoice:: AP1-2-1
+    :practice: T
+    
+    Consider the following code segment.
+
+    .. code-block:: java
+
+       System.out.print("Java is ");
+       System.out.println("fun ");
+       System.out.print("and cool!");
+
+    What is printed as a result of executing the code segment?       
+    
+    - .. raw:: html
+    
+         <pre>Java is fun and cool!</pre>
+
+      - Notice the println in line 2.
+
+    - .. raw:: html
+    
+         <pre>
+         Java isfun 
+         and cool!
+         </pre>
+
+      - Notice the space after is in the first line. 
+      
+    - .. raw:: html
+      
+         <pre>Java is
+         fun 
+         and cool!  </pre>
+
+      - Notice that the first line is a print, not println.
+      
+    - .. raw:: html
+      
+         <pre>Java is fun
+         and cool!  </pre>
+      
+      + Correct! Pay attention to which lines are print or println.
+      
+ 
+.. mchoice:: AP1-2-2
+    :practice: T
+    
+    Consider the following code segment.
+
+    .. code-block:: java
+    
+       System.out.println("Roses are red, ")      // Line 1;
+       System.out.println("Violets are blue, ")  // Line 2;
+       System.out.print("Unexpected '}' ")        // Line 3;
+       System.out.print("on line 32. ")           // Line 4;
+
+    The code segment is intended to produce the following output but may not work as intended.
+
+    .. raw:: html
+      
+       <pre>Roses are red,
+       Violets are blue,
+       Unexpected '}' on line 32.</pre>
+
+    Which change, if any, can be made so that the code segment produces the intended output?
+    
+    - Replacing print with println on lines 3 and 4.
+    
+      - These should print on the same line without a newline in between.
+      
+    - Replacing println with print on lines 1 and 2.
+    
+      - These should print out with a newline in between.
+      
+    - Removing the single quotes in line 3.
+    
+      - The single quotes are fine in this line.
+    
+    - Putting the semicolon after the ) on each line.
+    
+      + Correct! The semicolon should go after each command but not in the comment.
