@@ -248,7 +248,7 @@ Try this |visualization2| to see this code in action.
 
 .. note::
 
-    method(); is used to call a method within the same class, but object.method(); is necessary in the main method or from inside of a different class than the method you are calling.
+    method(); is used to call a method within the same class, but object.method(); is necessary if you are calling the method from the main method or from a different class.
 
 
 Before you call a method from ``main`` or from outside of the current class, you must make sure that you have created and initialized an object. Remember that if you just declare an object reference without setting it to refer to a new object the value will be ``null`` meaning that it doesn't reference an object. If you call a method on a variable who's value is ``null``, you will get a **NullPointerException** error.  A **pointer** is another name for a reference.

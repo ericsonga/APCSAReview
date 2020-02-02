@@ -164,11 +164,13 @@ If there is a local variable with the same name as an instance variable, the var
 |Groupwork| Programming Challenge : Debugging
 ------------------------------------------------------------
 
-Debug the following program that has scope violations. Then, add comments that label the variable declarations as class, method, or block scope.
+
 
 .. activecode:: challenge-5-8-Debug
   :language: java
 
+  Debug the following program that has scope violations. Then, add comments that label the variable declarations as class, method, or block scope.
+  ~~~~
   public class TesterClass 
   {
      public static void main(String[] args)
