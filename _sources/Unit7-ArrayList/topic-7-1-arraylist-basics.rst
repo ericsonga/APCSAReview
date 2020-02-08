@@ -115,7 +115,9 @@ Another option is to import everything at the same level in a package using ``im
 Declaring and Creating ArrayLists
 ----------------------------------
 
-To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList like ``String`` to hold strings as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what you allow in your ArrayList.  The generic type ArrayList<Type> is preferred over ArrayList because it allows the compiler to find errors that would otherwise be found at run-time. 
+To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList, for example ``String`` as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what you allow in your ArrayList.  The generic type ArrayList<Type> is preferred over ArrayList because it allows the compiler to find errors that would otherwise be found at run-time. 
+
+
 
 .. code-block:: java 
 
@@ -123,6 +125,9 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
     // An ArrayList of Strings:
     ArrayList<String> shoppingList = new ArrayList<String>();
 
+.. note::
+
+    ArrayLists can only hold objects like String and the wrapper classes Integer and Double. They cannot hold primitive types like int, double, etc.
 
 |CodingEx| **Coding Exercise**
 
