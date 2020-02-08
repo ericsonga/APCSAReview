@@ -22,7 +22,7 @@
 Sorting Algorithms
 ==================
 
-There are many sorting algorithms to put an array or list elements in alphabetic or numerical order. The three that you need to know for the AP CS A exam are:
+There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CS A exam are:
 
 ..	index::
 	single: selection sort

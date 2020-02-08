@@ -41,6 +41,8 @@ If you use a variable to keep score you would probably increment it (add one to 
 .. activecode:: lccv1
    :language: java
    
+   Try the code below to see how score is incremented by 1.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -164,11 +166,13 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
 
 |CodingEx| **Coding Exercise:** 
 
-Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
+
 
 .. activecode:: lcop1
    :language: java
    
+   Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -195,11 +199,13 @@ Operators can be used to create compound expressions with more than one operator
 
 |CodingEx| **Coding Exercise:** 
 
-In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**.
+
 
 .. activecode:: compound1
    :language: java
    
+   In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**.
+   ~~~~
    public class TestCompound
    {
       public static void main(String[] args)
@@ -253,11 +259,13 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
     Figure 1: Long division showing the whole number result and the remainder
     
 
-|CodingEx| **Coding Exercise:** In the example below, try to guess what it will print out and then run it to see if you are right.
+|CodingEx| **Coding Exercise:** 
 
 .. activecode:: lcop2
    :language: java
    
+   In the example below, try to guess what it will print out and then run it to see if you are right.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -335,6 +343,8 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 .. activecode:: challenge1-4
    :language: java
 
+   Calculate your age, your pet's age, and your pet's age in dog years.
+   ~~~~
    public class Challenge1_4
    {
       public static void main(String[] args)

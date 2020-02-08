@@ -170,6 +170,8 @@ Here is the Student class again, but this time with a toString() method. Note th
 .. activecode:: StudentToString
   :language: java
 
+  See the toString() method in action.
+  ~~~~
   public class TesterClass 
   {
      // main method for testing
@@ -233,12 +235,14 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 .. activecode:: challenge-5-4-Pet-Class
   :language: java
 
+  Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic.
+  ~~~~
   public class TesterClass 
   {
      // main method for testing
      public static void main(String[] args)
      {
-        // Create Pet objects and test all your methods
+        // Create 3 Pet objects and test all your methods
         
      }   
    }
@@ -251,7 +255,11 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
   */
   class Pet 
   {
-     // complete class definition
+     // keep track of the name, age, weight, type of animal, and breed of the pet
+     
+     
+     // Write 2 constructors, accessor (get) methods, and a toString method. Use good commenting.
+     
      
   }
   

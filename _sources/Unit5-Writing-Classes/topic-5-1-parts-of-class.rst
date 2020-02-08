@@ -321,7 +321,7 @@ In this project, you will create a class that can tell riddles like the followin
 
   public class Riddle
   {
-     // 2 instance variables: private type variableName;
+     // 2 instance variables for Riddle's question and answer: private type variableName;
      
      
      // constructor

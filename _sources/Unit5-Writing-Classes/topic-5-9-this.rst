@@ -36,6 +36,8 @@ Run the code below and also check it out in the |Java visualizer| which shows ho
 .. activecode:: PersonClassThis
   :language: java
 
+  Observe the use of the keyword this in the code below.
+  ~~~~
   public class Person 
   {
      // instance variables 

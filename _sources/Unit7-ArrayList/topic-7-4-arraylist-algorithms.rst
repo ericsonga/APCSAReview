@@ -53,6 +53,8 @@ Here are two common ArrayList traversal loops that can be used for these algorit
      if (list.get(i) ....)
          ...
   }  
+
+
   
 You should be able to trace through code that uses all the basic ArrayList methods like the following.
 
@@ -108,7 +110,39 @@ You can step through the code above by clicking on the following `Example1 <http
       
 You can step through the code above by clicking on the following `Example2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(1)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
+.. activecode:: arrayListRemoveInLoop
+   :language: java
+   
+   The following code is supposed to initialize the ArrayList arr to [0,1,2,3,4] and then remove every other element. However, when you remove an element the size of the array changes and elements move up an index! How will the array changes in this loop? 
+   ~~~~
+   import java.util.*;
 
+   public class ArrayListLoop 
+   {
+    public static void main(String[] args) 
+    {
+      ArrayList<Integer> arr = new ArrayList<Integer>();
+      for(int i=0; i < 5; i++)
+      {
+         arr.add(i);
+         
+      }
+      for(int i=0; i < arr.size(); i++)
+      {
+         if (i % 2 == 0)
+         { 
+            System.out.println("Removing element " + i + " : " + arr.get(i));
+            arr.remove(i);
+         }
+      }
+      System.out.println(arr);
+   }
+
+
+.. note::
+
+    If you use add or remove inside a loop that traverses an ArrayList, you may get unexpected results because the size of the ArrayList has changed! 
+    
 Some algorithms require multiple String, array, or ArrayList objects to be traversed simultaneously. For example, the following code traverses two parallel ArrayLists that hold the grades for different tests. 
 
 .. activecode:: parallelArrayLists
