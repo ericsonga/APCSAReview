@@ -532,7 +532,7 @@ Rewrite the following code that uses an array to use an ArrayList instead. In th
          System.out.println("Here's the first thing to do: " 
               + toDoList[0] );
          
-         // remove item 0 and move everything up 
+         // remove item 0 and move everything down 
          //  (this can be done in 1 command with ArrayList)
          toDoList[0] = toDoList[1];
          toDoList[1] = toDoList[2];

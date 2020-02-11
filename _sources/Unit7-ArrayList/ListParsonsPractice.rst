@@ -280,7 +280,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
           if (nums.get(i) == nums(toRemove)) { #distractor
    =====
-            nums.remove(i);
+           nums.remove(i);
    =====
           } //end if
    =====

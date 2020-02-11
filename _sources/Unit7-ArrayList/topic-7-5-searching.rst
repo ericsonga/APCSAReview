@@ -44,7 +44,7 @@ The following video is also on YouTube at https://youtu.be/DHLCXXX1OtE.  It intr
     :align: center
 
 
-* **Sequential or Linear search** typically starts at the first element in an array or list and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1.
+* **Sequential or Linear search** typically starts at the first element in an array or ArrayList and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1.
 * **Binary search** can only be used on data that has been **sorted** or stored in order.  It checks the middle of the data to see if that middle value is less than, equal, or greater than the desired value and then based on the results of that it narrows the search. It cuts the search space in half each time.
 
 
@@ -63,11 +63,13 @@ Sequential Search
 
 Sequential or linear search is the only method that can be used to find a value in unsorted data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns the index it found it at, or it loops until the end of the array or list and then it returns a -1 to show that it didn't find the value in the array or list.
 
-The code for ``sequentialSearch`` below is from the AP CS A course description.
+
 
 .. activecode:: seqSearch
   :language: java
 
+  The code for ``sequentialSearch`` for arrays below is from the AP CS A course description.
+  ~~~
   public class ArraySearcher
   {
 
@@ -101,6 +103,53 @@ The code for ``sequentialSearch`` below is from the AP CS A course description.
   }
 
 To see this executing using the Java Visualizer click on the following link `SequentialSearch <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ArraySearcher%0A%7B%0A++%0A++/**+Finds+the+index+of+a+value+in+an+array+of+integers.%0A++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+%0A++++*+%40param+target+the+item+to+be+found+in+elements.+%0A++++*+%40return+an+index+of+target+in+elements+if+found%3B+-1+otherwise.+%0A++++*/%0A++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)+%0A++%7B+%0A++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)+%0A++++%7B+%0A++++++if+(elements%5Bj%5D+%3D%3D+target)+%0A++++++%7B+%0A++++++++return+j%3B+%0A++++++%7D+%0A++++%7D+%0A++++return+-1%3B+%0A++%7D%0A++%0A++public+static+void+main(String%5B%5D+args)%0A++%7B%0A++++int%5B%5D+numArray+%3D+%7B3,+-2,+9,+38,+-23%7D%3B%0A++++System.out.println(%22Tests+of+sequentialSearch%22)%3B%0A++++System.out.println(sequentialSearch(numArray,3))%3B%0A++++System.out.println(sequentialSearch(numArray,9))%3B%0A++++System.out.println(sequentialSearch(numArray,-23))%3B%0A++++System.out.println(sequentialSearch(numArray,99))%3B%0A++%7D%0A++%0A%7D&mode=display&curInstr=3>`_
+
+Here is the same search with an ArrayList. The same algorithms can be used with arrays or ArrayLists, but notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays. Many of our examples will use arrays for simplicity since with arrays, we know how many items we have and the size won't change during runtime. There are methods such as contains that can be used in ArrayLists instead of writing your own algorithms. However, they are not in the AP CSA Java subset.
+
+.. activecode:: seqSearchList
+    :language: java
+
+    Here is a linear search using ArrayLists. Notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays.
+    ~~~~
+    import java.util.*;
+
+    public class ArrayListSearcher
+    {
+
+      /** Finds the index of a value in an ArrayList of integers.
+        * @param elements an array containing the items to be searched. 
+        * @param target the item to be found in elements. 
+        * @return an index of target in elements if found; -1 otherwise. 
+        */
+      public static int sequentialSearch(ArrayList<Integer> elements, int target) 
+      { 
+        for (int j = 0; j < elements.size(); j++) 
+        { 
+          if (elements.get(j) == target) 
+          { 
+            return j; 
+          } 
+        } 
+        return -1; 
+      }
+
+      public static void main(String[] args)
+      {
+        ArrayList<Integer> numList = new ArrayList<Integer>();
+        numList.add(3);
+        numList.add(-2);
+        numList.add(9);
+        numList.add(38);
+        numList.add(-23);
+        System.out.println("Tests of sequentialSearch");
+        System.out.println(sequentialSearch(numList,3));
+        System.out.println(sequentialSearch(numList,9));
+        System.out.println(sequentialSearch(numList,-23));
+        System.out.println(sequentialSearch(numList,99));
+      }
+
+    }
+
 
 |Exercise| **Check Your Understanding**
 
