@@ -355,7 +355,7 @@ N    Linear Search  Binary Search
 100  100            7
 ==== ============== ==============
 
-Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (to be exact, log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log\ :sub:`2`\ n as n, the data size, grows and see that binary search runs much faster for any n.  You don't need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 512, 1024, etc.) until you reach a number that is slightly above n. 
+Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (or log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log\ :sub:`2`\ n as n, the data size, grows and see that binary search runs much faster for any n.  You don't need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 512, 1024, etc.) until you reach a number that is slightly above n. 
 
 
 |Exercise| **Check Your Understanding**
@@ -404,8 +404,8 @@ Runtimes can be described with mathematical functions. For an array of size n, l
    How many times would the loop in the binary search run for an array  int[] arr = {2, 10, 23, 31, 55, 86} with binarySearch(arr,55)?
 
 .. mchoice:: qbs_4
-   :answer_a: 15 times
-   :answer_b: 9 times
+   :answer_a: approximately 15 times
+   :answer_b: approximately 9 times
    :answer_c: 500 times
    :answer_d: 2 times
    :correct: b
