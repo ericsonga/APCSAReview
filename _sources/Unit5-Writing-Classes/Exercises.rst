@@ -249,7 +249,7 @@ Exercises
          Party p = new Party(10, 5.0);
 
          Which of the following can be used to replace /* missing constructor */ 
-         so that the object m is correctly created?
+         so that the object p is correctly created?
      
     - .. code-block:: java
     

@@ -181,7 +181,7 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 .. activecode:: challenge1-6-average
    :language: java
 
-   Type in three made up int grades and then sum and average them. Use casting to report the result as a double.
+   Type in three made up int grades and then sum and average them. Use casting to report the result as a double. If you do this challenge on repl.it, please paste your repl link here to turn it in.
    ~~~~
    public class Challenge1_6
    {
