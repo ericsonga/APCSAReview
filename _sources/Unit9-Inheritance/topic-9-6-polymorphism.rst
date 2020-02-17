@@ -252,7 +252,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
       public class Dictionary extends Book
       {
-         public String getDefinition(String word)
+         public String getDefinition()
          {
             // implementation not shown
          }
