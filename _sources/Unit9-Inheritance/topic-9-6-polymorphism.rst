@@ -38,7 +38,7 @@ This is simliar to a toddler toy that has pictures of animals and when a handle 
     Figure 1: A see n say toy
 
    
-If you were simulating this toy in software you could create an Animal class that had an abstract makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
+If you were simulating this toy in software you could create an Animal class that had a makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
 
 ..	index::
     single: declared type
@@ -252,7 +252,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
       public class Dictionary extends Book
       {
-         public String getDefinition(String word)
+         public String getDefinition()
          {
             // implementation not shown
          }
