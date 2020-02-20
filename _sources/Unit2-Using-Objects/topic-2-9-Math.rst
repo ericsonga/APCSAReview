@@ -177,7 +177,7 @@ Here are some examples that move a random number into a specific range.
 Other Math functions that you can use are:
 
 
-- int abs(int) : Returns the absolute value of an int value (which just removes any negative signs).
+- int abs(int) : Returns the absolute value of an int value (which is the value of a number without its sign, for example Math.abs(-4) = 4). 
 
 - double abs(double) : Returns the absolute value of a double value.
 
