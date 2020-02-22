@@ -149,6 +149,8 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
 .. activecode:: parallelArrayLists
    :language: java
    
+   Demonstration of parallel ArrayLists.
+   ~~~~
    import java.util.*;  
    
     public class ParallelTests

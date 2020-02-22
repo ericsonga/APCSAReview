@@ -68,7 +68,7 @@ Sequential or linear search is the only method that can be used to find a value 
 .. activecode:: seqSearch
   :language: java
 
-  The code for ``sequentialSearch`` for arrays below is from the AP CS A course description.
+  The code for ``sequentialSearch`` for arrays below is from a previous AP CS A course description.
   ~~~
   public class ArraySearcher
   {
@@ -184,6 +184,8 @@ Of course you can also look for a string in an array or list.  But, when you loo
 .. activecode:: seqSearchStr
   :language: java
 
+  Demonstration of a linear search for a String.
+  ~~~~
   public class SearchTest
   {
 
@@ -233,6 +235,8 @@ The code for ``binarySearch`` below is from the AP CS A course description. A re
 .. activecode:: binSearch
   :language: java
 
+  Demonstration of iterative binary search.
+  ~~~~
   public class SearchTest
   {
      public static int binarySearch(int[] elements, int target) {
@@ -287,6 +291,8 @@ You can also use binary search with a string array.  But, when you look for a st
 .. activecode:: binSearchStrings
   :language: java
   
+  Demonstration of binary search with strings using compareTo.
+  ~~~~
   public class BinSearchStrings
   {
      public static int binarySearch(String[] elements, String target) {
