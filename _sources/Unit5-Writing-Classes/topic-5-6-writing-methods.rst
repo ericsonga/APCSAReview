@@ -253,7 +253,9 @@ Methods can also return values of any type back to the calling method. The calli
         boolean flag = false;
         for(int i=0; i < text.length(); i++) {
             if (text.substring(i, i+1).equalsIgnoreCase(letter))
+	    {
                 flag = true;
+	    }
         }
         return flag;
      }
