@@ -131,12 +131,12 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
 
 |CodingEx| **Coding Exercise**
 
-In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
-
 
 .. activecode:: ArrayListDeclare
    :language: java
 
+   In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
+   ~~~~
    import java.util.*; // import everything at this level
    public class Test
    {
@@ -157,6 +157,8 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
 .. activecode:: ArrayListCreateStr
    :language: java
 
+   Demonstrating a NullPointerException.
+   ~~~~
    import java.util.*; // import everything at this level
    public class Test
    {
@@ -224,11 +226,13 @@ Although it is not on the AP exam, you can convert arrays to ArrayLists using it
             
 |CodingEx| **Coding Exercise**
 
-You can add values to an ArrayList by using its **add** method, described in detail in the next lesson. Try the code below. Can you add another item to the shopping list? Note that the type of the ArrayList, String or Integer, also determines the type of parameters and return types for all of its methods, so add and print work for any type of ArrayList. 
+You can add values to an ArrayList by using its **add** method, described in detail in the next lesson. Try the code below. Note that the type of the ArrayList, String or Integer, also determines the type of parameters and return types for all of its methods, so add and print work for any type of ArrayList. 
 
 .. activecode:: listAdd
    :language: java
 
+   Can you add another item to the shopping list? 
+   ~~~~
    import java.util.*;  // import all classes in this package.
    public class Shopping
    {
@@ -267,6 +271,8 @@ First, let's discuss how to break up a number into its digits. Try the code belo
 .. activecode:: divideby10
    :language: java
 
+   Set number to a different number and guess what number / and % will return. Which operator gives you a digit in number?
+   ~~~~
    public class DivideBy10
    {
       public static void main(String[] args)
@@ -289,6 +295,8 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
 .. activecode:: challenge-7-1-digits
    :language: java
 
+   Complete the challenge below to put the digits of a number in an ArrayList.
+   ~~~~
    import java.util.*;
    
    public class Digits

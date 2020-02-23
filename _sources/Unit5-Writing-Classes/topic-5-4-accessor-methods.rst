@@ -237,16 +237,6 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 
   Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic.
   ~~~~
-  public class TesterClass 
-  {
-     // main method for testing
-     public static void main(String[] args)
-     {
-        // Create 3 Pet objects and test all your methods
-        
-     }   
-   }
-  
   /**
       Pet class (complete comments)
       @author
@@ -260,8 +250,18 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
      
      // Write 2 constructors, accessor (get) methods, and a toString method. Use good commenting.
      
-     
+     // Don't forget to complete the main method in the TesterClass below!   
   }
+  
+  public class TesterClass 
+  {
+     // main method for testing
+     public static void main(String[] args)
+     {
+        // Create 3 Pet objects and test all your methods
+        
+     }   
+   }
   
 
 

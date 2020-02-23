@@ -113,7 +113,7 @@ You can step through the code above by clicking on the following `Example2 <http
 .. activecode:: arrayListRemoveInLoop
    :language: java
    
-   The following code is supposed to initialize the ArrayList arr to [0,1,2,3,4] and then remove every other element. However, when you remove an element the size of the array changes and elements move up an index! How will the array changes in this loop? 
+   The following code is supposed to initialize the ArrayList arr to [0,1,2,3,4] and then remove every other element to get [1,3]. However, when you remove an element the size of the array changes and elements move up an index! See if you can figure out why you get the unexpected result.  
    ~~~~
    import java.util.*;
 
@@ -136,6 +136,7 @@ You can step through the code above by clicking on the following `Example2 <http
          }
       }
       System.out.println(arr);
+    }
    }
 
 
@@ -148,6 +149,8 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
 .. activecode:: parallelArrayLists
    :language: java
    
+   Demonstration of parallel ArrayLists.
+   ~~~~
    import java.util.*;  
    
     public class ParallelTests

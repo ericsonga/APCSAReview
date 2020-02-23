@@ -212,7 +212,7 @@ Here are some rules to follow with if statements to avoid some common errors:
         if (isCold = true); 
             System.out.println("Wear a coat");
             System.out.println("Wear gloves");
-        System.out.println("Bye");
+        
       }
    }
    
@@ -236,7 +236,7 @@ Here are some rules to follow with if statements to avoid some common errors:
  
 Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like "Signs point to yes!", "Very doubtful", etc. If you've never seen a Magic 8 ball, check out this |video|.
 
-We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see|lesson 2.9|.
+We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see |lesson 2.9|.
 
 .. activecode:: challenge3-2-if-Magic8ball
    :language: java

@@ -87,6 +87,8 @@ The code for ``selectionSort`` below is from the AP CS A course description.
 .. activecode:: selSort
   :language: java
 
+  Demonstration of selection sort.
+  ~~~~
   import java.util.Arrays;
 
   public class SortTest
@@ -210,6 +212,8 @@ The code for ``insertionSort`` below is from the AP CS A course description.
 .. activecode:: insertionSort
   :language: java
 
+  Demonstration of insertion sort.
+  ~~~~
   import java.util.Arrays;
 
   public class SortTest
