@@ -78,7 +78,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        if (listOfNums.get(i).equals(zero)) {
    =====
-       if (listOfNums.get(i) == 0) { #distractor
+       if (listOfNums.get(i) == zero) { #distractor
    =====
            listOfNums.remove(i);
    =====

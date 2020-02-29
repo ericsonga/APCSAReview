@@ -242,7 +242,24 @@ Here is a flowchart for a conditional with 3 options like in the code above.
      if (score >= 70) grade = "C";
      if (score >= 60) grade = "D";
      else grade = "E";
+
+
+.. activecode::  ifelseifBattery
+  :language: java
      
+  Finish the following code so that it prints "Plug in your phone!" if the battery is below 50, "Unplug your phone!" if it is above 100, and "All okay!" otherwise. Change the battery value to test all 3 conditions.
+  ~~~~
+  public class BatteryTest
+  {
+      public static void main(String[] args)
+      {
+          int battery = 60;
+          
+          System.out.println("All okay!");
+      }
+  }
+
+
 |Groupwork| Programming Challenge : Adventure
 ---------------------------------------------
 
