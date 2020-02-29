@@ -69,7 +69,7 @@ Sequential or linear search is the only method that can be used to find a value 
   :language: java
 
   The code for ``sequentialSearch`` for arrays below is from a previous AP CS A course description.
-  ~~~
+  ~~~~
   public class ArraySearcher
   {
 
