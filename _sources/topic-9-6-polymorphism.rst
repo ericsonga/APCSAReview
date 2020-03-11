@@ -288,6 +288,8 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
 .. activecode:: challenge-9-6-shopping2
   :language: java     
   
+  Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceOf to test items to see see if they are a DiscountedItem.
+  ~~~~
     import java.util.*;
 
     /** 

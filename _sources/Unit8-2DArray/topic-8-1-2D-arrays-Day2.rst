@@ -48,6 +48,8 @@ Try the code below. Did it print what you expected?  When you print a two dimens
 .. activecode:: 2DArraySet
   :language: java
   
+  Add another row of data to the arrays.
+  ~~~~
   public class Test 
   {
      public static void main(String[] args)
@@ -155,11 +157,13 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 |CodingEx| **Coding Exercise**
 
-Add another row to seatingInfo initialized to your name and a friend's name. Get these names out of the array using the correct indices and then print them out.
+
 
 .. activecode:: 2DArrayInitGet
   :language: java
   
+  Add another row to seatingInfo initialized to your name and a friend's name. Get these names out of the array using the correct indices and then print them out.
+  ~~~~
   public class Test 
   {
      public static void main(String[] args)

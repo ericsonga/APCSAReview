@@ -48,12 +48,13 @@ The actual parameters given to super() are used to initialize the inherited inst
     
 |CodingEx| **Coding Exercise**
 
-The ``super(theName)`` in the ``Employee`` constructor will call the constructor that takes a ``String`` object in the ``Person`` class to set the name. Try creating another Employee object in the main method that passes in your name and then use the get methods to print it out.
-Which class constructor sets the name? Which class constructor sets the id?
+The ``super(theName)`` in the ``Employee`` constructor will call the constructor that takes a ``String`` object in the ``Person`` class to set the name. 
 
 .. activecode:: InitPrivateInherited
   :language: java
 
+  Try creating another Employee object in the main method that passes in your name and then use the get methods to print it out. Which class constructor sets the name? Which class constructor sets the id?
+  ~~~~
   class Person 
   {
      private String name; 
@@ -250,6 +251,8 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
 .. activecode:: challenge-9-2-Square-Rectangle
   :language: java
   
+    Create a Square class that inherits from Rectangle.
+    ~~~~
     class Rectangle 
     {
       private int length;
