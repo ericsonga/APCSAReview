@@ -35,11 +35,13 @@ The keyword super is very useful in allowing us to first execute the superclass 
 
 |CodingEx| **Coding Exercise**
 
-In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Taco". Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
+In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Taco". 
 
 .. activecode:: SuperEx
    :language: java
 
+    Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
+    ~~~~
       public class Person 
       {
          private String name = null;
@@ -165,6 +167,8 @@ The Customer class below keeps track of the names and addresses of customers. It
 .. activecode:: challenge-9-4-Customer-super
    :language: java
 
+    Complete the OnlineCustomer class below which inherits from Customer and adds an email address and override the toString() method.
+    ~~~~
     public class Customer
     {
        private String name;

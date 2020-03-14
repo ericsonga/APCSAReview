@@ -36,7 +36,7 @@ Remember that a **class** in programming defines a new **abstract data type**. W
    <a href="https://www.youtube.com/watch?v=1JJL0YszYik" target="_blank">video</a>
 
 
-Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. 
+Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can't live on a blueprint although it describes a house! But you can use it to build houses and live in those. You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. 
 
 
 .. youtube:: 1JJL0YszYik

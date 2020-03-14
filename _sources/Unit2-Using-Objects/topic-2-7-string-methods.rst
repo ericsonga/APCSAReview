@@ -363,7 +363,7 @@ The following code shows some common mistakes with strings.
         // Print out the first letter?
         System.out.println("The first letter in " + str1 + ":" + str1.substring(1,1) );
    
-        // Print out the last letter?
+        // Print out the last character?
         System.out.println("The last char. in " + str1 + ":" + str1.substring(8) );
         
         // Print str1 in lower case? Will str1 change?

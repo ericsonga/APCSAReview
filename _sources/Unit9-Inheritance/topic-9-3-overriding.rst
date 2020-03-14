@@ -31,11 +31,13 @@ A subclass inherits all public methods from its superclass, and these methods re
 
 |CodingEx| **Coding Exercise**
 
-In the following example the ``MeanGreeter`` inherits the ``greet()`` method from ``Greeter``, but then overrides it. Run the program to see. Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return "Hola!" (or hi in another language) instead of "Hi!". Create an object to test it out.
+In the following example the ``MeanGreeter`` inherits the ``greet()`` method from ``Greeter``, but then overrides it. Run the program to see. 
 
 .. activecode:: GreeterEx
    :language: java
 
+   Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return "Hola!" (or hi in another language) instead of "Hi!". Create an object to test it out.
+   ~~~~
    public class Greeter
    {
       public String greet()
@@ -88,11 +90,13 @@ Don't get **overriding** a method confused with **overloading** a method!
     
 |CodingEx| **Coding Exercise**
 
-In the example below the ``greet(String who)`` method overloads the ``greet()`` method of ``Greeter``.  Notice that ``MeanGreeter`` inherits this method and it isn't overriden. After running the code, try overriding the greet(String) method in the MeanGreeter class to return "Go away" + the who String. 
+In the example below the ``greet(String who)`` method overloads the ``greet()`` method of ``Greeter``.  Notice that ``MeanGreeter`` inherits this method and it isn't overriden. 
    
 .. activecode:: GreeterOverride
    :language: java
 
+   After running the code, try overriding the greet(String) method in the MeanGreeter class to return "Go away" + the who String. 
+   ~~~~
    public class Greeter
    {
       public String greet()
@@ -250,6 +254,8 @@ For example, if a parent has a private instance variables, ``name``, then the pa
 .. activecode:: InheritedGetSet
   :language: java
 
+  Demonstrated inherited get/set methods.
+  ~~~~
   class Person 
   {
      private String name; 
@@ -366,6 +372,8 @@ The following Pet class keeps track of a pet's name and type and has a construct
 .. activecode:: challenge-9-3-Pet-Sounds
    :language: java
    
+    Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out "Woof!" or "Meow!".
+    ~~~~
     public class Pet
     {
        private String name;

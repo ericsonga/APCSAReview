@@ -41,11 +41,13 @@ One commonly overriden Object method is toString(), which is often used to print
 
 |CodingEx| **Coding Exercise**
 
-In the following code, the Person class overrides the Object toString() method and the Student class overrides the Person toString() method. They each add on their attributes. After trying the code below, add another subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Create an APStudent object in the main method to test it.
+In the following code, the Person class overrides the Object toString() method and the Student class overrides the Person toString() method. They each add on their attributes. 
 
 .. activecode:: toStringDemo
   :language: java 
-      
+  
+  After trying the code below, add another subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Create an APStudent object in the main method to test it.
+  ~~~~
     public class Person
     {
        private String name;
@@ -139,11 +141,12 @@ If you want to change how the inherited ``equals`` method works you can **overri
 
 |CodingEx| **Coding Exercise**
 
-Try to guess what this code will print out before running it.
 
 .. activecode:: StringTest1
    :language: java
 
+   Try to guess what this code will print out before running it.
+   ~~~~
    public class StringTest
    {
       public static void main(String[] args)
@@ -262,6 +265,8 @@ Work in pairs to write the following code and test each part before moving on to
 .. activecode:: challenge-9-7-savingsaccount
    :language: java
    
+   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a toSTring and an equals method for it.
+   ~~~~
    public class Account 
    {
        private String name;

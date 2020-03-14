@@ -87,4 +87,7 @@ options.build.template_args['runestone_version'] = version
 if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBNAME' in environ:
     options.build.template_args['dburl'] = 'postgresql://{DBUSER}:{DBPASS}@{DBHOST}/{DBNAME}'.format(**environ)
 
+version = pkg_resources.require("runestone")[0].version
+options.build.template_args['runestone_version'] = version
+
 from runestone import build  # build is called implicitly by the paver driver.
