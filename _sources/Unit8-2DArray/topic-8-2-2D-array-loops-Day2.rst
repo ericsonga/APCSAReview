@@ -27,11 +27,13 @@ Enhanced For-Each Loop for 2D Arrays (Day 2)
 ..	index::
 	pair: 2D Array; for-each loop
 
-Since 2D arrays are really arrays of arrays you can also use a nested for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row!
+Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row!
 
 .. activecode:: getAvgForEach
    :language: java
    
+   Nested enhanced for loops demo.
+   ~~~~
    public class Test
    {
 
@@ -68,12 +70,13 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
 
 |CodingEx| **Coding Exercise**
 
-What will the following code print out? Can you add another method that gets the total for a column? 
+
 
 .. activecode:: lca2dloopPart
    :language: java 
  
-
+   What will the following code print out? Can you add another method that gets the total for a column? 
+   ~~~~
    public class Test
    {
 
@@ -102,6 +105,8 @@ You can loop through just part of a 2D array. You can change the starting value 
 .. activecode:: lca2dloopPart2
    :language: java 
 
+   Loooping through just part of a 2D array.
+   ~~~~
    public class Test
    {
       public static int countValues(int value, int[][] a, 
@@ -131,12 +136,13 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 |CodingEx| **Coding Exercise**
 
-What will the following code print? Can you change the code to work for a String 2D array?
+
 
 .. activecode:: linearSearch2DArrays
    :language: java 
- 
-
+   
+   What will the following code print? Can you change the code to work for a String 2D array?
+   ~~~~
    public class Test
    {
       public static boolean search(int[][] array, int value)
@@ -219,6 +225,8 @@ Scroll down to the bottom of the following code and take a look at the switchCol
     :language: java
     :datafile: pictureClasses, arch.jpg
 
+    Picture Lab
+    ~~~~
     import java.awt.*;
     import java.awt.font.*;
     import java.awt.geom.*;
