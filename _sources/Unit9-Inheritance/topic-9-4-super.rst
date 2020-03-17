@@ -39,11 +39,11 @@ In the example below, the Student class overrides the getFood() method of the Pe
 
 .. activecode:: SuperEx
    :language: java
-
-    Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
-    ~~~~
-      public class Person 
-      {
+   
+   Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
+   ~~~~
+   public class Person 
+   {
          private String name = null;
          
          public Person(String theName)
@@ -166,11 +166,11 @@ The Customer class below keeps track of the names and addresses of customers. It
 
 .. activecode:: challenge-9-4-Customer-super
    :language: java
-
-    Complete the OnlineCustomer class below which inherits from Customer and adds an email address and override the toString() method.
-    ~~~~
-    public class Customer
-    {
+   
+   Complete the OnlineCustomer class below which inherits from Customer and adds an email address and override the toString() method.
+   ~~~~
+   public class Customer
+   {
        private String name;
        private String address;
 

@@ -97,11 +97,13 @@ As seen in the code below, the ``equals`` method that is inherited from the ``Ob
 
 |CodingEx| **Coding Exercise**
 
-Try to guess what this code will print out before running it.
+
 
 .. activecode:: ObjEquals
    :language: java
 
+   Try to guess what this code will print out before running it.
+   ~~~~
    public class Person
    {
       private String name;
@@ -165,11 +167,12 @@ Any class can override the inherited ``equals`` method by providing a method wit
 
 |CodingEx| **Coding Exercise**
 
-Try to guess what this code will print out before running it.
 
 .. activecode:: OverrideEquals
    :language: java
 
+   Try to guess what this code will print out before running it.
+   ~~~~
    public class Person
    {
       private String name;

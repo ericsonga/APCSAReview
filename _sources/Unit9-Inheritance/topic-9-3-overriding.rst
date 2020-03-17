@@ -372,10 +372,10 @@ The following Pet class keeps track of a pet's name and type and has a construct
 .. activecode:: challenge-9-3-Pet-Sounds
    :language: java
    
-    Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out "Woof!" or "Meow!".
-    ~~~~
-    public class Pet
-    {
+   Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out "Woof!" or "Meow!".
+   ~~~~
+   public class Pet
+   {
        private String name;
        private String type;
 
