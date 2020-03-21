@@ -36,11 +36,11 @@ The actual parameters given to super() are used to initialize the inherited inst
 
     public class Employee extends Person
     {
-        public class Employee()
+        public Employee()
         {
             super(); // calls the Person() constructor
         }
-        public class Employee(String theName)
+        public Employee(String theName)
         {
             super(theName); // calls Person(theName) constructor
         }
