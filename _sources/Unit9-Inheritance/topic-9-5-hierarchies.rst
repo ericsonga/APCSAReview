@@ -180,7 +180,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
    
    public class Pet
    {
-       sprivate String name;
+       private String name;
        private String type;
 
        public Pet(String n, String t)
