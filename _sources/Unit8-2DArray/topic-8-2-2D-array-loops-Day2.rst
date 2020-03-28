@@ -195,7 +195,11 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 .. |repl.it project| raw:: html
 
-   <a href= "https://repl.it/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it project</a>
+   <a href= "https://repl.it/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+
+.. |repl 2| raw:: html
+
+   <a href= "https://repl.it/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
 
 
 .. raw:: html
@@ -366,7 +370,7 @@ Scroll down to the bottom of the following code and take a look at the switchCol
       }
     } 
 
-Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. Test it in the active code above or on |repl.it project| or your own IDE to see what it does.  
+Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. You can test it in the active code above or on this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result)  or your own IDE to see what it does.  
 
 Here are some more exercises from the |Picture Lab|:
 
