@@ -161,8 +161,8 @@ Apply the grading rubric shown above as you answer the following questions.
    :answer_a: Yes
    :answer_b: No
    :correct: b
-   :feedback_a: What if b is equal to c but both are less than a?
-   :feedback_b: This does not always compute the price correctly (when b is equal to c and they are both less than a).  
+   :feedback_a: What if b is equal to c but both are greater than a?
+   :feedback_b: This does not always compute the price correctly (when b is equal to c and they are both greater than a, it should return b+c, not a+b).  
 
    Should the student earn 1 point for correctly calculating the price and making it available to be returned from ``getPrice``?
    

@@ -27,14 +27,17 @@
     :align: top
     :alt: finish exam
    
-Post Test
--------------
+Post Test and Survey
+-------------------------
 
 The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability, and complete the few survey questions at the bottom too. 
 
 Please make sure you are logged in on Runestone so that your answers are saved. Click the |start| button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take. Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed. 
 
 Please note that this is a difficult exam. We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.
+
+Post-Test
+============
 
 .. timed:: postexam2
     
@@ -620,6 +623,9 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
          }
      
      
+Post-Survey
+============
+
 .. poll:: qprogrammingpost
    :option_1: beginner programmer
    :option_2: intermediate programmer
