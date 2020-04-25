@@ -36,11 +36,11 @@ The actual parameters given to super() are used to initialize the inherited inst
 
     public class Employee extends Person
     {
-        public class Employee()
+        public Employee()
         {
             super(); // calls the Person() constructor
         }
-        public class Employee(String theName)
+        public Employee(String theName)
         {
             super(theName); // calls Person(theName) constructor
         }
@@ -250,11 +250,11 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
        
 .. activecode:: challenge-9-2-Square-Rectangle
   :language: java
-  
-    Create a Square class that inherits from Rectangle.
-    ~~~~
-    class Rectangle 
-    {
+
+  Create a Square class that inherits from Rectangle.
+  ~~~~
+  class Rectangle 
+  {
       private int length;
       private int width;
 
@@ -281,11 +281,11 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
         System.out.println();
       }
 
-    }
+  }
 
-    // 1. Make the class square inherit from Rectangle
-    public class Square 
-    {
+  // 1. Make the class square inherit from Rectangle
+  public class Square 
+  {
        // 2. Add a Square no-argument constructor
        
        // 3. Add a Square constructor with 1 argument for a side
@@ -300,7 +300,7 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
           // Square s = new Square(3);
           // s.draw();
        }
-    }
+  }
 
 .. |repl.it Java Swing code| raw:: html
 

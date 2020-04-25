@@ -104,10 +104,10 @@ Notice that in the following code, the print method has a parameter of type Pers
 .. activecode:: superclassMethod
   :language: java 
   
-    Which toString() method is called below? What would happen if you commented out the Student toString() method? Which one would be called now?
-    ~~~
-    public class Tester 
-    {
+  Which toString() method is called below? What would happen if you commented out the Student toString() method? Which one would be called now?
+  ~~~~
+  public class Tester 
+  {
        // This will implicitly call the toString() method of object p
        public void print(Person p)
        {
@@ -173,14 +173,14 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
 
 .. activecode:: superclassArray
   :language: java     
-   
-   Scroll down to look at the Dog class and add a similar Cat class that extends Pet. Scroll back to the main method and add some Cat objects to the ArrayList too. Does the petList work with Cats too?
-   ~~~~
-   import java.util.*; // for ArrayList
+  
+  Scroll down to look at the Dog class and add a similar Cat class that extends Pet. Scroll back to the main method and add some Cat objects to the ArrayList too. Does the petList work with Cats too?
+  ~~~~
+  import java.util.*; // for ArrayList
    
    public class Pet
    {
-       sprivate String name;
+       private String name;
        private String type;
 
        public Pet(String n, String t)
@@ -273,7 +273,7 @@ In the DiscountedItem subclass,
   
   Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Try adding discounted items to the cart in main.
   ~~~~
-    import java.util.*;
+  import java.util.*;
 
     /** 
        The ShoppingCart class has an ArrayList of Items.
