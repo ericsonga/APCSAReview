@@ -90,7 +90,7 @@ Check your understanding of the question
 .. mchoice:: delim_cu_mc_3
    :answer_a: int
    :answer_b: String
-   :answer_c: List
+   :answer_c: ArrayList
    :answer_d: double
    :correct: c
    :feedback_a: Check again.
