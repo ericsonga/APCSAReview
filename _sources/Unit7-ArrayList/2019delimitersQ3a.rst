@@ -164,7 +164,12 @@ This implies that the code needs to create an empty ``ArrayList`` of type ``Stri
 Write the Code
 ==================
 
-Complete the method ``getDelimitersList`` below.  The main method contains code to test your solution.
+A string containing text and possibly delimiters has been split into *tokens* and stored in
+``String[] tokens``. Each token is either an open delimiter, a close delimiter, or a substring that is not a
+delimiter. You will write the method ``getDelimitersList``, which returns an ``ArrayList``
+containing all the open and close delimiters found in ``tokens`` in their original order.
+
+Write the method getDelimitersList in the code below. The main method contains code to test your solution.
 
 .. activecode:: frq2019Q3A-delim
    :language: java
