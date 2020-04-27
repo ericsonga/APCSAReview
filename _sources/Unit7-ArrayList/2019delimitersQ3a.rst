@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix:  8-22-
+   :prefix:  7-4-9-
    :start: 1
 
 Free Response - Delimiters A
@@ -55,14 +55,13 @@ Check your understanding of the question
     :iscode:
     :feedback: Variable declarations start with a type and then a name.
 
-    :click-incorrect:A string:endclick::click-incorrect: containing text and possibly delimiters has been split into *tokens* and stored inTest2:endclick:
-    :click-correct:String[] tokens:endclick:. :click-incorrect:Each token is either an open delimiter, a close delimiter, or a substring that is not a
-    delimiter:endclick:. :click-incorrect: You will write the method :endclick::click-incorrect:getDelimitersList:endclick:, :click-incorrect: which returns an:endclick: :click-correct:ArrayList:endclick::click-incorrect:
-    containing all the open and close delimiters found in tokens in their original order.:endclick:
+    :click-incorrect:A string:endclick::click-incorrect: containing text and possibly delimiters has been split into *tokens* and stored in:endclick: :click-correct:String[] tokens:endclick:. 
+    :click-incorrect:Each token is either an open delimiter, a close delimiter, or a substring that is not a delimiter:endclick:. :click-incorrect: You will write the method:endclick: :click-incorrect: getDelimitersList:endclick:, :click-incorrect:which returns an:endclick: :click-correct:ArrayList:endclick:
+    :click-incorrect: containing all the open and close delimiters found in tokens in their original order.:endclick:
 
 
 .. mchoice:: delim_cu_mc_1
-   :answer_a: array
+   :answer_a: String array
    :answer_b: List
    :answer_c: String
    :answer_d: ArrayList
