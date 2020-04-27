@@ -64,6 +64,28 @@ You can set one variable's value to a *copy* of the value of another variable.  
 
 Click on this cool |Java visualizer| to step through the code. Click on the Forward button at the bottom of the code to see how the values of the variables change.
 
+ 
+.. codelens:: asgn-viz1
+    :language: java 
+ 
+    public class Test2
+    {
+      public static void main(String[] args)
+      {
+        int x = 3;
+        int y = 2;
+        System.out.println(x);
+        System.out.println(y);
+        x = y;
+        System.out.println(x);
+        System.out.println(y);
+        y = 5;
+        System.out.println(x);
+        System.out.println(y);
+      }
+    }
+
+
 .. only works with https
 
 .. raw:: html
