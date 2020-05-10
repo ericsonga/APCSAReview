@@ -190,3 +190,4 @@ We encourage you to work in pairs or groups to tackle the following challenging 
    2016freeresponseQ4A.rst
    2016freeresponseQ4B.rst
    2019delimitersQ3a.rst
+   2019delimitersQ3b.rst
