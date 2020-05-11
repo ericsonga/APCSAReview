@@ -21,7 +21,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    System.out.println(lastName);
    =====
-   System.out.printlln(firstname); #distractor
+   System.out.println(firstname); #distractor
 
 
 .. parsonsprob:: ch4ex2muc
