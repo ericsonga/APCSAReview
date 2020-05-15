@@ -71,6 +71,9 @@ The code below has a main method for testing.  Write the constructor for the ``R
 .. datafile:: RandomStringChooser.java
    :hide:
 
+   import java.util.List;
+   import java.util.ArrayList;
+   
    public class RandomStringChooser
    {
        /* field */
