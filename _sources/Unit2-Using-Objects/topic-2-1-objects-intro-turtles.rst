@@ -19,6 +19,8 @@
     :align: middle
     :alt: groupwork
 
+.. datafile:: turtleClasses.jar
+
 .. |repl| raw:: html
 
    <a href="https://repl.it" target="_blank" style="text-decoration:underline">repl.it</a>
