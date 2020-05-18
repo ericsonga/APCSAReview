@@ -44,7 +44,7 @@ The ``add(index,obj)`` method adds the passed object at the passed index, but fi
    {
       public static void main(String[] arts)
       {
-         List list1 = new ArrayList();
+         List<Integer> list1 = new ArrayList<Integer>();
          list1.add(new Integer(1));
          System.out.println(list1);
          list1.add(new Integer(2));
@@ -75,7 +75,7 @@ The code below has the same result as the code above.  The compiler will automat
    {
       public static void main(String[] arts)
       {
-         List list1 = new ArrayList();
+         List<Integer> list1 = new ArrayList<Integer>();
          list1.add(1);
          System.out.println(list1);
          list1.add(2);
