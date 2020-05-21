@@ -42,6 +42,12 @@ Why Programming? Why Java?
 
 What do Minecraft, Android phones, and Netflix have in common? They're all programmed in Java! Here is a |video of Notch|, the creator of the popular game Minecraft, programming in Java.  Many of the apps you use in an Android phone or tablet are also written in Java. If you've used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a **programming language** that is used worldwide to create software that we all use.
 
+The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces this first lesson in CSAwesome.
+
+.. youtube:: Fc-BQzPbJmU
+    :width: 800
+    :align: center
+
 
 .. |runbutton| image:: Figures/run-button.png
     :height: 20px
