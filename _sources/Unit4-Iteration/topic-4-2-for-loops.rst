@@ -74,27 +74,43 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
 |CodingEx| **Coding Exercise**
 
 
-
 .. activecode:: forloop
    :language: java
+   :autograde: unittest
    
-   Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10? Can you make it count by 2s? Can you make it count backwards?
+   Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10? 
    ~~~~
-   public class ForLoopTest
+   public class ForLoop
    {
       public static void main(String[] args)
       {
         for(int count = 1; count <= 5; count++)
         {
            System.out.println(count);
-        }
- 
+        } 
       }
    }
+   
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("ForLoop", "main");
+            String expect = "2\n3\n4\n5\n6\n7\n8\n9\n10\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+   }
+   
+.. For an extra challenge, see if you can make the loop above count by 2s backwards!
 
 |CodingEx| **Coding Exercise**
-
-
 
 .. activecode:: forloopfromwhile
    :language: java
