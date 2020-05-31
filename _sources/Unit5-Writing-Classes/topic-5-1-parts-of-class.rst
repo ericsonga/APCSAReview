@@ -382,99 +382,103 @@ In this project, you will create a class that can tell riddles like the followin
   ====
   // Test Code for Lesson 5.1.5 - Riddle
   // @author Kate McDonnell
+  // Test Code for Lesson 5.1.5 - Riddle
   import static org.junit.Assert.*;
-  import org.junit.*;;
+  import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-    @Before
-    public void setUp()
-    {
-        super.setUp();
-        
-        Object[] values = new Object[]{"Question", "Answer"};
-        setDefaultValues(values);
-    }
-    
-    @Test
-    public void testPrintQuestion() throws IOException
-    {
-        String output = getInstanceMethodOutput("Riddle", "printQuestion");
-        String expect = "Question";
+        public RunestoneTests()
+        {
+            super("Riddle"); // class name / location of main
 
-        boolean passed = getResults(expect, output, "Checking method printQuestion()");
-        assertTrue(passed);
-    }
-
-    @Test
-    public void testPrintAnswer() throws IOException
-    {
-        String output = getMethodOutput("Riddle", "printAnswer");
-        String expect = "Answer";
-
-        boolean passed = getResults(expect, output, "Checking method printAnswer()");
-        assertTrue(passed);
-    }
-    
-    @Test
-    public void testDefaultConstructor()
-    {
-        String[] args = {"Question 1", "Answer 1"};
-        String output = checkDefaultConstructor("Riddle");
-        String expect = "fail";
-
-        boolean passed = getResults(expect, output, "Checking default constructor");
-        assertTrue(passed);
-    }
-
-    @Test
-    public void testConstructor()
-    {
-        String[] args = {"Question 1", "Answer 1"};
-        String output = checkConstructor("Riddle", args);
-        String expect = "pass";
-
-        boolean passed = getResults(expect, output, "Checking constructor with parameters");
-        assertTrue(passed);
-    }
-
-    @Test
-    public void testVariableTypes()
-    {
-        String varTypes = "String String";
-        String output = testInstanceVariableTypes("Riddle", varTypes.split(" "));
-
-        boolean passed = getResults(varTypes, output, "Checking Instance Variable Type(s)");
-        assertTrue(passed);
-    }
-    
-    @Test
-    public void testPrivateVariables()
-    {
-        String expect = "2 Private";
-        String output = testPrivateInstanceVariables("Riddle");
-
-        boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
-        assertTrue(passed);
-    }
-    
-    @Test
-    public void testMain() throws IOException
-    {
-        String output = getMethodOutput("Riddle", "main");//.split("\n");
-        String expect = "6 line(s) of text";
-        String actual = " line(s) of text";
-
-        if (output.length() > 0) {
-            actual = output.split("\n").length + actual;
-        } else {
-            actual = output.length() + actual;
+            Object[] values = new Object[]{"Question", "Answer"};
+            setDefaultValues(values);
         }
-        boolean passed = getResults(expect, actual, "Checking main method");
-        assertTrue(passed);
-     }
+
+        @Test
+        public void testPrintQuestion()
+        {
+            String output = getMethodOutput("printQuestion");
+            String expect = "Question";
+
+            boolean passed = getResults(expect, output, "Checking method printQuestion()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrintAnswer()
+        {
+            String output = getMethodOutput("printAnswer");
+            String expect = "Answer";
+
+            boolean passed = getResults(expect, output, "Checking method printAnswer()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testDefaultConstructor()
+        {
+            String[] args = {"Question 1", "Answer 1"};
+            String output = checkDefaultConstructor();
+            String expect = "fail";
+
+            boolean passed = getResults(expect, output, "Checking default constructor");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructor()
+        {
+            String[] args = {"Question 1", "Answer 1"};
+            String output = checkConstructor(args);
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking constructor with parameters");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testVariableTypes()
+        {
+            String varTypes = "String String";
+            String output = testInstanceVariableTypes(varTypes.split(" "));
+
+            boolean passed = getResults(varTypes, output, "Checking Instance Variable Type(s)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariables()
+        {
+            String expect = "2 Private";
+            String output = testPrivateInstanceVariables();
+
+            boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+
+            String expect = "6 line(s) of text";
+            String actual = " line(s) of text";
+
+            if (output.length() > 0) {
+                actual = output.split("\n").length + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = getResults(expect, actual, "Checking main method");
+            assertTrue(passed);
+        }
     }
+
 
 Summary
 ----------

@@ -101,7 +101,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
         @Test
         public void testMain() throws IOException
         {
-            String output = getMethodOutput("ForLoop", "main");
+            String output = getMethodOutput("main");
             String expect = "2\n3\n4\n5\n6\n7\n8\n9\n10\n";
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
