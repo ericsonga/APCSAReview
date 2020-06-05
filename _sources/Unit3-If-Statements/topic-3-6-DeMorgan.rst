@@ -23,14 +23,26 @@
 
     <style>    td { text-align: left; } </style>
     
-Equivalent Boolean Expressions (DeMorgan's Laws)
-================================================
+Equivalent Boolean Expressions (De Morgan's Laws)
+=================================================
 
 ..	index::
-	single: DeMorgan's Laws
+	single: De Morgan's Laws
 	single: negation
-	
-DeMorgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an AND (&&) or OR (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state the following equivalencies. Here's an easy way to remember De Morgan's Laws: **move the NOT inside, AND becomes OR** and **move the NOT inside, OR becomes AND**.
+
+What if you heard a rumor about a senior at your high school? And then you heard that the rumor wasn't true. Which part of "a senior at your high school" wasn't true? Maybe they weren't a senior? Or maybe they didn't go to your high school? You could write this as a logic statement like below using negation (!) and the AND (&&) operator since both parts have to be true for the whole statement to be true. (Thank you to Kevin Saxton from Kent School, CT for this example.)
+
+.. code-block:: java 
+
+        !(a && b)
+        
+        a = "senior"
+        b = "at our high school"
+        
+
+In this lesson, you will learn about De Morgan's Laws which simplify statements like this. We know that !(a senior at our high school) could mean !(a senior) or !(at our high school). Let's learn more about De Morgan's Laws.
+
+De Morgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an AND (&&) or OR (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state the following equivalencies. Here's an easy way to remember De Morgan's Laws: **move the NOT inside, AND becomes OR** and **move the NOT inside, OR becomes AND**.
 
 .. figure:: Figures/demorgan.png
     :width: 400px
@@ -46,6 +58,15 @@ In Java, De Morgan's Laws are written with the following operators:
     
     -  **!(a || b)** is equivalent to **!a && !b** 
     
+Going back to our example above, !(a senior && at our high school) is equivalent to !(a senior) or !(at our high school):
+
+.. code-block:: java 
+
+        !(a && b) is equivalent to !a || !b
+        
+        a = "senior"
+        b = "at our high school"
+        
 You can also simplify negated boolean expressions that have relational operators like <, >, ==. You can  remove negation by moving it inside and flipping the relational operator to its opposite sign. For example, not (c equals d) is the same as saying c does not equal d.  An easy way to remember this is **Move the NOT inside, flip the sign** (== becomes !=, < becomes >=, and > becomes <=).
 
 
@@ -56,7 +77,7 @@ You can also simplify negated boolean expressions that have relational operators
   - !(c <= d) is equivalent to (c > d)
   - !(c >= d) is equivalent to (c < d)
 
-Although you do not have to memorize DeMorgan's Laws for the CS A Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) == !a || !b by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
+Although you do not have to memorize De Morgan's Laws for the CS A Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) == !a || !b by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
 
 +-------+-------+-----------+----------+
 | a     | b     | !(a && b) | !a || !b |
@@ -70,7 +91,7 @@ Although you do not have to memorize DeMorgan's Laws for the CS A Exam, you shou
 | false | false | true      | true     |
 +-------+-------+-----------+----------+
 
-Often, you can simplify boolean expressions to create equivalent expressions. For example, applying DeMorgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)`` as seen in the figure below. This can then be simplified further by moving the not operator inside and flipping the relation operators. So, ``!(x < 3) || !(y > 2)`` is simplified to ``(x >= 3 || y <= 2)`` where the relational operators are flipped and the negation is removed. These two simplification steps are seen below. 
+Often, you can simplify boolean expressions to create equivalent expressions. For example, applying De Morgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)`` as seen in the figure below. This can then be simplified further by moving the not operator inside and flipping the relation operators. So, ``!(x < 3) || !(y > 2)`` is simplified to ``(x >= 3 || y <= 2)`` where the relational operators are flipped and the negation is removed. These two simplification steps are seen below. 
 
 .. figure:: Figures/demorganex.png
     :width: 400px

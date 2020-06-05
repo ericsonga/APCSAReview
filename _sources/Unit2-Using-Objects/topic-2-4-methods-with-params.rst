@@ -192,7 +192,7 @@ Tracing Methods
 You will not write your own methods until Unit 5, but you should be able to trace and interpret method calls like below. 
 
 Here is another version of the Old MacDonald Song with a more powerful abstraction. The method verse has 2 parameters for the animal and the noise it makes, so that it can be used for any animal.
-Use the |Java Visualizer| to step through the code.
+Use the Code Lens button or this |Java Visualizer| to step through the code.
 
 .. |Java visualizer| raw:: html
 

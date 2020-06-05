@@ -132,7 +132,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
         @Test
         public void testMain() throws IOException
         {
-            String output = getMethodOutput("Person", "main");
+            String output = getMethodOutput("main");
             boolean passed = getResults(output, output, "Expected output from main");
             assertTrue(passed);
         }
