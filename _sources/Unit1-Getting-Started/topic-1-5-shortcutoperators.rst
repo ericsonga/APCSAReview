@@ -42,7 +42,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
 .. activecode:: lcpp
    :language: java
    
-   Run the code below to see what the ++ increment operator does.
+   Run the code below to see what the ++ increment operator does. Remember that you can use the Code Lens button to see it in the visualizer.
    ~~~~
    public class Test2
    {
@@ -118,14 +118,23 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
 
 Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end. 
 
-**Code Tracing** is a technique used to simulate a dry run through the code or pseudocode line by line by hand as if you are the computer executing the code. Tracing can be used for debugging or proving that your program runs correctly or for figuring out what the code actually does. Trace tables can be used to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column in a table and keep track of its value throughout the program. Some trace tables also keep track of the output and the line number you are currently tracing.
+**Code Tracing** is a technique used to simulate a dry run through the code or pseudocode line by line by hand as if you are the computer executing the code. Tracing can be used for debugging or proving that your program runs correctly or for figuring out what the code actually does. Trace tables can be used to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column or row in a table and keep track of its value throughout the program. Some trace tables also keep track of the output and the line number you are currently tracing.
 
-== == == ======
-x  y  z  Output
--- -- -- ------
-== == == ======
+.. figure:: Figures/traceTable.png
+    :width: 150px
+    :align: center
+    :figclass: align-center
 
- .. code-block:: java 
+or
+
+.. figure:: Figures/traceInline.png
+    :width: 220px
+    :align: center
+    :figclass: align-center
+
+Trace through the following code:
+
+.. code-block:: java 
 
      int x = 0;
      int y = 5;

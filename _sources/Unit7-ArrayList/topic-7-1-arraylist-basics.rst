@@ -138,7 +138,7 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
    In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
    ~~~~
    import java.util.*; // import everything at this level
-   public class Test
+   public class ArrayListDeclare
    {
        public static void main(String[] args)
        {
@@ -160,7 +160,7 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
    Demonstrating a NullPointerException.
    ~~~~
    import java.util.*; // import everything at this level
-   public class Test
+   public class ArrayListCreateStr
    {
        public static void main(String[] args)
        {
@@ -181,7 +181,7 @@ Here's an example of a Integer ArrayList:
    :language: java
 
    import java.util.*; // import everything at this level
-   public class Test
+   public class ArrayListCreateInt
    {
        public static void main(String[] args)
        {

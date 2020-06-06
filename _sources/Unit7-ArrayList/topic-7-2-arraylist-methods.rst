@@ -91,7 +91,7 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
    Run the code below to see how the list changes as each object is added to the end.  Notice that we added the same string to the list more than once.  Lists can hold duplicate objects. Can you add your name to the list and then print out the list?
    ~~~~
    import java.util.*;  // import all classes in this package.
-   public class Test
+   public class listAdd1
    {
       public static void main(String[] args)
       {
@@ -176,7 +176,7 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
    What will the code below print out? Try figuring it out before running it. Remember that ArrayLists start at index 0 and that the add(index,obj) always has the index as the first argument.
    ~~~~    
    import java.util.*;  // import all classes in this package.
-   public class Test
+   public class listAddInt2
    {
       public static void main(String[] arts)
       {
@@ -324,7 +324,7 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
    What will the following code print out? Try to guess before you run it. Were you surprised? Read the note below.
    ~~~~
    import java.util.*;  // import all classes in this package.
-   public class Test
+   public class listRem
    {
       public static void main(String[] arts)
       {
@@ -409,7 +409,7 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
    Try to guess what the code below will print before running it. Can you get the last element in the nameList to print it out? Can you set the first element in the list to your name and print out the list?
    ~~~~
    import java.util.*;  // import all classes in this package.
-   public class Test
+   public class listGetSet
    {
       public static void main(String[] args)
       {

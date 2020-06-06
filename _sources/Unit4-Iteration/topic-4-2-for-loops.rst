@@ -321,6 +321,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
 .. activecode:: TurtleSquare
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square?
@@ -348,6 +349,48 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
           world.show(true); 
       }
     }
+    
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleDrawSquare", false);
+        }
+
+        @Test
+        public void test1() throws IOException
+        {
+           String target = "for (int * = #; * ? #; *~)";
+           boolean passed = checkCodeContains("for loop", target);
+           assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String forwards = ".forward()";
+            int count = countOccurences(code, forwards);
+            boolean passed = count == 1;
+            passed = getResults("1 forward()", "" + count  + " forward()", "Should only need forward() once", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String forwards = ".turn(90)";
+            int count = countOccurences(code, forwards);
+            boolean passed = count == 1;
+            passed = getResults("1 turn(90)", "" + count  + " turn(90)", "Should only need turn(90) once", passed);
+            assertTrue(passed);
+        }
+       }
 
 |Groupwork| Programming Challenge : Turtles Drawing Shapes
 ----------------------------------------------------------
@@ -371,7 +414,7 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
     import java.util.*;
     import java.awt.*;
 
-    public class TurtleDrawSquare
+    public class TurtleDrawShapes
     {
       public static void main(String[] args)
       {
@@ -389,6 +432,7 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
           world.show(true); 
       }
     }
+    
    
    
 Summary
