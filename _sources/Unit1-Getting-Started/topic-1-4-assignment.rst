@@ -40,6 +40,7 @@ If you use a variable to keep score you would probably increment it (add one to 
 
 .. activecode:: lccv1
    :language: java
+   :autograde: unittest   
    
    Try the code below to see how score is incremented by 1.
    ~~~~
@@ -53,6 +54,26 @@ If you use a variable to keep score you would probably increment it (add one to 
         System.out.println(score);
       }
    }
+   ====
+   // Test Code for Lesson 1.4 Expressions - iccv1
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "0\n1\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
    
 You can set one variable's value to a *copy* of the value of another variable.  This won't change the value of the variable that you are copying from.  
 
@@ -67,6 +88,7 @@ Click on this cool |Java visualizer| to step through the code. Click on the Forw
  
 .. codelens:: asgn_viz1
     :language: java 
+    :optional:
  
     public class Test2
     {
@@ -192,6 +214,7 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
 
 .. activecode:: lcop1
    :language: java
+   :autograde: unittest      
    
    Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
    ~~~~
@@ -207,6 +230,26 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
         System.out.println(2 != 3);
       }
    }
+   ====
+   // Test Code for Lesson 1.4 Expressions - iccv1
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "5\n-1\n6\n0\nfalse\ntrue";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
    
 
 
@@ -225,6 +268,7 @@ Operators can be used to create compound expressions with more than one operator
 
 .. activecode:: compound1
    :language: java
+   :autograde: unittest      
    
    In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**.
    ~~~~
@@ -237,6 +281,8 @@ Operators can be used to create compound expressions with more than one operator
         System.out.println(2 + (3 * 2));
       }
    }
+
+   
    
 |Exercise| **AP CSA Sample Question**
 
@@ -285,6 +331,7 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
 
 .. activecode:: lcop2
    :language: java
+   :autograde: unittest      
    
    In the example below, try to guess what it will print out and then run it to see if you are right.
    ~~~~
@@ -298,7 +345,27 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
         System.out.println(9 % 2);
       }
    }
-    
+   ====
+   // Test Code for Lesson 1.4 Expressions - lcop2
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "1\n3\n0\n1";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
+
 
 .. note::
    The result of ``x % y`` when ``x`` is smaller than ``y`` is always ``x``.  The value ``y`` can't go into ``x`` at all (goes in 0 times), since ``x`` is smaller than ``y``, so the result is just ``x``.  So if you see ``2 % 3`` the result is ``2``.  
@@ -347,7 +414,7 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
     :align: middle
     :alt: dog
     
-|dog| In this programming challenge, you will calculate your age, your pet's age, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code. 
+|dog| In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code. 
 
 .. |repl| raw:: html
 
@@ -365,7 +432,7 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 .. activecode:: challenge1-4
    :language: java
 
-   Calculate your age, your pet's age, and your pet's age in dog years.
+   Calculate your age and your pet's age from the birthdates, and your pet's age in dog years.
    ~~~~
    public class Challenge1_4
    {

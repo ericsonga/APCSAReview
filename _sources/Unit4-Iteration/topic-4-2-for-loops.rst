@@ -77,6 +77,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
 .. activecode:: forloop
    :language: java
    :autograde: unittest
+   :practice: T
    
    Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10? 
    ~~~~
@@ -110,10 +111,47 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
    
 .. For an extra challenge, see if you can make the loop above count by 2s backwards!
 
-|CodingEx| **Coding Exercise**
+
+.. activecode:: forloop
+   :language: java
+   :autograde: unittest
+   :practice: T
+   
+   Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop. 
+   ~~~~
+   public class ForLoop
+   {
+      public static void main(String[] args)
+      {
+        for(int count = 1; count <= 5; count++)
+        {
+           System.out.println(count);
+        } 
+      }
+   }
+   
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "5\n3\n1";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+   }
+   
 
 .. activecode:: forloopfromwhile
    :language: java
+   :autograde: unittest
+   :practice: T
    
    Here is a while loop that counts from 5 to 10. Run it and see what it does. Can you change it to a for-loop? Run your for-loop. Does it do the same thing?
    ~~~~
@@ -127,9 +165,51 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
            System.out.println(count);
            count++;
         }
- 
       }
    }
+   ====
+   // Test Code for Lesson 4.1 - For Loop
+
+    import static org.junit.Assert.*;
+
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ForLoopFromWhile");
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "5\n6\n7\n8\n9\n10\n";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testWhile() throws IOException
+        {
+            String target = "while (*)";
+            boolean passed = checkCodeNotContains("while loop", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFor() throws IOException
+        {
+            String target = "for (int * = #; * ? #; *~)";
+            boolean passed = checkCodeContains("for loop", target);
+            assertTrue(passed);
+        }
+    }
    
 |Exercise| **Check your understanding**
 
@@ -358,11 +438,11 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests() {
-            super("TurtleDrawSquare", false);
+            super("TurtleDrawSquare");
         }
 
         @Test
-        public void test1() throws IOException
+        public void test1()
         {
            String target = "for (int * = #; * ? #; *~)";
            boolean passed = checkCodeContains("for loop", target);
@@ -374,8 +454,11 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
         {
             String code = getCode();
             String forwards = ".forward()";
+
             int count = countOccurences(code, forwards);
+
             boolean passed = count == 1;
+
             passed = getResults("1 forward()", "" + count  + " forward()", "Should only need forward() once", passed);
             assertTrue(passed);
         }
@@ -385,12 +468,15 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
         {
             String code = getCode();
             String forwards = ".turn(90)";
+
             int count = countOccurences(code, forwards);
+
             boolean passed = count == 1;
+
             passed = getResults("1 turn(90)", "" + count  + " turn(90)", "Should only need turn(90) once", passed);
             assertTrue(passed);
         }
-       }
+    }
 
 |Groupwork| Programming Challenge : Turtles Drawing Shapes
 ----------------------------------------------------------

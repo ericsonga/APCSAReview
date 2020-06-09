@@ -210,6 +210,7 @@ When you are printing out variables, you can use the **string concatenation** op
  
 .. activecode:: lcdv2
    :language: java
+   :autograde: unittest      
    
    Run the following code to see what is printed. Then, change the values and run it again. Try adding quotes to variables and removing spaces in the print out statements to see what happens.
    ~~~~
@@ -233,6 +234,23 @@ When you are printing out variables, you can use the **string concatenation** op
         String name = "Jose";
         System.out.println("Hi " + name);
       }
+   }
+        
+   ====
+   // should pass if/when they run code
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            boolean passed = getResults(output, output, "Expected output from main");
+            assertTrue(passed);
+        }
    }
    
 .. note::
@@ -320,8 +338,9 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
 
 .. activecode:: lcdv3
    :language: java
+   :autograde: unittest   
    
-   This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
+   This is an example of *assignment dyslexia*, when the coder has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
    ~~~~
    public class Test3
    {
@@ -331,6 +350,24 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
         4 = score; 
         System.out.println(score);
       }
+   }
+        
+   ====
+   // should pass if/when they run code
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "4";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
    }
    
 |Exercise| **Check Your Understanding**
@@ -392,6 +429,7 @@ The keyword **final** can be used in front of a variable declaration to make it 
 
 .. activecode:: Testfn
    :language: java
+   :autograde: unittest 
    
    Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
    ~~~~
@@ -404,6 +442,22 @@ The keyword **final** can be used in front of a variable declaration to make it 
         PI = 4.2; // This will cause a syntax error
       }
    }
+   ====
+   // should pass if/when they run code
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            boolean passed = getResults(output, output, "Expected output from main");
+            assertTrue(passed);
+        }
+   }   
 
 Naming Variables
 --------------------
@@ -436,19 +490,37 @@ The convention in Java and many programming languages is to always start a varia
   
 .. activecode:: lcnv1
    :language: java
+   :autograde: unittest   
 
    Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  Run the code below to see the difference.
    ~~~~
-   public class Test
+   public class CaseSensitiveClass
    {
       public static void main(String[] args)
       {
         int playerScore = 0; // variable name using camel case
         int playerscore = 1; // this is a different variable
-        System.out.println(playerScore);
-        System.out.println(playerscore);
+        System.out.println("playerScore is " + playerScore);
+        System.out.println("playerscore is " + playerscore);
       }
    }
+   
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "playerScore is 0\nplayerscore is 1";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
    
 |Exercise| **Check Your Understanding**
             
@@ -484,6 +556,8 @@ The convention in Java and many programming languages is to always start a varia
 
 .. activecode:: challenge1-3
    :language: java
+   :autograde: unittest   
+   :practice: T
 
    Debug the following code. Can you find the all the bugs and get the code to run? 
    ~~~~
@@ -504,6 +578,22 @@ The convention in Java and many programming languages is to always start a varia
       }
    }
 
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+    @Test
+    public void testMain() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = "Welcome to the weather report on Channel 101 \nThe temperature today is 70.5\nIs it sunny today? true";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+    }
             
 
 Summary

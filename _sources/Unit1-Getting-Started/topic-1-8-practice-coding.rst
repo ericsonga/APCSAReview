@@ -416,7 +416,8 @@ Code Practice with Variables
 
            .. activecode::  ch4Ex2a
               :language: java
-
+              :optional:
+              
               This is the answer to the previous question.
               ~~~~              
               public class Test1
@@ -464,6 +465,7 @@ Code Practice with Variables
 
            .. activecode::  ch4Ex3a
               :language: java
+              :optional:
 
               public class Test1
               {
@@ -510,7 +512,8 @@ Code Practice with Variables
 
            .. activecode::  ch4Ex5a
               :language: java
-
+              :optional:
+              
               This is the answer to the previous question.
               ~~~~              
               public class Test1
@@ -560,7 +563,8 @@ Code Practice with Variables
 
            .. activecode::  ch4Ex6a
               :language: java
-
+              :optional:
+              
               public class Test1
               {
                   public static void main(String[] args)
@@ -608,7 +612,8 @@ Code Practice with Variables
 
            .. activecode::  ch4Ex7a
               :language: java
-
+              :optional:
+              
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -656,7 +661,8 @@ Code Practice with Variables
 
            .. activecode::  ch4Ex8a
               :language: java
-
+              :optional:
+              
               This is the answer to the previous question.
               ~~~~              
               public class Test1
@@ -705,7 +711,8 @@ Code Practice with Variables
 
            .. activecode::  ch4Ex9a
               :language: java
-
+              :optional:
+              
               public class Test1
               {
                   public static void main(String[] args)
@@ -753,7 +760,8 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex1a
               :language: java
-   
+              :optional:
+ 
               This is the answer for the previous question.
               ~~~~   
               public class Test1
@@ -804,7 +812,8 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex2a
               :language: java
-   
+              :optional:
+ 
               This is the answer for the previous question.
               ~~~~
               public class Test1
@@ -855,7 +864,8 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex3a
               :language: java
-             
+              :optional:
+              
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -904,7 +914,8 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex4a
               :language: java
-   
+              :optional:
+                 
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -952,7 +963,8 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex5a
               :language: java
-   
+              :optional:
+                 
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -996,7 +1008,8 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex6a
               :language: java
-   
+              :optional:
+                 
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -1042,6 +1055,7 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex7a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~
@@ -1087,7 +1101,8 @@ Code Practice with Variables
            
            .. activecode::  ch3Ex8a
               :language: java
-   
+              :optional:
+ 
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -1134,7 +1149,8 @@ Code Practice with Variables
            
            .. activecode::  ch3Ex10a
               :language: java
-   
+              :optional:
+                 
               This is the answer to the previous question.
               ~~~~
               public class Test1

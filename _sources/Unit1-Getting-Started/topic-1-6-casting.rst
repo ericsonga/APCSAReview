@@ -49,6 +49,22 @@ The casting operators (int) and (double) are used right next to a number or vari
         System.out.println((double) 1 / 3);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "0\n0.3333333333333333\n0.3333333333333333\n0.3333333333333333\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
 	
 Java assumes that if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.  But, if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result. If there is at least one double in the operation, Java will widen the type of the other operand to double too and return the result in a double. If you have integers and you want a double result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  
 
@@ -63,6 +79,7 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
 
 .. activecode:: nearestInt
    :language: java
+   :autograde: unittest
    
    Run the code below to see how the formula of adding or subtracting .5 and then casting with (int) rounds a positive or negative double number to the closest int.
    ~~~~
@@ -80,7 +97,23 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
         System.out.println("-5.0/3 rounded to nearest negative int: " + nearestNegInt);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "5.0/3 = 1.6666666666666667\n5/3 truncated: 1\n5.0/3 rounded to nearest int: 2\n-5.0/3 rounded to nearest negative int: -2\n";
+
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+     }
 
 
 ..	index::
@@ -124,6 +157,8 @@ Although it's not on the exam, you can format long decimal numbers to just show 
         System.out.println( String.format("%.02f", number) );
       }
    }
+
+
    
 
 |Exercise| **Check your understanding**
