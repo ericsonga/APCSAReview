@@ -23,7 +23,8 @@ Unit 1 AP CS A Exam Weighting: 2.5-5%
    topic-1-5-shortcutoperators.rst
    topic-1-6-casting.rst
    topic-1-7-summary.rst
-   topic-1-8-practice-coding.rst
+   topic-1-8-practice-mixed-code.rst
+   topic-1-9-practice-coding.rst
    Exercises.rst
 
    
