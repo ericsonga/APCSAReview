@@ -300,7 +300,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
    } // end method
    
 
-.. .. shortanswer:: songTestPred
+
 
    
 
@@ -310,6 +310,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
 
 .. activecode:: lcfcp1
    :language: java
+   :autograde: unittest
    
    What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3?
    ~~~~
@@ -338,45 +339,56 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
          SongTest.printPopSong();
       }
    }
+   ====
+   // Test Code for Lesson 4.1 - For Loop
+    import static org.junit.Assert.*;
+
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("SongTest");
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "3 bottles of pop on the wall\n3 bottles of pop on the wall\n3 bottles of pop\nTake one down and pass it around\n2 bottles of pop on the wall\n2 bottles of pop on the wall\n2 bottles of pop\nTake one down and pass it around\n1 bottles of pop on the wall\n1 bottles of pop on the wall\n1 bottles of pop\nTake one down and pass it around\n0 bottles of pop on the wall";
+
+            String expect1 = expect.split("\n")[0];
+            String output1 = output.split("\n")[0];
+
+            boolean passed = output.contains(expect);
+            passed = getResults(expect1, output1, "Print the song from 3", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testMain2() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "5 bottles of pop on the wall\n5 bottles of pop\nTake one down and pass it around\n4 bottles of pop on the wall\n4 bottles of pop on the wall\n4 bottles of pop\nTake one down and pass it around";
+
+            boolean passed = !output.contains(expect);
+
+            String expect1 = expect.split("\n")[0];
+            String output1 = output.split("\n")[0];
+
+            passed = getResults(expect1, output1, "Change the 5 to a 3", passed);
+            assertTrue(passed);
+        }
+    }
   
 The method **printPopSong** prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.  
 
 
-   
-.. .. activecode:: lcfcp2
-   :language: java
-   
-   public class SongTest2
-   {
-
-      public static void printPopSong()
-      {
-         String line1 = " bottles of pop on the wall";
-         String line2 = " bottles of pop";  
-         String line3 = "Take one down and pass it around";  
   
-         for (int i = 0; i < 3; i++)
-         {
-            System.out.println(i + line1);
-            System.out.println(i + line2); 
-            System.out.println(line3); 
-            System.out.println((i - 1) + line1);
-            System.out.println();
-         }
-      }
-      
-      public static void main(String[] args)
-      {
-         SongTest.printPopSong();
-      }
-   }
-   
-.. How many times does the code above print the lines to the song?
-   
-.. .. note::
-   
-   You can also calculate the number of times a loop executes as the value that ends the loop minus the starting value.  In this case the loop ends when i is 3 so (3 - 0 = 3).  
-
 
 .. note::
    
