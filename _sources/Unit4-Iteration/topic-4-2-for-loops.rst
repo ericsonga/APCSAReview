@@ -112,7 +112,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
 .. For an extra challenge, see if you can make the loop above count by 2s backwards!
 
 
-.. activecode:: forloop
+.. activecode:: forloop-backwards
    :language: java
    :autograde: unittest
    :practice: T
