@@ -39,7 +39,7 @@ The casting operators (int) and (double) are used right next to a number or vari
    
    What happens when you divide an int by an int or with a double operand or with the type cast (double) on one of the operands?
    ~~~~
-   public class Test
+   public class OperatorTest
    {
       public static void main(String[] args)
       {
@@ -52,7 +52,7 @@ The casting operators (int) and (double) are used right next to a number or vari
    ====
    import static org.junit.Assert.*;
    import org.junit.*;;
-    import java.io.*;
+   import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {

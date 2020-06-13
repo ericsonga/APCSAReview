@@ -173,8 +173,8 @@ Java has two different print commands to print output to the screen:
         public void testLineCount() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "1 line of output";
-            String actual = " line(s) of output";
+            String expect = "1 output line";
+            String actual = "  output line";
 
             if (output.length() > 0) {
                actual = output.split("\n").length + actual;
@@ -414,7 +414,7 @@ In Java and many text-based coding languages, // is used to mark the beginning o
     :align: left
     :alt: Rubber Duck
     
-In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently.
+In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
 
 Working in pairs, debug the following code. Can you find the all the bugs and get the code to run? 
 
@@ -432,7 +432,7 @@ Working in pairs, debug the following code. Can you find the all the bugs and ge
       {
          System.out.print("Good morning! ")
          system.out.print("Good afternoon!);
-         System.Print "And good evening!";
+         System.Print " And good evening!";
       
    }
            
