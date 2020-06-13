@@ -78,7 +78,8 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
 
 .. activecode:: lccb1
    :language: java
-
+   :autograde: unittest
+  
    The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code below to see this.
    ~~~~
    public class Test1
@@ -93,6 +94,23 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
         System.out.println("Drive carefully");
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Take an umbrella! \nDrive carefully";
+            // space then \n for separate print statements
+            boolean passed = getResults(expect, output, "\nExpected output from main\n");
+            assertTrue(passed);
+        }
+    }
   
 
 

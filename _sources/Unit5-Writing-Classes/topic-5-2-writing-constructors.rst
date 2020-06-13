@@ -138,8 +138,9 @@ If there are no constructors written for a class, Java provides a no-argument **
 
 .. activecode:: class-Fraction
   :language: java
+  :autograde: unittest
 
-  The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Note that this constructor sets the default instance variable values to 1 rather than 0 -- so we don't end up with divide by zero. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer|.     
+  The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Note that this constructor sets the default instance variable values to 1 rather than 0 -- so we don't end up with divide by zero. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer| by clicking on the Code Lens button below.     
   ~~~~
   public class Fraction
   {
@@ -177,12 +178,36 @@ If there are no constructors written for a class, Java provides a no-argument **
         f2.print();
      }
   }
+  ====
+  // Test Code for Lesson 5.2.0.1 - Fraction
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "1/1\n1/2";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+    }
   
 |CodingEx| **Coding Exercise**
 
 .. activecode:: class-Car
   :language: java
-
+  :autograde: unittest
+  :practice: T
+  
   The following class defines a Car with the instance variables model and year, for example a Honda 2010 car. However, some of the code is missing. Fill in the code for the 2 constructors that are numbered 1 and 2. And fill in the code to call the constructors in the main method numbered 3. The car1 object should test the first constructor with default values and the car2 object should test the second constructor to create a Honda 2010 car. Run your program and make sure it works and prints out the information for both cars.
   ~~~~
   public class Car
@@ -225,6 +250,28 @@ If there are no constructors written for a class, Java provides a no-argument **
         car2.print();
      }
   }
+  ====
+  // Test Code for Lesson 5.2.0 - Car
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Car model: \nCar year: 2019\nCar model: Honda\nCar year: 2010";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+    }
 
 Constructors are used to set the initial state of an object by initializing its instance variables. The examples above have instance variables that are primitive types, but you can have other objects, reference types, as instance variables. For example, a Person class could have an Address object as an instance variable, and the Address class could have String instance variables for the street, city, and state. 
 
@@ -259,6 +306,7 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
 .. activecode:: challenge-5-2-Student-class
   :language: java
+  :autograde: unittest
 
   /** class Student 
    * with 4 instance variables,
@@ -270,7 +318,94 @@ We encourage you to work in pairs for this challenge to create a Student class w
    
    
    }
-  
+   ====
+   // Test Code for Lesson 5.2.1 - Challenge - Student
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Student");
+        }
+
+        @Test
+        public void testDefaultConstructor()
+        {
+            String output = checkDefaultConstructor();
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking default constructor");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructor4()
+        {
+            String output = checkConstructor(4);
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking constructor with 4 parameters");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructor1()
+        {
+            String output = checkConstructor(1);
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking constructor with 1 parameter");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariables()
+        {
+            String expect = "4 Private";
+            String output = testPrivateInstanceVariables();
+
+            boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrint() throws IOException
+        {
+            String output = getMethodOutput("print");
+            String expect = "More than 15 characters";
+            String actual = " than 15 characters";
+
+            if (output.length() < 15) {
+                actual = "Less" + actual;
+            } else {
+                actual = "More" + actual;
+            }
+            boolean passed = getResults(expect, output, "Checking print method");
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");//.split("\n");
+            String expect = "4 line(s) of text";
+            String actual = " line(s) of text";
+
+            if (output.length() > 0) {
+                actual = output.split("\n").length + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = getResults(expect, actual, "Checking main method");
+            assertTrue(passed);
+        }
+        }
   
 Summary
 --------

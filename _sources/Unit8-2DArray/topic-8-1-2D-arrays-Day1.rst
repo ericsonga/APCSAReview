@@ -211,7 +211,7 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
   
   What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained in the next lesson.
   ~~~~
-  public class Test 
+  public class TicketInfo 
   {
      public static void main(String[] args)
      {

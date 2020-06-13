@@ -87,6 +87,7 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
  
 .. activecode:: lcfc1
    :language: java
+   :autograde: unittest    
 
    Run this code to see the output below it. Then change the code to print your name, for example "Hi Pat!", and run again. 
    ~~~~    
@@ -97,7 +98,23 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
          System.out.println("Hi there!");
       }
    }
+     
+   ====
+   // should pass if/when they run code
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            boolean passed = getResults(output, output, "Expected output from main");
+            assertTrue(passed);
+        }
+   }
 
 
 
@@ -122,8 +139,9 @@ Java has two different print commands to print output to the screen:
 
 .. activecode:: printCommands
    :language: java
+   :autograde: unittest 
 
-   Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there?
+   Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there keeping all 3 print statements?
    ~~~~    
    public class MyClass
    {
@@ -133,6 +151,39 @@ Java has two different print commands to print output to the screen:
          System.out.println("there");
          System.out.print("!");
       }
+   }
+        
+   ====
+   // should pass if/when they run code
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Hi there!";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+        @Test
+        public void testLineCount() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "1 line of output";
+            String actual = " line(s) of output";
+
+            if (output.length() > 0) {
+               actual = output.split("\n").length + actual;
+            } else {
+               actual = output.length() + actual;
+           }
+           boolean passed = getResults(expect, actual, "Checking lines of output");
+           assertTrue(passed);
+        }
    }
    
 Most command keywords in Java must be in lowercase, but class names such as System and String are capitalized. Commands in Java must end with a semicolon (;). Think of the semicolon (;) in Java like a period (.) in English. You use a semicolon (``;``) to show the end of a Java **statement**, just the way you use a period (.) to show the end of an English sentence.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
@@ -225,6 +276,8 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
 
 .. activecode:: sc2error1
    :language: java
+   :autograde: unittest 
+   :practice: T
 
    Fix the code below.
    ~~~~
@@ -234,6 +287,23 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
       {
          System.out.println("Hi there!);
       }
+   }
+           
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Hi there!";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
    }
 
 
@@ -245,6 +315,8 @@ Click on the |runbutton| button below to try and run the following code.  Look f
 
 .. activecode:: sc2error2
    :language: java
+   :autograde: unittest 
+   :practice: T
 
    Fix the code below.
    ~~~~
@@ -255,7 +327,25 @@ Click on the |runbutton| button below to try and run the following code.  Look f
          System.out.println("Hi there!";
       }
    }
-   
+           
+   ====
+   // should pass if/when they run code
+   // This doesn't really work because it filters out the \n
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Hi there!";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+   }
 
     
     
@@ -265,6 +355,8 @@ Click on the |runbutton| button below to try and run the following code.  What i
 
 .. activecode:: sc2error3
    :language: java
+   :autograde: unittest 
+   :practice: T
 
    Fix the code below.
    ~~~~    
@@ -274,6 +366,25 @@ Click on the |runbutton| button below to try and run the following code.  What i
       {
          system.out.println("Hi there!")
       }
+   }
+           
+   ====
+   // should pass if/when they run code
+   // This doesn't really work because it filters out the \n
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Hi there!";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
    }
 
 
@@ -310,6 +421,8 @@ Working in pairs, debug the following code. Can you find the all the bugs and ge
 
 .. activecode:: challenge1-2
    :language: java
+   :autograde: unittest 
+   :practice: T
 
    Fix the code below.
    ~~~~
@@ -321,6 +434,24 @@ Working in pairs, debug the following code. Can you find the all the bugs and ge
          system.out.print("Good afternoon!);
          System.Print "And good evening!";
       
+   }
+           
+   ====
+   // should pass if/when they run code
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Good morning! Good afternoon! And good evening";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
    }
 
 
