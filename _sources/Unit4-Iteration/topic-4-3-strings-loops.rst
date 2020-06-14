@@ -189,8 +189,8 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
 
             boolean passed = getResults(expect, output, "Output should be different", pass);
             assertTrue(passed);
+         }
         }
-}
   
  
 For Loops: Reverse String

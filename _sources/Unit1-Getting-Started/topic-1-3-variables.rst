@@ -559,7 +559,7 @@ The convention in Java and many programming languages is to always start a varia
    :autograde: unittest   
    :practice: T
 
-   Debug the following code. Can you find the all the bugs and get the code to run? 
+   Working in pairs, debug the following code. Can you find the all the bugs and get the code to run? 
    ~~~~
    public class Challenge1_3
    {
