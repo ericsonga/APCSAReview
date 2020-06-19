@@ -122,6 +122,8 @@ To actually create an array after declaring the variable, use the **new** keywor
 
 .. activecode:: lcab1
    :language: java
+   :autograde: unittest
+   :practice: T
    
    In the following code, add another array declaration that creates an array of 5 doubles called prices and another array of 5 Strings called names and corresponding System.out.println commands.
    ~~~~
@@ -136,8 +138,36 @@ To actually create an array after declaring the variable, use the **new** keywor
         // Add an array of 5 Strings called names.
       
         System.out.println("Array highScores declared with size " + highScores.length);
+        // Print out the length of the new arrays
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Test1");
+        }
+
+        @Test
+        public void testDouble() throws IOException
+        {
+            String target = "double [] prices = new double[5];";
+            boolean passed = checkCodeContains(target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testString() throws IOException
+        {
+            String target = "String [] names = new String[5];";
+            boolean passed = checkCodeContains(target);
+            assertTrue(passed);
+        }
+    }
 
 ..	index::
 	pair: array; initialization
@@ -194,6 +224,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
 .. activecode:: lcab2
    :language: java
+   :autograde: unittest   
    
    Try running the code below to see the length. Try adding another value to the highScores initializer list and run again to see the length value change.
    ~~~~
@@ -205,15 +236,47 @@ Arrays know their length (how many elements they can store).  It is a public rea
         System.out.println(highScores.length);
       }
    }
+   ====
+   // Test for Lesson 6.1.2 - While Loop FindAndReplace lclw1
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Test2");
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main").trim();
+            String expect = "6";
+
+            //boolean pass = !output.equals(expect.trim());
+
+            boolean passed = getResults(expect, output, "Did you add another value?");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class Test2 { public static void main (String [] args) { int [] highScores = {99,98,98,88,68}; System.out.println(highScores.length); } }";
+
+            boolean changed = codeChanged(origCode);
+
+            assertTrue(changed);
+
+        }
+    }
 
 
 .. note::
 
    Note that length is an instance variable and not a method, unlike the String ``length()`` method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. The length instance variable is declared as a ``public final int``.  ``public`` means you can access it and ``final`` means the value can't change.
    
-.. .. shortanswer:: arrayQuestions
 
-   What questions do you have about arrays?
 
 |Exercise| **Check your understanding**
    
@@ -361,6 +424,7 @@ If you want to keep track of the top 5 highest scores in a game and the names of
 
 .. activecode:: array-set
    :language: java
+   :autograde: unittest   
    
    Try out the following code which has two parallel arrays, highScores and names. Can you print out Mateo's score? Can you change Sofia's score to 97 using an assignment statement in the code? Can you change the arrays so that they have 6 elements and add your name and score and print them out? 
    ~~~~
@@ -377,6 +441,43 @@ If you want to keep track of the top 5 highest scores in a game and the names of
         System.out.println(names[1] + " has a score of " + highScores[1]);
       }
    }
+   ====
+   // Test for Lesson 6.1.2 - While Loop FindAndReplace lclw1
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Test1");
+        }
+
+        @Test
+        public void test1() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Jamal has a score of 99\nEmily has a score of 98";
+
+            boolean passed = !output.equals(expect);
+
+            passed = getResults(expect, output, "Did you change the main?", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Mateo has a score of 88";
+
+            boolean passed = output.contains("Mateo");
+
+            passed = getResults(expect, output, "Did you print out Mateo?", passed);
+            assertTrue(passed);
+        }
+    }
    
 What happens if you try to access an element that is not there? Try to access a highScore or name at index 7 above to see what happens. The index must be between 0 and the length of the array - 1 or it will give an error message called ArrayIndexOutOfBoundsException. 
 
@@ -425,7 +526,7 @@ Here's a fun String array of image filenames. The following code displays an onl
      // This method will just work in Active Code which interprets html
      public void printHTMLimage(String filename)
      {
-        String baseURL = "https://raw.githubusercontent.com/bhoffman0/APCSA-2019/master/_sources/Unit6-Arrays/6-1-images/";
+        String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
         System.out.print("<img src=" + baseURL + filename + ">");
       }
     }  
@@ -455,6 +556,7 @@ In this challenge, you will create a guide to different countries using arrays.
 
 .. activecode:: challenge-1-6-countries
    :language: java
+   :autograde: unittest        
    
    public class Countries
    {
@@ -479,9 +581,88 @@ In this challenge, you will create a guide to different countries using arrays.
       // This method will just work in Active Code which interprets html
       public void printHTMLimage(String filename)
       {
-        String baseURL = "https://raw.githubusercontent.com/bhoffman0/APCSA-2019/master/_sources/Unit6-Arrays/6-1-images/";
+        String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
         System.out.print("<img src=" + baseURL + filename + ">");
       }
+     }
+     ====
+     // Test for Lesson 6.1 - challenge
+     import static org.junit.Assert.*;
+     import org.junit.*;;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+        public RunestoneTests() {
+            super("Countries");
+        }
+
+        @Test
+        public void test1() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Country Capital Language Image";
+
+            int len = expect.split(" ").length;
+
+            boolean passed = len == 4 && output.contains(".jpg");
+
+            passed = getResults(expect, output, "Did you print all the info?", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "<img src";
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect + "...", output, "Did you uncomment the image code?", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3() throws IOException
+        {
+            String[] lines = new String[10];
+
+            for (int i = 0; i < lines.length; i++)
+            {
+                lines[i] = getMethodOutput("main");
+            }
+
+            int difft = 10;
+
+            for (int i = 0; i < lines.length-1; i++) {
+                if (lines[i].equals(lines[i+1])) {
+                    difft--;
+                }
+            }
+
+            boolean passed = difft > 3;
+
+            passed = getResults("> 3 Countries", difft + " countries", "Did you pick a random country?", passed);
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void testArrays() throws IOException {
+            //System.out.println(program);
+            String program = getCode();
+
+            int arrays = 0;
+            int index = program.indexOf("String[]");
+            while (index >= 0) {
+                arrays++;
+                index = program.indexOf("String[]", index + 7);
+            }
+
+            boolean passed = getResults("5 x String[]", arrays + " x String[]", "Did you declare 4 arrays?");
+            assertTrue(passed);
+        }
      }
     
 Summary

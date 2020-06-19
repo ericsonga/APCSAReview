@@ -248,7 +248,8 @@ When you are printing out variables, you can use the **string concatenation** op
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            boolean passed = getResults(output, output, "Expected output from main");
+            String expect = "The score is 0\nThe price is 23.25\nfalse\ntrue\nHi Jose";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
    }
@@ -454,7 +455,8 @@ The keyword **final** can be used in front of a variable declaration to make it 
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            boolean passed = getResults(output, output, "Expected output from main");
+            String expect = "3.14";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
    }   
@@ -517,7 +519,7 @@ The convention in Java and many programming languages is to always start a varia
         {
             String output = getMethodOutput("main");
             String expect = "playerScore is 0\nplayerscore is 1";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
     }

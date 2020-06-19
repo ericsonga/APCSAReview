@@ -70,7 +70,7 @@ If you use a variable to keep score you would probably increment it (add one to 
         {
             String output = getMethodOutput("main");
             String expect = "0\n1\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
     }
@@ -108,13 +108,6 @@ Click on this cool |Java visualizer| to step through the code. Click on the Forw
     }
 
 
-.. only works with https
-
-.. .. raw:: html
-
-   <div>
-   <iframe width="800" height="600" frameborder="0" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
-   </div>
    
 |Exercise| **Check your understanding**
 
@@ -236,7 +229,6 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
     import org.junit.After;
     import org.junit.Before;
     import org.junit.Test;
-
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -246,7 +238,7 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
         {
             String output = getMethodOutput("main");
             String expect = "5\n-1\n6\n0\nfalse\ntrue";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
     }
@@ -281,6 +273,25 @@ Operators can be used to create compound expressions with more than one operator
         System.out.println(2 + (3 * 2));
       }
    }
+   ====
+   // Test Code for Lesson 1.4 Expressions - compunds
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "8\n10\n8";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
    
    
@@ -361,7 +372,7 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
         {
             String output = getMethodOutput("main");
             String expect = "1\n3\n0\n1";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main",true);
             assertTrue(passed);
         }
     }
@@ -431,8 +442,10 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 
 .. activecode:: challenge1-4
    :language: java
+   :autograde: unittest
+   :practice: T
 
-   Calculate your age and your pet's age from the birthdates, and your pet's age in dog years.
+   Calculate your age and your pet's age from the birthdates, and then your pet's age in dog years.
    ~~~~
    public class Challenge1_4
    {
@@ -460,6 +473,34 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
       
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    public class RunestoneTests extends CodeTestHelper
+    {
+       @Test
+       public void testAsgn1() throws IOException
+       {
+           String target = "age = currentYear - birthYear";
+           boolean passed = checkCodeContains("formula for age", target);
+           assertTrue(passed);
+       }
+       @Test
+       public void testAsgn2() throws IOException
+       {
+           String target = "dogAge = currentYear - dogBirthYear";
+           boolean passed = checkCodeContains("formula for dogAge", target);
+           assertTrue(passed);
+       }
+       @Test
+       public void testAsgn3() throws IOException
+       {
+           String target = "dogYearsAge = dogAge * 7";
+           boolean passed = checkCodeContains("formula for dogYearsAge using dogAge", target);
+           assertTrue(passed);
+       }
+    }
    
 
 Summary

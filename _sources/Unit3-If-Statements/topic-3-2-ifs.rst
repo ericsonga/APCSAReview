@@ -106,8 +106,7 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
         {
             String output = getMethodOutput("main");
             String expect = "Take an umbrella! \nDrive carefully";
-            // space then \n for separate print statements
-            boolean passed = getResults(expect, output, "\nExpected output from main\n");
+            boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
     }

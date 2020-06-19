@@ -132,14 +132,13 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
         @Test
         public void testMain() throws IOException
         {
-            String output = getMethodOutput("main");
-            boolean passed = getResults(output, output, "Expected output from main");
+           String output = getMethodOutput("main");
+            String expect = "Name: Sana\nEmail: sana@gmail.com\nPhone Number: 123-456-7890\nName: Jean\nEmail: jean@gmail.com\nPhone Number: 404 899-9955";
+
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
   }
-  
-  
-.. changed to just 1 constructor using initName as arguments and toString. No getters and setters to begin with.
 
   
 
@@ -152,7 +151,7 @@ Instance Variables
 	pair: class; instance variables
 
 
-**Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance Variables are also called **attributes**, **fields**, or **properties**. 
+**Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance variables are also called **attributes**, **fields**, or **properties**. 
 
 Instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
 

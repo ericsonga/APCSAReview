@@ -406,7 +406,7 @@ AP Practice
             System.out.println("Each person gets " + slices + " slices each");
         }
 
-    What of the following lines would go into ``/* INSERT CODE HERE */`` in the method splitPizza in order to call the ``printSlices`` method to print the number of slices per person correctly? 
+    Which of the following lines would go into ``/* INSERT CODE HERE */`` in the method splitPizza in order to call the ``printSlices`` method to print the number of slices per person correctly? 
     
     - printSlices(slicesPerPerson);
     

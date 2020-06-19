@@ -118,6 +118,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
 
 .. activecode:: time_part_a
    :language: java
+   :autograde: unittest   
 
    /**
     * Objects of the Time class hold a time value for
@@ -228,11 +229,88 @@ Use conditionals (if statements) to check for each of these conditions and take 
 
        }
     }
+    ====
+    // Test Code for Lesson 5.14 - FRQ - Time - Part A
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        private Time[] time = {new Time(0,0,0), new Time(0,0, 58), new Time(0,0, 59), new Time(0,58, 59), new Time(0,59, 59), new Time(23,59, 59)};
+        private String[] expected = {"00:00:01", "00:00:59", "00:01:00", "00:59:00", "01:00:00", "00:00:00"};
+
+        @Test
+        public void test0() throws IOException
+        {
+            Time time = new Time(0, 0, 0);
+            time.tick();
+            String actual = time.toString();
+            String expected = "00:00:01";
+
+            boolean passed = getResults(expected, actual, time.toString() +".tick()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1() throws IOException
+        {
+            int i = 1; 
+            time[i].tick();
+            String actual = time[i].toString();
+            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() throws IOException
+        {
+            int i = 2; 
+            time[i].tick();
+            String actual = time[i].toString();
+            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3() throws IOException
+        {
+            int i = 3; 
+            time[i].tick();
+            String actual = time[i].toString();
+            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4() throws IOException
+        {
+            int i = 4; 
+            time[i].tick();
+            String actual = time[i].toString();
+            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test5() throws IOException
+        {
+            int i = 5; 
+            time[i].tick();
+            String actual = time[i].toString();
+            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            assertTrue(passed);
+        }
+    }
+
 
 **Part b.**  Write the method ``add(Time offset)`` which adds the seconds together and makes sure the result is 59 or less (incrementing the minutes as needed), adds the minutes together and makes sure the result is 59 or less (increments the hours as needed), and adds the hours together (resetting the hours to 0 if it reaches 24).  When you have finished writing the method, click "Run" to test your solution.  The main method has code that will test your solution using several different times.
 
 .. activecode:: time_part_b
    :language: java
+   :autograde: unittest   
 
    /**
     * Objects of the Time class hold a time value for
@@ -349,4 +427,100 @@ Use conditionals (if statements) to check for each of these conditions and take 
 
 
        }
+    }
+    ====
+    // Test Code for Lesson 5.14 - FRQ - Time - Part B
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1() throws IOException
+        {
+            Time time1 = new Time(1,1,1);
+            Time time2 = new Time(2,2,2);
+            time1.add(time2);
+
+            String expected = "03:03:03";
+            String actual = time1.toString();
+
+            String msg = time1.toString() +".add(" + time2.toString() + ")";
+
+            boolean passed = getResults(expected, actual, msg);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() throws IOException
+        {
+            Time time1 = new Time(0,0,59);
+            Time time2 = new Time(0,0,1);
+            time1.add(time2);
+
+            String expected = "00:01:00";
+            String actual = time1.toString();
+
+            boolean passed = getResults(expected, actual, time1.toString() +".add(" + time2.toString() + ")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3() throws IOException
+        {
+            Time time1 = new Time(0,59,0);
+            Time time2 = new Time(0,0,1);
+            time1.add(time2);
+
+            String expected = "00:59:01";
+            String actual = time1.toString();
+
+            boolean passed = getResults(expected, actual, time1.toString() +".add(" + time2.toString() + ")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4() throws IOException
+        {
+            Time time1 = new Time(0,59,59);
+            Time time2 = new Time(0,0,1);
+            time1.add(time2);
+
+            String expected = "01:00:00";
+            String actual = time1.toString();
+
+            boolean passed = getResults(expected, actual, time1.toString() +".add(" + time2.toString() + ")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test5() throws IOException
+        {
+            Time time1 = new Time(23,0,0);
+            Time time2 = new Time(1,0,0);
+            time1.add(time2);
+
+            String expected = "00:00:00";
+            String actual = time1.toString();
+
+            boolean passed = getResults(expected, actual, time1.toString() +".add(" + time2.toString() + ")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test6() throws IOException
+        {
+            Time time1 = new Time(23,59,59);
+            Time time2 = new Time(23,59,59);
+            time1.add(time2);
+
+            String expected = "23:59:58";
+            String actual = time1.toString();
+
+            boolean passed = getResults(expected, actual, time1.toString() +".add(" + time2.toString() + ")");
+            assertTrue(passed);
+        }
     }

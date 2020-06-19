@@ -41,6 +41,7 @@ You may ignore any issues related to integer overflow.
 
 .. activecode:: APLineFRQ
    :language: java
+   :autograde: unittest   
 
    // Declare the APLine class
    {
@@ -66,3 +67,85 @@ You may ignore any issues related to integer overflow.
         System.out.println(onLine1 + " " + onLine2);
      }  
    }
+   ====
+   // Test Code for Lesson 5.15 - FRQ - APLine
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("APLine");
+            // This sets default values for when objects are instantiated
+            Object[] values = new Object[]{3, 2, -6};
+            setDefaultValues(values);
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = " true false";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructor()
+        {
+            String output = checkConstructor(3);
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testGetSlope() throws IOException
+        {
+            double output = Double.parseDouble(getMethodOutput("getSlope"));
+            double expect = -1.5;
+
+            boolean passed = getResults(expect, output, "Checking method getSlope()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testIsOnLine1() throws IOException
+        {
+            Object[] args =  {2, 0};
+            String output = getMethodOutput("isOnLine", args);
+            String expect = "true";
+
+            boolean passed = getResults(expect, output, "Checking method isOnLine(5, -2)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testIsOnLine2() throws IOException
+        {
+            Object[] args =  {5, -2};
+            String output = getMethodOutput("isOnLine", args);
+            String expect = "false";
+
+            boolean passed = getResults(expect, output, "Checking method isOnLine(5, -2)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariables()
+        {
+            String expect = "3 Private";
+            // Will produce a printout with number of private and public variables
+            String output = testPrivateInstanceVariables();
+
+            boolean passed = getResults("3 Private", output, "Checking Instance Variable(s)");
+
+            assertTrue(passed);
+        }
+    }

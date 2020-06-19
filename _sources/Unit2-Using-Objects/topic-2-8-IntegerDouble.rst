@@ -44,8 +44,11 @@ These wrapper classes (defined in the java.lang package) are also useful because
 
 .. activecode:: lcmm1
    :language: java
+   :autograde: unittest
    
-   public class Test
+   What's the minimum and maximum numbers for an int? What happens if you go beyond these limits with - 1 or + 1?
+   ~~~~
+   public class Test1
    {
       public static void main(String[] args)
       {
@@ -55,6 +58,21 @@ These wrapper classes (defined in the java.lang package) are also useful because
         System.out.println(Integer.MAX_VALUE + 1);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "-2147483648\n2147483647\n2147483647\n-2147483648";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
    
 The int type in Java can be used to represent any whole number from -2147483648 to 2147483647.  Why those numbers?  Integers in Java are represented in 2's complement binary and each integer gets 32 bits of space.  In 32 bits of space with one bit used to represent the sign you can represent that many values.  Why is there one more negative number than positive number?  It is because 0 is considered a positive number. 
 
@@ -98,8 +116,11 @@ Here are some more useful methods in the Integer and  Double classes:
 
 .. activecode:: integerMethods
    :language: java
-   
-   public class Test
+   :autograde: unittest
+ 
+   Run the code below to see useful methods in the Interger and Double wrapper classes.
+   ~~~~    
+   public class Test2
    {
       public static void main(String[] args)
       {
@@ -109,21 +130,41 @@ Here are some more useful methods in the Integer and  Double classes:
         System.out.println( d.doubleValue() );
         
         String ageStr = "16";
-        // Integer.parseInt and Double.parseDouble are often used to convert an input string to a number so you can do math on it   
+        // Integer.parseInt and Double.parseDouble are often used to 
+        // convert an input string to a number so you can do math on it. 
         // They are not on the AP exam
         System.out.println("Age " + ageStr + " in 10 years is " + (Integer.parseInt(ageStr) + 10) );
         System.out.println("Note that + with strings does concatenation, not addition: " + (ageStr + 10));      
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "2\n3.5\nAge 16 in 10 years is 26\nNote that + with strings does concatenation, not addition: 1610";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
   
 |Groupwork| Programming Challenge : Debugging
 ----------------------------------------------
 
-Can you find and fix all the bugs in the following code?
+Can you find and fix all the bugs in the following code to use the correct Integer and Double methods and variables?
 
 .. activecode:: challenge2-8-wrapperDebug
    :language: java
+   :autograde: unittest
    
+   Find and fix the bugs below to use the correct Integer and Double methods and variables.
+   ~~~~
    public class Debug
    {
       public static void main(String[] args)
@@ -137,6 +178,29 @@ Can you find and fix all the bugs in the following code?
         System.out.println( i.MAX_VALUE() );
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "2\n5.0\n-2147483648\n2147483647";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+        @Test
+        public void testCode() throws IOException
+        {
+           String target = "Integer.MAX_VALUE";
+           boolean passed = checkCodeContains("MAX_VALUE", target);
+           assertTrue(passed);
+        }
+    }
   
 
 

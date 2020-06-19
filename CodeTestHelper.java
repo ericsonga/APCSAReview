@@ -16,14 +16,14 @@ import org.junit.Test;
  * do not exist.
  *
  * @author  Kate McDonnell
- * @version 0.1.7
- * @since 2020-06-08
+ * @version 0.1.9
+ * @since 2020-06-16
  * 
  * 
  */
 public class CodeTestHelper
 {
-    private boolean replit = true;
+    public static boolean replit = false;
 
     private static String results = "";
     private static String mainOutput = "";
@@ -44,7 +44,7 @@ public class CodeTestHelper
     public CodeTestHelper(String name) {
         setupClass(name);
     }
-
+    /* Do NOT use this constructor *****
     public CodeTestHelper(String name, boolean hasMain) {
         if (hasMain)
             setupClass(name);
@@ -60,6 +60,7 @@ public class CodeTestHelper
             }
         }
     }
+    */
 
     private void setupClass(String name) {
         try {
@@ -115,10 +116,17 @@ public class CodeTestHelper
      */
     public boolean getResults(String expected, String actual, String msg)
     {
-        String clnExp = cleanString(expected.trim());
-        String clnAct = cleanString(actual.trim());
+        expected = expected.trim();
+        actual = actual.trim();
+        
+        boolean passed = containsMatch(actual, expected);
 
-        boolean passed = clnExp.equals(clnAct);
+        if (!passed) {
+            String clnExp = cleanString(expected);
+            String clnAct = cleanString(actual);
+
+            passed = clnExp.equals(clnAct);
+        }
 
         String output = formatOutput(expected, actual, msg, passed);
         results += output + "\n";
@@ -184,6 +192,11 @@ public class CodeTestHelper
     private String formatOutput(String expected, String actual, String msg, boolean passed) 
     {
         String output = "";
+
+        expected = expected.trim();
+        actual = actual.trim();
+        msg = msg.trim();
+        
         if (replit) {
             //expected = expected.replaceAll("\\n", " ").replaceAll("\\r", " ");
             //actual   = actual.replaceAll("\\n", " ").replaceAll("\\r", " ");
@@ -192,6 +205,7 @@ public class CodeTestHelper
         } else {
             expected = expected.replaceAll("\\n", "<br>").replaceAll("\\r", "<br>");
             actual   = actual.replaceAll("\\n", "<br>").replaceAll("\\r", "<br>");
+            msg   = msg.replaceAll("\\n", "<br>").replaceAll("\\r", "<br>");
             output = "Expected: " + expected + "\tActual: " + actual + "\tMessage: " + msg + "\tPassed: " + passed;
         }
         
@@ -1085,16 +1099,18 @@ public class CodeTestHelper
         for(int i=0; i<s.length(); ++i) {
             char ch = s.charAt(i);
          
-            if (ch == '$')
+            if (ch == ' ' || ch == '\n' || ch == '\r' || ch == '\t')
+                b.append("\\s+");
+            else if (ch == '$')
                 b.append("[A-Za-z]+");
             else if (ch == '#')
                 b.append("\\d+");
                 else if (ch == '?')
-                b.append("[<>=!]+");
+                b.append("[<>=!?]+");
             else if (ch == '~')
                 b.append("[+-=]+[0-9]*");
             else if (ch == '*')
-                b.append("[A-Za-z0-9 <>=!+-]+");
+                b.append("[A-Za-z0-9 <>=!+\\-*]+");
             else if ("\\.^$|?*+[]{}()".indexOf(ch) != -1)
                 b.append('\\').append(ch);
             else
@@ -1209,147 +1225,6 @@ public class CodeTestHelper
         return cleanString(orig.toLowerCase());
     }
 
-    /* -------------------------------------------
-     * Unused code from original version
-     * --------------------------------------------------------------------
-    final int MAX_LINE_WIDTH = 70;
-
-    protected String failMessage(String msg)
-    {
-        return failMessage(msg, MAX_LINE_WIDTH);
-    }
-
-    protected String failMessage(String msg, int maxWidth)
-    {
-        String stars = repeat("*", MAX_LINE_WIDTH + 2);
-
-        return "\n" + stars + "\n" + msg + "\n" + stars + "\n";
-    }
-
-    protected String createMessage(String testName, String exp, String act)
-    {
-        return createColMessage(testName, exp, act);
-    }
-
-    protected String createColMessage(String testName, String exp, String act)
-    {
-        return createColMessage(testName, exp, act, MAX_LINE_WIDTH);
-    }
-
-    protected String createColMessage(String testName, String exp, String act, int maxWidth)
-    {
-        String stars = repeat("*", maxWidth*2);
-        String lines = repeat("=", maxWidth*2);
-        String spaces = repeat(" ", maxWidth*2);
-
-        stars = stars.substring(0, maxWidth) + "***" + stars.substring(0, maxWidth); //***
-        lines = lines.substring(0, maxWidth) + " | " + lines.substring(0, maxWidth);
-
-        String output = "\n\n" + stars + "\n";
-        output += ("TEST FAILED: " + testName) + "\n";
-
-        output += ("Expected"+spaces).substring(0, maxWidth) + " |  Actual\n";
-        output += lines + "\n";
-
-        String[] explines = exp.split("\n");
-        String[] actlines = act.split("\n");
-
-        for (int i = 0; i < explines.length || i < actlines.length; i++)
-        {
-            if (i < explines.length)
-            {
-                explines[i] = explines[i].replaceAll("\t", " ") + spaces;
-                output += explines[i].substring(0, maxWidth);
-            }
-            else
-            {
-                output += spaces;
-            }
-
-            output += " |  ";
-
-            if (i == 0 && (actlines.length <= 0 || actlines[0].length() <= 0))
-                output += "No output detected.";
-            if (i < actlines.length)
-            {
-                actlines[i] = actlines[i].replaceAll("\t", "    ");
-                output += actlines[i];
-            }
-            output += "\n";
-        }
-
-        output += stars + "\n\n";
-        return output;
-    }
-
-    private static String repeat(String str, int times) {
-        //return new String(new char[times]).replace("\0", str);
-
-        String output = "";
-
-        for (int i = 0; i < times; i++)
-            output += str;
-
-        return output;
-    }
-
-    public String addInputValuesToOutput(String outputs, String inputs)
-    {
-        outputs = outputs.replaceAll(":: ", ":: \n").replaceAll("\n\n", "\n");
-        String[] outLines = outputs.split("\n"); //replaceAll(":: ", ":: ").
-        String[] inLines = inputs.split(" ");
-
-        String output = "";
-
-        //output += outLines.length;
-
-        if (outLines.length <= 1 && outLines[0].length() < 3)
-            return "";
-
-        for (int i = 0; i < outLines.length; i++)
-        {
-            output += outLines[i].replaceAll("\n","");
-            if (i < inLines.length)
-                output += " " + inLines[i];//.replaceAll("\n","");
-            output += "\n";
-        }
-        return output.replaceAll("\n\n", "\n");
-    }
-
-    public static boolean checkRandom(String output, int min, int max)
-    {
-        output = output.replaceAll("[^0-9 ]", "").replaceAll("\\s+", " ").trim();
-
-        String[] vals = output.split(" ");
-        int[] nums = new int[vals.length];
-
-        for (int i = 0; i < vals.length; i++)
-        {
-            try {
-                int n = Integer.parseInt(vals[i]);
-                //System.out.println(n);
-                nums[i] = n;
-                if (n < min || n > max)
-                    return false;
-            } catch (Exception e) {
-
-            }
-        }
-
-        int count = 0;
-
-        for (int i = 1; i < vals.length - 1; i++)
-        {
-            if (nums[i - 1] == nums[i] && nums[i] == nums[i+1])
-                count++;
-        }
-
-        if (count > vals.length / 2)
-            return false;
-
-        return true;
-    }
-    */
 
 
 /* Random helper methods so they don't have to be rewritten lots of times
@@ -1366,7 +1241,25 @@ public class CodeTestHelper
         return count;
     } 
 
-    public boolean containsIgnoreCase(String orig, String target) {
+    public boolean containsIgnoreCase(String orig, String target){
         return orig.toLowerCase().contains(target.toLowerCase());
+    }
+
+    public boolean containsMatch(String orig, String target) {
+        //target = target.replaceAll("\\s", "");
+        //orig = orig.replaceAll("\\s", "");
+        
+        if(isRegex(target))
+        {
+            String anyText = "[\\s\\S]*";
+            target = createSimpleRegex(target);
+
+            //System.out.println(target);
+
+            return orig.matches(anyText + target + anyText);
+        }
+
+        return orig.contains(target);
+
     }
 }

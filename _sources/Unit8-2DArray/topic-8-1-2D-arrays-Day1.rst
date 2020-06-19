@@ -208,6 +208,8 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
 
 .. activecode:: 2DArrayCreate
   :language: java
+  :autograde: unittest   
+
   
   What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained in the next lesson.
   ~~~~
@@ -221,6 +223,36 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
         System.out.println(ticketInfo[0].length + " columns");
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TicketInfo");
+        }
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expected = "5 rows\n10 columns";
+
+            boolean passed = output.contains(expected);passed = getResults(expected, output, "Prints rows and columns", passed);
+
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String expected = "studentNames = new String[10][5]";
+
+            boolean passed = checkCodeContains(expected);
+            assertTrue(passed);
+        }
+    }
   
 This lesson is continued on the next page. 
 

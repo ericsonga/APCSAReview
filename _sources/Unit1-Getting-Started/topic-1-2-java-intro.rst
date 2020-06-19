@@ -111,7 +111,8 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            boolean passed = getResults(output, output, "Expected output from main");
+            String expect = "Hi there!";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
    }
@@ -330,7 +331,6 @@ Click on the |runbutton| button below to try and run the following code.  Look f
            
    ====
    // should pass if/when they run code
-   // This doesn't really work because it filters out the \n
    import static org.junit.Assert.*;
    import org.junit.*;;
    import java.io.*;

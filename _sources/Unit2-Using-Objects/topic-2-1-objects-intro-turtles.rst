@@ -85,6 +85,7 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
 
 .. activecode:: TurtleTest
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Try clicking the |runbutton| button below to see what the following program does.
@@ -107,16 +108,30 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
           world.show(true);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleTest1");
+        }
+
+        @Test
+        public void test1()
+        {
+            boolean passed = getResults("true", "true", "main()");
+            assertTrue(passed);
+        }
+    }
 
 
 The program above creates a ``World`` object called ``world`` and a ``Turtle`` object called ``yertle`` and places ``yertle`` in the center of the world.  The code
 asks ``yertle`` to go forward, turn left, and then go forward.  It didn't tell the turtle how much to go forward, so it goes forward 100 pixels by default. As the turtle moves it draws with its pen.
 There is hidden Java code that defines the ``World`` and ``Turtle`` classes.  Notice that a world was first
 created and then a turtle.  Turtles need to be created in a world.
-
-.. note ::
-
-   Case matters in Java, so ``world`` and ``World`` are two different things.  Also, notice that the **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``.
 
 .. mchoice:: 2_1_turle_dir
    :practice: T
@@ -293,6 +308,7 @@ Classes can **inherit** attributes and methods from another class in Java, just 
 
 .. activecode:: TurtleTest2
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     In the code below, ``yertle`` goes forward and then turns left. Can you change the code to make ``yertle`` go ``forward`` twice and then ``turnRight``?
@@ -313,6 +329,42 @@ Classes can **inherit** attributes and methods from another class in Java, just 
           world.show(true);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleTest2");
+        }
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            String expect = "yertle.forward()";
+
+            int count = countOccurences(code, expect);
+
+            boolean passed = getResults("2 time(s)", "" + count  + " time(s)", "yertle.forward() twice");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String expect = "yertle.turnRight()";
+
+            int count = countOccurences(code, expect);
+
+            boolean passed = count >= 1;
+            passed = getResults("1+ time(s)", "" + count + " time(s)", "yertle.turnRight()", passed);
+            assertTrue(passed);
+        }
+    }
 
 When you write a class like the ``Turtle`` class, you can create many objects of that class type. In the code below,
 two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your turtle and add in a line like the following in the main method to make it move:
@@ -328,6 +380,7 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
 
 .. activecode:: TurtleTest3
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Can you add another turtle object to the code below?
@@ -352,6 +405,30 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
 
           world.show(true);
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleTest3");
+        }
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            String expect = "new Turtle(world)";
+
+            int count = countOccurences(code, expect);
+
+            boolean passed = count >= 3;
+            passed = getResults("3+ Turtles", "" + count  + " Turtles", "Add a new Turtle(s)", passed);
+            assertTrue(passed);
+        }
     }
 
 
@@ -461,6 +538,7 @@ After writing your code below, if you'd like your own copy, you can open this |r
 
 .. activecode:: challenge2-1-TurtleDraw
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     import java.util.*;
@@ -484,7 +562,76 @@ After writing your code below, if you'd like your own copy, you can open this |r
           world.show(true);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleTest");
+        }
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            String expect = "new Turtle(world)";
+
+            int count = countOccurences(code, expect);
+
+            boolean passed = count >= 1;
+
+            passed = getResults("1+ Turtle(s)", "" + count  + " Turtle(s)", "At least 1 Turtle", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String right = ".turnRight()";
+            String left  = ".turnLeft()";
+
+            int countR = countOccurences(code, right);
+            int countL = countOccurences(code, left);
+            int count = countR + countL;
+
+            boolean passed = countR >= 8 || countL >= 8 || (countL >= 4 && countR >= 4);
+
+            passed = getResults("8+ turns", "" + count  + " turns(s)", "two squares (8 turns total)", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String forwards = ".forward()";
+            String backwards = ".backward()";
+
+            int forward = countOccurences(code, forwards);
+            int backward = countOccurences(code, backwards);
+            int moves = forward + backward;
+
+            boolean passed = forward >= 8 || backward >= 8 || (backward >= 4 && forward >= 4);
+
+            passed = getResults("8+ moves", "" + moves  + " move(s)", "two squares (8 moves total)", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4() {
+            String[] code = getCode().split("\n");
+            int expect = 38;
+
+            boolean passed = code.length >= expect;
+
+            passed = getResults(expect + "+ line(s)", "" + code.length  + " lines(s)", "More than " + expect + " lines of code", passed);
+            assertTrue(passed);
+        }
+    }
 
 
 Summary
@@ -881,7 +1028,7 @@ AP Practice
          * @param height the height of the desired picture
          * @param width the width of the desired picture
          */
-        public Picture(int height, int width)
+        public Picture(int width, int height)
         {
           // let the parent class handle this width and height
           super(width,height);
