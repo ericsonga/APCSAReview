@@ -55,11 +55,13 @@ There are problems in this section that can help you check your understanding of
 .. reveal:: delim_cu_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
+   :optional:
 
    .. clickablearea:: delim_find_parts_ca
        :question: Click on the part of the sentences below with the type of thing passed to the method <code>getDelimitersList</code> and the type it returns.
        :iscode:
        :feedback: Variable declarations start with a type and then a name.
+       :optional:
 
        :click-incorrect:A string:endclick::click-incorrect: containing text and possibly delimiters has been split into *tokens* and stored inTest2:endclick:
        :click-correct:String[] tokens:endclick:. :click-incorrect:Each token is either an open delimiter, a close delimiter, or a substring that is not a
@@ -70,6 +72,7 @@ There are problems in this section that can help you check your understanding of
 .. reveal:: delim_cu_r2
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
+   :optional:
 
    .. mchoice:: delim_cu_mc_1
       :answer_a: array
@@ -81,12 +84,14 @@ There are problems in this section that can help you check your understanding of
       :feedback_b: Check again
       :feedback_c: Check again
       :feedback_d: Check again
+      :optional:
 
       What type is tokens?
 
 .. reveal:: delim_cu_r3
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
+   :optional:
 
    .. mchoice:: delim_cu_mc_2
       :answer_a: int
@@ -98,12 +103,14 @@ There are problems in this section that can help you check your understanding of
       :feedback_b: Yes, tokens is an array of strings.
       :feedback_c: Check again.
       :feedback_d: Check again.
+      :optional:
 
       What type of thing is in tokens?
 
 .. reveal:: delim_cu_r4
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
+   :optional:
 
    .. mchoice:: delim_cu_mc_3
       :answer_a: int
@@ -115,6 +122,7 @@ There are problems in this section that can help you check your understanding of
       :feedback_b: Check again.
       :feedback_c: It returns a list of strings, which is actually an ArrayList.
       :feedback_d: Check again.
+      :optional:
 
       What type of thing does getDelimitersList return?
 
@@ -138,6 +146,7 @@ This section contains a plain English explanation of one way to solve this probl
 .. reveal:: delim_algorithm_r1
    :showtitle: Reveal Algorithm
    :hidetitle: Hide Algorithm
+   :optional:
 
    The method ``getDelimtersList`` needs to return an ``ArrayList`` of ``Strings`` containing all the open and close delimiters found in the ``tokens`` array in their original order.
 
@@ -146,6 +155,7 @@ This section contains a plain English explanation of one way to solve this probl
 .. reveal:: delim_rev_solve_mc_1
    :showtitle: Reveal Problem
    :hidetitle: Hide problem
+   :optional:
 
    .. mchoice:: delim_solve_mc_1
       :answer_a: delList = new ArrayList&lt;String&gt;();
@@ -157,12 +167,14 @@ This section contains a plain English explanation of one way to solve this probl
       :feedback_b: You must include the () when creating a new object
       :feedback_c: You must create an ArrayList using a concrete subclass like ArrayList
       :feedback_d: The declared type must be the same or a parent class of the actual type.
+      :optional:
 
       Which Java expression correctly creates an empty ArrayList of type String called delList?
 
 .. reveal:: delim_rev_solve_mc_2
    :showtitle: Reveal Problem
    :hidetitle: Hide problem
+   :optional:
 
    .. mchoice:: delim_solve_mc_2
       :answer_a: while
@@ -174,12 +186,14 @@ This section contains a plain English explanation of one way to solve this probl
       :feedback_b: You can use a for loop, but it would make your code more error prone than another type of loop
       :feedback_c: Since you need to loop through all the strings in the array tokens in order, a for-each loop would be best
       :feedback_d: There is no need for a nested loop in this situation
+      :optional:
 
       Which loop would be best for this situation?
 
 .. reveal:: delim_rev_solve_mc_3
    :showtitle: Reveal Problem
    :hidetitle: Hide problem
+   :optional:
 
    .. mchoice:: delim_solve_mc_3
       :answer_a: delList.set(0,item);
@@ -191,12 +205,14 @@ This section contains a plain English explanation of one way to solve this probl
       :feedback_b: This would add item at index 0 and move right any other items in the list
       :feedback_c: This would remove item from the list
       :feedback_d: This adds item to the end of the list
+      :optional:
 
       Which code adds item to the end of the list called delList?
 
 .. reveal:: delim_rev_solve_mc_4
    :showtitle: Reveal Problem
    :hidetitle: Hide problem
+   :optional:
 
    .. mchoice:: delim_solve_mc_4
       :answer_a: if (token == openDel && token == closeDel)
@@ -208,6 +224,7 @@ This section contains a plain English explanation of one way to solve this probl
       :feedback_b: You should use .equals with strings
       :feedback_c: You should use || for or not &&
       :feedback_d: This returns true when openDel or closeDel have the same characters as token
+      :optional:
 
       Which code correctly checks if token is equal to (has the same characters as) openDel or closeDel?
 

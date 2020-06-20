@@ -69,6 +69,7 @@ The following flowchart demonstrates that if the condition (the boolean expressi
 
 .. activecode:: lccb2
    :language: java
+   :autograde: unittest
    
    Try the following code. If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after conditional``.  
    ~~~~
@@ -88,6 +89,24 @@ The following flowchart demonstrates that if the condition (the boolean expressi
         System.out.println("after conditional");
       }
    } 
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Let's go to the game\nafter conditional";
+
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+
+    }
    
 
 
@@ -112,7 +131,7 @@ If/else statements can also be used with relational operators and numbers like b
    :language: java
    
    Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age's value to 15 and then run it again to see the result of the print statement in the else part. 
-   Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements. Then, change the boolean expression to match the laws of your state.
+   Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements. 
    ~~~~
    public class DriversLicenseTest
    {
@@ -208,6 +227,7 @@ If statements can be nested inside other if statements. Sometimes with nested if
 
 .. activecode:: danglingelse
    :language: java
+   :autograde: unittest
    
    Try the following code with a dangling else. Notice that the indentation does not matter. How could you get the else to belong to the first if statement?
    ~~~~
@@ -223,7 +243,24 @@ If statements can be nested inside other if statements. Sometimes with nested if
           else // Which if is else attached to?? 
            System.out.println("Bring your umbrella!");
       }
-   } 
+   }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "";
+            boolean passed = getResults(expect, output, "Expected no output from main");
+            assertTrue(passed);
+        }
+    }
+
 
 You can use curly brackets { } to enclose a nested if and have the else clause belong to the the top level if clause like below:
 

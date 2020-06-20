@@ -33,6 +33,7 @@ The problems in this section can help you check your understanding of part B.  Y
 .. reveal:: delim_cub_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
+   :optional:
 
    .. mchoice:: delim_cub_mc_1
       :answer_a: String
@@ -44,12 +45,14 @@ The problems in this section can help you check your understanding of part B.  Y
       :feedback_b: The values false and true are of type boolean.
       :feedback_c: In some languages false and true are represented by integers, but not in Java.
       :feedback_d: What type are false and true?
+      :optional:
 
       What type does isBalanced return?
 
 .. reveal:: delim_cub_r2
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
+   :optional:
 
    .. mchoice:: delim_cub_mc_2
       :answer_a: openDel
@@ -61,6 +64,7 @@ The problems in this section can help you check your understanding of part B.  Y
       :feedback_b: closeDel holds the close delimiter
       :feedback_c: Delimiters is the class name
       :feedback_d: delimiters is the variable which is passed to the isBalanced method
+      :optional:
 
       What is the name of the variable the code will be looping through?
 
@@ -87,6 +91,7 @@ This section contains a plain English explanation of one way to solve this probl
 .. reveal:: delim_alg_partb_r1
    :showtitle: Reveal Algorithm
    :hidetitle: Hide Algorithm
+   :optional:
 
    The method ``isBalanced`` will loop through ``delimiters`` and keep track of the number of open and close delimiters we have found so far.  To do that we can create two integer variables: ``totalOpen`` and ``totalClose`` and set them to 0
    initially. Each time through the loop we will check if the current string which we will call currString is equal to ``openDel`` and if so increment ``totalOpen``, otherwise if it is equal to ``closeDel`` increment ``totalClose``.   Next if ``totalClose`` > ``totalOpen`` the method should return false.  A
@@ -95,6 +100,7 @@ This section contains a plain English explanation of one way to solve this probl
 .. reveal:: delim_rev_solveb_mc_1
    :showtitle: Reveal Problem
    :hidetitle: Hide problem
+   :optional:
 
    .. mchoice:: delim_solveb_mc_1
       :answer_a: while
@@ -106,12 +112,14 @@ This section contains a plain English explanation of one way to solve this probl
       :feedback_b: You can use a for loop, but it would make your code more error prone than another type of loop
       :feedback_c: Since you need to loop through all the strings in the ArrayList in order, a for-each loop would be best
       :feedback_d: There is no need for a nested loop in this situation
+      :optional:
 
       Which loop would be best for this situation?
 
 .. reveal:: delim_rev_solveb_mc_2
    :showtitle: Reveal Problem
    :hidetitle: Hide problem
+   :optional:
 
    .. mchoice:: delim_solveb_mc_2
       :answer_a: if (currString = openDel)
@@ -123,6 +131,7 @@ This section contains a plain English explanation of one way to solve this probl
       :feedback_b: You must include the () when creating a new object
       :feedback_c: You must create an ArrayList using a concrete subclass like ArrayList
       :feedback_d: The declared type must be the same or a parent class of the actual type.
+      :optional:
 
       Which Java expression correctly tests if currString is equal to openDel?
 

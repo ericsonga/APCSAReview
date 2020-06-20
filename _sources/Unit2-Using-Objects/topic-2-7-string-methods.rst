@@ -48,7 +48,7 @@ A string holds characters in a sequence.  Each character is at a position or **i
 
    The first character in a string is at index 0 and the last characters is at **length** - 1.
 
-For the AP CS A exam there are only a few things that you have to know about strings.  All of the following are included in the |AP CS A Reference Sheet| that you get during the exam so you don't have to memorize these.  
+For the AP CS A exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the |AP CS A Reference Sheet| that you get during the exam so you don't have to memorize these.  
 
 
     -  **int length()** method returns the number of characters in the string, including spaces and special characters like punctuation.
@@ -69,6 +69,7 @@ Run the code below to see the output from the String methods ``length``, ``subst
 
 .. activecode:: lcsm1
    :language: java
+   :autograde: unittest
 
    This code shows the output from String methods length, substring, and indexOf. How many letters does substring(0,3) return? What does indexOf return when its argument is not found? 
    ~~~~
@@ -95,6 +96,22 @@ Run the code below to see the output from the String methods ``length``, ``subst
         System.out.println(message2.toUpperCase());
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "14\n11\nThi\no\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 .. note::
 
@@ -204,10 +221,23 @@ CompareTo and Equals
 
 We can compare primitive types like int and double using operators like == and < or >, which you will learn about in the next unit. However, with reference types like String, you must use the methods equals and compareTo, not == or < or >.
 
-Run the example below to see the output from ``compareTo`` and ``equals``. Notice that compareTo tells you how you would order the two strings alphabetically. If they are equal, it returns 0. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  And notice that equals is case-sensitive.
+The method ``compareTo`` compares two strings character by character. If they are equal, it returns 0. If the first string is alphabetically ordered before the second string (which is the argument of compareTo), it returns a negative number. And if the first string is alphabetically ordered after the second string, it returns a positive number. (The actual number that it returns does not matter, but it is the distance in the first letter that is different, e.g. A is 7 letters away from H.) 
+
+.. figure:: Figures/compareTo.png
+    :width: 350px
+    :align: center
+    :alt: compareTo
+    :figclass: align-center
+
+    Figure 2: compareTo returns a negative or positive value or 0 based on alphabetical order
+
+The equals method compares the two strings character by character and returns true or false. Both compareTo and equals are case-sensitive. There are case-insensitive versions of these methods, ``compareToIgnoreCase`` and ``equalsIgnoreCase``, which are not on the AP exam. 
+
+Run the example below to see the output from ``compareTo`` and ``equals``. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  Notice that equals is case-sensitive.
 
 .. activecode:: lcsm2
    :language: java
+   :autograde: unittest
 
    Run the code to see how the String methods equals and compareTo work. Is equals case-sensitive? When does compareTo return a negative number? 
    ~~~~
@@ -226,6 +256,23 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Notic
         System.out.println(message.equals("hello!"));
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "1\n0\n7\n-18\ntrue\nfalse";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
+
 
 
 .. |String class| raw:: html
@@ -350,7 +397,8 @@ The following code shows some common mistakes with strings.
 
 .. activecode:: stringMistakes
    :language: java
-
+   :practice: T
+   :autograde: unittest
    
    This code contains some common mistakes with strings. Fix the code to use the string methods correctly.
    ~~~~
@@ -372,6 +420,22 @@ The following code shows some common mistakes with strings.
     
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "The first letter in Hello!:H\nThe last char. in Hello!:!\nIn lowercase: hello!";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        } 
+    }
 
 Here is a list of common mistakes made with Strings.
  
@@ -398,7 +462,7 @@ Here is a list of common mistakes made with Strings.
     
 |pig| Can you speak Pig Latin? In Pig Latin, you take the first letter and put it at the end of the word and add the letters "ay" to the end. For example, "pig" becomes "igpay". 
 
-Create a program that takes a word and outputs it in Pig Latin using String methods. You may need the word's length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).
+Create a program that takes a word and transforms it to Pig Latin using String methods. You may need the word's length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).
 
 .. |repl| raw:: html
 
@@ -414,7 +478,11 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
 
 .. activecode:: challenge2-7-PigLatin
    :language: java
+   :practice: T
+   :autograde: unittest
    
+   Use the substring method to transform a word into Pig Latin where the first letter is put at the end and "ay" is added. The word pig is igpay in Pig Latin.
+   ~~~~
    public class PigLatin
    {
       public static void main(String[] args)
@@ -427,6 +495,29 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
         System.out.println(word + " in Pig Latin is " + pigLatin);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "* in Pig Latin is *ay";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+       @Test
+       public void testContainsSubstring() throws IOException
+       {
+           String target = "word.substring";
+           boolean passed = checkCodeContains("substring method", target);
+           assertTrue(passed);
+       }
+    }  
 
 
 

@@ -94,6 +94,8 @@ Try the following code. Note that this active code window has 2 classes! The mai
 
 .. activecode:: StudentObjExample
   :language: java
+  :autograde: unittest
+  :practice: T
 
   Try the following code. Note that it has a bug! It tries to access the private instance variable email from outside the class Student.  Change the main method in Tester class so that it uses the appropriate public accessor method (get method) to access the email value instead.
   ~~~~
@@ -140,13 +142,30 @@ Try the following code. Note that this active code window has 2 classes! The mai
         return id;
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Name:Skyler\nEmail:skyler@sky.com\nID: 123456";
+            boolean passed = getResults(expect, output, "Checking for expected output");
+            assertTrue(passed);
+        }
 
-
-
-
-
- 
-
+        @Test
+        public void testMethodCall() throws IOException
+        {
+            String target = "s1.getEmail()";
+            boolean passed = checkCodeContains("call to accessor method for email", target);
+            assertTrue(passed);
+        }
+    }
 
     
 
@@ -165,10 +184,11 @@ Another common method that returns a value is the toString() method which return
 
 This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement. 
 
-Here is the Student class again, but this time with a toString() method. Note that when we call System.out.println(s1); it will automatically call the toString() method to cast the object into a String. The toString() method will return a String that is then printed out. Watch how the control moves to the toString() method and then comes back to main in the |Java visualizer|.
+Here is the Student class again, but this time with a toString() method. Note that when we call System.out.println(s1); it will automatically call the toString() method to cast the object into a String. The toString() method will return a String that is then printed out. Watch how the control moves to the toString() method and then comes back to main in the |Java visualizer| or by using the Code Lens button.
 
 .. activecode:: StudentToString
   :language: java
+  :autograde: unittest
 
   See the toString() method in action.
   ~~~~
@@ -201,6 +221,22 @@ Here is the Student class again, but this time with a toString() method. Note th
        return id + ": " + name + ", " + email;
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "123456: Skyler, skyler@sky.com";
+            boolean passed = getResults(expect, output, "Checking for expected output", true);
+            assertTrue(passed);
+        }
+    }
   
   
 |Groupwork| Programming Challenge : Class Pet

@@ -195,7 +195,7 @@ If there are no constructors written for a class, Java provides a no-argument **
             String output = getMethodOutput("main");
             String expect = "1/1\n1/2";
 
-            boolean passed = getResults(expect, output, "Running main");
+            boolean passed = getResults(expect, output, "Running main", true);
             assertTrue(passed);
         }
 

@@ -58,7 +58,7 @@ In Java, De Morgan's Laws are written with the following operators:
     
     -  **!(a || b)** is equivalent to **!a && !b** 
     
-Going back to our example above, !(a senior && at our high school) is equivalent to !(a senior) or !(at our high school):
+Going back to our example above, !(a senior && at our high school) is equivalent to !(a senior) or !(at our high school) using De Morgan's Laws:
 
 .. code-block:: java 
 

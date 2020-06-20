@@ -31,6 +31,7 @@ The coding problems below are mostly about Strings, but more problems on other t
            
            .. activecode::  ch3Ex9a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~
@@ -81,6 +82,7 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex1a
               :language: java
+              :optional:
 
               This is the answer to the previous question.
               ~~~~
@@ -132,6 +134,7 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex4a
               :language: java
+              :optional:
 
               This is the answer to the previous question.
               ~~~~
@@ -181,6 +184,7 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex10a
               :language: java
+              :optional:
 
               This is the answer to the previous question.
               ~~~~              
@@ -229,6 +233,7 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex11a
               :language: java
+              :optional:
 
               This is the answer to the previous question.
               ~~~~              
@@ -276,6 +281,7 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex12a
               :language: java
+              :optional:
 
               This is the answer to the previous question.
               ~~~~              

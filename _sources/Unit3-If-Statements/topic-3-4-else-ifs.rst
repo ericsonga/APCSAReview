@@ -50,6 +50,7 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
 
 .. activecode:: lccbElseIf
    :language: java
+   :autograde: unittest
    
    Run the code below and try changing the value of x to get each of the three possible lines in the conditional to print.
    ~~~~
@@ -73,6 +74,20 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
         System.out.println("after conditional");
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class TestElseIf { public static void main(String[] args) { int x = 2; if (x < 0) { System.out.println(\"x is negative\");  } else if (x == 0) {  System.out.println(\"x is 0\"); } else { System.out.println(\"x is positive\"); } System.out.println(\"after conditional\"); } }";
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+    }
 
 Here is a flowchart for a conditional with 3 options like in the code above. 
 
@@ -183,8 +198,9 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
 .. activecode:: lccbIfDebug
    :language: java
-   
-   The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Then, fix the code by adding in 3 else's to connect the if statements and see if it works.
+   :autograde: unittest
+
+   The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Use the Code Lens button. Then, fix the code by adding in 3 else's to connect the if statements and see if it works.
    ~~~~
    public class IfDebug
    {
@@ -217,7 +233,42 @@ Here is a flowchart for a conditional with 3 options like in the code above.
         System.out.println(grade);
       }
    }
+   ====
+   // Test Code for Lesson 3.4 - lccbIfDebug
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMainCorrectOutput() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expected = "A\n";
+            boolean passed = getResults(expected, output, "Expected output from main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeContainsFourElses()
+        {
+            String code = getCode();
+            String[] tokens = code.split("\\s+");
+
+            int expectedElseCount = 4;
+            int actualElseCount  = 0;
+            for (int i = 0; i < tokens.length; i++) {
+                if (tokens[i].equals("else")) {
+                    actualElseCount++;
+                }
+            }
+            boolean passed = getResults(expectedElseCount, actualElseCount, "Expected number of else's");
+            assertTrue(passed);
+        }
+    }
 
 .. .. mchoice:: qcb3_4_4
    :practice: T

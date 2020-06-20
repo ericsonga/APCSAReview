@@ -78,7 +78,7 @@ Primitive values like ints and reference values like Strings can be compared usi
         {
             String output = getMethodOutput("main");
             String expect = "false\ntrue\nfalse\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
     }
@@ -170,7 +170,7 @@ If you have trouble telling < and > apart, think of a number line and think of <
         {
             String output = getMethodOutput("main");
             String expect = "false\ntrue\ntrue\ntrue\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
     }
@@ -244,7 +244,7 @@ Here are some boolean expressions that are very useful in coding:
         {
             String output = getMethodOutput("main");
             String expect = "Remainder of 15/2 is 1\nRemainder of 16/2 is 0\nIs 15 even? false \nIs 16 even? true\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
     }
@@ -260,7 +260,7 @@ The **modulo** operator has been used quite a bit on the AP CS A exam, so you sh
     - Use it whenever you have limited storage and you need to wrap around to the front if the value goes over the limit (``num % limit``).
     
     
-.. (This was used for the free response question 3 in 2009 at http://coweb.cc.gatech.edu/ice-gt/1278 ).
+
 
 
 |Groupwork| Programming Challenge : Prime Numbers POGIL
@@ -300,7 +300,7 @@ The following program checks if 5 is a prime number by seeing if it is divisible
 .. activecode:: challenge3-1-primeNumbers
    :language: java
    
-   Experiment with the code below adding boolean expressions to determine if the numbers 5, 6, and 7 are prime. Are all odd numbers prime? Are all even numbers not prime?
+   Experiment with the code below changing the value of number and adding more print statements with boolean expressions to determine if the numbers 5, 6, and 7 are prime. Are all odd numbers prime? Are all even numbers not prime?
    ~~~~    
    public class PrimeNumbers
    {

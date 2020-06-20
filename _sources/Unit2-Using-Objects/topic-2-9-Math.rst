@@ -41,7 +41,8 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
 
 .. activecode:: random1
    :language: java
-   
+   :autograde: unittest
+
    Try out the following code.  Run it several times to see what it prints each time.
    ~~~~
    public class Test3
@@ -52,6 +53,22 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
         System.out.println(Math.random());
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = output;
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
   
 
    
@@ -64,6 +81,7 @@ You can use ``Math.random`` and a cast to integer to return a random integer bet
    
 .. activecode:: randomRange
    :language: java
+   :autograde: unittest
 
    Run the code below several times to see how the value changes each time. How could you change the code to return a random integer from 1 to 10?  Modify the code and see if your answer is correct. Try removing the parentheses from around (Math.random() * 10) and run the code several times. What happens? The parentheses are necessary because (int) will cast the closest expression, and (int)Math.random() will always be 0 since anything after the decimal point is dropped.
    ~~~~
@@ -74,7 +92,21 @@ You can use ``Math.random`` and a cast to integer to return a random integer bet
         System.out.println((int) (Math.random() * 10));
       }
    }
-   
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+       @Test
+       public void testContainsRange() throws IOException
+       {
+           String target = "+ 1";
+           boolean passed = checkCodeContains("Math.random in range 1 to 10", target);
+           assertTrue(passed);
+       }
+    }
   
 .. note::
 

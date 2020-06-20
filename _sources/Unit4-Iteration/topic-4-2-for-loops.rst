@@ -312,7 +312,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
    :language: java
    :autograde: unittest
    
-   What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3?
+   What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3? Try the Code Lens button to visualize and trace through this code.
    ~~~~
    public class SongTest
    {
@@ -340,13 +340,11 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
       }
    }
    ====
-   // Test Code for Lesson 4.1 - For Loop
+   // Test Code for Lesson 4.1 - popSong
     import static org.junit.Assert.*;
-
     import org.junit.After;
     import org.junit.Before;
     import org.junit.Test;
-
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -359,7 +357,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "3 bottles of pop on the wall\n3 bottles of pop on the wall\n3 bottles of pop\nTake one down and pass it around\n2 bottles of pop on the wall\n2 bottles of pop on the wall\n2 bottles of pop\nTake one down and pass it around\n1 bottles of pop on the wall\n1 bottles of pop on the wall\n1 bottles of pop\nTake one down and pass it around\n0 bottles of pop on the wall";
+            String expect = "3 bottles of pop on the wall";
 
             String expect1 = expect.split("\n")[0];
             String output1 = output.split("\n")[0];
@@ -373,14 +371,14 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
         public void testMain2() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "5 bottles of pop on the wall\n5 bottles of pop\nTake one down and pass it around\n4 bottles of pop on the wall\n4 bottles of pop on the wall\n4 bottles of pop\nTake one down and pass it around";
+            String expect = "5 bottles of pop on the wall";
 
             boolean passed = !output.contains(expect);
 
             String expect1 = expect.split("\n")[0];
             String output1 = output.split("\n")[0];
 
-            passed = getResults(expect1, output1, "Change the 5 to a 3", passed);
+            passed = getResults(expect1, output1, "Does not contain 5", passed);
             assertTrue(passed);
         }
     }
@@ -530,6 +528,7 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
           world.show(true); 
       }
     }
+    ====
     
    
    

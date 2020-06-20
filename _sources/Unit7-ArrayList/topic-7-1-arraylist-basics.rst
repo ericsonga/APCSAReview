@@ -37,7 +37,7 @@ Intro to ArrayLists
 In the last unit, we learned about arrays to hold collections of related data. But arrays have limitations. The size of an array is established at the time of creation and cannot be changed. What if you don't know how big the collection of data will be? What if you want to add and remove items from the collection and change the size of the collection while the program is running? For example, if you wanted to represent a shopping list, you might add to the list throughout the week and remove things from the list while you are shopping. You probably would not know how many items will be on the list at the beginning of the week.
 
     
-Luckily, Java has a class  called **ArrayList** which is a re-sizable array. An ArrayList has an underlying array that grows or shrinks as needed. You can use ArrayList instead of arrays whenever you don't know the size of the array you need or you know that you will add and remove items changing the array's size dynamically during run time. An ArrayList is **mutable**, meaning it can change during runtime by adding and removing objects from it.
+Luckily, Java has a class  called **ArrayList** which is a re-sizable array. An ArrayList has an underlying array that grows or shrinks as needed. You can use ArrayList instead of arrays whenever you don't know the size of the array you need or you know that you will add and remove items and may need to change the array's size dynamically during run time. An ArrayList is **mutable**, meaning it can change during runtime by adding and removing objects from it.
 
 An ArrayList is often called just a **list** on the CS A exam. In past AP CS A exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
 
@@ -115,7 +115,7 @@ Another option is to import everything at the same level in a package using ``im
 Declaring and Creating ArrayLists
 ----------------------------------
 
-To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList, for example ``String`` as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what you allow in your ArrayList.  The generic type ArrayList<Type> is preferred over ArrayList because it allows the compiler to find errors that would otherwise be found at run-time. 
+To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList, for example ``String`` as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what to allow in your ArrayList.  Using a type ArrayList<Type> is preferred over just using ArrayList because it allows the compiler to find errors that would otherwise be missed until run-time. 
 
 
 
@@ -134,6 +134,7 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
 
 .. activecode:: ArrayListDeclare
    :language: java
+   :autograde: unittest   
 
    In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
    ~~~~
@@ -146,7 +147,28 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
           System.out.println(nameList);
        }
     }
-    
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayListDeclare");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "null";
+
+            boolean passed = getResults(expect, output, "main()" true);
+            assertTrue(passed);
+        }
+
+    }
 
 
 

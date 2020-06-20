@@ -49,8 +49,9 @@ What if you want two things to be true before the body of the conditional is exe
 
 .. activecode:: lccc1
    :language: java
+   :autograde: unittest   
 
-   For example, what if you want to go out and your parents say you could if you clean your room and do your homework?  Run the code below and try different values for ``cleanedRoom`` and ``didHomework`` and see what they have to be for it to print ``You can go out``.
+   What if you want to go out and your parents say you can go out if you clean your room and do your homework?  Run the code below and try different values for ``cleanedRoom`` and ``didHomework`` and see what they have to be for it to print ``You can go out``.
    ~~~~
    public class Test1
    {
@@ -68,6 +69,29 @@ What if you want two things to be true before the body of the conditional is exe
         }
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class Test1 { public static void main(String[] args){ boolean cleanedRoom = true; boolean didHomework = false;if (cleanedRoom && didHomework){System.out.println(\"You can go out\");} else { System.out.println(\"No, you can't go out\");}}}";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+        @Test
+        public void testMain() {   
+            String output = getMethodOutput("main");
+           String expect = "You can go out";
+
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+        }
+    }
 
 What if it is okay if only one of two things is true? Use ``||`` as a logical **or** to join two Boolean expressions and the body of the condition will be executed if one or both are true.  
 
@@ -76,14 +100,15 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
 
 .. activecode:: lccc2
    :language: java
-   
+   :autograde: unittest 
+
    For example, your parents might say you can go out if you can walk or they don't need the car.  Try different values for ``walking`` and ``carIsAvailable`` and see what the values have to be to print ``You can go out``.
    ~~~~
    public class Test2
    {
       public static void main(String[] args)
       {
-        boolean walking = true;
+        boolean walking = false;
         boolean carIsAvailable = false;
         if (walking || carIsAvailable) 
         {
@@ -95,6 +120,29 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
         }
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class Test2 {public static void main(String[] args){boolean walking = false;boolean carIsAvailable = false;if (walking || carIsAvailable){System.out.println(\"You can go out\");}else{System.out.println(\"No, you can't go out\"); }}}";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+        @Test
+        public void testMain() {   
+            String output = getMethodOutput("main");
+           String expect = "You can go out";
+
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+        }
+    }
 
 .. note::
 
@@ -108,6 +156,7 @@ With numerical values, the or-operator is often used to check for error conditio
 
 .. activecode:: lcccnum
    :language: java
+   :autograde: unittest 
    
    Explore how && and || are used with numbers below. Try different values for score like -10 and 110 in the code below.
    ~~~~
@@ -127,6 +176,21 @@ With numerical values, the or-operator is often used to check for error conditio
  
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+         @Test
+        public void testChangedCode() {
+            String origCode = "public class TestNum{public static void main(String[] args){int score = 10; // Try -10 and 110 if (score < 0 || score > 100){ System.out.println(\"Score has an illegal value.\");}if (score >= 0 && score <= 100){ System.out.println(\"Score is in the range 0-100\");}}}";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+    }   
 
 
 
@@ -135,15 +199,14 @@ The **not** (!) operator can be used to negate a boolean value. We've seen ! bef
 |CodingEx| **Coding Exercise**
 
 
-
 .. activecode:: lcccnot
    :language: java
-   
+   :autograde: unittest
+      
    The code below says if homework is not done, you can't go out. Try different values for ``homeworkDone``.
    ~~~~
    public class TestNot
-   {
-      public static void main(String[] args)
+   {    public static void main(String[] args)
       {
         boolean homeworkDone = false;
         if (!homeworkDone) 
@@ -152,10 +215,26 @@ The **not** (!) operator can be used to negate a boolean value. We've seen ! bef
         }
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+       @Test
+        public void testChangedCode() {
+            String origCode = "public class TestNot{public static void main(String[] args){ boolean homeworkDone = false; if (!homeworkDone) { System.out.println(\"Sorry, you can't go out!\"); } } }";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+    }
 
 .. note::
 
     In Java, ! will be executed before &&, and && will be executed before ||, unless there are parentheses. Anything inside parentheses is executed first.
+ 
 
 Truth Tables
 ------------

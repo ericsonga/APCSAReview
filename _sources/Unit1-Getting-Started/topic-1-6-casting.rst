@@ -110,7 +110,7 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
             String output = getMethodOutput("main");
             String expect = "5.0/3 = 1.6666666666666667\n5/3 truncated: 1\n5.0/3 rounded to nearest int: 2\n-5.0/3 rounded to nearest negative int: -2\n";
 
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
      }

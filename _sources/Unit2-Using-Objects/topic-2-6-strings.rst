@@ -41,12 +41,14 @@ You can declare a variable to be of type ``String``.
 .. note::
 
    Class names in Java, like ``String``, begin with a capital letter.  All primitive types: ``int``, ``double``, and ``boolean``, begin with a lowercase letter.  This is one easy way to tell the difference between primitive types and class types. 
-   
-Run the following code.  What does it print?
+
 
 .. activecode:: lcsb1
    :language: java
+   :autograde: unittest
    
+   Run the following code.  What does it print?
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -55,8 +57,26 @@ Run the following code.  What does it print?
         System.out.println(greeting);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "null";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
-The code above declares an object variable named ``greeting`` and sets the value of greeting to the Java keyword ``null`` to show that it doesn't refer to any object yet.  So ``System.out.println(greeting);`` will print ``null``.  Object variables **refer** to objects in memory.  A reference is a way to find the actual object, like adding a contact to your phone lets you reach someone without knowing exactly where they are.  The value of greeting is null since the string object has not been created yet. 
+The code above declares an object variable named ``greeting`` and sets the value of greeting to the Java keyword ``null`` to show that it doesn't refer to any object yet.  So ``System.out.println(greeting);`` will print ``null``.  
+
+Object variables **refer** to objects in memory.  A reference is a way to find the actual object, like adding a contact to your phone lets you reach someone without knowing exactly where they are.  The value of greeting is null since the string object has not been created yet. 
 
 .. figure:: Figures/greeting.png
     :width: 50px
@@ -89,11 +109,13 @@ In both cases an object of the ``String`` class will be created in memory and th
 
 |CodingEx| **Coding Exercise:**
 
-Here is an active code sample that creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings firstname and lastname using the two methods and print them out with the greetings.
 
 .. activecode:: lcsbnew
    :language: java
-   
+   :autograde: unittest
+
+   Here is an active code sample that creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings called firstname and lastname, one using a string literal and the other using new, and print them out with the greetings.
+   ~~~~
    public class StringTest
    {
       public static void main(String[] args)
@@ -104,13 +126,30 @@ Here is an active code sample that creates two greeting strings: one using a str
         System.out.println(greeting2);
        }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testChangedCode() {
+            String origCode = "Hello!\nWelcome!";
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+    }
 
 
-Now that greeting refers to an actual object we can ask the object what class created it. Try the following.  What does it print? 
+
 
 .. activecode:: lcsb2
    :language: java
+   :autograde: unittest
    
+   Now that greeting refers to an actual object we can ask the object what class created it. Try the following.  What does it print? 
+   ~~~~
    public class Test2
    {
       public static void main(String[] args)
@@ -122,6 +161,22 @@ Now that greeting refers to an actual object we can ask the object what class cr
         System.out.println(parentClass);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "class java.lang.String\nclass java.lang.Object";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
    
 ..	index::
 	single: parent class
@@ -155,8 +210,10 @@ Strings can be **appended** to each other to create a new string using the ``+``
 
 .. activecode:: lcso1
    :language: java
+   :autograde: unittest
+   :practice: T
    
-   Try the following code. Can you use += or + to have it add on another name Andrea and 2 more exlamation points (!) to the happy birthday greeting? 
+   Try the following code. Add another variable for a lastname that is "Hernandez". Use += or + to add the lastname variable after name to the result. Use += or + to add 2 more exclamation points (!) to the end of the happy birthday greeting in result. 
    ~~~~
    public class Test1
    {
@@ -169,6 +226,22 @@ Strings can be **appended** to each other to create a new string using the ``+``
         System.out.println(result);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Happy Birthday Jose Hernandez!!!";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
   
 .. note::
    Note that spaces are not added between strings automatically.  If you want a space between two strings then add one using + " " +. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".  And remember that variables are never put inside the quotes ("") since this would print the variable name out letter by letter instead of its value.
@@ -209,6 +282,7 @@ You can even add other items to a string using the ``+`` operator.  The other it
 
 .. activecode:: lcso2
    :language: java
+   :autograde: unittest
    
    What do you think the following will print? Guess before you hit run. If you want the addition to take place before the numbers are turned into a string what should you do? Try to modify the code  so that it adds 4 + 3 before appending the value to the string. Hint: you used this to do addition before multiplication in arithmetic expressions.
    ~~~~
@@ -220,18 +294,35 @@ You can even add other items to a string using the ``+`` operator.  The other it
         System.out.println(message);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "127";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
    
 .. note::
    If you are appending a number to a string it will be converted to a string first before being appended.  
   
-Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  
+Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want to do addition instead, try using parentheses!
 
 What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a **backslash escape sequence**. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \\n which will put in a newline. 
 
 .. activecode:: bhescape
    :language: java
+   :autograde: unittest
    
-   Here are the escape sequences that may be used in the AP course
+   Here are the escape sequences that may be used in the AP course.
    ~~~~
    public class TestEscape
    {
@@ -243,7 +334,23 @@ What if you wanted to print out a double quote " character? Since the double quo
         System.out.println(message);
       }
    }
-   
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = output;
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
+    
 |Groupwork| Programming Challenge : Mad Libs
 --------------------------------------------
 
@@ -263,6 +370,8 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
 
 .. activecode:: challenge2-6-MadLibs
    :language: java
+   :autograde: unittest
+   :practice: T
    
    If you used repl.it for this challenge, copy the url of your repl here to turn in.
    ~~~~
@@ -288,6 +397,35 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
         
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Roses are *\n* are *\nI like *\nDo * like them too?";
+
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testNull() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "null";
+
+            String actual = countOccurences(output, expect) + " null values";
+
+            boolean passed = getResults("0 null values", actual, "No null values");
+            assertTrue(passed);
+        }
+    }
 
 
 

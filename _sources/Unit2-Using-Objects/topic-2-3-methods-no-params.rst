@@ -185,12 +185,40 @@ You will learn to write your own methods in Unit 5. In this Unit, you should be 
 
    <a href="http://www.pythontutor.com/java.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
-This Java |visualization| shows how a song can be divided up into methods. Click on visualize and then the forward button to step through the code. When we call a method or a constructor, this makes the program execute the code in that method before continuing on with the next sequential line of code.   Once the last statement in the method has executed, flow of control is returned to the point immediately following where the method was called. This example also demonstrates that there are two different ways to call methods. Methods inside the same class can call each other using just ``methodName()``, but to call methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. Execution in Java always begins in the ``main`` method in the current class (the one that was passed to Java to execute).
+The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song. When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it. Methods inside the same class can call each other using just ``methodName()``, but to call methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
 
-.. raw:: html
+.. codelens:: songviz1
+    :language: java 
+    :optional:
+    
+    public class Song 
+    {
+      public void print() 
+      {
+        System.out.println("Old MacDonald had a farm");
+        chorus();
+        System.out.print("And on that farm he had a ");
+        animal();
+        chorus();
+      }
+        
+      public void chorus()
+      {
+        System.out.println("E-I-E-I-O");
+      }
 
-   <div>
-   <iframe width="800" height="700" frameborder="0"  style="max-width:95%; margin-left:5%" src="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"> </iframe>
+      public void animal() 
+      {
+        System.out.println("duck");
+      }
+        
+      public static void main(String[] args) 
+      {
+        Song s = new Song();
+        s.print();
+      }
+    }
+    
 
 
 
@@ -215,24 +243,29 @@ This Java |visualization| shows how a song can be divided up into methods. Click
 
    .. code-block:: java
 
-      public class Song {
-
-        public void print() {
+      public class Song 
+      {
+        public void print() 
+        {
             System.out.print("I like to ");
             eat();
             eat();
             eat();
             fruit();
         }
+        
         public void fruit()
         {
             System.out.println("apples and bananas!");
         }
 
-        public void eat() {
+        public void eat() 
+        {
            System.out.print("eat ");
         }
-        public static void main(String[] args) {
+        
+        public static void main(String[] args) 
+        {
            Song s = new Song();
            s.print();
         }
