@@ -513,7 +513,7 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
        @Test
        public void testContainsSubstring() throws IOException
        {
-           String target = "word.substring";
+           String target = "word.substring(";
            boolean passed = checkCodeContains("substring method", target);
            assertTrue(passed);
        }

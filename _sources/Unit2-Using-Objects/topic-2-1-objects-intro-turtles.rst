@@ -62,26 +62,12 @@ Intro to Objects with Turtles
 In the 1960s, an educational programming language called **Logo** was developed. It is best known for teaching programming with turtles! The turtles were graphical or robotic turtles that were controlled with simple commands like go forward or turn right. Here's a photo of a robot turtle from the 1960s.  The turtle had a pen attached to it. The student-programmers would steer the robot around using simple commands to create drawings with their code.
 
 
-.. .. figure:: Figures/mindstorms_turtle.jpg
-    :width: 300px
-    :align: center
-    :alt: Children playing with a Logo turtle robot that can draw with a pen
-    :figclass: align-center
-
-    Figure 1: Children playing with a Logo turtle robot that could draw with a pen
 
 ..	index::
-	single: comment
-	single: library
-	single: screen
 	pair: turtle; screen
 	pair: turtle; library
-	pair: programming; comment
-	pair: program; comment
 
 Today, we can play with virtual turtles in a graphical world. Below is a sample Java program that works with Turtle objects.
-
-
 
 .. activecode:: TurtleTest
     :language: java
@@ -116,7 +102,7 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests() {
-            super("TurtleTest1");
+            super("TurtleTest");
         }
 
         @Test
@@ -344,7 +330,7 @@ Classes can **inherit** attributes and methods from another class in Java, just 
         public void test1()
         {
             String code = getCode();
-            String expect = "yertle.forward()";
+            String expect = "yertle.forward";
 
             int count = countOccurences(code, expect);
 
@@ -600,7 +586,7 @@ After writing your code below, if you'd like your own copy, you can open this |r
 
             boolean passed = countR >= 8 || countL >= 8 || (countL >= 4 && countR >= 4);
 
-            passed = getResults("8+ turns", "" + count  + " turns(s)", "two squares (8 turns total)", passed);
+            passed = getResults("8+ turns", "" + count  + " turns(s)", "two squares (8 right or left turns total)", passed);
             assertTrue(passed);
         }
 
@@ -608,8 +594,8 @@ After writing your code below, if you'd like your own copy, you can open this |r
         public void test3()
         {
             String code = getCode();
-            String forwards = ".forward()";
-            String backwards = ".backward()";
+            String forwards = ".forward";
+            String backwards = ".backward";
 
             int forward = countOccurences(code, forwards);
             int backward = countOccurences(code, backwards);

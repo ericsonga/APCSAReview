@@ -16,14 +16,14 @@ import org.junit.Test;
  * do not exist.
  *
  * @author  Kate McDonnell
- * @version 0.1.9
- * @since 2020-06-16
+ * @version 0.2.0
+ * @since 2020-06-23
  * 
  * 
  */
 public class CodeTestHelper
 {
-    public static boolean replit = false;
+    public static boolean replit = true;
 
     private static String results = "";
     private static String mainOutput = "";
@@ -116,16 +116,42 @@ public class CodeTestHelper
      */
     public boolean getResults(String expected, String actual, String msg)
     {
+        return getResults(false, false, expected, actual, msg);
+    }
+
+    public boolean getResultsRegEx(String expected, String actual, String msg) {
+        return getResults(true, false, expected, actual, msg);
+    }
+
+    public boolean getResultsContains(String expected, String actual, String msg) {
+        return getResults(false, true, expected, actual, msg);
+    }
+        
+    public boolean getResults(boolean useRegex, boolean contain, String expected, String actual, String msg)
+    {
         expected = expected.trim();
         actual = actual.trim();
         
-        boolean passed = containsMatch(actual, expected);
+        boolean passed = false;
+        
+        if (useRegex)
+            passed = isMatch(actual, expected);
 
-        if (!passed) {
+        if (!passed && contain)
+            passed = containsMatch(actual, expected);
+
+        if (!passed && !contain) {
             String clnExp = cleanString(expected);
             String clnAct = cleanString(actual);
 
             passed = clnExp.equals(clnAct);
+        }
+
+        if (!passed && contain) {
+            String clnExp = cleanString(expected);
+            String clnAct = cleanString(actual);
+
+            passed = clnExp.contains(clnAct);
         }
 
         String output = formatOutput(expected, actual, msg, passed);
@@ -394,7 +420,8 @@ public class CodeTestHelper
         }
         catch(Exception e) {
             if (errorMessage.equals(""))
-                errorMessage = "Method could not be invoked (5)";
+                errorMessage = stackToString(e);
+                //errorMessage = "Method could not be invoked (5)";
         }
 
         if (errorMessage.equals(""))
@@ -836,14 +863,58 @@ public class CodeTestHelper
         }
         catch(Exception e) {
             if (errorMessage.equals(""))
-                errorMessage = "Method " + m.getName() + " could not be invoked";
+                errorMessage = stackToString(e);
+                //errorMessage += "\nMethod " + m.getName() + " could not be invoked";
         }
 
         if (errorMessage.equals(""))
+            //errorMessage = stackToString(e);
             errorMessage = "Method " + m.getName() + " with parameters " + Arrays.toString(arguments) + " does not exist";
 
         cleanUpStreams();
         return errorMessage;
+    }
+
+    // https://stackoverflow.com/questions/10120709/difference-between-printstacktrace-and-tostring#:~:text=toString%20()%20gives%20name%20of,is%20raised%20in%20the%20application.&text=While%20e.,Jon%20wrote%20in%20his%20answer.
+    private String stackToString(Throwable e) {
+        if (e == null)  return "Exception: stack null";
+    
+        StringWriter sw = new StringWriter();
+        e.printStackTrace(new PrintWriter(sw));
+
+        String trace = sw.toString();
+        String location = "", except = "";
+
+        int expStart = trace.indexOf("Caused by: ");
+        int expLen = "Caused by: ".length();
+
+        if (expStart > -1) {
+            except = trace.substring(expStart + expLen);
+            trace = trace.substring(0, expStart-1);
+
+            int expEnd = except.indexOf("\n");
+            if (expEnd > -1)
+                except = except.substring(0, expEnd);
+        }
+
+        int locStart = trace.lastIndexOf("\n");
+        int locLen = "Caused by: ".length();
+
+        if (locStart > -1) {
+            int locEnd = trace.lastIndexOf("\n");
+            location = trace.substring(locStart + 1);
+        }
+
+        //Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+
+        String exp = except.substring(0, except.indexOf(":"));
+        String desc = except.substring(except.indexOf(":") + 2);
+
+        String thread = location.substring(location.indexOf(".")+1, location.indexOf("("));
+
+        String rslt = "Exception in thread \"" + thread + "\" " + exp + ": " + desc;
+
+        return rslt + "\n" + location;
     }
 
     private String getStaticMethodReturn(Method m, Object[] args)// throws IOException
@@ -863,7 +934,8 @@ public class CodeTestHelper
         }
         catch(Exception e) {
             if (errorMessage.equals(""))
-                errorMessage = "Method " + m.getName() + " could not be invoked";
+                errorMessage = stackToString(e);
+                //errorMessage = "Method " + m.getName() + " could not be invoked";
         }
 
         if (errorMessage.equals(""))
@@ -1086,6 +1158,38 @@ public class CodeTestHelper
         return false;
     }
 
+    public boolean checkCodeContainsNoRegex(String desc, String target)  
+    {
+        String msg = "";
+        String output = "";
+        
+        String text = getCode();
+        
+        boolean expected = true;
+        boolean hasCode = false;
+
+        try{
+            String code = text.replaceAll(" ", "");
+            String target2 = target.replaceAll(" ", "");
+
+            hasCode = code.contains(target2);
+
+            boolean passed = expected == hasCode;
+
+            msg = "Checking that code contains " + desc;
+            output = formatOutput(""+expected, ""+hasCode, msg, passed);
+            results += output + "\n";
+
+            return passed;
+        } catch (Exception e) {
+            msg = "Test could not be completed";
+            output = formatOutput("true", "false", msg, false);
+            results += output + "\n";
+
+        }
+        return false;
+    }
+
     private boolean isRegex(String target) {
         return target.contains("*") || target.contains("$") || target.contains("#") || target.contains("~");
     }
@@ -1099,7 +1203,9 @@ public class CodeTestHelper
         for(int i=0; i<s.length(); ++i) {
             char ch = s.charAt(i);
          
-            if (ch == ' ' || ch == '\n' || ch == '\r' || ch == '\t')
+            if (ch == '\n' || ch == '\r')
+                b.append("\\s+");
+            else if (ch == ' ')
                 b.append("\\s+");
             else if (ch == '$')
                 b.append("[A-Za-z]+");
@@ -1243,6 +1349,23 @@ public class CodeTestHelper
 
     public boolean containsIgnoreCase(String orig, String target){
         return orig.toLowerCase().contains(target.toLowerCase());
+    }
+
+    public boolean isMatch(String orig, String target) {
+        //target = target.replaceAll("\\s", "");
+        //orig = orig.replaceAll("\\s", "");
+        
+        if(isRegex(target))
+        {
+            target = createSimpleRegex(target);
+
+            //System.out.println(target);
+
+            return orig.matches(target);
+        }
+
+        return orig.contains(target);
+
     }
 
     public boolean containsMatch(String orig, String target) {

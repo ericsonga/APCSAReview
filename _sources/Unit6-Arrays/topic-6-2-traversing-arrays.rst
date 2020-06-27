@@ -61,8 +61,9 @@ What does the code above print out? You can follow the code in this |visualizer|
 
 .. activecode:: arraytrace1
    :language: java
+   :autograde: unittest    
    
-   What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. You can also follow it in the |visualizer2|.
+   What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. You can also follow it in the |visualizer2| by clicking on the Show Code Lens button.
    ~~~~
    public class Test1
    {
@@ -80,11 +81,30 @@ What does the code above print out? You can follow the code in this |visualizer|
         System.out.println(names[index+1]);
       }
    }
+   ====
+   // Test for Lesson 6.2
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Test1");
+        }
+
+        @Test
+        public void test1() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Jamal\nDestiny\nEmily\nRafi";
+
+            boolean passed = getResults(expect, output, "Did you run the code?", true);
+            assertTrue(passed);
+        }
+    }
    
-
-    
-
-
 
 For Loop to Traverse Arrays
 ---------------------------
@@ -100,7 +120,7 @@ We can use iteration with a **for loop** to visit each element of an array.  Thi
     :align: center
     :figclass: align-center
 
-    Figure 1: For Loop Traversing Array
+    Figure 2: For Loop Traversing Array
 
 For example, here is a loop traversing the highScores array to print every score. Follow the code below in the |visualizer3|.
 
@@ -124,8 +144,9 @@ For example, here is a loop traversing the highScores array to print every score
 
 .. activecode:: arraytrace2
    :language: java
-   
-   What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. Try adding your name and a friend's name to the array names and run the code again. Did the code work without changing the loop?
+   :autograde: unittest  
+      
+   What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. Try the Code Lens button. Then, try adding your name and a friend's name to the array names and run the code again. Did the code work without changing the loop?
    ~~~~
    public class Test2
    {
@@ -139,6 +160,44 @@ For example, here is a loop traversing the highScores array to print every score
         }
       }
    }
+   ====
+   // Test for Lesson 6.2
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Test2");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Jamal\nEmily\nDestiny\nMateo\nSofia";
+
+            boolean passed = output.contains(expect);
+            passed = getResults(expect, output, "Did you run the code?", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Jamal\nEmily\nDestiny\nMateo\nSofia\nYour name\nFriend's name";
+
+            int len = output.split("\n").length;
+
+            boolean passed = len >= 6;
+
+            passed = getResults(expect, output, "Did you add two more names?", passed);
+            assertTrue(passed);
+        }
+    }
    
 The following code demonstrates a loop that changes the values in an array. In this code, the array is passed as an argument to the static methods in the class.  Arrays in Java are objects. The array variables are references to an address in memory. Since arrays can be very large, we do not want to copy them when we pass them into methods. When an array is passed as an argument to a method, the name of the array refers to its address in memory. Therefore, any changes to the array in the method will affect the original array. You can also try the code in the |Java visualizer|.
 
@@ -154,8 +213,9 @@ The following code demonstrates a loop that changes the values in an array. In t
 
 .. activecode:: lcal1
    :language: java
+   :autograde: unittest  
    
-   What does the following code print out? Trace through it keeping track of the array values and the output. Then run it to see if you're right. Notice that in this code, the array is passed as an argument to the methods. You can also try the code in the |Java visualizer| to see it running step by step as you hit Forward.
+   What does the following code print out? Trace through it keeping track of the array values and the output. Then run it to see if you're right. Notice that in this code, the array is passed as an argument to the methods. You can also try the code in the |Java visualizer| with the Code Lens button.
    ~~~~
    public class ArrayLoop
    {
@@ -185,6 +245,29 @@ The following code demonstrates a loop that changes the values in an array. In t
         printValues(numArray);
       }
    }
+   ====
+   // Test for Lesson 6.2
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayLoop");
+        }
+
+        @Test
+        public void test1() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "4 12 14 24 10";
+
+            boolean passed = getResults(expect, output, "Did you run the code?",true);
+            assertTrue(passed);
+        }
+    }
       
 .. note::
    
@@ -232,12 +315,12 @@ You don't have to loop through an array from the front to the back.  You can loo
 
 |CodingEx| **Coding Exercise**
 
-
-
 .. activecode:: lcbf1
    :language: java
+   :autograde: unittest  
+   :practice: T
    
-   What does the following code print out? Trace through it keeping track of the array values and the output. Then run it to see if you're right. Notice that the array and the target are passed in as arguments to the getIndexOfLastElementSmallerThanTarget method. You can also try the code in the |visualizerBF|. Can you add another method that finds the index of the last element greater than the target instead of smaller than the target and have main print out a test of it?
+   What does the following code print out? Notice that the array and the target are passed in as arguments to the getIndexOfLastElementSmallerThanTarget method. Trace through it keeping track of the array values and the output. Then run it to see if you're right.  You can also try the code in the |visualizerBF| with the Code Lens button. Can you add another method that finds the index of the last element greater than the target instead of smaller than the target and have main print out a test of it? Call this method getIndexOfLastElementGreaterThanTarget and give it 2 arguments and a return value like the method below.
    ~~~~
    public class ArrayFindSmallest
    {
@@ -253,6 +336,14 @@ You don't have to loop through an array from the front to the back.  You can loo
          return -1;
       }
    
+      /** Add a method called getIndexOfLastElementGreaterThanTarget 
+          @param int array
+          @param int target
+          @return index of the last number greater than target 
+      */
+      
+      
+   
       public static void main (String[] args)
       {
          int[] theArray = {-30, -5, 8, 23, 46};
@@ -264,11 +355,59 @@ You don't have to loop through an array from the front to the back.  You can loo
          System.out.println("Last index of element smaller than -30: " + getIndexOfLastElementSmallerThanTarget(theArray,-30));
       }
    }
-   
-   
+   ====
+   // Test for Lesson 6.2.3 - ArrayFindSmallest
 
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayFindSmallest");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Last index of element smaller than ";
+
+            boolean passed = output.contains(expect);
+            output = output.substring(0, output.indexOf("\n"));
+            passed = getResults("Last index of element smaller than 50: 4", output, "Ran getIndexOfLastElementSmallerThanTarget", passed);
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void test2()
+        {
+            int[] nums = {10, 50, 20, 30, 40, 20};
+            Object[] args = {nums, 30};
+
+            String output = getMethodOutput("getIndexOfLastElementGreaterThanTarget", args);
+            String expect = "4";
+
+            boolean passed = getResults(expect, output, "getIndexOfLastElementGreaterThanTarget({10, 50, 20, 30, 40, 20}, 30)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            int[] nums = {10, 50, 20, 30, 40, 20};
+            Object[] args = {nums, 100};
+
+            String output = getMethodOutput("getIndexOfLastElementGreaterThanTarget", args);
+            String expect = "-1";
+
+            boolean passed = getResults(expect, output, "getIndexOfLastElementGreaterThanTarget({10, 50, 20, 30, 40, 20}, 100)");
+            assertTrue(passed);
+        }
+    }
    
-.. Notice that if the array is a field of the ArrayWorker class you must create an ArrayWorker object in the main method.  You don't have to pass the array to the ``getIndexOfLastElementSmallerThanTarget`` method like you do if the method is static.  The object already has the array as a field and any object method has access to it.
 
 
 |Exercise| **Check Your Understanding**
@@ -338,12 +477,14 @@ Looping through Part of an Array
 ..	index::
 	pair: loop; range
 	
-You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (``&&``) on line 14 to make sure that the loop doesn't go beyond the length of the array, because if you had an array that had less than 5 elements, you wouldn't want the code to try to double the 4th element which doesn't exist! Notice that in this code, the array is a private instance variable of the class ArrayWorker. It is created in the constructor and changed or accessed by the methods. 
+You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (``&&``) on line 14 to make sure that the loop doesn't go beyond the length of the array, because if you had an array that had less than 5 elements, you wouldn't want the code to try to double the 5th element which doesn't exist! Notice that in this code, the array is a private instance variable of the class ArrayWorker. It is created in the constructor and changed or accessed by the methods. 
 
 .. activecode:: lclp1
    :language: java
+   :autograde: unittest  
+   :practice: T
    
-   What will the following code print out? Can you write a similar method that triples the first 4 elements of the array?  
+   What will the following code print out? Can you write a similar method called tripleFirstFour() that triples the first 4 elements of the array? Make sure you test it in main.
    ~~~~
    public class ArrayWorker
    {
@@ -363,6 +504,10 @@ You don't have to loop through all of the elements of an array.  You can loop th
           values[i] = values[i] * 2;
         }
       }
+   
+      /** Write a method called tripleFirstFour() that triples the first 4 elements of the array **/
+      
+      
       
       public void printArray()
       {
@@ -380,6 +525,47 @@ You don't have to loop through all of the elements of an array.  You can loop th
         worker.printArray();
       }
    }
+   ====
+   // Test for Lesson 6.2.4 - ArrayWorker
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayWorker");
+
+            int[] numArray = {0, 1, 2, 3, 4, 5};
+            setDefaultValues(new Object[]{numArray});
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "6 16 -6 4 40 5 33 1".replaceAll(" ", "\n");
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect, output, "Did you run the doubleFirstFiveMethod?", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("tripleFirstFour");
+            output = getMethodOutput("printArray");
+            String expect = "0 3 6 9 4 5".replaceAll(" ", "\n");
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect, output, "Testing tripleFirstFour() method on array [0, 1, 2, 3, 4, 5]", passed);
+            assertTrue(passed);
+        }
+    }
    
    
 |CodingEx| **Coding Exercise**
@@ -695,6 +881,7 @@ The following Active Code uses a dictionary array of the most common 100 English
 
 .. activecode:: challenge-6-2-spellchecker
    :language: java
+   :autograde: unittest    
    
    public class SpellChecker
    {
@@ -714,28 +901,85 @@ The following Active Code uses a dictionary array of the most common 100 English
         SpellChecker checker = new SpellChecker();
         /* Uncomment to test Part 1 
         checker.print10();
-	*/
+	    */
         
-	/* Uncomment to test Part 2
+	    /* Uncomment to test Part 2
         String word = "catz";
         if (checker.spellcheck(word) == true)
-	{
+	    {
             System.out.println(word + " is spelled correctly!");
-	}
+     	}
         else
-	{
+	    {
             System.out.println(word + " is misspelled!");
-	}
+	    }
         */
         
-        // 3. optional: 
-        // checker.printStartsWith("ab");
+        // 3. optional and not autograded
+        // checker.printStartsWith("a");
       }
    }
+   ====
+   // Test for Lesson 6.2.5 - challenge-6-2-spell-checker
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("SpellChecker");
+        }
+
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "the of and a to in is you that it".replaceAll(" ", "\n") + "\ncatz is misspelled!";
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect, output, "Did you uncomment the main method?", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("print10");
+            String expect = "the of and a to in is you that it".replaceAll(" ", "\n");
+
+            boolean passed = getResults(expect, output, "print10()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            Object[] args = {"dogz"};
+            String output = getMethodOutput("spellcheck", args);
+            String expect = "false";
+
+            boolean passed = getResults(expect, output, "spellcheck(\"dogz\")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            Object[] args = {"dog"};
+            String output = getMethodOutput("spellcheck", args);
+            String expect = "true";
+
+            boolean passed = getResults(expect, output, "spellcheck(\"dog\")");
+            assertTrue(passed);
+        }
+    }
  
  
 3. Optional Challenge: Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take 
-a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string.
+a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string. This is not autograded.
 
  
 Summary

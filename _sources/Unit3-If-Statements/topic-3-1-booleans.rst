@@ -99,6 +99,7 @@ We can also use == or != to test if two reference values, like Turtle and String
 .. activecode:: boolRef
    :language: java
    :datafile: turtleClasses.jar   
+   :autograde: unittest
    
    What will the code below print out? Try to guess before you run it! 
    ~~~~     
@@ -118,6 +119,24 @@ We can also use == or != to test if two reference values, like Turtle and String
           Turtle friend = mia; // set friend to be an alias for mia
           System.out.println(friend == mia);
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("BoolTestRef");
+        }
+
+        @Test
+        public void test1()
+        {
+           boolean passed = getResults("true", "true", "main()");
+            assertTrue(passed);
+        }
     }
 
 
@@ -299,7 +318,9 @@ The following program checks if 5 is a prime number by seeing if it is divisible
 
 .. activecode:: challenge3-1-primeNumbers
    :language: java
-   
+   :autograde: unittest
+   :practice: T
+  
    Experiment with the code below changing the value of number and adding more print statements with boolean expressions to determine if the numbers 5, 6, and 7 are prime. Are all odd numbers prime? Are all even numbers not prime?
    ~~~~    
    public class PrimeNumbers
@@ -315,7 +336,38 @@ The following program checks if 5 is a prime number by seeing if it is divisible
         System.out.println("Divisible by 4? " + (number % 4 == 0));
         System.out.println("Divisible by 5? " + (number % 5 == 0));
       }
-   }  
+   }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+       @Test
+        public void testChangedCode() {
+            String origCode = "public class PrimeNumbers{public static void main(String[] args){int number = 5; System.out.println(\"A prime number is only divisible by 1 and itself.\"); System.out.println(\"Is \" + number + \" divisible by 1 up to \" + number + \"?\"); System.out.println(\"Divisible by 1? \" + (number % 1 == 0)); System.out.println(\"Divisible by 2? \" + (number % 2 == 0)); System.out.println(\"Divisible by 3? \" + (number % 3 == 0)); System.out.println(\"Divisible by 4? \" + (number % 4 == 0)); System.out.println(\"Divisible by 5? \" + (number % 5 == 0));}}";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+
+         @Test
+       public void testBool6() throws IOException
+       {
+           String target = "number % 6 == 0";
+           boolean passed = checkCodeContains("boolean check for divisibility by 6", target);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testBool7() throws IOException
+       {
+           String target = "number % 7 == 0";
+           boolean passed = checkCodeContains("boolean check for divisibility by 7", target);
+           assertTrue(passed);
+       }
+    }
  
     
 Summary
