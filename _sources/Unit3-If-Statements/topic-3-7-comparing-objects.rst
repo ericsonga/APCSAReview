@@ -51,6 +51,7 @@ When the operator ``==`` is used to compare object variables, it returns true wh
 
 .. activecode:: lcse1
    :language: java
+   :autograde: unittest    
    
    If you run the following, what will be printed?
    ~~~~
@@ -66,6 +67,22 @@ When the operator ``==`` is used to compare object variables, it returns true wh
         System.out.println(s2.equals(s3));
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Bye\ntrue\ntrue\n";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 The code above will print ``Bye`` since s3 has been assigned to a copy of the value in s2 which is an object reference to the String object that has the characters "Bye" in it.  
 In addition, ``s2 == s3`` will be true since the two variables refer to the same object.  Also, ``s2.equals(s3)`` will also be true; again since the two variables refer to the same object, of course the characters will be the same.  
@@ -91,6 +108,7 @@ The one common place to use == or != with objects is to compare them to **null**
 
 .. activecode:: nullTest
    :language: java
+   :autograde: unittest    
 
    Try the following code to see a NullPointer error. Since s is null, indexOf throws an NullPointer error for s. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
    ~~~~
@@ -109,6 +127,22 @@ The one common place to use == or != with objects is to compare them to **null**
         }
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+
+      @Test
+        public void testChangedCode() {
+            String origCode = "public class NullTest { public static void main(String[] args) { String s = null; if (s.indexOf(\"a\") >= 0) {  System.out.println(s + \" contains an a\"); } if (s != null && s.indexOf(\"a\") >= 0) { System.out.println(s + \" contains an a\"); } } }";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+    }
      
 
     
@@ -119,6 +153,7 @@ If you use the ``new`` keyword to create a string, it will always create a new s
 
 .. activecode:: lcse2
    :language: java
+   :autograde: unittest    
    
    What will the following print?
    ~~~~
@@ -132,6 +167,22 @@ If you use the ``new`` keyword to create a string, it will always create a new s
         System.out.println(s1.equals(s2));
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "false\ntrue\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
   
 Since we used the ``new`` keyword, two different String objects will be created that each have the characters ``Hello`` in them.  So ``s1 == s2`` will be false since they don't refer to the same object, but ``s1.equals(s2)`` is true since the two different objects contain the same characters in the same order.  
 
@@ -144,34 +195,7 @@ Since we used the ``new`` keyword, two different String objects will be created 
    
 Note that you can also create Strings using string literals instead of new. String literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and == on the exam.
 
-.. Using String Literals
-.. ---------------------
-
-    
-.. .. activecode:: lcse3
-   :language: java
-   
-   What do you think the following code will print?  Run it to check.
-   ~~~~
-   public class Test2
-   {
-      public static void main(String[] args)
-      {
-        String s1 = "Hello";
-        String s2 = "Hello";
-        System.out.println(s1 == s2);
-        System.out.println(s1.equals(s2));
-      }
-   }
   
-.. Since we used string literals this time rather than the ``new`` keyword, the Java run-time will check if that string literal already exists as an object in memory, and if so reuse it.  So ``s1`` and ``s2`` will refer to the same string object.  That means that both ``==`` and ``equals`` will be true.
-
-.. .. figure:: Figures/twoStringRefsLiteral.png
-    :width: 175px
-    :align: center
-    :figclass: align-center
-
-    Figure 3: Two string variables that refer to the same string literal.  
   
 |Exercise| **Check your understanding**
 

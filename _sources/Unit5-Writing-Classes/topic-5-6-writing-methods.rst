@@ -108,9 +108,11 @@ For example, here is a chorus() method definition that we could write for the "T
 
 
 .. activecode:: Song1
-  :language: java
+  :language: java   
+  :autograde: unittest    
+  :practice: T
 
-  Run the following code to see the song This Old Man print out. Can you change the last two lines in the second verse to call the chorus() method instead? You can also see this code run in the |Java visualizer|.
+  Run the following code to see the song This Old Man print out. Can you replace the last two lines in the second verse in the main method with a call the chorus() method instead? You can also see this code run in the |Java visualizer| by clicking on the Code Lens button.
   ~~~~
   public class Song 
   { 
@@ -135,6 +137,41 @@ For example, here is a chorus() method definition that we could write for the "T
       System.out.println("This old man came rolling home.");
     }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "This old man, he played one.\nHe played knick knack on my thumb.  \nWith a knick knack paddy whack, give a dog a bone.\nThis old man came rolling home.\nThis old man, he played two.\nHe played knick knack on my shoe. \nWith a knick knack paddy whack, give a dog a bone.\nThis old man came rolling home.";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class Song{ // The chorus method public void chorus() { System.out.println(\"With a knick knack paddy whack, give a dog a bone.\"); System.out.println(\"This old man came rolling home.\"); }  public static void main(String args[])  {  Song mySong = new Song();  System.out.println(\"This old man, he played one.\");  System.out.println(\"He played knick knack on my thumb. \");  mySong.chorus();  System.out.println(\"This old man, he played two.\");  System.out.println(\"He played knick knack on my shoe. \");  // Can you replace these 2 lines with a method call to chorus()?  System.out.println(\"With a knick knack paddy whack, give a dog a bone.\");  System.out.println(\"This old man came rolling home.\")  }  }";
+
+            boolean changed = codeChanged(origCode);
+
+            assertTrue(changed);
+
+        }
+
+        @Test
+        public void testcodeContains(){
+          int count = countOccurences(getCode(),"mySong.chorus();");
+          boolean passed = count > 1;
+          passed = getResults("> 1 chorus call",  count  + " chorus call(s)", "Added a call to chorus?", passed);
+          assertTrue(passed);
+        }
+
+    }
   
 Parameters
 -----------
@@ -170,8 +207,10 @@ We can make methods even more powerful and more abstract by giving them paramete
 
 .. activecode:: Song2
   :language: java
+  :autograde: unittest    
+  :practice: T
 
-  Run the following code to see the song This Old Man print out using the verse and chorus methods.  You can also see this code run in the |visualizer|. Can you add verse three with the rhyme "knee"? Can you add verse four with the rhyme "door"? How many verses do you know?
+  Run the following code to see the song This Old Man print out using the verse and chorus methods.  You can also see this code run in the |visualizer| by clicking on the Show Code Lens button below. Can you add verse three with the rhyme "knee"? Can you add verse four with the rhyme "door"? How many verses do you know?
   ~~~~
   public class Song 
   { 
@@ -202,8 +241,33 @@ We can make methods even more powerful and more abstract by giving them paramete
       mySong.chorus();
     }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+   
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testThree() 
+        {
+            boolean passed = checkCodeContains("verse three", "mySong.verse(\"three\", \"knee\");");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFour() 
+        {
+            boolean passed = checkCodeContains("verse four", "mySong.verse(\"four\", \"door\");");
+            assertTrue(passed);
+        }
+    }
   
-When you create your own method, the variables you define for it in the method header are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in these local parameter variables. When a method is called, the right method definition is found by checking the **method signature** or **header** at the top of the method definition to match the method name, the number of arguments, the data types for the arguments and the return type. Here's what that looks like with the 2 method calls above. Notice how the parameter variables get new values with every method call.
+When you create your own method, the variables you define for it in the method header are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in these local parameter variables. 
+
+When a method is called, the right method definition is found by checking the **method signature** or **header** at the top of the method definition to match the method name, the number of arguments, the data types for the arguments and the return type. 
+
+Here's what that looks like with the 2 method calls above. Notice how the parameter variables get new values with every method call.
 
 .. figure:: Figures/args2params.png
     :width: 500px
@@ -225,7 +289,7 @@ If you pass in an argument that holds a reference to an object, like a String or
     
     Figure 2: Turtle Reference Equality
     
-Although String objects are not mutable, the classes that you create will have mutable objects. If the reference parameter is for a mutable object, the method could change the actual object, but it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification. Methods can even access the private data and methods of a parameter that is a reference to an object if the parameter is the same type as the method’s enclosing class. Note that Strings are immutable objects, so they cannot be changed by the method; only a new changed copy of them can be made.
+(Advanced topics warning): Although String objects are not mutable, the classes that you create will have mutable objects. If the reference parameter is for a mutable object, the method could change the actual object. However, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification. Methods can even access the private data and methods of a parameter that is a reference to an object if the parameter is the same type as the method’s enclosing class. Note that Strings are immutable objects, so they cannot be changed by the method; only a new changed copy of them can be made.
 
 
 Methods can also return values of any type back to the calling method. The calling method should do something with this return value, like printing it out or saving it in a variable. Try the problems below to practice with a String method that takes a parameter and returns a boolean value.
@@ -236,8 +300,10 @@ Methods can also return values of any type back to the calling method. The calli
 
 .. activecode:: StringFind
   :language: java
+  :autograde: unittest    
+  :practice: T
 
-  Run the following program which contains a method called findLetter that takes a letter and a text as parameters and uses a loop to see if that letter is in the text. It returns a boolean true or false value.  Give letter and the text new values in the main method and run it again to try finding a different letter. Then, change the code of the method to count how many letters it finds and return the count as an int. 
+  Run the following program which contains a method called findLetter that takes a letter and a text as parameters and uses a loop to see if that letter is in the text and returns true if it is, false otherwise. Give the variables ``letter`` and ``text`` new values in the main method and run it again to try finding a different letter. Then, change the code of the findLetter method to return how many times it finds letter in text, using a new variable called ``count``. How would the return type change?
   ~~~~
   public class StringFind 
   { 
@@ -268,6 +334,50 @@ Methods can also return values of any type back to the calling method. The calli
       System.out.println( test.findLetter(letter, message) ); 
     }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void tryfindLetter() 
+        { 
+           String message = "Apples and Oranges";
+           String letter = "p";
+           Object[] args = {letter,message};
+           String output = getMethodOutput("findLetter", args);
+           String expect = "2";
+
+           boolean passed = getResults(expect, output, 
+                    "findLetter(\"p\",\"Apples and Oranges\")");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void test2() 
+        {
+            boolean passed = checkCodeContains("changed return type of findLetter", "public int findLetter(String letter, String text)");
+            assertTrue(passed);
+        }
+
+         @Test
+        public void test1() 
+        {
+            boolean passed = checkCodeContains("variable count set to 0", "int count = 0;");
+            assertTrue(passed);
+        }
+
+         @Test
+        public void test3() 
+        {   String code = getCode();
+            boolean passed = code.contains("count++;") || 
+            code.contains("count = count + 1;") || code.contains("count = 1 + count;") || code.contains("count += 1;") || code.contains("++count;");
+            passed = getResults("count incremented",Boolean.toString(passed),"Count incremented?", passed);
+            assertTrue(passed);
+        }
+    }
   
 |Groupwork| Programming Challenge : Song with Parameters
 ---------------------------------------------------------

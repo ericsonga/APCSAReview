@@ -378,7 +378,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
             String expect1 = expect.split("\n")[0];
             String output1 = output.split("\n")[0];
 
-            passed = getResults(expect1, output1, "Does not contain 5", passed);
+            passed = getResults(expect1, output1, "Do not start loop from 5", passed);
             assertTrue(passed);
         }
     }

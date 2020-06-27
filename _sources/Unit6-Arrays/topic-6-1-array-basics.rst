@@ -155,7 +155,7 @@ To actually create an array after declaring the variable, use the **new** keywor
         @Test
         public void testDouble() throws IOException
         {
-            String target = "double [] prices = new double[5];";
+            String target = "new double[5];";
             boolean passed = checkCodeContains(target);
             assertTrue(passed);
         }
@@ -163,7 +163,7 @@ To actually create an array after declaring the variable, use the **new** keywor
         @Test
         public void testString() throws IOException
         {
-            String target = "String [] names = new String[5];";
+            String target = "new String[5];";
             boolean passed = checkCodeContains(target);
             assertTrue(passed);
         }
@@ -607,7 +607,7 @@ In this challenge, you will create a guide to different countries using arrays.
 
             boolean passed = len == 4 && output.contains(".jpg");
 
-            passed = getResults(expect, output, "Did you print all the info?", passed);
+            passed = getResults(expect, expect, "Did you print all the info?", passed);
             assertTrue(passed);
         }
 
@@ -619,7 +619,8 @@ In this challenge, you will create a guide to different countries using arrays.
 
             boolean passed = output.contains(expect);
 
-            passed = getResults(expect + "...", output, "Did you uncomment the image code?", passed);
+            //passed = getResults(expect + "...", output, "Did you uncomment the image code?", passed);
+            passed = getResults("image", "image", "Did you uncomment the image code?", passed);
             assertTrue(passed);
         }
 
@@ -643,7 +644,7 @@ In this challenge, you will create a guide to different countries using arrays.
 
             boolean passed = difft > 3;
 
-            passed = getResults("> 3 Countries", difft + " countries", "Did you pick a random country?", passed);
+            passed = getResults("> 3 Countries", difft + " countries", "Can pick a random different country > 3 times?", passed);
             assertTrue(passed);
         }
 

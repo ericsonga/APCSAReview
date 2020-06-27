@@ -136,9 +136,10 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
    :language: java
    :autograde: unittest   
 
-   In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
+   In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). 
    ~~~~
-   import java.util.*; // import everything at this level
+   import java.util.*; // import for ArrayList
+   
    public class ArrayListDeclare
    {
        public static void main(String[] args)
@@ -164,7 +165,7 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
             String output = getMethodOutput("main");
             String expect = "null";
 
-            boolean passed = getResults(expect, output, "main()" true);
+            boolean passed = getResults(expect, output, "main()", true);
             assertTrue(passed);
         }
 

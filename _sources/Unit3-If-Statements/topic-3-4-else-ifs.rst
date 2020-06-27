@@ -199,6 +199,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 .. activecode:: lccbIfDebug
    :language: java
    :autograde: unittest
+   :practice: T
 
    The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Use the Code Lens button. Then, fix the code by adding in 3 else's to connect the if statements and see if it works.
    ~~~~
@@ -270,33 +271,12 @@ Here is a flowchart for a conditional with 3 options like in the code above.
         }
     }
 
-.. .. mchoice:: qcb3_4_4
-   :practice: T
-   :answer_a: A
-   :answer_b: B
-   :answer_c: C
-   :answer_d: D
-   :answer_e: E
-   :correct: d
-   :feedback_a: Notice that each of the first 4 statements start with an if so you need to check each one.  What will actually be printed?  Try it in one of the active code windows above.  
-   :feedback_b: Each of the first 4 if statements will execute.
-   :feedback_c: Check this in active code.
-   :feedback_d: Each of the if statements will be executed. So grade will be set to A, then B then C and finally D.  
-   :feedback_e: This will only be true when score is less than 60. 	
-
-    What is the value of grade when the following code executes and score is 93?  
-   
-   .. code-block:: java 
-
-     if (score >= 90) grade = "A";
-     if (score >= 80) grade = "B";
-     if (score >= 70) grade = "C";
-     if (score >= 60) grade = "D";
-     else grade = "E";
 
 
 .. activecode::  ifelseifBattery
   :language: java
+  :autograde: unittest
+  :practice: T
      
   Finish the following code so that it prints "Plug in your phone!" if the battery is below 50, "Unplug your phone!" if it is above 100, and "All okay!" otherwise. Change the battery value to test all 3 conditions.
   ~~~~
@@ -309,7 +289,39 @@ Here is a flowchart for a conditional with 3 options like in the code above.
           System.out.println("All okay!");
       }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class BatteryTest {  public static void main(String[] args)  {  int battery = 60;  System.out.println(\"All okay!\");  }  }";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+
+        @Test
+        public void testCodeContains3(){
+          boolean ifCheck1 = checkCodeContains("if statement for battery above 100", "if (battery > 100)");
+            assertTrue(ifCheck1);
+        }
+
+        @Test
+        public void testCodeContains5(){
+            boolean ifCheck1 = checkCodeContains("if statement for battery less than 50", "if (battery < 50)");
+            assertTrue(ifCheck1);
+        }
+
+        @Test
+        public void testCodeContains4(){
+          boolean ifCheck2 = checkCodeContains("else", "else");
+          assertTrue(ifCheck2);
+        }
+    }
 
 |Groupwork| Programming Challenge : Adventure
 ---------------------------------------------

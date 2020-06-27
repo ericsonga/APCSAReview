@@ -464,7 +464,7 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
          // from the currentYear and dogBirthYear variables 
          int dogAge = 
          
-         // Calculate the age of your dog in dogYears (7 times a human year)
+         // Calculate the age of your dog in dogYears (7 times your dog's age in human years)
          int dogYearsAge =
          
          // Print out your age, your dog's age, and your dog's age in dog years. Make sure you print out text too so that the user knows what is being printed out.
@@ -496,9 +496,11 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
        @Test
        public void testAsgn3() throws IOException
        {
-           String target = "dogYearsAge = dogAge * 7";
-           boolean passed = checkCodeContains("formula for dogYearsAge using dogAge", target);
-           assertTrue(passed);
+            String target1 = "dogYearsAge = dogAge * 7";
+            String target2 = "dogYearsAge = 7 * dogAge";
+            boolean passed = 
+       checkCodeContainsNoRegex("formula for dogYearsAge using dogAge", target1) || checkCodeContainsNoRegex("formula for dogYearsAge using dogAge in another order", target2);
+            assertTrue(passed);
        }
     }
    

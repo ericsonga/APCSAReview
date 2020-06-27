@@ -239,7 +239,7 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
             String output = getMethodOutput("main");
             String expected = "5 rows\n10 columns";
 
-            boolean passed = output.contains(expected);passed = getResults(expected, output, "Prints rows and columns", passed);
+            boolean passed = output.contains(expected);passed = getResults(expected, output, "Changed ticketInfo to 5 rows and 10 columns", passed);
 
             assertTrue(passed);
         }

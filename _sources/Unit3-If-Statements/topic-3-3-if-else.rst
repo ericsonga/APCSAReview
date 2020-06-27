@@ -129,6 +129,8 @@ If/else statements can also be used with relational operators and numbers like b
 
 .. activecode:: licenseifelse
    :language: java
+   :autograde: unittest
+   :practice: T
    
    Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age's value to 15 and then run it again to see the result of the print statement in the else part. 
    Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements. 
@@ -148,7 +150,21 @@ If/else statements can also be used with relational operators and numbers like b
         }
       }
    } 
-
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+         @Test
+       public void testCodeContains() throws IOException
+       {
+           String target = "age >= 15";
+           boolean passed = checkCodeContains("check age >= 15", target);
+           assertTrue(passed);
+       }
+    }
 
 .. parsonsprob:: ifelseevenOdd
    :numbered: left
@@ -189,6 +205,8 @@ If/else statements can also be used with relational operators and numbers like b
 
 .. activecode:: scoreifelse
    :language: java
+   :autograde: unittest
+   :practice: T
    
    Try the following code. Add an else statement to the if statement that prints out "Good job!" if the score is greater than 9. Change the value of score to test it. Can you change the boolean test to only print out "Good job" if the score is greater than 20?
    ~~~~
@@ -203,6 +221,31 @@ If/else statements can also be used with relational operators and numbers like b
         }
       }
    } 
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class ScoreTest   {      public static void main(String[] args)      {        int score = 8;        if (score <= 9)         {            System.out.println(\"Try for a higher score!\");        }      }} ";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+        @Test
+        public void testCodeContainsElse(){
+          boolean ifCheck2 = checkCodeContains("else", "else");
+          assertTrue(ifCheck2);
+        }
+        @Test
+        public void testCodeContains(){
+            boolean ifCheck1 = checkCodeContains("if testing with 20", "if (score <= 20)");
+            assertTrue(ifCheck1);
+        }
+    }
 
 
 
@@ -228,6 +271,7 @@ If statements can be nested inside other if statements. Sometimes with nested if
 .. activecode:: danglingelse
    :language: java
    :autograde: unittest
+   :practice: T
    
    Try the following code with a dangling else. Notice that the indentation does not matter. How could you get the else to belong to the first if statement?
    ~~~~
@@ -276,19 +320,6 @@ You can use curly brackets { } to enclose a nested if and have the else clause b
       do that statement;
 
 
-.. Here's a more complex program that uses nested ifs to guess a number between 1 and 4. This program uses the **divide and conquer** technique called **binary search**, and we will come up with a better way to code this once we learn about loops in the next unit. 
-
-.. .. raw:: html
-
-    <iframe height="500px" width="100%"  style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/GuessingWithIfs?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-
-.. .. fillintheblank:: 3_3_2_test_cases
-
-   How many test cases do you need to test all the different branching possibilities in the program above?  
-   
-   -    :5: That's right. Count all the possible answers. There are 5 different possibilities.
-        :.*: Try it and see
 
 |Groupwork| Programming Challenge : 20 Questions
 ------------------------------------------------

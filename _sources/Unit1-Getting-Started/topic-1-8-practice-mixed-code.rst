@@ -1,7 +1,6 @@
 .. qnum::
    :prefix: 1-8-
-   :start: 1
-   
+   :start: 1   
 
 
 
@@ -223,7 +222,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            System.out.println("Your name is " + name);
    =====
-           System.out.println("You favorite food is " + food);
+           System.out.println("Your favorite food is " + food);
    =====
        }
    =====

@@ -327,7 +327,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
    :autograde: unittest
    :practice: T
    
-   Write a while loop that replaces every occurrence of "cat" in the message with "dog".
+   Write a while loop that replaces every occurrence of "cat" in the message with "dog" using the indexOf and substring methods.
    ~~~~
    public class ChallengeReplace
    {
@@ -335,7 +335,8 @@ Are you a cat person or a dog person? The code below prints a nice message about
      {
         String message = "I love cats! I have a cat named Coco. My cat's very smart!";
 
-        // Write a loop here that replaces every occurrence of "cat" in the message with "dog" 
+        // Write a loop here that replaces every occurrence of "cat" 
+        // in the message with "dog", using indexOf and substring.
         
         
         
@@ -372,7 +373,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
         @Test
         public void testWhile() throws IOException
         {
-            String target = "while\\s*\\([A-Za-z0-9 =><]+\\)";
+            String target = "while(";
             boolean passed = checkCodeContains("while loop", target);
             assertTrue(passed);
         }
@@ -380,7 +381,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
         @Test
         public void testReplace() throws IOException
         {
-            String target = "\\.replace(All)*\\s*\\(";
+            String target = ".replace";
             boolean passed = checkCodeNotContains("shortcut replace", target);
             assertTrue(passed);
         }
