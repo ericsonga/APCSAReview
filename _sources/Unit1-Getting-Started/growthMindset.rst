@@ -37,3 +37,7 @@ Plan A didn’t work.	          Let's try something else.
 ----------------------------  ---------------------------------------
 It’s good enough.	          How can I improve this?
 ============================  =======================================
+
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>

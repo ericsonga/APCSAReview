@@ -280,3 +280,7 @@ Summary
 - Integer values in Java are represented by values of type int, which are stored using a finite amount (4 bytes) of memory. Therefore, an int value must be in the range from Integer.MIN_VALUE to Integer.MAX_VALUE inclusive.
 
 - If an expression would evaluate to an int value outside of the allowed range, an integer overflow occurs. This could result in an incorrect value within the allowed range.
+
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>

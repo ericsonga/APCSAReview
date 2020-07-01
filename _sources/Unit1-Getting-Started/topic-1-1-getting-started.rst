@@ -17,3 +17,7 @@ Follow the links below to learn more about the AP CS A course and exam and Java 
    growthMindset.rst
    ptest1.rst
    survey.rst
+   
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>

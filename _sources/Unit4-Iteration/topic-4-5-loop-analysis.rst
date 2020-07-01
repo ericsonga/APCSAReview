@@ -43,12 +43,12 @@ Let's practice tracing through loops with many variables. Remember to make a tra
 
 |CodingEx| **Coding Exercise**
 
-Here is a complex loop.  See if you can trace the code on paper by making a tracing table to predict what the code will do when you run it. Click on the this |Java visualizer| link to help you step through the code. 
+Here is a complex loop.  See if you can trace the code on paper by making a tracing table to predict what the code will do when you run it. Click on the this |Java visualizer| link or the Code Lens button to help you step through the code. 
 
 .. activecode:: example_trace_loop
    :language: java
    
-   Can you trace through this code? Add in output statements like ``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop to keep track of the variables and run.
+   Can you trace through this code? Add in output statements like ``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop to keep track of the variables and run. Click on the Code Lens button to visualize the code step by step.
    ~~~~
    public class Test
    {
@@ -67,7 +67,7 @@ Here is a complex loop.  See if you can trace the code on paper by making a trac
 
 
 
-Did you trace table look like the following?
+Did your trace table look like the following?
 
 .. figure:: Figures/whileLoopTrace.png
     :width: 150px
@@ -75,30 +75,6 @@ Did you trace table look like the following?
     :figclass: align-center
 
     Figure 1: A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
-    
-.. You can also add ``System.out.println(variable)`` to print the value of a variable.  In the code below the values of all of the variables are printed before the loop and at the end of the loop body.
-
-.. .. activecode:: while_ex2vars
-   :language: java
-   
-   public class Test
-   {
-      public static void main(String[] args)
-      {
-      
-         int var1 = 3;
-         int var2 = 2;
-   
-         System.out.println("var1: " + var1 + " var2: " + var2);
-         
-         while ((var2 != 0) && ((var1 / var2) >= 0))
-         {
-            var1 = var1 + 1;
-            var2 = var2 - 1;
-            System.out.println("var1: " + var1 + " var2: " + var2);
-         }
-      }
-   }
   
 
 

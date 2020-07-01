@@ -28,12 +28,7 @@ Unit 1 AP CS A Exam Weighting: 2.5-5%
    Exercises.rst
 
    
-.. Old TOC
-    whatIsJava.rst
-   introClassObject.rst
-   firstClass.rst
-   compileTimeErrors.rst
-   firstOOClass.rst
-   runClass.rst
-   partsOfAClass.rst
-   JavaBasicsSummary.rst
+   
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>

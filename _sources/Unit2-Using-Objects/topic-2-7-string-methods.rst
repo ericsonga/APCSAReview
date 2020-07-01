@@ -507,14 +507,16 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
         {
             String output = getMethodOutput("main");
             String expect = "* in Pig Latin is *ay";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResultsRegEx(expect, output, "Expected output from main");
             assertTrue(passed);
         }
        @Test
-       public void testContainsSubstring() throws IOException
+       public void testContainsSubstring() 
        {
            String target = "word.substring(";
-           boolean passed = checkCodeContains("substring method", target);
+           int count = countOccurences(getCode(), target);
+           boolean passed = count >= 2;
+           passed = getResults("2 substring calls", count + " substring call(s)","Code contains calls to substring method", passed);
            assertTrue(passed);
        }
     }  

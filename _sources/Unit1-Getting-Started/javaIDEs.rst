@@ -56,3 +56,7 @@ Eclipse
 -------
 
 Eclipse (https://www.eclipse.org/downloads/packages/installer) is what many professional Java programmers use. It may be a little complex for beginners. Here are some installation and configuration instructions for Eclipse for CS A Java: http://skylit.com/javamethods/faqs/Eclipse.pdf.
+
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>
