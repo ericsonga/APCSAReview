@@ -41,7 +41,7 @@ When you play a song, you can set it to loop, which means that when it reaches t
 
 A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false, we exit the loop and continue with the statements that are after the body of the ``while`` loop.  If the condition is false the first time you check it, the body of the loop will not execute.  
 
-Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs more than once. The curly brackets { } are optional when there is just 1 statement following the condition, but it is a good idea to put them in anyway because loops often have more than 1 statement in the body.
+Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs more than once. The curly brackets { } are optional when there is just 1 statement following the condition, but required if there are more than 1 statement in the loop. In the AP exam, they will always use curly brackets, which is a good practice to follow.
 
 .. code-block:: java
 
@@ -111,8 +111,10 @@ The loop condition usually involves a **loop control variable** that controls wh
 
 .. activecode:: whileloop
    :language: java
+   :autograde: unittest
+   :practice: T
    
-   Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of writing a loop. Can you change it to count from 2 to 10? Can you make it count by 2s? Can you make it count backwards?
+   Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of writing a loop. Can you change it to count from 2 to 10? 
    ~~~~
    public class LoopTest1
    {
@@ -131,6 +133,22 @@ The loop condition usually involves a **loop control variable** that controls wh
  
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "2\n3\n4\n5\n6\n7\n8\n9\n10\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
 
 Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is standard practice to do so.  
 
@@ -274,8 +292,9 @@ Another common error with loops is an **off-by-one error** where the loop runs o
 
 .. activecode:: whileloopbugs
    :language: java
+   :autograde: unittest
    
-   The while loop should print out the numbers 1 to 8, but it has 2 errors that cause an infinite loop and an off-by-one error. Can you fix the errors? If you run an infinite loop, you may need to refresh the page to stop it (so make sure all active code windows on the page are saved).
+   The while loop should print out the numbers 1 to 8, but it has 2 errors that cause an infinite loop and an off-by-one error. Can you fix the errors? If you run an infinite loop, you may need to refresh the page to stop it (so make sure all active code windows on the page have been saved and click on Load History after refreshing).
    ~~~~
    public class LoopTest2
    {
@@ -288,6 +307,27 @@ Another common error with loops is an **off-by-one error** where the loop runs o
         }
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("LoopTest2");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "1\n2\n3\n4\n5\n6\n7\n8";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+    }
    
 Input-Controlled Loops
 ----------------------
@@ -339,7 +379,7 @@ We encourage you to work in pairs on this guessing game. In the guessing game, t
 
 As an extension to this project, you can add a counter variable to count how many guesses the user took and print it out when they guess correctly.
 
-When you finish and run your program, what is a good guessing strategy for guessing a number between 0 and 100? What was your first guess? One great strategy is to always split the guessing space into two and eliminating half, so guessing 50 for the first guess. This is called a **divide and conquer** or **binary search** algorithm. If your guess is between 0-100, you should be able to guess the number within 7 guesses. Another extension is to test whether the user got it in 7 guesses or less and provide feedback on how well they did.
+When you finish and run your program, what is a good guessing strategy for guessing a number between 0 and 100? What was your first guess? One great strategy is to always split the guessing space into two and eliminating half, so guessing 50 for the first guess. This is called a **divide and conquer** or **binary search** algorithm. If your guess is between 0-100, you should be able to guess the number within 7 guesses. Another extension to this challenge is to test whether the user got it in 7 guesses or less and provide feedback on how well they did.
 
 .. |Scanner class| raw:: html
 

@@ -50,7 +50,7 @@ Here is a complex loop.  See if you can trace the code on paper by making a trac
    
    Can you trace through this code? Add in output statements like ``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop to keep track of the variables and run. Click on the Code Lens button to visualize the code step by step.
    ~~~~
-   public class Test
+   public class Trace
    {
        public static void main(String[] args)
        {

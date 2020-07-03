@@ -193,8 +193,9 @@ Let's consider the substring method in Java. This method has a strong preconditi
 
 .. activecode:: substring-preconditions
     :language: java
+    :autograde: unittest
 
-    The following code breaks the preconditions of the substring method and throws an IndexOutOfBoundsException. Can you fix the code by changing the arguments for the substring method to print out "lo"? What are the preconditions for the substring method?
+    The following code breaks the preconditions of the substring method and throws an IndexOutOfBoundsException. Can you fix the code by changing the arguments for the substring method to print out the substring "lo"? What are the preconditions for the substring method?
     ~~~~
     public class SubstringPreconditions
     {
@@ -203,6 +204,27 @@ Let's consider the substring method in Java. This method has a strong preconditi
           String str = "hello";
           System.out.println( str.substring(-1,10) );
       }
+    }
+    ====
+    // Test for Lesson 5.3.2 Substring-preconditions
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("SubstringPreconditions");
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "lo";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
     }
 
 .. note::
@@ -321,6 +343,7 @@ Here is a simple class called User that could be used in an online store. Add go
 
 .. activecode:: challenge-5-3-comments
     :language: java
+    :autograde: unittest
 
     // comments?
     public class User
@@ -354,6 +377,137 @@ Here is a simple class called User that could be used in an online store. Add go
           u1.welcome();
           u2.welcome();
       }
+    }
+    ====
+    // Test for 5.3.5 Comments
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    import java.nio.file.Files;
+    import java.nio.file.Paths;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        private String program;
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Welcome guest!\nWelcome cooldude@gmail.com!";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testClassComment() throws IOException {
+            //System.out.println(program);
+            program = new String(Files.readAllBytes(Paths.get("User.java")));
+
+            int index = program.indexOf("public class User");
+
+            String beginning = program.substring(0, index-1).trim();
+            String expected = "A comment starting with // or /* and not // comments?";
+            //System.out.println(beginning);
+
+            boolean pass = !beginning.startsWith("// comments") && isComment(beginning);
+
+            boolean passed = getResults(expected, beginning, "Class comment", pass);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testVariablesComment() throws IOException {
+            //System.out.println(program);
+            program = new String(Files.readAllBytes(Paths.get("User.java")));
+
+            int start = program.indexOf("{") + 1;
+            int end = program.indexOf("private String username");
+
+            String comment = program.substring(start, end).trim();
+            String expected = "A comment starting with // or /*";
+            //System.out.println(beginning);
+
+            boolean passed = getResults(expected, comment, "Variable comment", isComment(comment));
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testDefaultConstructorComment() throws IOException {
+            //System.out.println(program);
+            program = new String(Files.readAllBytes(Paths.get("User.java")));
+
+            int start = program.indexOf("password;") + "password;".length() + 1;
+            int end = program.indexOf("public User()");
+
+            String comment = program.substring(start, end).trim();
+            String expected = "A comment starting with // or /*";
+            //System.out.println(beginning);
+
+            boolean passed = getResults(expected, comment, "Default constructor comment", isComment(comment));
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructorComment() throws IOException {
+            //System.out.println(program);
+            program = new String(Files.readAllBytes(Paths.get("User.java")));
+
+            int start = program.indexOf("*1000);");
+            start = program.indexOf("}", start) + 1;
+            int end = program.indexOf("public User(String nameInit, String pwordInit)");
+
+            String comment = program.substring(start, end).trim();
+            String expected = "A comment starting with // or /*";
+            //System.out.println(beginning);
+
+            boolean passed = getResults(expected, comment, "Constructor comment", isComment(comment));
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testWelcomeComment() throws IOException {
+            //System.out.println(program);
+            program = new String(Files.readAllBytes(Paths.get("User.java")));
+
+            int start = program.indexOf("password = pwordInit;");
+            start = program.indexOf("}", start) + 1;
+            int end = program.indexOf("public void welcome()");
+
+            String comment = program.substring(start, end).trim();
+            String expected = "A comment starting with // or /*";
+            //System.out.println(beginning);
+
+            boolean passed = getResults(expected, comment, "Welcome method comment", isComment(comment));
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testMainComment() throws IOException {
+            //System.out.println(program);
+            program = new String(Files.readAllBytes(Paths.get("User.java")));
+
+            int start = program.indexOf("username + \"!\");");
+            start = program.indexOf("}", start) + 1;
+            int end = program.indexOf("public static void main");
+
+            String comment = program.substring(start, end).trim();
+            String expected = "A comment starting with // or /*";
+            //System.out.println(beginning);
+
+            boolean passed = getResults(expected, comment, "Main method comment", isComment(comment));
+            assertTrue(passed);
+        }
+
+        private boolean isComment(String block) {
+            if (!block.contains("\n") && block.startsWith("//"))
+                return true;
+            if (block.startsWith("/*") && block.endsWith("*/"))
+                return true;
+            return false;
+
+        }
     }
 
 

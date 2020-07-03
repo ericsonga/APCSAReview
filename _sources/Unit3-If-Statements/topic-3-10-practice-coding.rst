@@ -34,6 +34,7 @@ Coding Practice
         
            .. activecode::  ch5Ex1a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~
@@ -86,6 +87,7 @@ Coding Practice
            
            .. activecode::  ch5Ex2a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~
@@ -139,6 +141,7 @@ Coding Practice
            
            .. activecode::  ch5Ex3a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~   
@@ -189,6 +192,7 @@ Coding Practice
            
            .. activecode::  ch5Ex4a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~               
@@ -239,6 +243,7 @@ Coding Practice
         
            .. activecode::  ch5Ex5a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~              
@@ -290,6 +295,7 @@ Coding Practice
         
            .. activecode::  ch5Ex6a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~              
@@ -338,6 +344,7 @@ Coding Practice
            
            .. activecode::  ch5Ex7a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~
@@ -385,6 +392,7 @@ Coding Practice
           
            .. activecode::  ch5Ex8a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~              
@@ -432,6 +440,7 @@ Coding Practice
            
            .. activecode::  ch5Ex9a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~              
@@ -483,6 +492,7 @@ Coding Practice
            
            .. activecode::  ch5Ex10a
               :language: java
+              :optional:
    
               This is the answer to the previous question.
               ~~~~

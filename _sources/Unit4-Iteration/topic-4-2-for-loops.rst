@@ -512,14 +512,17 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 
 1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360. 
 
-2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What angle should you use for the turns? Remember they have to add up to 360 degrees.
+2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What external angle should you use for the turns? Remember they have to add up to 360 degrees.
 
 3. Create a variable n that holds the number of sides for any polygon, and use n in your loop. Can you have the loop draw a variety of shapes by just changing the value of the variable n? The power of abstraction! Can you draw a 9 sided nonagon? (Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts).
 
 .. activecode:: challenge4-2-TurtleLoopShapes
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
+    Use a for-loop to draw a triangle. Then, change it to a pentagon. Then change it to draw any polygon using a variable n that holds the number of sides. Note that the angles in the turns have to add up to 360.
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -540,6 +543,80 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
           
           world.show(true); 
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleDrawShapes");
+        }
+
+        @Test
+        public void test1()
+        {
+           String target = "for (int * = *; * ? *; *~)";
+           boolean passed = checkCodeContains("for loop", target);
+           assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String forwards = ".forward(";
+
+            int count = countOccurences(code, forwards);
+
+            boolean passed = count == 1;
+
+            passed = getResults("1 forward(...)", "" + count  + " forward(...)", "Should only need forward() once", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String forwards = ".turn(";
+
+            int count = countOccurences(code, forwards);
+
+            boolean passed = count == 1;
+
+            passed = getResults("1 turn(...)", "" + count  + " turn(...)", "Should only need turn(...) once", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            String forwards = "int n";
+
+            int count = countOccurences(code, forwards);
+
+            boolean passed = count == 1;
+
+            passed = getResults("true", "" + passed, "Declare int n", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test5()
+        {
+            String code = getCode();
+            String test = "360/n";
+
+            int count = countOccurences(code.replaceAll(" ",""), test);
+            boolean passed = count == 1;
+
+            passed = getResults("true", "" + passed, "Calculates angle correctly using n", passed);
+            assertTrue(passed);
+        }
     }
     
    

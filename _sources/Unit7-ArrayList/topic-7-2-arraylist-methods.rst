@@ -87,6 +87,7 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
 
 .. activecode:: listAdd1
    :language: java
+   :autograde: unittest
 
    Run the code below to see how the list changes as each object is added to the end.  Notice that we added the same string to the list more than once.  Lists can hold duplicate objects. Can you add your name to the list and then print out the list?
    ~~~~
@@ -105,6 +106,37 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
          System.out.println(nameList.size());
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ListAdd");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "[Diego, Grace, Diego, Your name]";
+            String searchString = "\\[Diego, Grace, Diego, [A-Za-z0-9 '-,]+\\]";
+
+            String[] lines = output.split("\n");
+            String longest = lines[0];
+            for (int i = 0; i < lines.length; i++) {
+                if (lines[i].length() > longest.length())
+                    longest = lines[i];
+            }
+
+            boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]+");
+
+            passed = getResults(expect, longest, "Add your name to the list", passed);
+            assertTrue(passed);
+        }
+    }
 
 ..	index::
 	pair: list; autoboxing
@@ -123,7 +155,7 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
 .. activecode:: StudentArrayList
   :language: java
 
-  An example of an ArrayList of Student objects.
+  An example of an ArrayList of Student objects. Add a new student with your name and info in it.
   ~~~~
   import java.util.*;
   
@@ -405,6 +437,7 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
 
 .. activecode:: listGetSet
    :language: java
+   :autograde: unittest
 
    Try to guess what the code below will print before running it. Can you get the last element in the nameList to print it out? Can you set the first element in the list to your name and print out the list?
    ~~~~
@@ -424,6 +457,49 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
          System.out.println(nameList);         
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("listGetSet");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "[Your name, John, Deja]";
+            String searchString = "\\[[A-Za-z0-9 '-,]+, John, Deja\\]";
+
+            String[] lines = output.split("\n");
+            String longest = lines[0];
+            for (int i = 0; i < lines.length; i++) {
+                if (lines[i].length() > longest.length())
+                    longest = lines[i];
+            }
+
+            boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]+");
+
+            passed = getResults(expect, longest, "Add your name to the list", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String searchString = "Deja";
+
+            boolean passed = output.contains("\n" + searchString + "\n") || output.matches("[\\s]+" + searchString + "[\\s]+");
+
+            passed = getResults("true", "" + passed, "Prints last item in list (Deja)", passed);
+            assertTrue(passed);
+        }
+    }
 
 
 |Exercise| **Check your understanding**

@@ -32,9 +32,9 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
 .. activecode:: getAvgForEach
    :language: java
    
-   Nested enhanced for loops demo.
+   Nested enhanced for loops demo. Click on the CodeLens button to visualize and step through the code.
    ~~~~
-   public class Test
+   public class Average
    {
 
       public static double getAvg(int[][] a)
@@ -59,7 +59,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
   
 In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
 
-You can step through this code using the Java Visualizer by clicking on the following `link3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A+++%7B%0A%0A++++++public+static+double+getAvg(int%5B%5D%5B%5D+a)%0A++++++%7B%0A+++++++++double+total+%3D+0%3B%0A+++++++++for+(int%5B%5D+colArray+%3A+a)%0A+++++++++%7B%0A++++++++++++for+(int+val+%3A+colArray)%0A++++++++++++%7B%0A+++++++++++++++total+%3D+total+%2B+val%3B%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++return+total+/+(a.length+*+a%5B0%5D.length)%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D%5B%5D+theArray+%3D+%7B%7B80,+90,+70%7D,+%7B20,+80,+75%7D%7D%3B%0A+++++++++System.out.println(getAvg(theArray))%3B%0A++++++%7D%0A+++%7D&mode=display&curInstr=0>`_
+
 
 
 
@@ -77,7 +77,7 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
  
    What will the following code print out? Can you add another method that gets the total for a column? 
    ~~~~
-   public class Test
+   public class Total
    {
 
       public static int getTotalForRow(int row, int[][] a)
@@ -107,7 +107,7 @@ You can loop through just part of a 2D array. You can change the starting value 
 
    Loooping through just part of a 2D array.
    ~~~~
-   public class Test
+   public class Count
    {
       public static int countValues(int value, int[][] a, 
                                  int rowStart, int rowEnd, 
@@ -143,7 +143,7 @@ Here is a linear search algorithm where we access each row and then apply a line
    
    What will the following code print? Can you change the code to work for a String 2D array?
    ~~~~
-   public class Test
+   public class Search
    {
       public static boolean search(int[][] array, int value)
       {

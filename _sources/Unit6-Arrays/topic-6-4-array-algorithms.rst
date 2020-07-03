@@ -73,7 +73,7 @@ Here are two common array traversal loops that can be used for these algorithms:
 .. activecode:: minmax
    :language: java
    
-   The code below finds the minimum (smallest element) in an array. Try it in the |Java visualizer|. Can you change it to find the maximum element instead? Can you also compute the average of the elements?
+   The code below finds the minimum (smallest element) in an array. Try it in the |Java visualizer| with the CodeLens button. Can you change it to find the maximum element instead? Can you also compute the average of the elements?
    ~~~~
    public class MinMax
    {      
@@ -101,7 +101,7 @@ Here are two common array traversal loops that can be used for these algorithms:
 .. activecode:: rotate
    :language: java
    
-   The code below rotates array elements to the left. Note that you need to use an indexed loop for this because you need to change the array and access two elements at different indices. Try it in the |visualizer|. Can you change it to rotate the elements to the right instead? 
+   The code below rotates array elements to the left. Note that you need to use an indexed loop for this because you need to change the array and access two elements at different indices. Try it in the |visualizer| with the CodeLens button. Can you change it to rotate the elements to the right instead? 
    ~~~~
    public class Rotate
    {      

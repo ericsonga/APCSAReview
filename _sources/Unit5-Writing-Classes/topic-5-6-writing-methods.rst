@@ -319,9 +319,9 @@ Methods can also return values of any type back to the calling method. The calli
         boolean flag = false;
         for(int i=0; i < text.length(); i++) {
             if (text.substring(i, i+1).equalsIgnoreCase(letter))
-	    {
+	        {
                 flag = true;
-	    }
+	        }
         }
         return flag;
      }
@@ -342,7 +342,7 @@ Methods can also return values of any type back to the calling method. The calli
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
-        public void tryfindLetter() 
+        public void tryfindLetter() throws IOException
         { 
            String message = "Apples and Oranges";
            String letter = "p";
@@ -355,6 +355,19 @@ Methods can also return values of any type back to the calling method. The calli
            assertTrue(passed);
         }
 
+         @Test
+        public void tryfindLetter2() throws IOException
+        { 
+           String message = "Test strings";
+           String letter = "s";
+           Object[] args = {letter,message};
+           String output = getMethodOutput("findLetter", args);
+           String expect = "3";
+
+           boolean passed = getResults(expect, output, 
+                    "findLetter(\"s\",\"Test strings\")");
+           assertTrue(passed);
+        }
         @Test
         public void test2() 
         {
@@ -413,7 +426,7 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
 1. Print out the |The Ants Go Marching| song and circle the repeated parts of the song.
 
 
-2. In the active code window below, create a method or methods that takes parameters to print out a verse. The method(s) should be abstract enough to work for all 3 verses. Use good commenting for your methods that describe the @param.
+2. In the active code window below, create a method or methods that takes parameters to print out a verse. The method(s) should be abstract enough to work for all 3 verses.  Use good commenting for your methods that describe the @param. For the autograder, make sure you create a method called
 
 3. In the main method, create an object of the class and call the method(s) you created in the last step to print out 3 verses of the song. Can you add more verses?
 

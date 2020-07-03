@@ -98,10 +98,11 @@ Since you can find out the number of rows and columns in a 2D array you can use 
 
 .. activecode:: lcgetAverage
    :language: java 
+   :autograde: unittest
    
-   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Note that an array can be passed in as an argument to a method.
+   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Note that an array can be passed in as an argument to a method. Click on the CodeLens button and then next to step through this code in the visualizer.
    ~~~~
-   public class Test
+   public class Test1
    {
 
       public static double getAverage(int[][] a)
@@ -125,6 +126,38 @@ Since you can find out the number of rows and columns in a 2D array you can use 
          System.out.println(getAverage(matrix));
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expected = "3.5";
+
+            boolean passed = !output.contains(expected);
+
+            passed = getResults("true", ""+passed, "Average has changed");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String expected = "int[][] matrix = { {1,2,3},{4,5,6}};";
+
+            boolean passed = !code.replaceAll(" ","").contains(expected.replaceAll(" ",""));
+
+            passed = getResults("true", ""+passed, "Matrix has been changed");
+            assertTrue(passed);
+        }
+    }
    
 Some key things to notice about this code are:
 
@@ -134,7 +167,7 @@ Some key things to notice about this code are:
 - The number of columns is ``a[0].length``
 - The number of times this loop executes is the number of rows times the number of columns.  
 
-You can step through the code by clicking on this `link1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A%7B%0A%0A+++public+static+double+getAverage(int%5B%5D%5B%5D+a)%0A+++%7B%0A++++++double+total+%3D+0%3B%0A++++++int+value+%3D+0%3B%0A++++++for+(int+row+%3D+0%3B+row+%3C+a.length%3B+row%2B%2B)%0A++++++%7B%0A+++++++++for+(int+col+%3D+0%3B+col+%3C+a%5B0%5D.length%3B+col%2B%2B)%0A+++++++++%7B%0A++++++++++++value+%3D+a%5Brow%5D%5Bcol%5D%3B%0A++++++++++++total+%3D+total+%2B+value%3B%0A+++++++++%7D%0A++++++%7D%0A++++++return+total+/+(a.length+*+a%5B0%5D.length)%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D%5B%5D+matrix+%3D+%7B%7B1,2,3%7D,%7B4,5,6%7D%7D%3B%0A++++++System.out.println(getAverage(matrix))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0/>`_
+
 
 |Exercise| **Mixed up programs**
 
@@ -173,9 +206,6 @@ You can step through this code using the Java Visualizer by clicking on the foll
 
    <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&mode=display&curInstr=40" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
 
-.. |Java Visualizer2| raw:: html
-
-   <a href= "https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+array+%3D+%7B%7B1,2,3%7D,%7B4,5,6%7D%7D%3B%0A++++++++for+(int+col+%3D+0%3B+col+%3C+array%5B0%5D.length%3B+col%2B%2B)%0A++++++++%7B%0A++++++++++++for+(int+row+%3D+0%3B+row+%3C+array.length%3B+row%2B%2B)%0A++++++++++++%7B%0A++++++++++++++++int+value+%3D+array%5Brow%5D%5Bcol%5D%3B%0A++++++++++++++++System.out.println(value)%3B%0A++++++++++++%7D%0A++++++++%7D%0A+++%7D%0A%7D&mode=display&curInstr=14" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
 
 Most nested loops with 2D Arrays use "row-major order" where the outer loop goes through each row. However, you can write nested loops that traverse in "column-major order" like below.
 
@@ -186,8 +216,9 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
 
 .. activecode:: ColumnMajorTraversal
    :language: java 
+   :autograde: unittest
    
-   What will the following code print out? Try to guess before you run it.
+   What will the following code print out? Try to guess before you run it. Then, step through it with the CodeLens button.
    ~~~~
    public class ColumnMajorTraversal
    {
@@ -203,6 +234,23 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
         }     
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expected = "1\n4\n2\n5\n3\n6";
+
+            boolean passed = getResults(expected, output, "main()", true);
+            assertTrue(passed);
+        }
+    }
          
 
 This lesson is continued on the next page. 
