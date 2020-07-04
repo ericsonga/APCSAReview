@@ -105,7 +105,11 @@ Vocabulary Practice
    <a href="https://quizlet.com/434063730/cs-awesome-unit-2-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
 
 
-For more practice, see this |Quizlet|.
+For more practice, see this |Quizlet| embedded below.
+
+.. raw:: html
+
+    <iframe style="max-width:90%; margin-left:5%" src="https://quizlet.com/434063730/flashcards/embed?i=2cxqxx&x=1jj1" height="500" width="100%" style="border:0"></iframe>
     
 Common Mistakes 
 ----------------------------

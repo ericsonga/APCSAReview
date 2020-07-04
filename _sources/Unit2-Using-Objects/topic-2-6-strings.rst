@@ -410,8 +410,9 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
             String output = getMethodOutput("main");
             String expect = "Roses are *\n* are *\nI like *\nDo * like them too?";
 
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResultsRegEx(expect, output, "Expected output from main");
             assertTrue(passed);
+            String output = getMethodOutput("main");
         }
 
         @Test

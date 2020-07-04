@@ -250,7 +250,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            double price = 2.20;
            int mpg = 42;
    =====
-           double numGalls = miles / mpg;
+           double numGalls = (double) miles / mpg;
    =====
            double totalCost = numGalls * price;
    =====
@@ -280,7 +280,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            int mpg = 26;
            int tankHolds = 15;
    =====
-           double numGalls = tankHolds / 2;
+           double numGalls = (double) tankHolds / 2;
    =====
            double miles = numGalls * mpg;
    =====
@@ -381,3 +381,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
           double priceForTwo = price * 2 #distractor
    
+
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>

@@ -114,3 +114,8 @@ Please log into Runestone and fill out the following survey.  You do not have to
            
    I would like to pursue further study or a career in computing.
    
+   
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>
+   

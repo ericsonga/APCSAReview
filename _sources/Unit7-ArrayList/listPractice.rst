@@ -728,7 +728,7 @@ Code Practice with ArrayLists
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test {
+              public class Test1 {
                   public static String findLongest(ArrayList<String> list)
                   {
                       //code here
@@ -759,7 +759,7 @@ Code Practice with ArrayLists
 
               import java.util.List;
               import java.util.ArrayList;
-              public class Test {
+              public class Test2 {
                   public static String findLongest(ArrayList<String> list)
                   {
                       String longest = "";

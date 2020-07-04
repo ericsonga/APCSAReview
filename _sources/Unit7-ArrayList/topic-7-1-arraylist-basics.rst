@@ -180,7 +180,7 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
 .. activecode:: ArrayListCreateStr
    :language: java
 
-   Demonstrating a NullPointerException.
+   The following code demonstrates a NullPointerException. Change list2 so that it creates a new Arraylist to remove the NullPointerException.
    ~~~~
    import java.util.*; // import everything at this level
    public class ArrayListCreateStr
@@ -253,10 +253,11 @@ You can add values to an ArrayList by using its **add** method, described in det
 
 .. activecode:: listAdd
    :language: java
+   :autograde: unittest
 
    Can you add another item to the shopping list? 
    ~~~~
-   import java.util.*;  // import all classes in this package.
+   import java.util.*;  
    public class Shopping
    {
       public static void main(String[] args)
@@ -276,6 +277,30 @@ You can add values to an ArrayList by using its **add** method, described in det
          System.out.println(quantities);
      }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Shopping");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Size: 0\n[carrots]\n[carrots, bread]\n[carrots, bread, chocolate]\nSize: 3\n[2, 4]";
+
+            boolean passed = !output.equals(expect);
+
+            passed = getResults(expect, output, "Changes to main()", passed);
+            assertTrue(passed);
+        }
+
+    }
 
  
 
@@ -293,6 +318,7 @@ First, let's discuss how to break up a number into its digits. Try the code belo
 
 .. activecode:: divideby10
    :language: java
+   :autograde: unittest
 
    Set number to a different number and guess what number / and % will return. Which operator gives you a digit in number?
    ~~~~
@@ -305,8 +331,31 @@ First, let's discuss how to break up a number into its digits. Try the code belo
          System.out.println(number % 10);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("DivideBy10");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "15\n4";
+
+            boolean passed = !output.equals(expect);
+
+            passed = getResults(expect, output, "Try another number", passed);
+            assertTrue(passed);
+        }
+    }
    
-Change the code above to use a while loop to print out each digit in reverse order starting from the right (4, 5, 1 for the number 154) while dividing it by 10. Here is the pseudocode:
+We can us a while loop to print out each digit in reverse order starting from the right (4, 5, 1 for the number 154) while dividing it by 10. You can try it in the active code above. Here is the pseudocode:
 
     - while number is greater than 0
       
@@ -317,6 +366,7 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
 
 .. activecode:: challenge-7-1-digits
    :language: java
+   :autograde: unittest
 
    Complete the challenge below to put the digits of a number in an ArrayList.
    ~~~~
@@ -350,6 +400,38 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
          System.out.println(d1);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Digits");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "[1, 5, 4]";
+
+            boolean passed = getResults(expect, output, "Digits(154)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            Digits test = new Digits(123456);
+            String output = test.toString();
+            String expect = "[1, 2, 3, 4, 5, 6]";
+
+            boolean passed = getResults(expect, output, "Digits(123456)");
+            assertTrue(passed);
+        }
+    }
    
 Summary
 -----------

@@ -32,6 +32,7 @@ Coding Practice with Loops
         
            .. activecode::  ch6ex1a
               :language: java
+              :optional:
    
               In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
               ~~~~
@@ -76,6 +77,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex2a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -126,6 +128,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex3a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -170,6 +173,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex4a
               :language: java
+              :optional:
    
                public class Test1
                {
@@ -219,6 +223,7 @@ Coding Practice with Loops
         
            .. activecode::  ch6ex5a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -268,6 +273,7 @@ Coding Practice with Loops
         
            .. activecode::  ch6ex6a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -316,6 +322,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex7na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -361,6 +368,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex8na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -400,6 +408,7 @@ Coding Practice with Loops
           
            .. activecode::  ch6ex9na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -446,6 +455,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex10na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -489,6 +499,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex11na
               :language: java
+              :optional:
    
               This is the answer to the question above. Use a ``for`` loop with ``x`` changing from 0 to 10 and print the value of ``x`` and ``10 * x``.  Use parentheses around ``x * 10`` to make sure it is evaluated before it is turned into a string.
               ~~~~
@@ -532,6 +543,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex12na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -579,6 +591,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex16na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -629,6 +642,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex14na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -675,6 +689,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex15na
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -721,6 +736,7 @@ Coding Practice with Loops
            
            .. activecode::  ch6ex13na
               :language: java
+              :optional:
    
               public class Test1
               {

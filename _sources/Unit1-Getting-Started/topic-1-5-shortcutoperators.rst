@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. raw:: html
+
+    <style>    td { text-align: left; } </style>
     
     
 ..	index::
@@ -34,25 +38,39 @@
 Compound Assignment Operators 
 =============================
    
-Compound assignment operators are shortcuts that do a math operation and assignment in one step. For example, ``x += 1`` adds 1 to x and assigns the sum to x. It is the same as ``x = x + 1``. This pattern is possible with any operator put in front of the = sign. You should know that ``x += y`` is the same as ``x = x + y``, ``x -= y`` is the same as ``x = x - y``, ``x *= y`` is the same as ``x = x * y``, and ``x /= y`` is the same as ``x = x / y``.   
+Compound assignment operators are shortcuts that do a math operation and assignment in one step. For example, ``x += 1`` adds 1 to x and assigns the sum to x. It is the same as ``x = x + 1``. This pattern is possible with any operator put in front of the = sign, as seen below.
 
-The most common shortcut ``++``, the plus-plus or increment operator, is used to add one to the current value; ``x++`` is the same as ``x += 1`` and the same as ``x = x + 1``. It is a shortcut that is used a lot in loops. You may have also seen it in the language C++ which is an inside joke that C has been incremented or improved to create C++.
-The ``--`` operator is used to subtract one from the current value: ``y--`` is the same as ``y = y - 1``. These are the only two double operators; this shortcut pattern does not exist with other operators. Run the following code to see ++ in action!
++------------+------------+-----------+----------+----------+
+|\+ shortcuts|\- shortcuts|\* shortcut|/ shortcut|% shortcut|
++============+============+===========+==========+==========+
+|x = x + 1;  |x = x - 1;  |x = x * 2; |x = x / 2;|x = x % 2;|
++------------+------------+-----------+----------+----------+
+|x += 1;     |x -= 1;     |x \*\= 2;  |x /= 2;   |x %= 2;   |
++------------+------------+-----------+----------+----------+
+|x++;        |x\- \-;     |           |          |          |
++------------+------------+-----------+----------+----------+
+
+The most common shortcut operator ``++``, the plus-plus or **increment** operator, is used to add 1 to the current value; ``x++`` is the same as ``x += 1`` and the same as ``x = x + 1``. It is a shortcut that is used a lot in loops. If you've heard of the programming language C++, the ++ in C++ is an inside joke that C has been incremented or improved to create C++. The ``--`` decrement operator is used to subtract 1 from the current value: ``y--`` is the same as ``y = y - 1``. These are the only two double operators; this shortcut pattern does not exist with other operators. Run the following code to see these shortcut operators in action!
 
 .. activecode:: lcpp
    :language: java
    :autograde: unittest    
   
-   Run the code below to see what the ++ increment operator does. Remember that you can use the Code Lens button to see it in the visualizer.
+   Run the code below to see what the ++ and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Try creating more compound assignment statements with shortcut operators and work with a partner to guess what they would print out before running the code.
    ~~~~
    public class Test2
    {
       public static void main(String[] args)
       {
-        int num = 0;
-        System.out.println(num);
-        num++;
-        System.out.println(num);
+        int score = 0;
+        System.out.println(score);
+        score++;
+        System.out.println(score);
+        score *= 2;
+        System.out.println(score);
+        int penalty = 5;
+        score -= penalty/2;
+        System.out.println(score);      
       }
    }
    ====
@@ -66,7 +84,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "0\n1\n";
+            String expect = "0\n1\n2\n0";
 
             boolean passed = getResults(expect, output, "Expected output from main",true);
             assertTrue(passed);
@@ -102,7 +120,7 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
      int x = 0;
      int y = 1;
      int z = 2;
-     x--; // x followed by the double minus sign
+     x--; 
      y++;
      z+=y;
      
@@ -184,5 +202,9 @@ Summary
 - Compound assignment operators (+=, -=, \*=, /=, %=) can be used in place of the assignment operator.
 - The increment operator (++) and decrement operator (--) are used to add 1 or subtract 1 from the stored value of a variable. The new value is assigned to the variable.
 - The use of increment and decrement operators in prefix form (i.e., ++x) and inside other expressions (i.e., arr[x++]) is outside the scope of this course and the AP Exam. 
+
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>
 
 

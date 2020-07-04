@@ -24,3 +24,7 @@ Here is a comparison of some App Inventor blocks compared to AP CSP pseudocode a
 .. raw:: html
 
     <iframe src="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/view" style="max-width:100%; margin-left:5%; width:90%;"  height="600px"></iframe>
+    
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>

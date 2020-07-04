@@ -126,8 +126,9 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
 
 .. activecode:: overfl
    :language: java
+   :autograde: unittest
    
-   Try the integer overflows below. An int cannot hold that high a value!
+   Try the code below to see two integer overflow errors for a too large positive and negative number. An int cannot hold that high a value! Fix the integer overflow error by deleting the last 0 in the numbers.
    ~~~~
    public class TestOverflow
    {
@@ -137,14 +138,32 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
         int negative = -2147483650; // overflow 
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "214748365\n-214748365\n";
+
+            boolean passed = getResults(expect, output, "Fixed Integer Overflow Error", true);
+            assertTrue(passed);
+        }
+    }
 
 ..	index::
 	pair: double; precision format
     
-Although it's not on the exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:
+Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:
 
 .. activecode:: double_precision
    :language: java
+   :autograde: unittest
    
    Run the code below to see how a decimal number can be formatted to show 2 digits after the decimal point.
    ~~~~
@@ -157,6 +176,23 @@ Although it's not on the exam, you can format long decimal numbers to just show 
         System.out.println( String.format("%.02f", number) );
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "3.0\n3.00\n";
+
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 
    
@@ -215,18 +251,22 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 
 .. activecode:: challenge1-6-average
    :language: java
+   :autograde: unittest
+   :practice: T
 
-   Type in three made up int grades and then sum and average them. Use casting to report the result as a double. If you do this challenge on repl.it, please paste your repl link here to turn it in.
+   Type in three made up int grades and then sum and average them. Use type casting to report the result as a double. If you do this challenge on repl.it, please paste your repl link here to turn it in.
    ~~~~
    public class Challenge1_6
    {
       public static void main(String[] args)
       {
-         // 1. Declare 3 int variables for grades and initialize them to 3 values
+         // 1. Declare 3 int variables called grade1, grade2, grade3
+         // and initialize them to 3 values
+  
          
-         // 2. Declare an int variable for the sum of the grades
+         // 2. Declare an int variable called sum for the sum of the grades
          
-         // 3. Declare a variable for the average of the grades
+         // 3. Declare a variable called average for the average of the grades
          
          // 4. Write a formula to calculate the sum of the 3 grades (add them up). 
          
@@ -237,6 +277,22 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
       
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+       public void testAsgn1() throws IOException
+       {
+           String target = "average = (double) sum/3;";
+           boolean passed = checkCodeContains("formula for average of 3 grades using sum and type casting to double", target);
+           assertTrue(passed);
+       }
+    }
+
 
 .. |Unicode| raw:: html
 
@@ -250,11 +306,15 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 
    <a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a>
    
-If you get done early with this challenge, here's something else fun you can do in Java, although it's not covered in the AP exam. Java was one of the first programming languages to use |UNICODE| for its characters. Unicode is an international standard where each letter in any alphabet is represented by a number.  Unicode uses hex code (a base 16 code that uses the digits 0-9 and the letters A-F for 10-15), but you can give Java an equivalent decimal number and type cast it to the type char (for character) to show the unicode character. Try the following program which prints out |Chinese|. Look up other characters at this |Unicode Lookup| site and print them out in the Active Code window below by using the decimal number (see Dec column in site) and type casting to char. Can you print out a letter from 3 different languages?
+If you get done early with this challenge, here's something else fun you can do in Java, although it's not covered in the AP exam. Java was one of the first programming languages to use |UNICODE| for its characters. Unicode is an international standard where each letter in any alphabet is represented by a number.  Unicode uses hex code (a base 16 code that uses the digits 0-9 and the letters A-F for 10-15), but you can give Java an equivalent decimal number and type cast it to the type char (for character) to show the unicode character. 
+
+Try the following program which prints out |Chinese|. Look up other characters at this |Unicode Lookup| site and print them out in the Active Code window below by using the decimal number (see Dec column in site) and type casting to char. Can you print out a letter from 3 different languages?
 
 .. activecode:: challenge1-6-unicode
    :language: java
 
+   Can you print out a letter from 3 different languages using this |Unicode Lookup| site?
+   ~~~~
    public class ChallengeUnicode
    {
       public static void main(String[] args)
@@ -266,6 +326,22 @@ If you get done early with this challenge, here's something else fun you can do 
        
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testChangedCode() {
+            String origCode = "public class ChallengeUnicode {   public static void main(String[] args)   {     System.out.println(\"A in ASCII and Unicode is the decimal number 65: \" + (char)65);     System.out.println(\"You can typecast a decimal number to char for the Chinese character for sun: \" + (char)11932);     System.out.println(\"Or you can print out the Chinese character for moon using unicode hex: \\u2E9D\"); }  }";
+
+            boolean changed = codeChanged(origCode);
+            assertTrue(changed);
+        }
+    }
+
    
 Summary
 -------------------
@@ -280,3 +356,7 @@ Summary
 - Integer values in Java are represented by values of type int, which are stored using a finite amount (4 bytes) of memory. Therefore, an int value must be in the range from Integer.MIN_VALUE to Integer.MAX_VALUE inclusive.
 
 - If an expression would evaluate to an int value outside of the allowed range, an integer overflow occurs. This could result in an incorrect value within the allowed range.
+
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>

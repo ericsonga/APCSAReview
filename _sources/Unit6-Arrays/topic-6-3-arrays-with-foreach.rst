@@ -28,7 +28,9 @@ Enhanced For-Loop (For-Each) for Arrays
 	single: for-each
 	pair: loop; for-each
    
-There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively. To set up a for-each loop, use **for (type variable : arrayname)** where the type is the type for elements in the array, and read it as "for each variable value in arrayname". You may have used a similar loop in AP CSP Pseudocode or App Inventor with lists like below.
+There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively. 
+
+To set up a for-each loop, use **for (type variable : arrayname)** where the type is the type for elements in the array, and read it as "for each variable value in arrayname". You may have used a similar loop in AP CSP Pseudocode or App Inventor with lists like below.
 
 
 .. figure:: Figures/appinvForEachComparison.png
@@ -66,6 +68,7 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
 
 .. activecode:: foreach1
    :language: java
+   :autograde: unittest
    
    Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.
    ~~~~
@@ -87,6 +90,42 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
         }
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ForEachDemo");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect1 = "10\n9\n8\n8";
+            String expect2 = "Jamal\nEmily\nDestiny\nMateo";
+
+            boolean passed = output.contains(expect1) && output.contains(expect2);
+
+            passed = getResults(expect1 + " " + expect2, output, "Original main()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String expect = "10 9 8 8 Jamal Emily Destiny Mateo".replaceAll(" ", "\n");
+
+            boolean passed = !output.equals(expect) && output.length() > expect.length();
+
+            passed = getResults(expect, output, "Added another high score and name", passed);
+            assertTrue(passed);
+        }
+    }
   
 |CodingEx| **Coding Exercise**
 
@@ -94,6 +133,8 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
 
 .. activecode:: evenLoop
    :language: java
+   :autograde: unittest
+   :practice: T
    
    Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!
    ~~~~
@@ -110,6 +151,36 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
         }
       }
    }
+   ====
+   // Test for Lesson 6.3.2 - EvenLoop
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("EvenLoop");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "6 is even!\n2 is even!\n12 is even!";
+
+            boolean passed = getResults(expect, output, "main()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() 
+        {
+            boolean passed = checkCodeContains("for each loop", "for(int * : values)");
+            assertTrue(passed);
+        }
+    }
 
 Foreach Loop Limitations
 --------------------------
@@ -118,15 +189,17 @@ Foreach Loop Limitations
 
    <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
    
-What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop changes, not the real array values. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the |visualizer| and click on Forward to see why it doesn't work. 
+What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop changes, not the real array values. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the |visualizer| by clicking the CodeLens button and step through the code to see why it doesn't work. 
 
 |CodingEx| **Coding Exercise**
 
 
 .. activecode:: incrementLoop
    :language: java
+   :autograde: unittest
+   :practice: T
 
-   Note that the for-each loop below cannot change the values in the array because only the loop variable value will change. Change the loop to an indexed for loop to make it change the array values.
+   The for-each loop below cannot change the values in the array because only the loop variable value will change. Run it with the CodeLens button to see why this is. Then, change the loop to an indexed for loop to make it change the array values.
    ~~~~
    public class IncrementLoop
    {      
@@ -147,10 +220,42 @@ What if we had a loop that incremented all the elements in the array. Would that
         }
       }
    }
+   ====
+   // Test for Lesson 6.3.3 - IncrementLoop
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("IncrementLoop");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "New val: 7\nNew val: 3\nNew val: 2\nNew val: 8\nNew val: 13\nNew val: 6\nArray after the loop:\n7 3 2 8 13 6";
+
+            boolean passed = getResults(expect, output, "main()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() 
+        {
+            String target = "for (int * = #; * ? *.length; *~)";
+            boolean passed = checkCodeContains("for loop", target);
+            assertTrue(passed);
+
+        }
+    }
    
 .. note::
 
-   For each loops cannot be used in all situations. Only use for-each loops when you want to loop through **all** the values in an array without changing their values. 
+   Enhanced for each loops cannot be used in all situations. Only use for-each loops when you want to loop through **all** the values in an array without changing their values. 
    
    - Do not use for each loops if you need the index.
    - Do not use for each loops if  you need to change the values in the array.
@@ -220,54 +325,19 @@ What if we had a loop that incremented all the elements in the array. Would that
 Foreach Loop Algorithms
 --------------------------
 
-.. You can step through this code using the Java Visualizer by clicking on the following link  `link1 <http://www.pythontutor.com/java.html#code=public+class+Test1%0A%7B%0A+++public+static+double+getAvg(int%5B%5D+values)%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B+%5D+values+%3D+%7B2,+6,+7,+12,+5%7D%3B%0A+++++System.out.println(getAvg(values))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_. 
 
-.. .. activecode:: lcaf1
-   :language: java
-   
-   public class Test1
-   {
-      public static double getAvg(int[] values)
-      {
-        double total = 0;
-        for (int val : values)
-        {
-          total  = total + val;
-        }
-        return total / values.length;
-      }
-      
-      public static void main(String[] args)
-      {
-        int[ ] values = {2, 6, 7, 12, 5};
-        System.out.println(getAvg(values));
-      }
-   }
-  
-.. ..	index::
-	single: static
-	single: class method
-	pair: method; class
-	pair: method; static
-
-.. The **for-each** loop is shown on line 6 above.  It says to loop through the array called ``values`` and each time through the loop set the variable ``val`` to the next item in the array.  We have to specify the type of ``val`` first since this declares a variable.  The type must match the type of objects in the array.
-
- 
-
-.. The code above wasn't object-oriented.  You may have noticed that it was declared to be **static**.  This means that it is a **class method** not an **object method**.  It is a **class method** since it doesn't operate on any object fields - all data that it needs has been passed in to the method.  Class methods can be called using ``ClassName.methodName()``.  They can also be called on an object of the class.  Object methods can only be called on an object of the class.  
-    
-.. A more object-oriented way of doing this would be if the array was a field called ``values`` in the same class as the ``getAverage`` method.  Then you don't need to pass the array ``values`` to the method and the method is an object (instance) method since it operates on the fields of the object.  You will typically initialize fields in the constructor as shown below.  
 
 .. |Java visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getAverage())%3B%0A+++%7D%0A%7D%0A%0A&mode=display&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
    
 
-Here is an object-oriented example that has the array as a private instance variable in the class and provides a public method average that uses a for-each loop.  You can use the |Java Visualizer| to step through this code. 
+Here is an object-oriented example that has the array as a private instance variable in the class and provides a public method average that uses a for-each loop.  You can use the |Java Visualizer| or the Code Lens button to step through this code. 
      
 
 .. activecode:: lcaf2
    :language: java
+   :autograde: unittest
    
    Try the code below. 
    ~~~~
@@ -297,7 +367,29 @@ Here is an object-oriented example that has the array as a private instance vari
         System.out.println(aWorker.getAverage());
       }
    }
-   
+   ====
+   // Test for Lesson 6.3.3 - IncrementLoop
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayWorker");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "6.4";
+
+            boolean passed = getResults(expect, output, "main()", true);
+            assertTrue(passed);
+        }
+    }
 
 
 
@@ -386,11 +478,14 @@ If you want to step through the correct code to see what it does in the Java Vis
 
    <a href= "https://repl.it/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
    
-Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the spellcheck(word) method described in the last lesson to use enhanced for-each loops instead of indexed for-loops. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
+Copy the spellcheck method that you used in the Spell Checker Challenge in the last lesson. Re-write the method  to use an enhanced for-each loop instead of an indexed for-loop. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
 
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
+   :autograde: unittest
    
+   Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found.
+   ~~~~
    public class SpellChecker
    {
      private String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
@@ -401,6 +496,8 @@ Copy the code you used in the Spell Checker Challenge in the last lesson. Re-wri
        * that takes a word as a parameter and returns true if it is 
        * in the dictionary array. Return false if it is not found.
        */
+       
+       
       
       public static void main(String[] args)
       {
@@ -413,11 +510,74 @@ Copy the code you used in the Spell Checker Challenge in the last lesson. Re-wri
             System.out.println(word + " is misspelled!");
         */
 
-       // Optional:
-       // checker.printStartsWith("ab");
+       // Optional (not autograded)
+       // checker.printStartsWith("a");
       }
    }
- 
+   ====
+   // Test for Lesson 6.2.5 - challenge-6-2-spell-checker
+
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("SpellChecker");
+        }
+
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "catz is misspelled!";
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect, output, "Did you uncomment the main method?", passed);
+            assertTrue(passed);
+        }
+
+
+
+        @Test
+        public void test3()
+        {
+            Object[] args = {"dogz"};
+            String output = getMethodOutput("spellcheck", args);
+            String expect = "false";
+
+            boolean passed = getResults(expect, output, "spellcheck(\"dogz\")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            Object[] args = {"dog"};
+            String output = getMethodOutput("spellcheck", args);
+            String expect = "true";
+
+            boolean passed = getResults(expect, output, "spellcheck(\"dog\")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFor() throws IOException
+        {
+            String target = "for (int * = #; * ? #; *~)";
+            boolean passed = checkCodeNotContains("for loop", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testForEach() 
+        {
+            boolean passed = checkCodeContains("for each loop", "for(String * : dictionary)");
+            assertTrue(passed);
+        }
+    }
 
 Summary
 -------

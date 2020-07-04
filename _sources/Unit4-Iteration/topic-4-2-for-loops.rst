@@ -43,23 +43,26 @@ If you took AP CSP with a block programming language like App Inventor, you prob
     
     Figure 1: Comparing App Inventor and Java for loops
 
-A for-loop has 3 parts: initialization, condition, and change.  The parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.  Note that these 3 parts correspond to the the 3 steps of writing a loop mentioned in the last lesson: initialize, test, and change the loop variable. In for loops, the loop variable is usually a counter variable.
+Three Parts of a For Loop
+--------------------------
+
+A for-loop combines all 3 parts of writing a loop in one line to initialize, test, and change the loop control variable.  The 3 parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.  
 
 .. code-block:: java
 
-  for (initialization; condition; change)
+  for (initialize; test condition; change)
   {
      loop body
   }
   
-The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line. One of the strange things about a ``for`` loop is that the code doesn't actually execute where you see it in the declaration.  The code in the initialization area is executed only one time before the loop begins, the condition is checked each time through the loop and the loop continues as long as the condition is true, at the end of each execution of the body of the loop the changes are done, just like a while loop.  When the loop condition is false execution will continue at the next statement after the body of the loop.
+The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line. One of the strange things about a ``for`` loop is that the code doesn't actually execute where you see it in the declaration.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.
 
 .. figure:: Figures/ForLoopFlow.png
-    :width: 300px
+    :width: 250px
     :align: center
     :figclass: align-center
 
-    Figure 2: Flow in a for loop
+    Figure 2: Control flow in a for loop
     
     
 You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` loop actually executes like a ``while`` loop does if you use the ``while`` loop to repeat the body of the loop a specific number of times. 
@@ -109,44 +112,9 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
         }
    }
    
-.. For an extra challenge, see if you can make the loop above count by 2s backwards!
 
 
-.. activecode:: forloop-backwards
-   :language: java
-   :autograde: unittest
-   :practice: T
-   
-   Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop. 
-   ~~~~
-   public class ForLoop
-   {
-      public static void main(String[] args)
-      {
-        for(int count = 1; count <= 5; count++)
-        {
-           System.out.println(count);
-        } 
-      }
-   }
-   
-   ====
-   import static org.junit.Assert.*;
-   import org.junit.*;;
-   import java.io.*;
 
-   public class RunestoneTests extends CodeTestHelper
-   {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "5\n3\n1";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-   }
-   
 
 .. activecode:: forloopfromwhile
    :language: java
@@ -210,7 +178,26 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
             assertTrue(passed);
         }
     }
+
+.. note::
    
+   Two common patterns in for-loops are to count from 0 up to an number (using <) or count from 1 to the number including the number (using <=). Remember that if you start at 0 use <, and if you start at 1, use <=. The two loops below using these two patterns both run 10 times. The variable i (for index) is often used as a counter in for-loops.
+   
+   .. code-block:: java 
+   
+      // These loops both run 10 times
+      // If you start at 0, use <
+      for(int i = 0; i < 10; i++)
+      {
+         System.out.println(i);
+      }
+      // If you start at 1, use <=
+      for(int i = 1; i <= 10; i++) 
+      {
+         System.out.println(i);
+      }
+  
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qlb_3_1
@@ -301,12 +288,12 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
    
 
 
-
+Decrementing Loops
+-------------------
    
+You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, "for (int i=5; i > 0; i--)`` counts from 5 down to 1.
 
 |CodingEx| **Coding Exercise**
-
-
 
 .. activecode:: lcfcp1
    :language: java
@@ -386,22 +373,48 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
 The method **printPopSong** prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.  
 
 
-  
 
-.. note::
+.. activecode:: forloop-backwards
+   :language: java
+   :autograde: unittest
+   :practice: T
    
-   Two common patterns in for-loops are to count from 0 up to an number (using <) or count from 1 to the number including the number (using <=). Remember that if you start at 0 use <, and if you start at 1, use <=. The two loops below using these two patterns both run 10 times. The variable i (for index) is often used as a counter in for-loops.
+   Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop. 
+   ~~~~
+   public class ForLoop
+   {
+      public static void main(String[] args)
+      {
+        for(int count = 1; count <= 5; count++)
+        {
+           System.out.println(count);
+        } 
+      }
+   }
    
-   .. code-block:: java 
-   
-      // These loops both run 10 times
-      // If you start at 0, use <
-      for(int i = 0; i < 10; i++)   
-         System.out.println(i);
-      // If you start at 1, use <=
-      for(int i = 1; i <= 10; i++)  
-         System.out.println(i);
-        
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "5\n3\n1";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+   }
+     
+
+
+
+Turtle Loops
+------------
+
         
 |CodingEx| **Coding Exercise**
 
@@ -499,14 +512,17 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 
 1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360. 
 
-2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What angle should you use for the turns? Remember they have to add up to 360 degrees.
+2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What external angle should you use for the turns? Remember they have to add up to 360 degrees.
 
 3. Create a variable n that holds the number of sides for any polygon, and use n in your loop. Can you have the loop draw a variety of shapes by just changing the value of the variable n? The power of abstraction! Can you draw a 9 sided nonagon? (Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts).
 
 .. activecode:: challenge4-2-TurtleLoopShapes
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
+    Use a for-loop to draw a triangle. Then, change it to a pentagon. Then change it to draw any polygon using a variable n that holds the number of sides. Note that the angles in the turns have to add up to 360.
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -529,17 +545,90 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
       }
     }
     ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleDrawShapes");
+        }
+
+        @Test
+        public void test1()
+        {
+           String target = "for (int * = *; * ? *; *~)";
+           boolean passed = checkCodeContains("for loop", target);
+           assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String forwards = ".forward(";
+
+            int count = countOccurences(code, forwards);
+
+            boolean passed = count == 1;
+
+            passed = getResults("1 forward(...)", "" + count  + " forward(...)", "Should only need forward() once", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String forwards = ".turn(";
+
+            int count = countOccurences(code, forwards);
+
+            boolean passed = count == 1;
+
+            passed = getResults("1 turn(...)", "" + count  + " turn(...)", "Should only need turn(...) once", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            String forwards = "int n";
+
+            int count = countOccurences(code, forwards);
+
+            boolean passed = count == 1;
+
+            passed = getResults("true", "" + passed, "Declare int n", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test5()
+        {
+            String code = getCode();
+            String test = "360/n";
+
+            int count = countOccurences(code.replaceAll(" ",""), test);
+            boolean passed = count == 1;
+
+            passed = getResults("true", "" + passed, "Calculates angle correctly using n", passed);
+            assertTrue(passed);
+        }
+    }
     
    
    
 Summary
 -------
 
-- There are three parts in a for loop header: the initialization, the Boolean expression, and the increment or decrement statement.
+- There are three parts in a for loop header: the initialization, the test condition (a Boolean expression), and an increment or decrement statement to change the loop control variable.
 
-- In a for loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a **loop control variable**.
+- In a for loop, the initialization statement is only executed once before the evaluation of the test Boolean expression. The variable being initialized is referred to as a **loop control variable**.
 
-- In each iteration of a for loop, the increment statement is executed after the entire loop body is executed and before the Boolean expression is evaluated again.
+- In each iteration of a for loop, the increment or decrement statement is executed after the entire loop body is executed and before the Boolean expression is evaluated again.
 
 - A for loop can be rewritten into an equivalent while loop and vice versa.
 

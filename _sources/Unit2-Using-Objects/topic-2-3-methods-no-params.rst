@@ -141,7 +141,8 @@ Procedural Abstraction
 
 **Procedural abstraction** allows a programmer to use a method and not worry about the details of how it exactly works. For example, we know that if we hit the brakes, the car will stop, and we can still use the brakes even if we don't really know how they work.
 
-You will learn to write your own methods in Unit 5. In this Unit, you should be able to use methods already written for you and figure out what they do. When we use methods for a class in a library, we can look up the **method signature** in its documentation to see its name and parameter list (which can be empty for methods without parameters). For example, here is a ``Student`` class with a method called print(). Methods are defined after the instance variables (attributes) and constructors in a class.
+You will learn to write your own methods in Unit 5. In this unit, you should be able to use methods already written for you and figure out what they do. When we use methods for a class in a library, we can look up the **method signature** (or **method header**), which is the method name followed by a paramatere list, in its documentation. For example, here is a ``Student`` class with a method signature ``public void print()`` which has an empty parameter list with no parameters. Methods are defined after the instance variables (attributes) and constructors in a class.
+
 
 .. figure:: Figures/StudentClass.png
     :width: 500px
@@ -283,7 +284,7 @@ Try this |visualization2| to see this code in action.
     method(); is used to call a method within the same class, but object.method(); is necessary if you are calling the method from the main method or from a different class.
 
 
-Before you call a method from ``main`` or from outside of the current class, you must make sure that you have created and initialized an object. Remember that if you just declare an object reference without setting it to refer to a new object the value will be ``null`` meaning that it doesn't reference an object. If you call a method on a variable who's value is ``null``, you will get a **NullPointerException** error.  A **pointer** is another name for a reference.
+Before you call a method from ``main`` or from outside of the current class, you must make sure that you have created and initialized an object. Remember that if you just declare an object reference without setting it to refer to a new object the value will be ``null`` meaning that it doesn't reference an object. If you call a method on a variable whose value is ``null``, you will get a **NullPointerException** error, where a **pointer** is another name for a reference.
 
 
 
@@ -346,7 +347,7 @@ Summary
 
 - A **method** or **constructor** call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, the flow of control is returned to the point immediately following the method or constructor call.
 
-- A **NullPointerException** will happen if you try to call an object method on an object variable who's value is ``null``.  This usually means that you forgot to create the object using the ``new`` operator followed by the class name and parentheses.
+- A **NullPointerException** will happen if you try to call an object method on an object variable whose value is ``null``.  This usually means that you forgot to create the object using the ``new`` operator followed by the class name and parentheses.
 
 - An **object method** or **non-static method** is one that must be called on an object of a class.  It usually works with the object's attributes.
 

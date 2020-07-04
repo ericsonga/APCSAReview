@@ -377,7 +377,15 @@ Are you a cat person or a dog person? The code below prints a nice message about
             boolean passed = checkCodeContains("while loop", target);
             assertTrue(passed);
         }
-
+        
+        @Test
+        public void testSubString() 
+        {
+            String target = "substring(";
+            boolean passed = checkCodeContains("substring", target);
+            assertTrue(passed);
+        }
+        
         @Test
         public void testReplace() throws IOException
         {

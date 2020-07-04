@@ -346,7 +346,7 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
     ~~~~
     import java.util.*; 
 
-    public class Test {
+    public class WordPairTest {
         public static void main(String[] args)
         {
             // Create an ArrayList of WordPair objects called pairs

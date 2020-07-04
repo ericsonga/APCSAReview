@@ -158,7 +158,10 @@ Multiple Choice Exercises
       int y = x;
       int z = x * y;
       x++;
-     
+    
+.. raw:: html
+    
+    <script src="../_static/custom-csawesome.js"></script>
 
    
 

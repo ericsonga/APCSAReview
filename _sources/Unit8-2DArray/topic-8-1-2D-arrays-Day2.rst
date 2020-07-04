@@ -43,14 +43,15 @@ When arrays are created their contents are automatically initialized to 0 for nu
 
 |CodingEx| **Coding Exercise**
 
-Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use this |Java visualizer| to see what the values are after this code runs. Edit the code in the visualizer to add in an extra row to the seatingChart and add your name and a friend's name in the columns of this extra row using assignment statements.
+Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use the |Java visualizer| with the Code Lens button to see what the values are after this code runs. Edit the code to add in an extra row to the seatingChart and add your name and a friend's name in the columns of this extra row using assignment statements.
 
 .. activecode:: 2DArraySet
   :language: java
+  :autograde: unittest   
   
   Add another row of data to the arrays.
   ~~~~
-  public class Test 
+  public class TwoDArraySet 
   {
      public static void main(String[] args)
      {
@@ -81,6 +82,54 @@ Try the code below. Did it print what you expected?  When you print a two dimens
         System.out.println(seatingChart);
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TwoDArraySet");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expected = "[[I@", expected2 = "[[Ljava.lang.String;@";
+
+            boolean passed = output.contains(expected) && output.contains(expected2);
+
+            passed = getResults("true", ""+passed, "Prints two 2D arrays");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String expected = "new String [4][2]";
+
+            boolean passed = code.contains(expected);
+
+            passed = getResults("true", ""+passed, "Add another row to seatingChart");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String expected1 = "seatingChart[3][0]";
+            String expected2 = "seatingChart[3][1]";
+
+            boolean passed = code.contains(expected1) && code.contains(expected2);
+
+            passed = getResults("true", ""+passed, "Give values to new elements");
+            assertTrue(passed);
+        }
+    }
   
 
 
@@ -161,10 +210,11 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 .. activecode:: 2DArrayInitGet
   :language: java
+  :autograde: unittest   
   
   Add another row to seatingInfo initialized to your name and a friend's name. Get these names out of the array using the correct indices and then print them out.
   ~~~~
-  public class Test 
+  public class TwoDArrayInitGet 
   {
      public static void main(String[] args)
      {
@@ -174,6 +224,73 @@ To get the value in a 2D array give the name of the array followed by the row an
   
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TwoDArrayInitGet");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expected = "Jamal is at [0,0]";
+
+            boolean passed = output.contains(expected);
+
+            passed = getResults("true", "" + passed, "Output contains " + expected);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String[] lines = output.split("\n");
+
+            String expected = "[3,0]";
+            String actual = "";
+
+            boolean passed = false;
+
+            for (String l : lines) {
+                if (l.replaceAll(" ", "").contains(expected)) {
+                    actual = l;
+                    passed = true;
+                }
+            }
+
+            passed = getResults("Name is at "+ expected, actual, "Add one name to new row", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String output = getMethodOutput("main");
+            String[] lines = output.split("\n");
+
+            String expected = "[3,1]";
+            String actual = "";
+
+            boolean passed = false;
+
+            for (String l : lines) {
+                if (l.replaceAll(" ", "").contains(expected)) {
+                    actual = l;
+                    passed = true;
+                }
+            }
+
+            passed = getResults("Name is at "+ expected, actual, "Add second name to new row", passed);
+            assertTrue(passed);
+        }  
+    }
      
 |Groupwork| Programming Challenge : ASCII Art
 ---------------------------------------------------
@@ -188,8 +305,9 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
 
 .. activecode:: challenge-8-1-ascii-art
   :language: java
+  :autograde: unittest
   
-  public class Test 
+  public class AsciiArt
   {
      public static void main(String[] args)
      {
@@ -216,7 +334,56 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
          
      }
   }
-  
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("AsciiArt");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "___  \n (@ @) \n(  V  )\n -m-m-";
+
+            boolean passed = output.replaceAll(" ", "").contains(expect.replaceAll(" ", ""));
+            passed = getResults(expect, output, "changed o to @", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String expect = "___  \n (@ @) \n(  V  )\n -m-m-";
+
+            if (output.contains("-m-m-")) {
+                int i = output.indexOf("-m-m-") + "-m-m-".length();
+                output = output.substring(i);
+            }
+
+            String[] lines = output.split("\n");
+
+            boolean passed = output.length() >= 10 && lines.length >= 3;
+
+            passed = getResults("Your art", output, "added your own ascii art (should be at least 3 x 3)", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String expect = "asciiArt[#][#] = \"@\"";
+
+            boolean passed = checkCodeContains(expect);
+            assertTrue(passed);
+        } 
+    }
 
 1. Change the code above to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it. 
 

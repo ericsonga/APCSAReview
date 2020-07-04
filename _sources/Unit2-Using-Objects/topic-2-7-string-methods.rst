@@ -53,7 +53,7 @@ For the AP CS A exam, you only need to know how to use the following String meth
 
     -  **int length()** method returns the number of characters in the string, including spaces and special characters like punctuation.
 
-    -  **String substring(int from, int to)** method returns a string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).
+    -  **String substring(int from, int to)** method returns a new string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).
 
     -  **int indexOf(String str)** method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.
 
@@ -293,7 +293,7 @@ The String library which is built into the default java.lang library simplifies 
 .. dragndrop:: ch4_str1
     :feedback: Review the vocabulary.
     :match_1: the position of a character in a string|||index 
-    :match_2: a new string with 0 to all characters copied from another string|||substring
+    :match_2: a new string that is a part of another string with 0 to all characters copied from the original string|||substring
     :match_3: doesn't change|||immutable
     :match_4: the number of characters in a string|||length
     
@@ -507,14 +507,16 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
         {
             String output = getMethodOutput("main");
             String expect = "* in Pig Latin is *ay";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = getResultsRegEx(expect, output, "Expected output from main");
             assertTrue(passed);
         }
        @Test
-       public void testContainsSubstring() throws IOException
+       public void testContainsSubstring() 
        {
            String target = "word.substring(";
-           boolean passed = checkCodeContains("substring method", target);
+           int count = countOccurences(getCode(), target);
+           boolean passed = count >= 2;
+           passed = getResults("2 substring calls", count + " substring call(s)","Code contains calls to substring method", passed);
            assertTrue(passed);
        }
     }  
@@ -549,8 +551,7 @@ Summary
   
   - **int compareTo(String other)** : returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other.
 
-- A string identical to the single element substring at position index can be created by calling substring(index, index + 1).
-
+- ``str.substring(index, index + 1)`` returns a single character at index in string str. 
 
 
 
