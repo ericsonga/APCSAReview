@@ -412,7 +412,6 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
 
             boolean passed = getResultsRegEx(expect, output, "Expected output from main");
             assertTrue(passed);
-            String output = getMethodOutput("main");
         }
 
         @Test

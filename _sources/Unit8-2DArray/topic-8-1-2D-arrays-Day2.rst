@@ -49,7 +49,7 @@ Try the code below. Did it print what you expected?  When you print a two dimens
   :language: java
   :autograde: unittest   
   
-  Add another row of data to the arrays.
+  Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows. Use the CodeLens button to see the contents of the array. 
   ~~~~
   public class TwoDArraySet 
   {
@@ -218,7 +218,9 @@ To get the value in a 2D array give the name of the array followed by the row an
   {
      public static void main(String[] args)
      {
-        String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
+        String[][] seatingInfo = { {"Jamal", "Maria"}, 
+                                   {"Jake", "Suzy"}, 
+                                   {"Emma", "Luke"} };
         String name = seatingInfo[0][0];
         System.out.println(name + " is at [0,0]");
   
@@ -265,7 +267,7 @@ To get the value in a 2D array give the name of the array followed by the row an
                 }
             }
 
-            passed = getResults("Name is at "+ expected, actual, "Add one name to new row", passed);
+            passed = getResults("Name is at "+ expected, actual, "Add one name to new row and print it out", passed);
             assertTrue(passed);
         }
 
@@ -287,7 +289,7 @@ To get the value in a 2D array give the name of the array followed by the row an
                 }
             }
 
-            passed = getResults("Name is at "+ expected, actual, "Add second name to new row", passed);
+            passed = getResults("Name is at "+ expected, actual, "Add second name to new row and print it out", passed);
             assertTrue(passed);
         }  
     }
@@ -301,12 +303,18 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 ASCII is a commonly used character encoding standard where each key you press on the keyboard is translated to an ASCII number to be stored in the computer. ASCII has been mostly replaced by UNICODE which includes characters in other languages like Chinese. In the days before good graphics, some people made ASCII art just using the keyboard characters. Take a look at this |ASCII art| collection!
 
-We can represent ASCII art in a 2D array of rows and columns. What do you think the following code will print out? Try to guess before you run it. The loops to print out the 2D array will be explained in the next lesson.
+We can represent ASCII art in a 2D array of rows and columns. What do you think the following code will print out? Try to guess before you run it. The loops to print out the 2D array will be explained in the next lesson. Then, do the following:
+
+1. Change the code to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it. 
+
+2. Add a new asciiArt array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``. 
 
 .. activecode:: challenge-8-1-ascii-art
   :language: java
   :autograde: unittest
   
+  Part 1: Add 2 assignment statements for the 2D array asciiArt to change the "o" characters to "@" characters. Part 2: Create a new asciiArt array and print it out.   
+  ~~~~
   public class AsciiArt
   {
      public static void main(String[] args)
@@ -323,6 +331,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
 
      
         // print the asciiArt for Part 1
+        System.out.println("ASCII Art:");
         for(String[] row : asciiArt) {
           for(String column : row)
             System.out.print(column);
@@ -385,9 +394,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
         } 
     }
 
-1. Change the code above to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it. 
 
-2. Change the asciiArt array to a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``. 
 
 Summary
 -------
