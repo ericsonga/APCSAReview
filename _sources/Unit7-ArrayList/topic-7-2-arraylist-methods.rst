@@ -114,7 +114,7 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests() {
-            super("ListAdd");
+            super("listAdd1");
         }
 
         @Test
