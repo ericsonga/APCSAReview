@@ -465,49 +465,22 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
       {  
         World world = new World(400,400);
 
-        // Create a large 150x200 CustomTurtle with a green body (Color.green)
+        // 1. Create a large 150x200 CustomTurtle with a green body (Color.green)
         // and a blue shell (Color.blue) at position (150,300).
         // Move it forward to see it.
         
     
 
-        // Create a small 25x50 CustomTurtle with a red body 
+        // 2. Create a small 25x50 CustomTurtle with a red body 
         // and a yellow shell at position (350,200)
         // Move it forward to see it.
         
 
-        // Create a CustomTurtle of your own design
+        // 3. Create a CustomTurtle of your own design
         
         world.show(true);
       }
     }
-    ====
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-          public RunestoneTests() {
-            super("CustomTurtleRunner");
-          }
-
-        @Test
-        public void test1()
-        {
-            String target = "new CustomTurtle(150,300,world, Color.green, Color.blue, 180, 200)";
-            boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300)",target);
-            assertTrue(passed);
-        }
-        @Test
-        public void test2()
-        {
-            String target = "new CustomTurtle(350,200,world, Color.red, Color.yellow, 25, 50)";
-            boolean passed = checkCodeContains("constructor for a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200)",target);
-            assertTrue(passed);
-        }
-    }
-
 
     class CustomTurtle extends Turtle
     {
@@ -573,6 +546,32 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
         setHeight(h);
         setWidth(w);    
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+          public RunestoneTests() {
+            super("CustomTurtleRunner");
+          }
+
+        @Test
+        public void test1()
+        {
+            String target = "new CustomTurtle(150,300,world, Color.green, Color.blue, 180, 200)";
+            boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300)",target);
+            assertTrue(passed);
+        }
+        @Test
+        public void test2()
+        {
+            String target = "new CustomTurtle(350,200,world, Color.red, Color.yellow, 25, 50)";
+            boolean passed = checkCodeContains("constructor for a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200)",target);
+            assertTrue(passed);
+        }
     }
 
 Summary
