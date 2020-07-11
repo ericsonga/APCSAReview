@@ -47,8 +47,9 @@ Here is a complex loop.  See if you can trace the code on paper by making a trac
 
 .. activecode:: example_trace_loop
    :language: java
+   :autograde: unittest
    
-   Can you trace through this code? Add in output statements like ``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop to keep track of the variables and run. Click on the Code Lens button to visualize the code step by step.
+   Can you trace through this code? Add in output statements ``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop at the end to keep track of the variables and run. Click on the Code Lens button to visualize the code step by step.
    ~~~~
    public class Trace
    {
@@ -64,6 +65,23 @@ Here is a complex loop.  See if you can trace the code on paper by making a trac
            }
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "var1: 3 var2: 2\nvar1: 4 var2: 1\nvar1: 5 var2: 0\n";
+        boolean passed = getResults(expect, output, "Expected output from main", true);
+        assertTrue(passed);
+      }
+    }
+  
 
 
 
@@ -147,6 +165,7 @@ Loops can be also analyzed to determine how many times they run.  This is called
 
 .. activecode::  countstars1
    :language: java
+   :autograde: unittest
    
    How many stars are printed out in this loop? How many times does the loop run? Figure it out on paper before you run the code.
    ~~~~
@@ -159,6 +178,23 @@ Loops can be also analyzed to determine how many times they run.  This is called
                System.out.print("*");   
       }  
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "****\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+    }
+  
 
 If you made a trace table, you would know that the loop runs when i = 3, 4, 5, 6 but finishes as soon as i becomes 7 since that is not less than 7. So, the loop runs 4 times. Or you can use the shortcut formula in the note below.
 
@@ -177,6 +213,7 @@ In the code above the largest value that allows the loop to run is 6 (which is t
 
 .. activecode::  countstars
    :language: java
+   :autograde: unittest
    
    How many stars are printed out by the following loops? How many times do the loops run? Calculate on paper before you run the code.
    ~~~~
@@ -195,6 +232,23 @@ In the code above the largest value that allows the loop to run is 6 (which is t
           }      
       }  
    }   
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "**********\n**********\n**********\n**********\n**********\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+    }
+  
    
 .. note::
 

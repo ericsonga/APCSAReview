@@ -275,20 +275,23 @@ If there are no constructors written for a class, Java provides a no-argument **
 
 Constructors are used to set the initial state of an object by initializing its instance variables. The examples above have instance variables that are primitive types, but you can have other objects, reference types, as instance variables. For example, a Person class could have an Address object as an instance variable, and the Address class could have String instance variables for the street, city, and state. 
 
-(Advanced Topic Warning) When you pass object references as parameters to constructors or methods, they become aliases for the original object and can change it. If a constructor has an object instance variable, it can copy   the referenced object in the parameter using new and the constructor of the referenced object like below so that it does not change the state of the original object. You will see more examples like this in later lessons.
+(Advanced AP Topic Warning) When you pass object references as parameters to constructors or methods, they become aliases for the original object and can change it. If a constructor has an object instance variable, it can copy   the referenced object in the parameter using new and the constructor of the referenced object like below so that it does not change the state of the original object. You will see more examples like this in later lessons.
 
 .. code-block:: java 
 
-     public class Person {
+     public class Person 
+     {
        private String name;
        private Address addr; //Assumes an Address class is already defined
        
-     // constructor: initialize instance variable and call Address constructor to make a copy
-     public Person(String initName, Address initAddr)
-     {
-        name = initName;
-        addr = new Address(initAddr.getStreet(), initAddr.getCity(), initAddr.getState());
-     }
+       // constructor: initialize instance variable and call Address constructor to make a copy
+       public Person(String initName, Address initAddr)
+       {
+          name = initName;
+          addr = new Address(initAddr.getStreet(), 
+                     initAddr.getCity(), initAddr.getState());
+       }
+      }
      
 
 |Groupwork| Programming Challenge : Student Class
@@ -308,6 +311,8 @@ We encourage you to work in pairs for this challenge to create a Student class w
   :language: java
   :autograde: unittest
 
+  Create a class Student with 4 instance variables, 3 constructors, and a print method. Write a main method that creates 3 Student objects with the 3 different constructors and calls their print() method.
+  ~~~~       
   /** class Student 
    * with 4 instance variables,
    * 3 constructors, a print method, 
@@ -315,8 +320,31 @@ We encourage you to work in pairs for this challenge to create a Student class w
    */
    public class Student 
    {
-   
-   
+      // Write 4 instance variables
+      
+      
+      // Write 3 constructors to initialize the instance variables
+      //  1. no parameters using default values
+      //  2. 1 parameter and the rest default values
+      //  3. 4 parameters
+       
+      
+      // Write a print method that prints all the instance variables
+      public void print()
+      {
+      
+      
+      }
+      
+      // main method 
+      public static void main(String[] args)
+      {  
+         // Construct 3 Student objects using the 3 different constructors 
+         
+         
+         // call their print() methods
+      
+      }
    }
    ====
    // Test Code for Lesson 5.2.1 - Challenge - Student
@@ -331,6 +359,9 @@ We encourage you to work in pairs for this challenge to create a Student class w
     {
         public RunestoneTests() {
             super("Student");
+
+            Object[] values = new Object[]{"Name", 0};
+            setDefaultValues(values);
         }
 
         @Test
@@ -374,7 +405,7 @@ We encourage you to work in pairs for this challenge to create a Student class w
         }
 
         @Test
-        public void testPrint() throws IOException
+        public void testPrint()
         {
             String output = getMethodOutput("print");
             String expect = "More than 15 characters";
@@ -385,7 +416,7 @@ We encourage you to work in pairs for this challenge to create a Student class w
             } else {
                 actual = "More" + actual;
             }
-            boolean passed = getResults(expect, output, "Checking print method");
+            boolean passed = getResults(expect, actual, "Checking print method");
             assertTrue(passed);
         }
 
@@ -394,18 +425,22 @@ We encourage you to work in pairs for this challenge to create a Student class w
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");//.split("\n");
-            String expect = "4 line(s) of text";
+            String expect = "3+ line(s) of text";
             String actual = " line(s) of text";
+            int len = output.split("\n").length;
 
             if (output.length() > 0) {
-                actual = output.split("\n").length + actual;
+                actual = len + actual;
             } else {
                 actual = output.length() + actual;
             }
-            boolean passed = getResults(expect, actual, "Checking main method");
+            boolean passed = len >= 3;
+
+            getResults(expect, actual, "Checking output", passed);
             assertTrue(passed);
         }
-        }
+    }
+    
   
 Summary
 --------

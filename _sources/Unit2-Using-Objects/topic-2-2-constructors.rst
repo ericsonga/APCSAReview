@@ -50,7 +50,10 @@ A new object is created with the ``new`` keyword followed by the class name (``n
 Overloading Constructors
 ---------------------------
 
-There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. There can also be other constructors that take parameters like the ``Turtle(world)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
+There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. 
+
+There can also be other constructors that take parameters like the ``Turtle(world)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
+
 The ``World`` class actually has 2 constructors.  One doesn't take any parameters and one takes the world's width and height.
 
 
@@ -147,11 +150,12 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
 
 .. activecode:: TurtleConstructorTest
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Try changing the code below to create a ``World`` object with 300x400 pixels. Where is the turtle placed by default? What parameters do you need to pass to the ``Turtle`` constructor to put the turtle at the top right corner? Experiment and find out. What happens if you mix up the order of the parameters?
 
-    (If the code below does not work for you, you can also use the ``Turtle`` code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work in your browser, you can also use the ``Turtle`` code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -170,20 +174,43 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
           world.show(true);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleConstructorTest");
+        }
+
+        @Test
+        public void test1()
+        {
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorTest\n{\n  public static void main(String[] args)\n  {\n      // Change the World constructor to 300x400\n      World world = new World(300,300);\n\n      // Change the Turtle constructor to put the turtle in the top right corner\n      Turtle t1 = new Turtle(world);\n\n      t1.turnLeft();\n      world.show(true);\n  }\n}\n";
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
+
+    }
 
 Object Variables and References
 ---------------------------------
 
-You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. A reference is like a tracking number that you can use to track the location of a package. The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world)``).  However, you will typically declare an object variable and initialize it in the same line of code (``Turtle t2 = new Turtle(world);``).
+You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package. 
+
+The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world)``).  Or more commonly, you can declare an object variable and initialize it in the same line of code (``Turtle t2 = new Turtle(world);``).
 
 .. code-block:: java
 
     World world = new World();
     Turtle t1 = null;
     t1 = new Turtle(world);
+    // declare and initialize t2
     Turtle t2 = new Turtle(world);
 
-Notice that you only specify the type (class name) for an object reference when you declare it (``Turtle t1 = null``) and not when you assign it a value (``t1 = new Turtle(world)``).
+
 
 Constructor Signatures
 -----------------------------------
@@ -293,7 +320,7 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
 Formal and Actual Parameters
 --------------------------------
 
-When a constructor like ``Date(2005,9,1)`` is called, the **formal parameters**, (year, month, day), are set to copies of the  **actual parameters** (or **arguments**), which are (2005,9,1).  This is also called **call by value** which means that copies of the actual parameter values are passed to the constructor.  These values are used to initialize the object's attributes.
+When a constructor like ``Date(2005,9,1)`` is called, the **formal parameters**, (year, month, day), are set to copies of the  **actual parameters** (or **arguments**), which are (2005,9,1).  This is **call by value** which means that copies of the actual parameter values are passed to the constructor.  These values are used to initialize the object's attributes.
 
 .. figure:: Figures/parameterMappingDate.png
     :width: 450px
@@ -337,12 +364,22 @@ The type of the values being passed in as arguments have to match the type of th
 
 This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors. And you will see parameters again with methods in the next lessons.
 
-|Groupwork| Programming Challenge : Debugging
----------------------------------------------
+.. image:: Figures/customTurtles.png
+    :width: 200
+    :align: left
+    
+|Groupwork| Programming Challenge: Custom Turtles
+---------------------------------------------------
 
+
+    
+Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors.
+
+First, as a warm up, do the following debugging exercise.
 
 .. activecode:: challenge2-2-TurtleConstructorDebug
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Debug the following code.
@@ -364,7 +401,178 @@ This lesson introduces a lot of vocabulary, but don't worry if you don't underst
           world.show(true);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleConstructorDebug");
+        }
+
+        @Test
+        public void test1()
+        {
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorDebug\n{\n  public static void main(String[] args)\n  {\n      World w = new World(300,0);\n      turtle t0;\n      Turtle t1 = new Turtle();\n      Turtle t2 = new Turtle(world, 100, 50)\n      t0.forward();\n      t1.turnRight();\n      t2.turnLeft();\n      world.show(true);\n  }\n}\n";
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
+    }
+
+The CustomTurtle class in the ActiveCode below inherits many of its attributes and methods from the Turtle class (you will learn more about inheritance in Unit 9). However, it has some new constructors with more parameters to customize a turtle with its body color, shell color, width, and height. CustomTurtle has 3 constructors:
+
+.. code-block:: java
+
+  /** Constructs a CustomTurtle in the middle of the world */
+  public CustomTurtle(ModelDisplay world)
+ 
+  /** Constructs a CustomTurtle with a specific body color, 
+      shell color, and width and height in the middle of the world */
+  public CustomTurtle(ModelDisplay world, Color body, Color shell, int w, int h) 
+
+  /** Constructs a CustomTurtle with a specific body color, 
+      shell color, and width and height at position (x,y) in the world */
+  public CustomTurtle(int x, int y, ModelDisplay w, Color body, Color shell, int w, int h) 
+
+
+.. |Color| raw:: html
+
+   <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
+   
+You will use the constructor(s) to create the CustomTurtles below. You can specify colors like Color.red by using the |Color| class in Java.
+
+1. Create a large 150x200 (width 150 and height 200) CustomTurtle with a green body (Color.green) and a blue shell (Color.blue) at position (150,300)
+
+2. Create a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200)
+
+3. Create a CustomTurtle of your own design.
+
+.. activecode:: challenge2-2-CustomTurtles
+    :language: java
+    :autograde: unittest
+    :datafile: turtleClasses.jar
+
+    Use the CustomTurtle constructors to create the following turtles.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class CustomTurtleRunner 
+    {
+      public static void main(String[] args) 
+      {  
+        World world = new World(400,400);
+
+        // 1. Create a large 150x200 CustomTurtle with a green body (Color.green)
+        // and a blue shell (Color.blue) at position (150,300).
+        // Move it forward to see it.
+        
+    
+
+        // 2. Create a small 25x50 CustomTurtle with a red body 
+        // and a yellow shell at position (350,200)
+        // Move it forward to see it.
+        
+
+        // 3. Create a CustomTurtle of your own design
+        
+        world.show(true);
+      }
+    }
+
+    class CustomTurtle extends Turtle
+    {
+       private int x;
+       private int y;
+       private World w;
+       private Color bodycolor;
+       private Color shellcolor;
+       private int width;
+       private int height;
+
+     /** Constructor that takes the model display
+       * @param modelDisplay the thing that displays the model
+       */
+      public CustomTurtle(ModelDisplay modelDisplay) 
+      {
+        // let the parent constructor handle it
+        super(modelDisplay);
+      }
+
+      /** Constructor that takes the model
+       * display to draw it on and custom colors and size
+       * @param m the world
+       * @param body : the body color
+       * @param shell : the shell color
+       * @param w: width
+       * @param h: height
+       */
+      public CustomTurtle(ModelDisplay m, Color body, Color shell, int w, int h)
+      {
+        // let the parent constructor handle it
+        super(m);
+        bodycolor = body;
+        setBodyColor(body);
+        shellcolor = shell;
+        setShellColor(shell);
+        height = h;
+        width = w;
+        setHeight(h);
+        setWidth(w);    
+      }
+
+    /** Constructor that takes the x and y and a model
+       * display to draw it on and custom colors and size
+       * @param x the starting x position
+       * @param y the starting y position
+       * @param m the world
+       * @param body : the body color
+       * @param shell : the shell color
+       * @param w: width
+       * @param h: height
+       */
+      public CustomTurtle(int x, int y, ModelDisplay m,  Color body, Color shell, int w, int h) 
+      {
+        // let the parent constructor handle it
+        super(x,y,m);
+        bodycolor = body;
+        setBodyColor(body);
+        shellcolor = shell;
+        setShellColor(shell);
+        height = h;
+        width = w;
+        setHeight(h);
+        setWidth(w);    
+      }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+          public RunestoneTests() {
+            super("CustomTurtleRunner");
+          }
+
+        @Test
+        public void test1()
+        {
+            String target = "new CustomTurtle(150,300,world, Color.green, Color.blue, 180, 200)";
+            boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300)",target);
+            assertTrue(passed);
+        }
+        @Test
+        public void test2()
+        {
+            String target = "new CustomTurtle(350,200,world, Color.red, Color.yellow, 25, 50)";
+            boolean passed = checkCodeContains("constructor for a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200)",target);
+            assertTrue(passed);
+        }
+    }
 
 Summary
 -------------------

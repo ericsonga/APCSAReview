@@ -136,10 +136,12 @@ Most if statements have a boolean condition that uses relational operators like 
 
 .. activecode:: if-relational
    :language: java
+   :autograde: unittest
+   :practice: T
    
    Run the following active code a couple times until you see all the possible outputs. It prints out whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.
    ~~~~
-   public class Test
+   public class TestNumbers
    {
       public static void main(String[] args)
       {
@@ -159,6 +161,80 @@ Most if statements have a boolean condition that uses relational operators like 
         }
       }
    }
+   ====
+   // Test Code for Lesson 3.2.1 - Activity 1 - if-relational
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testPositive()
+        {
+            String output = "";
+            int num = -999;
+
+            while(num <= 0) {
+                output = getMethodOutput("main");
+                num = getNumber(output);
+            }
+
+            String expect = "The number is " + num + "\n" + num + " is positive!";
+
+            boolean passed = getResults(expect, output, "Testing positive numbers");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testZero()
+        {
+            String output = "";
+            int num = -999;
+
+            while(num != 0) {
+                output = getMethodOutput("main");
+                num = getNumber(output);
+            }
+
+            String expect = "The number is " + num + "\n" + num + " is zero!";
+
+            boolean passed = getResults(expect, output, "Testing zero");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testNegative()
+        {
+            String output = "";
+            int num = 999;
+
+            while(num >= 0) {
+                output = getMethodOutput("main");
+                num = getNumber(output);
+            }
+
+            String expect = "The number is " + num + "\n" + num + " is negative!";
+
+            boolean passed = getResults(expect, output,"Testing negative numbers");
+            assertTrue(passed);
+        }
+
+        private int getNumber(String output) {
+            output = output.replaceAll("The number is ", "");
+            int space = output.indexOf("\n");
+
+            String numStr = output;
+
+            if (space >= 0)
+                numStr = numStr.substring(0, space).trim();
+
+            return Integer.parseInt(numStr);
+        }
+    }
 
 
 .. note::
@@ -218,6 +294,8 @@ Here are some rules to follow with if statements to avoid some common errors:
    
 .. activecode:: lccb2-indent
    :language: java
+   :autograde: unittest
+   :practice: T
 
    The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
    ~~~~
@@ -232,6 +310,32 @@ Here are some rules to follow with if statements to avoid some common errors:
         
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "";
+            boolean passed = getResults(expect, output, "Expected output from main if isCold is false");
+            assertTrue(passed);
+        }
+        @Test
+        public void testCountCurlies()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "{");
+            boolean passed = num >= 3;
+
+            getResults("3", "" + num, "Number of {", passed);
+            assertTrue(passed);
+        }
+    }
    
 |Groupwork| Programming Challenge : Magic 8 Ball
 ------------------------------------------------
@@ -257,6 +361,7 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 
 .. activecode:: challenge3-2-if-Magic8ball
    :language: java
+   :autograde: unittest
    
    public class Magic8Ball
    {
@@ -264,12 +369,74 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
       {
         // Get a random number from 1 to 8
         
-        // Use if statements to print out 1 of 8 responses
+        // Use if statements to test the random number 
+        // and print out 1 of 8 random responses 
         
           
       }
    }
-   
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.ArrayList;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Magic8Ball");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+
+            boolean passed = output.length() > 0;
+
+            passed = getResults("Output length > 0", "Output length of " + output.length(), "Prints a statement", passed);
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void test2()
+        {
+            String[] output = new String[200];
+
+            for (int i = 0; i < output.length; i++) {
+                output[i] = getMethodOutput("main");
+            }
+
+            ArrayList <String> lines = new ArrayList <String> ();
+
+            for (int i = 0; i < output.length; i++) {
+                if (!lines.contains(output[i]))
+                    lines.add(output[i]);
+            }
+
+            int responses = lines.size();
+            boolean passed = lines.size() >= 8;
+
+            passed = getResults("8", ""+responses, "Unique responses", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCodeWithoutComments();
+
+            int numIfs = countOccurences(code, "if");
+
+            boolean passed = numIfs >= 7;
+
+            passed = getResults("7 or more", ""+numIfs, "Code has at least 7 if statements", passed);
+            assertTrue(passed);
+        }
+    }
+
+
 .. |repl version| raw:: html
 
     <a href="https://repl.it/@BerylHoffman/Magic8BallTemplate" target="_blank" style="text-decoration:underline">repl version</a>

@@ -406,19 +406,19 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
    <pre>
     The ants go marching one by one, hurrah, hurrah
     The ants go marching one by one, hurrah, hurrah
-    The ants go marching one by one,
+    The ants go marching one by one
     The little one stops to suck his thumb
     And they all go marching down to the ground
 
     The ants go marching two by two, hurrah, hurrah
     The ants go marching two by two, hurrah, hurrah
-    The ants go marching two by two,
+    The ants go marching two by two
     The little one stops to tie his shoe
     And they all go marching down to the ground
 
     The ants go marching three by three, hurrah, hurrah
     The ants go marching three by three, hurrah, hurrah
-    The ants go marching three by three,
+    The ants go marching three by three
     The little one stops to climb a tree
     And they all go marching down to the ground
     </pre>
@@ -426,28 +426,71 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
 1. Print out the |The Ants Go Marching| song and circle the repeated parts of the song.
 
 
-2. In the active code window below, create a method or methods that takes parameters to print out a verse. The method(s) should be abstract enough to work for all 3 verses.  Use good commenting for your methods that describe the @param. For the autograder, make sure you create a method called
+2. In the active code window below, create a method or methods that takes parameters to print out a verse. The method(s) should be abstract enough to work for all 3 verses.  Use good commenting for your methods that describe the @param. For the autograder, make sure you create a method called verse that takes 2 parameters. 
 
 3. In the main method, create an object of the class and call the method(s) you created in the last step to print out 3 verses of the song. Can you add more verses?
 
 .. activecode:: challenge-5-6-song
   :language: java
+  :autograde: unittest  
 
+  Create method(s) with parameters to print out verses of the song The Ants Go Marching. https://www.lyrics.com/lyric/5526512/The+Ants+Go+Marching
+  ~~~~
   public class Song 
   { 
-    // Create method(s) with parameters to print out verses 
-    // of the song The Ants Go Marching.
-    // https://www.lyrics.com/lyric/5526512/The+Ants+Go+Marching
+    // Create at least 1 method called verse that takes 2 parameters
+    // that can be used to print out the verses of the song The Ants Go Marching
     
     
     public static void main(String args[]) 
     {
-      // Create a Song object and call its method to print out 
+      // Create a Song object and call its method(s) to print out 
       // the verses of The Ants Go Marching
+      // There should be atleast 1 method called verse that takes 2 arguments.
+    
     
     }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void checkCodeContains1(){
+        //check verse 1
+        boolean passed = checkCodeContains("verse method call with 2 arguments for verse 1", "verse(\"one\", \"suck his thumb\"");
+        assertTrue(passed);
+      }
 
+      @Test
+      public void checkCodeContains2(){
+         //check verse 2
+          boolean passed = checkCodeContains("verse method call with 2 arguments for verse 2", "verse(\"two\", \"tie his shoe\"");
+        assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains3(){
+         //check verse 3
+          boolean passed = checkCodeContains("verse method call with 2 arguments for verse 3", "verse(\"three\", \"climb a tree\"");
+        assertTrue(passed);  
+      }
+
+          @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "The ants go marching three by three\nThe little one stops to climb a tree";
+            boolean passed = output.contains(expect);
+            getResults(expect, output, "Expected output from main contains 3 verses");
+            assertTrue(passed);
+        }
+    }
+
+    
 
 
 Summary

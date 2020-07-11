@@ -91,6 +91,7 @@ It can help to write out what you need to do to get each of the characters to co
 
 .. activecode:: lcfrssa3
    :language: java
+   :autograde: unittest  
 
    public class Test
    {
@@ -116,6 +117,23 @@ It can help to write out what you need to do to get each of the characters to co
          // compare R and A and do nothing
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "A\nB\nR\nA\nA\nC\nA\nD\nA\nB\nR\nA\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+    }
+  
 
 In this example we are looping through the characters from left to right one at a time and comparing the two adjacent characters.  If the first is an "A" and the second is not we will swap the characters and then need to increment the index to not check the ones we swapped again.  So we start checking the characters at index 0 and 1 and then swap them, but then move to comparing 2 and 3 rather than 1 and 2 which means we increment the current index by 2.  If we don't swap the characters we only increment the index by 1.
 
@@ -123,6 +141,7 @@ The following shows what to do to solve the example with "WHOA".
 
 .. activecode:: lcfrssa4
    :language: java
+   :autograde: unittest  
 
    public class Test
    {
@@ -136,6 +155,23 @@ The following shows what to do to solve the example with "WHOA".
          System.out.println("WHOA".substring(3,4)); // get the A - compare the O and A and do nothing
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "W\nH\nH\nO\nO\nA\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+    }
+  
 
 In this case since we didn't swap any characters we only increment the index by 1 each time through the loop.
 
@@ -148,7 +184,10 @@ Write the method scrambleWord below.
 
 .. activecode:: lcfrssa5
    :language: java
+   :autograde: unittest  
 
+   Write the method scrambleWord.
+   ~~~~
    import java.util.List;
    import java.util.ArrayList;
 
@@ -185,6 +224,40 @@ Write the method scrambleWord below.
             System.out.println(word + " becomes " + scrambleWord(word));
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "Testing Part (a):\nTAN becomes TNA\nABRACADABRA becomes BARCADABARA\nWHOA becomes WHOA\nAARDVARK becomes ARADVRAK\nEGGS becomes EGGS\nA becomes A\n becomes \n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+
+        @Test
+        public void testIfLoop()
+        {
+           String code = getCode();
+           boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
+           getResults("Expected loop and if",""+passed, "Checking for loop and if statement",passed);
+            assertTrue(passed);
+        }
+
+            @Test
+        public void testCodeContains() 
+        {
+            String target = ".substring(";
+            boolean passed = checkCodeContains("substring method", target);
+            assertTrue(passed);
+        }
+    }
+  
 
 Video - One way to code the solution
 =====================================

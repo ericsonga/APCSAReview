@@ -118,7 +118,7 @@ Here are some more useful methods in the Integer and  Double classes:
    :language: java
    :autograde: unittest
  
-   Run the code below to see useful methods in the Interger and Double wrapper classes.
+   Run the code below to see useful methods in the Integer and Double wrapper classes.
    ~~~~    
    public class Test2
    {

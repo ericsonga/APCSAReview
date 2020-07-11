@@ -51,6 +51,7 @@ To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 
 
 .. activecode:: lcfrsda2
    :language: java
+   :autograde: unittest  
 
    public class Test
    {
@@ -61,11 +62,30 @@ To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 
          System.out.println(128 % 1);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    //import java.util.regex.*;
+    /* Do NOT change Main or CodeTestHelper.java. */
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "0\n0\n0\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
+
 
 To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remainder that is greater than 0, so it can't be a self-divisor and we return false.
 
 .. activecode:: lcfrsda3
    :language: java
+   :autograde: unittest  
 
    public class Test
    {
@@ -74,6 +94,24 @@ To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remain
          System.out.println(26 % 6);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    //import java.util.regex.*;
+    /* Do NOT change Main or CodeTestHelper.java. */
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "2\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
+
 
 To return false if the number has a 0 in it we just have to check if the current digit is a zero and then return false. So, 120 and 102 should both return false.
 
@@ -83,6 +121,7 @@ How can we loop through all the digits in a number?  We can use x % 10 to get th
 
 .. activecode:: lcfrsda4
    :language: java
+   :autograde: unittest  
 
    public class Test
    {
@@ -94,7 +133,25 @@ How can we loop through all the digits in a number?  We can use x % 10 to get th
          System.out.println(12 / 10);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    //import java.util.regex.*;
+    /* Do NOT change Main or CodeTestHelper.java. */
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "8\n12\n2\n1\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
 
+   
 .. mchoice:: frsda_1
    :practice: T
    :answer_a: for
@@ -125,6 +182,7 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
 
 .. activecode:: lcfrsda5
    :language: java
+   :autograde: unittest  
 
    public class SelfDivisor
    {
@@ -150,6 +208,40 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         System.out.println("102: " + isSelfDivisor(102));
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "128: true\n26: false\n120: false\n102: false\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testIfLoop()
+        {
+           String code = getCode();
+           boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
+           getResults("Expected loop, if, %",""+passed, "Checking for loop and if statement",passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testModDiv()
+        {
+           String code = getCode();
+           boolean passed = code.contains("%") && code.contains("/");
+           getResults("Expected % and /",""+passed, "Checking for use of % and /",passed);
+            assertTrue(passed);
+        }
+    }
+
 
 Video - One way to code the solution
 =====================================

@@ -165,6 +165,7 @@ Put all of the code together to solve this problem.
 
 .. activecode:: APCalendarFRQPartA
    :language: java
+   :autograde: unittest
 
    Write the code for the method numberOfLeapYears below and run to test it.
    ~~~~
@@ -195,6 +196,47 @@ Put all of the code together to solve this problem.
         System.out.println("Your answer should be 13: " + answer);
     }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("APCalendar");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Your answer should be 13: 13";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            int answer = APCalendar.numberOfLeapYears(1990, 2100);
+            int expect = 27;
+
+            boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(1990, 2100)");
+            assertTrue(passed);   
+        }
+
+        @Test
+        public void test3()
+        {
+            int answer = APCalendar.numberOfLeapYears(2001, 2002);
+            int expect = 0;
+
+            boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(2001, 2002)");
+            assertTrue(passed);   
+        }
+    }
 
 Part B: dayOfWeek()
 ===========================
@@ -265,8 +307,9 @@ Try the mod operator below.
 
 .. activecode:: mod
    :language: java
+   :autograde: unittest
    
-   Complete the program below to wrap around values from 0 to 7. What value would you use for the divisor?
+   Complete the program below to figure out a day of the week from 0-6 where 0 is Sunday and 6 is Saturday for 7 days of the week. What value would you use for the divisor?
    ~~~~
    public class Mod
    {
@@ -282,6 +325,28 @@ Try the mod operator below.
         System.out.println("Remainder of " + day3 + "/" + divisor + " is " + (day3 % divisor) );
       }
    }  
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Mod");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Remainder of 7/7 is 0\nRemainder of 8/7 is 1\nRemainder of 9/7 is 2";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+    }
+    
    
 .. mchoice:: dow4
    :answer_a: firstDayOfYear(2019) + dayOfYear(1,8,2019)   
@@ -302,6 +367,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
 
 .. activecode:: APCalendarFRQPartB
    :language: java
+   :autograde: unittest
 
    Write the code for the method dayOfWeek below and run to test it. Then, try it with today's date and see if it returns the right value.
    ~~~~
@@ -347,5 +413,45 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
         return gc.get(Calendar.DAY_OF_YEAR);
     }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("APCalendar");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Your answer should be 2: 2";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            int answer = APCalendar.dayOfWeek(7, 2, 2020);
+            int expect = 4;
+
+            boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(7, 2, 2020)");
+            assertTrue(passed);   
+        }
+
+        @Test
+        public void test3()
+        {
+            int answer = APCalendar.dayOfWeek(2, 29, 2022);
+            int expect = 2;
+
+            boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(2, 29, 2022)");
+            assertTrue(passed);   
+        }
+    }
 
