@@ -342,11 +342,11 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
 .. activecode:: ArrayListWordPair1
    :language: java
    
-    Create an Arraylist of WordPair objects.
-    ~~~~
-    import java.util.*; 
+   Create an Arraylist of WordPair objects.
+   ~~~~
+   import java.util.*; 
 
-    public class WordPairTest {
+   public class WordPairTest {
         public static void main(String[] args)
         {
             // Create an ArrayList of WordPair objects called pairs
@@ -397,9 +397,9 @@ In the class WordPairsList below, you will write the constructor which takes the
 .. activecode:: challenge-7-3-WordPairs
    :language: java
    
-    FRQ WordPairs Challenge: Complete the constructor for WordPairsList below which will add pairs of words from a given array to the ArrayList. Then, complete the method numMatches().
-    ~~~~
-    import java.util.*; 
+   FRQ WordPairs Challenge: Complete the constructor for WordPairsList below which will add pairs of words from a given array to the ArrayList. Then, complete the method numMatches().
+   ~~~~
+   import java.util.*; 
 
     public class WordPairsList
     {

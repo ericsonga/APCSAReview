@@ -2,8 +2,13 @@ import java.io.*;
 import java.lang.reflect.*;
 
 import java.util.Arrays;
+
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
 
 import static org.junit.Assert.*;
 import org.junit.After;
@@ -16,14 +21,14 @@ import org.junit.Test;
  * do not exist.
  *
  * @author  Kate McDonnell
- * @version 0.2.0
- * @since 2020-06-23
+ * @version 0.2.9
+ * @since 2020-07-10
  * 
  * 
  */
 public class CodeTestHelper
 {
-    public static boolean replit = false;
+    public static boolean replit = true;
 
     private static String results = "";
     private static String mainOutput = "";
@@ -44,23 +49,16 @@ public class CodeTestHelper
     public CodeTestHelper(String name) {
         setupClass(name);
     }
-    /* Do NOT use this constructor *****
-    public CodeTestHelper(String name, boolean hasMain) {
-        if (hasMain)
-            setupClass(name);
-        else {
-            try {
-                this.className = name;
-                this.c = Class.forName(this.className);
 
-                mainOutput = "";
+    public CodeTestHelper(String name, String input){
+        inContent = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+        System.setIn(inContent);
+        
+        setupClass(name);
+        
+        System.setIn(System.in);
 
-            } catch (Exception e) {
-                System.out.println("Exception: " + e.toString());
-            }
-        }
     }
-    */
 
     private void setupClass(String name) {
         try {
@@ -69,8 +67,23 @@ public class CodeTestHelper
 
             mainOutput = getMethodOutput("main");
 
-        } catch (Exception e) {
-             System.out.println("No suitable main method found");
+        } catch (Exception e1) {
+            try {
+                name = findMainMethod();
+
+                if (!name.equals("main not found")){
+
+                    this.className = name;
+                    this.c = Class.forName(this.className);
+
+                    mainOutput = getMethodOutput("main");
+                }
+                else {
+                    System.out.println("No suitable main method found");
+                }
+            } catch (Exception e2) {
+                System.out.println("No suitable main method found");
+            }
         }
             
     }
@@ -117,6 +130,10 @@ public class CodeTestHelper
     public boolean getResults(String expected, String actual, String msg)
     {
         return getResults(false, false, expected, actual, msg);
+    }
+
+    public boolean getResultsRegex(String expected, String actual, String msg) {
+        return getResults(true, false, expected, actual, msg);
     }
 
     public boolean getResultsRegEx(String expected, String actual, String msg) {
@@ -646,7 +663,7 @@ public class CodeTestHelper
             Constructor ctor = null;
             for (int i = 0; i < ctors.length; i++) {
                 ctor = ctors[i];
-                if (numArgs != 0 && ctor.getGenericParameterTypes().length == numArgs)
+                if (ctor.getGenericParameterTypes().length == numArgs)
                     return "pass";
             }
             
@@ -678,21 +695,24 @@ public class CodeTestHelper
         try {
             Constructor[] ctors = c.getDeclaredConstructors();
             Constructor ctor = null;
-            Constructor longest = ctors[0];
+            Constructor shortest = ctors[0];
 
             for (int i = 0; i < ctors.length; i++) {
                 ctor = ctors[i];
-                if (ctor.getGenericParameterTypes().length == 0)
+                //System.out.println(""+ ctor.getGenericParameterTypes().length);
+                if (ctor.getGenericParameterTypes().length == 0) {
+                    //System.out.println("Using default constructor");
                     return ctor.newInstance();
+                }
                 if (checkConstructorDefaults(ctor)) {
                     return ctor.newInstance(defaultTestValues);
                 }
-                if (ctor.getGenericParameterTypes().length > longest.getGenericParameterTypes().length)
-                    longest = ctor;
+                if (ctor.getGenericParameterTypes().length < shortest.getGenericParameterTypes().length)
+                    shortest = ctor;
             }
 
-            Object[] constValues = getConstructorParameters(longest);
-            return longest.newInstance(constValues);
+            Object[] constValues = getConstructorParameters(shortest);
+            return shortest.newInstance(constValues);
         } catch (Exception e) {
             errorMessage = "Couldn't call constructor";
         }
@@ -853,7 +873,7 @@ public class CodeTestHelper
                 if (checkParameters(m, arguments) || m.getName().equals("main"))
                     m.invoke(null, arguments);
                 else
-                    errorMessage = "Arguments incorrect";
+                    errorMessage = "Arguments incorrect (3)";
             else
                 m.invoke(null);
 
@@ -926,7 +946,7 @@ public class CodeTestHelper
                     return cleanResult(result);
                 }
                 else
-                    return "Arguments incorrect";
+                    return "Arguments incorrect (2)";
             } else {
                 Object result = m.invoke(null);
                 return cleanResult(result);
@@ -1032,6 +1052,18 @@ public class CodeTestHelper
                     argTypes[i] = boolean[].class;
                 } else if (args[i].getClass().getComponentType().equals(String.class)) {
                     argTypes[i] = String[].class;
+                } else if (args[i].getClass().getComponentType().isArray()) {
+                    if (args[i].getClass().getComponentType().equals(int[].class)) {
+                        argTypes[i] = int[][].class;
+                    } else if (args[i].getClass().getComponentType().equals(double[].class)) {
+                        argTypes[i] = double[][].class;
+                    } else if (args[i].getClass().getComponentType().equals(boolean[].class)) {
+                        argTypes[i] = boolean[][].class;
+                    } else if (args[i].getClass().getComponentType().equals(String[].class)) {
+                        argTypes[i] = String[][].class;
+                    } else {
+                        argTypes[i] = Object[][].class;
+                    }
                 } else {
                     argTypes[i] = Object[].class;
                 }
@@ -1069,7 +1101,7 @@ public class CodeTestHelper
                     {
                         String clssName = children[i].substring(0,children[i].length() - ".java".length());
                         Class<?> c = Class.forName(clssName);
-                        if(c != null && !clssName.equals("Main") && !clssName.equals("TestRunner")) {
+                        if(c != null && (replit && !clssName.equals("Main")) && !clssName.equals("TestRunner")) {
                             Method[] meths = c.getDeclaredMethods();
                             for(Method m: meths) {
                               int mods = m.getModifiers();
@@ -1098,33 +1130,26 @@ public class CodeTestHelper
 
 /* Methods for checking whether code contains or does not contain a String -------*/
 
-    public String getCode() 
-    {
-        if (!className.contains(".java"))
-            className += ".java";
-
-        try {
-            String text = new String(Files.readAllBytes(Paths.get(className)));
-            return text;
-        } catch (IOException e) {
-            return "File " + className + " does not exist";
-        }
-    }
-
     public boolean checkCodeContains(String target) {
-        return checkCodeContains(target, target);
+        return checkCodeContains(false, target, target, true);
     }
 
     public boolean checkCodeContains(String desc, String target){
-        return checkCodeContains(desc, target, true);
+        return checkCodeContains(false, desc, target, true);
     }
 
-    public boolean checkCodeContains(String desc, String target, boolean expected)  
+    public boolean checkCodeContains(String desc, String target, boolean expected)  {
+        return checkCodeContains(false, desc, target, expected);
+    }
+
+
+    public boolean checkCodeContains(boolean useRegex, String desc, String target, boolean expected)  
     {
         String msg = "";
         String output = "";
         
-        String text = getCode();
+        String text = getCodeWithoutComments();//getCode();
+        target = removeComments(target);
 
         boolean hasCode = false;
 
@@ -1134,10 +1159,13 @@ public class CodeTestHelper
 
             hasCode = code.contains(target2);
 
-            if(isRegex(target2))
+            if(!hasCode && useRegex)// && isRegex(target2))
             {
                 String anyText = "[\\s\\S]*";
                 target2 = createSimpleRegex(target2);
+
+                //System.out.println(target2);
+                //System.out.println(code);
 
                 hasCode = code.matches(anyText + target2 + anyText);
             }
@@ -1158,36 +1186,67 @@ public class CodeTestHelper
         return false;
     }
 
+    public String getCode() {
+        return getCodeWithoutComments();
+    }
+
+    public String getCodeWithComments() 
+    {
+        if (!className.contains(".java"))
+            className += ".java";
+
+        try {
+            String text = new String(Files.readAllBytes(Paths.get(className)));
+            return text;
+        } catch (IOException e) {
+            return "File " + className + " does not exist";
+        }
+    }
+
+    public String getCodeWithoutComments() {
+        String code = getCodeWithComments();
+        code = removeComments(code);
+
+        return code;
+    }
+
+    public String removeComments(String code) {
+        int startBlock = code.indexOf("/*");
+        int endBlock = -1;
+        while(startBlock >= 0) {
+            endBlock = code.indexOf("*/");
+            if (endBlock >= 0)
+                code = code.substring(0, startBlock) + code.substring(endBlock + 2);
+
+            startBlock = code.indexOf("/*");
+        }
+
+        int startLine = code.indexOf("//");
+        int endLine = -1;
+        while(startLine >= 0) {
+            endLine = code.indexOf("\n", startLine+1);
+            if (endLine >= 0)
+                code = code.substring(0, startLine) + code.substring(endLine);
+
+            startLine = code.indexOf("//");
+        }
+
+        return code;
+    }
+
     public boolean checkCodeContainsNoRegex(String desc, String target)  
     {
-        String msg = "";
-        String output = "";
-        
-        String text = getCode();
-        
-        boolean expected = true;
-        boolean hasCode = false;
+        return checkCodeContains(false, desc, target, true);
+    }
 
-        try{
-            String code = text.replaceAll(" ", "");
-            String target2 = target.replaceAll(" ", "");
+    public boolean checkCodeContainsRegex(String desc, String target)  
+    {
+        return checkCodeContains(true, desc, target, true);
+    }
 
-            hasCode = code.contains(target2);
-
-            boolean passed = expected == hasCode;
-
-            msg = "Checking that code contains " + desc;
-            output = formatOutput(""+expected, ""+hasCode, msg, passed);
-            results += output + "\n";
-
-            return passed;
-        } catch (Exception e) {
-            msg = "Test could not be completed";
-            output = formatOutput("true", "false", msg, false);
-            results += output + "\n";
-
-        }
-        return false;
+    public boolean checkCodeNotContainsRegex(String desc, String target)  
+    {
+        return checkCodeContains(true, desc, target, false);
     }
 
     private boolean isRegex(String target) {
@@ -1232,7 +1291,7 @@ public class CodeTestHelper
 
     public boolean checkCodeNotContains(String desc, String target) 
     {
-        return checkCodeContains(desc, target, false);
+        return checkCodeContains(false, desc, target, false);
     }
 
     public boolean codeChanged(String origCode)
@@ -1246,6 +1305,7 @@ public class CodeTestHelper
         String output = "";
         
         String currCode = getCode();
+        origCode = removeComments(origCode);
 
         try{
             currCode = currCode.replaceAll("\\s+", "");
@@ -1336,6 +1396,9 @@ public class CodeTestHelper
 /* Random helper methods so they don't have to be rewritten lots of times
 */
     public int countOccurences(String orig, String target) {
+        orig = orig.replaceAll("\\s+", "");
+        target = target.replaceAll("\\s+","");
+
         int count = 0;
 
         int index = orig.indexOf(target);
@@ -1346,6 +1409,34 @@ public class CodeTestHelper
         }
         return count;
     } 
+
+    public int countOccurencesRegex(String orig, String target) {
+
+        
+
+        orig = orig.replaceAll("\\s+", "");
+        target = target.replaceAll("\\s+","");
+
+        target = createSimpleRegex(target);
+
+        int count = 0;
+        int pos = 0;
+
+        Pattern p = Pattern.compile(target);
+        Matcher m = p.matcher(orig);
+        
+        //System.out.println(p);
+        //System.out.println(m);
+        //System.out.println(pos + "\t" + m.find(pos));
+        
+
+        while (m.find(pos)) {
+            pos = m.start() + 1;
+            //System.out.println(pos + "\t" + m.find(pos));
+            count++;
+        }
+        return count;
+    }
 
     public boolean containsIgnoreCase(String orig, String target){
         return orig.toLowerCase().contains(target.toLowerCase());
@@ -1385,4 +1476,20 @@ public class CodeTestHelper
         return orig.contains(target);
 
     }
+
+/* With input methods .......................... */
+
+    private ByteArrayInputStream inContent;
+
+    public String getMethodOutputWithInput(String methodName, String input) {
+        inContent = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+        System.setIn(inContent);
+        
+        String output = getMethodOutput(methodName);
+
+        System.setIn(System.in);
+
+        return output;
+    }
+
 }

@@ -41,13 +41,16 @@
 Calling Methods that Return Values
 ===================================
 
-Some methods return a value back that the program can use. In the previous lesson, you may have used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value. 
+If a method is a **void method** and has **void** as its return type, like most of the methods we have seen so far, that means that it does not return anything. But some methods **return** a value back that the program can use. 
 
+Get Methods
+------------
 
-Here are some examples of using get methods for the turtle object yertle. When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()*. 
+In the previous lesson, we used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value. 
 
-If a method is a **void method** and has **void** as its return type, like most of the methods we have seen so far, that means that it does not return anything and it can be called on its own. But methods with return types need to be called in an assignment statement or a print statement or a similar expression to use what it returns.
+When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()* means getWidth will return an int (an integer number). 
 
+Here are some examples of using get methods for the turtle object yertle. 
 
 .. code-block:: java 
 
@@ -70,11 +73,12 @@ If a method is a **void method** and has **void** as its return type, like most 
 
 .. activecode:: TurtleTestGetSet
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Try the code below that changes the turtle's width and height. How big or small can you make yertle?
 
-    (If the code below does not work for you, you can also copy in the code below into the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work in your browser, you can also copy in the code below into the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -94,14 +98,34 @@ If a method is a **void method** and has **void** as its return type, like most 
           world.show(true); 
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleTestGetSet");
+        }
+
+        @Test
+        public void test1()
+        {
+            String orig = "import java.util.*;\nimport java.awt.*;\nimport java.lang.Math;\n\npublic class TurtleTestGetSet\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n      Turtle yertle = new Turtle(world);\n      System.out.println(\"Yertle's width is: \" + yertle.getWidth());\n      yertle.setWidth(200);\n      yertle.setHeight(200);\n      System.out.println(\"Yertle's width is: \" + yertle.getWidth());\n      yertle.turnRight();\n      world.show(true);\n  }\n}\n";
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
+    }
     
 |CodingEx| **Coding Exercise:**    
 
 .. activecode:: TurtleArea
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Fix the errors in the code below so that it prints out the area of the space that the turtle occupies by multiplying its width and height. Remember that you have to do something with the values that get methods return.
+    Fix the errors in the code below so that it prints out the area of the space that the turtle occupies by multiplying its width and height. Remember that you have to do something with the values that the get methods return.
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -119,9 +143,31 @@ If a method is a **void method** and has **void** as its return type, like most 
           System.out.println("Yertle's area is: ");
       }
     }
-    
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
-Another common method that returns a value is the toString() method which returns a String description of the turtle. This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement. 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleArea");
+        }
+
+        @Test
+        public void test1()
+        {
+            String actual = getMethodOutput("main");
+            String expected = "Yertle's area is: 270";
+            boolean passed = getResults(expected, actual, "Prints correct answer");
+            assertTrue(passed);
+        }
+    }
+
+toString() Methods
+------------------
+
+Another common method that returns a value is the **toString()** method. This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement. In the Turtle class, the toString() method returns a String description of the turtle.
 
 .. code-block:: java 
 
@@ -134,11 +180,9 @@ Another common method that returns a value is the toString() method which return
 
 |CodingEx| **Coding Exercise:**
 
-
-
-
 .. activecode:: TurtleTestMethodsReturn2
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Try some of the get methods and the toString() method in the program below. Note that you have to print out what the get methods return in order to see what they do!
@@ -161,7 +205,53 @@ Another common method that returns a value is the toString() method which return
           world.show(true); 
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleTestMethods2");
+        }
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "getWidth()");
+
+            boolean passed = num > 0;
+            getResults(">=1", "" + num, "Calls to getWidth()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "getHeight()");
+
+            boolean passed = num > 0;
+            getResults(">=1", "" + num, "Calls to getHeight()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "toString()") + countOccurences(code, "System.out.println(yertle)");
+
+            boolean passed = num > 0;
+            getResults(">=1", "" + num, "Calls to toString()");
+            assertTrue(passed);
+        }
+    }
+
+Methods with Arguments and Return Values
+-----------------------------------------
 
 Methods that take arguments and return values are like mathematical functions. Given some input, they return a value. For example, a square(x) method would take an argument x and return its square by multiplying it by itself.
 
@@ -227,6 +317,7 @@ Try this |visualization| to see this code in action.
 
 .. activecode:: challenge2-5-TurtleDistance
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     import java.util.*;
@@ -248,6 +339,61 @@ Try this |visualization| to see this code in action.
           
           world.show(true); 
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleTestDistance");
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            int num = countOccurences(code, ".getXPos()");
+
+            boolean passed = num > 0;
+            getResults(">=1", "" + num, "Calls to getXPos()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            int num = countOccurences(code, ".getYPos()");
+
+            boolean passed = num > 0;
+            getResults(">=1", "" + num, "Calls to getYPos()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            int num = countOccurences(code, ".getDistance(");
+
+            boolean passed = num >= 2;
+            getResults(">=2", "" + num, "Calls to getDistance(...)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            int num = countOccurences(code, ".getDistance(0,0)");
+
+            boolean passed = num >= 1;
+            getResults(">=1", "" + num, "Calls getDistance(0,0)");
+            assertTrue(passed);
+        }
     }
 
 

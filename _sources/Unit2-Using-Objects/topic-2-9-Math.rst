@@ -254,6 +254,7 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
  
 .. activecode:: challenge2-9-random-math
    :language: java
+   :autograde: unittest
    
    Complete the combination lock challenge below.
    ~~~~
@@ -270,12 +271,99 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
         
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    import java.util.ArrayList;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String[] lines = output.split("\\s+");
+
+            boolean passed = lines.length >= 2;
+
+            passed = getResults("2+ lines of output", lines.length + " lines of output", "Expected output", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+
+            boolean passed = output.contains("6400");
+
+            passed = getResults("true", "" + passed, "Prints 40^3", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "Math.random()");
+
+            boolean passed = num >= 3;
+            passed = getResults("3 or more", ""+num, "Calls to Math.random()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "Math.pow(");
+
+            boolean passed = num >= 1;
+            passed = getResults("1 or more", ""+num, "Calls to Math.pow(...)", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test5() {
+            int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+
+            String output = "";
+            String[] lines;
+            int[] nums = new int[4];
+            int countUniqueNums = 0;
+
+            for (int i = 0; i < 1000; i++) {
+                output = getMethodOutput("main");
+                lines = output.split("\\s+");
+
+                if (lines.length == nums.length) {
+                    nums[0] = Integer.parseInt(lines[0]);
+                    nums[1] = Integer.parseInt(lines[1]);
+                    nums[2] = Integer.parseInt(lines[2]);
+
+                    min = Math.min(min, Math.min(nums[0], Math.min(nums[1], nums[2])));
+                    max = Math.max(max, Math.max(nums[0], Math.max(nums[1], nums[2])));
+
+                    if (nums[0] != nums[1] && nums[1] != nums[2])
+                        countUniqueNums++;
+                }
+            }
+
+            boolean passed = min == 0 && max == 39 && countUniqueNums > 5;
+            getResults("Min: " + 0 + "\nMax: " + 39, "Min: " + min + "\nMax: " + max, "Checking random results", passed);
+            assertTrue(passed);
+        }
+    }
 
 
 Here's another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by Zac Martin's class.
 
 .. activecode:: challenge-2-9b-dancing-turtles
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Complete the random numbers using Math.random() in the correct ranges to choose x, y coordinates for the turtle.
@@ -317,6 +405,36 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
           } // end of loop
           world.show(true); 
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("DancingTurtles");
+        }
+
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            int numRandom = countOccurences(code, "Math.random()");
+
+            boolean passed = numRandom >= 5;
+            passed = getResults("5+", ""+numRandom, "5+ calls to Math.random()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+           boolean passed = checkCodeContainsNoRegex("Random numbers for 0-255 colors (256 values)","Math.random() * 256");
+           assertTrue(passed);
+        }
     }
     
 

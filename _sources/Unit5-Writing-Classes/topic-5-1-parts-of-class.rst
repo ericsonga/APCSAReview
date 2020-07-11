@@ -465,15 +465,19 @@ In this project, you will create a class that can tell riddles like the followin
         {
             String output = getMethodOutput("main");
 
-            String expect = "6 line(s) of text";
+            String expect = "2+ line(s) of text";
             String actual = " line(s) of text";
 
+            int len = output.split("\n").length;
+
             if (output.length() > 0) {
-                actual = output.split("\n").length + actual;
+                actual = len + actual;
             } else {
                 actual = output.length() + actual;
             }
-            boolean passed = getResults(expect, actual, "Checking main method");
+            boolean passed = len >= 2;
+
+            getResults(expect, actual, "Checking main method", passed);
             assertTrue(passed);
         }
     }

@@ -90,6 +90,7 @@ After you put the mixed up code in order above, type in the same code below to m
 
 .. activecode:: TurtleDraw7
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     import java.util.*;
@@ -108,12 +109,32 @@ After you put the mixed up code in order above, type in the same code below to m
           world.show(true);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleDraw7");
+        }
+
+        @Test
+        public void test1()
+        {
+            String orig = "yertle.forward();\nyertle.turnLeft();\nyertle.forward();";
+            boolean passed = checkCodeContains(orig);
+            assertTrue(passed);
+        }
+    }
 
 |CodingEx| **Coding Exercise:**
 
 
 .. activecode:: TurtleDraw8
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Can you make yertle draw the digital number 8, as 2 squares on top of each other?
@@ -134,7 +155,47 @@ After you put the mixed up code in order above, type in the same code below to m
           world.show(true);
       }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleDraw8");
+        }
+
+        @Test
+        public void test1()
+        {
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleDraw8\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n      Turtle yertle = new Turtle(world);\n      // Make yertle draw an 8 with 2 squares\n      yertle.forward();\n\n\n      world.show(true);\n  }\n}\n";
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() {
+            String code = getCode();
+            int numForward = countOccurences(code, "forward()");
+
+            boolean passed = numForward >= 7;
+
+            passed = getResults("7 or more", ""+numForward, "Calls to forward()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3() {
+            String code = getCode();
+            int numTurn = countOccurences(code, ".turn");
+
+            boolean passed = numTurn >= 5;
+
+            passed = getResults("5 or more", ""+numTurn, "Calls to turnRight() or turnLeft()", passed);
+            assertTrue(passed);
+        }
+    }
 
 Procedural Abstraction
 -----------------------
@@ -186,7 +247,9 @@ You will learn to write your own methods in Unit 5. In this unit, you should be 
 
    <a href="http://www.pythontutor.com/java.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
-The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song. When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it. Methods inside the same class can call each other using just ``methodName()``, but to call methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
+The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song. 
+
+When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it. Methods inside the same class can call each other using just ``methodName()``, but to call methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
 
 .. codelens:: songviz1
     :language: java 
@@ -291,7 +354,7 @@ Before you call a method from ``main`` or from outside of the current class, you
 |Groupwork| Programming Challenge : Draw a Letter
 -------------------------------------------------
 
-Working in pairs, use the area below to use a turtle to draw a simple block-style letter or number that uses just straight lines (no curves or diagonals). It could be one of your initials or a number from today's date.
+Working in pairs, use the area below (or the |repl link|) to use a turtle to draw a simple block-style letter or number that uses just straight lines (no curves or diagonals). It could be one of your initials or a number from today's date.
 
 It may help to act out the code pretending you are the turtle. Remember that which way you turn depends on which direction you are facing, and the turtle begins facing north (towards the top of the page).
 
@@ -310,10 +373,9 @@ Here are some simple turtle methods that you can use:
 
 You may notice that it is challenging to have your turtle draw with these simple methods. In the next lesson, we will use more complex ``Turtle`` methods where you can indicate how many steps to take or what angle to turn that will make drawing a lot easier!
 
-After writing your code below, if you'd like your own copy, you can open this |repl link|, copy in your code, and save it in your own repl.it account.
-
 .. activecode:: challenge2-3-Turtle_Letter
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     Create a drawing of a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or a number from today's date.
@@ -331,6 +393,36 @@ After writing your code below, if you'd like your own copy, you can open this |r
 
           world.show(true);
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtleLetter");
+        }
+
+        @Test
+        public void test1()
+        {
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleLetter\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n\n\n\n      world.show(true);\n  }\n}\n";
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            boolean passed = lines.length >= 20;
+            passed = getResults("20 or more lines", lines.length + " lines", "Adding a reasonable amount of lines to code", passed);
+            assertTrue(passed);
+        }
     }
 
 

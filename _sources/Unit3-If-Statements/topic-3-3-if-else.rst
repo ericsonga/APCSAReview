@@ -378,10 +378,109 @@ The |Animal Guessing program| below uses the following decision tree:
 
     <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/GuessAnimal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
+After you complete your code on repl.it, paste in your code below to run it through the auto-grader. Also include a link to your code on repl.it in comments.
+
+.. activecode:: challenge3-3-IfElse-20Questions-autograde
+  :language: java
+  :autograde: unittest  
+
+  Copy and paste your code from your repl.it and run to see if it passes the autograder tests. Include the link to your repl.it code in comments. Note that this code will only run with the autograder's input and will not ask the user for input.
+  ~~~~
+  // Copy in your link to your code on repl.it here:
+  // Copy in all of your code from repl.it below (include import and public class Main)
+       
+
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Main", input1.replaceAll(" ", "\n")); // Use in book
+        }
+
+        private static int goal = 5;
+
+        private static String input1 = "y y y y y y y y y y y y y y y y y y y y y y y y y y";
+        private static String input2 = "n n n n n n n n n n n n n n n n n n n n n n n n n n";
+        private String output1, output2;
+
+        @Test
+        public void test1()
+        {
+            String input = input1.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
+            output1 = output;
+
+            String[] lines = output.split("\n");
+
+            boolean passed = lines.length >= goal;
+
+            passed = getResults(goal +"+ lines", "" + lines.length + " lines", "Outputs at least " + goal +" lines", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String input = input2.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
+            output2 = output;
+
+            if (output1 == null) {
+                input = input1.replaceAll(" ", "\n");
+                output1 = getMethodOutputWithInput("main", input);
+            }
+
+            boolean passed = !output1.equals(output2);
+
+            passed = getResults("true", "" + passed, "Outputs different results for different inputs", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "if");
+            boolean passed = num >= 4;
+
+            getResults("4+", "" + num, "Number of if statements", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            int numIfs = countOccurences(code, "if");
+            int numElse = countOccurences(code, "else");
+            boolean passed = numIfs == numElse;
+
+            getResults(numIfs + " & " + numIfs, numIfs + " & " + numElse, "Ifs & Elses Match", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test5()
+        {
+            String code = getCode();
+            int num = countOccurences(code, "scan.nextLine()");
+            boolean passed = num >= 4;
+
+            getResults("4+", "" + num, "Number of scan.nextLine()", passed);
+            assertTrue(passed);
+        }
+    }
+    
+    
 .. shortanswer:: challenge3-3-IfElse-20Questions
 
-   After you complete your code on repl, paste in a link to it (click on share) here.
+  (Old short answer - obsolete) After you complete your code on repl, paste in a link to it (click on share) here.
    
+
    
 Summary
 -------

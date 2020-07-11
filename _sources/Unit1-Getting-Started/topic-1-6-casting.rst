@@ -128,7 +128,7 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
    :language: java
    :autograde: unittest
    
-   Try the code below to see two integer overflow errors for a too large positive and negative number. An int cannot hold that high a value! Fix the integer overflow error by deleting the last 0 in the numbers.
+   Try the code below to see two integer overflow errors for a positive and negative number. An int cannot hold that many digits! Fix the integer overflow error by deleting the last 0 in the numbers.
    ~~~~
    public class TestOverflow
    {

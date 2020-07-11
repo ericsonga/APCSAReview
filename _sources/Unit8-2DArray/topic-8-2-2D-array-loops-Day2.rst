@@ -181,7 +181,7 @@ Here is a linear search algorithm where we access each row and then apply a line
 ..	index::
 	single: pixels
     
-.. .. figure:: Figures/smiley.png
+.. figure:: ../../_static/arch.jpg
     :width: 200px
     :align: left
     
@@ -202,7 +202,7 @@ Here is a linear search algorithm where we access each row and then apply a line
    <a href= "https://repl.it/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
 
 
-.. raw:: html
+.. .. raw:: html
 
     <canvas id="arch.jpg" class="image"  width="150" style="display: block; align:left; float:left;">
     </canvas>
@@ -223,13 +223,18 @@ model, which stores values for red, green, and blue, each ranging from 0 to 255.
 
 Scroll down to the bottom of the following code and take a look at the switchColors method. Run the code and watch what it does. It switches RGB values of each pixel and the colors change! 
 
+Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. You can test it in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does. 
+
+.. datafile:: arch.jpg
+   :image:
+   :fromfile: ../../_static/arch.jpg
 
 
 .. activecode:: challenge-8-2-picture
     :language: java
     :datafile: pictureClasses.jar, arch.jpg
 
-    Picture Lab
+    Picture Lab: write a method called zeroBlue() that sets the blue values at all pixels to zero. Continue on with other picture lab exercises as described below.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -370,7 +375,7 @@ Scroll down to the bottom of the following code and take a look at the switchCol
       }
     } 
 
-Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. You can test it in the active code above or on this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result)  or your own IDE to see what it does.  
+ 
 
 Here are some more exercises from the |Picture Lab|:
 

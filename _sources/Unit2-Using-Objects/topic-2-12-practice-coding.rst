@@ -13,6 +13,8 @@ The coding problems below are mostly about Strings, but more problems on other t
            
            .. activecode::  ch3Ex9q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               Write the code to print a random number from 1 to 100.  You can use ``Math.random()`` to get a value between 0 and not quite 1. 
               ~~~~
@@ -23,6 +25,34 @@ The coding problems below are mostly about Strings, but more problems on other t
                       
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testCheckCodeContains1() 
+                    {
+                        boolean passed = checkCodeContainsNoRegex("random number up to 100", "Math.random()*100");
+                        assertTrue(passed);    
+                    }
+
+                     @Test
+                    public void testCheckCodeContains2() 
+                    {
+                        boolean passed = checkCodeContainsNoRegex("random number starting at 1", "+1");
+                        assertTrue(passed);    
+                    }
+
+                     @Test
+                    public void testCheckCodeContains3() 
+                    {
+                        boolean passed = checkCodeContains("casting to int", "(int)");
+                        assertTrue(passed);    
+                    }
+                }
 
 
         .. tab:: Answer
@@ -33,7 +63,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :language: java
               :optional:
    
-              This is the answer to the previous question.
+              Answer: This is the answer to the previous question.
               ~~~~
               public class Test1
               {
@@ -56,7 +86,8 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex1q
               :language: java
-
+              :autograde: unittest
+              :practice: T
               
               The following code should get the first letter of the first name, middle name, and last name and append (concatenate) them together and then return them all in lowercase.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~
@@ -73,18 +104,41 @@ The coding problems below are mostly about Strings, but more problems on other t
                       System.out.println(initials.toLowerCase();
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "smh";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                     @Test
+                    public void testCodeContains() 
+                    {
+                        String target = ".substring(0,1)";
+                        boolean passed = checkCodeContains("substring method", target);
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
 
-
-           Line 5 has an ending ``'`` instead of ``"``.  Line 7 is missing a ``=``.  Line 8 has ``firstname``, but it should be ``firstName``.  Remember that you should uppercase the first letter of each new word, after the first word, to make the variable name easier to read (use camel case).  Line 9 has ``subString``, but the method name is ``substring``.  Line 11 is missing a ``)``.
+          Line 5 has an ending ``'`` instead of ``"``.  Line 7 is missing a ``=``.  Line 8 has ``firstname``, but it should be ``firstName``.  Remember that you should uppercase the first letter of each new word, after the first word, to make the variable name easier to read (use camel case).  Line 9 has ``subString``, but the method name is ``substring``.  Line 11 is missing a ``)``.
 
            .. activecode::  ch4Ex1a
               :language: java
               :optional:
 
-              This is the answer to the previous question.
+              Answer: This is the answer to the previous question.
               ~~~~
               public class Test1
               {
@@ -113,6 +167,8 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex4q
               :language: java
+              :autograde: unittest
+              :practice: T
 
               The following code should print the first 3 letters of the string ``message`` all in lowercase letters. However, the code has errors.  Fix the errors so that the code runs as intended.
               ~~~~
@@ -126,6 +182,29 @@ The coding problems below are mostly about Strings, but more problems on other t
                       System.println(lower);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "mee";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                      @Test
+                    public void testCodeContains() 
+                    {
+                        String target = ".substring(0,3)";
+                        boolean passed = checkCodeContains("substring method fixed", target);
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -164,7 +243,8 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex10q
               :language: java
-
+              :autograde: unittest
+              :practice: T
               
               The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do accomplish this task.
               ~~~~
@@ -173,10 +253,36 @@ The coding problems below are mostly about Strings, but more problems on other t
                   public static void main(String[] args)
                   {
                       String name1 = "ALEX";
+                   
+                   
+                   
                       System.out.println(firstNameCaps);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "Alex";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
 
+                     @Test
+                    public void testCodeContains() 
+                    {
+                        String target = ".substring(";
+                        boolean passed = checkCodeContains("substring method", target);
+                        assertTrue(passed);
+                    }
+                }
 
         .. tab:: Answer
 
@@ -212,7 +318,8 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex11q
               :language: java
-
+              :autograde: unittest
+              :practice: T
               
               The following code should remove the word "very " (and following space) from the message and print the new message.  You can use ``indexOf`` to find the position of a substring in your string.  You can use ``substring`` to create a new string removing the word.
               ~~~~
@@ -225,6 +332,36 @@ The coding problems below are mostly about Strings, but more problems on other t
 
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+               
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "I am happy!";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                     @Test
+                    public void testCodeContains() 
+                    {
+                        String target = ".substring(";
+                        boolean passed = checkCodeContains("substring method", target);
+                        assertTrue(passed);
+                    }
+                     @Test
+                    public void testCodeContains2() 
+                    {
+                        String target = ".indexOf(";
+                        boolean passed = checkCodeContains("indexOf method", target);
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -262,8 +399,10 @@ The coding problems below are mostly about Strings, but more problems on other t
 
            .. activecode::  ch4Ex12q
               :language: java
+              :autograde: unittest
+              :practice: T
 
-              The following code should replace ``lol`` in the message with ``laugh out loud`` and print the new message.
+              The following code should replace ``lol`` in the message with ``laugh out loud`` and print the new message using indexOf and substring.
               ~~~~
               public class Test1
               {
@@ -273,6 +412,37 @@ The coding problems below are mostly about Strings, but more problems on other t
 
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "That was great - laugh out loud";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                     @Test
+                    public void testCodeContains() 
+                    {
+                        String target = ".substring(";
+                        boolean passed = checkCodeContains("substring method", target);
+                        assertTrue(passed);
+                    }
+                     @Test
+                    public void testCodeContains2() 
+                    {
+                        String target = ".indexOf(";
+                        boolean passed = checkCodeContains("indexOf method", target);
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer

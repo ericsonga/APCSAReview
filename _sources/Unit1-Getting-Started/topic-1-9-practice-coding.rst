@@ -12,6 +12,8 @@ Unit 1 Coding Practice
 
            .. activecode::  ch4Ex2q
               :language: java
+              :autograde: unittest
+              :practice: T
 
               The following code should print "Mary's favorite color is blue".  However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~
@@ -24,8 +26,23 @@ Unit 1 Coding Practice
                       System.out.println(Name +
                                          "'s favorite color is " + color);
                   }
-              }
+              }              
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
 
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "Mary's favorite color is blue";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
 
         .. tab:: Answer
 
@@ -60,6 +77,8 @@ Unit 1 Coding Practice
 
            .. activecode::  ch4Ex3q
               :language: java
+              :autograde: unittest
+              :practice: T
 
               The following code should print "Gabby's favorite sport is soccer".  However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~
@@ -74,6 +93,22 @@ Unit 1 Coding Practice
                                          sport);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "Gabby's favorite sport is soccer";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -108,8 +143,10 @@ Unit 1 Coding Practice
 
            .. activecode::  ch4Ex5q
               :language: java
+              :autograde: unittest
+              :practice: T
 
-              The following code should print "Your name is Carly and your favorite color is red".  Finish the code so that it prints the output correctly.
+              The following code should print "Your name is Carly and your favorite color is red".  Finish the code so that it prints the output correctly using the variables provided.
               ~~~~
               public class Test1
               {
@@ -121,6 +158,22 @@ Unit 1 Coding Practice
                   }
 
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "Your name is Carly and your favorite color is red";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -157,10 +210,12 @@ Unit 1 Coding Practice
         .. tab:: Question
 
 
-           Finish the code below so that it prints "Your name is Justin and your age is 16".
+           Finish the code below so that it prints "Your name is Justin and your age is 16" using the variables provided.
 
            .. activecode::  ch4Ex6q
               :language: java
+              :autograde: unittest
+              :practice: T
 
               public class Test1
               {
@@ -172,6 +227,22 @@ Unit 1 Coding Practice
 
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "Your name is Justin and your age is 16";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -208,8 +279,10 @@ Unit 1 Coding Practice
 
            .. activecode::  ch4Ex7q
               :language: java
+              :autograde: unittest
+              :practice: T
 
-              Write the code to print "Julian's favorite color is green.  His favorite food is pizza.".
+              Write the code to print "Julian's favorite color is green.  His favorite food is pizza." using the variables provided.
               ~~~~
               public class Test1
               {
@@ -221,6 +294,22 @@ Unit 1 Coding Practice
                       System.out.println();
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "Julian’s favorite color is green. His favorite food is pizza.";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -257,6 +346,8 @@ Unit 1 Coding Practice
 
            .. activecode::  ch4Ex8q
               :language: java
+              :autograde: unittest
+              :practice: T
 
               Finish the code below to print your favorite animal and food.
               ~~~~
@@ -270,6 +361,33 @@ Unit 1 Coding Practice
 
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+              
+                public class RunestoneTests extends CodeTestHelper
+                {
+                   @Test
+                    public void testPrintStringsA() throws IOException
+                    {
+                      String target1 = "+ animal +";
+                      boolean passed1 = checkCodeContains("print animal string variation 1", target1);
+                      String target2 = "+ \nanimal";
+                      boolean passed2 = checkCodeContains("print animal string variation 2", target2);
+                      assertTrue(passed1 || passed2);
+                    }
+
+                     @Test
+                    public void testPrintStringsB() throws IOException
+                    {
+                        String target1 = "+ food +";
+                        boolean passed1 = checkCodeContains("print food string variation 1", target1);
+                        String target2 = "+ \nfood";
+                        boolean passed2 = checkCodeContains("print food string variation 2", target2);
+                        assertTrue(passed1 || passed2);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -309,6 +427,8 @@ Unit 1 Coding Practice
 
            .. activecode::  ch4Ex9q
               :language: java
+              :autograde: unittest
+              :practice: T
 
               public class Test1
               {
@@ -320,6 +440,33 @@ Unit 1 Coding Practice
 
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                   @Test
+                    public void testPrintStringsA() throws IOException
+                    {
+                      String target1 = "+ movie +";
+                      boolean passed1 = checkCodeContains("print movie string variation 1", target1);
+                      String target2 = "+ \nmovie";
+                      boolean passed2 = checkCodeContains("print movie string variation 2", target2);
+                      assertTrue(passed1 || passed2);
+                    }
+
+                     @Test
+                    public void testPrintStringsB() throws IOException
+                    {
+                        String target1 = "+ book +";
+                        boolean passed1 = checkCodeContains("print book string variation 1", target1);
+                        String target2 = "+ \nbook";
+                        boolean passed2 = checkCodeContains("print book string variation 2", target2);
+                        assertTrue(passed1 || passed2);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -354,6 +501,8 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex1q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.
               ~~~~
@@ -363,12 +512,29 @@ Unit 1 Coding Practice
                   {
                       int tripMiles = 300
                       Double price = 2.50;
-                      int milesPerGallon = 36;
+                      int milesPerGallon = 30;
                       double numberOfGallons = tripmiles / milesPerGallon;
                       double totalCost = numberOfGallons * price;
                       System.out.println(totalCost);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "25.0";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
+
 
 
         .. tab:: Answer
@@ -387,7 +553,7 @@ Unit 1 Coding Practice
                   {
                       int tripMiles = 300;
                       double price = 2.50;
-                      int milesPerGallon = 36;
+                      int milesPerGallon = 30;
                       double numberOfGallons = tripMiles / milesPerGallon;
                       double totalCost = numberOfGallons * price;
                       System.out.println(totalCost);
@@ -406,6 +572,8 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex2q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``. Fix the code so that it compiles and runs correctly.
               ~~~~  
@@ -421,6 +589,23 @@ Unit 1 Coding Practice
                       System.out.println(bodyMassIndexMetric);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+              
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "21.480555555555554\n";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
+
 
 
         .. tab:: Answer
@@ -458,6 +643,8 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex3q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~          
@@ -473,6 +660,22 @@ Unit 1 Coding Practice
                       System.out.println(numMiles;
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                 public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "136.17021276595744\n";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
+
 
 
         .. tab:: Answer
@@ -510,6 +713,8 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex4q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~
@@ -523,6 +728,22 @@ Unit 1 Coding Practice
                       System.out.println(finalPrice);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "16.32\n";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
+
 
 
         .. tab:: Answer
@@ -559,6 +780,8 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex5q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly. 
               ~~~~
@@ -572,6 +795,22 @@ Unit 1 Coding Practice
                       System.out.println numDays);
                       
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "3\n";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
+
 
 
         .. tab:: Answer
@@ -607,16 +846,48 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex6q
               :language: java
+              :autograde: unittest
+              :practice: T
    
-              Write the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.
+              Complete the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.
               ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      
+                    double goal = 
+                    double weeklyRate = 
+                    double numWeeks = 
+                    double numMonths = 
+                    System.out.println(numMonths);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                //import java.util.regex.*;
+                /* Do NOT change Main or CodeTestHelper.java. */
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "2.5\n";
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testFormulaNumMonths() throws IOException
+                  {
+                    String target = "double numMonths = numWeeks / 4;";
+                    boolean passed = checkCodeContains("formula for numMonths", target);
+                    assertTrue(passed);
+                    }
+                }
+
 
 
         .. tab:: Answer
@@ -652,8 +923,9 @@ Unit 1 Coding Practice
         .. tab:: Question 
            
            .. activecode::  ch3Ex7q
-              :language: java
-   
+              :language: java 
+              :autograde: unittest
+              :practice: T  
                 
               Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon.
               ~~~~
@@ -661,9 +933,38 @@ Unit 1 Coding Practice
               {
                   public static void main(String[] args)
                   {
-                      
+                     // Your code should use the variables 
+                     // numGallons, milesPerGallon, and miles
+                     // and print out miles
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "80.0\n";
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);
+                  }
+
+                @Test
+                  public void testFormulaMiles() throws IOException
+                  {
+                    String target1 = "double miles = numGallons * milesPerGallon;";
+                    String target2 = "double miles = milesPerGallon * numGallons;";
+                    boolean passed1 = checkCodeContainsNoRegex("formula variant for miles using milesPerGallon and numGallons", target1);
+                    boolean passed2 = checkCodeContains("formula variant for miles using milesPerGallon and numGallons", target2);
+                    assertTrue(passed1 || passed2);
+                  }  
+                }
+
 
 
         .. tab:: Answer
@@ -700,6 +1001,8 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex8q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.
               ~~~~
@@ -707,9 +1010,37 @@ Unit 1 Coding Practice
               {
                   public static void main(String[] args)
                   {
+                     // Your code should use the variables
+                     // secondsInDay and secondsInThreeDays
+                     // and print out secondsInThreeDays
                       
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "259200\n";
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);
+                  }
+
+                @Test
+                  public void testFormulaMiles() throws IOException
+                  {
+                    String target1 = "int secondsInThreeDays = secondsInDay * 3;";
+                    String target2 = "int secondsInThreeDays = 3 * secondsInDay;";
+                    boolean passed1 = checkCodeContainsNoRegex("formula variant for secondsInThreeDays using secondsInDay", target1);
+                    boolean passed2 = checkCodeContainsNoRegex("formula variant for secondsInThreeDays using secondsInDay", target2);
+                    assertTrue(passed1 || passed2);
+                  } 
+                } 
 
 
         .. tab:: Answer
@@ -748,6 +1079,8 @@ Unit 1 Coding Practice
            
            .. activecode::  ch3Ex10q
               :language: java
+              :autograde: unittest
+              :practice: T
    
               Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can't buy part of a wing.
               ~~~~
@@ -755,9 +1088,37 @@ Unit 1 Coding Practice
               {
                   public static void main(String[] args)
                   {
+                    // Your code should use the variables
+                    // money, pricePerWing, numWings 
+                    // and print out numWings
                       
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "6\n";
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testFormulaWings() throws IOException
+                  {
+                    String target = "int numWings = (int)(money / pricePerWing);";
+                    boolean passed = checkCodeContains("formula for numWings using money and pricePerWing, and type casting", target);
+                    assertTrue(passed);
+                  }  
+                }
+
 
 
         .. tab:: Answer
@@ -775,8 +1136,8 @@ Unit 1 Coding Practice
                   public static void main(String[] args)
                   {
                       double money = 4.5;
-                      double pricePer = 0.75;
-                      int num = (int) (money / pricePer);
+                      double pricePerWing = 0.75;
+                      int num = (int) (money / pricePerWing);
                       System.out.println(num);
                   }
               }

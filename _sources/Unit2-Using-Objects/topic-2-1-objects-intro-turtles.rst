@@ -2858,17 +2858,7 @@ AP Practice
         {
           // let the parent constructor handle it
           super(p);
-        }
-
-        /////////////////// methods ///////////////////////
-
-
-        public static void main(String[] args)
-        {
-          World earth = new World();
-          Turtle t1 = new Turtle(earth);
-          t1.forward();
-        }
+        }   
 
       } // this is the end of class Turtle, put all new methods before this
       /**
