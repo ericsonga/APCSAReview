@@ -28,7 +28,7 @@ import org.junit.Test;
  */
 public class CodeTestHelper
 {
-    public static boolean replit = true;
+    public static boolean replit = false;
 
     private static String results = "";
     private static String mainOutput = "";
