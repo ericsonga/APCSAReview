@@ -21,7 +21,7 @@ import org.junit.Test;
  * do not exist.
  *
  * @author  Kate McDonnell
- * @version 0.3.0
+ * @version 0.3.0*
  * @since 2020-07-11
  * 
  * 
@@ -146,16 +146,20 @@ public class CodeTestHelper
         
     public boolean getResults(boolean useRegex, boolean contain, String expected, String actual, String msg)
     {
+        while (actual.contains("&ltimg") || actual.contains("<img")){
+            int start = actual.contains("&ltimg") ? actual.indexOf("&ltimg") : actual.indexOf("<img");
+            int end = actual.contains("&gt") ? actual.indexOf("&gt", start) : actual.indexOf(">", start);
+
+            actual = actual.substring(0, start) + actual.substring(end+1);
+            actual = actual.trim();
+
+            //System.out.println(actual);
+        }
+
         expected = expected.trim();
         actual = actual.trim();
         
         boolean passed = false;
-        
-        if (useRegex)
-            passed = isMatch(actual, expected);
-
-        if (!passed && contain)
-            passed = containsMatch(actual, expected);
 
         if (!passed && !contain) {
             String clnExp = cleanString(expected);
@@ -163,6 +167,15 @@ public class CodeTestHelper
 
             passed = clnExp.equals(clnAct);
         }
+
+        if (!passed && !expected.equals(""))
+            contain = true;
+        
+        if (!passed && (useRegex || isRegex(expected)))
+            passed = isMatch(actual, expected);
+
+        if (!passed && contain && (useRegex || isRegex(expected)))
+            passed = containsMatch(actual, expected);
 
         if (!passed && contain) {
             String clnExp = cleanString(expected);
