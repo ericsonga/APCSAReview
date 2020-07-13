@@ -527,6 +527,8 @@ After writing your code below, if you'd like your own copy, you can open this |r
     :autograde: unittest
     :datafile: turtleClasses.jar
 
+    Create a Turtle object and have it draw a shape, for example a small square and then a larger square (by calling the forward method multiple times).
+    ~~~~
     import java.util.*;
     import java.awt.*;
 

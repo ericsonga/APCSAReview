@@ -21,8 +21,8 @@ import org.junit.Test;
  * do not exist.
  *
  * @author  Kate McDonnell
- * @version 0.2.9
- * @since 2020-07-10
+ * @version 0.3.0
+ * @since 2020-07-11
  * 
  * 
  */
@@ -1101,7 +1101,10 @@ public class CodeTestHelper
                     {
                         String clssName = children[i].substring(0,children[i].length() - ".java".length());
                         Class<?> c = Class.forName(clssName);
-                        if(c != null && (replit && !clssName.equals("Main")) && !clssName.equals("TestRunner")) {
+                        if(c != null && !clssName.equals("TestRunner") && !(replit && clssName.equals("Main"))) {
+                            /*if (replit && clssName.equals("Main"))
+                                continue;
+                              */  
                             Method[] meths = c.getDeclaredMethods();
                             for(Method m: meths) {
                               int mods = m.getModifiers();
@@ -1159,7 +1162,7 @@ public class CodeTestHelper
 
             hasCode = code.contains(target2);
 
-            if(!hasCode && useRegex)// && isRegex(target2))
+            if(!hasCode && (useRegex || isRegex(target2)))
             {
                 String anyText = "[\\s\\S]*";
                 target2 = createSimpleRegex(target2);
@@ -1269,13 +1272,13 @@ public class CodeTestHelper
             else if (ch == '$')
                 b.append("[A-Za-z]+");
             else if (ch == '#')
-                b.append("\\d+");
+                b.append("[0-9A-Za-z*-+/ \\(\\)]+");
                 else if (ch == '?')
                 b.append("[<>=!?]+");
             else if (ch == '~')
                 b.append("[+-=]+[0-9]*");
             else if (ch == '*')
-                b.append("[A-Za-z0-9 <>=!+\\-*]+");
+                b.append("[A-Za-z0-9 <>=!+/\\-*\\(\\)]+");
             else if ("\\.^$|?*+[]{}()".indexOf(ch) != -1)
                 b.append('\\').append(ch);
             else

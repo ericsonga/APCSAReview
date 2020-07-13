@@ -299,7 +299,7 @@ Here are some rules to follow with if statements to avoid some common errors:
 
    The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
    ~~~~
-   public class Test
+   public class Test1
    {
       public static void main(String[] args)
       {

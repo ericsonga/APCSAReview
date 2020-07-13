@@ -359,14 +359,14 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
     }
 
 
-Here's another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by Zac Martin's class.
+Here's another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by Zac Martin's class. 
 
 .. activecode:: challenge-2-9b-dancing-turtles
     :language: java
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Complete the random numbers using Math.random() in the correct ranges to choose x, y coordinates for the turtle.
+    Complete the random numbers using Math.random() in the correct ranges to choose x, y coordinates and random color in the range of 0-255 for the turtle. Put on some music and watch your turtle dance!
     ~~~~
     import java.util.*;
     import java.awt.*;

@@ -51,7 +51,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :autograde: unittest 
    :practice: T
    
-   Can you change the code to be a 10x8 rectangle? Try replacing line 10 with this print statement to see the rows and columns: System.out.print(row + "-" + col + " ");  
+   Can you change the code to be a 10x8 rectangle? Try replacing line 10 with this print statement to see the rows and columns: ``System.out.print(row + \"-\" + col + " ");``  
    ~~~~
    public class NestedLoops
    {
@@ -283,11 +283,11 @@ Try a nested loop with turtles! If the code below does not work in your browser,
    
 In the last exercise, you used nested for-loops to have the turtle draw a square repeatedly to make a snowflake. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using nested loops. We encourage you to work in pairs on this.
 
-1. Complete the code in the active code window below to draw a snowflake of triangles. How many times did you need to run the outer loop to go all the way around?
+1. Complete the code in the active code window below to draw a snowflake of triangles. Remember that triangles have 3 sides and you will need to turn 120 degrees (external angle) 3 times to draw the triangle. Use the **turnAmount** variable for the single turn after drawing a triangle. How many times did you need to run the outer loop to go all the way around? Try changing the turnAmount variable to 40 to see how many times you need to loop with a wider distance between the triangles.
 
-2. In the exercise above, you figured out how many times to run the outer loop to finish the snowflake. You may have noticed that the number of times the loop needs to run is related to the angle you turn before drawing the next triangle (30 degrees). These turns have to add up to 360 degrees to go all the way around. Create a variable called **turnAmount** to use instead of 30 in the last turn command and change it to a different value (try 45 or 15). Change the outer loop so that it runs the number of times needed by using a formula with this turnAmount variable and 360. Can you draw a snowflake using more or less triangles than before?
+2. In the exercise above, you figured out how many times to run the outer loop to finish the snowflake. You may have noticed that the number of times the loop needs to run is related to the angle you turn before drawing the next triangle. These turns have to add up to 360 degrees to go all the way around.  Change the outer loop so that it runs the number of times needed by using a formula with the  **turnAmount** variable and 360. Can you draw a snowflake using more or less triangles than before by just changing the turnAmount value?
 
-3. Create another variable called **n** for the number of sides in the polygon the inner loop draws. Change the angle in the inner loop to also use a formula with 360 and this new variable. Can you change your snowflake to draw squares or pentagons instead? (Note this may overwhelm the Active Code server, so you may need to switch to using this |repl link| or your own IDE).
+3. Create another variable called **n** for the number of sides in the polygon the inner loop draws. Change the angle in the inner loop to also use a formula with 360 and this new variable. Can you change your snowflake to draw squares or pentagons instead? (Note if this overwhelms the Active Code server and times out, try a larger turnAmount. (Or you can switch to using this |repl link| or your own IDE).
 
 4. Let's add some more color! Add an if/else statement that changes the |Color| of the pen before the inner loop depending on whether the outer loop variable is odd or even. Remember that even numbers have no remainder when divided by 2.
 
@@ -318,7 +318,7 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
           // 1. Write a for loop that runs many times 
           // 2. Change it to use turnAmount to figure out how many times to run
           
-             // 1 & 2. Write an inner loop that draws a triangle 
+             // 1 & 2. Write an inner loop that draws a triangle (3 sides, 120 degree turns)
              // 3. Then change it to be any polygon with a variable n
              
              

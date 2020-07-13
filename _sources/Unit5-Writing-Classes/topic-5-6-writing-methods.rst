@@ -485,7 +485,7 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
             String output = getMethodOutput("main");
             String expect = "The ants go marching three by three\nThe little one stops to climb a tree";
             boolean passed = output.contains(expect);
-            getResults(expect, output, "Expected output from main contains 3 verses");
+            getResults(expect, output, "Expected output from main contains 3 verses", passed);
             assertTrue(passed);
         }
     }

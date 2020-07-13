@@ -87,13 +87,15 @@ Try to figure out the last two examples on your own.
 Figuring out the algorithm
 ===========================
 
-It can help to write out what you need to do to get each of the characters to compare.  The following shows what to do to solve the example with "ABRACADABRA".
+It can help to write out what you need to do to get each of the characters to compare.  
 
 .. activecode:: lcfrssa3
    :language: java
    :autograde: unittest  
 
-   public class Test
+   The following shows what to do to solve the example with "ABRACADABRA".
+   ~~~~
+   public class TestABRACADABRA
    {
       public static void main(String[] args)
       {
@@ -137,13 +139,14 @@ It can help to write out what you need to do to get each of the characters to co
 
 In this example we are looping through the characters from left to right one at a time and comparing the two adjacent characters.  If the first is an "A" and the second is not we will swap the characters and then need to increment the index to not check the ones we swapped again.  So we start checking the characters at index 0 and 1 and then swap them, but then move to comparing 2 and 3 rather than 1 and 2 which means we increment the current index by 2.  If we don't swap the characters we only increment the index by 1.
 
-The following shows what to do to solve the example with "WHOA".
 
 .. activecode:: lcfrssa4
    :language: java
    :autograde: unittest  
 
-   public class Test
+   The following shows what to do to solve the example with "WHOA".
+   ~~~~
+   public class TestWHOA
    {
       public static void main(String[] args)
       {
@@ -186,7 +189,7 @@ Write the method scrambleWord below.
    :language: java
    :autograde: unittest  
 
-   Write the method scrambleWord.
+   FRQ StringScramble A: Write the method scrambleWord.
    ~~~~
    import java.util.List;
    import java.util.ArrayList;

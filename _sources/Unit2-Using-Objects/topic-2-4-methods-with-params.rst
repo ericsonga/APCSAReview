@@ -335,7 +335,8 @@ Use the Code Lens button or this |Java Visualizer| to step through the code.
         {
             String code = getCode();
             int numVerses = countOccurences(code, "verse(");
-            boolean passed = numVerses >= 3;
+            boolean passed = numVerses >= 4;
+            // + 1 because of verse method definition
             passed = getResults("3 or more", ""+numVerses, "Number of verses", passed);
             assertTrue(passed);
         }
@@ -416,6 +417,8 @@ It may help to act out the code pretending you are the turtle. Remember that the
     :autograde: unittest
     :datafile: turtleClasses.jar
 
+    Draw a Turtle House! Make sure you use forward, turn, penUp, penDown, moveTo methods as well as different colors. Have fun!
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -467,7 +470,7 @@ It may help to act out the code pretending you are the turtle. Remember that the
             int num = countOccurences(code, ".penUp()");
 
             boolean passed = num >= 1;
-            passed = getResults("4 or more", ""+num, "Calls penUp()", passed);
+            passed = getResults("1 or more", ""+num, "Calls penUp()", passed);
             assertTrue(passed);
         }
 

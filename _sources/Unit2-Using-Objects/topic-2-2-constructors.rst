@@ -426,15 +426,15 @@ The CustomTurtle class in the ActiveCode below inherits many of its attributes a
 .. code-block:: java
 
   /** Constructs a CustomTurtle in the middle of the world */
-  public CustomTurtle(ModelDisplay world)
+  public CustomTurtle(World w)
  
   /** Constructs a CustomTurtle with a specific body color, 
       shell color, and width and height in the middle of the world */
-  public CustomTurtle(ModelDisplay world, Color body, Color shell, int w, int h) 
+  public CustomTurtle(World w, Color body, Color shell, int w, int h) 
 
   /** Constructs a CustomTurtle with a specific body color, 
       shell color, and width and height at position (x,y) in the world */
-  public CustomTurtle(int x, int y, ModelDisplay w, Color body, Color shell, int w, int h) 
+  public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h) 
 
 
 .. |Color| raw:: html
@@ -493,7 +493,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
        private int height;
 
      /** Constructor that takes the model display
-       * @param modelDisplay the thing that displays the model
+       * @param modelDisplay the thing that displays the model or world
        */
       public CustomTurtle(ModelDisplay modelDisplay) 
       {

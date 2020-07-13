@@ -166,7 +166,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
         public void testWhile() throws IOException
         {
             String target = "while (*)";
-            boolean passed = checkCodeNotContains("while loop", target);
+            boolean passed = checkCodeNotContainsRegex("while loop", target);
             assertTrue(passed);
         }
 
@@ -174,7 +174,7 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
         public void testFor() throws IOException
         {
             String target = "for (int * = #; * ? #; *~)";
-            boolean passed = checkCodeContains("for loop", target);
+            boolean passed = checkCodeContainsRegex("for loop", target);
             assertTrue(passed);
         }
     }
@@ -468,7 +468,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
         public void test1()
         {
            String target = "for (int * = #; * ? #; *~)";
-           boolean passed = checkCodeContains("for loop", target);
+           boolean passed = checkCodeContainsRegex("for loop", target);
            assertTrue(passed);
         }
 
@@ -559,7 +559,7 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
         public void test1()
         {
            String target = "for (int * = *; * ? *; *~)";
-           boolean passed = checkCodeContains("for loop", target);
+           boolean passed = checkCodeContainsRegex("for loop", target);
            assertTrue(passed);
         }
 
