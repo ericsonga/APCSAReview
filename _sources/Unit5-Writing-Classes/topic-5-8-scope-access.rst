@@ -92,6 +92,7 @@ Another way to look at scope is that a variable's scope is where it lives and ex
 
 .. activecode:: PersonScope
   :language: java
+  :autograde: unittest
 
   Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope. 
   ~~~~
@@ -127,12 +128,34 @@ Another way to look at scope is that a variable's scope is where it lives and ex
         System.out.println(p1);
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testCodeContains(){
+          boolean passed = checkCodeContains("returning instance variables", "return  name + \": \" + email;");
+          assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeContains2(){
+          boolean passed = checkCodeContains("declaration and initialization of id to 0", "int id = 0;");
+          assertTrue(passed);
+        }
+    }
 
 If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We'll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword this to refer to this object's instance variables.
 
 .. activecode:: PersonLocalVar
   :language: java
+  :autograde: unittest
 
+  In this example, the local variable is used instead of the instance variable of the same name. What will the code print out? Try it with the CodeLens button.
+  ~~~~
   public class Person 
   {
      private String name;
@@ -160,6 +183,22 @@ If there is a local variable with the same name as an instance variable, the var
         System.out.println(p1);
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+   
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "unknown: sana@gmail.com";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 |Groupwork| Programming Challenge : Debugging
 ------------------------------------------------------------
@@ -168,6 +207,8 @@ If there is a local variable with the same name as an instance variable, the var
 
 .. activecode:: challenge-5-8-Debug
   :language: java
+  :autograde: unittest
+  :practice: T
 
   Debug the following program that has scope violations. Then, add comments that label the variable declarations as class, method, or block scope.
   ~~~~
@@ -213,6 +254,36 @@ If there is a local variable with the same name as an instance variable, the var
        return newNumerator + "/" + denominator;
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+   
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TesterClass");
+        }
+
+        @Test
+        public void test1() {
+            String orig = "public class TesterClass\n{\n   public static void main(String[] args)\n   {\n      Fraction f1 = new Fraction();\n      Fraction f2 = new Fraction(1,2);\n      System.out.println(f1);\n      System.out.println(f2.numerator / f2.denominator);\n   }\n }\n\n/** Class Fraction */\nclass Fraction\n{\n   //  instance variables\n   private int numerator;\n   private int denominator;\n\n   // constructor: set instance variables to default values\n   public Fraction()\n   {\n      int d = 1;\n      numerator = d;\n      denominator = d;\n   }\n\n   // constructor: set instance variables to init parameters\n   public Fraction(int initNumerator, int initDenominator)\n   {\n      numerator = initNumerator;\n      denominator = initDenominator;\n   }\n\n   public String toString()\n   {\n     // if the denominator is 1, then just return the numerator\n     if (denominator == d) {\n        int newNumerator = 1;\n     }\n     return newNumerator + \"/\" + denominator;\n   }\n}\n";
+
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() {
+            String expect = "1\n0";
+            String actual = getMethodOutput("main");
+
+            boolean passed = getResults(expect, actual, "Testing main()");
+            assertTrue(passed);
+        }
+    }
+
+    
 
 Summary
 -------

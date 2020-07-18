@@ -30,13 +30,14 @@ The keyword **this** can be used in a class to refer to the current calling obje
    <a href="http://www.pythontutor.com/visualize.html#code=%20public%20class%20Person%20%0A%20%20%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%0A%20%20%20%20%20public%20Person%28String%20theName%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20theName%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20accessor%20methods%20-%20getters%20%0A%20%20%20%20%20public%20String%20getName%28%29%20%7B%20return%20this.name%3B%7D%0A%20%20%20%20%20public%20String%20getEmail%28%29%20%7B%20return%20this.email%3B%7D%0A%20%20%20%20%20public%20String%20getPhoneNumber%28%29%20%7B%20return%20this.phoneNumber%3B%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20mutatoor%20methods%20-%20setters%0A%20%20%20%20%20public%20void%20setName%28String%20theName%29%20%7B%20this.name%20%3D%20theName%3B%7D%0A%20%20%20%20%20public%20void%20setEmail%28String%20theEmail%29%20%7Bthis.email%20%3D%20theEmail%3B%7D%0A%20%20%20%20%20public%20void%20setPhoneNumber%28String%20thePhoneNumber%29%20%7B%20this.phoneNumber%20%3D%20thePhoneNumber%3B%7D%0A%20%20%20%20%20public%20String%20toString%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20this.name%20%2B%20%22%20%22%20%2B%20this.email%20%2B%20%22%20%22%20%2B%20this.phoneNumber%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28p1%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22%29%3B%0A%20%20%20%20%20%20%20%20p2.setEmail%28%22jean%40gmail.com%22%29%3B%0A%20%20%20%20%20%20%20%20p2.setPhoneNumber%28%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28p2%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D%0A%20%20&cumulative=false&curInstr=25&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
    
 For example, in the following Class Person, when we create an object p1 and call the constructor or p1.setEmail(), the word "this" refers to p1. And when we make the same method calls with object p2, "this" refers to p2.    
-Run the code below and also check it out in the |Java visualizer| which shows how this refers to different objects when the code is run.
+Run the code below and also check it out in the |Java visualizer| with the Code Lens button which shows how this refers to different objects when the code is run.
 
  
 .. activecode:: PersonClassThis
   :language: java
+  :autograde: unittest
 
-  Observe the use of the keyword this in the code below.
+  Observe the use of the keyword this in the code below. Click on the CodeLens button and then forward to see the memory in action.
   ~~~~
   public class Person 
   {
@@ -76,6 +77,27 @@ Run the code below and also check it out in the |Java visualizer| which shows ho
         System.out.println(p2);
      }
   }
+  ====
+   import static org.junit.Assert.*;
+      import org.junit.*;
+      import java.io.*;
+
+      public class RunestoneTests extends CodeTestHelper
+      {
+          public RunestoneTests() {
+              super("Person");
+          }
+
+            @Test
+            public void testMain() throws IOException
+            {
+               String output = getMethodOutput("main");
+                String expect = "Sana null null\nJean jean@gmail.com 404 899-9955";
+
+                boolean passed = getResults(expect, output, "Expected output from main", true);
+                assertTrue(passed);
+            }
+      }
 
 .. note::
 
@@ -112,8 +134,9 @@ The **this** variable can be used anywhere you would use an object variable.  Yo
 
 .. activecode:: PayClassThis
    :language: java
-   
-   What does this code print out? Trace through the code. Notice how the this Pay object is passed to the Overtime constructor.
+   :autograde: unittest
+
+   What does this code print out? Trace through the code with the CodeLens button. Notice how the this Pay object is passed to the Overtime constructor.
    ~~~~
    public class Pay
    {
@@ -158,6 +181,23 @@ The **this** variable can be used anywhere you would use an object variable.  Yo
         return payWithOvertime;
     }
    }
+   ====
+    import static org.junit.Assert.*;
+      import org.junit.*;
+      import java.io.*;
+
+      public class RunestoneTests extends CodeTestHelper
+      {
+            @Test
+            public void testMain() throws IOException
+            {
+               String output = getMethodOutput("main");
+                String expect = "150.0";
+
+                boolean passed = getResults(expect, output, "Expected output from main", true);
+                assertTrue(passed);
+            }
+      }
 
 |Exercise| Check Your Understanding
 
@@ -257,14 +297,106 @@ The **this** variable can be used anywhere you would use an object variable.  Yo
 
 .. activecode:: challenge-5-9-BankAccount
   :language: java
+  :autograde: unittest
 
-  Create a class called BankAccount that keeps track of the account holder's name, the account number, and the balance in the account. Create 2 constructors, a toString() method, and withdraw(amount) and deposit(amount) methods. Test your class in a main method.
+  Create a class called BankAccount that keeps track of the account holder's name, the account number, and the balance in the account. Create 2 constructors, a toString() method, and withdraw(amount) and deposit(amount) methods. Use the this keyword in the constructor and methods. Test your class in a main method.
   ~~~~
   public class BankAccount
   {
   
   
   }
+  ====
+   import static org.junit.Assert.*;
+      import org.junit.*;
+      import java.io.*;
+
+      public class RunestoneTests extends CodeTestHelper
+      {
+            public RunestoneTests() {
+                super("BankAccount");
+            }
+
+            @Test
+            public void test0()
+            {
+               String output = getMethodOutput("main");
+                String expect = "Something like:\nName 101 100.0\nName 101 200.0\nName 101 100.0";
+
+                boolean passed = !output.contains("Method main does not exist");
+
+                getResults(expect, output, "Expected output from main", passed);
+                assertTrue(passed);
+            }
+
+            @Test
+            public void test1()
+            {
+                String output = checkDefaultConstructor();
+                String expect = "pass";
+
+                boolean passed = getResults(expect, output, "Checking default constructor");
+                assertTrue(passed);
+            }
+
+            @Test
+            public void test2()
+            {
+                String output = checkConstructor(3);
+                String expect = "pass";
+
+                boolean passed = getResults(expect, output, "Checking 3-parameter constructor");
+                assertTrue(passed);
+            }
+
+
+            @Test
+            public void test01()
+            {
+                String expect = "3 Private";
+                String output = testPrivateInstanceVariables();
+
+                boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+                assertTrue(passed);
+            }
+
+            @Test
+            public void test3() {
+                String target = "public String toString()";
+
+                boolean passed = checkCodeContainsRegex("toString method", target);
+                assertTrue(passed);
+            }
+
+            @Test
+            public void test41() {
+                String target = "public void withdraw(*)";
+
+                boolean passed = checkCodeContainsRegex("withdraw method", target);
+                assertTrue(passed);
+            }
+
+            @Test
+            public void test42() {
+                String target = "public void deposit(*)";
+
+                boolean passed = checkCodeContainsRegex("deposit method", target);
+                assertTrue(passed);
+            }
+
+            @Test
+            public void test5() {
+                String target = "this.";
+                String code = getCode();
+
+                int num = countOccurences(code, target);
+
+                boolean passed = num >= 6;
+
+                getResults("6+", ""+num, "use of this.*", passed);
+                assertTrue(passed);
+            }
+      }
    
 
 

@@ -477,9 +477,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
     }
 
 
-.. shortanswer:: challenge3-4-ElseIf-20Adventure
 
-   (Old short answer - obsolete) After you complete your code on repl, paste in a link to it (click on share) here.
    
 Summary
 --------

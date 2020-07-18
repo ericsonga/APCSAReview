@@ -72,6 +72,7 @@ Here are two common array traversal loops that can be used for these algorithms:
 
 .. activecode:: minmax
    :language: java
+   :autograde: unittest
    
    The code below finds the minimum (smallest element) in an array. Try it in the |Java visualizer| with the CodeLens button. Can you change it to find the maximum element instead? Can you also compute the average of the elements?
    ~~~~
@@ -89,6 +90,51 @@ Here are two common array traversal loops that can be used for these algorithms:
         System.out.println("Min is " + min );
       }
    }
+   ====
+   // Test for Lesson MinMax
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("MinMax");
+
+            int[] numArray =  {2, 6, 7, 12, 5};
+            setDefaultValues(new Object[]{numArray});
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Max is 12";
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect, output, "Max element", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Average is 5.5";
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect, output, "Average", passed);
+            assertTrue(passed);
+        }
+        @Test
+        public void test3()
+        {
+          boolean passed = checkCodeContains("if statement using val >","if (val >");
+          assertTrue(passed);
+        }
+    }
 
 .. |visualizer| raw:: html
 
@@ -100,8 +146,9 @@ Here are two common array traversal loops that can be used for these algorithms:
 
 .. activecode:: rotate
    :language: java
+   :autograde: unittest
    
-   The code below rotates array elements to the left. Note that you need to use an indexed loop for this because you need to change the array and access two elements at different indices. Try it in the |visualizer| with the CodeLens button. Can you change it to rotate the elements to the right instead? 
+   The code below rotates array elements to the left. Note that you need to use an indexed loop for this because you need to change the array and access two elements at different indices. Try it in the |visualizer| with the CodeLens button. Can you change it to rotate the elements to the right instead? Hint: use a backwards loop. 
    ~~~~
    public class Rotate
    {      
@@ -109,11 +156,13 @@ Here are two common array traversal loops that can be used for these algorithms:
       {
         int[ ] values = {6, 2, 1, 7, 12, 5};
         int first = values[0];
-        for (int i=0; i < values.length; i++)
+        for (int i = 0; i < values.length; i++)
         {
            // if it's not the last element, copy the next one over
           if (i < values.length - 1) 
+          {
               values[i] = values[i+1];
+          }
           else {
              // last element gets first
              values[i] = first; 
@@ -124,9 +173,39 @@ Here are two common array traversal loops that can be used for these algorithms:
         {
            System.out.print(val + " ");
         }
-
     }
    }
+   ====
+   // Test for Lesson 6.4.2 - Rotate
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Rotate");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "5 6 2 1 7 12";
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults(expect, output, "Rotate numbers to the right", passed);
+            assertTrue(passed);
+        }
+        
+        @Test
+        public void test3()
+        {
+          boolean passed = checkCodeContains("copying values[i-1] into values[i]","values[i] = values[i-1]");
+          assertTrue(passed);
+        }
+       }
   
 We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. These will get easier with practice! 
 

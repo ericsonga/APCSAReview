@@ -28,54 +28,26 @@ In this lesson, you will learn about assignment statements and expressions that 
 Assignment Statements
 ---------------------
 
-Remember that a variable holds a value and that value can change or vary.  **Assignment statements** initialize or change the value stored in a variable using the assignment operator =.  The value of the expression on the right of the = sign is stored in the variable on the left. These values can be complex **expressions** that contain math operators and other variables like in the example below. 
+**Assignment statements** initialize or change the value stored in a variable using the assignment operator =.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the = sign is stored in the variable on the left.  
 
-.. code-block:: java 
 
-    // Assignment statement: 
-    // variable = expression;
-    score = (10 * points) + 5;
+.. figure:: Figures/assignment.png
+    :width: 350px
+    :align: center
+    :figclass: align-center
+    
+    Figure 2: Assignment Statement (variable = expression;)
 
-If you use a variable to keep score you would probably increment it (add one to the current value) whenever score should go up.  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below. The formula looks a little crazy in math class, but it makes sense in coding because the variable on the left is set to the value of the arithmetic expression on the right. So, the score variable is set to the previous value of score + 1.
+Instead of saying equals for the = in an assignment statement, say "gets" or "is assigned" to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.
 
-.. activecode:: lccv1
-   :language: java
-   :autograde: unittest   
+The following video by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
+
+.. youtube:: MZwIgM__5C8
+    :width: 700
+    :align: center
+    
    
-   Try the code below to see how score is incremented by 1.
-   ~~~~
-   public class Test1
-   {
-      public static void main(String[] args)
-      {
-        int score = 0;
-        System.out.println(score);
-        score = score + 1;
-        System.out.println(score);
-      }
-   }
-   ====
-   // Test Code for Lesson 1.4 Expressions - iccv1
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "0\n1\n";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
-   
-You can set one variable's value to a *copy* of the value of another variable.  This won't change the value of the variable that you are copying from.  
+As we saw in the video, we can set one variable's value to a *copy* of the value of another variable like ``y = x;``.  This won't change the value of the variable that you are copying from.  
 
 
 
@@ -83,7 +55,7 @@ You can set one variable's value to a *copy* of the value of another variable.  
 
    <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
-Click on this cool |Java visualizer| to step through the code. Click on the Forward button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the ``Code Lens`` button at the top of each Active Code.
+Let's step through the following code in the |Java visualizer| to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.
 
  
 .. codelens:: asgn_viz1
@@ -139,9 +111,9 @@ Click on this cool |Java visualizer| to step through the code. Click on the Forw
        z = 3;
 
       
-|Exercise| **Mixed up programs**
+|Exercise| **Mixed Up Code**
 
-In the mixed up programs below, drag the blocks to the right to put them in the right order.
+
 
 .. parsonsprob:: 2_swap
    :numbered: left
@@ -162,7 +134,50 @@ In the mixed up programs below, drag the blocks to the right to put them in the 
    y = temp;
    =====
    y = x; #distractor
+
+Adding 1 to a Variable
+-------------------------
+
+If you use a variable to keep score you would probably increment it (add one to the current value) whenever score should go up.  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below. The formula looks a little crazy in math class, but it makes sense in coding because the variable on the left is set to the value of the arithmetic expression on the right. So, the score variable is set to the previous value of score + 1.
+
+.. activecode:: lccv1
+   :language: java
+   :autograde: unittest   
    
+   Try the code below to see how score is incremented by 1. Try substituting 2 instead of 1 to see what happens.
+   ~~~~
+   public class Test1
+   {
+      public static void main(String[] args)
+      {
+        int score = 0;
+        System.out.println(score);
+        score = score + 1;
+        System.out.println(score);
+      }
+   }
+   ====
+   // Test Code for Lesson 1.4 Expressions - iccv1
+    import static org.junit.Assert.*;
+    import org.junit.After;
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "0\n1\n";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
+
+
 Input with Variables
 --------------------
 
@@ -197,9 +212,9 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). Arithmetic expressions can be of type int or double. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.  (You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.)
+Java uses the standard mathematical operators for addition (+), subtraction (-), multiplication (*), and division (/). Arithmetic expressions can be of type int or double. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.  (You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.)
 
-Java uses the operator ``==`` to test if the value on the left is equal to the value on the right and ``!=`` to test if two items are not equal.   Don't get one equal sign ``=`` confused with two equal signs ``==``! They mean different things in Java. One equal sign is used to assign a value to a variable. Two equal signs are used to test a variable to see if it is a certain value and that returns true or false as you'll see below.  Use == and != only with int values and not doubles because double values are an approximation and 3.3333 will not equal 3.3334 even though they are very close.
+Java uses the operator **==** to test if the value on the left is equal to the value on the right and **!=** to test if two items are not equal.   Don't get one equal sign = confused with two equal signs ==. They mean different things in Java. One equal sign is used to assign a value to a variable. Two equal signs are used to test a variable to see if it is a certain value and that returns true or false as you'll see below.  Use == and != only with int values and not doubles because double values are an approximation and 3.3333 will not equal 3.3334 even though they are very close.
 
 |CodingEx| **Coding Exercise:** 
 
@@ -209,7 +224,7 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
    :language: java
    :autograde: unittest      
    
-   Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
+   Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn't surprising that it prints 0?  See the note below.
    ~~~~
    public class Test1
    {
@@ -219,6 +234,7 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
         System.out.println(2 - 3);
         System.out.println(2 * 3);
         System.out.println(2 / 3);
+        // == is to test while = is to assign
         System.out.println(2 == 3);
         System.out.println(2 != 3);
       }
@@ -262,7 +278,7 @@ Operators can be used to create compound expressions with more than one operator
    :language: java
    :autograde: unittest      
    
-   In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**.
+   In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**. How do the parentheses change the precedence?
    ~~~~
    public class TestCompound
    {
@@ -274,7 +290,7 @@ Operators can be used to create compound expressions with more than one operator
       }
    }
    ====
-   // Test Code for Lesson 1.4 Expressions - compunds
+   // Test Code for Lesson 1.4 Expressions - compounds
     import static org.junit.Assert.*;
     import org.junit.After;
     import org.junit.Before;
@@ -295,47 +311,25 @@ Operators can be used to create compound expressions with more than one operator
 
    
    
-|Exercise| **AP CSA Sample Question**
 
-The following is a 2019 AP CSA sample question.
-
-.. mchoice:: apcsa_sample1
-   :practice: T
-   :answer_a: 0.666666666666667
-   :answer_b: 9.0
-   :answer_c: 10.0
-   :answer_d: 11.5
-   :answer_e: 14.0
-   :correct: c
-   :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence. 
-   :feedback_b: Don't forget that division and multiplication will be done first due to operator precedence.
-   :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).   
-   :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int result where it is rounded down to the nearest int.
-   :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
-   
-   Consider the following code segment.
-   
-   .. code-block:: java 
-   
-       int a = 5;
-       int b = 2;
-       double c = 3.0;
-       System.out.println(5 + a / b * c - 1);
-   
-   What is printed when the code segment is executed?
    
    
 The Modulo Operator
 --------------------
 
-The percent sign operator (``%``) is the **mod (modulo)** or **remainder** operator.  The mod operator (``x % y``) returns the remainder after you divide ``x`` (first number) by ``y`` (second number) so ``5 % 2`` will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number went into another evenly and the remainder?  That remainder is what is returned by the modulo operator.
+The percent sign operator (%) is the **mod (modulo)** or **remainder** operator.  The mod operator (x % y) returns the remainder after you divide x (first number) by y (second number) so 5 % 2 will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number went into another evenly and the remainder?  That remainder is what is returned by the modulo operator.
 
 .. figure:: Figures/mod-py.png
     :width: 150px
     :align: center
     :figclass: align-center
     
-    Figure 1: Long division showing the whole number result and the remainder
+    Figure 1: Long division showing the integer result and the remainder
+    
+
+.. youtube:: jp-T9lFISlI
+    :width: 700
+    :align: center
     
 
 |CodingEx| **Coding Exercise:** 
@@ -379,7 +373,7 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
 
 
 .. note::
-   The result of ``x % y`` when ``x`` is smaller than ``y`` is always ``x``.  The value ``y`` can't go into ``x`` at all (goes in 0 times), since ``x`` is smaller than ``y``, so the result is just ``x``.  So if you see ``2 % 3`` the result is ``2``.  
+   The result of x % y when x is smaller than y is always x.  The value y can't go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.  
   
 ..	index::
 	single: modulo
@@ -420,12 +414,12 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
 |Groupwork| Programming Challenge : Dog Years
 ------------------------------------------------
 
-.. |dog| image:: Figures/dog-free.png
-    :width: 100
-    :align: middle
+.. image:: Figures/dog-free.png
+    :width: 150
+    :align: left
     :alt: dog
-    
-|dog| In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code. 
+
+In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code. 
 
 .. |repl| raw:: html
 
@@ -527,6 +521,37 @@ Summary
 - During execution, expressions are evaluated to produce a single value.
 
 - The value of an expression has a type based on the evaluation of the expression.
+
+AP Practice
+------------
+
+The following is a 2019 AP CSA sample question.
+
+.. mchoice:: apcsa_sample1
+   :practice: T
+   :answer_a: 0.666666666666667
+   :answer_b: 9.0
+   :answer_c: 10.0
+   :answer_d: 11.5
+   :answer_e: 14.0
+   :correct: c
+   :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence. 
+   :feedback_b: Don't forget that division and multiplication will be done first due to operator precedence.
+   :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).   
+   :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int result where it is rounded down to the nearest int.
+   :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
+   
+   Consider the following code segment.
+   
+   .. code-block:: java 
+   
+       int a = 5;
+       int b = 2;
+       double c = 3.0;
+       System.out.println(5 + a / b * c - 1);
+   
+   What is printed when the code segment is executed?
+
 
 .. raw:: html
     

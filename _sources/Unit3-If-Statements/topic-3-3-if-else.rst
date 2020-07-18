@@ -473,13 +473,7 @@ After you complete your code on repl.it, paste in your code below to run it thro
             getResults("4+", "" + num, "Number of scan.nextLine()", passed);
             assertTrue(passed);
         }
-    }
-    
-    
-.. shortanswer:: challenge3-3-IfElse-20Questions
-
-  (Old short answer - obsolete) After you complete your code on repl, paste in a link to it (click on share) here.
-   
+    }   
 
    
 Summary

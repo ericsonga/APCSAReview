@@ -155,7 +155,7 @@ For example, here is a chorus() method definition that we could write for the "T
 
         @Test
         public void testChangedCode() {
-            String origCode = "public class Song{ // The chorus method public void chorus() { System.out.println(\"With a knick knack paddy whack, give a dog a bone.\"); System.out.println(\"This old man came rolling home.\"); }  public static void main(String args[])  {  Song mySong = new Song();  System.out.println(\"This old man, he played one.\");  System.out.println(\"He played knick knack on my thumb. \");  mySong.chorus();  System.out.println(\"This old man, he played two.\");  System.out.println(\"He played knick knack on my shoe. \");  // Can you replace these 2 lines with a method call to chorus()?  System.out.println(\"With a knick knack paddy whack, give a dog a bone.\");  System.out.println(\"This old man came rolling home.\")  }  }";
+             String origCode = "public class Song\n{\n  // The chorus method\n  public void chorus()\n  {\n     System.out.println(\"With a knick knack paddy whack, give a dog a bone.\");\n     System.out.println(\"This old man came rolling home.\");\n  }\n\n  public static void main(String args[])\n  {\n    Song mySong = new Song();\n    System.out.println(\"This old man, he played one.\");\n    System.out.println(\"He played knick knack on my thumb. \");\n    mySong.chorus();\n\n    System.out.println(\"This old man, he played two.\");\n    System.out.println(\"He played knick knack on my shoe. \");\n    // Can you replace these 2 lines with a method call to chorus()?\n    System.out.println(\"With a knick knack paddy whack, give a dog a bone.\");\n    System.out.println(\"This old man came rolling home.\");\n  }\n}\n";
 
             boolean changed = codeChanged(origCode);
 
@@ -384,9 +384,9 @@ Methods can also return values of any type back to the calling method. The calli
 
          @Test
         public void test3() 
-        {   String code = getCode();
+        {   String code = removeSpaces(getCode());
             boolean passed = code.contains("count++;") || 
-            code.contains("count = count + 1;") || code.contains("count = 1 + count;") || code.contains("count += 1;") || code.contains("++count;");
+            code.contains("count=count+1;") || code.contains("count=1+count;") || code.contains("count+=1;") || code.contains("++count;");
             passed = getResults("count incremented",Boolean.toString(passed),"Count incremented?", passed);
             assertTrue(passed);
         }

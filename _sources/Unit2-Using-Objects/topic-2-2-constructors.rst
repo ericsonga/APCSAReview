@@ -561,7 +561,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
         @Test
         public void test1()
         {
-            String target = "new CustomTurtle(150,300,world, Color.green, Color.blue, 180, 200)";
+            String target = "new CustomTurtle(150,300,world, Color.green, Color.blue, 150, 200)";
             boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300)",target);
             assertTrue(passed);
         }

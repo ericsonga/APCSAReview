@@ -130,6 +130,7 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
 
 .. activecode:: turtle-preconditions
     :language: java
+    :autograde: unittest
     :datafile: turtleClasses.jar
 
     import java.util.*;
@@ -145,6 +146,25 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
           t.turnRight();
           world.show(true); 
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("TurtlePreconditions");
+        }
+
+        @Test
+        public void test1()
+        {
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtlePreconditions\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n      // Change 0,0 to other values outside of 0-300 to break the preconditions and see what happens\n      Turtle t = new Turtle(0,0,world);\n      t.turnRight();\n      world.show(true);\n  }\n}";
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
     }
     
 The Turtle constructor's precondition is that x and y should be between 0 and the width and height of the world. If it receives values out of this range, it sets x and y to the closest legal values that it can so that the turtle appears just at the edge of the world. Similarly, the forward() method will not allow the turtle to leave the world.  
@@ -392,7 +412,7 @@ Here is a simple class called User that could be used in an online store. Add go
         private String program;
 
         @Test
-        public void testMain() throws IOException
+        public void testMain()
         {
             String output = getMethodOutput("main");
             String expect = "Welcome guest!\nWelcome cooldude@gmail.com!";
@@ -401,9 +421,8 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testClassComment() throws IOException {
-            //System.out.println(program);
-            program = new String(Files.readAllBytes(Paths.get("User.java")));
+        public void testClassComment() {
+            program = getCodeWithComments();
 
             int index = program.indexOf("public class User");
 
@@ -418,9 +437,8 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testVariablesComment() throws IOException {
-            //System.out.println(program);
-            program = new String(Files.readAllBytes(Paths.get("User.java")));
+        public void testVariablesComment() {
+            program = getCodeWithComments();
 
             int start = program.indexOf("{") + 1;
             int end = program.indexOf("private String username");
@@ -434,9 +452,8 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testDefaultConstructorComment() throws IOException {
-            //System.out.println(program);
-            program = new String(Files.readAllBytes(Paths.get("User.java")));
+        public void testDefaultConstructorComment() {
+            program = getCodeWithComments();
 
             int start = program.indexOf("password;") + "password;".length() + 1;
             int end = program.indexOf("public User()");
@@ -450,9 +467,8 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testConstructorComment() throws IOException {
-            //System.out.println(program);
-            program = new String(Files.readAllBytes(Paths.get("User.java")));
+        public void testConstructorComment() {
+            program = getCodeWithComments();
 
             int start = program.indexOf("*1000);");
             start = program.indexOf("}", start) + 1;
@@ -467,9 +483,8 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testWelcomeComment() throws IOException {
-            //System.out.println(program);
-            program = new String(Files.readAllBytes(Paths.get("User.java")));
+        public void testWelcomeComment() {
+            program = getCodeWithComments();
 
             int start = program.indexOf("password = pwordInit;");
             start = program.indexOf("}", start) + 1;
@@ -484,9 +499,8 @@ Here is a simple class called User that could be used in an online store. Add go
         }
 
         @Test
-        public void testMainComment() throws IOException {
-            //System.out.println(program);
-            program = new String(Files.readAllBytes(Paths.get("User.java")));
+        public void testMainComment() {
+            program = getCodeWithComments();
 
             int start = program.indexOf("username + \"!\");");
             start = program.indexOf("}", start) + 1;
@@ -509,7 +523,6 @@ Here is a simple class called User that could be used in an online store. Add go
 
         }
     }
-
 
 Summary
 -------

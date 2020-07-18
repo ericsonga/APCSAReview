@@ -11,10 +11,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex1q
               :language: java
+              :autograde: unittest  
+              :practice: T
 
               Fix the following code so that it prints every other value in the array ``arr1`` starting with the value at index 0.
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -25,6 +27,40 @@ Code Practice with Arrays
                       }
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "1, 7, 15, ";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testCodeContains1(){
+                      boolean passed = checkCodeContains("correct array data type", "int[] arr1 = {1, 3, 7, 9, 15, 17};");
+                      assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testCodeContains2(){
+                      boolean passed = checkCodeContains("correct for loop condition", "for (int index = 0; index < arr1.length; index+=2)");
+                      assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testCodeContains3(){
+                      boolean passed = checkCodeContains("access values in array instead of index", "System.out.print(arr1[index] + \", \")");
+                      assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -33,10 +69,11 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex1a
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -61,10 +98,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex2q
               :language: java
+              :autograde: unittest  
+              :practice: T
               
               Fix the following to print the values in the array ``a1`` starting with the value at the last index and then backwards to the value at the first index.
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -73,6 +112,40 @@ Code Practice with Arrays
                           System.out.print(arr[i] + ", ");
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+              
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "15, 9, 7, 3, 1, ";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                    @Test 
+                    public void testCodeContains1(){
+                      boolean passed = checkCodeContains("correct starting index", "int i = a1.length-1;");
+                      assertTrue(passed);
+                    }
+
+                     @Test 
+                    public void testCodeContains2(){
+                      boolean passed = checkCodeContains("correct ending index", "i >= 0;");
+                      assertTrue(passed);
+                    }
+
+                     @Test 
+                    public void testCodeContains3(){
+                      boolean passed = checkCodeContains("correct array variable name", "System.out.print(a1[i] + \", \");");
+                      assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -81,10 +154,11 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex2a
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -107,10 +181,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex3q
               :language: java
+              :autograde: unittest  
+              :practice: T
 
               Rewrite the following code so that it prints all the values in an array ``arr1`` using a for-each loop instead of a ``for`` loop.
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -121,6 +197,29 @@ Code Practice with Arrays
                       }
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testCodeContains() 
+                    {
+
+                        boolean passed = checkCodeContains("for each loop", "for (int * : arr1)");
+                        assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testCodeContains1() 
+                    {
+
+                        boolean passed = checkCodeContains("print statement variable name", "System.out.print(* + \", \");");
+                        assertTrue(passed);
+                    }
+                }
 
 
 
@@ -130,6 +229,7 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex3a
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
@@ -157,8 +257,10 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex4q
               :language: java
+              :autograde: unittest  
+              :practice: T
 
-              Finish the following code so that it prints out all of the odd values in the array ``a1``.
+              Finish the following code so that it prints out all of the odd values in the array ``a1``. Hint: use % to check for odd values.
               ~~~~
               public class Test1
               {
@@ -170,6 +272,30 @@ Code Practice with Arrays
                       }
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "3 7 9 ";
+
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                         assertTrue(passed);
+                    }
+                    @Test
+                    public void testContains()
+                    {
+                      boolean passed = checkCodeContains("Use % to see if value is odd","value % 2 ");
+                      assertTrue(passed);
+                    }
+                }
+              
 
 
         .. tab:: Answer
@@ -178,6 +304,7 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex4a
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
@@ -210,10 +337,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex5q
               :language: java
+              :autograde: unittest  
+              :practice: T
 
               Finish the following method ``getSum`` to return the sum of all values in the passed array.
               ~~~~
-              public class Test
+              public class Test1
               {
 
                   public static int getSum(int[] arr)
@@ -228,6 +357,36 @@ Code Practice with Arrays
                                          " and your answer is: " + getSum(a1));
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "It should print 11  and your answer is: 11";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testMethod(){
+                       int[] nums = {10, 20, 30, 40, 50};
+                       Object[] args = {nums};
+
+                       // name of method, arguments are (nums, 30)
+                       String output = getMethodOutput("getSum", args);
+                       String expect = "150";
+
+                       boolean passed = getResults(expect, output, 
+                                "getSum({10, 20, 30, 40, 50})");
+                       assertTrue(passed);
+                    }
+                }
 
 
 
@@ -237,12 +396,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex5a
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
-              public class Test
+              public class Test1
               {
-
                   public static int getSum(int[] arr)
                   {
                      int sum = 0;
@@ -273,10 +432,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex6q
               :language: java
+              :autograde: unittest  
+              :practice: T
 
               Finish the following method to return the sum of all of the non-negative values in the passed array.
               ~~~~
-              public class Test
+              public class Test1
               {
 
                   public static int getSumNonNeg(int[] arr)
@@ -290,6 +451,36 @@ Code Practice with Arrays
                                          "and your answer is: " + getSumNonNeg(a1));
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "The code should print 11 and your answer is: 11";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testMethod(){
+                       int[] nums = {10, -20, 30, -40, 50};
+                       Object[] args = {nums};
+
+                       // name of method, arguments are (nums, 30)
+                       String output = getMethodOutput("getSumNonNeg", args);
+                       String expect = "90";
+
+                       boolean passed = getResults(expect, output, 
+                                "getSum({10, -20, 30, -40, 50})");
+                       assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -298,10 +489,11 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex6a
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
-              public class Test
+              public class Test1
               {
 
                   public static int getSumNonNeg(int[] arr)
@@ -339,7 +531,8 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex7nq
               :language: java
-
+              :autograde: unittest  
+              :practice: T
               
               Finish the following code to print the strings at the odd indices in the array.
               ~~~~
@@ -350,7 +543,31 @@ Code Practice with Arrays
                       String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
 
                   }
+              
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expectNewL = "Landon\nGabby\n";
+                        boolean passedNewL = getResults(expectNewL, output, "Expected output from main");
+                        assertTrue(passedNewL);
+                    }
+                    @Test
+                    public void testCodeContains() 
+                    {
+
+                        boolean passed = checkCodeContains("for loop", "for");
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -359,6 +576,7 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex7na
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
@@ -386,10 +604,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex8nq
               :language: java
-
+              :autograde: unittest  
+              :practice: T
+              
               Finish the method ``getSumChars`` below to return the total number of characters in the array of strings ``strArr``.
               ~~~~ 
-              public class Test
+              public class Test1
               {
 
                   public static int getSumChars(String[] strArr)
@@ -402,6 +622,48 @@ Code Practice with Arrays
                       System.out.println(getSumChars(strArr));
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "9";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testCodeContains1(){
+                      boolean passed = checkCodeContains("adding length of each string", ".length()");
+                      assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testCodecontains(){
+                      boolean passed = checkCodeContains("for loop", "for");
+                      assertTrue(passed);
+                    }
+
+                    @Test
+                    public void testMethod(){
+                       String[] strs = {"a","aa","aaa"};
+                       Object[] args = {strs};
+
+                       // name of method, arguments are (nums, 30)
+                       String output = getMethodOutput("getSumChars", args);
+                       String expect = "6";
+
+                       boolean passed = getResults(expect, output, 
+                                "getSumChars({\"a\",\"aa\",\"aaa\"})");
+                       assertTrue(passed);
+                    }
+                }
 
 
 
@@ -412,10 +674,11 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex8na
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static int getSumChars(String[] strArr)
                   {
@@ -447,10 +710,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex9nq
               :language: java
+              :autograde: unittest  
+              :practice: T
 
               Finish the method ``findMin`` so that it finds and returns the minimum value in the array.
               ~~~~
-              public class Test
+              public class Test1
               {
 
                   public static int findMin(int[] arr)
@@ -463,6 +728,8 @@ Code Practice with Arrays
                       System.out.println(findMin(arr));
                   }
               }
+              ====
+              
 
 
 
@@ -473,10 +740,11 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex9na
               :language: java
+              :optional:
 
               Solution to question above.    
               ~~~~
-              public class Test
+              public class Test1
               {
 
                   public static int findMin(int[] arr)
@@ -500,6 +768,42 @@ Code Practice with Arrays
                       System.out.println(findMin(arr));
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "-3";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                    @Test 
+                    public void testCodeContains2(){
+                      boolean passed = checkCodeContains("for loop", "for");
+                      assertTrue(passed);
+                    }
+
+                     @Test
+                    public void testMethod(){
+                       int[] nums = {10, 20, 5, 40, 50};
+                       Object[] args = {nums};
+
+                       // name of method, arguments are (nums, 30)
+                       String output = getMethodOutput("findMin", args);
+                       String expect = "5";
+
+                       boolean passed = getResults(expect, output, 
+                                "findMin({10, 20, 5, 40, 50})");
+                       assertTrue(passed);
+                    }
+                }
 
 
 
@@ -515,10 +819,12 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex10nq
               :language: java
+              :autograde: unittest  
+              :practice: T
               
               Finish the method ``getAverage`` to calculate and return the average of all of the values in the array.
               ~~~~
-              public class Test
+              public class Test1
               {
 
                   public static double getAverage(int[] arr)
@@ -531,7 +837,42 @@ Code Practice with Arrays
                       System.out.println(getAverage(arr));;
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
 
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "20.0";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                       @Test 
+                    public void testCodeContains2(){
+                      boolean passed = checkCodeContains("for loop", "for");
+                      assertTrue(passed);
+                    }
+
+                     @Test
+                    public void testMethod(){
+                       int[] nums = {10, 20, 30, 40, 50};
+                       Object[] args = {nums};
+
+                       // name of method, arguments are (nums, 30)
+                       String output = getMethodOutput("getAverage", args);
+                       String expect = "30.0";
+
+                       boolean passed = getResults(expect, output, 
+                                "getAverage({10, 20, 30, 40, 50})");
+                       assertTrue(passed);
+                    }
+                }
 
         .. tab:: Answer
 
@@ -539,10 +880,11 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex10na
               :language: java
+              :optional:
               
               Solution to question above.    
               ~~~~
-              public class Test
+              public class Test1
               {
 
                   public static double getAverage(int[] arr)

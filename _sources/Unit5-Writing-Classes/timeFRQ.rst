@@ -226,15 +226,17 @@ Use conditionals (if statements) to check for each of these conditions and take 
           time.tick();
           System.out.println("For (23,59,59) and tick() you got " + time + " which should be 00:00:00");
 
-
        }
     }
     ====
     // Test Code for Lesson 5.14 - FRQ - Time - Part A
+
     import static org.junit.Assert.*;
+
     import org.junit.After;
     import org.junit.Before;
     import org.junit.Test;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -244,13 +246,14 @@ Use conditionals (if statements) to check for each of these conditions and take 
 
         @Test
         public void test0() throws IOException
-        {
+        {   
             Time time = new Time(0, 0, 0);
+            String label = time.toString() +".tick()";
             time.tick();
             String actual = time.toString();
             String expected = "00:00:01";
 
-            boolean passed = getResults(expected, actual, time.toString() +".tick()");
+            boolean passed = getResults(expected, actual, label);
             assertTrue(passed);
         }
 
@@ -258,9 +261,10 @@ Use conditionals (if statements) to check for each of these conditions and take 
         public void test1() throws IOException
         {
             int i = 1; 
+            String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
-            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            boolean passed = getResults(expected[i], actual, label);
             assertTrue(passed);
         }
 
@@ -268,9 +272,10 @@ Use conditionals (if statements) to check for each of these conditions and take 
         public void test2() throws IOException
         {
             int i = 2; 
+            String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
-            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            boolean passed = getResults(expected[i], actual, label);
             assertTrue(passed);
         }
 
@@ -278,9 +283,10 @@ Use conditionals (if statements) to check for each of these conditions and take 
         public void test3() throws IOException
         {
             int i = 3; 
+            String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
-            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            boolean passed = getResults(expected[i], actual, label);
             assertTrue(passed);
         }
 
@@ -288,9 +294,10 @@ Use conditionals (if statements) to check for each of these conditions and take 
         public void test4() throws IOException
         {
             int i = 4; 
+            String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
-            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            boolean passed = getResults(expected[i], actual, label);
             assertTrue(passed);
         }
 
@@ -298,12 +305,14 @@ Use conditionals (if statements) to check for each of these conditions and take 
         public void test5() throws IOException
         {
             int i = 5; 
+            String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
-            boolean passed = getResults(expected[i], actual, time[i].toString() +".tick()");
+            boolean passed = getResults(expected[i], actual, label);
             assertTrue(passed);
         }
     }
+
 
 
 **Part b.**  Write the method ``add(Time offset)`` which adds the seconds together and makes sure the result is 59 or less (incrementing the minutes as needed), adds the minutes together and makes sure the result is 59 or less (increments the hours as needed), and adds the hours together (resetting the hours to 0 if it reaches 24).  When you have finished writing the method, click "Run" to test your solution.  The main method has code that will test your solution using several different times.

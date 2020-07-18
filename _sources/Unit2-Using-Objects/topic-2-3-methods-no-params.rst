@@ -249,7 +249,8 @@ You will learn to write your own methods in Unit 5. In this unit, you should be 
 
 The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song. 
 
-When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it. Methods inside the same class can call each other using just ``methodName()``, but to call methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
+When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it. 
+
 
 .. codelens:: songviz1
     :language: java 
@@ -285,6 +286,15 @@ When you call the chorus() method, it skips to the chorus code, executes and pri
     
 
 
+Methods inside the same class can call each other using just ``methodName()``, but to call methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
+
+.. figure:: Figures/calling-methods.png
+    :width: 450px
+    :align: center
+    :alt: Calling Methods
+    :figclass: align-center
+
+    Figure 2: Calling methods from main() or from other methods inside the same class.
 
 
 |Exercise| **Check your understanding**

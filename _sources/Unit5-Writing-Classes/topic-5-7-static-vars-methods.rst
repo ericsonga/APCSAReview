@@ -257,10 +257,11 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
 
 1. Copy in your class from the last lesson into this active code window. Change the method(s) that print out the verses of the Song to be static. In the main method, change how you call the static methods by using just the classname instead of creating an object.
 
-2. Add a static variable to the class that keeps track of the number of verses. Increment this variable each time the method to print a verse is called and print it out. 
+2. Add a static variable to the class that keeps track of the number of verses. Increment this variable in the method verse and print it out at the beginning of the verse. 
 
 .. activecode:: challenge-5-7-static-song
   :language: java
+  :autograde: unittest  
 
   public class Song 
   { 
@@ -277,6 +278,61 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
     
     }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void checkCodeContains1(){
+        //check verse 1
+        boolean passed = checkCodeContains("verse one method call", "verse(\"one\", \"suck his thumb\"");
+        assertTrue(passed);
+
+      }
+
+      @Test
+      public void checkCodeContains2(){
+         //check verse 2
+          boolean passed = checkCodeContains("verse two method call", "verse(\"two\", \"tie his shoe\"");
+        assertTrue(passed);
+
+      }
+
+      @Test
+      public void checkCodeContains3(){
+         //check verse 3
+          boolean passed = checkCodeContains("verse three method call", "verse(\"three\", \"climb a tree\"");
+        assertTrue(passed);
+
+      }
+      @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "The ants go marching three by three\nThe little one stops to climb a tree";
+            boolean passed = output.contains(expect);
+            getResults(expect, output, "Expected output from main contains 3 verses", passed);
+            assertTrue(passed);
+        }
+        
+      @Test
+      public void checkCodeContains4(){
+         //check static
+         String code = getCode();
+         int actual = countOccurences(code, "static");
+         String expected = "3";
+
+         boolean passed = actual >= 3;
+         getResults(expected, ""+actual, "Static methods and/or variables");
+        assertTrue(passed);
+
+      }
+    }
+
+    
 
 
 Summary

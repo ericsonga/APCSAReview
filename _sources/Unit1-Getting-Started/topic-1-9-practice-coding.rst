@@ -371,21 +371,17 @@ Unit 1 Coding Practice
                    @Test
                     public void testPrintStringsA() throws IOException
                     {
-                      String target1 = "+ animal +";
-                      boolean passed1 = checkCodeContains("print animal string variation 1", target1);
-                      String target2 = "+ \nanimal";
-                      boolean passed2 = checkCodeContains("print animal string variation 2", target2);
-                      assertTrue(passed1 || passed2);
+                      String target1 = "+animal";
+                      boolean passed1 = checkCodeContains("print animal string", target1);
+                      assertTrue(passed1);
                     }
 
                      @Test
                     public void testPrintStringsB() throws IOException
                     {
-                        String target1 = "+ food +";
-                        boolean passed1 = checkCodeContains("print food string variation 1", target1);
-                        String target2 = "+ \nfood";
-                        boolean passed2 = checkCodeContains("print food string variation 2", target2);
-                        assertTrue(passed1 || passed2);
+                        String target1 = "+food";
+                        boolean passed1 = checkCodeContains("print food string", target1);
+                        assertTrue(passed1);
                     }
                 }
 
@@ -450,21 +446,17 @@ Unit 1 Coding Practice
                    @Test
                     public void testPrintStringsA() throws IOException
                     {
-                      String target1 = "+ movie +";
-                      boolean passed1 = checkCodeContains("print movie string variation 1", target1);
-                      String target2 = "+ \nmovie";
-                      boolean passed2 = checkCodeContains("print movie string variation 2", target2);
-                      assertTrue(passed1 || passed2);
+                      String target1 = "+movie";
+                      boolean passed1 = checkCodeContains("print movie string", target1);
+                      assertTrue(passed1);
                     }
 
                      @Test
                     public void testPrintStringsB() throws IOException
                     {
-                        String target1 = "+ book +";
-                        boolean passed1 = checkCodeContains("print book string variation 1", target1);
-                        String target2 = "+ \nbook";
-                        boolean passed2 = checkCodeContains("print book string variation 2", target2);
-                        assertTrue(passed1 || passed2);
+                        String target1 = "+book";
+                        boolean passed1 = checkCodeContains("print book string", target1);
+                        assertTrue(passed1);
                     }
                 }
 
@@ -957,11 +949,17 @@ Unit 1 Coding Practice
                 @Test
                   public void testFormulaMiles() throws IOException
                   {
-                    String target1 = "double miles = numGallons * milesPerGallon;";
-                    String target2 = "double miles = milesPerGallon * numGallons;";
-                    boolean passed1 = checkCodeContainsNoRegex("formula variant for miles using milesPerGallon and numGallons", target1);
-                    boolean passed2 = checkCodeContains("formula variant for miles using milesPerGallon and numGallons", target2);
-                    assertTrue(passed1 || passed2);
+                    String target1 = removeSpaces("double miles = numGallons * milesPerGallon;");
+                    String target2 = removeSpaces("double miles = milesPerGallon * numGallons;");
+                    String code = removeSpaces(getCode());
+
+                    boolean passed1 = code.contains(target1);
+                    boolean passed2 = code.contains(target2);
+
+                    boolean passed = passed1 || passed2;
+
+                    getResults("true", ""+passed, "formula for miles using milesPerGallon and numGallons", passed);
+                    assertTrue(passed);
                   }  
                 }
 
@@ -1034,11 +1032,15 @@ Unit 1 Coding Practice
                 @Test
                   public void testFormulaMiles() throws IOException
                   {
-                    String target1 = "int secondsInThreeDays = secondsInDay * 3;";
-                    String target2 = "int secondsInThreeDays = 3 * secondsInDay;";
-                    boolean passed1 = checkCodeContainsNoRegex("formula variant for secondsInThreeDays using secondsInDay", target1);
-                    boolean passed2 = checkCodeContainsNoRegex("formula variant for secondsInThreeDays using secondsInDay", target2);
-                    assertTrue(passed1 || passed2);
+                    String target1 = removeSpaces("int secondsInThreeDays = secondsInDay * 3;");
+                    String target2 = removeSpaces("int secondsInThreeDays = 3 * secondsInDay;");
+                    String code = removeSpaces(getCode());
+                    boolean passed1 = code.contains(target1);
+                    boolean passed2 = code.contains(target2);
+
+                    boolean passed = passed1 || passed2;
+                    getResults("true", "" + passed, "formula variant for secondsInThreeDays using secondsInDay", passed);
+                    assertTrue(passed);
                   } 
                 } 
 
@@ -1113,7 +1115,7 @@ Unit 1 Coding Practice
                   @Test
                   public void testFormulaWings() throws IOException
                   {
-                    String target = "int numWings = (int)(money / pricePerWing);";
+                    String target = "int numWings = (int)(money / pricePerWing);"
                     boolean passed = checkCodeContains("formula for numWings using money and pricePerWing, and type casting", target);
                     assertTrue(passed);
                   }  
@@ -1137,8 +1139,8 @@ Unit 1 Coding Practice
                   {
                       double money = 4.5;
                       double pricePerWing = 0.75;
-                      int num = (int) (money / pricePerWing);
-                      System.out.println(num);
+                      int numWings = (int) (money / pricePerWing);
+                      System.out.println(numWings);
                   }
               }
               

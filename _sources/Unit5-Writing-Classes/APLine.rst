@@ -35,23 +35,27 @@ Try and Solve It
 
 Write the `APLine` class. Your implementation must include a constructor that has three integer parameters that represent ``a``, ``b``, and ``c``, in that order.
 You may assume that the values of the parameters representing ``a`` and ``b`` are not zero.
-It must also include a method ``getSlope`` that calculates and returns the slope of the line, and a method ``isOnLine`` that returns ``true`` if the point represented by its two parameters (``x`` and ``y``, in that order) is on the ``APLine`` and returns ``false`` otherwise.
-Your class must produce the indicated results when the main method below is run.
-You may ignore any issues related to integer overflow.
+
+It must also include a method ``getSlope()`` that calculates and returns the slope of the line (using the equation ``-a / b``) and a method ``isOnLine(x,y)`` that returns ``true`` if the point represented by its two parameters (``x`` and ``y``, in that order) is on the ``APLine`` and returns ``false`` otherwise, by testing  if
+``ax + by + c`` is equal to 0.
+
+Your class must produce the indicated results when the main method below is run. You may ignore any issues related to integer overflow.
 
 .. activecode:: APLineFRQ
    :language: java
    :autograde: unittest   
 
+   Write a class APLine with instance variables, a constructor with 3 paramaters for a, b, c, and the methods getSlope() and isOnLine(x,y).
+   ~~~
    // Declare the APLine class
    {
-    /** State variables. Any numeric type; object or primitive. */
+    /** Declare instance variables */
 
     /** Constructor with 3 int parameters. */
 
-    /** Determine the slope of this APLine. */
-
-    /** Determine if coordinates represent a point on this APLine. */
+    /** method getSlope(): Determine the slope of this APLine. */
+    
+    /** method isOnLine(x,y): Determine if coordinates (x,y) represent a point on this APLine. */
 
     /** Test with this main method */
     public static void main(String[] args) 
