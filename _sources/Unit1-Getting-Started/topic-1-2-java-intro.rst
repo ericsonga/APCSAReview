@@ -198,7 +198,7 @@ Computers don't actually speak Java so we have to **compile** (translate) Java s
    
 **Syntax errors** are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon ``;`` missing or if the code has a open curly brace ``{`` or open quote ``"``, but no close curly brace ``}`` or close quote ``"``. Informally, a syntax error is called a **bug**, and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/8/8a/H96566k.jpg
+.. figure:: Figures/firstbug.jpg
     :width: 300px
     :align: center
     :figclass: align-center
@@ -409,7 +409,7 @@ In Java and many text-based coding languages, // is used to mark the beginning o
     
 In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
 
-Working in pairs, debug the following code. Can you find the all the bugs and get the code to run? 
+Working in pairs, debug the following code. Can you find all the bugs and get the code to run? 
 
 
 .. activecode:: challenge1-2

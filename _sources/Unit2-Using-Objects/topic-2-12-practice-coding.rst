@@ -206,10 +206,9 @@ The coding problems below are mostly about Strings, but more problems on other t
                     }
                 }
 
-
         .. tab:: Answer
 
-          Line 5 ends with ``:`` when it should be ``;``.  Line 6 should be ``substring(0,3)``.  Line 7 should be ``part`` not ``message``.  Line 8 should be ``System.out.println``.
+           Line 5 ends with ``:`` when it should be ``;``.  Line 6 should be ``substring(0,3)``.  Line 7 should be ``part`` not ``message``.  Line 8 should be ``System.out.println``.
 
            .. activecode::  ch4Ex4a
               :language: java

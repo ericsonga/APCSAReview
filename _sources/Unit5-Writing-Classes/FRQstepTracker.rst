@@ -169,6 +169,7 @@ You will receive at least 1 point if you write the class header and a constructo
 
 .. activecode:: stepTrackerCode1
    :language: java
+   :autograde: unittest 
 
    Write the first draft of the class StepTracker below with the class name, the instance variables, and the constructor with a parameter for the minimum number of steps threshold for active days. Make sure it compiles.
    ~~~~
@@ -186,6 +187,43 @@ You will receive at least 1 point if you write the class header and a constructo
          StepTracker tr = new StepTracker(10000);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void test1(){
+        //check class name
+        boolean passed = checkCodeContains("correct class heading", "public class StepTracker");
+        assertTrue(passed);
+
+      }
+
+      @Test
+      public void test2(){
+         //constructor with 1 parameter for threshold minSteps
+         String args = "int";
+         String results = checkConstructor(args);
+
+         boolean passed = getResults("pass", results, "Checking constructor with one int argument");
+         assertTrue(passed);
+
+      }
+
+      @Test
+      public void test3(){
+            //check int - declaration of instance variables and parameter in constructor
+            String actual = testPrivateInstanceVariables();
+            String expected = "4 Private";
+
+            boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
+            assertTrue(passed);
+
+      }
+    }
+
    
 Here is the rubric for the instance variables and the constructor for this problem. Did you receive all 3 points? In class, your teacher may have you grade each others' code.
 
@@ -239,6 +277,7 @@ Remember that accessor methods usually look like the following:
 
 .. activecode:: stepTrackerCode2
    :language: java
+   :autograde: unittest
 
    Copy the code from your first draft of the class StepTracker above  with the instance variables and constructor. Write the accessor methods **activeDays** which returns the number of active days.
    ~~~~
@@ -258,6 +297,39 @@ Remember that accessor methods usually look like the following:
          System.out.println(tr.activeDays()); // returns 0. No data have been recorded yet.
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+       @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "0\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains1(){
+        //check accessor method activeDays()
+        boolean passed = checkCodeContains("activeDays() method", "public int activeDays()");
+        assertTrue(passed);
+
+      }
+
+      @Test
+      public void checkCodeContains2(){
+         //check that activeDays() returns a value
+          boolean passed = checkCodeContains("return");
+        assertTrue(passed);
+
+      }
+    }
+    
    
 Here is the rubric for the accessor method activeDays() for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others' code.
 
@@ -348,6 +420,7 @@ Consider each of your instance variables and whether this method should change t
    
 .. activecode:: stepTrackerCode3
    :language: java
+   :autograde: unittest
 
    Copy the code from your draft of the class StepTracker above  with the class name, the instance variables, constructor, and accessory method. Write the mutator method **addDailySteps** which takes a parameter and adds it to the appropriate instance variable and changes other instance variables appropriately.
    ~~~~
@@ -376,6 +449,40 @@ Consider each of your instance variables and whether this method should change t
          System.out.println(tr.activeDays());  // returns 1. Of the three days for which step data were entered, one day had at least 10,000 steps.
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+     @Test
+     public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "0\n0\n1\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains1()
+      {
+        //check mutator method addDailySteps()
+        boolean passed = checkCodeContains("addDailySteps method with parameter", "public void addDailySteps(int");
+        assertTrue(passed);
+
+      }
+
+     @Test
+      public void checkCodeContains2()
+      {
+        //check mutator method addDailySteps() contains "if"
+        boolean passed = checkCodeContains("if statement","if (");
+        assertTrue(passed);
+      }
+    }
+
 
 Here is the rubric for the mutator method for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive all the points? In class, your teacher may have you grade each others' code.
 
@@ -422,6 +529,7 @@ The complex accessor method **averageSteps()** must calculate the average number
    
 .. activecode:: stepTrackerCode4
    :language: java
+   :autograde: unittest
 
    Copy the code from your draft of the class StepTracker above  with the instance variables, constructor, accessor and mutator methods. Write the accessor method **averageSteps** which returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked.
    ~~~~
@@ -463,6 +571,31 @@ The complex accessor method **averageSteps()** must calculate the average number
          System.out.println(tr.averageSteps()); // returns 10222.2. The average number of steps per day is (51111 / 5).
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+     @Test
+     public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "0\n0.0\n0\n7000.0\n1\n9000.0\n2\n10222.2\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+
+      @Test
+      public void checkCodeContains1()
+      {
+        //check mutator method averageSteps()
+        boolean passed = checkCodeContains("averageSteps() method","public double averageSteps()");
+        assertTrue(passed);
+
+      }
+      }
    
 Here is the rubric for the averageSteps method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others' code.
 

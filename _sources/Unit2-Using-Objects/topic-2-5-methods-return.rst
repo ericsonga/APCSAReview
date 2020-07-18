@@ -162,6 +162,31 @@ Here are some examples of using get methods for the turtle object yertle.
             boolean passed = getResults(expected, actual, "Prints correct answer");
             assertTrue(passed);
         }
+         @Test
+        public void test2() {
+            String code = getCode();
+            String target = ".getHeight()";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 1;
+
+            getResults("1+", "" + num, "Calls to " + target, passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3() {
+            String code = getCode();
+            String target = ".getWidth()";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 1;
+
+            getResults("1+", "" + num, "Calls to " + target, passed);
+            assertTrue(passed);
+        }
     }
 
 toString() Methods

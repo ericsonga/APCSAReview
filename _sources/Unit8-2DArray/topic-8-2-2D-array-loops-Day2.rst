@@ -228,6 +228,7 @@ Now, write a similar method called zeroBlue() that sets the blue values at all p
 .. datafile:: arch.jpg
    :image:
    :fromfile: ../../_static/arch.jpg
+   :hide: 
 
 
 .. activecode:: challenge-8-2-picture

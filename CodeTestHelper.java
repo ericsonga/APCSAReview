@@ -21,14 +21,14 @@ import org.junit.Test;
  * do not exist.
  *
  * @author  Kate McDonnell
- * @version 0.2.9
- * @since 2020-07-10
+ * @version 0.3.4
+ * @since 2020-07-13
  * 
  * 
  */
 public class CodeTestHelper
 {
-    public static boolean replit = true;
+    public static boolean replit = false;
 
     private static String results = "";
     private static String mainOutput = "";
@@ -86,6 +86,18 @@ public class CodeTestHelper
             }
         }
             
+    }
+
+    public void changeClass(String name) {
+        try {
+            this.className = name;
+            this.c = Class.forName(this.className);
+
+            //mainOutput = getMethodOutput("main");
+
+        } catch (Exception e1) {
+            System.out.println("Class not found");
+        }
     }
 
 
@@ -146,16 +158,20 @@ public class CodeTestHelper
         
     public boolean getResults(boolean useRegex, boolean contain, String expected, String actual, String msg)
     {
+        while (actual.contains("&ltimg") || actual.contains("<img")){
+            int start = actual.contains("&ltimg") ? actual.indexOf("&ltimg") : actual.indexOf("<img");
+            int end = actual.contains("&gt") ? actual.indexOf("&gt", start) : actual.indexOf(">", start);
+
+            actual = actual.substring(0, start) + actual.substring(end+1);
+            actual = actual.trim();
+
+            //System.out.println(actual);
+        }
+
         expected = expected.trim();
         actual = actual.trim();
         
         boolean passed = false;
-        
-        if (useRegex)
-            passed = isMatch(actual, expected);
-
-        if (!passed && contain)
-            passed = containsMatch(actual, expected);
 
         if (!passed && !contain) {
             String clnExp = cleanString(expected);
@@ -164,11 +180,20 @@ public class CodeTestHelper
             passed = clnExp.equals(clnAct);
         }
 
+        if (!passed && !expected.equals(""))
+            contain = true;
+        
+        if (!passed && (useRegex || isRegex(expected)))
+            passed = isMatch(actual, expected);
+
+        if (!passed && contain && (useRegex || isRegex(expected)))
+            passed = containsMatch(actual, expected);
+
         if (!passed && contain) {
             String clnExp = cleanString(expected);
             String clnAct = cleanString(actual);
 
-            passed = clnExp.contains(clnAct);
+            passed = clnAct.contains(clnExp);
         }
 
         String output = formatOutput(expected, actual, msg, passed);
@@ -676,6 +701,37 @@ public class CodeTestHelper
         return errorMessage;
     }
 
+    public String checkConstructor(String argList) {
+        errorMessage = "";
+
+        int numArgs = countOccurences(argList, ",") + 1;
+        argList = argList.replaceAll(" ","");
+
+        try {
+            Constructor[] ctors = c.getDeclaredConstructors();
+
+            Constructor ctor = null;
+            for (int i = 0; i < ctors.length; i++) {
+                ctor = ctors[i];
+                String header = ctor.toString();
+                //System.out.println(ctor.toGenericString());
+
+                if (ctor.getGenericParameterTypes().length == numArgs && header.contains(argList)) {
+                    
+                    return "pass";
+                }
+                    return "pass";
+            }
+            
+            return "fail";
+
+        } catch (Exception e) {
+            errorMessage = "fail"; //"Default Constructor does not exist";
+        }
+
+        return errorMessage;
+    }
+
     // https://stackoverflow.com/questions/14524751/cast-object-to-generic-type-for-returning
     private <T> T convertInstanceOfObject(Object o, Class<T> clazz) {
         try {
@@ -882,14 +938,17 @@ public class CodeTestHelper
             return output.trim();
         }
         catch(Exception e) {
-            if (errorMessage.equals(""))
+            if (errorMessage.equals("")) {
                 errorMessage = stackToString(e);
-                //errorMessage += "\nMethod " + m.getName() + " could not be invoked";
+                //errorMessage += "\nMethod " + m.getName() + " could not be invoked (3)";
+                
+            }
         }
 
-        if (errorMessage.equals(""))
+        if (errorMessage.equals("")) {
             //errorMessage = stackToString(e);
             errorMessage = "Method " + m.getName() + " with parameters " + Arrays.toString(arguments) + " does not exist";
+        }
 
         cleanUpStreams();
         return errorMessage;
@@ -903,38 +962,73 @@ public class CodeTestHelper
         e.printStackTrace(new PrintWriter(sw));
 
         String trace = sw.toString();
+
+        String returnString = "";
+        
         String location = "", except = "";
 
-        int expStart = trace.indexOf("Caused by: ");
-        int expLen = "Caused by: ".length();
+        String causedBy = "Caused by: ";
+        int expLen = causedBy.length();
+        int expStart = trace.indexOf(causedBy);
+
+        returnString += "Start: " + expStart + "\n";
 
         if (expStart > -1) {
             except = trace.substring(expStart + expLen);
-            trace = trace.substring(0, expStart-1);
+            //trace = trace.substring(0, expStart-1);
 
-            int expEnd = except.indexOf("\n");
+            int expEnd = except.indexOf(className + ".java");
+            expEnd = except.indexOf("\n", expEnd);
+
             if (expEnd > -1)
                 except = except.substring(0, expEnd);
+        } else {
+            return "Exception in method";
         }
 
-        int locStart = trace.lastIndexOf("\n");
-        int locLen = "Caused by: ".length();
+        return except;
+        
+    }
 
-        if (locStart > -1) {
-            int locEnd = trace.lastIndexOf("\n");
-            location = trace.substring(locStart + 1);
+    /** Seeing what this does
+     */
+    public static String getStackTraceString(Throwable e) {
+        return getStackTraceString(e, "");
+    }
+
+    private static String getStackTraceString(Throwable e, String indent) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(e.toString());
+        sb.append("\n");
+
+        StackTraceElement[] stack = e.getStackTrace();
+        if (stack != null) {
+            for (StackTraceElement stackTraceElement : stack) {
+                sb.append(indent);
+                sb.append("\tat ");
+                sb.append(stackTraceElement.toString());
+                sb.append("\n");
+            }
         }
 
-        //Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+        Throwable[] suppressedExceptions = e.getSuppressed();
+        // Print suppressed exceptions indented one level deeper.
+        if (suppressedExceptions != null) {
+            for (Throwable throwable : suppressedExceptions) {
+                sb.append(indent);
+                sb.append("\tSuppressed: ");
+                sb.append(getStackTraceString(throwable, indent + "\t"));
+            }
+        }
 
-        String exp = except.substring(0, except.indexOf(":"));
-        String desc = except.substring(except.indexOf(":") + 2);
+        Throwable cause = e.getCause();
+        if (cause != null) {
+            sb.append(indent);
+            sb.append("Caused by: ");
+            sb.append(getStackTraceString(cause, indent));
+        }
 
-        String thread = location.substring(location.indexOf(".")+1, location.indexOf("("));
-
-        String rslt = "Exception in thread \"" + thread + "\" " + exp + ": " + desc;
-
-        return rslt + "\n" + location;
+        return sb.toString();
     }
 
     private String getStaticMethodReturn(Method m, Object[] args)// throws IOException
@@ -1101,7 +1195,10 @@ public class CodeTestHelper
                     {
                         String clssName = children[i].substring(0,children[i].length() - ".java".length());
                         Class<?> c = Class.forName(clssName);
-                        if(c != null && (replit && !clssName.equals("Main")) && !clssName.equals("TestRunner")) {
+                        if(c != null && !clssName.equals("TestRunner") && !(replit && clssName.equals("Main"))) {
+                            /*if (replit && clssName.equals("Main"))
+                                continue;
+                              */  
                             Method[] meths = c.getDeclaredMethods();
                             for(Method m: meths) {
                               int mods = m.getModifiers();
@@ -1159,7 +1256,7 @@ public class CodeTestHelper
 
             hasCode = code.contains(target2);
 
-            if(!hasCode && useRegex)// && isRegex(target2))
+            if(!hasCode && (useRegex || isRegex(target2)))
             {
                 String anyText = "[\\s\\S]*";
                 target2 = createSimpleRegex(target2);
@@ -1269,13 +1366,13 @@ public class CodeTestHelper
             else if (ch == '$')
                 b.append("[A-Za-z]+");
             else if (ch == '#')
-                b.append("\\d+");
+                b.append("[0-9A-Za-z*-+/ \\(\\)]+");
                 else if (ch == '?')
                 b.append("[<>=!?]+");
             else if (ch == '~')
                 b.append("[+-=]+[0-9]*");
             else if (ch == '*')
-                b.append("[A-Za-z0-9 <>=!+\\-*]+");
+                b.append("[A-Za-z0-9 <>=!+/\\-*\\(\\)]+");
             else if ("\\.^$|?*+[]{}()".indexOf(ch) != -1)
                 b.append('\\').append(ch);
             else
@@ -1316,7 +1413,7 @@ public class CodeTestHelper
 
             boolean changed = !currCode.equals(origCode);
             boolean passed = changed == expected;
-            msg = "Code has been changed";
+            msg = "Checking that code has been changed";
 
             output = formatOutput(""+expected, ""+changed, msg, passed);
             results += output + "\n";
@@ -1395,6 +1492,14 @@ public class CodeTestHelper
 
 /* Random helper methods so they don't have to be rewritten lots of times
 */
+    public String removeSpaces(String orig) {
+        return orig.replaceAll("\\s+", "");
+    }
+
+    public String removeNewLines(String orig) {
+        return orig.replaceAll("\n", "").replaceAll("\r", "");
+    }
+
     public int countOccurences(String orig, String target) {
         orig = orig.replaceAll("\\s+", "");
         target = target.replaceAll("\\s+","");

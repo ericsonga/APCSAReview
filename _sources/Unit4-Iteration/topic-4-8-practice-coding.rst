@@ -16,7 +16,7 @@ Coding Practice with Loops
    
               Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 1 (inclusive).  
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -64,7 +64,7 @@ Coding Practice with Loops
    
               Answer: In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -91,7 +91,7 @@ Coding Practice with Loops
    
               Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 1 to 10 (inclusive).
               ~~~~
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {

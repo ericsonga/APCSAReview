@@ -79,6 +79,7 @@ Try the Student class below which this time has set methods added. You will need
 
 .. activecode:: StudentObjExample2
   :language: java
+  :autograde: unittest
 
   Fix the main method to include a call to the appropriate set method.
   ~~~~
@@ -138,6 +139,37 @@ Try the Student class below which this time has set methods added. You will need
         return id + ": " + name + ", " + email;
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("TesterClass");
+        }
+
+        @Test
+        public void test1()
+        {
+            String target = "s1.setEmail(\"skyler2@gmail.com\");";
+            boolean passed = checkCodeContains("call to setEmail()", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "123456: Skyler, skyler@sky.com\n123456: Skyler 2, skyler2@gmail.com";
+
+            boolean passed = getResults(expect, output, "Checking main()", true);
+            assertTrue(passed);
+        }
+    }
   
 |Exercise| **Check your understanding**
 
@@ -213,6 +245,7 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 
 .. activecode:: challenge-5-5-Pet-Class
   :language: java
+  :autograde: unittest
   
   Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with 2 constructors, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
   ~~~~
@@ -237,6 +270,120 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
         
      }   
    }  
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("TesterClass");
+        }
+
+        @Test
+        public void testConstructors()
+        {
+           changeClass("Pet");
+            int count = 0;
+
+            for (int i = 0; i < 6; i++) {
+                if (checkConstructor(i).equals("pass"))
+                    count++;
+            }
+
+            boolean passed = count >= 2;
+
+            getResults("2+", ""+count, "Checking for 2 constructors", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariables()
+        {
+            changeClass("Pet");
+            String expect = "5 Private";
+            String output = testPrivateInstanceVariables();
+
+            boolean passed = getResults(expect, output, "Checking Private Instance Variables");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            String target = "public * get*()";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num >= 6;
+
+            getResults("6", ""+num, "Checking accessor (get) methods for each variable", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String target = "public void set*(*)";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num >= 6;
+
+            getResults("6", ""+num, "Checking mutator (set) methods for each variable", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String target = "public String toString()";
+            boolean passed = checkCodeContains("toString() method", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            String target = "Pet * = new Pet(";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num >= 3;
+
+            getResults("3", ""+num, "Checking main method creates three Pet objects", passed);
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+
+            String expect = "3+ line(s) of text";
+            String actual = " line(s) of text";
+
+            int len = output.split("\n").length;
+
+            if (output.length() > 0) {
+                actual = len + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = len >= 3;
+
+            getResults(expect, actual, "Checking main method prints info for 3 Pet objects", passed);
+            assertTrue(passed);
+        }
+    }
+
 
 Summary
 --------

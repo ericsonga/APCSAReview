@@ -106,6 +106,8 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
 .. activecode:: lcfrhba1
    :language: java
    
+   FRQ HorseBarn A: Write the method findHorseSpace.
+   ~~~~
    class Horse
    {
       private String name;
@@ -185,6 +187,7 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
                            barn.findHorseSpace("Coco"));
       }
    }
+   
 
     
 Video - One way to code the solution

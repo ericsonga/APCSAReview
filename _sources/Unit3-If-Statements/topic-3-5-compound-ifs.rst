@@ -78,7 +78,7 @@ What if you want two things to be true before the body of the conditional is exe
     {
         @Test
         public void testChangedCode() {
-            String origCode = "public class Test1 { public static void main(String[] args){ boolean cleanedRoom = true; boolean didHomework = false;if (cleanedRoom && didHomework){System.out.println(\"You can go out\");} else { System.out.println(\"No, you can't go out\");}}}";
+            String origCode = "public class Test1 { public static void main(String[] args){ boolean cleanedRoom = true; boolean didHomework = false; if (cleanedRoom && didHomework){ System.out.println(\"You can go out\");} else { System.out.println(\"No, you can't go out\");}}}";
 
             boolean changed = codeChanged(origCode);
             assertTrue(changed);
@@ -129,7 +129,7 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
     {
         @Test
         public void testChangedCode() {
-            String origCode = "public class Test2 {public static void main(String[] args){boolean walking = false;boolean carIsAvailable = false;if (walking || carIsAvailable){System.out.println(\"You can go out\");}else{System.out.println(\"No, you can't go out\"); }}}";
+            String origCode = "public class Test2 { public static void main(String[] args){ boolean walking = false; boolean carIsAvailable = false; if (walking || carIsAvailable) { System.out.println(\"You can go out\"); } else{System.out.println(\"No, you can't go out\"); }}}";
 
             boolean changed = codeChanged(origCode);
             assertTrue(changed);
@@ -185,7 +185,7 @@ With numerical values, the or-operator is often used to check for error conditio
     {
          @Test
         public void testChangedCode() {
-            String origCode = "public class TestNum{public static void main(String[] args){int score = 10; // Try -10 and 110 if (score < 0 || score > 100){ System.out.println(\"Score has an illegal value.\");}if (score >= 0 && score <= 100){ System.out.println(\"Score is in the range 0-100\");}}}";
+            String origCode = "public class TestNum{public static void main(String[] args){int score = 10;  if (score < 0 || score > 100){ System.out.println(\"Score has an illegal value.\");}if (score >= 0 && score <= 100){ System.out.println(\"Score is in the range 0-100\");}}}";
 
             boolean changed = codeChanged(origCode);
             assertTrue(changed);

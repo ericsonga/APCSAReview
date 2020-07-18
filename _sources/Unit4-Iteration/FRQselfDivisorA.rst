@@ -53,7 +53,7 @@ To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 
    :language: java
    :autograde: unittest  
 
-   public class Test
+   public class TestMod
    {
       public static void main(String[] args)
       {
@@ -87,7 +87,7 @@ To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remain
    :language: java
    :autograde: unittest  
 
-   public class Test
+   public class TestSelfDivisor
    {
       public static void main(String[] args)
       {
@@ -123,7 +123,7 @@ How can we loop through all the digits in a number?  We can use x % 10 to get th
    :language: java
    :autograde: unittest  
 
-   public class Test
+   public class TestDigits
    {
       public static void main(String[] args)
       {
@@ -184,6 +184,8 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
    :language: java
    :autograde: unittest  
 
+   FRQ SelfDivisor: Write the method isSelfDivisor.
+   ~~~~
    public class SelfDivisor
    {
 

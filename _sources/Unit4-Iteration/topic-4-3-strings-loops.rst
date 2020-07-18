@@ -295,7 +295,7 @@ Here is a for-loop that creates a new string that reverses the string s.  We sta
         @Test
         public void testMain() throws IOException
         {
-            String origCode = "public class ReverseString {    public static void main(String[] args)    {      String s = \"Hello\";      String sReversed = \"\";      String ithLetter;       for(int i=0; i < s.length(); i++) {          ithLetter = s.substring(i,i+1);          // add the letter at index i to what's already reversed.          sReversed = ithLetter + sReversed;      }      System.out.println(s + \" reversed is \" + sReversed);    }  }";
+            String origCode = "public class ReverseString\n{\n   public static void main(String[] args)\n   {\n     String s = \"Hello\";\n     String sReversed = \"\";\n     String ithLetter;\n\n     for(int i=0; i < s.length(); i++) {\n         ithLetter = s.substring(i,i+1);\n         // add the letter at index i to what's already reversed.\n         sReversed = ithLetter + sReversed;\n     }\n     System.out.println(s + \" reversed is \" + sReversed);\n   }\n }\n\n";
 
             boolean passed = codeChanged(origCode);
             assertTrue(passed);

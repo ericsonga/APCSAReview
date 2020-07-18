@@ -499,9 +499,7 @@ For this project, you will need to use the |Scanner class| for input and |repl.i
     }
 
   
-.. shortanswer:: challenge4-1-loop-GuessingGame
 
-    (Old short answer - obsolete) After you complete your code on repl, paste in a link to it (click on share) here.
    
    
 Summary

@@ -574,6 +574,7 @@ You can even start in the middle and loop through the rest of the array.
 
 .. activecode:: lclp2
    :language: java
+   :autograde: unittest  
    
    Does this work for arrays that have an even number of elements?  Does it work for arrays that have an odd number of elements?  Modify the main code below to test with both arrays with an even number of items and an odd number.
    ~~~~
@@ -610,6 +611,38 @@ You can even start in the middle and loop through the rest of the array.
         worker.printArray();
       }
    }
+   ====
+   // Test for Lesson 6.2.4 - ArrayWorker
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayWorker");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "3\n8\n-6\n4".replaceAll(" ", "\n");
+
+            boolean passed = getResults(expect, output, "Testing main()", true);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String orig = "public class ArrayWorker\n{\n   private int[ ] values;\n\n   public ArrayWorker(int[] theValues)\n   {\n      values = theValues;\n   }\n\n   public void doubleLastHalf()\n   {\n     for (int i = values.length / 2; i < values.length; i++)\n     {\n       values[i] = values[i] * 2;\n     }\n   }\n\n   public void printArray()\n   {\n      for (int i = 0; i < values.length; i++)\n      {\n        System.out.println(  values[i] );\n      }\n   }\n\n   public static void main(String[] args)\n   {\n     int[] numArray = {3,8,-3, 2};\n     ArrayWorker worker = new ArrayWorker(numArray);\n     worker.doubleLastHalf();\n     worker.printArray();\n   }\n}\n";
+
+            boolean passed = codeChanged(orig);
+            assertTrue(passed);
+        }
+    }
    
 |Exercise| **Check Your Understanding**
 
@@ -765,7 +798,9 @@ When processing all array elements, be careful to start at the first index which
 
 .. activecode:: offbyone
    :language: java
-   
+   :autograde: unittest  
+   :practice: T
+
    The following code has an ArrayIndexOutOfBoundsException. It has 2 common off-by-one errors in the loop. Can you fix it and make the loop print out all the scores?
    ~~~~
    public class OffByone
@@ -780,6 +815,45 @@ When processing all array elements, be careful to start at the first index which
           }          
       }
     }
+    ====
+    // Test for Lesson 6.2 OffByOne
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("OffByone");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "9\n8\n7".replaceAll(" ", "\n");
+
+            boolean passed = output.contains(expect);
+            getResults(expect, output, "Testing right off-by-one error", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String expect = "10\n9\n8".replaceAll(" ", "\n");
+
+            boolean passed = output.contains(expect);
+            getResults(expect, output, "Testing left off-by-one error", passed);
+            assertTrue(passed);
+        }
+        @Test
+        public void checkCodeContains1(){
+            boolean passed = checkCodeContains("fixes to for loop", "for (int i = 0; i <");
+            assertTrue(passed);
+        }
+    }
 
 
 
@@ -792,6 +866,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
 
 .. activecode:: lcap1
    :language: java
+   :autograde: unittest  
    
    What is wrong with the code below?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)? 
    ~~~~
@@ -824,7 +899,51 @@ Be careful not to jump out of loop too early when you are looking for a value in
         System.out.println(sWorker.findString("Hey"));
       }
    }
+   ====
+   // Test for Lesson 6.2.4 - ArrayWorker
 
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("StringWorker");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "1".replaceAll(" ", "\n");
+
+            boolean passed = getResults(expect, output, "Testing main()", true);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            StringWorker sWorker = new StringWorker();
+            String output = ""+sWorker.findString("Good morning!");
+            String expect = "2";
+
+            boolean passed = getResults(expect, output, "Testing findString(\"Good morning!\")");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            StringWorker sWorker = new StringWorker();
+            String output = ""+sWorker.findString("Hello!");
+            String expect = "-1";
+
+            boolean passed = getResults(expect, output, "Testing findString(\"Hello!\")");
+            assertTrue(passed);
+        }
+    }
 
       
 .. mchoice:: qab_5

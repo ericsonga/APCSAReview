@@ -678,7 +678,7 @@ Exercises
    :answer_a: The private variables boxesOfFood and numOfPeople are not properly initialized.
    :answer_b: The private variables boxesOfFood and numOfPeople should have been declared public.
    :answer_c: The public method getBoxesOfFood should have been declared private.
-   :answer_d: The variable updatedAmountOfFood in the eatFoodBoxes method is not declared in this method.
+   :answer_d: The variable updatedAmountOfFood in the eatFood method is not declared in this method.
    :answer_e: The variables boxesOfFood and numOfPeople in the updatedAmountOfFood method are local variables.
    :correct: d
    :feedback_a: The private variables boxesOfFood and numOfPeople are initialized by the constructor.

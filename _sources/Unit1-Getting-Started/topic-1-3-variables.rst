@@ -617,6 +617,28 @@ Summary
 - The memory associated with a variable of a primitive type holds an actual primitive value.
 - When a variable is declared final, its value cannot be changed once it is initialized.  
 
+AP Practice
+------------
+
+
+.. mchoice:: AP1-3-1
+   :practice: T
+   :answer_a: int GPA; int numStudents;
+   :answer_b: double GPA; int numStudents;
+   :answer_c: double GPA; double numStudents;
+   :answer_d: int GPA; boolean numStudents;
+   :answer_e: double GPA; boolean numStudents;
+   :correct: b
+   :feedback_a: The average grade in GPA could be a decimal number like 3.5. 
+   :feedback_b: Yes, the average grade could be a decimal number, and the number of students is an integer.
+   :feedback_c: The number of students is an integer number. Although it could be saved in a double, an int would be more appropriate.   
+   :feedback_d: The average grade in GPA could be a decimal number like 3.5. Booleans hold a true or false value, not numbers.
+   :feedback_e: Booleans hold a true or false value, not numbers.
+   
+   Which of the following pairs of declarations are the most appropriate to store a student’s average course grade in the variable GPA and the number of students in the variable numStudents?
+   
+
+   
 .. raw:: html
     
     <script src="../_static/custom-csawesome.js"></script>
