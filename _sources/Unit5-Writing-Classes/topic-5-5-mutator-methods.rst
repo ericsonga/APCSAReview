@@ -319,9 +319,9 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 
             int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 6;
+            boolean passed = num >= 5;
 
-            getResults("6", ""+num, "Checking accessor (get) methods for each variable", passed);
+            getResults("5", ""+num, "Checking accessor (get) methods for each variable", passed);
             assertTrue(passed);
         }
 
@@ -333,9 +333,9 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 
             int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 6;
+            boolean passed = num >= 5;
 
-            getResults("6", ""+num, "Checking mutator (set) methods for each variable", passed);
+            getResults("5", ""+num, "Checking mutator (set) methods for each variable", passed);
             assertTrue(passed);
         }
 

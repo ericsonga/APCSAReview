@@ -525,7 +525,7 @@ Explore the following problems with your group:
 
         @Test
         public void testCodeContains1(){
-          boolean ifStatement = checkCodeContains("conditional: if sunny", "if (sunny");
+          boolean ifStatement = checkCodeContains("conditional: if", "if");
           assertTrue(ifStatement);
         }
 

@@ -97,11 +97,13 @@ The Algorithm
 Solve Part A
 ------------
 
-Complete the method ``getTotalBoxes`` below.
 
 .. activecode:: FRQCookieOrderA
    :language: java
+   :autograde: unittest        
 
+   FRQ Cookie Order Part A: Complete the method ``getTotalBoxes`` below.
+   ~~~~
    import java.util.List;
    import java.util.ArrayList;
 
@@ -177,3 +179,46 @@ Complete the method ``getTotalBoxes`` below.
         System.out.println("Make some changes to your code, please.");
     }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("MasterOrder");
+        }
+
+        @Test
+        public void test0() {
+            String output = getMethodOutput("main");
+            String expected = "Looks like your code works well!";
+
+            boolean passed = getResults(expected, output, "main()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1()
+        {
+            MasterOrder order = new MasterOrder();
+            int total = order.getTotalBoxes();
+
+            boolean passed = getResults("0", ""+total, "Empty order");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            MasterOrder order = new MasterOrder();
+            order.addOrder(new CookieOrder("Raisin", 4));
+            order.addOrder(new CookieOrder("Oatmeal", 5));
+
+            int total = order.getTotalBoxes();
+
+            boolean passed = getResults("9", ""+total, "Test order of 4 boxes of Raisin and 5 Oatmeal");
+            assertTrue(passed);
+        }
+    }

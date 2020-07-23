@@ -112,8 +112,9 @@ You can step through the code above by clicking on the following `Example2 <http
 
 .. activecode:: arrayListRemoveInLoop
    :language: java
+   :autograde: unittest        
 
-   The following code is supposed to initialize the ArrayList arr to [0,1,2,3,4] and then remove every other element to get [1,3]. However, when you remove an element the size of the array changes and elements move up an index! See if you can figure out why you get the unexpected result.
+   The following code is supposed to initialize the ArrayList arr to [0,1,2,3,4] and then remove every other element to get [1,3]. However, when you remove an element the size of the array changes and elements move up an index! See if you can figure out why you get the unexpected result. Try the CodeLens button to trace through the code.
    ~~~~
    import java.util.*;
 
@@ -138,6 +139,22 @@ You can step through the code above by clicking on the following `Example2 <http
       System.out.println(arr);
     }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Removing element 0: 0\nRemoving element 2: 3\n[1, 2, 4]";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 
 .. note::
@@ -148,6 +165,7 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
 
 .. activecode:: parallelArrayLists
    :language: java
+   :autograde: unittest        
 
    Demonstration of parallel ArrayLists.
    ~~~~
@@ -172,6 +190,22 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
             }
             int numberOfGrades = test1Grades.size() * 2;
             System.out.println("Average over two tests: " + total/numberOfGrades);
+        }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Average over two tests: 85.0";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
         }
     }
 

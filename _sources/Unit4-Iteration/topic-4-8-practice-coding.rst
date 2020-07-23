@@ -342,14 +342,15 @@ Coding Practice with Loops
                     assertTrue(passed);
                   }
 
-                  @Test
+                    @Test
                     public void testWhileLoop() throws IOException
                     {
-                        String target1 = "x = x + 1;";
+                        String target1 = "x=x+1;";
                         String target2 = "x++;";
-                        boolean passed1 = checkCodeContains("changing the loop variable variation 1", target1);
-                        boolean passed2 = checkCodeContains("changing the loop variable variation 2", target2);
-                        assertTrue(passed1 || passed2);
+                        String code = removeSpaces(getCode());
+                        boolean passed = code.contains(target1) || code.contains(target2);
+                        getResults("true", ""+passed, "changing the loop variable");
+                        assertTrue(passed);
                     }
                 }
 

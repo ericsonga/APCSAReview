@@ -305,7 +305,7 @@ Unit 1 Coding Practice
                     public void testMain() throws IOException
                     {
                         String output = getMethodOutput("main");
-                        String expect = "Julian’s favorite color is green. His favorite food is pizza.";
+                        String expect = "Julian's favorite color is green. His favorite food is pizza.";
                         boolean passed = getResults(expect, output, "Expected output from main");
                         assertTrue(passed);
                     }
@@ -1039,7 +1039,7 @@ Unit 1 Coding Practice
                     boolean passed2 = code.contains(target2);
 
                     boolean passed = passed1 || passed2;
-                    getResults("true", "" + passed, "formula variant for secondsInThreeDays using secondsInDay", passed);
+                    getResults("true", "" + passed, "formula for secondsInThreeDays using secondsInDay", passed);
                     assertTrue(passed);
                   } 
                 } 
@@ -1115,7 +1115,7 @@ Unit 1 Coding Practice
                   @Test
                   public void testFormulaWings() throws IOException
                   {
-                    String target = "int numWings = (int)(money / pricePerWing);"
+                    String target = "int numWings = (int)(money / pricePerWing)";
                     boolean passed = checkCodeContains("formula for numWings using money and pricePerWing, and type casting", target);
                     assertTrue(passed);
                   }  

@@ -86,8 +86,9 @@ The code for ``selectionSort`` below is from the AP CS A course description.
 
 .. activecode:: selSort
   :language: java
+  :autograde: unittest        
 
-  Demonstration of selection sort.
+  Demonstration of selection sort. Click on the Code Lens button or the link below to step through the code.
   ~~~~
   import java.util.Arrays;
 
@@ -119,6 +120,22 @@ The code for ``selectionSort`` below is from the AP CS A course description.
         System.out.println(Arrays.toString(arr1));
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "[3, 86, -20, 14, 40]\n[-20, 3, 14, 40, 86]";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 To see this executing using the Java Visualizer click on the following `SelectionSort <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=+import+java.util.Arrays%3B%0A+%0A+public+class+SortTest%0A++%7B%0A+++++public+static+void+selectionSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)+%0A++++++++%7B%0A+++++++++++int+minIndex+%3D+j%3B%0A+++++++++++for+(int+k+%3D+j+%2B+1%3B+k+%3C+elements.length%3B+k%2B%2B)+%0A+++++++++++%7B%0A++++++++++++++if+(elements%5Bk%5D+%3C+elements%5BminIndex%5D)+%0A++++++++++++++%7B%0A+++++++++++++++++minIndex+%3D+k%3B+%0A++++++++++++++%7D%0A+++++++++++%7D%0A+++++++++++int+temp+%3D+elements%5Bj%5D%3B+%0A+++++++++++elements%5Bj%5D+%3D+elements%5BminIndex%5D%3B+%0A+++++++++++elements%5BminIndex%5D+%3D+temp%3B%0A+++++++++%7D%0A+++++%7D%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++selectionSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_
 
@@ -211,8 +228,9 @@ The code for ``insertionSort`` below is from the AP CS A course description.
 
 .. activecode:: insertionSort
   :language: java
+  :autograde: unittest        
 
-  Demonstration of insertion sort.
+  Demonstration of insertion sort. Click on the Code Lens button or the link below to step through the code.
   ~~~~
   import java.util.Arrays;
 
@@ -241,6 +259,22 @@ The code for ``insertionSort`` below is from the AP CS A course description.
         System.out.println(Arrays.toString(arr1));
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+   
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "[3, 86, -20, 14, 40]\n[-20, 3, 14, 40, 86]";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 To see this executing using the Java Visualizer click on the following `Insertion-Sort <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+insertionSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++for+(int+j+%3D+1%3B+j+%3C+elements.length%3B+j%2B%2B)+%0A++++++++%7B%0A+++++++++++int+temp+%3D+elements%5Bj%5D%3B%0A+++++++++++int+possibleIndex+%3D+j%3B%0A+++++++++++while+(possibleIndex+%3E+0+%26%26+temp+%3C+elements%5BpossibleIndex+-+1%5D)+%0A+++++++++++%7B%0A++++++++++++++elements%5BpossibleIndex%5D+%3D+elements%5BpossibleIndex+-+1%5D%3B%0A++++++++++++++possibleIndex--%3B+%0A+++++++++++%7D%0A+++++++++++elements%5BpossibleIndex%5D+%3D+temp%3B%0A++++++++%7D%0A++++%7D%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++insertionSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_
 

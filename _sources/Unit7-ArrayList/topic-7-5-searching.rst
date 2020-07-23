@@ -67,8 +67,9 @@ Sequential or linear search is the only method that can be used to find a value 
 
 .. activecode:: seqSearch
   :language: java
+  :autograde: unittest        
 
-  The code for ``sequentialSearch`` for arrays below is from a previous AP CS A course description.
+  The code for ``sequentialSearch`` for arrays below is from a previous AP CS A course description. Click on the Code Lens button or the link below to see this code running in the Java visualizer.
   ~~~~
   public class ArraySearcher
   {
@@ -99,8 +100,23 @@ Sequential or linear search is the only method that can be used to find a value 
        System.out.println(sequentialSearch(numArray,-23));
        System.out.println(sequentialSearch(numArray,99));
      }
-
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Tests of sequentialSearch\n0\n2\n4\n-1";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 To see this executing using the Java Visualizer click on the following link `SequentialSearch <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ArraySearcher%0A%7B%0A++%0A++/**+Finds+the+index+of+a+value+in+an+array+of+integers.%0A++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+%0A++++*+%40param+target+the+item+to+be+found+in+elements.+%0A++++*+%40return+an+index+of+target+in+elements+if+found%3B+-1+otherwise.+%0A++++*/%0A++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)+%0A++%7B+%0A++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)+%0A++++%7B+%0A++++++if+(elements%5Bj%5D+%3D%3D+target)+%0A++++++%7B+%0A++++++++return+j%3B+%0A++++++%7D+%0A++++%7D+%0A++++return+-1%3B+%0A++%7D%0A++%0A++public+static+void+main(String%5B%5D+args)%0A++%7B%0A++++int%5B%5D+numArray+%3D+%7B3,+-2,+9,+38,+-23%7D%3B%0A++++System.out.println(%22Tests+of+sequentialSearch%22)%3B%0A++++System.out.println(sequentialSearch(numArray,3))%3B%0A++++System.out.println(sequentialSearch(numArray,9))%3B%0A++++System.out.println(sequentialSearch(numArray,-23))%3B%0A++++System.out.println(sequentialSearch(numArray,99))%3B%0A++%7D%0A++%0A%7D&mode=display&curInstr=3>`_
 
@@ -108,8 +124,9 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
 
 .. activecode:: seqSearchList
     :language: java
+    :autograde: unittest        
 
-    Here is a linear search using ArrayLists. Notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays.
+    Here is a linear search using ArrayLists. Notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays. Click on the Code Lens button to step through this code in the visualizer.
     ~~~~
     import java.util.*;
 
@@ -147,7 +164,22 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
         System.out.println(sequentialSearch(numList,-23));
         System.out.println(sequentialSearch(numList,99));
       }
-
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Tests of sequentialSearch\n0\n2\n4\n-1";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
     }
 
 
@@ -183,8 +215,9 @@ Of course you can also look for a string in an array or list.  But, when you loo
 
 .. activecode:: seqSearchStr
   :language: java
+  :autograde: unittest        
 
-  Demonstration of a linear search for a String.
+  Demonstration of a linear search for a String. Click on the Code Lens button or the link below to step through this code.
   ~~~~
   public class SearchTest
   {
@@ -214,6 +247,22 @@ Of course you can also look for a string in an array or list.  But, when you loo
         System.out.println(index);
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+   
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "1\n-1";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 To see this executing using the Java Visualizer click on this `String-SeqSearch <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A%0A+++++public+static+int+sequentialSearch(String%5B%5D+elements,+String+target)%0A+++++%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++++%7B%0A+++++++++++if+(elements%5Bj%5D.equals(target))%0A+++++++++++%7B%0A++++++++++++++return+j%3B%0A+++++++++++%7D+%0A+++++++%7D%0A+++++++return+-1%3B%0A+++++%7D%0A+++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++String%5B%5D+arr1+%3D+%7B%22blue%22,+%22red%22,+%22purple%22,+%22green%22%7D%3B%0A++++++++%0A++++++++//+test+when+the+target+is+in+the+array%0A++++++++int+index+%3D+sequentialSearch(arr1,%22red%22)%3B%0A++++++++System.out.println(index)%3B%0A++++++++%0A++++++++//+test+when+the+target+is+not+in+the+array%0A++++++++index+%3D+sequentialSearch(arr1,%22pink%22)%3B%0A++++++++System.out.println(index)%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_
 
@@ -224,9 +273,9 @@ Binary Search
 	single: binary search
 	pair: search; binary
 
-A binary search can only be used if the data is sorted.
+Binary search can only be used if the data is sorted.
 
-It compares a target value to the value in the middle of a range of indices.  If the value isn't found it looks again in either the left or right half of the current range. Each time through the loop it eliminates half the values in the search area until either the value is found or there is no more data to look at.  Click on this `Binary Search Animation <http://cs.armstrong.edu/liang/animation/web/BinarySearch.html>`_ to see how it works.
+Binary search keeps dividing the sorted search space into half. It compares a target value to the value in the middle of a range of indices.  If the value isn't found it looks again in either the left or right half of the current range. Each time through the loop it eliminates half the values in the search area until either the value is found or there is no more data to look at.  Click on this `Binary Search Animation <http://cs.armstrong.edu/liang/animation/web/BinarySearch.html>`_ to see how it works.
 
 Binary search calculates the middle index as ``left + right / 2`` where left starts out at 0 and right starts out at the array length - 1 (the index of the last element).   Remember that integer division gives an integer result so 2.5 becomes 2.  It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one.  If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index.    It also stops when left is greater than right which indicates that the value wasn't found and it returns -1.
 
@@ -234,8 +283,9 @@ The code for ``binarySearch`` below is from the AP CS A course description. A re
 
 .. activecode:: binSearch
   :language: java
+  :autograde: unittest        
 
-  Demonstration of iterative binary search.
+  Demonstration of iterative binary search. Click on the Code Lens button or the link below to step through this code.
   ~~~~
   public class SearchTest
   {
@@ -281,7 +331,23 @@ The code for ``binarySearch`` below is from the AP CS A course description. A re
         System.out.println(index);
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "2\n0\n4\n-1";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
+    
 To see this executing using the Java Visualizer click on the following link: `BinarySearch Ex <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0>`_
 
 You can also use binary search with a string array.  But, when you look for a string be sure to use ``compareTo()`` method rather than ``<`` or ``>`` which can only be used with primitive types.  Remember how the String method compareTo() works:
@@ -290,8 +356,9 @@ You can also use binary search with a string array.  But, when you look for a st
 
 .. activecode:: binSearchStrings
   :language: java
+  :autograde: unittest        
   
-  Demonstration of binary search with strings using compareTo.
+  Demonstration of binary search with strings using compareTo. Click on the Code Lens button to step through the code.
   ~~~~
   public class BinSearchStrings
   {
@@ -337,6 +404,22 @@ You can also use binary search with a string array.  But, when you look for a st
         System.out.println(index);
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "2\n0\n4\n-1";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
   
 Runtimes
 --------

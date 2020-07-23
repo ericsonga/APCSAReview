@@ -170,7 +170,7 @@ Write the method ``isBalanced`` in the code below. The ``main`` method contains 
        }
 
        /** Returns an ArrayList of delimiters from the array tokens, as described in part (a). */
-       public ArrayList<String> getDelimtersList(String[] tokens)
+       public ArrayList<String> getDelimitersList(String[] tokens)
        {
           ArrayList<String> delList = new ArrayList<String>();
 
@@ -189,29 +189,29 @@ Write the method ``isBalanced`` in the code below. The ``main`` method contains 
         */
        public boolean isBalanced(ArrayList<String> delimiters)
        {
-          /* to be implemented in part (b)
+          /* to be implemented in part (b) */
        }
 
        public static void main(String[] args)
        {
            Delimiters d1 = new Delimiters("<sup>", "</sup>");
            String[] tokens = {"<sup>", "<sup>", "</sup>", "<sup>", "</sup>", "</sup>"};
-           ArrayList<String> delList1 = d1.getDelimtersList(tokens);
+           ArrayList<String> delList1 = d1.getDelimitersList(tokens);
            boolean res1 = d1.isBalanced(delList1);
            System.out.println("It should print true and it prints " + res1);
 
            String[] tokens2 = {"<sup>", "</sup>", "</sup>", "<sup>"};
-           ArrayList<String> delList2 = d1.getDelimtersList(tokens2);
+           ArrayList<String> delList2 = d1.getDelimitersList(tokens2);
            boolean res2 = d1.isBalanced(delList2);
            System.out.println("It should print false and it prints " + res2);
 
            String[] tokens3 = {"</sup>"};
-           ArrayList<String> delList3 = d1.getDelimtersList(tokens3);
+           ArrayList<String> delList3 = d1.getDelimitersList(tokens3);
            boolean res3 = d1.isBalanced(delList2);
            System.out.println("It should print false and it prints " + res3);
 
            String[] tokens4 = {"<sup>", "</sup>", "</sup>"};
-           ArrayList<String> delList4 = d1.getDelimtersList(tokens4);
+           ArrayList<String> delList4 = d1.getDelimitersList(tokens4);
            boolean res4 = d1.isBalanced(delList2);
            System.out.println("It should print false and it prints " + res4);
        }

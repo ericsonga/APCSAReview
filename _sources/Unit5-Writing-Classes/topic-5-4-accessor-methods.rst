@@ -348,9 +348,9 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 
             int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 6;
+            boolean passed = num >= 5;
 
-            getResults("6", ""+num, "Checking accessor (get) methods for each variable", passed);
+            getResults("5", ""+num, "Checking accessor (get) methods for each variable", passed);
             assertTrue(passed);
         }
 

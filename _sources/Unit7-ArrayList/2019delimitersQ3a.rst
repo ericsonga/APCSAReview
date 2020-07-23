@@ -6,7 +6,7 @@ Free Response - Delimiters A
 ------------------------------
 
 ..	index::
-	  single: delimiters
+    single: delimiters
     single: free response
 
 The following is a free response question from 2019. It was question 3 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
@@ -237,11 +237,14 @@ A string containing text and possibly delimiters has been split into *tokens* an
 delimiter. You will write the method ``getDelimitersList``, which returns an ``ArrayList``
 containing all the open and close delimiters found in ``tokens`` in their original order.
 
-Write the method getDelimitersList in the code below. The main method contains code to test your solution.
+
 
 .. activecode:: frq2019Q3A-delim
    :language: java
+   :autograde: unittest        
 
+   Write the method getDelimitersList in the code below. The main method contains code to test your solution.
+   ~~~~
    import java.util.*;
    public class Delimiters
    {
@@ -261,7 +264,7 @@ Write the method getDelimitersList in the code below. The main method contains c
        }
 
        /** Returns an ArrayList of delimiters from the array tokens, as described in part (a). */
-       public ArrayList<String> getDelimtersList(String[] tokens)
+       public ArrayList<String> getDelimitersList(String[] tokens)
        {
            /* to be implemented in part a */
        }
@@ -270,14 +273,76 @@ Write the method getDelimitersList in the code below. The main method contains c
        {
            Delimiters d1 = new Delimiters("(", ")");
            String[] tokens = {"(", "x + y", ")", " * 5" };
-           ArrayList<String> res1 = d1.getDelimtersList(tokens);
+           ArrayList<String> res1 = d1.getDelimitersList(tokens);
            System.out.println("It should print [(, )] and it prints" + res1);
 
            Delimiters d2 = new Delimiters("<q>", "</q>");
            String[] tokens2 = {"<q>", "yy", "</q>", "zz", "</q>"};
-           ArrayList<String> res2 = d2.getDelimtersList(tokens2);
-           System.out.println("It should print [<q>, </q>, </q>] and it prints" + res2);
-
-
+           ArrayList<String> res2 = d2.getDelimitersList(tokens2);
+           System.out.println("It should print [<q>, </q>, </q>] and it prints " + res2);
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    import java.util.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+       @Test
+      public void testRunGetDelimitersList()
+      {
+          Delimiters d1 = new Delimiters("[", "]");
+          String[] tokens = {"[", "[", "x", "]", "]", "+ 5" };
+          ArrayList<String> res1 = d1.getDelimitersList(tokens);
+          String[] answer = {"[", "[", "]", "]" };
+          List<String> answerList = Arrays.asList(answer);
+          boolean passed = res1.equals(answerList);
+          getResults("true", passed+"","getDelimitersList(\"{[[x]]+5})", passed);
+          assertTrue(passed);
+      }
+
+     @Test
+     public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "It should print [(, )] and it prints[(, )]\nIt should print [<q>, </q>, </q>] and it prints [<q>, </q>, </q>]\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+
+
+      @Test
+      public void checkCodeContains1()
+      {
+        //check accessor method getDelimitersList()
+        boolean passed = checkCodeContains("correct getDelimitersList method header", "ArrayList<String> getDelimitersList(String[]");
+        assertTrue(passed);
+
+      }
+
+     @Test
+      public void checkCodeContains2()
+      {
+        //check accessor method getDelimitersList() creates a new ArrayList<String>
+        boolean passed = checkCodeContains("new ArrayList<String> declared in method","= new ArrayList<String>()");
+        assertTrue(passed);
+      }
+
+       @Test
+      public void checkCodeContains3()
+      {
+        //check accessor method getDelimtersList() checks for open delimiters in generating returned delimitaor ArrayList
+        boolean passed = checkCodeContains("checks for open delimiters",".equals(openDel)");
+        assertTrue(passed);
+      }
+
+       @Test
+      public void checkCodeContains4()
+      {
+        //check accessor method getDelimtersList() checks for close delimiters in generating returned delimitaor ArrayList
+        boolean passed = checkCodeContains("checks for closed delimiters",".equals(closeDel)");
+        assertTrue(passed);
+      }
+    }

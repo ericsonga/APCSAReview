@@ -648,20 +648,14 @@ In this challenge, you will create a guide to different countries using arrays.
             assertTrue(passed);
         }
 
-
         @Test
         public void testArrays() throws IOException {
             //System.out.println(program);
-            String program = getCode();
+            String code = getCode();
 
-            int arrays = 0;
-            int index = program.indexOf("String[]");
-            while (index >= 0) {
-                arrays++;
-                index = program.indexOf("String[]", index + 7);
-            }
+            int arrays = countOccurences(code, "String[]");
 
-            boolean passed = getResults("5 x String[]", arrays + " x String[]", "Did you declare 4 arrays?");
+            boolean passed = getResults("5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays?");
             assertTrue(passed);
         }
      }

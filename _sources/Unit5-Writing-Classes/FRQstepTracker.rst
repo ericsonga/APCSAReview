@@ -18,7 +18,7 @@
     :align: middle
     :alt: groupwork
 
-Free Response Question (FRQ) for Classes
+Free Response Question for Classes: FRQ StepTracker
 -----------------------------------------------------
 
 ..	index::

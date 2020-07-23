@@ -51,7 +51,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :autograde: unittest 
    :practice: T
    
-   Can you change the code to be a 10x8 rectangle? Try replacing line 10 with this print statement to see the rows and columns: ``System.out.print(row + \"-\" + col + " ");``  
+   Can you change the code to be a 10x8 rectangle? Try replacing line 10 with this print statement to see the rows and columns: ``System.out.print(row + "-" + col + " ");``  
    ~~~~
    public class NestedLoops
    {

@@ -102,6 +102,7 @@ How to Solve This
 
 The Algorithm
 -------------------
+
 .. parsonsprob:: CookieOrderB
    :numbered: left
    :adaptive:
@@ -134,11 +135,13 @@ The Algorithm
 
 Solve Part B
 ------------
-Complete the method ``removeVariety`` below.
 
 .. activecode:: FRQCookieOrderB
   :language: java
+  :autograde: unittest        
 
+  FRQ Cookie Order B: Complete the method ``removeVariety`` below.
+  ~~~~
   import java.util.List;
   import java.util.ArrayList;
 
@@ -221,3 +224,52 @@ Complete the method ``removeVariety`` below.
        System.out.println("Make some changes to your code, please.");
    }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("MasterOrder");
+        }
+
+        @Test
+        public void test0() {
+            String output = getMethodOutput("main");
+            String expected = "Looks like your code works well!";
+
+            boolean passed = getResults(expected, output, "main()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1()
+        {
+            MasterOrder order = new MasterOrder();
+            order.addOrder(new CookieOrder("Raisin", 3));
+            order.addOrder(new CookieOrder("Oatmeal", 8));
+            order.addOrder(new CookieOrder("Raisin", 4));
+            order.addOrder(new CookieOrder("Oatmeal", 8));
+
+            int total = order.removeVariety("Raisin");
+
+            boolean passed = getResults("7", ""+total, "Remove variety with 7 boxes");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            MasterOrder order = new MasterOrder();
+            order.addOrder(new CookieOrder("Raisin", 3));
+            order.addOrder(new CookieOrder("Oatmeal", 8));
+            order.addOrder(new CookieOrder("Raisin", 4));
+            order.addOrder(new CookieOrder("Oatmeal", 8));
+
+            int total = order.removeVariety("Chocolate Chip");
+
+            boolean passed = getResults("0", ""+total, "Remove order with 0 boxes");
+        }
+    }
