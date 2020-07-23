@@ -121,29 +121,39 @@ Also, circle what the return type of what you need to return. In this case, the 
 
 Next, plan your loop.
 
-.. mchoice:: callooptype
-   :practice: T
-   :answer_a: for loop
-   :answer_b: while loop
-   :correct: a
-   :feedback_a: Use a for loop when you know how many times a loop needs to execute.  
-   :feedback_b: Although you could use a while loop. It is  easier to use a for loop in this case. Use a while loop when you don't know how many times a loop needs to execute.
+.. reveal:: call_loop_type_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which loop should you use to count the number of leap years between year1 and year2?
+    .. mchoice:: callooptype
+        :practice: T
+        :answer_a: for loop
+        :answer_b: while loop
+        :correct: a
+        :feedback_a: Use a for loop when you know how many times a loop needs to execute.  
+        :feedback_b: Although you could use a while loop. It is  easier to use a for loop in this case. Use a while loop when you don't know how many times a loop needs to execute.
+
+        Which loop should you use to count the number of leap years between year1 and year2?
    
-.. mchoice:: calloop2
-   :practice: T
-   :answer_a: Loop from 0 to year1
-   :answer_b: Loop from 0 to year2
-   :answer_c: Loop from 2020 to 2030
-   :answer_d: Loop from year1 to year2
-   :correct: d
-   :feedback_a: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
-   :feedback_b: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
-   :feedback_c: You need to count the leap years between year1 and year2. The problem does not mention starting at year 2020.
-   :feedback_d: You need to count the leap years between year1 and year2. 
+.. reveal:: call_loop_type_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   What is the starting and ending values for the loop to count the leap years between year 1 and year 2?
+    .. mchoice:: calloop2
+        :practice: T
+        :answer_a: Loop from 0 to year1
+        :answer_b: Loop from 0 to year2
+        :answer_c: Loop from 2020 to 2030
+        :answer_d: Loop from year1 to year2
+        :correct: d
+        :feedback_a: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
+        :feedback_b: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
+        :feedback_c: You need to count the leap years between year1 and year2. The problem does not mention starting at year 2020.
+        :feedback_d: You need to count the leap years between year1 and year2. 
+
+        What is the starting and ending values for the loop to count the leap years between year 1 and year 2?
    
 It is usually easiest to use a **for loop** if you know how many times the loop should execute using the given information. Figure out what the initial and ending values of the loop variable should be. Some of the method parameters will usually be used for these. In this case, we need to loop from year1 to year2.  The preconditions stated for the method tells us that we don't have to worry about year1 and year2 being out of order or below 0. So don't waste time on error-checking these values. Here's a possible loop:
 
@@ -250,44 +260,59 @@ In part B of the AP Calendar FRQ, you need to write the code inside a static met
 
 If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples. 
 
-.. mchoice:: dow1
-   :answer_a: Wednesday (3)
-   :answer_b: Thursday (4)
-   :answer_c: Friday (5)
-   :answer_d: Saturday (6)
-   :correct: c
-   :feedback_a: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
-   :feedback_b: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
-   :feedback_c: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later on a Friday. 
-   :feedback_d: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+.. reveal:: dow_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019? 
+    .. mchoice:: dow1
+        :answer_a: Wednesday (3)
+        :answer_b: Thursday (4)
+        :answer_c: Friday (5)
+        :answer_d: Saturday (6)
+        :correct: c
+        :feedback_a: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+        :feedback_b: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later on a Friday. 
+        :feedback_d: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+
+        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019? 
    
-.. mchoice:: dow2
-   :answer_a: firstDayOfYear(2019) + dayOfYear(1,4,2019)   
-   :answer_b: firstDayOfYear(2019) + dayOfYear(1,4,2019) - 1
-   :answer_c: firstDayOfYear(2019) - dayOfYear(1,4,2019)
-   :answer_d: firstDayOfYear(2019) * dayOfYear(1,4,2019)
-   :correct: b
-   :feedback_a: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
-   :feedback_b: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
-   :feedback_c: You must start at the firstDayOfYear and add on the days following up until that date.
-   :feedback_d: You must start at the firstDayOfYear and add on the days following up until that date.
+.. reveal:: dow_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which of the following expressions return the right value for the day of the week (5) for Jan. 4th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,4,2019) returns 4?
-   
-.. mchoice:: dow3
-   :answer_a: 1
-   :answer_b: 2
-   :answer_c: 3
-   :answer_d: 9
-   :correct: b
-   :feedback_a: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
-   :feedback_b: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later so would fall on the same day of the week.
-   :feedback_c: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later. 
-   :feedback_d: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
+    .. mchoice:: dow2
+        :answer_a: firstDayOfYear(2019) + dayOfYear(1,4,2019)   
+        :answer_b: firstDayOfYear(2019) + dayOfYear(1,4,2019) - 1
+        :answer_c: firstDayOfYear(2019) - dayOfYear(1,4,2019)
+        :answer_d: firstDayOfYear(2019) * dayOfYear(1,4,2019)
+        :correct: b
+        :feedback_a: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
+        :feedback_b: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
+        :feedback_c: You must start at the firstDayOfYear and add on the days following up until that date.
+        :feedback_d: You must start at the firstDayOfYear and add on the days following up until that date.
 
-   If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
+        Which of the following expressions return the right value for the day of the week (5) for Jan. 4th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,4,2019) returns 4?
+
+.. reveal:: dow_r3
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: dow3
+        :answer_a: 1
+        :answer_b: 2
+        :answer_c: 3
+        :answer_d: 9
+        :correct: b
+        :feedback_a: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
+        :feedback_b: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later so would fall on the same day of the week.
+        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later. 
+        :feedback_d: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
+
+        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
 
 
 If we used the formula in exercise 4-10-4 above for the date in exercise 4-10-5 above, we would get 10:
@@ -347,21 +372,25 @@ Try the mod operator below.
         }
     }
     
+.. reveal:: dow_r4
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: dow4
+        :answer_a: firstDayOfYear(2019) + dayOfYear(1,8,2019)   
+        :answer_b: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 
+        :answer_c: firstDayOfYear(2019) + dayOfYear(1,8,2019) % 7
+        :answer_d: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 % 4
+        :answer_e: (firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1) % 7
+        :correct: e
+        :feedback_a: This would return 10 but there are only 7 days of the week.
+        :feedback_b: This would return 9 but there are only 7 days of the week.
+        :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3 
+        :feedback_d: Mod 4 does not make sense because there are 7 days of the week.
+        :feedback_e: This would return (2 + 8 - 1) % 7 = 2.
    
-.. mchoice:: dow4
-   :answer_a: firstDayOfYear(2019) + dayOfYear(1,8,2019)   
-   :answer_b: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 
-   :answer_c: firstDayOfYear(2019) + dayOfYear(1,8,2019) % 7
-   :answer_d: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 % 4
-   :answer_e: (firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1) % 7
-   :correct: e
-   :feedback_a: This would return 10 but there are only 7 days of the week.
-   :feedback_b: This would return 9 but there are only 7 days of the week.
-   :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3 
-   :feedback_d: Mod 4 does not make sense because there are 7 days of the week.
-   :feedback_e: This would return (2 + 8 - 1) % 7 = 2.
-   
-   Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?
+        Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?
    
 Complete the code for the method dayOfWeek below for Part B of this FRQ.
 
