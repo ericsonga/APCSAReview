@@ -146,7 +146,7 @@ Unit 1 Coding Practice
               :autograde: unittest
               :practice: T
 
-              The following code should print "Your name is Carly and your favorite color is red".  Finish the code so that it prints the output correctly using the variables provided.
+              The following code should print ``Your name is Carly and your favorite color is red``.  Finish the code so that it prints the output correctly using the variables provided.
               ~~~~
               public class Test1
               {
@@ -210,7 +210,7 @@ Unit 1 Coding Practice
         .. tab:: Question
 
 
-           Finish the code below so that it prints "Your name is Justin and your age is 16" using the variables provided.
+           Finish the code below so that it prints ``Your name is Justin and your age is 16`` using the variables provided.
 
            .. activecode::  ch4Ex6q
               :language: java
@@ -282,7 +282,7 @@ Unit 1 Coding Practice
               :autograde: unittest
               :practice: T
 
-              Write the code to print "Julian's favorite color is green.  His favorite food is pizza." using the variables provided.
+              Write the code to print ``Julian's favorite color is green.  His favorite food is pizza.`` using the variables provided.
               ~~~~
               public class Test1
               {
@@ -496,7 +496,7 @@ Unit 1 Coding Practice
               :autograde: unittest
               :practice: T
    
-              The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.
+              The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 30 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.
               ~~~~
               public class Test1
               {

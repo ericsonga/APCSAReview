@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 8-14-
+   :prefix: 7-4-1-
    :start: 1
 
 Free Response - String Scramble B
@@ -138,11 +138,14 @@ Another way to solve this problem is to start at the end of the list and loop to
 Try and Solve It
 =================== 
 
-Write the method ``scrambleOrRemove`` below. The main has code to test the result.
+
 
 .. activecode:: frqScrambleOrRemove
    :language: java
+   :autograde: unittest    
    
+   Write the method ``scrambleOrRemove`` below. The main has code to test the result.
+   ~~~~
    import java.util.List;
    import java.util.ArrayList;
 
@@ -218,6 +221,63 @@ Write the method ``scrambleOrRemove`` below. The main has code to test the resul
          System.out.println(" ==> " + wordList);
       }  
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.List;
+    import java.util.ArrayList;
+    import java.util.Arrays;
+
+    public class RunestoneTests extends CodeTestHelper
+    { 
+      public RunestoneTests() 
+      {
+        super("ScrambledStrings");
+      } 
+
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "[TNA, BARCADABARA, PAPLE]";
+        boolean passed = output.contains(expect);
+        assertTrue(passed);
+        System.out.println("expected output from main");
+      }
+
+      @Test
+      public void test1()
+      {
+        ArrayList<String> wordList = new ArrayList(Arrays.asList("TAN", "ABRACADABRA", "WHOA", "APPLE", "EGGS"));
+
+        ArrayList<String> wordListExpect = new ArrayList(Arrays.asList("TNA", "BARCADABARA", "PAPLE"));
+
+        ScrambledStrings.scrambleOrRemove(wordList);
+
+        boolean result = wordList.equals(wordListExpect);
+
+        boolean passed = getResults("true", ""+result, "scrambleOrRemove works for ArrayList #1: TAN, ABRACADABRA, WHOA, APPLE, EGGS");
+
+        assertTrue(passed);
+      } 
+
+       @Test
+        public void test2()
+        {
+          ArrayList<String> wordList = new ArrayList(Arrays.asList("TESTING", "ONE", "TWO", "THREE"));
+
+          ArrayList<String> wordListExpect = new ArrayList(Arrays.asList());
+
+          ScrambledStrings.scrambleOrRemove(wordList);
+
+          boolean result = wordList.equals(wordListExpect);
+
+          boolean passed = getResults("true", ""+result, "scrambleOrRemove works for ArrayList #2: TESTING, ONE, TWO, THREE");
+
+          assertTrue(passed);
+        } 
+    }
 
 
 
