@@ -115,49 +115,69 @@ To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remain
 
 To return false if the number has a 0 in it we just have to check if the current digit is a zero and then return false. So, 120 and 102 should both return false.
 
-So we need to loop through all the digits in the number one at a time and test if the current digit is 0 and if so return false.  Otherwise we need to test if the passed number is evenly divisible (0 remainder) by the current digit.  If it isn't we return false.  If we have looped through all the digits and not found a problem return true.
 
-How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the mod operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
+Click to reveal hints and problems to lead you to the solution or skip ahead to write your own solution.
 
-.. activecode:: lcfrsda4
-   :language: java
-   :autograde: unittest  
-
-   public class TestDigits
-   {
-      public static void main(String[] args)
-      {
-         System.out.println(128 % 10);
-         System.out.println(128 / 10);
-         System.out.println(12 % 10);
-         System.out.println(12 / 10);
-      }
-   }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    //import java.util.regex.*;
-    /* Do NOT change Main or CodeTestHelper.java. */
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "8\n12\n2\n1\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
-
-.. reveal:: frsda_r1
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
+.. reveal:: frsda_hints_r
+   :showtitle: Reveal Hints
+   :hidetitle: Hide Hints
    :optional:
    
-    .. mchoice:: frsda_1
-        :practice: T
+   **Hints:**
+   
+   So we need to loop through all the digits in the number one at a time and test if the current digit is 0 and if so return false.  Otherwise we need to test if the passed number is evenly divisible (0 remainder) by the current digit.  If it isn't we return false.  If we have looped through all the digits and not found a problem return true.
+   
+   How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the mod operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
+
+   .. activecode:: lcfrsda4
+       :language: java
+       :autograde: unittest  
+
+       public class TestDigits
+       {
+          public static void main(String[] args)
+          {
+             System.out.println(128 % 10);
+             System.out.println(128 / 10);
+             System.out.println(12 % 10);
+             System.out.println(12 / 10);
+          }
+       }
+       ====
+       import static org.junit.Assert.*;
+        import org.junit.*;
+        import java.io.*;
+        //import java.util.regex.*;
+        /* Do NOT change Main or CodeTestHelper.java. */
+        public class RunestoneTests extends CodeTestHelper
+        {
+            @Test
+            public void testMain() throws IOException
+            {
+                String output = getMethodOutput("main");
+                String expect = "8\n12\n2\n1\n";
+                boolean passed = getResults(expect, output, "Expected output from main");
+                assertTrue(passed);
+            }
+        }
+
+
+
+.. reveal:: frsda_reveal_alg
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+   
+   **Algorithm**: 
+   
+   We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.
+
+.. reveal:: frsda_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
+   
+   .. mchoice:: frsda_1
         :answer_a: for
         :answer_b: for each
         :answer_c: while
@@ -167,16 +187,8 @@ How can we loop through all the digits in a number?  We can use x % 10 to get th
         :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.
 
         Which loop should you use to loop through all the digits of the number?
-
-We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.
-
-.. reveal:: frsda_r2
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
-   :optional:
-
-    .. mchoice:: frsda_2
-        :practice: T
+        
+   .. mchoice:: frsda_2
         :answer_a: Loop while the current number is greater than 10.
         :answer_b: Loop while the current number is greater than 9.
         :answer_c: Loop while the current number is greater than 0.
@@ -254,15 +266,19 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
     }
 
 
+
 Video - One way to code the solution
 =====================================
 
-There are many possible solutions to this problem.
+There are many possible solutions to this problem. Click to reveal a possible solution's video for this problem.
 
-.. the video is selfDivisorCodeA.mov
+.. reveal:: video_self_divisor_reveal
+   :showtitle: Reveal Video
+   :hidetitle: Hide Video
+   
+   The following video is also on YouTube at https://youtu.be/oK1hDTmR3AE.  It walks through creating a solution.
 
-The following video is also on YouTube at https://youtu.be/oK1hDTmR3AE.  It walks through creating a solution.
-
-.. youtube:: oK1hDTmR3AE
-    :width: 800
-    :align: center
+   .. youtube:: oK1hDTmR3AE
+        :width: 800
+        :align: center
+        :optional:

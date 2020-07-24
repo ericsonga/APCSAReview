@@ -412,3 +412,18 @@ Summary
 - The square brackets [row][col] are used to access and modify an element in a 2D array.
 
 - "Row-major order" refers to an ordering of 2D array elements where traversal occurs across each row, while "column-major order" traversal occurs down each column.
+
+
+2D Arrays Game
+----------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Arrays** and then check on **2D** and click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>

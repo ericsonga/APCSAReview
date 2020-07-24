@@ -1,4 +1,4 @@
-   .. qnum::
+.. qnum::
    :prefix: 5-13-
    :start: 1
    
@@ -100,13 +100,7 @@ Work in pairs or groups to read through the problem statement and determine the 
 
 It may help to first identify the variables that are needed for the constructor and the accessor and mutator methods.
 
-
-.. reveal:: steptracker_instanceVars_r1
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
-   :optional:
-
-    .. clickablearea:: steptracker_instance_variables
+.. clickablearea:: steptracker_instance_variables
          :question: Select the phrases below which probably mention an instance variable. Note that some of these may be referring to the same variable or to local variables.
          :feedback: Think about phrases that indicate a value that is being stored or changed or returned.
          :iscode:
@@ -123,12 +117,14 @@ It may help to first identify the variables that are needed for the constructor 
         
               - averageSteps, which returns :click-correct:the average number of steps per day:endclick:, calculated by dividing :click-correct:the total number of steps taken:endclick: by :click-correct:the number of days tracked.:endclick:
 
+Click to reveal multiple choice questions that will help you to determine the instance variables through the constructor parameters and accessor and mutator methods. 
+
 .. reveal:: steptraker_ctor_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: steptracker-constructor
+   .. mchoice:: steptracker-constructor
         :answer_a: the minimum number of steps that must be taken for a day to be considered active
         :answer_b: the number of active days
         :answer_c: the average number of steps per day
@@ -148,7 +144,7 @@ It may help to first identify the variables that are needed for the constructor 
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: steptracker-accessor
+   .. mchoice:: steptracker-accessor
         :answer_a: StepTracker tr = new StepTracker(1000)
         :answer_b: tr.addDailysteps(1000);
         :answer_c: tr.activeDays();
@@ -164,7 +160,7 @@ It may help to first identify the variables that are needed for the constructor 
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: steptracker-mutator
+   .. mchoice:: steptracker-mutator
         :answer_a: StepTracker tr = new StepTracker(1000)
         :answer_b: tr.addDailysteps(1000);
         :answer_c: tr.activeDays();
@@ -177,12 +173,8 @@ It may help to first identify the variables that are needed for the constructor 
     
         Which of the following methods is a mutator method that changes the value of an instance variable?
    
-.. reveal:: steptracker_vars_r1
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
-   :optional:
 
-   .. shortanswer:: steptracker-variables
+.. shortanswer:: steptracker-variables
 
       What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?
    
@@ -282,14 +274,15 @@ Remember that accessor methods usually look like the following:
         return varName;
      }
    }
-  
+
+Click to reveal a multiple choice problem to help you determine the accessor method header.
+
 .. reveal:: steptracker_accessor_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: steptracker-accessor-header
-        :practice: T
+   .. mchoice:: steptracker-accessor-header
         :answer_a: public void activeDays()
         :answer_b: private void activeDays()
         :answer_c: public int activeDays(int numSteps)
@@ -395,14 +388,14 @@ Remember that mutator methods often look like the following:
          }
      }
      
+Click to reveal a multiple choice problem to help you determine the mutator method header.
 
 .. reveal:: steptracker_mutator_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: steptracker-mutator-header
-        :practice: T
+   .. mchoice:: steptracker-mutator-header
         :answer_a: public void addDailySteps()
         :answer_b: private void addDailySteps()
         :answer_c: public int addDailySteps(int numSteps)
@@ -435,14 +428,14 @@ The code for this mutator method is a little more complex than the template abov
     </table><p>
 
 
-Consider each of your instance variables and whether this method should change them. 
+Consider each of your instance variables and whether this method should change them. The problem which you can reveal below may help you. 
 
 .. reveal:: steptracker_mutator_r2
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: steptracker-mutator-changes
+   .. mchoice:: steptracker-mutator-changes
         :answer_a: the minimum number of steps that must be taken for a day to be considered active
         :answer_b: the number of active days
         :answer_c: the average number of steps per day
@@ -538,13 +531,14 @@ Writing the Accessor Method averageSteps
 
 This problem asks you to write a more complex accessor method which uses the instance variables to calculate and return the **averageSteps** for 2 points. This method returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked. 
 
+Click to reveal a multiple choice problem to help you determine the accessor method header.
+
 .. reveal:: steptracker_accessor_r2
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: steptracker-accessor-header2
-        :practice: T
+   .. mchoice:: steptracker-accessor-header2
         :answer_a: public void averageSteps()
         :answer_b: public int averageSteps()
         :answer_c: public double averageSteps()

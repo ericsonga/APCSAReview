@@ -1110,3 +1110,16 @@ Summary
 
 - Since the index for an array starts at 0 and end at the number of elements − 1, "off by one" errors are easy to make when traversing an array, resulting in an **ArrayIndexOutOfBoundsException** being thrown.
 
+Arrays Game
+-------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Arrays** and then check on **Loops** and click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>

@@ -563,3 +563,19 @@ Summary
 - In Java, ! has precedence (is executed before) && which has precedence over ||. Parentheses can be used to force the order of execution in a different way.
 
 - When the result of a logical expression using && or || can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as **short-circuit evaluation**.
+
+
+Boolean Game
+---------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+
