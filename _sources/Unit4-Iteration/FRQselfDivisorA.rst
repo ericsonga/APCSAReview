@@ -151,32 +151,41 @@ How can we loop through all the digits in a number?  We can use x % 10 to get th
         }
     }
 
+.. reveal:: frsda_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
    
-.. mchoice:: frsda_1
-   :practice: T
-   :answer_a: for
-   :answer_b: for each
-   :answer_c: while
-   :correct: c
-   :feedback_a: Use a for loop when you know how many times a loop needs to execute.  Do you know that here?
-   :feedback_b: Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?
-   :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.
+    .. mchoice:: frsda_1
+        :practice: T
+        :answer_a: for
+        :answer_b: for each
+        :answer_c: while
+        :correct: c
+        :feedback_a: Use a for loop when you know how many times a loop needs to execute.  Do you know that here?
+        :feedback_b: Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?
+        :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.
 
-   Which loop should you use to loop through all the digits of the number?
+        Which loop should you use to loop through all the digits of the number?
 
 We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.
 
-.. mchoice:: frsda_2
-   :practice: T
-   :answer_a: Loop while the current number is greater than 10.
-   :answer_b: Loop while the current number is greater than 9.
-   :answer_c: Loop while the current number is greater than 0.
-   :correct: c
-   :feedback_a: What happens if the number is 10 in this case?
-   :feedback_b: Does this actually test the first digit in a number?
-   :feedback_c: We will know that we are out of digits when x / 10 is 0. This wouldn't work if the number passed to the method was 0 originally, but were told in the precondition that number is greater than 0 to start.
+.. reveal:: frsda_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   What should you use as the test in the while loop?
+    .. mchoice:: frsda_2
+        :practice: T
+        :answer_a: Loop while the current number is greater than 10.
+        :answer_b: Loop while the current number is greater than 9.
+        :answer_c: Loop while the current number is greater than 0.
+        :correct: c
+        :feedback_a: What happens if the number is 10 in this case?
+        :feedback_b: Does this actually test the first digit in a number?
+        :feedback_c: We will know that we are out of digits when x / 10 is 0. This wouldn't work if the number passed to the method was 0 originally, but were told in the precondition that number is greater than 0 to start.
+
+        What should you use as the test in the while loop?
 
 Try to write the code for the method isSelfDivisor.  When you are ready click "Run" to test your solution. Remember that it should return true for 128, false for 26, false for 120, and false for 102.
 

@@ -1,4 +1,4 @@
-.. qnum::
+   .. qnum::
    :prefix: 5-13-
    :start: 1
    
@@ -18,7 +18,7 @@
     :align: middle
     :alt: groupwork
 
-Free Response Question for Classes: FRQ StepTracker
+Free Response Question (FRQ) for Classes
 -----------------------------------------------------
 
 ..	index::
@@ -101,66 +101,90 @@ Work in pairs or groups to read through the problem statement and determine the 
 It may help to first identify the variables that are needed for the constructor and the accessor and mutator methods.
 
 
+.. reveal:: steptracker_instanceVars_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-.. clickablearea:: steptracker_instance_variables
-    :question: Select the phrases below which probably mention an instance variable. Note that some of these may be referring to the same variable or to local variables.
-    :feedback: Think about phrases that indicate a value that is being stored or changed or returned.
-    :iscode:
+    .. clickablearea:: steptracker_instance_variables
+         :question: Select the phrases below which probably mention an instance variable. Note that some of these may be referring to the same variable or to local variables.
+         :feedback: Think about phrases that indicate a value that is being stored or changed or returned.
+         :iscode:
 
-    This question involves the implementation of :click-incorrect:a fitness tracking system that is represented by the **StepTracker** class.:endclick: 
+         This question involves the implementation of :click-incorrect:a fitness tracking system that is represented by the **StepTracker** class.:endclick: 
     
-    :click-incorrect:A StepTracker object:endclick: is created with a parameter that defines :click-correct:the minimum number of steps that must be taken for a day to be considered active. :endclick:
+         :click-incorrect:A StepTracker object:endclick: is created with a parameter that defines :click-correct:the minimum number of steps that must be taken for a day to be considered active. :endclick:
     
-    :click-incorrect:The StepTracker class:endclick: provides a constructor and the following methods. 
+         :click-incorrect:The StepTracker class:endclick: provides a constructor and the following methods. 
     
-        - addDailySteps, which accumulates :click-correct:information about steps:endclick:, in readings taken once per day. 
+              - addDailySteps, which accumulates :click-correct:information about steps:endclick:, in readings taken once per day. 
     
-        - activeDays, which returns :click-correct:the number of active days.:endclick:
+              - activeDays, which returns :click-correct:the number of active days.:endclick:
         
-        - averageSteps, which returns :click-correct:the average number of steps per day:endclick:, calculated by dividing :click-correct:the total number of steps taken:endclick: by :click-correct:the number of days tracked.:endclick:
+              - averageSteps, which returns :click-correct:the average number of steps per day:endclick:, calculated by dividing :click-correct:the total number of steps taken:endclick: by :click-correct:the number of days tracked.:endclick:
 
-.. mchoice:: steptracker-constructor
-   :answer_a: the minimum number of steps that must be taken for a day to be considered active
-   :answer_b: the number of active days
-   :answer_c: the average number of steps per day
-   :answer_d: the total number of steps taken
-   :answer_e: number of days tracked
-   :correct: a
-   :feedback_a: Yes, the problem definition describes this as a parameter to create a StepTracker object.
-   :feedback_b: This is not described as a parameter to create an StepTracker object. 
-   :feedback_c: This is not described as a parameter to create an StepTracker object.
-   :feedback_d: This is not described as a parameter to create an StepTracker object.
-   :feedback_e: This is not described as a parameter to create an StepTracker object.
-    
-   Given the StepTracker class description above, which of these statements describes an instance variable that the StepTracker constructor should set using a parameter?
-   
-.. mchoice:: steptracker-accessor
-   :answer_a: StepTracker tr = new StepTracker(1000)
-   :answer_b: tr.addDailysteps(1000);
-   :answer_c: tr.activeDays();
-   :correct: c
-   :feedback_a: This is a call to the constructor. 
-   :feedback_b: No, addDailySteps(1000) probably adds the given steps to an instance variable as a mutator method.
-   :feedback_c: Yes, activeDays() is an accessor method that returns the number of active days (a great instance variable!).
-    
-   Which of the following methods is an accessor method that returns the value of an instance variable?
-   
-.. mchoice:: steptracker-mutator
-   :answer_a: StepTracker tr = new StepTracker(1000)
-   :answer_b: tr.addDailysteps(1000);
-   :answer_c: tr.activeDays();
-   :answer_d: tr.averageSteps();
-   :correct: b
-   :feedback_a: No, this is a call to the constructor. 
-   :feedback_b: Yes, addDailySteps(1000) is a mutator method that adds the steps given as a parameter to an instance variable that keeps track of the steps taken so far.
-   :feedback_c: No, activeDays() is an accessor method that returns the number of active days.
-   :feedback_d: No, averageSteps() is a complex accessor method that calculates and returns the average number of steps from the instance variable.
-    
-   Which of the following methods is a mutator method that changes the value of an instance variable?
-   
-.. shortanswer:: steptracker-variables
+.. reveal:: steptraker_ctor_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?
+    .. mchoice:: steptracker-constructor
+        :answer_a: the minimum number of steps that must be taken for a day to be considered active
+        :answer_b: the number of active days
+        :answer_c: the average number of steps per day
+        :answer_d: the total number of steps taken
+        :answer_e: number of days tracked
+        :correct: a
+        :feedback_a: Yes, the problem definition describes this as a parameter to create a StepTracker object.
+        :feedback_b: This is not described as a parameter to create an StepTracker object. 
+        :feedback_c: This is not described as a parameter to create an StepTracker object.
+        :feedback_d: This is not described as a parameter to create an StepTracker object.
+        :feedback_e: This is not described as a parameter to create an StepTracker object.
+    
+        Given the StepTracker class description above, which of these statements describes an instance variable that the StepTracker constructor should set using a parameter?
+   
+.. reveal:: accessor_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: steptracker-accessor
+        :answer_a: StepTracker tr = new StepTracker(1000)
+        :answer_b: tr.addDailysteps(1000);
+        :answer_c: tr.activeDays();
+        :correct: c
+        :feedback_a: This is a call to the constructor. 
+        :feedback_b: No, addDailySteps(1000) probably adds the given steps to an instance variable as a mutator method.
+        :feedback_c: Yes, activeDays() is an accessor method that returns the number of active days (a great instance variable!).
+    
+        Which of the following methods is an accessor method that returns the value of an instance variable?
+   
+.. reveal:: mutator_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: steptracker-mutator
+        :answer_a: StepTracker tr = new StepTracker(1000)
+        :answer_b: tr.addDailysteps(1000);
+        :answer_c: tr.activeDays();
+        :answer_d: tr.averageSteps();
+        :correct: b
+        :feedback_a: No, this is a call to the constructor. 
+        :feedback_b: Yes, addDailySteps(1000) is a mutator method that adds the steps given as a parameter to an instance variable that keeps track of the steps taken so far.
+        :feedback_c: No, activeDays() is an accessor method that returns the number of active days.
+        :feedback_d: No, averageSteps() is a complex accessor method that calculates and returns the average number of steps from the instance variable.
+    
+        Which of the following methods is a mutator method that changes the value of an instance variable?
+   
+.. reveal:: steptracker_vars_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+   .. shortanswer:: steptracker-variables
+
+      What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?
    
 Writing the Class Header and Constructor
 ========================================
@@ -259,21 +283,26 @@ Remember that accessor methods usually look like the following:
      }
    }
   
-.. mchoice:: steptracker-accessor-header
-   :practice: T
-   :answer_a: public void activeDays()
-   :answer_b: private void activeDays()
-   :answer_c: public int activeDays(int numSteps)
-   :answer_d: public void activeDays(int numSteps)
-   :answer_e: public int activeDays()
-   :correct: e
-   :feedback_a: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables.
-   :feedback_b: Accessor methods should not be private.
-   :feedback_c: Accessor methods do not usually take parameters.
-   :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
-   :feedback_e: Correct, accessor methods are public, have a return type, and no parameter.  
+.. reveal:: steptracker_accessor_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: steptracker-accessor-header
+        :practice: T
+        :answer_a: public void activeDays()
+        :answer_b: private void activeDays()
+        :answer_c: public int activeDays(int numSteps)
+        :answer_d: public void activeDays(int numSteps)
+        :answer_e: public int activeDays()
+        :correct: e
+        :feedback_a: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables.
+        :feedback_b: Accessor methods should not be private.
+        :feedback_c: Accessor methods do not usually take parameters.
+        :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
+        :feedback_e: Correct, accessor methods are public, have a return type, and no parameter.  
      
-   Which of the following is a good method header for the accessor method activeDays()?
+        Which of the following is a good method header for the accessor method activeDays()?
 
 .. activecode:: stepTrackerCode2
    :language: java
@@ -367,21 +396,26 @@ Remember that mutator methods often look like the following:
      }
      
 
-.. mchoice:: steptracker-mutator-header
-   :practice: T
-   :answer_a: public void addDailySteps()
-   :answer_b: private void addDailySteps()
-   :answer_c: public int addDailySteps(int numSteps)
-   :answer_d: public void addDailySteps(int numSteps)
-   :answer_e: private int addDailySteps()
-   :correct: d
-   :feedback_a: Mutator methods take a parameter to change the value of an instance variable.
-   :feedback_b: Mutator methods should not be private.
-   :feedback_c: Mutator methods do not usually return a value.
-   :feedback_d: Correct, mutator methods are public with a void return type and take a parameter to change the value of an instance variable.
-   :feedback_e: Mutator methods should not be private and should take a parameter to change the value of an instance variable.
+.. reveal:: steptracker_mutator_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: steptracker-mutator-header
+        :practice: T
+        :answer_a: public void addDailySteps()
+        :answer_b: private void addDailySteps()
+        :answer_c: public int addDailySteps(int numSteps)
+        :answer_d: public void addDailySteps(int numSteps)
+        :answer_e: private int addDailySteps()
+        :correct: d
+        :feedback_a: Mutator methods take a parameter to change the value of an instance variable.
+        :feedback_b: Mutator methods should not be private.
+        :feedback_c: Mutator methods do not usually return a value.
+        :feedback_d: Correct, mutator methods are public with a void return type and take a parameter to change the value of an instance variable.
+        :feedback_e: Mutator methods should not be private and should take a parameter to change the value of an instance variable.
      
-   Which of the following is a good method header for the mutator method addDailySteps?
+        Which of the following is a good method header for the mutator method addDailySteps?
    
 The code for this mutator method is a little more complex than the template above, because it needs to change more than 1 instance variable. Notice the comments in the sample code execution:
 
@@ -403,20 +437,25 @@ The code for this mutator method is a little more complex than the template abov
 
 Consider each of your instance variables and whether this method should change them. 
 
-.. mchoice:: steptracker-mutator-changes
-   :answer_a: the minimum number of steps that must be taken for a day to be considered active
-   :answer_b: the number of active days
-   :answer_c: the average number of steps per day
-   :answer_d: the total number of steps taken
-   :answer_e: number of days tracked
-   :correct: b, d, e
-   :feedback_a: The minimum is set by the constructor.
-   :feedback_b: Yes, addDailySteps should determine whether the number of steps given in its parameter is an active day and if so, change this variable.
-   :feedback_c: This method does not have to calculate the average.
-   :feedback_d: Yes, addDailySteps should add the number of steps taken that day in its parameter to the total.
-   :feedback_e: Yes, addDailySteps is called each day and can change the variable for the number of days being tracked.
+.. reveal:: steptracker_mutator_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: steptracker-mutator-changes
+        :answer_a: the minimum number of steps that must be taken for a day to be considered active
+        :answer_b: the number of active days
+        :answer_c: the average number of steps per day
+        :answer_d: the total number of steps taken
+        :answer_e: number of days tracked
+        :correct: b, d, e
+        :feedback_a: The minimum is set by the constructor.
+        :feedback_b: Yes, addDailySteps should determine whether the number of steps given in its parameter is an active day and if so, change this variable.
+        :feedback_c: This method does not have to calculate the average.
+        :feedback_d: Yes, addDailySteps should add the number of steps taken that day in its parameter to the total.
+        :feedback_e: Yes, addDailySteps is called each day and can change the variable for the number of days being tracked.
      
-   Which of the following values does the mutator method addDailySteps need to change? (check all that apply)
+        Which of the following values does the mutator method addDailySteps need to change? (check all that apply)
    
 .. activecode:: stepTrackerCode3
    :language: java
@@ -499,22 +538,26 @@ Writing the Accessor Method averageSteps
 
 This problem asks you to write a more complex accessor method which uses the instance variables to calculate and return the **averageSteps** for 2 points. This method returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked. 
 
+.. reveal:: steptracker_accessor_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-.. mchoice:: steptracker-accessor-header2
-   :practice: T
-   :answer_a: public void averageSteps()
-   :answer_b: public int averageSteps()
-   :answer_c: public double averageSteps()
-   :answer_d: public void averageSteps(int numSteps)
-   :answer_e: public int averageSteps(int numSteps)
-   :correct: c
-   :feedback_a: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables.
-   :feedback_b: When you compute an average using division, you usually end up with a double value, not int. 
-   :feedback_c: Correct, accessor methods are public, have a return type, and no parameter. In this case, returning an average requires a double return type.
-   :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
-   :feedback_e: Accessor methods do not usually take parameters.
+    .. mchoice:: steptracker-accessor-header2
+        :practice: T
+        :answer_a: public void averageSteps()
+        :answer_b: public int averageSteps()
+        :answer_c: public double averageSteps()
+        :answer_d: public void averageSteps(int numSteps)
+        :answer_e: public int averageSteps(int numSteps)
+        :correct: c
+        :feedback_a: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables.
+        :feedback_b: When you compute an average using division, you usually end up with a double value, not int. 
+        :feedback_c: Correct, accessor methods are public, have a return type, and no parameter. In this case, returning an average requires a double return type.
+        :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
+        :feedback_e: Accessor methods do not usually take parameters.
      
-   Which of the following is a good method header for the accessor method averageSteps() which returns the average number of steps per day?
+        Which of the following is a good method header for the accessor method averageSteps() which returns the average number of steps per day?
    
 The complex accessor method **averageSteps()** must calculate the average number of steps from your instance variables. Notice that the first time it is called in the sample code execution, it returns 0.0 since there are no steps recorded. This avoids a divide by 0 error.
 
