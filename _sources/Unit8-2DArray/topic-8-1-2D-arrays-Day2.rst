@@ -355,12 +355,22 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
         }
 
         @Test
+        public void test0()
+        {
+            String output = getMethodOutput("main");
+            String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
+
+            boolean passed = getResults(expect, output, "Running main()", true);
+            assertTrue(passed);
+        }
+
+        @Test
         public void test1()
         {
             String output = getMethodOutput("main");
-            String expect = "___  \n (@ @) \n(  V  )\n -m-m-";
+            String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
 
-            boolean passed = output.replaceAll(" ", "").contains(expect.replaceAll(" ", ""));
+            boolean passed = output.contains("@") && !output.contains("o");
             passed = getResults(expect, output, "changed o to @", passed);
             assertTrue(passed);
         }
@@ -388,10 +398,15 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
         public void test3()
         {
             String expect = "asciiArt[#][#] = \"@\"";
+            String code = getCode();
+            int num = countOccurencesRegex(code, expect);
 
-            boolean passed = checkCodeContains(expect);
+            boolean passed = num >= 2;
+
+            getResults("2", ""+num, "Number of asciiArt[#][#] = \"@\" lines in code", passed);
+
             assertTrue(passed);
-        } 
+        }
     }
 
 
