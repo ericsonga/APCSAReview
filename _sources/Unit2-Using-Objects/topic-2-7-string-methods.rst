@@ -554,6 +554,20 @@ Summary
 - ``str.substring(index, index + 1)`` returns a single character at index in string str. 
 
 
+String Methods Game
+---------------------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings** and then on the letters that would be the result of the string method calls. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+
 
 
 ..	index::

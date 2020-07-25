@@ -1510,5 +1510,17 @@ Summary
         } // end of SimplePicture class
 
 
+2D Arrays and Loops Game
+-------------------------
 
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Arrays** and then check **2D** and check **Loops** and then click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
 

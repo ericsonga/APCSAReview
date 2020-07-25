@@ -45,7 +45,7 @@ Code Practice with Arrays
 
                     @Test
                     public void testCodeContains1(){
-                      boolean passed = checkCodeContains("correct array data type", "int[] arr1 = {1, 3, 7, 9, 15, 17};");
+                      boolean passed = checkCodeContains("correct array data type", "int[] arr1");
                       assertTrue(passed);
                     }
 
@@ -77,7 +77,7 @@ Code Practice with Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[] arr1 = {1, 3, 7, 9, 15};
+                      int[] arr1 = {1, 3, 7, 9, 15, 17};
                       for (int index = 0; index < arr1.length; index+=2)
                       {
                           System.out.print(arr1[index] + ", ");
@@ -485,7 +485,7 @@ Code Practice with Arrays
 
         .. tab:: Answer
 
-          Declare a variable to hold the ``sum`` and initialize it to zero.  Loop through all the values in the array.  If the current value is non negative (greater than or equal to 0) then add it to the ``sum``.  Return the ``sum``.
+           Declare a variable to hold the ``sum`` and initialize it to zero.  Loop through all the values in the array.  If the current value is non negative (greater than or equal to 0) then add it to the ``sum``.  Return the ``sum``.
 
            .. activecode::  ch7Ex6a
               :language: java
@@ -728,8 +728,42 @@ Code Practice with Arrays
                       System.out.println(findMin(arr));
                   }
               }
-              ====
-              
+              ====       
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "-3";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+
+                    @Test 
+                    public void testCodeContains2(){
+                      boolean passed = checkCodeContains("for loop", "for");
+                      assertTrue(passed);
+                    }
+
+                     @Test
+                    public void testMethod(){
+                       int[] nums = {10, 20, 5, 40, 50};
+                       Object[] args = {nums};
+
+                       // name of method, arguments are (nums, 30)
+                       String output = getMethodOutput("findMin", args);
+                       String expect = "5";
+
+                       boolean passed = getResults(expect, output, 
+                                "findMin({10, 20, 5, 40, 50})");
+                       assertTrue(passed);
+                    }
+                }
 
 
 
@@ -768,44 +802,6 @@ Code Practice with Arrays
                       System.out.println(findMin(arr));
                   }
               }
-              ====
-              import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
-                
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "-3";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-
-                    @Test 
-                    public void testCodeContains2(){
-                      boolean passed = checkCodeContains("for loop", "for");
-                      assertTrue(passed);
-                    }
-
-                     @Test
-                    public void testMethod(){
-                       int[] nums = {10, 20, 5, 40, 50};
-                       Object[] args = {nums};
-
-                       // name of method, arguments are (nums, 30)
-                       String output = getMethodOutput("findMin", args);
-                       String expect = "5";
-
-                       boolean passed = getResults(expect, output, 
-                                "findMin({10, 20, 5, 40, 50})");
-                       assertTrue(passed);
-                    }
-                }
-
-
 
         .. tab:: Discussion
 

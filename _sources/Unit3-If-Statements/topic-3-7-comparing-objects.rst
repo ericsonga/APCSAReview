@@ -134,13 +134,38 @@ The one common place to use == or != with objects is to compare them to **null**
     
     public class RunestoneTests extends CodeTestHelper
     {
+        public RunestoneTests() {
+            super("NullTest");
+        }
 
-      @Test
+        @Test
+        public void testMain() {
+            String output = getMethodOutput("main");
+            String expect = "apple contains an a\napple contains an a";
+
+            boolean passed = getResults(expect, output, "Checking main() gives correct results");
+        }
+
+        @Test
         public void testChangedCode() {
             String origCode = "public class NullTest { public static void main(String[] args) { String s = null; if (s.indexOf(\"a\") >= 0) {  System.out.println(s + \" contains an a\"); } if (s != null && s.indexOf(\"a\") >= 0) { System.out.println(s + \" contains an a\"); } } }";
 
             boolean changed = codeChanged(origCode);
+
             assertTrue(changed);
+
+        }
+
+        @Test
+        public void testCodeContains()
+        {
+            String code = getCode();
+            String target1 = "String s = ";
+            String target2 = "System.out.println(s + \" contains an a\");";
+
+            boolean passed = code.contains(target1) && code.contains(target2);
+            getResults("true", ""+passed, "Checking that code has not been removed", passed);
+            assertTrue(passed);
         }
     }
      

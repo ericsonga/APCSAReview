@@ -322,11 +322,23 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
       public void checkCodeContains4(){
          //check static
          String code = getCode();
-         int actual = countOccurences(code, "static");
-         String expected = "3";
+         int actual = countOccurences(code, "static void");
+         String expected = "2";
 
-         boolean passed = actual >= 3;
-         getResults(expected, ""+actual, "Static methods and/or variables");
+         boolean passed = actual >= 2;
+         getResults(expected, ""+actual, "Static void methods");
+        assertTrue(passed);
+
+      }
+      @Test
+      public void checkCodeContains5(){
+         //check static
+         String code = getCode();
+         int actual = countOccurences(code, "static int");
+         String expected = "1";
+
+         boolean passed = actual >= 1;
+         getResults(expected, ""+actual, "Static int variable");
         assertTrue(passed);
 
       }

@@ -360,34 +360,34 @@ These problems are similar to those you will see on the AP CS A exam.
 
      I.   for (int j = 1; j <= 5; j++) {
              for (int k = 5; k >= j; k--) {
-                System.out.print(j + " ");
+                System.out.print(j);
              }
              System.out.println();
           }
 
      II.  for (int j = 1; j <= 5; j++) {
              for (int k = 5; k >= 1; k--) {
-                System.out.print(j + " ");
+                System.out.print(j);
              }
              System.out.println();
           }
 
      III. for (int j = 1; j <= 5; j++) {
              for (int k = 1; k <= j; k++) {
-                System.out.print(j + " ");
+                System.out.print(j);
              }
              System.out.println();
           }
 
      IV.  for (int j = 1; j <= 5; j++) {
              for (int k = 1; k <= 5; k++) {
-                System.out.println(j + " ");
+                System.out.println(j);
              }
           }
 
      V.   for (int j = 1; j <= 5; j++) {
              for (int k = j; k <= 5; k++) {
-                System.out.print(k + " ");
+                System.out.print(k);
              }
              System.out.println();
           }

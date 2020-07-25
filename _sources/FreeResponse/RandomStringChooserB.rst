@@ -99,7 +99,7 @@ The code below has a main method for testing.  Write the constructor for the ``R
            {
                pos = (int) (Math.random() * words.size());
 
-               return words.remove(pos);
+               return (String) words.remove(pos);
            }
            return "NONE";
         }

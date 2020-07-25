@@ -154,6 +154,7 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
 
 .. activecode:: StudentArrayList
   :language: java
+  :autograde: unittest 
 
   An example of an ArrayList of Student objects. Add a new student with your name and info in it.
   ~~~~
@@ -191,6 +192,27 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
        return id + ": " + name + ", " + email;
      }
   } 
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("StudentList");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "[123456: Skyler, skyler@sky.com, 789012: Ayanna, ayanna@gmail.com]";
+
+            boolean passed = getResults(expect, output, "main()", true);
+            assertTrue(passed);
+        }
+    }
  
 Add(index,obj) in an ArrayList
 ------------------------------
@@ -204,6 +226,7 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
 
 .. activecode:: listAddInt2
    :language: java
+   :autograde: unittest
 
    What will the code below print out? Try figuring it out before running it. Remember that ArrayLists start at index 0 and that the add(index,obj) always has the index as the first argument.
    ~~~~    
@@ -227,6 +250,27 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
          System.out.println(list1.size());
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("listAddInt2");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "[1]\n[1, 2]\n[1, 3, 2]\n[1, 4, 3, 2]\n4\n";
+
+            boolean passed = getResults(expect, output, "main()", true);
+            assertTrue(passed);
+        }
+    }
     
 .. note::
 
@@ -352,6 +396,7 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
 
 .. activecode:: listRem
    :language: java
+   :autograde: unittest
 
    What will the following code print out? Try to guess before you run it. Were you surprised? Read the note below.
    ~~~~
@@ -369,6 +414,27 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
          System.out.println(list1);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("listRem");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "[1, 2, 3]\n[1, 3]";
+
+            boolean passed = getResults(expect, output, "main()", true);
+            assertTrue(passed);
+        }
+    }
    
 .. note::
 
@@ -471,20 +537,7 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
         @Test
         public void test1()
         {
-            String output = getMethodOutput("main");
-            String expect = "[Your name, John, Deja]";
-            String searchString = "\\[[A-Za-z0-9 '-,]+, John, Deja\\]";
-
-            String[] lines = output.split("\n");
-            String longest = lines[0];
-            for (int i = 0; i < lines.length; i++) {
-                if (lines[i].length() > longest.length())
-                    longest = lines[i];
-            }
-
-            boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]+");
-
-            passed = getResults(expect, longest, "Add your name to the list", passed);
+            boolean passed = checkCodeContainsRegex("nameList.set(0, \"Your name\")", "nameList.set(0, ");
             assertTrue(passed);
         }
 
@@ -494,7 +547,7 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
             String output = getMethodOutput("main");
             String searchString = "Deja";
 
-            boolean passed = output.contains("\n" + searchString + "\n") || output.matches("[\\s]+" + searchString + "[\\s]+");
+            boolean passed = output.contains("\n" + searchString + "\n") || output.matches("\\s+" + searchString + "\\s+");
 
             passed = getResults("true", "" + passed, "Prints last item in list (Deja)", passed);
             assertTrue(passed);
@@ -598,6 +651,7 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
 
 .. activecode:: challenge-7-2-array-to-arraylist
    :language: java
+   :autograde: unittest
 
    Rewrite the following code that uses an array to use an ArrayList instead. In the comments write why you think an ArrayList is a better data structure to use than an array for this problem.
    ~~~~
@@ -633,6 +687,49 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
          // Answer:
       }
    }
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ToDoList");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "3 things to do!\nHere's the first thing to do: Do homework\nHere's the next thing to do: Order pizza";
+
+            boolean passed = getResults(expect, output, "Output is the same");
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void test2()
+        {
+            String output = removeSpaces(getCode());
+            String expect = "ArrayList<String>";
+
+            boolean passed = output.contains(expect);
+
+            passed = getResults("true", "" + passed, "Declare ArrayList", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String expect = "[*]";
+
+            boolean passed = checkCodeNotContains(expect);
+            assertTrue(passed);
+        }
+    }
 
 Summary
 -----------

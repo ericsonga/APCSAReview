@@ -146,7 +146,7 @@ After you put the mixed up code in order above, type in the same code below to m
     {
       public static void main(String[] args)
       {
-          World world = new World(300,300);
+          World world = new World(500,500);
           Turtle yertle = new Turtle(world);
           // Make yertle draw an 8 with 2 squares
           yertle.forward();
@@ -177,7 +177,7 @@ After you put the mixed up code in order above, type in the same code below to m
         @Test
         public void test2() {
             String code = getCode();
-            int numForward = countOccurences(code, "forward()");
+            int numForward = countOccurences(code, "forward(");
 
             boolean passed = numForward >= 7;
 

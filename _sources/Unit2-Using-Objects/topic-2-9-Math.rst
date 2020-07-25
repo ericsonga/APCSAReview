@@ -279,8 +279,6 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
 
     public class RunestoneTests extends CodeTestHelper
     {
-
-
         @Test
         public void test1()
         {
@@ -297,9 +295,7 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
         public void test2()
         {
             String output = getMethodOutput("main");
-
-            boolean passed = output.contains("6400");
-
+            boolean passed = output.contains("64000");
             passed = getResults("true", "" + passed, "Prints 40^3", passed);
             assertTrue(passed);
         }
@@ -308,10 +304,10 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
         public void test3()
         {
             String code = getCode();
-            int num = countOccurences(code, "Math.random()");
+            int num = countOccurences(code, "(int)(Math.random()*40");
 
             boolean passed = num >= 3;
-            passed = getResults("3 or more", ""+num, "Calls to Math.random()", passed);
+            passed = getResults("3", ""+num, "Calls to Math.random() for a random number from 0 up to 40", passed);
             assertTrue(passed);
         }
 
@@ -324,42 +320,11 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
             boolean passed = num >= 1;
             passed = getResults("1 or more", ""+num, "Calls to Math.pow(...)", passed);
             assertTrue(passed);
-        }
-
-        @Test
-        public void test5() {
-            int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-
-            String output = "";
-            String[] lines;
-            int[] nums = new int[4];
-            int countUniqueNums = 0;
-
-            for (int i = 0; i < 1000; i++) {
-                output = getMethodOutput("main");
-                lines = output.split("\\s+");
-
-                if (lines.length == nums.length) {
-                    nums[0] = Integer.parseInt(lines[0]);
-                    nums[1] = Integer.parseInt(lines[1]);
-                    nums[2] = Integer.parseInt(lines[2]);
-
-                    min = Math.min(min, Math.min(nums[0], Math.min(nums[1], nums[2])));
-                    max = Math.max(max, Math.max(nums[0], Math.max(nums[1], nums[2])));
-
-                    if (nums[0] != nums[1] && nums[1] != nums[2])
-                        countUniqueNums++;
-                }
-            }
-
-            boolean passed = min == 0 && max == 39 && countUniqueNums > 5;
-            getResults("Min: " + 0 + "\nMax: " + 39, "Min: " + min + "\nMax: " + max, "Checking random results", passed);
-            assertTrue(passed);
-        }
+        }       
     }
 
 
-Here's another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by Zac Martin's class. 
+Here's another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by CSA teacher Zac Martin. 
 
 .. activecode:: challenge-2-9b-dancing-turtles
     :language: java
@@ -380,8 +345,8 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
           Turtle yertle = new Turtle(world);
 
           // This is a loop that runs 10 times (you will learn to write loops in Unit 4)
-         for(int i=1; i <= 10; i++)
-         {
+          for(int i=1; i <= 10; i++)
+          {
            // Can you choose a randomX between 0-500? 
            // Can you adjust for the 20 pixel width of the turtle,
            // so it doesn't get cut off at the edges? 

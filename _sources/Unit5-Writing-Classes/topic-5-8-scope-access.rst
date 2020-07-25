@@ -275,7 +275,7 @@ If there is a local variable with the same name as an instance variable, the var
 
         @Test
         public void test2() {
-            String expect = "1\n0";
+            String expect = "1\n1/2";
             String actual = getMethodOutput("main");
 
             boolean passed = getResults(expect, actual, "Testing main()");

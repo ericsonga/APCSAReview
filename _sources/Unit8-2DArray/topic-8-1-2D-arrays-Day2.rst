@@ -355,12 +355,22 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
         }
 
         @Test
+        public void test0()
+        {
+            String output = getMethodOutput("main");
+            String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
+
+            boolean passed = getResults(expect, output, "Running main()", true);
+            assertTrue(passed);
+        }
+
+        @Test
         public void test1()
         {
             String output = getMethodOutput("main");
-            String expect = "___  \n (@ @) \n(  V  )\n -m-m-";
+            String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
 
-            boolean passed = output.replaceAll(" ", "").contains(expect.replaceAll(" ", ""));
+            boolean passed = output.contains("@") && !output.contains("o");
             passed = getResults(expect, output, "changed o to @", passed);
             assertTrue(passed);
         }
@@ -388,10 +398,15 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
         public void test3()
         {
             String expect = "asciiArt[#][#] = \"@\"";
+            String code = getCode();
+            int num = countOccurencesRegex(code, expect);
 
-            boolean passed = checkCodeContains(expect);
+            boolean passed = num >= 2;
+
+            getResults("2", ""+num, "Number of asciiArt[#][#] = \"@\" lines in code", passed);
+
             assertTrue(passed);
-        } 
+        }
     }
 
 
@@ -412,3 +427,18 @@ Summary
 - The square brackets [row][col] are used to access and modify an element in a 2D array.
 
 - "Row-major order" refers to an ordering of 2D array elements where traversal occurs across each row, while "column-major order" traversal occurs down each column.
+
+
+2D Arrays Game
+----------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Arrays** and then check on **2D** and click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>

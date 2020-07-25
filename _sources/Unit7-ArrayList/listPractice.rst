@@ -14,11 +14,13 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex1q
               :language: java
+              :autograde: unittest        
+              :practice: T
 
               import java.util.List;
               import java.util.Arraylist;
 
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -31,6 +33,22 @@ Code Practice with ArrayLists
                       System.out.println(names);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                    @Test
+                    public void testMain() throws IOException
+                    {
+                        String output = getMethodOutput("main");
+                        String expect = "Sam\nJessica\nMark\nAlexis";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+                    }
+                }
 
 
         .. tab:: Answer
@@ -39,11 +57,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex1a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -73,11 +94,13 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex2q
               :language: java
+              :autograde: unittest        
+              :practice: T
 
               import java.util.list;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static ArrayList<Integer> reverse(ArrayList<Integer> list)
                   {
@@ -103,6 +126,8 @@ Code Practice with ArrayLists
                       System.out.println("Your Result:\t\t " + result);
                   }
               }
+              ====
+              
 
 
         .. tab:: Answer
@@ -113,11 +138,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex2a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static ArrayList<Integer> reverse(ArrayList<Integer> list)
                   {
@@ -160,11 +188,13 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex3q
               :language: java
+              :autograde: unittest        
+              :practice: T
 
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void printEvenIndex(ArrayList<Integer> list)
                   {
@@ -199,11 +229,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex3a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void printEvenIndex(ArrayList<Integer> list)
                   {
@@ -246,13 +279,17 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex4q
               :language: java
+              :autograde: unittest        
+              :practice: T
 
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
-                  public static void printEvenElements(ArrayList<Integer> list)
+                  public static void printEvenEleme
+              :autograde: unittest        
+              :practice: Tnts(ArrayList<Integer> list)
                   {
                       for (int i = 0; i < list.length; i++)
                       {
@@ -285,11 +322,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex4a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void printEvenElements(ArrayList<Integer> list)
                   {
@@ -337,7 +377,7 @@ Code Practice with ArrayLists
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -360,11 +400,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex5a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void main(String[] args)
                   {
@@ -398,7 +441,7 @@ Code Practice with ArrayLists
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static int sumNegValues(ArrayList<Integer> list)
                   {
@@ -427,11 +470,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex6a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static int sumNegValues(ArrayList<Integer> list)
                   {
@@ -480,7 +526,7 @@ Code Practice with ArrayLists
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void removeLongStrings(ArrayList<String> list)
                   {
@@ -509,11 +555,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex7a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void removeLongStrings(ArrayList<String> list)
                   {
@@ -562,7 +611,7 @@ Code Practice with ArrayLists
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void shiftLeftOne(ArrayList<Integer> list)
                   {
@@ -591,11 +640,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex8a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void shiftLeftOne(ArrayList<Integer> list)
                   {
@@ -637,7 +689,7 @@ Code Practice with ArrayLists
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void moveSmallest(ArrayList<Integer> list)
                   {
@@ -674,11 +726,14 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex9a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test
+              public class Test1
               {
                   public static void moveSmallest(ArrayList<Integer> list)
                   {
@@ -728,7 +783,7 @@ Code Practice with ArrayLists
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test1 {
+              public class Test11 {
                   public static String findLongest(ArrayList<String> list)
                   {
                       //code here
@@ -756,10 +811,13 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex10a
               :language: java
-
+              :optional:
+                 
+              This is the answer to the previous question.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
-              public class Test2 {
+              public class Test12 {
                   public static String findLongest(ArrayList<String> list)
                   {
                       String longest = "";

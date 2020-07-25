@@ -119,49 +119,57 @@ Also, circle what the return type of what you need to return. In this case, the 
         return numLeapYears;
      }
 
-Next, plan your loop.
+Next, plan your loop. Click to reveal some problems that may help you to plan the loop.
 
-.. mchoice:: callooptype
-   :practice: T
-   :answer_a: for loop
-   :answer_b: while loop
-   :correct: a
-   :feedback_a: Use a for loop when you know how many times a loop needs to execute.  
-   :feedback_b: Although you could use a while loop. It is  easier to use a for loop in this case. Use a while loop when you don't know how many times a loop needs to execute.
+.. reveal:: call_loop_type_r1
+   :showtitle: Reveal Problems 
+   :hidetitle: Hide Problems 
+   :optional:
 
-   Which loop should you use to count the number of leap years between year1 and year2?
-   
-.. mchoice:: calloop2
-   :practice: T
-   :answer_a: Loop from 0 to year1
-   :answer_b: Loop from 0 to year2
-   :answer_c: Loop from 2020 to 2030
-   :answer_d: Loop from year1 to year2
-   :correct: d
-   :feedback_a: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
-   :feedback_b: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
-   :feedback_c: You need to count the leap years between year1 and year2. The problem does not mention starting at year 2020.
-   :feedback_d: You need to count the leap years between year1 and year2. 
+   .. mchoice:: callooptype
+        :answer_a: for loop
+        :answer_b: while loop
+        :correct: a
+        :feedback_a: Use a for loop when you know how many times a loop needs to execute.  
+        :feedback_b: Although you could use a while loop. It is  easier to use a for loop in this case. Use a while loop when you don't know how many times a loop needs to execute.
+
+        Which loop should you use to count the number of leap years between year1 and year2?
+
+   .. mchoice:: calloop2
+        :answer_a: Loop from 0 to year1
+        :answer_b: Loop from 0 to year2
+        :answer_c: Loop from 2020 to 2030
+        :answer_d: Loop from year1 to year2
+        :correct: d
+        :feedback_a: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
+        :feedback_b: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
+        :feedback_c: You need to count the leap years between year1 and year2. The problem does not mention starting at year 2020.
+        :feedback_d: You need to count the leap years between year1 and year2. 
+
+.. reveal:: call_loop_type_r2
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
 
    What is the starting and ending values for the loop to count the leap years between year 1 and year 2?
    
-It is usually easiest to use a **for loop** if you know how many times the loop should execute using the given information. Figure out what the initial and ending values of the loop variable should be. Some of the method parameters will usually be used for these. In this case, we need to loop from year1 to year2.  The preconditions stated for the method tells us that we don't have to worry about year1 and year2 being out of order or below 0. So don't waste time on error-checking these values. Here's a possible loop:
+   It is usually easiest to use a **for loop** if you know how many times the loop should execute using the given information. Figure out what the initial and ending values of the loop variable should be. Some of the method parameters will usually be used for these. In this case, we need to loop from year1 to year2.  The preconditions stated for the method tells us that we don't have to worry about year1 and year2 being out of order or below 0. So don't waste time on error-checking these values. Here's a possible loop:
 
-.. code-block:: java
+   .. code-block:: java
 
-    for(int i = year1 ; i <= year2 ; i++)
-    {
-    
-    }
+      for(int i = year1 ; i <= year2 ; i++)
+      {
 
-Note that you are given a method to use called isLeapYear(). The method header for it says that it returns a boolean. Any method that starts with the word "is" usually returns a boolean. If it returns a boolean, that is a signal to you that you should use it in an if statement. The method will usually take an argument. If it is used inside the loop, this could be the loop variable. For example,
+      }
 
-.. code-block:: java
+   Note that you are given a method to use called isLeapYear(). The method header for it says that it returns a boolean. Any method that starts with the word "is" usually returns a boolean. If it returns a boolean, that is a signal to you that you should use it in an if statement. The method will usually take an argument. If it is used inside the loop, this could be the loop variable. For example,
 
-   if (isLeapYear(i))
-       ...
-       
-Put all of the code together to solve this problem. 
+   .. code-block:: java
+
+      if (isLeapYear(i))
+          ...
+
+   Put all of the code together to solve this problem. 
 
 .. activecode:: APCalendarFRQPartA
    :language: java
@@ -248,54 +256,71 @@ In part B of the AP Calendar FRQ, you need to write the code inside a static met
 - **dayOfYear(month, day, year)** returns n, where month, day, and year specify the nth day of the year. For the first day of the year, January 1 (month = 1, day = 1), the value 1 is returned. This method accounts for whether year is a leap year. For example, dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year, while dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year. 
 
 
-If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples. 
+If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples by revealing the problems below.
 
-.. mchoice:: dow1
-   :answer_a: Wednesday (3)
-   :answer_b: Thursday (4)
-   :answer_c: Friday (5)
-   :answer_d: Saturday (6)
-   :correct: c
-   :feedback_a: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
-   :feedback_b: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
-   :feedback_c: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later on a Friday. 
-   :feedback_d: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+.. reveal:: dow_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019? 
+   .. mchoice:: dow1
+        :answer_a: Wednesday (3)
+        :answer_b: Thursday (4)
+        :answer_c: Friday (5)
+        :answer_d: Saturday (6)
+        :correct: c
+        :feedback_a: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+        :feedback_b: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later on a Friday. 
+        :feedback_d: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+
+        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019? 
    
-.. mchoice:: dow2
-   :answer_a: firstDayOfYear(2019) + dayOfYear(1,4,2019)   
-   :answer_b: firstDayOfYear(2019) + dayOfYear(1,4,2019) - 1
-   :answer_c: firstDayOfYear(2019) - dayOfYear(1,4,2019)
-   :answer_d: firstDayOfYear(2019) * dayOfYear(1,4,2019)
-   :correct: b
-   :feedback_a: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
-   :feedback_b: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
-   :feedback_c: You must start at the firstDayOfYear and add on the days following up until that date.
-   :feedback_d: You must start at the firstDayOfYear and add on the days following up until that date.
+.. reveal:: dow_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which of the following expressions return the right value for the day of the week (5) for Jan. 4th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,4,2019) returns 4?
-   
-.. mchoice:: dow3
-   :answer_a: 1
-   :answer_b: 2
-   :answer_c: 3
-   :answer_d: 9
-   :correct: b
-   :feedback_a: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
-   :feedback_b: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later so would fall on the same day of the week.
-   :feedback_c: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later. 
-   :feedback_d: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
+   .. mchoice:: dow2
+        :answer_a: firstDayOfYear(2019) + dayOfYear(1,4,2019)   
+        :answer_b: firstDayOfYear(2019) + dayOfYear(1,4,2019) - 1
+        :answer_c: firstDayOfYear(2019) - dayOfYear(1,4,2019)
+        :answer_d: firstDayOfYear(2019) * dayOfYear(1,4,2019)
+        :correct: b
+        :feedback_a: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
+        :feedback_b: You must start at the firstDayOfYear and add on the days following up until that date - 1 since you start counting at 1.
+        :feedback_c: You must start at the firstDayOfYear and add on the days following up until that date.
+        :feedback_d: You must start at the firstDayOfYear and add on the days following up until that date.
+
+        Which of the following expressions return the right value for the day of the week (5) for Jan. 4th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,4,2019) returns 4?
+
+.. reveal:: dow_r3
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+   .. mchoice:: dow3
+        :answer_a: 1
+        :answer_b: 2
+        :answer_c: 3
+        :answer_d: 9
+        :correct: b
+        :feedback_a: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
+        :feedback_b: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later so would fall on the same day of the week.
+        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later. 
+        :feedback_d: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
 
    If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
 
 
-If we used the formula in exercise 4-10-4 above for the date in exercise 4-10-5 above, we would get 10:
+   If we used the formula in exercise 4-10-4 above for the date in exercise 4-10-5 above, we would get 10:
 
-- firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 = 2 + 8 = 10
+   - firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 = 2 + 8 = 10
 
-But there is no 10th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. The FRQ that involves writing an expression will probably use the mod operator. Remember these tips about when to use the mod operator:
+   But there is no 10th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. 
 
+
+The FRQ that involves writing an expression will probably use the mod operator. Remember these tips about when to use the mod operator:
 
 - Use mod whenever you need to wrap around to the front if the value goes over the limit (num % limit). For example here for weekdays or for hours and minutes.
 
@@ -305,63 +330,72 @@ But there is no 10th day of week. There are only 7 days of the week. So when we 
 
 Try the mod operator below.
 
-.. activecode:: mod
-   :language: java
-   :autograde: unittest
-   
-   Complete the program below to figure out a day of the week from 0-6 where 0 is Sunday and 6 is Saturday for 7 days of the week. What value would you use for the divisor?
-   ~~~~
-   public class Mod
-   {
-      public static void main(String[] args)
-      {
-        int day1 = 7;
-        int day2 = 8;
-        int day3 = 9;
-        // fill in the divisor value below
-        int divisor =   ;
-        System.out.println("Remainder of " + day1 + "/" + divisor + " is " + (day1 % divisor) );
-        System.out.println("Remainder of " + day2 + "/" + divisor + " is " + (day2 % divisor) );
-        System.out.println("Remainder of " + day3 + "/" + divisor + " is " + (day3 % divisor) );
-      }
-   }  
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+.. reveal:: mod_r
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Mod");
-        }
+   .. activecode:: mod
+       :language: java
+       :autograde: unittest
 
-        @Test
-        public void test1()
+       Complete the program below to figure out a day of the week from 0-6 where 0 is Sunday and 6 is Saturday for 7 days of the week. What value would you use for the divisor?
+       ~~~~
+       public class Mod
+       {
+          public static void main(String[] args)
+          {
+            int day1 = 7;
+            int day2 = 8;
+            int day3 = 9;
+            // fill in the divisor value below
+            int divisor =   ;
+            System.out.println("Remainder of " + day1 + "/" + divisor + " is " + (day1 % divisor) );
+            System.out.println("Remainder of " + day2 + "/" + divisor + " is " + (day2 % divisor) );
+            System.out.println("Remainder of " + day3 + "/" + divisor + " is " + (day3 % divisor) );
+          }
+       }  
+       ====
+       import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
+
+        public class RunestoneTests extends CodeTestHelper
         {
-            String output = getMethodOutput("main");
-            String expect = "Remainder of 7/7 is 0\nRemainder of 8/7 is 1\nRemainder of 9/7 is 2";
+            public RunestoneTests() {
+                super("Mod");
+            }
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "Remainder of 7/7 is 0\nRemainder of 8/7 is 1\nRemainder of 9/7 is 2";
+
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
         }
-    }
     
+.. reveal:: dow_r4
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+   .. mchoice:: dow4
+        :answer_a: firstDayOfYear(2019) + dayOfYear(1,8,2019)   
+        :answer_b: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 
+        :answer_c: firstDayOfYear(2019) + dayOfYear(1,8,2019) % 7
+        :answer_d: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 % 4
+        :answer_e: (firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1) % 7
+        :correct: e
+        :feedback_a: This would return 10 but there are only 7 days of the week.
+        :feedback_b: This would return 9 but there are only 7 days of the week.
+        :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3 
+        :feedback_d: Mod 4 does not make sense because there are 7 days of the week.
+        :feedback_e: This would return (2 + 8 - 1) % 7 = 2.
    
-.. mchoice:: dow4
-   :answer_a: firstDayOfYear(2019) + dayOfYear(1,8,2019)   
-   :answer_b: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 
-   :answer_c: firstDayOfYear(2019) + dayOfYear(1,8,2019) % 7
-   :answer_d: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 % 4
-   :answer_e: (firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1) % 7
-   :correct: e
-   :feedback_a: This would return 10 but there are only 7 days of the week.
-   :feedback_b: This would return 9 but there are only 7 days of the week.
-   :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3 
-   :feedback_d: Mod 4 does not make sense because there are 7 days of the week.
-   :feedback_e: This would return (2 + 8 - 1) % 7 = 2.
-   
-   Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?
+        Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?
    
 Complete the code for the method dayOfWeek below for Part B of this FRQ.
 

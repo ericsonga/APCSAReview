@@ -378,4 +378,18 @@ Summary
 - Arithmetic expression values can be compared using relational operators (i.e., <, >, <=, >=) in Java.
 - An expression involving relational operators evaluates to a Boolean value of true or false.
 
+Relational Operators Practice Game
+-----------------------------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Relationals**,  evaluate the relational expression and click on None, All, or the numbers that make the expression true. Check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+
 

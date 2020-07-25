@@ -30,13 +30,13 @@ in the table below.
 Try and Solve It
 ----------------
 
-Finish writing the ``getAverage`` method in the class below.  
 
 .. activecode:: SkyViewB
    :language: java
 
-   public class SkyView
-   
+   Finish writing the ``getAverage`` method in the class below.  
+   ~~~~
+   public class SkyView 
    {
        private double[][] view;
 
@@ -68,11 +68,12 @@ Finish writing the ``getAverage`` method in the class below.
                    }
                }
                else {
-               for (int c = numCols - 1; c >= 0; c--)
-               {
-                   view[r][c] = scanned[scannedIndex];
-                   scannedIndex++;
-               }
+                   for (int c = numCols - 1; c >= 0; c--)
+                   {
+                       view[r][c] = scanned[scannedIndex];
+                       scannedIndex++;
+                   }
+                }
            }
        }
        

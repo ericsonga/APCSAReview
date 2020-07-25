@@ -53,16 +53,6 @@ An ArrayList is often called just a **list** on the CS A exam. In past AP CS A e
    :feedback_d: An ArrayList is really a dynamic array (one that can grow or shrink as needed).
 
    Which of the following is a reason to use an ArrayList instead of an array?
-   
-.. Say you create an array of 5 elements.  What happens when you want to add a 6th one?  You will have to create another bigger array and copy over the items from the old array and then add the new value at the end. What length should the new array be?  If you just create an array for 6 elements you won't waste any space, but you will have to create a new array again if you want to add another item.  If you create a larger array than you need (usually about twice as big), you will also have to keep track of how many items are actually in the list, since the length of the array isn't the same thing as the number of items in the list. 
-
-.. .. figure:: Figures/whyLists.png
-    :width: 400px
-    :align: center
-    :figclass: align-center
-
-    Figure 2: Original array, after creating a new array that can contain one more item, and an array that is twice as big as the original with a size to indicate how many values are valid in the array.
-
 
 
 
@@ -179,10 +169,12 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
 
 .. activecode:: ArrayListCreateStr
    :language: java
+   :autograde: unittest   
+   :practice: T
 
-   The following code demonstrates a NullPointerException. Change list2 so that it creates a new Arraylist to remove the NullPointerException.
+   The following code demonstrates a NullPointerException. Change the list2 declaration so that it creates a new Arraylist to remove the NullPointerException. 
    ~~~~
-   import java.util.*; // import everything at this level
+   import java.util.*; // import needed for ArrayList
    public class ArrayListCreateStr
    {
        public static void main(String[] args)
@@ -193,16 +185,38 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
           System.out.println("The size of list2 is: " + list2.size());
        }
    }
-   
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayListCreateStr");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "The size of nameList is: 0\nThe size of list2 is: 0";
+
+            boolean passed = getResults(expect, output, "main()", true);
+            assertTrue(passed);
+        }
+     }
  
   
 You can also create ArrayLists of integer values.  However, you have to use ``Integer`` as the type because ArrayLists can only hold objects, not primitive values.  All primitive types must be **wrapped** in objects before they are added to an ArrayList.  For example, ``int`` values can be wrapped in ``Integer`` objects, ``double`` values can be wrapped in ``Double`` objects. You can actually put in any kind of Objects in an ArrayList, even for a class that you wrote in Unit 5 like Student or Person or Pet. 
 
-Here's an example of a Integer ArrayList:
 
 .. activecode:: ArrayListCreateInt
    :language: java
+   :autograde: unittest 
 
+   Here's an example of a Integer ArrayList.
+   ~~~~
    import java.util.*; // import everything at this level
    public class ArrayListCreateInt
    {
@@ -212,6 +226,28 @@ Here's an example of a Integer ArrayList:
           System.out.println(numList.size());
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayListCreateInt");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "0";
+
+            boolean passed = getResults(expect, output, "main()", true);
+            assertTrue(passed);
+        }
+    }
+    
 
 |Exercise| **Check your understanding**
 
@@ -234,7 +270,10 @@ Although it is not on the AP exam, you can convert arrays to ArrayLists using it
 
 .. activecode:: ArrayListFromArray
    :language: java
+   :autograde: unittest 
 
+   Example code creating an ArrayList from an array.
+   ~~~~
    import java.util.*; 
    public class ArrayListFromArray
    {
@@ -245,7 +284,27 @@ Although it is not on the AP exam, you can convert arrays to ArrayLists using it
           System.out.println(namesList);
        }
    }
-  
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("ArrayListFromArray");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "[Dakota, Madison, Brooklyn]";
+
+            boolean passed = getResults(expect, output, "main()", true);
+            assertTrue(passed);
+        }
+    }
             
 |CodingEx| **Coding Exercise**
 
@@ -296,7 +355,7 @@ You can add values to an ArrayList by using its **add** method, described in det
 
             boolean passed = !output.equals(expect);
 
-            passed = getResults(expect, output, "Changes to main()", passed);
+            passed = getResults(expect, output, "Changed code", passed);
             assertTrue(passed);
         }
 

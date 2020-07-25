@@ -648,20 +648,14 @@ In this challenge, you will create a guide to different countries using arrays.
             assertTrue(passed);
         }
 
-
         @Test
         public void testArrays() throws IOException {
             //System.out.println(program);
-            String program = getCode();
+            String code = getCode();
 
-            int arrays = 0;
-            int index = program.indexOf("String[]");
-            while (index >= 0) {
-                arrays++;
-                index = program.indexOf("String[]", index + 7);
-            }
+            int arrays = countOccurences(code, "String[]");
 
-            boolean passed = getResults("5 x String[]", arrays + " x String[]", "Did you declare 4 arrays?");
+            boolean passed = getResults("5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays?");
             assertTrue(passed);
         }
      }
@@ -687,3 +681,17 @@ Summary
 - Square brackets ([ ]) are used to access and modify an element in an array using an index. The indexed array variable, for example array[index], can be used anywhere a regular variable can be used, for example to get or assign values.
 
 - The valid index values for an array are 0 through one less than the number of elements in the array, inclusive. Using an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown.
+
+
+Arrays Game
+-------------
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Arrays** and click on the element of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
