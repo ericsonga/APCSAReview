@@ -684,7 +684,8 @@ Summary
 
 
 Arrays Game
--------------
+=============
+
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
