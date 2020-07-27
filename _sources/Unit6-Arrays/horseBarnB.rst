@@ -71,27 +71,40 @@ How to solve this problem
 
 One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array. What kind of loop should you use? A for loop or an enhanced for loop would work for this problem. You will need an index for at least the temporary array. 
 
+.. (teachers complained that you could use either because you need a 2nd index anyway) .. mchoice:: frhbb_1
+   :answer_a: for 
+   :answer_b: for each
+   :answer_c: while
+   :correct: a
+   :feedback_a: Use a for loop when you know how many times a loop needs to execute and need the index.
+   :feedback_b: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a for each loop if you want to loop through all the elements in a collection and don't need an index.
+   :feedback_c: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a while loop when you don't know how many times a loop needs to execute.  
+
+   Which loop is a good one to use to solve this problem?
+
 While we are looping through the ``spaces`` array, we need to check for non-null positions.
 
-.. mchoice:: frhbb_2
-   :answer_a: if (spaces.get(index) != null)
-   :answer_b: if (!spaces[index].null())
-   :answer_c: if (spaces[index] != null)
-   :correct: c
-   :feedback_a: This is the syntax for checking an element within an ArrayList.
-   :feedback_b: Is null() a standard Java method? Comparing an object with a null value is simpler.
-   :feedback_c: "!=" is the best way to compare an element with a null value.
+.. reveal:: frhbb_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   How do we check if the space at the current index isn't null? 
+    .. mchoice:: frhbb_2
+        :answer_a: if (spaces.get(index) != null)
+        :answer_b: if (!spaces[index].null())
+        :answer_c: if (spaces[index] != null)
+        :correct: c
+        :feedback_a: This is the syntax for checking an element within an ArrayList.
+        :feedback_b: Is null() a standard Java method? Comparing an object with a null value is simpler.
+        :feedback_c: "!=" is the best way to compare an element with a null value.
+
+        How do we check if the space at the current index isn't null? 
    
-   
+Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.   
    
 .. activecode:: lcfrhbb1
    :language: java
-   :autograde: unittest           
        
-   Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.       
-   ~~~~
    class Horse 
    {
       private String name;
@@ -164,57 +177,6 @@ While we are looping through the ``spaces`` array, we need to check for non-null
         System.out.println(barn);
       }
    }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.lang.reflect.Field;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "space 0 has name: Trigger weight: 1340\nspace 1 has name: Silver weight: 1210\nspace 2 has name: Patches weight: 1350\nspace 3 has name: Duke weight: 1410\nspace 4 has  null \nspace 5 has  null \nspace 6 has  null";
-
-            boolean passed = removeSpaces(output).contains(removeSpaces(expect));
-            getResults(expect, output, "Expected output from main", passed);
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test1() {
-            HorseBarn barn = new HorseBarn(7);
-
-            try {
-                Field barnField = HorseBarn.class.getDeclaredField("spaces");
-                barnField.setAccessible(true);
-
-                Horse[] spaces = (Horse[]) barnField.get(barn);
-
-                spaces[1] = new Horse("Trigger", 1340);
-                spaces[3] = new Horse("Silver",1210);
-                spaces[5] = new Horse("Lady", 1575);
-
-                String expect = "space 0 has name: Trigger weight: 1340\nspace 1 has name: Silver weight: 1210\nspace 2 has name: Lady weight: 1575\nspace 3 has  null \nspace 4 has  null \nspace 5 has  null \nspace 6 has  null";
-                barn.consolidate();
-                String actual = barn.toString();
-
-                boolean passed = removeSpaces(actual).contains(removeSpaces(expect));
-
-                String msg = "Checking consolidate() with [null, \"Trigger\", null, \"Silver\", null, \"Lady\", null, null]";
-
-               getResults(expect, actual, msg, passed);
-                assertTrue(passed);
-
-            } catch (Exception e) {
-                getResults("", "", "There was a error with the testing code.", false);
-                fail();
-            }
-
-        }
-    }
 
     
 Video - One way to code the solution

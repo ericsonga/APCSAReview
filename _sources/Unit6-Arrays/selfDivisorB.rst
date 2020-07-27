@@ -73,31 +73,41 @@ How to solve this problem
 The first thing to do is try to solve the example by hand.  The question tells us to return an array of size num so we need to create an array of that size.  We need 
 to loop as long as we haven't found 3 self divisors and try the current value.  If the current value is a self-divisor then we add it to the array.  When we have found 3 self divisors then return the array. We will need to keep track of the number of self divisors that we have found.  We would try 10 (false), 11 (true so add to the array), 12 (true so add to the array), 13 (false), 14 (false), 15 (true so add to the array and return the array since we found 3).  
 
-.. mchoice:: frsdb_1
-   :answer_a: for
-   :answer_b: for each
-   :answer_c: while
-   :correct: c
-   :feedback_a: Use a for loop when you know how many times a loop needs to execute.  Do you know that here?
-   :feedback_b: Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?
-   :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.  
+.. reveal:: frsdb_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which loop should you use to solve this problem?
+    .. mchoice:: frsdb_1
+        :answer_a: for
+        :answer_b: for each
+        :answer_c: while
+        :correct: c
+        :feedback_a: Use a for loop when you know how many times a loop needs to execute.  Do you know that here?
+        :feedback_b: Use a for each loop when you want to loop through all values in a collection.  Do we have a collection here?
+        :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.  
 
-.. mchoice:: frsdb_2
-   :answer_a: int[] retArray = new int[3];
-   :answer_b: retArray = new int[num];
-   :answer_c: int retArray = new int[num];
-   :answer_d: int[] retArray = new int[num];
-   :answer_e: int[] retArray;
-   :correct: d
-   :feedback_a: Don't just use the size for the array from the example.  The question says to return an array of size num and num could be anything.
-   :feedback_b: Don't forget to declare your variables.
-   :feedback_c: Don't forget that it is an array.
-   :feedback_d: This declares an array of ints called retArray and creates it with a size of num.
-   :feedback_e: This declares the array, but doesn't create it. 
+        Which loop should you use to solve this problem?
 
-   Which of the following correctly declares and creates the array to return?
+.. reveal:: frsdb_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+    .. mchoice:: frsdb_2
+        :answer_a: int[] retArray = new int[3];
+        :answer_b: retArray = new int[num];
+        :answer_c: int retArray = new int[num];
+        :answer_d: int[] retArray = new int[num];
+        :answer_e: int[] retArray;
+        :correct: d
+        :feedback_a: Don't just use the size for the array from the example.  The question says to return an array of size num and num could be anything.
+        :feedback_b: Don't forget to declare your variables.
+        :feedback_c: Don't forget that it is an array.
+        :feedback_d: This declares an array of ints called retArray and creates it with a size of num.
+        :feedback_e: This declares the array, but doesn't create it. 
+
+        Which of the following correctly declares and creates the array to return?
    
 Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15, and then 22, 24, 33, 36, and 44.
    

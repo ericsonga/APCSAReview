@@ -72,27 +72,37 @@ How to Solve This
 1. You will need to loop through each element in the array until you reach a non-zero element. You will also need to keep track of the number of leading zeros.  
 2. Remember that you must replace the samples array with a new array without the leading zeros.  How do you create an array of a particular size?
 
-.. mchoice:: fr_soundb_1
-   :answer_a: while
-   :answer_b: for
-   :answer_c: for-each
-   :correct: a
-   :feedback_a: A while loop is the best choice when you don't know the number of times you need to loop.
-   :feedback_b: You could use a for loop, but typically a while loop is used when you want to loop while a condition is true.
-   :feedback_c: A for-each loop would only allow you to loop through all the values, but you first want to loop while there are leading zeros. 
+.. reveal:: fr_soundb_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which loop would be best for this problem?
+    .. mchoice:: fr_soundb_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: a
+        :feedback_a: A while loop is the best choice when you don't know the number of times you need to loop.
+        :feedback_b: You could use a for loop, but typically a while loop is used when you want to loop while a condition is true.
+        :feedback_c: A for-each loop would only allow you to loop through all the values, but you first want to loop while there are leading zeros. 
+
+        Which loop would be best for this problem?
    
-.. mchoice:: fr_soundb_2
-   :answer_a: int[] samples2;
-   :answer_b: int[] samples2 = new Array(count);
-   :answer_c: int[] samples2 = new int[count];
-   :correct: c
-   :feedback_a: This only declares the variable samples2 which will refer to an array of integers, it doesn't create the array object.
-   :feedback_b: The new keyword is not used to create an array.
-   :feedback_c: This will create an array of integers of size count and a variable named samples2 which will refer to that array.
+.. reveal:: fr_soundb_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which is the correct code for creating an integer array variable named ``samples2`` and setting it to refer to an array of integers of size ``count``?
+    .. mchoice:: fr_soundb_2
+        :answer_a: int[] samples2;
+        :answer_b: int[] samples2 = new Array(count);
+        :answer_c: int[] samples2 = new int[count];
+        :correct: c
+        :feedback_a: This only declares the variable samples2 which will refer to an array of integers, it doesn't create the array object.
+        :feedback_b: The new keyword is not used to create an array.
+        :feedback_c: This will create an array of integers of size count and a variable named samples2 which will refer to that array.
+
+        Which is the correct code for creating an integer array variable named ``samples2`` and setting it to refer to an array of integers of size ``count``?
 
 Mixed Up Code
 -------------------

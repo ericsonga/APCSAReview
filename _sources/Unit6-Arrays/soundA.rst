@@ -85,27 +85,37 @@ If the current value is less than the negative of the limit, then it should be r
 
 We will have to return the count of values changed.
 
-.. mchoice:: fr_sounda_1
-   :answer_a: while
-   :answer_b: for
-   :answer_c: for-each
-   :correct: b
-   :feedback_a: You could use a while loop, but if you are looping through all values in an array it is better to use a for loop.  It is easier to make mistakes with a while loop and forget to increment a value in the body of the loop so that the loop eventually stops.
-   :feedback_b: Use a for loop when you want to loop through all or part of an array and need to change some of the values in the array.
-   :feedback_c: You could use a for-each loop to loop through all of the values in the array, but you wouldn't be able to change the values. 
+.. reveal:: fr_sounda_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which loop would be best for this problem?
+    .. mchoice:: fr_sounda_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: b
+        :feedback_a: You could use a while loop, but if you are looping through all values in an array it is better to use a for loop.  It is easier to make mistakes with a while loop and forget to increment a value in the body of the loop so that the loop eventually stops.
+        :feedback_b: Use a for loop when you want to loop through all or part of an array and need to change some of the values in the array.
+        :feedback_c: You could use a for-each loop to loop through all of the values in the array, but you wouldn't be able to change the values. 
+
+        Which loop would be best for this problem?
    
-.. mchoice:: fr_sounda_2
-   :answer_a: samples[i].set(-limit);
-   :answer_b: samples[i] = limit;
-   :answer_c: samples[i] = -limit;
-   :correct: c
-   :feedback_a: There is no set method on arrays.
-   :feedback_b: This would set the value at index i to limit rather than the negative of the limit.  
-   :feedback_c: This will set the value at index i to the negative of the limit.
+.. reveal:: fr_sounda_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which is the correct code for changing the current value to the negative of the limit?
+    .. mchoice:: fr_sounda_2
+        :answer_a: samples[i].set(-limit);
+        :answer_b: samples[i] = limit;
+        :answer_c: samples[i] = -limit;
+        :correct: c
+        :feedback_a: There is no set method on arrays.
+        :feedback_b: This would set the value at index i to limit rather than the negative of the limit.  
+        :feedback_c: This will set the value at index i to the negative of the limit.
+
+        Which is the correct code for changing the current value to the negative of the limit?
 
 
 Mixed Up Code

@@ -74,29 +74,39 @@ How to solve this problem
 In order to find the index of the horse with the same name we are looking for, we will need to loop through the array ``spaces``. As we loop, we will compare the name we are looking for with the ``Horse`` object's name at the current index.
 We will have to watch out for spaces that are empty (are null).  
 
-.. mchoice:: frhba_1
-   :answer_a: spaces[index].name;
-   :answer_b: spaces[index].getName();
-   :answer_c: spaces.get(index).getName();
-   :correct: b
-   :feedback_a: Getter methods are needed to access private class variables.
-   :feedback_b: This is the syntax for getting the value of an element in an array.  
-   :feedback_c: This is the syntax for getting the value of an element in an arrayList.   
+.. reveal:: frhba_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which of the following correctly retrieves the name of a "Horse" object from the "spaces" array?
+    .. mchoice:: frhba_1
+        :answer_a: spaces[index].name;
+        :answer_b: spaces[index].getName();
+        :answer_c: spaces.get(index).getName();
+        :correct: b
+        :feedback_a: Getter methods are needed to access private class variables.
+        :feedback_b: This is the syntax for getting the value of an element in an array.  
+        :feedback_c: This is the syntax for getting the value of an element in an arrayList.   
+
+        Which of the following correctly retrieves the name of a "Horse" object from the "spaces" array?
 
 Once we have the name of the current ``Horse`` object, we need to compare this name to the name we are looking for.
 
-.. mchoice:: frhba_2
-   :answer_a: str.compareTo(anotherString);
-   :answer_b: str == anotherString;
-   :answer_c: str.equals(anotherString);
-   :correct: c
-   :feedback_a: This String method is used for comparing two strings alphabetically. It returns 0 if they are equal so you would need to check the return value.
-   :feedback_b: This would only return true if the two variables refer to the same object.  
-   :feedback_c: This String method will compare the characters in both strings and return true if they are the same.
+.. reveal:: frhba_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   What is the best way to compare two strings for equality?  
+    .. mchoice:: frhba_2
+        :answer_a: str.compareTo(anotherString);
+        :answer_b: str == anotherString;
+        :answer_c: str.equals(anotherString);
+        :correct: c
+        :feedback_a: This String method is used for comparing two strings alphabetically. It returns 0 if they are equal so you would need to check the return value.
+        :feedback_b: This would only return true if the two variables refer to the same object.  
+        :feedback_c: This String method will compare the characters in both strings and return true if they are the same.
+
+        What is the best way to compare two strings for equality?  
    
 Try It!
 ========
@@ -105,7 +115,6 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
    
 .. activecode:: lcfrhba1
    :language: java
-   :autograde: unittest           
    
    FRQ HorseBarn A: Write the method findHorseSpace.
    ~~~~
@@ -188,86 +197,6 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
                            barn.findHorseSpace("Coco"));
       }
    }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.lang.reflect.Field;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Index of Trigger should be 0 and is 0\nIndex of Silver should be 2 and is 2\nIndex of Coco should be -1 and is -1";
-
-            boolean passed = removeSpaces(output).contains(removeSpaces(expect));
-
-            getResults(expect, output, "Expected output from main", passed);
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test1() {
-            HorseBarn barn = new HorseBarn(7);
-
-            try {
-                Field barnField = HorseBarn.class.getDeclaredField("spaces");
-                barnField.setAccessible(true);
-
-                Horse[] spaces = (Horse[]) barnField.get(barn);
-
-                spaces[1] = new Horse("Trigger", 1340);
-                spaces[3] = new Horse("Silver",1210);
-                spaces[4] = new Horse("Lady", 1575);        
-                spaces[6] = new Horse("Patches", 1350);
-                spaces[0] = new Horse("Duke", 1410);
-
-                String expected = "3";
-                String actual = "" + barn.findHorseSpace("Silver");
-
-                String msg = "Checking findHorseSpace(\"Silver\") with [\"Duke\", \"Trigger\", null, \"Silver\", \"Lady\", null, \"Patches\"]";
-                boolean passed = getResults(expected, actual, msg);
-                assertTrue(passed);
-
-            } catch (Exception e) {
-                getResults("", "", "There was a error with the testing code.", false);
-                fail();
-            }
-
-        }
-
-        @Test
-        public void test2() {
-            HorseBarn barn = new HorseBarn(7);
-
-            try {
-                Field barnField = HorseBarn.class.getDeclaredField("spaces");
-                barnField.setAccessible(true);
-
-                Horse[] spaces = (Horse[]) barnField.get(barn);
-
-                spaces[1] = new Horse("Trigger", 1340);
-                spaces[3] = new Horse("Silver",1210);
-                //spaces[4] = new Horse("Lady", 1575);        
-                spaces[6] = new Horse("Patches", 1350);
-                spaces[0] = new Horse("Duke", 1410);
-
-                String expected = "-1";
-                String actual = "" + barn.findHorseSpace("Lady");
-
-                String msg = "Checking findHorseSpace(\"Lady\") with [\"Duke\", \"Trigger\", null, \"Silver\", null, null, \"Patches\"]";
-                boolean passed = getResults(expected, actual, msg);
-                assertTrue(passed);
-
-            } catch (Exception e) {
-                getResults("", "", "There was a error with the testing code.", false);
-                fail();
-            }
-
-        }
-    }
    
 
     
