@@ -72,14 +72,14 @@ How to solve this problem
 ===========================
 
 In order to find the index of the horse with the same name we are looking for, we will need to loop through the array ``spaces``. As we loop, we will compare the name we are looking for with the ``Horse`` object's name at the current index.
-We will have to watch out for spaces that are empty (are null).  
+We will have to watch out for spaces that are empty (are null).  Click to reveal a practice problem about objects.
 
 .. reveal:: frhba_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: frhba_1
+   .. mchoice:: frhba_1
         :answer_a: spaces[index].name;
         :answer_b: spaces[index].getName();
         :answer_c: spaces.get(index).getName();
@@ -90,14 +90,14 @@ We will have to watch out for spaces that are empty (are null).
 
         Which of the following correctly retrieves the name of a "Horse" object from the "spaces" array?
 
-Once we have the name of the current ``Horse`` object, we need to compare this name to the name we are looking for.
+Once we have the name of the current ``Horse`` object, we need to compare this name to the name we are looking for. Click to reveal a practice problem about String comparisons.
 
 .. reveal:: frhba_r2
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: frhba_2
+   .. mchoice:: frhba_2
         :answer_a: str.compareTo(anotherString);
         :answer_b: str == anotherString;
         :answer_c: str.equals(anotherString);

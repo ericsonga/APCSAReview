@@ -83,14 +83,14 @@ limit, it should be reset to the limit and the count of the values changed shoul
 
 If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.   
 
-We will have to return the count of values changed.
+We will have to return the count of values changed. Click to reveal problems to help you write your solution.
 
 .. reveal:: fr_sounda_r1
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
    :optional:
 
-    .. mchoice:: fr_sounda_1
+   .. mchoice:: fr_sounda_1
         :answer_a: while
         :answer_b: for
         :answer_c: for-each
@@ -100,13 +100,8 @@ We will have to return the count of values changed.
         :feedback_c: You could use a for-each loop to loop through all of the values in the array, but you wouldn't be able to change the values. 
 
         Which loop would be best for this problem?
-   
-.. reveal:: fr_sounda_r2
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
-   :optional:
 
-    .. mchoice:: fr_sounda_2
+   .. mchoice:: fr_sounda_2
         :answer_a: samples[i].set(-limit);
         :answer_b: samples[i] = limit;
         :answer_c: samples[i] = -limit;

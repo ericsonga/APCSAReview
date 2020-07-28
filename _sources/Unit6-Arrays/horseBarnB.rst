@@ -82,14 +82,14 @@ One way to solve this problem is to create a temporary array the same size as ``
 
    Which loop is a good one to use to solve this problem?
 
-While we are looping through the ``spaces`` array, we need to check for non-null positions.
+While we are looping through the ``spaces`` array, we need to check for non-null positions. Click to reveal a practice problem about checking for null values.
 
 .. reveal:: frhbb_r2
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
    :optional:
 
-    .. mchoice:: frhbb_2
+   .. mchoice:: frhbb_2
         :answer_a: if (spaces.get(index) != null)
         :answer_b: if (!spaces[index].null())
         :answer_c: if (spaces[index] != null)

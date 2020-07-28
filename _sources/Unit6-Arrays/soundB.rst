@@ -72,12 +72,14 @@ How to Solve This
 1. You will need to loop through each element in the array until you reach a non-zero element. You will also need to keep track of the number of leading zeros.  
 2. Remember that you must replace the samples array with a new array without the leading zeros.  How do you create an array of a particular size?
 
+Click to reveal problems to help you write your solution.
+
 .. reveal:: fr_soundb_r1
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
    :optional:
 
-    .. mchoice:: fr_soundb_1
+   .. mchoice:: fr_soundb_1
         :answer_a: while
         :answer_b: for
         :answer_c: for-each
@@ -87,13 +89,8 @@ How to Solve This
         :feedback_c: A for-each loop would only allow you to loop through all the values, but you first want to loop while there are leading zeros. 
 
         Which loop would be best for this problem?
-   
-.. reveal:: fr_soundb_r2
-   :showtitle: Reveal Problem
-   :hidetitle: Hide Problem
-   :optional:
 
-    .. mchoice:: fr_soundb_2
+   .. mchoice:: fr_soundb_2
         :answer_a: int[] samples2;
         :answer_b: int[] samples2 = new Array(count);
         :answer_c: int[] samples2 = new int[count];
