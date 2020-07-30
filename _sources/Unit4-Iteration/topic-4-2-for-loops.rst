@@ -514,14 +514,14 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 
 2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What external angle should you use for the turns? Remember they have to add up to 360 degrees.
 
-3. Create a variable n that holds the number of sides for any polygon, and use n in your loop. Can you have the loop draw a variety of shapes by just changing the value of the variable n? The power of abstraction! Can you draw a 9 sided nonagon? (Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts).
+3. Create a variable n that holds the number of sides for any polygon, and use n in your loop for the sides and to calculate the angle to turn. Can you have the loop draw a variety of shapes by just changing the value of the variable n? The power of abstraction! Can you draw a 9 sided nonagon? (Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts).
 
 .. activecode:: challenge4-2-TurtleLoopShapes
     :language: java
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Use a for-loop to draw a triangle. Then, change it to a pentagon. Then change it to draw any polygon using a variable n that holds the number of sides. Note that the angles in the turns have to add up to 360.
+    Use a for-loop to draw a triangle. Then, change it to a pentagon. Then change it to draw any polygon using a variable n that holds the number of sides. Note that the angles in the turns have to add up to 360. The autograder only checks one shape at a time, so comment out the code for one shape before starting on the next.
     ~~~~
     import java.util.*;
     import java.awt.*;

@@ -5,9 +5,9 @@
 Free Response - Number Cube B
 =============================
 
-..      index::
-      single: numbercubeb
-    single: free response
+.. index::
+   single: numbercubeb
+   single: free response
 
 The following is a free response question from 2009.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
@@ -40,6 +40,7 @@ If there are no runs of any value, the method returns -1.
 
 How to Solve
 ----------------
+
 You are going to need to keep track of the current run length, the maximum run length, the index where the max run started (which should start at -1).  You want to compare one value to an adjacent value 
 so you will need to be careful that you don't go out of bounds.  If you find two values that are adjacent that are equal then increment the current run length and set the start index.  If the two adjacent values
 are not equal then reset the current run length to 0.  Return the starting index of the maximum length run.
@@ -84,11 +85,13 @@ Mixed Up Code
 Try and Solve Part B
 --------------------
 
-Write the method ``getLongestRun`` that takes as its parameter an array of integer values representing a series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A run is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.
 
 .. activecode:: FRQNumberCubeB
    :language: java
+   :autograde: unittest      
 
+   FRQ Number Cube B: Write the method ``getLongestRun`` that takes as its parameter an array of integer values representing a series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A run is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.
+   ~~~~
    public class NumberCube
    {
 
@@ -113,3 +116,54 @@ Write the method ``getLongestRun`` that takes as its parameter an array of integ
            }
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.Arrays;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String expect = "Looks like your code works well!";
+            String actual = getMethodOutput("main");
+
+            boolean passed = getResults(expect, actual, "Checking output of main()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() {
+            int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+            String actual = "" + NumberCube.getLongestRun(values);
+            String expect = "-1";
+
+            boolean passed = getResults(expect, actual, "Checking output with " + Arrays.toString(values));
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3() {
+            int[] values = {1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+            String actual = "" + NumberCube.getLongestRun(values);
+            String expect = "0";
+
+            boolean passed = getResults(expect, actual, "Checking output with " + Arrays.toString(values));
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4() {
+            int[] values = {1, 1, 1, 1, 2, 2, 2, 2, 2};
+
+            String actual = "" + NumberCube.getLongestRun(values);
+            String expect = "4";
+
+            boolean passed = getResults(expect, actual, "Checking output with " + Arrays.toString(values));
+            assertTrue(passed);
+        }  
+    }

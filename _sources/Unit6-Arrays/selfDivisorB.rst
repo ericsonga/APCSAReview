@@ -103,7 +103,10 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
    
 .. activecode:: lcfrsdb
    :language: java
-   
+   :autograde: unittest
+
+   FRQ SelfDivisor B: write the method firstNumSelfDivisors below.
+   ~~~~  
    public class SelfDivisor
    {
 
@@ -151,6 +154,33 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
            System.out.print(n + " ");
         System.out.println();
       }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.Arrays;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Self divisors for firstNumSelfDivisors(10, 3):\n11 12 15\nSelf divisors for firstNumSelfDivisors(22, 5):\n22 24 33 36 44";
+            boolean passed = getResults(expect, output, "Checking output from main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() {
+            String msg = "Checking firstNumSelfDivisors(5, 10)";
+            String output = Arrays.toString(SelfDivisor.firstNumSelfDivisors(5, 10));
+            String expect = "[5, 6, 7, 8, 9, 11, 12, 15, 22, 24]";
+
+            boolean passed = getResults(expect, output, msg);
+            assertTrue(passed);
+        }
     }
     
 Video - One way to code the solution
