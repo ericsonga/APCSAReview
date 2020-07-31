@@ -585,7 +585,7 @@ The complex accessor method **averageSteps()** must calculate the average number
           
       
       //Write the accessor method averageSteps() here
-      // @return average steps calculated by dividing the total number of steps taken by the number of days tracked (which should be instance variables).
+      // @return average steps calculated by dividing the total number of steps taken by the number of days tracked (which should be instance variables). Make sure you use type casting to double!
       
       
       
@@ -620,7 +620,7 @@ The complex accessor method **averageSteps()** must calculate the average number
       {
         String output = getMethodOutput("main");
         String expect = "0\n0.0\n0\n7000.0\n1\n9000.0\n2\n10222.2\n";
-        boolean passed = getResults(expect, output, "Expected output from main");
+        boolean passed = getResults(expect, output, "Expected output from main. Make sure you used casting to double for the last result!");
         assertTrue(passed);
       }
 

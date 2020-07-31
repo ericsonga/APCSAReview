@@ -44,7 +44,6 @@ Objects - Instances of Classes
 Java is an **object-oriented programming** language.  In object-oriented programming, we group the data attributes and the behaviors/methods that use them together into objects, like the Turtle object on the left. 
 
 
-
 **Objects** are created from a **class** definition in the code, and they are **instances** of a class. In this unit, you will learn to use objects created from classes like Turtle and String that were written by other programmers. Later on, in Unit 5, you will learn to write code to create your own classes.
 
 .. |runbutton| image:: Figures/run-button.png
@@ -75,7 +74,7 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
     :datafile: turtleClasses.jar
 
     Try clicking the |runbutton| button below to see what the following program does.
-    (If the code below does not work for you, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -113,11 +112,13 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
         }
     }
 
+The following video shows how the program creates a ``World`` object called ``world`` and a ``Turtle`` object called ``yertle`` in memory. There is hidden Java code that defines the ``World`` and ``Turtle`` classes. Turtle is the name of the class that we've written for you that defines **methods** like ``forward()``, and yertle (and any other variable names that you use) are **objects** or **object instances** created using the Turtle class.
 
-The program above creates a ``World`` object called ``world`` and a ``Turtle`` object called ``yertle`` and places ``yertle`` in the center of the world.  The code
-asks ``yertle`` to go forward, turn left, and then go forward.  It didn't tell the turtle how much to go forward, so it goes forward 100 pixels by default. As the turtle moves it draws with its pen.
-There is hidden Java code that defines the ``World`` and ``Turtle`` classes.  Notice that a world was first
-created and then a turtle.  Turtles need to be created in a world.
+.. youtube:: 8Csj9i9r2K8
+    :width: 700
+    :align: center
+    :optional:
+ 
 
 .. mchoice:: 2_1_turle_dir
    :practice: T
@@ -134,14 +135,8 @@ created and then a turtle.  Turtles need to be created in a world.
    Which way does a turtle face when it is first created?
 
 
-A computer doesn't automatically know what we mean by a robot turtle or world.  We have to write Java classes to define what we
-mean.  The class defines the data that every turtle knows about itself (called **attributes** or **fields**) like where it is in the world and which way it is facing.  The class also defines
-what objects of the class can do (called **methods** or **behaviors**) like ``turnRight`` and move ``forward``.
 
-You can think of a **class** as a classification. A class defines the type of the objects created from it and creates objects of that type.
-Another way to say this is that a **class** in Java defines a new **abstract data type**.  When you create **objects**, you create a new **instance** (object) of that class data type. Here, ``yertle`` is an object of the class ``Turtle``.
-
-Also notice that the **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100. Try changing the code above to go forward 50 pixels instead and then run it again.  What happens?
+The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again.  What happens?
 
 .. parsonsprob:: 2_1_Turtle_L
    :practice: T
@@ -181,8 +176,8 @@ Also notice that the **dot operator** (.) is used to run an object's method. You
    } // end class
 
 
-A computer doesn't automatically know what we mean by a robot turtle or world.  We have to write Java classes to define what we
-mean.  The class defines the data that every turtle object knows about itself (called **fields** or **attributes**) like where it is in the world and which way it is facing.  The class also defines
+A computer doesn't automatically know what we mean by a turtle or world.  We have to write Java classes to define what we
+mean.  The class defines the data that every turtle object knows about itself (called **attributes** or **fields**) like where it is in the world and which way it is facing.  The class also defines
 what objects of the class can do (called **methods** or **behaviors**) like ``turnRight`` and move ``forward``.
 
 .. mchoice:: 2_1_type_object
@@ -423,7 +418,8 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
 What are Classes and Objects?
 -----------------------------
 
-In Java, a **class** is used to define a new **abstract data type** (classify something).   The class defines what objects of the class need to know (attributes or instance variables) and do (behaviors or methods).  A class is the formal implementation, or blueprint, of the attributes and behaviors of an object.
+In Java, a **class** is used to define a new **abstract data type** (and classify something).   The class defines what objects of the class need to know (attributes or instance variables) and do (behaviors or methods).  A class is the formal implementation, or blueprint, of the attributes and behaviors of an object.
+
 
 There are many classes that are part of the Java language, but you only have to know a few of these for the AP CS A exam (``String``, ``Math``, ``System``, ``ArrayList``).
 

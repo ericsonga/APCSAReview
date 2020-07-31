@@ -465,7 +465,7 @@ These problems are harder than most of those that you will usually see on the AP
 
    .. code-block:: java
 
-     public class Test1
+     public class Test
      {
         String someFunc(String str)
         {

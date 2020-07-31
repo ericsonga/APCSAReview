@@ -137,14 +137,14 @@ Mixed Up Code
 
 Try and Solve Part B
 --------------------
-Finish writing the method ``trimSilenceFromBeginning`` below that removes the silence from the beginning of a
-sound. To remove starting silence, a new array of values is created that contains the same values as the
-original ``samples`` array in the same order but without the leading zeros. The instance variable ``samples``
-is updated to refer to the new array. 
 
 .. activecode:: FRQSoundB
    :language: java
+   :autograde: unittest      
 
+   FRQ Sound B: Finish writing the method ``trimSilenceFromBeginning`` below that removes the silence from the beginning of a sound. To remove starting silence, a new array of values is created that contains the same values as the original ``samples`` array in the same order but without the leading zeros. The instance variable ``samples``
+is updated to refer to the new array. 
+   ~~~~
    import java.util.Arrays;
    public class Sound
    {
@@ -172,3 +172,49 @@ is updated to refer to the new array.
          System.out.println("The length of the new array should be 12 and is " + s.samples.length);
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    import java.lang.reflect.Field;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0";
+
+            boolean passed = output.contains(expect);
+
+            expect = "The original array of samples is [0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0]\nThe new array of samples is [-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0]";
+
+            getResults(expect, output, "Checking output from main()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() {
+            Sound s = new Sound();
+            s.trimSilenceFromBeginning();
+
+            try {
+                Field sampleField = Sound.class.getDeclaredField("samples");
+                sampleField.setAccessible(true);
+
+                int[] samples = (int[]) sampleField.get(s);
+
+                String expected = "12";
+                String actual = ""+ samples.length;
+
+                String msg = "Checking samples array length after trimSilenceFromBeginning()";
+                boolean passed = getResults(expected, actual, msg);
+                assertTrue(passed);
+
+            } catch (Exception e) {
+                getResults("", "", "There was a error with the testing code.", false);
+                fail();
+            }
+        }
+    }
