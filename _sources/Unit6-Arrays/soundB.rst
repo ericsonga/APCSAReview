@@ -135,8 +135,7 @@ Try and Solve Part B
    :language: java
    :autograde: unittest      
 
-   FRQ Sound B: Finish writing the method ``trimSilenceFromBeginning`` below that removes the silence from the beginning of a sound. To remove starting silence, a new array of values is created that contains the same values as the original ``samples`` array in the same order but without the leading zeros. The instance variable ``samples``
-is updated to refer to the new array. 
+   FRQ Sound B: Finish writing the method ``trimSilenceFromBeginning`` below that removes the silence from the beginning of a sound. To remove starting silence, a new array of values is created that contains the same values as the original ``samples`` array in the same order but without the leading zeros. The instance variable ``samples`` is updated to refer to the new array. 
    ~~~~
    import java.util.Arrays;
    public class Sound

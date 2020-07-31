@@ -34,7 +34,10 @@
     pair: operators; equality
     pair: operators; inequality
 
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
+    
 Compound Assignment Operators 
 =============================
    

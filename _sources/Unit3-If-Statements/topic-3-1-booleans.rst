@@ -386,7 +386,7 @@ Relational Operators Practice Game
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
    
    
-Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Relationals**,  evaluate the relational expression and click on None, All, or the numbers that make the expression true. Check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
+Try the game below to practice. Click on **Relationals**,  evaluate the relational expression and click on None, All, or the numbers that make the expression true. Check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html
 
