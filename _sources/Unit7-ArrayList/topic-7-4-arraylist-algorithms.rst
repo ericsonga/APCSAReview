@@ -112,7 +112,7 @@ You can step through the code above by clicking on the following `Example2 <http
 
 .. activecode:: arrayListRemoveInLoop
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
 
    The following code is supposed to initialize the ArrayList arr to [0,1,2,3,4] and then remove every other element to get [1,3]. However, when you remove an element the size of the array changes and elements move up an index! See if you can figure out why you get the unexpected result. Try the CodeLens button to trace through the code.
    ~~~~
@@ -165,7 +165,7 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
 
 .. activecode:: parallelArrayLists
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
 
    Demonstration of parallel ArrayLists.
    ~~~~
@@ -196,7 +196,7 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -225,3 +225,4 @@ We encourage you to work in pairs or groups to tackle the following challenging 
    2016freeresponseQ4B.rst
    2019delimitersQ3a.rst
    2019delimitersQ3b.rst
+   2013gridworldQ3A.rst
