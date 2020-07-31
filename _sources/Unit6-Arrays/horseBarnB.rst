@@ -71,52 +71,68 @@ How to solve this problem
 
 One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array. What kind of loop should you use? A for loop or an enhanced for loop would work for this problem. You will need an index for at least the temporary array. 
 
-While we are looping through the ``spaces`` array, we need to check for non-null positions.
+.. (teachers complained that you could use either because you need a 2nd index anyway) .. mchoice:: frhbb_1
+   :answer_a: for 
+   :answer_b: for each
+   :answer_c: while
+   :correct: a
+   :feedback_a: Use a for loop when you know how many times a loop needs to execute and need the index.
+   :feedback_b: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a for each loop if you want to loop through all the elements in a collection and don't need an index.
+   :feedback_c: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a while loop when you don't know how many times a loop needs to execute.  
 
-.. mchoice:: frhbb_2
-   :answer_a: if (spaces.get(index) != null)
-   :answer_b: if (!spaces[index].null())
-   :answer_c: if (spaces[index] != null)
-   :correct: c
-   :feedback_a: This is the syntax for checking an element within an ArrayList.
-   :feedback_b: Is null() a standard Java method? Comparing an object with a null value is simpler.
-   :feedback_c: "!=" is the best way to compare an element with a null value.
+   Which loop is a good one to use to solve this problem?
 
-   How do we check if the space at the current index isn't null? 
+While we are looping through the ``spaces`` array, we need to check for non-null positions. Click to reveal a practice problem about checking for null values.
+
+.. reveal:: frhbb_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+   .. mchoice:: frhbb_2
+        :answer_a: if (spaces.get(index) != null)
+        :answer_b: if (!spaces[index].null())
+        :answer_c: if (spaces[index] != null)
+        :correct: c
+        :feedback_a: This is the syntax for checking an element within an ArrayList.
+        :feedback_b: Is null() a standard Java method? Comparing an object with a null value is simpler.
+        :feedback_c: "!=" is the best way to compare an element with a null value.
+
+        How do we check if the space at the current index isn't null? 
    
-   
+Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.   
    
 .. activecode:: lcfrhbb1
    :language: java
-   :autograde: unittest           
-       
-   Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.       
+   :autograde: unittest
+
+   Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.
    ~~~~
-   class Horse 
+   class Horse
    {
       private String name;
       private int weight;
-  
+
       public Horse(String theName, int theWeight)
       {
          this.name = theName;
          this.weight = theWeight;
       }
-  
+
       public String getName() { return this.name;}
-  
+
       public int getWeight() { return this.weight; }
-  
+
       public String toString()
       {
          return "name: " + this.name + " weight: " + this.weight;
       }
    }
-   
-   public class HorseBarn 
-   { 
-      private Horse[] spaces; 
-  
+
+   public class HorseBarn
+   {
+      private Horse[] spaces;
+
       /** Constructor that takes the number of stalls
        * @param numStalls - the number of stalls in the barn
        */
@@ -124,19 +140,19 @@ While we are looping through the ``spaces`` array, we need to check for non-null
       {
         spaces = new Horse[numStalls];
       }
-  
 
-      /** Consolidates the barn by moving horses so that the horses are 
-       *  in adjacent spaces, starting at index 0, with no empty space 
+
+      /** Consolidates the barn by moving horses so that the horses are
+       *  in adjacent spaces, starting at index 0, with no empty space
        *  between any two horses.
-       * Postcondition: The order of the horses is the same as before 
+       * Postcondition: The order of the horses is the same as before
        *  the consolidation.
        */
       public void consolidate()
       {
 
-      } 
-  
+      }
+
       public String toString()
       {
         String result = "";
@@ -149,7 +165,7 @@ While we are looping through the ``spaces`` array, we need to check for non-null
         }
         return result;
       }
-  
+
       public static void main (String[] args)
       {
         HorseBarn barn = new HorseBarn(7);
@@ -216,7 +232,8 @@ While we are looping through the ``spaces`` array, we need to check for non-null
         }
     }
 
-    
+
+
 Video - One way to code the solution
 =====================================
 

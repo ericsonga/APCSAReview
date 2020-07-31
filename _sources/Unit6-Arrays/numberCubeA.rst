@@ -36,40 +36,46 @@ method should return an array of the values produced by tossing the number cube 
 How to Solve
 ----------------
 
-You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call ``toss``.  You will need to loop that number of times and each time set the value of the array at that index to the result of the ``toss``.  Return the array.   
+You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call ``toss``.  You will need to loop that number of times and each time set the value of the array at that index to the result of the ``toss``.  Return the array. Click to reveal problems to help you write your solution.
 
-.. mchoice:: numbercubea_1
-   :answer_a: (int) (Math.random() * 6) + 1)
-   :answer_b: (int) (Math.random() * 6)
-   :answer_c: Math.random(6);
-   :correct: a
-   :feedback_a: This expression correctly generates a random number between 1 and 6.
-   :feedback_b: This expression generates a random number from 0 to 5.  
-   :feedback_c: This isn't valid
+.. reveal:: numbercubea_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
 
-   Which Java expression correctly generates a random number between 1 and 6?
+   .. mchoice:: numbercubea_1
+        :answer_a: (int) (Math.random() * 6) + 1)
+        :answer_b: (int) (Math.random() * 6)
+        :answer_c: Math.random(6);
+        :correct: a
+        :feedback_a: This expression correctly generates a random number between 1 and 6.
+        :feedback_b: This expression generates a random number from 0 to 5.  
+        :feedback_c: This isn't valid
+
+        Which Java expression correctly generates a random number between 1 and 6?
    
-.. mchoice:: numbercubea_2
-   :answer_a: int[] tossArray = new int[];
-   :answer_b: int[] tossArray = new int(numTosses);
-   :answer_c: int[] tossArray = new int[numTosses];
-   :correct: c
-   :feedback_a: You need to specify the size of the array when you create it.
-   :feedback_b: It should be new int[numTosses].
-   :feedback_c: This will create an array of size numTosses.
-
-   Which of the following correctly creates an array of size numTosses?
    
-.. mchoice:: numbercubea_3
-   :answer_a: for (int i = 0; i <= numTosses; i++)
-   :answer_b: for (int i = 1; i < numTosses; i++)
-   :answer_c: for (int i = 0; i < numTosses; i++)
-   :correct: c
-   :feedback_a: This will execute numTosses + 1 times.
-   :feedback_b: This will execute numTosses - 1 times.
-   :feedback_c: This will execute numTosses times.
+   .. mchoice:: numbercubea_2
+        :answer_a: int[] tossArray = new int[];
+        :answer_b: int[] tossArray = new int(numTosses);
+        :answer_c: int[] tossArray = new int[numTosses];
+        :correct: c
+        :feedback_a: You need to specify the size of the array when you create it.
+        :feedback_b: It should be new int[numTosses].
+        :feedback_c: This will create an array of size numTosses.
 
-   Which of the following correctly loops numTosses number of times?
+        Which of the following correctly creates an array of size numTosses?
+   
+   .. mchoice:: numbercubea_3
+        :answer_a: for (int i = 0; i <= numTosses; i++)
+        :answer_b: for (int i = 1; i < numTosses; i++)
+        :answer_c: for (int i = 0; i < numTosses; i++)
+        :correct: c
+        :feedback_a: This will execute numTosses + 1 times.
+        :feedback_b: This will execute numTosses - 1 times.
+        :feedback_c: This will execute numTosses times.
+
+        Which of the following correctly loops numTosses number of times?
    
 
 Mixed Up Code
