@@ -72,31 +72,41 @@ How to solve this problem
 ===========================
 
 In order to find the index of the horse with the same name we are looking for, we will need to loop through the array ``spaces``. As we loop, we will compare the name we are looking for with the ``Horse`` object's name at the current index.
-We will have to watch out for spaces that are empty (are null).  
+We will have to watch out for spaces that are empty (are null).  Click to reveal a practice problem about objects.
 
-.. mchoice:: frhba_1
-   :answer_a: spaces[index].name;
-   :answer_b: spaces[index].getName();
-   :answer_c: spaces.get(index).getName();
-   :correct: b
-   :feedback_a: Getter methods are needed to access private class variables.
-   :feedback_b: This is the syntax for getting the value of an element in an array.  
-   :feedback_c: This is the syntax for getting the value of an element in an arrayList.   
+.. reveal:: frhba_r1
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
 
-   Which of the following correctly retrieves the name of a "Horse" object from the "spaces" array?
+   .. mchoice:: frhba_1
+        :answer_a: spaces[index].name;
+        :answer_b: spaces[index].getName();
+        :answer_c: spaces.get(index).getName();
+        :correct: b
+        :feedback_a: Getter methods are needed to access private class variables.
+        :feedback_b: This is the syntax for getting the value of an element in an array.  
+        :feedback_c: This is the syntax for getting the value of an element in an arrayList.   
 
-Once we have the name of the current ``Horse`` object, we need to compare this name to the name we are looking for.
+        Which of the following correctly retrieves the name of a "Horse" object from the "spaces" array?
 
-.. mchoice:: frhba_2
-   :answer_a: str.compareTo(anotherString);
-   :answer_b: str == anotherString;
-   :answer_c: str.equals(anotherString);
-   :correct: c
-   :feedback_a: This String method is used for comparing two strings alphabetically. It returns 0 if they are equal so you would need to check the return value.
-   :feedback_b: This would only return true if the two variables refer to the same object.  
-   :feedback_c: This String method will compare the characters in both strings and return true if they are the same.
+Once we have the name of the current ``Horse`` object, we need to compare this name to the name we are looking for. Click to reveal a practice problem about String comparisons.
 
-   What is the best way to compare two strings for equality?  
+.. reveal:: frhba_r2
+   :showtitle: Reveal Problem
+   :hidetitle: Hide Problem
+   :optional:
+
+   .. mchoice:: frhba_2
+        :answer_a: str.compareTo(anotherString);
+        :answer_b: str == anotherString;
+        :answer_c: str.equals(anotherString);
+        :correct: c
+        :feedback_a: This String method is used for comparing two strings alphabetically. It returns 0 if they are equal so you would need to check the return value.
+        :feedback_b: This would only return true if the two variables refer to the same object.  
+        :feedback_c: This String method will compare the characters in both strings and return true if they are the same.
+
+        What is the best way to compare two strings for equality?  
    
 Try It!
 ========
@@ -105,36 +115,36 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
    
 .. activecode:: lcfrhba1
    :language: java
-   :autograde: unittest           
-   
+   :autograde: unittest
+
    FRQ HorseBarn A: Write the method findHorseSpace.
    ~~~~
    class Horse
    {
       private String name;
       private int weight;
-  
+
       public Horse(String theName, int theWeight)
       {
          this.name = theName;
          this.weight = theWeight;
       }
-  
+
       public String getName() { return this.name;}
-  
+
       public int getWeight() { return this.weight; }
-  
+
       public String toString()
       {
          return "name: " + this.name + " weight: " + this.weight;
       }
    }
 
-   
-   public class HorseBarn 
-   { 
-      private Horse[] spaces; 
-  
+
+   public class HorseBarn
+   {
+      private Horse[] spaces;
+
       /** Constructor that takes the number of stalls
        * @param numStalls - the number of stalls in the barn
        */
@@ -142,18 +152,18 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
       {
         spaces = new Horse[numStalls];
       }
-  
-      /** Returns the index of the space that contains the horse with the specified name. 
-       * * Precondition: No two horses in the barn have the same name. 
-       * @param name the name of the horse to find 
-       * @return the index of the space containing the horse with the specified name; 
-       * -1 if no horse with the specified name is in the barn. 
-       */ 
-      public int findHorseSpace(String name) 
-      { 
-    
-      } 
-  
+
+      /** Returns the index of the space that contains the horse with the specified name.
+       * * Precondition: No two horses in the barn have the same name.
+       * @param name the name of the horse to find
+       * @return the index of the space containing the horse with the specified name;
+       * -1 if no horse with the specified name is in the barn.
+       */
+      public int findHorseSpace(String name)
+      {
+
+      }
+
       public String toString()
       {
         String result = "";
@@ -166,7 +176,7 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
         }
         return result;
       }
-  
+
       public static void main (String[] args)
       {
         HorseBarn barn = new HorseBarn(7);
@@ -175,16 +185,16 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
         barn.spaces[3] = new Horse("Lady", 1575);
         barn.spaces[5] = new Horse("Patches", 1350);
         barn.spaces[6] = new Horse("Duke", 1410);
-        
+
         // print out what is in the barn
         System.out.println(barn);
-        
+
         // test
-        System.out.println("Index of Trigger should be 0 and is " + 
+        System.out.println("Index of Trigger should be 0 and is " +
                            barn.findHorseSpace("Trigger"));
-        System.out.println("Index of Silver should be 2 and is " + 
+        System.out.println("Index of Silver should be 2 and is " +
                            barn.findHorseSpace("Silver"));
-        System.out.println("Index of Coco should be -1 and is " + 
+        System.out.println("Index of Coco should be -1 and is " +
                            barn.findHorseSpace("Coco"));
       }
    }
@@ -220,7 +230,7 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
 
                 spaces[1] = new Horse("Trigger", 1340);
                 spaces[3] = new Horse("Silver",1210);
-                spaces[4] = new Horse("Lady", 1575);        
+                spaces[4] = new Horse("Lady", 1575);
                 spaces[6] = new Horse("Patches", 1350);
                 spaces[0] = new Horse("Duke", 1410);
 
@@ -250,7 +260,7 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
 
                 spaces[1] = new Horse("Trigger", 1340);
                 spaces[3] = new Horse("Silver",1210);
-                //spaces[4] = new Horse("Lady", 1575);        
+                //spaces[4] = new Horse("Lady", 1575);
                 spaces[6] = new Horse("Patches", 1350);
                 spaces[0] = new Horse("Duke", 1410);
 
@@ -268,9 +278,9 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
 
         }
     }
-   
 
-    
+
+
 Video - One way to code the solution
 =====================================
 
