@@ -197,7 +197,89 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
                            barn.findHorseSpace("Coco"));
       }
    }
-   
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.lang.reflect.Field;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Index of Trigger should be 0 and is 0\nIndex of Silver should be 2 and is 2\nIndex of Coco should be -1 and is -1";
+
+            boolean passed = removeSpaces(output).contains(removeSpaces(expect));
+
+            getResults(expect, output, "Expected output from main", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1() {
+            HorseBarn barn = new HorseBarn(7);
+
+            try {
+                Field barnField = HorseBarn.class.getDeclaredField("spaces");
+                barnField.setAccessible(true);
+
+                Horse[] spaces = (Horse[]) barnField.get(barn);
+
+                spaces[1] = new Horse("Trigger", 1340);
+                spaces[3] = new Horse("Silver",1210);
+                spaces[4] = new Horse("Lady", 1575);
+                spaces[6] = new Horse("Patches", 1350);
+                spaces[0] = new Horse("Duke", 1410);
+
+                String expected = "3";
+                String actual = "" + barn.findHorseSpace("Silver");
+
+                String msg = "Checking findHorseSpace(\"Silver\") with [\"Duke\", \"Trigger\", null, \"Silver\", \"Lady\", null, \"Patches\"]";
+                boolean passed = getResults(expected, actual, msg);
+                assertTrue(passed);
+
+            } catch (Exception e) {
+                getResults("", "", "There was a error with the testing code.", false);
+                fail();
+            }
+
+        }
+
+        @Test
+        public void test2() {
+            HorseBarn barn = new HorseBarn(7);
+
+            try {
+                Field barnField = HorseBarn.class.getDeclaredField("spaces");
+                barnField.setAccessible(true);
+
+                Horse[] spaces = (Horse[]) barnField.get(barn);
+
+                spaces[1] = new Horse("Trigger", 1340);
+                spaces[3] = new Horse("Silver",1210);
+                //spaces[4] = new Horse("Lady", 1575);
+                spaces[6] = new Horse("Patches", 1350);
+                spaces[0] = new Horse("Duke", 1410);
+
+                String expected = "-1";
+                String actual = "" + barn.findHorseSpace("Lady");
+
+                String msg = "Checking findHorseSpace(\"Lady\") with [\"Duke\", \"Trigger\", null, \"Silver\", null, null, \"Patches\"]";
+                boolean passed = getResults(expected, actual, msg);
+                assertTrue(passed);
+
+            } catch (Exception e) {
+                getResults("", "", "There was a error with the testing code.", false);
+                fail();
+            }
+
+        }
+    }
+
+
+  
 
     
 Video - One way to code the solution

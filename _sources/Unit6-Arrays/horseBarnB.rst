@@ -177,7 +177,57 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
         System.out.println(barn);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.lang.reflect.Field;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "space 0 has name: Trigger weight: 1340\nspace 1 has name: Silver weight: 1210\nspace 2 has name: Patches weight: 1350\nspace 3 has name: Duke weight: 1410\nspace 4 has  null \nspace 5 has  null \nspace 6 has  null";
+
+            boolean passed = removeSpaces(output).contains(removeSpaces(expect));
+            getResults(expect, output, "Expected output from main", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1() {
+            HorseBarn barn = new HorseBarn(7);
+
+            try {
+                Field barnField = HorseBarn.class.getDeclaredField("spaces");
+                barnField.setAccessible(true);
+
+                Horse[] spaces = (Horse[]) barnField.get(barn);
+
+                spaces[1] = new Horse("Trigger", 1340);
+                spaces[3] = new Horse("Silver",1210);
+                spaces[5] = new Horse("Lady", 1575);
+
+                String expect = "space 0 has name: Trigger weight: 1340\nspace 1 has name: Silver weight: 1210\nspace 2 has name: Lady weight: 1575\nspace 3 has  null \nspace 4 has  null \nspace 5 has  null \nspace 6 has  null";
+                barn.consolidate();
+                String actual = barn.toString();
+
+                boolean passed = removeSpaces(actual).contains(removeSpaces(expect));
+
+                String msg = "Checking consolidate() with [null, \"Trigger\", null, \"Silver\", null, \"Lady\", null, null]";
+
+               getResults(expect, actual, msg, passed);
+                assertTrue(passed);
+
+            } catch (Exception e) {
+                getResults("", "", "There was a error with the testing code.", false);
+                fail();
+            }
+
+        }
+    }
     
 Video - One way to code the solution
 =====================================
