@@ -115,35 +115,36 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
    
 .. activecode:: lcfrhba1
    :language: java
-   
+   :autograde: unittest
+
    FRQ HorseBarn A: Write the method findHorseSpace.
    ~~~~
    class Horse
    {
       private String name;
       private int weight;
-  
+
       public Horse(String theName, int theWeight)
       {
          this.name = theName;
          this.weight = theWeight;
       }
-  
+
       public String getName() { return this.name;}
-  
+
       public int getWeight() { return this.weight; }
-  
+
       public String toString()
       {
          return "name: " + this.name + " weight: " + this.weight;
       }
    }
 
-   
-   public class HorseBarn 
-   { 
-      private Horse[] spaces; 
-  
+
+   public class HorseBarn
+   {
+      private Horse[] spaces;
+
       /** Constructor that takes the number of stalls
        * @param numStalls - the number of stalls in the barn
        */
@@ -151,18 +152,18 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
       {
         spaces = new Horse[numStalls];
       }
-  
-      /** Returns the index of the space that contains the horse with the specified name. 
-       * * Precondition: No two horses in the barn have the same name. 
-       * @param name the name of the horse to find 
-       * @return the index of the space containing the horse with the specified name; 
-       * -1 if no horse with the specified name is in the barn. 
-       */ 
-      public int findHorseSpace(String name) 
-      { 
-    
-      } 
-  
+
+      /** Returns the index of the space that contains the horse with the specified name.
+       * * Precondition: No two horses in the barn have the same name.
+       * @param name the name of the horse to find
+       * @return the index of the space containing the horse with the specified name;
+       * -1 if no horse with the specified name is in the barn.
+       */
+      public int findHorseSpace(String name)
+      {
+
+      }
+
       public String toString()
       {
         String result = "";
@@ -175,7 +176,7 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
         }
         return result;
       }
-  
+
       public static void main (String[] args)
       {
         HorseBarn barn = new HorseBarn(7);
@@ -184,16 +185,16 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
         barn.spaces[3] = new Horse("Lady", 1575);
         barn.spaces[5] = new Horse("Patches", 1350);
         barn.spaces[6] = new Horse("Duke", 1410);
-        
+
         // print out what is in the barn
         System.out.println(barn);
-        
+
         // test
-        System.out.println("Index of Trigger should be 0 and is " + 
+        System.out.println("Index of Trigger should be 0 and is " +
                            barn.findHorseSpace("Trigger"));
-        System.out.println("Index of Silver should be 2 and is " + 
+        System.out.println("Index of Silver should be 2 and is " +
                            barn.findHorseSpace("Silver"));
-        System.out.println("Index of Coco should be -1 and is " + 
+        System.out.println("Index of Coco should be -1 and is " +
                            barn.findHorseSpace("Coco"));
       }
    }
@@ -279,9 +280,7 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
     }
 
 
-  
 
-    
 Video - One way to code the solution
 =====================================
 

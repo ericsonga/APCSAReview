@@ -104,32 +104,35 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
    
 .. activecode:: lcfrhbb1
    :language: java
-       
-   class Horse 
+   :autograde: unittest
+
+   Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.
+   ~~~~
+   class Horse
    {
       private String name;
       private int weight;
-  
+
       public Horse(String theName, int theWeight)
       {
          this.name = theName;
          this.weight = theWeight;
       }
-  
+
       public String getName() { return this.name;}
-  
+
       public int getWeight() { return this.weight; }
-  
+
       public String toString()
       {
          return "name: " + this.name + " weight: " + this.weight;
       }
    }
-   
-   public class HorseBarn 
-   { 
-      private Horse[] spaces; 
-  
+
+   public class HorseBarn
+   {
+      private Horse[] spaces;
+
       /** Constructor that takes the number of stalls
        * @param numStalls - the number of stalls in the barn
        */
@@ -137,19 +140,19 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
       {
         spaces = new Horse[numStalls];
       }
-  
 
-      /** Consolidates the barn by moving horses so that the horses are 
-       *  in adjacent spaces, starting at index 0, with no empty space 
+
+      /** Consolidates the barn by moving horses so that the horses are
+       *  in adjacent spaces, starting at index 0, with no empty space
        *  between any two horses.
-       * Postcondition: The order of the horses is the same as before 
+       * Postcondition: The order of the horses is the same as before
        *  the consolidation.
        */
       public void consolidate()
       {
 
-      } 
-  
+      }
+
       public String toString()
       {
         String result = "";
@@ -162,7 +165,7 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
         }
         return result;
       }
-  
+
       public static void main (String[] args)
       {
         HorseBarn barn = new HorseBarn(7);
@@ -228,7 +231,9 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
 
         }
     }
-    
+
+
+
 Video - One way to code the solution
 =====================================
 
