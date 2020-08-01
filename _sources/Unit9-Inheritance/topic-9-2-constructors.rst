@@ -20,7 +20,10 @@
     :align: middle
     :alt: groupwork
     
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
+    
 Inheritance and Constructors
 ============================
 
@@ -52,6 +55,7 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
 
 .. activecode:: InitPrivateInherited
   :language: java
+  :autograde: unittest
 
   Try creating another Employee object in the main method that passes in your name and then use the get methods to print it out. Which class constructor sets the name? Which class constructor sets the id?
   ~~~~
@@ -81,8 +85,7 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
   }
   
   public class Employee extends Person
-  {
-    
+  {    
      private static int nextId = 1;
      private int id; 
   	
@@ -105,6 +108,41 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
         System.out.println(emp.getId());
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Employee");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Dani\n#";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String target = "Employee * = new Employee";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num >= 2;
+
+            getResults("2+", "" + num, "Creating new Employee()", passed);
+            assertTrue(passed);
+        }
+    }
 
   
 If a class has no constructor in Java, the compiler will add a no-argument constructor.  A no-argument constructor is one that doesn't have any parameters, for example ``public Person()``.   
@@ -250,6 +288,7 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
        
 .. activecode:: challenge-9-2-Square-Rectangle
   :language: java
+  :autograde: unittest
 
   Create a Square class that inherits from Rectangle.
   ~~~~
@@ -301,6 +340,56 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
           // s.draw();
        }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Square");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main").trim();
+            String expect = "* * * * *\n* * * * * \n* * * * * \n\n* \n\n* * * \n* * * \n* * *";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String target = "extends Rectangle";
+
+            boolean passed = checkCodeContains(target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String output = checkDefaultConstructor();
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking Square no-argument constructor");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String output = checkConstructor(new Object[]{1});
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking Square constructor with 1 argument (int)");
+            assertTrue(passed);
+        }
+    }
 
 .. |repl.it Java Swing code| raw:: html
 

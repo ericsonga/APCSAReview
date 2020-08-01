@@ -37,22 +37,22 @@ Creating and Initializing Objects: Constructors
 
 A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has **constructors** like ``World()`` and ``Turtle(world)`` which are used initialize the attributes in a newly created object.
 
-A new object is created with the ``new`` keyword followed by the class name (``new Class()``).  When this code executes, it creates a new object of the specified class and calls a constructor, which has the same name as the class.  For example, ``new World()`` creates and initializes a new object of the ``World`` class, and ``new Turtle(world)`` creates and initializes a new ``Turtle`` object in the specified world.
+A new object is created with the ``new`` keyword followed by the class name (``new Class()``).  When this code executes, it creates a new object of the specified class and calls a constructor, which has the same name as the class.  For example, ``new World()`` creates and initializes a new object of the ``World`` class, and ``new Turtle(habitat)`` creates and initializes a new ``Turtle`` object in the World habitat.
 
 
 .. code-block:: java
 
     // To create a new object and call a constructor write:
     // ClassName variableName = new ClassName(parameters);
-    World world = new World();    // create a new World object
-    Turtle t = new Turtle(world); // create a new Turtle object
+    World habitat = new World();    // create a new World object
+    Turtle t = new Turtle(habitat); // create a new Turtle object
 
 Overloading Constructors
 ---------------------------
 
 There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. 
 
-There can also be other constructors that take parameters like the ``Turtle(world)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
+There can also be other constructors that take parameters like the ``Turtle(habitat)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
 
 The ``World`` class actually has 2 constructors.  One doesn't take any parameters and one takes the world's width and height.
 
@@ -134,17 +134,17 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
 
 .. mchoice:: const_turtle
    :practice: T
-   :answer_a: Turtle t = Turtle(world);
+   :answer_a: Turtle t = Turtle(world1);
    :answer_b: Turtle t = new Turtle();
-   :answer_c: Turtle t = new Turtle(world, 100, 100);
-   :answer_d: Turtle t = new Turtle(100, 100, world);
+   :answer_c: Turtle t = new Turtle(world1, 100, 100);
+   :answer_d: Turtle t = new Turtle(100, 100, world1);
    :correct: d
    :feedback_a: You must use the new keyword to create a new Turtle.
    :feedback_b: All turtle constructors take a world as a parameter.
    :feedback_c: The order of the parameters matter.
    :feedback_d: This creates a new Turtle object in the passed world at location (100,100)
 
-   Which of these is valid syntax for creating and initializing a Turtle object?
+   Which of these is valid syntax for creating and initializing a Turtle object in world1?
 
 |CodingEx| **Coding Exercise:**
 
@@ -165,13 +165,13 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
       public static void main(String[] args)
       {
           // Change the World constructor to 300x400
-          World world = new World(300,300);
+          World world1 = new World(300,300);
 
           // Change the Turtle constructor to put the turtle in the top right corner
-          Turtle t1 = new Turtle(world);
+          Turtle t1 = new Turtle(world1);
 
           t1.turnLeft();
-          world.show(true);
+          world1.show(true);
       }
     }
     ====
@@ -188,7 +188,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorTest\n{\n  public static void main(String[] args)\n  {\n      // Change the World constructor to 300x400\n      World world = new World(300,300);\n\n      // Change the Turtle constructor to put the turtle in the top right corner\n      Turtle t1 = new Turtle(world);\n\n      t1.turnLeft();\n      world.show(true);\n  }\n}\n";
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorTest\n{\n  public static void main(String[] args)\n  {\n      // Change the World constructor to 300x400\n      World world1 = new World(300,300);\n\n      // Change the Turtle constructor to put the turtle in the top right corner\n      Turtle t1 = new Turtle(world1);\n\n      t1.turnLeft();\n      world1.show(true);\n  }\n}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -463,12 +463,14 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
     {
       public static void main(String[] args) 
       {  
-        World world = new World(400,400);
+        World world1 = new World(400,400);
 
-        // 1. Create a large 150x200 CustomTurtle with a green body (Color.green)
+        // 1. Change the constructor call below to create a large 
+        // 150x200 CustomTurtle with a green body (Color.green)
         // and a blue shell (Color.blue) at position (150,300).
         // Move it forward to see it.
-        
+        CustomTurtle turtle1 = new CustomTurtle(world1); 
+        turtle1.forward();
     
 
         // 2. Create a small 25x50 CustomTurtle with a red body 
@@ -478,7 +480,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
 
         // 3. Create a CustomTurtle of your own design
         
-        world.show(true);
+        world1.show(true);
       }
     }
 

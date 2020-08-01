@@ -10,21 +10,20 @@ Code Practice with ArrayLists
 
         .. tab:: Question
 
-           Fix the following code so that it compiles. The code should instantiate an ArrayList of Strings ``names`` and fill it with the Strings from the array ``friends``. It should then print out ``names``.
-
            .. activecode::  ch8Ex1q
               :language: java
               :autograde: unittest        
               :practice: T
 
-              import java.util.List;
-              import java.util.Arraylist;
+              Fix the following code so that it compiles. The code should instantiate an ArrayList of Strings ``names`` and fill it with the Strings from the array ``friends``. It should then print out ``names``.
+              ~~~~
+              import java.util.*;
 
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      List<String> names = new ArrayList<String>();
+                      ArrayList<String> names = new ArrayList<String>();
                       String[] friends = {"Sam", "Jessica", "Mark", "Alexis"};
                       for (int i = 0; i <= friends.length; i++)
                       {
@@ -53,7 +52,7 @@ Code Practice with ArrayLists
 
         .. tab:: Answer
 
-           In line 2, capitalize the ``l`` in ``Arraylist`` so that the proper library is imported.  In line 10, change the terminating condition to ``i < friends.length`` so that you don't go out of bounds of the array.
+           In line 10, change the terminating condition to ``i < friends.length`` so that you don't go out of bounds of the array.
 
            .. activecode::  ch8Ex1a
               :language: java
@@ -61,14 +60,13 @@ Code Practice with ArrayLists
                  
               This is the answer to the previous question.
               ~~~~
-              import java.util.List;
-              import java.util.ArrayList;
+              import java.util.*;
 
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      List<String> names = new ArrayList<String>();
+                      ArrayList<String> names = new ArrayList<String>();
                       String[] friends = {"Sam", "Jessica", "Mark", "Alexis"};
                       for (int i = 0; i < friends.length; i++)
                       {
@@ -90,16 +88,15 @@ Code Practice with ArrayLists
 
         .. tab:: Question
 
-           Fix the following class so that it will compile and the method ``reverse`` will return an ArrayList containing Integers in the reversed order of the ArrayList parameter ``list``. Hint: for this solution, only one line needs to be added to the for-loop inside of the ``reverse`` method.
-
            .. activecode::  ch8Ex2q
               :language: java
               :autograde: unittest        
               :practice: T
 
-              import java.util.list;
-              import java.util.ArrayList;
-
+              Fix the following class so that it will compile and the method ``reverse`` will return an ArrayList containing Integers in the reversed order of the ArrayList parameter ``list``. Hint: for this solution, only one line needs to be added to the for-loop inside of the ``reverse`` method.
+              ~~~~
+              import java.util.*;
+              
               public class Test1
               {
                   public static ArrayList<Integer> reverse(ArrayList<Integer> list)
@@ -127,12 +124,39 @@ Code Practice with ArrayLists
                   }
               }
               ====
-              
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                import java.util.List;
+                import java.util.ArrayList;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:	 [2, 3, -2, 9, 7, 5, 1]\n" +
+                                    "Your Result:		 [2, 3, -2, 9, 7, 5, 1]\n";
+
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);
+                  }
+
+                @Test 
+                  public void testAdd()
+                  {
+                    String target = "reversed.add(0,element);";
+                    boolean passed = checkCodeContains("add method called to add element to the beginning of ArrayList reversed",target);
+                    assertTrue(passed);
+                  }
+                }
 
 
         .. tab:: Answer
 
-           In line 1, capitalize the``l`` in ``list`` so that the proper library is imported.  Change line 8 ``int`` to ``Integer`` because ArrayLists only store objects and int is a primitive.  Add in line 11 ``reversed.add(0, element);`` so that each element of the ArrayList ``list``, the parameter, is added in front of the previously added element (thereby reversing the order).
+           Change line 8 ``int`` to ``Integer`` because ArrayLists only store objects and int is a primitive.  Add in line 11 ``reversed.add(0, element);`` so that each element of the ArrayList ``list``, the parameter, is added in front of the previously added element (thereby reversing the order).
 
            Note that there are other equally correct ways to reverse the order of the ArrayList without creating a new Array or by traversing through it backwards.
 
@@ -142,8 +166,7 @@ Code Practice with ArrayLists
                  
               This is the answer to the previous question.
               ~~~~
-              import java.util.List;
-              import java.util.ArrayList;
+              import java.util.*;
 
               public class Test1
               {
@@ -181,18 +204,16 @@ Code Practice with ArrayLists
 
 .. tabbed:: ch8Ex3
 
-        .. tab:: Question
-
-
-           Fix the following method ``printEvenIndex`` so that it will print out the Integers at even indices of the passed-in ArrayList ``list``.
+        .. tab:: Question   
 
            .. activecode::  ch8Ex3q
               :language: java
               :autograde: unittest        
               :practice: T
 
-              import java.util.List;
-              import java.util.ArrayList;
+              Fix the following method ``printEvenIndex`` so that it will print out the Integers at even indices of the passed-in ArrayList ``list``.
+              ~~~~
+              import java.util.*;
 
               public class Test1
               {
@@ -221,6 +242,40 @@ Code Practice with ArrayLists
                       printEvenIndex(values);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+                
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t1, 7, -2, 2,\n" +
+                                    "Your Result:\t\t1, 7, -2, 2,\n";
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
+
+                @Test 
+                  public void testFor()
+                  {
+                    String target = "for (int i = 0; i < list.size(); i++)";
+                    boolean passed = checkCodeContains("FOR loop: traversing ArrayList list",target);
+                    assertTrue(passed);
+                  }
+
+
+                @Test 
+                  public void testEvenIndx()
+                  {
+                    String target = "if (i % 2 == 0)";
+                    boolean passed = checkCodeContains("checking EVEN index i: traversing ArrayList list",target);
+                    assertTrue(passed);
+                  }
+                }
 
 
         .. tab:: Answer
@@ -233,9 +288,8 @@ Code Practice with ArrayLists
                  
               This is the answer to the previous question.
               ~~~~
-              import java.util.List;
-              import java.util.ArrayList;
-
+              import java.util.*;
+              
               public class Test1
               {
                   public static void printEvenIndex(ArrayList<Integer> list)
@@ -274,22 +328,18 @@ Code Practice with ArrayLists
 
         .. tab:: Question
 
-
-           Fix the following method ``printEvenElements`` so that it will print out all of the even Integers that are in the passed-in ArrayList ``list``.
-
            .. activecode::  ch8Ex4q
               :language: java
               :autograde: unittest        
               :practice: T
 
-              import java.util.List;
-              import java.util.ArrayList;
+              Fix the following method ``printEvenElements`` so that it will print out all of the even Integers that are in the passed-in ArrayList ``list``.
+              ~~~~
+              import java.util.*;
 
               public class Test1
               {
-                  public static void printEvenEleme
-              :autograde: unittest        
-              :practice: Tnts(ArrayList<Integer> list)
+                  public static void printEvenElements(ArrayList<Integer> list)
                   {
                       for (int i = 0; i < list.length; i++)
                       {
@@ -314,7 +364,41 @@ Code Practice with ArrayLists
                       printEvenElements(values);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
 
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t44, -16, 2,\n"  +
+                                    "Your Result:\t\t44, -16, 2,\n";
+
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
+
+                @Test 
+                  public void testSizeMethod()
+                  {
+                    String target = "i < list.size()";
+                    boolean passed = checkCodeContains("SIZE method used in traversing ArrayList list",target);
+                    assertTrue(passed);
+                  }
+
+
+                @Test 
+                  public void testIntCast()
+                  {
+                    String target = "(int) list.get(i)";
+                    boolean passed = checkCodeContains("INT CASTING: getting ArrayList list values of type INTEGER ",target);
+                    assertTrue(passed);
+                  }
+                }
 
         .. tab:: Answer
 
@@ -326,8 +410,7 @@ Code Practice with ArrayLists
                  
               This is the answer to the previous question.
               ~~~~
-              import java.util.List;
-              import java.util.ArrayList;
+              import java.util.*;
 
               public class Test1
               {
@@ -369,13 +452,14 @@ Code Practice with ArrayLists
 
         .. tab:: Question
 
-           Rewrite the following code so that it fills the ArrayList ``values`` with the elements of the array ``nums`` using a for-each loop instead of a ``for`` loop.
-
            .. activecode::  ch8Ex5q
               :language: java
+              :autograde: unittest        
+              :practice: T              
 
-              import java.util.List;
-              import java.util.ArrayList;
+              Rewrite the following code so that it fills the ArrayList ``values`` with the elements of the array ``nums`` using a for-each loop instead of a ``for`` loop.
+              ~~~~
+              import java.util.*;
 
               public class Test1
               {
@@ -391,6 +475,31 @@ Code Practice with ArrayLists
                       System.out.println("Your Result:\t\t " + values);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;;
+                import java.io.*;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t[1, 44, 7, 9, -16, 3]\n" +
+                                    "Your Result:\t\t[1, 44, 7, 9, -16, 3]\n ";   
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
+
+                @Test 
+                  public void testForEachLoop()
+                  {
+                    String target = "for (int * : nums)";
+                    boolean passed = checkCodeContainsRegex("For-Each loop in traversing Array nums",target);
+                    assertTrue(passed);
+                  }
+                }
 
 
 
@@ -437,6 +546,7 @@ Code Practice with ArrayLists
 
            .. activecode::  ch8Ex6q
               :language: java
+              :autograde: unittest  
 
               import java.util.List;
               import java.util.ArrayList;
@@ -462,6 +572,43 @@ Code Practice with ArrayLists
                       System.out.println(sumNegValues(values));
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                import java.util.List;
+                import java.util.ArrayList;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t\t -19\n" + 
+                                    "Your Result:\t -19\n";  
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
+
+                @Test
+                  public void testSumNegValues()
+                  {
+                    ArrayList<Integer> values = new ArrayList<Integer>();
+                    values.add(2);
+                    values.add(34);
+                    values.add(-10);
+                    values.add(9);
+                    values.add(-5);
+                    values.add(3);
+
+                    String output = String.valueOf(Test1.sumNegValues(values));
+                    String expect = "-15";
+
+                    boolean passed = getResults(expect, output, "sumNegValues method test");
+                    assertTrue(passed);
+                  }
+                }
 
 
         .. tab:: Answer
@@ -515,14 +662,14 @@ Code Practice with ArrayLists
 
 .. tabbed:: ch8Ex7
 
-        .. tab:: Question
-
-
-           Finish the following method ''removeLongStrings'' that checks each element of the passed in ArrayList ``list`` and removes any that are strictly longer than 4 characters.
+        .. tab:: Question   
 
            .. activecode::  ch8Ex7q
               :language: java
+              :autograde: unittest  
 
+              Finish the following method ''removeLongStrings'' that checks each element of the passed in ArrayList ``list`` and removes any that are strictly longer than 4 characters.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
@@ -547,8 +694,47 @@ Code Practice with ArrayLists
                       System.out.println("Your Result:\t\t " + values);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                import java.util.List;
+                import java.util.ArrayList;
 
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t [fish, cat, foo]\n" + 
+                                    "Your Result:\t\t [fish, cat, foo]\n";  
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
 
+                @Test
+                  public void testRemoveLongStrings()
+                  {
+                    ArrayList<String> mylist1 = new ArrayList<String>();
+                    mylist1.add("longword");
+                    mylist1.add("dog");
+                    mylist1.add("longword");
+                    mylist1.add("wee");
+
+                    ArrayList<String> mylist2 = new ArrayList<>();   
+                    mylist2.add("dog");    
+                    mylist2.add("wee");
+
+                    Test1.removeLongStrings(mylist1);
+
+                    boolean result = mylist2.equals(mylist1);
+
+                    boolean passed = getResults("true", ""+result, "removeLongStrings method test");
+                    assertTrue(passed);
+                  }
+                }
+        
         .. tab:: Answer
 
            Loop through all of the elements of the ArrayList ``list``. In each iteration, check if the length of each element is strictly greater ``>`` than 4; if it is, remove that element.
@@ -603,11 +789,12 @@ Code Practice with ArrayLists
 
         .. tab:: Question
 
-           Fill in the method ``shiftLeftOne`` below to shift all of the elements of the passed-in ArrayList ``list`` left by one. The original first element should be wrapped to the back of the list after the shift. Ex: {1, 2, 3, 4} should turn turn into {2, 3, 4, 1}
-
            .. activecode::  ch8Ex8q
               :language: java
+              :autograde: unittest  
 
+              Fill in the method ``shiftLeftOne`` below to shift all of the elements of the passed-in ArrayList ``list`` left by one. The original first element should be wrapped to the back of the list after the shift. Ex: {1, 2, 3, 4} should turn turn into {2, 3, 4, 1}
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
@@ -632,6 +819,45 @@ Code Practice with ArrayLists
                       System.out.println("Your Result:\t\t " + values);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                import java.util.List;
+                import java.util.ArrayList;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t [2, 3, 4, 5, 1]\n" +
+                                    "Your Result:\t\t [2, 3, 4, 5, 1]\n ";  
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
+
+                  @Test   
+                  public void testShiftLeftOne()
+                  {
+                    ArrayList<Integer> mylist1 = new ArrayList<Integer>();
+                    mylist1.add(2);
+                    mylist1.add(4);
+                    mylist1.add(1);
+
+                    ArrayList<Integer> mylist2 = new ArrayList<Integer>();      
+                    mylist2.add(4);
+                    mylist2.add(1);
+                    mylist2.add(2);
+                    Test1.shiftLeftOne(mylist1);
+
+                    boolean result = mylist2.equals(mylist1);
+
+                    boolean passed = getResults("true", ""+result, "shiftLeftOne method test");
+                    assertTrue(passed);
+                  }
+                }
 
 
         .. tab:: Answer
@@ -681,11 +907,12 @@ Code Practice with ArrayLists
 
         .. tab:: Question
 
-           Finish the method ``moveSmallest`` so that it finds the smallest value in the passed-in ArrayList ``list`` and moves it to the front of the list.
-
            .. activecode::  ch8Ex9q
               :language: java
+              :autograde: unittest  
 
+              Finish the method ``moveSmallest`` so that it finds the smallest value in the passed-in ArrayList ``list`` and moves it to the front of the list.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
@@ -718,7 +945,50 @@ Code Practice with ArrayLists
                       System.out.println("Your Result:\t\t " + values);
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                import java.util.List;
+                import java.util.ArrayList;
 
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t [1, 3, 11, 54, 7, 22]\n" +
+                                    "Your Result:\t\t [1, 3, 11, 54, 7, 22]\n ";  
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
+
+                  @Test   
+                  public void testMoveSmallest()
+                  {
+                    ArrayList<Integer> mylist1 = new ArrayList<Integer>();
+                    mylist1.add(11);
+                    mylist1.add(54);
+                    mylist1.add(7);
+                    mylist1.add(3);
+                    mylist1.add(22);
+
+                    ArrayList<Integer> mylist2 = new ArrayList<Integer>(); 
+                    mylist2.add(3);
+                    mylist2.add(11);
+                    mylist2.add(54);
+                    mylist2.add(7);
+                    mylist2.add(22);
+
+                    Test1.moveSmallest(mylist1);
+
+                    boolean result = mylist2.equals(mylist1);
+
+                    boolean passed = getResults("true", ""+result, "moveSmallest method test");
+                    assertTrue(passed);
+                  }  
+                }
 
         .. tab:: Answer
 
@@ -775,15 +1045,16 @@ Code Practice with ArrayLists
 
         .. tab:: Question
 
-           Finish the method ``findLongest`` to find and return the longest String in the ArrayList of Strings ``list``.
-
            .. activecode::  ch8Ex10q
               :language: java
+              :autograde: unittest  
 
+              Finish the method ``findLongest`` to find and return the longest String in the ArrayList of Strings ``list``.
+              ~~~~
               import java.util.List;
               import java.util.ArrayList;
 
-              public class Test11 {
+              public class Test1 {
                   public static String findLongest(ArrayList<String> list)
                   {
                       //code here
@@ -803,6 +1074,40 @@ Code Practice with ArrayLists
                       System.out.println(findLongest(values));
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+                import org.junit.*;
+                import java.io.*;
+                import java.util.List;
+                import java.util.ArrayList;
+
+                public class RunestoneTests extends CodeTestHelper
+                {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                    String output = getMethodOutput("main");
+                    String expect = "Expected Result:\t metropolitan\n" +
+                                    "Your Result:\t\t metropolitan\n";  
+                    boolean passed = getResults(expect, output, "Expected output from main");
+                    assertTrue(passed);    
+                  }
+
+                  @Test   
+                  public void testFindLongest()
+                  {
+                    ArrayList<String> mylist = new ArrayList<String>();
+                    mylist.add("longword");
+                    mylist.add("longerword");
+                    mylist.add("short");
+
+                    String output = Test1.findLongest(mylist);
+                    String expect = "longerword";
+
+                    boolean passed = getResults(output, expect, "findLongest method test");
+                    assertTrue(passed);
+                  }
+                }
 
 
         .. tab:: Answer
@@ -817,7 +1122,7 @@ Code Practice with ArrayLists
               ~~~~
               import java.util.List;
               import java.util.ArrayList;
-              public class Test12 {
+              public class Test1 {
                   public static String findLongest(ArrayList<String> list)
                   {
                       String longest = "";

@@ -11,7 +11,7 @@ Free Response - StringFormatter A
     
 The following is a free response question from 2016. It was question 4 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year. 
 
-4.  This question involves the process of taking a list of words, called ``wordList``, and producing a formatted string of a specified length. 
+This question involves the process of taking a list of words, called ``wordList``, and producing a formatted string of a specified length. 
 The list ``wordList`` contains at least two words, consisting of letters only.  
 When the formatted string is constructed, spaces are placed in the gaps between words so that as many spaces as possible are evenly distributed to each gap. 
 The equal number of spaces inserted into each gap is referred to as the basic gap width. 
@@ -89,11 +89,14 @@ Put the Code in Order
 Write the Code
 ==================
 
-Finish writing the ``totalLetters`` method below so that it returns the number of letters for all the strings in ``wordList``.  The ``main`` method below will test your code to check that you solved it correctly.
+
    
 .. activecode:: lcfrsTotalLetters
    :language: java 
+   :autograde: unittest      
    
+   Finish writing the ``totalLetters`` method below so that it returns the number of letters for all the strings in ``wordList``.  The ``main`` method below will test your code to check that you solved it correctly.
+   ~~~~
    import java.util.*;
    public class StringFormatter
    {
@@ -118,6 +121,45 @@ Finish writing the ``totalLetters`` method below so that it returns the number o
             System.out.println("Should print 5 and prints: " + totalLetters(words2));
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+      public RunestoneTests() 
+      {
+        super("StringFormatter");
+      }
+
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "Should print 7 and prints: 7\n" +
+                        "Should print 5 and prints: 5\n";
+
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+
+    @Test
+      public void test1()
+      {
+        List<String> myWords = new ArrayList<String>();
+        myWords.add("A");
+        myWords.add("dog");
+        myWords.add("is");  
+
+        String output = String.valueOf(StringFormatter.totalLetters(myWords));
+        String expect = "6";
+
+        boolean passed = getResults(expect, output, "totalLetters method test on A, dog, is");
+        assertTrue(passed);
+      }
+    }
    
    
 

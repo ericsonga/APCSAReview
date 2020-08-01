@@ -307,7 +307,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         .. code-block:: java
 
-            public void calculatePizzaOrder(int numOfPeople, double slicesPerPerson)
+            public void calculatePizzaOrder(int numOfPeople, int slicesPerPerson)
             {
                 int numOfPizzas = (numOfPeople * slicesPerPerson)/8;
                 /* INSERT CODE HERE */

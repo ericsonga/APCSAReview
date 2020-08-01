@@ -56,7 +56,7 @@ Alternatively, we could say that a CoursePeriod  has a Course attribute inside i
      private int period;
   }
 
-Here is another example. Consider the class Student and Course and an APcourse. An APcourse is a special type of Course. Students are in Courses. What are the relationships between these classes? The UML diagram below shows the inherits (is-a) relationship between Course and APcourse and the associate (has-a) relationship between Class and Students.
+Here is another example. Consider the classes Student, Course, and  APcourse. An APcourse is a special type of Course. Students are in Courses. What are the relationships between these classes? The UML diagram below shows the inherits (is-a) relationship between Course and APcourse and the associate (has-a) relationship between Course and Students.
 
 .. figure:: Figures/APcourseUML.png
     :width: 350px
@@ -71,6 +71,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
 
 .. activecode:: apclass
   :language: java
+  :autograde: unittest      
     
   What do you think the following code will print out?
   ~~~~
@@ -99,6 +100,23 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
           System.out.println(csa instanceof Course);
        }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "Is an APcourse a Course? true\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+    }
+  
 
 
 is-a Substitution Test
@@ -186,6 +204,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
 .. activecode:: challenge-9-1-online-store
   :language: java
+  :autograde: unittest      
   
   Declare 3 instance variables for each of the classes below. Create an inheritance or association relationship for some of them. 
   ~~~~
@@ -220,6 +239,105 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
           System.out.println(b instanceof ItemForSale);
        }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Store");
+        }
+
+        @Test
+        public void test1()
+        { 
+            String output = getMethodOutput("main");
+            String expect = "true";
+
+            boolean passed = getResults(expect, output, "Running main", true);
+            assertTrue(passed);
+
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String target = "extends ItemForSale";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 2;
+            getResults("2", ""+num, "Testing code for " + target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariablesItemForSale()
+        {
+            String cname = "ItemForSale";
+            changeClass(cname);
+            String expect = "2+ Private";
+            String output = testPrivateInstanceVariables();
+
+            int num = Integer.parseInt(output.substring(0, output.indexOf(" ")));
+
+            boolean passed = num >= 2;
+
+            getResults(expect, output, "Checking Instance Variables - " + cname, passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariablesAuthor()
+        {
+            String cname = "Author";
+            changeClass(cname);
+            String expect = "2+ Private";
+            String output = testPrivateInstanceVariables();
+
+            int num = Integer.parseInt(output.substring(0, output.indexOf(" ")));
+
+            boolean passed = num >= 2;
+
+            getResults(expect, output, "Checking Instance Variables - " + cname, passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariablesMovie()
+        {
+            String cname = "Movie";
+            changeClass(cname);
+            String expect = "2+ Private";
+            String output = testPrivateInstanceVariables();
+
+            int num = Integer.parseInt(output.substring(0, output.indexOf(" ")));
+
+            boolean passed = num >= 2;
+
+            getResults(expect, output, "Checking Instance Variables - " + cname, passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariablesBook()
+        {
+            String cname = "Book";
+            changeClass(cname);
+            String expect = "2+ Private";
+            String output = testPrivateInstanceVariables();
+
+            int num = Integer.parseInt(output.substring(0, output.indexOf(" ")));
+
+            boolean passed = num >= 2;
+
+            getResults(expect, output, "Checking Instance Variables - " + cname, passed);
+            assertTrue(passed);
+        }
+    }
 
 Summary
 --------

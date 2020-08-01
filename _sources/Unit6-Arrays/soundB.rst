@@ -72,27 +72,34 @@ How to Solve This
 1. You will need to loop through each element in the array until you reach a non-zero element. You will also need to keep track of the number of leading zeros.  
 2. Remember that you must replace the samples array with a new array without the leading zeros.  How do you create an array of a particular size?
 
-.. mchoice:: fr_soundb_1
-   :answer_a: while
-   :answer_b: for
-   :answer_c: for-each
-   :correct: a
-   :feedback_a: A while loop is the best choice when you don't know the number of times you need to loop.
-   :feedback_b: You could use a for loop, but typically a while loop is used when you want to loop while a condition is true.
-   :feedback_c: A for-each loop would only allow you to loop through all the values, but you first want to loop while there are leading zeros. 
+Click to reveal problems to help you write your solution.
 
-   Which loop would be best for this problem?
-   
-.. mchoice:: fr_soundb_2
-   :answer_a: int[] samples2;
-   :answer_b: int[] samples2 = new Array(count);
-   :answer_c: int[] samples2 = new int[count];
-   :correct: c
-   :feedback_a: This only declares the variable samples2 which will refer to an array of integers, it doesn't create the array object.
-   :feedback_b: The new keyword is not used to create an array.
-   :feedback_c: This will create an array of integers of size count and a variable named samples2 which will refer to that array.
+.. reveal:: fr_soundb_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
 
-   Which is the correct code for creating an integer array variable named ``samples2`` and setting it to refer to an array of integers of size ``count``?
+   .. mchoice:: fr_soundb_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: a
+        :feedback_a: A while loop is the best choice when you don't know the number of times you need to loop.
+        :feedback_b: You could use a for loop, but typically a while loop is used when you want to loop while a condition is true.
+        :feedback_c: A for-each loop would only allow you to loop through all the values, but you first want to loop while there are leading zeros. 
+
+        Which loop would be best for this problem?
+
+   .. mchoice:: fr_soundb_2
+        :answer_a: int[] samples2;
+        :answer_b: int[] samples2 = new Array(count);
+        :answer_c: int[] samples2 = new int[count];
+        :correct: c
+        :feedback_a: This only declares the variable samples2 which will refer to an array of integers, it doesn't create the array object.
+        :feedback_b: The new keyword is not used to create an array.
+        :feedback_c: This will create an array of integers of size count and a variable named samples2 which will refer to that array.
+
+        Which is the correct code for creating an integer array variable named ``samples2`` and setting it to refer to an array of integers of size ``count``?
 
 Mixed Up Code
 -------------------
@@ -130,14 +137,13 @@ Mixed Up Code
 
 Try and Solve Part B
 --------------------
-Finish writing the method ``trimSilenceFromBeginning`` below that removes the silence from the beginning of a
-sound. To remove starting silence, a new array of values is created that contains the same values as the
-original ``samples`` array in the same order but without the leading zeros. The instance variable ``samples``
-is updated to refer to the new array. 
 
 .. activecode:: FRQSoundB
    :language: java
+   :autograde: unittest      
 
+   FRQ Sound B: Finish writing the method ``trimSilenceFromBeginning`` below that removes the silence from the beginning of a sound. To remove starting silence, a new array of values is created that contains the same values as the original ``samples`` array in the same order but without the leading zeros. The instance variable ``samples`` is updated to refer to the new array. 
+   ~~~~
    import java.util.Arrays;
    public class Sound
    {
@@ -165,3 +171,49 @@ is updated to refer to the new array.
          System.out.println("The length of the new array should be 12 and is " + s.samples.length);
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    import java.lang.reflect.Field;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0";
+
+            boolean passed = output.contains(expect);
+
+            expect = "The original array of samples is [0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0]\nThe new array of samples is [-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0]";
+
+            getResults(expect, output, "Checking output from main()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() {
+            Sound s = new Sound();
+            s.trimSilenceFromBeginning();
+
+            try {
+                Field sampleField = Sound.class.getDeclaredField("samples");
+                sampleField.setAccessible(true);
+
+                int[] samples = (int[]) sampleField.get(s);
+
+                String expected = "12";
+                String actual = ""+ samples.length;
+
+                String msg = "Checking samples array length after trimSilenceFromBeginning()";
+                boolean passed = getResults(expected, actual, msg);
+                assertTrue(passed);
+
+            } catch (Exception e) {
+                getResults("", "", "There was a error with the testing code.", false);
+                fail();
+            }
+        }
+    }

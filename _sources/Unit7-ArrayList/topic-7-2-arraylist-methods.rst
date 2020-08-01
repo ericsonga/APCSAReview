@@ -131,7 +131,7 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
                     longest = lines[i];
             }
 
-            boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]+");
+            boolean passed = output.matches("[\\s\\S]+" + searchString + "[\\s\\S]*");
 
             passed = getResults(expect, longest, "Add your name to the list", passed);
             assertTrue(passed);

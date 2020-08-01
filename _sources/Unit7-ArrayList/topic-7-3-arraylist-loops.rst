@@ -42,9 +42,9 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
    :practice: T
 
    What does the following code do? Guess before you run it. Then, add another enhanced for each loop that computes the product of all the elements in myList by multiplying them. Print out the product after the new loop.
-   ~~~~s
+   ~~~~
    import java.util.*;  // import all classes in this package.
-   public class Test
+   public class Test1
    {  
        public static void main(String[] args)
        {
@@ -85,7 +85,8 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
         {
             String output = getMethodOutput("main");
             String expect = "30000";
-            boolean passed = output.contains(expect);getResults(expect, output, "Prints out product", passed);
+            boolean passed = output.contains(expect);
+            getResults(expect, output, "Prints out product", passed);
             assertTrue(passed);
         }
         @Test
@@ -171,7 +172,7 @@ The example below demonstrates a while loop and an object-oriented approach wher
    :autograde: unittest
    :practice: T
    
-   The following code removes a name from a list. Set the found variable to the appropriate values to make the code work.
+   The following code removes a name from a list. Set the found variable to the appropriate true or false values at line 13 and line 20 to make the code work.
    ~~~~
    import java.util.*;  
    public class ListWorker

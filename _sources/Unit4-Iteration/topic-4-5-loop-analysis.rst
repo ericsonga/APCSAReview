@@ -391,3 +391,19 @@ Summary
 - The number of times a loop executes can be calculated by (largestValue - smallestValue + 1) where these are the largest and smallest values of the loop counter variable possible in the body of the loop.  
 
 - The number of times a nested for-loop runs is the number of times the outer loop runs **times** the number of times the inner loop runs. 
+
+
+Loop Analysis Game
+-------------------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
+   
+   
+Try the game below to practice loop analysis. Click on **Loops** and click on the number of times the loop runs. For an added challenge, try the check boxes for Backwards, Do While, and Nested. We encourage you to work in pairs and see how high a score you can get.
+
+.. raw:: html
+
+    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+

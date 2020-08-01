@@ -83,29 +83,34 @@ limit, it should be reset to the limit and the count of the values changed shoul
 
 If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.   
 
-We will have to return the count of values changed.
+We will have to return the count of values changed. Click to reveal problems to help you write your solution.
 
-.. mchoice:: fr_sounda_1
-   :answer_a: while
-   :answer_b: for
-   :answer_c: for-each
-   :correct: b
-   :feedback_a: You could use a while loop, but if you are looping through all values in an array it is better to use a for loop.  It is easier to make mistakes with a while loop and forget to increment a value in the body of the loop so that the loop eventually stops.
-   :feedback_b: Use a for loop when you want to loop through all or part of an array and need to change some of the values in the array.
-   :feedback_c: You could use a for-each loop to loop through all of the values in the array, but you wouldn't be able to change the values. 
+.. reveal:: fr_sounda_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
 
-   Which loop would be best for this problem?
-   
-.. mchoice:: fr_sounda_2
-   :answer_a: samples[i].set(-limit);
-   :answer_b: samples[i] = limit;
-   :answer_c: samples[i] = -limit;
-   :correct: c
-   :feedback_a: There is no set method on arrays.
-   :feedback_b: This would set the value at index i to limit rather than the negative of the limit.  
-   :feedback_c: This will set the value at index i to the negative of the limit.
+   .. mchoice:: fr_sounda_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: b
+        :feedback_a: You could use a while loop, but if you are looping through all values in an array it is better to use a for loop.  It is easier to make mistakes with a while loop and forget to increment a value in the body of the loop so that the loop eventually stops.
+        :feedback_b: Use a for loop when you want to loop through all or part of an array and need to change some of the values in the array.
+        :feedback_c: You could use a for-each loop to loop through all of the values in the array, but you wouldn't be able to change the values. 
 
-   Which is the correct code for changing the current value to the negative of the limit?
+        Which loop would be best for this problem?
+
+   .. mchoice:: fr_sounda_2
+        :answer_a: samples[i].set(-limit);
+        :answer_b: samples[i] = limit;
+        :answer_c: samples[i] = -limit;
+        :correct: c
+        :feedback_a: There is no set method on arrays.
+        :feedback_b: This would set the value at index i to limit rather than the negative of the limit.  
+        :feedback_c: This will set the value at index i to the negative of the limit.
+
+        Which is the correct code for changing the current value to the negative of the limit?
 
 
 Mixed Up Code
@@ -148,14 +153,14 @@ Mixed Up Code
 Try and Solve Part A
 --------------------
 
-Write the method ``limitAmplitude`` that will change any value that has an amplitude greater than the
-given limit. Values that are greater than ``limit`` are replaced with ``limit``, and values that are less than
-``-limit`` are replaced with ``–limit``. The method returns the total number of values that were changed in
-the array.  The ``main`` method has code to test your solution.
+
 
 .. activecode:: FRQSoundA
    :language: java
+   :autograde: unittest      
 
+   FRQ Sound A: Write the method ``limitAmplitude`` that will change any value that has an amplitude greater than the given limit. Values that are greater than ``limit`` are replaced with ``limit``, and values that are less than ``-limit`` are replaced with ``–limit``. The method returns the total number of values that were changed in the array.  The ``main`` method has code to test your solution.
+   ~~~~
    import java.util.Arrays;
    public class Sound
    {
@@ -182,3 +187,62 @@ the array.  The ``main`` method has code to test your solution.
     
        }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.Arrays;
+    import java.lang.reflect.Field;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "40, 2000, 17, -2000, -17, -2000, 2000, 1048, -420, 33, 15, -32, 2000, 2000";
+            boolean passed = output.contains(expect);
+
+            expect = "The original array is: [40, 2532, 17, -2300, -17, -4000, 2000, 1048, -420, 33, 1\n5, -32, 2030, 3223]\nlimitAmplitude(2000) should return 5 and returned 5\nThe changed array is: [40, 2000, 17, -2000, -17, -2000, 2000, 1048, -420, 33, 15, -32, 2000, 2000]";
+
+            getResults(expect, output, "Checking output from main()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1() {
+            Sound s = new Sound();
+
+            String expected = "8";
+            String actual = "" + s.limitAmplitude(75);
+
+            String msg = "Checking limitAmplitude(75) return value";
+            boolean passed = getResults(expected, actual, msg);
+            assertTrue(passed);
+
+        }
+
+        @Test
+        public void test2() {
+            Sound s = new Sound();
+            s.limitAmplitude(75);
+
+            try {
+                Field sampleField = Sound.class.getDeclaredField("samples");
+                sampleField.setAccessible(true);
+
+                int[] samples = (int[]) sampleField.get(s);
+
+                String expected = "[40, 75, 17, -75, -17, -75, 75, 75, -75, 33, 15, -32, 75, 75]";
+                String actual = Arrays.toString(samples);
+
+                String msg = "Checking limitAmplitude(75) array results";
+                boolean passed = getResults(expected, actual, msg);
+                assertTrue(passed);
+
+            } catch (Exception e) {
+                getResults("", "", "There was a error with the testing code.", false);
+                fail();
+            }
+        }
+    }

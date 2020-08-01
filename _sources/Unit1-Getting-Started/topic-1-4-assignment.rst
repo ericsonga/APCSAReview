@@ -18,7 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
     
 Expressions and Assignment Statements
 =====================================
@@ -36,7 +39,7 @@ Assignment Statements
     :align: center
     :figclass: align-center
     
-    Figure 2: Assignment Statement (variable = expression;)
+    Figure 1: Assignment Statement (variable = expression;)
 
 Instead of saying equals for the = in an assignment statement, say "gets" or "is assigned" to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.
 
@@ -489,12 +492,16 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
        }
        @Test
        public void testAsgn3() throws IOException
-       {
-            String target1 = "dogYearsAge = dogAge * 7";
-            String target2 = "dogYearsAge = 7 * dogAge";
-            boolean passed = 
-       checkCodeContainsNoRegex("formula for dogYearsAge using dogAge", target1) || checkCodeContainsNoRegex("formula for dogYearsAge using dogAge in another order", target2);
-            assertTrue(passed);
+       {       
+           String target1 = removeSpaces("dogYearsAge = dogAge * 7");
+           String target2 = removeSpaces("dogYearsAge = 7 * dogAge");
+           String code = removeSpaces(getCode());
+
+           boolean passed1 = code.contains(target1);
+           boolean passed2 = code.contains(target2);
+           boolean passed = passed1 || passed2;
+           getResults("true", ""+passed, "formula for dogYearsAge using dogAge", passed);
+           assertTrue(passed);
        }
     }
    

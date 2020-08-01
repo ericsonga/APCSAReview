@@ -19,8 +19,8 @@
     :align: middle
     :alt: groupwork
     
-Nested Loops for 2D Arrays
---------------------------
+Nested Loops for 2D Arrays (Day 1)
+-----------------------------------
 
 In this lesson, you will learn how to use nested loops to traverse a 2D Array.
 

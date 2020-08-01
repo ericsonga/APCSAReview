@@ -36,40 +36,46 @@ method should return an array of the values produced by tossing the number cube 
 How to Solve
 ----------------
 
-You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call ``toss``.  You will need to loop that number of times and each time set the value of the array at that index to the result of the ``toss``.  Return the array.   
+You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call ``toss``.  You will need to loop that number of times and each time set the value of the array at that index to the result of the ``toss``.  Return the array. Click to reveal problems to help you write your solution.
 
-.. mchoice:: numbercubea_1
-   :answer_a: (int) (Math.random() * 6) + 1)
-   :answer_b: (int) (Math.random() * 6)
-   :answer_c: Math.random(6);
-   :correct: a
-   :feedback_a: This expression correctly generates a random number between 1 and 6.
-   :feedback_b: This expression generates a random number from 0 to 5.  
-   :feedback_c: This isn't valid
+.. reveal:: numbercubea_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
 
-   Which Java expression correctly generates a random number between 1 and 6?
+   .. mchoice:: numbercubea_1
+        :answer_a: (int) (Math.random() * 6) + 1)
+        :answer_b: (int) (Math.random() * 6)
+        :answer_c: Math.random(6);
+        :correct: a
+        :feedback_a: This expression correctly generates a random number between 1 and 6.
+        :feedback_b: This expression generates a random number from 0 to 5.  
+        :feedback_c: This isn't valid
+
+        Which Java expression correctly generates a random number between 1 and 6?
    
-.. mchoice:: numbercubea_2
-   :answer_a: int[] tossArray = new int[];
-   :answer_b: int[] tossArray = new int(numTosses);
-   :answer_c: int[] tossArray = new int[numTosses];
-   :correct: c
-   :feedback_a: You need to specify the size of the array when you create it.
-   :feedback_b: It should be new int[numTosses].
-   :feedback_c: This will create an array of size numTosses.
-
-   Which of the following correctly creates an array of size numTosses?
    
-.. mchoice:: numbercubea_3
-   :answer_a: for (int i = 0; i <= numTosses; i++)
-   :answer_b: for (int i = 1; i < numTosses; i++)
-   :answer_c: for (int i = 0; i < numTosses; i++)
-   :correct: c
-   :feedback_a: This will execute numTosses + 1 times.
-   :feedback_b: This will execute numTosses - 1 times.
-   :feedback_c: This will execute numTosses times.
+   .. mchoice:: numbercubea_2
+        :answer_a: int[] tossArray = new int[];
+        :answer_b: int[] tossArray = new int(numTosses);
+        :answer_c: int[] tossArray = new int[numTosses];
+        :correct: c
+        :feedback_a: You need to specify the size of the array when you create it.
+        :feedback_b: It should be new int[numTosses].
+        :feedback_c: This will create an array of size numTosses.
 
-   Which of the following correctly loops numTosses number of times?
+        Which of the following correctly creates an array of size numTosses?
+   
+   .. mchoice:: numbercubea_3
+        :answer_a: for (int i = 0; i <= numTosses; i++)
+        :answer_b: for (int i = 1; i < numTosses; i++)
+        :answer_c: for (int i = 0; i < numTosses; i++)
+        :correct: c
+        :feedback_a: This will execute numTosses + 1 times.
+        :feedback_b: This will execute numTosses - 1 times.
+        :feedback_c: This will execute numTosses times.
+
+        Which of the following correctly loops numTosses number of times?
    
 
 Mixed Up Code
@@ -101,11 +107,14 @@ Mixed Up Code
 Try and Solve Part A
 -----------------------
 
-Write the method ``getCubeTosses`` that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.
+
 
 .. activecode:: FRQNumberCubeA
    :language: java
-
+   :autograde: unittest      
+   
+   FRQ Number Cube A: Write the method ``getCubeTosses`` that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.
+   ~~~~ 
     import java.util.Arrays;
     public class NumberCube
     {
@@ -132,5 +141,66 @@ Write the method ``getCubeTosses`` that takes a number cube and a number of toss
               System.out.println("You returned an array of the correct size:");
               System.out.println(Arrays.toString(tosses));
             }
+        }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testleng() throws IOException
+        {
+            String expect = "You returned an array of the correct size";
+            String actual = getMethodOutput("main");
+
+            boolean passed = getResults(expect, actual, "Checking output from main()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1() {
+            NumberCube c = new NumberCube();
+            int[] results = NumberCube.getCubeTosses(c, 20);
+
+            String expect = "20";
+            String actual = "" + results.length;
+
+            boolean passed = getResults(expect, actual, "Checking getNumTosses() returns an array of the correct size");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2() {
+            NumberCube c = new NumberCube();
+            int[] results = NumberCube.getCubeTosses(c, 100);
+
+            boolean passed = true;
+            int same = 0;
+
+            for (int i = 0; i < results.length; i++) {
+                if (i < results.length - 1 && results[i] == results[i+1])
+                    same++;
+
+                if (results[i] < 1 || results[i] > 6)
+                    passed = false;
+            }
+
+            if (same > 25) passed = false;
+
+            String expect = "true";
+            String actual = "" +passed;
+
+            passed = getResults(expect, actual, "Checking that tosses are within proper range (1-6, no 0)", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3() {
+            String target = "cube.toss()";
+            boolean passed = checkCodeContains("call to cube.toss()", target);
+            assertTrue(passed);
         }
     }

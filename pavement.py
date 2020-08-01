@@ -47,7 +47,7 @@ else:
     dest = '../../static'
 
 #dest = '../../static'
-    
+
 
 
 

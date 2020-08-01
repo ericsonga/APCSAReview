@@ -573,7 +573,7 @@ Boolean Game
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
    
    
-Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
+Try the game below written to practice Booleanss. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html
 

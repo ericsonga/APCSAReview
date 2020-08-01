@@ -24,6 +24,10 @@
 
    <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a> 
     
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
+    
 Object Superclass
 ====================
 
@@ -171,7 +175,7 @@ Any class can override the inherited ``equals`` method by providing a method wit
 .. activecode:: OverrideEquals
    :language: java
 
-   Try to guess what this code will print out before running it.
+   Try to guess what this code will print out before running it. Click on the CodeLens button to step forward through the code and watch the memory.
    ~~~~
    public class Person
    {

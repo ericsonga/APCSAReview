@@ -19,6 +19,9 @@
     :align: middle
     :alt: groupwork
     
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right    
     
 Casting and Ranges of Variables
 ===============================
@@ -36,6 +39,7 @@ The casting operators (int) and (double) are used right next to a number or vari
 
 .. activecode:: lcct1
    :language: java
+   :autograde: unittest
    
    What happens when you divide an int by an int or with a double operand or with the type cast (double) on one of the operands?
    ~~~~

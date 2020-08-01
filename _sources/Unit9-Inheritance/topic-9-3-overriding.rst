@@ -21,6 +21,10 @@
     :alt: groupwork
     
    
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
+    
 Overriding Methods
 ======================
 
@@ -35,6 +39,7 @@ In the following example the ``MeanGreeter`` inherits the ``greet()`` method fro
 
 .. activecode:: GreeterEx
    :language: java
+   :autograde: unittest
 
    Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return "Hola!" (or hi in another language) instead of "Hi!". Create an object to test it out.
    ~~~~
@@ -61,6 +66,66 @@ In the following example the ``MeanGreeter`` inherits the ``greet()`` method fro
          return "Go Away";
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests(){
+          super("Greeter");
+        }
+
+        @Test
+        public void testChangedCode() {
+            String origCode = "public static void main(String[] args) { Greeter g1 = new Greeter(); System.out.println(g1.greet()); Greeter g2 = new MeanGreeter() System.out.println(g2.greet()); }";
+
+            boolean changed = codeChanged(origCode);
+
+            assertTrue(changed);
+
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String target = "extends Greeter";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 2;
+            getResults("2", ""+num, "Testing code for " + target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String target = "public String greet()";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 3;
+            getResults("3", ""+num, "Testing code for " + target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            String target = ".greet()";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 3;
+            getResults("3", ""+num, "Testing code for " + target);
+            assertTrue(passed);
+        }
+    }
    
 .. note::
 
@@ -79,6 +144,7 @@ You may see the @Override annotation above a method. This is optional but it pro
 
 Overloading Methods
 -------------------
+
 Don't get **overriding** a method confused with **overloading** a method!
 **Overloading** a method is when several methods have the same name but the parameter types, order, or number are different. So with overriding, the method signatures look identical but they are in different classes, but in overloading, only the method names are identical and they have different parameters.
 
@@ -94,6 +160,7 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
    
 .. activecode:: GreeterOverride
    :language: java
+   :autograde: unittest
 
    After running the code, try overriding the greet(String) method in the MeanGreeter class to return "Go away" + the who String. 
    ~~~~
@@ -125,6 +192,37 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
          return "Go Away";
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+   
+    public class RunestoneTests extends CodeTestHelper
+    {
+      public RunestoneTests(){
+        super("Greeter");
+      }
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Hello Sam\nGo Away Nimish";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeContains(){
+          boolean passed = checkCodeContains("greet(String who) override declaration", "public String greet(String *)");
+          assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeContains2(){
+          boolean passed = checkCodeContains("greet(String who) override return", "return \"Go Away \" + who;");
+          assertTrue(passed);
+        }
+    }
    
 .. note::
    
@@ -253,6 +351,7 @@ For example, if a parent has a private instance variables, ``name``, then the pa
 
 .. activecode:: InheritedGetSet
   :language: java
+  :autograde: unittest
 
   Demonstrated inherited get/set methods.
   ~~~~
@@ -301,6 +400,25 @@ For example, if a parent has a private instance variables, ``name``, then the pa
         System.out.println(emp.getId());
      }
   }
+  ====
+  import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+   
+    public class RunestoneTests extends CodeTestHelper
+    {
+      public RunestoneTests(){
+        super("Employee");
+      }
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Dina\n1";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
   
 |Exercise| **Check your understanding**
   
@@ -371,6 +489,7 @@ The following Pet class keeps track of a pet's name and type and has a construct
 
 .. activecode:: challenge-9-3-Pet-Sounds
    :language: java
+   :autograde: unittest
    
    Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out "Woof!" or "Meow!".
    ~~~~
@@ -420,7 +539,65 @@ The following Pet class keeps track of a pet's name and type and has a construct
 
     // Add a Cat class
 
-  
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Pet");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect = "hamster\ngrr!\ndog\nWoof!\ncat\nMeow!\n";
+
+            boolean passed = getResults(expect, output, "Running main");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {      
+            String code = getCode();
+            String target = "extends Pet";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 2;
+            getResults("2", ""+num, "Testing code for " + target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String target = "public void speak()";
+
+            int num = countOccurences(code, target);
+
+            boolean passed = num >= 2;
+            getResults("2", ""+num, "Testing code for " + target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test4()
+        {
+            String code = getCode();
+            String target = "super(";
+
+            int num = countOccurences(code, target);
+            boolean passed = num >= 2;
+            getResults("2", ""+num, "Testing code for " + target);
+            assertTrue(passed);
+        }
+    }
 
 Summary
 ---------

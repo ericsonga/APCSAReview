@@ -20,7 +20,10 @@
     :align: middle
     :alt: groupwork
     
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
+    
 super Keyword
 ============================================
 
