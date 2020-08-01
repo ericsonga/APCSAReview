@@ -271,7 +271,7 @@ Here is a linear search algorithm where we access each row and then apply a line
                 String output = getMethodOutput("search", args);
                 String expect = "true";
 
-                boolean passed = getResults(expect, output, "Testing search({{\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\"}}, \"b\")");
+                boolean passed = getResults(expect, output, "Testing search({ {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\" } }, \"b\")");
                 assertTrue(passed);
             }  
     }
