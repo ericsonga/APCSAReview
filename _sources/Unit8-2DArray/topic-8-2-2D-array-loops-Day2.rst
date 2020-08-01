@@ -31,6 +31,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
 
 .. activecode:: getAvgForEach
    :language: java
+   :autograde: unittest      
    
    Nested enhanced for loops demo. Click on the CodeLens button to visualize and step through the code.
    ~~~~
@@ -56,6 +57,22 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
          System.out.println(getAvg(theArray));
       }
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "69.16666666666667";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
   
 In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
 
@@ -74,8 +91,9 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
 
 .. activecode:: lca2dloopPart
    :language: java 
+   :autograde: unittest      
  
-   What will the following code print out? Can you add another method that gets the total for a column? 
+   What will the following code print out? Can you add another method called ``getTotalForCol`` that gets the total for a column? 
    ~~~~
    public class Total
    {
@@ -90,13 +108,58 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
          return total;
       }
       
+      // Complete the method getTotalForCol below
+      public static int getTotalForCol(int col, int[][] a)
+      { 
+           int total = 0;
+           // Add a loop here to total a column col
+           
+           
+           return total;
+      }
+      
       public static void main(String[] args)
       {
          int[][] matrix = {  {1,2,3},{4,5,6}};
          System.out.println(getTotalForRow(0,matrix));
+         System.out.println(getTotalForCol(0,matrix));
       }
    }
-  
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+         public RunestoneTests() {
+            super("Total");
+        }
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "6\n5";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+        @Test
+            public void test2()
+            {
+                int[][] array = { {1,4,8},{6,7,9} };
+                int value = 0;
+                Object[] args = {value, array};
+
+
+                String output = getMethodOutput("getTotalForCol", args);
+                String expect = "7";
+
+                boolean passed = getResults(expect, output, "Testing getTotalForCol(0, { {1, 4,8},{6, 7, 9} })");
+                assertTrue(passed);
+            }
+    }
+
+
 ..	index::
 	pair: 2D Array; loop range
 
@@ -104,8 +167,9 @@ You can loop through just part of a 2D array. You can change the starting value 
 
 .. activecode:: lca2dloopPart2
    :language: java 
+   :autograde: unittest      
 
-   Loooping through just part of a 2D array.
+   Looping through just part of a 2D array. Try the CodeLens button.
    ~~~~
    public class Count
    {
@@ -118,7 +182,8 @@ You can loop through just part of a 2D array. You can change the starting value 
          {
             for (int col = colStart; col <= colEnd; col++)
             {
-               if (a[row][col] == value) count++;
+               if (a[row][col] == value) 
+                  count++;
             }
          }
          return count;
@@ -130,6 +195,22 @@ You can loop through just part of a 2D array. You can change the starting value 
          System.out.println(countValues(3,matrix,0,2,0,2));
       }  
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "4";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    } 
 
 
 Here is a linear search algorithm where we access each row and then apply a linear search on it to find an element.
@@ -140,8 +221,9 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 .. activecode:: linearSearch2DArrays
    :language: java 
+   :autograde: unittest      
    
-   What will the following code print? Can you change the code to work for a String 2D array?
+   What will the following code print? Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints.
    ~~~~
    public class Search
    {
@@ -167,6 +249,32 @@ Here is a linear search algorithm where we access each row and then apply a line
 
       }  
    }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Search");
+        }
+
+        @Test
+            public void test2()
+            {
+                String[][] array = { {"a","b","c"},{"d","e","f"},{"g","h","i"},{"j","k","l"} };
+                String value = "b";
+                Object[] args = {array, value};
+
+
+                String output = getMethodOutput("search", args);
+                String expect = "true";
+
+                boolean passed = getResults(expect, output, "Testing search({{\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\"}}, \"b\")");
+                assertTrue(passed);
+            }  
+    }
    
 |Groupwork| Programming Challenge : Picture Lab
 ---------------------------------------------------
@@ -202,19 +310,6 @@ Here is a linear search algorithm where we access each row and then apply a line
    <a href= "https://repl.it/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
 
 
-.. .. raw:: html
-
-    <canvas id="arch.jpg" class="image"  width="150" style="display: block; align:left; float:left;">
-    </canvas>
-    <script>
-    var context = document.getElementById("arch.jpg").getContext("2d");
-    var img = new Image();
-    img.onload = function () {
-        context.drawImage(img, 0, 0);
-    }
-    img.src = "../_static/arch.jpg";
-
-    </script>
     
 Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  The color of a pixel is  represented using the RGB (Red, Green, Blue) color
 model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple?

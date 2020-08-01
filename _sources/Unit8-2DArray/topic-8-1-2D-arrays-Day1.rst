@@ -19,8 +19,8 @@
     :align: middle
     :alt: groupwork
 
-2D Arrays
----------
+2D Arrays (Day 1)
+-----------------
 
 ..	index::
     single: 2D Arrays

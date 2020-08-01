@@ -153,15 +153,14 @@ Mixed Up Code
 Try and Solve Part A
 --------------------
 
-Write the method ``limitAmplitude`` that will change any value that has an amplitude greater than the
-given limit. Values that are greater than ``limit`` are replaced with ``limit``, and values that are less than
-``-limit`` are replaced with ``–limit``. The method returns the total number of values that were changed in
-the array.  The ``main`` method has code to test your solution.
+
 
 .. activecode:: FRQSoundA
    :language: java
    :autograde: unittest      
 
+   FRQ Sound A: Write the method ``limitAmplitude`` that will change any value that has an amplitude greater than the given limit. Values that are greater than ``limit`` are replaced with ``limit``, and values that are less than ``-limit`` are replaced with ``–limit``. The method returns the total number of values that were changed in the array.  The ``main`` method has code to test your solution.
+   ~~~~
    import java.util.Arrays;
    public class Sound
    {

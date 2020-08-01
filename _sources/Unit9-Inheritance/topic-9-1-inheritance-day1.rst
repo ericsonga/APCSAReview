@@ -134,17 +134,19 @@ The Student class can also inherit from the class Person just like Employee and 
 
 .. activecode:: StudentInheritance
   :language: java
+  :autograde: unittest      
+  :practice: T
   
   What do you need to add to the Student class declaration below to make it inherit from type Person? When you fix the code, the **instanceof** operator will return true that Student s is an instance of both the Student and the Person class. What other private instance variables could you add to Person and Student? In which class would you put an address attribute? Where would you put gpa?
   ~~~~
-    class Person
-    {
+  class Person
+  {
        private String name;
-    }
+  }
 
-    // How can we make the Student class inherit from class Person?
-    public class Student 
-    {
+  // How can we make the Student class inherit from class Person?
+  public class Student 
+  {
        private int id;
 
        public static void main(String[] args)
@@ -153,4 +155,26 @@ The Student class can also inherit from the class Person just like Employee and 
           System.out.println(s instanceof Student);
           System.out.println(s instanceof Person);
        }
+   }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "true\ntrue";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+        @Test
+        public void containsExtends()
+        {
+           boolean passed = checkCodeContains("Student extends Person");
+           assertTrue(passed);
+        }
     }

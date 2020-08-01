@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
     
 Inheritance Hierarchies
 ===========================
@@ -103,6 +107,7 @@ Notice that in the following code, the print method has a parameter of type Pers
 
 .. activecode:: superclassMethod
   :language: java 
+  :autograde: unittest
   
   Which toString() method is called below? What would happen if you commented out the Student toString() method? Which one would be called now?
   ~~~~
@@ -149,6 +154,28 @@ Notice that in the following code, the print method has a parameter of type Pers
           return super.toString() + " " + id;
        }
     }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Tester");
+        }
+
+        @Test
+        public void test1()
+        { 
+            String output = getMethodOutput("main");
+            String expect = "Sila\nTully 1001";
+
+            boolean passed = getResults(expect, output, "Running main", true);
+            assertTrue(passed);
+
+        }
+    }
       
 Superclass Arrays and ArrayLists
 ---------------------------------
@@ -173,7 +200,8 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
 
 .. activecode:: superclassArray
   :language: java     
-  
+  :autograde: unittest
+
   Scroll down to look at the Dog class and add a similar Cat class that extends Pet. Scroll back to the main method and add some Cat objects to the ArrayList too. Does the petList work with Cats too?
   ~~~~
   import java.util.*; // for ArrayList
@@ -211,6 +239,71 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
        {
          super(n, "dog");
        }
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("Pet");
+        }
+
+        @Test
+        public void test1()
+        { 
+            String output = getMethodOutput("main");
+            String expect = "Sammy is a hamster\nFido is a dog";
+
+            boolean passed = getResults(expect, output, "Running main", true);
+            assertTrue(passed);
+
+        }
+
+        @Test
+        public void test2()
+        { 
+            String output = getMethodOutput("main");
+            String expect = "Sammy is a hamster\nFido is a dog\n... is a cat";
+
+            boolean passed = output.contains("is a cat");
+
+            getResults(expect, output, "Checking that a cat was added to the output", passed);
+            assertTrue(passed);
+
+        }
+
+        @Test
+        public void test3()
+        { 
+            String target = "class Cat";
+
+            boolean passed = checkCodeContains(target);
+            assertTrue(passed);
+
+        }
+
+        @Test
+        public void test4()
+        { 
+            String target = "public Cat(String *)";
+
+            boolean passed = checkCodeContains(target);
+            assertTrue(passed);
+
+        }
+
+        @Test
+        public void test5()
+        { 
+            String target = "petList.add(new Cat(*))";
+
+            boolean passed = checkCodeContains(target);
+            assertTrue(passed);
+
+        }
     }
     
 
@@ -269,7 +362,8 @@ In the DiscountedItem subclass,
 6. If you used repl.it or another IDE to complete this challenge, copy the code for DiscountedItem into the ActiveCode below so that it is saved for the next lesson. 
 
 .. activecode:: challenge-9-5-shopping
-  :language: java     
+  :language: java  
+  :autograde: unittest
   
   Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Try adding discounted items to the cart in main.
   ~~~~
@@ -399,6 +493,91 @@ In the DiscountedItem subclass,
                 return name + " " + valueToString(price);
         }
        }
+       ====
+       import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
+
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Tester");
+            }
+
+            @Test
+            public void test1()
+            { 
+                String output = getMethodOutput("main");
+                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+
+                boolean passed = getResults(expect, output, "Running main", true);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test2()
+            { 
+                String output = getMethodOutput("main");
+                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+
+                boolean passed = output.contains("ice cream") && output.contains("apples");
+
+                getResults(expect, output, "Checking that DiscountedItem objects were added to ArrayList", passed);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test3()
+            { 
+                String target = "String, double, double";
+
+                boolean passed = getResults("pass", checkConstructor(target), "Checking constructor with arguments: " + target);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test4()
+            { 
+                String target = "public double getDiscount()";
+
+                boolean passed = checkCodeContains(target);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test5()
+            { 
+                String target = "public String toString()";
+
+                boolean passed = checkCodeContains(target);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test6()
+            { 
+                String target = "super.toString()";
+
+                boolean passed = checkCodeContains(target);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test7()
+            { 
+                String target = "super.valueToString(*)";
+
+                boolean passed = checkCodeContains(target);
+                assertTrue(passed);
+
+            }
+        }
     
     
 Summary

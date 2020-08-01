@@ -364,6 +364,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
             assertTrue(passed);
         }
 
+        /* removed because doesn't work if their own art has o 
         @Test
         public void test1()
         {
@@ -373,7 +374,8 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
             boolean passed = output.contains("@") && !output.contains("o");
             passed = getResults(expect, output, "changed o to @", passed);
             assertTrue(passed);
-        }
+        } 
+        */
 
         @Test
         public void test2()

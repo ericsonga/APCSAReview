@@ -21,14 +21,15 @@ import org.junit.Test;
  * do not exist.
  *
  * @author  Kate McDonnell
- * @version 0.3.4
- * @since 2020-07-13
+ * @version 0.3.5
+ * @since 2020-07-28
  * 
  * 
  */
 public class CodeTestHelper
 {
     public static boolean replit = false;
+    public static boolean sort = false;
 
     private static String results = "";
     private static String mainOutput = "";
@@ -93,8 +94,6 @@ public class CodeTestHelper
             this.className = name;
             this.c = Class.forName(this.className);
 
-            //mainOutput = getMethodOutput("main");
-
         } catch (Exception e1) {
             System.out.println("Class not found");
         }
@@ -120,10 +119,13 @@ public class CodeTestHelper
      */
     public static String getFinalResults() {
         String finalResults = "";//"Starting Output\n";
-        finalResults += mainOutput; //getMethodOutput(className, "main"); 
+        finalResults += mainOutput; 
         //finalResults += "\nEnding Output";
         //finalResults += "\n--------------------------------------------------------";
         finalResults += "\nStarting Tests\n";
+
+        if (sort) sortResults();
+
         finalResults += results.trim();
         finalResults += "\nEnding Tests";
         resetFinalResults();
@@ -293,9 +295,9 @@ public class CodeTestHelper
     public String getMethodOutput(String methodName)// throws IOException
     {
         if (methodName.equals("main")) {
-            return getMethodOutput(methodName, new String[1]);
+            return cleanQuotes(getMethodOutput(methodName, new String[1]));
         }
-        return getMethodOutput(methodName, null);
+        return cleanQuotes(getMethodOutput(methodName, null));
     }
 
     /**
@@ -1294,7 +1296,7 @@ public class CodeTestHelper
 
         try {
             String text = new String(Files.readAllBytes(Paths.get(className)));
-            return text;
+            return cleanQuotes(text);
         } catch (IOException e) {
             return "File " + className + " does not exist";
         }
@@ -1500,7 +1502,7 @@ public class CodeTestHelper
         return orig.replaceAll("\n", "").replaceAll("\r", "");
     }
 
-    public int countOccurences(String orig, String target) {
+    public static int countOccurences(String orig, String target) {
         orig = orig.replaceAll("\\s+", "");
         target = target.replaceAll("\\s+","");
 
@@ -1548,8 +1550,8 @@ public class CodeTestHelper
     }
 
     public boolean isMatch(String orig, String target) {
-        //target = target.replaceAll("\\s", "");
-        //orig = orig.replaceAll("\\s", "");
+        target = target.replaceAll("\\s", "");
+        orig = orig.replaceAll("\\s", "");
         
         if(isRegex(target))
         {
@@ -1565,8 +1567,8 @@ public class CodeTestHelper
     }
 
     public boolean containsMatch(String orig, String target) {
-        //target = target.replaceAll("\\s", "");
-        //orig = orig.replaceAll("\\s", "");
+        target = target.replaceAll("\\s", "");
+        orig = orig.replaceAll("\\s", "");
         
         if(isRegex(target))
         {
@@ -1597,4 +1599,54 @@ public class CodeTestHelper
         return output;
     }
 
+
+    
+
+    public String cleanQuotes(String str) {
+        return str.replaceAll("[\\u2018\\u2019]", "'")
+           .replaceAll("[\\u201C\\u201D]", "\"");
+    }
+
+    public static void sortResults() {
+        String newResults = "";
+        int size = countOccurences(results, "Expected:");
+        String[] tests = new String[size];
+        int[] values = new int[size];
+        int start = 0, end = 0;
+
+        for (int i = 0; i < size; i++) {
+            values [i] = i;
+            end = results.indexOf("Expected:", start + 1);
+            if (end >= 0)
+                tests[i] = results.substring(start, end);
+            else
+                tests[i] = results.substring(start);
+            start = end;
+        }
+
+        
+
+        for (int i = 0; i < size; i++) {
+            String currMsg = tests[i].substring(tests[i].indexOf("Message: ")).toLowerCase();
+            int min = i;
+
+            for (int j = i + 1; j < size; j++) {
+                String nextMsg = tests[j].substring(tests[j].indexOf("Message: ")).toLowerCase();
+                if (nextMsg.compareTo(currMsg) < 0)
+                    min = j;
+            }
+
+            int temp = values[i];
+            values[i] = values[min];
+            values[min] = temp;
+
+            
+        }
+
+        for (int i = 0; i < size; i++) {
+            newResults += tests[values[i]];
+        }
+
+        results = newResults;
+    }
 }

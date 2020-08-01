@@ -19,6 +19,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
     
 Polymorphism
 =============
@@ -286,9 +290,10 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
 
 
 .. activecode:: challenge-9-6-shopping2
-  :language: java     
+  :language: java   
+  :autograde: unittest
   
-  Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceOf to test items to see see if they are a DiscountedItem.
+  Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceOf to test items to see if they are a DiscountedItem.
   ~~~~
   import java.util.*;
 
@@ -404,6 +409,74 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
                 return name + " " + valueToString(price);
         }
        }
+       ====
+       import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
+
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Tester");
+            }
+
+            @Test
+            public void test1()
+            { 
+                String output = getMethodOutput("main");
+                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+
+                boolean passed = output.contains("ice cream") && output.contains("apples");
+
+                getResults(expect, output, "Checking that DiscountedItem objects were added to ArrayList", passed);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test2()
+            { 
+                String output = getMethodOutput("main");
+                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+
+                boolean passed = !output.equals(expect);
+
+                getResults(expect, output, "Checking that countDiscountedItems() was added to output", passed);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test3()
+            { 
+                String output = getMethodOutput("main");
+                String expect = "cart.countDiscountedItems()";
+
+                boolean passed = checkCodeContains(expect);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test4()
+            { 
+                String target = "public int countDiscountedItems()";
+
+                boolean passed = checkCodeContains(target);
+                assertTrue(passed);
+
+            }
+
+            @Test
+            public void test5()
+            { 
+                String target = "if (* instanceof DiscountedItem)\n*++;";
+
+                boolean passed = checkCodeContains(target);
+                assertTrue(passed);
+
+            }
+        }
     
     
 Summary

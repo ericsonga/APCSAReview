@@ -20,7 +20,7 @@
     :alt: groupwork
 
 .. image:: ../../_static/time90.png
-    :width: 200
+    :width: 225
     :align: right
     
 Expressions and Assignment Statements
