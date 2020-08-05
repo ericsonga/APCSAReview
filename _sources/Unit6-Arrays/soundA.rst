@@ -76,14 +76,21 @@ is executed, the value of ``numChanges`` will be 5, and the array ``samples`` wi
 How to Solve This
 --------------------
 
-We will have to loop through each value in the array and compare the value to the limit. We will need to keep track of the number of values changed.  
+Click to reveal problems and the algorithm to help you write your solution.
 
-If the current value is greater than the 
-limit, it should be reset to the limit and the count of the values changed should be incremented. 
+.. reveal:: soundA_algorithm_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
 
-If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.   
+   We will have to loop through each value in the array and compare the value to the limit. We will need to keep track of the number of values changed.  
 
-We will have to return the count of values changed. Click to reveal problems to help you write your solution.
+   If the current value is greater than the 
+   limit, it should be reset to the limit and the count of the values changed should be incremented. 
+
+   If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.   
+
+   We will have to return the count of values changed. 
 
 .. reveal:: fr_sounda_r1
    :showtitle: Reveal Problems
@@ -116,39 +123,44 @@ We will have to return the count of values changed. Click to reveal problems to 
 Mixed Up Code
 -------------------
 
-.. parsonsprob:: SoundA
-   :numbered: left
-   :adaptive:
+Click to reveal the Mixed Up Code for the solution of this problem.
 
-   The method <code>limitAmplitude</code> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.
-   -----
-   public int limitAmplitude(int limit) 
-   { 
-   =====
-       int numChanged = 0;
-       for (int i = 0; i < samples.length; i++) 
-       {
-   =====
+.. reveal:: soundA_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: SoundA
+      :numbered: left
+      :adaptive:
+
+      The method <code>limitAmplitude</code> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.
+      -----
+      public int limitAmplitude(int limit) {
+      =====
+        int numChanged = 0;
+        for (int i = 0; i < samples.length; i++) 
+        {
+      =====
            if (samples[i] > limit) 
            {
-   =====
-               samples[i] = limit;
-               numChanged++;
-   =====
+      =====
+              samples[i] = limit;
+              numChanged++;
+      =====
            } // end first if
            if (samples[i] < -limit) 
            {
-   =====
-               samples[i] = -limit;
-               numChanged++;
-   =====
-           } // end second if
-   =====
-       } // end for
-   =====
-       return numChanged;
-   =====
-   } // end method
+      =====
+              samples[i] = -limit;
+              numChanged++;
+      =====
+            } // end second if
+      =====
+        } // end for
+      =====
+        return numChanged;
+      =====
+      } // end method
 
 Try and Solve Part A
 --------------------
