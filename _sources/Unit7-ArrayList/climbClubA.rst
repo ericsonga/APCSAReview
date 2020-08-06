@@ -103,10 +103,43 @@ following entries.
 How To Solve This
 -------------------
 
-In the ``addClimb`` method you need to create a new ``ClimbInfo`` object and initialize the ``peakName`` and ``climbTime``.  How do you create a new object of a class and initialize the fields?
+Click to reveal the algorithm and practice problems to help you write your solution.
 
-Once you have created the ``ClimbInfo`` object you want to add it in the order they were created.  To do this you can add it to the end of the ``climbList``.  How do you add an object to the end of a list?
+.. reveal:: algorithm_climbA_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
 
+   In the ``addClimb`` method you need to create a new ``ClimbInfo`` object and initialize the ``peakName`` and ``climbTime``.  How do you create a new object of a class and initialize the fields?
+
+   Once you have created the ``ClimbInfo`` object you want to add it in the order they were created.  To do this you can add it to the end of the ``climbList``.  How do you add an object to the end of a list?
+
+.. reveal:: fr_climbA_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
+
+   .. mchoice:: fr_climbA_1
+        :answer_a: ClimbInfo newClimb = new ClimbInfo("Everest", 600);
+        :answer_b: new ClimbInfo("Everest", 600);
+        :answer_c: ClimbInfo newClimb = new ClimbInfo();
+        :correct: a
+        :feedback_a: Correct!
+        :feedback_b: This answer is missing the instantiation of the variable newClimb. Try again!
+        :feedback_c: The constructor of a ClimbInfo object requires two arguments. Try again!
+
+        How would you create a new object newClimb of the ClimbInfo class, with a peakName of Everest and climbTime of 600?
+
+   .. mchoice:: fr_climbA_2
+        :answer_a: list.add(0, 7);
+        :answer_b: list.add(7);
+        :answer_c: add(7);
+        :correct: b
+        :feedback_a: This would add 7 to the beginning of the list. Try again!
+        :feedback_b: Correct!
+        :feedback_c: You must reference the ArrayList list using a dot operator to use the add() method. Try again!
+
+        How do you append a new item, 7, to the end of a non-empty ArrayList<Integer> list?
 .. .. disqus::
    :shortname: cslearn4u
    :identifier: apcsa-climbClubAFRQ

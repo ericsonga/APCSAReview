@@ -65,74 +65,117 @@ What method of List allows you to replace an element in a list?  What method of 
 
     Figure 2: Example call and result
 
-The Algorithm
-===========================
+Click to reveal the algorithm and practice problems to help you write your solution.
 
-Loop through the list and scramble the current word.  If the scrambled word and original are equal then remove the word from the list and otherwise replace it.  We will have to be careful since the size of the list can change in the loop.  If we remove an element all the other elements will shift left.  
-We will only want to increment the index if the word was replaced and not removed.
+.. reveal:: stringScrambleAlgorithm_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+
+   Loop through the list and scramble the current word.  If the scrambled word and original are equal then remove the word from the list and otherwise replace it.  We will have to be careful since the size of the list can change in the loop.  If we remove an element all the other elements will shift left.  
+   We will only want to increment the index if the word was replaced and not removed.
+
+.. reveal:: fr_scrambleB_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
+
+   .. mchoice:: fr_scrambleB_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: c
+        :feedback_a: A while loop would work. Check out a mixed up code example below.
+        :feedback_b: A for loop would work. Check out a mixed up code example below.
+        :feedback_c: Correct! A for-each loop doesn't allow you to change the value (e.g. remove an item)
+
+        Which loop would NOT work for this problem?
+
+   .. mchoice:: fr_scrambleB_2
+        :answer_a: get(1)
+        :answer_b: find(1)
+        :answer_c: contains(1)
+        :correct: a
+        :feedback_a: Correct! WordList.get(1) would return the second item in WordList.
+        :feedback_b: Try again! .find() is not an ArrayList method.
+        :feedback_c: Try again! WordList.contains(1) returns true or false regarding whether 1 is present in WordList.
+
+        What ArrayList method can you use to get the value of an item at an index in WordList?
 
 Mixed Up Code
 ================
 
-.. parsonsprob:: StringScrambleB1
-  :numbered: left
-  :adaptive:
-   
-  The method test below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
-  -----
-  public static void test(List<String> wordList) {
-  =====
-    int i = 0;
-    while (i < wordList.size()) {
-  =====
-       String current = wordList.get(i);
-       String scrambled = scrambleWord(current);
-  =====
-       if (scrambled.equals(current)) 
-  =====
-          wordList.remove(i);
-  =====
-       else
-       {
-  =====
-          wordList.set(i,scrambled);
-  =====
-          i++;
-  =====
-       } // end else
-  =====
-    } // end while
-  =====
-  } // end method
+Click to reveal the Mixed Up Code for the solution to this problem.
+
+.. reveal:: stringScrambleB_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: stringScrambleB
+      :numbered: left
+      :adaptive:
+
+      The method <code>test</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly. 
+      -----
+      public static void test(List<String> wordList) {
+      =====
+         int i = 0;
+         while (i < wordList.size()) {
+      =====
+            String current = wordList.get(i);
+            String scrambled = scrambleWord(current);
+      =====
+            if (scrambled.equals(current)) 
+      =====
+               wordList.remove(i);
+      =====
+            else
+            {
+      =====
+               wordList.set(i,scrambled);
+      =====
+               i++;
+      =====
+            } // end else
+      =====
+         } // end while
+      =====
+      } // end method
   
 Another way to solve this problem is to start at the end of the list and loop towards the front of the list.  That way you don't have to worry about the index being off if you remove an item from the list.
+Click to reveal the Mixed Up Code for another solution to this problem.
   
-.. parsonsprob:: StringScrambleB2
-  :numbered: left
-  :adaptive:
-   
-  The method test below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  
-  -----
-  
-  public static void test(List<String> wordList) {
-  =====
-     for (int i = wordList.size() - 1; i >= 0; i--) {
-  =====
-        String word = wordList.get(i);
-  =====
-        String scrambled = scrambleWord(word);
-  =====
-        if (!scrambled.equals(word))
-  =====
-          wordList.set(i, scrambled);
-  =====
-        else
-  =====
-          wordList.remove(i);
-  =====
-     } // end for
-  =====
-  } // end method
+.. reveal:: stringScrambleB2_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: stringScrambleB2
+      :numbered: left
+      :adaptive:
+
+      The method <code>test</code> below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      -----
+      public static void test(List<String> wordList) {
+      =====
+         for (int i = wordList.size() - 1; i >= 0; i--) {
+      =====
+            String word = wordList.get(i);
+      =====
+            String scrambled = scrambleWord(word);
+      =====
+            if (!scrambled.equals(word))
+      =====
+               wordList.set(i, scrambled);
+      =====
+               wordList.set(i,scrambled);
+      =====
+            else
+      =====
+               wordList.remove(i);
+      =====
+         } // end for
+      =====
+      } // end method
 
 
 Try and Solve It

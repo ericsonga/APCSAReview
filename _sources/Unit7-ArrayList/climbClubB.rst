@@ -110,20 +110,63 @@ Walk Through the Example
 #. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Algonquin and a climbTime of 225.  You will compare Algonquin to Monadnock and since Algonquin is less than Monadnock you will insert it at position 0.
 #. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Monadnock and a climbTime of 334. You will compare Monadnock to Algonquin and since it is greater you will continue.  You will next check Monadnock to Monadnock and since they are equal you can insert it there.  
    
-Algorithm
------------
-
-Loop through the elements of ``climbList`` until you find the index where the new peakName is less than the peakName of the ``ClimbInfo`` object at the current index.  Insert the new ``ClimbInfo`` object there.  
-
 How To Solve This
 -------------------
 
-#. How will you find the correct place to add it in the list?  You will need to loop through the ``climbList`` and find the first place that the new ``peakName`` is less than the current list element's ``peakName``.   What type of loop should you use?
-#. You have to watch out for the case when the new peakName is greater than anything else in the list or the list is empty.
-#. Once you find the right place to add the new object how can you add it at that location?  What method of the ``ArrayList`` class lets you add an object at a particular location in a list?
-#. How can you tell if one string is less than or equal to another?  
-#. How can you get the peakName from the next ``ClimbInfo`` object?  
-#. In the ``addClimb`` method you need to create a new ``ClimbInfo`` object and initialize the ``peakName`` and ``climbTime``.  How do you create a new object of a class and initialize the fields?
+Click to reveal the algorithm and problems to help you write your solution.
+
+.. reveal:: algorithm_climbB_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+
+   Loop through the elements of ``climbList`` until you find the index where the new peakName is less than the peakName of the ``ClimbInfo`` object at the current index.  Insert the new ``ClimbInfo`` object there.  
+
+
+.. reveal:: fr_climbB_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
+
+   .. mchoice:: fr_climbB_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: a
+        :feedback_a: Correct! While loops are perfect when you don't always need to loop through the whole list.
+        :feedback_b: Try again. For loops are typically used when it is necessary to access every element in a list.
+        :feedback_c: Try again. For each loops automatically loop through every element in a list, but this problem doesn't require that.
+         
+        What type of loop should you use to find the first place that the new peakName is less than the current element's peakName?
+
+   .. mchoice:: fr_climbB_2
+        :answer_a: add()
+        :answer_b: add(ClimbInfo elmt)
+        :answer_c: add(int i, ClimbInfo elmt)
+        :correct: c
+        :feedback_a: There are two versions of the add method for ArrayLists. Both require at least one argument.
+        :feedback_b: This will add the element to the end of the list rather than at a specific index.
+        :feedback_c: Correct! This will add elmt at the ith index in your list.
+         
+        What ArrayList method allows you to add a new element at a specific index in a list?
+
+   .. mchoice:: fr_climbB_3
+        :answer_a: true
+        :answer_b: false
+        :correct: b
+        :feedback_a: s1 starts with "B", so it is less than s1, which starts with "K". This means compareTo would return a negative number, not a positive number.
+        :feedback_b: Correct! "Bee" is less than "Kiwi", so value would be false after running this code.
+         
+        What will be stored in value after running this code: 
+        
+        .. code-block:: java
+
+            String s1 = "Bee";
+            String s2 = "Kiwi";
+            boolean value = false;
+            if (s1.compareTo(s2) > 0){
+                boolean value = true;
+            }
 
 Try and Solve It
 -------------------

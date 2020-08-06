@@ -94,44 +94,85 @@ The method call ``goodies.removeVariety("Brownie")`` returns `0` and does not ch
 
 How to Solve This
 --------------------
-1. How will you keep track of the number of boxes of cookies that were removed?
-2. You will need to check the variety of each cookie order in the list of orders. What type of loop will you use?
-3. How will you handle the fact that you may be removing items from the list as you are processing it?  Removing an item will change the length of the list and which item is at which index.
-4. How will you check to see if a certain cookie order's variety matches the given variety?
-5. How do you remove an item from a list?
 
-The Algorithm
+Click to reveal multiple choice questions that may help you write your solution.  
+
+.. reveal:: fr_cookieB_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
+
+   .. mchoice:: fr_cookieB_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: b
+        :feedback_a: While loops are better for problems where you are looping until a condition is true or false.
+        :feedback_b: Correct! A for loop will allow you to access every CookieOrder and change its contents.
+        :feedback_c: This will not work because you will be changing values by removing boxes.
+         
+        What type of loop is best to check the variety of each cookie order in the list of orders?
+
+   .. mchoice:: fr_cookieB_2
+        :answer_a: remove(list[2]);
+        :answer_b: list.remove(list[2]);
+        :answer_c: list.remove(2);
+        :correct: c
+        :feedback_a: The remove method in the ArrayList class requires the object to call its function with a dot operator.
+        :feedback_b: The remove method in the ArrayList class requires an integer as its argument, not a String.
+        :feedback_c: Correct! Use the dot operator with list and the index you want to remove as the argument.
+         
+        How would you remove the third item from an ArrayList<String> list of size 6?
+
+   .. mchoice:: fr_cookieB_3
+        :answer_a: if (str1 == str2)
+        :answer_b: if (str1.equals(str2))
+        :answer_c: if (str1 = str2)
+        :correct: b
+        :feedback_a: Strings cannot be compared with a double equals sign. 
+        :feedback_b: Correct! the equals() method in the String class will compare two strings.
+        :feedback_c: A single = should only be used for assigning values!
+         
+        How would you compare the values of two Strings str1 and str2?
+
+Mixed Up Code
 -------------------
 
-.. parsonsprob:: CookieOrderB
-   :numbered: left
-   :adaptive:
+Click to reveal the Mixed Up Code for the solution to this problem.
 
-   The method removeVariety below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.
-   -----
-   private int removeVariety(String cookieVar) {
-       int numBoxesRemoved = 0;
-   =====
-       for (int i = this.orders.size() - 1; i >= 0; i--) {
-   =====
-       for (int i = 0; i < this.orders.size(); i++) { #paired
-   =====
-           String thisOrder = this.orders.get(i);
-   =====
-           if(cookieVar.equals(thisOrder.getVariety())) {
-   =====
-           if(cookieVar == thisOrder.getVariety()) { #paired
-   =====
+.. reveal:: cookieOrderB_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: cookieOrderB
+      :numbered: left
+      :adaptive:
+
+      The method <code>removeVariety</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.
+      -----
+      private int removeVariety(String cookieVar) {
+         int numBoxesRemoved = 0;
+      =====
+         for (int i = this.orders.size() - 1; i >= 0; i--) {
+      =====
+         for (CookieOrder co : this.orders) {
+      =====
+            String thisOrder = this.orders.get(i);
+      =====
+            if(cookieVar.equals(thisOrder.getVariety())) {
+      =====
+            if(cookieVar == thisOrder.getVariety()) { #paired
+      =====
                numBoxesRemoved += thisOrder.getNumBoxes();
                this.orders.remove(i);
-   =====
-           } // end if
-   =====
-       } // end for
-   =====
-       return numBoxesRemoved;
-   =====
-   } // end method
+      =====
+            } // end if
+      =====
+         } // end for
+      =====
+         return numBoxesRemoved;
+      =====
+      } // end method
 
 Solve Part B
 ------------

@@ -66,32 +66,86 @@ The ``getTotalBoxes`` method computes and returns the sum of the number of boxes
 
 How to Solve This
 --------------------
-1. You will need to loop through each Cookie Order, since there are more than one. What type of loop will you use?
-2. How will you continuously count the amount of boxes? You will need a variable to hold that data.
-3. The method has a return type; what will you return?
 
-The Algorithm
--------------------
-.. parsonsprob:: CookieOrderA
-   :numbered: left
-   :adaptive:
+Click to reveal multiple choice questions that may help you write your solution.
 
-   The method getTotalBoxes below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-   -----
-   public int getTotalBoxes() {
+.. reveal:: fr_cookieA_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
 
-   =====
-       int sum = 0;
-   =====
-       for (CookieOrder co : this.orders) {
-   =====
-           sum += co.getNumBoxes();
-   =====
-       } // end for
-   =====
-       return sum;
-   =====
-   } // end method
+   .. mchoice:: fr_cookieA_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: c
+        :feedback_a: While loops are better for problems where you are looping until a condition is true or false.
+        :feedback_b: This will work, but it is more concise to use a for-each loop.
+        :feedback_c: Correct! This is the most concise way to access every CookieOrder.
+         
+        What type of loop is best for this problem?
+
+   .. mchoice:: fr_cookieA_2
+        :answer_a: The total number of cookie orders
+        :answer_b: The total number of cookie boxes
+        :answer_c: The total number of cookies
+        :correct: b
+        :feedback_a: The number of cookie orders is the length of the orders List. We are going one step farther in counting boxes. Try again!
+        :feedback_b: Correct!
+        :feedback_c: We don't know how many cookies are in each box. Try again!
+         
+        What will you return at the end of this method?
+
+   .. mchoice:: fr_cookieA_3
+        :answer_a: It does not count the total number of boxes because the sum variable's scope is only inside the loop.
+        :answer_b: It counts orders, not boxes
+        :answer_c: Nothing.
+        :correct: a
+        :feedback_a: Correct! int sum must be initialized before the loop.
+        :feedback_b: co.getNumBoxes returns the number of boxes for a CookieOrder.
+        :feedback_c: Take a closer look inside the loop.
+         
+        What is wrong with this code?
+
+        .. code-block:: java
+
+            public int getTotalBoxes() {
+                for (CookieOrder co : this.orders){
+                  int sum = sum + co.getNumBoxes();
+                }
+
+                return sum;
+
+            }
+
+Mixed Up Code
+----------------
+
+Click to reveal the  Mixed Up Code for the solution to this problem.
+
+.. reveal:: cookieOrderA_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: cookieOrderA
+      :numbered: left
+      :adaptive:
+
+      The method <code>getTotalBoxes</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      -----
+      public int getTotalBoxes() {
+      =====
+         int sum = 0;
+      =====
+         for (CookieOrder co : this.orders) {
+      =====
+            sum += co.getNumBoxes();
+      =====
+         } // end for
+      =====
+         return sum;
+      =====
+      } // end method
 
 
 Solve Part A
