@@ -36,7 +36,14 @@ method should return an array of the values produced by tossing the number cube 
 How to Solve
 ----------------
 
-You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call ``toss``.  You will need to loop that number of times and each time set the value of the array at that index to the result of the ``toss``.  Return the array. Click to reveal problems to help you write your solution.
+Click to reveal the algorithm and problems to help you write your solution.
+
+.. reveal:: numbercubealg_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+
+   You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call ``toss``.  You will need to loop that number of times and each time set the value of the array at that index to the result of the ``toss``.  Return the array.
 
 .. reveal:: numbercubea_r1
    :showtitle: Reveal Problems
@@ -80,28 +87,34 @@ You will need to create an array to hold the results of each cube toss.  The siz
 
 Mixed Up Code
 -------------------
-.. parsonsprob:: NumberCubeA
-   :numbered: left
-   :adaptive:
 
-   The method getCubeTosses below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-   -----
-   public static int[] getCubeTosses(NumberCube cube,
-                                     int numTosses)
-   {
-   =====
-       int[] cubeTosses = new int[numTosses];
-   =====
-       for (int i = 0; i < numTosses; i++)
-       {
-   =====
+Click to reveal the Mixed Up Code for the solution to this problem.
+
+.. reveal:: numcubeA_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: numcubeA
+      :numbered: left
+      :adaptive:
+
+      The method <code>getCubeTosses</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      -----
+      public static int[] getCubeTosses(NumberCube cube,
+                                     int numTosses) {
+      =====
+        int[] cubeTosses = new int[numTosses];
+      =====
+        for (int i = 0; i < numTosses; i++)
+        {
+      =====
            cubeTosses[i] = cube.toss();
-   =====
-       } // end for
-   =====
-       return cubeTosses;
-   =====
-   } // end method
+      =====
+        } // end for
+      =====
+        return cubeTosses;
+      =====
+      } // end method
 
 
 Try and Solve Part A
