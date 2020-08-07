@@ -3,61 +3,51 @@
    :start: 1
 
 Free Response - String Scramble B
------------------------------------
-
-..	index::
-	single: string scramble
+..      index::
+        single: string scramble
     single: free response
 
-The following is part b of a free response question from 2014.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
+The following is part b of a free response question from 2014. It was question 1 on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
-**Question 1.**  This question involves reasoning about strings made up of uppercase letters. You will implement two related methods that appear in the same class (not shown). The first method takes a single string parameter and returns a scrambled version of that string. The second method takes a list of strings and modifies the list by scrambling each entry in the list. Any entry that cannot be scrambled is removed from the list.
+Question 1. This question involves reasoning about strings made up of uppercase letters. You will implement two related methods that appear in the same class (not shown). The first method takes a single string parameter and returns a scrambled version of that string. The second method takes a list of strings and modifies the list by scrambling each entry in the list. Any entry that cannot be scrambled is removed from the list.
 
-**Part b.** Write the method ``scrambleOrRemove``, which replaces each word in the parameter ``wordList`` with its scrambled version and removes any words that are unchanged after scrambling.  The relative order of the words in ``wordList`` remains the same as before the call to ``scrambleOrRemove``.
+Part b. Write the method scrambleOrRemove, which replaces each word in the parameter wordList with its scrambled version and removes any words that are unchanged after scrambling. The relative order of the words in wordList remains the same as before the call to scrambleOrRemove.
 
-The following example shows how the contents of ``wordList`` would be modified as a result of calling ``scrambleOrRemove``.
+The following example shows how the contents of wordList would be modified as a result of calling scrambleOrRemove.
 
-.. figure:: Figures/stringScrambleB.png
-    :width: 500px
-    :align: center
-    :figclass: align-center
+Figures/stringScrambleB.png
+Figure 1: Example call and result
 
-    Figure 1: Example call and result
+Assume that the method scrambleWord works as intended and is in the same class. It will return the scrambled word or the same word. You will write the scrambleOrRemove method to replace each original word with the scrambled word or remove the word if it was not scrambled.
 
-Assume that the method ``scrambleWord`` works as intended and is in the same class.  It will return the scrambled word or the same word.  You will write the ``scrambleOrRemove`` method to replace each original word with the scrambled word or remove the word if it was not scrambled.
+import java.util.List;
+import java.util.ArrayList;
 
-.. code-block:: java
+public class ScrambledStrings
+{
 
-   import java.util.List;
-   import java.util.ArrayList;
-
-   public class ScrambledStrings
+   /** Modifies wordList by replacing each word with its scrambled
+     *  version, removing any words that are unchanged as a result of scrambling.
+     *  @param wordList the list of words
+     *  Precondition: wordList contains only non-null objects
+     *  Postcondition:
+     *   - all words unchanged by scrambling have been removed from wordList
+     *   - each of the remaining words has been replaced by its scrambled version
+     *   - the relative ordering of the entries in wordList is the same as it was
+     *        before the method was called
+     */
+   public static void scrambleOrRemove(List<String> wordList)
    {
-
-      /** Modifies wordList by replacing each word with its scrambled
-        *  version, removing any words that are unchanged as a result of scrambling.
-        *  @param wordList the list of words
-        *  Precondition: wordList contains only non-null objects
-        *  Postcondition:
-        *   - all words unchanged by scrambling have been removed from wordList
-        *   - each of the remaining words has been replaced by its scrambled version
-        *   - the relative ordering of the entries in wordList is the same as it was
-        *        before the method was called
-        */
-      public static void scrambleOrRemove(List<String> wordList)
-      {
-         /* to be implemented in part b */
-      }
-
+      /* to be implemented in part b */
    }
 
+}
 How to solve this problem
-===========================
 .. shortanswer:: 2014string_algorithm_partB
 
    Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.
 
-This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.
+This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things. Click on the buttons to reveal the questions.
 
 .. reveal:: 2014strng_algorithm_B
     :showtitle: Reveal Algorithm Structure Hint
@@ -169,10 +159,7 @@ This section contains a plain English explanation of one way to solve this probl
 
 
 The Algorithm
-===========================
-
-Loop through the list and scramble the current word.  If the scrambled word and original are equal then remove the word from the list and otherwise replace it.  We will have to be careful since the size of the list can change in the loop.  If we remove an element all the other elements will shift left.
-We will only want to increment the index if the word was replaced and not removed. There are many ways to solve this problem but we have outlined 2 in the following optional questions. If you feel that you are ready to solve the problem, please skip ahead to the active code block.
+Loop through the list and scramble the current word. If the scrambled word and original are equal then remove the word from the list and otherwise replace it. We will have to be careful since the size of the list can change in the loop. If we remove an element all the other elements will shift left. We will only want to increment the index if the word was replaced and not removed. There are many ways to solve this problem but we have outlined 2 in the following optional questions. If you feel that you are ready to solve the problem, please skip ahead to the active code block.
 
 .. reveal:: strng_scarmble_parsons_pseudo
     :showtitle: Reveal Solution 1 Pseudo Code Problem
@@ -184,7 +171,7 @@ We will only want to increment the index if the word was replaced and not remove
           initialize index counter
           while (index less than wordlist size)
             initialize a string and set it equal to word in wordList at index
-            
+
             initialize another string and set it equal to the scrambled version
             of the word in wordlist at index
 
@@ -283,10 +270,6 @@ Another way to solve this problem is to start at the end of the list and loop to
 
 
 Try and Solve It
-===================
-
-
-
 .. activecode:: frqScrambleOrRemove
    :language: java
    :autograde: unittest

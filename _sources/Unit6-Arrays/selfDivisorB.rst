@@ -70,8 +70,15 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
 How to solve this problem
 ===========================
 
-The first thing to do is try to solve the example by hand.  The question tells us to return an array of size num so we need to create an array of that size.  We need 
-to loop as long as we haven't found 3 self divisors and try the current value.  If the current value is a self-divisor then we add it to the array.  When we have found 3 self divisors then return the array. We will need to keep track of the number of self divisors that we have found.  We would try 10 (false), 11 (true so add to the array), 12 (true so add to the array), 13 (false), 14 (false), 15 (true so add to the array and return the array since we found 3).  Click to reveal problems to help you write your solution.
+Click to reveal the algorithm and problems to help you write your solution.
+
+.. reveal:: selfDivBalg_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+
+   The first thing to do is try to solve the example by hand.  The question tells us to return an array of size num so we need to create an array of that size.  We need 
+   to loop as long as we haven't found 3 self divisors and try the current value.  If the current value is a self-divisor then we add it to the array.  When we have found 3 self divisors then return the array. We will need to keep track of the number of self divisors that we have found.  We would try 10 (false), 11 (true so add to the array), 12 (true so add to the array), 13 (false), 14 (false), 15 (true so add to the array and return the array since we found 3).
 
 .. reveal:: frsdb_r1
    :showtitle: Reveal Problems
