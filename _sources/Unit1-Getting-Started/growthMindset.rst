@@ -10,8 +10,8 @@ Watch this video about the Growth Mindset:
 
 
 .. youtube:: WtKJrB5rOKs
-    :height: 315
-    :width: 560
+    :height: 400
+    :width: 600
     :align: left
 
 

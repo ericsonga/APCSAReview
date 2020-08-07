@@ -37,6 +37,10 @@
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
    
 Calling Methods that Return Values
 ===================================

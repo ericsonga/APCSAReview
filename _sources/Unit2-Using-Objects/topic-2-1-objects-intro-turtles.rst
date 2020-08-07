@@ -77,8 +77,9 @@ The following picture has lots of cats (objects of the type cat).  They are all 
 
 Watch the following video by Dr. Colleen Lewis about classes and objects:
 
-.. youtube:: LfSaSANJPLg
-    :width: 750
+.. youtube:: 64DOwDu5SVo
+    :width: 650
+    :height: 415
     :align: center
 
 
@@ -192,7 +193,8 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
 The following video shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.  
 
 .. youtube:: TFmmG4_KK8I
-    :width: 750
+    :width: 650
+    :height: 415
     :align: center
     
 The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again. 
@@ -575,7 +577,8 @@ AP Practice
 This video shows another class called Belt and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
 
 .. youtube:: Y9vn6u3901Y
-    :width: 750
+    :width: 650
+    :height: 415
     :align: center
 
 Try these AP practice questions that will help to prepare you for the AP Classroom progress checks.

@@ -41,7 +41,8 @@ What do Android phones, Minecraft, and Netflix have in common? They're all progr
 The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces this first lesson in CSAwesome.
 
 .. youtube:: Fc-BQzPbJmU
-    :width: 800
+    :width: 700
+    :height: 400
     :align: center
 
 
@@ -91,7 +92,7 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
    {
       public static void main(String[] args)
       {
-         System.out.println("Hi there!");
+          System.out.println("Hi there!");
       }
    }
      
@@ -144,9 +145,9 @@ Java has two different print commands to print output to the screen:
    {
       public static void main(String[] args)
       {
-         System.out.print("Hi ");
-         System.out.println("there");
-         System.out.print("!");
+          System.out.print("Hi ");
+          System.out.println("there");
+          System.out.print("!");
       }
    }
         
@@ -282,7 +283,7 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
    {
       public static void main(String[] args)
       {
-         System.out.println("Hi there!);
+          System.out.println("Hi there!);
       }
    }
            
@@ -321,7 +322,7 @@ Click on the |runbutton| button below to try and run the following code.  Look f
    {
       public static void main(String[] args)
       {
-         System.out.println("Hi there!";
+          System.out.println("Hi there!";
       }
    }
            
@@ -360,7 +361,7 @@ Click on the |runbutton| button below to try and run the following code.  What i
    {
       public static void main(String[] args)
       {
-         system.out.println("Hi there!")
+          system.out.println("Hi there!")
       }
    }
            
@@ -426,9 +427,9 @@ Working in pairs, debug the following code. Can you find all the bugs and get th
    {
       public static void main(String[] args)
       {
-         System.out.print("Good morning! ")
-         system.out.print("Good afternoon!);
-         System.Print " And good evening!";
+          System.out.print("Good morning! ")
+          system.out.print("Good afternoon!);
+          System.Print " And good evening!";
       
    }
            
@@ -463,7 +464,7 @@ Summary
    {
       public static void main(String[] args)
       {
-         System.out.println("Hi there!");
+          System.out.println("Hi there!");
       }
    }
    

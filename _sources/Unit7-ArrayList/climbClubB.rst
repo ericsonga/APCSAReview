@@ -264,54 +264,48 @@ Complete the method ``addClimb`` in the ``ClimbingClub`` class in the code below
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
+     import org.junit.*;
+     import java.io.*;
 
-      public RunestoneTests() 
-      {
-        super("ClimbingClub");
-      }
+     public class RunestoneTests extends CodeTestHelper
+     {
 
+       public RunestoneTests() 
+       {
+         super("ClimbingClub");
+       }
+
+
+       @Test
+       public void testMain() throws IOException
+       {
+         String output = getMethodOutput("main");
+
+         String expect1 = "The order printed above should be Algonquin, Monadnock, Monadnock, Whiteface";
+
+         boolean passed = output.contains(expect1);
+
+         getResults(expect1, output, "Expected output from main", passed);
+
+         assertTrue(passed);
+         }
 
       @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
+       public void test1()
+       {
+         ClimbingClub hikerClub = new ClimbingClub();
+         hikerClub.addClimb("Mount B", 200);
+         hikerClub.addClimb("Mount C", 300);
+         hikerClub.addClimb("Mount A", 225);
 
-        String expect1 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 344\nPeak name: Monadnock time: 274\nPeak name: Whiteface time: 301\n";
-        expect1 = expect1 + "The order printed above should be Algonquin, Monadnock, Monadnock, Whiteface\n";
+         String output = hikerClub.toString();
 
-        String expect2 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 274\nPeak name: Monadnock time: 344\nPeak name: Whiteface time: 301\n";
-        expect2 = expect2 + "The order printed above should be Algonquin, Monadnock, Monadnock, Whiteface\n";
+         String expect1 = "Peak name: Mount A time: 225\nPeak name: Mount B time: 200\nPeak name: Mount C time: 300";
 
-        boolean passed = (getResults(expect1, output, "Expected output from main")) || (getResults(expect2, output, "Expected output from main"));
-
-        assertTrue(passed);
-        }
-
-     @Test
-      public void test1()
-      {
-        ClimbingClub hikerClub = new ClimbingClub();
-        hikerClub.addClimb("Monadnock", 274);
-        hikerClub.addClimb("Whiteface", 301);
-        hikerClub.addClimb("Algonquin", 225);
-        hikerClub.addClimb("Monadnock", 344);
-
-        String output = hikerClub.toString();
-
-        String expect1 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 344\nPeak name: Monadnock time: 274\nPeak name: Whiteface time: 301\n";
-
-        String expect2 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 274\nPeak name: Monadnock time: 344\nPeak name: Whiteface time: 301\n";     
-
-        boolean passed = (getResults(expect1, output, "addClimb (with sorting) works")) || (getResults(expect2, output, "addClimb (with sorting) works"));
-
-        assertTrue(passed);
-      }
-    }
+         boolean passed = (getResults(expect1, output, "addClimb on new input with sorting works"));   
+         assertTrue(passed);
+       }
+     }
         
 
     

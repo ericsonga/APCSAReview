@@ -149,11 +149,13 @@ Here is a folk dance video that shows the merge sort process.
 
 .. youtube:: XaqR3G_NVoo
     :align: center
+    :height: 315
 
 And here is a short video that describes how merge sort works.
 
 .. youtube:: 4VqmGXwpLqc
     :align: center
+    :height: 315
     
 
 The code for ``mergeSort`` below is from the AP CS A course description.

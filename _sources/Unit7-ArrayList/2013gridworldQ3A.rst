@@ -43,7 +43,7 @@ For part A we will be working with the class ``BoundedGrid<E>`` which implements
     :align: center
     :figclass: align-center
 
-Part A: Check your understanding of the question
+Check your understanding of the question
 ================================================
 
 The problems in this section are to help you check your understanding and guide you towards a solution.

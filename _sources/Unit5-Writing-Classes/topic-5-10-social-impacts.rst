@@ -51,8 +51,8 @@ Another problem in machine learning is **bias** in algorithms or data. Machine l
 Watch the following |video1| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League). 
 
 .. youtube:: TWWsW1w-BVo
-    :height: 315
-    :width: 560
+    :height: 400
+    :width: 600
     :align: left
     
 
