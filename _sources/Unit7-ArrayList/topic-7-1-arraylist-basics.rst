@@ -439,11 +439,11 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
       /** Constructs a list of digits from the given number */
       public Digits(int number)
       {
-         // initialize digitList to an empty ArrayList of Integers
+          // initialize digitList to an empty ArrayList of Integers
          
-         // Use a while loop to add each digit in number to digitList
+          // Use a while loop to add each digit in number to digitList
          
-         //Use Collections.reverse(digitList); to reverse the digits
+          //Use Collections.reverse(digitList); to reverse the digits
       
       }
       

@@ -491,6 +491,10 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
 
     public class RunestoneTests extends CodeTestHelper
     {
+        public RunestoneTests() {
+            super("WordPairTest");
+        }
+        
         @Test
         public void testMain() throws IOException
         {
@@ -506,6 +510,7 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
           assertTrue(passed);
         }
     }
+    
 
 .. figure:: Figures/wordpairs.png
     :width: 200px

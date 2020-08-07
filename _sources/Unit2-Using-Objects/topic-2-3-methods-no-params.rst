@@ -35,7 +35,10 @@
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
+    
 Calling Methods Without Parameters
 ===========================================
 
@@ -67,16 +70,16 @@ Every method call is followed by parentheses. The parentheses ``()`` after metho
        public static void main(String[] args)
        {
    =====
-           World world = new World(300,300);
+           World habitat = new World(300,300);
    =====
-           Turtle yertle = new Turtle(world);
+           Turtle yertle = new Turtle(habitat);
    =====
            yertle.forward();
    =====
            yertle.turnLeft();
            yertle.forward();
    =====
-           world.show(true);
+           habitat.show(true);
    =====
        } // end main
    =====
@@ -100,13 +103,13 @@ After you put the mixed up code in order above, type in the same code below to m
     {
       public static void main(String[] args)
       {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+          World habitat = new World(300,300);
+          Turtle yertle = new Turtle(habitat);
           // Make yertle draw a 7 using the code above
 
 
 
-          world.show(true);
+          habitat.show(true);
       }
     }
     ====
@@ -146,13 +149,13 @@ After you put the mixed up code in order above, type in the same code below to m
     {
       public static void main(String[] args)
       {
-          World world = new World(500,500);
-          Turtle yertle = new Turtle(world);
+          World habitat = new World(500,500);
+          Turtle yertle = new Turtle(habitat);
           // Make yertle draw an 8 with 2 squares
           yertle.forward();
 
 
-          world.show(true);
+          habitat.show(true);
       }
     }
     ====
@@ -169,7 +172,7 @@ After you put the mixed up code in order above, type in the same code below to m
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleDraw8\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n      Turtle yertle = new Turtle(world);\n      // Make yertle draw an 8 with 2 squares\n      yertle.forward();\n\n\n      world.show(true);\n  }\n}\n";
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleDraw8\n{\n  public static void main(String[] args)\n  {\n      World habitat = new World(300,300);\n      Turtle yertle = new Turtle(habitat);\n      // Make yertle draw an 8 with 2 squares\n      yertle.forward();\n\n\n      habitat.show(true);\n  }\n}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -397,11 +400,11 @@ You may notice that it is challenging to have your turtle draw with these simple
     {
       public static void main(String[] args)
       {
-          World world = new World(300,300);
+          World habitat = new World(300,300);
 
 
 
-          world.show(true);
+          habitat.show(true);
       }
     }
     ====
@@ -418,7 +421,7 @@ You may notice that it is challenging to have your turtle draw with these simple
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleLetter\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n\n\n\n      world.show(true);\n  }\n}\n";
+            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleLetter\n{\n  public static void main(String[] args)\n  {\n      World habitat = new World(300,300);\n\n\n\n      habitat.show(true);\n  }\n}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }

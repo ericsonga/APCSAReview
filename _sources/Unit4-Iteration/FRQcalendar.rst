@@ -14,18 +14,25 @@ The AP exam's first free response question (FRQ) is on Methods and Control Struc
 
 FRQ Question 1 on Control Structures will probably involve:
 
-- a for-loop that probably uses the method's parameter variables,
+- a **for-loop** that probably uses the method's parameter variables,
 
-- an if statement, probably inside the loop,
+- an **if statement**, probably inside the loop,
 
-- a call to other class methods given to you,
+- calls to other class **methods given to you**,
 
-- a numerical or string value that is calculated by the loop and returned at the end of the method.
+- a numerical or string value that is calculated by the loop and **returned** at the end of the method.
 
 - if the question has 2 parts, 1 part will probably require a loop and the other just an expression.
 
 
-On question 1, you will get points for constructing the loop correctly, calling the correct methods, calculating the correct value, and returning the value. Try to have some code for each of these steps. Do not use arrays or other more complex code. You may need to use Math or string methods.
+On question 1, you will get points for:
+
+- constructing the loop correctly, 
+- calling the correct methods, 
+- calculating the correct value, 
+- and returning the value. 
+
+Try to have some code for each of these steps. Do not use arrays or other more complex code. You may need to use Math or string methods.
 
 
 2019 APCalendar FRQ
@@ -82,7 +89,7 @@ Part A: numberOfLeapYear()
 
 Write the static method numberOfLeapYears, which returns the number of leap years between year1 and year2, inclusive. In order to calculate this value, a helper method is provided for you.
 
-- isLeapYear(year) returns true if year is a leap year and false otherwise.
+- **isLeapYear(year)** returns true if year is a leap year and false otherwise.
 
 Complete method numberOfLeapYears below. You must use isLeapYear appropriately to receive full credit.
 
@@ -146,12 +153,12 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
         :feedback_c: You need to count the leap years between year1 and year2. The problem does not mention starting at year 2020.
         :feedback_d: You need to count the leap years between year1 and year2. 
 
+        What is the starting and ending values for the loop to count the leap years between year 1 and year 2?
+
 .. reveal:: call_loop_type_r2
    :showtitle: Reveal Algorithm
    :hidetitle: Hide Algorithm
    :optional:
-
-   What is the starting and ending values for the loop to count the leap years between year 1 and year 2?
    
    It is usually easiest to use a **for loop** if you know how many times the loop should execute using the given information. Figure out what the initial and ending values of the loop variable should be. Some of the method parameters will usually be used for these. In this case, we need to loop from year1 to year2.  The preconditions stated for the method tells us that we don't have to worry about year1 and year2 being out of order or below 0. So don't waste time on error-checking these values. Here's a possible loop:
 
@@ -246,6 +253,19 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
         }
     }
 
+
+In the 2019 AP exam, part A numberOfLeapYears method was worth 5 points using the rubric below. Did you receive all 5 points? In class, your teacher may have you grade each others' code.
+
+
+.. figure:: Figures/numberOfLeapYearsRubric.png
+    :width: 700px
+    :align: center
+    :alt: Rubric for the numberOfLeapYears method
+    :figclass: align-center
+
+    Figure 1: Rubric for the numberOfLeapYears method
+    
+
 Part B: dayOfWeek()
 ===========================
 
@@ -310,7 +330,7 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
         :feedback_c: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later. 
         :feedback_d: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
 
-   If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
+        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
 
 
    If we used the formula in exercise 4-10-4 above for the date in exercise 4-10-5 above, we would get 10:
@@ -320,7 +340,7 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
    But there is no 10th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. 
 
 
-The FRQ that involves writing an expression will probably use the mod operator. Remember these tips about when to use the mod operator:
+The FRQ that involves writing an expression will probably use the **mod % operator**. Remember these tips about when to use the mod operator:
 
 - Use mod whenever you need to wrap around to the front if the value goes over the limit (num % limit). For example here for weekdays or for hours and minutes.
 
@@ -488,4 +508,16 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
             assertTrue(passed);   
         }
     }
+    
+
+In the 2019 AP exam, part B dayOfWeek method was worth 4 points using the rubric below. Did you receive all 4 points? In class, your teacher may have you grade each others' code.
+
+
+.. figure:: Figures/dayOfWeekRubric.png
+    :width: 700px
+    :align: center
+    :alt: Rubric for the dayOfWeek method
+    :figclass: align-center
+
+    Figure 2: Rubric for the dayOfWeek method
 

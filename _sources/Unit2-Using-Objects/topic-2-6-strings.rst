@@ -29,7 +29,10 @@
 	single: reference
 	pair: String; definition
     
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
+    
 Strings
 ========
 
@@ -120,10 +123,10 @@ In both cases an object of the ``String`` class will be created in memory and th
    {
       public static void main(String[] args)
       {
-        String greeting1 = "Hello!";
-        String greeting2 = new String("Welcome!");
-        System.out.println(greeting1);
-        System.out.println(greeting2);
+          String greeting1 = "Hello!";
+          String greeting2 = new String("Welcome!");
+          System.out.println(greeting1);
+          System.out.println(greeting2);
        }
     }
     ====
@@ -219,11 +222,11 @@ Strings can be **appended** to each other to create a new string using the ``+``
    {
       public static void main(String[] args)
       {
-        String start = "Happy Birthday"; 
-        String name = "Jose";
-        String result = start + " " + name;  // add together strings
-        result += "!"; // add on to the same string
-        System.out.println(result);
+          String start = "Happy Birthday"; 
+          String name = "Jose";
+          String result = start + " " + name;  // add together strings
+          result += "!"; // add on to the same string
+          System.out.println(result);
       }
    }
    ====

@@ -38,7 +38,8 @@ What is a Variable?
 A **variable** is a name associated with a memory location in the computer.  Computer memory can store a value and that value can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
 
 .. youtube:: pHgYlVjagmA
-    :width: 800
+    :width: 700
+    :height: 400
     :align: center
 
 
@@ -571,16 +572,16 @@ The convention in Java and many programming languages is to always start a varia
    {
       public static void main(String[] args)
       {
-         int temperature = 70.5;
-         double radioChannel = 101;
-         boolean sunny = 1
+          int temperature = 70.5;
+          double radioChannel = 101;
+          boolean sunny = 1
          
-         System.out.print("Welcome to the weather report on Channel ")
-         System.out.println(Radiochannel);
-         System.out.print("The temperature today is );
-         System.out.println(tempurature);
-         System.out.print("Is it sunny today? ");
-         System.out.println(sunny);
+          System.out.print("Welcome to the weather report on Channel ")
+          System.out.println(Radiochannel);
+          System.out.print("The temperature today is );
+          System.out.println(tempurature);
+          System.out.print("Is it sunny today? ");
+          System.out.println(sunny);
       }
    }
 

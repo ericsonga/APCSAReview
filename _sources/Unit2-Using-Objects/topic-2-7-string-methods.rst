@@ -23,6 +23,10 @@
 
    <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
     
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+    
 String Methods 
 =================
 

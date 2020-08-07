@@ -202,7 +202,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
   :language: java     
   :autograde: unittest
 
-  Scroll down to look at the Dog class and add a similar Cat class that extends Pet. Scroll back to the main method and add some Cat objects to the ArrayList too. Does the petList work with Cats too?
+  Scroll down to look at the Dog class and add a similar Cat class that extends Pet. Don't make the Cat class public because there can only be 1 public class in a file. Scroll back to the main method and add some Cat objects to the ArrayList too. Does the petList work with Cats too?
   ~~~~
   import java.util.*; // for ArrayList
    
@@ -298,7 +298,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
         @Test
         public void test5()
         { 
-            String target = "petList.add(new Cat(*))";
+            String target = "petList.add(new Cat(";
 
             boolean passed = checkCodeContains(target);
             assertTrue(passed);
@@ -365,7 +365,7 @@ In the DiscountedItem subclass,
   :language: java  
   :autograde: unittest
   
-  Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Try adding discounted items to the cart in main.
+  Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Uncomment the testing code in main to add discounted items to the cart.
   ~~~~
   import java.util.*;
 
@@ -381,6 +381,8 @@ In the DiscountedItem subclass,
         ShoppingCart cart = new ShoppingCart();
         cart.add(new Item("bread", 3.25));
         cart.add(new Item("milk", 2.50));
+         
+        // Uncomment these to test 
         //cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
         //cart.add(new DiscountedItem("apples", 1.35, 0.25));
 

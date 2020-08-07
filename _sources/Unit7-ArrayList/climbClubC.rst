@@ -282,53 +282,37 @@ Try it Out
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
+     import org.junit.*;
+     import java.io.*;
+     
+     public class RunestoneTests extends CodeTestHelper
+     {
+       public RunestoneTests() 
+       {
+         super("ClimbingClub");
+       }
 
-      public RunestoneTests() 
-      {
-        super("ClimbingClub");
-      }
+         @Test
+         public void testMain() throws IOException
+         {
+           String output = getMethodOutput("main");
 
+           String expect = "Peak name: Monadnock time: 274\n" +
+           "Peak name: Whiteface time: 301\n" +
+           "Peak name: Algonquin time: 225\n" + 
+           "Peak name: Monadnock time: 344\n" + 
+           "The order printed above should be Monadnock, Whiteface, Algonquin, Monadnock\n" +
+           "Distinct peaks is 4 and should be 3\n" +
+           "Peak name: Algonquin time: 225\n" +
+           "Peak name: Monadnock time: 274\n" +
+           "Peak name: Monadnock time: 344\n" + 
+           "Peak name: Whiteface time: 301\n" +
+           "The order printed above should be Algonquin, Monadnock, Monadnock, Whiteface\n" +
+           "Distinct peaks is 3 and should be 3\n";
 
-      @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-
-        String expect1 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 344\nPeak name: Monadnock time: 274\nPeak name: Whiteface time: 301\n";
-        expect1 = expect1 + "The order printed above should be Algonquin, Monadnock, Monadnock, Whiteface\n";
-
-        String expect2 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 274\nPeak name: Monadnock time: 344\nPeak name: Whiteface time: 301\n";
-        expect2 = expect2 + "The order printed above should be Algonquin, Monadnock, Monadnock, Whiteface\n";
-
-        boolean passed = (getResults(expect1, output, "Expected output from main")) || (getResults(expect2, output, "Expected output from main"));
-
-        assertTrue(passed);
-        }
-
-     @Test
-      public void test1()
-      {
-        ClimbingClub hikerClub = new ClimbingClub();
-        hikerClub.addClimb("Monadnock", 274);
-        hikerClub.addClimb("Whiteface", 301);
-        hikerClub.addClimb("Algonquin", 225);
-        hikerClub.addClimb("Monadnock", 344);
-
-        String output = hikerClub.toString();
-
-        String expect1 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 344\nPeak name: Monadnock time: 274\nPeak name: Whiteface time: 301\n";
-
-        String expect2 = "Peak name: Algonquin time: 225\nPeak name: Monadnock time: 274\nPeak name: Monadnock time: 344\nPeak name: Whiteface time: 301\n";     
-
-        boolean passed = (getResults(expect1, output, "addClimb (with sorting) works")) || (getResults(expect2, output, "addClimb (with sorting) works"));
-
-        assertTrue(passed);
-      }
-    }
+           boolean passed = getResults(expect,output,"Expected output from main", true);
+           assertTrue(passed);
+         }
+     }
 
     

@@ -93,7 +93,7 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
    :language: java 
    :autograde: unittest      
  
-   What will the following code print out? Can you add another method called ``getTotalForCol`` that gets the total for a column? 
+   What will the following code print out? Can you complete the  method called ``getTotalForCol`` that gets the total for a column? To do this, you must loop through the rows. The array's length will tell you how many rows you have since it is an array of arrays, while the length of the array's first element will tell you how many columns. 
    ~~~~
    public class Total
    {
@@ -110,12 +110,12 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
       
       // Complete the method getTotalForCol below
       public static int getTotalForCol(int col, int[][] a)
-      { 
-           int total = 0;
-           // Add a loop here to total a column col
+      {
+          int total = 0;
+          // Add a loop here to total a column col
            
            
-           return total;
+          return total;
       }
       
       public static void main(String[] args)
@@ -243,9 +243,13 @@ Here is a linear search algorithm where we access each row and then apply a line
       
       public static void main(String[] args)
       {
-         int[][] matrix = {  {3,2,3},{4,3,6},{8,9,3},{10,3,3}};
+         int[][] matrix = { {3,2,3},{4,3,6},{8,9,3},{10,3,3} };
          System.out.println(search(matrix,10));
          System.out.println(search(matrix,11));
+         
+        // Comment out the code above, and try these:
+        // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
+        // System.out.println(search(matrix2, "b")); 
 
       }  
    }
