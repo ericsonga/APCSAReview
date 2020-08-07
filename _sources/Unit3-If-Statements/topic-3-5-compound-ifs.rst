@@ -27,6 +27,10 @@
 
     <style>    td { text-align: left; } </style>
     
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+    
 Compound Boolean Expressions
 ============================
 
@@ -485,20 +489,22 @@ Explore the following problems with your group:
    :autograde: unittest
    :practice: T
 
+   Challenge-3-5-truthtables: Test your boolean expression in an if statement below.
+   ~~~
    public class TruthTable
    {
       public static void main(String[] args)
       {
-         // Test multiple values for these variables
-         boolean sunny = false;
-         int temperature = 90;
-         boolean raining = false;
+          // Test multiple values for these variables
+          boolean sunny = false;
+          int temperature = 90;
+          boolean raining = false;
          
-         // Write an if statement for: If it's sunny, 
-         //  OR if the temperature is greater than 80 
-         //     and it's not raining, "Go to the beach!"
-         
-         
+          // Write an if statement for: If it's sunny, 
+          //  OR if the temperature is greater than 80 
+          //     and it's not raining, "Go to the beach!"
+          
+          
       }
    }
    ====

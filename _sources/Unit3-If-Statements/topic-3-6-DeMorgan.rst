@@ -23,6 +23,10 @@
 
     <style>    td { text-align: left; } </style>
     
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+    
 Equivalent Boolean Expressions (De Morgan's Laws)
 =================================================
 
@@ -228,11 +232,11 @@ Explore the following problems with your group. You may use |this worksheet| to 
    {
       public static void main(String[] args)
       {
-         int x = -1; // try with x = -1, x = 0, and x = 1
-         System.out.println(!(x == 0 || x >= 1));
-         // add print statements for expressions in #2 and #3
-         // to see if they are equivalent when x = -1, 0, and 1.
-     
+          int x = -1; // try with x = -1, x = 0, and x = 1
+          System.out.println(!(x == 0 || x >= 1));
+          // add print statements for expressions in #2 and #3
+          // to see if they are equivalent when x = -1, 0, and 1.
+          
         
       }
    }
