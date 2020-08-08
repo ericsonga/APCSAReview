@@ -5,7 +5,9 @@
 .. highlight:: java
    :linenothreshold: 4
 
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
 
 Activity 3: Better Keyword Detection
 =======================================
@@ -20,7 +22,10 @@ and ``toLowerCase`` methods.  Do they do what you thought they would?  The metho
 
 .. activecode:: lc-strEx
    :language: java
+   :autograde: unittest
    
+   Run the code below. Why do you think you might want to change the string to all lowercase characters? Why doesn't the value of ``sample`` change? Do string methods change the string? Try some other string methods.
+   ~~~~
    /**
     * A program to allow students to try out different 
     * String methods. 
@@ -46,8 +51,24 @@ and ``toLowerCase`` methods.  Do they do what you thought they would?  The metho
 		 //  Try other methods here:
 
 	 }
-
    }
+   ====
+   // should pass if/when they run code
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "sample.indexOf("quick") = 4\n...";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
    
 .. |String in Java documentation| raw:: html
 
@@ -151,7 +172,7 @@ Try replacing the call in main at line 178 below with each of the following
 * ``maggie.findKeyword("I can't catch wild cats.", "cat", 0);``
 * ``maggie.findKeyword("I know nothing about snow plows.", "no", 0);``
 
-You can also step through the code in the |Java Visualizer|. It may take a minute or two to load.  Click the forward button at the bottom of the code to execute the next statement.
+You can also step through the code in the |Java Visualizer| or using the CodeLens button below. It may take a minute or two to load.  Click the forward button at the bottom of the code to execute the next statement.
  
 
 
@@ -160,12 +181,15 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 
    <a href="http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf" target="_blank">Magpie Chatbot Lab</a>
    
-Modify the code below to print the values of ``psn``, ``before``, and ``after`` right after the comment on line 100 in the ``findKeyword`` method below. Record each of the values in a table. The College Board student guide for the |Magpie Chatbot Lab| has a table on page 8 that can be printed.
+
 
 
 .. activecode:: lc-magpie3
    :language: java
+   :autograde: unittest
 
+   Modify the code below to print the values of ``psn``, ``before``, and ``after`` right after the comment on line 100 in the ``findKeyword`` method below. Record each of the values in a table. The College Board student guide for the |Magpie Chatbot Lab| has a table on page 8 that can be printed. Use the CodeLens button to step through the code.
+   ~~~~
    /**
     * A program to carry on conversations with a human user.
     * This version: 
@@ -348,6 +372,23 @@ Modify the code below to print the values of ``psn``, ``before``, and ``after`` 
 	  }
 
    }
+   ====
+       // should pass if/when they run code
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "6...";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 .. |Java Visualizer| raw:: html
 

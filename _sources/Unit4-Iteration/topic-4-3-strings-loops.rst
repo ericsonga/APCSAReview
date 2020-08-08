@@ -25,6 +25,10 @@
 
    <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
 
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
+    
 Loops and Strings
 =================
 
@@ -333,14 +337,14 @@ Are you a cat person or a dog person? The code below prints a nice message about
    {
      public static void main(String[] args)
      {
-        String message = "I love cats! I have a cat named Coco. My cat's very smart!";
+          String message = "I love cats! I have a cat named Coco. My cat's very smart!";
 
-        // Write a loop here that replaces every occurrence of "cat" 
-        // in the message with "dog", using indexOf and substring.
+          // Write a loop here that replaces every occurrence of "cat" 
+          // in the message with "dog", using indexOf and substring.
         
         
         
-        System.out.println(message);
+          System.out.println(message);
       }
    }
    ====

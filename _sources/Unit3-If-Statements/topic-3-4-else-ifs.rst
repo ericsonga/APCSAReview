@@ -24,7 +24,7 @@
     :alt: groupwork
 
 .. image:: ../../_static/time90.png
-    :width: 250
+    :width: 225
     :align: right
     
 Multi-Selection: else-if Statements

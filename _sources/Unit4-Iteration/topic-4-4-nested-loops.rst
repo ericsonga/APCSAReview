@@ -19,7 +19,9 @@
     :align: middle
     :alt: groupwork
 
-.. turtle snowflake patterns
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
 
 Nested For Loops
 ================

@@ -22,6 +22,10 @@
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
     
 For Loops
 =========
