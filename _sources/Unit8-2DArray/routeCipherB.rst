@@ -118,6 +118,7 @@ Complete method ``encryptMessage`` below.
 
 .. activecode:: FRQRouteCipherB
    :language: java
+   :autograde: unittest      
 
    public class RouteCipher
    {
@@ -188,3 +189,36 @@ Complete method ``encryptMessage`` below.
         System.out.println("Oops! Make a few changes to your code, please.");
      }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+
+       @Test
+       public void testMain() throws IOException
+       {
+         String output = getMethodOutput("main");
+         String expect = "Looks like your code works well!\n" ;  
+
+         boolean passed = getResults(expect, output, "Expected output from main");
+         assertTrue(passed);
+       }
+
+     @Test 
+       public void test1()
+       {
+         RouteCipher ciph = new RouteCipher(2, 3);
+
+         String result = String.valueOf(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea"));
+
+         boolean passed = getResults("true", result, "method encryptMessage");
+         assertTrue(passed);
+       }  
+     }
+

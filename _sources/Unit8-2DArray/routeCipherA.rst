@@ -42,7 +42,7 @@ An incomplete implementation of the ``RouteCipher`` class is shown below.
      *     if str.length() < numRows * numCols, "A" in each unfilled cell
      *     if str.length() > numRows * numCols, trailing characters are ignored
      */
-     private void fillBlock(String str)
+     public void fillBlock(String str)
      { /* to be implemented in part (a) */ }
 
      /** Extracts encrypted string from letterBlock in column-major order.
@@ -106,7 +106,7 @@ The Algorithm
 
   The method fillBlock below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
   -----
-  private void fillBlock(String str) {
+  public void fillBlock(String str) {
     int pos = 0;
   =====
     for (int r = 0; r < this.numRows; r++ ) {
@@ -131,11 +131,13 @@ The Algorithm
 
 Solve Part A
 ------------
-Complete the method ``fillBlock`` below.
 
 .. activecode:: FRQRouteCipherA
    :language: java
+   :autograde: unittest      
 
+   Complete the method ``fillBlock`` below.
+   ~~~~
    public class RouteCipher
    {
      /** A two-dimensional array of single-character strings, instantiated in the constructor */
@@ -159,8 +161,12 @@ Complete the method ``fillBlock`` below.
      *     if str.length() < numRows * numCols, "A" in each unfilled cell
      *     if str.length() > numRows * numCols, trailing characters are ignored
      */
-     public void fillBlock(String str){
+     public void fillBlock(String str)
+     {
       // Complete this method
+     
+     
+     
      }
 
      /** Extracts encrypted string from letterBlock in column-major order.
@@ -178,7 +184,8 @@ Complete the method ``fillBlock`` below.
      public String encryptMessage(String message)
      { return ""; }
 
-     public static void main(String[] args){
+     public static void main(String[] args)
+     {
 
       boolean test1 = false;
       RouteCipher ciph = new RouteCipher(3, 3);
@@ -197,3 +204,37 @@ Complete the method ``fillBlock`` below.
 
      }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+
+       @Test
+       public void testMain() throws IOException
+       {
+         String output = getMethodOutput("main");
+         String expect = "Looks like your code works well!\n" ;  
+
+         boolean passed = getResults(expect, output, "Expected output from main");
+         assertTrue(passed);
+       }
+
+
+     @Test 
+       public void test1()
+       {
+         RouteCipher ciph = new RouteCipher(3, 4);
+
+         ciph.fillBlock("Lady Bugs");
+
+         String result = String.valueOf((ciph.letterBlock[0][2]).equals("d") && (ciph.letterBlock[2][2]).equals("A"));boolean passed = getResults("true", result, "method fillBlock");
+         assertTrue(passed);
+       }
+     }
+

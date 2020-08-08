@@ -319,10 +319,11 @@ Photographs and images are made up of a 2D array of **pixels** which are tiny pi
 model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple?
 
 
+Scroll down to the bottom of the following code and take a look at the zeroBlue() method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. 
 
-Scroll down to the bottom of the following code and take a look at the switchColors method. Run the code and watch what it does. It switches RGB values of each pixel and the colors change! 
+Now, write a similar method called keepOnlyBlue() that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called switchColors() that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the getRed(), getGreen(), getBlue() to get the RGB values of the pixel and then swap them around by using the setRed, setGreen, setBlue methods and giving them different color values from the get methods as arguments.
 
-Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. You can test it in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does. 
+You can test the methods in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does. 
 
 .. datafile:: arch.jpg
    :image:
@@ -332,9 +333,10 @@ Now, write a similar method called zeroBlue() that sets the blue values at all p
 
 .. activecode:: challenge-8-2-picture
     :language: java
+    :autograde: unittest
     :datafile: pictureClasses.jar, arch.jpg
 
-    Picture Lab: write a method called zeroBlue() that sets the blue values at all pixels to zero. Continue on with other picture lab exercises as described below.
+    Picture Lab: 1) write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it. 2) write a method called switchColors() that replaces red values (using p.setRed) with green or blue values (using p.getGreen(), etc.) to change the colors around. Uncomment the code in main to test it. 
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -422,30 +424,26 @@ Now, write a similar method called zeroBlue() that sets the blue values at all p
 
       }
 
-     /** switchColors() traverses the 2D pixel array and 
-      * switches the RGB colors.
-      */
-     public void switchColors()
-     {
-       Pixel[][] pixels = this.getPixels2D();
-       int red, green, blue = 0;
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
 
-       for (Pixel[] rowArray : pixels)
-        {
-          for (Pixel p: rowArray)
-          {
-           red = p.getRed();
-           green = p.getGreen();
-           blue = p.getBlue();
-           p.setRed(green);
-           p.setGreen(blue);
-           p.setBlue(red);
-         }
-       }
-     }
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
+
       
      /* Add new methods here.
-        zeroBlue() method sets the blue values at all pixels to zero 
+        keepOnlyBlue() method sets the blue values at all pixels to zero.
+        switchColors() method swaps the color values of pixels.
      */
      
       /* Main method for testing 
@@ -454,32 +452,86 @@ Now, write a similar method called zeroBlue() that sets the blue values at all p
       {
         Picture arch = new Picture("arch.jpg");
         arch.show();
-        arch.switchColors();
+        arch.zeroBlue();
         arch.show();
         
-        //Uncomment the follow code to test your zeroBlue method.    
+        //Uncomment the follow code to test your keepOnlyBlue method.    
         /*
         Picture arch2 = new Picture("arch.jpg");
-        System.out.println("Zero blue: "); //using new method
-        arch2.zeroBlue();
+        System.out.println("Keep only blue: "); 
+        arch2.keepOnlyBlue();// using new method
         arch2.show();
         */ 
         System.out.println();
 
-        //Uncomment the follow code to test your keepOnlyBlue method.
-        /*   
-        System.out.println("Keep only blue: ");
-        arch.keepOnlyBlue();// using new method
-        arch.show();
+        //Uncomment the follow code to test your swithColors method.
+        /*  
+        Picture arch3 = new Picture("arch.jpg");
+        System.out.println("Switch colors: ");
+        arch3.switchColors();// using new method
+        arch3.show();
         */  
       }
     } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void keepOnlyBlue()";
+         boolean passed = checkCodeContains("keepOnlyBlue() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = ".setGreen(0);";
+         boolean passed = checkCodeContains("keepOnlyBlue() setting green pixels to the number 0",target);
+         assertTrue(passed);
+       }
+
+       @Test
+         public void test3()
+         { 
+             String target = "for";
+             String code = getCode();
+             int index = code.indexOf("public void keepOnlyBlue()");
+             code = code.substring(index, index + 200);
+             boolean passed = code.contains(target);
+
+             getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
+             assertTrue(passed);   
+         }
+         @Test 
+        public void testSwitch1()
+        {
+         String target = "public void switchColors()";
+         boolean passed = checkCodeContains("switchColors() method",target);
+         assertTrue(passed);
+        }
+
+        @Test 
+        public void testSwitch2()
+        {
+         String target = ".getGreen();";
+         boolean passed = checkCodeContains("switchColors() uses getGreen()",target);
+         assertTrue(passed);
+        }
+      }
+
 
  
 
 Here are some more exercises from the |Picture Lab|:
-
-- Write a method keepOnlyBlue that will keep only the blue values, that is, it will set the red and green values to zero. 
 
 - Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
 

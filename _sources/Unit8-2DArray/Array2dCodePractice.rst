@@ -9,14 +9,15 @@ Code Practice with 2D Arrays
 
         .. tab:: Question
 
-           Replace the "ADD CODE HERE" below with the code to declare and create a 3 by 3 two-dimensional int array named ``table``. The finished code will print the values 0 to 8.
-           
            .. activecode::  arr2DEx1q
               :language: java
+              :autograde: unittest 
+              :practice: T              
    
+              Replace the "ADD CODE HERE" below with the code to declare and create a 3 by 3 two-dimensional int array named ``table``. The finished code will print the values 0 to 8.
+              ~~~~
               public class Test1
-              {
-              	
+              {              	
                   public static void main(String[] args)
                   {
                       // ADD CODE HERE //
@@ -34,6 +35,29 @@ Code Practice with 2D Arrays
                       }
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;;
+               import java.io.*;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+                   @Test
+                   public void testMain() throws IOException
+                   {
+                       String output = getMethodOutput("main");
+                       String expect = "0 1 2 3 4 5 6 7 8";
+                       boolean passed = getResults(expect, output, "Expected output from main");
+                       assertTrue(passed);
+                   }
+                   @Test
+                   public void testContains()
+                   {
+                       String target = "int[][] table = new int[3][3];";
+                       boolean passed = checkCodeContains("3x3 declaration of int array table", target);
+                      assertTrue(passed);
+                   }
+               }
 
 
         .. tab:: Answer
@@ -42,6 +66,7 @@ Code Practice with 2D Arrays
         
            .. activecode::  arr2DEx1a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -73,13 +98,14 @@ Code Practice with 2D Arrays
 .. tabbed:: arr2DEx2
 
         .. tab:: Question
-
-           
-          Replace the "ADD CODE HERE" below with the code to declare and initialize a two-dimensional String array called ``students`` with the names "Brice, Marvin, Anna" in the first row and "Kamal, Maria, Elissa" in the second. The finished code will print all the names in the array starting with all in the first row followed by all in the second row. 
            
            .. activecode::  arr2DEx2q
               :language: java
-   
+              :autograde: unittest      
+              :practice: T
+              
+              Replace the "ADD CODE HERE" below with the code to declare and initialize a two-dimensional String array called ``students`` with the names "Brice, Marvin, Anna" in the first row and "Kamal, Maria, Elissa" in the second. The finished code will print all the names in the array starting with all in the first row followed by all in the second row. 
+              ~~~~     
               public class Test1
               {
                   public static void main(String[] args)
@@ -97,16 +123,40 @@ Code Practice with 2D Arrays
                       }
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;;
+               import java.io.*;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+                   @Test
+                   public void testMain() throws IOException
+                   {
+                       String output = getMethodOutput("main");
+                       String expect = "Brice Marvin Anna Kamal Maria Elissa";
+                       boolean passed = getResults(expect, output, "Expected output from main");
+                       assertTrue(passed);
+                   }
+                   @Test
+                   public void testContains()
+                   {
+                       String target = "String[][] students";
+                       boolean passed = checkCodeContains("2D String array called students", target);
+                      assertTrue(passed);
+                   }
+               }
 
 
 
         .. tab:: Answer
         
            You can declare, create, and initialize a 3 by 3 two-dimensional String array on one line as shown below.  Declare the array with ``type[][] name``.  Create and initialize an array with two rows and three columns
-           using ``={ {item1, item2, item3}, {item4, item5, item6} };``.  Be sure to separate the items with commas.  Also separate the rows with a comma.
+           using ``= { {item1, item2, item3}, {item4, item5, item6} };``.  Be sure to separate the items with commas.  Also separate the rows with a comma.
            
            .. activecode::  arr2DEx2a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -136,12 +186,14 @@ Code Practice with 2D Arrays
 .. tabbed:: arr2DEx3
 
         .. tab:: Question
-
-           Print the values 47, 51, and 20 by accessing them in the  the given two-dimensional array.
            
            .. activecode::  arr2DEx3q
               :language: java
+              :autograde: unittest      
+              :practice: T
    
+              Print the values 47, 51, and 20 by accessing them in  the given two-dimensional array.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -152,7 +204,35 @@ Code Practice with 2D Arrays
                       
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;;
+               import java.io.*;
 
+               public class RunestoneTests extends CodeTestHelper
+               {
+                   @Test
+                   public void testDigitOne() throws IOException
+                   {
+                       String target = "arr[0][0]";
+                       boolean passed = checkCodeContains("using arr to access 47", target);
+                      assertTrue(passed);
+                   }
+                   @Test
+                   public void testDigit2() throws IOException
+                   {
+                       String target = "arr[1][0]";
+                       boolean passed = checkCodeContains("using arr to access 51", target);
+                      assertTrue(passed);
+                   }
+                   @Test
+                   public void testDigit3() throws IOException
+                   {
+                       String target = "arr[1][2]";
+                       boolean passed = checkCodeContains("using arr to access 20", target);
+                      assertTrue(passed);
+                   }
+               }
 
 
         .. tab:: Answer
@@ -162,6 +242,7 @@ Code Practice with 2D Arrays
  
            .. activecode::  arr2DEx3a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -185,12 +266,14 @@ Code Practice with 2D Arrays
 .. tabbed:: arr2DEx4
 
         .. tab:: Question
-
-           Print the values 8, 3, 87, and 34 by accessing them from the given two-dimensional array.
            
            .. activecode::  arr2DEx4q
               :language: java
-   
+              :autograde: unittest  
+              :practice: T
+              
+              Print the values 8, 3, 87, and 34 by accessing them from the given two-dimensional array.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -201,6 +284,51 @@ Code Practice with 2D Arrays
                      
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;;
+               import java.io.*;
+               
+               public class RunestoneTests extends CodeTestHelper
+               {
+                   @Test
+                   public void testOutput() throws IOException
+                   {
+                       String output = getMethodOutput("main");
+                       String expect = "8\n3\n87\n34";
+                       boolean passed = getResults(expect, output, "Expected output from main");
+                       assertTrue(passed);
+                   }
+
+                   @Test
+                   public void testDigitOne() throws IOException
+                   {
+                     String target = "arr[0][2]";
+                     boolean passed = checkCodeContains("Correct accessing of 8", target);
+                     assertTrue(passed);
+                   }
+                   @Test
+                   public void testDigitTwo() throws IOException
+                   {
+                     String target = "arr[1][0]";
+                     boolean passed = checkCodeContains("Correct accessing of 3", target);
+                     assertTrue(passed);
+                   }
+                   @Test
+                   public void testDigitThree() throws IOException
+                   {
+                     String target = "arr[2][1]";
+                     boolean passed = checkCodeContains("Correct accessing of 87", target);
+                     assertTrue(passed);
+                   }
+                   @Test
+                   public void testDigitFour() throws IOException
+                   {
+                     String target = "arr[4][0]";
+                     boolean passed = checkCodeContains("Correct accessing of 34", target);
+                     assertTrue(passed);
+                   }
+               }
 
 
 
@@ -211,6 +339,7 @@ Code Practice with 2D Arrays
  
            .. activecode::  arr2DEx4a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -247,22 +376,57 @@ Code Practice with 2D Arrays
            
            .. activecode::  arr2DEx5q
               :language: java
+              :autograde: unittest
+              :practice: T
    
-              public class Test1 {
+              Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array.
+              ~~~~
+              public class Test1 
+              {
               
                   public static void main(String[] args)
                   {
                       String[][] arr = { {"hello","there","world"},
                                         {"how","are","you"} };
                                         
-                      System.out.println("Rows:");
-                      // ADD CODE TO PRINT NUMBER OF ROWS HERE // 
+                      System.out.print("Rows:");
+                      // ADD CODE TO PRINT NUMBER OF ROWS HERE using arr // 
                       
-                      System.out.println("Columns:");
-                      // ADD CODE TO PRINT NUMBER OF COLUMNS HERE // 
+                      System.out.print("Columns:");
+                      // ADD CODE TO PRINT NUMBER OF COLUMNS HERE using arr // 
                   	
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;;
+               import java.io.*;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+                   @Test
+                   public void testMain() throws IOException
+                   {
+                       String output = getMethodOutput("main");
+                       String expect = "Rows: 2\nColumns: 3";
+                       boolean passed = getResults(expect, output, "Expected output from main");
+                       assertTrue(passed);
+                   }
+                   @Test
+                   public void test2() 
+                   {
+                       String target = "arr.length";
+                       boolean passed = checkCodeContains("using arr and length to get number of rows", target);
+                      assertTrue(passed);
+                   }
+                   @Test
+                   public void test3() 
+                   {
+                       String target = "arr[0].length";
+                       boolean passed = checkCodeContains("using arr[0] and length to get number of columns", target);
+                      assertTrue(passed);
+                   }
+               }
 
         .. tab:: Answer
            
@@ -271,6 +435,7 @@ Code Practice with 2D Arrays
  
           .. activecode::  arr2DEx5a
               :language: java
+              :optional:
    
               public class Test1 {
                   public static void main(String[] args)
@@ -278,9 +443,11 @@ Code Practice with 2D Arrays
                       String[][] arr = { {"hello","there","world"},
                                         {"how","are","you"} };
                                         
-                      System.out.println("Rows:" + arr.length);
-                      System.out.println();
-                      System.out.println("Columns:" + arr[0].length);
+                      System.out.print("Rows:");
+                      System.out.println(arr.length);
+
+                      System.out.print("Columns:");
+                      System.out.println(arr[0].length);
                   }
               }
               
@@ -298,6 +465,7 @@ Code Practice with 2D Arrays
            
            .. activecode::  arr2DEx6q
               :language: java
+              :autograde: unittest 
    
               public class Test1
               {
@@ -310,6 +478,34 @@ Code Practice with 2D Arrays
                   	
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;;
+               import java.io.*;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+                   @Test
+                   public void testMain() throws IOException
+                   {
+                       String output = getMethodOutput("main");
+                       String expect = "Hey there! \nI hope \nyou are \ndoing well ";
+                       boolean passed = getResults(expect, output, "Expected output from main");
+                       assertTrue(passed);
+                   }
+                   @Test
+                  public void test1()
+                  {     
+                   String code = getCode();
+                   String target = "for";
+
+                   int num = countOccurences(code, target);
+                   boolean passed = (num >= 2);
+
+                   getResults("2", ""+num, "2 for loops", passed);
+                   assertTrue(passed);
+                 }   
+               }
 
         .. tab:: Answer
            
@@ -318,6 +514,7 @@ Code Practice with 2D Arrays
  
            .. activecode::  arr2DEx6a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -335,7 +532,7 @@ Code Practice with 2D Arrays
                       }
                   }
               }
-              
+
         .. tab:: Discussion 
 
             .. disqus::
