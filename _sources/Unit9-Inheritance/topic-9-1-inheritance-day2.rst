@@ -196,7 +196,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
 - First, do some research in an online store like Amazon to see what information they store on books, movies, and authors, and what type of information is the same for all items for sale. 
 
-- List at least 3 attributes for each class. Which attributes should be in ItemForSale and which in Book, Movie or Author?
+- List at least 2 attributes for each class. Which attributes should be in ItemForSale and which in Book, Movie or Author?
 
 - What is the relationship between ItemForSale and Book? between ItemForSale and Movie? between Book and Author? between Store and ItemForSale? You may want to draw UML Class Diagrams for these classes on paper or using an online drawing tool like |Creately.com| (choose Class Diagrams, click to connect classes and choose the relationship)
 
@@ -206,7 +206,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
   :language: java
   :autograde: unittest      
   
-  Declare 3 instance variables for each of the classes below. Create an inheritance or association relationship for some of them. 
+  Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them. 
   ~~~~
   class ItemForSale
   {
@@ -230,7 +230,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
     
   public class Store 
   {
-       // instance variables
+       // instance variable (could be an array or ArrayList of one of the classes above)
 
        public static void main(String[] args)
        {

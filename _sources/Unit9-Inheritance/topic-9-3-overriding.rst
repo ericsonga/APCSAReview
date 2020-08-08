@@ -41,7 +41,7 @@ In the following example the ``MeanGreeter`` inherits the ``greet()`` method fro
    :language: java
    :autograde: unittest
 
-   Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return "Hola!" (or hi in another language) instead of "Hi!". Create an object to test it out.
+   Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return ``Hola!`` (or hi in another language) instead of ``Hi!``. Create an object to test it out.
    ~~~~
    public class Greeter
    {
@@ -162,7 +162,7 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
    :language: java
    :autograde: unittest
 
-   After running the code, try overriding the greet(String) method in the MeanGreeter class to return "Go away" + the who String. 
+   After running the code, try overriding the greet(String) method in the MeanGreeter class to return ``Go away`` + the who String. 
    ~~~~
    public class Greeter
    {
@@ -189,14 +189,14 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
    {
       public String greet()
       {
-         return "Go Away";
+         return "Go away";
       }
    }
    ====
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-   
+  
     public class RunestoneTests extends CodeTestHelper
     {
       public RunestoneTests(){
@@ -206,24 +206,23 @@ In the example below the ``greet(String who)`` method overloads the ``greet()`` 
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "Hello Sam\nGo Away Nimish";
+            String expect = "Hello Sam\nGo away Nimish";
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
 
         @Test
         public void testCodeContains(){
-          boolean passed = checkCodeContains("greet(String who) override declaration", "public String greet(String *)");
-          assertTrue(passed);
-        }
-
-        @Test
-        public void testCodeContains2(){
-          boolean passed = checkCodeContains("greet(String who) override return", "return \"Go Away \" + who;");
-          assertTrue(passed);
-        }
+         String code = removeSpaces(getCode());
+         String target = removeSpaces("public String greet(String");
+        
+         int num = countOccurences(code, target);
+         boolean passed = num >= 2;
+         getResults("2", ""+num, "Testing code for  number of greet methods");
+         assertTrue(passed);
+        } 
     }
-   
+    
 .. note::
    
    To overload a method the method must have the same name, but the parameter list must be different in some way.  It can have a different number of parameters, different types of parameters, and/or a different order for the parameter types.  The return type can also be different.
@@ -482,16 +481,16 @@ You can step through this code in the Java Visualizer by clicking on the followi
 The following Pet class keeps track of a pet's name and type and has a constructor, get method, and a method called speak() that prints an animal noise.
 
 1. Write a subclass called Dog that inherits from Pet. 
-2. Write a Dog constructor that has one argument, the name, and calls the super constructor passing it the name and the animal type "dog". 
-3. Override the method speak() in the Dog class to print out a barking sound like "Woof!". (Do not override the get method. This superclass method should work for all subclasses).
+2. Write a Dog constructor that has one argument, the name, and calls the super constructor passing it the name and the animal type ``dog``. 
+3. Override the method speak() in the Dog class to print out a barking sound like ``Woof!``. (Do not override the get method. This superclass method should work for all subclasses).
 4. Uncomment the Dog object in the main method to test it out.
-5. Write a similar Cat class that inherits from Pet and has a similar constructor and overrides the method speak() with a "Meow!". Test it out.
+5. Write a similar Cat class that inherits from Pet and has a similar constructor with type ``cat`` and overrides the method speak() with a ``Meow!``. Test it out.
 
 .. activecode:: challenge-9-3-Pet-Sounds
    :language: java
    :autograde: unittest
    
-   Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out "Woof!" or "Meow!".
+   Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out ``Woof!`` or ``Meow!``.
    ~~~~
    public class Pet
    {
@@ -569,7 +568,7 @@ The following Pet class keeps track of a pet's name and type and has a construct
             int num = countOccurences(code, target);
 
             boolean passed = num >= 2;
-            getResults("2", ""+num, "Testing code for " + target);
+            getResults("2", ""+num, "Testing code for " + target, passed);
             assertTrue(passed);
         }
 
@@ -582,7 +581,7 @@ The following Pet class keeps track of a pet's name and type and has a construct
             int num = countOccurences(code, target);
 
             boolean passed = num >= 2;
-            getResults("2", ""+num, "Testing code for " + target);
+            getResults("2", ""+num, "Testing code for " + target, passed);
             assertTrue(passed);
         }
 

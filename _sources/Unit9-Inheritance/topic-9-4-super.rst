@@ -42,8 +42,9 @@ In the example below, the Student class overrides the getFood() method of the Pe
 
 .. activecode:: SuperEx
    :language: java
+   :autograde: unittest      
    
-   Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then add a vegan food. Change Javier to a Vegan and try it out!
+   Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then say "but " and add a vegan food. Change Javier to a Vegan and try it out!
    ~~~~
    public class Person 
    {
@@ -81,7 +82,7 @@ In the example below, the Student class overrides the getFood() method of the Pe
          public String getFood()
          {
             String output = super.getFood();
-            return output + " and Taco";
+            return output + " and Pizza";
          }
          
          public int getId() {return this.id;}
@@ -90,6 +91,40 @@ In the example below, the Student class overrides the getFood() method of the Pe
             this.id = theId;
          }
       } 
+      ====
+      import static org.junit.Assert.*;
+          import org.junit.*;
+          import java.io.*;
+          import java.util.List;
+          import java.util.ArrayList;
+
+          public class RunestoneTests extends CodeTestHelper
+          {
+            public RunestoneTests(){
+              super("Person");
+            }
+
+            @Test
+            public void testMain() throws IOException
+            { 
+              String output = getMethodOutput("main");
+
+              String expect = "No Hamburger and Pizza but * \n";  
+
+              boolean passed = getResults(expect, output, "Expected output from main");
+              assertTrue(passed);
+            }
+
+            @Test
+            public void test1()
+            {
+              String target = "No \" + super.getFood()";
+              boolean passed = checkCodeContains("\"No \" + super.getFood() called in Vegan class",  target);
+              assertTrue(passed);
+            }
+          }
+
+  
       
 How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method, all the way up to the Object class.  The method has to be there, or else the code would not have compiled. 
       
@@ -169,8 +204,9 @@ The Customer class below keeps track of the names and addresses of customers. It
 
 .. activecode:: challenge-9-4-Customer-super
    :language: java
+   :autograde: unittest      
    
-   Complete the OnlineCustomer class below which inherits from Customer and adds an email address and override the toString() method.
+   Complete the OnlineCustomer class below to inherit from Customer and add an email address and override the toString() method.
    ~~~~
    public class Customer
    {
@@ -198,10 +234,63 @@ The Customer class below keeps track of the names and addresses of customers. It
     }
 
     // Complete the OnlineCustomer class to inherit from Customer
+    // It should have an email attribute and an overriden toString() method
     class OnlineCustomer 
     {
        
     }
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+
+       @Test
+       public void testMain() throws IOException
+       {
+         String output = getMethodOutput("main");
+         String expect = "Name: Fran Santiago\n" +
+                         "Address: 123 Main St., Anytown, USA\n" +
+                         "Name: Jasper Smith\n" +
+                         "Address: 456 High St., Anytown, USA\n" + 
+                         "Email Address: jsmith456@gmail.com";       
+         boolean passed = getResults(expect, output, "Expected output from main");
+         assertTrue(passed);
+       }
+        @Test
+        public void containsExtends()
+        {
+           String target = "OnlineCustomer extends Customer";
+           boolean passed = checkCodeContains(target);
+           assertTrue(passed);
+        }
+
+       @Test
+        public void test1()
+        {     
+         String code = getCode();
+         String target = "public String toString()";
+
+         int num = countOccurencesRegex(code, target);
+         boolean passed = (num == 2);
+
+         getResults("2", ""+num, "2 toString methods", passed);
+         assertTrue(passed);
+       }
+
+        @Test
+        public void containsSuper()
+        {
+           String target = "super(";
+           boolean passed = checkCodeContains(target);
+           assertTrue(passed);
+         }
+     }
+
 
 
 Summary

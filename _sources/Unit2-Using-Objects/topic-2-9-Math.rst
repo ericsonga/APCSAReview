@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
 
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+
 Using the Math Class
 ====================
 
@@ -262,11 +266,11 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
    {
       public static void main(String[] args)
       {
-        // 1. Use Math.random() to generate 3 integers from 0-40 (not including 40) and print them out.
+          // 1. Use Math.random() to generate 3 integers from 0-40 (not including 40) and print them out.
         
         
-        // 2. Calculate the number of combinations to choose 3 numbers between 0-40 (not including 40) using Math.pow() and print it out. 
-        // For example, Math.pow(10,2) is 10^2 and the number of permutations to choose 2 numbers between 0-9.
+          // 2. Calculate the number of combinations to choose 3 numbers between 0-40 (not including 40) using Math.pow() and print it out. 
+          // For example, Math.pow(10,2) is 10^2 and the number of permutations to choose 2 numbers between 0-9.
         
         
       }

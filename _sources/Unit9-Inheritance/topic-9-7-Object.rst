@@ -49,11 +49,12 @@ In the following code, the Person class overrides the Object toString() method a
 
 .. activecode:: toStringDemo
   :language: java 
+  :autograde: unittest
   
-  After trying the code below, add another subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Create an APStudent object in the main method to test it.
+  After trying the code below, complete the subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Create an APStudent object in the main method to test it.
   ~~~~
-    public class Person
-    {
+  public class Person
+  {
        private String name;
        public Person(String name)
        {
@@ -69,6 +70,11 @@ In the following code, the Person class overrides the Object toString() method a
           Student s = new Student("Tully", 1001);
           System.out.println(p); //call Person toString
           System.out.println(s);  //call Student toString
+          // Uncomment the code below to test the APStudent class 
+          /*
+          APStudent ap = new APStudent("Ayanna", 1002, 5);
+          System.out.println(ap);
+          */
        }
     }
 
@@ -85,6 +91,51 @@ In the following code, the Person class overrides the Object toString() method a
           return super.toString() + " " + id;
        }
     }
+    
+    class APStudent extends Student
+    {
+       private int score;
+       public APStudent(String name, int id, int score)
+       {
+          super(name, id);
+          this.score = score;
+       }
+       // Add a toString() method here that calls the super class toString
+       
+    }
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("Person");
+         }
+
+         @Test
+         public void test1()
+         { 
+             String output = getMethodOutput("main");
+             String expect = "Sila\nTully 1001";
+
+             boolean passed = getResults(expect, output, "Checking output from main()", true);
+             assertTrue(passed);
+         }
+          @Test
+         public void containsToString()
+         {
+           String code = getCode();
+           String target = "public String toString()";
+
+           int num = countOccurencesRegex(code, target);
+           boolean passed = (num >= 3);
+
+           getResults("3", ""+num, "3 toString methods", passed);
+           assertTrue(passed);
+         }
+     }
       
 
     
@@ -105,6 +156,7 @@ As seen in the code below, the ``equals`` method that is inherited from the ``Ob
 
 .. activecode:: ObjEquals
    :language: java
+   :autograde: unittest
 
    Try to guess what this code will print out before running it.
    ~~~~
@@ -130,6 +182,29 @@ As seen in the code below, the ``equals`` method that is inherited from the ``Ob
          
       }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("Person");
+         }
+
+         @Test
+         public void test1()
+         { 
+             String output = getMethodOutput("main");
+             String expect = "false\nfalse\nfalse\ntrue";
+
+             boolean passed = getResults(expect, output, "Checking output from main()", true);
+             assertTrue(passed);
+
+         }
+     }
+   
    
 The ``equals`` method inherited from the ``Object`` class only returns true when the two references point to the same object as shown in the code above and figure 1 below.
 
@@ -150,6 +225,7 @@ If you want to change how the inherited ``equals`` method works you can **overri
 
 .. activecode:: StringTest1
    :language: java
+   :autograde: unittest
 
    Try to guess what this code will print out before running it.
    ~~~~
@@ -165,7 +241,28 @@ If you want to change how the inherited ``equals`` method works you can **overri
          System.out.println(s1.equals(s3));
       }
    }
-   
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("StringTest");
+         }
+
+         @Test
+         public void test1()
+         { 
+             String output = getMethodOutput("main");
+             String expect = "false\nfalse\ntrue";
+
+             boolean passed = getResults(expect, output, "Checking output from main()", true);
+             assertTrue(passed);
+
+         }
+     }
 
 Any class can override the inherited ``equals`` method by providing a method with the same method signature (method name and parameter list) and return type.  The provided method will be called instead of the inherited one, which is why we say that the new method **overrides** the inherited method.  The ``Person`` class below **overrides** the inherited ``equals`` method.
 
@@ -174,6 +271,7 @@ Any class can override the inherited ``equals`` method by providing a method wit
 
 .. activecode:: OverrideEquals
    :language: java
+   :autograde: unittest
 
    Try to guess what this code will print out before running it. Click on the CodeLens button to step forward through the code and watch the memory.
    ~~~~
@@ -209,6 +307,28 @@ Any class can override the inherited ``equals`` method by providing a method wit
          System.out.println(p3.equals(p4));         
       }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("Person");
+         }
+
+         @Test
+         public void test1()
+         { 
+             String output = getMethodOutput("main");
+             String expect = "false\nfalse\ntrue\ntrue";
+
+             boolean passed = getResults(expect, output, "Checking output from main()", true);
+             assertTrue(passed);
+
+         }
+     }
    
 .. figure:: Figures/overrideEquals.png
     :width: 300px
@@ -271,8 +391,9 @@ Work in pairs to write the following code and test each part before moving on to
 
 .. activecode:: challenge-9-7-savingsaccount
    :language: java
+   :autograde: unittest
    
-   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a toSTring and an equals method for it.
+   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a toString and an equals method for it. Uncomment the code in main to test your new class and methods. 
    ~~~~
    public class Account 
    {
@@ -284,16 +405,127 @@ Work in pairs to write the following code and test each part before moving on to
           this.name = name;
           this.balance = balance;
        }
-       public static void main(String[] args)
+       
+       public String toString() {
+        return name + ", " + balance;
+       }
+       
+       public boolean equals(Object other)
        {
-           
+    	  Account otherAccount = (Account) other;
+    	  return (this.balance == otherAccount.balance) &&
+       		    	this.name.equals(otherAccount.name);
+       }
+
+       public static void main(String[] args)
+       {  
+           Account acct1 = new Account("Armani Smith",1500);
+		   System.out.println(acct1);
+           // Uncomment this code to test SavingsAccount
+           /*
+           SavingsAccount acct2 = SavingsAccount("Dakota Jones",1500,4.5);
+           SavingsAccount acct3 = SavingsAccount("Dakota Jones",1500,4.5);
+		   System.out.println(acct2);
+		   System.out.println(acct2.equals(acct3));
+           */
        }
    }
-   
+   /* Write the SavingsAccount class which inherits from Account 
+      and has an interest rate and a constructor, toString, and
+      equals methods.
+   */
    class SavingsAccount
    {
    
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("Account");
+         }
+
+         @Test
+         public void test1()
+         { 
+             String output = getMethodOutput("main");
+             String expect = "Armani Smith, 1500.0\nDakota Jones, 1500.0 4.5\ntrue";
+
+             boolean passed = getResults(expect, output, "Checking output from main()");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void test3()
+         { 
+             String target = "public String toString()";
+
+             String code = getCode();
+             int index = code.indexOf("class SavingsAccount");
+             code = code.substring(index);
+             boolean passed = code.contains(target);
+
+             getResults("true", ""+passed, "Checking that code contains toString() in SavingsAccount", passed);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void test30()
+         { 
+             String target = "super.toString()";
+
+             String code = getCode();
+             int index = code.indexOf("class SavingsAccount");
+             code = code.substring(index);
+
+             boolean passed = code.contains(target);
+
+             getResults("true", ""+passed, "Checking that code contains call to super.toString() in SavingsAccount", passed);
+             assertTrue(passed);
+         }
+         @Test
+         public void containsExtends()
+             {
+                String target = "SavingsAccount extends Account";
+                boolean passed = checkCodeContains(target);
+                assertTrue(passed);
+             }
+
+         @Test
+         public void test31()
+         { 
+             String target = "public boolean equals(Object other)";
+
+             String code = getCode();
+             int index = code.indexOf("class SavingsAccount");
+             code = code.substring(index);
+
+             boolean passed = code.contains(target);
+
+             getResults("true", ""+passed, "Checking that code contains equals() in SavingsAccount", passed);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void test32()
+         { 
+             String target = "super.equals(";
+
+             String code = getCode();
+             int index = code.indexOf("class SavingsAccount");
+             code = code.substring(index);
+
+             boolean passed = code.contains(target);
+
+             getResults("true", ""+passed, "Checking that code contains call to super.equals() in SavingsAccount", passed);
+             assertTrue(passed);
+
+         }
+     }
    
    
 Summary

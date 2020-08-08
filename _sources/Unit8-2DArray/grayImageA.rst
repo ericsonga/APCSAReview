@@ -104,11 +104,14 @@ Looping through a 2D array is more complicated than the simple arrays we usually
       }
    } 
    
-Try to write the code for the method ``countWhitePixels``. When you are ready click "Run" to test your solution.   
+   
    
 .. activecode:: lcfrgia2
    :language: java
+   :autograde: unittest      
    
+   FRQ Gray Image A: write the code for the method ``countWhitePixels``. When you are ready click "Run" to test your solution.
+   ~~~~
    public class GrayImage
    {
       public static final int BLACK = 0;
@@ -148,6 +151,71 @@ Try to write the code for the method ``countWhitePixels``. When you are ready cl
                            image.countWhitePixels());
       }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+
+       @Test
+       public void testMain() throws IOException
+       {
+         String output = getMethodOutput("main");
+         String expect = "count white should be 5 and is 5\n";  
+
+         boolean passed = getResults(expect, output, "Expected output from main");
+         assertTrue(passed);
+       }
+       @Test
+       public void test1()
+       {
+         int[][] values = { {255, 255, 255},
+                            {255, 255, 255},
+                            {255, 255, 255}};
+
+         GrayImage image = new GrayImage(values);
+         String output = String.valueOf(image.countWhitePixels());
+         String expect = "9";
+
+         boolean passed = getResults(expect, output, "countWhitePixels 3X3, all are white");
+         assertTrue(passed);
+       }
+
+       @Test
+       public void test2()
+       {
+         int[][] values = { {255, 0},
+                            {0, 255},
+                            {255, 0},
+                            {0, 255},};
+
+         GrayImage image = new GrayImage(values);
+         String output = String.valueOf(image.countWhitePixels());
+         String expect = "4";
+
+         boolean passed = getResults(expect, output, "countWhitePixels 4X2, half are white");
+         assertTrue(passed);
+       }
+
+       @Test
+       public void test3() 
+       {
+         String code = getCode();
+         String target = "for (int * = #;";
+
+         int num = countOccurencesRegex(code, target);
+
+         boolean passed = num == 2;
+
+         getResults("2", ""+num, "2 For loops (nested)", passed);
+         assertTrue(passed);
+       }
+     }
+
     
 Video - One way to code the solution
 =====================================

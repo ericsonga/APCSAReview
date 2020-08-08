@@ -25,7 +25,10 @@
 	pair: Variable; boolean
 	pair: boolean; variable
 
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
+    
 Boolean Expressions
 ===================
 
@@ -327,14 +330,14 @@ The following program checks if 5 is a prime number by seeing if it is divisible
    {
       public static void main(String[] args)
       {
-        int number = 5;
-        System.out.println("A prime number is only divisible by 1 and itself.");
-        System.out.println("Is " + number + " divisible by 1 up to " + number + "?");
-        System.out.println("Divisible by 1? " + (number % 1 == 0));
-        System.out.println("Divisible by 2? " + (number % 2 == 0));
-        System.out.println("Divisible by 3? " + (number % 3 == 0));
-        System.out.println("Divisible by 4? " + (number % 4 == 0));
-        System.out.println("Divisible by 5? " + (number % 5 == 0));
+          int number = 5;
+          System.out.println("A prime number is only divisible by 1 and itself.");
+          System.out.println("Is " + number + " divisible by 1 up to " + number + "?");
+          System.out.println("Divisible by 1? " + (number % 1 == 0));
+          System.out.println("Divisible by 2? " + (number % 2 == 0));
+          System.out.println("Divisible by 3? " + (number % 3 == 0));
+          System.out.println("Divisible by 4? " + (number % 4 == 0));
+          System.out.println("Divisible by 5? " + (number % 5 == 0));
       }
    }
    ====

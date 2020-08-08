@@ -32,10 +32,14 @@
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
+    
 Creating and Initializing Objects: Constructors
 ================================================
 
-A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has **constructors** like ``World()`` and ``Turtle(world)`` which are used initialize the attributes in a newly created object.
+A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has **constructors** like ``World()`` and ``Turtle(habitat)`` which are used initialize the attributes in a newly created object.
 
 A new object is created with the ``new`` keyword followed by the class name (``new Class()``).  When this code executes, it creates a new object of the specified class and calls a constructor, which has the same name as the class.  For example, ``new World()`` creates and initializes a new object of the ``World`` class, and ``new Turtle(habitat)`` creates and initializes a new ``Turtle`` object in the World habitat.
 
@@ -200,15 +204,15 @@ Object Variables and References
 
 You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package. 
 
-The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world)``).  Or more commonly, you can declare an object variable and initialize it in the same line of code (``Turtle t2 = new Turtle(world);``).
+The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world1)``).  Or more commonly, you can declare an object variable and initialize it in the same line of code (``Turtle t2 = new Turtle(world1);``).
 
 .. code-block:: java
 
-    World world = new World();
+    World world1 = new World();
     Turtle t1 = null;
-    t1 = new Turtle(world);
+    t1 = new Turtle(world1);
     // declare and initialize t2
-    Turtle t2 = new Turtle(world);
+    Turtle t2 = new Turtle(world1);
 
 
 
@@ -463,24 +467,24 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
     {
       public static void main(String[] args) 
       {  
-        World world1 = new World(400,400);
+          World world1 = new World(400,400);
 
-        // 1. Change the constructor call below to create a large 
-        // 150x200 CustomTurtle with a green body (Color.green)
-        // and a blue shell (Color.blue) at position (150,300).
-        // Move it forward to see it.
-        CustomTurtle turtle1 = new CustomTurtle(world1); 
-        turtle1.forward();
+          // 1. Change the constructor call below to create a large 
+          // 150x200 CustomTurtle with a green body (Color.green)
+          // and a blue shell (Color.blue) at position (150,300).
+          // Move it forward to see it.
+          CustomTurtle turtle1 = new CustomTurtle(world1); 
+          turtle1.forward();
     
 
-        // 2. Create a small 25x50 CustomTurtle with a red body 
-        // and a yellow shell at position (350,200)
-        // Move it forward to see it.
+          // 2. Create a small 25x50 CustomTurtle with a red body 
+          // and a yellow shell at position (350,200)
+          // Move it forward to see it.
         
 
-        // 3. Create a CustomTurtle of your own design
+          // 3. Create a CustomTurtle of your own design
         
-        world1.show(true);
+          world1.show(true);
       }
     }
 

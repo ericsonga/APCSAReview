@@ -23,6 +23,10 @@
     :align: middle
     :alt: groupwork
     
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+    
 Two-way Selection: if-else Statements
 ======================================
 
@@ -214,11 +218,11 @@ If/else statements can also be used with relational operators and numbers like b
    {
       public static void main(String[] args)
       {
-        int score = 8;
-        if (score <= 9) 
-        {
+          int score = 8;
+          if (score <= 9) 
+          {
             System.out.println("Try for a higher score!");
-        }
+          }
       }
    } 
    ====
@@ -279,13 +283,13 @@ If statements can be nested inside other if statements. Sometimes with nested if
    {
       public static void main(String[] args)
       {
-         boolean sunny = true;
-         boolean hot = false;
-         if (sunny)
+          boolean sunny = true;
+          boolean hot = false;
+          if (sunny)
             if (hot)
                 System.out.println("Head for the beach!");
-          else // Which if is else attached to?? 
-           System.out.println("Bring your umbrella!");
+           else // Which if is else attached to?? 
+          System.out.println("Bring your umbrella!");
       }
    }
    ====

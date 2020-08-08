@@ -19,7 +19,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
 
 if Statements and Control Flow
 ===============================
@@ -145,20 +148,23 @@ Most if statements have a boolean condition that uses relational operators like 
    {
       public static void main(String[] args)
       {
-        // Get a random number from -10 up to 10.
-        int number = (int) (Math.random()*21 - 10);
-        System.out.println("The number is " + number);
+          // Get a random number from -10 up to 10.
+          int number = (int) (Math.random()*21 - 10);
+          System.out.println("The number is " + number);
         
-        // is it positive?
-        if (number > 0)
-        {
-           System.out.println(number + " is positive!");
-        }
-        // is it 0?
-        if (number == 0)
-        {
-           System.out.println(number + " is zero!");
-        }
+          // is it positive?
+          if (number > 0)
+          {
+              System.out.println(number + " is positive!");
+          }
+          // is it 0?
+          if (number == 0)
+          {
+              System.out.println(number + " is zero!");
+          }
+          // is it negative?
+          // Add another if statement
+          
       }
    }
    ====
@@ -303,10 +309,10 @@ Here are some rules to follow with if statements to avoid some common errors:
    {
       public static void main(String[] args)
       {
-        boolean isCold = false;
-        if (isCold = true); 
-            System.out.println("Wear a coat");
-            System.out.println("Wear gloves");
+          boolean isCold = false;
+          if (isCold = true); 
+              System.out.println("Wear a coat");
+              System.out.println("Wear gloves");
         
       }
    }

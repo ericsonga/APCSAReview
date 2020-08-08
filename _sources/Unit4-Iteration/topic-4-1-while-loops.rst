@@ -207,6 +207,7 @@ Watch the following |video| for a tracing demo. When you are tracing through cod
    
 .. youtube:: TZss5ukwN8s
     :width: 600
+    :height: 400
     :align: center
     
     
@@ -303,7 +304,7 @@ Another common error with loops is an **off-by-one error** where the loop runs o
         int count = 1;
         while (count < 8)
         {
-           System.out.println(count);
+            System.out.println(count);
         }
       }
    }
@@ -462,9 +463,9 @@ For this project, you will need to use the |Scanner class| for input and |repl.i
         {
             String code = getCode();
             int num = countOccurences(code, "if");
-            boolean passed = num >= 2;
+            boolean passed = num >= 1;
 
-            getResults("2", "" + num, "Number of if statements", passed);
+            getResults(">=1", "" + num, "Number of if statements", passed);
             assertTrue(passed);
         }
 

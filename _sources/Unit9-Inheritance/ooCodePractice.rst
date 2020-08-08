@@ -8,12 +8,13 @@ Code Practice with Object Oriented Concepts
 .. tabbed:: ooEx1
 
         .. tab:: Question
-
-           Write a method that overloads the talk method by taking in a name and printing "Hello" with that name.
                 
            .. activecode::  ooEx1q
               :language: java
+              :autograde: unittest      
    
+              Write a method that overloads the talk method by taking in a name and printing ``Hello`` with that name.
+              ~~~~
               public class Test1
               {
                   public static void talk() 
@@ -28,6 +29,34 @@ Code Practice with Object Oriented Concepts
                   	talk("Matthew");
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "Hello Matthew\n";
+
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+               @Test 
+                 public void testtalk_name()
+                 {
+                   String target = "public static void talk(String *)";
+                   boolean passed = checkCodeContainsRegex("overloaded method talk with a String parameter",target);
+                   assertTrue(passed);
+                 }
+               }
 
 
         .. tab:: Answer
@@ -37,6 +66,7 @@ Code Practice with Object Oriented Concepts
         
            .. activecode::  ooEx1a
               :language: java
+              :optional:
    
               public class Test1
               {
@@ -62,45 +92,17 @@ Code Practice with Object Oriented Concepts
                 :shortname: cslearn4u
                 :identifier: javareview_ooex1d
 
-.. .. tabbed:: ooEx2
-
-        .. tab:: Question
-
-           Create an interface named Test that has a void talk method and void walk method. Check your answer with the answer tab instead of running it!
-                
-           .. activecode:: ooEx2q
-              :language: java
-   
-
-        .. tab:: Answer
-        
-           We declare an interface similarly to how we declare a class, first put its access modifier (public, private, etc) then what it is, which in this case would be interface.
-           Since it is an interface, it is important to remember that the methods cannot have a body. They will be public and abstract methods even if you don't use those keywords when you declare the methods.
-        
-           .. activecode::  ooEx2a
-              :language: java
-   
-              public interface Test 
-              {
-              	public void talk();
-              	public void walk();
-              }
-              
-        .. tab:: Discussion 
-
-            .. disqus::
-                :shortname: cslearn4u
-                :identifier: javareview_ooex2d 
                 
 .. tabbed:: ooEx3
 
         .. tab:: Question
-
-           Edit this code so the class Beagle is a subclass of the Dog class.  When you run the code it should print "woof!" and then "arf arf"
                 
            .. activecode:: ooEx3q
               :language: java
+              :autograde: unittest  
    
+              Edit this code so the class Beagle is a subclass of the Dog class.  When you run the code it should print "woof!" and then "arf arf".
+              ~~~~
               public class Dog 
               {
                   public void speak() 
@@ -124,6 +126,35 @@ Code Practice with Object Oriented Concepts
                       System.out.println("arf arf");
                   }   
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "woof!\n" +  
+                                   "arf arf\n";        
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+
+               @Test 
+                 public void testBeagleExtendsDog()
+                 {
+                   String target = "class Beagle extends Dog";
+                   boolean passed = checkCodeContains("class Beagle extends class Dog",target);
+                   assertTrue(passed);
+                 }
+               }
 
 
         .. tab:: Answer
@@ -132,6 +163,7 @@ Code Practice with Object Oriented Concepts
         
            .. activecode:: ooEx3a
               :language: java
+              :optional:
    
               public class Dog 
               {
@@ -166,12 +198,13 @@ Code Practice with Object Oriented Concepts
 .. tabbed:: ooEx4
 
         .. tab:: Question
-
-           Add an equals method to this class that returns true if the current Dog and passed Dog have the same name.  The code should print false twice then true twice.
                         
            .. activecode::  ooEx4q
               :language: java
+              :autograde: unittest  
    
+              Add an equals method to this class that returns true if the current Dog and passed Dog have the same name.  The code should print false twice then true twice.
+              ~~~~
               public class Dog 
               {
                   private String name;
@@ -198,6 +231,61 @@ Code Practice with Object Oriented Concepts
                       System.out.println(d3.equals(d4));
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "false\n" + 
+                                   "false\n" + 
+                                   "true\n" + 
+                                   "true\n" ;       
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+               @Test 
+                 public void test1()
+                 {
+                   String target = "Dog * = (Dog)other";    
+
+                   boolean passed = checkCodeContainsRegex("casting of Object other to type Dog", target);
+                   assertTrue(passed);
+                 }
+
+               @Test
+                 public void test2()
+                 {
+                   Dog d1 = new Dog("Rufus");
+                   Dog d2 = new Dog("Sally");   
+
+                   String result = String.valueOf(!(d1.equals(d2)));
+
+                   boolean passed = getResults("true", result, "Equals method test - not equals");
+                   assertTrue(passed);
+                 }
+
+                 @Test
+                 public void test3()
+                 {
+                   Dog d1 = new Dog("Rufus");    
+                   Dog d3 = new Dog("Rufus");
+
+                   String result = String.valueOf((d1.equals(d3)));
+
+                   boolean passed = getResults("true", result, "Equals method test - equals");
+                   assertTrue(passed);
+                 }
+               }
 
         .. tab:: Answer
         
@@ -206,6 +294,7 @@ Code Practice with Object Oriented Concepts
         
            .. activecode::  ooEx4a
               :language: java
+              :optional:
               
               public class Dog 
               {
@@ -247,11 +336,12 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Question
 
-           Override the taste method from the Candy class in the Chocolate class to return "tastes chocolately".  It should print "tastes sweet!" and then "tastes chocolately".
-
            .. activecode::  ooEx5q
               :language: java
+              :autograde: unittest  
    
+              Override the taste method from the Candy class in the Chocolate class to return ``tastes chocolately``.  It should print ``tastes sweet!`` and then ``tastes chocolately``.
+              ~~~~
               public class Candy 
               {
                   public String taste() 
@@ -272,6 +362,40 @@ Code Practice with Object Oriented Concepts
               {
                   // ADD CODE HERE              
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "tastes sweet!\n" + 
+                                   "tastes chocolately\n";       
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+               @Test
+                 public void test1() 
+                 {
+                   String code = getCode();
+                   String target = "public String taste()";
+
+                   int num = countOccurencesRegex(code, target);
+
+                   boolean passed = (num == 2);
+
+                   getResults("2", ""+num, "2 taste methods", passed);
+                   assertTrue(passed);
+                 }
+               }
 
         .. tab:: Answer
         
@@ -279,6 +403,7 @@ Code Practice with Object Oriented Concepts
         
            .. activecode::  ooEx5a
               :language: java
+              :optional:
               
               public class Candy 
               {
@@ -315,12 +440,13 @@ Code Practice with Object Oriented Concepts
 .. tabbed:: ooEx6
 
         .. tab:: Question
-
-           Overload the greet method to just print "Hello" if not given any parameters.  It should print "Hello" and then "Hello Sansa".
            
            .. activecode::  ooEx6q
               :language: java
+              :autograde: unittest  
    
+              Overload the greet method to just print ``Hello`` if not given any parameters.  It should print ``Hello`` and then ``Hello Sansa``.
+              ~~~~
               public class Student 
               {
                   public static void greet(String name) 
@@ -334,6 +460,34 @@ Code Practice with Object Oriented Concepts
                      greet("Sansa");
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "Hello\nHello Sansa";  
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+
+                 @Test
+                 public void test1() 
+                 {
+                   String target = "greet();";
+                   boolean passed = checkCodeContains("overriden greet method", target);
+                   assertTrue(passed);
+                 }
+               }
               
         .. tab:: Answer
         
@@ -341,6 +495,7 @@ Code Practice with Object Oriented Concepts
         
            .. activecode::  ooEx6a
               :language: java
+              :optional:
    
               public class Student 
               {
@@ -371,12 +526,13 @@ Code Practice with Object Oriented Concepts
 .. tabbed:: ooEx7
 
         .. tab:: Question
-
-           Add a call to Pet's brag method before printing anything in Dog's brag method (hint: use super to call an overridden method).  It should print "I have the best pet!" and then "I have the best dog".
            
            .. activecode::  ooEx7q
               :language: java
+              :autograde: unittest  
    
+              Add a call to Pet's brag method before printing anything in Dog's brag method (hint: use super to call an overridden method).  It should print ``I have the best pet!`` and then ``I have the best dog``.
+              ~~~~
               public class Pet 
               {
                   
@@ -401,6 +557,35 @@ Code Practice with Object Oriented Concepts
                       System.out.println("I have the best dog!");
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "I have the best pet!\n" +
+                                   "I have the best dog!\n";       
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+
+                 @Test
+                 public void test1() 
+                 {
+                   String target = "super.brag();";
+                   boolean passed = checkCodeContains("super to override method brag", target);
+                   assertTrue(passed);
+                 }
+               }
               
         .. tab:: Answer
         
@@ -408,6 +593,7 @@ Code Practice with Object Oriented Concepts
            
            .. activecode::  ooEx7a
               :language: java
+              :optional:
    
               public class Pet 
               {
@@ -445,11 +631,12 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Question
 
-          Finish the Teacher constructor.  Use super to use the Person construtor to set the fields inherited from Person.  It should print "Destini 20" followed by "Erica 55 Masters in Teaching".
-
            .. activecode::  ooEx8q
               :language: java
+              :autograde: unittest  
    
+              Finish the Teacher constructor.  Use super to use the Person construtor to set the fields inherited from Person.  It should print ``Destini 20`` followed by ``Erica 55 Masters in Teaching``.   
+              ~~~~
               public class Person 
               {
                   private String name;
@@ -495,6 +682,41 @@ Code Practice with Object Oriented Concepts
                       // ADD CODE HERE
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "Destini 20\n" +    
+                                   "Erica 55 Masters in Teaching\n";       
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+
+                 @Test
+                 public void test1() 
+                 {
+                   Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
+
+                   String output = p2.toString();
+                   String expect = "Erica 55 Masters in Teaching";
+
+                   boolean passed = getResults(output, expect, "Teacher class extends Person class");
+                   assertTrue(passed);
+                 }
+               }
+
+ 
 
         .. tab:: Answer
         
@@ -502,6 +724,7 @@ Code Practice with Object Oriented Concepts
            
            .. activecode::  ooEx8a
               :language: java
+              :optional:
               
               public class Person 
               {
@@ -560,11 +783,12 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Question
 
-          Add public getter and setter methods to the Store class so its variables can be accessed by other classes.  It should print the store's name and address and then change both and print the new values.
-
            .. activecode::  ooEx9q
               :language: java
+              :autograde: unittest  
    
+              Add public getter and setter methods to the Store class so its variables can be accessed by other classes.  It should print the store's name and address and then change both and print the new values.
+              ~~~~
               public class Store 
               {
                   private String name;
@@ -590,7 +814,46 @@ Code Practice with Object Oriented Concepts
                       
                   }
               }
-              
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "Barb's Store\n" +
+                                   "333 Main St.\n" +  
+                                   "Barbara's Store\n" +
+                                   "555 Pine St.\n";  
+
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+                 @Test
+                 public void test1() 
+                 {
+                   Store myStore = new Store("A Store", "An Address");
+
+                   myStore.setName("Barbara's Store");
+                   myStore.setAddress("555 Pine St.");
+
+                   String output = myStore.getName() + "\n" + myStore.getAddress();
+                   String expect = "Barbara's Store\n" + "555 Pine St.";
+
+                   boolean passed = getResults(output, expect, "testing class Store: setters & getters");
+                   assertTrue(passed);
+                 }
+               }
+
+ 
               
 
         .. tab:: Answer
@@ -599,6 +862,7 @@ Code Practice with Object Oriented Concepts
            
            .. activecode::  ooEx9a
               :language: java
+              :optional:
    
               public class Store 
               {
@@ -639,25 +903,19 @@ Code Practice with Object Oriented Concepts
 .. tabbed:: ooEx10
 
         .. tab:: Question
-
-          Correctly finish the Dog subclass for the following Animal class.  Override the methods speak() to print "woof" and eat() to print "num num".
           
            .. activecode::  ooEx10q
               :language: java
+              :autograde: unittest  
    
+              Correctly finish the Dog subclass for the following Animal class.  Override the methods speak() to print ``woof`` and eat() to print ``num num``.
+              ~~~~
               class Animal 
               {
                   public String name;
                   public int numLegs;
                   public void speak() { System.out.println("sniff");}
                   public void eat() { System.out.println("crunch"); }
-                  
-                  public static void main(String[] args)
-                  {
-                     Dog myDog = new Dog();
-                     myDog.speak();
-                     myDog.eat();
-                  }
               }
               
               public class Dog extends Animal 
@@ -671,11 +929,52 @@ Code Practice with Object Oriented Concepts
                       myDog.eat();
                   }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "woof\n" +
+                                   "num num\n";  
+
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+                 @Test
+                 public void test1() 
+                 {
+                   String target = " public void speak()";
+                   boolean passed = checkCodeContains("speak method", target);
+                   assertTrue(passed);
+                 }
+
+                 @Test
+                 public void test2() 
+                 {
+                   String target = " public void eat()";
+                   boolean passed = checkCodeContains("eat method", target);
+                   assertTrue(passed);
+                 }
+               }
+
+ 
 
         .. tab:: Answer
         
            .. activecode::  ooEx10a
               :language: java
+              :optional:
    
               class Animal 
               {
@@ -694,7 +993,7 @@ Code Practice with Object Oriented Concepts
                   
                   public void eat() 
                   {
-                      System.out.println("nom nom");
+                      System.out.println("num num");
                   }
                   
                   public static void main(String[] args)
@@ -716,11 +1015,12 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Question
 
-          Override the compareTo method so that it returns a postive number if the current Person is older than the passed other and a negative number if they are younger. If their age is the same then return the compareTo result on the names.
-          
            .. activecode::  ooEx11q
               :language: java
+              :autograde: unittest  
    
+              Override the compareTo method so that it returns a postive number if the current Person is older than the passed other and a negative number if they are younger. If their age is the same then return the compareTo result on the names.
+              ~~~~
               public class Person implements Comparable<Person>
               {
                   private String name;
@@ -751,6 +1051,66 @@ Code Practice with Object Oriented Concepts
                       System.out.println(p4.compareTo(p5));
                    }
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "-1\n1\n-2\n11\n1\n";  
+
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+
+                 @Test
+                 public void test1() 
+                 {
+                   Person p1 = new Person("Carlos",17);
+                   Person p2 = new Person("Lia",18);
+                   String output = String.valueOf(p1.compareTo(p2));
+                   String expect = "-1";
+
+                   boolean passed = getResults(expect, output, "test1: compareTo method, ages different");
+
+                   assertTrue(passed);
+                 }
+
+                 @Test
+                 public void test2() 
+                 {
+                   Person p2 = new Person("Lia",18);
+                   Person p3 = new Person("Asraf", 17);
+                   String output = String.valueOf(p2.compareTo(p3));
+                   String expect = "1";
+
+                   boolean passed = getResults(expect, output, "test2: compareTo method, ages different");
+
+                   assertTrue(passed);
+                 }
+
+                 @Test
+                 public void test3() 
+                 {
+                   Person p4 = new Person("Lia", 17);
+                   Person p5 = new Person("Karla", 17);
+
+                   String output = String.valueOf(p4.compareTo(p5));
+                   String expect = "11";
+
+                   boolean passed = getResults(expect, output, "test2: compareTo method, ages same");
+                 }
+               }
+ 
 
         .. tab:: Answer
         
@@ -758,6 +1118,7 @@ Code Practice with Object Oriented Concepts
            
            .. activecode::  ooEx11a
               :language: java
+              :optional:
               
               public class Person implements Comparable<Person>
               {
@@ -810,11 +1171,12 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Question
        
-       	   Override the Person class's speak function inside the Student class. Make the function print "I'm a student". 
-       	   
            .. activecode::  ooEx12q
               :language: java
+              :autograde: unittest  
               
+              Override the Person class's speak function inside the Student class. Make the function print ``I'm a student``. 
+              ~~~~
               public class Person
               {
                   public void speak() 
@@ -833,6 +1195,42 @@ Code Practice with Object Oriented Concepts
               {
                   // ADD CODE HERE
               }
+              ====
+              import static org.junit.Assert.*;
+               import org.junit.*;
+               import java.io.*;
+               import java.util.List;
+               import java.util.ArrayList;
+
+               public class RunestoneTests extends CodeTestHelper
+               {
+
+                 @Test
+                 public void testMain() throws IOException
+                 {
+                   String output = getMethodOutput("main");
+                   String expect = "I'm a student\n";  
+
+                   boolean passed = getResults(expect, output, "Expected output from main");
+                   assertTrue(passed);
+                 }
+
+               @Test
+                 public void test1() 
+                 {
+                   String code = getCode();
+                   String target = "public void speak()";
+
+                   int num = countOccurencesRegex(code, target);
+
+                   boolean passed = (num == 2);
+
+                   getResults("2", ""+num, "2 speak methods", passed);
+                   assertTrue(passed);
+                 }
+               }
+
+ 
 
         .. tab:: Answer
         
@@ -840,6 +1238,7 @@ Code Practice with Object Oriented Concepts
            
            .. activecode::  ooEx12a
               :language: java
+              :optional:
               
               public class Person
               {

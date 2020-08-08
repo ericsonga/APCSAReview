@@ -41,46 +41,59 @@ If there are no runs of any value, the method returns -1.
 How to Solve
 ----------------
 
-You are going to need to keep track of the current run length, the maximum run length, the index where the max run started (which should start at -1).  You want to compare one value to an adjacent value 
-so you will need to be careful that you don't go out of bounds.  If you find two values that are adjacent that are equal then increment the current run length and set the start index.  If the two adjacent values
-are not equal then reset the current run length to 0.  Return the starting index of the maximum length run.
+Click to reveal the algorithm for solving this problem.
+
+.. reveal:: numbercubeBalg_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+
+   You are going to need to keep track of the current run length, the maximum run length, the index where the max run started (which should start at -1).  You want to compare one value to an adjacent value 
+   so you will need to be careful that you don't go out of bounds.  If you find two values that are adjacent that are equal then increment the current run length and set the start index.  If the two adjacent values
+   are not equal then reset the current run length to 0.  Return the starting index of the maximum length run.
 
 Mixed Up Code
 -------------------
-.. parsonsprob:: NumberCubeB
-   :numbered: left
-   :adaptive:
 
-   The method getLongestRun below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-   -----
-   public static int getLongestRun(int[] values)
-   {
-       int currentLen = 0;
-       int maxLen = 0;
-       int maxStart = -1;
-   =====
-       for (int i = 0; i < values.length-1; i++)
-       {
-   =====
-           if (values[i] == values[i+1])
-           {
-   =====
+Click to reveal the Mixed Up Code for the solution to this problem.
+
+.. reveal:: numcubeB_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: numcubeB
+      :numbered: left
+      :adaptive:
+
+      The method <code>getLongestRun</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      -----
+      public static int getLongestRun(int[] values) {
+         int currentLen = 0;
+         int maxLen = 0;
+         int maxStart = -1;
+      =====
+         for (int i = 0; i < values.length-1; i++)
+         {
+      =====
+            if (values[i] == values[i+1])
+            {
+      =====
                currentLen++;
                if (currentLen > maxLen)
                {
                    maxLen = currentLen;
                    maxStart = i - currentLen + 1;
                }
-   =====
-           } else {
+      =====
+            } else {
                currentLen = 0;
-           }
-   =====
-       } // end for
-       return maxStart;
-   =====
-   } // end method
-
+            }
+      =====
+         } // end for
+         return maxStart;
+      =====
+      } // end method
+      
 
 Try and Solve Part B
 --------------------

@@ -326,9 +326,8 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
          String expected = "2";
 
          boolean passed = actual >= 2;
-         getResults(expected, ""+actual, "Static void methods");
+         getResults(expected, ""+actual, "Static void methods", passed);
         assertTrue(passed);
-
       }
       @Test
       public void checkCodeContains5(){
@@ -338,7 +337,7 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
          String expected = "1";
 
          boolean passed = actual >= 1;
-         getResults(expected, ""+actual, "Static int variable");
+         getResults(expected, ""+actual, "Static int variable", passed);
         assertTrue(passed);
 
       }

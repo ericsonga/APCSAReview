@@ -31,15 +31,24 @@ Creating a Class
 
 Remember that a **class** in programming defines a new **abstract data type**. When you create **objects**, you create new variables or **instances** of that class data type. For example in Unit 2, we created yertle and myrtle, 2 turtle objects created from the class Turtle, and we used the Java String class to create different String variables, also called **object references**.
 
-.. |video| raw:: html
+Watch this short video to review the vocabulary in object-oriented programming:
+
+.. youtube:: LfSaSANJPLg
+    :width: 650
+    :height: 415
+    :align: center
+
+.. .. |video| raw:: html
 
    <a href="https://www.youtube.com/watch?v=1JJL0YszYik" target="_blank">video</a>
 
 
-Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can't live on a blueprint although it describes a house! But you can use it to build houses and live in those. You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. 
+.. Here is a fun |video| demonstrating the difference between the class  
+
+You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. For example, the class House below is a blueprint of a house and the objects which are individual houses built from that blueprint. You can't live on a blueprint although it describes a house! But you can use it to build houses and live in those.
 
 
-.. youtube:: 1JJL0YszYik
+.. .. youtube:: 1JJL0YszYik
     :height: 315
     :width: 560
     :align: left

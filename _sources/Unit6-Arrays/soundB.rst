@@ -69,10 +69,17 @@ After ``trimSilenceFromBeginning`` has been called, the instance variable ``samp
 
 How to Solve This
 --------------------
-1. You will need to loop through each element in the array until you reach a non-zero element. You will also need to keep track of the number of leading zeros.  
-2. Remember that you must replace the samples array with a new array without the leading zeros.  How do you create an array of a particular size?
 
-Click to reveal problems to help you write your solution.
+Click to reveal problems and the algorithm to help you write your solution.
+
+.. reveal:: soundB_algorithm_r1
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+
+   1. You will need to loop through each element in the array until you reach a non-zero element. You will also need to keep track of the number of leading zeros.  
+   2. Remember that you must replace the samples array with a new array without the leading zeros.  How do you create an array of a particular size?
+
 
 .. reveal:: fr_soundb_r1
    :showtitle: Reveal Problems
@@ -104,36 +111,41 @@ Click to reveal problems to help you write your solution.
 Mixed Up Code
 -------------------
 
-.. parsonsprob:: SoundB
-   :numbered: left
-   :adaptive:
+Click to reveal the Mixed Up Code for the solution of this problem.
 
-   The method <code>trimSilenceFromBeginning</code> below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.
-   -----
-   public void trimSilenceFromBeginning() 
-   {
-       int i = 0;
-   =====
-       while (this.samples[i] == 0) 
-       {
-   =====
+.. reveal:: soundB_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
+
+    .. parsonsprob:: SoundB
+      :numbered: left
+      :adaptive:
+
+      The method <code>trimSilenceFromBeginning</code> below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      -----
+      public void trimSilenceFromBeginning() {
+        int i = 0;
+      =====
+        while (this.samples[i] == 0) 
+        {
+      =====
            i++;
-   =====
-       } // end while
-   =====
-       int samplesLen = this.samples.length;
-       int[] newSamples = new int[samplesLen - i];
-   =====
-       for (int j = 0; j < newSamples.length; j++) 
-       {
-   =====
+      =====
+        } // end while
+      =====
+        int samplesLen = this.samples.length;
+        int[] newSamples = new int[samplesLen - i];
+      =====
+        for (int j = 0; j < newSamples.length; j++) 
+        {
+      =====
            newSamples[j] = this.samples[j+i];
-   =====
-       } // end for
-   =====
-       this.samples = newSamples;
-   =====
-   } // end method
+      =====
+        } // end for
+      =====
+        this.samples = newSamples;
+      =====
+      } // end method
 
 Try and Solve Part B
 --------------------

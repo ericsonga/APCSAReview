@@ -43,7 +43,7 @@ For part A we will be working with the class ``BoundedGrid<E>`` which implements
     :align: center
     :figclass: align-center
 
-Part A: Check your understanding of the question
+Check your understanding of the question
 ================================================
 
 The problems in this section are to help you check your understanding and guide you towards a solution.
@@ -181,7 +181,7 @@ This section contains a plain English explanation of one way to solve this probl
       :answer_b: for
       :answer_c: for-each
       :answer_d: while
-      :correct: d
+      :correct: a
       :feedback_a: Correct! This method will be the easiest to read and simplest to debug.
       :feedback_b: you cannot use a single for loop because you need to traverse 2 dimensions
       :feedback_c: you could use a nested for-each loop but it would make your code longer and less efficient, as well as harder to read.

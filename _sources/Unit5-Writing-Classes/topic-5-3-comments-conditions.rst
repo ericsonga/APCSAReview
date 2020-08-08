@@ -48,7 +48,7 @@ There are 3 types of comments in Java:
    
 The special characters ``//`` are used to mark the rest of the line as a comment in many programming languages.  If the comment is going to be multiple lines, we use ``/*`` to start the comment and ``*/`` to end the comment. 
 
-There is also a special version of the multi-line comment, ``/**``  ``*/``, called the documentation comment. Java has a cool tool called |javadoc| that comes with the |Java JDK| that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the |String class|. Although you do not have to use this in the AP exam, it's a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want ot use this tool. 
+There is also a special version of the multi-line comment, ``/**``  ``*/``, called the documentation comment. Java has a cool tool called |javadoc| that comes with the |Java JDK| that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the |String class|. Although you do not have to use this in the AP exam, it's a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want to use this tool. 
 
 |Exercise| **Check your understanding**
 
@@ -332,8 +332,8 @@ One very popular type of agile development is called **Scrum**. The following sh
 
 
 .. youtube:: TRcReyRYIMg
-    :height: 315
-    :width: 560
+    :height: 400
+    :width: 600
     :align: left
 
 |Groupwork| Group Exercise

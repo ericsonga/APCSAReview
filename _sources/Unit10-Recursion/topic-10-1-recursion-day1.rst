@@ -132,6 +132,7 @@ The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It intr
 
 .. youtube:: V2S_8E_ubBY
     :width: 800
+    :height: 315
     :align: center
     
 ..	index::

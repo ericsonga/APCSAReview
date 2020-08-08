@@ -35,8 +35,9 @@
     :align: top
     :alt: run button
    
-
-
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
 
 Calling Methods With Parameters
 ===========================================

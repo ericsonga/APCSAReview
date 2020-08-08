@@ -103,12 +103,15 @@ Once again, this problem starts with looping through the array of pixels, using 
     <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A%7B%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D%5B%5D+values+%3D+%7B%7B9,+8,+7,+6,+5%7D,%0A+++++++++++++++++++++++%7B7,+6,+5,+4,+3%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D%7D%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+values.length%3B+i%2B%2B)%0A+++++%7B%0A+++++++for+(int+j+%3D+0%3B+j+%3C+values%5Bi%5D.length%3B+j%2B%2B)%0A+++++++%7B%0A+++++++++System.out.print(values%5Bi%5D%5Bj%5D+-+values%5Bi%2B2%5D%5Bj%2B2%5D)%3B%0A+++++++%7D%0A+++++++System.out.println()%3B%0A+++++%7D%0A+++%7D%0A%7D&mode=display&curInstr=6" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
    
 
-When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops. The code below prints out the pixel value at position (row, col) after it is decreased by the value at position (row + 2, col + 2), but what if (row+2,col+2) is beyond the array bounds? Can you fix the terminating conditions of the loops so that we do not go beyond the array bounds? You can step through the code using the |Java Visualizer|.
+When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops. The code below prints out the pixel value at position (row, col) after it is decreased by the value at position (row + 2, col + 2), but what if (row+2,col+2) is beyond the array bounds? Can you fix the terminating conditions of the loops so that we do not go beyond the array bounds? You can step through the code using the |Java Visualizer| or the CodeLens button.
 
 .. activecode:: lcfrgib3
    :language: java
+   :autograde: unittest      
    
-   public class Test
+   Fix the terminating conditions of the loops so that we do not go beyond the array bounds
+   ~~~~
+   public class LoopTest
    {
       public static void main(String[] args)
       {
@@ -126,14 +129,39 @@ When comparing our pixel values to values deeper in the array, we need to be car
         }
       }
    } 
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+
+       @Test
+       public void testMain() throws IOException
+       {
+         String output = getMethodOutput("main");
+         String expect = "777\n" +    
+                         "55\n";  
+
+         boolean passed = getResults(expect, output, "Expected output from main");
+         assertTrue(passed);
+       }
+     }
+   
    
  
 
-Try to write the code for the method ``processImage``. When you are ready click "Run" to test your solution.   
    
 .. activecode:: lcfrgib4
    :language: java
+   :autograde: unittest      
    
+   FRQ Gray Image B: write the code for the method ``processImage``.
+   ~~~~
    public class GrayImage
    {
       public static final int BLACK = 0;
@@ -192,6 +220,54 @@ Try to write the code for the method ``processImage``. When you are ready click 
         image.printValues(); 
       }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+
+       @Test
+       public void testMain() throws IOException
+       {
+         String output = getMethodOutput("main");
+         String expect = "221, 184, 178, 84, 135,\n" +    
+                         "84, 255, 255, 130, 84,\n" + 
+                         "78, 255, 0, 0, 78,\n" + 
+                         "84, 130, 255, 130, 84,\n" +   
+                         "after process image\n" +
+                         "221, 184, 100, 84, 135,\n" + 
+                         "0, 125, 171, 130, 84,\n" + 
+                         "78, 255, 0, 0, 78,\n" + 
+                         "84, 130, 255, 130, 84,\n" ;  
+
+         boolean passed = getResults(expect, output, "Expected output from main");
+         assertTrue(passed);
+       }
+
+     @Test 
+       public void test1()
+       {
+         String target = "pixelValues[row+2][col+2];";
+         boolean passed = checkCodeContainsRegex("altered pixel value",target);
+         assertTrue(passed);
+       }
+
+     @Test 
+     public void test2()
+       {
+         String target1 = "pixelValues[row][col] < BLACK";
+         String target2 = "pixelValues[row][col] < 0";
+
+         boolean passed = checkCodeContainsRegex("check of pixel value less than 0",target1) ||                       checkCodeContainsRegex("check of pixel value less than 0",target2);
+         assertTrue(passed);
+       }
+     }
+
     
 Video - One way to code the solution
 =====================================

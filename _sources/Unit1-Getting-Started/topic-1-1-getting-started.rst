@@ -1,3 +1,7 @@
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+    
 Getting Started
 ==================
 
