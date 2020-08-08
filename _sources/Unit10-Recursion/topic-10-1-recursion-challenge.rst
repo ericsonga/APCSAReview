@@ -6,6 +6,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time45.png
+    :width: 225
+    :align: right
     
 |Groupwork| Tracing Challenge : Recursion
 ===========================================

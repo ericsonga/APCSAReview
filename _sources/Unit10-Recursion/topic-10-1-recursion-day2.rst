@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
 
+.. image:: ../../_static/time45.png
+    :width: 225
+    :align: right
+
 Tracing Recursive Methods (Day 2)
 ===================================
 
