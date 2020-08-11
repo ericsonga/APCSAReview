@@ -39,7 +39,7 @@
 Creating and Initializing Objects: Constructors
 ================================================
 
-A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has **constructors** like ``World()`` and ``Turtle(habitat)`` which are used initialize the attributes in a newly created object.
+A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has **constructors** like ``World()`` and ``Turtle(habitat)`` which are used to initialize the attributes in a newly created object.
 
 A new object is created with the ``new`` keyword followed by the class name (``new Class()``).  When this code executes, it creates a new object of the specified class and calls a constructor, which has the same name as the class.  For example, ``new World()`` creates and initializes a new object of the ``World`` class, and ``new Turtle(habitat)`` creates and initializes a new ``Turtle`` object in the World habitat.
 
@@ -567,15 +567,15 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
         @Test
         public void test1()
         {
-            String target = "new CustomTurtle(150,300,world, Color.green, Color.blue, 150, 200)";
-            boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300)",target);
+            String target = "new CustomTurtle(150,300,world1, Color.green, Color.blue, 150, 200)";
+            boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300) in world1",target);
             assertTrue(passed);
         }
         @Test
         public void test2()
         {
-            String target = "new CustomTurtle(350,200,world, Color.red, Color.yellow, 25, 50)";
-            boolean passed = checkCodeContains("constructor for a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200)",target);
+            String target = "new CustomTurtle(350,200,world1, Color.red, Color.yellow, 25, 50)";
+            boolean passed = checkCodeContains("constructor for a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200) in world1",target);
             assertTrue(passed);
         }
     }

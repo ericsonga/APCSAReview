@@ -223,7 +223,7 @@ You can see this code in action in the |visualizer2|.
         public void testCodeContains1()
         {
 
-            boolean passed = checkCodeContains("return type of printMax()", "public static void printMax()");
+            boolean passed = checkCodeContains("static printMax() header", "public static void printMax()");
             assertTrue(passed);
         }
 
@@ -231,7 +231,8 @@ You can see this code in action in the |visualizer2|.
         public void testCodeContains2()
         {
 
-            boolean passed = checkCodeContains("static variable maxTemp in static function", "System.out.println(maxTemp);");
+            boolean passed = code.contains("System.out.println(maxTemp);") ||       code.contains("System.out.println(Temperature.maxTemp);");
+            getResults("true",""+passed, "printMax method",passed);
             assertTrue(passed);
         }
 

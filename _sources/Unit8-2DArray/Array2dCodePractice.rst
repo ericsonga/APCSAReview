@@ -408,7 +408,7 @@ Code Practice with 2D Arrays
                    public void testMain() throws IOException
                    {
                        String output = getMethodOutput("main");
-                       String expect = "Rows: 2\nColumns: 3";
+                       String expect = "Rows:2\nColumns:3";
                        boolean passed = getResults(expect, output, "Expected output from main");
                        assertTrue(passed);
                    }

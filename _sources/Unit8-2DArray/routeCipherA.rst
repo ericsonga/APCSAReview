@@ -233,7 +233,7 @@ Solve Part A
 
          ciph.fillBlock("Lady Bugs");
 
-         String result = String.valueOf((ciph.letterBlock[0][2]).equals("d") && (ciph.letterBlock[2][2]).equals("A"));boolean passed = getResults("true", result, "method fillBlock");
+         String result = String.valueOf((ciph.letterBlock[0][2]).equals("d") && (ciph.letterBlock[2][2]).equals("A"));boolean passed = getResults("true", result, "method fillBlock works");
          assertTrue(passed);
        }
      }

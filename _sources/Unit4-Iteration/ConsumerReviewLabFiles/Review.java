@@ -7,6 +7,7 @@ import java.io.*;
 
 /**
  * Class that contains helper methods for the Review Lab
+ * (method removePunctuation() was added from teacher code)
  **/
 public class Review {
   
@@ -114,6 +115,23 @@ public class Review {
     return punc;
   }
   
+  /**
+   * Returns the word after removing any beginning or ending punctuation
+   */
+  public static String removePunctuation( String word )
+  {
+    while(word.length() > 0 && !Character.isAlphabetic(word.charAt(0)))
+    {
+      word = word.substring(1);
+    }
+    while(word.length() > 0 && !Character.isAlphabetic(word.charAt(word.length()-1)))
+    {
+      word = word.substring(0, word.length()-1);
+    }
+    
+    return word;
+  }
+  
   /** 
    * Randomly picks a positive adjective from the positiveAdjectives.txt file and returns it.
    */
@@ -154,6 +172,7 @@ public class Review {
     // read in the file contents into a string using the textToString method with the filename
 
     // set up a sentimentTotal variable
+    double sentimentTotal = 0;
 
     // loop through the file contents 
 
@@ -177,7 +196,7 @@ public class Review {
     // call the totalSentiment method with the fileName
 
     // determine number of stars between 0 and 4 based on totalSentiment value 
-    int stars;
+    int stars = 0; // change this!
     // write if statements here
 
 

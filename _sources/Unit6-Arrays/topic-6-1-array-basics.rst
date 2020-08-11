@@ -507,6 +507,7 @@ Here's a fun String array of image filenames. The following code displays an onl
     
 .. activecode:: imageArray
    :language: java
+   :autograde: unittest
    
    Can you change the index variable's value so that it prints out the puppy image? Can you print out the reindeer? Try all of them! What indices did you need to use? Then try using a random number for the index instead. Remember that (int)(Math.random()*max) will return a number from 0 up to max. What's the maximum number it can be for this array?
    ~~~~
@@ -530,7 +531,32 @@ Here's a fun String array of image filenames. The following code displays an onl
         String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
         System.out.print("<img src=" + baseURL + filename + ">");
       }
-    }  
+    }
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         @Test
+         public void testCode()
+         {
+             String code = getCode();
+             String expect = "int index = 0;";
+
+             boolean passed = !code.contains(expect);
+
+             getResults("index not 0",passed + "", "Changed index to another value", passed);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testRandomAdded() {
+             boolean passed = checkCodeContains("Math.random to set index", "Math.random");
+             assertTrue(passed);
+         }
+     }
 
 |Groupwork| Programming Challenge : Countries Array
 ===================================================
