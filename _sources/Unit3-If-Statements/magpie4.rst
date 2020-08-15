@@ -5,7 +5,9 @@
 .. highlight:: java
    :linenothreshold: 4
 
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
 
 Activity 4: Responses that Transform Statements
 =================================================

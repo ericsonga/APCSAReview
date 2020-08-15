@@ -19,7 +19,9 @@
     :align: middle
     :alt: groupwork
     
-
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
 
 Anatomy of a Java Class
 =======================
@@ -291,7 +293,7 @@ Object-Oriented Design
    <a href="https://creately.com" target="_blank">Creately.com</a> 
 
 
-In **Object-Oriented Design** (OOD), programmers first spend time to decide which classes are needed and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CS A exam). If you want to draw your own, |Creately.com| is a good free online drawing tool for class diagrams.
+In **Object-Oriented Design** (OOD), programmers first decide which classes are needed to solve a problem and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CS A exam). If you want to draw your own, |Creately.com| is a good free online drawing tool for class diagrams.
 
 
 .. figure:: Figures/turtleUMLClassDiagram.png
@@ -353,40 +355,39 @@ In this project, you will create a class that can tell riddles like the followin
   ~~~~
   public class Riddle
   {
-     // write 2 instance variables for Riddle's question and answer: private type variableName;
+      // write 2 instance variables for Riddle's question and answer: private type variableName;
+          
+      
+      // constructor
+      public Riddle(String initQuestion, String initAnswer)
+      {
+          // set the instance variables to the init parameter variables
      
+      }
      
-     // constructor
-     public Riddle(String initQuestion, String initAnswer)
-     {
-        // set the instance variables to the init parameter variables
-     
-     }
-     
-     // Print riddle question
-     public void printQuestion()
-     {
-       // print out the riddle question with System.out.println
+      // Print riddle question
+      public void printQuestion()
+      {
+          // print out the riddle question with System.out.println
        
-     }
+      }
      
-     // Print riddle answer
-     public void printAnswer()
-     {
-       // print out the riddle answer with System.out.println
+      // Print riddle answer
+      public void printAnswer()
+      {
+          // print out the riddle answer with System.out.println
        
-     }
+      }
      
-     // main method for testing
-     public static void main(String[] args)
-     {
-        // call the constructor to create 2 new Riddle objects
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // call the constructor to create 2 new Riddle objects
         
-        // call their printQuestion() and printAnswer methods
+         // call their printQuestion() and printAnswer methods
        
-     }
+      }
   }
-  
   ====
   // Test Code for Lesson 5.1.5 - Riddle
   // @author Kate McDonnell

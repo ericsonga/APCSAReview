@@ -22,7 +22,9 @@
     :align: middle
     :alt: groupwork
 
-
+.. image:: ../../_static/time45.png
+    :width: 225
+    :align: right
 
 
 What is Recursion? (Day 1)
@@ -167,6 +169,8 @@ See the method `factorial` below that calculates the **factorial** of a number. 
 
 .. activecode:: FactorialTest
    :language: java
+   :autograde: unittest
+   :practice: T
 
    Run the code below to test the factorial method. What's the factorial of 6? Add another test to print out the factorial of 6. What's the factorial of 1? Add another test to print out the factorial of 1.
    ~~~~
@@ -188,6 +192,22 @@ See the method `factorial` below that calculates the **factorial** of a number. 
            System.out.println("factorial of 5 is: " +factorial(5));
        }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+      public class RunestoneTests extends CodeTestHelper
+     {
+         @Test
+         public void testMain() throws IOException
+         {
+             String output = getMethodOutput("main");
+             String expect = "factorial of 3 is: 6\nfactorial of 4 is: 24\nfactorial of 5 is: 120\nfactorial of 6 is: 720\nfactorial of 1 is: 1\n";
+             boolean passed = getResults(expect, output, "Expected output from main");
+             assertTrue(passed);
+         }
+     }
+
 
 Base Case
 ==========

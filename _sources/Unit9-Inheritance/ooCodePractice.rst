@@ -1105,9 +1105,10 @@ Code Practice with Object Oriented Concepts
                    Person p5 = new Person("Karla", 17);
 
                    String output = String.valueOf(p4.compareTo(p5));
-                   String expect = "11";
+                   String expect = "1";
 
                    boolean passed = getResults(expect, output, "test2: compareTo method, ages same");
+                    assertTrue(passed);
                  }
                }
  

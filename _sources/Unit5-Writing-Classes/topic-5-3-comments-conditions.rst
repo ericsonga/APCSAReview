@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
     
     
 Comments and Conditions
@@ -133,6 +137,8 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
     :autograde: unittest
     :datafile: turtleClasses.jar
 
+    Try to break the preconditions about the range of the values of x and y in the Turtle constructor below.
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -369,34 +375,34 @@ Here is a simple class called User that could be used in an online store. Add go
     public class User
     {
     
-      private String username;
-      private String password;
+        private String username;
+        private String password;
       
-      public User()
-      {
-         username = "guest";
-         password = "guest" + (int)(Math.random()*1000);
-      }
+        public User()
+        {
+            username = "guest";
+            password = "guest" + (int)(Math.random()*1000);
+        }
       
-      public User(String nameInit, String pwordInit)
-      {
-          username = nameInit;
-          password = pwordInit;
-      }
+        public User(String nameInit, String pwordInit)
+        {
+            username = nameInit;
+            password = pwordInit;
+        }
       
-      public void welcome()
-      {
-         System.out.println("Welcome " + username + "!");
-      }
+        public void welcome()
+        {
+            System.out.println("Welcome " + username + "!");
+        }
       
-      public static void main(String[] args)
-      {
-          User u1 = new User(); // guest login
-          // new user 
-          User u2 = new User("cooldude@gmail.com", "Coolness*10"); 
-          u1.welcome();
-          u2.welcome();
-      }
+        public static void main(String[] args)
+        {
+            User u1 = new User(); // guest login
+            // new user 
+            User u2 = new User("cooldude@gmail.com", "Coolness*10"); 
+            u1.welcome();
+            u2.welcome();
+        }
     }
     ====
     // Test for 5.3.5 Comments

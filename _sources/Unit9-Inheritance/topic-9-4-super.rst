@@ -44,7 +44,7 @@ In the example below, the Student class overrides the getFood() method of the Pe
    :language: java
    :autograde: unittest      
    
-   Add another subclass called Vegan that inherits from the Student class. Override the getFood() method to call the superclass getFood() but add a "No " in front of it and then say "but " and add a vegan food. Change Javier to a Vegan and try it out!
+   Add another subclass called Vegan that inherits from the Student class. Add a Vegan contructor that takes a name as an argument and passes it to the super constructor. Override the getFood() method in Vegan to call the superclass getFood() but add a "No " in front of it and then say "but " and add a vegan food. Change Javier to a Vegan object in main() and try it out!
    ~~~~
    public class Person 
    {
@@ -198,15 +198,17 @@ The Customer class below keeps track of the names and addresses of customers. It
 
 1. Create a subclass OnlineCustomer that inherits from the Customer class and adds a new instance variable for the email address of a online customer.
 
-2. Override the toString() method in the OnlineCustomer class to call the super class toString() method and then add on the email address. See the example above for help.
+2. Write an OnlineCustomer constructor that take 3 arguments, name, address, email, and passes the name and address to the super (Customer) constructor.
 
-3. Test the class by uncommenting the OnlineCustomer objects in the main method.
+3. Override the toString() method in the OnlineCustomer class to call the super class toString() method and then add on the email address. See the example above for help.
+
+4. Test the class by uncommenting the OnlineCustomer objects in the main method.
 
 .. activecode:: challenge-9-4-Customer-super
    :language: java
    :autograde: unittest      
    
-   Complete the OnlineCustomer class below to inherit from Customer and add an email address and override the toString() method.
+   Complete the OnlineCustomer class below to inherit from Customer and add an email address, a constructor, and override the toString() method.
    ~~~~
    public class Customer
    {
@@ -228,13 +230,18 @@ The Customer class below keeps track of the names and addresses of customers. It
        {
           Customer c = new Customer("Fran Santiago", "123 Main St., Anytown, USA");
           System.out.println(c);
-         // OnlineCustomer c2 = new OnlineCustomer("Jasper Smith", "456 High St., Anytown, USA", "jsmith456@gmail.com");
+          
+          // Uncomment these to test OnlineCustomer
+          // OnlineCustomer c2 = new OnlineCustomer("Jasper Smith", "456 High St., Anytown, USA", "jsmith456@gmail.com");
           // System.out.println(c2);
        }
     }
 
     // Complete the OnlineCustomer class to inherit from Customer
-    // It should have an email attribute and an overriden toString() method
+    // It should have an email attribute, 
+    // a constructor with 3 arguments (name, address, email) that uses the super constructor, 
+    // and an overriden toString() method that calls the super toString() method 
+    //  and then prints "\nEmail:" and the email variable.
     class OnlineCustomer 
     {
        
@@ -257,7 +264,7 @@ The Customer class below keeps track of the names and addresses of customers. It
                          "Address: 123 Main St., Anytown, USA\n" +
                          "Name: Jasper Smith\n" +
                          "Address: 456 High St., Anytown, USA\n" + 
-                         "Email Address: jsmith456@gmail.com";       
+                         "Email: jsmith456@gmail.com";       
          boolean passed = getResults(expect, output, "Expected output from main");
          assertTrue(passed);
        }

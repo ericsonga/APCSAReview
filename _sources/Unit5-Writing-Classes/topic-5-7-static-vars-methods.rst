@@ -19,6 +19,9 @@
     :align: middle
     :alt: groupwork
     
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
     
 Static Variables and Methods
 ============================
@@ -95,11 +98,11 @@ Since there is only 1 copy of a static variable or method, static variables are 
      // main method for testing
      public static void main(String[] args)
      {
-        // call the constructor to create a new person
-        Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
-        Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
+         // call the constructor to create a new person
+         Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
+         Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
         
-        Person.printPersonCounter();
+         Person.printPersonCounter();
      }
   }
   ====
@@ -223,7 +226,7 @@ You can see this code in action in the |visualizer2|.
         public void testCodeContains1()
         {
 
-            boolean passed = checkCodeContains("return type of printMax()", "public static void printMax()");
+            boolean passed = checkCodeContains("static printMax() header", "public static void printMax()");
             assertTrue(passed);
         }
 
@@ -231,7 +234,8 @@ You can see this code in action in the |visualizer2|.
         public void testCodeContains2()
         {
 
-            boolean passed = checkCodeContains("static variable maxTemp in static function", "System.out.println(maxTemp);");
+            boolean passed = code.contains("System.out.println(maxTemp);") ||       code.contains("System.out.println(Temperature.maxTemp);");
+            getResults("true",""+passed, "printMax method",passed);
             assertTrue(passed);
         }
 

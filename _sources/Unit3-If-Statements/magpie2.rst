@@ -5,7 +5,9 @@
 .. highlight:: java
    :linenothreshold: 4
 
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
 
 Activity 2: Running Simplified Magpie Code
 ===========================================
@@ -23,7 +25,10 @@ Run the following code and see the responses to these 4 inputs.
 
 .. activecode:: lc-magpie2
    :language: java
-
+   :autograde: unittest
+   
+   Run to see the results. Try changing the input in main. 
+   ~~~~
    public class Magpie2
    {
       public String getGreeting()
@@ -81,6 +86,23 @@ Run the following code and see the responses to these 4 inputs.
         System.out.println(maggie.getResponse("Do you know my brother?"));
       }
    }
+   ====
+    // should pass if/when they run code
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "Hello, let's talk....";
+            boolean passed = getResults(expect, output, "Expected output from main", true);
+            assertTrue(passed);
+        }
+    }
 
 .. |chatbots| raw:: html
 
@@ -108,6 +130,8 @@ The method ``getRandomResponse`` generates a random number and uses that to assi
 
 
 
+
+
 Exercises
 ------------
 
@@ -132,7 +156,7 @@ Alter the code above or in your own IDE (see section below) to do the following.
 
 * Pick three more keywords, such as “no” and “brother” and edit the ``getResponse`` method to respond to each of these.
 
-* What happens when more than one keyword appears in a string? Try the input “My **mother** has a **dog** but **no** cat.” Which response did you get -- was it the one about family or the one about pets or the negative one for no?  Change the order of your if-else-if statements to make it so that one of the other responses is selected and try running it again.
+* What happens when more than one keyword appears in a string? Try the input ``My **mother** has a **dog** but **no** cat.`` Which response did you get -- was it the one about family or the one about pets or the negative one for no?  Change the order of your if-else-if statements to make it so that one of the other responses is selected and try running it again.
 
 .. shortanswer:: short-lab1b1
    :optional:

@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
 
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
+    
 Loop Analysis
 ==============
 
@@ -406,4 +410,5 @@ Try the game below to practice loop analysis. Click on **Loops** and click on th
 .. raw:: html
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+    <script>      window.scrollTo(0, 0);</script>
 

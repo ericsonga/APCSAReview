@@ -19,7 +19,9 @@
     :align: middle
     :alt: groupwork
     
-.. arrays of objects?
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
 
 Enhanced For-Loop (For-Each) for Arrays
 =======================================
@@ -142,13 +144,15 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
    {      
       public static void main(String[] args)
       {
-        int[ ] values = {6, 2, 1, 7, 12, 5};
-        // Rewrite this loop as a for each loop and run
-        for (int i=0; i < values.length; i++)
-        {
-          if (values[i] % 2 == 0)
-              System.out.println(values[i] + " is even!");
-        }
+          int[ ] values = {6, 2, 1, 7, 12, 5};
+          // Rewrite this loop as a for each loop and run
+          for (int i=0; i < values.length; i++)
+          {
+              if (values[i] % 2 == 0)
+              {
+                 System.out.println(values[i] + " is even!");
+              }
+          }
       }
    }
    ====
@@ -205,19 +209,19 @@ What if we had a loop that incremented all the elements in the array. Would that
    {      
       public static void main(String[] args)
       {
-        int[ ] values = {6, 2, 1, 7, 12, 5};
-        // Can this loop increment the values?
-        for (int val : values)
-        {
-          val++;
-          System.out.println("New val: " + val);
-        }
-        // Print out array to see if they really changed
-        System.out.println("Array after the loop: ");
-        for (int v : values)
-        {
-          System.out.print(v + " ");
-        }
+          int[ ] values = {6, 2, 1, 7, 12, 5};
+          // Can this loop increment the values?
+          for (int val : values)
+          {
+            val++;
+            System.out.println("New val: " + val);
+          }
+          // Print out array to see if they really changed
+          System.out.println("Array after the loop: ");
+          for (int v : values)
+          {
+             System.out.print(v + " ");
+          }
       }
    }
    ====
@@ -343,29 +347,29 @@ Here is an object-oriented example that has the array as a private instance vari
    ~~~~
    public class ArrayWorker
    {
-      private int[ ] values;
+       private int[ ] values;
       
-      public ArrayWorker(int[] theValues)
-      {
-         values = theValues;
-      }
+       public ArrayWorker(int[] theValues)
+       {
+          values = theValues;
+       }
       
-      public double getAverage()
-      {
-        double total = 0;
-        for (int val : values)
-        {
-          total  = total + val;
-        }
-        return total / values.length;
-      }
+       public double getAverage()
+       {
+          double total = 0;
+          for (int val : values)
+          {
+             total  = total + val;
+          }
+          return total / values.length;
+       }
       
-      public static void main(String[] args)
-      {
-        int[] numArray =  {2, 6, 7, 12, 5};
-        ArrayWorker aWorker = new ArrayWorker(numArray); 
-        System.out.println(aWorker.getAverage());
-      }
+       public static void main(String[] args)
+       {
+           int[] numArray =  {2, 6, 7, 12, 5};
+           ArrayWorker aWorker = new ArrayWorker(numArray); 
+           System.out.println(aWorker.getAverage());
+       }
    }
    ====
    // Test for Lesson 6.3.3 - IncrementLoop

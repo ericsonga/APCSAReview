@@ -51,7 +51,7 @@ In the following code, the Person class overrides the Object toString() method a
   :language: java 
   :autograde: unittest
   
-  After trying the code below, complete the subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Create an APStudent object in the main method to test it.
+  After trying the code below, complete the subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Uncomment the APStudent object in the main method to test it.
   ~~~~
   public class Person
   {
@@ -118,9 +118,9 @@ In the following code, the Person class overrides the Object toString() method a
          public void test1()
          { 
              String output = getMethodOutput("main");
-             String expect = "Sila\nTully 1001";
+             String expect = "Sila\nTully 1001\nAyanna 1002 5";
 
-             boolean passed = getResults(expect, output, "Checking output from main()", true);
+             boolean passed = getResults(expect, output, "Checking output from main()");
              assertTrue(passed);
          }
           @Test
@@ -378,22 +378,20 @@ In the following code, a bank account class contains the account holder's name a
 
 Work in pairs to write the following code and test each part before moving on to the next step:
 
-1. Write a toString() method for Account that returns the name and balance with a comma in between.
+1. Write a subclass called SavingsAccount that extends Account and  adds an interest rate variable. 
 
-2. Write an equals method for Account that checks that the name and balance are equal.
+2. Write a constructor with 3 arguments (name, balance, interest rate) for the SavingsAccount class that uses the super constructor.
 
-3. Write a subclass called SavingsAccount that extends Account and  adds an interest rate variable. 
+3. Write a toString() method for SavingsAccount that returns a call to the super toString() method and the interest rate.
 
-4. Write a toString() method for SavingsAccount that returns a call to the super toString() method and the interest rate.
-
-5. Write an equals method for SavingsAccount that calls the superclass equals method and checks that the interest rates are equal.
+4. Write an equals method for SavingsAccount that calls the superclass equals method and checks that the interest rates are equal.
 
 
 .. activecode:: challenge-9-7-savingsaccount
    :language: java
    :autograde: unittest
    
-   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a toString and an equals method for it. Uncomment the code in main to test your new class and methods. 
+   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a constructor with 3 arguments, a toString, and an equals method for it. Uncomment the code in main to test your new class and methods. 
    ~~~~
    public class Account 
    {
@@ -453,7 +451,7 @@ Work in pairs to write the following code and test each part before moving on to
          public void test1()
          { 
              String output = getMethodOutput("main");
-             String expect = "Armani Smith, 1500.0\nDakota Jones, 1500.0 4.5\ntrue";
+             String expect = "Armani Smith, 1500.0\nDakota Jones, 1500.0, 4.5\ntrue";
 
              boolean passed = getResults(expect, output, "Checking output from main()");
              assertTrue(passed);

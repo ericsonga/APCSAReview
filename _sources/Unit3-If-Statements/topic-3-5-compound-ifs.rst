@@ -28,7 +28,7 @@
     <style>    td { text-align: left; } </style>
     
 .. image:: ../../_static/time90.png
-    :width: 250
+    :width: 225
     :align: right
     
 Compound Boolean Expressions
@@ -584,4 +584,5 @@ Try the game below written to practice Booleanss. Click on **Booleans**, look at
 .. raw:: html
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+    <script>      window.scrollTo(0, 0);</script>
 

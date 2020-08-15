@@ -161,21 +161,12 @@ Declaring 2D Arrays
 ..	index::
 	pair: 2D Array; declaration
 
-To declare a 2D array, specify the type of elements that will be stored in the array, then (``[][]``) to show that it is a 2D array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).  Try the the following in DrJava's interaction pane.
+To declare a 2D array, specify the type of elements that will be stored in the array, then (``[][]``) to show that it is a 2D array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).  
  
 .. code-block:: java 
 
   int[][] ticketInfo;
   String[][] seatingChart; 
-
-|Exercise| **Check your understanding**
-
-.. fillintheblank:: 2darrayNullfill
-
-   What is printed when you type System.out.println(ticketInfo); after you do the above declarations?
-   
-   -    :null$: Correct.  The array hasn't actually been created yet so it prints null.
-        :.*: Try it in the active code window below.
 
 
 

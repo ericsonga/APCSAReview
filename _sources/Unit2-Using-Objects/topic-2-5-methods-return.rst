@@ -252,7 +252,7 @@ Another common method that returns a value is the **toString()** method. This me
             int num = countOccurences(code, "getWidth()");
 
             boolean passed = num > 0;
-            getResults(">=1", "" + num, "Calls to getWidth()");
+            getResults(">=1", "" + num, "Calls to getWidth()", passed);
             assertTrue(passed);
         }
 
@@ -263,7 +263,7 @@ Another common method that returns a value is the **toString()** method. This me
             int num = countOccurences(code, "getHeight()");
 
             boolean passed = num > 0;
-            getResults(">=1", "" + num, "Calls to getHeight()");
+            getResults(">=1", "" + num, "Calls to getHeight()", passed);
             assertTrue(passed);
         }
 
@@ -274,7 +274,7 @@ Another common method that returns a value is the **toString()** method. This me
             int num = countOccurences(code, "toString()") + countOccurences(code, "System.out.println(yertle)");
 
             boolean passed = num > 0;
-            getResults(">=1", "" + num, "Calls to toString()");
+            getResults(">=1", "" + num, "Calls to toString()", passed);
             assertTrue(passed);
         }
     }
@@ -387,7 +387,7 @@ Try this |visualization| to see this code in action.
             int num = countOccurences(code, ".getXPos()");
 
             boolean passed = num > 0;
-            getResults(">=1", "" + num, "Calls to getXPos()");
+            getResults(">=1", "" + num, "Calls to getXPos()", passed);
             assertTrue(passed);
         }
 
@@ -398,7 +398,7 @@ Try this |visualization| to see this code in action.
             int num = countOccurences(code, ".getYPos()");
 
             boolean passed = num > 0;
-            getResults(">=1", "" + num, "Calls to getYPos()");
+            getResults(">=1", "" + num, "Calls to getYPos()", passed);
             assertTrue(passed);
         }
 
@@ -409,7 +409,7 @@ Try this |visualization| to see this code in action.
             int num = countOccurences(code, ".getDistance(");
 
             boolean passed = num >= 2;
-            getResults(">=2", "" + num, "Calls to getDistance(...)");
+            getResults(">=2", "" + num, "Calls to getDistance(...)", passed);
             assertTrue(passed);
         }
 
@@ -420,7 +420,7 @@ Try this |visualization| to see this code in action.
             int num = countOccurences(code, ".getDistance(0,0)");
 
             boolean passed = num >= 1;
-            getResults(">=1", "" + num, "Calls getDistance(0,0)");
+            getResults(">=1", "" + num, "Calls getDistance(0,0)", passed);
             assertTrue(passed);
         }
     }

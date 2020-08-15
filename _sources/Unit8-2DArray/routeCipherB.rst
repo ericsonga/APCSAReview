@@ -217,7 +217,7 @@ Complete method ``encryptMessage`` below.
 
          String result = String.valueOf(ciph.encryptMessage("Meet at midnight").substring(0, 6).equals("Mte ea"));
 
-         boolean passed = getResults("true", result, "method encryptMessage");
+         boolean passed = getResults("true", result, "method encryptMessage works");
          assertTrue(passed);
        }  
      }
