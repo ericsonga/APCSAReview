@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
 
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
+    
 Writing Constructors
 ====================
 
@@ -219,7 +223,7 @@ If there are no constructors written for a class, Java provides a no-argument **
      // constructor: set instance variables to default values
      public Car()
      {
-        // 1. set the instance variables to default values "" and 2019
+         // 1. set the instance variables to default values "" and 2019
         
      
      }
@@ -227,7 +231,7 @@ If there are no constructors written for a class, Java provides a no-argument **
      // constructor: set instance variables to init parameters
      public Car(String initModel, int initYear)
      {
-        // 2. set the instance variables to the init parameter variables
+         // 2. set the instance variables to the init parameter variables
      
      
      }
@@ -242,12 +246,15 @@ If there are no constructors written for a class, Java provides a no-argument **
      // main method for testing
      public static void main(String[] args)
      {
-        // 3. call the constructor to create 2 new Car objects using the 2 constructors. car1 will be the default values. car2 should be a Honda 2010 car.
-        Car car1 = 
-        Car car2 = 
+         // 3. call the constructor to create 2 new Car objects 
+         // using the 2 constructors. 
+         // car1 will be the default values. 
+         // car2 should be a Honda 2010 car.
+         Car car1 = 
+         Car car2 = 
         
-        car1.print();
-        car2.print();
+         car1.print();
+         car2.print();
      }
   }
   ====
@@ -320,21 +327,21 @@ We encourage you to work in pairs for this challenge to create a Student class w
    */
    public class Student 
    {
-      // Write 4 instance variables
+       // Write 4 instance variables
       
       
-      // Write 3 constructors to initialize the instance variables
-      //  1. no parameters using default values
-      //  2. 1 parameter and the rest default values
-      //  3. 4 parameters
+       // Write 3 constructors to initialize the instance variables
+       //  1. no parameters using default values
+       //  2. 1 parameter and the rest default values
+       //  3. 4 parameters
        
       
-      // Write a print method that prints all the instance variables
-      public void print()
-      {
+       // Write a print method that prints all the instance variables
+       public void print()
+       {
       
       
-      }
+       }
       
       // main method 
       public static void main(String[] args)

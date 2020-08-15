@@ -19,7 +19,10 @@
     :align: middle
     :alt: groupwork
     
-
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
+    
 Traversing Arrays with For Loops
 ==========================================
 
@@ -605,10 +608,10 @@ You can even start in the middle and loop through the rest of the array.
       
       public static void main(String[] args)
       {
-        int[] numArray = {3,8,-3, 2};
-        ArrayWorker worker = new ArrayWorker(numArray);
-        worker.doubleLastHalf();
-        worker.printArray();
+          int[] numArray = {3,8,-3, 2};
+          ArrayWorker worker = new ArrayWorker(numArray);
+          worker.doubleLastHalf();
+          worker.printArray();
       }
    }
    ====
@@ -1123,3 +1126,4 @@ Try the game below to practice loops with arrays. Click on **Arrays** and then c
 .. raw:: html
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+    <script>      window.scrollTo(0, 0);</script>

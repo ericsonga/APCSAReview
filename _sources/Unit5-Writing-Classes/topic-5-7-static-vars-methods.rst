@@ -19,6 +19,9 @@
     :align: middle
     :alt: groupwork
     
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right
     
 Static Variables and Methods
 ============================
@@ -95,11 +98,11 @@ Since there is only 1 copy of a static variable or method, static variables are 
      // main method for testing
      public static void main(String[] args)
      {
-        // call the constructor to create a new person
-        Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
-        Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
+         // call the constructor to create a new person
+         Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
+         Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
         
-        Person.printPersonCounter();
+         Person.printPersonCounter();
      }
   }
   ====

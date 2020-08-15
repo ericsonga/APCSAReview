@@ -204,6 +204,13 @@ Object Variables and References
 
 You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package. 
 
+Watch the video below about null.
+
+.. youtube:: 5fpjgXAV2BU
+    :width: 650
+    :height: 415
+    :align: center
+
 The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world1)``).  Or more commonly, you can declare an object variable and initialize it in the same line of code (``Turtle t2 = new Turtle(world1);``).
 
 .. code-block:: java
@@ -213,6 +220,7 @@ The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turt
     t1 = new Turtle(world1);
     // declare and initialize t2
     Turtle t2 = new Turtle(world1);
+
 
 
 

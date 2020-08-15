@@ -29,6 +29,7 @@
     :width: 250
     :align: right
     
+    
 Boolean Expressions
 ===================
 
@@ -37,12 +38,20 @@ Boolean Expressions
 Testing Equality (==)
 ----------------------
 
-Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal) to return boolean values. 
+Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal) which return boolean values. 
 
 .. note::
 
     One = sign changes the value of a variable. Two == equal signs are used to test if a variable holds a certain value, without changing its value!
 
+
+Watch the following video which shows what happens in memory as primitive types like int and reference types like Dog are compared with == in a physical model of Java memory.
+
+.. youtube:: bO9bejT0jwE
+    :width: 650
+    :height: 415
+    :align: center
+    
 |CodingEx| **Coding Exercise**
 
 
@@ -393,6 +402,10 @@ Try the game below to practice. Click on **Relationals**,  evaluate the relation
 
 .. raw:: html
 
-    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+     <iframe id="page-embed" class="init" height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+    <script> $('#page-embed').on('load', function() {
+     if ($(this).hasClass('init')) {
+      $(this).removeClass('init').show();
+    } });</script>
 
 

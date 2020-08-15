@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
     
 Array Algorithms (FRQs)
 =======================

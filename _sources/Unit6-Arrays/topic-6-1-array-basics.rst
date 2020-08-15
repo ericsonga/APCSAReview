@@ -19,6 +19,10 @@
     :align: middle
     :alt: groupwork
     
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
+
 
 Array Creation and Access
 --------------------------
@@ -29,7 +33,7 @@ Array Creation and Access
 	pair: array; index
 
 To keep track of 10 exam scores, we could declare 10 separate variables:  int score1, score2, score3, … , score10; 
-But what if we had 100 exam scores? That would be a lot of variables! Most programming languages have a simple **data structure** for a collection of related data that makes this easier. In App Inventor, this is called a list. In Java and many programming languages, this is called an **array**.
+But what if we had 100 exam scores? That would be a lot of variables! Most programming languages have a simple **data structure** for a collection of related data that makes this easier. In many block-based programming languages like App Inventor and Scratch, this is called a list. In Java and many programming languages, this is called an **array**.
 
 An **array** is a block of memory that stores a collection of data items (**elements**) of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don't need to name each one. Instead you use the array name and a number (called an **index**) for the position of an item in the array. You can make arrays of ints, doubles, Strings, and even classes that you have written like Students. 
 
@@ -74,7 +78,7 @@ Arrays and lists in most programming languages start counting elements from the 
 Declaring and Creating an Array
 ===============================
 
-When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. This data type will be for all the elements in the array.
+When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, ``int[] scores`` means we have an array called scores that contains int values.
 
 .. code-block:: java 
    
@@ -85,9 +89,19 @@ When we declare a variable, we specify its type and then the variable name.  To 
 
 The declarations do not create the array.  Arrays are **objects** in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).  
 
+There are two ways to create an array. You can use the keyword **new** to get new memory or use an **initializer list** to set up the values in the array.
 
+Watch the following video which shows the two ways of creating an array with a physical model of Java memory.
 
-To actually create an array after declaring the variable, use the **new** keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array names below. The size of an array is set at the time of creation and cannot be changed after that.
+.. youtube:: IbPFjw1FNkE
+    :width: 650
+    :height: 415
+    :align: center
+
+Using new to Create Arrays
+==========================
+
+To create an empty array after declaring the variable, use the **new** keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array names below. The size of an array is set at the time of creation and cannot be changed after that.
 
 .. code-block:: java 
    
@@ -189,8 +203,8 @@ To actually create an array after declaring the variable, use the **new** keywor
 
     Figure 3: Two 5 element arrays with their values set to the default values for integer and object arrays.
 
-Initializer Lists
-============================
+Initializer Lists to Create Arrays
+======================================
 
 Another way to create an array is to use an **initializer list**. You can initialize (set) the values in the array to a list of values in curly brackets { } when you create it, like below.  In this case you don't specify the size of the array, it will be determined from the number of values that you specify.  
 
@@ -199,8 +213,6 @@ Another way to create an array is to use an **initializer list**. You can initia
   int[ ] highScores = {99,98,98,88,68};
   String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
   
-  
-
   
 When you create an array of a **primitive type** (like ``int``) with initial values specified, space is allocated for the specified number of items of that type and the values in the array are set to the specified values.  When you create an array of an **object type** (like ``String``) with initial values, space is set aside for that number of object references.  The objects are created and the object references set so that the objects can be found. 
 
@@ -211,11 +223,20 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 
     Figure 4: A primitive array and an object array
 
+
+Watch the following video which shows an array of String objects with a physical model of Java memory.
+
+.. youtube:: T-YZvVvPOac
+    :width: 650
+    :height: 415
+    :align: center
+    
 ..	index::
     single: dot-notation
 	pair: array; length
 
-
+Array length
+=============
 
 Arrays know their length (how many elements they can store).  It is a public read-only instance variable so you can use **dot-notation** to access the instance variable (``arrayName.length``).  **Dot-notation** is using variable name followed by a ``.`` and then the instance variable (property) name or a method name. Try the following.
 
@@ -318,8 +339,13 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
 .. note::
 
     The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access or modify array items.
-    
 
+Watch the following video which shows a physical model of Java memory setting array values.
+
+.. youtube:: uagEJw6bTM4
+    :width: 650
+    :height: 415
+    :align: center
 
 
 |Exercise| **Check your understanding**
@@ -336,7 +362,7 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
    String v = |blank|;
 
    -   :cars\[1\]: Correct.
-       :x: Use the array name cars with [ ] with a number in it. Don't use spaces in your answer!
+       :x: Use the array name cars with [ ] with a number in it. Don't use spaces or ; in your answer!
        
 .. fillintheblank:: array-access2
 
@@ -724,3 +750,4 @@ Try the game below to practice arrays. Click on **Arrays** and click on the elem
 .. raw:: html
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
+    <script>      window.scrollTo(0, 0);</script>

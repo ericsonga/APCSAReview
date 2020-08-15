@@ -4,7 +4,9 @@ h1, h2 {
 }
 
 strong {
-    color:  #00b3e3;
+    color:  #0550FF; /*#1E90FF;  #00b3e3*/
+    background-color: ghostwhite;
+    font-weight: bolder;
 }
 
 a {

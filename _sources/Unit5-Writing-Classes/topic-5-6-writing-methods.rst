@@ -28,6 +28,10 @@
     pair: method; parameter
     pair: method; argument
     pair: method; return 
+
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
     
 Writing Methods
 =================
@@ -125,16 +129,16 @@ For example, here is a chorus() method definition that we could write for the "T
     
     public static void main(String args[]) 
     {
-      Song mySong = new Song();
-      System.out.println("This old man, he played one.");
-      System.out.println("He played knick knack on my thumb. ");
-      mySong.chorus();
+        Song mySong = new Song();
+        System.out.println("This old man, he played one.");
+        System.out.println("He played knick knack on my thumb. ");
+        mySong.chorus();
 
-      System.out.println("This old man, he played two.");
-      System.out.println("He played knick knack on my shoe. ");
-      // Can you replace these 2 lines with a method call to chorus()?
-      System.out.println("With a knick knack paddy whack, give a dog a bone.");
-      System.out.println("This old man came rolling home.");
+        System.out.println("This old man, he played two.");
+        System.out.println("He played knick knack on my shoe. ");
+        // Can you replace these 2 lines with a method call to chorus()?
+        System.out.println("With a knick knack paddy whack, give a dog a bone.");
+        System.out.println("This old man came rolling home.");
     }
   }
   ====
@@ -234,11 +238,11 @@ We can make methods even more powerful and more abstract by giving them paramete
     
     public static void main(String args[]) 
     {
-      Song mySong = new Song();
-      mySong.verse("one", "thumb");
-      mySong.chorus();
-      mySong.verse("two", "shoe");
-      mySong.chorus();
+        Song mySong = new Song();
+        mySong.verse("one", "thumb");
+        mySong.chorus();
+        mySong.verse("two", "shoe");
+        mySong.chorus();
     }
   }
   ====
@@ -316,23 +320,25 @@ Methods can also return values of any type back to the calling method. The calli
      */
      public boolean findLetter(String letter, String text)
      {
-        boolean flag = false;
-        for(int i=0; i < text.length(); i++) {
-            if (text.substring(i, i+1).equalsIgnoreCase(letter))
-	        {
+         boolean flag = false;
+         for(int i=0; i < text.length(); i++) 
+         {
+             if (text.substring(i, i+1).equalsIgnoreCase(letter))
+	         {
                 flag = true;
-	        }
-        }
-        return flag;
-     }
-    public static void main(String args[]) 
-    {
-      StringFind test = new StringFind();
-      String message = "Apples and Oranges";
-      String letter = "p";
-      System.out.println("Does " + message +  " contain a " + letter + "?");
-      System.out.println( test.findLetter(letter, message) ); 
-    }
+	         }
+         }
+         return flag;
+      }
+    
+      public static void main(String args[]) 
+      {
+          StringFind test = new StringFind();
+          String message = "Apples and Oranges";
+          String letter = "p";
+          System.out.println("Does " + message +  " contain a " + letter + "?");
+          System.out.println( test.findLetter(letter, message) ); 
+      }
   }
   ====
   import static org.junit.Assert.*;
@@ -438,17 +444,17 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
   ~~~~
   public class Song 
   { 
-    // Create at least 1 method called verse that takes 2 parameters
-    // that can be used to print out the verses of the song The Ants Go Marching
-    
-    
-    public static void main(String args[]) 
-    {
-      // Create a Song object and call its method(s) to print out 
-      // the verses of The Ants Go Marching
-      // There should be atleast 1 method called verse that takes 2 arguments.
-    
-    
+     // Create at least 1 method called verse that takes 2 parameters
+     // that can be used to print out the verses of the song The Ants Go Marching
+     
+     
+     public static void main(String args[]) 
+     {
+         // Create a Song object and call its method(s) to print out 
+         // the verses of The Ants Go Marching
+         // There should be atleast 1 method called verse that takes 2 arguments.
+          
+          
     }
   }
   ====
