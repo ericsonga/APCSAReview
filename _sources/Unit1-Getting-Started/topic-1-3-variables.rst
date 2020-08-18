@@ -499,16 +499,15 @@ The convention in Java and many programming languages is to always start a varia
    :language: java
    :autograde: unittest   
 
-   Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  Run the code below to see the difference.
+   Java is case sensitive so ``gameScore`` and ``gamescore`` are not the same.  Run and fix the code below to use the right variable name.
    ~~~~
    public class CaseSensitiveClass
    {
       public static void main(String[] args)
       {
-        int playerScore = 0; // variable name using camel case
-        int playerscore = 1; // this is a different variable
-        System.out.println("playerScore is " + playerScore);
-        System.out.println("playerscore is " + playerscore);
+        int gameScore = 0; // variable name using camel case
+        // this is using a different variable without camel case!
+        System.out.println("gameScore is " + gamescore);
       }
    }
    
@@ -523,7 +522,7 @@ The convention in Java and many programming languages is to always start a varia
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "playerScore is 0\nplayerscore is 1";
+            String expect = "gameScore is 0\n";
             boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }

@@ -98,9 +98,9 @@ Index
 * :ref:`genindex`
 * :ref:`search`
 
-.. |errata form| raw:: html
+.. |errors form| raw:: html
 
-   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">errata form</a>
+   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">errors form</a>
    
 .. |interest form| raw:: html
 
@@ -114,9 +114,9 @@ Index
 
    <a href="http://csawesome.org" target="_blank" style="text-decoration:underline">csawesome.org</a>   
    
-If you see errors or bugs, please report them with this |errata form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
+If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 8/14/2020)
+(last revised 8/18/2020)
 
 © Copyright 2015 Barb Ericson, Univ. Michigan, 2019 revised by Beryl Hoffman (Elms College). Created using `Runestone  <http://runestone.academy>`_.
 
