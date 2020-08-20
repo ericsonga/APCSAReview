@@ -79,38 +79,217 @@ Assume that ``fillBlock`` and ``encryptBlock`` methods work as specified. Soluti
 
 How to Solve This
 --------------------
-1. You will need to loop through the message. What type of loop will you use?
-2. Remember that you will need to call the ``encryptBlock`` method.
+.. shortanswer:: routecipherb_short
+
+   Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.
+
+This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.
+Click on the buttons to reveal the questions.
+
+.. reveal:: FRQRouteCipherB_1
+   :showtitle: Reveal Loop Hint
+   :hidetitle: Hide Loop Hint
+
+   To solve this problem, you have a message that you need to process and concatenate. Do you need to use a loop for this?
+
+   .. reveal:: FRQRouteCipherB_1.5
+      :showtitle: Reveal Loop Type Problem
+      :hidetitle: Hide Loop Type Problem
+
+      .. mchoice:: FRQRouteCipherB_1.5MC
+        :answer_a: while
+        :answer_b: if
+        :answer_c: for
+        :answer_d: switch statement
+        :correct: a
+        :feedback_a: Correct!
+        :feedback_b: This would not work in this situation.
+        :feedback_c: This would not work in this situation.
+        :feedback_d: This would not work in this situation.
+
+        What type of loop could you use?
+
+   .. reveal:: FRQRouteCipherB_1.75
+      :showtitle: Reveal Alternate Loop Type Problem
+      :hidetitle: Hide Loop Type Problem
+
+      .. mchoice:: FRQRouteCipherB_1.75MC
+        :answer_a: switch
+        :answer_b: if
+        :answer_c: for
+        :answer_d: You can solve this without a loop
+        :answer_e: for each
+        :correct: d
+        :feedback_a: This would not work in this situation.
+        :feedback_b: This would not work in this situation.
+        :feedback_c: This would not work in this situation.
+        :feedback_d: Correct!
+        :feedback_e: This would not work in this situation.
+
+         Could you solve this problem with a different kind of loop?
+
+This problem can be very succinctly solved using recursion. If you are unfamiliar with recursion do not worry if the recursive solution does not make immediate sense.
+It is not necessary that you understand recursion at this point however, once you have completed unit 10 which covers the basics of recursion, feel free to return to this
+question to practice working through the recursive solution.
 
 The Algorithm
 -------------------
-.. parsonsprob:: RouteCipherB
-  :numbered: left
-  :adaptive:
+.. reveal:: routecipherB_recursive
+   :showtitle: Reveal Recursion Exercises
+   :hidetitle: Hide Recursion Exercises
 
-  The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-  -----
-  public String encryptMessage(String message) {
-    String encryptedMessage = "";
-    int chunkSize = this.numRows * this.numCols;
-  =====
-    while (message.length() > 0) {
-  =====
-      if (chunkSize > message.length()) {
-  =====
-        chunkSize = message.length();
-  =====
-      } // end if
-  =====
-      fillBlock(message);
-      encryptedMessage += encryptBlock();
-      message = message.substring(chunkSize);
-  =====
-    } // end while
-  =====
-    return encryptedMessage;
-  =====
-  } // end method
+   .. mchoice:: FRQRouteCipherBrecur_1
+     :answer_a: if (message.length() == 0) { return ""; }
+     :answer_b: if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
+     :answer_c: return "";
+     :answer_d: return encryptBlock();
+     :correct: a
+     :feedback_a: Correct!
+     :feedback_b: This would not work in this situation.
+     :feedback_c: This would not work in this situation.
+     :feedback_d: This would not work in this situation.
+
+     What is your base case?
+
+   .. mchoice:: FRQRouteCipherBrecur_2
+     :answer_a: Head
+     :answer_b: Tail
+     :answer_c: Tree
+     :answer_d: Body
+     :correct: b
+     :feedback_a: The recursive call is not the first statement in the method hence it is not head recursive.
+     :feedback_b: Correct!
+     :feedback_c: We do not make multiple recursive calls so the method is not tree recursive.
+     :feedback_d: This is not a term that describes recursion.
+
+     What kind of recursion will you use?
+
+   .. mchoice:: FRQRouteCipherBrecur_3
+     :answer_a: return "";
+     :answer_b: return (encryptMessage(message.substring(this.numRows * this.numCols)));
+     :answer_c: return (encryptBlock());
+     :answer_d:  return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
+     :correct: d
+     :feedback_a: This is the return statement of the base case.
+     :feedback_b: This does not return the correct results
+     :feedback_c: This is the return statement of one of the conditional base cases.
+     :feedback_d: Correct!
+
+     What is your tail recursive call?
+
+If you still feel unsure of the recursive solution, it is recommended that you return to the recursion unit to do some more practice as this problem is quite challenging to solve recursively.
+
+   .. reveal:: routecipherB_rec??
+      :showtitle: Reveal Recursion Solution Exercise
+      :hidetitle: Hide Recursion Solution Exercise
+
+      .. parsonsprob:: RouteCipherB_recurpar
+        :numbered: left
+        :adaptive:
+
+        The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+        -----
+        public String encryptMessage(String message) {
+        =====
+          if (message.length() == 0) { return ""; }
+        =====
+          fillBlock(message);
+        =====
+          if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
+        =====
+          return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
+        =====
+        } // end method
+
+.. reveal:: routecipherB_reg
+   :showtitle: Reveal Non Recursive Exercises
+   :hidetitle: Hide Non Recursive Exercises
+
+   .. mchoice:: FRQRouteCipherBnorm_1
+     :answer_a: while (message.substring(k, k + 1) < 0)
+     :answer_b: while (message.substring(k, k + 1) > 0)
+     :answer_c: while (message.length() < 0)
+     :answer_d: while (message.length() > 0)
+     :correct: d
+     :feedback_a: You do not need to apply that formula here.
+     :feedback_b: You do not need to apply that formula here.
+     :feedback_c: The inequality is backwards.
+     :feedback_d: Correct!
+
+     What should your while statement conditional be?
+
+   .. mchoice:: FRQRouteCipherBnorm_2
+     :answer_a: int chunkSize = this.numRows * this.numCols;
+     :answer_b: int chunkSize = this.numRows + this.numCols;
+     :answer_c: int chunkSize = this.numRows - this.numCols;
+     :answer_d: int chunkSize = this.numRows / this.numCols;
+     :correct: a
+     :feedback_a: Correct!
+     :feedback_b: This does not give you the correct result.
+     :feedback_c: This does not give you the correct result.
+     :feedback_d: This does not give you the correct result.
+
+     How can you determine how large the "chunk size" should be?
+
+   .. mchoice:: FRQRouteCipherBnorm_3
+     :answer_a: chunkSize = message.substring(chunkSize);
+     :answer_b: chunkSize = += encryptBlock();
+     :answer_c: chunkSize = message.length();
+     :answer_d: chunkSize = fillBlock(message);
+     :correct: c
+     :feedback_a: This does not give you the correct result.
+     :feedback_b: This does not give you the correct result.
+     :feedback_c: Correct!
+     :feedback_d: This does not give you the correct result.
+
+     Given that chunkSize is greater that messaeg.lenght(), what should the code execute?
+
+   .. mchoice:: FRQRouteCipherBnorm_4
+     :answer_a: encryptMessage(message);
+     :answer_b: fillBlock(message);
+     :answer_c: RouteCipher(message);
+     :answer_d: encryptBlock(message);
+     :correct: b
+     :feedback_a: This is the method we are trying to write!
+     :feedback_b: Correct!
+     :feedback_c: RouteCipher is the class of the method we are currently writing.
+     :feedback_d: We need to call a different method before we call encryptBlock()
+
+     What method needs to be called on message before you can call "encryptBlock()"?
+
+Below is a mixed up version of the correct solution hinted at by the previous questions.
+
+   .. reveal:: routecipherB_pars_sol
+      :showtitle: Reveal Possible Solution Exercise
+      :hidetitle: Hide Possible Solution Problem
+
+       .. parsonsprob:: RouteCipherB
+         :numbered: left
+         :adaptive:
+
+         The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+         -----
+         public String encryptMessage(String message) {
+           String encryptedMessage = "";
+           int chunkSize = this.numRows * this.numCols;
+         =====
+           while (message.length() > 0) {
+         =====
+             if (chunkSize > message.length()) {
+         =====
+               chunkSize = message.length();
+         =====
+             } // end if
+         =====
+             fillBlock(message);
+             encryptedMessage += encryptBlock();
+             message = message.substring(chunkSize);
+         =====
+           } // end while
+         =====
+           return encryptedMessage;
+         =====
+         } // end method
 
 Solve Part B
 ------------
@@ -118,7 +297,7 @@ Complete method ``encryptMessage`` below.
 
 .. activecode:: FRQRouteCipherB
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    public class RouteCipher
    {
@@ -204,13 +383,13 @@ Complete method ``encryptMessage`` below.
        public void testMain() throws IOException
        {
          String output = getMethodOutput("main");
-         String expect = "Looks like your code works well!\n" ;  
+         String expect = "Looks like your code works well!\n" ;
 
          boolean passed = getResults(expect, output, "Expected output from main");
          assertTrue(passed);
        }
 
-     @Test 
+     @Test
        public void test1()
        {
          RouteCipher ciph = new RouteCipher(2, 3);
@@ -219,6 +398,5 @@ Complete method ``encryptMessage`` below.
 
          boolean passed = getResults("true", result, "method encryptMessage works");
          assertTrue(passed);
-       }  
+       }
      }
-
