@@ -94,47 +94,203 @@ The following expression may be used to obtain a single-character string at posi
 
 How to Solve This
 --------------------
-1. You will need to access each element in the ``letterBlock`` array. What type of loop will you use?
-2. The ``letterBlock`` array has two dimensions. How many loops will you use?
-3. Remember the String methods.
+.. shortanswer:: routeciphera_short
+
+   Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.
+
+This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.
+Click on the buttons to reveal the questions.
+
+.. reveal:: routeciphera_1
+   :showtitle: Reveal Loop Hint
+   :hidetitle: Hide Loop Hint
+
+   You will need to access each element in the ``letterBlock`` array. What type of loop will you use?
+
+   .. reveal:: routeciphera_1.5
+      :showtitle: Reveal Loop Type Problem
+      :hidetitle: Hide Loop Type Problem
+
+      .. mchoice:: routeciphera_1.5MC
+        :answer_a: for each
+        :answer_b: if
+        :answer_c: for
+        :answer_d: while
+        :answer_e: switch statement
+        :correct: c
+        :feedback_a: We need to utilize elements by indexing them so a for each loop will not work
+        :feedback_b: This is not a type of loop
+        :feedback_c: Correct!
+        :feedback_d: Although this could would, we would need some kind of tracker variable to allow use to count indexes which would be more easily accomplished by a different loop.
+        :feedback_e: This would not work in this situation.
+
+        What type of loop should you use?
+
+   The ``letterBlock`` array has two dimensions. How many loops will you use?
+
+   .. reveal:: routeciphera_1.75
+      :showtitle: Reveal Loop Amount Problem
+      :hidetitle: Hide Loop Amount Problem
+
+      .. mchoice:: routeciphera_1.75MC
+        :answer_a: 1
+        :answer_b: 2, nested
+        :answer_c: 2, un-nested
+        :answer_d: 3, un-nested
+        :correct: b
+        :feedback_a: This would not correctly iterate through the 2D array
+        :feedback_b: Correct!
+        :feedback_c: This would not correctly iterate through the 2D array
+        :feedback_d: This would not correctly iterate through the 2D array
+
+        How many Loops should you use?
+
+.. reveal:: routeciphera_2
+   :showtitle: Reveal Outer Bounds Problem
+   :hidetitle: Hide Outer Bounds Problem
+
+   .. mchoice:: routeciphera_2MC
+     :answer_a: numRows
+     :answer_b: numCols
+     :answer_c: str.length()
+     :answer_d: str[0].length()
+     :correct: a
+     :feedback_a: Correct!
+     :feedback_b: No, numCols finds the width and we are iterating through this in row-major order.
+     :feedback_c: This finds us the length of the string but the array is not based on the string length.
+     :feedback_d: Strings aren't defined under the '[]' operator and str is not a 2D array so this would return an error.
+
+     What can you use to set the outer bound while you iterate through your 2D array?
+
+.. reveal:: routeciphera_3
+   :showtitle: Reveal Inner Bounds Problem
+   :hidetitle: Hide Inner Bounds Problem
+
+   .. mchoice:: routeciphera_3MC
+     :answer_a: numRows
+     :answer_b: numCols
+     :answer_c: str.length()
+     :answer_d: str[0].length()
+     :correct: b
+     :feedback_a: No, numRows finds the width and should not be used as the inner bound because we are iterating through the array in row-major order.
+     :feedback_b: Correct!
+     :feedback_c: This finds us the length of the string but the array is not based on the string length.
+     :feedback_d: Strings aren't defined under the '[]' operator and str is not a 2D array so this would return an error.
+
+     What can you use to set the outer bound while you iterate through your 2D array?
+
+.. reveal:: routeciphera_4
+   :showtitle: Reveal String Method Problem
+   :hidetitle: Hide String Method Problem
+
+   .. mchoice:: routeciphera_4MC
+     :answer_a: str.length()
+     :answer_b: str(lowerbound, upperbound)
+     :answer_c: str.subsection(lowerbound, upperbound)
+     :answer_d: str.substring(lowerbound, upperbound)
+     :correct: d
+     :feedback_a: This does not return a string
+     :feedback_b: This is not a valid string method
+     :feedback_c: This is not a valid string method
+     :feedback_d: Correct!
+
+     Which ``String`` method can you use to access partial or full strings within another string?
 
 The Algorithm
 -------------------
-.. parsonsprob:: RouteCipherA
-  :numbered: left
-  :adaptive: 
+.. reveal:: routeciphera_5
+   :showtitle: Reveal Access Formula Problem
+   :hidetitle: Hide Access Formula Problem
 
-  The method fillBlock below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-  -----
-  public void fillBlock(String str) {
-    int pos = 0;
-  =====
-    for (int r = 0; r < this.numRows; r++ ) {
-  =====
-        for (int c = 0; c < this.numCols; c++ ) {
-  =====
-            if (pos < str.length()) {
-  =====
-                String subStr = str.substring(pos, pos+1);
-                this.letterBlock[r][c] = subStr;
-                pos++;
-  =====
-            } else {
-                this.letterBlock[r][c] = "A";
-            } // end else block
-  =====
-        } // end inner for
-  =====
-    } // end outer for
-  =====
-  } // end method
+   .. mchoice:: routeciphera_5MC
+     :answer_a:  str.substring(k, k)
+     :answer_b: str.substring(k + 1, k + 1)
+     :answer_c: str.substring(k, k + 1)
+     :answer_d: str.substring(k + 1, k)
+     :correct: c
+     :feedback_a: This will not return the correct char correctly
+     :feedback_b: This will not return the correct char correctly
+     :feedback_c: Correct!
+     :feedback_d: This will not return the correct char correctly
 
-Solve Part A
-------------
+     What is the formula for obtaining a single-character string at position ``k`` of the string ``str``?
+
+.. reveal:: routeciphera_5.5
+   :showtitle: Reveal Formula Variable Problem
+   :hidetitle: Hide Formula Variable Problem
+
+   .. mchoice:: routeciphera_5.5MC
+     :answer_a: str.substring(c + r * this.numCols, 1 + c + r * this.numCols)
+     :answer_b: str.substring(c - r * this.numCols, 1 + c - r * this.numCols)
+     :answer_c: str.substring(c + r, 1 + c + r)
+     :answer_d: str.substring(c - r, 1 + c - r)
+     :correct: a
+     :feedback_a: Correct!
+     :feedback_b: Try using this formula to find a given character of one of the example strings. Does it work? Try coming up with some of your own examples to figure out the forumla for k.
+     :feedback_c: Try using this formula to find a given character of one of the example strings. Does it work? Try coming up with some of your own examples to figure out the forumla for k.
+     :feedback_d: Try using this formula to find a given character of one of the example strings. Does it work? Try coming up with some of your own examples to figure out the forumla for k.
+
+     How can one find the aforementioned ``k``? (this is hard to visualize, try drawing out some examples)
+
+.. reveal:: routeciphera_6
+   :showtitle: Reveal Conditional Problem
+   :hidetitle: Hide Conditional Problem
+
+   .. mchoice:: routeciphera_6MC
+     :answer_a: if (str.length() < (c + (r * this.numCols)))
+     :answer_b: if (str.length() > (c + (r * this.numCols)))
+     :answer_c: if (str.length() > numRows * numCols)
+     :answer_d: if (str.length() < numRows * numCols)
+     :correct: b
+     :feedback_a: This will not return the correct boolean
+     :feedback_b: Correct!
+     :feedback_c: We need to determine whether or not to ignore trialing character at each step, not just check for it once at the beginning.
+     :feedback_d: We need to determine whether or not to ignore trialing character at each step, not just check for it once at the beginning.
+
+     What conditional can you write to make sure trailing characters are ignored?
+
+The exercises above have been guiding you towards just one of many possible solutions. To read through a different solution, click on the Reveal
+button below and complete the problem.
+
+.. reveal:: routecipherA_pars_sol
+   :showtitle: Reveal Possible Solution Exercise
+   :hidetitle: Hide Possible Solution Problem
+
+    .. parsonsprob:: RouteCipherA
+      :numbered: left
+      :adaptive:
+
+      The method fillBlock below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      -----
+      public void fillBlock(String str) {
+        int pos = 0;
+      =====
+        for (int r = 0; r < this.numRows; r++ ) {
+      =====
+            for (int c = 0; c < this.numCols; c++ ) {
+      =====
+                if (pos < str.length()) {
+      =====
+                    String subStr = str.substring(pos, pos+1);
+                    this.letterBlock[r][c] = subStr;
+                    pos++;
+      =====
+                } else {
+                    this.letterBlock[r][c] = "A";
+                } // end else block
+      =====
+            } // end inner for
+      =====
+        } // end outer for
+      =====
+      } // end method
+
+Try And Solve It
+--------------------
 
 .. activecode:: FRQRouteCipherA
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    Complete the method ``fillBlock`` below.
    ~~~~
@@ -164,9 +320,9 @@ Solve Part A
      public void fillBlock(String str)
      {
       // Complete this method
-     
-     
-     
+
+
+
      }
 
      /** Extracts encrypted string from letterBlock in column-major order.
@@ -219,14 +375,14 @@ Solve Part A
        public void testMain() throws IOException
        {
          String output = getMethodOutput("main");
-         String expect = "Looks like your code works well!\n" ;  
+         String expect = "Looks like your code works well!\n" ;
 
          boolean passed = getResults(expect, output, "Expected output from main");
          assertTrue(passed);
        }
 
 
-     @Test 
+     @Test
        public void test1()
        {
          RouteCipher ciph = new RouteCipher(3, 4);
@@ -237,4 +393,3 @@ Solve Part A
          assertTrue(passed);
        }
      }
-

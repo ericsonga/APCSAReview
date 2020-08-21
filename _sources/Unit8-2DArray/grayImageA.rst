@@ -156,7 +156,7 @@ When approaching this problem, it can be helpful to look for keywords or hints t
 .. shortanswer:: gray_image_A
 
    Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.
-
+   
 .. reveal:: 2012GreyScale_alg
    :showtitle: Reveal Class Problem
    :hidetitle: Hide Class Problem
