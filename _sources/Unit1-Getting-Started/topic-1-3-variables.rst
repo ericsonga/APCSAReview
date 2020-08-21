@@ -474,7 +474,7 @@ Naming Variables
 
 While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores ``_``. It must be all one word with no spaces. 
 
-You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words see http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html.  
+You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words see https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9.  
 
 The name of the variable should describe the data it holds.  A name like ``score`` helps make your code easier to read. A name like ``x`` is not a good variable name in programming, because it gives no clues as to what kind of data it holds.  Do not name
 your variables crazy things like ``thisIsAReallyLongName``, especially on the AP exam. You want to make your code easy to understand, not harder.  
