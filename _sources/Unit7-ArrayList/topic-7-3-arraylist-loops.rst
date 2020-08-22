@@ -18,7 +18,11 @@
     :width: 35
     :align: middle
     :alt: groupwork
-
+    
+.. image:: ../../_static/time90.png
+    :width: 225
+    :align: right
+    
 Traversing ArrayLists with Loops
 ================================
 
@@ -359,11 +363,11 @@ You can put any kind of Objects into an ArrayList. For example, here is an Array
      // main method for testing
      public static void main(String[] args)
      {
-        ArrayList<Student> roster = new ArrayList<Student>();
-        roster.add(new Student("Skyler", "skyler@sky.com", 123456));
-        roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
-        // Replace this with a for each loop that prints out each student on a separate line
-        System.out.println(roster);
+         ArrayList<Student> roster = new ArrayList<Student>();
+         roster.add(new Student("Skyler", "skyler@sky.com", 123456));
+         roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
+         // Replace this with a for each loop that prints out each student on a separate line
+         System.out.println(roster);
      }
    }
   
@@ -542,18 +546,18 @@ In the class WordPairsList below, you will write the constructor which takes the
    
         public WordPairsList(String[] words) 
         {   
-           // WRITE YOUR CODE HERE
-           // initialize allPairs to an empty ArrayList of WordPair objects
+            // WRITE YOUR CODE HERE
+            // initialize allPairs to an empty ArrayList of WordPair objects
            
-           // nested loops through the words array to add each pair to allPairs
+            // nested loops through the words array to add each pair to allPairs
            
         
         }
    
         public int numMatches() 
         {
-          //Write the code for the second part described below
-          return 0;
+            //Write the code for the second part described below
+            return 0;
         }
         
         public String toString() {

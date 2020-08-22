@@ -19,7 +19,9 @@
     :align: middle
     :alt: groupwork
     
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
 
 Enhanced For-Each Loop for 2D Arrays (Day 2)
 ----------------------------------------------------
@@ -33,7 +35,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
    :language: java
    :autograde: unittest      
    
-   Nested enhanced for loops demo. Click on the CodeLens button to visualize and step through the code.
+   Nested enhanced for loops demo. 
    ~~~~
    public class Average
    {
@@ -169,7 +171,7 @@ You can loop through just part of a 2D array. You can change the starting value 
    :language: java 
    :autograde: unittest      
 
-   Looping through just part of a 2D array. Try the CodeLens button.
+   Looping through just part of a 2D array. 
    ~~~~
    public class Count
    {

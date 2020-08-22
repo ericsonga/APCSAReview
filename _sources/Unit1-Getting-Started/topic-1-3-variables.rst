@@ -338,7 +338,8 @@ When you are printing out variables, you can use the **string concatenation** op
     :click-incorrect:}:endclick:
 
 
-The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
+The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location associated with the variable name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4.  A variable always has to be on the left side of the ``=`` and a value or expression on the right.   
+
    
 |CodingEx| **Coding Exercise:** 
 
@@ -346,7 +347,7 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
    :language: java
    :autograde: unittest   
    
-   This is an example of *assignment dyslexia*, when the coder has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
+   This assignment statement below is in the wrong order. Try to fix it to compile and run.
    ~~~~
    public class Test3
    {
@@ -474,7 +475,7 @@ Naming Variables
 
 While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores ``_``. It must be all one word with no spaces. 
 
-You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words see http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html.  
+You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words see https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9.  
 
 The name of the variable should describe the data it holds.  A name like ``score`` helps make your code easier to read. A name like ``x`` is not a good variable name in programming, because it gives no clues as to what kind of data it holds.  Do not name
 your variables crazy things like ``thisIsAReallyLongName``, especially on the AP exam. You want to make your code easy to understand, not harder.  
@@ -499,16 +500,15 @@ The convention in Java and many programming languages is to always start a varia
    :language: java
    :autograde: unittest   
 
-   Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  Run the code below to see the difference.
+   Java is case sensitive so ``gameScore`` and ``gamescore`` are not the same.  Run and fix the code below to use the right variable name.
    ~~~~
    public class CaseSensitiveClass
    {
       public static void main(String[] args)
       {
-        int playerScore = 0; // variable name using camel case
-        int playerscore = 1; // this is a different variable
-        System.out.println("playerScore is " + playerScore);
-        System.out.println("playerscore is " + playerscore);
+        int gameScore = 0; // variable name using camel case
+        // this is using a different variable without camel case!
+        System.out.println("gameScore is " + gamescore);
       }
    }
    
@@ -523,7 +523,7 @@ The convention in Java and many programming languages is to always start a varia
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "playerScore is 0\nplayerscore is 1";
+            String expect = "gameScore is 0\n";
             boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }

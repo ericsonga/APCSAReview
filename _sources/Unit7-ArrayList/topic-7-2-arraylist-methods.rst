@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
     
 .. raw:: html
 
@@ -37,7 +41,7 @@ ArrayList Methods
 
    <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
    
-The following are the ``ArrayList`` methods that you need to know for the AP CS A exam.  These are included on the |AP CS A Reference Sheet| that you will receive during the exam so you do not need to memorize them. We will look at how these methods work below.
+The following are the ``ArrayList`` methods that you need to know for the AP CS A exam.  These are included on the |AP CS A Reference Sheet| that you will receive during the exam so you do not need to memorize them. The E in the method headers below stands for the type of the element in the ArrayList; this type E can be any Object type. We will look at how these methods work below.
 
     -  **int size()** returns the number of elements in the list
     
@@ -96,14 +100,14 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
    {
       public static void main(String[] args)
       {
-         ArrayList<String> nameList = new ArrayList<String>();
-         nameList.add("Diego");
-         System.out.println(nameList);
-         nameList.add("Grace");
-         System.out.println(nameList);
-         nameList.add("Diego"); 
-         System.out.println(nameList);
-         System.out.println(nameList.size());
+          ArrayList<String> nameList = new ArrayList<String>();
+          nameList.add("Diego");
+          System.out.println(nameList);
+          nameList.add("Grace");
+          System.out.println(nameList);
+          nameList.add("Diego"); 
+          System.out.println(nameList);
+          System.out.println(nameList.size());
       }
    }
    ====
@@ -165,11 +169,11 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
      // main method for testing
      public static void main(String[] args)
      {
-        ArrayList<Student> roster = new ArrayList<Student>();
-        roster.add(new Student("Skyler", "skyler@sky.com", 123456));
-        roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
+         ArrayList<Student> roster = new ArrayList<Student>();
+         roster.add(new Student("Skyler", "skyler@sky.com", 123456));
+         roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
 
-        System.out.println(roster);
+         System.out.println(roster);
      }
    }
   
@@ -512,15 +516,15 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
    {
       public static void main(String[] args)
       {
-         ArrayList<String> nameList = new ArrayList<String>();
-         nameList.add("Diego");
-         nameList.add("Grace");
-         nameList.add("Deja"); 
-         System.out.println(nameList);
-         System.out.println(nameList.get(0));
-         System.out.println(nameList.get(1));
-         nameList.set(1, "John");
-         System.out.println(nameList);         
+          ArrayList<String> nameList = new ArrayList<String>();
+          nameList.add("Diego");
+          nameList.add("Grace");
+          nameList.add("Deja"); 
+          System.out.println(nameList);
+          System.out.println(nameList.get(0));
+          System.out.println(nameList.get(1));
+          nameList.set(1, "John");
+          System.out.println(nameList);         
       }
    }
    ====
@@ -661,30 +665,30 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
    {
       public static void main(String[] args)
       {
-         // Rewrite this code to use an ArrayList instead of an array
-         String[] toDoList = new String[3];
-         toDoList[0] = "Do homework";
-         toDoList[1] = "Help make dinner";
-         toDoList[2] = "Call grandma";
+          // Rewrite this code to use an ArrayList instead of an array
+          String[] toDoList = new String[3];
+          toDoList[0] = "Do homework";
+          toDoList[1] = "Help make dinner";
+          toDoList[2] = "Call grandma";
+          
+          // changing element 1
+          toDoList[1] = "Order pizza";
          
-         // changing element 1
-         toDoList[1] = "Order pizza";
-         
-         System.out.println(toDoList.length + " things to do!");
-         System.out.println("Here's the first thing to do: " 
+          System.out.println(toDoList.length + " things to do!");
+          System.out.println("Here's the first thing to do: " 
               + toDoList[0] );
          
-         // remove item 0 and move everything down 
-         //  (this can be done in 1 command with ArrayList)
-         toDoList[0] = toDoList[1];
-         toDoList[1] = toDoList[2];
-         toDoList[2] = "";
-         
-         System.out.println("Here's the next thing to do: " 
+          // remove item 0 and move everything down 
+          //  (this can be done in 1 command with ArrayList)
+          toDoList[0] = toDoList[1];
+          toDoList[1] = toDoList[2];
+          toDoList[2] = "";
+          
+          System.out.println("Here's the next thing to do: " 
               + toDoList[0] );
               
-         // Why is an ArrayList better than an array for a toDoList?
-         // Answer:
+          // Why is an ArrayList better than an array for a toDoList?
+          // Answer:
       }
    }
    ====

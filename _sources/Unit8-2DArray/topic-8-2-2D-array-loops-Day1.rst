@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
     
 Nested Loops for 2D Arrays (Day 1)
 -----------------------------------
@@ -100,7 +104,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
    :language: java 
    :autograde: unittest
    
-   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Note that an array can be passed in as an argument to a method. Click on the CodeLens button and then next to step through this code in the visualizer.
+   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Note that an array can be passed in as an argument to a method. 
    ~~~~
    public class Test1
    {
@@ -218,7 +222,7 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
    :language: java 
    :autograde: unittest
    
-   What will the following code print out? Try to guess before you run it. Then, step through it with the CodeLens button.
+   What will the following code print out? Try to guess before you run it. 
    ~~~~
    public class ColumnMajorTraversal
    {

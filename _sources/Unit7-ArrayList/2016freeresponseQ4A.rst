@@ -53,38 +53,78 @@ Complete method ``totalLetters`` below.
 How to Solve Part A
 =====================
 
-We need to return the total number of letters for all of the strings in ``wordList``.  We will need to create an
-integer variable to keep track of the number of letters and initialize it to 0.  Then we will loop through all of the strings in ``wordList`` and 
-add the length of the current string to the number of letters.  When the loop is finished we will return the number of letters.
+Click to reveal the algorithm and multiple choice problems that may help you write your solution.
+
+.. reveal:: algorithm_stringFormatterA
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
+
+   We need to return the total number of letters for all of the strings in ``wordList``.  We will need to create an
+   integer variable to keep track of the number of letters and initialize it to 0.  Then we will loop through all of the strings in ``wordList`` and 
+   add the length of the current string to the number of letters.  When the loop is finished we will return the number of letters.
+
+
+.. reveal:: fr_formatter_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
+
+   .. mchoice:: fr_formatter_1
+        :answer_a: while
+        :answer_b: for
+        :answer_c: for-each
+        :correct: c
+        :feedback_a: A while loop is the best choice when you don't know the number of times you need to loop.
+        :feedback_b: You could use a for loop, but there is a more concise option since you are not changing any values of wordList.
+        :feedback_c: Correct! A for-each loop is the most concise way to access every string in wordList to keep track of numLetters
+
+        Which loop would be best for this problem?
+
+   .. mchoice:: fr_formatter_2
+        :answer_a: str.size()
+        :answer_b: str.length()
+        :answer_c: str.length
+        :correct: b
+        :feedback_a: .size() is not the correct method call to find the length of a string. .size() is used with ArrayLists. Try again!
+        :feedback_b: Correct! str.length() will return the length of String str.
+        :feedback_c: Almost! length() is a method call, so parentheses are required.
+
+        What is the correct way to access the length of a String str?
+
 
 
 Put the Code in Order 
 ======================
 
-.. parsonsprob:: 2016Q4A
-   :numbered: left
-   :adaptive:
+.. reveal:: stringFormatterA_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
 
-   The following has the correct code to solve this problem, but also contains extra code that isn't needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.
-   -----
-   public static int totalLetters(List<String> wordList)
-   {
-   =====
-       int numLetters = 0; 
-   =====
-       for (String s : wordList)
-   =====
-       for (String s in wordList) #paired
-   =====
-           numLetters = numLetters + s.length();
-   =====
-           numLetters = numLetters + wordList.length(); #paired
-   =====
-       return numLetters;
-   =====
-       return numletters; #paired
-   =====
-   }
+    .. parsonsprob:: stringFormatterA
+      :numbered: left
+      :adaptive:
+
+      The following has the correct code to solve this problem, but also contains extra code that isn't needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.
+      -----
+      public static int totalLetters(List<String> wordList)
+      {
+      =====
+         int numLetters = 0; 
+      =====
+         for (String s : wordList)
+      =====
+         for (String s in wordList) #paired
+      =====
+            numLetters = numLetters + s.length();
+      =====
+            numLetters = numLetters + wordList.length(); #paired
+      =====
+         return numLetters;
+      =====
+         return numletters; #paired
+      =====
+      } //end method
 
 Write the Code
 ==================

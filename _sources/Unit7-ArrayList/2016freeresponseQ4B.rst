@@ -51,40 +51,77 @@ Complete method ``basicGapWidth`` below.
    
 How to Solve Part B
 =====================
+
+Click to reveal the algorithm and multiple choice questions that may help you write your solution.
+
+.. reveal:: algorithm_stringFormatterB
+   :showtitle: Reveal Algorithm
+   :hidetitle: Hide Algorithm
+   :optional:
    
-To calculate ``basicGapWidth`` we need to find the number of spaces left after the characters fill the ``formattedLen`` and divide that 
-by the number of gaps between words.  We can use ``totalLetters`` (written in part A) to get the total number of characters for all the strings in ``wordList``. 
-The number of gaps between words is the number of words in ``wordList`` minus 1.  The ``basicGapWidth`` is the number of spaces left divided by the number of gaps between words.  Remember that if we do an integer division any fractional part will be thrown away, which is what we want to happen in this case.
+   To calculate ``basicGapWidth`` we need to find the number of spaces left after the characters fill the ``formattedLen`` and divide that 
+   by the number of gaps between words.  We can use ``totalLetters`` (written in part A) to get the total number of characters for all the strings in ``wordList``. 
+   The number of gaps between words is the number of words in ``wordList`` minus 1.  The ``basicGapWidth`` is the number of spaces left divided by the number of gaps between words.  Remember that if we do an integer division any fractional part will be thrown away, which is what we want to happen in this case.
 
-For example, if ``formattedLen`` is 20 and ``wordList`` is ["AP", "COMP", "SCI", "ROCKS"] then the number of spaces left is 20 - 14 = 6 and the number of gaps is 4 - 1 = 3.  The result is 6 / 3 = 2. 
+   For example, if ``formattedLen`` is 20 and ``wordList`` is ["AP", "COMP", "SCI", "ROCKS"] then the number of spaces left is 20 - 14 = 6 and the number of gaps is 4 - 1 = 3.  The result is 6 / 3 = 2. 
 
-If ``formattedLen`` is 20 and ``wordList`` is ["GREEN", "EGGS", "AND", "HAM"] then the number of spaces left is 20 - 15 = 5 and the number of gaps is 4 - 1 = 3 so 5 / 3 = 1.  There will be two extra spaces left over.   
+   If ``formattedLen`` is 20 and ``wordList`` is ["GREEN", "EGGS", "AND", "HAM"] then the number of spaces left is 20 - 15 = 5 and the number of gaps is 4 - 1 = 3 so 5 / 3 = 1.  There will be two extra spaces left over.   
 
-If ``formattedLen`` is 20 and ``wordList`` is ["BEACH", "BALL"] then the number of spaces left is 20 - 9 = 11 and the number of gaps is 2 - 1 = 1 so 11 / 1 = 11.  
+   If ``formattedLen`` is 20 and ``wordList`` is ["BEACH", "BALL"] then the number of spaces left is 20 - 9 = 11 and the number of gaps is 2 - 1 = 1 so 11 / 1 = 11.  
+
+.. reveal:: fr_formatterb_r1
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
+   :optional:
+
+   .. mchoice:: fr_formatterb_1
+        :answer_a: list.length()
+        :answer_b: list.size
+        :answer_c: list.size()
+        :correct: c
+        :feedback_a: .length() is used with Arrays to return the number of items. Try again!
+        :feedback_b: .size is a method call, so parentheses are required.
+        :feedback_c: Correct! ArrayLists use .size() to return the number of items in a list.
+
+        How do you access the number of items in an ArrayList<String> called list?
+
+   .. mchoice:: fr_formatterb_2
+        :answer_a: True
+        :answer_b: False
+        :correct: b
+        :feedback_a: Incorrect. You do not need to access any of the individual items in wordList.
+        :feedback_b: Correct! All you need is the size of wordList, which you can find without a loop.
+
+        True or False: A loop is required to correctly solve this problem.
 
 Put the Code in Order 
 ======================
 
-.. parsonsprob:: 2016Q4B
-   :numbered: left
-   :adaptive: 
+.. reveal:: stringFormatterB_parsons
+    :showtitle: Reveal Mixed Up Code
+    :hidetitle: Hide Mixed Up Code
 
-   The following has the correct code to solve this problem, but also contains extra code that isn't needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.
-   -----
-   public static int basicGapWidth(List<String> wordList, 
-                                   int formattedLen) 
-   =====
-   {
-   =====
-       int numSpaces = formattedLen - totalLetters(wordList);
-       int numGaps = wordList.size() - 1;
-   =====
-       int numSpaces = formattedLen + totalLetters(wordList); #paired
-       int numGaps = wordList.length - 1; 
-   =====
-       return numSpaces / numGaps;
-   =====
-   }
+    .. parsonsprob:: stringFormatterB
+      :numbered: left
+      :adaptive:
+
+      The following has the correct code to solve this problem, but also contains extra code that isn't needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the <i>Check Me</i> button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.
+      -----
+      public static int basicGapWidth(List<String> wordList, 
+                                      int formattedLen) 
+      =====
+      {
+      =====
+         int numSpaces = formattedLen - totalLetters(wordList);
+         int numGaps = wordList.size() - 1;
+      =====
+         int numSpaces = formattedLen + totalLetters(wordList); #paired
+         int numGaps = wordList.length - 1; 
+      =====
+         return numSpaces / numGaps;
+      =====
+      } //end method
+  
              
    
 Write the Code

@@ -53,15 +53,15 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'AP CS A Java 2019'
-copyright = '2015 Barb Ericson, 2019 revised by Beryl Hoffman Mobile CSP'
+project = 'CSAwesome'
+copyright = '2015 Barb Ericson, 2019 revised by Beryl Hoffman'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '2019'
+version = '2020'
 # The full version, including alpha/beta/rc tags.
 release = 'beta'
 
@@ -121,7 +121,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "AP CS Awesome!",
+    'navbar_title': "AP CSAwesome!",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Units",
@@ -169,10 +169,10 @@ html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'AP CS Awesome'
+html_title = 'AP CSAwesome'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='AP CS Awesome'
+html_short_title ='AP CSAwesome'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
