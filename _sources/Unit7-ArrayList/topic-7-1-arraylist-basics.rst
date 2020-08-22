@@ -18,6 +18,10 @@
     :width: 35
     :align: middle
     :alt: groupwork
+
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
     
 Intro to ArrayLists
 =======================
@@ -321,19 +325,19 @@ You can add values to an ArrayList by using its **add** method, described in det
    {
       public static void main(String[] args)
       {
-         ArrayList<String> shoppingList = new ArrayList<String>();
-         System.out.println("Size: " + shoppingList.size());
-         shoppingList.add("carrots");
-         System.out.println(shoppingList);
-         shoppingList.add("bread");
-         System.out.println(shoppingList);
-         shoppingList.add("chocolate"); 
-         System.out.println(shoppingList);
-         System.out.println("Size: " + shoppingList.size());
-         ArrayList<Integer> quantities = new ArrayList<Integer>();
-         quantities.add(2);
-         quantities.add(4);
-         System.out.println(quantities);
+          ArrayList<String> shoppingList = new ArrayList<String>();
+          System.out.println("Size: " + shoppingList.size());
+          shoppingList.add("carrots");
+          System.out.println(shoppingList);
+          shoppingList.add("bread");
+          System.out.println(shoppingList);
+          shoppingList.add("chocolate"); 
+          System.out.println(shoppingList);
+          System.out.println("Size: " + shoppingList.size());
+          ArrayList<Integer> quantities = new ArrayList<Integer>();
+          quantities.add(2);
+          quantities.add(4);
+          System.out.println(quantities);
      }
    }
    ====

@@ -19,8 +19,9 @@
     :align: middle
     :alt: groupwork
 
-
-
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
   
 Set Value(s) in a 2D Array (Day 2)
 ----------------------------------------
@@ -43,13 +44,13 @@ When arrays are created their contents are automatically initialized to 0 for nu
 
 |CodingEx| **Coding Exercise**
 
-Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use the |Java visualizer| with the Code Lens button to see what the values are after this code runs. Edit the code to add in an extra row to the seatingChart and add your name and a friend's name in the columns of this extra row using assignment statements.
+Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use the |Java visualizer| to see what the values are after this code runs. Edit the code to add in an extra row to the seatingChart and add your name and a friend's name in the columns of this extra row using assignment statements.
 
 .. activecode:: 2DArraySet
   :language: java
   :autograde: unittest   
   
-  Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows. Use the CodeLens button to see the contents of the array. 
+  Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows. 
   ~~~~
   public class TwoDArraySet 
   {

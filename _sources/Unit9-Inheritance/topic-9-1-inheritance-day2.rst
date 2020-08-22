@@ -20,6 +20,10 @@
     :align: middle
     :alt: groupwork
 
+.. image:: ../../_static/time45.png
+    :width: 250
+    :align: right 
+    
 is-a vs. has-a (Day 2)
 ---------------------------------------
 

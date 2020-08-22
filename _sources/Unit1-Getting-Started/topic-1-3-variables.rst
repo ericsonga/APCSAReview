@@ -338,7 +338,8 @@ When you are printing out variables, you can use the **string concatenation** op
     :click-incorrect:}:endclick:
 
 
-The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
+The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location associated with the variable name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4.  A variable always has to be on the left side of the ``=`` and a value or expression on the right.   
+
    
 |CodingEx| **Coding Exercise:** 
 
@@ -346,7 +347,7 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
    :language: java
    :autograde: unittest   
    
-   This is an example of *assignment dyslexia*, when the coder has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
+   This assignment statement below is in the wrong order. Try to fix it to compile and run.
    ~~~~
    public class Test3
    {

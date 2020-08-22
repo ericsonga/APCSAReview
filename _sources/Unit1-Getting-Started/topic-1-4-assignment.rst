@@ -267,7 +267,7 @@ Java uses the operator **==** to test if the value on the left is equal to the v
 
 .. note::
 
-   When Java sees you doing integer division (or any operation with integers) it assumes you want an integer result so it throws away anything after the decimal point in the answer, essentially rounding down the answer to a whole number. If you need a double answer, you should make at least one of the values in the expression a double like 2.0.
+   When Java sees you doing integer division (or any operation with integers) it assumes you want an integer result so it throws away anything after the decimal point in the answer. If you need a double answer, you should make at least one of the values in the expression a double like 2.0.
 
    
 With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
@@ -515,7 +515,7 @@ Summary
 
 - The arithmetic operators consist of +, -, \* , /, and % (modulo for the remainder in division).
 
-- An arithmetic operation that uses two int values will evaluate to an int value. With integer division, any decimal part in the result will be thrown away, essentially rounding down the answer to a whole number.
+- An arithmetic operation that uses two int values will evaluate to an int value. With integer division, any decimal part in the result will be thrown away.
 
 - An arithmetic operation that uses at least one double value will evaluate to a double value.
 
@@ -547,7 +547,7 @@ The following is a 2019 AP CSA sample question.
    :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence. 
    :feedback_b: Don't forget that division and multiplication will be done first due to operator precedence.
    :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).   
-   :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int result where it is rounded down to the nearest int.
+   :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.
    :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
    
    Consider the following code segment.

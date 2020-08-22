@@ -128,12 +128,15 @@ Click on the buttons to reveal the questions.
 
          Could you solve this problem with a different kind of loop?
 
+
+
+Alternate Recursive Solution
+-----------------------------
+
 This problem can be very succinctly solved using recursion. If you are unfamiliar with recursion do not worry if the recursive solution does not make immediate sense.
 It is not necessary that you understand recursion at this point however, once you have completed unit 10 which covers the basics of recursion, feel free to return to this
 question to practice working through the recursive solution.
 
-The Algorithm
--------------------
 .. reveal:: routecipherB_recursive
    :showtitle: Reveal Recursion Exercises
    :hidetitle: Hide Recursion Exercises
@@ -177,9 +180,10 @@ The Algorithm
 
      What is your tail recursive call?
 
+
 If you still feel unsure of the recursive solution, it is recommended that you return to the recursion unit to do some more practice as this problem is quite challenging to solve recursively.
 
-   .. reveal:: routecipherB_rec??
+.. reveal:: routecipherB_rec??
       :showtitle: Reveal Recursion Solution Exercise
       :hidetitle: Hide Recursion Solution Exercise
 
@@ -259,7 +263,7 @@ If you still feel unsure of the recursive solution, it is recommended that you r
 
 Below is a mixed up version of the correct solution hinted at by the previous questions.
 
-   .. reveal:: routecipherB_pars_sol
+.. reveal:: routecipherB_pars_sol
       :showtitle: Reveal Possible Solution Exercise
       :hidetitle: Hide Possible Solution Problem
 
