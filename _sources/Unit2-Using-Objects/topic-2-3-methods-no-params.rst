@@ -205,7 +205,7 @@ Procedural Abstraction
 
 **Procedural abstraction** allows a programmer to use a method and not worry about the details of how it exactly works. For example, we know that if we hit the brakes, the car will stop, and we can still use the brakes even if we don't really know how they work.
 
-You will learn to write your own methods in Unit 5. In this unit, you should be able to use methods already written for you and figure out what they do. When we use methods for a class in a library, we can look up the **method signature** (or **method header**), which is the method name followed by a paramatere list, in its documentation. For example, here is a ``Student`` class with a method signature ``public void print()`` which has an empty parameter list with no parameters. Methods are defined after the instance variables (attributes) and constructors in a class.
+You will learn to write your own methods in Unit 5. In this unit, you should be able to use methods already written for you and figure out what they do. When we use methods for a class in a library, we can look up the **method signature** (or **method header**), which is the method name followed by a parameter list, in its documentation. For example, here is a ``Student`` class with a method signature ``public void print()`` which has an empty parameter list with no parameters. Methods are defined after the instance variables (attributes) and constructors in a class.
 
 
 .. figure:: Figures/StudentClass.png
