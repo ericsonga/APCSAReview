@@ -228,7 +228,7 @@ Java uses the operator **==** to test if the value on the left is equal to the v
    :language: java
    :autograde: unittest      
    
-   Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn't surprising that it prints 0?  See the note below.
+   Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn't it surprising that it prints 0?  See the note below.
    ~~~~
    public class Test1
    {

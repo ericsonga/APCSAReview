@@ -46,7 +46,7 @@ A **variable** is a name associated with a memory location in the computer.  Com
 When you play a game, it will often have a score.  Scores often start at 0 and increase.  A score can be stored in a variable.  
 
 .. figure:: Figures/pongScore.png
-    :width: 400px
+    :width: 300px
     :align: center
     :figclass: align-center
     
