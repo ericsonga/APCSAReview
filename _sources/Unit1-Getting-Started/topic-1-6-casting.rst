@@ -126,19 +126,19 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
 
 What happens to repeating decimal numbers like 3.333333...?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits. 
 
-For example, int values are stored in 4 bytes of memory. There is an Integer.MAX_VALUE defined as 2147483647 and an Integer.MIN_VALUE defined as -2147483648. If you try to store any number larger or smaller than these numbers in an int variable, it will result in an error called **integer overflow**. Try it below.
+For example, int values are stored in 4 bytes of memory. There is an Integer.MAX_VALUE defined as 2147483647 and an Integer.MIN_VALUE defined as -2147483648. If you try to store any number larger or smaller than these numbers in an int variable, it will result in an **integer overflow** where an incorrect value could be stored. Try it below. 
 
 .. activecode:: overfl
    :language: java
    :autograde: unittest
    
-   Try the code below to see two integer overflow errors for a positive and negative number. An int cannot hold that many digits! Fix the integer overflow error by deleting the last 0 in the numbers.
+   Try the code below to see two integer overflows for a positive and negative number. An int cannot hold that many digits! Fix the integer overflow by deleting the last 0 in the numbers to store less digits.
    ~~~~
    public class TestOverflow
    {
       public static void main(String[] args)
       {
-        int id = 2147483650; // overflow error!
+        int id = 2147483650; // overflow
         int negative = -2147483650; // overflow 
       }
    }
@@ -291,7 +291,7 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
         @Test
        public void testAsgn1() throws IOException
        {
-           String target = "average = (double) sum/3;";
+           String target = "(double) sum/3;";
            boolean passed = checkCodeContains("formula for average of 3 grades using sum and type casting to double", target);
            assertTrue(passed);
        }

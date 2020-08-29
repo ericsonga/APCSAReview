@@ -186,8 +186,8 @@ Java has two different print commands to print output to the screen:
    
 Most command keywords in Java must be in lowercase, but class names such as System and String are capitalized. Commands in Java must end with a semicolon (;). Think of the semicolon (;) in Java like a period (.) in English. You use a semicolon (``;``) to show the end of a Java **statement**, just the way you use a period (.) to show the end of an English sentence.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
 
-Syntax Errors
----------------
+Syntax Errors and Debugging
+-----------------------------
 
 Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page. 
 
@@ -210,12 +210,18 @@ Computers don't actually speak Java so we have to **compile** (translate) Java s
     Figure 2: Grace Hopper's log showing a real bug, 1947.
 
 
-The compiler tries to make sense of your code, but if your code has **syntax errors**, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem. Debugging can be frustrating but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. |Rubber duck debugging| is a lot of fun!
+The compiler tries to run your code, but if your code has **syntax errors**, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem. 
 
+Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. |Rubber duck debugging| is a lot of fun!
+
+.. youtube:: auv10y-dN4s
+    :width: 700
+    :height: 400
+    :align: center
+    
 Let's practice debugging some code! 
 
    
-
 |Exercise| **Check Your Understanding: Mixed up programs**
 
 
