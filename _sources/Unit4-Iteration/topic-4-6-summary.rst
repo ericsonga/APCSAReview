@@ -77,9 +77,12 @@ Common Mistakes
  
 Here is an example of a while loop that doesn't ever change the value in the loop so it never ends.  If you run it refresh the page to stop it.  Fix it.
  
- .. activecode:: while_loop_mistake1
+.. activecode:: while_loop_mistake1
    :language: java
+   :autograde: unittest 
    
+   Fix the infinite loop so that it counts from 3 down to 1. 
+   ~~~~
    public class Test
    {
       public static void main(String[] args)
@@ -91,13 +94,33 @@ Here is an example of a while loop that doesn't ever change the value in the loo
           }
       }
    }
-   
-Here is an example of going past the bounds of a string.  This code should double all but the first and last letter in message.  Fix the code so that it doesn't cause an out of bounds an error.
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;;
+     import java.io.*;
 
- .. activecode:: while_loop_oob
-   :language: java
+     public class RunestoneTests extends CodeTestHelper
+     {
+         @Test
+         public void test1()
+         {
+             String output = getMethodOutput("main");
+             String expect = "3\n2\n1";
+
+             boolean passed = getResults(expect, output, "Expected output");
+             assertTrue(passed);
+         }
+     }
    
-   public class Test
+Here is an example of going past the bounds of a string.  This code should double all but the first and last letter in message.  Fix the code so that it doesn't cause an out of bounds error.
+
+.. activecode:: while_loop_oob
+   :language: java
+   :autograde: unittest 
+   
+   Fix the test condition in the loop below so that it doesn't cause an out of bounds error.
+   ~~~~
+   public class Loop2
    {
       public static void main(String[] args)
       {
@@ -112,36 +135,82 @@ Here is an example of going past the bounds of a string.  This code should doubl
           System.out.println(result);
       }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;;
+     import java.io.*;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         @Test
+         public void test1()
+         {
+             String output = getMethodOutput("main");
+             String expect = "waattcchh  oouut";
+
+             boolean passed = getResults(expect, output, "Expected output");
+             assertTrue(passed);
+         }
+     }
    
 Here is an example of jumping out of a loop too early.  The code below is intended to test if all of the letters in a string are in ascending order from left to right. But, it doesn't work correctly.  Can you fix it?
 
- .. activecode:: while_loop_early_leave
+.. activecode:: while_loop_early_leave
    :language: java
+   :autograde: unittest 
    
-   public class Test
+   Fix the code below so it does not leave the loop too early. Try the CodeLens button to see what is going on. When should you return true or false?
+   ~~~~
+   public class Loop3
    {
-   
       public static boolean isInOrder(String check)
       {
-          int pos = 0;
-          while (pos < check.length() - 1)
-          {
-             if (check.substring(pos, pos+1).compareTo(check.substring(pos+1, pos+2)) < 0)
-                return true;
-             pos++;
-          }
-          return false;
+           int pos = 0;
+           while (pos < check.length() - 1)
+           {
+               String letter1 = check.substring(pos, pos+1);
+               String letter2 = check.substring(pos+1, pos+2);
+               if (letter1.compareTo(letter2) < 0)
+               {
+                  return true;
+               }
+               pos++;
+           }
+           return false;
       }
       
       public static void main(String[] args)
       {
-         System.out.println(isInOrder("abca"));
-         System.out.println(isInOrder("abc"));
-          
+         System.out.println(isInOrder("abca") + " should return false");
+         System.out.println(isInOrder("abc") + " should return true");
       }
    }
-   
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;;
+     import java.io.*;
 
+     public class RunestoneTests extends CodeTestHelper
+     {
+         @Test
+         public void test1()
+         {
+             String output = getMethodOutput("main");
+             String expect = "false should return false\ntrue should return true";
+
+             boolean passed = getResults(expect, output, "Expected output");
+             assertTrue(passed);
+         }
+         @Test
+         public void test2()
+         {
+             boolean output = Loop3.isInOrder("zxy");
+
+             boolean passed = output == false;
+             getResults("false", output+"","isInOrder(\"zxy\")", passed);
+             assertTrue(passed);
+         }
+     }
    
 
    
