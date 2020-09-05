@@ -219,7 +219,7 @@ You will learn to write your own methods in Unit 5. In this unit, you should be 
 |Exercise| Check Your Understanding
 
 .. clickablearea:: student_methods
-    :question: Click on the methods headers (signatures) in the following class. Do not click on the constructors.
+    :question: Click on the method headers (signatures) in the following class. Do not click on the constructors.
     :iscode:
     :feedback: Methods follow the constructors. The method header is the first line of a method.
 
@@ -504,13 +504,13 @@ AP Practice
 
       - There is no endParty() method in the class Party.
 
-    - myParty.numInvited++;
+    - myParty.numInvited();
 
-      - This would cause an error because you cannot access the private instance variables of an object outside of the class.
+      - There is no numInvited() method in the class Party. It is an instance variable.
 
     - System.out.println( myParty.cancelParty() );
 
-      - This would cause an error because the void method cancelParty() does not return a String that could be printed out.
+      - This would cause an error because the void method cancelParty() does not return a String that could be printed.
 
 
 .. mchoice:: AP2-3-2

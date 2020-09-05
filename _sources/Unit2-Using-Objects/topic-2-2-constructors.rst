@@ -109,8 +109,8 @@ The constructor that doesn't take any parameters, ``World()``, creates a graphic
     World world1 = new World(); // creates a 640x480 world
     World world2 = new World(300,400); // creates a 300x400 world
 
-.. note ::
-   The turtle word does not use the cartesian coordinate system.  The top left corner is (0,0), x increases to the right, and y increases towards the bottom of the page.
+.. note::
+   The turtle world does not use the cartesian coordinate system.  The top left corner is (0,0), x increases to the right, and y increases towards the bottom of the page.
 
 .. figure:: Figures/coords.png
     :width: 200px
@@ -122,7 +122,7 @@ The constructor that doesn't take any parameters, ``World()``, creates a graphic
 The Turtle Class Constructors
 ----------------------------------------------------------
 
-The ``Turtle`` class also has multiple constructors, although it always requires a world as an parameter in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.
+The ``Turtle`` class also has multiple constructors, although it always requires a world as a parameter in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.
 
 There is another ``Turtle`` constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.
 
