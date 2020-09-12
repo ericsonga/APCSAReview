@@ -204,7 +204,11 @@ Object Variables and References
 
 You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package. 
 
-Watch the video below about null.
+.. |video1| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=5fpjgXAV2BU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
+   
+Watch the |video1| below about null.
 
 .. youtube:: 5fpjgXAV2BU
     :width: 650

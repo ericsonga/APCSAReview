@@ -50,7 +50,7 @@ A string holds characters in a sequence.  Each character is at a position or **i
 
 .. note::
 
-   The first character in a string is at index 0 and the last characters is at **length** - 1.
+   The first character in a string is at index 0 and the last characters is at **length** -1.
 
 For the AP CS A exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the |AP CS A Reference Sheet| that you get during the exam so you don't have to memorize these.  
 
@@ -59,7 +59,7 @@ For the AP CS A exam, you only need to know how to use the following String meth
 
     -  **String substring(int from, int to)** method returns a new string with the characters in the current string starting with the character at the ``from`` index and ending at the character *before* the ``to`` index (if the ``to`` index is specified, and if not specified it will contain the rest of the string).
 
-    -  **int indexOf(String str)** method returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.
+    -  **int indexOf(String str)** method searches for the string ``str`` in the current string and returns the index of the beginning of ``str`` in the current string or -1 if it isn't found.
 
     -  **int compareTo(String other)** returns a negative value if the current string is less than the ``other`` string alphabetically, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string alphabetically.
 
@@ -69,7 +69,7 @@ For the AP CS A exam, you only need to know how to use the following String meth
 String Methods: length, substring, indexOf
 ------------------------------------------
 
-Run the code below to see the output from the String methods ``length``, ``substring``, and ``indexOf``. The length method returns the number of characters in the string, not the last index which is length-1. The ``str.substring(from,to)`` method returns the substring from the ``from`` index up to (but not including) the ``to`` index. The method ``str.indexOf(substring)`` returns the index of where it finds substring in str or -1 if it is not there.   
+Run the code below to see the output from the String methods ``length``, ``substring``, and ``indexOf``. The length method returns the number of characters in the string, not the last index which is length -1. The ``str.substring(from,to)`` method returns the substring from the ``from`` index up to (but not including) the ``to`` index. The method ``str.indexOf(substring)`` searches for the substring in str and returns the index of where it finds substring in str or -1 if it is not there.   
 
 .. activecode:: lcsm1
    :language: java
@@ -88,7 +88,7 @@ Run the code below to see the output from the String methods ``length``, ``subst
         System.out.println(message2.length());
 
         System.out.println(message1.substring(0,3));
-        System.out.println(message2.substring(4,5));
+        System.out.println(message1.substring(2,3));
         System.out.println(message1.substring(5));
         
         System.out.println(message1.indexOf("is")); // This will match the is in "This"!
@@ -111,7 +111,7 @@ Run the code below to see the output from the String methods ``length``, ``subst
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "14\n11\nThi\no\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
+            String expect = "14\n11\nThi\ni\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
             boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
@@ -171,7 +171,7 @@ Run the code below to see the output from the String methods ``length``, ``subst
    :feedback_a: This would be true if substring returned all the characters from the first index to the last inclusive, but it does not include the character at the last index.
    :feedback_b: This would be true if it was s1.substring(0,1)
    :feedback_c: This would be true if it was s1.substring(0,2)
-   :feedback_d: Substring returns all the characters from the starting index to the last index - 1.
+   :feedback_d: Substring returns all the characters from the starting index to the last index -1.
 
    What is the value of s2 after the following code executes?
 
@@ -251,7 +251,6 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Since
       {
         String message = "Hello!";
 
-        System.out.println(message.compareTo("Hello there"));
         System.out.println(message.compareTo("Hello!"));
         System.out.println(message.compareTo("And"));
         System.out.println(message.compareTo("Zoo"));
@@ -271,7 +270,7 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Since
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "1\n0\n7\n-18\ntrue\nfalse";
+            String expect = "0\n7\n-18\ntrue\nfalse";
             boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
@@ -285,8 +284,7 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Since
    
 There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
 
-The String library which is built into the default java.lang library simplifies a lot of complex programming tasks for us. Classes are grouped together into a **package** like java.lang. Many other useful library packages can be imported in. Programmers provide **Application Program Interfaces (APIs)** to allow other programmers to use their code. Documentation for APIs and libraries are essential to understanding the attributes and behaviors of an object of a class.
-
+An **Application Programming Interface (API)** is a library of prewritten classes that simplify complex programming tasks for us. These classes are grouped together in a **package** like java.lang and we can import these packages (or individual classes) into our programs to make use of them. For instance, we have just discussed the String library built into the default java.lang package - it takes care of the detailed work of manipulating strings for us.  There are many other useful library packages as well, both in the java.lang package and in other packages. Documentation for APIs and libraries are essential to understanding how to use these classes.
 
 .. note::
 
@@ -448,7 +446,7 @@ Here is a list of common mistakes made with Strings.
   
   -  Thinking that strings can change when they can't.  They are immutable.  
   
-  - Trying to access part of a string that is not between index 0 and length - 1. This will throw an IndexOutOfBoundsException.
+  - Trying to access part of a string that is not between index 0 and length -1. This will throw an IndexOutOfBoundsException.
   
   -  Trying to call a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
   
@@ -545,11 +543,11 @@ Summary
   
   - **int length()** : returns the number of characters in a String object. 
 
-  - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to – 1).
+  - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to -1).
 
   - **String substring(int from)** : returns substring(from, length()).
   
-  - **int indexOf(String str)** : returns the index of the first occurrence of str; returns -1 if not found.
+  - **int indexOf(String str)** : searches for str in the current string and returns the index of the first occurrence of str; returns -1 if not found.
   
   - **boolean equals(String other)** : returns true if this (the calling object) is equal to other; returns false otherwise.
   

@@ -240,25 +240,13 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
 
 This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below. 
 
- 
-.. |repl| raw:: html
-
-   <a href="https://repl.it" target="_blank">repl.it</a>
-   
-
-.. |Scanner| raw:: html
-
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-   
-Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|.
-
 
 .. activecode:: challenge1-6-average
    :language: java
    :autograde: unittest
    :practice: T
 
-   Type in three made up int grades and then sum and average them. Use type casting to report the result as a double. If you do this challenge on repl.it, please paste your repl link here to turn it in.
+   Type in three made up int grades and then sum and average them. Use type casting to report the result as a double. If you do this challenge on repl.it (see template and links below), please paste your repl link here to turn it in.
    ~~~~
    public class Challenge1_6
    {
@@ -291,11 +279,27 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
         @Test
        public void testAsgn1() throws IOException
        {
-           String target = "(double) sum/3;";
+           String target = "(double) sum/3";
            boolean passed = checkCodeContains("formula for average of 3 grades using sum and type casting to double", target);
            assertTrue(passed);
        }
     }
+
+ 
+.. |repl| raw:: html
+
+   <a href="https://repl.it" target="_blank">repl.it</a>
+   
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+
+.. |repl template| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Challenge1-6-Average-Template" target="_blank">repl template</a>
+
+Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
 
 
 .. |Unicode| raw:: html

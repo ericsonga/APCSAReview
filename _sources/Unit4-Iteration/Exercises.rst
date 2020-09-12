@@ -466,3 +466,5 @@ Here are some recommended problems
 * http://codingbat.com/prob/p165666
 * http://codingbat.com/prob/p117334
 * http://codingbat.com/prob/p121596
+
+The Mark Complete button and green check mark are intentionally not included for this page because there may be many quiz-bank exercises on this page.

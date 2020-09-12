@@ -44,8 +44,11 @@ Primitive values like ints and reference values like Strings can be compared usi
 
     One = sign changes the value of a variable. Two == equal signs are used to test if a variable holds a certain value, without changing its value!
 
+.. |Colleen video| raw:: html
 
-Watch the following video which shows what happens in memory as primitive types like int and reference types like Dog are compared with == in a physical model of Java memory.
+   <a href="https://www.youtube.com/watch?v=bO9bejT0jwE&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
+   
+Watch the following |Colleen video| which shows what happens in memory as primitive types like int and reference types like Dog are compared with == in a physical model of Java memory.
 
 .. youtube:: bO9bejT0jwE
     :width: 650
