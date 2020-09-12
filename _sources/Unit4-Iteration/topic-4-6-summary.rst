@@ -83,7 +83,7 @@ Here is an example of a while loop that doesn't ever change the value in the loo
    
    Fix the infinite loop so that it counts from 3 down to 1. 
    ~~~~
-   public class Test
+   public class Loop1
    {
       public static void main(String[] args)
       {

@@ -314,7 +314,7 @@ These problems are harder than most of those that you will usually see on the AP
          System.out.print("second ");
    
    
-   
+The Mark Complete button and green check mark are intentionally not included in the Exercises.html pages because these pages may be used for many quiz-bank exercises.   
 
 
 

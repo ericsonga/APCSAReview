@@ -35,11 +35,15 @@ Games would be boring if the same thing happened each time you played the game. 
 to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number.
 
 There are lots of mathematical methods
-that you might want to use in your programs like ``Math.abs`` (absolute value).  These methods are in the **Math** class defined in the java.lang package. These are **static methods** which means you can call them by just using ``ClassName.methodName()`` without creating an object or just the method name if they are called from within the same class. 
+that you might want to use in your programs like ``Math.abs(int)`` which calculates the absolute value of an int argument (which is the value of a number without its sign, for example Math.abs(-4) = 4). 
+
+These methods are in the **Math** class defined in the java.lang package. These are **static methods** which means you can call them by just using ``ClassName.methodName()`` without creating an object. 
+This is why we can just say Math.random() instead of having to define an object of the class Math. 
+ 
 
 .. note::
 
-   **Static methods** (also called class methods) are called using the class name and the dot operator (.) followed by the method name, for example Math.random(). You do not need to create an object of the class to use them. 
+   **Static methods** (also called class methods) are called using the class name and the dot operator (.) followed by the method name. You do not need to create an object of the class to use them. You can use ClassName.methodName() or just methodName() if they are called from within the same class.
 
 The ``Math.random()`` method returns a number greater than or equal to 0.0, and less than 1.0. 
 

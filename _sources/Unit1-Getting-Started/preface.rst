@@ -8,9 +8,9 @@ Preface
 ..	index::
 	single: license
 	
-CSAwesome is a free AP CS A curriculum that was created in 2019 by adapting the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. 
+CSAwesome is a free AP CS A curriculum that was created in 2019 by adapting the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. 
 
-CSAwesome is an official College Board CS A curriculum and PD provider as of 2020. Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CS A 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, Beth Simon, John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, and Kyle Gillette for feedback, edits, and ideas. In the summer 2020, we are very grateful to CSA teacher extraordinaire Kate McDonnell who created a JUnit test code suite for our Java server, and many volunteers including Pat Clark, Emma Brown, Emma Pinnell, who helped to add many junit tests to each active code to make them auto-gradable. Our hopes are that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
+CSAwesome is an official College Board CS A curriculum and PD provider as of 2020. Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CS A 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, Beth Simon, John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, Kyle Gillette, and Peter Bowers for feedback, edits, and ideas. In the summer 2020, we are very grateful to CSA teacher extraordinaire Kate McDonnell who created a JUnit test code suite for our Java server, and many volunteers including Pat Clark, Emma Brown, Emma Pinnell, who helped to add many junit tests to each active code to make them auto-gradable. Our hopes are that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
 
 .. |form| raw:: html
 
@@ -28,7 +28,7 @@ Special thanks also to the following people that we have collaborated with:
 
 * Jeff (Jochen) Rick made great contributions to the Parsons problems (mixed up code problems).
 
-* Philip Guo who created the Java Visualizer, which we link to.  We would love to embed it in this ebook, but need someone to do that.
+* Philip Guo who created the Java Visualizer, which we use in the e-book.
 
 * Paul Resnick at the University of Michigan for hosting us all at the summer 2016 hackathon for Runestone Interactive and for his input into the design of the instructor dashboard.
 

@@ -149,13 +149,21 @@ In Unit 7, we looked at two sorting algorithms, Selection Sort and Insertion Sor
 
 A merge sort recursively breaks the values to be sorted in half until there is only one value to be sorted and then it merges the two sorted lists into one sorted list.  The code shown below uses a second array the same size as the original array for merging the values in order.  Then it copies all of the sorted values back into the original array.
 
-Here is a folk dance video that shows the merge sort process.
+.. |video| raw:: html
+
+   <a href="https://youtu.be/XaqR3G_NVoo" target="_blank">video</a>
+   
+Here is a folk dance |video| that shows the merge sort process.
 
 .. youtube:: XaqR3G_NVoo
     :align: center
     :height: 315
 
-And here is a short video that describes how merge sort works.
+.. |video2| raw:: html
+
+   <a href="https://youtu.be/4VqmGXwpLqc" target="_blank">video</a>
+   
+And here is a short |video2| that describes how merge sort works.
 
 .. youtube:: 4VqmGXwpLqc
     :align: center
@@ -289,8 +297,12 @@ You can trace through a merge sort algorithm given an array by using parentheses
 ==========================================================
 
 
-Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a video that shows merge sort with cards. 
+Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a |video3| that shows merge sort with cards. 
 
+.. |video3| raw:: html
+
+   <a href="https://youtu.be/AMJjtTo1LLE" target="_blank">video</a>
+   
 .. youtube:: AMJjtTo1LLE
     :align: center
     

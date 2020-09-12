@@ -128,7 +128,6 @@ Recursion can also be used to traverse String, array, and ArrayList objects, muc
 Factorial Method
 =================
 
-.. the video is Recursion.mov
 
 The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It introduces the concept of recursion and tracing recursion with the factorial method.
 

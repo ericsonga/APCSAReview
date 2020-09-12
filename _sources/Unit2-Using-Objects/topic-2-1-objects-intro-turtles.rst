@@ -75,7 +75,11 @@ The following picture has lots of cats (objects of the type cat).  They are all 
 
     Discuss with your class: What are some attributes of cats? What are some behaviors of cats? (Note that attributes are often nouns or adjectives describing features of cats, and behaviors are often verbs).
 
-Watch the following video by Dr. Colleen Lewis about classes and objects:
+.. |video1| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=64DOwDu5SVo&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
+   
+Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 
 .. youtube:: 64DOwDu5SVo
     :width: 650
@@ -190,7 +194,11 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
         }
     }
 
-The following video shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.  
+.. |video2| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=TFmmG4_KK8I&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
+   
+The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.  
 
 .. youtube:: TFmmG4_KK8I
     :width: 650
@@ -574,7 +582,11 @@ Summary
 AP Practice
 ------------
 
-This video shows another class called Belt and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
+.. |video3| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=Y9vn6u3901Y&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
+
+This |video3| shows another class called Belt and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
 
 .. youtube:: Y9vn6u3901Y
     :width: 650

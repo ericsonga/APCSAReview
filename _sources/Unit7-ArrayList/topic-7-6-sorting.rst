@@ -39,23 +39,7 @@ There are many sorting algorithms to put an array or ArrayList elements in alpha
 * Merge sort - Break the elements into two parts and recursively sort each part.  An array of one item is sorted (base case).  Then merge the two sorted arrays into one. MergeSort will be covered in Unit 10.
 
 
-.. There are many videos on YouTube that show these sorts.  Here is a folk dance for selection sort.
-.. .. youtube:: Ns4TPTC8whw
-    :align: center
-    
-.. Here is folk dance for insertion sort.
 
-    
-.. Here is folk dance for merge sort.
-
-
-.. .. youtube:: XaqR3G_NVoo
-    :align: center
-
-.. Here is another video that talks about bubble sort, insertion sort, and quick sort.  Of these only insertion sort is on the exam.
-
-.. .. youtube:: WaNLJf8xzC4
-    :align: center
 
 
 Selection Sort
@@ -67,13 +51,21 @@ Selection Sort
 
 The selection sort that you need to know for the exam starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
 
-Here is a folk dance video that shows the selection sort process.
+.. |video| raw:: html
+
+   <a href="https://youtu.be/Ns4TPTC8whw" target="_blank">video</a>
+   
+Here is a folk dance |video| that shows the selection sort process.
 
 .. youtube:: Ns4TPTC8whw
     :align: center
 
-And a short video that describes how selection sort works.
+And a short |video2| that describes how selection sort works.
 
+.. |video2| raw:: html
+
+   <a href="https://youtu.be/g-PGLbMth_g" target="_blank">video</a>
+   
 .. youtube:: g-PGLbMth_g
     :align: center
     
@@ -204,14 +196,21 @@ Insertion Sort
 
 The insertion sort that you need to know for the exam starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.
 
+.. |video3| raw:: html
 
+   <a href="https://youtu.be/ROalU379l3U" target="_blank">video</a>
+   
 
-Here is a folk dance video that shows the insertion sort process.
+Here is a folk dance |video3| that shows the insertion sort process.
 
 .. youtube:: ROalU379l3U
     :align: center
 
-And a short video that describes how insertion sort works.
+.. |video4| raw:: html
+
+   <a href="https://youtu.be/JU767SDMDvA" target="_blank">video</a>
+   
+And a short |video4| that describes how insertion sort works.
 
 .. youtube:: JU767SDMDvA
     :align: center

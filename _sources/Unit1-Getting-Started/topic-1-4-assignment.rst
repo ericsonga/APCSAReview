@@ -43,7 +43,11 @@ Assignment Statements
 
 Instead of saying equals for the = in an assignment statement, say "gets" or "is assigned" to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.
 
-The following video by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
+.. |video| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=MZwIgM__5C8&ab_channel=colleenlewis" target="_blank">video</a>
+   
+The following |video| by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
 
 .. youtube:: MZwIgM__5C8
     :width: 700
@@ -330,6 +334,11 @@ The percent sign operator (%) is the **mod (modulo)** or **remainder** operator.
     
     Figure 1: Long division showing the integer result and the remainder
     
+.. |video2| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis" target="_blank">video</a>
+
+Here is a |video2| about mod.
 
 .. youtube:: jp-T9lFISlI
     :width: 700
@@ -426,19 +435,6 @@ The percent sign operator (%) is the **mod (modulo)** or **remainder** operator.
 
 In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code. 
 
-.. |repl| raw:: html
-
-   <a href="https://repl.it" target="_blank">repl.it</a>
-   
-
-.. |Scanner| raw:: html
-
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-   
-Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|.
-
-
-
 .. activecode:: challenge1-4
    :language: java
    :autograde: unittest
@@ -507,6 +503,21 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
        }
     }
    
+
+.. |repl| raw:: html
+
+   <a href="https://repl.it" target="_blank">repl.it</a>
+   
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+   
+.. |repl template| raw:: html
+
+   <a href="https://repl.it/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
+
+Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
 
 Summary
 -------------------

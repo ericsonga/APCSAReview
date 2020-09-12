@@ -247,7 +247,7 @@ Try the following mixed up code to draw a simple house made of a square and a tr
    :adaptive:
    :noindent:
    
-   The following code uses a turtle to draw a simple house, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw a square for the house and then a red triangle for the roof.  Click on the "Check Me" button to check your solution.  You can copy and paste this code in the Active Code window above to see it in action.
+   The following code uses a turtle to draw a simple house, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw a square for the house and then a red triangle for the roof.  Click on the "Check Me" button to check your solution.  You can type this code in the Active Code window above to see it in action.
    -----
    public class TurtleDrawHouse
    {

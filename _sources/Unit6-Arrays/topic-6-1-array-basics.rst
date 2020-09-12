@@ -91,7 +91,11 @@ The declarations do not create the array.  Arrays are **objects** in Java, so an
 
 There are two ways to create an array. You can use the keyword **new** to get new memory or use an **initializer list** to set up the values in the array.
 
-Watch the following video which shows the two ways of creating an array with a physical model of Java memory.
+.. |video2| raw:: html
+
+   <a href="https://youtu.be/IbPFjw1FNkE" target="_blank">video</a>
+   
+Watch the following |video2| which shows the two ways of creating an array with a physical model of Java memory.
 
 .. youtube:: IbPFjw1FNkE
     :width: 650
@@ -223,8 +227,11 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 
     Figure 4: A primitive array and an object array
 
+.. |video3| raw:: html
 
-Watch the following video which shows an array of String objects with a physical model of Java memory.
+   <a href="https://youtu.be/T-YZvVvPOac" target="_blank">video</a>
+   
+Watch the following |video3| which shows an array of String objects with a physical model of Java memory.
 
 .. youtube:: T-YZvVvPOac
     :width: 650
@@ -340,7 +347,11 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
 
     The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access or modify array items.
 
-Watch the following video which shows a physical model of Java memory setting array values.
+.. |video4| raw:: html
+
+   <a href="https://youtu.be/uagEJw6bTM4" target="_blank">video</a>
+   
+Watch the following |video4| which shows a physical model of Java memory setting array values.
 
 .. youtube:: uagEJw6bTM4
     :width: 650
