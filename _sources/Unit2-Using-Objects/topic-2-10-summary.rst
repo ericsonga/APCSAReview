@@ -48,9 +48,9 @@ Java Keyword Summary
   
   - **int length()** : returns the number of characters in a String object. 
 
-  - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to – 1).
+  - **String substring(int from, int to)** : returns the substring beginning at index from and ending at index (to -1). The single element substring at position index can be created by calling substring(index, index + 1).
 
-  - **String substring(int from)** : returns substring(from, length()). A string identical to the single element substring at position index can be created by calling substring(index, index + 1
+  - **String substring(int from)** : returns substring(from, length()). 
   
   - **int indexOf(String str)** : returns the index of the first occurrence of str; returns -1 if not found.
   
@@ -79,7 +79,7 @@ Java Keyword Summary
   - **double abs(double)** : Returns the absolute value of a double value.
   - **double pow(double, double)** : Returns the value of the first parameter raised to the power of the second parameter. 
   - **double sqrt(double)** :  Returns the positive square root of a double value.
-  - **double random()** :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0)!
+  - **double random()** :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
   
 
 
@@ -114,20 +114,20 @@ For more practice, see this |Quizlet| embedded below.
 Common Mistakes 
 ----------------------------
 
-  - Forgetting to declare an object to call a method from main or from outside of the class, for example object.method();
+- Forgetting to declare an object to call a method from main or from outside of the class, for example object.method();
   
-  - Forgetting () after method names when calling methods, for example object.method();
+- Forgetting () after method names when calling methods, for example object.method();
   
-  - Forgetting to give the right parameters in the right order to a method that requires them.
+- Forgetting to give the right parameters in the right order to a method that requires them.
   
-  - Forgetting to save, print, or use the return value from a method that returns a value, for example int result = Math.pow(2,3);
+- Forgetting to save, print, or use the return value from a method that returns a value, for example int result = Math.pow(2,3);
 
-  -  Using ``==`` to test if two strings or objects are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals`` or ``compareTo`` instead.    
+-  Using ``==`` to test if two strings or objects are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals(String)`` or ``compareTo(String)`` instead.    
   
-  -  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.  
+-  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.  
   
-  -  Thinking that substrings include the character at the last index when they don't. 
+-  Thinking that substrings include the character at the last index when they don't. 
   
-  -  Thinking that strings can change when they can't.  They are immutable.  
+-  Thinking that strings can change when they can't.  They are immutable.  
   
-  -  Trying to invoke a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
+-  Trying to call a method like ``str1.indexOf(str2)`` with a string reference str1 that is null.  You will get a null pointer exception.

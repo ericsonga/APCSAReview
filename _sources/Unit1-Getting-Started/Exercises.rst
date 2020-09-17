@@ -162,6 +162,10 @@ Multiple Choice Exercises
 .. raw:: html
     
     <script src="../_static/custom-csawesome.js"></script>
+    
+
+ 
+The Mark Complete button and green check mark are intentionally not included for this page because there may be many quiz-bank exercises on this page.
 
    
 
