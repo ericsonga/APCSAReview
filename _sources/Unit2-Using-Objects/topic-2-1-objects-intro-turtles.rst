@@ -82,6 +82,7 @@ The following picture has lots of cats (objects of the type cat).  They are all 
 Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 
 .. youtube:: 64DOwDu5SVo
+    :optional:
     :width: 650
     :height: 415
     :align: center
@@ -204,6 +205,8 @@ The following |video2| shows how the program creates a ``World`` object called `
     :width: 650
     :height: 415
     :align: center
+    :optional:
+    
     
 The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again. 
  
@@ -531,9 +534,9 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
             int countL = countOccurences(code, left);
             int count = countR + countL;
 
-            boolean passed = countR >= 8 || countL >= 8 || (countL >= 4 && countR >= 4);
+            boolean passed = countR >= 6 || countL >= 6 || (countL >= 3 && countR >= 3);
 
-            passed = getResults("8+ turns", "" + count  + " turns(s)", "two squares (8 right or left turns total)", passed);
+            passed = getResults("6+ turns", "" + count  + " turns(s)", "two squares (6+ right or left turns total)", passed);
             assertTrue(passed);
         }
 
@@ -592,7 +595,8 @@ This |video3| shows another class called Belt and how it has 3 instance variable
     :width: 650
     :height: 415
     :align: center
-
+    :optional:
+    
 Try these AP practice questions that will help to prepare you for the AP Classroom progress checks.
 
 .. mchoice:: AP2-1-1

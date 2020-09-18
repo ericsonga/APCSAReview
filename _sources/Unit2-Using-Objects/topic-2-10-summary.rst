@@ -114,13 +114,13 @@ For more practice, see this |Quizlet| embedded below.
 Common Mistakes 
 ----------------------------
 
-- Forgetting to declare an object to call a method from main or from outside of the class, for example object.method();
+- Forgetting to declare an object to call a method from main or from outside of the class, for example ``object.method();``
   
-- Forgetting () after method names when calling methods, for example object.method();
+- Forgetting () after method names when calling methods, for example ``object.method();``
   
 - Forgetting to give the right parameters in the right order to a method that requires them.
   
-- Forgetting to save, print, or use the return value from a method that returns a value, for example int result = Math.pow(2,3);
+- Forgetting to save, print, or use the return value from a method that returns a value, for example ``int result = Math.pow(2,3);``
 
 -  Using ``==`` to test if two strings or objects are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals(String)`` or ``compareTo(String)`` instead.    
   
@@ -130,4 +130,4 @@ Common Mistakes
   
 -  Thinking that strings can change when they can't.  They are immutable.  
   
--  Trying to call a method like ``str1.indexOf(str2)`` with a string reference str1 that is null.  You will get a null pointer exception.
+-  Trying to call a method like ``str1.indexOf(str2)`` with a string reference ``str1`` that is null.  You will get a null pointer exception.

@@ -245,7 +245,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :autograde: unittest
               :practice: T
               
-              The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do accomplish this task.
+              The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do this task.
               ~~~~
               public class Test1
               {
