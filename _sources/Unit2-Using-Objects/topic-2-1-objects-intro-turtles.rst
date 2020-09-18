@@ -624,13 +624,13 @@ Try these AP practice questions that will help to prepare you for the AP Classro
 
 .. mchoice:: AP2-1-2
    :practice: T
-   :answer_a: An attribute of the myParty object is boolean.
-   :answer_b: An attribute of the Party class is myParty.
-   :answer_c: An instance of the Party class is myParty.
-   :answer_d: An attribute of the Party instance is myParty.
-   :answer_e: An instance of the Party object is numOfPeople.
+   :answer_a: boolean is an attribute of the myParty object.
+   :answer_b: myParty is an attribute of the Party class.
+   :answer_c: myParty is an instance of the Party class.
+   :answer_d: myParty is an attribute of the Party instance.
+   :answer_e: numOfPeople is an instance of the Party object.
    :correct: c
-   :feedback_a: An attribute of myParty is numOfPeople.
+   :feedback_a: boolean is the type of an attribute, but not an attribute.
    :feedback_b: myParty is an instance of the Party class.
    :feedback_c: myParty is an object that is an instance of the Party class.
    :feedback_d: An attribute of the Party class is numOfPeople.
