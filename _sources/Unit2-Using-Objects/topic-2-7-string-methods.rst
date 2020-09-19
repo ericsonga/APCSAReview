@@ -489,12 +489,13 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
    {
       public static void main(String[] args)
       {
-        String word = 
+          
+          String word = 
 
-        // Use word.substring to construct word in pig latin
-        String pigLatin = 
+          // Use word.substring to construct word in pig latin
+          String pigLatin = 
         
-        System.out.println(word + " in Pig Latin is " + pigLatin);
+          System.out.println(word + " in Pig Latin is " + pigLatin);
       }
    }
    ====

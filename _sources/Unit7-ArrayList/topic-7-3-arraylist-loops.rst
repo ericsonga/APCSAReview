@@ -631,7 +631,7 @@ In the class WordPairsList below, you will write the constructor which takes the
             if (lines.length > 1)
                 output = lines[1];
 
-            getResults(expect, output, "Part 2 - numMatches from main()", passed);
+            getResults(expect, output, "Part 2 - call to numMatches from main()", passed);
             assertTrue(passed);
         }
 

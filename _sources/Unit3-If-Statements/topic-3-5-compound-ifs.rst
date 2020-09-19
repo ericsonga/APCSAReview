@@ -488,9 +488,9 @@ Explore the following problems with your group:
    :language: java
    :autograde: unittest
    :practice: T
-
+   
    Challenge-3-5-truthtables: Test your boolean expression in an if statement below.
-   ~~~
+   ~~~~
    public class TruthTable
    {
       public static void main(String[] args)
