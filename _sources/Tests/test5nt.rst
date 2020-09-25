@@ -21,11 +21,12 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: III executes to true if either a||b true, III is true because x-y will become 0 then 0 * a *b... = 0
 
    Suppose ``x, y, and z`` are variables of type ``int``. Consider the following three conditions
-      I. (x == y) && (y == z)  && (x == z)
-      II. (x==y) || (y==z) && (x == z)
-      III. (x - y) * (x - z) * (y - z) == 0
+      
+   I. (x == y) && (y == z)  && (x == z)
+   II. (x==y) || (y==z) && (x == z)
+   III. (x - y) * (x - z) * (y - z) == 0
 
-      Which of these conditions is (are) always true if x == y is true?
+   Which of these conditions is (are) always true if x == y is true?
 
 .. mchoice:: qtnt5_2
    :answer_a: 1
@@ -78,7 +79,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
   :correct: c
   :feedback_a: Trace out the recursive calls. See https://tinyurl.com/AP19-Q6
   :feedback_b: Trace out the recursive calls. See https://tinyurl.com/AP19-Q6
-  :feedback_c: Trace out the recursive calls
+  :feedback_c: Correct!
   :feedback_d: Trace out the recursive calls. See https://tinyurl.com/AP19-Q6
   :feedback_e: Trace out the recursive calls. See https://tinyurl.com/AP19-Q6
 
@@ -102,7 +103,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             return f1(x + 1) + x;
     }
 
-.. mchoice:: qtnt5_6
+.. mchoice:: qtnt5_5
       :answer_a: It is legal for the value of a static variable to be changed in a constructor.
       :answer_b: The constructor in a subclass must use the keyword super to initialize the private instance variables from its superclass.
       :answer_c: An interface never has constructors.
@@ -117,7 +118,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
       Which statement about constructors is ``false``?
 
-.. mchoice:: qtnt5_7
+.. mchoice:: qtnt5_6
       :answer_a: 10
       :answer_b: 12
       :answer_c: 16
@@ -142,7 +143,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                 return mystery(n -1) + mystery(n - 2);
         }
 
-.. mchoice:: qtnt5_8
+.. mchoice:: qtnt5_7
       :answer_a: I only
       :answer_b: II only
       :answer_c: III only
@@ -157,15 +158,16 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
 
       Suppose ``a and b`` are ``boolean`` variables. The expression below
-          ``!a && !b``
+        
+      ``!a && !b``
 
-        ...will evaluate to ``false`` whenever
+      ...will evaluate to ``false`` whenever
 
-         I. a and b are both false
-         II. a is false and b is true
-         III. a is true and b is false
+      I. a and b are both false
+      II. a is false and b is true
+      III. a is true and b is false
 
-.. mchoice:: qtnt5_9
+.. mchoice:: qtnt5_8
       :answer_a: 1 6
       :answer_b: 7 12
       :answer_c: -3 12
@@ -178,25 +180,23 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       :feedback_d: condition (y % x ==1) never true
       :feedback_e: condition (y % x ==1) never true. Trace it out https://tinyurl.com/AP19-Q12
 
-        Consider the following code segment. What will be the output after execution of this code segment?
+      Consider the following code segment. What will be the output after execution of this code segment?
 
-        .. code-block:: java
+      .. code-block:: java
 
-           int x = 10, y = 0;
-           while(x > 5)
-           {
-              y = 3;
-              while(y < x)
-              {
-                  y *= 2;
-                  if( y % x == 1)
-                      y += x;
-              }
-              x -= 3
-           }
-           Systen.out.println(x + " " + y);
+        int x = 10, y = 0;
+        while(x > 5){
+            y = 3;
+            while(y < x){
+                y *= 2;
+                if( y % x == 1)
+                    y += x;
+            }
+            x -= 3
+        }
+        System.out.println(x + " " + y);
 
-.. mchoice:: qtnt5_10
+.. mchoice:: qtnt5_9
       :answer_a: -5
       :answer_b: 0
       :answer_c: 13
@@ -215,7 +215,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
         int result = 13 - 3 * 6 / 4 % 3
 
-.. mchoice:: qtnt5_11
+.. mchoice:: qtnt5_10
       :answer_a: 0
       :answer_b: 1
       :answer_c: k -1
@@ -238,7 +238,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                 System.out.print("SMALL");
         }
 
-.. mchoice:: qtnt5_12
+.. mchoice:: qtnt5_11
     :answer_a: It prints string str
     :answer_b: It prints string str in reverse order
     :answer_c: It prints only the first two characters of string str
@@ -265,7 +265,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
       }
 
-.. mchoice:: qtnt5_13
+.. mchoice:: qtnt5_12
     :answer_a: 9
     :answer_b: 15
     :answer_c: 19
@@ -279,7 +279,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
     :feedback_e: Second for loop goes until colum <= row index
 
     A square matrix is declared as
-        ``int[][] mat = new int [SIZE][SIZE]``
+        
+    ``int[][] mat = new int [SIZE][SIZE]``
 
     where ``SIZE`` is an appropriate integer constant. Consider the code below.
 
@@ -308,7 +309,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           return total;
       }
 
-.. mchoice:: qtnt5_14
+.. mchoice:: qtnt5_13
     :answer_a: Find the smallest element in arr and swap it into arr[0]
     :answer_b: Compare arr[0] with arr[1] and, if necessary, shift and replace elements such that arr[0] is less than arr[1]
     :answer_c: Compare arr[0] with the middle element of arr, arr[mid] , and if arr[0] is less than arr[mid] , swap these elements
@@ -323,7 +324,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
     The elements of an array are to be sorted in increasing order. Which represent the first step of a merge sort algorithm?
 
-.. mchoice:: qtnt5_15
+.. mchoice:: qtnt5_14
     :answer_a: return 4 * n;
     :answer_b: return 8 * n;
     :answer_c: return 64 * n;
@@ -349,7 +350,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             return n;
         }
 
-.. mchoice:: qtnt5_16
+.. mchoice:: qtnt5_15
     :answer_a: 36
     :answer_b: 30
     :answer_c: 35
@@ -374,7 +375,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             }
         }
 
-.. mchoice:: qtnt5_17
+.. mchoice:: qtnt5_16
     :answer_a: run eat
     :answer_b: run eat sleep
     :answer_c: run eat sleep bark
@@ -420,7 +421,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           }
         }
 
-.. mchoice:: qtnt5_18
+.. mchoice:: qtnt5_17
     :answer_a: -1
     :answer_b: 1
     :answer_c: 0
@@ -445,7 +446,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         }
         System.out.println(x - y);
 
-.. mchoice:: qtnt5_19
+.. mchoice:: qtnt5_18
   :answer_a: 4
   :answer_b: 5
   :answer_c: 6
@@ -471,7 +472,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               sum++;
       }
 
-.. mchoice:: qtnt5_20
+.. mchoice:: qtnt5_19
     :answer_a: mput
     :answer_b: mpu
     :answer_c: mp
