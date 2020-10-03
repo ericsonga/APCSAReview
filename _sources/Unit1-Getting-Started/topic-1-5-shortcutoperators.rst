@@ -107,7 +107,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
    :answer_a: x = -1, y = 1, z = 4
    :answer_b: x = -1, y = 2, z = 3
    :answer_c: x = -1, y = 2, z = 2
-   :answer_d: x = -1, y = 2, z = 2
+   :answer_d: x = 0, y = 1, z = 2
    :answer_e: x = -1, y = 2, z = 4
    :correct: e
    :feedback_a: This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.
