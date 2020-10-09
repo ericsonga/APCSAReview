@@ -32,10 +32,6 @@ AP CS A Exam Weighting: 5-7.5%
    midterm_unit5.rst
    CBLabs.rst
    
-.. Incorporate things from:  firstOOClass.rst
-   runClass.rst
-   JavaBasicsSummary.rst
-   objectObasics.rst
-   objects&Classes.rst
+
   
    
