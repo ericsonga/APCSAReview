@@ -179,7 +179,7 @@ Can you find and fix all the bugs in the following code to use the correct Integ
         System.out.println( doubleValue() );
         // Print out the min and max values possible for integers
         System.out.println(Integer.min_value);
-        System.out.println( i.MAX_VALUE() );
+        System.out.println( int.MAX_VALUE() );
       }
    }
    ====

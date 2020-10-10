@@ -64,7 +64,7 @@ and ``toLowerCase`` methods.  Do they do what you thought they would?  The metho
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "sample.indexOf("quick") = 4\n...";
+            String expect = "sample.indexOf(\"quick\") = 4\n...";
             boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }

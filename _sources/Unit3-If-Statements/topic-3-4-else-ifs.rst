@@ -361,7 +361,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
 
 1. Try the program below or with this |repl link|. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
 
-2. Add in **else if** statements to go in the directions of "s" for south and "e" for east, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. 
+2. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. 
 
 2. How many test-cases are needed to test all branches of your code?
 

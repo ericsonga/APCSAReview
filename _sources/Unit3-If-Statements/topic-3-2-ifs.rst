@@ -473,7 +473,7 @@ Summary
        Do StatementN;
     }
 
-- Java boolean expressions can compare primitive values and reference values with the relational operators == and != and arithmetic expression values with the relational operators (i.e., <, >, <=, >=).
+- Relational operators (==, !=, <, >, <=, >=) are used in boolean expressions to compare values and arithmetic expressions. 
 
 - Conditional (if) statements affect the flow of control by executing different statements based on the value of a Boolean expression.
 

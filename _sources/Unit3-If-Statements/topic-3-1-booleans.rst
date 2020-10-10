@@ -38,7 +38,7 @@ Boolean Expressions
 Testing Equality (==)
 ----------------------
 
-Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal) which return boolean values. 
+The operators == and != (not equal) can be used to compare values. They return true or false boolean values. 
 
 .. note::
 
@@ -54,8 +54,9 @@ Watch the following |Colleen video| which shows what happens in memory as primit
     :width: 650
     :height: 415
     :align: center
+    :optional:
     
-|CodingEx| **Coding Exercise**
+The following code shows how == is used with primitive types like int.
 
 
 
@@ -168,7 +169,7 @@ The **Relational Operators** below in Java are used to compare numeric values or
 - == Equals
 - != Does not equal
 
-If you have trouble telling < and > apart, think of a number line and think of < and > as arrows; < (less than) points towards 0 and smaller numbers on the number line and > (greater than) points towards the larger numbers on the number line. With <= and >=, remember to write the two symbols in the order that you would say them "less than" followed by "or equal to". 
+If you have trouble telling < and > apart, think of a number line and think of < and > as arrows; < (less than) points towards 0 and smaller numbers on the number line and > (greater than) points towards the larger numbers on the number line. Or remember that < starts with the smaller (less) point and > starts with the open wide (greater) side. With <= and >=, remember to write the two symbols in the order that you would say them "less than" followed by "or equal to". 
 
 |CodingEx| **Coding Exercise**
 
@@ -229,7 +230,7 @@ If you have trouble telling < and > apart, think of a number line and think of <
 Testing with mod (%)
 ---------------------
 
-Here are some boolean expressions that are very useful in coding:
+Here are some boolean expressions that are very useful in coding and mod is used in many of them:
 
 .. code-block:: java 
 
@@ -291,7 +292,7 @@ The **modulo** operator has been used quite a bit on the AP CS A exam, so you sh
     
     -  Use it to get the number of minutes left when you convert to hours (``num % 60``).  
     
-    - Use it whenever you have limited storage and you need to wrap around to the front if the value goes over the limit (``num % limit``).
+    - Use it whenever you have limit in the value, and you need to wrap around to the front if the value goes over the limit (``num % limit``).
     
     
 

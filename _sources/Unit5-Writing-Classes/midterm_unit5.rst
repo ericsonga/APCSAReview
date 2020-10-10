@@ -22,6 +22,14 @@ Midterm Problems
 
    .. code-block:: java
 
+      /* Output:
+      1
+      22
+      333
+      4444
+      55555
+      */
+      
       //Loop I
       for (int i = 1; i <= 5; i++) {
          for (int j = i; j > 0; j--) {
@@ -61,14 +69,7 @@ Midterm Problems
       System.out.println();
       }
 
-      /*
-      Output:
-      1
-      22
-      333
-      4444
-      55555
-      */
+     
 
 .. mchoice:: mid_1_2
    :answer_a: A
