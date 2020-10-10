@@ -148,22 +148,22 @@ The AP Computer Science A course specification tells you to assume that all 2D a
       public static void testGetLargest() {
       // test when largest is last
         IntArrayWorker worker = new IntArrayWorker();
-        int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
+        int [][] nums2 = { {1, 2, 3}, {4, 5, 6} };
         worker.setMatrix(nums2);
         int largest = worker.getLargest();
         System.out.println("Largest should be 6 and is " + largest);
         // test when largest is first
-        int[][] nums3 = {{6, 2, 3}, {4, 5, 1}};
+        int[][] nums3 = { {6, 2, 3}, {4, 5, 1} };
         worker.setMatrix(nums3);
         largest = worker.getLargest();
         System.out.println("Largest should be 6 and is " + largest);
         // test when largest is in the middle
-        int[][] nums4 = {{1, 2, 3}, {6, 5, 1}};
+        int[][] nums4 = { {1, 2, 3}, {6, 5, 1} };
         worker.setMatrix(nums4);
         largest = worker.getLargest();
         System.out.println("Largest should be 6 and is " + largest);
         // test when duplicate largest
-        int[][] nums5 = {{6, 2, 6}, {4, 5, 1}};
+        int[][] nums5 = { {6, 2, 6}, {4, 5, 1} };
         worker.setMatrix(nums5);
         largest = worker.getLargest();
         System.out.println("Largest should be 6 and is " + largest);
