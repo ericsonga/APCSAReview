@@ -357,13 +357,13 @@ Midterm Problems
    :answer_d: II and III
    :answer_e: I, II, and III
    :correct: d
-   :feedback_a: This implementation of ''addMinutes'' does not account for values of additionMinutes that push the minute count above 60.
+   :feedback_a: This implementation of ``addMinutes`` does not account for values of additionMinutes that push the minute count above 60.
    :feedback_b: Implementation II works, but implementation III also works.
    :feedback_c: Implementation IV does not work for situations where additionMinutes + minutes does not go above 60.
    :feedback_d: Correct!
    :feedback_e: Implementations II and III are correct, but implementation I is not. Implementation I does not account for values of additionMinutes that push the minute account above 60.
 
-   Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement ''addMinutes()''?
+   Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement ``addMinutes()``?
 
    .. code-block:: java
 
@@ -390,20 +390,20 @@ Midterm Problems
             }
       II.  public void addMinutes(int additionMinutes)
             {
-               if(minutes + additionMinutes >= 60)
+               if (minutes + additionMinutes >= 60)
                {
                   hours += 1;
-                  minutes -= 60;
+                  minutes += additionMinutes - 60;
                }
                else
                {
-                  minutes += minutes + additionMinutes;
+                  minutes += additionMinutes;
                }
             }
       III. public void addMinutes(int additionMinutes)
             {
                minutes += additionMinutes;
-               if(minutes >= 60)
+               if (minutes >= 60)
                {
                   hours++;
                   minutes -= 60;
@@ -411,7 +411,7 @@ Midterm Problems
             }
       IV.  public void addMinutes(int additionMinutes){
             {
-               if(additionMinutes + minutes >= 60)
+               if (additionMinutes + minutes >= 60)
                {
                   minutes = additionMinutes + minutes - 60;
                   hours += 1;
@@ -446,7 +446,7 @@ Midterm Problems
    :feedback_d: Incorrect, this method prints the parameter reversed.
    :feedback_e: Incorrect, this method prints the parameter reversed.
       
-   What does the function ''mystery'' do?
+   What does the function ``mystery`` do?
 
    .. code-block:: java
 

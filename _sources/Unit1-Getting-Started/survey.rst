@@ -1,6 +1,8 @@
+Survey
+-------
 
 Sisters Rise Up
-----------------
+===============
 
 Sisters Rise Up is a research study at the University of Michigan that is trying to determine ways to help women of color (Black, Latinx, and/or Native American) who are taking Advanced Placement Computer Science A (CSA) succeed in the course and on the exam.  It offers free remote one-hour help sessions twice a week which are led by undergraduate students at the University of Michigan.  If you are interested in Sisters Rise Up please fill out the form at https://bit.ly/2QXPri1 with your parent or guardian's contact information.
 
@@ -10,7 +12,7 @@ If you have questions please email Barbara Ericson (barbarer@umich.edu).
 
 
 Survey
-------
+======
 
 .. |Privacy Policy| raw:: html
 
@@ -125,6 +127,4 @@ Please log into Runestone and fill out the following survey.  You do not have to
    I would like to pursue further study or a career in computing.
 
 
-.. raw:: html
 
-    <script src="../_static/custom-csawesome.js"></script>

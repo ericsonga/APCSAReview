@@ -149,7 +149,7 @@ Most if statements have a boolean condition that uses relational operators like 
       public static void main(String[] args)
       {
           // Get a random number from -10 up to 10.
-          int number = (int) (Math.random()*21 - 10);
+          int number = (int) (Math.random()*21) - 10;
           System.out.println("The number is " + number);
         
           // is it positive?
