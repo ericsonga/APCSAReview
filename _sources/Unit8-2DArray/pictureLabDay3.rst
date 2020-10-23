@@ -8,14 +8,14 @@ means that the amount of data that is stored is much smaller than the available 
 To make this activity run on your browser, it has been modified slightly from the original picture lab. We have provided an active code section with the arch.jpg file and a main method with one helper function. This gives you some freedom to run tests as you see fit.
 Write what you feel will help you answer the multiple choice questions. For example, if asked what color is at the center of the image, you could have a print statement access the center of the image and print out the RGB values.
 
-.. datafile:: arch2.jpg
+.. datafile:: metalLion.jpg
    :image:
-   :fromfile: ../../_static/arch.jpg
+   :fromfile: ../../_static/metalLion.jpg
    :hide:
 
 .. activecode:: challenge-8-8-picture
     :language: java
-    :datafile: pictureClasses.jar, arch2.jpg
+    :datafile: pictureClasses.jar, metalLion.jpg
 
     Write helper methods that you call in main to help you answer the multiple choice questions below. You can try running the code to see what effect your methods have had on the image or what output is printed.
     ~~~~

@@ -5,6 +5,7 @@ This section should be mostly review and is just here to help you practice your 
 Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
 The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.
 
+
 .. mchoice:: picture-day4-2a
 
    Here is a method in the ``IntArrayWorker`` class, it operates in a private instance variable
@@ -44,7 +45,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-       public int mysteryMethod() {
+       public int getCount() {
          int total = 0;
          int i = 0;
          int j = 0;
@@ -61,7 +62,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-       public int mysteryMethod() {
+       public int getCount() {
          int total = 0;
          for (int[] rowArray : matrix) {
             for (int item : rowArray) {
@@ -75,7 +76,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-       public int mysteryMethod() {
+       public int getCount() {
          int total = 0;
          for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
@@ -89,7 +90,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-       public int mysteryMethod() {
+       public int getCount() {
           int total = 0;
           int mystery = 0;
           int row = 0;
@@ -104,10 +105,10 @@ The AP Computer Science A course specification tells you to assume that all 2D a
               }
               row++;
           }
-          return (total + mystery);
+          return (total - mystery);
        }
 
-     + Correct! Although, this is a bad way to sum a 2D array.
+     - this does not return the correct amount.
 
 .. activecode:: challenge-8-8-picture4
     :language: java
@@ -210,12 +211,12 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
 .. mchoice:: picture-day4-4a
 
-   What would a functioning implementation of a frequency method in the ``IntArrayWorker`` class look like?
+   What would a functioning implementation of a frequency method, called ``getColTotal``, in the ``IntArrayWorker`` class look like?
    We want this method to accept a target int, and then return how many times that int appears in the array.
 
    - .. code-block:: Java
 
-       public int frequency(int target) {
+       public int getColTotal(int target) {
           int count = 0;
           int current = 0;
              for (int row = 0; row < matrix.length; row++) {
@@ -233,7 +234,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-        public int frequency(int target) {
+        public int getColTotal(int target) {
         int count = 0;
             for (int item : matrix) {
                 if (target == item) {
@@ -247,7 +248,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-        public int frequency(int target) {
+        public int getColTotal(int target) {
           int count = 0;
           for (int[] rowArray : matrix) {
              for (int item : rowArray) {
@@ -261,7 +262,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-        public int frequency(int target) {
+        public int getColTotal(int target) {
         int count = 0;
             for (int row = 0; row < matrix.length; row++) {
                 if (matrix[row].find(target)) {
