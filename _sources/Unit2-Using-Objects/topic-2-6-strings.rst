@@ -95,7 +95,7 @@ In Java there are two ways to create an object of the ``String`` class.  You can
 
 .. code-block:: java
 
-  greeting = new String("Hello");
+   String greeting = new String("Hello");
   
 ..	index::
     single: String literal
@@ -106,7 +106,7 @@ In Java you can also use just a **string literal**, which is a set of characters
 
 .. code-block:: java 
 
-  greeting = "Hello";
+   String greeting = "Hello";
 
 In both cases an object of the ``String`` class will be created in memory and the value of the variable greeting will be set to an object reference, a way to find that object.  
 
