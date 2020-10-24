@@ -22,6 +22,5 @@ Java represents color using the ``java.awt.Color`` class. You can try practicing
 
    pictureLabDay3.rst
    pictureLabDay4.rst
-   pictureLabDay5.rst
 
 There is also a new College Board 2019 extension of this lab called the |Steganography lab|. The teacher guide and the code files are available in the AP Course Audit Portal.
