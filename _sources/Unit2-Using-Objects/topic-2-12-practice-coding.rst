@@ -506,27 +506,6 @@ Here are some practice coding problems for Turtles.
       }
     }
 
-.. activecode:: Turtle-eoc-square-ac
-    :language: java
-    :datafile: turtleClasses.jar
-
-    Finish the code below to have ``t1`` draw a square where all of the
-    sides are length 50.
-    ~~~~
-    import java.util.*;
-    import java.awt.*;
-
-    public class TurtleTest
-    {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle t1  = new Turtle(habitat);
-
-          habitat.show(true);
-      }
-    }
-
 .. activecode:: Turtle-eoc-rect-ac
     :language: java
     :datafile: turtleClasses.jar
@@ -547,6 +526,25 @@ Here are some practice coding problems for Turtles.
           habitat.show(true);
       }
     }
+
+.. activecode:: Turtle-eoc-draw-seven-ac
+    :language: java
+    :datafile: turtleClasses.jar
+
+    Finish the code below to have ``t1`` draw the number seven.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World habitat = new World(300,300);
+          Turtle t1  = new Turtle(habitat);
+
+          habitat.show(true);
+      }
 
 
 .. activecode:: Turtle-eoc-draw-four-ac
