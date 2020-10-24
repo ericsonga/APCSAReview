@@ -376,6 +376,7 @@ Try and Solve It
     import java.util.ArrayList;
     import java.util.Arrays;
 
+    @SuppressWarnings("unchecked")
     public class RunestoneTests extends CodeTestHelper
     {
       public RunestoneTests()
@@ -398,7 +399,7 @@ Try and Solve It
       {
         ArrayList<String> wordList = new ArrayList(Arrays.asList("TAN", "ABRACADABRA", "WHOA", "APPLE", "EGGS"));
 
-        ArrayList<String> wordListExpect = new ArrayList(Arrays.asList("TNA", "BARCADABARA", "PAPLE"));
+        ArrayList<String> wordListExpect = new ArrayList<String>(Arrays.asList("TNA", "BARCADABARA", "PAPLE"));
 
         ScrambledStrings.scrambleOrRemove(wordList);
 
@@ -414,7 +415,7 @@ Try and Solve It
         {
           ArrayList<String> wordList = new ArrayList(Arrays.asList("TESTING", "ONE", "TWO", "THREE"));
 
-          ArrayList<String> wordListExpect = new ArrayList(Arrays.asList());
+          ArrayList<String> wordListExpect = new ArrayList<String>(Arrays.asList());
 
           ScrambledStrings.scrambleOrRemove(wordList);
 
