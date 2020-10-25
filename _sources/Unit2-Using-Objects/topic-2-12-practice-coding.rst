@@ -5,24 +5,24 @@
 Coding Practice
 ======================
 
-The coding problems below are mostly about Strings, but more problems on other topics in this unit will be added in the future.
+The first several problems are about Strings, but there are some about Turtles as well.
 
 .. tabbed:: ch3Ex9
 
-        .. tab:: Question 
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex9q
               :language: java
               :autograde: unittest
               :practice: T
-   
-              Write the code to print a random number from 1 to 100.  You can use ``Math.random()`` to get a value between 0 and not quite 1. 
+
+              Write the code to print a random number from 1 to 100.  You can use ``Math.random()`` to get a value between 0 and not quite 1.
               ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      
+
                   }
               }
               ====
@@ -33,36 +33,36 @@ The coding problems below are mostly about Strings, but more problems on other t
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
-                    public void testCheckCodeContains1() 
+                    public void testCheckCodeContains1()
                     {
                         boolean passed = checkCodeContainsNoRegex("random number up to 100", "Math.random()*100");
-                        assertTrue(passed);    
+                        assertTrue(passed);
                     }
 
                      @Test
-                    public void testCheckCodeContains2() 
+                    public void testCheckCodeContains2()
                     {
                         boolean passed = checkCodeContainsNoRegex("random number starting at 1", "+1");
-                        assertTrue(passed);    
+                        assertTrue(passed);
                     }
 
                      @Test
-                    public void testCheckCodeContains3() 
+                    public void testCheckCodeContains3()
                     {
                         boolean passed = checkCodeContains("casting to int", "(int)");
-                        assertTrue(passed);    
+                        assertTrue(passed);
                     }
                 }
 
 
         .. tab:: Answer
-        
-           First multiply the output from Math.random() times 100 and then cast it to an integer.  This will result in a random number from 0 to 99.  Add one to make it from 1 to 100.  
-           
+
+           First multiply the output from Math.random() times 100 and then cast it to an integer.  This will result in a random number from 0 to 99.  Add one to make it from 1 to 100.
+
            .. activecode::  ch3Ex9a
               :language: java
               :optional:
-   
+
               Answer: This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -72,13 +72,13 @@ The coding problems below are mostly about Strings, but more problems on other t
                       System.out.println(((int) (Math.random() * 100)) + 1);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex9d
-                
+
 
 .. tabbed:: ch4Ex1
 
@@ -88,7 +88,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :language: java
               :autograde: unittest
               :practice: T
-              
+
               The following code should get the first letter of the first name, middle name, and last name and append (concatenate) them together and then return them all in lowercase.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~
               public class Test1
@@ -108,7 +108,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -121,7 +121,7 @@ The coding problems below are mostly about Strings, but more problems on other t
                     }
 
                      @Test
-                    public void testCodeContains() 
+                    public void testCodeContains()
                     {
                         String target = ".substring(0,1)";
                         boolean passed = checkCodeContains("substring method", target);
@@ -186,7 +186,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -198,7 +198,7 @@ The coding problems below are mostly about Strings, but more problems on other t
                         assertTrue(passed);
                     }
                       @Test
-                    public void testCodeContains() 
+                    public void testCodeContains()
                     {
                         String target = ".substring(0,3)";
                         boolean passed = checkCodeContains("substring method fixed", target);
@@ -244,7 +244,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :language: java
               :autograde: unittest
               :practice: T
-              
+
               The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do this task.
               ~~~~
               public class Test1
@@ -252,9 +252,9 @@ The coding problems below are mostly about Strings, but more problems on other t
                   public static void main(String[] args)
                   {
                       String name1 = "ALEX";
-                   
-                   
-                   
+
+
+
                       System.out.println(firstNameCaps);
                   }
               }
@@ -262,7 +262,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -275,7 +275,7 @@ The coding problems below are mostly about Strings, but more problems on other t
                     }
 
                      @Test
-                    public void testCodeContains() 
+                    public void testCodeContains()
                     {
                         String target = ".substring(";
                         boolean passed = checkCodeContains("substring method", target);
@@ -292,7 +292,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :optional:
 
               This is the answer to the previous question.
-              ~~~~              
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -319,7 +319,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :language: java
               :autograde: unittest
               :practice: T
-              
+
               The following code should remove the word "very " (and following space) from the message and print the new message.  You can use ``indexOf`` to find the position of a substring in your string.  You can use ``substring`` to create a new string removing the word.
               ~~~~
               public class Test1
@@ -335,7 +335,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-               
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -347,14 +347,14 @@ The coding problems below are mostly about Strings, but more problems on other t
                         assertTrue(passed);
                     }
                      @Test
-                    public void testCodeContains() 
+                    public void testCodeContains()
                     {
                         String target = ".substring(";
                         boolean passed = checkCodeContains("substring method", target);
                         assertTrue(passed);
                     }
                      @Test
-                    public void testCodeContains2() 
+                    public void testCodeContains2()
                     {
                         String target = ".indexOf(";
                         boolean passed = checkCodeContains("indexOf method", target);
@@ -372,7 +372,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :optional:
 
               This is the answer to the previous question.
-              ~~~~              
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -415,7 +415,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -428,14 +428,14 @@ The coding problems below are mostly about Strings, but more problems on other t
                     }
 
                      @Test
-                    public void testCodeContains() 
+                    public void testCodeContains()
                     {
                         String target = ".substring(";
                         boolean passed = checkCodeContains("substring method", target);
                         assertTrue(passed);
                     }
                      @Test
-                    public void testCodeContains2() 
+                    public void testCodeContains2()
                     {
                         String target = ".indexOf(";
                         boolean passed = checkCodeContains("indexOf method", target);
@@ -453,7 +453,7 @@ The coding problems below are mostly about Strings, but more problems on other t
               :optional:
 
               This is the answer to the previous question.
-              ~~~~              
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -474,11 +474,8 @@ The coding problems below are mostly about Strings, but more problems on other t
                 :shortname: cslearn4u
                 :identifier: javareview_ch4Ex12d
 
-                
-                
 
-
-For more practice with Strings see problems at http://codingbat.com/java/String-1.  
+For more practice with Strings see problems at http://codingbat.com/java/String-1.
 
 * http://codingbat.com/prob/p161056
 * http://codingbat.com/prob/p147483
@@ -486,9 +483,106 @@ For more practice with Strings see problems at http://codingbat.com/java/String-
 * http://codingbat.com/prob/p130896
 * http://codingbat.com/prob/p130781
 
- 
-  
-   
+Here are some practice coding problems for Turtles.
+
+.. activecode:: Turtle-eoc-triangle-ac
+    :language: java
+    :datafile: turtleClasses.jar
+
+    Finish the code below to have ``t1`` draw a triangle where all of the
+    sides are length 50.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World habitat = new World(300,300);
+          Turtle t1 = new Turtle(habitat);
+
+          habitat.show(true);
+      }
+    }
+
+.. activecode:: Turtle-eoc-rect-ac
+    :language: java
+    :datafile: turtleClasses.jar
+
+    Finish the code below to have ``t1`` draw a rectangle.  The vertical
+    sides should be length 50 and the horizontal length 100.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World habitat = new World(300,300);
+          Turtle t1  = new Turtle(habitat);
+
+          habitat.show(true);
+      }
+    }
+
+.. activecode:: Turtle-eoc-draw-seven-ac
+    :language: java
+    :datafile: turtleClasses.jar
+
+    Finish the code below to have ``t1`` draw the number seven.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World habitat = new World(300,300);
+          Turtle t1  = new Turtle(habitat);
+
+          habitat.show(true);
+      }
 
 
+.. activecode:: Turtle-eoc-draw-four-ac
+    :language: java
+    :datafile: turtleClasses.jar
 
+    Finish the code below to have ``t1`` draw the number four.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World habitat = new World(300,300);
+          Turtle t1  = new Turtle(habitat);
+
+          habitat.show(true);
+      }
+    }
+
+.. activecode:: Turtle-eoc-draw-interesting-ac
+    :language: java
+    :datafile: turtleClasses.jar
+
+    Finish the code below to have ``t1`` draw something interesting.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleTest
+    {
+      public static void main(String[] args)
+      {
+          World habitat = new World(300,300);
+          Turtle t1  = new Turtle(habitat);
+
+          habitat.show(true);
+      }
+    }
