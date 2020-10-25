@@ -40,7 +40,7 @@ Compound Boolean Expressions
 	single: truth table
 	pair: logical; and
 	pair: logical; or
-	pair: conditional; complex
+	single: compound boolean
 
 And (&&), Or (||), and Not (!)
 --------------------------------
@@ -152,7 +152,7 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
 
     In English, we often use an exclusive-or like in the sentence "do you want to be player 1 *or* player 2?" where you can't be both player 1 and player 2. In programming, the or-operator is an inclusive-or which means that the whole expression is true if either one or the other or *both* conditions are true. 
     
-With numerical values, the or-operator is often used to check for error conditions on different ends of the number line, while the and-operator is often used to see if a number is in an range. 
+With numerical values, the **or** (||) operator is often used to check for error conditions on different ends of the number line, while the **and** (&&) operator is often used to see if a number is in an range. 
 
 |CodingEx| **Coding Exercise**
 
@@ -198,7 +198,7 @@ With numerical values, the or-operator is often used to check for error conditio
 
 
 
-The **not** (!) operator can be used to negate a boolean value. We've seen ! before in != (not equal).  In Java, ! has precedence (is executed before) &&, and && has precedence over ||. Parentheses can be used to force the order of execution in a different way. If you mix ! with && and ||, be careful because the results are often the opposite of what you think it will be at first. We'll see examples of this in the next lesson.  
+The **not** (!) operator can be used to negate a boolean value. We've seen ! before in != (not equal).  If you use ! in expressions with && and ||, be careful because the results are often the opposite of what you think it will be at first. We'll see examples of this in the next lesson.  
 
 |CodingEx| **Coding Exercise**
 
@@ -345,7 +345,7 @@ The following table shows the result for P || Q when P and Q are both expression
    :feedback_a: first case will print if either of the two conditions are true.  The first condition is true, even though the second one isn't.
    :feedback_b: second case will print if both of the conditions are false, but the first condition is true.   
 
-   What is printed when the following code executes and x has been set to 3 and y has been set to 6?  Notice that it is now an **or** (||) instead of and.
+   What is printed when the following code executes and x has been set to 3 and y has been set to 6?  Notice that it is now an **or** (||) instead of **and** (&&).
    
    .. code-block:: java 
 
@@ -365,11 +365,13 @@ Short Circuit Evaluation
 	single: short circuit evaluation
 	pair: conditional; short circuit evaluation
   
-Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second condition isn't necessarily checked if the result from the first condition is enough to tell if the result is true or false.   In a complex conditional with a logical and (``&&``) both conditions must be true, so if the first is false, then the second doesn't have to be evaluated.  If the complex conditional uses a logical or (``||``) and the first condition is true, then the second condition won't be executed, since only one of the conditions needs to be true.    
+Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second expression (on the right of the operator) isn't necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:   
+ 
+- If two boolean values/expressions are combined with a logical **or** (||) and the first expression is true, then the second expression won’t be executed, since only one needs to be true for the result to be true.
+- If two boolean values/expressions are combined with a logical **and** (&&) and the first expression is false, then the second expression won't be executed.  If the first expression is false, the result will be false, since both sides of the && need to be true for the result to be true. 
 
-.. note::
 
-   In a complex conditional using a logical and (``&&``) the evaluation will short circuit (not execute the second condition) if the first condition is false.  In a complex conditional using a logical or (``||``) the evaluation will short circuit if the first condition is true.  
+
  
 |Exercise| **Check your understanding**
 
@@ -558,17 +560,17 @@ Explore the following problems with your group:
 Summary
 --------
 
-- Logical operators !(not), &&(and), and ||(or) are used with Boolean values. 
+- Logical operators ``!`` (not), ``&&`` (and), and ``||`` (or) are used with Boolean values. 
 
-- (A && B) is true if both A and B are true.
+- ``(A && B)`` is true if both A and B are true.
 
-- (A || B) is true if either A or B (or both) are true.
+- ``(A || B)`` is true if either A or B (or both) are true.
 
-- !(A) is true if A is false.
+- ``!(A)`` is true if A is false.
 
-- In Java, ! has precedence (is executed before) && which has precedence over ||. Parentheses can be used to force the order of execution in a different way.
+- In Java, ``!`` has precedence (is executed before) ``&&`` which has precedence over ``||``. Parentheses can be used to force the order of execution in a different way.
 
-- When the result of a logical expression using && or || can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as **short-circuit evaluation**.
+- When the result of a logical expression using ``&&`` or ``||`` can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as **short-circuit evaluation**.
 
 
 Boolean Game
@@ -579,7 +581,7 @@ Boolean Game
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
    
    
-Try the game below written to practice Booleanss. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
+Try the game below written to practice Booleans. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html
 

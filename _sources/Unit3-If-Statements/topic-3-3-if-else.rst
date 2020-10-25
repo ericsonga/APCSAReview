@@ -189,15 +189,15 @@ If/else statements can also be used with relational operators and numbers like b
         if (x % 2 == 0) 
         =====
         {
-            System.out.println("x is even");
+           System.out.println("x is even");
         }
-            =====    
+        =====    
         else
         =====
         {
-            System.out.println("x is odd");
+           System.out.println("x is odd");
         }
-            =====
+        =====
        }
        =====
     }
@@ -277,7 +277,7 @@ If statements can be nested inside other if statements. Sometimes with nested if
    :autograde: unittest
    :practice: T
    
-   Try the following code with a dangling else. Notice that the indentation does not matter. How could you get the else to belong to the first if statement?
+   Try the following code with a dangling else. Notice that the indentation does not matter to the compiler (but you should make it your habit to use good indentation just as a best practice). How could you get the else to belong to the first if statement?
    ~~~~
    public class DanglingElseTest
    {
@@ -318,10 +318,10 @@ You can use curly brackets { } to enclose a nested if and have the else clause b
     if (boolean expression) 
     {
        if (boolean expression)
-          do this;
+          Do this statement;
     }
     else  // belongs to first if
-      do that statement;
+      Do that statement;
 
 
 
@@ -372,7 +372,7 @@ The |Animal Guessing program| below uses the following decision tree:
            System.out.println("I guess an elephant! Click on run to play again.");
        }
 
-3. Did you notice that when it asked "Is it a pet?" and you said "y", it immediately guessed "dog"? What if you were thinking of a cat? Try to come up with a question that distinguishes dogs from cats and put in code in the correct place (in place of I guess a dog) to ask the question, get the answer, and use an if/else to guess cat or dog. Run your code and test both possibilities!
+3. Did you notice that when it asked "Is it a pet?" and you said "y", it immediately guessed "dog"? What if you were thinking of a cat? Try to come up with a question that distinguishes dogs from cats and put in code in the correct place (in place of the code that prints out "I guess a dog") to ask the question, get the answer, and use an if/else to guess cat or dog. Run your code and test both possibilities!
 
 4. How many animals can your game now guess? How many test-cases are needed to test all branches of your code?
 
@@ -487,10 +487,12 @@ Summary
 
 .. code-block:: java
 
-    if (boolean expression) {
+    if (boolean expression) 
+    {
         Do statement;
     }
-    else {
+    else 
+    {
         Do other statement;
     }
 
