@@ -88,8 +88,16 @@ When the operator ``==`` is used to compare object variables, it returns true wh
         }
     }
 
-The code above will print ``Bye`` since s3 has been assigned to a copy of the value in s2 which is an object reference to the String object that has the characters "Bye" in it.  
-In addition, ``s2 == s3`` will be true since the two variables refer to the same object.  Also, ``s2.equals(s3)`` will also be true; again since the two variables refer to the same object, of course the characters will be the same.  
+The code above will print ``Bye`` since s3 has been assigned to a copy of the value in s2 which is an object reference to the String object that has the characters "Bye" in it.  In addition, ``s2 == s3`` will be true since the two variables refer to the same object.  Also, ``s2.equals(s3)`` will also be true; again since the two variables refer to the same object, of course the characters will be the same.  
+
+The following `video <https://www.youtube.com/watch?v=hhYBVgmC-vw>`_ shows how == and equals works with String objects in memory using the code above.
+
+.. youtube:: hhYBVgmC-vw
+    :width: 700
+    :height: 400
+    :align: center
+
+Here's another representation of memory where s2 and s3 refer to the same object in memory.
 
 .. figure:: Figures/stringRefExamplev2.png
     :width: 250px
@@ -102,9 +110,12 @@ In addition, ``s2 == s3`` will be true since the two variables refer to the same
 
 .. note::
     
-    Only use ``==`` with primitive types like int or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings which will check to see if they are equal  letter by letter.      
+    Only use ``==`` with primitive types like int or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings to test if they are equal  letter by letter.      
     
-The one common place to use == or != with objects is to compare them to **null** to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with && in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole && test is false. 
+Comparing with null
+--------------------
+
+One common place to use == or != with objects is to compare them to **null** to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with && in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole && test is false. 
 
 |CodingEx| **Coding Exercise**
 
@@ -114,7 +125,7 @@ The one common place to use == or != with objects is to compare them to **null**
    :language: java
    :autograde: unittest    
 
-   Try the following code to see a NullPointer error. Since s is null, indexOf throws an NullPointer error for s. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
+   Try the following code to see a NullPointer error (if you don't see the error because of the autograding, you can copy it into the pencil icon scratch area to run it without the grader). Since s is null, indexOf throws an NullPointer error for s. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
    ~~~~
    public class NullTest
    {    
@@ -173,7 +184,12 @@ The one common place to use == or != with objects is to compare them to **null**
         }
     }
      
+The `following video <https://www.youtube.com/watch?v=GPdoHm1K8HA>`_ shows how the null string reference works in memory.
 
+.. youtube:: GPdoHm1K8HA
+    :width: 700
+    :height: 400
+    :align: center
     
 Using new with Strings
 ----------------------
