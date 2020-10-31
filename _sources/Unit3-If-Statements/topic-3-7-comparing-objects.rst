@@ -50,8 +50,8 @@ When the operator ``==`` is used to compare object variables, it returns true wh
 
     Figure 1: String aliases
 
-|CodingEx| **Coding Exercise**
 
+|CodingEx| **Coding Exercise**
 
 .. activecode:: lcse1
    :language: java
@@ -65,7 +65,7 @@ When the operator ``==`` is used to compare object variables, it returns true wh
       {
         String s1 = new String("Hello");
         String s2 = new String("Bye");
-        String s3 = s2;
+        String s3 = s2;   // s3 is now an alias for s2
         System.out.println(s3);
         System.out.println(s2 == s3);
         System.out.println(s2.equals(s3));
@@ -87,39 +87,154 @@ When the operator ``==`` is used to compare object variables, it returns true wh
             assertTrue(passed);
         }
     }
+ 
 
-The code above will print ``Bye`` since s3 has been assigned to a copy of the value in s2 which is an object reference to the String object that has the characters "Bye" in it.  In addition, ``s2 == s3`` will be true since the two variables refer to the same object.  Also, ``s2.equals(s3)`` will also be true; again since the two variables refer to the same object, of course the characters will be the same.  
-
-The following `video <https://www.youtube.com/watch?v=hhYBVgmC-vw>`_ shows how == and equals works with String objects in memory using the code above.
+The following `video <https://www.youtube.com/watch?v=hhYBVgmC-vw>`_ traces through the code above and shows how ``==`` and ``equals`` work with String objects in memory.
 
 .. youtube:: hhYBVgmC-vw
     :width: 700
     :height: 400
     :align: center
+    :optional:
+    
+Here's the representation of memory where s2 and s3 refer to the same String object.
 
-Here's another representation of memory where s2 and s3 refer to the same object in memory.
-
-.. figure:: Figures/stringRefExamplev2.png
-    :width: 250px
+.. figure:: Figures/s2ands3.jpg
+    :width: 350px
     :align: center
     :figclass: align-center
 
-    Figure 2: Several String variables with references to objects of the String class. 
+    Figure 2: s2 and s3 are aliases referring to the same String object
+     
+    
 
+    
+Equality with New Strings
+--------------------------
+
+If you use the ``new`` keyword to create a string, it will always create a new string object. So, even if we create two string objects with new that contain all the same characters in the same order, they will not refer to the same object. 
+
+.. activecode:: lcse2
+   :language: java
+   :autograde: unittest    
+   
+   What will the following print?
+   ~~~~
+   public class Test2
+   {
+      public static void main(String[] args)
+      {
+        String s1 = new String("Hello");
+        String s2 = new String("Hello");
+        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));
+      }
+   }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "false\ntrue\n";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+    }
+
+Watch the `video below <https://www.youtube.com/watch?v=xZroaSGhgxA>`_ to see how this code works in memory. Since we used the ``new`` keyword, two different String objects will be created that each have the characters ``Hello`` in them.  So ``s1 == s2`` will be false since they don't refer to the same object, but ``s1.equals(s2)`` is true since the two different objects contain the same characters in the same order.  
+
+.. youtube:: xZroaSGhgxA
+    :width: 700
+    :height: 400
+    :align: center
+    :optional:
+    
+Here is the representation of these String objects in memory. 
+
+.. figure:: Figures/s1ands2.jpg
+    :width: 350px
+    :align: center
+    :figclass: align-center
+
+    Figure 3: Two strings that are equal with equals but not with ==.
+   
+Note that you can also create Strings using string literals instead of new, like ``String s = "Hello"``. String literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and == on the AP exam.
 
 
 .. note::
     
-    Only use ``==`` with primitive types like int or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings to test if they are equal  letter by letter.      
-    
+    Only use ``==`` with primitive types like int or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings to test if they are equal letter by letter. 
+  
+|Exercise| **Check your understanding**
+
+.. mchoice:: qsbeq_1
+   :practice: T
+   :answer_a: s1 == s2 && s1 == s3
+   :answer_b: s1 == s2 && s1.equals(s3)
+   :answer_c: s1 != s2 && s1.equals(s3)
+   :correct: b
+   :feedback_a: Do s1 and s3 refer to the same object?
+   :feedback_b: Yes s2 was set to refer to the same object as s1 and s1 and s3 have the same characters.
+   :feedback_c: Did you miss that s2 was set to refer to the same object as s1?
+
+   Which of the following is true after the code executes?
+   
+   .. code-block:: java
+
+     String s1 = new String("hi");
+     String s2 = new String("bye");
+     String s3 = new String("hi");
+     s2 = s1;
+     
+.. mchoice:: qsbeq_2
+   :practice: T
+   :answer_a: s1 == s2 && s1 == s3
+   :answer_b: s2.equals(s3) && s1.equals(s3)
+   :answer_c: s1 != s3 && s1.equals(s3)
+   :correct: c
+   :feedback_a: Do s1 and s2 refer to the same object?
+   :feedback_b: Does s2 have the same characters as s1 or s3?
+   :feedback_c: s1 and s3 refer to different string objects but they  contain the same characters "hi" in the same order.   
+
+   Which of the following is true after the code executes?
+   
+   .. code-block:: java
+
+     String s1 = new String("hi");
+     String s2 = new String("bye");
+     String s3 = new String("hi");
+     
+.. mchoice:: qsbeq_3
+   :practice: T
+   :answer_a: s1 == s3 && s1.equals(s3)
+   :answer_b: s2.equals(s3) && s1.equals(s3)
+   :answer_c: !(s1 == s2) && !(s1 == s3)
+   :correct: c
+   :feedback_a: Since s3 uses the new operator it will not refer to the same object as s1.  
+   :feedback_b: Do s2 and s3 have the same characters in the same order?
+   :feedback_c: All of the variables refer to different objects.  But, s1.equals(s3) would be true since they have the same characters in the same order.
+
+   Which of the following is true after the code executes?
+   
+   .. code-block:: java
+
+     String s1 = new String("hi");
+     String s2 = new String("bye");
+     String s3 = new String("hi");
+     
+     
 Comparing with null
 --------------------
 
 One common place to use == or != with objects is to compare them to **null** to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with && in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole && test is false. 
 
 |CodingEx| **Coding Exercise**
-
-
 
 .. activecode:: nullTest
    :language: java
@@ -190,116 +305,8 @@ The `following video <https://www.youtube.com/watch?v=GPdoHm1K8HA>`_ shows how t
     :width: 700
     :height: 400
     :align: center
+    :optional:    
     
-Using new with Strings
-----------------------
-
-If you use the ``new`` keyword to create a string, it will always create a new string object. So, even if we create two string objects with new that contain all the same characters in the same order, they will not refer to the same object. 
-
-.. activecode:: lcse2
-   :language: java
-   :autograde: unittest    
-   
-   What will the following print?
-   ~~~~
-   public class Test2
-   {
-      public static void main(String[] args)
-      {
-        String s1 = new String("Hello");
-        String s2 = new String("Hello");
-        System.out.println(s1 == s2);
-        System.out.println(s1.equals(s2));
-      }
-   }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "false\ntrue\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
-  
-Since we used the ``new`` keyword, two different String objects will be created that each have the characters ``Hello`` in them.  So ``s1 == s2`` will be false since they don't refer to the same object, but ``s1.equals(s2)`` is true since the two different objects contain the same characters in the same order.  
-
-.. figure:: Figures/twoStringRefsv2.png
-    :width: 175px
-    :align: center
-    :figclass: align-center
-
-    Figure 3: Two strings that are equal with equals but not with ==.
-   
-Note that you can also create Strings using string literals instead of new. String literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and == on the exam.
-
-  
-  
-|Exercise| **Check your understanding**
-
-.. mchoice:: qsbeq_1
-   :practice: T
-   :answer_a: s1 == s2 && s1 == s3
-   :answer_b: s1 == s2 && s1.equals(s3)
-   :answer_c: s1 != s2 && s1.equals(s3)
-   :correct: b
-   :feedback_a: Do s1 and s3 refer to the same object?
-   :feedback_b: Yes s2 was set to refer to the same object as s1 and s1 and s3 have the same characters.
-   :feedback_c: Did you miss that s2 was set to refer to the same object as s1?
-
-   Which of the following is true after the code executes?
-   
-   .. code-block:: java
-
-     String s1 = new String("hi");
-     String s2 = new String("bye");
-     String s3 = new String("hi");
-     s2 = s1;
-     
-.. mchoice:: qsbeq_2
-   :practice: T
-   :answer_a: s1 == s2 && s1 == s3
-   :answer_b: s2.equals(s3) && s1.equals(s3)
-   :answer_c: s1 != s3 && s1.equals(s3)
-   :correct: c
-   :feedback_a: Do s1 and s2 refer to the same object?
-   :feedback_b: Does s2 have the same characters as s1 or s3?
-   :feedback_c: s1 and s3 refer to different string objects but they  contain the same characters "hi" in the same order.   
-
-   Which of the following is true after the code executes?
-   
-   .. code-block:: java
-
-     String s1 = new String("hi");
-     String s2 = new String("bye");
-     String s3 = new String("hi");
-     
-.. mchoice:: qsbeq_3
-   :practice: T
-   :answer_a: s1 == s3 && s1.equals(s3)
-   :answer_b: s2.equals(s3) && s1.equals(s3)
-   :answer_c: !(s1 == s2) && !(s1 == s3)
-   :correct: c
-   :feedback_a: Since s3 uses the new operator it will not refer to the same object as s1.  
-   :feedback_b: Do s2 and s3 have the same characters in the same order?
-   :feedback_c: All of the variables refer to different objects.  But, s1.equals(s3) would be true since they have the same characters in the same order.
-
-   Which of the following is true after the code executes?
-   
-   .. code-block:: java
-
-     String s1 = new String("hi");
-     String s2 = new String("bye");
-     String s3 = new String("hi");
-     
-     
 |Groupwork| Programming Challenge : Tracing Code 
 ------------------------------------------------
 

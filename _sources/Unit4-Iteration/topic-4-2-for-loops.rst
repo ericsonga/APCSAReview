@@ -76,7 +76,8 @@ Watch the following `video <https://www.youtube.com/watch?v=SEDnzXeb2hU&list=PLH
     :width: 700
     :height: 400
     :align: center
-
+    :optional:
+    
 Here is a control flow diagram for a for loop.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.
 
 .. figure:: Figures/ForLoopFlow.png

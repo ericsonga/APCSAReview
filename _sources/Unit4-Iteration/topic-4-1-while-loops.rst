@@ -86,7 +86,8 @@ The following `video <https://www.youtube.com/watch?v=Uw9mv53Jnfs>`_ introduces 
     :width: 700
     :height: 400
     :align: center
- 
+    :optional:
+    
 Here's what the flow of control looks like in a Java while loop. Notice that while the condition is true, the loop body is repeated.
 
 .. figure:: Figures/WhileLoopFlow.png
