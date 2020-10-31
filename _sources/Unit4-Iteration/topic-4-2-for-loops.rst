@@ -47,6 +47,8 @@ If you took AP CSP with a block programming language like App Inventor, you prob
     
     Figure 1: Comparing App Inventor and Java for loops
 
+
+
 Three Parts of a For Loop
 --------------------------
 
@@ -59,7 +61,24 @@ A for-loop combines all 3 parts of writing a loop in one line to initialize, tes
      loop body
   }
   
-The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line. One of the strange things about a ``for`` loop is that the code doesn't actually execute where you see it in the declaration.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.
+The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line.  
+
+.. figure:: Figures/compareForAndWhile.png
+    :width: 600px
+    :align: center
+    :figclass: align-center
+
+    Figure 2: Showing how a for loop maps to a while loop
+
+Watch the following `video <https://www.youtube.com/watch?v=SEDnzXeb2hU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&index=9&ab_channel=colleenlewis>`_ which compares a while loop and for loop line by line. 
+
+.. youtube:: SEDnzXeb2hU
+    :width: 700
+    :height: 400
+    :align: center
+    :optional:
+    
+Here is a control flow diagram for a for loop.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.
 
 .. figure:: Figures/ForLoopFlow.png
     :width: 250px
@@ -67,16 +86,6 @@ The for-loop is almost a shortcut way to write a while loop with all three steps
     :figclass: align-center
 
     Figure 2: Control flow in a for loop
-    
-    
-You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` loop actually executes like a ``while`` loop does if you use the ``while`` loop to repeat the body of the loop a specific number of times. 
-
-.. figure:: Figures/compareForAndWhile.png
-    :width: 600px
-    :align: center
-    :figclass: align-center
-
-    Figure 3: Showing how a for loop maps to a while loop
     
 |CodingEx| **Coding Exercise**
 

@@ -12,6 +12,7 @@ In this chapter you learned about **conditionals**.  **Conditionals** are used t
     single: boolean expression
     single: boolean variable
     single: complex conditional
+    single: compound boolean expression
     single: DeMorgan's Laws
     single: logical and
     single: logical or
@@ -23,13 +24,13 @@ Concept Summary
 
 - **Block of statements** - One or more statements enclosed in an open curly brace '{' and a closing curly brace '}'.
 - **Boolean expression** - A mathematical or logical expression that is either true or false.  
-- **complex conditional** - A Boolean expression with two or more conditions joined by a logical and '&&' or a logical or '||'.
+- **compound Boolean expressions** - A Boolean expression with two or more conditions joined by a logical **and** '&&' or a logical **or** '||'.
 - **conditional** - Used to execute code only if a Boolean expression is true.
 - **DeMorgan's Laws** - Rules about how to distribute a negation on a complex conditional.  
-- **logical and** - Used to only execute the following statement or block of statements if both conditions are true
-- **logical or** - Used to execute the following statement or block of statements if one of the conditions are true
+- **logical and** - Used in compound boolean expressions that are true if both conditions are true.
+- **logical or** - Used in compound boolean expressions that are true if one of the conditions is true.
 - **negation** - turns a true statement false and a false statement true
-- **short circuit evaluation** - The type of evaluation used for logical and '&&' and logical or '||' expressions.  If the first condition is false in a complex conditional with a logical and the second condition won't be evaluated.  If the first condition is true is a complex conditional with a logical or the second condition won't be evaluated.
+- **short circuit evaluation** - The type of evaluation used for logical **and** (&&) and logical **or** (||) expressions. If the first condition is false in a compound boolean expression joined with a logical **and**, then the second condition won’t be evaluated. If the first condition is true in a compound boolean expression joined with a logical **or** then the second condition won’t be evaluate.
 
 Java Keyword Summary
 --------------------
@@ -43,19 +44,19 @@ Vocabulary Practice
 
 .. dragndrop:: ch5_cond1
     :feedback: Review the summaries above.
-    :match_1: joints two conditions and it will only be true if both of the conditions are true|||logical and
+    :match_1: joins two conditions and it will only be true if both of the conditions are true|||logical and
     :match_2: used to execute code only when a Boolean condition is true|||conditional
     :match_3: an expression that is either true or false|||Boolean expression
-    :match_4: a conditional with two or more conditions joined together with logical ands or ors|||complex conditional
+    :match_4: an expression with two or more expressions joined together with logical ands or ors|||compound boolean expression
     
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
     
 .. dragndrop:: ch5_cond2
     :feedback: Review the summaries above.
-    :match_1: used to execute code when one of two conditions is true|||logical or
-    :match_2: one or more statements enclosed in a open curly brace and a close curly brace|||blocks of statements
+    :match_1: used to execute code when at least one of two conditions is true|||logical or
+    :match_2: one or more statements enclosed in a open curly brace and a close curly brace|||block(s) of statements
     :match_3: used to start a conditional and execute code if a condition is true|||if
-    :match_4: used to distribute a negation on a complex conditional|||DeMorgan's Laws
+    :match_4: used to distribute a negation on a compound boolean expression|||DeMorgan's Laws
     
     Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
 
@@ -75,7 +76,7 @@ Common Mistakes
   
   -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.    
   
-  -  Trouble with complex conditionals which are two or more Boolean expressions joined by ``&&`` or ``||``.  
+  -  Trouble with compound boolean expressions which are two or more Boolean expressions joined by **and (&&)`` or **or (||)**.  
   
   - Not understanding that `||` is an inclusive-or where one or *both* conditions must be true.
 

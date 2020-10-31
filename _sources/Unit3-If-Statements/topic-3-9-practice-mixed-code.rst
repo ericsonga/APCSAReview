@@ -164,7 +164,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The main method in the following class should print your fine if you are speeding.  If you are going over 65 but less than 75 the fine is 50.  If you are going at least 75 and less than 85 the fine is 100.  Over that the fine is 200.   But, the blocks have been mixed up and includes <b>two extra blocks</b> that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The main method in the following class should print your fine if you are speeding.  If you are going over 65 but less than 75 the fine is 50.  If you are going at least 75 and less than 85 the fine is 100.  Over that the fine is 200.  It does not print anything if you are not speeding. But, the blocks have been mixed up and includes <b>two extra blocks</b> that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
    public class Test1
    {

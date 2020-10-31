@@ -462,7 +462,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
         {
             String code = getCode();
             int elseif = countOccurences(code, "else if");
-            boolean passed = elseif == 3;
+            boolean passed = elseif >= 3;
 
             getResults(""+3, ""+elseif, "Number of else if statements", passed);
             assertTrue(passed);

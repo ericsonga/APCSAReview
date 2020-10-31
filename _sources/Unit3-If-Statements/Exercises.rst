@@ -185,9 +185,9 @@ These problems are similar to those you will see on the AP CS A exam.
 
      I.   if (score >= 93)
              grade = "A";
-          if (score >= 84 && score <=92)
+          if (score >= 84 && score < 93)
              grade = "B";
-          if (score >=75 && score <= 83)
+          if (score >=75 && score < 84)
              grade = "C";
           if (score < 75)
              grade = "F";
@@ -205,7 +205,7 @@ These problems are similar to those you will see on the AP CS A exam.
              grade = "A";
           else if (score >= 84)
              grade = "B";
-          else if (score >=75)
+          else if (score >= 75)
              grade = "C";
           else
              grade = "F";

@@ -325,11 +325,16 @@ Coding Practice
                     }
 
                     @Test
-                    public void testCheckCodeContains()
+                    public void testCountIfs()
                     {
-                        boolean outputLess = checkCodeContains("if (x < 0)");
-                        assertTrue(outputLess);
+                        String code = getCode();
+                        int num = countOccurences(code, "if");
+                        boolean passed = num >= 2;
+
+                        getResults("2+", "" + num, "Number of if statements", passed);
+                        assertTrue(passed);
                     }
+
                     @Test
                     public void testCheckCodeContains2()
                     {
@@ -758,7 +763,7 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                      double score = 67;
+                      int score = 67;
                       
                   }
               }
@@ -771,7 +776,7 @@ Coding Practice
                 {
                   @Test
                     public void testChangedCode() {
-                        String origCode = "public class Test1 { public static void main(String[] args) {        double score = 67; } }";
+                        String origCode = "public class Test1 { public static void main(String[] args) {        int score = 67; } }";
 
                         boolean changed = codeChanged(origCode);
 
@@ -856,7 +861,7 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                      double score = 67;
+                      int score = 67;
                       if (score >= 92)
                           System.out.println("A");
                       else if (score >= 82)

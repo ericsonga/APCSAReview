@@ -79,6 +79,15 @@ If you're used to a language like Snap! or Scratch, you may be familiar with the
 
     Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java while loop 
 
+
+The following `video <https://www.youtube.com/watch?v=Uw9mv53Jnfs>`_ introduces while loops.
+
+.. youtube:: Uw9mv53Jnfs
+    :width: 700
+    :height: 400
+    :align: center
+    :optional:
+    
 Here's what the flow of control looks like in a Java while loop. Notice that while the condition is true, the loop body is repeated.
 
 .. figure:: Figures/WhileLoopFlow.png
@@ -88,7 +97,10 @@ Here's what the flow of control looks like in a Java while loop. Notice that whi
 
     Figure 3: Control Flow in a while Loop
     
-The loop condition usually involves a **loop control variable** that controls when to stop the loop. The simplest loops are **counter-controlled loops** like below, where the loop variable is a counter that controls how many times to repeat the loop. There are 3 steps to writing a loop using this loop control variable as seen below in a loop that counts from 1 to 10.
+Three Steps to Writing a Loop
+-------------------------------
+
+The simplest loops are **counter-controlled loops** like below, where the **loop control variable** is a counter that controls how many times to repeat the loop. There are 3 steps to writing a loop using this loop control variable as seen below in a loop that counts from 1 to 10.
 
 .. figure:: Figures/loop3steps.png
     :width: 400px

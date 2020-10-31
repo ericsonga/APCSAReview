@@ -185,15 +185,18 @@ What does the following code print out? Watch the code run in the  |Java visuali
    }
 
 
+Nested Loops with Turtles
+---------------------------
+
+Try nested loops with turtles to create a snowflake design! 
+
 |CodingEx| **Coding Exercise**
-
-
 
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
    
-Try a nested loop with turtles! If the code below does not work in your browser, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.
+
 
 .. activecode:: TurtleNestedLoop
     :language: java
@@ -201,6 +204,8 @@ Try a nested loop with turtles! If the code below does not work in your browser,
     :autograde: unittest
 
     The turtle below is trying to draw a square many times to create a snowflake pattern. Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15. 
+    
+    If the code below does not work in your browser, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -213,6 +218,9 @@ Try a nested loop with turtles! If the code below does not work in your browser,
           Turtle yertle = new Turtle(world);
           yertle.setColor(Color.blue); 
           
+           // Outer loop will do inner loop to draw a square,
+           // and then turn a little each time
+           // How many times should the outer loop run to complete the pattern? Try some numbers between 5 and 15.
           for (int i = 1; i <= 5; i++) {
            
              // inner loop draws a square
@@ -302,6 +310,8 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
     :datafile: turtleClasses.jar
 
     Use nested for-loops to have the turtle draw a snowflake of polygons. Use the variable turnAmount to turn after each shape and the variable n for the sides of the polygon.
+    
+    If the code below does not work in your browser, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.
     ~~~~
     import java.util.*;
     import java.awt.*;
