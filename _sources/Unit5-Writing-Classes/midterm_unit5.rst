@@ -166,11 +166,11 @@ Midterm Problems
    :answer_d: 64
    :answer_e: 625
    :correct: c
-   :feedback_a: 
-   :feedback_b: 
+   :feedback_a: This would be the correct answer if there were only two loops nested, but there are three. Try again!
+   :feedback_b: Take a look at how many times each inner loop will execute every time the outer loop runs.
    :feedback_c: Correct! 
-   :feedback_d: 
-   :feedback_e: 
+   :feedback_d: Try again - check the difference between <= and < in each loop.
+   :feedback_e: If you got this value you probably made one extra call to the each of the loops, notice that the loops start at 1 and not 0.
 
    Consider the following block of code. What value is returned from ``solution(5)``?
 
@@ -509,11 +509,11 @@ Midterm Problems
    :answer_d: "HloWrd"
    :answer_e: "el ol!"
    :correct: d
-   :feedback_a: 
-   :feedback_b: 
-   :feedback_c: 
+   :feedback_a: The variable holds all characters that were stored at even indices for the original phrase.
+   :feedback_b: The variable holds all characters that were stored at even indices for the original phrase.
+   :feedback_c: The variable holds all characters that were stored at even indices for the original phrase.
    :feedback_d: Correct! The variable holds all characters that were stored at even indices for the original phrase.
-   :feedback_e: 
+   :feedback_e: The variable holds all characters that were stored at even indices for the original phrase.
       
    After the following code is executed, what does the variable ``mystery`` hold?
    
@@ -584,11 +584,11 @@ Midterm Problems
    :answer_d: a = 6 and b = 0
    :answer_e: a = 0 and b = 13
    :correct: c
-   :feedback_a: 
-   :feedback_b: 
+   :feedback_a: This would be true if the loop stopped when i was equal to 6. Try again!
+   :feedback_b: Take another look at how a and b change in each iteration of the loop.
    :feedback_c: Correct!
-   :feedback_d: 
-   :feedback_e: 
+   :feedback_d: Almost there! b = 0, but take another look at how a changes in each iteration of the loop.
+   :feedback_e: Take another look at how a and b change within each iteration of the loop. You are close!
    
    What are the values of ``a`` and ``b`` after the ``for`` loop finishes?
    
