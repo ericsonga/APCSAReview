@@ -293,32 +293,34 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
       public void checkCodeContains1(){
         //check verse 1
         boolean passed = checkCodeContains("verse one method call", "verse(\"one\", \"suck his thumb\"");
+        Song.numVerses = 0;
         assertTrue(passed);
-
       }
 
       @Test
       public void checkCodeContains2(){
          //check verse 2
           boolean passed = checkCodeContains("verse two method call", "verse(\"two\", \"tie his shoe\"");
-        assertTrue(passed);
-
+          Song.numVerses = 0;
+          assertTrue(passed);
       }
 
       @Test
       public void checkCodeContains3(){
          //check verse 3
           boolean passed = checkCodeContains("verse three method call", "verse(\"three\", \"climb a tree\"");
-        assertTrue(passed);
-
+          Song.numVerses = 0;
+          assertTrue(passed);
       }
       @Test
         public void testMain() throws IOException
         {
+            Song.numVerses = 0;
             String output = getMethodOutput("main");
             String expect = "The ants go marching three by three\nThe little one stops to climb a tree";
             boolean passed = output.contains(expect);
             getResults(expect, output, "Expected output from main contains 3 verses", passed);
+            Song.numVerses = 0;
             assertTrue(passed);
         }
         
@@ -331,7 +333,8 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
 
          boolean passed = actual >= 2;
          getResults(expected, ""+actual, "Static void methods", passed);
-        assertTrue(passed);
+         Song.numVerses = 0;
+         assertTrue(passed);
       }
       @Test
       public void checkCodeContains5(){
@@ -342,8 +345,8 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
 
          boolean passed = actual >= 1;
          getResults(expected, ""+actual, "Static int variable", passed);
-        assertTrue(passed);
-
+         Song.numVerses = 0;
+         assertTrue(passed);
       }
     }
 
