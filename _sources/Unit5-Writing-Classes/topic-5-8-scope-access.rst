@@ -26,6 +26,12 @@
 Scope and Access
 =================
 
+..	index::
+    single: scope
+    single: access
+    single: local variable
+    
+    
 The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly brackets { } -- this is its scope.  
 
 Java has 3 levels of scope that correspond to different types of variables:
@@ -82,7 +88,7 @@ The image below shows these 3 levels of scope.
          :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:        
 
-**Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to keep any variables that are used by just one method as local variables in that method. 
+**Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to declare any variables that are used by just one method as local variables in that method. 
 
 Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have Class scope regardless of whether they are public or private.
 

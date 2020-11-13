@@ -6,17 +6,17 @@ Midterm Problems
 ----------------------------------------
 
 .. mchoice:: mid_1_1
-   :answer_a: I
-   :answer_b: II
-   :answer_c: III
-   :answer_d: IV
-   :answer_e: V
+   :answer_a: I only
+   :answer_b: I and II
+   :answer_c: III only
+   :answer_d: IV and V
+   :answer_e: V only
    :correct: a
    :feedback_a: Correct! This will loop with i changing from 1 to 5 and then for each i, j will loop from i to 0 printing the value of i and then a new line.
-   :feedback_b: This will loop i from 0 to 4 and j from 0 to i, neglecting to ouput 5.
-   :feedback_c: This will loop with i changing from 1 to 4 and j from i to 0.
-   :feedback_d: This will loop with i changing from 1 to 5 and j from 0 to i but it will print each value on a different line.
-   :feedback_e: This will loop with i changing from 0 to 4 and j from 0 to i.
+   :feedback_b: II will loop i from 0 to 4 and j from 0 to i, neglecting to ouput 5.
+   :feedback_c: III will loop with i changing from 1 to 4 and j from i to 0.
+   :feedback_d: IV will loop with i changing from 1 to 5 and j from 0 to i but it will print each value on a different line.
+   :feedback_e: V will loop with i changing from 0 to 4 and j from 0 to i.
 
    Which of the following code segments will produce the displayed output?
 
@@ -31,32 +31,40 @@ Midterm Problems
       */
       
       //Loop I
-      for (int i = 1; i <= 5; i++) {
-         for (int j = i; j > 0; j--) {
+      for (int i = 1; i <= 5; i++) 
+      {
+         for (int j = i; j > 0; j--) 
+         {
             System.out.print(i);
          }
-      System.out.println();
+         System.out.println();
       }
 
       //Loop II
-      for (int i = 0; i < 5; i++) {
-         for (int j = 0; j < i; j++) {
+      for (int i = 0; i < 5; i++) 
+      {
+         for (int j = 0; j < i; j++) 
+         {
             System.out.print(i);
          }
-      System.out.println();
+         System.out.println();
       }
 
       //Loop III
-      for (int i = 1; i < 5; i++) {
-         for (int j = i; j > 0; j--) {
+      for (int i = 1; i < 5; i++) 
+      {
+         for (int j = i; j > 0; j--) 
+         {
             System.out.print(i);
          }
-      System.out.println();
+         System.out.println();
       }
 
       //Loop IV
-      for (int i = 1; i < 6; i++) {
-         for (int j = 0; j < i; j++) {
+      for (int i = 1; i < 6; i++) 
+      {
+         for (int j = 0; j < i; j++) 
+         {
             System.out.println(i);
          }
       }
@@ -66,23 +74,23 @@ Midterm Problems
          for (int j = 0; j < i; j++) {
             System.out.print(i+1);
          }
-      System.out.println();
+         System.out.println();
       }
 
      
 
 .. mchoice:: mid_1_2
    :answer_a: A
-   :answer_b: B
-   :answer_c: C
-   :answer_d: D
+   :answer_b: AC
+   :answer_c: C 
+   :answer_d: BD
    :answer_e: E
    :correct: c
-   :feedback_a: Step through this code at https://www.shorturl.at/kmFKU
-   :feedback_b: Step through this code at https://www.shorturl.at/kmFKU
-   :feedback_c: Correct!
-   :feedback_d: Step through this code at https://www.shorturl.at/kmFKU
-   :feedback_e: Step through this code at https://www.shorturl.at/kmFKU
+   :feedback_a: num2 is negative 
+   :feedback_b: Only one letter will be printed.
+   :feedback_c: Correct because num2 is negative and an or is used.
+   :feedback_d: Only one letter will be printed.
+   :feedback_e: One of the other conditions is true.
    
    Consider the following method.  What is the output from ``conditionTest(3,-2);``?
 
@@ -90,19 +98,23 @@ Midterm Problems
 
       public static void conditionTest(int num1, int num2)
       {
-         if ((num1 > 0) && (num2 > 0)) {
+         if ((num1 > 0) && (num2 > 0)) 
+         {
             if (num1 > num2)
                System.out.println("A");
             else
                System.out.println("B");
          }
-         else if ((num2 < 0) || (num1 < 0)) {
+         else if ((num2 < 0) || (num1 < 0)) 
+         {
             System.out.println("C");
          }
-         else if (num2 < 0) {
+         else if (num2 < 0) 
+         {
             System.out.println("D");
          }
-         else {
+         else 
+         {
             System.out.println("E");
          }
       }
@@ -127,19 +139,23 @@ Midterm Problems
       int max = 5;
 
       //Loop I
-      for (int i = 0; i < max; i++){
+      for (int i = 0; i < max; i++)
+      {
          System.out.print(i);
       }
 
       //Loop II
       int j = 0;
-      while (j < max){
+      while (j < max)
+      {
          System.out.print(j);
          j++;
       }
+      
       //Loop III
       int k = 0;
-      for (int i = max; i > 0; i--){
+      for (int i = max; i > 0; i--)
+      {
          System.out.print(i);
       }
 
@@ -150,21 +166,25 @@ Midterm Problems
    :answer_d: 64
    :answer_e: 625
    :correct: c
-   :feedback_a: Step through this code at https://www.shorturl.at/ctBT7
-   :feedback_b: Step through this code at https://www.shorturl.at/ctBT7
+   :feedback_a: 
+   :feedback_b: 
    :feedback_c: Correct! 
-   :feedback_d: Step through this code at https://www.shorturl.at/ctBT7
-   :feedback_e: Step through this code at https://www.shorturl.at/ctBT7
+   :feedback_d: 
+   :feedback_e: 
 
    Consider the following block of code. What value is returned from ``solution(5)``?
 
    .. code-block:: java
 
-      public int solution(int limit){
+      public int solution(int limit)
+      {
          int s = 0;
-         for (int outside = 1; outside <= limit; outside++){
-            for (int middle = 1; middle <= limit; middle++){
-               for (int inside = 1; inside <= limit; inside++){
+         for (int outside = 1; outside <= limit; outside++)
+         {
+            for (int middle = 1; middle <= limit; middle++)
+            {
+               for (int inside = 1; inside <= limit; inside++)
+               {
                   s++;
                }
             }
@@ -194,47 +214,62 @@ Midterm Problems
    :answer_d: s="rain"; b=4;
    :answer_e: s="bow";  b=4;
    :correct: d
-   :feedback_a: Strings are immutable so changing str doesn't affect the string that s refers to. Step through the code at https://www.shorturl.at/jkBU2
-   :feedback_b: Nothing done in the method test affects the value of b. Step through the code at https://www.shorturl.at/jkBU2
-   :feedback_c: Strings are immutable so changing str doesn't affect the string that s refers to. Step through the code at https://www.shorturl.at/jkBU2
+   :feedback_a: Strings are immutable so changing str doesn't affect the string that s refers to. 
+   :feedback_b: Nothing done in the method test affects the value of b. 
+   :feedback_c: Strings are immutable so changing str doesn't affect the string that s refers to. 
    :feedback_d: Correct!
-   :feedback_e: All changes to string s result in a new string object. Step through the code at https://www.shorturl.at/jkBU2
+   :feedback_e: All changes to string s result in a new string object. 
 
 
-   Consider the following method.  Assume that ``String s = "rain";`` and ``int b = 4;`` have been executed.  What are the values of ``s`` and ``b`` after ``test(s,b)`` is executed?
+   Consider the following class with the method ``test``. What is the output after the main method is executed calling ``test(s,b)``?
 
    .. code-block:: java
 
-      public static void test(String str, int y){
-         str = str + "bow";
-         y = y * 2;
-      }
+      public class Test1
+      {
+        public static void test(String str, int y)
+        {
+           str = str + "bow";
+           y = y * 2;
+        }
+      
+        public static void main(String[] args) 
+        { 
+           String s = "rain"; 
+           int b = 4; 
+           test(s, b); 
+           System.out.println("s="+s+"; b="+b); 
+        }
+       }
 
 .. mchoice:: mid_1_7
-   :answer_a: The getAge method should be declared as private.
-   :answer_b: The return type of the getAge method should be void.
-   :answer_c: The getAge method should have at least one parameter.
-   :answer_d: The variable age is not declared inside the getAge method.
-   :answer_e: The instance variable age should be returned instead of a, which is local to the constructor.
+   :answer_a: The ``getAge()`` method should be declared as private.
+   :answer_b: The return type of the ``getAge()`` method should be void.
+   :answer_c: The ``getAge()`` method should have at least one parameter.
+   :answer_d: The variable ``age`` is not declared inside the ``getAge()`` method.
+   :answer_e: The instance variable ``age`` should be returned instead of a, which is local to the constructor.
    :correct: e
    :feedback_a: The method should be public so it can be accessed outside of the class.
-   :feedback_b: The method return type should stay as int.
-   :feedback_c: The getAge should not take any parameters.
-   :feedback_d: This is an instance variable and should be declared outside.
+   :feedback_b: The method's return type should be int.
+   :feedback_c: The getAge method should not take any parameters.
+   :feedback_d: This is an instance variable and should be declared outside of the method.
    :feedback_e: Correct! The accessor method getAge should return the instance variable age.
 
-   Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?
+   Consider the following ``Cat`` class that has an ``age`` attribute of type int. The ``getAge`` method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the ``getAge`` method does NOT work as intended?
 
    .. code-block:: java
 
-      public class Cat{
+      public class Cat
+      {
          private int age;
 
-         public Cat(int a){
+         public Cat(int a)
+         {
             age = a;
          }
 
-         public int getAge(){
+         public int getAge()
+         {
             return a;
          }
       }
@@ -243,46 +278,43 @@ Midterm Problems
    :answer_a: I only
    :answer_b: I and II only
    :answer_c: I and III only
-   :answer_d: IV
+   :answer_d: I, II, and III
+   :answer_e: II and III only
    :correct: d
-   :feedback_a: It's true that the local variables can be declared in the body of constructors and methods, but II,III are also true about local variables.
-   :feedback_b: Static methods cannot call non-static methods, so III is false.
+   :feedback_a: It's true that the local variables can be declared in the body of constructors and methods, but there are other options that are also true about local variables.
+   :feedback_b: Both I and II are true but III is also true regarding local variables.
    :feedback_c: Both I and III are true but II is also true regarding local variables.
    :feedback_d: Correct! All of the above are true.
+   :feedback_e: Both of these are true but I is also true.
 
    Which of the following statements are TRUE about local variables?
 
    .. code-block:: java
 
       I.   Local variables can be declared in the body of constructors and methods.
-      II.  Local variables may only be used within the constructor or method and cannot be 
-           declared to be public or private.
-      III. When there is a local variable with the same name as an instance variable, the 
-           variable name will refer to the local variable instead of the instance variable.
-      IV.  All of the above.
+      II.  Local variables may only be used within the constructor or method and cannot be declared to be public or private.
+      III. When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable.
 
 .. mchoice:: mid_1_9
-   :answer_a: I and II
-   :answer_b: V
-   :answer_c: I,II and IV
-   :answer_d: I and III
+   :answer_a: I and II only
+   :answer_b: I, II, and III
+   :answer_c: I and III only
+   :answer_d: I only
+   :answer_e: III only
    :correct: c
-   :feedback_a: Both I and II are true about static methods, but IV is also true.
-   :feedback_b: Static methods cannot call non-static methods, so III is false.
-   :feedback_c: Correct! I, II, and IV are true.
-   :feedback_d: I is true, but III is not true. Static methods cannot call non-static methods.
+   :feedback_a: Static methods cannot acccess instance variables. They can only access static variables.
+   :feedback_b: Static methods cannot acccess instance variables. They can only access static variables.
+   :feedback_c: Correct! I and III are true, but static methods cannot acccess instance variables. They can only access static variables.
+   :feedback_d: I is true, but there is another option that is true too.
+   :feedback_e: III is true, but there is another option that is true too.
 
-   Which of the following statements are TRUE about Static methods?
+   Which of the following statements are TRUE about **static** methods?
 
    .. code-block:: java
 
-      I.   Static methods and variables include the keyword static before their name in the 
-           header or declaration. They can be public or private.
-      II.  Static methods cannot access or change the values of instance variables, but they
-           can access or change the values of static variables.
-      III. Static methods can call non-static methods.
-      IV.  Static methods are associated with the class, not objects of the class.
-      V.   All of the above.
+      I.   Static methods and variables include the keyword static before their name in the header or declaration and can be public or private.
+      II.  Static methods can access or change the values of instance variables.
+      III.  Static methods are associated with the class, not objects of the class.
 
 .. mchoice:: mid_1_10
    :answer_a: var1 = 0, var2 = 2
@@ -297,13 +329,14 @@ Midterm Problems
    :feedback_d: Correct!
    :feedback_e: 0/2 won't cause a division by zero. The result is just zero.
 
-   What are the values of var1 and var2 after the following code segment is executed and the while loop finishes?
+   What are the values of ``var1`` and ``var2`` after the following code segment is executed and the while loop finishes?
 
    .. code-block:: java
 
       int var1 = 0;
       int var2 = 2;
-      while ((var2 != 0) && ((var1 / var2) >= 0)) {
+      while ((var2 != 0) && ((var1 / var2) >= 0)) 
+      {
          var1 = var1 + 1;
          var2 = var2 - 1;
       }
@@ -312,41 +345,49 @@ Midterm Problems
    :answer_a: 5 4 3 2 1
    :answer_b: -5 -4 -3 -2 -1
    :answer_c: -4 -3 -2 -1 0
+   :answer_d: -5 -4 -3 -2 -1 0
+   :answer_e: -4 -3 -2 -1
+
    :correct: c
-   :feedback_a: x is initialized (set) to -5 to start and incremented (x++) before the print statement executes. Step through the code at https://www.shorturl.at/dgotA.
-   :feedback_b: x is incremented (x++) from -5 before the print statement executes. Step through the code at https://www.shorturl.at/dgotA.
+   :feedback_a: x is initialized (set) to -5 to start and incremented (x++) before the print statement executes. 
+   :feedback_b: x is incremented (x++) from -5 before the print statement executes. 
    :feedback_c: Correct!
+   :feedback_d: x is incremented (x++) from -5 before the print statement executes.
+   :feedback_e: 0 is printed out the last time through the loop when x is -1 and is incremented.
 
    What does the following code print?
 
    .. code-block:: java
 
       int x = -5;
-      while (x < 0){
+      while (x < 0)
+      {
          x++;
          System.out.print(x + " ");
       }
 
 .. mchoice:: mid_1_12
-   :answer_a: 0 3 6 9 12 15
+   :answer_a: 0 3 6 9 12
    :answer_b: 0 1 2 3 4 5
    :answer_c: 1 4 7 10 13
-   :answer_d: This code will not print anything.
-   :answer_e: 0 3 6 9 12
+   :answer_d: 0 3 6 9 12 15  
+   :answer_e: This code will not print anything.
    :correct: d
-   :feedback_a: This would be true if this loop had the correct syntax on the print.
-   :feedback_b: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
-   :feedback_c: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
-   :feedback_d: Correct! The syntax to output text is System.out.print(), so this code will cause a compiler error.
-   :feedback_e: The program does not output anything due to incorrect syntax - if the syntax was correct, it would also print 15.
+   :feedback_a: It would also print 15.
+   :feedback_b: The conditional would only match multiples of three.
+   :feedback_c: The conditional would only match multiples of three.
+   :feedback_d: Yes, the multiples of 3 from 0 to 15.
+   :feedback_e: This code would print the multiples of 3.
 
    What will be printed after this code is executed?
 
    .. code-block:: java
 
-      for (int i = 0; i <= 15; i++) {
-         if (i % 3 == 0) {
-            System.print(i + " ");
+      for (int i = 0; i <= 15; i++) 
+      {
+         if (i % 3 == 0) 
+         {
+            System.out.print(i + " ");
          }
       }
 
@@ -367,15 +408,20 @@ Midterm Problems
 
    .. code-block:: java
 
-      public class Timer{
+      public class Timer
+      {
          private int hours; // number of hours
          private int minutes; // 0 <= minutes < 60
 
-         void addHours(int addition){
+         void addHours(int addition)
+         {
             hours = hours + addition;
          }   
          
-         void addMinutes(int additionMinutes){
+         /** addMinutes adds the given argument to the time stored in hours and minutes. 
+         The argument additionMinutes is between 0 and 119.  **/
+         void addMinutes(int additionMinutes)
+         {
             // implementation not shown
          }
             
@@ -385,38 +431,35 @@ Midterm Problems
 
       //Proposed Implementations:
       I.   public void addMinutes(int additionMinutes)
-            {
+           {
                minutes = minutes + additionMinutes;
-            }
+           }
       II.  public void addMinutes(int additionMinutes)
-            {
-               if (minutes + additionMinutes >= 60)
-               {
-                  hours += 1;
-                  minutes += additionMinutes - 60;
-               }
-               else
-               {
-                  minutes += additionMinutes;
-               }
-            }
-      III. public void addMinutes(int additionMinutes)
-            {
+           {
                minutes += additionMinutes;
-               if (minutes >= 60)
+               if (minutes >= 60) 
+               { 
+                  hours += minutes / 60;
+                  minutes = minutes % 60;
+               }
+           }
+      III. public void addMinutes(int additionMinutes)
+           {
+               minutes += additionMinutes;
+               while (minutes >= 60)
                {
                   hours++;
                   minutes -= 60;
                }
-            }
-      IV.  public void addMinutes(int additionMinutes){
-            {
+           }
+      IV.  public void addMinutes(int additionMinutes)
+           {
                if (additionMinutes + minutes >= 60)
                {
                   minutes = additionMinutes + minutes - 60;
                   hours += 1;
                }
-            }
+           }
 
 .. mchoice:: mid_1_14
    :answer_a: !(a && b)
@@ -450,9 +493,11 @@ Midterm Problems
 
    .. code-block:: java
 
-      public void mystery (String tester){
-         for (int i = tester.length(); i >= 0; i--){
-            System.out.print(tester.charAt(i));
+      public void mystery(String tester)
+      {
+         for (int i = tester.length() - 1; i >= 0; i--)
+         {
+            System.out.print(tester.substring(i,i+1));
          }
          System.out.println("");
       }
@@ -464,23 +509,27 @@ Midterm Problems
    :answer_d: "HloWrd"
    :answer_e: "el ol!"
    :correct: d
-   :feedback_a: Step through the code at https://www.shorturl.at/fyHMN.
-   :feedback_b: Step through the code at https://www.shorturl.at/fyHMN.
-   :feedback_c: Step through the code at https://www.shorturl.at/fyHMN.
+   :feedback_a: 
+   :feedback_b: 
+   :feedback_c: 
    :feedback_d: Correct! The variable holds all characters that were stored at even indices for the original phrase.
-   :feedback_e: Step through the code at https://www.shorturl.at/fyHMN.
+   :feedback_e: 
       
-   After the following code is executed, what does the variable mystery hold?
+   After the following code is executed, what does the variable ``mystery`` hold?
    
    .. code-block:: java
 
-      public class Mysterious{
-         public static void main (String[] args){
+      public class Mysterious
+      {
+         public static void main (String[] args)
+         {
             String mystery = "";
             String starter = "Hello World!";
-            for(int i = 0; i < starter.length(); i++){
-               if(i % 2 == 0){
-                  mystery += starter.charAt(i);
+            for (int i = 0; i < starter.length(); i++)
+            {
+               if(i % 2 == 0)
+               {
+                  mystery += starter.substring(i,i+1);
                }
             }
          }
@@ -499,21 +548,24 @@ Midterm Problems
    :feedback_d: III is incorrect due to a problem with the constructor argument. Try again!
    :feedback_e: Two of these options are incorrect. Take a closer look at the syntax of I and parameters of III.
    
-   Which of the following code segments correctly creates an instance of a new Party object?
+   Which of the following code segments correctly creates an instance of a new ``Party`` object?
    
    .. code-block:: java
 
-      public class Party{
+      public class Party
+      {
 
          private int numInvited;
          private boolean partyCancelled;
 
-         public Party(){
+         public Party()
+         {
             numInvited = 1;
             partyCancelled = false;
          }
 
-         public Party(int invites){
+         public Party(int invites)
+         {
             numInvited = invites;
             partyCancelled = false;
          }
@@ -532,11 +584,11 @@ Midterm Problems
    :answer_d: a = 6 and b = 0
    :answer_e: a = 0 and b = 13
    :correct: c
-   :feedback_a: Step through the code at https://www.shorturl.at/mIY04.
-   :feedback_b: Step through the code at https://www.shorturl.at/mIY04.
+   :feedback_a: 
+   :feedback_b: 
    :feedback_c: Correct!
-   :feedback_d: Step through the code at https://www.shorturl.at/mIY04.
-   :feedback_e: Step through the code at https://www.shorturl.at/mIY04.
+   :feedback_d: 
+   :feedback_e: 
    
    What are the values of ``a`` and ``b`` after the ``for`` loop finishes?
    
@@ -557,11 +609,11 @@ Midterm Problems
    :answer_d: null
    :answer_e: hI tHERE
    :correct: c
-   :feedback_a: Strings are immutable and so any change to a string returns a new string. Step through the code at https://shorturl.at/klorI.
-   :feedback_b: Strings are immutable and so any change to a string returns a new string. Step through the code at https://shorturl.at/klorI.
+   :feedback_a: Strings are immutable and so any change to a string returns a new string. 
+   :feedback_b: Strings are immutable and so any change to a string returns a new string. 
    :feedback_c: Correct!
-   :feedback_d: Strings are immutable and so any changes to a string returns a new string. Step through the code at https://shorturl.at/klorI.
-   :feedback_e: Strings are immutable and so any changes to a string returns a new string. Step through the code at https://shorturl.at/klorI.
+   :feedback_d: Strings are immutable and so any changes to a string returns a new string. 
+   :feedback_e: Strings are immutable and so any changes to a string returns a new string. 
    
    Consider the following code.  What string is referenced by ``s1`` after the code executes?
    
