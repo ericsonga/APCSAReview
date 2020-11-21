@@ -261,7 +261,7 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
 
 1. Copy in your class from the last lesson into this active code window. Change the method(s) that print out the verses of the Song to be static. In the main method, change how you call the static methods by using just the classname instead of creating an object.
 
-2. Add a static variable to the class that keeps track of the number of verses. Increment this variable in the method verse and print it out at the beginning of the verse. 
+2. Add a public static variable called **numVerses** to the class that keeps track of the number of verses. Increment this variable in the method verse and print it out at the beginning of the verse. 
 
 .. activecode:: challenge-5-7-static-song
   :language: java
@@ -269,7 +269,7 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
 
   public class Song 
   { 
-    // Add a static verse counter variable
+    // Add a public static variable called numVerses
     
     
     // Change the method(s) to be static
@@ -279,6 +279,7 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
     public static void main(String args[]) 
     {
       // Call the static method(s) to print out the Song 
+      // Print out the static variable numVerses
     
     }
   }

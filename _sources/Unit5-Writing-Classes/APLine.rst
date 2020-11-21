@@ -46,8 +46,9 @@ Your class must produce the indicated results when the main method below is run.
    :autograde: unittest   
 
    Write a class APLine with instance variables, a constructor with 3 paramaters for a, b, c, and the methods getSlope() and isOnLine(x,y).
-   ~~~
+   ~~~~
    // Declare the APLine class
+   
    {
     /** Declare instance variables */
 
