@@ -1060,9 +1060,7 @@ The following Active Code uses a dictionary array of the most common 100 English
             String output = getMethodOutput("main");
             String expect = "the of and a to in is you that it".replaceAll(" ", "\n") + "\ncatz is misspelled!";
 
-            boolean passed = output.contains(expect);
-
-            passed = getResults(expect, output, "Did you uncomment the main method?", passed);
+            boolean passed = getResults(expect, output, "Did you uncomment the main method?");
             assertTrue(passed);
         }
 
