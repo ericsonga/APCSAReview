@@ -304,7 +304,7 @@ Try and Solve It
    :language: java
    :autograde: unittest
 
-   FRQ Gray Image B: write the code for the method ``processImage``. When you are ready click "Run" to test your solution.
+   FRQ Gray Image B: write the code for the method ``processImage``. Please use row and col for your loop variables.
    ~~~~
    public class GrayImage
    {
@@ -397,7 +397,7 @@ Try and Solve It
        public void test1()
        {
          String target = "pixelValues[row+2][col+2];";
-         boolean passed = checkCodeContainsRegex("altered pixel value",target);
+         boolean passed = checkCodeContainsRegex("subtracting pixel at row+2, col+2",target);
          assertTrue(passed);
        }
 
@@ -407,7 +407,7 @@ Try and Solve It
          String target1 = "pixelValues[row][col] < BLACK";
          String target2 = "pixelValues[row][col] < 0";
 
-         boolean passed = checkCodeContainsRegex("check of pixel value less than 0",target1) ||                       checkCodeContainsRegex("check of pixel value less than 0",target2);
+         boolean passed = checkCodeContainsRegex("check of pixel value at row, col less than 0",target2) ||                       checkCodeContainsRegex("or check of pixel value less than BLACK",target1);
          assertTrue(passed);
        }
      }
