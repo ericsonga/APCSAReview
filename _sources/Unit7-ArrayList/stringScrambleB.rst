@@ -122,14 +122,14 @@ This section contains a plain English explanation of one way to solve this probl
 
     .. mchoice:: strng_mcalg_answr_2
        :answer_a: (int i = wordList.size() - 1; i != wordList.size(); i--)
-       :answer_b: (int i = wordList.size() - 1; index >= 0; index--)
+       :answer_b: (int i = wordList.size() - 1; i >= 0; i--)
        :answer_c: (int i = wordList.size(); i >= 0; i--)
-       :answer_d: (int i = wordList.size() - 1; index > 0; index--)
+       :answer_d: (int i = wordList.size() - 1; i > 0; i--)
        :correct: b
        :feedback_a: this will lead to an infinite loop
        :feedback_b: Correct!
-       :feedback_c: This loop starts out of bounds.
-       :feedback_d: This loop doesn't iterate all the way through the wordList.
+       :feedback_c: This loop starts out of bounds since there isn't an element at wordList.size().
+       :feedback_d: This loop doesn't iterate all the way through the wordList. It misses the 0th element.
 
        You can also use a for loop to solve this problem instead of a while loop. what conditional could we write to make sure the loop does not go out of bounds?
 

@@ -48,7 +48,7 @@ Coding Practice with Loops
                     @Test
                     public void testForLoop() throws IOException
                     {
-                        String target = "for(int x = 5;";
+                        String target = "for(int * = 5;";
                         boolean passed = checkCodeContains("for loop", target);
                         assertTrue(passed);
                     }
@@ -120,7 +120,7 @@ Coding Practice with Loops
                     @Test
                     public void testForLoop() throws IOException
                     {
-                        String target = "while (x";
+                        String target = "while (";
                         boolean passed = checkCodeContains("while loop", target);
                         assertTrue(passed);
                     }
@@ -198,7 +198,7 @@ Coding Practice with Loops
                     @Test
                     public void testForLoop() throws IOException
                     {
-                        String target = "for (int x = 5;";
+                        String target = "for (int * = 5;";
                         boolean passed = checkCodeContains("for loop", target);
                         assertTrue(passed);
                     }
@@ -268,7 +268,7 @@ Coding Practice with Loops
                     @Test
                     public void testForLoop() throws IOException
                     {
-                        String target = "while (x";
+                        String target = "while (";
                         boolean passed = checkCodeContains("while loop", target);
                         assertTrue(passed);
                     }
@@ -349,7 +349,7 @@ Coding Practice with Loops
                         String target2 = "x++;";
                         String code = removeSpaces(getCode());
                         boolean passed = code.contains(target1) || code.contains(target2);
-                        getResults("true", ""+passed, "changing the loop variable");
+                        getResults("true", ""+passed, "changing the loop variable x");
                         assertTrue(passed);
                     }
                 }

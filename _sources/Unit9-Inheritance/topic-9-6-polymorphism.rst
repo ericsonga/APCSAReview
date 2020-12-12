@@ -447,17 +447,6 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
             }
 
             @Test
-            public void test3()
-            { 
-                String output = getMethodOutput("main");
-                String expect = "cart.countDiscountedItems()";
-
-                boolean passed = checkCodeContains(expect);
-                assertTrue(passed);
-
-            }
-
-            @Test
             public void test4()
             { 
                 String target = "public int countDiscountedItems()";
