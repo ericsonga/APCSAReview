@@ -241,7 +241,7 @@ The code does not currently work in Runestone because it is missing the Grid Wor
 .. activecode:: frq2013Q3A-grid
    :language: java
 
-   This FRQ does not currently work in Runestone because it is missing the Grid World library. You can write the metnod getEmpty Locations, but it will not compile.
+   This FRQ does not currently work in Runestone because it is missing the Grid World library. You can write the method getEmpty Locations, but it will not compile.
    ~~~~
    import info.gridworld.grid;
    public class GridWorldUtilities
