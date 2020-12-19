@@ -2,10 +2,10 @@
 Picture Lab Day 3: Exploring a Picture
 =======================================
 In this section we will cover the basics of image navigation. Images all start at a (0,0) point but unlike the origin in geometry, this point is in the upper right corner rather than the bottom left.
-We will be using an image called arch.jpg which should appear on the page. A JPEG file is one that follows an intentional standard for storing picture data using lossy compression. Lossy compression
+We will be using an image called lion.jpg which should appear on the page. A JPEG file is one that follows an intentional standard for storing picture data using lossy compression. Lossy compression
 means that the amount of data that is stored is much smaller than the available data, but the data that is omitted to reach this smaller size, will not be missed.
 
-To make this activity run on your browser, it has been modified slightly from the original picture lab. We have provided an active code section with the arch.jpg file and a main method with one helper function. This gives you some freedom to run tests as you see fit.
+To make this activity run on your browser, it has been modified slightly from the original picture lab. We have provided an active code section with the lion.jpg file and a main method with one helper function. This gives you some freedom to run tests as you see fit.
 Write what you feel will help you answer the multiple choice questions. For example, if asked what color is at the center of the image, you could have a print statement access the center of the image and print out the RGB values.
 
 .. datafile:: metalLion.jpg
@@ -129,10 +129,10 @@ Write what you feel will help you answer the multiple choice questions. For exam
        */
       public static void main(String[] args)
       {
-        Picture arch = new Picture("arch.jpg");
-        arch.show();
-        arch.hint();
-        arch.show();
+        Picture lion = new Picture("metalLion.jpg");
+        lion.show();
+        lion.hint();
+        lion.show();
 
       }
     }
