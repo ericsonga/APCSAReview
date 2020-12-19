@@ -2,14 +2,18 @@
    :prefix:  7-4-11-
    :start: 1
 
-Free Response - Grid World A
-------------------------------
+Free Response - Grid World A (Not Complete)
+--------------------------------------------------------
 
 ..	index::
 	  single: Grid World
-    single: free response
+      single: free response
+
+This FRQ does not currently work in Runestone because it is missing the Grid World library.
 
 The following is a free response question from 2013. It was question 3 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
+
+
 
 3.   This question involves reasoning about the GridWorld case study that was formerly required knowledge for the APCSA exam. It is no longer expected that you know this information and it will be provided to you in this question.
 Because there is a lot of extra material that you need to read and understand, this question may seem more challenging and will require more time than a typical FRQ you would expect on your AP exam. It is still good practice nonetheless.
@@ -231,11 +235,14 @@ In this question, you will write the ``GridWorldUtilities`` method ``getEmptyLoc
 in grid, the method returns an empty ``Arraylist``. Otherwise, it returns an ``Arraylist`` of all empty locations in
 grid. Each empty location should appear exactly once in the ``Arraylist``.
 
-Write the method ``getEmptyLocations`` in the code below. The main method contains code to test your solution.
+Write the method ``getEmptyLocations`` in the code below. 
+The code does not currently work in Runestone because it is missing the Grid World library.
 
 .. activecode:: frq2013Q3A-grid
    :language: java
 
+   This FRQ does not currently work in Runestone because it is missing the Grid World library. You can write the metnod getEmpty Locations, but it will not compile.
+   ~~~~
    import info.gridworld.grid;
    public class GridWorldUtilities
    {
@@ -252,6 +259,6 @@ Write the method ``getEmptyLocations`` in the code below. The main method contai
 
        public static void main(String[] args)
        {
-           ???
+          /* Test the method */
        }
    }

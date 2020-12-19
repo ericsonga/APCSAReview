@@ -1,6 +1,7 @@
 
-Picture Lab Day 3: Exploring a Picture
-=======================================
+Picture Lab Day 3: Exploring a Picture (not complete)
+=====================================----==------------
+
 In this section we will cover the basics of image navigation. Images all start at a (0,0) point but unlike the origin in geometry, this point is in the upper right corner rather than the bottom left.
 We will be using an image called lion.jpg which should appear on the page. A JPEG file is one that follows an intentional standard for storing picture data using lossy compression. Lossy compression
 means that the amount of data that is stored is much smaller than the available data, but the data that is omitted to reach this smaller size, will not be missed.

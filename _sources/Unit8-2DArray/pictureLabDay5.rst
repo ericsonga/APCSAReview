@@ -1,6 +1,7 @@
 
-Picture Lab Day 5: Modifying a Picture
-======================================
+Picture Lab Day 5: Modifying a Picture (not complete)
+=====================================----==------------
+
 You will write methods in the ``Picture`` class that modify digital pictures.
 The ``Picture`` class inherits from the ``SimplePicture`` class and the ``SimplePicture`` class implements the ``DigitalPicture`` interface as shown in the Unified Modeling Language (UML) class diagram in the figure .
 

@@ -17,6 +17,8 @@ As a quick refresher on digital images, each point of color is called a pixel an
 We can store values for red, green, and blue, each ranging from 0 to 255. Unlike mixing paints, which is subtractive (light gets absorbed more with more mixing), the computer display is additive (you are actually adding light rather than absorbing it).
 Java represents color using the ``java.awt.Color`` class. You can try practicing modifying colors in the aforementioned lab in 8.2.6.
 
+The following picture lab pages are currently being edited and are not yet complete.
+
 .. toctree::
    :maxdepth: 3
 
