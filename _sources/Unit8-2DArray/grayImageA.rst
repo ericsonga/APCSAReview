@@ -401,13 +401,13 @@ Try and Solve It
        public void test3()
        {
          String code = getCode();
-         String target = "for (int * = #;";
+         String target = "for";
 
          int num = countOccurencesRegex(code, target);
 
          boolean passed = num == 2;
 
-         getResults("2", ""+num, "2 For loops (nested)", passed);
+         getResults("2", ""+num, "2 for loops (nested)", passed);
          assertTrue(passed);
        }
      }
