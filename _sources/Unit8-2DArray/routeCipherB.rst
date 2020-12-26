@@ -86,13 +86,9 @@ How to Solve This
 This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.
 Click on the buttons to reveal the questions.
 
-.. reveal:: FRQRouteCipherB_1
-   :showtitle: Reveal Loop Hint
-   :hidetitle: Hide Loop Hint
+To solve this problem, you have a message that you need to process and concatenate. Do you need to use a loop for this?
 
-   To solve this problem, you have a message that you need to process and concatenate. Do you need to use a loop for this?
-
-   .. reveal:: FRQRouteCipherB_1.5
+.. reveal:: FRQRouteCipherB_1.5
       :showtitle: Reveal Loop Type Problem
       :hidetitle: Hide Loop Type Problem
 
@@ -103,111 +99,17 @@ Click on the buttons to reveal the questions.
         :answer_d: switch statement
         :correct: a
         :feedback_a: Correct!
-        :feedback_b: This would not work in this situation.
-        :feedback_c: This would not work in this situation.
-        :feedback_d: This would not work in this situation.
+        :feedback_b: You would need a loop.
+        :feedback_c: For this problem, a while loop would be easier to use.
+        :feedback_d: You would need a loop.
 
-        What type of loop could you use?
-
-   .. reveal:: FRQRouteCipherB_1.75
-      :showtitle: Reveal Alternate Loop Type Problem
-      :hidetitle: Hide Loop Type Problem
-
-      .. mchoice:: FRQRouteCipherB_1.75MC
-        :answer_a: switch
-        :answer_b: if
-        :answer_c: for
-        :answer_d: You can solve this without a loop
-        :answer_e: for each
-        :correct: d
-        :feedback_a: This would not work in this situation.
-        :feedback_b: This would not work in this situation.
-        :feedback_c: This would not work in this situation.
-        :feedback_d: Correct!
-        :feedback_e: This would not work in this situation.
-
-         Could you solve this problem with a different kind of loop?
+        What type of loop could you use to solve this problem?
 
 
-
-Alternate Recursive Solution
------------------------------
-
-This problem can be very succinctly solved using recursion. If you are unfamiliar with recursion do not worry if the recursive solution does not make immediate sense.
-It is not necessary that you understand recursion at this point however, once you have completed unit 10 which covers the basics of recursion, feel free to return to this
-question to practice working through the recursive solution.
-
-.. reveal:: routecipherB_recursive
-   :showtitle: Reveal Recursion Exercises
-   :hidetitle: Hide Recursion Exercises
-
-   .. mchoice:: FRQRouteCipherBrecur_1
-     :answer_a: if (message.length() == 0) { return ""; }
-     :answer_b: if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
-     :answer_c: return "";
-     :answer_d: return encryptBlock();
-     :correct: a
-     :feedback_a: Correct!
-     :feedback_b: This would not work in this situation.
-     :feedback_c: This would not work in this situation.
-     :feedback_d: This would not work in this situation.
-
-     What is your base case?
-
-   .. mchoice:: FRQRouteCipherBrecur_2
-     :answer_a: Head
-     :answer_b: Tail
-     :answer_c: Tree
-     :answer_d: Body
-     :correct: b
-     :feedback_a: The recursive call is not the first statement in the method hence it is not head recursive.
-     :feedback_b: Correct!
-     :feedback_c: We do not make multiple recursive calls so the method is not tree recursive.
-     :feedback_d: This is not a term that describes recursion.
-
-     What kind of recursion will you use?
-
-   .. mchoice:: FRQRouteCipherBrecur_3
-     :answer_a: return "";
-     :answer_b: return (encryptMessage(message.substring(this.numRows * this.numCols)));
-     :answer_c: return (encryptBlock());
-     :answer_d:  return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
-     :correct: d
-     :feedback_a: This is the return statement of the base case.
-     :feedback_b: This does not return the correct results
-     :feedback_c: This is the return statement of one of the conditional base cases.
-     :feedback_d: Correct!
-
-     What is your tail recursive call?
-
-
-If you still feel unsure of the recursive solution, it is recommended that you return to the recursion unit to do some more practice as this problem is quite challenging to solve recursively.
-
-.. reveal:: routecipherB_rec??
-      :showtitle: Reveal Recursion Solution Exercise
-      :hidetitle: Hide Recursion Solution Exercise
-
-      .. parsonsprob:: RouteCipherB_recurpar
-        :numbered: left
-        :adaptive:
-
-        The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
-        -----
-        public String encryptMessage(String message) {
-        =====
-          if (message.length() == 0) { return ""; }
-        =====
-          fillBlock(message);
-        =====
-          if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
-        =====
-          return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
-        =====
-        } // end method
 
 .. reveal:: routecipherB_reg
-   :showtitle: Reveal Non Recursive Exercises
-   :hidetitle: Hide Non Recursive Exercises
+   :showtitle: Reveal conditional for loop
+   :hidetitle: Hide conditional for loop
 
    .. mchoice:: FRQRouteCipherBnorm_1
      :answer_a: while (message.substring(k, k + 1) < 0)
@@ -246,7 +148,7 @@ If you still feel unsure of the recursive solution, it is recommended that you r
      :feedback_c: Correct!
      :feedback_d: This does not give you the correct result.
 
-     Given that chunkSize is greater that messaeg.lenght(), what should the code execute?
+     If chunkSize is greater that message.length(), what should you set chunkSize to?
 
    .. mchoice:: FRQRouteCipherBnorm_4
      :answer_a: encryptMessage(message);
@@ -264,8 +166,8 @@ If you still feel unsure of the recursive solution, it is recommended that you r
 Below is a mixed up version of the correct solution hinted at by the previous questions.
 
 .. reveal:: routecipherB_pars_sol
-      :showtitle: Reveal Possible Solution Exercise
-      :hidetitle: Hide Possible Solution Problem
+       :showtitle: Reveal Possible Solution Exercise
+       :hidetitle: Hide Possible Solution Problem
 
        .. parsonsprob:: RouteCipherB
          :numbered: left
@@ -404,3 +306,80 @@ Complete method ``encryptMessage`` below.
          assertTrue(passed);
        }
      }
+
+
+
+Alternate Recursive Solution
+-----------------------------
+
+Instead of using loops, this problem can be solved using recursion. If you are unfamiliar with recursion do not worry if the recursive solution does not make immediate sense.
+It is not necessary that you understand recursion at this point however, once you have completed unit 10 which covers the basics of recursion, feel free to return to this
+question to practice working through the recursive solution.
+
+.. reveal:: routecipherB_recursive
+   :showtitle: Reveal Recursion Exercises
+   :hidetitle: Hide Recursion Exercises
+
+   .. mchoice:: FRQRouteCipherBrecur_1
+     :answer_a: if (message.length() == 0) { return ""; }
+     :answer_b: if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
+     :answer_c: return "";
+     :answer_d: return encryptBlock();
+     :correct: a
+     :feedback_a: Correct!
+     :feedback_b: This would not work in this situation.
+     :feedback_c: This would not work in this situation.
+     :feedback_d: This would not work in this situation.
+
+     What is your base case?
+
+   .. mchoice:: FRQRouteCipherBrecur_2
+     :answer_a: Head
+     :answer_b: Tail
+     :answer_c: Tree
+     :answer_d: Body
+     :correct: b
+     :feedback_a: The recursive call is not the first statement in the method hence it is not head recursive.
+     :feedback_b: Correct!
+     :feedback_c: We do not make multiple recursive calls so the method is not tree recursive.
+     :feedback_d: This is not a term that describes recursion.
+
+     What kind of recursion will you use?
+
+   .. mchoice:: FRQRouteCipherBrecur_3
+     :answer_a: return "";
+     :answer_b: return (encryptMessage(message.substring(this.numRows * this.numCols)));
+     :answer_c: return (encryptBlock());
+     :answer_d:  return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
+     :correct: d
+     :feedback_a: This is the return statement of the base case.
+     :feedback_b: This does not return the correct results
+     :feedback_c: This is the return statement of one of the conditional base cases.
+     :feedback_d: Correct!
+
+     What is your tail recursive call?
+
+
+If you still feel unsure of the recursive solution, it is recommended that you return to the recursion unit to do some more practice as this problem is quite challenging to solve recursively.
+
+.. reveal:: routecipherB_rec??
+      :showtitle: Reveal Recursion Solution Exercise
+      :hidetitle: Hide Recursion Solution Exercise
+
+      .. parsonsprob:: RouteCipherB_recurpar
+        :numbered: left
+        :adaptive:
+
+        The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+        -----
+        public String encryptMessage(String message) {
+        =====
+          if (message.length() == 0) { return ""; }
+        =====
+          fillBlock(message);
+        =====
+          if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
+        =====
+          return (encryptBlock() + encryptMessage(message.substring(this.numRows * this.numCols)));
+        =====
+        } // end method
