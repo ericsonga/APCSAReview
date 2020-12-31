@@ -1,6 +1,6 @@
 
 Picture Lab Day 4: 2D Arrays in Java (not complete)
-=====================================----==------------
+=======================================================
 
 This section should be mostly review and is just here to help you practice your skills traversing 2D arrays. In this section you will be working with integer data stored in a 2D array.
 Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
