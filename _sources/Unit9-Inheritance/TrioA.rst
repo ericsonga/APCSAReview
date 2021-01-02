@@ -124,9 +124,9 @@ Try and Solve It
    }
 
    // Declare the Trio class.  It must implement the MenuItem interface.
-   
+   public class Trio implements MenuItem
    {
-      // declare the fields that you need for a trio object
+      // declare the instance variables that you need for a trio object
    
       // write a constructor that takes a Sandwich, Salad, and a Drink, in that order
       

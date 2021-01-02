@@ -74,7 +74,7 @@ Vocabulary Practice
 
 .. |Quizlet| raw:: html
 
-   <a href="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+   <a href="https://quizlet.com/434081272/cs-awesome-unit-6-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
 
 
 For more practice, see this |Quizlet|.
