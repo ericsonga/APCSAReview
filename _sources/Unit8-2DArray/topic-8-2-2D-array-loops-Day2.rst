@@ -553,7 +553,7 @@ Summary
 
 - Nested iteration statements can be written to traverse the 2D array in "row-major order" or "column-major order."
 
-- In a enhanced for each loop, the variable of the outer loop must be the type of each row, which is a 1D array. The inner enhanced for loop variable must be the same type as the elements stored in the array.
+- In an enhanced for each loop, the variable of the outer loop must be the type of each row, which is a 1D array. The inner enhanced for loop variable must be the same type as the elements stored in the array.
 
 - All standard 1D array algorithms can be applied to 2D array objects.
 
