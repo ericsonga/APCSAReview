@@ -69,7 +69,7 @@ Many programming languages actually store two-dimensional array data in a one-di
 How Java Stores 2D Arrays
 ---------------------------
 
-Java actually stores two-dimensional arrays as arrays of arrays.  Each element of the outer array has a reference to each inner array.  The picture below shows a 2D array that has 3 rows and 7 columns.  Notice that the array indices start at 0 and end at the length - 1.  
+Java actually stores a two-dimensional array as an array of arrays.  Each element of the outer array has a reference to each inner array.  The picture below shows a 2D array that has 3 rows and 7 columns.  Notice that the array indices start at 0 and end at the length - 1.  
 
 .. figure:: Figures/ArrayRowsAndCols.png
     :width: 300px

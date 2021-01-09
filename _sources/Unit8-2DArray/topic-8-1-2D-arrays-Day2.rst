@@ -417,7 +417,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
 Summary
 -------
 
-- 2D arrays are stored as arrays of arrays. Therefore, the way 2D arrays are created and indexed is similar to 1D array objects.
+- A 2D array is stored as an array of arrays. And the way 2D arrays are created and indexed is similar to 1D array objects.
 
 - 2D arrays are declared and created with the following syntax: datatype[][] variableName = new datatype[numberRows][numberCols];
 

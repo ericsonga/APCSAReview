@@ -459,7 +459,7 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
             @Test
             public void test5()
             { 
-                String target = "if (* instanceof DiscountedItem)\n*++;";
+                String target = "if (* instanceof DiscountedItem)";
 
                 boolean passed = checkCodeContains(target);
                 assertTrue(passed);

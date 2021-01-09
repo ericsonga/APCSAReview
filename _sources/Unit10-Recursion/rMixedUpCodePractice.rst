@@ -147,17 +147,17 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if(n % 2 == 0)
    =====
-            return 1;
+              return 1;
    =====
-            else return 0;
+           else return 0;
    =====
-        else if((n % 10) % 2 == 0)
+       else if((n % 10) % 2 == 0)
    =====
-                return evenDigits(n / 10) + 1;
+           return evenDigits(n / 10) + 1;
    =====
-		else
+       else
    =====
-                return evenDigits(n / 10);
+           return evenDigits(n / 10);
    =====
    }
 
