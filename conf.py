@@ -12,7 +12,7 @@
 # serve to show the default.
 
 import sys, os
-
+from sphinx.errors import ExtensionError
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -246,6 +246,12 @@ html_css_files = ['css/custom.css',]
 def setup(app):
     app.add_stylesheet('css/custom.css')
     for f in script_files:
-        app.add_js_file(f)
+        try:
+            app.add_autoversioned_javascript(f)
+        except ExtensionError:
+            app.add_js_file(f)
     for f in css_files:
-	    app.add_css_file(f)
+        try:
+            app.add_autoversioned_stylesheet(f)
+        except ExtensionError:
+            app.add_css_file(f)
