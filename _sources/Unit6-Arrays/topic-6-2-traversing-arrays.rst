@@ -1095,6 +1095,12 @@ The following Active Code uses a dictionary array of the most common 100 English
             boolean passed = getResults(expect, output, "spellcheck(\"dog\")");
             assertTrue(passed);
         }
+        @Test
+        public void testEquals() 
+        {
+            boolean passed = checkCodeContains("use of equals method", ".equals(");
+            assertTrue(passed);
+        }
     }
  
  

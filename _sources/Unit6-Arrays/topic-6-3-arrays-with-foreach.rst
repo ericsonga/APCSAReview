@@ -581,7 +581,13 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
             boolean passed = checkCodeContains("for each loop", "for(String * : dictionary)");
             assertTrue(passed);
         }
-    }
+        @Test
+        public void testEquals() 
+        {
+            boolean passed = checkCodeContains("use of equals method", ".equals(");
+            assertTrue(passed);
+        }
+      }
 
 Summary
 -------
