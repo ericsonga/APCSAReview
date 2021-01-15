@@ -318,8 +318,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
    =====
-          int cost = 0.6;
-          int money = 3.5; #distractor
+           int cost = 0.6;
+           int money = 3.5; #distractor
           
 .. parsonsprob:: ch3ex9muc
    :numbered: left
@@ -349,8 +349,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
    =====
-          int price = 52.99; 
-          int discount = 0.6; #distractor
+           int price = 52.99; 
+           int discount = 0.6; #distractor
           
 .. parsonsprob:: ch3ex10muc
    :numbered: left
@@ -379,7 +379,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
    =====
-          double priceForTwo = price * 2 #distractor
+           double priceForTwo = price * 2 #distractor
    
 
 .. raw:: html

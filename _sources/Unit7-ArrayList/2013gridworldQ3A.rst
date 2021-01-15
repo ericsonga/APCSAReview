@@ -58,7 +58,7 @@ You can skip these if you think you know what to do already.  Click the buttons 
    :hidetitle: Hide Keyword Problem
 
    .. clickablearea:: grid_find_parts
-       :question: The question statement is listed below. Click on the part of the sentences below with the data type of the object passed to  <code>getEmptyLocations</code> and the datatype of the returned object.
+       :question: The question statement is listed below. Click on the part of the sentences below with the data type of the object passed to  getEmptyLocations and the datatype of the returned object.
        :iscode:
        :feedback: The method header for getEmptyLocations is "public static ? getEmptyLocations (?)". What information should replace the "?" and what does that tell you about the method?
 
@@ -240,11 +240,11 @@ The code does not currently work in Runestone because it is missing the Grid Wor
 
 .. activecode:: frq2013Q3A-grid
    :language: java
-   :datafile: Grid.jar, Location.jar, BoundedGrid.jar, AbstractGrid.jar
+   :datafile: GridWorld.jar
 
    This FRQ does not currently work in Runestone because it is missing the Grid World library. You can write the method getEmpty Locations, but it will not compile.
    ~~~~
-   import info.gridworld.grid;
+   
    public class GridWorldUtilities
    {
 
@@ -303,17 +303,16 @@ The code does not currently work in Runestone because it is missing the Grid Wor
 
 
        }
-   }
+       }
 
-.. datafile:: Grid.jar
+.. datafile:: GridWorld.jar
         :hide:
 
-        package info.gridworld.grid;
         import java.util.ArrayList;
 
         /**
-         * <code>Grid</code> provides an interface for a two-dimensional, grid-like
-         * environment containing arbitrary objects. <br />
+         * Grid provides an interface for a two-dimensional, grid-like
+         * environment containing arbitrary objects. 
          * This interface is testable on the AP CS A and AB exams.
          */
         public interface Grid<E>
@@ -331,39 +330,39 @@ The code does not currently work in Runestone because it is missing the Grid Wor
             int getNumCols();
 
             /**
-             * Checks whether a location is valid in this grid. <br />
-             * Precondition: <code>loc</code> is not <code>null</code>
+             * Checks whether a location is valid in this grid. 
+             * Precondition: loc is not null
              * @param loc the location to check
-             * @return <code>true</code> if <code>loc</code> is valid in this grid,
-             * <code>false</code> otherwise
+             * @return true if loc is valid in this grid,
+             * false otherwise
              */
             boolean isValid(Location loc);
 
             /**
-             * Puts an object at a given location in this grid. <br />
-             * Precondition: (1) <code>loc</code> is valid in this grid (2)
-             * <code>obj</code> is not <code>null</code>
+             * Puts an object at a given location in this grid. 
+             * Precondition: (1) loc is valid in this grid (2)
+             * obj is not null
              * @param loc the location at which to put the object
              * @param obj the new object to be added
-             * @return the object previously at <code>loc</code> (or <code>null</code>
+             * @return the object previously at loc (or null
              * if the location was previously unoccupied)
              */
             E put(Location loc, E obj);
 
             /**
-             * Removes the object at a given location from this grid. <br />
-             * Precondition: <code>loc</code> is valid in this grid
+             * Removes the object at a given location from this grid. 
+             * Precondition: loc is valid in this grid
              * @param loc the location of the object that is to be removed
-             * @return the object that was removed (or <code>null<code> if the location
+             * @return the object that was removed (or null if the location
              *  is unoccupied)
              */
             E remove(Location loc);
 
             /**
-             * Returns the object at a given location in this grid. <br />
-             * Precondition: <code>loc</code> is valid in this grid
+             * Returns the object at a given location in this grid. 
+             * Precondition: loc is valid in this grid
              * @param loc a location in this grid
-             * @return the object at location <code>loc</code> (or <code>null<code>
+             * @return the object at location loc (or null
              *  if the location is unoccupied)
              */
             E get(Location loc);
@@ -377,10 +376,10 @@ The code does not currently work in Runestone because it is missing the Grid Wor
             /**
              * Gets the valid locations adjacent to a given location in all eight
              * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest). <br />
-             * Precondition: <code>loc</code> is valid in this grid
+             * west, and northwest). 
+             * Precondition: loc is valid in this grid
              * @param loc a location in this grid
-             * @return an array list of the valid locations adjacent to <code>loc</code>
+             * @return an array list of the valid locations adjacent to loc
              * in this grid
              */
             ArrayList<Location> getValidAdjacentLocations(Location loc);
@@ -388,45 +387,43 @@ The code does not currently work in Runestone because it is missing the Grid Wor
             /**
              * Gets the valid empty locations adjacent to a given location in all eight
              * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest). <br />
-             * Precondition: <code>loc</code> is valid in this grid
+             * west, and northwest). 
+             * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid empty locations adjacent to
-             * <code>loc</code> in this grid
+             * loc in this grid
              */
             ArrayList<Location> getEmptyAdjacentLocations(Location loc);
 
             /**
              * Gets the valid occupied locations adjacent to a given location in all
              * eight compass directions (north, northeast, east, southeast, south,
-             * southwest, west, and northwest). <br />
-             * Precondition: <code>loc</code> is valid in this grid
+             * southwest, west, and northwest). 
+             * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid occupied locations adjacent to
-             * <code>loc</code> in this grid
+             * loc in this grid
              */
             ArrayList<Location> getOccupiedAdjacentLocations(Location loc);
 
             /**
              * Gets the neighboring occupants in all eight compass directions (north,
              * northeast, east, southeast, south, southwest, west, and northwest).
-             * <br />
-             * Precondition: <code>loc</code> is valid in this grid
+             * 
+             * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return returns an array list of the objects in the occupied locations
-             * adjacent to <code>loc</code> in this grid
+             * adjacent to loc in this grid
              */
             ArrayList<E> getNeighbors(Location loc);
         }
-
-.. datafile:: Location.jar
-        :hide:
-
-        package info.gridworld.grid;
+         // End of Class Grid
+         
+        // Location Class
 
         /**
-         * A <code>Location</code> object represents the row and column of a location
-         * in a two-dimensional grid. <br />
+         * A Location object represents the row and column of a location
+         * in a two-dimensional grid. 
          * The API of this class is testable on the AP CS A and AB exams.
          */
         public class Location implements Comparable
@@ -577,7 +574,7 @@ The code does not currently work in Runestone because it is missing the Grid Wor
              * direction is rounded to the nearest compass direction.
              * @param target a location that is different from this location
              * @return the closest compass direction from this location toward
-             * <code>target</code>
+             * target
              */
             public int getDirectionToward(Location target)
             {
@@ -599,12 +596,12 @@ The code does not currently work in Runestone because it is missing the Grid Wor
             }
 
             /**
-             * Indicates whether some other <code>Location</code> object is "equal to"
+             * Indicates whether some other Location object is "equal to"
              * this one.
              * @param other the other location to test
-             * @return <code>true</code> if <code>other</code> is a
-             * <code>Location</code> with the same row and column as this location;
-             * <code>false</code> otherwise
+             * @return true if other is a
+             * Location with the same row and column as this location;
+             * false otherwise
              */
             public boolean equals(Object other)
             {
@@ -625,15 +622,15 @@ The code does not currently work in Runestone because it is missing the Grid Wor
             }
 
             /**
-             * Compares this location to <code>other</code> for ordering. Returns a
+             * Compares this location to other for ordering. Returns a
              * negative integer, zero, or a positive integer as this location is less
-             * than, equal to, or greater than <code>other</code>. Locations are
-             * ordered in row-major order. <br />
-             * (Precondition: <code>other</code> is a <code>Location</code> object.)
+             * than, equal to, or greater than other. Locations are
+             * ordered in row-major order. 
+             * (Precondition: other is a Location object.)
              * @param other the other location to test
              * @return a negative integer if this location is less than
-             * <code>other</code>, zero if the two locations are equal, or a positive
-             * integer if this location is greater than <code>other</code>
+             * other, zero if the two locations are equal, or a positive
+             * integer if this location is greater than other
              */
             public int compareTo(Object other)
             {
@@ -660,15 +657,15 @@ The code does not currently work in Runestone because it is missing the Grid Wor
             }
         }
 
-.. datafile:: BoundedGrid.jar
-        :hide:
+        // End of Class
 
-        package info.gridworld.grid;
+        // BoundedGrid Class
+        
         import java.util.ArrayList;
 
         /**
-         * A <code>BoundedGrid</code> is a rectangular grid with a finite number of
-         * rows and columns. <br />
+         * A BoundedGrid is a rectangular grid with a finite number of
+         * rows and columns. 
          * The implementation of this class is testable on the AP CS AB exam.
          */
         public class BoundedGrid<E> extends AbstractGrid<E>
@@ -677,7 +674,7 @@ The code does not currently work in Runestone because it is missing the Grid Wor
 
             /**
              * Constructs an empty bounded grid with the given dimensions.
-             * (Precondition: <code>rows > 0</code> and <code>cols > 0</code>.)
+             * (Precondition: rows > 0 and cols > 0.)
              * @param rows number of rows in BoundedGrid
              * @param cols number of columns in BoundedGrid
              */
@@ -762,15 +759,15 @@ The code does not currently work in Runestone because it is missing the Grid Wor
             }
         }
 
-.. datafile:: AbstractGrid.jar
-        :hide:
-
-        package info.gridworld.grid;
+        // End of Class
+        
+        // Class AbstractGrid
+        
         import java.util.ArrayList;
 
         /**
-         * <code>AbstractGrid</code> contains the methods that are common to grid
-         * implementations. <br />
+         * AbstractGrid contains the methods that are common to grid
+         * implementations. 
          * The implementation of this class is testable on the AP CS AB exam.
          */
         public abstract class AbstractGrid<E> implements Grid<E>
