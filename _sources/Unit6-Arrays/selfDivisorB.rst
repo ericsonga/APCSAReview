@@ -198,12 +198,11 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
 Video - One way to code the solution
 =====================================
 
-There are many possible solutions to this problem.  The video below shows one solution.
+There are many possible solutions to this problem.  The video below (at https://www.youtube.com/watch?v=2VBz-pX1Xos ) shows one solution.
 
-.. video:: v_selfDivBSol
-   :controls:
-   :thumb: ../_static/codeVideo.png
-
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/selfDivisorB.mov
-   http://ice-web.cc.gatech.edu/ce21/1/static/video/selfDivisorB.webm
+.. youtube:: 2VBz-pX1Xos
+    :width: 800
+    :align: center
+ 
+   
    
