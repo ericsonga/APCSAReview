@@ -503,15 +503,18 @@ You can test the methods in the active code below or in this |repl.it project| o
 
        @Test
          public void test3()
-         { 
-             String target = "for";
-             String code = getCode();
-             int index = code.indexOf("public void keepOnlyBlue()");
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void keepOnlyBlue()");
+            boolean passed = false;
+            if (index > 0) {
              code = code.substring(index, index + 200);
-             boolean passed = code.contains(target);
-
-             getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
-             assertTrue(passed);   
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
+            assertTrue(passed);     
          }
          @Test 
         public void testSwitch1()
