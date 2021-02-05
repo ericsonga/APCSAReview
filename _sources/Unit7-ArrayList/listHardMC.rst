@@ -67,5 +67,14 @@ You can step through the code above by clicking on the following `Example-8-13-2
 
 
 
-For more practice with free response questions with Lists see question 1 from 2012 at http://home.cc.gatech.edu/ice-gt/320, question 3 from 2011 at http://home.cc.gatech.edu/ice-gt/306,  question 1 from 2008 at http://coweb.cc.gatech.edu/ice-gt/1279, and question 3 from 2007 at http://coweb.cc.gatech.edu/ice-gt/1280.
+.. |FRQs| raw:: html
+
+   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit#gid=1826848698" target="_blank" style="text-decoration:underline">FRQs</a>
+   
+For more practice with free response questions with Lists, look up the following FRQs in this |FRQs| spreadsheet:
+
+- question 1 from 2012 FRQs
+- question 3 from 2011 FRQs
+- question 1 from 2008 FRQs
+- and question 3 from 2007 FRQs
 

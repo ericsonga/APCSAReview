@@ -13,7 +13,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should double each element in the array then print out the new value -- so (1,2,3,4,5) should become (2,4,6,8,10).  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following program segment should double each element in the array then print out the new value -- so (1,2,3,4,5) should become (2,4,6,8,10).  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
    -----
    int[] arr = {1, 2, 3, 4, 5};
    =====
@@ -32,7 +32,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should fill an array with elements that count up from 0 to 50 by 5 (0, 5, 10, 15, 20...).  But the blocks have been mixed up.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following program segment should fill an array with elements that count up from 0 to 50 by 5 (0, 5, 10, 15, 20...).  But the blocks have been mixed up.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
    -----
    int[] arr = new int[11];
    =====
@@ -51,7 +51,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should print each element in the array that is even using an enhanced for each loop.  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment should print each element in the array that is even using an enhanced for each loop.  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution. </p>
    -----
    int[] arr = {14, -5, 2, 17, 29, -8, 36};
    =====
@@ -71,7 +71,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following program segment is a method that should return the smallest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order with the correct indentation on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return the smallest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order with the correct indentation on the right.  Click the Check button to check your solution. </p>
    -----
    public static int findSmallest(int[] arr) {
    =====
@@ -99,7 +99,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following program segment is a method that should return the average given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order with the correct indentation on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return the average given an array of integers (the parameter).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order with the correct indentation on the right.  Click the Check button to check your solution. </p>
    -----
    public static double findAverage(int[] arr) {
    =====
@@ -123,7 +123,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following program segment is a method that should return the largest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return the largest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution. </p>
    -----
    public static int findLargest(int[] arr) {
    =====
@@ -153,7 +153,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following program segment is a method that should return an integer array that is "right shifted" by one -- so {6, 2, 5, 3} returns {3, 6, 2, 5} (the parameter). Note that the method return type is int[] which means it will return an int array. But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return an integer array that is "right shifted" by one -- so {6, 2, 5, 3} returns {3, 6, 2, 5} (the parameter). Note that the method return type is int[] which means it will return an int array. But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution. </p>
    -----
    public static int[] shiftRight(int[] arr) {
    =====
@@ -179,7 +179,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following program segment is a method that should return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) -- so {1,2,3,4} should return {2,3}.  But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) -- so {1,2,3,4} should return {2,3}.  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution. </p>
    -----
    public static int[] makeMiddle(int[] arr) {
    =====
@@ -202,7 +202,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following program segment is a method that should return string array that is in reverse order -- so {"b", "a", "z"} should return {"z", "a", "b"}.  But, the blocks have been mixed up and include <b>two extra blocks</b> that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program segment is a method that should return string array that is in reverse order -- so {"b", "a", "z"} should return {"z", "a", "b"}.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution. </p>
    -----
    public static String[] reverse(String[] arr) {
    =====
@@ -232,7 +232,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following program copies the first half of an array given as an argument to the method into a result array which is returned. But, the blocks have been mixed up and include <b>one extra block</b> that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution. </p>
+   The following program copies the first half of an array given as an argument to the method into a result array which is returned. But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution. </p>
    -----
    public static int[] firstHalf(int[] arr) {
    =====

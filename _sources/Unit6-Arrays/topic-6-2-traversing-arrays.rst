@@ -284,7 +284,7 @@ The following code demonstrates a loop that changes the values in an array. In t
    :adaptive:
    :noindent:
 
-   The following method has the correct code to subtract amt from all the values in the array <b>values</b>, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order.
+   The following method has the correct code to subtract amt from all the values in the array values, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order.
    -----
    public static void subAll(int[] values, int amt)
    {

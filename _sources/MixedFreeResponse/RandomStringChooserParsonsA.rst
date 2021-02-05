@@ -39,7 +39,7 @@ Mixed Up Code Practice
    :adaptive:
    :noindent:
 
-   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In the <code>getNext</code> method, if the list length is greater than zero, it will pick a position at random in the list and remove the item from that position and return it.  Otherwise, if the list is empty, it returns "NONE".  The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In the <code>getNext</code> method, if the list length is greater than zero, it will pick a position at random in the list and remove the item from that position and return it.  Otherwise, if the list is empty, it returns "NONE".  The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
    -----
    public class RandomStringChooser
    {
@@ -95,7 +95,7 @@ More Mixed Up Code Practice
    :adaptive:
    :noindent:
 
-   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In <code>getNext</code> it will return "NONE" if the length of the list is 0.  Otherwise, it will calculate a random index in the list, remove the string at that index, and return it. The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The mixed up code below includes the correct code for the class, a field, a constructor, and the <code>getNext</code> method.  In the constructor it will create an <code>ArrayList</code> and fill it by looping through the array and adding each string to the list.  In <code>getNext</code> it will return "NONE" if the length of the list is 0.  Otherwise, it will calculate a random index in the list, remove the string at that index, and return it. The blocks have been mixed up and include extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
    -----
    public class RandomStringChooser
    {

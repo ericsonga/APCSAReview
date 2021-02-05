@@ -15,7 +15,7 @@ Mixed Up Code Practice
    :adaptive:
    :noindent:
 
-   The following program segment should print 4 random responses using if/else statements,  but the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   The following program segment should print 4 random responses using if/else statements,  but the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
    -----
    private String getRandomResponse()
    {
