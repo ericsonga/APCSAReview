@@ -266,9 +266,7 @@ The **dot operator** (.) is used to run an object's method. You can think of the
    :feedback_c: An attribute is something the object knows about itself like its position.
    :feedback_d: A method is something an object can do like turn right.
 
-   What type of thing is    :width: 30px
-    :align: middle
-    :alt: coding exercise the position of a turtle in a world?
+   What type of thing is the position of a turtle in a world?
 
 
 .. raw:: html

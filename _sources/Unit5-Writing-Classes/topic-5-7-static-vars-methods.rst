@@ -235,7 +235,7 @@ You can see this code in action in the |visualizer2|.
         {
             String code = getCode();
             boolean passed = code.contains("System.out.println(maxTemp);") ||       code.contains("System.out.println(Temperature.maxTemp);");
-            getResults("true",""+passed, "printMax method",passed);
+            getResults("true",""+passed, "printMax method returns the right value",passed);
             assertTrue(passed);
         }
 
