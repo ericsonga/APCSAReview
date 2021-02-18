@@ -2,7 +2,7 @@
 Picture Lab Day 3: Exploring a Picture (not complete)
 ========================================================
 
-In this section we will cover the basics of image navigation. Images all start at a (0,0) point but unlike the origin in geometry, this point is in the upper right corner rather than the bottom left.
+In this lesson (which is not complete), we will cover the basics of image navigation. Images all start at a (0,0) point but unlike the origin in geometry, this point is in the upper right corner rather than the bottom left.
 We will be using an image called lion.jpg which should appear on the page. A JPEG file is one that follows an intentional standard for storing picture data using lossy compression. Lossy compression
 means that the amount of data that is stored is much smaller than the available data, but the data that is omitted to reach this smaller size, will not be missed.
 
@@ -18,7 +18,7 @@ Write what you feel will help you answer the multiple choice questions. For exam
     :language: java
     :datafile: pictureClasses1.jar, metalLion.jpg
 
-    Write helper methods that you call in main to help you answer the multiple choice questions below. You can try running the code to see what effect your methods have had on the image or what output is printed.
+    Look at the zeroBlue() method. Try changing the bounds of its loops and look at the results of the code. What does this tell you about the indexing of an image?
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -109,17 +109,15 @@ Write what you feel will help you answer the multiple choice questions. For exam
       /**
         zeroBlue() method sets the blue values at all pixels to zero
      */
-      public void hint()
+      public void zeroBlue()
       {
         Pixel[][] pixels = this.getPixels2D();
 
-        for (int i = pixels.length - 25; i < pixels.length; ++i) {
-          for (int j = pixels[0].length - 25; j < pixels[0].length; ++i) {
+        for (int i = 20; i < pixels.length; i++) {
+          for (int j = 20; j < pixels[0].length; j++) {
               pixels[i][j].setBlue(0);
-              pixels[i][j].setGreen(0);
           }
         }
-        System.out.println("look at the bounds of these loops and the results of the code, what does this tell you about the indexing of an image?");
       }
 
 
@@ -132,7 +130,7 @@ Write what you feel will help you answer the multiple choice questions. For exam
       {
         Picture lion = new Picture("metalLion.jpg");
         lion.show();
-        lion.hint();
+        lion.zeroBlue();
         lion.show();
 
       }

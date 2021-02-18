@@ -2,7 +2,8 @@
 Picture Lab Day 4: 2D Arrays in Java (not complete)
 =======================================================
 
-This section should be mostly review and is just here to help you practice your skills traversing 2D arrays. In this section you will be working with integer data stored in a 2D array.
+This lesson, which is not yet complete, should be mostly review and is just here to help you practice your skills traversing 2D arrays. In this section you will be working with integer data stored in a 2D array.
+
 Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
 The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.
 
@@ -46,7 +47,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-       public int getCount() {
+       public int getSum() {
          int total = 0;
          int i = 0;
          int j = 0;
@@ -59,11 +60,11 @@ The AP Computer Science A course specification tells you to assume that all 2D a
          }
        }
 
-     - This method doesn't know when to stop so it will continue forever and index out of bounds and this leads to undefined behavior.
+     - This method will continue forever and give an index out of bounds error. 
 
    - .. code-block:: Java
 
-       public int getCount() {
+       public int getSum() {
          int total = 0;
          for (int[] rowArray : matrix) {
             for (int item : rowArray) {
@@ -73,25 +74,25 @@ The AP Computer Science A course specification tells you to assume that all 2D a
          return total;
        }
 
-     + Correct! This used nested for each loops to iterate through the array.
+     + Correct! This uses nested for each loops to iterate through the array.
 
    - .. code-block:: Java
 
-       public int getCount() {
+       public int getSum() {
          int total = 0;
          for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                total = total + arr[j][i];
+                total = total + matrix[i][j];
             }
          }
          return total;
        }
 
-     + Correct! This adds up the values in each column rather than going row by row.
+     + Correct! This uses nested for loops to traverse through the matrix.
 
    - .. code-block:: Java
 
-       public int getCount() {
+       public int getSum() {
           int total = 0;
           int mystery = 0;
           int row = 0;
@@ -109,7 +110,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
           return (total - mystery);
        }
 
-     - this does not return the correct amount.
+     - This does not return the correct amount.
 
 .. activecode:: challenge-8-8-picture4
     :language: java
@@ -212,22 +213,22 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
 .. mchoice:: picture-day4-4a
 
-   What would a functioning implementation of a frequency method, called ``getColTotal``, in the ``IntArrayWorker`` class look like?
+   What would a functioning implementation of a frequency method, called ``findFreq``, in the ``IntArrayWorker`` class look like?
    We want this method to accept a target int, and then return how many times that int appears in the array.
 
    - .. code-block:: Java
 
-       public int getColTotal(int target) {
+       public int findFreq(int target) {
           int count = 0;
           int current = 0;
              for (int row = 0; row < matrix.length; row++) {
                for(int col = 0; col < matrix[0].length; col++) {
                    current = matrix[row][col];
                    if (current == target) {
-               count++;
-               }
-             }
-           }
+                       count++;
+                   }
+                }
+              }
           return count;
         }
 
@@ -235,25 +236,27 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-        public int getColTotal(int target) {
-        int count = 0;
-            for (int item : matrix) {
-                if (target == item) {
+        public int findFreq(int target) {
+          int count = 0;
+          for (int item : matrix) {
+              if (target == item) {
                     count++;
                 }
             }
           return count;
         }
 
-     - This for each loop is not quite enough to iterate through the whole 2D array
+     - This for each loop is not quite enough to iterate through the whole 2D array.
 
    - .. code-block:: Java
 
-        public int getColTotal(int target) {
+        public int findFreq(int target) {
           int count = 0;
           for (int[] rowArray : matrix) {
              for (int item : rowArray) {
-                 total = total + item;
+                  if (item == target) {
+                       count++;
+                   }
              }
           }
           return count;
@@ -263,7 +266,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
 
    - .. code-block:: Java
 
-        public int getColTotal(int target) {
+        public int findFreq(int target) {
         int count = 0;
             for (int row = 0; row < matrix.length; row++) {
                 if (matrix[row].find(target)) {
@@ -273,7 +276,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
             return count;
         }
 
-     - find() does not exist in the Java array class, if you're unsure of what is available you can look up the array API.
+     - find() does not exist in the Java array class. If you're unsure of what is available you can look up the array API.
 
 Alternative ways to store 2D arrays
 ---------------------------------------------------
