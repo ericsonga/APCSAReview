@@ -510,7 +510,7 @@ In the DiscountedItem subclass,
             public void test1()
             { 
                 String output = getMethodOutput("main");
-                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $4.50 ($1.50)\n   apples $1.35 ($0.25)\nSub-total: $11.60\nDiscount: $1.75\nTotal: $9.85";
 
                 boolean passed = getResults(expect, output, "Running main", true);
                 assertTrue(passed);
@@ -521,7 +521,7 @@ In the DiscountedItem subclass,
             public void test2()
             { 
                 String output = getMethodOutput("main");
-                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $1.50 ($1.50)\n   apples $0.25 ($0.25)\nSub-total: $7.50\nDiscount: $1.75\nTotal: $5.75";
+                String expect = "Order Items:\n   bread $3.25\n   milk $2.50\n   ice cream $4.50 ($1.50)\n   apples $1.35 ($0.25)\nSub-total: $11.60\nDiscount: $1.75\nTotal: $9.85";
 
                 boolean passed = output.contains("ice cream") && output.contains("apples");
 

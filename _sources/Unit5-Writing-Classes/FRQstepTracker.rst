@@ -632,6 +632,30 @@ The complex accessor method **averageSteps()** must calculate the average number
         assertTrue(passed);
 
       }
+      
+      @Test
+       public void checkCodeZero() {
+           StepTracker tr = new StepTracker(10000);
+           double average = tr.averageSteps();
+
+           boolean passed = getResults(0.0, average, "averageSteps() returns 0.0 when no days recorded");
+           assertTrue(passed);
+       }
+       
+       @Test
+       public void checkCodeDoubleResult() {
+           StepTracker tr = new StepTracker(10000);
+           tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
+           tr.addDailySteps(5000);
+           tr.addDailySteps(13000);
+           tr.addDailySteps(23000);
+           tr.addDailySteps(1111);
+           double average = tr.averageSteps();
+
+           boolean passed = getResults(10222.2, average, "averageSteps() returns 10222.2 (no integer division)");
+           assertTrue(passed);
+       }
+
       }
    
 Here is the rubric for the averageSteps method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others' code.
