@@ -408,13 +408,12 @@ First, let's discuss how to break up a number into its digits. Try the code belo
         @Test
         public void test1()
         {
-            String output = getMethodOutput("main");
-            String expect = "15\n4";
+            String origCode = "public class DivideBy10{public static void main(String[] args){int number = 154;System.out.println(number / 10);System.out.println(number % 10);}}";
+        
+            boolean changed = codeChanged(origCode);
 
-            boolean passed = !output.equals(expect);
+            assertTrue(changed);
 
-            passed = getResults(expect, output, "Try another number", passed);
-            assertTrue(passed);
         }
     }
    
