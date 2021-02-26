@@ -157,7 +157,7 @@ Click to reveal the Mixed Up Code for the solution to this problem.
       =====
          for (CookieOrder co : this.orders) { #distractor
       =====
-            String thisOrder = this.orders.get(i);
+            CookieOrder thisOrder = this.orders.get(i);
       =====
             if(cookieVar.equals(thisOrder.getVariety())) {
       =====
