@@ -209,7 +209,7 @@ When designing a class, programmers make decisions about what data to make acces
          :click-incorrect:}:endclick:
          
          :click-incorrect:public void setLast(String theLast) {:endclick:
-            :click-incorrect:first = theLast;:endclick:
+            :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
          
     :click-incorrect:}:endclick:      
@@ -276,7 +276,7 @@ To call a method to do its job, we create an object of the class and then use th
          :click-correct:}:endclick:
          
          :click-correct:public void setLast(String theLast) {:endclick:
-            :click-correct:first = theLast;:endclick:
+            :click-correct:last = theLast;:endclick:
          :click-correct:}:endclick:
          
     :click-incorrect:}:endclick: 
