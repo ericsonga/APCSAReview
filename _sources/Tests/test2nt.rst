@@ -55,7 +55,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_a: When the add method is used with two parameters, the value is added at the specific index, not at the end of the list. In this list, 4 has been added at index 1.
    :feedback_b: This would be correct if 7 had been placed in the list using add, not set. Remember that the set method replaces the value at the index. It does not move the previous value to the right.
    :feedback_c: Remember that in ArrayLists, indexing starts at 0, not 1.
-   :feedback_d: The 2 at index 1 is removed resulting in [6, 9], then a 4 is added at index 1 resulting in [6, 4, 9]. A 5 is added to the end of the list resulting in [6,4,9,5], and the value at 2 is replaced with a 7 resulting in [6,4,7,5]. 
+   :feedback_d: The 9 at index 2 is removed, resulting in [6, 2], then a 4 is added at index 1 resulting in [6, 4, 2]. A 5 is added to the end of the list resulting in [6,4,2,5], and the value at 2 is replaced with a 7 resulting in [6,4,7,5]. 
    :feedback_e: Remember that in ArrayLists, indexing starts at 0, not 1. The set method replaces the value at the specified index with a new value, so the original value is deleted.
    
    Assume that ``list`` has been instantiated as an ArrayList of integers containing ``[6, 2, 9]`` . What are the contents of ``list`` after the code is executed?
