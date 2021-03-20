@@ -86,8 +86,8 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
   
   public class Employee extends Person
   {    
-     private static int nextId = 1;
      private int id; 
+     public static int nextId = 1;
   	
      public Employee(String theName)
      {
@@ -117,6 +117,7 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
     {
         public RunestoneTests() {
             super("Employee");
+            Employee.nextId = 1;
         }
 
         @Test
@@ -126,6 +127,7 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
             String expect = "Dani\n#";
 
             boolean passed = getResults(expect, output, "Running main");
+            Employee.nextId = 1;
             assertTrue(passed);
         }
 
@@ -140,6 +142,7 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
             boolean passed = num >= 2;
 
             getResults("2+", "" + num, "Creating new Employee()", passed);
+            Employee.nextId = 1;
             assertTrue(passed);
         }
     }
