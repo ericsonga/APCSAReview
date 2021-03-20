@@ -496,7 +496,7 @@ Work in pairs to write the following code and test each part before moving on to
          @Test
          public void test31()
          { 
-             String target = "public boolean equals(Object other)";
+             String target = "public boolean equals(Object";
 
              String code = getCode();
              int index = code.indexOf("class SavingsAccount");
@@ -504,7 +504,7 @@ Work in pairs to write the following code and test each part before moving on to
 
              boolean passed = code.contains(target);
 
-             getResults("true", ""+passed, "Checking that code contains equals() in SavingsAccount", passed);
+             getResults("true", ""+passed, "Checking that code contains equals method in SavingsAccount", passed);
              assertTrue(passed);
          }
 
