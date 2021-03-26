@@ -108,17 +108,13 @@ Try to solve each of the following. Click the *Check Me* button to check each so
           return "";
        } //end if
    =====
-       else
+       if (myText.charAt(0) == '*')
        {
+          return removeStar(myText.substring(1));
+       } //end if
    =====
-         if (myText.charAt(0) == '*')
-         {
-            return removeStar(myText.substring(1));
-         } //end if
+       return myText.charAt(0) + removeStar(myText.substring(1));
    =====
-         return myText.charAt(0) + removeStar(myText.substring(1));
-   =====
-       } //end else
    } //end method
 
 

@@ -551,7 +551,7 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
             String output = getMethodOutput("main");
             String searchString = "Deja";
 
-            boolean passed = output.contains("\n" + searchString + "\n") || output.matches("\\s+" + searchString + "\\s+");
+            boolean passed = output.contains("\n" + searchString) || output.matches("\\s+" + searchString + "\\s+");
 
             passed = getResults("true", "" + passed, "Prints last item in list (Deja)", passed);
             assertTrue(passed);
