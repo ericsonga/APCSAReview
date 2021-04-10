@@ -527,7 +527,7 @@ You can test the methods in the active code below or in this |repl.it project| o
         @Test 
         public void testSwitch2()
         {
-         String target = ".getGreen();";
+         String target = ".getGreen()";
          boolean passed = checkCodeContains("switchColors() uses getGreen()",target);
          assertTrue(passed);
         }

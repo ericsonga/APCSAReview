@@ -345,7 +345,7 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
   }
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
+    import org.junit.*;
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -392,6 +392,22 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
             boolean passed = getResults(expect, output, "Checking Square constructor with 1 argument (int)");
             assertTrue(passed);
         }
+        @Test
+         public void test5()
+         {
+             String target = "area";
+
+             boolean passed = checkCodeContains(target);
+             assertTrue(passed);
+         }
+         @Test
+         public void test6()
+         {
+             String target = "LongRectangle extends Rectangle";
+
+             boolean passed = checkCodeContains(target);
+             assertTrue(passed);
+         }
     }
 
 .. |repl.it Java Swing code| raw:: html
