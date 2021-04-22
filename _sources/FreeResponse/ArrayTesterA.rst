@@ -63,12 +63,14 @@ When the code segment has completed execution, the variable result ``result`` wi
 Try and Solve It
 ----------------
 
-Complete the method ``getColumn`` below.
 
 .. activecode:: isLatin
    :language: java
+   :autograde: unittest
 
-   public class ArrayTester
+   Complete the method ``getColumn`` below.
+   ~~~~
+   class ArrayTester
    {
 
       /** Returns an array containing the elements of column c of arr2D in the same order as
@@ -94,3 +96,64 @@ Complete the method ``getColumn`` below.
       } // end of main
 
    } // end of class
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     import java.util.Arrays;
+     //import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("ArrayTester");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "It should print the values from the second column: 1 4 7 5.\n1 4 7 5";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output from main");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             int [][] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 } };
+
+             String arrayStr = "[[0, 1, 2],\n [3, 4, 5],\n [6, 7, 8],\n [9, 5, 3]]";
+
+             int[] result = ArrayTester.getColumn(arr2D, 0);
+
+             String expect = "[0, 3, 6, 9]";
+             String output = Arrays.toString(result);
+
+             passed = getResults(expect, output, "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain3() {
+             boolean passed = false;
+
+             int [][] arr2D = { { 0, 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 5, 3 } };
+
+             String arrayStr = "[[0, 1, 2, 3, 4, 5],\n [6, 7, 8, 9, 5, 3]]";
+
+             int[] result = ArrayTester.getColumn(arr2D, 2);
+
+             String expect = "[2, 8]";
+             String output = Arrays.toString(result);
+
+             passed = getResults(expect, output, "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
+             assertTrue(passed);
+         }
+     }

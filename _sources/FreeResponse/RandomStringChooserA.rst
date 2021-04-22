@@ -45,11 +45,12 @@ The code below has comments to help you get started.  It also has a main method 
 
 .. activecode:: RandomStrChooserA1
    :language: java
+   :autograde: unittest
 
    import java.util.List;
    import java.util.ArrayList;
 
-   // Declare the RandomStringChooser class
+   // Declare a public RandomStringChooser class
 
    {
 
@@ -73,3 +74,56 @@ The code below has comments to help you get started.  It also has a main method 
         } // end of main
 
    } // end of class
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("RandomStringChooser");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "It should print the words in the array in a random order and then NONE twice\non \nbus \nwheels \nthe \nNONE \nNONE";
+
+             String output1 = getMethodOutput("main");
+
+             expect = expect.substring(expect.indexOf("\n")+1);
+             output1 = output1.substring(output1.indexOf("\n")+1);
+
+             int num1 = countOccurences(output1, "wheels");
+             int num2 = countOccurences(output1, "on");
+             int num3 = countOccurences(output1, "the");
+             int num4 = countOccurences(output1, "bus");
+             int num5 = countOccurences(output1, "NONE");
+
+             passed = num1 == 1 && num2 == 1 && num3 == 1 && num4 == 1 && num5 == 2;
+
+             getResults(expect, output1, "Checking that each word is in output correct number of times", passed);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             String expect = "It should print the words in the array in a random order and then NONE twice\non \nbus \nwheels \nthe \nNONE \nNONE";
+
+             String output1 = getMethodOutput("main");
+             String output2 = getMethodOutput("main");
+             String output3 = getMethodOutput("main");
+
+             passed = !output1.equals(output2) || !output2.equals(output3) || !output1.equals(output3);
+
+             getResults("Different results each time", "Same results each time", "Checking for random order", passed);
+                 assertTrue(passed);
+
+         }
+     }

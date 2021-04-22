@@ -30,9 +30,9 @@ Inheritance and Constructors
 ..	index::
     pair: constructor; super
 
-Subclasses inherit all the private instance variables in a superclass that they extend, but they cannot directly access them since they are private. And constructors are not inherited. 
+Subclasses inherit public methods from the superclass that they extend, but they cannot access the private instance variables of the superclass directly and must use the public accessor and mutator methods. And subclasses do not inherit constructors from the superclass.
 
-How do you initialize inherited private variables if you don't have direct access to them in the subclass?  In Java you can put a call to the parent constructor using  as the first line in a subclass constructor.   In Java, the superclass constructor can be called from the first line of a subclass constructor by using the keyword super and passing appropriate parameters, for example ``super();`` or ``super(theName);`` as in the code below.
+So, how do you initialize the superclass' private variables if you don't have direct access to them in the subclass?  In Java, the superclass constructor can be called from the first line of a subclass constructor by using the special keyword **super()** and passing appropriate parameters, for example ``super();`` or ``super(theName);`` as in the code below.
 The actual parameters given to super() are used to initialize the inherited instance variables, for example the name instance variable in the Person superclass.
 
 .. code-block:: java
@@ -218,8 +218,8 @@ Regardless of whether the superclass constructor is called implicitly or explici
    :answer_d: III only
    :correct: b
    :feedback_a: I is okay but III is also okay.
-   :feedback_b: NamedPoint will inherit from MPoint all fields but the fields are private and they can not be directly accessed in NamedPoint. You can use super as the first line in a constructor to initialize inherited fields. You can also set your own fields in a constructor. If you don't use super as the first line in a constructor one will be put there by the compiler that will call the parent's no argument constructor.
-   :feedback_c: II is invalid. Children inherit all of the fields from a parent but do not have direct access to private fields. You can use super in a constructor to initialize inherited fields by calling the parent's constructor with the same parameter list.
+   :feedback_b: The MPoint variables are private and they can not be directly accessed in NamedPoint. You can use super as the first line in a constructor to initialize them. If you don't use super as the first line in a constructor one will be put there by the compiler that will call the parent's no argument constructor.
+   :feedback_c: II is invalid. Children do not have direct access to private fields. You can use super in a constructor to initialize these by calling the parent's constructor with the same parameter list.
    :feedback_d: I is also okay
     
    Given the class definitions of MPoint and NamedPoint below, which of the constructors that follow (labeled I, II, and III) would be valid in the NamedPoint class?
@@ -423,7 +423,7 @@ For a more complex example of drawing shapes, try running this |repl.it Java Swi
 Summary
 ---------
 
-- Subclasses inherit all the private instance variables in a superclass that they extend, but they cannot directly access them since they are private.
+- Subclasses do not have access to the private instance variables in a superclass that they extend.
 
 - Constructors are not inherited.
 

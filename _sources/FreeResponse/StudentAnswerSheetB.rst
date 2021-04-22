@@ -44,7 +44,10 @@ The code below has a main method for testing the ``highestScoringStudent`` metho
 
 .. activecode:: StudentAnswerKeyB
    :language: java
+   :autograde: unittest   
 
+   Complete method ``highestScoringStudent`` below.     
+   ~~~~
    import java.util.ArrayList;
    import java.util.List;
    import java.util.Arrays;
@@ -145,5 +148,73 @@ The code below has a main method for testing the ``highestScoringStudent`` metho
          System.out.println("Your best is: " + results.highestScoringStudent(key) + " and should be S4");
       }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     import java.util.Arrays;
+     import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("TestResults");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "Your score for s1 is: 5.25 and should be 5.25\nYour score for s2 is: 5.5 and should be 5.5\nYour score for s3 is: 6.5 and should be 6.5\nYour score for s4 is: 7.5 and should be 7.5\nYour best is: S4 and should be S4";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             String keyList = "A A A B B B C C C D D D E E E";
+             String ansList1 = "A B ? B C ? C D ? D E ? E A ?";
+             String ansList2 = "A B D B C D C D B D E C E A B";
+             String ansList3 = "A A A B B B C C C D D D E E E";
+             String ansList4 = "B B B B B B C C C C C C E E E";
+
+             ArrayList<String> key = new ArrayList<String>(Arrays.asList(keyList.split(" ")));
+
+           ArrayList<String> answers1 = new ArrayList<String>(Arrays.asList(ansList1.split(" ")));
+           ArrayList<String> answers2 = new ArrayList<String>(Arrays.asList(ansList2.split(" ")));
+           ArrayList<String> answers3 = new ArrayList<String>(Arrays.asList(ansList3.split(" ")));
+           ArrayList<String> answers4 = new ArrayList<String>(Arrays.asList(ansList4.split(" ")));
+
+           StudentAnswerSheet s1 = new StudentAnswerSheet("S1", answers1);
+           StudentAnswerSheet s2 = new StudentAnswerSheet("S2", answers2);
+           StudentAnswerSheet s3 = new StudentAnswerSheet("S2", answers3);
+           StudentAnswerSheet s4 = new StudentAnswerSheet("S2", answers4);
+
+           ArrayList<StudentAnswerSheet> sheets = new ArrayList<StudentAnswerSheet>();
+           sheets.add(s1);
+           sheets.add(s2);
+           sheets.add(s3);
+           sheets.add(s4);
+
+           TestResults results = new TestResults(sheets);
+
+
+             // change this next line
+           String output = "Your best is: " + results.highestScoringStudent(key);
+
+             String expect = "Your best is: S2";
+
+
+             passed = getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+     }
 
      

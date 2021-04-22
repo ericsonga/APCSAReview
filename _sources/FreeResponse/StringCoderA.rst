@@ -111,7 +111,10 @@ The code below contains a main method for testing the ``decodeString`` method.
 
 .. activecode:: StringCoderA
    :language: java
+   :autograde: unittest
    
+   Finish writing the ``StringCoder`` method ``decodeString``.
+   ~~~~
    import java.util.*;
    
    class StringPart
@@ -206,5 +209,57 @@ The code below contains a main method for testing the ``decodeString`` method.
       }
   
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     import java.util.ArrayList;
+
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("StringCoder");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "overeager is encoded as [(37, 3), (14, 2), (46, 2), (9, 2)]\nDecoding we get overeager and should be overeager";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+
+        @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             ArrayList<StringPart> csawesome = new ArrayList<StringPart>();
+             csawesome.add(new StringPart(19,0));
+             csawesome.add(new StringPart(0,1));
+             csawesome.add(new StringPart(46,1));
+             csawesome.add(new StringPart(12,2));
+             csawesome.add(new StringPart(0,1));
+             csawesome.add(new StringPart(31,2));
+             csawesome.add(new StringPart(9,1));
+             String output = "csawesome is encoded as " + csawesome + "\n";
+
+             StringCoder key = new StringCoder();
+             output += "Decoding we get " + key.decodeString(csawesome) + " and should be csawesome";
+
+             String expect = "csawesome is encoded as [(19, 0), (0, 1), (46, 1), (12, 2), (0, 1), (31, 2), (9, 1)]\nDecoding we get sawesome and should be csawesome";
+
+             passed = getResults(expect, output, "Checking for expected results for \"csawesome\"");
+
+             assertTrue(passed);
+
+         }
+     }
 
    

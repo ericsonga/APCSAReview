@@ -295,9 +295,9 @@ Alternatively, if you want to solve this problem using nested for each loops, co
      :feedback_a: Correct!
      :feedback_b: Our image is in greyscale and is not a three value color
      :feedback_c: 0 is the value of black
-     :feedback_d: When using the private variables, you need to make sure the spelling is the same.
+     :feedback_d: When using private variables, you need to make sure the spelling is the same.
 
-     What array will you be modifying in this method?
+     How will you check if pv is white?
 
 Try and Solve It
 ===================

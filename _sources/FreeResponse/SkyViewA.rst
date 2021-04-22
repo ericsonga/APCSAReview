@@ -118,9 +118,11 @@ The code below declares the class, the view, and a constructor for you to finish
 
 .. activecode:: SkyViewA
    :language: java
+   :autograde: unittest
 
-   public class SkyView
-   
+   Complete the ``SkyView`` constructor in the class below.
+   ~~~~
+   public class SkyView  
    {
        private double[][] view;
 
@@ -182,5 +184,61 @@ The code below declares the class, the view, and a constructor for you to finish
             }
        
         } // end of main
-
+      
+        public String toString() 
+        {
+           String output = "";
+           for (int row = 0; row < view.length; row++)
+           {
+               for (int col = 0; col < view[row].length; col++)
+               {
+                   output += view[row][col] + ", ";
+               }
+               output += "\n";
+            }
+           return output;
+        }
    } // end of class
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     //import java.util.Arrays;
+     //import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("SkyView");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+             SkyView sView = new SkyView(3, 2, val2);
+             String expect = "0.3, 0.7,\n0.8, 0.4,\n1.4, 1.1,";
+
+             String output = sView.toString().trim();
+
+             getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+             SkyView sView = new SkyView(2, 3, val2);
+             String expect = "0.3, 0.7, 0.4, \n1.1, 1.4, 0.8,";
+
+             String output = sView.toString().trim();
+
+             getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+     }

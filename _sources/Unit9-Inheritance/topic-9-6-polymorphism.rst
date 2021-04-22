@@ -195,7 +195,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
    :feedback_c: The variable car is a Car object, so the constructor used is not the same as the fastCar object which is a RaceCar. The car constructor does not change the passed in parameter, so it is set to 5 initially. 
    :feedback_d: RaceCar inherits from the Car class so all the public object methods in Car can be accessed by any object of the RaceCar class.
 
-   What is the output from running the main method in the RaceCar class?
+   What is the output from running the main method in the Car class?
    
    .. code-block:: java
    

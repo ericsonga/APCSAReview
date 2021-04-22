@@ -39,7 +39,10 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
 
 .. activecode:: NumberGroupC
    :language: java
+   :autograde: unittest
    
+   Write the method ``contains`` below in the class MultiGroups.
+   ~~~~
    import java.util.ArrayList;
    
    class NumberGroup 
@@ -89,3 +92,56 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
        System.out.println("Multiple1 contains 6 (should be true)? " + multiple1.contains(6));
      } // end of main
     }
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     import java.util.Arrays;
+     //import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("MultiGroups");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "Multiple1 contains 2 (should be true)? true\nMultiple1 contains 9 (should be false)? false\nMultiple1 contains 6 (should be true)? true";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output from main");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             MultiGroups multiple1 = new MultiGroups(new Range(5, 8),new Range(10, 12),new Range(15, 20));
+
+             String expect = "false";
+             String output = ""+multiple1.contains(0);
+
+             passed = getResults(expect, output, "Checking that MultiGroups with Range(5, 8), Range(10, 12), Range(15, 20) contains(0) should be false");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain3() {
+             boolean passed = false;
+
+             MultiGroups multiple1 = new MultiGroups(new Range(5, 8),new Range(10, 12),new Range(15, 20));
+
+             String expect = "true";
+             String output = ""+multiple1.contains(11);
+
+             passed = getResults(expect, output, "Checking that MultiGroups with Range(5, 8), Range(10, 12), Range(15, 20) contains(11) should be true");
+             assertTrue(passed);
+         }
+     }

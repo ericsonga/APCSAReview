@@ -18,13 +18,13 @@ Write the complete ``Range`` class. Include all necessary instance variables and
 Try and Solve It
 ----------------
 
-Complete the class ``Range`` below with instance variables, a constructor, and a contains method.
-
-The code below has a main method for testing the ``NumberGroup`` method.
 
 .. activecode:: NumberGroupB
    :language: java
+   :autograde: unittest
 
+   Complete the class ``Range`` below with instance variables, a constructor, and a contains method.
+   ~~~~
    class NumberGroup 
    { 
       /* Implementation not shown */
@@ -53,3 +53,56 @@ The code below has a main method for testing the ``NumberGroup`` method.
        } // end of main
 
    } // end of class
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     import java.util.Arrays;
+     //import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("Range");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "This is testing the constructor\nDoes the range contain 4 (should be false): false\nDoes the range contain 5 (should be true): true";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output from main");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             Range test = new Range(5, 80);
+             // Test the contains method
+             String expect = "false";
+             String output = ""+test.contains(0);
+
+             passed = getResults(expect, output, "Checking that Range(5, 80) contains(0)");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain3() {
+             boolean passed = false;
+
+             Range test = new Range(5, 80);
+             // Test the contains method
+             String expect = "true";
+             String output = ""+test.contains(10);
+
+             passed = getResults(expect, output, "Checking that Range(5, 80) contains(10)");
+             assertTrue(passed);
+         }
+     }

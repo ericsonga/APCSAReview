@@ -177,7 +177,7 @@ Click on the buttons to reveal the questions.
      :feedback_c: This finds us the length of the string but the array is not based on the string length.
      :feedback_d: Strings aren't defined under the '[]' operator and str is not a 2D array so this would return an error.
 
-     What can you use to set the outer bound while you iterate through your 2D array?
+     What can you use to set the inner bound while you iterate through your 2D array?
 
 .. reveal:: routeciphera_4
    :showtitle: Reveal String Method Problem

@@ -71,7 +71,10 @@ The code below has a main method for testing the ``getScore`` method.
 
 .. activecode:: StudentAnswerKeyA
    :language: java
+   :autograde: unittest   
 
+   Complete method ``getScore`` below.
+   ~~~~
    import java.util.ArrayList;
    import java.util.List;
    import java.util.Arrays;
@@ -132,3 +135,52 @@ The code below has a main method for testing the ``getScore`` method.
 
       }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     import java.util.Arrays;
+     import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("StudentAnswerSheet");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "Your score for s1 is: 5.25 and should be 5.25\nYour score for s2 is: 5.5 and should be 5.5\nYour score for s3 is: 6.5 and should be 6.5\nYour score for s4 is: 7.5 and should be 7.5";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             String keyList = "A A A B B B C C C D D D E E E";
+             String ansList = "A B ? B C ? C D ? D E ? E A ?";
+
+             ArrayList<String> key = new ArrayList<String>(Arrays.asList(keyList.split(" ")));
+
+           ArrayList<String> answers1 = new ArrayList<String>(Arrays.asList(ansList.split(" ")));
+
+           StudentAnswerSheet s1 = new StudentAnswerSheet("S1", answers1);
+
+           String output = "Your score for s1 is: " + s1.getScore(key);
+
+             String expect = "Your score for s1 is: 3.75";
+
+
+             passed = getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+     }

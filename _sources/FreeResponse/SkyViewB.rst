@@ -33,6 +33,7 @@ Try and Solve It
 
 .. activecode:: SkyViewB
    :language: java
+   :autograde: unittest
 
    Finish writing the ``getAverage`` method in the class below.  
    ~~~~
@@ -100,6 +101,53 @@ Try and Solve It
         } // end of main
 
    } // end of class
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     //import java.util.Arrays;
+     //import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("SkyView");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+
+             String view = "0.3, 0.7,\n0.8, 0.4,\n1.4,1.1,";
+
+             SkyView sView = new SkyView(3, 2, val2);
+             String expect = "getAverage(1,2,0,1)  --> 0.925";
+
+             String output = "getAverage(1,2,0,1)  --> " + sView.getAverage(1, 2, 0, 1);
+
+             getResults(expect, output, "Checking for expected output from:\n" + view);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             double[] val2 = {0.3, 0.7, 0.4, 0.8, 1.4, 1.1};
+             String view = "0.3, 0.7, 0.4,\n1.1, 1.4,  0.8,";
+             SkyView sView = new SkyView(2, 3, val2);
+             String expect = "getAverage(1,2,0,1) --> 0.875";
+
+             String output = "getAverage(1,2,0,1)  --> " + sView.getAverage(0, 1, 0, 1);
+
+             getResults(expect, output, "Checking for expected output from:\n" + view);
+             assertTrue(passed);
+         }
+     }
 
 
 

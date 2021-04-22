@@ -25,7 +25,10 @@ The code below has a main method for testing your method.
 
 .. activecode:: StringCoderB
    :language: java
+   :autograde: unittest
 
+   Complete method ``encodeString`` below.     
+   ~~~~
    import java.util.*;
 
    class StringPart
@@ -137,3 +140,43 @@ The code below has a main method for testing your method.
       }
 
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("StringCoder");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "overeager should be encoded as [(37, 3), (14, 2), (46, 2), (9, 2)]\nTesting part b overeager is encoded as [(37, 3), (14, 2), (46, 2), (9, 2)]";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             String expect = "csawesome is encoded as [(19, 1), (0, 1), (46, 1), (12, 2), (0, 1), (31, 2), (9, 1)]";
+
+             StringCoder key=new StringCoder();
+             String actual = "csawesome is encoded as " + key.encodeString("csawesome");
+
+             passed = getResults(expect, actual, "Checking for expected results for \"csawesome\"");
+
+             assertTrue(passed);
+
+         }
+     }

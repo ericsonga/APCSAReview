@@ -6,7 +6,7 @@ Hidden Word - Write Class
 ===============================
 
 ..	index::
-	  single: Hidden Word
+    single: Hidden Word
     single: free response
 
 The following is a free response question from 2015.  It was question 2 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
@@ -52,8 +52,9 @@ The code below has comments to help you get started.  It also has a main method 
 
 .. activecode:: HiddenWordClass
    :language: java
+   :autograde: unittest
 
-   // Declare the HiddenWord class below
+   // Declare the public HiddenWord class below
 
    {
 
@@ -76,3 +77,62 @@ The code below has comments to help you get started.  It also has a main method 
        } // end of main
 
    } // end of class
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+     //import java.util.Arrays;
+     //import java.util.ArrayList;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("HiddenWord");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "+A+++ it should print +A+++\nH**** it should print H****\nH*++* it should print H*++*\nHAR*S it should print HAR*S\nHARPS it should print HARPS";
+
+             String output = getMethodOutput("main");
+
+             passed = getResults(expect, output, "Checking for expected output from main");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             String word = "CSAWESOME";
+             String hint = "CSCSCSZZZ";
+
+             HiddenWord puzzle = new HiddenWord(word);
+
+             String output = puzzle.getHint(hint);
+             String expect = "CS+++S***";
+
+             passed = getResults(expect, output, "Checking for expected output \"" + word + "\" with hint \""+ hint + "\"");
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain3() {
+             boolean passed = false;
+
+             String word = "CSAWESOME";
+             String hint = "EZZZZSOME";
+
+             HiddenWord puzzle = new HiddenWord(word);
+
+             String output = puzzle.getHint(hint);
+             String expect = "+****SOME";
+
+             passed = getResults(expect, output, "Checking for expected output \"" + word + "\" with hint \""+ hint + "\"");
+             assertTrue(passed);
+         }
+     }

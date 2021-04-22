@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 14-2-
+   :prefix: 12-2-
    :start: 1
    
 Exam 1 for the AP CS A Exam (not timed)
@@ -352,9 +352,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: II and III
    :answer_e: I and II 
    :correct: c
-   :feedback_a: Because List is an abstract class you can not create a new object of the type List. 
+   :feedback_a: Use type ArrayList to create the object, not List. 
    :feedback_b: The type parameter in a generic ArrayList must be a class type, not a primitive type. int is a primitive type.
-   :feedback_c: Since an ArrayList is a List (implements the List interface), we can declare an ArrayList object as a List object.  This is called upcasting since we are casting it to the parent type.
+   :feedback_c: Correct.
    :feedback_d: III is correct, but II will cause a compile time error since we cannot use a primitive (int) as the type parameter in a generic ArrayList.
    :feedback_e: Both of these solutions will cause an error. 
 
@@ -363,8 +363,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    .. code-block:: java
      
       I ArrayList<String> stringList = new List<String>();
-      II List<int> intList = new ArrayList<int>();
-      III List<String> stringList = new ArrayList<String>();
+      II ArrayList<int> intList = new ArrayList<int>();
+      III ArrayList<String> stringList = new ArrayList<String>();
 
 .. mchoice:: qtnt1_14
    :answer_a: I
@@ -394,7 +394,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         for (int i = 0; i < matrix.length; i++) 
         {
 
-          for (t = 0; t < i; t++) 
+          for (int t = 0; t < i; t++) 
           {
             System.out.println(matrix[i][t]);
           }

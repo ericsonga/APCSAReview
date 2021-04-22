@@ -85,7 +85,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_b: There is no abstract visibility modfier.  You can not use the keyword abstract on variable declarations.
        :feedback_c: Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives diredct access to code in classes in the same package and subclasses.
        :feedback_e: Encapsulation means that only code in the defining class has direct access. The default package access gives direct access to code in classes in the same package.
-       :feedback_d: This is the definition of encapsulation and this is done in Java using private (a member is direclty accessible only in the class that defines it) and protected (a member is direclty accessible only within code in the same package and in subclasses).
+       :feedback_d: This is the definition of encapsulation and this is done in Java using private (a member is directly accessible only in the class that defines it) and protected (a member is directly accessible only within code in the same package and in subclasses).
 
        What is encapsulation and how does Java implement it?
 

@@ -107,8 +107,11 @@ The code below has a main method for testing.  Write the constructor for the ``R
 
 .. activecode:: RandomStrChooserB1
    :language: java
+   :autograde: unittest
    :datafile: RandomStringChooser.java
 
+   Complete the ``RandomLetterChooser`` constructor below.
+   ~~~~
    import java.util.List;
    import java.util.ArrayList;
 
@@ -148,3 +151,53 @@ The code below has a main method for testing.  Write the constructor for the ``R
            }
         }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("RandomLetterChooser");
+             //CodeTestHelper.sort = true;
+         }
+
+         @Test
+         public void testMain1() {
+             boolean passed = false;
+
+             String expect = "This should print three letters at random from cat and then NONE\ntcaNONE";
+
+             String output1 = getMethodOutput("main");
+
+             expect = expect.substring(expect.indexOf("\n")+1);
+             output1 = output1.substring(output1.indexOf("\n")+1);
+
+             int num1 = countOccurences(output1, "c");
+             int num2 = countOccurences(output1, "a");
+             int num3 = countOccurences(output1, "t");
+             int num5 = countOccurences(output1, "NONE");
+
+             passed = num1 == 1 && num2 == 1 && num3 == 1 && num5 == 1;
+
+             getResults(expect, output1, "Checking that each letter is in output correct number of times", passed);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             String output1 = getMethodOutput("main");
+             String output2 = getMethodOutput("main");
+             String output3 = getMethodOutput("main");
+
+             passed = !output1.equals(output2) || !output2.equals(output3) || !output1.equals(output3);
+
+             getResults("Different results each time", "Same results each time", "Checking for random order", passed);
+                 assertTrue(passed);
+
+         }
+     }
