@@ -600,7 +600,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :correct: c
         :feedback_a: Encapsulation is making data private so only code in the same class has direct access.
         :feedback_b: There is no abstract visibility modifier.  You cannot use the keyword abstract on variable declarations.
-        :feedback_c: This is the definition of encapsulation and this is done in Java using private (a member is direclty accessible only in the class that defines it) and protected (a member is directly accessible only within code in the same package and in subclasses).
+        :feedback_c: This is the definition of encapsulation and this is done in Java using private (a member is directly accessible only in the class that defines it) and protected (a member is directly accessible only within code in the same package and in subclasses).
         :feedback_d: Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives diredct access to code in classes in the same package and subclasses.
         :feedback_e: Encapsulation means that only code in the defining class has direct access. The default package access gives direct access to code in classes in the same package.
        
