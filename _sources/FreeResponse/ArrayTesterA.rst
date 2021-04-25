@@ -70,7 +70,7 @@ Try and Solve It
 
    Complete the method ``getColumn`` below.
    ~~~~
-   class ArrayTester
+   public class ArrayTester
    {
 
       /** Returns an array containing the elements of column c of arr2D in the same order as
@@ -80,7 +80,9 @@ Try and Solve It
        */
       public static int[] getColumn(int[] [] arr2D, int c)
       {
-
+          /** Complete this method **/
+          
+          
       }
 
       // Main method to test getColumn method

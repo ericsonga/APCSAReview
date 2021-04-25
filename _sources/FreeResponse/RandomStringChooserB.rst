@@ -64,7 +64,7 @@ Complete the ``RandomLetterChooser`` constructor below.  The following code bloc
 Try and Solve It
 ----------------
 
-Complete the ``RandomLetterChooser`` constructor below.
+Complete the ``RandomLetterChooser`` constructor below Copy in your RandomStringChooser class from the previous lesson (delete the public from in front of it since there can only be 1 public class if you have more than one).
 
 The code below has a main method for testing.  Write the constructor for the ``RandomLetterChooser`` class and use the main method to test it.
 
@@ -77,12 +77,12 @@ The code below has a main method for testing.  Write the constructor for the ``R
    public class RandomStringChooser
    {
        /* field */
-       private List<String> words;
+       private List&lt;String&gt; words;
 
        /* constructor */
        public RandomStringChooser(String[] wordArray)
        {
-           words = new ArrayList<String>();
+           words = new ArrayList&lt;String&gt;();
 
            for (String singleWord : wordArray)
            {
@@ -110,7 +110,7 @@ The code below has a main method for testing.  Write the constructor for the ``R
    :autograde: unittest
    :datafile: RandomStringChooser.java
 
-   Complete the ``RandomLetterChooser`` constructor below.
+   Complete the ``RandomLetterChooser`` constructor below (which can be 1 line of code). Copy in your RandomStringChooser class from the previous lesson (delete the public from in front of it since there can only be 1 public class if you have more than one).
    ~~~~
    import java.util.List;
    import java.util.ArrayList;
@@ -122,7 +122,9 @@ The code below has a main method for testing.  Write the constructor for the ``R
         */
        public RandomLetterChooser (String str)
        {
-         //*** write the constructor here ***!
+         /** write the constructor here **/
+         
+         
        }
 
        /** Returns an array of single-letter strings.
