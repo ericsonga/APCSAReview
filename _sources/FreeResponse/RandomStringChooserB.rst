@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix:  16-2-
+   :prefix:  15-2-
    :start: 1
 
 RandomStringChooser - Part B
@@ -108,13 +108,16 @@ The code below has a main method for testing.  Write the constructor for the ``R
 .. activecode:: RandomStrChooserB1
    :language: java
    :autograde: unittest
-   :datafile: RandomStringChooser.java
 
    Complete the ``RandomLetterChooser`` constructor below (which can be 1 line of code). Copy in your RandomStringChooser class from the previous lesson (delete the public from in front of it since there can only be 1 public class if you have more than one).
    ~~~~
    import java.util.List;
    import java.util.ArrayList;
 
+   // Copy in your RandomStringChoose class from the last lesson.
+   // Do not include public.
+   
+   
    public class RandomLetterChooser extends RandomStringChooser
    {
        /** Constructs a random letter chooser using the given string str.

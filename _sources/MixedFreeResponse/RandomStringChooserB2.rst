@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix:  17-4-
+   :prefix:  14-4-
    :start: 1
 
 RandomStringChooser - Part B - 2nd time
@@ -71,9 +71,14 @@ The code below has a main method for testing.  Write the constructor for the ``R
 .. activecode:: RandomStrChooserB1-2
    :language: java
 
+   Complete the ``RandomLetterChooser`` constructor below (which can be 1 or 2 lines of code). Copy in your RandomStringChooser class from the previous lesson (delete the public from in front of it since there can only be 1 public class if you ha
+   ~~~~
    import java.util.List;
    import java.util.ArrayList;
 
+   // Add in class RandomStringChooser from the previous lesson. 
+   // Do not make it public
+   
    public class RandomLetterChooser extends RandomStringChooser
    {
        /** Constructs a random letter chooser using the given string str.
@@ -110,34 +115,55 @@ The code below has a main method for testing.  Write the constructor for the ``R
            }
         }
    }
+   ====
+   import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
 
-   class RandomStringChooser
-   {
-       /* field */
-       private List<String> words;
 
-       /* constructor */
-       public RandomStringChooser(String[] wordArray)
-       {
-           words = new ArrayList<String>();
+     public class RunestoneTests extends CodeTestHelper
+     {
+         public RunestoneTests() {
+             super("RandomLetterChooser");
+             //CodeTestHelper.sort = true;
+         }
 
-           for (String singleWord : wordArray)
-           {
-               words.add(singleWord);
-           }
-       }
+         @Test
+         public void testMain1() {
+             boolean passed = false;
 
-       /* getNext method */
-       public String getNext()
-       {
-           int pos = 0;
+             String expect = "This should print three letters at random from cat and then NONE\ntcaNONE";
 
-           if (words.size() > 0)
-           {
-               pos = (int) (Math.random() * words.size());
+             String output1 = getMethodOutput("main");
 
-               return words.remove(pos);
-           }
-           return "NONE";
-        }
-   }
+             expect = expect.substring(expect.indexOf("\n")+1);
+             output1 = output1.substring(output1.indexOf("\n")+1);
+
+             int num1 = countOccurences(output1, "c");
+             int num2 = countOccurences(output1, "a");
+             int num3 = countOccurences(output1, "t");
+             int num5 = countOccurences(output1, "NONE");
+
+             passed = num1 == 1 && num2 == 1 && num3 == 1 && num5 == 1;
+
+             getResults(expect, output1, "Checking that each letter is in output correct number of times", passed);
+             assertTrue(passed);
+         }
+
+         @Test
+         public void testMain2() {
+             boolean passed = false;
+
+             String output1 = getMethodOutput("main");
+             String output2 = getMethodOutput("main");
+             String output3 = getMethodOutput("main");
+
+             passed = !output1.equals(output2) || !output2.equals(output3) || !output1.equals(output3);
+
+             getResults("Different results each time", "Same results each time", "Checking for random order", passed);
+                 assertTrue(passed);
+
+         }
+     }
+
+

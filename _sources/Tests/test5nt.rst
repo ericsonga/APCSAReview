@@ -106,14 +106,14 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 .. mchoice:: qtnt5_5
       :answer_a: It is legal for the value of a static variable to be changed in a constructor.
       :answer_b: The constructor in a subclass must use the keyword super to initialize the private instance variables from its superclass.
-      :answer_c: An interface never has constructors.
-      :answer_d: An abstract class never has constructors.
+      :answer_c: A constructor has no return type.
+      :answer_d: A constructor must be private.
       :answer_e: If a subclass does not explicitly provide a constructor and its superclass has just one constructor with a parameter, an error will occur when an attempt is made to create an instance of a subclass object.
       :correct: d
       :feedback_a: Static variables can still have their values changed
       :feedback_b: This is true, under the hood if you don't explicitly use the 'super' keyword, the compiler will do it for you automatically
-      :feedback_c: There is no point to make your interface class have constructors because we can never make an instance of that class anyways
-      :feedback_d: Can have unlimitted number of constructors
+      :feedback_c: This is true.
+      :feedback_d: Constructors should be public so that they can be called from outside the class to construct objects.
       :feedback_e: Because of the inheritance, the constructor from super class will be called and it is expecting a passed in parameter
 
       Which statement about constructors is ``false``?
@@ -407,7 +407,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
           public void act(){
               super.act();
-              System.out.print("bark ");
+              System.out.print("sleep ");
           }
 
           public void eat(){
@@ -485,7 +485,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
     :feedback_d: The .substring() function is inclusive left, exclusive right. Also if passed a single parameter it will take that as the starting index for the substring up to the rest of the string.
     :feedback_e: The .substring() function is inclusive left, exclusive right. Also if passed a single parameter it will take that as the starting index for the substring up to the rest of the string.
 
-    Which of the following is the equivalent in decimal to 2D in hexadecimal?
+    What is printed out by the following code?
 
     .. code-block:: Java
 
