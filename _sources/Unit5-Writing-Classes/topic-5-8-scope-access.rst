@@ -219,7 +219,7 @@ If there is a local variable with the same name as an instance variable, the var
   :autograde: unittest
   :practice: T
 
-  Debug the following program that has scope violations. Then, add comments that label the variable declarations as class, method, or block scope.
+  Debug the following program that has scope violations. You may need to add methods or use methods that are in the class Fraction appropriately. Then, add comments that label the variable declarations as class, method, or block scope.
   ~~~~
   public class TesterClass 
   {
@@ -290,6 +290,14 @@ If there is a local variable with the same name as an instance variable, the var
             boolean passed = getResults(expect, actual, "Testing main()");
             assertTrue(passed);
         }
+        @Test
+        public void test3() {
+           String code = getCodeWithoutComments();
+          int count = countOccurences(code,"private");
+          boolean passed = (count >= 2);
+          getResults("2 private vars", count + " private vars", "Keep the instance variables private! Use other Fraction methods.", passed);
+          assertTrue(passed);
+         }
     }
 
     
