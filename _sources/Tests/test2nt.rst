@@ -367,7 +367,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: II and III both correctly add the values in the specified row.
    :feedback_e: II and III are correct, but I adds every value in the matrix, not just the specified row.
 
-   You are trying to write a method ``sumRow`` that finds the sum of the values in a specified row of a 2-D matrix. Which of the following code segments could replace ``/* to be determined */`` to make the code work correctly? 
+   You are trying to write a method ``sumRow`` that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace ``/* to be determined */`` to make the code work correctly? 
 
    .. code-block:: java
      

@@ -13,7 +13,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should reverse the order of the characters in the given string -- so "abcd" should become "dcba".  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should reverse the order of the characters in the given string -- so "abcd" should become "dcba".  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static String reverse(String myText)
    {
@@ -67,7 +67,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should add up all of the elements in the passed-in array -- so {1,2,3,12} should return 18 (Note when the method is called, the index will always start off as 0).  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should add up all of the elements in the passed-in array -- so {1,2,3,12} should return 18 (Note when the method is called, the index will always start off as 0).  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int sumElements(int[] arr, int index)
    {
@@ -98,7 +98,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following method should remove any occurrence of an asterisk "*" from a passed-in string -- so "ab*c**d" should become "abcd".  But the blocks have been mixed up.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should remove any occurrence of an asterisk "*" from a passed-in string -- so "ab*c**d" should become "abcd".  But the blocks have been mixed up.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static String removeStar(String myText)
    {
@@ -124,7 +124,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should return the base multiplied power times. In otherwords, the base ^ power -- so exponent(2, 4) should return 16.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should return the base multiplied power times. In otherwords, the base ^ power -- so exponent(2, 4) should return 16.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int exponent(int base, int power)
    {
@@ -152,7 +152,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should return the number of times "5" is an element in the passed-in array -- so {1, 5, 7, 14, 5} will return 2 (Note that when the method is called the index will always start off as 0).  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should return the number of times "5" is an element in the passed-in array -- so {1, 5, 7, 14, 5} will return 2 (Note that when the method is called the index will always start off as 0).  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int numFiveOccurrence(int[] arr, int index)
    {
@@ -187,7 +187,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following method should repeat the passed-in string a set number of times -- so repeatThis("hi", 3) should return "hihihi".  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should repeat the passed-in string a set number of times -- so repeatThis("hi", 3) should return "hihihi".  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static String repeatThis(String s, int i)
    {
@@ -218,7 +218,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should return number of times the character " x " is in a String -- so findNumX("xHihxixx") should return 4.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should return number of times the character " x " is in a String -- so findNumX("xHihxixx") should return 4.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int findNumX(String s)
    {
@@ -252,7 +252,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :practice: T
    :adaptive:
 
-   The following method should return a string counting from 1 to the specified number -- so countTo(4) should return "1...2...3...4...".  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should return a string counting from 1 to the specified number -- so countTo(4) should return "1...2...3...4...".  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static String countTo(int x)
    {
@@ -283,7 +283,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should take an passed-in number and return a string such that only the even numbers are still present. All of the odd digits should be replaced with a "_" -- so 4321 should become "4_2_".  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
+   The following method should take an passed-in number and return a string such that only the even numbers are still present. All of the odd digits should be replaced with a "_" -- so 4321 should become ``4_2_``.  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static String displayEvenDigits(int num)
    {
