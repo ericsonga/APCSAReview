@@ -8,7 +8,7 @@
 Teacher PD Pretest for Units 1-6
 ---------------------------------
 
-Please try the following pretest for Units 1-5. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. It is fine to pick the "I don't know" answer option. You will take the same test at the end of the PD and see the answers after that. We hope that everyone will see a big improvement!  
+Please try the following pretest for Units 1-6. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. It is fine to pick the "I don't know" answer option. You will take the same test at the end of the PD and see the answers after that. We hope that everyone will see a big improvement!  
 
 .. .. highlight:: java
    :linenothreshold: 3
@@ -105,7 +105,7 @@ Please try the following pretest for Units 1-5. We don't expect you to know the 
 
        -
             
-     - 22
+     - 22.0
 
        +
             
@@ -228,7 +228,7 @@ Please try the following pretest for Units 1-5. We don't expect you to know the 
   
       Liquid liquid = new Liquid();
       
-   Which of the following statements are valid? 
+   Which of the following statements is valid? 
    
    - Liquid.freezingPoint;
    

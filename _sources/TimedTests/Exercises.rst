@@ -98,7 +98,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                 }
                 else
                 {
-                	minutes += minutes + additionMinutes;
+                	minutes += additionMinutes;
                 }
              }
 

@@ -104,7 +104,7 @@ Please complete the following post-test for Units 1-6.
 
        - Trace through the code keeping track of the variable values.
             
-     - 22
+     - 22.0
 
        + Correct. Integer division is used.
             
@@ -223,7 +223,7 @@ Please complete the following post-test for Units 1-6.
   
       Liquid liquid = new Liquid();
       
-   Which of the following statements are valid? 
+   Which of the following statements is valid? 
    
    - Liquid.freezingPoint;
    

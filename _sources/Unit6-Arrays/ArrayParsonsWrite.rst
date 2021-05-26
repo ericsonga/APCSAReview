@@ -3,7 +3,7 @@
 Alternative Write Code Problems for Parsons Problems
 =======================================================
 
-.. activecode:: ch7ex1muc_v2_wc
+.. activecode:: u6ex1muc_wc
    :language: java
    :autograde: unittest
    :practice: T
