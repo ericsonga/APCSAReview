@@ -7,7 +7,7 @@ Mixed Up Code Practice
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
-.. parsonsprob:: u6ex1muc
+.. parsonsprob:: arrayex1muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -25,7 +25,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
 
-.. parsonsprob:: u6ex2muc
+.. parsonsprob:: arrayex2muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -44,7 +44,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
 
 
-.. parsonsprob:: u6ex3muc
+.. parsonsprob:: arrayex3muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -65,7 +65,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end for loop
 
 
-.. parsonsprob:: u6ex4muc
+.. parsonsprob:: arrayex4muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -93,7 +93,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end findSmallest method
 
 
-.. parsonsprob:: u6ex5muc
+.. parsonsprob:: arrayex5muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -117,7 +117,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end findAverage method
 
 
-.. parsonsprob:: u6ex6muc
+.. parsonsprob:: arrayex6muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -147,7 +147,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end findLargest method
 
 
-.. parsonsprob:: u6ex7muc
+.. parsonsprob:: arrayex7muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -173,7 +173,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end shiftRight method
 
 
-.. parsonsprob:: u6ex8muc
+.. parsonsprob:: arrayex8muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -196,7 +196,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end makeMiddle method
 
 
-.. parsonsprob:: u6ex9muc
+.. parsonsprob:: arrayex9muc
    :numbered: left
    :practice: T
    :adaptive:
@@ -226,7 +226,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    } //end reverse method
 
 
-.. parsonsprob:: u6ex10muc
+.. parsonsprob:: arrayex10muc
    :numbered: left
    :practice: T
    :adaptive:

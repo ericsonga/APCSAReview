@@ -31,7 +31,7 @@
     :align: top
     :alt: finish exam
 
-Practice Exam 
+Practice Exam X
 ============================================================
 
 .. This said for first half of exam but it includes inheritance and has a lot of errors.
@@ -57,7 +57,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_b: Implementation II works, but implementation III also works.
       :feedback_c: Implementation IV does not work for situations where additionMinutes + minutes does not go above 60.
       :feedback_d: Correct!
-      :feedback_e: Implementations II and III are correct, but implementation I is not. Implementation I does not account for values of additionMinutes that push the minute account above 60.
+      :feedback_e: Implementations II and III are correct, but implementation I is not. Implementation I does not account for values of additionMinutes that push the minute count above 60.
 
       Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement ''addMinutes()''?
 
@@ -91,14 +91,11 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
         II.  public void addMinutes(int additionMinutes)
              {
-                if(minutes + additionMinutes >= 60)
+                minutes += additionMinutes;
+                if (minutes >= 60)
                 {
-                   hours += (additionMinutes/60);
-                   minutes += (additionMinutes % 60);
-                }
-                else
-                {
-                	minutes += additionMinutes;
+                   hours += (minutes / 60);
+                   minutes = (minutes % 60);
                 }
              }
 
@@ -114,7 +111,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
         IV.  public void addMinutes(int additionMinutes){
              {
-        	       if(additionMinutes + minutes >= 60)
+        	       if (additionMinutes + minutes >= 60)
         	       {
         	           minutes = additionMinutes + minutes - 60;
         	           hours += 1;
@@ -123,16 +120,16 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
    .. mchoice:: mt1_4
       :answer_a: int[] nums = [5];
-      :answer_b: int nums[5];
+      :answer_b: int[] nums;
       :answer_c: int[] nums = { 2, 4, 6, 8, 10 };
-      :answer_d: int[] nums; nums = new int[5];
+      :answer_d: int[] nums = new int[5];
       :correct: a
       :feedback_a: The left side is okay, but the right side is wrong.
-      :feedback_b: This correctly declares an array of five integers.
+      :feedback_b: This correctly declares an array of integers.
       :feedback_c: This correctly declares and initializes an array of five integers.
-      :feedback_d: This declares nums to be an array of integers and then creates the array.
+      :feedback_d: This declares nums to be an array of integers and creates the array.
 
-      Which is NOT a correct way to declare an array of 5 integers?
+      Which is NOT a correct way to declare an array of integers?
 
 
    .. mchoice:: mt1_7
@@ -164,7 +161,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :answer_d: a && b
       :answer_e: a || !b
       :correct: c
-      :feedback_a: This would be true if a or b are false using De Morgan's laws: !(a && b) = !a || !b.
+      :feedback_a: This would be true if a OR b are false using De Morgan's laws: !(a && b) = !a || !b.
       :feedback_b: If b was false, this option would be false.
       :feedback_c: Correct!
       :feedback_d: This will only be true only when both a and b are true.
@@ -180,18 +177,18 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :answer_e: Prints alternating characters from beginning and end of the string.
       :correct: a
       :feedback_a: This method prints the reversed string.
-      :feedback_b: Incorrect, this method prints the parameter reversed.
-      :feedback_c: Incorrect, this method prints the parameter reversed.
-      :feedback_d: Incorrect, this method prints the parameter reversed.
-      :feedback_e: Incorrect, this method prints the parameter reversed.
+      :feedback_b: Incorrect, this method prints the string reversed.
+      :feedback_c: Incorrect, this method prints the string reversed.
+      :feedback_d: Incorrect, this method prints the string reversed.
+      :feedback_e: Incorrect, this method prints the string reversed.
 
-      What does the function ''mystery'' do?
+      What does the function ``mystery`` do?
 
       .. code-block:: java
 
-         public void mystery (String tester)
+         public void mystery(String tester)
          {
-           for (int i = tester.length(); i >= 0; i--)
+           for (int i = tester.length() - 1; i >= 0; i--)
            {
                System.out.print(tester.charAt(i));
            }
@@ -221,9 +218,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
             {
                String mystery;
                String starter = "Hello World!";
-               for(int i = 0; i < starter.length(); i++)
+               for (int i = 0; i < starter.length(); i++)
                {
-                 if(i % 2 == 0)
+                 if (i % 2 == 0)
                  {
                    mystery += starter.charAt(i);
                  }
@@ -263,9 +260,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
       .. code-block:: java
 
-         I.   Methods from a superclass can be used in a subclass without rewriting
-              or copying code.
-         II.  An Object from a subclass can be passed as an argument to a method that takes an object of the superclass
+         I.   Methods from a superclass can be used in a subclass without rewriting or copying code.
+         II.  An object from a subclass can be passed as an argument to a method that takes an object of the superclass
          III. Objects from subclasses can be stored in the same array
          IV.  All of the above
          V.   None of the above
