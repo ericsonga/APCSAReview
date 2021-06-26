@@ -50,7 +50,7 @@ It’s good enough.	          How can I improve this?
 Pair Programming
 -----------------
 
-In this course, you are encouraged to work together in pairs to complete the programming challenges. **Pair programming** is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. You can also try buddy programming where each person uses their own computer but helps each other while coding. The advantages of pair programming are that two heads are better than one, and pairs usually produce better code with less roadblocks. As future software developers, it's also important to learn to work in teams.
+In this curriculum, you are encouraged to work together in pairs to complete the programming challenges. **Pair programming** is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. You can also try buddy programming where each person uses their own computer but helps each other while coding. The advantages of pair programming are that two heads are better than one, and pairs usually produce better code with less roadblocks. As future software developers, it's also important to learn to work in teams.
 
 Watch this |video2| about pair programming:
 

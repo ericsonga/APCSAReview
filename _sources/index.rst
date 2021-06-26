@@ -6,11 +6,11 @@
 AP CS A Java Course 
 ==========================================
 
-Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this course is to type in the url: **course.csawesome.org**
+Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
 
-This course is adapted from the Runestone Java Review course to follow the 2019 College Board unit ordering and learning objectives.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
+This curriculum is adapted from the Runestone Java Review ebook to follow the 2019 College Board unit ordering and learning objectives.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
 
-To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the course!
+To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
 
 
 .. raw:: html
@@ -63,34 +63,6 @@ Table of Contents
    MixedFreeResponse/toctree.rst
    FreeResponse/toctree.rst
    
-.. Old TOC
-    JavaBasics/toctree.rst
-   VariableBasics/toctree.rst
-   Strings/toctree.rst
-   Conditionals/toctree.rst
-   Labs/toctree.rst
-   LoopBasics/toctree.rst
-   ArrayBasics/toctree.rst
-   ListBasics/toctree.rst
-   Array2dBasics/toctree.rst
-   OOBasics/toctree.rst
-   Recursion/toctree.rst
-   SearchSort/toctree.rst
-   Tests/toctree.rst
-   TimedTests/toctree.rst
-   FreeResponse/toctree.rst
-   MixedFreeResponse/toctree.rst
-   PictureLab/toctree.rst
-   TurtleGraphics/toctree.rst
-
-.. Appendix 1
-.. ::::::::::::::::::::::::::::
-
-.. .. toctree::
-   :maxdepth: 2
-
-   Appendix/DrJava.rst
-   Appendix/gridWorld.rst
 
 Index
 ::::::::::::::::::
@@ -116,7 +88,7 @@ Index
    
 If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 5/26/2021)
+(last revised 6/26/2021)
 
 © Copyright 2015 Barb Ericson, Univ. Michigan, 2019 revised by Beryl Hoffman (Elms College). Created using `Runestone  <http://runestone.academy>`_.
 

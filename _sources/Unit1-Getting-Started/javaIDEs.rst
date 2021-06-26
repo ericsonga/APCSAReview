@@ -17,14 +17,19 @@ You can learn Java by just using the interactive coding panels called **Active C
 
 However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
 
-repl.it
+replit
 -------
 
-Repl.it (https://repl.it/) is a great online development environment that we would recommend using during this course. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Repl is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Repl.it also has a free K12 public school plan (https://repl.it/account/checkout/k12_per_seat) where public school teachers can apply to get a repl.it online classroom.
+Replit (https://replit.com/) is a great free online development environment. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Repl is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Replit also has a paid school plan called Teams (https://replit.com/teams-for-education) where teachers can set up virtual classrooms and grade assignments.
 
-Some of the Active Code samples in this e-book course also include a link to a repl.it project. These projects are public and as soon as you try to change the code, it will make a copy for you in your own repl.it account. If you are pair programming, there is also a multiplayer icon on the left in repl where you can share your code with another person, and you can both make changes at the same time. 
+Some of the Active Code samples in this e-book also include a link to a replit project. These projects are public and as soon as you try to change the code, it will make a copy for you in your own replit account. If you are pair programming, there is also a multiplayer icon on the left in repl where you can share your code with another person, and you can both make changes at the same time. 
 
 Online IDEs usually cannot use graphical user interfaces and just do input and output as text. However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! You need to choose Java Swing instead of just Java to get this environment when you start a new repl project. 
+
+CodingRooms
+-----------
+
+Coding Rooms (https://www.codingrooms.com/) is also a great online coding environment that has both free and paid versions. In Coding Rooms, you can set up a virtual classroom and watch all of your students code in real time, and grade their assignments. Coding Rooms has an AP CSA classroom template with short exercises.
 
 Dr. Java
 --------

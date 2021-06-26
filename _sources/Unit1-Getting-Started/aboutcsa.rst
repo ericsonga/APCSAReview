@@ -1,11 +1,11 @@
 About the AP CS A Exam
 ======================
     
-This course will prepare you for the Advanced Placement Computer Science A Exam. This exam tests your programming skills in Java. 
+This curriculum will prepare you for the Advanced Placement Computer Science A Exam. This exam tests your programming skills in Java. 
 
 The AP CS A exam is 3 hours long and has two sections — multiple choice and free-response. You will be given one hour and 30 minutes for each part.  The first part has 40 multiple-choice questions, and the second part has 4 free response questions where you have to write Java code by hand. Each part is worth 50% of your grade. During the exam, you will have access to the |AP CS A Reference Sheet|.
 
-Starting in 2020, the AP CS A exam will cover the following units and will provide formative assessments called Personal Progress Checks for each unit in the AP portal. 20 hours of lab time is required in AP CS A courses to allow students to practice Java programming. Note that abstract classes, interfaces, and binary/hex conversion have been removed from AP CS A starting in 2020. This course is arranged to follow the AP CS A units and provides many interactive exercises in each unit. 
+Starting in 2020, the AP CS A exam will cover the following units and will provide formative assessments called Personal Progress Checks for each unit in the AP portal. 20 hours of lab time is required in AP CS A courses to allow students to practice Java programming. Note that abstract classes, interfaces, and binary/hex conversion have been removed from AP CS A starting in 2020. This curriculum is arranged to follow the AP CS A units and provides many interactive exercises in each unit. 
 
 .. raw:: html
 
