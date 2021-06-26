@@ -61,7 +61,7 @@ copyright = '2015 Barb Ericson, 2019 revised by Beryl Hoffman'
 # built documents.
 #
 # The short X.Y version.
-version = '2020'
+version = '2021'
 # The full version, including alpha/beta/rc tags.
 release = 'beta'
 
@@ -191,7 +191,7 @@ html_short_title ='AP CSAwesome'
 # so a file named "default.css" will overwrite the builtin "default.css".
 
 # Including my static images and css files
-html_static_path = ['_static']  + runestone_static_dirs()
+html_static_path =  runestone_static_dirs() + ['_static']
 # 
 #html_static_path = runestone_static_dirs()
 
@@ -239,19 +239,39 @@ html_show_copyright = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'
 
-# These paths are either relative to html_static_path
-# or fully qualified paths (eg. https://...)
-html_css_files = ['css/custom.css',]
+import json
+
+# custom  files in _static
+custom_css_files = ['css/custom.css',]
 
 def setup(app):
-    app.add_stylesheet('css/custom.css')
-    for f in script_files:
+    """
+    A normal Runestone project will import this function into its conf.py
+    This setup will run after all of the extensions, so it is a good place
+    for us to include our common javascript and css files.
+    This could be expanded if there is additional initialization or customization
+    we wanted to do for all projects.
+    """
+    # Include JS and CSS produced by webpack. See `webpack static imports <webpack_static_imports>`_.
+    with open(pkg_resources.resource_filename("runestone", "dist/webpack_static_imports.json"), "r", encoding="utf-8") as f:
+        wb_imports = json.load(f)
+        script_files = wb_imports["js"]
+        _css_files = css_files + wb_imports["css"]
+
+    for jsfile in script_files:
         try:
-            app.add_autoversioned_javascript(f)
+            app.add_autoversioned_javascript(jsfile)
         except ExtensionError:
-            app.add_js_file(f)
-    for f in css_files:
+            app.add_js_file(jsfile)
+    for cssfile in _css_files:
         try:
-            app.add_autoversioned_stylesheet(f)
+            app.add_autoversioned_stylesheet(cssfile)
         except ExtensionError:
-            app.add_css_file(f)
+            app.add_css_file(cssfile)
+
+    app.config.html_static_path.append("dist/")
+
+    for c in custom_css_files:
+        app.add_css_file(c)
+    
+          
