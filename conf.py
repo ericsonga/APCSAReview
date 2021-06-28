@@ -20,8 +20,8 @@ from sphinx.errors import ExtensionError
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
 
-# Changed 5/24/2020: 
-from runestone import runestone_static_dirs, runestone_extensions, script_files, css_files
+# Changed 5/24/2020:
+from runestone import runestone_static_dirs, runestone_extensions, css_files
 #from runestone import runestone_static_dirs, runestone_extensions
 #from runestone import runestone_static_dirs, runestone_extensions, setup
 import pkg_resources
@@ -192,7 +192,7 @@ html_short_title ='AP CSAwesome'
 
 # Including my static images and css files
 html_static_path =  runestone_static_dirs() + ['_static']
-# 
+#
 #html_static_path = runestone_static_dirs()
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
@@ -273,5 +273,3 @@ def setup(app):
 
     for c in custom_css_files:
         app.add_css_file(c)
-    
-          
