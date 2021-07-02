@@ -10,5 +10,5 @@ Stories
    :maxdepth: 3
 
    CSAfterAPCS.rst
-   ChallengesInComputing.rst
-   MeetTheInterviewees.rst
+   challengesInComputing.rst
+   intervieweeIndex.rst
