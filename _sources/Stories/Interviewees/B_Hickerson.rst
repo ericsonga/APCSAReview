@@ -1,0 +1,35 @@
+Bryan Hickerson
+:::::::::::::::::::::::::::::::::::::
+
+.. image:: ../../../_static/Interviewees/B_Hickerson.jpg
+    :width: 350
+    :align: right
+    :alt: Picture of Bryan
+
+
+.. role:: raw-html(raw)
+   :format: html
+
+:raw-html:`<font color="CadetBlue"><em>"Having a product that actually has an impact, doing work that has an impact, [and] being able to have a strong influence... was really impactful for me."</em></font>` 
+
+
+
+
+**How did he get into computing?**
+
+*"I was always interested in video games as a kid. And I thought that was a very magical thing. But my dad also was a system administrator at Boeing. So, he helped me build my own computer and give me access to computers at a really young age. I think those two influences were probably the main things that got me really interested in computers."*
+
+**What kind of company does he work at?**
+
+*"I work at a startup, and I started as employee number three. Now we're at over 200 employees... that ability to have agency and ownership [at a startup]... was very powerful for me."*
+
+Brian started out by working at IBM, a large firm. He eventually transitioned to a start-up because he enjoyed the greater freedom and autonomy there.
+
+
+**What subfield is he interested in?**
+
+*"I came from doing a very different kind of programming to doing web development. I didn't know what I was doing, and a lot of it was learning."*
+
+Bryan is currently a web developer. He actually entered the industry industry as a low-level, database programmer. Once he joined his current company, he made the transition to web development.
+
+
