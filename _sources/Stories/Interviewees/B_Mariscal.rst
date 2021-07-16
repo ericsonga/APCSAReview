@@ -29,5 +29,5 @@ Briceida does back-end developing, where she builds and maintains the server-sid
 
 **How did she get into computer science?**
 
-*"In 2016... I was working as a security guard... at Jack in the Box. During that time, I met my boyfriend, and he was a security guard at that time. He was the one that encouraged me to go into tech, because a friend of his told him that, hey, you can just self-study...  It was very hard for me. But he kept pushing me and telling me, "Yeah, I think you can do it. You're very smart. You can do it. You can definitely do it." "
+*"In 2016... I was working as a security guard... at Jack in the Box. During that time, I met my boyfriend, and he was a security guard at that time. He was the one that encouraged me to go into tech, because a friend of his told him that, hey, you can just self-study...  It was very hard for me. But he kept pushing me and telling me, "Yeah, I think you can do it. You're very smart. You can do it. You can definitely do it."*
 
