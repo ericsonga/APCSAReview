@@ -12,9 +12,6 @@ Anaya Taylor
 
 :raw-html:`<font color="CadetBlue"><em>"I'm about average at most things... [but] when I get stuck... I'm kind of stubborn. That perseverance has really helped me."</em></font>` 
 
-
-
-
 **How did she get into computing?**
 
 *"My first exposure was that club in high school. We didn't do much coding, but there were a lot of fun projects with like messing with Arduinos and LEDs, and stuff like that. And then it progressed to the Rise Up camp, where we were coding in this animation program called Alice. That was really fun to work with, but it was also kind of difficult because if you didn't do something quite right, the animation wouldn't turn out too good. It was fun, I really enjoyed it."*
