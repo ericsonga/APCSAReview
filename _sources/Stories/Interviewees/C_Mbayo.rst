@@ -1,6 +1,11 @@
 Camille Mbayo
 :::::::::::::::::::::::::::::::::::::
 
+.. image:: ../../../_static/Interviewees/C_Mbayo.jpg
+    :width: 350
+    :align: right
+    :alt: Picture of Camille
+
 .. role:: raw-html(raw)
    :format: html
 
