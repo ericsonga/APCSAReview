@@ -1,6 +1,11 @@
 Carla De Lira
 :::::::::::::::::::::::::::::::::::::
 
+.. image:: ../../../_static/Interviewees/C_De_Lira.jpg
+    :width: 350
+    :align: right
+    :alt: Picture of Carla
+
 .. role:: raw-html(raw)
    :format: html
 
