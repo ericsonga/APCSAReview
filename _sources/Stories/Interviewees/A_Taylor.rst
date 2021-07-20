@@ -20,10 +20,10 @@ Anaya Taylor
 
 *"I'm currently an IT software engineer... it's been mostly meetings... the first few weeks, I didn't really know what was going on, but as we've progressed, it's become enjoyable, and I understand more."*
 
-Anaya is a software engineer, which means she develops software for the company she works at. She works with colleagues to seek solutions for the firm's problems and collaborates with coworkers to actually code.
+Anaya is a software engineer, which means she develops software for the company she works at. She works with colleagues to seek and create solutions for the firm's problems.
 
 **What does she do in her free time?**
 
 *"One of the best experiences for me was seeing a student that I had worked with come into Georgia Tech, and see her join our department."*
 
-Anaya volunteers at Rise Up 4 CS, a group that provides guidance and role models to underrepresented students in Computer Science. In high school, they supported and enabled her journey in CS. That led her to want to pay it forward.
+Anaya volunteers at Rise Up 4 CS, a group that provides guidance and role models to underrepresented students in Computer Science. In high school, they supported and enabled her journey in CS, which led her to want to pay it forward.
