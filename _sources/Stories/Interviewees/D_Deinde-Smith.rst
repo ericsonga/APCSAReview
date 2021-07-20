@@ -1,6 +1,11 @@
 Destini Deinde-Smith
 :::::::::::::::::::::::::::::::::::::
 
+.. image:: ../../../_static/Interviewees/D_Deinde-Smith.jpg
+    :width: 350
+    :align: right
+    :alt: Picture of Destini
+
 .. role:: raw-html(raw)
    :format: html
 
