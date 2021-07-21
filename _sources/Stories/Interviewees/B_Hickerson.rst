@@ -10,9 +10,7 @@ Bryan Hickerson
 .. role:: raw-html(raw)
    :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"Having a product that actually has an impact, doing work that has an impact, [and] being able to have a strong influence... was really impactful for me."</em></font>` 
-
-
+:raw-html:`<font color="CadetBlue"><em>"Having a product that actually has an impact, doing work that has an impact, [and] being able to have a strong influence was really impactful for me."</em></font>` 
 
 
 **How did he get into computing?**
@@ -21,7 +19,7 @@ Bryan Hickerson
 
 **What kind of company does he work at?**
 
-*"I work at a startup, and I started as employee number three. Now we're at over 200 employees... that ability to have agency and ownership [at a startup]... was very powerful for me."*
+*"I work at a startup, and I started as employee number three. Now we're at over 200 employees. Th[e] ability to have agency and ownership [at a startup] was very powerful for me."*
 
 Brian started out by working at IBM, a large firm. He eventually transitioned to a start-up because he enjoyed the greater freedom and autonomy there.
 

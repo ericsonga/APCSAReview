@@ -14,7 +14,7 @@ Carla De Lira
 
 **How did she get into computer science?**
 
-*"My dad was a self-learner and instilled that on me. He bought computer architecture books. I did not understand, but I appreciated that he tried... even though his background is not at all technical. Even my mom didn't really know what was happening, but she was always like, 'Yeah, you can do it.'"*
+*"My dad was a self-learner and instilled that on me. He bought computer architecture books. I did not understand, but I appreciated that he tried even though his background is not at all technical. Even my mom didn't really know what was happening, but she was always like, 'Yeah, you can do it.'"*
 
 **What challenges has she faced in computing?**
 
