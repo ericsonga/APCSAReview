@@ -29,5 +29,5 @@ Carla researches the intersection between human-computer interaction (HCI) and c
 
 **How did she get into research?**
 
-*"Most of my undergrad summers were doing research. The researc programs I did pushed me to do grad school. I went to Tapia, a diversity conference for people in computing. They were very welcoming and always gave me feedback. I was starting to develop my own mini self-image as a research. I started to see academia as a noble pursuit. I felt like there was a grander purpose rather than working for a company."*
+*"Most of my undergrad summers were doing research. The research programs I did pushed me to do grad school. I went to Tapia, a diversity conference for people in computing. They were very welcoming and always gave me feedback. I was starting to develop my own mini self-image as a research. I started to see academia as a noble pursuit. I felt like there was a grander purpose rather than working for a company."*
 

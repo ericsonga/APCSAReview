@@ -21,9 +21,6 @@ Coming from an anthropology background, Briceida views CS in an interdisplinary 
 
 *"A role model for me was my previous tech lead. He was a white man. I admired him because he was humble. He was not arrogant. He treated me like an equal. He explained things to me like an equal. I consider him a role model, because that's something that I want to achieve once I become a tech lead."*
 
-Briceida looks up to her previous tech lead because of how he treated her. His treatment now guides her in how she wants to treat others.
-
-
 **What subfield is she interested in?**
 
 *"During the bootcamp was when I decided that I wanted to be a back-end developer. I did not want to do front end, because it's a different kind of programming where you're gluing things together. I just didn't find it interesting."*
