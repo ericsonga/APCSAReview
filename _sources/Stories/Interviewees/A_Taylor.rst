@@ -18,7 +18,7 @@ Anaya Taylor
 
 **What subfield is she interested in?**
 
-*"I'm currently an IT software engineer... it's been mostly meetings... the first few weeks, I didn't really know what was going on, but as we've progressed, it's become enjoyable, and I understand more."*
+*"I'm currently an IT software engineer. The first few weeks, I didn't really know what was going on, but as we've progressed, it's become enjoyable, and I understand more."*
 
 Anaya is a software engineer, which means she develops software for the company she works at. She works with colleagues to seek and create solutions for the firm's problems.
 
