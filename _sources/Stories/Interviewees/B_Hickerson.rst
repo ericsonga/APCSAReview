@@ -28,4 +28,7 @@ Brian started out by working at IBM, a large firm. He eventually transitioned to
 
 Bryan is currently a web developer. He actually entered the industry as a low-level, database programmer. Once he joined his current company, he made the transition to web development.
 
-
+.. youtube:: NdWGoGKtV0M
+    :divid: Bryan_Hickerson
+    :height: 315
+    :width: 560
