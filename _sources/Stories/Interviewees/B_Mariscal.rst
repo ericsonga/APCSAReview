@@ -27,3 +27,7 @@ Coming from an anthropology background, Briceida views CS in an interdisplinary 
 
 Briceida does back-end developing, where she builds and maintains the server-side components of web services.
 
+.. youtube:: mQIH02_ecNw
+    :divid: Briceida_Mariscal
+    :height: 315
+    :width: 560
