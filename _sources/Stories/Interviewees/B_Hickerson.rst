@@ -1,17 +1,15 @@
 Bryan Hickerson
 :::::::::::::::::::::::::::::::::::::
 
-.. image:: ../../../_static/Interviewees/B_Hickerson.jpg
-    :width: 350
-    :align: right
-    :alt: Picture of Bryan
-
-
 .. role:: raw-html(raw)
    :format: html
 
 :raw-html:`<font color="CadetBlue"><em>"Having a product that actually has an impact, doing work that has an impact, [and] being able to have a strong influence was really impactful for me."</em></font>` 
 
+.. image:: ../../../_static/Interviewees/B_Hickerson.jpg
+    :width: 350
+    :align: right
+    :alt: Picture of Bryan
 
 **How did he get into computing?**
 

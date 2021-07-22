@@ -1,16 +1,15 @@
 Carla De Lira
 :::::::::::::::::::::::::::::::::::::
 
-.. image:: ../../../_static/Interviewees/C_De_Lira.jpg
-    :width: 350
-    :align: right
-    :alt: Picture of Carla
-
 .. role:: raw-html(raw)
    :format: html
 
 :raw-html:`<font color="CadetBlue"><em>"[Computing] is a pretty big part [of my identity], but not everything. I have pet guinea pigs I'm obsessed with. I like to craft. I like to read different kinds of literature."</em></font>` 
 
+.. image:: ../../../_static/Interviewees/C_De_Lira.jpg
+    :width: 350
+    :align: right
+    :alt: Picture of Carla
 
 **How did she get into computer science?**
 

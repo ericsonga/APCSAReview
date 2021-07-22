@@ -1,16 +1,15 @@
 Camille Mbayo
 :::::::::::::::::::::::::::::::::::::
 
-.. image:: ../../../_static/Interviewees/C_Mbayo.jpg
-    :width: 350
-    :align: right
-    :alt: Picture of Camille
-
 .. role:: raw-html(raw)
    :format: html
 
 :raw-html:`<font color="CadetBlue"><em>"My parents work for UNICEF, so we've always traveled. So, time and time again, seeing people on the African continent being screwed over. And that's like, 'Okay guys, it's time.' It's time we figure out what our tools are and that we share them. Since I was able to get elite education, I should... bring it back." </em></font>` 
 
+.. image:: ../../../_static/Interviewees/C_Mbayo.jpg
+    :width: 350
+    :align: right
+    :alt: Picture of Camille
 
 **Why did she choose computing?**
 
