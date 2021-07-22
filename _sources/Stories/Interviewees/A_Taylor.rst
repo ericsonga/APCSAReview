@@ -1,16 +1,15 @@
 Anaya Taylor
 :::::::::::::::::::::::::::::::::::::
 
-.. image:: ../../../_static/Interviewees/A_Taylor.jpg
-    :width: 350
-    :align: right
-    :alt: Picture of Anaya
-
-
 .. role:: raw-html(raw)
    :format: html
 
 :raw-html:`<font color="CadetBlue"><em>"I'm about average at most things... [but] when I get stuck... I'm kind of stubborn. That perseverance has really helped me."</em></font>` 
+
+.. image:: ../../../_static/Interviewees/A_Taylor.jpg
+    :width: 300
+    :align: right
+    :alt: Picture of Anaya
 
 **How did she get into computing?**
 
@@ -27,3 +26,8 @@ Anaya is a software engineer, which means she develops software for the company 
 *"One of the best experiences for me was seeing a student that I had worked with come into Georgia Tech, and see her join our department."*
 
 Anaya volunteers at Rise Up 4 CS, a group that provides guidance and role models to underrepresented students in Computer Science. In high school, they supported and enabled her journey in CS, which led her to want to pay it forward.
+
+.. youtube:: fwHw0rGbfZQ
+    :divid: Anaya_Taylor
+    :height: 315
+    :width: 560
