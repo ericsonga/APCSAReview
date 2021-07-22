@@ -7,43 +7,152 @@
 Unit 1 Mixed Up Code Practice
 ==============================
 
-Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems may have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
+Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems may have an extra block that isn't needed in the correct solution.  You can solve these on your phone or other mobile device!
 
-.. parsonsprob:: ch4ex1muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
+Experimental: You can choose to solve an associated write code problem instead of the mixed up code problem.
 
-   The following program segment should print Maria's first name on one line and her last name on the next line.  But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
-   -----
-   String firstName = "Maria";
-   String lastName = "Hernandez";
-   =====
-   System.out.println(firstName);
-   =====
-   System.out.println(lastName);
-   =====
-   System.out.printlln(firstname); #distractor
+.. selectquestion:: select_muc_wc1
+   :fromid: ch4ex1muc, muc_wc1
+   :toggle:
 
+.. reveal:: reveal_muc1
+   :showtitle: Reveal Mixed-up Code Problem if not selected above  
+   :hidetitle: Hide 
+   :optional:
+   
+   .. parsonsprob:: ch4ex1muc
+        :numbered: left
+        :practice: T
+        :adaptive:
+        :noindent:
 
-.. parsonsprob:: ch4ex2muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
+        The following program segment should print Maria's first name on one line and her last name on the next line.  But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+        -----
+        String firstName = "Maria";
+        String lastName = "Hernandez";
+        =====
+        System.out.println(firstName);
+        =====
+        System.out.println(lastName);
+        =====
+        System.out.printlln(firstname); #distractor
 
-   The following program segment should print the words to a famous poem. But the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
-   -----
-   System.out.println("Roses are red");
-   =====
-   System.out.println("Violets are blue");
-   =====
-   System.out.println("Sugar is sweet");
-   =====
-   System.out.println("And so are you");
+.. reveal:: reveal_wc1
+   :showtitle: Reveal Associated Write Code Problem  
+   :hidetitle: Hide 
+   :optional:
+   
+   .. activecode:: muc_wc1
+        :language: java
+        :practice: T
+        :autograde: unittest
+   
+        Write code that prints Maria's first name on one line and her last name on the next line. 
+        ~~~~
+        public class Test1 
+        {
+            public static void main(String[] args) 
+            {
+              String firstName = "Maria";
+              String lastName = "Hernandez";
 
+              // Add your code here
+              
+              
+            }
+         }
+         ====
+         import static org.junit.Assert.*;
+          import org.junit.*;
+          import java.io.*;
 
+          public class RunestoneTests extends CodeTestHelper
+          {
+              public RunestoneTests() {
+                  super("Test1");
+              }
+
+              @Test
+              public void test1()
+              {
+                  String output = getMethodOutput("main");
+                  String expect = "Maria\nHernandez";
+
+                  boolean passed = getResults(expect, output, "Running main");
+                  assertTrue(passed);
+              }
+          }
+
+Experimental: You can choose to solve an associated write code problem instead of the mixed up code problem.
+
+.. selectquestion:: select_muc_wc2
+   :fromid: muc_wc2, ch4ex2muc 
+   :toggle:
+
+.. reveal:: reveal_muc2
+   :showtitle: Reveal Mixed-up Code Problem if not selected above  
+   :hidetitle: Hide 
+   :optional:
+   
+   .. parsonsprob:: ch4ex2muc
+        :numbered: left
+        :practice: T
+        :adaptive:
+        :noindent:
+
+        The following program segment should print the words to a famous poem. But the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+        -----
+        System.out.println("Roses are red");
+        =====
+        System.out.println("Violets are blue");
+        =====
+        System.out.println("Sugar is sweet");
+        =====
+        System.out.println("And so are you");
+
+.. reveal:: reveal_wc2
+   :showtitle: Reveal Associated Write Code Problem  
+   :hidetitle: Hide 
+   :optional:
+   
+   .. activecode:: muc_wc2
+        :language: java
+        :practice: T
+        :autograde: unittest
+   
+        Write code that prints the poem ``Roses are red`` ``Violets are blue`` ``Sugar is sweet`` ``And so are you`` with 1 sentence on each line.
+        ~~~~
+        public class Test1 
+        {
+            public static void main(String[] args) 
+            {
+              // Add your code here
+              
+              
+            }
+         }
+         ====
+         import static org.junit.Assert.*;
+          import org.junit.*;
+          import java.io.*;
+
+          public class RunestoneTests extends CodeTestHelper
+          {
+              public RunestoneTests() {
+                  super("Test1");
+              }
+
+              @Test
+              public void test1()
+              {
+                  String output = getMethodOutput("main");
+                  String expect = "Roses are red\nViolets are blue\nSugar is sweet\nAnd so are you";
+
+                  boolean passed = getResults(expect, output, "Running main");
+                  assertTrue(passed);
+              }
+          }
+          
 .. parsonsprob:: ch4ex3muc
    :numbered: left
    :practice: T
