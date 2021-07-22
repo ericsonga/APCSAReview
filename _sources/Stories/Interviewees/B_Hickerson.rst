@@ -28,6 +28,6 @@ Brian started out by working at IBM, a large firm. He eventually transitioned to
 
 *"I came from doing a very different kind of programming to doing web development. I didn't know what I was doing, and a lot of it was learning."*
 
-Bryan is currently a web developer. He actually entered the industry industry as a low-level, database programmer. Once he joined his current company, he made the transition to web development.
+Bryan is currently a web developer. He actually entered the industry as a low-level, database programmer. Once he joined his current company, he made the transition to web development.
 
 

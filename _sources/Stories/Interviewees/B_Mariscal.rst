@@ -8,13 +8,13 @@ Briceida Mariscal
 
 **How did she get into computing?**
 
-*"In 2016, I was working as a security guard at Jack in the Box. During that time, I met my boyfriend, and he was a security guard at that time. He was the one that encouraged me to go into tech, because a friend of his told him that, hey, you can just self-study. It was very hard for me. But he kept pushing me and telling me, 'Yeah, I think you can do it. You're very smart. You can do it. You can definitely do it.'"*
+*"In 2016, I was working as a security guard at Jack in the Box. During that time, I met my boyfriend. He was the one that encouraged me to go into tech, because a friend of his told him that, hey, you can just self-study. It was very hard for me. But he kept pushing me and telling me, 'Yeah, I think you can do it. You're very smart. You can do it. You can definitely do it.'"*
 
 **How does she view CS?**
 
 *"I was an anthropology major. I was always trying to figure out how the world worked and how humans interact. As a software engineer, I get to see the part of life as a member of that society. I previously read books about how tech impacts society, but being inside this field gives me another perspective."*
 
-Coming from an anthropology background, Briceida views CS in an interdisplinary manner, where she highlights the anthropologic aspects of it. That gives her a unique perspective.
+Coming from an anthropology background, Briceida views CS in an interdisplinary manner, where she highlights the anthropological aspects of it. That gives her a unique perspective.
 
 
 **Who does she look up to?**
