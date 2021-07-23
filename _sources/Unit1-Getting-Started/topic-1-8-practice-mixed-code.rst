@@ -2,25 +2,14 @@
    :prefix: 1-8-
    :start: 1   
 
-
-
-Unit 1 Mixed Up Code Practice
+Mixed Up Code Practice
 ==============================
 
-Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems may have an extra block that isn't needed in the correct solution.  You can solve these on your phone or other mobile device!
+Try to solve each of the following mixed-up code problems or try the experimental switch between mixed up or write code versions of these problems on the next page instead. 
 
-Experimental: You can choose to solve an associated write code problem instead of the mixed up code problem.
+For these mixed up code problems, drag the blocks into the correct order. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems may have an extra block that isn't needed in the correct solution. After 3 tries, you can ask for help and some of the blocks will be combined. You can solve these on your phone or other mobile device!
 
-.. selectquestion:: select_muc_wc1
-   :fromid: ch4ex1muc, muc_wc1
-   :toggle:
-
-.. reveal:: reveal_muc1
-   :showtitle: Reveal Mixed-up Code Problem if not selected above  
-   :hidetitle: Hide 
-   :optional:
-   
-   .. parsonsprob:: ch4ex1muc
+.. parsonsprob:: ch4ex1muc
         :numbered: left
         :practice: T
         :adaptive:
@@ -37,64 +26,9 @@ Experimental: You can choose to solve an associated write code problem instead o
         =====
         System.out.printlln(firstname); #distractor
 
-.. reveal:: reveal_wc1
-   :showtitle: Reveal Associated Write Code Problem  
-   :hidetitle: Hide 
-   :optional:
-   
-   .. activecode:: muc_wc1
-        :language: java
-        :practice: T
-        :autograde: unittest
-   
-        Write code that prints Maria's first name on one line and her last name on the next line. 
-        ~~~~
-        public class Test1 
-        {
-            public static void main(String[] args) 
-            {
-              String firstName = "Maria";
-              String lastName = "Hernandez";
-
-              // Add your code here
-              
-              
-            }
-         }
-         ====
-         import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
-
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
-
-              @Test
-              public void test1()
-              {
-                  String output = getMethodOutput("main");
-                  String expect = "Maria\nHernandez";
-
-                  boolean passed = getResults(expect, output, "Running main");
-                  assertTrue(passed);
-              }
-          }
-
-Experimental: You can choose to solve an associated write code problem instead of the mixed up code problem.
-
-.. selectquestion:: select_muc_wc2
-   :fromid: muc_wc2, ch4ex2muc 
-   :toggle:
-
-.. reveal:: reveal_muc2
-   :showtitle: Reveal Mixed-up Code Problem if not selected above  
-   :hidetitle: Hide 
-   :optional:
-   
-   .. parsonsprob:: ch4ex2muc
+ 
+  
+.. parsonsprob:: ch4ex2muc
         :numbered: left
         :practice: T
         :adaptive:
@@ -110,49 +44,7 @@ Experimental: You can choose to solve an associated write code problem instead o
         =====
         System.out.println("And so are you");
 
-.. reveal:: reveal_wc2
-   :showtitle: Reveal Associated Write Code Problem  
-   :hidetitle: Hide 
-   :optional:
-   
-   .. activecode:: muc_wc2
-        :language: java
-        :practice: T
-        :autograde: unittest
-   
-        Write code that prints the poem ``Roses are red`` ``Violets are blue`` ``Sugar is sweet`` ``And so are you`` with 1 sentence on each line.
-        ~~~~
-        public class Test1 
-        {
-            public static void main(String[] args) 
-            {
-              // Add your code here
-              
-              
-            }
-         }
-         ====
-         import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
 
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
-
-              @Test
-              public void test1()
-              {
-                  String output = getMethodOutput("main");
-                  String expect = "Roses are red\nViolets are blue\nSugar is sweet\nAnd so are you";
-
-                  boolean passed = getResults(expect, output, "Running main");
-                  assertTrue(passed);
-              }
-          }
-          
 .. parsonsprob:: ch4ex3muc
    :numbered: left
    :practice: T

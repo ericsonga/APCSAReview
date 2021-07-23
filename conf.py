@@ -25,6 +25,9 @@ from sphinx.errors import ExtensionError
 from runestone import runestone_static_dirs, runestone_extensions, setup
 import pkg_resources
 
+# Trying for faster load times
+html_defer_js = True
+
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.

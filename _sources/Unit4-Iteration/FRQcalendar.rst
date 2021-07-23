@@ -333,11 +333,11 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
         If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
 
 
-   If we used the formula in exercise 4-10-4 above for the date in exercise 4-10-5 above, we would get 10:
+   If we used the formula in the exercise above for the date 1/8/2019, we would get 9:
 
-   - firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 = 2 + 8 = 10
+   - firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 = 2 + 8 - 1 = 9
 
-   But there is no 10th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. 
+   But there is no 9th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. Note that 9 % 7 = 2 which means that 1/8/2019 is the 2nd day of the week starting at 0.
 
 
 The FRQ that involves writing an expression will probably use the **mod % operator**. Remember these tips about when to use the mod operator:
