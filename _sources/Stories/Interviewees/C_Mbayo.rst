@@ -30,3 +30,8 @@ Camille is currently a developer, but she wants to pursue postgraduate studies a
 **How did she tackle impostor syndrome?**
 
 *"The internships gave me the confidence boost that I needed. I was just dropped into this internship. It seemed like they needed someone of more experience than I had, so I just felt overwhelmed. My manager saw that I was shutting down  and then he said something like it's okay, we're all learning here. And it was just such a short type phrase and that just resonated with me. It's not talked about. It's told that either you have the skills or you don't."*
+
+.. youtube:: pgGEyY6uY_A
+    :divid: Camille_Mbayo
+    :height: 315
+    :width: 560
