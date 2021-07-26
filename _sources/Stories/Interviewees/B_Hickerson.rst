@@ -23,12 +23,16 @@ Bryan Hickerson
 
 Brian started out by working at IBM, a large firm. He eventually transitioned to a start-up because he enjoyed the greater freedom and autonomy there.
 
+**What keeps him in computing?**
+
+*"There is some level of motivation now around teaching others... There's the level of understanding where you can work or do something, and then there's a level of understanding that you actually need to be able to effectively articulate that to someone. There's a slight difference. And it also just allows you to see it from a new perspective."*
+
 
 **What subfield is he interested in?**
 
 *"I came from doing a very different kind of programming to doing web development. I didn't know what I was doing, and a lot of it was learning."*
 
-Bryan is currently a web developer. He actually entered the industry as a low-level, database programmer. Once he joined his current company, he made the transition to web development.
+Bryan is currently a manager, but he started with his company as a web developer. He actually entered the industry as a low-level, database programmer. Once he joined his current company, he made the transition to web development.
 
 .. youtube:: NdWGoGKtV0M
     :divid: Bryan_Hickerson

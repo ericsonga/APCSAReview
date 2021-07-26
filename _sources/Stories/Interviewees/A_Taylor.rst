@@ -23,6 +23,10 @@ Anaya Taylor
 
 Anaya is a software engineer, which means she develops software for the company she works at. She works with colleagues to seek and create solutions for the firm's problems.
 
+**What does she dislike in computing?**
+
+*"There can be people that are a bit stuck-up and look down on you when you seek help. Not for any reason in particular, but just because that's how they perceive themselves. So that can be annoying, but it's also kind of easy to ignore since it's such a big environment."*
+
 **What does she do in her free time?**
 
 *"One of the best experiences for me was seeing a student that I had worked with come into Georgia Tech, and see her join our department."*
