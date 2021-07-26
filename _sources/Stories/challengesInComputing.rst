@@ -29,9 +29,7 @@ A lack of role models that "look like them" deters many racial & gender minoriti
 
     “Our computer science department had one woman teacher, and the whole engineering school only had one black women. And then she got pregnant and left for a while. The diversity was so small, so it was hard for me to find support.”
 
-Having a role model shows students that **the path they travel isn't impossible.** As :ref:`Destini-Deinde-Smith` said:
-
-    “Having black women be the people who I learned CS from [meant] there was never the sense of somewhere I shouldn't be or something that I shouldn't do. I could see her as someone with a CS degree. It made [pursuing CS] seem more plausible.”
+Having a role model shows students that **the path they travel isn't impossible.** It makes a career in computing seem more attainable and possible.
 
 A lack of relatable peers can also lead to similar feelings of isolation. Students are often left out of study groups or social events, while professionals are excluded from after-work parties or passed over for promotions. As :ref:`Carla-De-Lira` explains:
 
