@@ -407,9 +407,6 @@ Try the game below to practice. Click on **Relationals**,  evaluate the relation
 .. raw:: html
 
      <iframe id="page-embed" class="init" height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
-    <script> $('#page-embed').on('load', function() {
-     if ($(this).hasClass('init')) {
-      $(this).removeClass('init').show();
-    } });</script>
+
 
 

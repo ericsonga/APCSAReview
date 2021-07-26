@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 #
-# Problem Solving with Algorithms and Data Structures documentation build configuration file, created by
-# sphinx-quickstart on Thu Oct 27 08:17:45 2011.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -11,7 +9,9 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+import json
+import sys
+import os
 from sphinx.errors import ExtensionError
 
 
@@ -20,11 +20,13 @@ from sphinx.errors import ExtensionError
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
 
-# Changed 5/24/2020:
-from runestone import runestone_static_dirs, runestone_extensions, css_files
-#from runestone import runestone_static_dirs, runestone_extensions
-#from runestone import runestone_static_dirs, runestone_extensions, setup
+## Changed 2021
+#from runestone import runestone_static_dirs, runestone_extensions, css_files
+from runestone import runestone_static_dirs, runestone_extensions, setup
 import pkg_resources
+
+# Trying for faster load times
+html_defer_js = True
 
 # -- General configuration -----------------------------------------------------
 
@@ -239,37 +241,9 @@ html_show_copyright = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'
 
-import json
+
 
 # custom  files in _static
-custom_css_files = ['css/custom.css',]
+setup.custom_css_files = ['css/custom.css',]
 
-def setup(app):
-    """
-    A normal Runestone project will import this function into its conf.py
-    This setup will run after all of the extensions, so it is a good place
-    for us to include our common javascript and css files.
-    This could be expanded if there is additional initialization or customization
-    we wanted to do for all projects.
-    """
-    # Include JS and CSS produced by webpack. See `webpack static imports <webpack_static_imports>`_.
-    with open(pkg_resources.resource_filename("runestone", "dist/webpack_static_imports.json"), "r", encoding="utf-8") as f:
-        wb_imports = json.load(f)
-        script_files = wb_imports["js"]
-        _css_files = css_files + wb_imports["css"]
-
-    for jsfile in script_files:
-        try:
-            app.add_autoversioned_javascript(jsfile)
-        except ExtensionError:
-            app.add_js_file(jsfile)
-    for cssfile in _css_files:
-        try:
-            app.add_autoversioned_stylesheet(cssfile)
-        except ExtensionError:
-            app.add_css_file(cssfile)
-
-    app.config.html_static_path.append("dist/")
-
-    for c in custom_css_files:
-        app.add_css_file(c)
+# setup function moved to runestone 5.8.0 release

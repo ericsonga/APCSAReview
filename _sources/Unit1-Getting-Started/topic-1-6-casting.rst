@@ -26,7 +26,7 @@
 Casting and Ranges of Variables
 ===============================
 
-In Java, **type casting** is used to convert variables from one type to another. By **casting** we don't mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the "shape" (or type) of the variable.
+In Java, **type casting** is used to convert variable values from one type to another. By **casting** we don't mean something to do with fishing, but it is a similar idea to casting a pot in clay.  In Java when you cast you are changing the "shape" (or type) of the variable.
 
 .. figure:: Figures/casting.jpg
     :width: 300px
