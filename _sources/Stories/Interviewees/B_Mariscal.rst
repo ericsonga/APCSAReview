@@ -1,3 +1,5 @@
+.. _briceida-mariscal:
+
 Briceida Mariscal
 :::::::::::::::::::::::::::::::::::::
 

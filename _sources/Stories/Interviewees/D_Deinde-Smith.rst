@@ -1,3 +1,5 @@
+.. _destini-deinde-smith:
+
 Destini Deinde-Smith
 :::::::::::::::::::::::::::::::::::::
 

@@ -1,3 +1,5 @@
+.. _bryan-hickerson:
+
 Bryan Hickerson
 :::::::::::::::::::::::::::::::::::::
 

@@ -1,3 +1,5 @@
+.. _camille-mbayo:
+
 Camille Mbayo
 :::::::::::::::::::::::::::::::::::::
 
@@ -19,7 +21,7 @@ Camille Mbayo
 
 *"There are just so many entitled men, particularly white men, who make the experience frustrating."*
 
-*"People try to sound more knowledgeable than they are, and to someone who doesn't know, that sounds like they know what they're talking about. I never fully believed that I was a computer scientist until one summer when I was forced to intern."*
+*"People try to sound more knowledgeable than they are, and to someone who doesn’t know, that sounds like they know what they’re talking about. That definitely made me feel like I was behind. I never fully believed that I was a computer scientist until I had an internship."*
 
 Camille has dealt with sexism and impostor syndrome in computing. The sexism has led to her ideas being underappreciated, while her impostor syndrome has led to her underestimating her own ability.
 
