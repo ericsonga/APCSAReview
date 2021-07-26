@@ -29,4 +29,9 @@ Destini is studying computer science, a branch of computing that deals with math
 
 **Why did she choose computer science?**
 
-*"There's things that have to do with tech that aren't strict coding or sometimes seen as what female engineers are drawn to — typically being UI or UX. It's the stereotype of women being drawn to soft skills that made me want to get a degree in something that people couldn't dispute was CS. It made me want, at the minimum, to have a piece of paper that said computer science. I could point at it and say, 'No, no I learned computer science.'"* 
+*"There's things that have to do with tech that aren't strict coding or sometimes seen as what female engineers are drawn to — typically being UI or UX. It's the stereotype of women being drawn to soft skills that made me want to get a degree in something that people couldn't dispute was CS. It made me want, at the minimum, to have a piece of paper that said computer science. I could point at it and say, 'No, no I learned computer science.'"*
+
+.. youtube:: FW1fRJ4Ak3U
+    :divid: Destini_Deinde_Smith
+    :height: 315
+    :width: 560
