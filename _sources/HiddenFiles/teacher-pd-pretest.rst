@@ -5,19 +5,18 @@
    
 
    
-Teacher PD Post Test for Units 1-6
-------------------------------------
+Teacher PD Pretest for Units 1-6
+---------------------------------
 
-Please complete the following post-test for Units 1-6. 
+Please try the following pretest for Units 1-6. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. It is fine to pick the "I don't know" answer option. You will take the same test at the end of the PD and see the answers after that. We hope that everyone will see a big improvement!  
 
 .. .. highlight:: java
    :linenothreshold: 3
 
-.. timed:: teacherPD-posttest
+.. timed:: teacherPD-pretest
      :nofeedback:
      
-     .. mchoice:: PDposttest1
-          :random:
+     .. mchoice:: PDpretest1
 
           Unit 1 Primitive Types Skills and Learning Objectives:
 
@@ -69,10 +68,12 @@ Please complete the following post-test for Units 1-6.
 
             - print is correct since a new line is not printed after the first line of output.
 
+          - I don't know this yet
+
+            - That's okay. You will learn debugging skills in the PD.
 
 
-     .. mchoice:: PDposttest2
-          :random:
+     .. mchoice:: PDpretest2
 
           Unit 1 Primitive Types (Expressions) Skills and Learning Objectives:
 
@@ -97,28 +98,29 @@ Please complete the following post-test for Units 1-6.
 
           - 2
 
-            - Trace through the code keeping track of the variable values.
+            -
 
           - 8
 
-            - Trace through the code keeping track of the variable values.
+            -
 
           - 11
 
-            - Trace through the code keeping track of the variable values.
+            -
 
           - 22.0
 
-            + Correct. Integer division is used.
+            +
 
           - 22.4 
 
-            - Integer division is used since x is an int.
+            - 
 
+          - I don't know this yet.
 
+            -
 
-     .. mchoice:: PDposttest3
-        :random:
+     .. mchoice:: PDpretest3
 
         Unit 2 Using Objects (Constructors) Skills and Learning Objectives:
 
@@ -162,27 +164,30 @@ Please complete the following post-test for Units 1-6.
 
         - I only 
 
-          - Private instance variables like numInvited are not accessible outside of the class.
+          -
 
         - II only
 
-          + Correct. The constructor initializes the private instance variable.
+          +
 
         - III only
 
-          - Private instance variables like numInvited are not accessible outside of the class.
+          - 
 
         - II and III
 
-          - Private instance variables like numInvited are not accessible outside of the class.
+          -
 
         - I, II, and III       
 
-          - Private instance variables like numInvited are not accessible outside of the class.
+          -
+
+        - I don't know this yet. 
+
+          -
 
 
-     .. mchoice:: PDposttest4
-        :random:
+     .. mchoice:: PDpretest4
 
         Unit 2 Using Objects (Methods) Skills and Learning Objectives:
 
@@ -230,27 +235,30 @@ Please complete the following post-test for Units 1-6.
 
         - Liquid.freezingPoint;
 
-          - Private non-static instance variables like freezingPoint are not accessible outside of the class.
+          -
 
         - liquid.currentTemp();
 
-          - currentTemp is not a method.
+          -
 
         - liquid.lowerTemp();
 
-          - The lowerTemp method requires an argument.
+          -
 
         - liquid.raiseTemp(10);	
 
-          + Correct!
+          +
 
         - liquid.freeze(10)
 
-          - The freeze method does not have a parameter.
+          - 
+
+        - I don't know this yet.
+
+          -
 
 
-     .. mchoice:: PDposttest5
-          :random:
+     .. mchoice:: PDpretest5
 
           Unit 4 If Statements and Boolean Operators Skills and Learning Objectives:
 
@@ -273,27 +281,29 @@ Please complete the following post-test for Units 1-6.
 
           - "winner" will be printed when p is false, regardless of the value of q. 
 
-            + The boolean expression is not p or q.
+            +
 
           - "winner" will be printed when q is false, regardless of the value of p.
 
-            - p has to be false or q has to be true.
+            -
 
           - "winner" will be printed only when p is false and q is true.
 
-            - || means or, not and.
+            -
 
           - "winner" will always be printed.
 
-            - p has to be false or q has to be true.
+            -
 
           - "winner" will never be printed.
 
-            - It will be printed if p is false or q is true.
+            -
 
+          - I don't know this yet.
 
-     .. mchoice:: PDposttest6
-          :random:
+            -
+
+     .. mchoice:: PDpretest6
 
           Unit 4 If Statements Skills and Learning Objectives:
 
@@ -328,27 +338,30 @@ Please complete the following post-test for Units 1-6.
 
           - go on
 
-            - b is not greater than 100.
+            -
 
           - it up on
 
-            - b is not greater than 90.
+            -
 
           - it on
 
-            - b is not greater than 90.
+            -
 
           - up on
 
-            + Correct.
+            +
 
           - on
 
-            - The first if statement is true since a is = 100.
+            -
+
+          - I don't know this yet.
+
+            -
 
 
-     .. mchoice:: PDposttest7
-          :random:
+     .. mchoice:: PDpretest7
 
           Unit 4 Loops Skills and Learning Objectives:
 
@@ -373,27 +386,30 @@ Please complete the following post-test for Units 1-6.
 
           - for (int year1 = 2000; int year2 = 2020; count++)
 
-            - The for-loop should initialize, test, and increment the loop variable y.
+            -
 
           - for (int y = year2 - year1; y < year2; y++)
 
-            - y should start counting from year1.
+            -
 
           - for (int y = year1; y <= year2; y++)
 
-            + Correct. The for loops counts from year1 to year2. 
+            +
 
           - for (int year1 = 2000; year1 < year2; year1++)
 
-            - The for-loop should initialize, test, and increment the loop variable y.
+            -
 
           - for (int year1; year2; count++)
 
-            - The for-loop should initialize, test, and increment the loop variable y.
+            -
+
+          - I don't know this yet.
+
+            -
 
 
-     .. mchoice:: PDposttest8
-          :random:
+     .. mchoice:: PDpretest8
 
           Unit 4 Loops Skills and Learning Objectives:
 
@@ -419,27 +435,29 @@ Please complete the following post-test for Units 1-6.
 
           - "ABCDE"
 
-            - The for-loop increments the string index i by 2's, visiting every other character.
+            -
 
           - "BCDE"
 
-            - The for-loop increments the string index i by 2's, visiting every other character.
+            -
 
           - "AC"
 
-            - The character A is at index 0, but the loop starts at index 1.
+            -
 
           - "BD"
 
-            + Correct. The for-loop increments the string index i by 2's, visiting every other character, starting at index 1 (the second character).
+            +
 
           - "ACE"
 
-            - The character A is at index 0, but the loop starts at index 1.
+            -
 
+          - I don't know this yet.
 
-     .. mchoice:: PDposttest9
-          :random:
+            -
+
+     .. mchoice:: PDpretest9
 
           Unit 5 Writing Classes Skills and Learning Objectives:
 
@@ -469,7 +487,7 @@ Please complete the following post-test for Units 1-6.
                  age = age;
                }
 
-            - The parameters of the constructor cannot be the same variables as the instance variables, and the instance variables should be private.
+            -
 
           - .. code-block:: java 
 
@@ -481,7 +499,7 @@ Please complete the following post-test for Units 1-6.
                  age = a;
                }
 
-            + Correct. The constructor initializes the instance variables to the parameter variables.
+            +
 
           - .. code-block:: java 
 
@@ -493,7 +511,7 @@ Please complete the following post-test for Units 1-6.
                  age = a;
                }
 
-            - The instance variables should be private.
+            -
 
           - .. code-block:: java 
 
@@ -505,7 +523,7 @@ Please complete the following post-test for Units 1-6.
                  a = age;
                }
 
-            - name should be set to n, not the n to name.
+            -
 
           - .. code-block:: java 
 
@@ -517,11 +535,13 @@ Please complete the following post-test for Units 1-6.
                  a = age;
                }
 
-            - name should be set to n, not the n to name, and the instance variables should be private.
+            -
 
+          - I don't know this yet.
 
-     .. mchoice:: PDposttest10
-          :random:
+            -
+
+     .. mchoice:: PDpretest10
 
           Unit 5 Writing Classes Skills and Learning Objectives:
 
@@ -532,29 +552,30 @@ Please complete the following post-test for Units 1-6.
 
           - private int setY(int value)
 
-            - The set method should be public.
+            -
 
           - private void setY() 
 
-            - The set method should be public.
+            -
 
           - public int setY() 
 
-            - The set method needs a parameter to set y to.
+            -
 
           - public void setY() 
 
-            - The set method needs a parameter to set y to.
+            -
 
           - public void setY(int value) 
 
-            + Correct. The public set method sets the instance variable y to the parameter value.
+            +
+
+          - I don't know this yet.
+
+            -
 
 
-
-
-     .. mchoice:: PDposttest11
-          :random:
+     .. mchoice:: PDpretest11
 
           Unit 5 Writing Classes Skills and Learning Objectives:
 
@@ -580,28 +601,30 @@ Please complete the following post-test for Units 1-6.
 
           - The getId method should be declared as private.
 
-            - It should be public.
+            -
 
           - The getId method should have a parameter.
 
-            - It does not need a parameter.
+            -
 
           - The getId method should not return a value.
 
-            - It needs to return id.
+            -
 
           - The getId method should not have a return type.
 
-            - It needs a return type for the value it returns.
+            -
 
           - The getId method should have int as its return type. 
 
-            + Correct.
+            +
+
+          - I don't know this yet.
+
+            -
 
 
-
-     .. mchoice:: PDposttest12
-          :random:
+     .. mchoice:: PDpretest12
 
           Unit 6 Arrays Skills and Learning Objectives:
 
@@ -635,27 +658,29 @@ Please complete the following post-test for Units 1-6.
 
           - I only
 
-            - This is an infinite loop. i needs to be incremented.
+            -
 
           - II only 
 
-            + Correct. 
+            +
 
           - III only
 
-            - This loop will give an index out of bounds error. Arrays are indexed starting at 0 and up until array.length.
+            -
 
           - I and II only 
 
-            - I is an infinite loop. i needs to be incremented.
+            -
 
           - I, II, and III
 
-            - I is an infinite loop. III will have an array index out of bounds error.
+            -
 
+          - I don't know this yet.
 
-     .. mchoice:: PDposttest13
-          :random:
+            -
+
+     .. mchoice:: PDpretest13
 
           Unit 6 Arrays Skills and Learning Objectives:
 
@@ -679,23 +704,25 @@ Please complete the following post-test for Units 1-6.
 
           - Whenever the first element in array is equal to value
 
-            - temp will change its value as each element in the array is visited.
+            -
 
           - Whenever array contains any element which equals value
 
-            - temp will change its value as each element in the array is visited, so it may change after finding an element which equals value.
+            -
 
           - Whenever the last element in array is equal to value  
 
-            + Correct. temp will change its value as each element in the array is visited.
+            +
 
           - Whenever more than 1 element in array is equal to value
 
-            - If the 1 element is the last element, it will still return true.
+            -
 
           - Whenever exactly 1 element in array is equal to value
 
-            - Many elements can be equal to value, as long as the last one is equal.
+            -
 
+          - I don't know this yet.
 
+            -
 
