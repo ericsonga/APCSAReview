@@ -28,6 +28,11 @@ import pkg_resources
 # Trying for faster load times
 html_defer_js = True
 
+# new for title page
+course_description = "CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan, and Beryl Hoffman, Elms College."
+key_words = "AP CSA Java"
+shelf_section = "AP Computer Science"
+
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
