@@ -35,7 +35,7 @@ What is a Variable?
 ..	index::
 	single: variable
 
-A **variable** is a name associated with a memory location in the computer.  Computer memory can store a value and that value can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
+A **variable** is a name associated with a memory location in the computer, where you can store a value that can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
 
 .. youtube:: pHgYlVjagmA
     :width: 700
@@ -43,7 +43,7 @@ A **variable** is a name associated with a memory location in the computer.  Com
     :align: center
 
 
-When you play a game, it will often have a score.  Scores often start at 0 and increase.  A score can be stored in a variable.  
+When you play a game, it will often have a score.  Scores often start at 0 and increase, so they can change.  A score can be stored in a variable.  
 
 .. figure:: Figures/pongScore.png
     :width: 300px
@@ -69,7 +69,7 @@ Data Types
 	pair: variable; Boolean
 	pair: variable; String
 
-There are two types of variables in Java: **primitive variables** that hold primitive types and **object variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are: 
+There are two types of variables in Java: **primitive variables** that hold primitive types and **object or reference variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are: 
 
     -  int - which store integers (numbers like 3, -76, 20393) 
 
@@ -173,13 +173,13 @@ Declaring Variables in Java
 To create a variable, you must tell Java its data type and its name.  Creating a variable is also called **declaring a variable**.  The type is a keyword like int, double, or boolean, but you get to make up the name for the variable.  When you create a **primitive variable** Java will set aside enough bits in memory for that primitive type and associate that memory location with the name that you used.   
 
 Computers store all values using **bits** (binary digits).  A **bit** can represent two values and we usually say that the value of a bit is either 0 or 1. When you declare a variable, you have to tell Java the type of the variable because Java needs to know how many bits to use and how to represent the value.  The 3 different primitive types
-all require different number of bits.  An integer gets 32 bits of space, a double gets 64 bits of space and a boolean could be represented by just one bit. 
+all require different number of bits.  An integer gets 32 bits of memory, a double gets 64 bits of memory and a boolean could be represented by just one bit. 
 
 .. figure:: Figures/typesAndSpace.png
     :width: 500px
     :figclass: align-center
     
-    Figure 2: Examples of variables with names and values.  Notice that the different types get a different amount of space.
+    Figure 2: Examples of variables with names and values.  Notice that the different types get a different amount of memory space.
 
 To **declare** (create) a variable, you  specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).  
 
@@ -217,7 +217,7 @@ When you are printing out variables, you can use the **string concatenation** op
    :language: java
    :autograde: unittest      
    
-   Run the following code to see what is printed. Then, change the values and run it again. Try adding quotes to variables and removing spaces in the print out statements to see what happens.
+   Run the following code to see what is printed. Then, change the values and run it again. Try adding quotes to variables and removing spaces in the print statements to see what happens.
    ~~~~
    public class Test2
    {
@@ -475,7 +475,7 @@ Naming Variables
 
 While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores ``_``. It must be all one word with no spaces. 
 
-You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words see https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9.  
+You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words, see https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9.  
 
 The name of the variable should describe the data it holds.  A name like ``score`` helps make your code easier to read. A name like ``x`` is not a good variable name in programming, because it gives no clues as to what kind of data it holds.  Do not name
 your variables crazy things like ``thisIsAReallyLongName``, especially on the AP exam. You want to make your code easy to understand, not harder.  
@@ -492,7 +492,7 @@ your variables crazy things like ``thisIsAReallyLongName``, especially on the AP
     single: camel case
 	pair: variable; naming convention
 	
-The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case**. Another option is to use underscore ``_`` to separate words, but you cannot have spaces in a variable name. 
+The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word, for example ``gameScore``. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case** because it looks like the humps of a camel. Another option is to use underscore ``_`` to separate words, but you cannot have spaces in a variable name. 
 
 
   
@@ -573,11 +573,11 @@ The convention in Java and many programming languages is to always start a varia
       public static void main(String[] args)
       {
           int temperature = 70.5;
-          double radioChannel = 101;
+          double tvChannel = 101;
           boolean sunny = 1
          
           System.out.print("Welcome to the weather report on Channel ")
-          System.out.println(Radiochannel);
+          System.out.println(TVchannel);
           System.out.print("The temperature today is );
           System.out.println(tempurature);
           System.out.print("Is it sunny today? ");
@@ -616,7 +616,7 @@ Summary
   double gpa = 3.5;
   
   
-- **Data types** can be categorized as either primitive type (like int) or reference type (like String).
+- **Data types** can be primitive types (like int) or reference types (like String).
 - The three primitive data types used in this course are **int** (integer numbers), **double** (decimal numbers), and **boolean** (true or false).
 - Each variable has associated memory that is used to hold its value.
 - The memory associated with a variable of a primitive type holds an actual primitive value.
