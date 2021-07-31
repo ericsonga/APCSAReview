@@ -95,12 +95,15 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that print Marcus’s name on one line and his favorite color (Blue) on the next line.
+        Write code that prints Marcus’s name on one line and his favorite color (Blue) on the next line.
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
+               String name = "Marcus";
+               String favoriteColor = "Blue";
+
               // Add your code here
               
               
@@ -135,12 +138,13 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should figure out the cost for each shirt if they are buy 2 and get the third free and they are originally $45 each. Make sure your answer is a double.
+        Write code that figures out the cost for each shirt if you buy 2 and get the third free and they are originally $45 each. Make sure your answer is a double.
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
+              double price = 45;
               // Add your code here
               
               
@@ -176,13 +180,14 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should figure out the cost per person for a dinner including the tip. Assume the bill was $89.23, there are three people, and the tip should be 20%. Make sure your answer is a double.
+        Write code that figures out the cost per person for a dinner including the tip. Assume the bill was $89.23, there are three people, and the tip should be 20%. Make sure your answer is a double.
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
-              // Add your code here
+                double bill = 89.23;
+                // Add your code here
               
               
             }
@@ -218,7 +223,7 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should calculate and print the number of seconds in 5 days.
+        Write code that calculates and prints the number of seconds in 5 days.
         ~~~~
         public class Test1 
         {
@@ -259,7 +264,7 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should calculate and print the number of months it would take you to save $500 if you make $50 a week. Make sure your answer is a double.
+        Write code that calculates and prints the number of months it would take you to save $500 if you make $50 a week. Make sure your answer is a double.
         ~~~~
         public class Test1 
         {
@@ -300,17 +305,17 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that print the name on one line followed by the age on the next line. Your output should look like ``Your name is Layla`` and ``Your age is 16``.
+        Write code that prints the name on one line followed by the age on the next line. Your output should look like ``Your name is Layla`` and ``Your age is 16``.
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
-				String name = "Layla";
-				String age = "16";
+                String name = "Layla";
+                String age = "16";
 				
-				// Add your code here
-              
+                // Add your code here
+                
               
             }
         }
@@ -344,17 +349,17 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should print the name on one line and the favorite food on the next line. Your output should look like ``Your name is Julian`` ``Your favorite food is chicken wings``
+        Write code that prints the name on one line and the favorite food on the next line. Your output should look like ``Your name is Julian`` ``Your favorite food is chicken wings``
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
-				String name = "Julian";
-				String food = "chicken wings";
+                String name = "Julian";
+                String food = "chicken wings";
 				
-				// Add your code here
-				
+                // Add your code here
+                
               
             }
         }
@@ -388,14 +393,14 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should calculate and print the cost of a trip that is 200 miles when the price of gas is 2.20 and the miles per gallon is 42. Make sure your answer is a double. 
+        Write code that calculates and prints the cost of a trip that is 200 miles when the price of gas is 2.20 and the miles per gallon is 42. Make sure your answer is a double. 
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
-				// Add your code here
-              
+                // Add your code here
+                
               
             }
         }
@@ -430,7 +435,7 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should calculate how many miles you can go on half a tank of gas if the miles per gallon is 26 and your tank holds 15 gallons.  
+        Write code that calculates how many miles you can go on half a tank of gas if the miles per gallon is 26 and your tank holds 15 gallons.  
         ~~~~
         public class Test1 
         {
@@ -471,7 +476,7 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should calculate and print how many chicken wings you can buy with $3.50 if the wings are $.60 each. Make sure your answer is an integer.
+        Write code that calculates and prints how many chicken wings you can buy with $3.50 if the wings are $.60 each. Make sure your answer is an integer.
         ~~~~
         public class Test1 
         {
@@ -524,17 +529,17 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should calculate how much you will have to pay for an item that is 60% off the original price of $52.99.
+        Write code that calculates how much you will have to pay for an item that is 60 percent off the original price of $52.99.
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
-				double price = 52.99;
-				double discount = 0.6;
+                double price = 52.99;
+                double discount = 0.6;
 	
-				// Add your code here
-				
+                // Add your code here
+                
               
             }
         }
@@ -566,16 +571,16 @@ These are the equivalent Write-Code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should calculate and print how much the per item costs is for shorts that are buy 2 and get the third free. The shorts are $39.99 each. 
+        Write code that calculates and prints how much the per item costs is for shorts that are buy 2 and get the third free. The shorts are $39.99 each. 
         ~~~~
         public class Test1 
         {
             public static void main(String[] args) 
             {
-				double price = 39.99;
+                double price = 39.99;
 				
-				// Add your code here
-              
+                // Add your code here
+                
               
             }
         }
