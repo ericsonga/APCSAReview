@@ -11,10 +11,57 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 
 
 .. selectquestion:: select_u1_muc_wc1
-   :fromid: ch4ex1muc, u1_muc_wc1
+   :fromid: u1_muc_wc1, ch4ex1muc
    :toggle:
 
 .. selectquestion:: select_u1_muc_wc2
-   :fromid: u1_muc_wc2, ch4ex2muc 
+   :fromid: u1_muc_wc2, ch4ex2muc
+   :toggle:
+   
+.. selectquestion:: select_u1_muc_wc3
+   :fromid: u1_muc_wc3, ch4ex3muc
    :toggle:
 
+.. selectquestion:: select_u1_muc_wc4
+   :fromid: u1_muc_wc4, ch3ex1muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc5
+   :fromid: u1_muc_wc5, ch3ex2muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc6
+   :fromid: u1_muc_wc6, ch3ex4muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc7
+   :fromid: u1_muc_wc7, ch3ex5muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc8
+   :fromid: u1_muc_wc8, ch4ex5muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc9
+   :fromid: u1_muc_wc9, ch4ex6muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc10
+   :fromid: u1_muc_wc10, ch3ex6muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc11
+   :fromid: u1_muc_wc11, ch3ex7muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc12
+   :fromid: u1_muc_wc12, ch3ex8muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc13
+   :fromid: u1_muc_wc13, ch3ex9muc
+   :toggle:
+
+.. selectquestion:: select_u1_muc_wc14
+   :fromid: u1_muc_wc14, ch3ex10muc
+   :toggle:

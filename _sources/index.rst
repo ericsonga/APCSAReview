@@ -8,7 +8,7 @@ AP CS A Java Course
 
 Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
 
-This curriculum is adapted from the Runestone Java Review ebook to follow the 2019 College Board unit ordering and learning objectives.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
+CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
 
 To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
 
