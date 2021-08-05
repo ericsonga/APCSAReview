@@ -31,7 +31,7 @@ Anaya is a software engineer, which means she develops software for the company 
 
 *"One of the best experiences for me was seeing a student that I had worked with come into Georgia Tech, and see her join our department."*
 
-Anaya volunteers at Rise Up 4 CS, a group that provides guidance and role models to underrepresented students in Computer Science. In high school, they supported and enabled her journey in CS, which led her to want to pay it forward.
+Anaya mentors for Rise Up 4 CS, a group that provides guidance and role models to underrepresented students in Computer Science. In high school, they supported and enabled her journey in CS, which led her to want to pay it forward.
 
 .. youtube:: fwHw0rGbfZQ
     :divid: Anaya_Taylor
