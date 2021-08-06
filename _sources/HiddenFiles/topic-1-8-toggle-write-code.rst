@@ -2,11 +2,10 @@
    :prefix: 1-8-
    :start: 1   
 
-Unit 1 Mixed Up/Write Code Practice
-====================================
+Unit 1 Write Code for Toggle Code
+=========================================================
 
-These are the equivalent Write-Code problems.
-
+This is the write code problems associated with the mixed up code problems.
 
 .. activecode:: u1_muc_wc1
         :language: java
