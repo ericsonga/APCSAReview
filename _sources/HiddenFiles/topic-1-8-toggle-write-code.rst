@@ -235,7 +235,7 @@ This is the write code problems associated with the mixed up code problems.
         }
         ====
 		// ch3ex4muc
-		mport static org.junit.Assert.*;
+		import static org.junit.Assert.*;
 		import org.junit.*;;
 		import java.io.*;
 
@@ -420,7 +420,7 @@ This is the write code problems associated with the mixed up code problems.
 			{
 				String output = getMethodOutput("main");
 				double result = Double.parseDouble(output);
-				double expect = "10.476190476190476";
+				double expect = 10.476190476190476;
 				
 				boolean passed = getResults(expect, result, "Running main");
 				assertTrue(passed);
