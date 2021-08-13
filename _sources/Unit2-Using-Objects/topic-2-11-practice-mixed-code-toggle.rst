@@ -15,18 +15,22 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 
 .. selectquestion:: select_u2_muc_wc2
    :fromid: u2_muc_wc2, ch4ex4muc
-
+   :toggle:
+   
 .. selectquestion:: select_u2_muc_wc3
    :fromid: u2_muc_wc3, ch4ex7muc
-
+   :toggle:
+   
 .. selectquestion:: select_u2_muc_wc4
    :fromid: u2_muc_wc4, ch4ex8muc
+   :toggle:
 
 .. selectquestion:: select_u2_muc_wc5
    :fromid: u2_muc_wc5, ch4ex9muc
-
+   :toggle:
+   
 .. selectquestion:: select_u2_muc_wc6
    :fromid: u2_muc_wc6, ch4ex10muc
-
+   :toggle:
 
   
