@@ -419,8 +419,7 @@ This is the write code problems associated with the mixed up code problems.
 			public void test1()
 			{
 				String output = getMethodOutput("main");
-				double result = Double.parseDouble(output);
-				double expect = 10.476190476190476;
+                String expect = "10.476190476190476";
 				
 				boolean passed = getResults(expect, result, "Running main");
 				assertTrue(passed);
