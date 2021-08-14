@@ -421,7 +421,7 @@ This is the write code problems associated with the mixed up code problems.
 				String output = getMethodOutput("main");
                 String expect = "10.476190476190476";
 				
-				boolean passed = getResults(expect, result, "Running main");
+				boolean passed = getResults(expect, output, "Running main");
 				assertTrue(passed);
 			}
 
