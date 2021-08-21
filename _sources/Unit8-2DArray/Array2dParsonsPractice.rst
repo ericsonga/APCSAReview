@@ -106,11 +106,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            for (int col = 0; col < image[0].length / 2; col++) {
    =====
                String temp = image[row][col];
-               image[row][col] = image[row][image.length - 1 - col];
-               image[row][image.length - 1 - col] = temp;
+               image[row][col] = image[row][image[row].length - 1 - col];
+               image[row][image[row].length - 1 - col] = temp;
    =====
-               image[row][col] = image[row][image.length - 1 - col]; #paired
-               image[row][image.length - 1 - col] = image[row][col];
+               image[row][col] = image[row][image[row].length - 1 - col]; #paired
+               image[row][image[row].length - 1 - col] = image[row][col];
    =====
            } //end inner for loop
        } //end outer for loop
