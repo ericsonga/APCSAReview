@@ -26,7 +26,8 @@ from runestone import runestone_static_dirs, runestone_extensions, setup
 import pkg_resources
 
 # Trying for faster load times
-html_defer_js = True
+# breaks search page
+#html_defer_js = True
 
 # new for title page
 course_description = "CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan, and Beryl Hoffman, Elms College."

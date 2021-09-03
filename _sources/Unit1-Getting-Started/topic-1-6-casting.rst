@@ -365,6 +365,3 @@ Summary
 
 - If an expression would evaluate to an int value outside of the allowed range, an integer overflow occurs. This could result in an incorrect value within the allowed range.
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>

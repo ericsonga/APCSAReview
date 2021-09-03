@@ -30,6 +30,3 @@ Unit 1 AP CS A Exam Weighting: 2.5-5%
 
    
    
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>

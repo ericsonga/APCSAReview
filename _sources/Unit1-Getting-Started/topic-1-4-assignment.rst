@@ -573,6 +573,4 @@ The following is a 2019 AP CSA sample question.
    What is printed when the code segment is executed?
 
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>
+

@@ -575,6 +575,3 @@ AP Practice
       + Correct! The semicolon should go after each command but not in the comment.
 
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>

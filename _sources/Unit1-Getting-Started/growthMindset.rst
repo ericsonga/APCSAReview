@@ -63,6 +63,3 @@ Watch this |video2| about pair programming:
     :width: 600
     :align: left
     
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>

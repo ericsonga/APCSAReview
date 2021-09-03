@@ -110,7 +110,5 @@ Common Mistakes
   -  assuming that some value like 0 will be smaller than other ``int`` values.  Remember that ``int`` values can be negative as well.  If you want to set a value to the smallest possible ``int`` values use ``Integer.MIN_VALUE``.
   
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>
+
 

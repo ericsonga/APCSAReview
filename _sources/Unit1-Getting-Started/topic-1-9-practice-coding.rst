@@ -1150,6 +1150,3 @@ Coding Practice
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex10d
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>

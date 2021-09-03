@@ -632,6 +632,4 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             V.   None of the above
 
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>
+

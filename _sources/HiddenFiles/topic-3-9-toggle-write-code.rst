@@ -205,17 +205,17 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that prints out if a string has the word “ringing” in it or not.
+        Write code that prints out if the string ``message`` has the word ``ringing`` in it or not. It should print out ``Answer the phone!`` if ``ringing`` is in ``message``, and ``I don't hear anything.`` if not.
         ~~~~
         public class Test1 
-		{
-            public static void main(String[] args) 
-			{
-			    String message = "Is that the phone ringing?";
-				// Add your code here
+        {
+           public static void main(String[] args) 
+           {
+               String message = "Is that the phone ringing?";
+               // Add your code here
 			
-			}
-		}
+           }
+        }
         ====
 		import static org.junit.Assert.*;
 		import org.junit.*;;
@@ -260,18 +260,19 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that print if your favorite food is junk food (pizza or wings) or not. Your code should check to see if a variable's value is ``food`` or ``pizza``.
+        Write code that print if your favorite food is junk food (pizza or wings) or not. Your code should check to see if the variable ``favFood`` value is ``pizza`` or ``wings``. If it is, it should print out ``Your fav is junk food``. If not, it should print ``Your fav is not junk``. 
         ~~~~
         public class Test1
-		{
-			public static void main(String[] args)
-			{
-				String favFood = "kale";
-				// Add your code here
-			}
-
-		}
+        {
+            public static void main(String[] args)
+            {
+                String favFood = "kale";
+                // Add your code here
+        	
+            }
+        }
         ====
+		import static org.junit.Assert.*;
 		import static org.junit.Assert.*;
 		import org.junit.*;;
 		import java.io.*;
@@ -315,17 +316,16 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that print your fine if you are speeding. If you are going over 65 but less than 75 the fine is 50. If you are going at least 75 and less than 85 the fine is 100. Over that the fine is 200. It should not print anything if you are not speeding. 
+        Write code that print your fine if you are speeding. If you are going over 65 but less than 75, the fine is ``50``. If you are going at least 75 and less than 85, the fine is ``100``. Over that the fine is ``200``. It should not print anything if you are not speeding. 
         ~~~~
         public class Test1
-		{
-			public static void main(String[] args)
-			{
-				int speed = 90;
-				// Add your code here
-			}
-
-		}
+        {
+            public static void main(String[] args)
+            {
+                int speed = 90;
+                // Add your code here
+            }
+        }
         ====
 		import static org.junit.Assert.*;
 		import org.junit.*;;
@@ -376,17 +376,16 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that prints the alarm time. If it is a weekday you should get up at 7:00am and if not get up at 10:00am.
+        Write code that prints the alarm time. If it is a weekday you should get up at ``7:00am`` and if not get up at ``10:00am``.
         ~~~~
         public class Test1
-		{
-			public static void main(String[] args)
-			{
-				boolean weekend = false;
-				// Add your code here
-			}
-
-		}
+        {
+            public static void main(String[] args)
+            {
+               boolean weekend = false;
+               // Add your code here
+            }
+        }
         ====
 		import static org.junit.Assert.*;
 		import org.junit.*;;
@@ -442,18 +441,17 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that prints if you can text now. You can text if you are not driving and not eating.
+        Write code that prints if you ``Can text now`` or ``Can't text now``. You can text if you are not driving and not eating.
         ~~~~
         public class Test1
-		{
-			public static void main(String[] args)
-			{
-				boolean driving = true;
-				boolean eating = false;
-				// Add your code here
-			}
-
-		}
+        {
+            public static void main(String[] args)
+            {
+                boolean driving = true;
+                boolean eating = false;
+                // Add your code here
+            }
+        }
         ====
 		import static org.junit.Assert.*;
 		import org.junit.*;;
@@ -508,20 +506,19 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that should print if your name starts with a vowel or not.
+        Write code that prints whether your name ``Starts with a vowel`` (a, e, i, o, u) or ``Starts wwith a consonant``.
         ~~~~
         public class Test1
-		{
-			public static void main(String[] args)
-			{
-				String name = "Julian";
-			    String firstLetter = name.substring(0,1);
-			    String lowerFirst = firstLetter.toLowerCase();
-				
-				// Add your code here
-			}
-
-		}
+        {
+            public static void main(String[] args)
+            {
+                String name = "Julian";
+                String firstLetter = name.substring(0,1);
+                String lowerFirst = firstLetter.toLowerCase();
+                
+                // Add your code here
+            }
+        }
         ====
 		import static org.junit.Assert.*;
 		import org.junit.*;;
@@ -575,14 +572,13 @@ This is the write code problems associated with the mixed up code problems.
         Write code that prints the letter grade with your score. For a score greater than 90, it should print ``A``. For a score between 80 and 90, it should print ``B``. For a score between 70 and 80, it should print ``C``. For a score between 60 and 70, it should print ``D``. For all other scores, it should print ``E``.
         ~~~~
         public class Test1
-		{
-			public static void main(String[] args)
-			{
-				int score = 73;
-				// Add your code here
-			}
-
-		}
+        {
+            public static void main(String[] args)
+            {
+                int score = 73;
+                // Add your code here
+            }
+        }
         ====
 		import static org.junit.Assert.*;
 		import org.junit.*;;
@@ -631,5 +627,3 @@ This is the write code problems associated with the mixed up code problems.
 				assertTrue(passed);
 			}
 		}
-		
-				

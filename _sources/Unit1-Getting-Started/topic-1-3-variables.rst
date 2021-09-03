@@ -644,7 +644,5 @@ AP Practice
    
 
    
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>
+
 

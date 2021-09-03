@@ -383,6 +383,3 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
            double priceForTwo = price * 2 #distractor
    
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>

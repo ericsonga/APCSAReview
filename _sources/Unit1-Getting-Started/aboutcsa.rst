@@ -77,6 +77,3 @@ For more information on the exam see the College Board |AP CS A site| and the 20
 
 Also check out this list of |CS Careers| that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!  
 
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>

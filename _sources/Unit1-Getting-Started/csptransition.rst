@@ -35,6 +35,3 @@ Here is a a comparison of |code.org App Lab code to Java|:
 
     <iframe src="https://docs.google.com/document/d/1LB6a36tRKGgTGJUcpT_3TspXFqn5luu1YU8YmYt1CQs/edit?usp=sharing" style="max-width:100%; margin-left:5%; width:90%;"  height="600px"></iframe>
     
-.. raw:: html
-    
-    <script src="../_static/custom-csawesome.js"></script>
