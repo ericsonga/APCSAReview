@@ -23,8 +23,7 @@ Coding Practice
                   {
                       String name = Mary";
                       String color = "blue"
-                      System.out.println(Name +
-                                         "'s favorite color is " + color);
+                      System.out.println(Name + "'s favorite color is " + color);
                   }
               }              
               ====
@@ -58,10 +57,9 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                      String name = "Mary";
-                      String color = "blue";
-                      System.out.println(name +
-                                         "'s favorite color is " + color);
+                     String name = "Mary";
+                     String color = "blue";
+                     System.out.println(name + "'s favorite color is " + color);
                   }
               }
 
@@ -89,8 +87,7 @@ Coding Practice
                       String name "Gabby";
                       String sport = "soccer;
                       System.out.println(Name +
-                                         "'s favorite sport is "
-                                         sport);
+                                 "'s favorite sport is " sport);
                   }
               }
               ====
@@ -126,8 +123,7 @@ Coding Practice
                       String name = "Gabby";
                       String sport = "soccer";
                       System.out.println(name +
-                                         "'s favorite sport is " +
-                                         sport);
+                             "'s favorite sport is " + sport);
                   }
               }
 
@@ -192,10 +188,8 @@ Coding Practice
                   {
                       String name = "Carly";
                       String color = "red";
-                      System.out.println("Your name is " +
-                                         name +
-                                         " and your favorite color is " +
-                                         color);
+                      System.out.println("Your name is " + name 
+                            + " and your favorite color is " + color);
                    }
               }
 
@@ -259,10 +253,8 @@ Coding Practice
                   {
                       String name = "Justin";
                       int age = 16;
-                      System.out.println("Your name is " +
-                                         name +
-                                         " and your age is " +
-                                         age);
+                      System.out.println("Your name is " + name +
+                                         " and your age is " + age);
 
                   }
               }
@@ -372,7 +364,12 @@ Coding Practice
                     public void testPrintStringsA() throws IOException
                     {
                       String target1 = "+animal";
-                      boolean passed1 = checkCodeContains("print animal string", target1);
+                      //boolean passed1 = checkCodeContains("print animal string", target1);
+                      String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
+		              boolean passed1 = code.contains(target1);
+
+		              getResults(""+true, ""+passed1, "Code prints animal variable");
+
                       assertTrue(passed1);
                     }
 
@@ -380,7 +377,11 @@ Coding Practice
                     public void testPrintStringsB() throws IOException
                     {
                         String target1 = "+food";
-                        boolean passed1 = checkCodeContains("print food string", target1);
+                        //boolean passed1 = checkCodeContains("print food string", target1);
+                        String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
+		                boolean passed1 = code.contains(target1);
+
+		                getResults(""+true, ""+passed1, "Code prints food variable");
                         assertTrue(passed1);
                     }
                 }
@@ -402,10 +403,8 @@ Coding Practice
                   {
                       String animal = "horse";
                       String food = "chicken";
-                      System.out.println("My favorite animal is a " +
-                                         animal + ".  " +
-                                         "My favorite food is " +
-                                         food + ".");
+                      System.out.println("My favorite animal is a " + animal + ".  " +
+                                         "My favorite food is " + food + ".");
                   }
               }
 
@@ -447,7 +446,11 @@ Coding Practice
                     public void testPrintStringsA() throws IOException
                     {
                       String target1 = "+movie";
-                      boolean passed1 = checkCodeContains("print movie string", target1);
+                      //boolean passed1 = checkCodeContains("print movie string", target1);
+                      String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
+		              boolean passed1 = code.contains(target1);
+
+		              getResults(""+true, ""+passed1, "Code prints movie variable");
                       assertTrue(passed1);
                     }
 
@@ -455,7 +458,10 @@ Coding Practice
                     public void testPrintStringsB() throws IOException
                     {
                         String target1 = "+book";
-                        boolean passed1 = checkCodeContains("print book string", target1);
+                        //boolean passed1 = checkCodeContains("print book string", target1);                String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
+		                boolean passed1 = code.contains(target1);
+
+		                getResults(""+true, ""+passed1, "Code prints book variable");
                         assertTrue(passed1);
                     }
                 }
