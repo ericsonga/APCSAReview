@@ -12,6 +12,9 @@ CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an i
 
 To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
 
+ATTN: high school women, genderqueer, and non-binary technologists: Apply now for the NCWIT Award for Aspirations in Computing to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. #NCWITAiC22
+
+ATTN high school women of color taking AP CSA or CSP: Apply for Sisters Rise Up, a free online mentorship program for women of color (Black, Latina, and/or Native American) who are taking an AP CSA or CSP course during the 2021-2022 school year.  This program is part of a research project, Sisters Rise Up, which studies ways to help women of color succeed in AP CS.  It offers free remote help sessions led by undergraduate students from the University of Michigan. Two one-hour remote help sessions are offered most weeks and a two-three hour remote help session is offered once a month.  If you take the AP CS exam and send in your score by the end of August you will receive a $100 gift card.  If you are interested, please fill out contact information for a parent or guardian at https://forms.gle/4LfH8r28tw67iZd78.  
 
 .. raw:: html
 
@@ -89,7 +92,7 @@ Index
    
 If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 8/20/2021)
+(last revised 9/17/2021)
 
 © Copyright 2015 Barb Ericson, Univ. Michigan, 2019 revised by Beryl Hoffman (Elms College). Created using `Runestone  <http://runestone.academy>`_.
 
