@@ -458,7 +458,8 @@ Coding Practice
                     public void testPrintStringsB() throws IOException
                     {
                         String target1 = "+book";
-                        //boolean passed1 = checkCodeContains("print book string", target1);                String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
+                        //boolean passed1 = checkCodeContains("print book string", target1);                
+                        String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
 		                boolean passed1 = code.contains(target1);
 
 		                getResults(""+true, ""+passed1, "Code prints book variable");
