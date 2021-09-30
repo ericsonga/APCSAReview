@@ -309,11 +309,11 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 .. |repl.it project| raw:: html
 
-   <a href= "https://repl.it/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
 
 .. |repl 2| raw:: html
 
-   <a href= "https://repl.it/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
+   <a href= "https://replit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
 
 
     

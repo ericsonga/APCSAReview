@@ -27,7 +27,7 @@
 
 .. |repl link| raw:: html
 
-   <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
+   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
 
 .. |github| raw:: html
 

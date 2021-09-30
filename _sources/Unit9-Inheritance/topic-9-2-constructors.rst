@@ -412,7 +412,7 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
 
 .. |repl.it Java Swing code| raw:: html
 
-   <a href="https://repl.it/@BerylHoffman/Shapes" style="text-decoration:underline" target="_blank">repl.it Java Swing code</a>
+   <a href="https://replit.com/@BerylHoffman/Shapes" style="text-decoration:underline" target="_blank">repl.it Java Swing code</a>
    
 .. |files here| raw:: html
 

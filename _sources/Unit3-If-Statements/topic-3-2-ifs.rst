@@ -445,14 +445,14 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 
 .. |repl version| raw:: html
 
-    <a href="https://repl.it/@BerylHoffman/Magic8BallTemplate" target="_blank" style="text-decoration:underline">repl version</a>
+    <a href="https://replit.com/@BerylHoffman/Magic8BallTemplate" target="_blank" style="text-decoration:underline">repl version</a>
 
 
 Here's a |repl version| that uses the Scanner class to first have the user ask a question. You can add your code in from above and try running it. 
 
 .. raw:: html
 
-    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://repl.it/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://replit.com/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     
 Summary
 -------------------  

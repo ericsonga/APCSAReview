@@ -19,7 +19,7 @@ Consumer Review Lab
 
 .. |repl student files| raw:: html
 
-   <a href="https://repl.it/@BerylHoffman/AP-CSA-Consumer-Review-Lab-Student-Files" target="_blank" style="text-decoration:underline">repl student files</a>
+   <a href="https://replit.com/@BerylHoffman/AP-CSA-Consumer-Review-Lab-Student-Files" target="_blank" style="text-decoration:underline">repl student files</a>
 
 .. |Lesson 4.3 Loops and Strings| raw:: html
 

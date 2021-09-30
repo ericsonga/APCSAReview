@@ -297,7 +297,7 @@ This would be a good project to work together in pairs, and switch drivers (who 
 
 .. |repl template| raw:: html
 
-   <a href="https://repl.it/@BerylHoffman/Challenge1-6-Average-Template" target="_blank">repl template</a>
+   <a href="https://replit.com/@BerylHoffman/Challenge1-6-Average-Template" target="_blank">repl template</a>
 
 Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
 

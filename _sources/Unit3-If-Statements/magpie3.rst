@@ -161,7 +161,7 @@ Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it 
 
 .. |repl.it version 3| raw:: html
 
-   <a href="https://repl.it/@BerylHoffman/Magpie-ChatBot-Lab-v3" target="_blank">repl.it version 3</a>
+   <a href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3" target="_blank">repl.it version 3</a>
    
 Run the code below or this |repl.it version 3| to see this new method findKeyWord in action.
 
