@@ -330,11 +330,10 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 |Groupwork| Programming Challenge : Adventure
 ---------------------------------------------
 
-.. image:: http://www.spitenet.com/cave/images/AdventureMap.jpg
+.. image:: Figures/adventure.jpg
     :width: 200
     :align: left
     :alt: Adventure map
-    
     
 .. |Colossal Cave Adventure| raw:: html
 
