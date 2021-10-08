@@ -194,14 +194,15 @@ The first several problems are about Strings, but there are some about Turtles a
                     {
                         String output = getMethodOutput("main");
                         String expect = "mee";
-                        boolean passed = getResults(expect, output, "Expected output from main");
+                        boolean passed = output.equals(expect);
+                        passed = getResults(expect, output, "Expected output from main", passed);
                         assertTrue(passed);
                     }
                       @Test
                     public void testCodeContains()
                     {
                         String target = ".substring(0,3)";
-                        boolean passed = checkCodeContains("substring method fixed", target);
+                        boolean passed = checkCodeContains("substring method ", target);
                         assertTrue(passed);
                     }
                 }
