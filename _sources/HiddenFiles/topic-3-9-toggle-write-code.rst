@@ -260,7 +260,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that print if your favorite food is junk food (pizza or wings) or not. Your code should check to see if the variable ``favFood`` value is ``pizza`` or ``wings``. If it is, it should print out ``Your fav is junk food``. If not, it should print ``Your fav is not junk``. 
+        Write code that prints if your favorite food is junk food (pizza or wings) or not. Your code should check to see if the variable ``favFood`` value is ``pizza`` or ``wings``. If it is, it should print out ``Your fav is junk food``. If not, it should print ``Your fav is not junk``. 
         ~~~~
         public class Test1
         {
@@ -272,7 +272,6 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		import static org.junit.Assert.*;
 		import static org.junit.Assert.*;
 		import org.junit.*;;
 		import java.io.*;
@@ -298,7 +297,8 @@ This is the write code problems associated with the mixed up code problems.
 			{
 				String code = getCodeWithoutComments();
 				int count = countOccurences(code, ".equals(");
-				boolean passed = getResults(""+1, ""+count, "Counting number of calls to .equals()");
+                boolean passed = count >= 2;
+				passed = getResults(""+2, ""+count, "Counting number of calls to .equals()", passed);
 				assertTrue(passed);
 			}
 			
@@ -316,7 +316,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that print your fine if you are speeding. If you are going over 65 but less than 75, the fine is ``50``. If you are going at least 75 and less than 85, the fine is ``100``. Over that the fine is ``200``. It should not print anything if you are not speeding. 
+        Write code that prints your fine if you are speeding. If you are going over 65 but less than 75, the fine is ``50``. If you are going at least 75 and less than 85, the fine is ``100``. Over that the fine is ``200``. It should not print anything if you are not speeding. 
         ~~~~
         public class Test1
         {
