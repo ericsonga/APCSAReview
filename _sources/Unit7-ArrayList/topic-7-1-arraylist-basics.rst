@@ -417,7 +417,7 @@ First, let's discuss how to break up a number into its digits. Try the code belo
         }
     }
    
-We can us a while loop to print out each digit in reverse order starting from the right (4, 5, 1 for the number 154) while dividing it by 10. You can try it in the active code above. Here is the pseudocode:
+We can use a while loop to print out each digit in reverse order starting from the right (4, 5, 1 for the number 154) while dividing it by 10. You can try it in the active code above. Here is the pseudocode:
 
     - while number is greater than 0
       
