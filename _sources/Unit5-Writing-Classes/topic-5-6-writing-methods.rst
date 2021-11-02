@@ -403,7 +403,7 @@ Methods can also return values of any type back to the calling method. The calli
 
 .. |The Ants Go Marching| raw:: html
 
-   <a href="https://www.lyrics.com/lyric/5526512/The+Ants+Go+Marching" target="_blank">The Ants Go Marching</a>
+   <a href="https://youtu.be/QPwEZ8Vv2YQ" target="_blank">The Ants Go Marching</a>
 
 Here's another song, |The Ants Go Marching|, that is very similar to the This Old Man song in its repetitive structure. 
 
@@ -415,18 +415,21 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
     The ants go marching one by one
     The little one stops to suck his thumb
     And they all go marching down to the ground
+    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
 
     The ants go marching two by two, hurrah, hurrah
     The ants go marching two by two, hurrah, hurrah
     The ants go marching two by two
     The little one stops to tie his shoe
     And they all go marching down to the ground
+    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
 
     The ants go marching three by three, hurrah, hurrah
     The ants go marching three by three, hurrah, hurrah
     The ants go marching three by three
     The little one stops to climb a tree
     And they all go marching down to the ground
+    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
     </pre>
 
 1. Print out the |The Ants Go Marching| song and circle the repeated parts of the song.
