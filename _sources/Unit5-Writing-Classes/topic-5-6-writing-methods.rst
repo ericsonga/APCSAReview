@@ -443,7 +443,7 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
   :language: java
   :autograde: unittest  
 
-  Create method(s) with parameters to print out verses of the song The Ants Go Marching. https://www.lyrics.com/lyric/5526512/The+Ants+Go+Marching
+  Create method(s) with parameters to print out verses of the song The Ants Go Marching. |The Ants Go Marching|  
   ~~~~
   public class Song 
   { 
