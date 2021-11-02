@@ -255,7 +255,7 @@ You can see this code in action in the |visualizer2|.
 
 .. |The Ants Go Marching| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ target="_blank">The Ants Go Marching</a>
+   <a href="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ" target="_blank">The Ants Go Marching</a>
 
 In the last lesson, we wrote a class with methods to print out the song |The Ants Go Marching|. Notice that this is a class where there are no instance variables and we don't really need to generate multiple objects. With students or pets, it makes sense to have multiple objects. With the Song, we can just make the methods static and have just 1 copy of them. 
 
