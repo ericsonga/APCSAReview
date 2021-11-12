@@ -29,13 +29,26 @@ Enhanced For-Each Loop for 2D Arrays (Day 2)
 ..	index::
 	pair: 2D Array; for-each loop
 
-Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row!
+Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row, String[] in the example below for a 2D String array. The type of the variables in the for-each loops must match the type of the array. For-each loops are much simpler since you don't have to use the indices and the []'s, but you can only use them if you are not going to change the values in an array of primitive types since the variable val below will not change the original array.
+
+.. code-block:: java
+
+      String[][] array;
+      // Nested For-each loops that traverse a 2D String array
+      for (String[] innerArray : array) 
+      {
+         for (String val : innerArray)
+         {
+             System.out.println(val);
+         }
+      }
+
 
 .. activecode:: getAvgForEach
    :language: java
    :autograde: unittest      
    
-   Nested enhanced for loops demo. 
+   Nested for-each loops demo. Click on the CodeLens button to trace through the code.
    ~~~~
    public class Average
    {
@@ -563,6 +576,39 @@ Summary
 - When applying sequential/linear search algorithms to 2D arrays, each row must be accessed then sequential/linear search applied to each row of a 2D array.
 
 
+AP Practice
+------------
+
+.. mchoice:: AP8-2-2
+   :practice: T
+   :answer_a: 36
+   :answer_b: 54
+   :answer_c: 63
+   :answer_d: 68
+   :answer_e: 78
+   :correct: b
+   :feedback_a: Trace through the code.
+   :feedback_b: Correct! 
+   :feedback_c: Trace through the code.
+   :feedback_d: Trace through the code.
+   :feedback_e: Notice that the inner loop goes up to but not including x.length - 1.
+
+   Consider the following code segment. What is the value of sum as a result of executing the code segment?
+
+   .. code-block:: java
+    
+      int[][] arr = { {1, 2, 3, 4},
+                      {5, 6, 7, 8},
+                      {9, 10, 11, 12} };
+      int sum = 0;
+      for (int[] x : arr)
+      {
+          for (int y = 0; y < x.length - 1; y++)
+          {
+               sum += x[y];
+          }
+      }
+ 
 
 .. datafile:: pictureClasses.jar
         :hide:    

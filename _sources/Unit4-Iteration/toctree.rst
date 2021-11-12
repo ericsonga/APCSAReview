@@ -20,6 +20,7 @@ AP CS A Exam Weighting: 17.5-22.5%
    topic-4-5-loop-analysis.rst
    topic-4-6-summary.rst
    topic-4-7-practice-mixed-code.rst
+   topic-4-7-practice-mixed-code-toggle.rst
    topic-4-8-practice-coding.rst
    Exercises.rst
    FRQcalendar.rst

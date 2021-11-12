@@ -104,7 +104,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
    :language: java 
    :autograde: unittest
    
-   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Note that an array can be passed in as an argument to a method. 
+   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Use the CodeLens button to trace through the code. Note that an array can be passed in as an argument to a method.  
    ~~~~
    public class Test1
    {
@@ -256,6 +256,43 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
         }
     }
          
+
+AP Practice
+------------
+
+.. mchoice:: AP8-2-1
+   :practice: T
+   :answer_a: 45 44 43 42 41
+   :answer_b: 45
+   :answer_c: 41 42
+   :answer_d: 45 44
+   :answer_e: 44 45
+   :correct: d
+   :feedback_a: Trace through the code. Notice that the inner loop stops at index row.
+   :feedback_b: Trace through the code. Notice that the inner loop stops at index row.
+   :feedback_c: Trace through the code. Notice that the inner loop works through the row backwards.
+   :feedback_d: Correct!
+   :feedback_e: Trace through the code. Notice that the inner loop works through the row backwards.
+
+   Consider the following code segment. What is the last row of numbers printed when this code segment is executed? 
+
+   .. code-block:: java
+    
+      int[][] points = { {11, 12, 13, 14, 15},
+                         {21, 22, 23, 24, 25},
+                         {31, 32, 33, 34, 35},
+                         {41, 42, 43, 44, 45}};
+      for (int row = 0; row < points.length; row++)
+      {
+          for (int col = points[0].length - 1; col >= row; col--)
+          {
+               System.out.print(points[row][col] + " ");
+          }
+          System.out.println();
+     }
+
+
+
 
 This lesson is continued on the next page. 
 

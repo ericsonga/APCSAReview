@@ -163,14 +163,14 @@ Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it 
 
    <a href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3" target="_blank">repl.it version 3</a>
    
-Run the code below or this |repl.it version 3| to see this new method findKeyWord in action.
+Run the code below or this |repl.it version 3| to see this new method findKeyWord in action. It is called from the getResponse() method to print out an appropriate response based on a keyword. For example, looking for the word "no" to print out "Why so negative?", but it won't match no inside of another word like "another".
 
-Try replacing the call in main at line 178 below with each of the following
+.. code-block:: java
 
-* ``maggie.findKeyword("She's my sister", "sister", 0);``
-* ``maggie.findKeyword("Brother Tom is helpful", "brother", 0);``
-* ``maggie.findKeyword("I can't catch wild cats.", "cat", 0);``
-* ``maggie.findKeyword("I know nothing about snow plows.", "no", 0);``
+    if (findKeyword(statement, "no") >= 0)
+    {
+       response = "Why so negative?";
+    }
 
 You can also step through the code in the |Java Visualizer| or using the CodeLens button below. It may take a minute or two to load.  Click the forward button at the bottom of the code to execute the next statement.
  

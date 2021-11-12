@@ -87,7 +87,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test1() {
                 String output = getMethodOutput("main");
-                String expect = "0\n20\n40\n60\n80\n100";
+                String expect = "15\n14\n13\n12\n11\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n0";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
@@ -244,7 +244,7 @@ This is the write code problems associated with the mixed up code problems.
 
 
 
-.. activecode:: u4_muc_wc6
+.. activecode:: u4_muc_wc7
         :language: java
         :practice: T
         :autograde: unittest
@@ -291,7 +291,7 @@ This is the write code problems associated with the mixed up code problems.
 
 
 
-.. activecode:: u4_muc_wc7
+.. activecode:: u4_muc_wc8
         :language: java
         :practice: T
         :autograde: unittest
@@ -320,7 +320,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test1() {
                 String output = getMethodOutput("main");
-                String expect = "******\n******\n******";
+                String expect = "1\n22\n333";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
@@ -337,7 +337,7 @@ This is the write code problems associated with the mixed up code problems.
         }
 
 
-.. activecode:: u4_muc_wc8
+.. activecode:: u4_muc_wc9
         :language: java
         :practice: T
         :autograde: unittest
@@ -384,7 +384,7 @@ This is the write code problems associated with the mixed up code problems.
 
 
 
-.. activecode:: u4_muc_wc9
+.. activecode:: u4_muc_wc10
         :language: java
         :practice: T
         :autograde: unittest
