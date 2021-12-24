@@ -413,14 +413,14 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
     The ants go marching one by one, hurrah, hurrah
     The ants go marching one by one, hurrah, hurrah
     The ants go marching one by one
-    The little one stops to suck his thumb
+    The little one stops to suck a thumb
     And they all go marching down to the ground
     To get out of the rain, BOOM! BOOM! BOOM! BOOM!
 
     The ants go marching two by two, hurrah, hurrah
     The ants go marching two by two, hurrah, hurrah
     The ants go marching two by two
-    The little one stops to tie his shoe
+    The little one stops to tie a shoe
     And they all go marching down to the ground
     To get out of the rain, BOOM! BOOM! BOOM! BOOM!
 
@@ -470,21 +470,21 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
       @Test
       public void checkCodeContains1(){
         //check verse 1
-        boolean passed = checkCodeContains("verse method call with 2 arguments for verse 1", "verse(\"one\", \"suck his thumb\"");
+        boolean passed = checkCodeContains("verse method call with 2 arguments for verse one", "verse(\"one\", \"suck");
         assertTrue(passed);
       }
 
       @Test
       public void checkCodeContains2(){
          //check verse 2
-          boolean passed = checkCodeContains("verse method call with 2 arguments for verse 2", "verse(\"two\", \"tie his shoe\"");
+          boolean passed = checkCodeContains("verse method call with 2 arguments for verse two", "verse(\"two\", \"tie");
         assertTrue(passed);
       }
 
       @Test
       public void checkCodeContains3(){
          //check verse 3
-          boolean passed = checkCodeContains("verse method call with 2 arguments for verse 3", "verse(\"three\", \"climb a tree\"");
+          boolean passed = checkCodeContains("verse method call with 2 arguments for verse three", "verse(\"three\", \"climb a tree\"");
         assertTrue(passed);  
       }
 

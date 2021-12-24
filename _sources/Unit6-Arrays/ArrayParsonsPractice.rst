@@ -13,7 +13,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment should loop from 0 to less than the length of the array and double each element in the array ``arr`` and also print out each new value on the same line separated by ", " -- the finished code should print "2, 4, 6, 8, 10, ".  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The following program segment should loop from 0 to less than the length of the array and double each element in the array ``arr`` and also print out each new value on the same line separated by ", ". The finished code should print "2, 4, 6, 8, 10, ".  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    int[] arr = {1, 2, 3, 4, 5};
    =====

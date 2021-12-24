@@ -12,7 +12,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Finish the code to  loop from 0 to less than the length of the array and double each element in the array arr and also print out each new value on the same line separated by ", " – the finished code should print "2, 4, 6, 8, 10, ".
+        Write a loop that traverses the array arr from 0 to less than the length of the array. In the loop, double each element in the array arr and print out each new value on the same line separated by ", ". The finished code should print "2, 4, 6, 8, 10, ".
         ~~~~
         public class Test1 
         {
@@ -39,7 +39,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test1() {
                 String output = getMethodOutput("main");
-                String expect = "2, \n4, \n6, \n8, \n10,";
+                String expect = "2, 4, 6, 8, 10, ";
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
@@ -61,7 +61,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Finish the code to fill an array with elements that count up from 0 to 50 by 5 (0, 5, 10, 15, 20…).
+        Write a for loop that fills an array with elements that count up from 0 to 50 by 5 (0 5 10 15 20 … 50) and prints out each element on a separate line.
         ~~~~
         public class Test1 
         {
@@ -110,7 +110,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Finish the code to print each element in the array that is even using an enhanced for each loop.
+        Write an enhanced for each loop to traverse the array and print out an element if it is even. 
         ~~~~
         public class Test1 
         {
@@ -157,7 +157,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Finish the method to return the smallest integer given an array of integers (the parameter).  
+        Finish the method to return the smallest integer in an array arr given as the parameter.  
         ~~~~
         import java.util.Arrays;
 
@@ -165,7 +165,7 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static int findSmallest(int[] arr) 
             {
-                int smallest = -1;
+                int smallest = arr[0];
 
                 // Add your code here
 
@@ -237,7 +237,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Finish the method to return the average given an array of integers (the parameter). The method should return a double value.
+        Finish the method to return the average of the elements in an array arr given as the parameter. The method should return the average.
         ~~~~
         import java.util.Arrays;
 
@@ -316,7 +316,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Finish the method to return the largest integer given an array of integers (the parameter).
+        Finish the method to return the largest integer in an array arr given as the parameter.
         ~~~~
         import java.util.Arrays;
 
@@ -392,7 +392,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Finish the method to return an integer array that is "right shifted" by one – so ``{6, 2, 5, 3}`` returns ``{3, 6, 2, 5}`` (the parameter).
+        Finish the method that given an array as a parameter, returns the elements "right shifted" by one – so ``{6, 2, 5, 3}`` returns ``{3, 6, 2, 5}``.
         ~~~~
         import java.util.Arrays;
 
@@ -402,7 +402,7 @@ This is the write code problems associated with the mixed up code problems.
             public static int[] shiftRight(int[] arr) 
             {
 
-                int[] result = null;
+                int[] result = new int[ arr.length ];
 
                 // Add your code here
 
@@ -485,9 +485,10 @@ This is the write code problems associated with the mixed up code problems.
             {
                 int[] result = new int[2];
 
-                // Add your code here
-
-
+                // Finish this code (no loop necessary)
+                int middleIndex = 
+                result[0] = 
+                result[1] = 
 
                 return result;
 

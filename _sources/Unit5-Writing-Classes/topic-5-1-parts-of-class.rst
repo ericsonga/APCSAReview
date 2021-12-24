@@ -533,7 +533,7 @@ AP Practice
         - .. code-block:: java
 
             public String name;
-            private int age;
+            public int age;
             private Cat(String name, int age)
             { /* implementation not shown */ }
 
