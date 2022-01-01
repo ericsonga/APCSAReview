@@ -484,7 +484,7 @@ Code Practice with Object Oriented Concepts
                  public void test1() 
                  {
                    String target = "greet();";
-                   boolean passed = checkCodeContains("overriden greet method", target);
+                   boolean passed = checkCodeContains("overridden greet method", target);
                    assertTrue(passed);
                  }
                }

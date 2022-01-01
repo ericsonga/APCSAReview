@@ -181,11 +181,11 @@ When the student ``getFood()`` method is executed it will start executing the ``
      
 You can step through this example using the Java Visualizer by clicking on the following link: `Super Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
 
-The toString() method is a common method that is overriden. A subclass can override the superclass toString() method and call the super.toString() before adding on its own instance variables.  
+The toString() method is a common method that is overridden. A subclass can override the superclass toString() method and call the super.toString() before adding on its own instance variables.  
 
 .. code-block:: java
 
-   // overriden toString() in subclass
+   // overridden toString() in subclass
    public String toString() 
    {
      return super.toString() + "\n" + subclassInstanceVariables;
@@ -240,7 +240,7 @@ The Customer class below keeps track of the names and addresses of customers. It
     // Complete the OnlineCustomer class to inherit from Customer
     // It should have an email attribute, 
     // a constructor with 3 arguments (name, address, email) that uses the super constructor, 
-    // and an overriden toString() method that calls the super toString() method 
+    // and an overridden toString() method that calls the super toString() method 
     //  and then prints "\nEmail:" and the email variable.
     class OnlineCustomer 
     {

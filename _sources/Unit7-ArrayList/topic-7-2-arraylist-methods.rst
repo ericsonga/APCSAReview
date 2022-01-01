@@ -744,6 +744,6 @@ Summary
   - **int size()** : Returns the number of elements in the list
   - **boolean add(E obj)** : Appends obj to end of list; returns true
   - **void add(int index, E obj)** : Insertss obj at position index (0 <= index <= size), moving elements at position index and higher to the right (adds 1 to their indices) and adds 1 to size
-  - remove(int index) — Removes element from position index, moving elements at position index + 1 and higher to the left (subtracts 1 from their indices) and subtracts 1 from size; returns the element formerly at position index
+  - **remove(int index)** — Removes element from position index, moving elements at position index + 1 and higher to the left (subtracts 1 from their indices) and subtracts 1 from size; returns the element formerly at position index
   - **E get(int index)** : Returns the element at position index in the list
   - **E set(int index, E obj)** : Replaces the element at position index with obj; returns the element formerly at position index

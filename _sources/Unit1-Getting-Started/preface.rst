@@ -43,7 +43,7 @@ Google has supported this work through their Google RISE Awards: TFR14-03256,   
 to help more under-represented students succeed in their AP CS A courses and on the exam.
 
 Any opinions, findings, and conclusions or recommendations expressed in this material
-are those of the authors and do not necessarily reflect the views of the Google.
+are those of the authors and do not necessarily reflect the views of  Google.
 
 
 **Contributors**

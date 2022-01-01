@@ -1,24 +1,203 @@
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+    
+Picture Lab A5: Modifying a Picture 
+=====================================================
 
-Picture Lab Day 3: Exploring a Picture (not complete)
-========================================================
+Even though digital pictures have millions of pixels, modern computers are so fast that they can process
+all of them quickly. You will write methods in the ``Picture`` class that modify digital pictures.
 
-In this lesson (which is not complete), we will cover the basics of image navigation. Images all start at a (0,0) point but unlike the origin in geometry, this point is in the upper right corner rather than the bottom left.
-We will be using an image called lion.jpg which should appear on the page. A JPEG file is one that follows an intentional standard for storing picture data using lossy compression. Lossy compression
-means that the amount of data that is stored is much smaller than the available data, but the data that is omitted to reach this smaller size, will not be missed.
+Picture Classes: UML and Inheritance
+-------------------------------------
 
-To make this activity run on your browser, it has been modified slightly from the original picture lab. We have provided an active code section with the lion.jpg file and a main method with one helper function. This gives you some freedom to run tests as you see fit.
-Write what you feel will help you answer the multiple choice questions. For example, if asked what color is at the center of the image, you could have a print statement access the center of the image and print out the RGB values.
+The ``Picture`` class inherits attributes and methods from the ``SimplePicture`` class and the ``SimplePicture`` class implements the ``DigitalPicture`` interface as shown in the Unified Modeling Language (UML) class diagram in the figure .
 
-.. datafile:: metalLion.jpg
-   :image:
-   :fromfile: ../../_static/metalLion.jpg
-   :hide:
+.. figure:: Figures/UML.png
+    :width: 750px
+    :align: center
+    :figclass: align-center
 
-.. activecode:: challenge-8-8-picture
+    Figure 1: A UML Class diagram
+
+A UML class diagram shows classes and the relationships between the classes. Each class is shown in a box with the class name at the top.
+The middle area shows attributes (instance or class variables) and the bottom area shows methods. The open triangle points to the class that the connected class inherits from.
+The straight line links show associations between classes. Association is also called a “has-a” relationship. The numbers at the end of the association links give the number of objects associated with an object at the other end.
+
+For example, it shows that one ``Pixel`` object has one ``Color`` object associated with it and that a ``Color`` object can have zero to many ``Pixel`` objects associated with it.
+You may notice that the UML class diagram doesn't look exactly like Java code. UML isn't language specific.
+
+The following questions require some knowledge about inheritance which is covered in the next unit, Unit 9. You may want to come back to do these questions after Unit 9. 
+
+
+.. |Picture Lab project| raw:: html
+
+   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Picture Lab project link</a>
+
+.. reveal:: plhide1
+     :showtitle: Reveal Inheritance Questions
+     :hidetitle: Hide Questions
+     :optional:
+   
+     Click on this |Picture Lab project| and click on Show files to answer the following questions.
+
+     .. mchoice:: picture-day5-0a
+        :answer_a: Yes
+        :answer_b: No, but it is inherited
+        :correct: b
+        :feedback_a: The Picture.java class does not have the getPixels2D() method defined in it but it inherits it from the class SimplePicture. 
+        :feedback_b: Correct, this class inherits that method from the class SimplePicture.
+        :optional:
+
+        Click on the |Picture Lab project| and click on Show files. Open ``Picture.java`` and look for the method ``getPixels2D``. Is it there?
+
+     .. mchoice:: picture-day5-1
+        :answer_a: Yes
+        :answer_b: No
+        :correct: a
+        :feedback_a: Yes, the SimplePicture class contains the method getPixels2D.
+        :feedback_b: The SimplePicture class contains the method getPixels2D. 
+        :optional:
+
+        Open ``SimplePicture.java`` and look for the method ``getPixels2D``. Is it there?
+
+     .. mchoice:: picture-day5-1a
+        :answer_a: yes
+        :answer_b: no
+        :correct: b
+        :feedback_a: We cannot create an object from an interface because it is abstract. 
+        :feedback_b: Correct! We cannot create an object from an interface because it is abstract. 
+        :optional:
+
+        This question is about interfaces which are not covered in the AP exam. Interfaces are like abstract templates of a class that specify the method headers but not the definitions. Does the following code compile? Try it in the main method if you do not know.
+          DigitalPicture p = new DigitalPicture();
+
+     .. mchoice:: picture-day5-2a
+        :answer_a: yes
+        :answer_b: no
+        :correct: a
+        :feedback_a: Yes. The SimplePicture class implements the interface DigitalPicture which means it is a type of Digital Picture.
+        :feedback_b: The SimplePicture class implements the interface DigitalPicture which means it is a type of Digital Picture.
+        :optional:
+
+        This question is about interfaces which are not covered in the AP exam. Assuming that a no-argument constructor exists for SimplePicture, would the following code compile?
+          DigitalPicture p = new SimplePicture();
+
+     .. mchoice:: picture-day5-3a
+        :answer_a: yes
+        :answer_b: no
+        :correct: a
+        :feedback_a: Yes, because Picture extends SimplePicture which implements the interface DigitalPicture.
+        :feedback_b: Picture extends SimplePicture which implements the interface DigitalPicture.
+        :optional:
+
+        This question is about interfaces which are not covered in the AP exam. Assuming that a no-argument constructor exists for Picture, would the following code compile?
+          DigitalPicture p = new Picture();
+
+     .. mchoice:: picture-day5-4a
+        :answer_a: yes
+        :answer_b: no
+        :correct: a
+        :feedback_a: Yes, because Picture extends SimplePicture which implements the interface DigitalPicture.
+        :feedback_b: Picture extends SimplePicture which implements the interface DigitalPicture.
+        :optional:
+
+        Assuming that a no-argument constructor exists for Picture, does the following code compile?
+         SimplePicture p = new Picture();
+
+     .. mchoice:: picture-day5-5a
+        :answer_a: yes
+        :answer_b: no
+        :correct: b
+        :feedback_a: Picture inherits from SimplePicture, but not the other way around. 
+        :feedback_b: Picture inherits from SimplePicture, but not the other way around.
+        :optional:
+
+        Assuming that a no-argument constructor exists for SimplePicture, does the following code compile?
+          Picture p = new SimplePicture();
+
+
+
+
+Because DigitalPicture declares a getPixels2D method that returns a two-dimensional
+array of Pixel objects, SimplePicture implements that interface, and Picture inherits
+from SimplePicture, you can use the getPixels2D method on a Picture object. You can
+loop through all the Pixel objects in the two-dimensional array to modify the picture. You can get
+and set the red, green, and/or blue value for a Pixel object. You can also get and/or set the Color
+value for a Pixel object. You can create a new Color object using a constructor that takes the red,
+green, and blue values as integers: ``Color myColor = new Color(255,30,120);``
+
+Image Modification Exercises
+---------------------------------------------------
+
+What do you think you will see if you modify the beach picture in to set all the blue
+values to zero? Do you think you will still see a beach? Run the main method in the Picture class in the Active Code below.
+The body of the main method will create a Picture object named beach from the
+“beach.jpg” file and call the method that sets
+the blue values at all pixels to zero.
+The following code is the main method from the Picture class.
+
+.. code-block:: java
+
+ public static void main(String[] args)
+ {
+   Picture pict = new Picture("beach.jpg");
+   pict.show(); // show the before picture
+   pict.zeroBlue();
+   pict.show(); // show the after picture
+ }
+
+
+The method zeroBlue in the Picture class gets a two-dimensional array of Pixel objects
+from the current picture (the picture the method was called on). It then declares a variable that will refer
+to a Pixel object named pixelObj. It uses a nested for-each loop to loop through all the
+pixels in the picture. Inside the body of the nested for-each loop it sets the blue value for the
+current pixel to zero. Note that you cannot change the elements of an array when you use a for-each
+loop. If, however, the array elements are references to objects that have methods that allow changes,
+you can change the internal state of objects referenced in the array (pixels). 
+
+The following code is the zeroBlue method in the Picture class.
+
+.. code-block:: java
+
+ public void zeroBlue()
+ {
+      Pixel[][] pixels = this.getPixels2D();
+      for (Pixel[] rowArray : pixels)
+      {
+           for (Pixel pixelObj : rowArray)
+           {
+              pixelObj.setBlue(0);
+           }
+      }
+ }
+
+.. |CodingEx| image:: ../../_static/codingExercise.png
+    :width: 30px
+    :align: middle
+    :alt: coding exercise
+    
+|CodingEx| **Coding Exercises**
+
+
+1. You may have done this exercise in the programming challenge in lesson 8.2. Using the zeroBlue method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the main method. 
+
+.. |repl.it project| raw:: html
+
+   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+
+.. |repl 2| raw:: html
+
+   <a href= "https://replit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
+   
+You can use beach.jpg or one of the other images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
+
+.. activecode:: picture-lab-A5-keepOnlyBlue
     :language: java
-    :datafile: pictureClasses1.jar, metalLion.jpg
+    :autograde: unittest
+    :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
 
-    Look at the zeroBlue() method. Try changing the bounds of its loops and look at the results of the code. What does this tell you about the indexing of an image?
+    Picture Lab keepOnlyBlue: Using zeroBlue() as a guide, write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it and comment out the call to zeroBlue().
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -26,7 +205,7 @@ Write what you feel will help you answer the multiple choice questions. For exam
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
+    import java.util.List; 
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -106,134 +285,860 @@ Write what you feel will help you answer the multiple choice questions. For exam
 
       }
 
-      /**
-        zeroBlue() method sets the blue values at all pixels to zero
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
      */
       public void zeroBlue()
       {
         Pixel[][] pixels = this.getPixels2D();
 
-        for (int i = 20; i < pixels.length; i++) {
-          for (int j = 20; j < pixels[0].length; j++) {
-              pixels[i][j].setBlue(0);
-          }
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
         }
       }
 
-
-     /* Add new methods here if needed.
+      
+     /* 
+        keepOnlyBlue() method sets the blue values at all pixels to zero.
+        
+        Add new method here.
      */
-
-      /* Main method for exploring
+     
+      /* Main method for testing 
        */
       public static void main(String[] args)
       {
-        Picture lion = new Picture("metalLion.jpg");
-        lion.show();
-        lion.zeroBlue();
-        lion.show();
+        Picture pict = new Picture("beach.jpg");
+        pict.show();
+        pict.zeroBlue(); // Put this in a comment
+        //Uncomment the follow code to test your keepOnlyBlue method.    
+        /*        
+        System.out.println("Keep only blue: "); 
+        pict.keepOnlyBlue();
+        */
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void keepOnlyBlue()";
+         boolean passed = checkCodeContains("keepOnlyBlue() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = ".setGreen(0);";
+         boolean passed = checkCodeContains("keepOnlyBlue() setting green pixels to the number 0",target);
+         assertTrue(passed);
+       }
+
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void keepOnlyBlue()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
+
+2. Write the negate method to negate all the pixels in a picture. To negate a picture, set the red
+value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value
+and the blue value to 255 minus the current blue value.  Be sure to call the new test method in the main
+method.
+
+.. activecode:: picture-lab-A5-negate
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
+
+    Picture Lab negate: Write a method called negate() that negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
 
       }
-    }
+
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
+
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
+
+      
+     /* 
+        negate() method negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
+        
+        Add new method here.
+     */
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        Picture pict = new Picture("kitten.jpg");
+        pict.show();      
+        System.out.println("Negate: "); 
+        pict.negate();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void negate()";
+         boolean passed = checkCodeContains("negate() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = "255";
+         boolean passed = checkCodeContains("negate() subtracts from 255",target);
+         assertTrue(passed);
+       }
+       
+        @Test 
+       public void test2b()
+       {
+         String target = ".getRed()";
+         boolean passed = checkCodeContains("negate() uses get methods",target);
+         assertTrue(passed);
+       }
+
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void negate()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that negate() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
 
 
-.. mchoice:: picture-day3-0a
-   :answer_a: 0
-   :answer_b: 180
-   :answer_c: 240
-   :answer_d: 90
-   :correct: a
-   :feedback_a: Correct
-   :feedback_b: Try running some more tests.
-   :feedback_c: Try running some more tests.
-   :feedback_d: Try running some more tests.
-   :optional:
+3. Write the grayscale method to turn the picture into shades of gray. Set the red, green, and
+blue values to the average of the current red, green, and blue values (add all three values and
+divide by 3).  Be sure to call the new test method in the main method.
 
-   What is the row index for the top left corner of the picture?
+.. activecode:: picture-lab-A5-gray-scale
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
 
-.. mchoice:: picture-day3-1a
-   :answer_a: 0
-   :answer_b: 180
-   :answer_c: 240
-   :answer_d: 90
-   :correct: a
-   :feedback_a: Correct
-   :feedback_b: Try running some more tests.
-   :feedback_c: Try running some more tests.
-   :feedback_d: Try running some more tests.
-   :optional:
+    Picture Lab Grayscale: Write a method called grayscale to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
 
-   What is the column index for the top left corner of the picture?
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
 
-.. mchoice:: picture-day3-2a
-   :answer_a: 60
-   :answer_b: 180
-   :answer_c: 320
-   :answer_d: 90
-   :correct: b
-   :feedback_a: Try running some more tests.
-   :feedback_b: Correct
-   :feedback_c: Try running some more tests.
-   :feedback_d: Try running some more tests.
-   :optional:
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
 
-   What is the right most column index?
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
 
-.. mchoice:: picture-day3-3a
-   :answer_a: 180
-   :answer_b: 0
-   :answer_c: 90
-   :answer_d: 240
-   :correct: d
-   :feedback_a: Try running some more tests.
-   :feedback_b: Try running some more tests.
-   :feedback_c: Try running some more tests.
-   :feedback_d: Correct
-   :optional:
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
 
-   What is the bottom most row index?
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
 
-.. mchoice:: picture-day3-4a
-   :answer_a: The row increases starting at the left and ending at the right.
-   :answer_b: The row increases starting at the right and ending at the left.
-   :answer_c: The row increases starting at the top and ending at the bottom.
-   :answer_d: The row increases starting at the bottom and ending at the top.
-   :correct: c
-   :feedback_a: Try running some more tests.
-   :feedback_b: Try running some more tests.
-   :feedback_c: Correct.
-   :feedback_d: Try running some more tests.
-   :optional:
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
 
-   Does the row index increase from left to right or top to bottom?
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
 
-.. mchoice:: picture-day3-5a
-   :answer_a: The column increases starting at the left and ending at the right.
-   :answer_b: The column increases starting at the right and ending at the left.
-   :answer_c: The column increases starting at the top and ending at the bottom.
-   :answer_d: The column increases starting at the bottom and ending at the top.
-   :correct: a
-   :feedback_a: Correct
-   :feedback_b: Try running some more tests.
-   :feedback_c: Try running some more tests.
-   :feedback_d: Try running some more tests.
-   :optional:
+      }
 
-   Does the column index increase from left to right or top to bottom?
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
 
-.. mchoice:: picture-day3-6a
-   :answer_a: This is when data is lost in the resizing of an image.
-   :answer_b: The intentional decreasing of resolution by merging adjacent pixels.
-   :answer_c: When an image is magnified to the point where the pixels look like small squares.
-   :answer_d: The modification of individual pixels similar to what was practiced in 8.2.6
-   :correct: c
-   :feedback_a: try again.
-   :feedback_b: try again.
-   :feedback_c: Correct
-   :feedback_d: try again.
-   :optional:
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
 
-   What is pixelation?
+      
+     /* 
+        grayscale() method sets the red, green, andblue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
+        
+        Add new method here.
+     */
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        Picture pict = new Picture("puppies.jpg");
+        pict.show();      
+        System.out.println("Gray Scale: "); 
+        pict.grayscale();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void grayscale()";
+         boolean passed = checkCodeContains("grayscale() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = ".getRed()";
+         boolean passed = checkCodeContains("grayscale() uses get methods",target);
+         assertTrue(passed);
+       }
+       
+        @Test 
+       public void test2b()
+       {
+         String target = "/3";
+         boolean passed = checkCodeContains("grayscale() divides by 3 to average the values",target);
+         assertTrue(passed);
+       }
+
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void grayscale()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that grayscale() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
+      
+4. Challenge — Explore the “water.jpg” picture in the images folder. Write a method
+fixUnderwater() to modify the pixel colors to make the fish easier to see. Create a class
+(static) method to test this new method in the class PictureTester. Be sure to call the new
+test method in the main method.
+
+.. activecode:: picture-lab-A5-fix-underwater
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
+
+    Picture Lab fix-underwater: Write a method called fixUnderwater() to modify the pixel colors to make the fish easier to see.
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+
+      }
+
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
+
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
+
+      
+     /* 
+        fixUnderwater() modifies the pixel colors to make the fish easier to see.
+        
+        Add new method here.
+     */
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        Picture pict = new Picture("water.jpg");
+        pict.show();      
+        System.out.println("Fix Underwater: "); 
+        pict.fixUnderwater();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void fixUnderwater()";
+         boolean passed = checkCodeContains("fixUnderwater() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = "255";
+         boolean passed = checkCodeContains("fixUnderwater() subtracts from 255",target);
+         assertTrue(passed);
+       }
+       
+        @Test 
+       public void test2b()
+       {
+         String target = ".getBlue()";
+         boolean passed = checkCodeContains("fixUnderwater() uses getBlue() method",target);
+         assertTrue(passed);
+       }
+
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void fixUnderwater()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that fixUnderwater() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
+      
+5. Extra Challenge — This exercise is not in the original picture lab. Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.
+
+.. activecode:: picture-lab-A5-tshirt-color
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
+
+    Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+
+      }
+
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
+
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
+
+      
+     /* 
+       changeTshirt(): Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). 
+        
+        Add new method here.
+     */
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        Picture pict = new Picture("student.jpg");
+        pict.show();      
+        System.out.println("Change tshirt color: "); 
+        pict.changeTshirt();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void changeTshirt()";
+         boolean passed = checkCodeContains("changeTshirt() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = "if";
+         boolean passed = checkCodeContains("changeTshirt uses if statement",target);
+         assertTrue(passed);
+       }
+       
+       @Test 
+       public void test2b()
+       {
+         String target = ".getRed() >";
+         boolean passed = checkCodeContains("changeTshirt() chacks if getRed() greater than a value",target);
+         assertTrue(passed);
+       }
+       
+       @Test 
+       public void test2c()
+       {
+         String target = ".setRed(0)";
+         boolean passed = checkCodeContains("changeTshirt() uses setRed(0)",target);
+         assertTrue(passed);
+       }
+
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void changeTshirt()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that changeTshirt() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
+      
+      
+Choose from these images:
+
+.. datafile:: beach.jpg
+   :hide:
+   :image:
+   :fromfile: Figures/beach.jpg
+
+
+.. datafile:: kitten.jpg
+   :image:
+   :fromfile: Figures/kitten.jpg
+
+.. datafile:: puppies.jpg
+   :image:
+   :fromfile: Figures/puppies.jpg
+
+.. datafile:: water.jpg
+   :image:
+   :fromfile: Figures/water.jpg
+   :hide:
+
+.. datafile:: blueMotorcycle.jpg
+   :image:
+   :fromfile: Figures/blueMotorcycle.jpg
+
+.. datafile:: student.jpg
+   :image:
+   :fromfile: Figures/student.jpg
+
+ 
+.. datafile:: metalLion.jpg
+   :image:
+   :fromfile: ../../_static/metalLion.jpg
+   :hide:
+   
 
 
 .. datafile:: pictureClasses1.jar

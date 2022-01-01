@@ -338,9 +338,9 @@ Coding Practice
                     @Test
                     public void testCheckCodeContains2()
                     {
-                        String code = getCode();
-                        boolean ifGreater = code.contains("if (x > 0)");
-                        boolean ifEqual = code.contains("if (x == 0)");
+                        boolean ifGreater = checkCodeContains("Test if x greater than 0", "if (x > 0)");
+                      
+                        boolean ifEqual = checkCodeContains("Test if equal", "if (x == 0)");
                         boolean passed = getResults("Test if x greater than 0 or test if x is equal to 0", "Greater than: " + ifGreater + ", Equal to: " + ifEqual, "Test if x greater than 0 or if x equal to 0", ifGreater || ifEqual );
                         assertTrue(passed);
                     }

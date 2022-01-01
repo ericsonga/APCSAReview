@@ -64,7 +64,7 @@ Many programming languages actually store two-dimensional array data in a one-di
     :align: center
     :figclass: align-center
 
-    Figure 1: A 2D array stored in row-major order or column-major order as a 1D array.
+    Figure 2: A 2D array stored in row-major order or column-major order as a 1D array.
     
 How Java Stores 2D Arrays
 ---------------------------

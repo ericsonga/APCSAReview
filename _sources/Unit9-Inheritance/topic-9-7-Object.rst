@@ -41,7 +41,7 @@ The **Object** class is the superclass of all other classes in Java and a part o
 toString() method
 -----------------
 
-One commonly overriden Object method is toString(), which is often used to print out the attributes of an object. It is a good idea to write your own toString() method in every class. In a subclass, toString() can call the superclass toString() method using super.toString() and then add on its own attributes. 
+One commonly overridden Object method is toString(), which is often used to print out the attributes of an object. It is a good idea to write your own toString() method in every class. In a subclass, toString() can call the superclass toString() method using super.toString() and then add on its own attributes. 
 
 |CodingEx| **Coding Exercise**
 
@@ -284,7 +284,7 @@ Any class can override the inherited ``equals`` method by providing a method wit
          this.name = theName;
       }
       
-      /** Overriden equals method that checks if names are equal
+      /** overridden equals method that checks if names are equal
           in this Person object and an the other Object.
           */
       public boolean equals(Object other)

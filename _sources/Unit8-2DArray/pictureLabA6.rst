@@ -1,324 +1,80 @@
-.. qnum::
-   :prefix: 8-2-
-   :start: 3
+.. image:: ../../_static/time90.png
+    :width: 250
+    :align: right
+    
+Picture Lab A6: Mirroring Pictures
+=====================================================
+
+
+Car designers at General Motors Research Labs only sculpt half of a car out of clay and then use a
+vertical mirror to reflect that half to see the whole car. What if we want to see what a picture would look
+like if we placed a mirror on a vertical line in the center of the width of the picture to reflect the left side
+(Figure 1)?
+
+.. figure:: Figures/picturelabmirror1.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+    
+    Figure 1: Original picture (left) and picture after mirroring (right)
+    
+How can we write a method to mirror a picture in this way? One way to figure out the algorithm, which
+is a description of the steps for solving a problem, is to try it on smaller and simpler data. Figure 2 shows
+the result of mirroring a two-dimensional array of numbers from left to right vertically.
+
+.. figure:: Figures/picturelabmirror2.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+    
+    Figure 2: Two-Dimensional array of numbers (left) and mirrored result (right)
+
+Can you figure out the algorithm for this process? Test your algorithm on different sizes of twodimensional arrays of integers. Will it work for 2D arrays with an odd number of columns? Will it work
+for 2D arrays with an even number of columns?
+
+One algorithm is to loop through all the rows and half the columns. You need to get a pixel from the left
+side of the picture and a pixel from the right side of the picture, which is the same distance from the
+right end as the left pixel is from the left end. Set the color of the right pixel to the color of the left pixel.
+The column number at the right end is the number of columns, also known as the width, minus one. So
+assuming there are at least 3 pixels in a row, 
+
+- The first left pixel will be at row=0, col=0 and the first right pixel will be at row=0, col=width-1. 
+- The second left pixel will be at row=0, col=1 and the corresponding right pixel will be at row=0, col=width-1-1. 
+- The third left pixel will be at row=0, col=2 and its right pixel will be at row=0, col=width-1-2. 
+- Each time the left pixel is at (current row value, current column value), the corresponding right pixel is at (current row value, width - 1 - (current column value)). 
+
+
+The following method implements this algorithm. Note that, because the method is not looping through all the pixels, it cannot use a nested for-each loop.
+
+.. code-block:: java
+ 
+ public void mirrorVertical()
+ {
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel leftPixel = null;
+      Pixel rightPixel = null;
+      int width = pixels[0].length;
+      for (int row = 0; row < pixels.length; row++)
+      {
+           for (int col = 0; col < width / 2; col++)
+           {
+                leftPixel = pixels[row][col];
+                rightPixel = pixels[row][width – 1 - col];
+                rightPixel.setColor(leftPixel.getColor());
+           }
+      }
+ }
+ 
+You can test this with the testMirrorVertical method in PictureTester.
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
     
-    
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-    
-    
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
-    
-.. image:: ../../_static/time45.png
-    :width: 250
-    :align: right 
+|CodingEx| **Coding Exercises**
 
-Enhanced For-Each Loop for 2D Arrays (Day 2)
-----------------------------------------------------
-
-..	index::
-	pair: 2D Array; for-each loop
-
-Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row, String[] in the example below for a 2D String array. The type of the variables in the for-each loops must match the type of the array. For-each loops are much simpler since you don't have to use the indices and the []'s, but you can only use them if you are not going to change the values in an array of primitive types since the variable val below will not change the original array.
-
-.. code-block:: java
-
-      String[][] array;
-      // Nested For-each loops that traverse a 2D String array
-      for (String[] innerArray : array) 
-      {
-         for (String val : innerArray)
-         {
-             System.out.println(val);
-         }
-      }
-
-
-.. activecode:: getAvgForEach
-   :language: java
-   :autograde: unittest      
-   
-   Nested for-each loops demo. Click on the CodeLens button to trace through the code.
-   ~~~~
-   public class Average
-   {
-
-      public static double getAvg(int[][] a)
-      {
-         double total = 0;
-         for (int[] innerArray : a)
-         {
-            for (int val : innerArray)
-            {
-               total = total + val;
-            }
-         }
-         return total / (a.length * a[0].length);
-      }
-      
-      public static void main(String[] args)
-      {
-         int[][] theArray = {  {80, 90, 70}, {20, 80, 75}};
-         System.out.println(getAvg(theArray));
-      }
-   }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "69.16666666666667";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
-  
-In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
-
-
-
-
-
-2D Array Algorithms
--------------------
-
-All of the array algorithms can be applied to 2D arrays too. For example, counting and searching algorithms work very similarly. The following code adds all of the values in a given row. 
-
-|CodingEx| **Coding Exercise**
-
-
-
-.. activecode:: lca2dloopPart
-   :language: java 
-   :autograde: unittest      
- 
-   What will the following code print out? Can you complete the  method called ``getTotalForCol`` that gets the total for a column? To do this, you must loop through the rows. The array's length will tell you how many rows you have since it is an array of arrays, while the length of the array's first element will tell you how many columns. 
-   ~~~~
-   public class Total
-   {
-
-      public static int getTotalForRow(int row, int[][] a)
-      {
-         int total = 0;
-         for (int col = 0; col < a[0].length; col++)
-         {
-            total = total + a[row][col]; 
-         }
-         return total;
-      }
-      
-      // Complete the method getTotalForCol below
-      public static int getTotalForCol(int col, int[][] a)
-      {
-          int total = 0;
-          // Add a loop here to total a column col
-           
-           
-          return total;
-      }
-      
-      public static void main(String[] args)
-      {
-         int[][] matrix = {  {1,2,3},{4,5,6}};
-         System.out.println(getTotalForRow(0,matrix));
-         System.out.println(getTotalForCol(0,matrix));
-      }
-   }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-         public RunestoneTests() {
-            super("Total");
-        }
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "6\n5";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-        @Test
-            public void test2()
-            {
-                int[][] array = { {1,4,8},{6,7,9} };
-                int value = 0;
-                Object[] args = {value, array};
-
-
-                String output = getMethodOutput("getTotalForCol", args);
-                String expect = "7";
-
-                boolean passed = getResults(expect, output, "Testing getTotalForCol(0, { {1, 4,8},{6, 7, 9} })");
-                assertTrue(passed);
-            }
-    }
-
-
-..	index::
-	pair: 2D Array; loop range
-
-You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array. 
-
-.. activecode:: lca2dloopPart2
-   :language: java 
-   :autograde: unittest      
-
-   Looping through just part of a 2D array. 
-   ~~~~
-   public class Count
-   {
-      public static int countValues(int value, int[][] a, 
-                                 int rowStart, int rowEnd, 
-                                 int colStart, int colEnd)
-      {
-         int count = 0;
-         for (int row = rowStart; row <= rowEnd; row++)
-         {
-            for (int col = colStart; col <= colEnd; col++)
-            {
-               if (a[row][col] == value) 
-                  count++;
-            }
-         }
-         return count;
-      } 
-      
-      public static void main(String[] args)
-      {
-         int[][] matrix = {  {3,2,3},{4,3,6},{8,9,3},{10,3,3}};
-         System.out.println(countValues(3,matrix,0,2,0,2));
-      }  
-   }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "4";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    } 
-
-
-Here is a linear search algorithm where we access each row and then apply a linear search on it to find an element.
-
-|CodingEx| **Coding Exercise**
-
-
-
-.. activecode:: linearSearch2DArrays
-   :language: java 
-   :autograde: unittest      
-   
-   What will the following code print? Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints.
-   ~~~~
-   public class Search
-   {
-      public static boolean search(int[][] array, int value)
-      {
-         boolean found = false;
-         for (int row = 0; row < array.length; row++)
-         {
-            for (int col = 0; col < array[0].length; col++)
-            {
-               if (array[row][col] == value)
-                   found = true;
-            }
-         }
-         return found;
-      } 
-      
-      public static void main(String[] args)
-      {
-         int[][] matrix = { {3,2,3},{4,3,6},{8,9,3},{10,3,3} };
-         System.out.println(search(matrix,10));
-         System.out.println(search(matrix,11));
-         
-        // Comment out the code above, and try these:
-        // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
-        // System.out.println(search(matrix2, "b")); 
-
-      }  
-   }
-   ====
-   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Search");
-        }
-
-        @Test
-            public void test2()
-            {
-                String[][] array = { {"a","b","c"},{"d","e","f"},{"g","h","i"},{"j","k","l"} };
-                String value = "b";
-                Object[] args = {array, value};
-
-
-                String output = getMethodOutput("search", args);
-                String expect = "true";
-
-                boolean passed = getResults(expect, output, "Testing search({ {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\" } }, \"b\")");
-                assertTrue(passed);
-            }  
-    }
-   
-|Groupwork| Programming Challenge : Picture Lab
----------------------------------------------------
-
-
-..	index::
-	single: images
-
-..	index::
-	single: pictures
-
-..	index::
-	single: pixels
-    
-.. figure:: ../../_static/arch.jpg
-    :width: 200px
-    :align: left
-    
-.. |CB Picture Lab| raw:: html
-
-   <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >College Board Picture Lab</a>
-   
-.. |RGB Color Mixer| raw:: html
-
-   <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
 
 .. |repl.it project| raw:: html
 
@@ -327,38 +83,20 @@ Here is a linear search algorithm where we access each row and then apply a line
 .. |repl 2| raw:: html
 
    <a href= "https://replit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
-
-.. |picture lab A1 to A3| raw:: html
-
-   <a href= "pictureLabA1toA3.html" style="text-decoration:underline" target="_blank">Picture Lab sections A1 to A3</a>
    
-.. |Picture Lab| raw:: html
+You can use caterpillar.jpg or one of the images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
-   <a href= "CBLabs.html" style="text-decoration:underline" target="_blank">Picture Lab</a>
-
-    
-Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  The color of a pixel is  represented using the RGB (Red, Green, Blue) color
-model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? If your class has time, do the reading and exercises for |picture lab A1 to A3| to first learn about digital pictures and RGB values.
+1. Write the method mirrorVerticalRightToLeft that mirrors a picture around a mirror
+placed vertically from right to left. Hint: you can copy the body of mirrorVertical and
+only change one line in the body of the method to accomplish this. 
 
 
-In this challenge, you will do a part of the Picture Lab to modify the pixels of a digital photo. Scroll down to the bottom of the following code and take a look at the zeroBlue() method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. 
-
-Now, write a similar method called keepOnlyBlue() that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called switchColors() that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the getRed(), getGreen(), getBlue() to get the RGB values of the pixel and then swap them around by using the setRed, setGreen, setBlue methods and giving them different color values from the get methods as arguments.
-
-You can test the methods in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does. 
-
-.. datafile:: arch.jpg
-   :image:
-   :fromfile: ../../_static/arch.jpg
-   :hide: 
-
-
-.. activecode:: challenge-8-2-picture
+.. activecode:: picture-lab-A6-mirrorVerticalRightToLeft
     :language: java
     :autograde: unittest
-    :datafile: pictureClasses.jar, arch.jpg
+    :datafile: pictureClasses2.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, redMotorcycle.jpg, student.jpg, caterpillar.jpg
 
-    Picture Lab: 1) write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it. 2) write a method called switchColors() that replaces red values (using p.setRed) with green or blue values (using p.getGreen(), etc.) to change the colors around. Uncomment the code in main to test it. 
+    Picture Lab A6 Mirroring: Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirrorplaced vertically from right to left. Hint: you can copy the body of mirrorVertical and only change one line in the body of the method to accomplish this. 
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -446,53 +184,48 @@ You can test the methods in the active code below or in this |repl.it project| o
 
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
-     */
-      public void zeroBlue()
+      /**
+	  * Method that mirrors the picture around a vertical mirror in the center of
+  	  * the picture from left to right
+	  */
+      public void mirrorVertical()
       {
-        Pixel[][] pixels = this.getPixels2D();
-
-        for (Pixel[] rowArray : pixels)
-         {
-           for (Pixel p: rowArray)
-           {
-                  p.setBlue(0);
-           }
-        }
-      }
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel leftPixel = null;
+		Pixel rightPixel = null;
+		int width = pixels[0].length;
+		for (int row = 0; row < pixels.length; row++)
+		{
+			for (int col = 0; col < width / 2; col++)
+			{
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][width - 1 - col];
+				rightPixel.setColor(leftPixel.getColor());
+			}
+		}
+	   }
 
       
-     /* Add new methods here.
-        keepOnlyBlue() method sets the blue values at all pixels to zero.
-        switchColors() method swaps the color values of pixels.
-     */
+      /* 
+        Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirrorplaced vertically from right to left. Hint: you can copy the body of mirrorVertical() above and only change one line in the body of the method to accomplish this. 
+        
+        Add new method here.
+      */
+     
      
       /* Main method for testing 
        */
       public static void main(String[] args)
       {
-        Picture arch = new Picture("arch.jpg");
-        arch.show();
-        arch.zeroBlue();
-        arch.show();
-        
-        //Uncomment the follow code to test your keepOnlyBlue method.    
-        /*
-        Picture arch2 = new Picture("arch.jpg");
-        System.out.println("Keep only blue: "); 
-        arch2.keepOnlyBlue();// using new method
-        arch2.show();
-        */ 
-        System.out.println();
-
-        //Uncomment the follow code to test your swithColors method.
-        /*  
-        Picture arch3 = new Picture("arch.jpg");
-        System.out.println("Switch colors: ");
-        arch3.switchColors();// using new method
-        arch3.show();
-        */  
+        Picture pict = new Picture("caterpillar.jpg");
+        pict.show();
+        pict.mirrorVertical(); // Put this in a comment
+        //Uncomment the follow code to test your  method.    
+        /*        
+        System.out.println("Mirror: "); 
+        pict.mirrorVerticalRightToLeft();
+        */
+        pict.show();
       }
     } 
     ====
@@ -508,16 +241,24 @@ You can test the methods in the active code below or in this |repl.it project| o
        @Test 
        public void test1()
        {
-         String target = "public void keepOnlyBlue()";
-         boolean passed = checkCodeContains("keepOnlyBlue() method",target);
+         String target = "public void mirrorVerticalRightToLeft()";
+         boolean passed = checkCodeContains("mirrorVerticalRightToLeft() method",target);
          assertTrue(passed);
        }
 
        @Test 
        public void test2()
        {
-         String target = ".setGreen(0);";
-         boolean passed = checkCodeContains("keepOnlyBlue() setting green pixels to the number 0",target);
+         String target = "leftPixel.setColor(";
+         boolean passed = checkCodeContains("mirrorVerticalRightToLeft() sets leftPixel's color",target);
+         assertTrue(passed);
+       }
+       
+        @Test 
+       public void test2b()
+       {
+         String target = "rightPixel.getColor()";
+         boolean passed = checkCodeContains("mirrorVerticalRightToLeft() uses rightPixel's getColor",target);
          assertTrue(passed);
        }
 
@@ -526,98 +267,259 @@ You can test the methods in the active code below or in this |repl.it project| o
          {
             String target = "for";
             String code = getCode();
-            int index = code.indexOf("public void keepOnlyBlue()");
+            int index = code.indexOf("public void mirrorVerticalRightToLeft()");
             boolean passed = false;
             if (index > 0) {
              code = code.substring(index, index + 200);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 
-            getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
+            getResults("true", ""+passed, "Checking that mirrorVerticalRightToLeft() contains 2 for loops", passed);
             assertTrue(passed);     
-         }
-         @Test 
-        public void testSwitch1()
-        {
-         String target = "public void switchColors()";
-         boolean passed = checkCodeContains("switchColors() method",target);
-         assertTrue(passed);
-        }
-
-        @Test 
-        public void testSwitch2()
-        {
-         String target = ".getGreen()";
-         boolean passed = checkCodeContains("switchColors() uses getGreen()",target);
-         assertTrue(passed);
-        }
+         }       
       }
 
 
- 
+      
+2. Write the method mirrorHorizontal that mirrors a picture around a mirror placed
+horizontally at the middle of the height of the picture. Mirror from top to bottom as shown in the
+pictures below (Figure 1). 
 
-Here are some more exercises from the |Picture Lab|:
-
-- Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
-
-- Write the grayscale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
-
-
-You can continue on with the |Picture Lab| to mirror images and create collages and detect edges as the first step in recognizing objects in images.
-
-Summary
-----------
-
-- We can loop through 2D arrays using nested for loops or nested enhanced for each loops.
-
-- The outer loop for a 2D array usually traverses the rows, while the inner loop traverses the columns in a single row. 
-
-- The 2D array's length gives the number of rows. A row's length array[0].length gives the number of columns. 
-
-- Nested iteration statements can be written to traverse the 2D array in "row-major order" or "column-major order."
-
-- In an enhanced for each loop, the variable of the outer loop must be the type of each row, which is a 1D array. The inner enhanced for loop variable must be the same type as the elements stored in the array.
-
-- All standard 1D array algorithms can be applied to 2D array objects.
-
-- When applying sequential/linear search algorithms to 2D arrays, each row must be accessed then sequential/linear search applied to each row of a 2D array.
-
-
-AP Practice
-------------
-
-.. mchoice:: AP8-2-2
-   :practice: T
-   :answer_a: 36
-   :answer_b: 54
-   :answer_c: 63
-   :answer_d: 68
-   :answer_e: 78
-   :correct: b
-   :feedback_a: Trace through the code.
-   :feedback_b: Correct! 
-   :feedback_c: Trace through the code.
-   :feedback_d: Trace through the code.
-   :feedback_e: Notice that the inner loop goes up to but not including x.length - 1.
-
-   Consider the following code segment. What is the value of sum as a result of executing the code segment?
-
-   .. code-block:: java
+.. figure:: Figures/picturelabmirror3.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
     
-      int[][] arr = { {1, 2, 3, 4},
-                      {5, 6, 7, 8},
-                      {9, 10, 11, 12} };
-      int sum = 0;
-      for (int[] x : arr)
-      {
-          for (int y = 0; y < x.length - 1; y++)
-          {
-               sum += x[y];
-          }
-      }
- 
+    Figure 3: Original picture (left) and mirrored from top to bottom (right)
 
-.. datafile:: pictureClasses.jar
+.. activecode:: picture-lab-A6-mirrorHorizontal
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses2.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, redMotorcycle.jpg, student.jpg, caterpillar.jpg
+
+    Picture Lab A6 Mirroring: Write a method mirrorHorizontal that mirrors a picture around a mirror placed horizontally at the middle of the height of the picture from top to bottom. 
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+
+      }
+
+      /**
+	  * Method that mirrors the picture around a vertical mirror in the center of
+  	  * the picture from left to right
+	  */
+      public void mirrorVertical()
+      {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel leftPixel = null;
+		Pixel rightPixel = null;
+		int width = pixels[0].length;
+		for (int row = 0; row < pixels.length; row++)
+		{
+			for (int col = 0; col < width / 2; col++)
+			{
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][width - 1 - col];
+				rightPixel.setColor(leftPixel.getColor());
+			}
+		}
+	   }
+
+      
+      /* 
+        Write a method mirrorHorizontal that mirrors a picture around a mirror placed horizontally at the middle of the height of the picture from top to bottom. 
+        
+        Add new method here.
+      */
+     
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        Picture pict = new Picture("redMotorcycle.jpg");
+        pict.show();
+        pict.mirrorHorizontal();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void mirrorHorizontal()";
+         boolean passed = checkCodeContains("mirrorHorizontal() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = "height = pixels.length;";
+         boolean passed = checkCodeContains("mirrorHorizontal() sets height to pixels.length",target);
+         assertTrue(passed);
+       }
+       
+        @Test 
+       public void test2b()
+       {
+         String target = "height/2";
+         boolean passed = checkCodeContains("mirrorHorizontal() uses height/2",target);
+         assertTrue(passed);
+       }
+       
+       @Test 
+       public void test2c()
+       {
+         String target = "pixels[height - row - 1][col]";
+         boolean passed = checkCodeContains("mirrorHorizontal() uses pixels[height - row - 1][col]",target);
+         assertTrue(passed);
+       }
+
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void mirrorHorizontal()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that mirrorHorizontal() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
+      
+3. Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror
+placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal
+and only change one line to accomplish this. 
+
+
+4. Challenge — Work in groups to figure out the algorithm for the method mirrorDiagonal
+that mirrors just a square part of the picture from bottom left to top right around a mirror placed
+on the diagonal line (the diagonal line is the one where the row index equals the column index).
+This will copy the triangular area to the left and below the diagonal line as shown below. This is
+like folding a square piece of paper from the bottom left to the top right, painting just the bottom
+left triangle and then (while the paint is still wet) folding the paper up to the top right again. The
+paint would be copied from the bottom left to the top right as shown in the pictures below
+(Figure 2). 
+
+.. figure:: Figures/picturelabmirror4.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+    
+    Figure 4: Original picture (left) and mirrored around the diagonal line with copying from bottom left to top right (right)
+    
+    
+
+Choose from these images as well as the images from the last lesson:
+
+.. datafile:: caterpillar.jpg
+   :hide:
+   :image:
+   :fromfile: Figures/caterpillar.jpg
+
+.. datafile:: redMotorcycle.jpg
+   :image:
+   :fromfile: Figures/redMotorcycle.jpg   
+
+
+
+.. datafile:: pictureClasses2.jar
         :hide:    
       
         import java.awt.Image;
@@ -1719,17 +1621,4 @@ AP Practice
         } // end of SimplePicture class
 
 
-2D Arrays and Loops Game
--------------------------
-
-.. |game| raw:: html
-
-   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
-Try the game below to practice loops with 2D arrays. Click on **Arrays** and then check **2D** and check **Loops** and then click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
-
-.. raw:: html
-
-    <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
 

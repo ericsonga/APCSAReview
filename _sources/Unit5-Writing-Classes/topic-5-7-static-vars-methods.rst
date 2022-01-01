@@ -293,7 +293,7 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
       @Test
       public void checkCodeContains1(){
         //check verse 1
-        boolean passed = checkCodeContains("verse one method call", "verse(\"one\", \"suck his thumb\"");
+        boolean passed = checkCodeContains("verse one method call", "verse(\"one\", \"suck");
         Song.numVerses = 0;
         assertTrue(passed);
       }
@@ -301,7 +301,7 @@ In the last lesson, we wrote a class with methods to print out the song |The Ant
       @Test
       public void checkCodeContains2(){
          //check verse 2
-          boolean passed = checkCodeContains("verse two method call", "verse(\"two\", \"tie his shoe\"");
+          boolean passed = checkCodeContains("verse two method call", "verse(\"two\", \"tie");
           Song.numVerses = 0;
           assertTrue(passed);
       }
