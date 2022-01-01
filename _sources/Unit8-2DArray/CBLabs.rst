@@ -1,5 +1,5 @@
 
-College Board Picture Laband Steganography Lab for 2D Arrays
+College Board Picture Lab and Steganography Lab for 2D Arrays
 =============================================================
 
 .. |Picture lab| raw:: html

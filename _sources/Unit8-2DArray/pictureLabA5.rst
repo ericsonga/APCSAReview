@@ -6,12 +6,12 @@ Picture Lab A5: Modifying a Picture
 =====================================================
 
 Even though digital pictures have millions of pixels, modern computers are so fast that they can process
-all of them quickly. You will write methods in the ``Picture`` class that modify digital pictures.
+all of them quickly. You will write methods in the ``Picture`` class that modify digital pictures. 
 
 Picture Classes: UML and Inheritance
 -------------------------------------
 
-The ``Picture`` class inherits attributes and methods from the ``SimplePicture`` class and the ``SimplePicture`` class implements the ``DigitalPicture`` interface as shown in the Unified Modeling Language (UML) class diagram in the figure .
+The ``Picture`` class inherits attributes and methods from the ``SimplePicture`` class and the ``SimplePicture`` class implements the ``DigitalPicture`` interface as shown in the **Unified Modeling Language (UML)** class diagram in the figure below.
 
 .. figure:: Figures/UML.png
     :width: 750px
@@ -124,13 +124,28 @@ array of Pixel objects, SimplePicture implements that interface, and Picture inh
 from SimplePicture, you can use the getPixels2D method on a Picture object. You can
 loop through all the Pixel objects in the two-dimensional array to modify the picture. You can get
 and set the red, green, and/or blue value for a Pixel object. You can also get and/or set the Color
-value for a Pixel object. You can create a new Color object using a constructor that takes the red,
-green, and blue values as integers: ``Color myColor = new Color(255,30,120);``
+value for a Pixel object. For example,
+
+.. code-block:: java
+
+      Picture pict = new Picture("beach.jpg");
+      Pixel[][] pixels = pict.getPixels2D();
+      Pixel p = pixels[0][0]; // get the first pixel      
+      int blue = p.getBlue(); // get its blue value
+      System.out.println("Pixel (0,0) has a blue value of " + blue );
+      p.setBlue(255);  // set its blue value to 255
+      pict.show();
+           
+
 
 Image Modification Exercises
 ---------------------------------------------------
 
-What do you think you will see if you modify the beach picture in to set all the blue
+.. image:: Figures/beach.jpg
+    :width: 250
+    :align: left
+    
+What do you think you will see if you modify the beach picture to set all the blue
 values to zero? Do you think you will still see a beach? Run the main method in the Picture class in the Active Code below.
 The body of the main method will create a Picture object named beach from the
 “beach.jpg” file and call the method that sets
@@ -165,21 +180,44 @@ The following code is the zeroBlue method in the Picture class.
       Pixel[][] pixels = this.getPixels2D();
       for (Pixel[] rowArray : pixels)
       {
-           for (Pixel pixelObj : rowArray)
+           for (Pixel p : rowArray)
            {
-              pixelObj.setBlue(0);
+              p.setBlue(0);
            }
       }
  }
+ 
+Another option is to use for loops with indices to visit each pixel in the picture:
+ 
+.. code-block:: java
+
+ public void zeroBlue()
+ {
+      Pixel[][] pixels = this.getPixels2D();
+      for (int row = 0; row < pixels.length; row++)
+      {
+           for (int col = 0 ; col < pixels[0].length; col++)
+           {
+              Pixel p = pixels[row][col];
+              p.setBlue(0);
+           }
+      }
+ }
+ 
+ 
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
     
+
 |CodingEx| **Coding Exercises**
 
-
+.. image:: Figures/keepOnlyBlue.png
+    :width: 250
+    :align: left
+    
 1. You may have done this exercise in the programming challenge in lesson 8.2. Using the zeroBlue method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the main method. 
 
 .. |repl.it project| raw:: html
@@ -197,7 +235,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
     :autograde: unittest
     :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
 
-    Picture Lab keepOnlyBlue: Using zeroBlue() as a guide, write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it and comment out the call to zeroBlue().
+    Picture Lab keepOnlyBlue: Using zeroBlue() as a guide, write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Change the method call in main from zeroBlue to keepOnlyBlue to test it. Try one of the other images below like metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, or student.jpg.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -305,7 +343,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
      /* 
         keepOnlyBlue() method sets the blue values at all pixels to zero.
         
-        Add new method here.
+        Add new method here and call it from main.
      */
      
       /* Main method for testing 
@@ -314,12 +352,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
       {
         Picture pict = new Picture("beach.jpg");
         pict.show();
-        pict.zeroBlue(); // Put this in a comment
-        //Uncomment the follow code to test your keepOnlyBlue method.    
-        /*        
-        System.out.println("Keep only blue: "); 
-        pict.keepOnlyBlue();
-        */
+        pict.zeroBlue(); // Change this to call keepOnlyBlue()
         pict.show();
       }
     } 
@@ -348,6 +381,14 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
          boolean passed = checkCodeContains("keepOnlyBlue() setting green pixels to the number 0",target);
          assertTrue(passed);
        }
+        @Test 
+       public void test2b()
+       {
+         String target = ".setRed(0);";
+         boolean passed = checkCodeContains("keepOnlyBlue() setting red pixels to the number 0",target);
+         assertTrue(passed);
+       }
+       
 
        @Test
          public void test3()
@@ -366,6 +407,10 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
          }       
       }
 
+.. image:: Figures/negate.jpg
+    :width: 250
+    :align: left
+    
 2. Write the negate method to negate all the pixels in a picture. To negate a picture, set the red
 value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value
 and the blue value to 255 minus the current blue value.  Be sure to call the new test method in the main
@@ -376,7 +421,7 @@ method.
     :autograde: unittest
     :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
 
-    Picture Lab negate: Write a method called negate() that negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
+    Picture Lab negate: Write a method called negate() that negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.  Try one of the other images below like beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, or student.jpg.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -464,22 +509,6 @@ method.
 
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
-     */
-      public void zeroBlue()
-      {
-        Pixel[][] pixels = this.getPixels2D();
-
-        for (Pixel[] rowArray : pixels)
-         {
-           for (Pixel p: rowArray)
-           {
-                  p.setBlue(0);
-           }
-        }
-      }
-
       
      /* 
         negate() method negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
@@ -491,7 +520,7 @@ method.
        */
       public static void main(String[] args)
       {
-        Picture pict = new Picture("kitten.jpg");
+        Picture pict = new Picture("puppies.jpg");
         pict.show();      
         System.out.println("Negate: "); 
         pict.negate();
@@ -549,7 +578,10 @@ method.
          }       
       }
 
-
+.. image:: Figures/grayscale.jpg
+    :width: 250
+    :align: left
+    
 3. Write the grayscale method to turn the picture into shades of gray. Set the red, green, and
 blue values to the average of the current red, green, and blue values (add all three values and
 divide by 3).  Be sure to call the new test method in the main method.
@@ -559,7 +591,7 @@ divide by 3).  Be sure to call the new test method in the main method.
     :autograde: unittest
     :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
 
-    Picture Lab Grayscale: Write a method called grayscale to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
+    Picture Lab Grayscale: Write a method called grayscale to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3). Try another image file from beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -647,22 +679,6 @@ divide by 3).  Be sure to call the new test method in the main method.
 
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
-     */
-      public void zeroBlue()
-      {
-        Pixel[][] pixels = this.getPixels2D();
-
-        for (Pixel[] rowArray : pixels)
-         {
-           for (Pixel p: rowArray)
-           {
-                  p.setBlue(0);
-           }
-        }
-      }
-
       
      /* 
         grayscale() method sets the red, green, andblue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
@@ -674,7 +690,7 @@ divide by 3).  Be sure to call the new test method in the main method.
        */
       public static void main(String[] args)
       {
-        Picture pict = new Picture("puppies.jpg");
+        Picture pict = new Picture("blueMotorcycle.jpg");
         pict.show();      
         System.out.println("Gray Scale: "); 
         pict.grayscale();
@@ -731,18 +747,24 @@ divide by 3).  Be sure to call the new test method in the main method.
             assertTrue(passed);     
          }       
       }
-      
-4. Challenge — Explore the “water.jpg” picture in the images folder. Write a method
-fixUnderwater() to modify the pixel colors to make the fish easier to see. Create a class
-(static) method to test this new method in the class PictureTester. Be sure to call the new
-test method in the main method.
+
+.. image:: Figures/water.jpg
+    :width: 200
+    :align: left
+    
+.. image:: Figures/fixunderwater.jpg
+    :width: 200
+    :align: left
+    
+4. Challenge — Explore the water.jpg picture. Write a method
+fixUnderwater() to modify the pixel colors to make the fish easier to see. There are many ways to do this, but you could try increasing one of the colors by a certain factor. Here are some more complex algorithms for increasing the brightness and contrast of images https://ie.nitk.ac.in/blog/2020/01/19/algorithms-for-adjusting-brightness-and-contrast-of-an-image/.
 
 .. activecode:: picture-lab-A5-fix-underwater
     :language: java
     :autograde: unittest
     :datafile: pictureClasses1.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, blueMotorcycle.jpg, student.jpg
 
-    Picture Lab fix-underwater: Write a method called fixUnderwater() to modify the pixel colors to make the fish easier to see.
+    Picture Lab fix-underwater: Write a method called fixUnderwater() to modify the pixel colors to make the fish easier to see. Try increasing one of the colors by a certain factor.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -829,23 +851,6 @@ test method in the main method.
         return output;
 
       }
-
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
-     */
-      public void zeroBlue()
-      {
-        Pixel[][] pixels = this.getPixels2D();
-
-        for (Pixel[] rowArray : pixels)
-         {
-           for (Pixel p: rowArray)
-           {
-                  p.setBlue(0);
-           }
-        }
-      }
-
       
      /* 
         fixUnderwater() modifies the pixel colors to make the fish easier to see.
@@ -882,19 +887,11 @@ test method in the main method.
          assertTrue(passed);
        }
 
-       @Test 
+        @Test 
        public void test2()
        {
-         String target = "255";
-         boolean passed = checkCodeContains("fixUnderwater() subtracts from 255",target);
-         assertTrue(passed);
-       }
-       
-        @Test 
-       public void test2b()
-       {
-         String target = ".getBlue()";
-         boolean passed = checkCodeContains("fixUnderwater() uses getBlue() method",target);
+         String target = ".setRed(";
+         boolean passed = checkCodeContains("fixUnderwater() uses the setRed() method to increase red values",target);
          assertTrue(passed);
        }
 
@@ -914,7 +911,11 @@ test method in the main method.
             assertTrue(passed);     
          }       
       }
-      
+
+.. image:: Figures/changetshirt.png
+    :width: 150
+    :align: left
+    
 5. Extra Challenge — This exercise is not in the original picture lab. Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.
 
 .. activecode:: picture-lab-A5-tshirt-color
@@ -1139,6 +1140,7 @@ Choose from these images:
    :fromfile: ../../_static/metalLion.jpg
    :hide:
    
+
 
 
 .. datafile:: pictureClasses1.jar

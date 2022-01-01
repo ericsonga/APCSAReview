@@ -42,8 +42,8 @@ let you see some of the color beneath it.
     Figure 1: RGB values and the resulting colors displayed in rows and columns
 
 How does the computer represent the values from 0 to 255? A decimal number uses the digits 0 to 9 and
-powers of 10 to represent values. The decimal number 325 means 5 ones (10\ :sup:`0`) plus 2 tens (10\ :sup:`1`) plus 3 hundreds (10\ :sup: `2`) for a total of three hundred and twenty-five. Computers use **binary numbers**, which use the digits 0 and 1 and powers of 2 to represent values using groups of bits. A **bit** is a binary digit, which
-can be either 0 or 1. A group of 8 bits is called a **byte**. The binary number 110 means 0 ones (2\ :sup: `0`) plus 1 two (2:sup: `1`) plus 1 four (2\ :sup: `2`), for a total of 6.
+powers of 10 to represent values. The decimal number 325 means 5 ones (10\ :sup:`0`) plus 2 tens (10\ :sup:`1`) plus 3 hundreds (10\ :sup:`2`) for a total of three hundred and twenty-five. Computers use **binary numbers**, which use the digits 0 and 1 and powers of 2 to represent values using groups of bits. A **bit** is a binary digit, which
+can be either 0 or 1. A group of 8 bits is called a **byte**. The binary number 110 means 0 ones (2\ :sup:`0`) plus 1 two (2\ :sup:`1`) plus 1 four (2\ :sup:`2`), for a total of 6.
 
 
 
