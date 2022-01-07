@@ -1108,7 +1108,6 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
 Choose from these images:
 
 .. datafile:: beach.jpg
-   :hide:
    :image:
    :fromfile: Figures/beach.jpg
 
@@ -1124,7 +1123,6 @@ Choose from these images:
 .. datafile:: water.jpg
    :image:
    :fromfile: Figures/water.jpg
-   :hide:
 
 .. datafile:: blueMotorcycle.jpg
    :image:
@@ -1138,7 +1136,6 @@ Choose from these images:
 .. datafile:: metalLion.jpg
    :image:
    :fromfile: ../../_static/metalLion.jpg
-   :hide:
    
 
 

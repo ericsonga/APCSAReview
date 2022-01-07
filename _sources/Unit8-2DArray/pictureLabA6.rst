@@ -59,7 +59,7 @@ The following method implements this algorithm. Note that, because the method is
            for (int col = 0; col < width / 2; col++)
            {
                 leftPixel = pixels[row][col];
-                rightPixel = pixels[row][width – 1 - col];
+                rightPixel = pixels[row][width - 1 - col];
                 rightPixel.setColor(leftPixel.getColor());
            }
       }
@@ -94,9 +94,9 @@ only change one line in the body of the method to accomplish this.
 .. activecode:: picture-lab-A6-mirrorVerticalRightToLeft
     :language: java
     :autograde: unittest
-    :datafile: pictureClasses2.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, redMotorcycle.jpg, student.jpg, caterpillar.jpg
+    :datafile: pictureClasses2.jar,redMotorcycle.jpg, caterpillar.jpg, puppy.jpg, beach2.jpg
 
-    Picture Lab A6 Mirroring: Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirrorplaced vertically from right to left. Hint: you can copy the body of mirrorVertical and only change one line in the body of the method to accomplish this. 
+    Picture Lab A6 Mirroring: Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirror placed vertically from right to left. Hint: you can copy the body of mirrorVertical and only change one line in the body of the method to accomplish this. Change the method call in the main method. 
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -207,9 +207,9 @@ only change one line in the body of the method to accomplish this.
 
       
       /* 
-        Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirrorplaced vertically from right to left. Hint: you can copy the body of mirrorVertical() above and only change one line in the body of the method to accomplish this. 
+        Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirror placed vertically from right to left. Hint: you can copy the body of mirrorVertical() above and only change one line in the body of the method to accomplish this. 
         
-        Add new method here.
+        Add new method here. Change the method call in main to test this.
       */
      
      
@@ -217,14 +217,12 @@ only change one line in the body of the method to accomplish this.
        */
       public static void main(String[] args)
       {
+        // or try puppy.jpg
         Picture pict = new Picture("caterpillar.jpg");
         pict.show();
-        pict.mirrorVertical(); // Put this in a comment
-        //Uncomment the follow code to test your  method.    
-        /*        
-        System.out.println("Mirror: "); 
-        pict.mirrorVerticalRightToLeft();
-        */
+        
+        pict.mirrorVertical(); // change this to pict.mirrorVerticalRightToLeft();        
+        
         pict.show();
       }
     } 
@@ -257,7 +255,7 @@ only change one line in the body of the method to accomplish this.
         @Test 
        public void test2b()
        {
-         String target = "rightPixel.getColor()";
+         String target = "rightPixel.getColor(";
          boolean passed = checkCodeContains("mirrorVerticalRightToLeft() uses rightPixel's getColor",target);
          assertTrue(passed);
        }
@@ -295,7 +293,7 @@ pictures below (Figure 1).
 .. activecode:: picture-lab-A6-mirrorHorizontal
     :language: java
     :autograde: unittest
-    :datafile: pictureClasses2.jar, beach.jpg, metalLion.jpg, water.jpg, kitten.jpg, puppies.jpg, redMotorcycle.jpg, student.jpg, caterpillar.jpg
+    :datafile: pictureClasses2.jar,  redMotorcycle.jpg,  caterpillar.jpg, beach2.jpg, puppy.jpg
 
     Picture Lab A6 Mirroring: Write a method mirrorHorizontal that mirrors a picture around a mirror placed horizontally at the middle of the height of the picture from top to bottom. 
     ~~~~
@@ -418,6 +416,7 @@ pictures below (Figure 1).
        */
       public static void main(String[] args)
       {
+        // or try puppy.jpg or caterpillar.jpg
         Picture pict = new Picture("redMotorcycle.jpg");
         pict.show();
         pict.mirrorHorizontal();
@@ -462,10 +461,18 @@ pictures below (Figure 1).
        public void test2c()
        {
          String target = "pixels[height - row - 1][col]";
-         boolean passed = checkCodeContains("mirrorHorizontal() uses pixels[height - row - 1][col]",target);
+         boolean passed = checkCodeContains("mirrorHorizontal() uses pixels[height - row - 1][col] to get the bottom pixel",target);
          assertTrue(passed);
        }
 
+       @Test 
+       public void test4()
+       {
+         String target = "bottomPixel.setColor(";
+         boolean passed = checkCodeContains("mirrorHorizontal() uses bottomPixel.setColor to change the bottom pixel",target);
+         assertTrue(passed);
+       }
+       
        @Test
          public void test3()
          {
@@ -483,13 +490,188 @@ pictures below (Figure 1).
          }       
       }
       
-3. Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror
-placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal
-and only change one line to accomplish this. 
+3. Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. 
 
+.. activecode:: picture-lab-A6-mirrorHorizontalBotToTop
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses2.jar,  redMotorcycle.jpg,  caterpillar.jpg, beach2.jpg, puppy.jpg
 
-4. Challenge — Work in groups to figure out the algorithm for the method mirrorDiagonal
-that mirrors just a square part of the picture from bottom left to top right around a mirror placed
+    Picture Lab A6 Mirroring: Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. 
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+
+      }
+
+      
+      /* 
+        Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. 
+        
+        Add new method here.
+      */
+     
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        // or try puppy.jpg or caterpillar.jpg
+        Picture pict = new Picture("redMotorcycle.jpg");
+        pict.show();
+        pict.mirrorHorizontalBotToTop();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void mirrorHorizontalBotToTop()";
+         boolean passed = checkCodeContains("mirrorHorizontalBotToTop() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = "height = pixels.length;";
+         boolean passed = checkCodeContains("mirrorHorizontalBotToTop() sets height to pixels.length",target);
+         assertTrue(passed);
+       }
+       
+        @Test 
+       public void test2b()
+       {
+         String target = "height/2";
+         boolean passed = checkCodeContains("mirrorHorizontalBotToTop() uses height/2",target);
+         assertTrue(passed);
+       }
+       
+       @Test 
+       public void test2c()
+       {
+         String target = "pixels[height - row - 1][col]";
+         boolean passed = checkCodeContains("mirrorHorizontalBotToTop() uses pixels[height - row - 1][col]",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test4()
+       {
+         String target = "topPixel.setColor(";
+         boolean passed = checkCodeContains("mirrorHorizontalBotToTop() uses setColor to change the topPixel variable",target);
+         assertTrue(passed);
+       }
+       
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void mirrorHorizontal()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that mirrorHorizontalBotToTop() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
+      
+4. Challenge — Work in groups to figure out the algorithm for the method mirrorDiagonal that mirrors just a square part of the picture from bottom left to top right around a mirror placed
 on the diagonal line (the diagonal line is the one where the row index equals the column index).
 This will copy the triangular area to the left and below the diagonal line as shown below. This is
 like folding a square piece of paper from the bottom left to the top right, painting just the bottom
@@ -498,15 +680,191 @@ paint would be copied from the bottom left to the top right as shown in the pict
 (Figure 2). 
 
 .. figure:: Figures/picturelabmirror4.png
-    :width: 450px
+    :width: 300px
     :align: center
     :figclass: align-center
     
     Figure 4: Original picture (left) and mirrored around the diagonal line with copying from bottom left to top right (right)
     
     
+.. activecode:: picture-lab-A6-mirrorDiagonal
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses2.jar,  redMotorcycle.jpg,  caterpillar.jpg, beach2.jpg, puppy.jpg
 
-Choose from these images as well as the images from the last lesson:
+    Picture Lab A6 Mirroring: Write a method method mirrorDiagonal that mirrors just a square part of the picture from bottom left to top right around a mirror placed on the diagonal line (the diagonal line is the one where the row index equals the column index). 
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+
+      }
+
+      /**
+	  * Method that mirrors the picture around a vertical mirror in the center of
+  	  * the picture from left to right
+	  */
+      public void mirrorVertical()
+      {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel leftPixel = null;
+		Pixel rightPixel = null;
+		int width = pixels[0].length;
+		for (int row = 0; row < pixels.length; row++)
+		{
+			for (int col = 0; col < width / 2; col++)
+			{
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][width - 1 - col];
+				rightPixel.setColor(leftPixel.getColor());
+			}
+		}
+	   }
+
+      
+      /* 
+        Write a method method mirrorDiagonal that mirrors just a square part of the picture from bottom left to top right around a mirror placed on the diagonal line (the diagonal line is the one where the row index equals the column index).
+        
+        Add new method here.
+      */
+     
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        // or try puppy.jpg or caterpillar.jpg
+        Picture pict = new Picture("beach2.jpg");
+        pict.show();
+        pict.mirrorDiagonal();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void mirrorDiagonal()";
+         boolean passed = checkCodeContains("mirrorDiagonal() method",target);
+         assertTrue(passed);
+       }
+
+       @Test 
+       public void test2()
+       {
+         String target = "col < row";
+         boolean passed = checkCodeContains("mirrorDiagonal() loops for col < row",target);
+         assertTrue(passed);
+       }
+       
+
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void mirrorDiagonal()");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that mirrorDiagonal() contains 2 for loops", passed);
+            assertTrue(passed);     
+         }       
+      }
+      
+Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
 
 .. datafile:: caterpillar.jpg
    :hide:
@@ -517,7 +875,13 @@ Choose from these images as well as the images from the last lesson:
    :image:
    :fromfile: Figures/redMotorcycle.jpg   
 
-
+.. datafile:: puppy.jpg
+   :image:
+   :fromfile: Figures/puppy.jpg
+   
+.. datafile:: beach2.jpg
+   :image:
+   :fromfile: Figures/beach.jpg
 
 .. datafile:: pictureClasses2.jar
         :hide:    

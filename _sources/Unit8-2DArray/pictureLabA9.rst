@@ -14,7 +14,18 @@ needs to be able to “see” a ball.
 One way to look for an edge in a picture is to compare the color at the current pixel with the pixel in the
 next column to the right. If the colors differ by more than some specified amount, this indicates that an
 edge has been detected and the current pixel color should be set to black. Otherwise, the current pixel is
-not part of an edge and its color should be set to white (Figure 12). How do you calculate the difference
+not part of an edge and its color should be set to white (Figure 1).
+
+
+.. figure:: Figures/picturelabedge.png
+    :width: 450px
+    :align: center
+    :figclass: align-center
+    
+    Figure 1: Original picture and after edge detection
+    
+    
+How do you calculate the difference
 between two colors? The formula for the difference between two points (x1,y1) and (x2,y2) is the square
 root of ((x2 - x1)2 + (y2 - y1)2 ). The difference between two colors (red1,green1,blue1) and (red2,green2,blue2)
 is the square root of ((red2 - red1)2 +(green2 - green1)2 +(blue2 - blue1)2
@@ -22,12 +33,6 @@ is the square root of ((red2 - red1)2 +(green2 - green1)2 +(blue2 - blue1)2
 method in the Pixel class uses this calculation to return the difference between the current pixel
 color and a passed color.
 
-.. figure:: Figures/picturelabedge.png
-    :width: 350px
-    :align: center
-    :figclass: align-center
-    
-    Figure 1: Original picture and after edge detection
  
 The following method implements this simple algorithm. Notice that the nested for loop stops earlier
 than when it reaches the number of columns. That is because in the nested loop the current color is
@@ -58,7 +63,152 @@ would cause an out-of-bounds error.
       }
  }
  
-You can test this with the testEdgeDetection method in PictureTester.
+You can test this with the edgeDetection method below.
+
+.. activecode:: picture-lab-A9-edgeDetection
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses.jar, swan.jpg, temple2.jpg
+
+    Picture Lab A9: Run to see edgeDetection working.  
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+      }
+      
+      public void edgeDetection(int edgeDist)
+      {
+           Pixel leftPixel = null;
+           Pixel rightPixel = null;
+           Pixel[][] pixels = this.getPixels2D();
+           Color rightColor = null;
+           for (int row = 0; row < pixels.length; row++)
+           {
+                for (int col = 0; col < pixels[0].length-1; col++)
+                {
+                     leftPixel = pixels[row][col];
+                     rightPixel = pixels[row][col+1];
+                     rightColor = rightPixel.getColor();
+                     if (leftPixel.colorDistance(rightColor) >
+                     edgeDist)
+                       leftPixel.setColor(Color.BLACK);
+                     else
+                       leftPixel.setColor(Color.WHITE);
+                }
+           }
+      }
+      
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        // You can also try temple2.jpg
+        Picture pict = new Picture("swan.jpg");
+        pict.show();
+        pict.edgeDetection(12);
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void edgeDetection(";
+         boolean passed = checkCodeContains("edgeDetection( method",target);
+         assertTrue(passed);
+       }          
+      }
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
@@ -69,12 +219,393 @@ You can test this with the testEdgeDetection method in PictureTester.
 
 
 1. Notice that the current edge detection method works best when there are big color changes from
-left to right but not when the changes are from top to bottom. Add another loop that compares
-the current pixel with the one below and sets the current pixel color to black as well when the
+left to right but not when the changes are from top to bottom. Add another nested loop that compares
+the current pixel with the pixel below it and sets the current pixel color to black as well when the
 color distance is greater than the specified edge distance.
 
-2. Work in groups to come up with another algorithm for edge detection.
+.. activecode:: picture-lab-A9-edgeDetection2
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses.jar, swan.jpg, temple2.jpg
 
+    Picture Lab A9: Improve the edgeDetection method by adding another nested loop that compares the current pixel with the pixel below it and sets the current pixel color to black as well, when the color distance is greater than the specified edge distance.
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+      }
+      
+      /** Add another nested loop that compares the current pixel with the pixel below it and sets the current pixel color to black as well when the color distance is greater than the specified edge distance.
+      */
+      public void edgeDetection(int edgeDist)
+      {
+           Pixel leftPixel = null;
+           Pixel rightPixel = null;
+           Pixel[][] pixels = this.getPixels2D();
+           Color rightColor = null;
+           for (int row = 0; row < pixels.length; row++)
+           {
+                for (int col = 0; col < pixels[0].length-1; col++)
+                {
+                     leftPixel = pixels[row][col];
+                     rightPixel = pixels[row][col+1];
+                     rightColor = rightPixel.getColor();
+                     if (leftPixel.colorDistance(rightColor) >
+                     edgeDist)
+                        leftPixel.setColor(Color.BLACK);
+                     else
+                        leftPixel.setColor(Color.WHITE);
+                }
+           }
+      }
+      
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        // You can also try temple2.jpg
+        Picture pict = new Picture("swan.jpg");
+        pict.show();
+        pict.edgeDetection(12);
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void edgeDetection(";
+         boolean passed = checkCodeContains("edgeDetection method",target);
+         assertTrue(passed);
+       }  
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void edgeDetection(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 400);
+             int num = countOccurences(code, target);
+             passed = num == 4;
+            } 
+            getResults("true", ""+passed, "Checking that edgeDetection contains 4 (2 nested) for loops", passed);
+            assertTrue(passed);     
+         }
+         @Test
+         public void test2()
+         {
+            String target = "colorDistance";
+            String code = getCode();
+            int index = code.indexOf("public void edgeDetection(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 400);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that edgeDetection calls colorDistance twice", passed);
+            assertTrue(passed);     
+         }
+         
+      }
+      
+2. Work in groups to come up with another algorithm for edge detection and test it below.
+
+
+.. activecode:: picture-lab-A9-myEdgeDetection
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses.jar, swan.jpg, temple2.jpg
+
+    Picture Lab A9: Come up with another algorithm for edgeDetection in a method called myEdgeDetection.
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+      }
+      
+      public void edgeDetection(int edgeDist)
+      {
+           Pixel leftPixel = null;
+           Pixel rightPixel = null;
+           Pixel[][] pixels = this.getPixels2D();
+           Color rightColor = null;
+           for (int row = 0; row < pixels.length; row++)
+           {
+                for (int col = 0; col < pixels[0].length-1; col++)
+                {
+                     leftPixel = pixels[row][col];
+                     rightPixel = pixels[row][col+1];
+                     rightColor = rightPixel.getColor();
+                     if (leftPixel.colorDistance(rightColor) >
+                     edgeDist)
+                       leftPixel.setColor(Color.BLACK);
+                     else
+                       leftPixel.setColor(Color.WHITE);
+                }
+           }
+      }
+      
+      /** Come up with another algorithm for edgeDetection 
+          in a method called myEdgeDetection
+      */
+      
+      
+      
+      
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        // You can also try temple2.jpg
+        Picture pict = new Picture("swan.jpg");
+        pict.show();
+        pict.myEdgeDetection();
+        pict.show();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void myEdgeDetection(";
+         boolean passed = checkCodeContains("myEdgeDetection( method",target);
+         assertTrue(passed);
+       } 
+       @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void myEdgeDetection(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 400);
+             int num = countOccurences(code, target);
+             passed = num >= 2;
+            } 
+            getResults("true", ""+passed, "Checking that myEdgeDetection contains at least 2 for loops", passed);
+            assertTrue(passed);     
+         }
+         
+         @Test
+         public void test2()
+         {
+            String target = "colorDistance";
+            String code = getCode();
+            int index = code.indexOf("public void myEdgeDetection(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 400);
+             int num = countOccurences(code, target);
+             passed = num >= 1;
+            } 
+            getResults("true", ""+passed, "Checking that myEdgeDetection calls colorDistance at least once", passed);
+            assertTrue(passed);     
+         }
+      }
+      
+.. |repl.it project| raw:: html
+
+   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+
+.. |repl 2| raw:: html
+
+   <a href= "https://replit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
+   
+
+
+Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
+
+.. datafile:: swan.jpg
+   :image:
+   :fromfile: Figures/swan.jpg
+   
+.. datafile:: temple2.jpg
+   :image:
+   :fromfile: Figures/temple.jpg
+   
+   
 How image processing is related to new scientific breakthroughs
 -----------------------------------------------------------------
 

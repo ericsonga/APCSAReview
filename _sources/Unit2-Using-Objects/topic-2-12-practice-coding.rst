@@ -5,7 +5,7 @@
 Coding Practice
 ======================
 
-The first several problems are about Strings, but there are some about Turtles as well.
+
 
 .. tabbed:: ch3Ex9
 

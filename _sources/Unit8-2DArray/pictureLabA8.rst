@@ -66,14 +66,211 @@ The following method shows how to create a simple collage using the copy method.
       this.copy(flower1,400,0);
       this.copy(flower2,500,0);
       this.mirrorVertical();
-      this.write("collage.jpg");
+      this.show();
  }
  
-Notice that the Picture method write can be used to save a copy of the final collage to your disk
-as a JPEG picture file. You can also specify the full path name of where to write the picture
-(“c:\temp\collage.jpg”). Be sure to include the extension (.jpg) as well so that your
-computer knows the file type.
-You can test this with the testCollage method in PictureTester.
+You can test this with the createCollage method below.
+
+.. activecode:: picture-lab-A8-createCollage
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses.jar, flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg
+
+    Picture Lab A8: Run to see createCollage() working.  
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+      }
+      
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
+
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
+      
+      /* mirrorVertical() */
+      public void mirrorVertical()
+      {
+           Pixel[][] pixels = this.getPixels2D();
+           Pixel leftPixel = null;
+           Pixel rightPixel = null;
+           int width = pixels[0].length;
+           for (int row = 0; row < pixels.length; row++)
+           {
+                for (int col = 0; col < width / 2; col++)
+                {
+                     leftPixel = pixels[row][col];
+                     rightPixel = pixels[row][width – 1 - col];
+                     rightPixel.setColor(leftPixel.getColor());
+                }
+           }
+      }
+      
+       /** copy from the passed fromPic to the
+         * specified startRow and startCol in the
+         * current picture
+         * @param fromPic the picture to copy from
+         * @param startRow the start row to copy to
+         * @param startCol the start col to copy to
+         */
+       public void copy(Picture fromPic, 
+                      int startRow, int startCol)
+       {
+         Pixel fromPixel = null;
+         Pixel toPixel = null;
+         Pixel[][] toPixels = this.getPixels2D();
+         Pixel[][] fromPixels = fromPic.getPixels2D();
+         for (int fromRow = 0, toRow = startRow; 
+              fromRow < fromPixels.length &&
+              toRow < toPixels.length; 
+              fromRow++, toRow++)
+         {
+           for (int fromCol = 0, toCol = startCol; 
+                fromCol < fromPixels[0].length &&
+                toCol < toPixels[0].length;  
+                fromCol++, toCol++)
+           {
+             fromPixel = fromPixels[fromRow][fromCol];
+             toPixel = toPixels[toRow][toCol];
+             toPixel.setColor(fromPixel.getColor());
+           }
+         }   
+       }
+
+      public void createCollage()
+      {
+           // You can also try butterfly.jpg and snowflake.jpg
+           Picture flower1 = new Picture("flower1.jpg");
+           Picture flower2 = new Picture("flower2.jpg");
+           this.copy(flower1,0,0);
+           this.copy(flower2,100,0);
+           this.copy(flower1,200,0);
+           Picture flowerNoBlue = new Picture(flower2);
+           flowerNoBlue.zeroBlue();
+           this.copy(flowerNoBlue,300,0);
+           this.copy(flower1,400,0);
+           this.copy(flower2,500,0);
+           this.mirrorVertical();
+           this.show();
+      }
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        createCollage();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void createCollage()";
+         boolean passed = checkCodeContains("createCollage() method",target);
+         assertTrue(passed);
+       }          
+      }
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
@@ -82,11 +279,519 @@ You can test this with the testCollage method in PictureTester.
     
 |CodingEx| **Coding Exercises**
 
-1. Create a second copy method that adds parameters to allow you to copy just part of the
+1. Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the
 fromPic. You will need to add parameters that specify the start row, end row, start column, 
-and end column to copy from. Write a class (static) test method in PictureTester to test
-this new method and call it in the main method.
+and end column to copy from. 
+
+.. activecode:: picture-lab-A8-createCollage-copyPartial
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses.jar, flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg
+
+    Picture Lab A8: Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the fromPic. You will need to add parameters that specify the start row, end row, start column, and end column to copy from. Use it in your collage.
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+      }
+      
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
+
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
+      
+      /* mirrorVertical() */
+      public void mirrorVertical()
+      {
+           Pixel[][] pixels = this.getPixels2D();
+           Pixel leftPixel = null;
+           Pixel rightPixel = null;
+           int width = pixels[0].length;
+           for (int row = 0; row < pixels.length; row++)
+           {
+                for (int col = 0; col < width / 2; col++)
+                {
+                     leftPixel = pixels[row][col];
+                     rightPixel = pixels[row][width – 1 - col];
+                     rightPixel.setColor(leftPixel.getColor());
+                }
+           }
+      }
+      
+       /** copy from the passed fromPic to the
+         * specified startRow and startCol in the
+         * current picture
+         * @param fromPic the picture to copy from
+         * @param startRow the start row to copy to
+         * @param startCol the start col to copy to
+         */
+       public void copy(Picture fromPic, 
+                      int startRow, int startCol)
+       {
+         Pixel fromPixel = null;
+         Pixel toPixel = null;
+         Pixel[][] toPixels = this.getPixels2D();
+         Pixel[][] fromPixels = fromPic.getPixels2D();
+         for (int fromRow = 0, toRow = startRow; 
+              fromRow < fromPixels.length &&
+              toRow < toPixels.length; 
+              fromRow++, toRow++)
+         {
+           for (int fromCol = 0, toCol = startCol; 
+                fromCol < fromPixels[0].length &&
+                toCol < toPixels[0].length;  
+                fromCol++, toCol++)
+           {
+             fromPixel = fromPixels[fromRow][fromCol];
+             toPixel = toPixels[toRow][toCol];
+             toPixel.setColor(fromPixel.getColor());
+           }
+         }   
+       }
+
+      /**  Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the fromPic. You will need to add parameters that specify the start row, end row, start column, and end column to copy from as well as the start row and start column to copy to like the method above.
+      
+         Write your method here and use it in createCollage below
+      */
+      
+      
+      public void createCollage()
+      {
+           // You can also try butterfly.jpg and snowflake.jpg
+           Picture flower1 = new Picture("flower1.jpg");
+           Picture flower2 = new Picture("flower2.jpg");
+           
+           // complete this method call
+           this.copyPartial(flower1, );
+           this.copy(flower2,100,0);
+           this.copy(flower1,200,0);
+           Picture flowerNoBlue = new Picture(flower2);
+           flowerNoBlue.zeroBlue();
+           this.copy(flowerNoBlue,300,0);
+           this.copy(flower1,400,0);
+           this.copy(flower2,500,0);
+           this.mirrorVertical();
+           this.show();
+      }
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        createCollage();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void copyPartial(";
+         boolean passed = checkCodeContains("copyPartial method",target);
+         assertTrue(passed);
+       }  
+       
+       @Test
+         public void test2()
+         {
+            String target = "int";
+            String code = getCode();
+            int index = code.indexOf("public void copyPartial(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 6;
+            } 
+            getResults("true", ""+passed, "Checking that copyPartial contains 6 int parameters", passed);
+            assertTrue(passed);     
+         } 
+         
+         @Test
+         public void test3()
+         {
+            String target = "for";
+            String code = getCode();
+            int index = code.indexOf("public void copyPartial(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 2;
+            } 
+            getResults("true", ""+passed, "Checking that copyPartial() contains 2 for loops", passed);
+            assertTrue(passed);     
+         } 
+      }
+      
 2. Create a myCollage method that has at least three pictures (can be the same picture) copied
-three times with three different picture manipulations and at least one mirroring. Write a class
-(static) test method in PictureTester to test this new method and call it in the main
-method.
+three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
+
+
+.. |repl.it project| raw:: html
+
+   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+
+.. |repl 2| raw:: html
+
+   <a href= "https://replit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
+   
+
+
+
+.. activecode:: picture-lab-A8-myCollage
+    :language: java
+    :autograde: unittest
+    :datafile: pictureClasses.jar, flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg
+
+    Picture Lab A8: Create a myCollage method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring. 
+    ~~~~
+    import java.awt.*;
+    import java.awt.font.*;
+    import java.awt.geom.*;
+    import java.awt.image.BufferedImage;
+    import java.text.*;
+    import java.util.*;
+    import java.util.List; 
+
+    /**
+     * A class that represents a picture.  This class inherits from
+     * SimplePicture and allows the student to add functionality to
+     * the Picture class.
+     *
+     * @author Barbara Ericson ericson@cc.gatech.edu
+     */
+    public class Picture extends SimplePicture
+    {
+      ///////////////////// constructors //////////////////////////////////
+
+      /**
+       * Constructor that takes no arguments
+       */
+      public Picture ()
+      {
+        /* not needed but use it to show students the implicit call to super()
+         * child constructors always call a parent constructor
+         */
+        super();
+      }
+
+      /**
+       * Constructor that takes a file name and creates the picture
+       * @param fileName the name of the file to create the picture from
+       */
+      public Picture(String fileName)
+      {
+        // let the parent class handle this fileName
+        super(fileName);
+      }
+
+      /**
+       * Constructor that takes the height and width
+       * @param height the height of the desired picture
+       * @param width the width of the desired picture
+       */
+      public Picture(int height, int width)
+      {
+        // let the parent class handle this width and height
+        super(width,height);
+      }
+
+      /**
+       * Constructor that takes a picture and creates a
+       * copy of that picture
+       * @param copyPicture the picture to copy
+       */
+      public Picture(Picture copyPicture)
+      {
+        // let the parent class do the copy
+        super(copyPicture);
+      }
+
+      /**
+       * Constructor that takes a buffered image
+       * @param image the buffered image to use
+       */
+      public Picture(BufferedImage image)
+      {
+        super(image);
+      }
+      ////////////////////// methods ///////////////////////////////////////
+
+      /**
+       * Method to return a string with information about this picture.
+       * @return a string with information about the picture such as fileName,
+       * height and width.
+       */
+      public String toString()
+      {
+        String output = "Picture, filename " + getFileName() +
+          " height " + getHeight()
+          + " width " + getWidth();
+        return output;
+      }
+      
+      /** 
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+      public void zeroBlue()
+      {
+        Pixel[][] pixels = this.getPixels2D();
+
+        for (Pixel[] rowArray : pixels)
+         {
+           for (Pixel p: rowArray)
+           {
+                  p.setBlue(0);
+           }
+        }
+      }
+      
+      /* mirrorVertical() */
+      public void mirrorVertical()
+      {
+           Pixel[][] pixels = this.getPixels2D();
+           Pixel leftPixel = null;
+           Pixel rightPixel = null;
+           int width = pixels[0].length;
+           for (int row = 0; row < pixels.length; row++)
+           {
+                for (int col = 0; col < width / 2; col++)
+                {
+                     leftPixel = pixels[row][col];
+                     rightPixel = pixels[row][width – 1 - col];
+                     rightPixel.setColor(leftPixel.getColor());
+                }
+           }
+      }
+      
+       /** copy from the passed fromPic to the
+         * specified startRow and startCol in the
+         * current picture
+         * @param fromPic the picture to copy from
+         * @param startRow the start row to copy to
+         * @param startCol the start col to copy to
+         */
+       public void copy(Picture fromPic, 
+                      int startRow, int startCol)
+       {
+         Pixel fromPixel = null;
+         Pixel toPixel = null;
+         Pixel[][] toPixels = this.getPixels2D();
+         Pixel[][] fromPixels = fromPic.getPixels2D();
+         for (int fromRow = 0, toRow = startRow; 
+              fromRow < fromPixels.length &&
+              toRow < toPixels.length; 
+              fromRow++, toRow++)
+         {
+           for (int fromCol = 0, toCol = startCol; 
+                fromCol < fromPixels[0].length &&
+                toCol < toPixels[0].length;  
+                fromCol++, toCol++)
+           {
+             fromPixel = fromPixels[fromRow][fromCol];
+             toPixel = toPixels[toRow][toCol];
+             toPixel.setColor(fromPixel.getColor());
+           }
+         }   
+       }
+
+      /**  Create a myCollage method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring. 
+      
+       Write your method here.
+      */
+      
+      
+      public void createCollage()
+      {
+           // You can also try butterfly.jpg and snowflake.jpg
+           Picture flower1 = new Picture("flower1.jpg");
+           Picture flower2 = new Picture("flower2.jpg");
+           
+           // complete this method call
+           this.copy(flower1,0,0);
+           this.copy(flower2,100,0);
+           this.copy(flower1,200,0);
+           Picture flowerNoBlue = new Picture(flower2);
+           flowerNoBlue.zeroBlue();
+           this.copy(flowerNoBlue,300,0);
+           this.copy(flower1,400,0);
+           this.copy(flower2,500,0);
+           this.mirrorVertical();
+           this.show();
+      }
+     
+      /* Main method for testing 
+       */
+      public static void main(String[] args)
+      {
+        myCollage();
+      }
+    } 
+    ====
+    import static org.junit.Assert.*;
+     import org.junit.*;
+     import java.io.*;
+     import java.util.List;
+     import java.util.ArrayList;
+     import java.util.Arrays;
+
+     public class RunestoneTests extends CodeTestHelper
+     {
+       @Test 
+       public void test1()
+       {
+         String target = "public void myCollage(";
+         boolean passed = checkCodeContains("myCollage method",target);
+         assertTrue(passed);
+       }  
+       
+       @Test
+         public void test2()
+         {
+            String target = "copy";
+            String code = getCode();
+            int index = code.indexOf("public void myCollage(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 3;
+            } 
+            getResults("true", ""+passed, "Checking that myCollage contains 3 copy calls", passed);
+            assertTrue(passed);     
+         } 
+         
+         @Test
+         public void test3()
+         {
+            String target = "mirror";
+            String code = getCode();
+            int index = code.indexOf("public void myCollage(");
+            boolean passed = false;
+            if (index > 0) {
+             code = code.substring(index, index + 200);
+             int num = countOccurences(code, target);
+             passed = num == 1;
+            } 
+            getResults("true", ""+passed, "Checking that myCollage() calls a mirror method", passed);
+            assertTrue(passed);     
+         } 
+      }
+
+You can use these images in this lesson:
+
+.. datafile:: flower1.jpg
+   :image:
+   :fromfile: Figures/flower1.jpg
+   
+.. datafile:: flower2.jpg
+   :image:
+   :fromfile: Figures/flower2.jpg
+
+.. datafile:: snowflake.jpg
+   :image:
+   :fromfile: Figures/snowflake.jpg
+   
+.. datafile:: butterfly.jpg
+   :image:
+   :fromfile: Figures/butterfly.jpg
