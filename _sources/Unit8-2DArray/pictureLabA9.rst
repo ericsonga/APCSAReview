@@ -27,8 +27,8 @@ not part of an edge and its color should be set to white (Figure 1).
     
 How do you calculate the difference
 between two colors? The formula for the difference between two points (x1,y1) and (x2,y2) is the square
-root of ((x2 - x1)2 + (y2 - y1)2 ). The difference between two colors (red1,green1,blue1) and (red2,green2,blue2)
-is the square root of ((red2 - red1)2 +(green2 - green1)2 +(blue2 - blue1)2
+root of ((x2 - x1)\ :sup:`2` + (y2 - y1)\ :sup:`2` ). The difference between two colors (red1,green1,blue1) and (red2,green2,blue2)
+is the square root of ((red2 - red1)\ :sup:`2` +(green2 - green1)\ :sup:`2` +(blue2 - blue1)\ :sup:`2`
 ). The colorDistance
 method in the Pixel class uses this calculation to return the difference between the current pixel
 color and a passed color.
@@ -375,7 +375,7 @@ color distance is greater than the specified edge distance.
             int index = code.indexOf("public void edgeDetection(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 400);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 4;
             } 
@@ -390,7 +390,7 @@ color distance is greater than the specified edge distance.
             int index = code.indexOf("public void edgeDetection(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 400);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 
@@ -560,7 +560,7 @@ color distance is greater than the specified edge distance.
             int index = code.indexOf("public void myEdgeDetection(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 400);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
             } 
@@ -576,7 +576,7 @@ color distance is greater than the specified edge distance.
             int index = code.indexOf("public void myEdgeDetection(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 400);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 1;
             } 

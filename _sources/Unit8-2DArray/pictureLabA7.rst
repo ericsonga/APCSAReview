@@ -151,7 +151,6 @@ You can test this with the mirrorTemple method below.
            int mirrorPoint = 276;
            Pixel leftPixel = null;
            Pixel rightPixel = null;
-           int count = 0;
            Pixel[][] pixels = this.getPixels2D();
 
            // loop through the rows
@@ -415,6 +414,14 @@ inside the body of the loop. Print the value of count after the nested loop ends
          boolean passed = checkCodeContains("mirrorTemple() has count++",target);
          assertTrue(passed);
        } 
+        @Test
+       public void testMain() throws IOException
+       {
+                        String output = getMethodOutput("main");
+                        String expect = "18410";
+                        boolean passed = getResults(expect, output, "Expected output from main");
+                        assertTrue(passed);
+       }
       }
 
 2. Write the method mirrorArms to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork |Explorer Repl| and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
@@ -538,7 +545,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @@Test 
+       @Test 
        public void test1()
        {
          String target = "public void mirrorArms()";
@@ -571,7 +578,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
             int index = code.indexOf("public void mirrorArms()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 400);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 4;
             } 
@@ -703,7 +710,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @@Test 
+       @Test 
        public void test1()
        {
          String target = "public void mirrorGull()";
@@ -736,7 +743,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
             int index = code.indexOf("public void mirrorGull()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 400);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 

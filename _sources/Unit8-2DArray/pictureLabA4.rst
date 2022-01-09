@@ -265,7 +265,7 @@ this in IntArrayWorkerTester.
        public static void testGetCount()
        {
          IntArrayWorker worker = new IntArrayWorker();
-         worker.setMatrix( { {1, 2, 1} {2, 1, 0} });
+         worker.setMatrix( new int[][]{ {1, 2, 1} {2, 1, 0} });
          int count = worker.getCount(1);
          System.out.println("Count should be 3 and count is " + count);
        }
@@ -308,7 +308,7 @@ this in IntArrayWorkerTester.
             public void test2()
             {
                 IntArrayWorker worker = new IntArrayWorker();
-                worker.setMatrix( { {1,4,8},{8,8,8} });
+                worker.setMatrix( new int[][]{ {1,4,8},{8,8,8} });
                 int count = worker.getCount(8);
                 int expectedCount = 4;
 
@@ -416,7 +416,7 @@ in the matrix. There is already a method to test this in IntArrayWorkerTester.
             public void test2()
             {
                 IntArrayWorker worker = new IntArrayWorker();
-                worker.setMatrix( { {1,4,8},{6,9,7} });
+                worker.setMatrix( new int[][]{ {1,4,8},{6,9,7} });
                 int output = worker.getLargest();
                 int expect = 9;               
 
@@ -515,7 +515,7 @@ IntArrayWorkerTester.
             public void test2()
             {
                 IntArrayWorker worker = new IntArrayWorker();
-                worker.setMatrix( { {1,1,1},{0,1,2} });
+                worker.setMatrix( new int[][]{ {1,1,1},{0,1,2} });
                 int count = worker.getColTotal(1);
                 int expectedCount = 2;
 

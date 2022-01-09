@@ -123,7 +123,7 @@ You can test this with the createCollage method below.
        * @param height the height of the desired picture
        * @param width the width of the desired picture
        */
-      public Picture(int height, int width)
+      public Picture(int width, int height)
       {
         // let the parent class handle this width and height
         super(width,height);
@@ -191,7 +191,7 @@ You can test this with the createCollage method below.
                 for (int col = 0; col < width / 2; col++)
                 {
                      leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][width – 1 - col];
+                     rightPixel = pixels[row][width - 1 - col];
                      rightPixel.setColor(leftPixel.getColor());
                 }
            }
@@ -249,7 +249,8 @@ You can test this with the createCollage method below.
        */
       public static void main(String[] args)
       {
-        createCollage();
+         Picture p = new Picture(500,500);
+         p.createCollage();
       }
     } 
     ====
@@ -335,7 +336,7 @@ and end column to copy from.
        * @param height the height of the desired picture
        * @param width the width of the desired picture
        */
-      public Picture(int height, int width)
+      public Picture(int width, int height)
       {
         // let the parent class handle this width and height
         super(width,height);
@@ -403,7 +404,7 @@ and end column to copy from.
                 for (int col = 0; col < width / 2; col++)
                 {
                      leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][width – 1 - col];
+                     rightPixel = pixels[row][width - 1 - col];
                      rightPixel.setColor(leftPixel.getColor());
                 }
            }
@@ -469,7 +470,8 @@ and end column to copy from.
        */
       public static void main(String[] args)
       {
-        createCollage();
+         Picture p = new Picture(500,500);
+         p.createCollage();
       }
     } 
     ====
@@ -498,7 +500,7 @@ and end column to copy from.
             int index = code.indexOf("public void copyPartial(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index, index + 400);
              int num = countOccurences(code, target);
              passed = num == 6;
             } 
@@ -514,7 +516,7 @@ and end column to copy from.
             int index = code.indexOf("public void copyPartial(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 
@@ -590,7 +592,7 @@ three times with three different picture manipulations and at least one mirrorin
        * @param height the height of the desired picture
        * @param width the width of the desired picture
        */
-      public Picture(int height, int width)
+      public Picture(int width, int height)
       {
         // let the parent class handle this width and height
         super(width,height);
@@ -658,7 +660,7 @@ three times with three different picture manipulations and at least one mirrorin
                 for (int col = 0; col < width / 2; col++)
                 {
                      leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][width – 1 - col];
+                     rightPixel = pixels[row][width - 1 - col];
                      rightPixel.setColor(leftPixel.getColor());
                 }
            }
@@ -694,12 +696,6 @@ three times with three different picture manipulations and at least one mirrorin
            }
          }   
        }
-
-      /**  Create a myCollage method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring. 
-      
-       Write your method here.
-      */
-      
       
       public void createCollage()
       {
@@ -707,7 +703,6 @@ three times with three different picture manipulations and at least one mirrorin
            Picture flower1 = new Picture("flower1.jpg");
            Picture flower2 = new Picture("flower2.jpg");
            
-           // complete this method call
            this.copy(flower1,0,0);
            this.copy(flower2,100,0);
            this.copy(flower1,200,0);
@@ -719,12 +714,18 @@ three times with three different picture manipulations and at least one mirrorin
            this.mirrorVertical();
            this.show();
       }
+      
+     /**  Create a myCollage() method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring. 
+      
+       Write your method here.
+      */
      
       /* Main method for testing 
        */
       public static void main(String[] args)
       {
-        myCollage();
+         Picture p = new Picture(500,500);
+         p.myCollage();
       }
     } 
     ====
@@ -753,7 +754,7 @@ three times with three different picture manipulations and at least one mirrorin
             int index = code.indexOf("public void myCollage(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 3;
             } 
@@ -769,7 +770,7 @@ three times with three different picture manipulations and at least one mirrorin
             int index = code.indexOf("public void myCollage(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 1;
             } 

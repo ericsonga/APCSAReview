@@ -86,8 +86,12 @@ You can test this with the testMirrorVertical method in PictureTester.
    
 You can use caterpillar.jpg or one of the images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
+.. image:: Figures/mirrorright.png
+    :width: 150
+    :align: left
+    
 1. Write the method mirrorVerticalRightToLeft that mirrors a picture around a mirror
-placed vertically from right to left. Hint: you can copy the body of mirrorVertical and
+placed vertically from right to left, so that you get 2 tails for the caterpillar instead of two heads. Hint: you can copy the body of mirrorVertical and
 only change one line in the body of the method to accomplish this. 
 
 
@@ -96,7 +100,7 @@ only change one line in the body of the method to accomplish this.
     :autograde: unittest
     :datafile: pictureClasses2.jar,redMotorcycle.jpg, caterpillar.jpg, puppy.jpg, beach2.jpg
 
-    Picture Lab A6 Mirroring: Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirror placed vertically from right to left. Hint: you can copy the body of mirrorVertical and only change one line in the body of the method to accomplish this. Change the method call in the main method. 
+    Picture Lab A6 Mirroring: Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirror placed vertically from right to left so that you get two tails for the caterpillar instead of two heads. Hint: you can copy the body of mirrorVertical and only change one line in the body of the method to accomplish this. Change the method call in the main method. 
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -268,7 +272,7 @@ only change one line in the body of the method to accomplish this.
             int index = code.indexOf("public void mirrorVerticalRightToLeft()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 
@@ -295,7 +299,7 @@ pictures below (Figure 1).
     :autograde: unittest
     :datafile: pictureClasses2.jar,  redMotorcycle.jpg,  caterpillar.jpg, beach2.jpg, puppy.jpg
 
-    Picture Lab A6 Mirroring: Write a method mirrorHorizontal that mirrors a picture around a mirror placed horizontally at the middle of the height of the picture from top to bottom. 
+    Picture Lab A6 Mirroring: Write a method mirrorHorizontal that mirrors a picture around a mirror placed horizontally at the middle of the height of the picture from top to bottom. Change the bottom pixel to be the color of the top pixel.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -481,7 +485,7 @@ pictures below (Figure 1).
             int index = code.indexOf("public void mirrorHorizontal()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 
@@ -497,7 +501,7 @@ pictures below (Figure 1).
     :autograde: unittest
     :datafile: pictureClasses2.jar,  redMotorcycle.jpg,  caterpillar.jpg, beach2.jpg, puppy.jpg
 
-    Picture Lab A6 Mirroring: Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. 
+    Picture Lab A6 Mirroring: Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. Change the top pixel to the bottom pixel instead of the other way around.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -662,7 +666,7 @@ pictures below (Figure 1).
             int index = code.indexOf("public void mirrorHorizontal()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 
@@ -680,7 +684,7 @@ paint would be copied from the bottom left to the top right as shown in the pict
 (Figure 2). 
 
 .. figure:: Figures/picturelabmirror4.png
-    :width: 300px
+    :width: 400px
     :align: center
     :figclass: align-center
     
@@ -855,7 +859,7 @@ paint would be copied from the bottom left to the top right as shown in the pict
             int index = code.indexOf("public void mirrorDiagonal()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 200);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 2;
             } 
