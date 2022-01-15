@@ -266,7 +266,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
     :autograde: unittest
     :datafile: pictureClasses.jar, temple.jpg
 
-    Picture Lab A7 Mirroring: Check the calculation of the number of times the body of the nested loop executes by adding an integer count variable to the mirrorTemple method that starts out at 0 and increments inside the body of the loop. Print the value of count after the nested loop ends.
+    Picture Lab A7 Mirroring: Check the calculation of the number of times the body of the nested loop executes by adding an integer count variable to the mirrorTemple method that starts out at 0 and increments inside the body of the loop. Print the value of count after the nested loop ends which should be 18410.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -414,14 +414,6 @@ inside the body of the loop. Print the value of count after the nested loop ends
          boolean passed = checkCodeContains("mirrorTemple() has count++",target);
          assertTrue(passed);
        } 
-        @Test
-       public void testMain() throws IOException
-       {
-                        String output = getMethodOutput("main");
-                        String expect = "18410";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-       }
       }
 
 2. Write the method mirrorArms to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork |Explorer Repl| and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
