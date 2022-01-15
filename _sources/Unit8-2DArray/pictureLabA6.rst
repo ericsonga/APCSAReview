@@ -663,7 +663,7 @@ pictures below (Figure 1).
          {
             String target = "for";
             String code = getCode();
-            int index = code.indexOf("public void mirrorHorizontal()");
+            int index = code.indexOf("public void mirrorHorizontalBotToTop(");
             boolean passed = false;
             if (index > 0) {
              code = code.substring(index);

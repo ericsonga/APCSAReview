@@ -278,12 +278,18 @@ You can test this with the createCollage method below.
     :align: middle
     :alt: coding exercise
     
+
 |CodingEx| **Coding Exercises**
 
+.. image:: Figures/copypartial.png
+    :width: 100
+    :align: left
+    
 1. Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the
 fromPic. You will need to add parameters that specify the start row, end row, start column, 
 and end column to copy from. 
 
+    
 .. activecode:: picture-lab-A8-createCollage-copyPartial
     :language: java
     :autograde: unittest
@@ -441,7 +447,11 @@ and end column to copy from.
          }   
        }
 
-      /**  Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the fromPic. You will need to add parameters that specify the start row, end row, start column, and end column to copy from as well as the start row and start column to copy to like the method above.
+      /**  Create a second copy method called copyPartial 
+          that adds parameters to allow you to copy just part of 
+          fromPic. You will need to add parameters that specify the 
+          start row, start column, end row, end column to copy from 
+          as well as the start row and start column to copy to like the method above.
       
          Write your method here and use it in createCollage below
       */
@@ -449,21 +459,15 @@ and end column to copy from.
       
       public void createCollage()
       {
-           // You can also try butterfly.jpg and snowflake.jpg
-           Picture flower1 = new Picture("flower1.jpg");
-           Picture flower2 = new Picture("flower2.jpg");
-           
-           // complete this method call
-           this.copyPartial(flower1, );
-           this.copy(flower2,100,0);
-           this.copy(flower1,200,0);
-           Picture flowerNoBlue = new Picture(flower2);
-           flowerNoBlue.zeroBlue();
-           this.copy(flowerNoBlue,300,0);
-           this.copy(flower1,400,0);
-           this.copy(flower2,500,0);
-           this.mirrorVertical();
-           this.show();
+          Picture snowflake = new Picture("snowflake.jpg");
+
+          // copy just the (0,0) to (50,50) portion of the snowflake to (0,0) 
+          this.copyPartial(snowflake,0,0,50,50, 0,0);
+          // copy just the (0,50) to (50,100) portion of the snowflake to (0,0)  
+          this.copyPartial(snowflake,0,45,50,90,70,50);
+          
+          this.mirrorVertical();
+          this.show();
       }
      
       /* Main method for testing 
@@ -500,7 +504,7 @@ and end column to copy from.
             int index = code.indexOf("public void copyPartial(");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 400);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num == 6;
             } 
@@ -758,7 +762,7 @@ three times with three different picture manipulations and at least one mirrorin
              int num = countOccurences(code, target);
              passed = num == 3;
             } 
-            getResults("true", ""+passed, "Checking that myCollage contains 3 copy calls", passed);
+            getResults("3", ""+num, "Checking that myCollage contains 3 copy calls", passed);
             assertTrue(passed);     
          } 
          

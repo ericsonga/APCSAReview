@@ -265,7 +265,7 @@ this in IntArrayWorkerTester.
        public static void testGetCount()
        {
          IntArrayWorker worker = new IntArrayWorker();
-         worker.setMatrix( new int[][]{ {1, 2, 1} {2, 1, 0} });
+         worker.setMatrix( new int[][]{ {1, 2, 1}, {2, 1, 0} });
          int count = worker.getCount(1);
          System.out.println("Count should be 3 and count is " + count);
        }
