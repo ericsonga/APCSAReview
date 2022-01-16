@@ -54,11 +54,10 @@ would cause an out-of-bounds error.
                 leftPixel = pixels[row][col];
                 rightPixel = pixels[row][col+1];
                 rightColor = rightPixel.getColor();
-                if (leftPixel.colorDistance(rightColor) >
-                edgeDist)
-                leftPixel.setColor(Color.BLACK);
+                if (leftPixel.colorDistance(rightColor) > edgeDist)
+                    leftPixel.setColor(Color.BLACK);
                 else
-                leftPixel.setColor(Color.WHITE);
+                    leftPixel.setColor(Color.WHITE);
            }
       }
  }
@@ -377,7 +376,7 @@ color distance is greater than the specified edge distance.
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 4;
+             passed = num >= 4;
             } 
             getResults("true", ""+passed, "Checking that edgeDetection contains 4 (2 nested) for loops", passed);
             assertTrue(passed);     
@@ -392,7 +391,7 @@ color distance is greater than the specified edge distance.
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that edgeDetection calls colorDistance twice", passed);
             assertTrue(passed);     

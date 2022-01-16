@@ -506,7 +506,7 @@ and end column to copy from.
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 6;
+             passed = num >= 6;
             } 
             getResults("true", ""+passed, "Checking that copyPartial contains 6 int parameters", passed);
             assertTrue(passed);     
@@ -522,7 +522,7 @@ and end column to copy from.
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that copyPartial() contains 2 for loops", passed);
             assertTrue(passed);     
@@ -757,10 +757,11 @@ three times with three different picture manipulations and at least one mirrorin
             String code = getCode();
             int index = code.indexOf("public void myCollage(");
             boolean passed = false;
+            int num = 0;
             if (index > 0) {
              code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num == 3;
+             num = countOccurences(code, target);
+             passed = num >= 3;
             } 
             getResults("3", ""+num, "Checking that myCollage contains 3 copy calls", passed);
             assertTrue(passed);     
@@ -776,7 +777,7 @@ three times with three different picture manipulations and at least one mirrorin
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 1;
+             passed = num >= 1;
             } 
             getResults("true", ""+passed, "Checking that myCollage() calls a mirror method", passed);
             assertTrue(passed);     

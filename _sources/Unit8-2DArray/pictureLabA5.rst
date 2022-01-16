@@ -400,7 +400,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
             if (index > 0) {
              code = code.substring(index, index + 500);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
             assertTrue(passed);     
@@ -571,7 +571,7 @@ method.
             if (index > 0) {
              code = code.substring(index, index + 500);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that negate() contains 2 for loops", passed);
             assertTrue(passed);     
@@ -741,7 +741,7 @@ divide by 3).  Be sure to call the new test method in the main method.
             if (index > 0) {
              code = code.substring(index, index + 500);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that grayscale() contains 2 for loops", passed);
             assertTrue(passed);     
@@ -905,7 +905,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
             if (index > 0) {
              code = code.substring(index, index + 500);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that fixUnderwater() contains 2 for loops", passed);
             assertTrue(passed);     
@@ -1097,7 +1097,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
             if (index > 0) {
              code = code.substring(index, index + 500);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that changeTshirt() contains 2 for loops", passed);
             assertTrue(passed);     

@@ -16,7 +16,7 @@ the rows from 27 to 96 (inclusive) and the columns from 13 to 275 (inclusive). Y
 starting and ending points for the row and column values to mirror just part of the picture.
 
 .. figure:: Figures/picturelabmirror5.png
-    :width: 350px
+    :width: 500px
     :align: center
     :figclass: align-center
     
@@ -416,6 +416,10 @@ inside the body of the loop. Print the value of count after the nested loop ends
        } 
       }
 
+.. image:: Figures/mirrorarms.png
+    :width: 150
+    :align: left
+    
 2. Write the method mirrorArms to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork |Explorer Repl| and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
 .. activecode:: picture-lab-A7-mirrorArms
@@ -572,13 +576,17 @@ inside the body of the loop. Print the value of count after the nested loop ends
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 4;
+             passed = num >= 4;
             } 
             getResults("true", ""+passed, "Checking that mirrorArms() contains 4 (2 nested) for loops for mirroring arms", passed);
             assertTrue(passed);     
          }   
       }
 
+.. image:: Figures/mirrorgull.png
+    :width: 150
+    :align: left
+    
 3. Write the method mirrorGull to mirror the seagull ("seagull.jpg") to the right so
 that there are two seagulls on the beach near each other. Fork |Explorer Repl| and change it to explore seagull.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
@@ -737,7 +745,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that mirrorGull() contains 2 for loops", passed);
             assertTrue(passed);     

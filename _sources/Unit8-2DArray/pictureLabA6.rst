@@ -274,7 +274,7 @@ only change one line in the body of the method to accomplish this.
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that mirrorVerticalRightToLeft() contains 2 for loops", passed);
             assertTrue(passed);     
@@ -285,10 +285,10 @@ only change one line in the body of the method to accomplish this.
       
 2. Write the method mirrorHorizontal that mirrors a picture around a mirror placed
 horizontally at the middle of the height of the picture. Mirror from top to bottom as shown in the
-pictures below (Figure 1). 
+pictures below (Figure 3). 
 
 .. figure:: Figures/picturelabmirror3.png
-    :width: 450px
+    :width: 500px
     :align: center
     :figclass: align-center
     
@@ -487,13 +487,18 @@ pictures below (Figure 1).
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that mirrorHorizontal() contains 2 for loops", passed);
             assertTrue(passed);     
          }       
       }
-      
+
+.. image:: Figures/horizontalbot2top.png
+    :width: 150
+    :align: left
+    
+    
 3. Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. 
 
 .. activecode:: picture-lab-A6-mirrorHorizontalBotToTop
@@ -668,7 +673,7 @@ pictures below (Figure 1).
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that mirrorHorizontalBotToTop() contains 2 for loops", passed);
             assertTrue(passed);     
@@ -684,7 +689,7 @@ paint would be copied from the bottom left to the top right as shown in the pict
 (Figure 2). 
 
 .. figure:: Figures/picturelabmirror4.png
-    :width: 400px
+    :width: 500px
     :align: center
     :figclass: align-center
     
@@ -861,7 +866,7 @@ paint would be copied from the bottom left to the top right as shown in the pict
             if (index > 0) {
              code = code.substring(index);
              int num = countOccurences(code, target);
-             passed = num == 2;
+             passed = num >= 2;
             } 
             getResults("true", ""+passed, "Checking that mirrorDiagonal() contains 2 for loops", passed);
             assertTrue(passed);     
