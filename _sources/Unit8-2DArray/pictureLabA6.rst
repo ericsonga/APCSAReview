@@ -65,7 +65,7 @@ The following method implements this algorithm. Note that, because the method is
       }
  }
  
-You can test this with the testMirrorVertical method in PictureTester.
+You can see mirrorVertical() in action by running the active code in the exercise below.
 
 
 .. |CodingEx| image:: ../../_static/codingExercise.png

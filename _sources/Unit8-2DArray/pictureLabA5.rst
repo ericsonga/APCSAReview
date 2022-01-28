@@ -373,6 +373,13 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
          boolean passed = checkCodeContains("keepOnlyBlue() method",target);
          assertTrue(passed);
        }
+       @Test 
+       public void test1b()
+       {
+         String target = ".keepOnlyBlue()";
+         boolean passed = checkCodeContains("Call to keepOnlyBlue() in main",target);
+         assertTrue(passed);
+       }
 
        @Test 
        public void test2()
@@ -398,7 +405,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
             int index = code.indexOf("public void keepOnlyBlue()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 500);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
             } 
@@ -569,7 +576,7 @@ method.
             int index = code.indexOf("public void negate()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 500);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
             } 
@@ -739,7 +746,7 @@ divide by 3).  Be sure to call the new test method in the main method.
             int index = code.indexOf("public void grayscale()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 500);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
             } 
@@ -903,7 +910,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
             int index = code.indexOf("public void fixUnderwater()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 500);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
             } 
@@ -1095,7 +1102,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
             int index = code.indexOf("public void changeTshirt()");
             boolean passed = false;
             if (index > 0) {
-             code = code.substring(index, index + 500);
+             code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
             } 
