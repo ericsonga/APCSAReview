@@ -350,7 +350,7 @@ This is the write code problems associated with the mixed up code problems.
 			@Test
 			public void test2()
 			{
-				boolean passed = checkCodeContains("speed >= 65 && speed < 75");
+				boolean passed = checkCodeContains("speed > 65 && speed < 75");
 				assertTrue(passed);
 			}
 
@@ -361,14 +361,6 @@ This is the write code problems associated with the mixed up code problems.
 				boolean passed = checkCodeContains("speed >= 75 && speed < 85");
 				assertTrue(passed);
 			}
-
-			@Test
-			public void test4()
-			{
-				boolean passed = checkCodeContains("speed >= 85");
-				assertTrue(passed);
-			}
-
 		}
 
 .. activecode:: u3_muc_wc7

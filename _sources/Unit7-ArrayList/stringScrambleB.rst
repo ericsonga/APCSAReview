@@ -390,8 +390,8 @@ Try and Solve It
         String output = getMethodOutput("main");
         String expect = "[TNA, BARCADABARA, PAPLE]";
         boolean passed = output.contains(expect);
+        passed = getResults(expect, output, "expected output from main", passed);
         assertTrue(passed);
-        System.out.println("expected output from main");
       }
 
       @Test
