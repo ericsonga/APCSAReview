@@ -139,7 +139,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The main method in the following class should print 3 rows with 6 <code>*</code> in each row.  But, the blocks have been mixed up and include two extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The main method in the following class should print 3 rows with 6 *'s in each row.  But, the blocks have been mixed up and include two extra blocks that aren't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public class Test1
    {
