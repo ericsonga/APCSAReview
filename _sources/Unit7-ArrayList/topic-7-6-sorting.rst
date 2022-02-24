@@ -335,11 +335,11 @@ You can step through the code above by clicking on the following `Visualization 
 
 Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data. 
 
-In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this |Google doc| (do File/Make a Copy) also seen below.
+In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this |Google doc| (login to Google to make your own copy) also seen below.
 
 .. |Google doc| raw:: html
 
-   <a href= "https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/edit?usp=sharing" style="text-decoration:underline" target="_blank" >Google document</a>
+   <a href= "https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy" style="text-decoration:underline" target="_blank" >Google document</a>
 
 .. raw:: html
     

@@ -251,7 +251,7 @@ Do not use the enhanced for each loop if you want to add or remove elements when
    :feedback_a: Incrementing the index each time through the loop will miss when there are two zeros in a row.
    :feedback_b: This would be true if the code moved the zeros to the end, but that is not what it does.
    :feedback_c: This would be true if the code moved the zeros to the font, but that is not what it does.
-   :feedback_d: This would be correct if <code>k</code> was only incremented when an item was not removed from the list.
+   :feedback_d: This would be correct if k was only incremented when an item was not removed from the list.
 
    Assume that ``nums`` has been created as an ``ArrayList`` object and it initially contains the following ``Integer`` values [0, 0, 4, 2, 5, 0, 3, 0]. What will ``nums`` contain as a result of executing ``numQuest``?
    
@@ -283,7 +283,7 @@ You can step through the code above by clicking on the following `Example <http:
    :numbered: left
    :adaptive: 
 
-   The following has the correct code for the method <code>getScore</code> plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in <code>wordList</code> and if the length of the current word is 3 it should add one to the <code>score</code>, if the length of the word is 4 it should add 2 to the <code>score</code>, and if the length is greater than 4 it should add 3 to the <code>score</code>.  The method should return the <code>score</code>.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
+   The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
    -----
    public static int getScore(List<String> wordList)
    {
@@ -321,7 +321,7 @@ You can step through the code above by clicking on the following `Example <http:
    :numbered: left
    :adaptive:
 
-   The following has the correct code for a method called <code>insertInOrder</code> plus at least one extra unneeded code statement. This method should add the passed <code>name</code> in alphabetic order to a private list field called <code>nameList</code>.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
+   The following has the correct code for a method called insertInOrder plus at least one extra unneeded code statement. This method should add the passed name in alphabetic order to a private list field called nameList.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
    -----
    public void insertInOrder(String name)
    {
