@@ -229,37 +229,89 @@ Write the method scrambleWord below.
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
       @Test
       public void testMain() throws IOException
       {
-        String output = getMethodOutput("main");
-        String expect = "Testing Part (a):\nTAN becomes TNA\nABRACADABRA becomes BARCADABARA\nWHOA becomes WHOA\nAARDVARK becomes ARADVRAK\nEGGS becomes EGGS\nA becomes A\n becomes \n";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
+         String output = getMethodOutput("main");
+         String expect = "Testing Part (a):\nTAN becomes TNA\nABRACADABRA becomes BARCADABARA\nWHOA becomes WHOA\nAARDVARK becomes ARADVRAK\nEGGS becomes EGGS\nA becomes A\n becomes \n";
+         boolean passed = getResults(expect, output, "Expected output from main");
+         assertTrue(passed);
       }
 
-        @Test
-        public void testIfLoop()
-        {
-           String code = getCode();
-           boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
-           getResults("Expected loop and if",""+passed, "Checking for loop and if statement",passed);
-            assertTrue(passed);
-        }
+      @Test
+      public void testIfLoop()
+      {
+         String code = getCode();
+         boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
+         getResults("Expected loop and if",""+passed, "Checking for loop and if statement",passed);
+         assertTrue(passed);
+      }
 
-            @Test
-        public void testCodeContains() 
-        {
-            String target = ".substring(";
-            boolean passed = checkCodeContains("substring method", target);
-            assertTrue(passed);
-        }
-    }
+      @Test
+      public void testCodeContains() 
+      {
+         String target = ".substring(";
+         boolean passed = checkCodeContains("substring method", target);
+         assertTrue(passed);
+      }
+
+      @Test
+      public void testFunction1() {
+         Object[] args = {"TAN"};
+         String output = getMethodOutput("scrambleWord", args);
+         String expect = "TNA";
+
+         boolean passed = getResults(expect, output, "scrambleWord(\"TAN\")");
+         assertTrue(passed);
+      }
+
+      @Test
+      public void testFunction2() {
+         Object[] args = {"WHOA"};
+         String output = getMethodOutput("scrambleWord", args);
+         String expect = "WHOA";
+
+         boolean passed = getResults(expect, output, "scrambleWord(\"WHOA\")");
+         assertTrue(passed);
+      }
+
+      @Test
+      public void testFunction3() {
+         Object[] args = {"AARDVARK"};
+         String output = getMethodOutput("scrambleWord", args);
+         String expect = "ARADVRAK";
+
+         boolean passed = getResults(expect, output, "scrambleWord(\"AARDVARK\")");
+         assertTrue(passed);
+      }
+
+      @Test
+      public void testFunction4() {
+         Object[] args = {"AMAZING"};
+         String output = getMethodOutput("scrambleWord", args);
+         String expect = "MAZAING";
+
+         boolean passed = getResults(expect, output, "scrambleWord(\"AMAZING\")");
+         assertTrue(passed);
+      }
+
+      @Test
+      public void testFunction5() {
+         Object[] args = {"ABRACADABRA"};
+         String output = getMethodOutput("scrambleWord", args);
+         String expect = "BARCADABARA";
+
+         boolean passed = getResults(expect, output, "scrambleWord(\"ABRACADABRA\")");
+         assertTrue(passed);
+      }
+   }
+  
+
   
 
 Video - One way to code the solution
