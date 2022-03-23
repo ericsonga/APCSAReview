@@ -235,6 +235,8 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
     import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
+    //import java.util.regex.*;
+    /* Do NOT change Main or CodeTestHelper.java. */
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -249,21 +251,69 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         @Test
         public void testIfLoop()
         {
-           String code = getCode();
-           boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
-           getResults("Expected loop, if, %",""+passed, "Checking for loop and if statement",passed);
+            String code = getCode();
+            boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
+            getResults("Expected loop, if, %",""+passed, "Checking for loop and if statement",passed);
             assertTrue(passed);
         }
 
         @Test
         public void testModDiv()
         {
-           String code = getCode();
-           boolean passed = code.contains("%") && code.contains("/");
-           getResults("Expected % and /",""+passed, "Checking for use of % and /",passed);
+            String code = getCode();
+            boolean passed = code.contains("%") && code.contains("/");
+            getResults("Expected % and /",""+passed, "Checking for use of % and /",passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFunction1() {
+            Object[] args = {128};
+            String output = getMethodOutput("isSelfDivisor", args);
+            String expect = "true";
+            boolean passed = getResults(expect, output, "isSelfDivisor(128)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFunction2() {
+            Object[] args = {26};
+            String output = getMethodOutput("isSelfDivisor", args);
+            String expect = "false";
+            boolean passed = getResults(expect, output, "isSelfDivisor(26)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFunction3() {
+            Object[] args = {120};
+            String output = getMethodOutput("isSelfDivisor", args);
+            String expect = "false";
+            boolean passed = getResults(expect, output, "isSelfDivisor(120)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFunction4() {
+            Object[] args = {102};
+            String output = getMethodOutput("isSelfDivisor", args);
+            String expect = "false";
+
+            boolean passed = getResults(expect, output, "isSelfDivisor(102)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testFunction5() {
+            Object[] args = {124};
+            String output = getMethodOutput("isSelfDivisor", args);
+            String expect = "true";
+
+            boolean passed = getResults(expect, output, "isSelfDivisor(124)");
             assertTrue(passed);
         }
     }
+
 
 
 
