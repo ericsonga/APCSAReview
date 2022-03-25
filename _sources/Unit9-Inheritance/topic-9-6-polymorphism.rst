@@ -293,7 +293,7 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
   :language: java   
   :autograde: unittest
   
-  Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceOf to test items to see if they are a DiscountedItem.
+  Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceof to test items to see if they are a DiscountedItem.
   ~~~~
   import java.util.*;
 
