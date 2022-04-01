@@ -57,7 +57,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
            int[][] matrix = { {4, 5, 6, 7}, {0, 1, 2, 3}, {3, 2, 1, 0}, {8, 9, 1, 2}}; 
 	       
            int total = 0;
-           for (int row = 0; row < len; row++)
+           for (int row = 0; row < matrix.length; row++)
            {
               total = total + matrix[row][1];
            }
@@ -328,7 +328,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_d: I works since the declared type is Animal and Animal has an eat method.  III works because the cast tells the compiler to treat b is a Bear and Bear has a growl method.
        :feedback_e: Does Animal have a growl method? Remember that the compiler checks for the method using the declared type.
 
-       Assume that list has been initialized with the following Integer objects: [9, 3, 17, 2, 16, 4, 1].  Which of the following shows the values in list after a call of mystery(4)?
+       Assume the following classes.
        
        .. code-block:: java
        
