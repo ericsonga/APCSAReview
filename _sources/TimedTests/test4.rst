@@ -498,17 +498,17 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          
     .. mchoice:: pe4_20
-       :answer_a: The method is recursive and the first call it will compare 3 to 5 and then do mystery(3,4,5).
-       :answer_b: There are two calls: mystery(0, 4, 5) and mystery(3, 4, 5).
-       :answer_c: This would be true if it was mystery(0, 4, 7);
-       :answer_d: This would be true if we were looking for a number that isn't in the array.
-       :answer_e: At most this will take log base 2 of the size of the array plus one to determine that the desired value isn't in the array.
+       :answer_a: 1
+       :answer_b: 2
+       :answer_c: 3
+       :answer_d: 4
+       :answer_e: 5
+       :feedback_a: No, the method is recursive and in the first call it will compare 3 to 5 and then do mystery(3,4,5).
+       :feedback_b: There are two calls: mystery(0, 4, 5) and mystery(3, 4, 5).
+       :feedback_c: This would be true if it was mystery(0, 4, 7);
+       :feedback_d: This would be true if we were looking for a number that isn't in the array.
+       :feedback_e: At most this will take log base 2 of the size of the array plus one to determine that the desired value isn't in the array.
        :correct: b
-       :feedback_a: 1
-       :feedback_b: 2
-       :feedback_c: 3
-       :feedback_d: 4
-       :feedback_e: 5
        
        Given the following code, how many calls to mystery are made (including the first call) when mystery(0, 4, 5) is executed when arr = {1, 2, 3, 5, 7}?
        

@@ -87,7 +87,7 @@ Let's write a recursive version of Binary Search. Note that you can write soluti
     
 .. shortanswer:: recursiveCallQ
 
-    Given a recursive binary search method with the method signature "boolean binarySearch(int[] array, int target, int startIndex, int endIndex)", what recursive method call would search the array from index 0 to the middle index? 
+    Given a recursive binary search method with the method signature "boolean binarySearch(int[] array, int startIndex, int endIndex, int target)", what recursive method call would search the array from index 0 to the middle index? 
 
 Here is the Java code for a recursive binary search:
 
@@ -102,7 +102,7 @@ Here is the Java code for a recursive binary search:
   ~~~~
   public class RecursiveBinarySearch
   {
-    public static int recursiveBinarySearch(int[] array, int target, int start, int end)
+    public static int recursiveBinarySearch(int[] array, int start, int end, int target)
     {
         int middle = (start + end)/2;
         // base case: check middle element
@@ -115,11 +115,11 @@ Here is the Java code for a recursive binary search:
         } 
         // recursive call: search start to middle
         if (target < array[middle]){
-            return recursiveBinarySearch(array, target, start, middle - 1);
+            return recursiveBinarySearch(array, start, middle - 1, target);
         }
         // recursive call: search middle to end
         if (target > array[middle]){
-            return recursiveBinarySearch(array, target, middle + 1, end);
+            return recursiveBinarySearch(array, middle + 1, end, target);
         }
         return -1;
     }
@@ -128,7 +128,7 @@ Here is the Java code for a recursive binary search:
    {
       int[] array = { 3, 7, 12, 19, 22, 25, 29, 30 };
       int target = 25;
-      int foundIndex = recursiveBinarySearch(array,target,0,array.length-1);
+      int foundIndex = recursiveBinarySearch(array, 0, array.length-1, target);
       System.out.println(target + " was found at index " + foundIndex);
    }
   }
@@ -315,7 +315,7 @@ Work in pairs to do the following tracing problems.
 
 .. shortanswer:: challenge-10-2-binary-search
 
-    Trace through recursiveBinarySearch(sortedArray, 22, 0, 8) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?
+    Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?
 
 Summary
 ============
