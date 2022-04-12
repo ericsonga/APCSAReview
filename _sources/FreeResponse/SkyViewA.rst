@@ -224,7 +224,7 @@ The code below declares the class, the view, and a constructor for you to finish
 
              String output = sView.toString().trim();
 
-             getResults(expect, output, "Checking for expected output");
+             passed = getResults(expect, output, "Checking for expected output");
              assertTrue(passed);
          }
 
@@ -238,7 +238,7 @@ The code below declares the class, the view, and a constructor for you to finish
 
              String output = sView.toString().trim();
 
-             getResults(expect, output, "Checking for expected output");
+             passed = getResults(expect, output, "Checking for expected output");
              assertTrue(passed);
          }
      }
