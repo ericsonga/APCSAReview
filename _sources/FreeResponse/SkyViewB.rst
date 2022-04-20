@@ -129,7 +129,7 @@ Try and Solve It
 
              String output = "getAverage(1,2,0,1)  --> " + sView.getAverage(1, 2, 0, 1);
 
-             [assed = getResults(expect, output, "Checking for expected output from:\n" + view);
+             passed = getResults(expect, output, "Checking for expected output from:\n" + view);
              assertTrue(passed);
          }
 
