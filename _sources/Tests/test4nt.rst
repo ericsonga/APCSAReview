@@ -537,7 +537,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: 2000
    :correct: b
    :feedback_a: 2 ^ 9 is 512, which is not enough elements to cover every element in the database. Remember that binary search requires log2 (number of elements) iterations to perform.
-   :feedback_b: 2 ^ 11 is 2024. 11 iterations is more than enough to find the value or guarantee that it is not in the database. Binary search takes log2 (number of elements) iterations to perform.
+   :feedback_b: 2 ^ 11 is 2048. 11 iterations is more than enough to find the value or guarantee that it is not in the database. Binary search takes log2 (number of elements) iterations to perform.
    :feedback_c: The value will be found in 20 iterations, but a smaller number of iterations could be used.
    :feedback_d: The value will be found in 20 iterations, but a smaller number of iterations could be used. Remember that binary search requires log2 (number of elements) iterations to perform correctly.
    :feedback_e: This would be true if we used a sequential search algorithm. However, binary search only needs log2 (number of elements) iterations.
