@@ -402,6 +402,92 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
         }
      }
   
+|Groupwork| Design a Class for your Community 
+----------------------------------------------------------
+
+In the previous lessons, you came up with a class of your own choice relevant to your community. 
+
+1. Copy your class with its 3 instance variables and constructors from lesson 5.2.  
+
+2. Create accessor (get) methods for each of the instance variables. 
+
+3. Create a toString() method that returns all the information in the instance variables. 
+
+4. Use these methods in the main method. Make sure you use good commenting.
+
+
+.. activecode:: community-challenge-5-4
+  :language: java
+  :autograde: unittest
+
+  Copy your class with its 3 instance variables and constructors from lesson 5.2.  Create accessor (get) methods for each of the instance variables. Create a toString() method that returns all the information in the instance variables. Use these methods in the main method. Make sure you use good commenting. 
+  ~~~~
+  // Write your class name next public class below
+  public class            //Add Your Class Name!
+  {
+      // 1. Copy your class with its 3 instance variables and constructors from lesson 5.2.  
+
+      // 2. Create accessor (get) methods for each of the instance variables. 
+
+      // 3. Create a toString() method that returns all the information in the instance variables. 
+
+      // 4. Use these methods in the main method. Make sure you use good commenting.
+      public static void main(String[] args)
+      {  
+         // Construct an object of your class  
+         
+         
+         // call the objects' accessor methods and toString methods and print them out. 
+      
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+         @Test
+        public void test1()
+        {
+            String code = getCode();
+            String target = "public * get*()";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num >= 3;
+
+            getResults("5", ""+num, "Checking accessor (get) methods for each variable", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String target = "public String toString()";
+            boolean passed = checkCodeContains("toString() method", target);
+            assertTrue(passed);
+        }
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");//.split("\n");
+            String expect = "3+ line(s) of text";
+            String actual = " line(s) of text";
+            int len = output.split("\n").length;
+
+            if (output.length() > 0) {
+                actual = len + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = len >= 3;
+
+            getResults(expect, actual, "Checking output", passed);
+            assertTrue(passed);
+        }
+    }
 
 
 Summary

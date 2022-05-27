@@ -499,8 +499,70 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
         }
     }
 
-    
+|Groupwork| Design a Class for your Community 
+----------------------------------------------------------
 
+In the previous lessons, you came up with a class of your own choice relevant to your community. Copy your class from the previous lesson below. Write an additional method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, e.g. print(format) could print the data according to an argument that is "plain" or "table" where the data is printed in a table drawn with dashes and lines (|). Come up with a creative method for your class working in pairs.
+
+
+.. activecode:: community-challenge-5-6
+  :language: java
+  :autograde: unittest
+
+  Copy your class from the last lesson. Add a method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, print(format) where format is "plain" or "table".
+  ~~~~
+  // Write your class name next public class below
+  public class            //Add Your Class Name!
+  {
+      // 1. Copy your class from the last lesson. 
+
+      // 2.  Add a method for your class that takes a parameter. 
+      // For example, there could be a print method with arguments that indicate 
+      // how you want to print out the information, print(format) where format is "plain" or "table".
+
+      // 3. Test the method in the main method. 
+      public static void main(String[] args)
+      {  
+         // Construct an object of your class  
+         
+         
+         // call the object's method
+      
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+       @Test
+        public void test()
+        {
+            String target = "public void print*(String *)";
+            boolean passed = checkCodeContains("print method with String argument", target);
+            assertTrue(passed);
+        }
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");//.split("\n");
+            String expect = "3+ line(s) of text";
+            String actual = " line(s) of text";
+            int len = output.split("\n").length;
+
+            if (output.length() > 0) {
+                actual = len + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = len >= 3;
+
+            getResults(expect, actual, "Checking output", passed);
+            assertTrue(passed);
+        }
+    }
 
 Summary
 -------

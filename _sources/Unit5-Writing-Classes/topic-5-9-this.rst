@@ -288,6 +288,15 @@ The **this** variable can be used anywhere you would use an object variable.  Yo
     :width: 100px
     :align: left
     
+.. |ATM video| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=YpD1tJK9vIA&ab_channel=Doyouknow%3F" target="_blank">video</a> 
+
+
+A bank account can be used to store your money. The bank keeps track of the account holder's name, the acount balance which is the amount of money in the account, and assigns an account number to each account. At the bank or an ATM (automatic teller machine) or on a phone app, the account holder can deposit (add) or withdraw (subtract) an amount from their account. Here's a |ATM video| that shows the steps to use an ATM to withdraw money from a bank acount. Phone apps like Venmo and Paypal connect to your bank account or credit card to send and get money from businesses or friends.
+
+For this challenge, you can work in pairs to:
+
 - Create a class called BankAccount below that keeps track of the account holder's name, the account number, and the balance in the account. Make sure you use the appropriate data types for these. 
 
 - Write 2 constructors for the class that initialize the instance variables to default values and to given parameters. For the parameters, use the same variable names as your instance variables. Use the **this** keyword to distinguish between the instance variables and the parameter variables.

@@ -341,9 +341,9 @@ In this project, you will create a class that can tell riddles like the followin
 
 1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |Creately.com|, although it is not required). 
 
-2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Hint:  Don't name your instance variables initQuestion and initAnswer -- we'll explain why shortly. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
+2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Don't name your instance variables initQuestion and initAnswer since they are used as constructor parameter variables. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
-3. Complete the main method to construct at least 2 Riddle objects and call their printQuestion() and printAnswer() methods to ask and answer the riddle. You can look up some good riddles online.
+3. Complete the main method to construct at least 2 Riddle objects that call the Riddle constructor with the arguments for the riddle question and answer and call their printQuestion() and printAnswer() methods to ask and answer the riddle. You can look up some good riddles online.
 
 
 
@@ -382,9 +382,10 @@ In this project, you will create a class that can tell riddles like the followin
       // main method for testing
       public static void main(String[] args)
       {
-          // call the constructor to create 2 new Riddle objects
+          // call the Riddle constructor to create 2 new Riddle objects 
+          // with the arguments for the riddle question and answer.
         
-         // call their printQuestion() and printAnswer methods
+          // call the riddle objects' printQuestion() and printAnswer methods
        
       }
   }
@@ -488,6 +489,55 @@ In this project, you will create a class that can tell riddles like the followin
             boolean passed = len >= 2;
 
             getResults(expect, actual, "Checking main method", passed);
+            assertTrue(passed);
+        }
+    }
+
+|Groupwork| Design a Class for your Community 
+----------------------------------------------------------
+
+.. |worksheet| raw:: html
+
+   <a href="https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing" target="_blank">worksheet</a>
+
+
+In this unit, you will design a class of your own choice that is relevant to your community. You will improve the class in each lesson of this unit. You can work in pairs on this project. 
+
+Ask someone in your family or community what would be important for them to track. For example, you could create a class to keep track of community events, health tracking, athlete games or statistics, community leaders, performers or performances, or another subject of your choice.  Fill in question 1 in this |worksheet|.
+
+In this lesson, come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be. You will add constructors and other methods to this class in the next lessons. You can use this |worksheet| to design your class, and then fill in the class below. Your class will not print out anything yet, but it should run without errors.
+
+.. activecode:: community-challenge-5-1
+  :language: java
+  :autograde: unittest
+
+  Come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class.  Your class will not print out anything yet, but it should run without errors.
+  ~~~~
+  // Write your class name next public class below
+  public class            //Add Your Class Name!
+  {
+      // write 3 instance variables for class: private type variableName;
+          
+      
+      
+     
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        @Test
+        public void testPrivateVariables()
+        {
+            String expect = "3 Private";
+            String output = testPrivateInstanceVariables();
+            boolean passed = false;
+            if (Integer.parseInt(expect.substring(0,1)) <= Integer.parseInt(output.substring(0,1)))
+               passed = true;
+            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
             assertTrue(passed);
         }
     }

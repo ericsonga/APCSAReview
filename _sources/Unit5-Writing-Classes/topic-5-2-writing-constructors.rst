@@ -448,7 +448,120 @@ We encourage you to work in pairs for this challenge to create a Student class w
         }
     }
     
-  
+|Groupwork| Design a Class for your Community 
+----------------------------------------------------------
+
+In the last lesson, you came up with a class of your own choice relevant to you or your community. In this lesson, you will add constructors to this class. 
+
+1. Copy your class with its 3 instance variables from the last lesson. 
+
+2. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters. 
+
+3. Write a print() method that uses System.out.println to print out all the instance variables. 
+
+4. Write a main method that constructs at least 2 objects of your class using the 3 different constructors and then calls their print() methods.
+
+.. activecode:: community-challenge-5-2
+  :language: java
+  :autograde: unittest
+
+  Copy your class with its 3 instance variables from the last lesson. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the 3 different constructors and then calls their print() methods. 
+  ~~~~
+  // Write your class name next public class below
+  public class            //Add Your Class Name!
+  {
+      // 1. copy in your instance variables for class from the last lesson
+          
+      // 2. Add a constructor with no parameters that initializes the instance variables to default values
+      // and a constructor with 3 parameters to set all of the instance variables to the given parameters. 
+
+
+      // 3. Write a print() method that uses System.out.println to print out all the instance variables. 
+
+      // 4. Write a main method that constructs at least 2 objects of your class 
+      // using the 3 different constructors and then calls their print() methods.
+      public static void main(String[] args)
+      {  
+         // Construct 2 objects of your class to test the 2 constructors 
+         
+         
+         // call the objects print() methods
+      
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        @Test
+        public void testPrivateVariables()
+        {
+            String expect = "3 Private";
+            String output = testPrivateInstanceVariables();
+            boolean passed = false;
+            if (Integer.parseInt(expect.substring(0,1)) <= Integer.parseInt(output.substring(0,1)))
+               passed = true;
+            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
+            assertTrue(passed);
+        }
+        @Test
+        public void testDefaultConstructor()
+        {
+            String output = checkDefaultConstructor();
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking default constructor");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructor3()
+        {
+            String output = checkConstructor(3);
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking constructor with 4 parameters");
+            assertTrue(passed);
+        }
+                @Test
+        public void testPrint()
+        {
+            String output = getMethodOutput("print");
+            String expect = "More than 15 characters";
+            String actual = " than 15 characters";
+
+            if (output.length() < 15) {
+                actual = "Less" + actual;
+            } else {
+                actual = "More" + actual;
+            }
+            boolean passed = getResults(expect, actual, "Checking print method");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");//.split("\n");
+            String expect = "3+ line(s) of text";
+            String actual = " line(s) of text";
+            int len = output.split("\n").length;
+
+            if (output.length() > 0) {
+                actual = len + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = len >= 3;
+
+            getResults(expect, actual, "Checking output", passed);
+            assertTrue(passed);
+        }
+    }
+
 Summary
 --------
 

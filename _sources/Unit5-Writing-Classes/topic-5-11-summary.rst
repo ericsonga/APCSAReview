@@ -70,6 +70,7 @@ Vocabulary Practice
 
 
 For more practice, see this |Quizlet|.
+
 Common Mistakes
 ----------------
 
