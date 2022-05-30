@@ -422,8 +422,7 @@ In the previous lessons, you came up with a class of your own choice relevant to
 
   Copy your class with its 3 instance variables and constructors from lesson 5.2.  Create accessor (get) methods for each of the instance variables. Create a toString() method that returns all the information in the instance variables. Use these methods in the main method. Make sure you use good commenting. 
   ~~~~
-  // Write your class name next public class below
-  public class            //Add Your Class Name!
+  public class          // Add your class name here!
   {
       // 1. Copy your class with its 3 instance variables and constructors from lesson 5.2.  
 
@@ -458,7 +457,7 @@ In the previous lessons, you came up with a class of your own choice relevant to
 
             boolean passed = num >= 3;
 
-            getResults("5", ""+num, "Checking accessor (get) methods for each variable", passed);
+            getResults("3", ""+num, "Checking accessor (get) methods for each variable", passed);
             assertTrue(passed);
         }
 

@@ -189,7 +189,7 @@ You will receive at least 1 point if you write the class header and a constructo
 
    Write the first draft of the class StepTracker below with the class name, the instance variables, and the constructor with a parameter for the minimum number of steps threshold for active days. Make sure it compiles.
    ~~~~
-   // Write class name here
+   // Write public class classname here
 
    {
       // write instance variable declarations here

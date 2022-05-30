@@ -406,8 +406,7 @@ In the previous lessons, you came up with a class of your own choice relevant to
 
   Copy your class with its instance variables, constructors, and accessors from the last lesson. Add mutator set methods for each of the instance variables. Test each of the set methods in the main method. 
   ~~~~
-  // Write your class name next public class below
-  public class            //Add Your Class Name!
+  public class          // Add your class name here!
   {
       // 1. Copy your class with its instance variables, constructors, and accessors from the last lesson. 
 
@@ -441,7 +440,7 @@ In the previous lessons, you came up with a class of your own choice relevant to
 
             boolean passed = num >= 3;
 
-            getResults("5", ""+num, "Checking accessor (get) methods for each variable", passed);
+            getResults("3", ""+num, "Checking accessor (get) methods for each variable", passed);
             assertTrue(passed);
         }
 
@@ -453,9 +452,9 @@ In the previous lessons, you came up with a class of your own choice relevant to
 
             int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 5;
+            boolean passed = num >= 3;
 
-            getResults("5", ""+num, "Checking mutator (set) methods for each variable", passed);
+            getResults("3", ""+num, "Checking mutator (set) methods for each variable", passed);
             assertTrue(passed);
         }
         @Test

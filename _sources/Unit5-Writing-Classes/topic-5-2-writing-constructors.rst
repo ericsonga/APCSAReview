@@ -467,8 +467,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
 
   Copy your class with its 3 instance variables from the last lesson. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the 3 different constructors and then calls their print() methods. 
   ~~~~
-  // Write your class name next public class below
-  public class            //Add Your Class Name!
+  public class          // Add your class name here!
   {
       // 1. copy in your instance variables for class from the last lesson
           
@@ -479,7 +478,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
       // 3. Write a print() method that uses System.out.println to print out all the instance variables. 
 
       // 4. Write a main method that constructs at least 2 objects of your class 
-      // using the 3 different constructors and then calls their print() methods.
+      // using the 2 different constructors and then calls their print() methods.
       public static void main(String[] args)
       {  
          // Construct 2 objects of your class to test the 2 constructors 
@@ -523,7 +522,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
             String output = checkConstructor(3);
             String expect = "pass";
 
-            boolean passed = getResults(expect, output, "Checking constructor with 4 parameters");
+            boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
             assertTrue(passed);
         }
                 @Test

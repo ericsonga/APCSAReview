@@ -513,14 +513,16 @@ In this lesson, come up with your class name for your community data-tracking cl
 
   Come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class.  Your class will not print out anything yet, but it should run without errors.
   ~~~~
-  // Write your class name next public class below
-  public class            //Add Your Class Name!
+  public class          // Add your class name here!
   {
       // write 3 instance variables for class: private type variableName;
           
       
-      
-     
+    
+      public static void main(String[] args)
+      {
+
+      }
   }
   ====
   import static org.junit.Assert.*;

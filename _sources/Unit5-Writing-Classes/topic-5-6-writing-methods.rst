@@ -511,8 +511,7 @@ In the previous lessons, you came up with a class of your own choice relevant to
 
   Copy your class from the last lesson. Add a method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, print(format) where format is "plain" or "table".
   ~~~~
-  // Write your class name next public class below
-  public class            //Add Your Class Name!
+  public class          // Add your class name here!
   {
       // 1. Copy your class from the last lesson. 
 
