@@ -345,3 +345,51 @@ Summary
 
 - A reference value can be compared with null, using == or !=,  to determine if the reference actually references an object.
 
+
+AP Practice
+------------
+
+.. mchoice:: AP3-7-1
+    :practice: T
+
+    Consider the following code segment. 
+
+    .. code-block:: java
+
+        String message = new String("AP Practice");
+        String note = new String("AP Practice");
+        String memo = new String("memo");
+        int i = 5;
+
+        if (message.equals(note) && !message.equals("memo"))
+        {
+            message = note;
+        
+            if (message == note && message.length() > i)
+            {
+               i = 3;
+               memo = message.substring(i);
+            }     
+        }
+
+    Which of the following expressions evaluate to ``true`` after the code segment above executes?
+   
+    - message == note && message == memo
+
+      - Message does not refer to the same object as memo.
+
+    - message.equals(note) && message.equals(memo)
+
+      - Message is not the same string as in memo.
+
+    - message == note && memo.equals("Practice")
+
+      + Yes, both if statements in the code above execute changing message to equal note and memo to equal "Practice".
+
+    - message != note || message == memo
+
+      - Both of these are false. 
+
+    - message.equals(memo) || memo.equals(note)
+
+      - Both of these are false.

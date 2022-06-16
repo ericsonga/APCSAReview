@@ -504,3 +504,76 @@ Summary
     {
         statement3;
     }
+
+AP Practice
+------------
+
+.. mchoice:: AP3-4-1
+    :practice: T
+
+    Assume an int variable x has been properly declared and initialized.
+    Which of the following code segments will print out "High" if *x* is 66 and above, 
+    "Medium" is *x* is between 33-65, and "Low" if *x* is below 33.
+
+    .. code-block:: java
+
+        // I.
+        if (x > 66)
+        {
+           System.out.println("High");
+        }
+        else if (x > 33)
+        {
+           System.out.println("Medium");
+        }
+        else {
+           System.out.println("Low");
+        }
+
+        // II.
+        if (x < 33)
+        {
+           System.out.println("Low");
+        }
+        else if (x < 66)
+        {
+           System.out.println("Medium");
+        }
+        else {
+           System.out.println("High");
+        }
+
+        // III.
+        if (x >= 66)
+        {
+           System.out.println("High");
+        }
+        if (x >= 33)
+        {
+           System.out.println("Medium");
+        }
+        if (x < 33) 
+        {
+           System.out.println("Low");
+        }
+
+    - I only
+
+      - If x = 66, it should print out "High".
+
+    - II only
+
+      + Correct!
+
+    - III only
+
+      - If x is 66, the code in III. will print out more than one thing.
+
+    - I and II only
+
+      - If x = 66, it should print out "High".
+
+    - II and III only
+
+      - If x is 66, the code in III. will print out more than one thing.
+

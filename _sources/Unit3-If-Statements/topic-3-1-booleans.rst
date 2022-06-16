@@ -394,6 +394,76 @@ Summary
 - Arithmetic expression values can be compared using relational operators (i.e., <, >, <=, >=) in Java.
 - An expression involving relational operators evaluates to a Boolean value of true or false.
 
+
+AP Practice
+------------
+
+.. mchoice:: AP3-1-1
+    :practice: T
+
+    Consider the following statement.
+
+    .. code-block:: java
+
+        boolean x = (5 % 3 == 0) == (3 > 5);
+
+    What is the value of x after the statement has been executed?
+
+    - false
+
+      - Although both sides of the middle == are false, false == false is true! Tricky!
+
+    - true
+
+      + (5 % 3 == 0) is false and (3 > 5) is false, and false == false is true! Tricky!
+
+    - (5 % 3 == 0)
+
+      - The boolean x should hold true or false. 
+
+    - (3 > 5)
+
+      - The boolean x should hold true or false. 
+
+    - 2
+
+      - The boolean x should hold true or false.
+
+
+
+.. mchoice:: AP3-1-2
+    :practice: T
+
+    Consider the following Boolean expression in which the int variables x and y have been properly declared and initialized. 
+    
+    .. code-block:: java
+
+        (x >= 10) == (y < 12)
+
+    Which of the following values for x and y will result in the expression evaluating to true  ?
+
+    - x = 10 and y = 12
+
+      - The left side is true, but y must be less than 12 to make the right side true.
+
+    - x = 9 and y = 9
+
+      - The left side is false (x must be greater than or equal to 10), but the right side is true.
+
+    - x = 10 and y = 11
+
+      + Correct! Both sides are true! 
+
+    - x = 10 and y = 13
+
+      - The left side is true, but y must be less than 12 to make the right side true.
+
+    - x = 9 and y = 12
+
+      + Correct! Both sides are false! This is tricky!
+
+
+
 Relational Operators Practice Game
 -----------------------------------
 

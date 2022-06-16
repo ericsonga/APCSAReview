@@ -573,6 +573,54 @@ Summary
 - When the result of a logical expression using ``&&`` or ``||`` can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as **short-circuit evaluation**.
 
 
+AP Practice
+------------
+
+.. mchoice:: AP3-5-1
+    :practice: T
+
+    Consider the following code segment. What is printed as a result of executing the code segment?
+
+    .. code-block:: java
+
+        int x = 10;
+        int y = 5;
+
+        if (x % 2 == 0 && y % 2 == 0 || x > y)
+        {
+            System.out.print("First ");
+        
+            if (y * 2 == x || y > 5 && x <= 10)
+            {
+               System.out.print("Second ");
+            }
+            else 
+            {
+               System.out.print("Third ");
+            }
+        }
+   
+    - Nothing is printed out.
+
+      - Some of these conditions are true.
+
+    - First
+
+      - This is partially correct.
+
+    - Third
+
+      - Third cannot be printed out unless First is printed out first. 
+
+    - FirstSecond
+
+      + Good tracing! 
+
+    - FirstThird
+
+      - Take another look at the second condition.
+
+
 Boolean Game
 ---------------
 

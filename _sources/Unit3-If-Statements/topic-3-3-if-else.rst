@@ -256,7 +256,9 @@ If/else statements can also be used with relational operators and numbers like b
 Nested Ifs and Dangling Else
 ----------------------------
 
-If statements can be nested inside other if statements. Sometimes with nested ifs we find a **dangling else** that could potentially belong to either if statement. The rule is that the else clause will always be a part of the closest if statement in the same block of code, regardless of indentation. 
+If statements can be nested inside other if statements. 
+Sometimes with nested ifs we find a **dangling else** that could potentially belong to either if statement. 
+The rule is that the else clause will always be a part of the closest unmatched if statement in the same block of code, regardless of indentation. 
 
 .. code-block:: java
 
@@ -502,4 +504,54 @@ Summary
 
 - Use 2 test-cases to find errors or validate results to try both branches of an if/else statement.
 
-- The else statement attaches to the closest if statement. 
+- The else statement attaches to the closest unmatched if statement in the same block of statements. 
+
+AP Practice
+------------
+
+.. mchoice:: AP3-3-1
+    :practice: T
+
+    Consider the following code segment where a range of "High", "Middle", or "Low" is being determined 
+    where x is an int and a "High" is 80 and above, a "Middle" is between 50 - 79, and "Low" is below 50.
+
+    .. code-block:: java
+
+        if (x >= 80)
+        {
+           System.out.println("High");
+        }
+
+        if (x >= 50)
+        {
+          System.out.println("Middle");
+        }
+        else 
+        {
+           System.out.println("Low");
+        }
+
+    Which of the following initializations for *x* will demonstrate that the code segment will not work as intended?
+
+    - 80
+
+      + This would print out both "High" and "Middle", showing that there is an error in the code. As you will see in the next lesson, one way to fix the code is to add another else in front of the second if. 
+
+    - 60
+
+      - This would correctly print out "Middle".
+
+    - 50
+
+      - This would correctly print out "Middle". 
+
+    - 30
+
+      - This would print out "Low" which is correct according to this problem description.
+
+    - -10
+
+      - This would print out "Low" which is correct according to this problem description.
+
+
+

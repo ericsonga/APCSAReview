@@ -478,3 +478,103 @@ Summary
 - Conditional (if) statements affect the flow of control by executing different statements based on the value of a Boolean expression.
 
 
+AP Practice
+------------
+
+.. mchoice:: AP3-2-1
+    :practice: T
+
+    Consider the following code segment.
+
+    .. code-block:: java
+
+        int speed = 35;
+        boolean rain = false;
+
+        if (rain)
+        {
+           speed -= 10;
+        }
+
+        if (rain == false)
+        {
+          speed += 5;
+        }
+
+        if (speed > 35)
+        {
+           speed = speed - 2;
+        }
+
+        System.out.println(speed);
+
+
+    What is printed as a result of executing the code segment?
+
+    - 28
+
+      - Some of the if statement conditions are false so they will not run.  
+
+    - 35
+
+      - Take a look at the changes to speed in the if statements.
+
+    - 38
+
+      + Correct! The first if statement condition is false, and the second and third if conditions are true. 
+
+    - 25
+
+      - The first if statement would only run if rain is true.
+
+    - 33
+
+      - The second if statement would run since rain is false. 
+
+
+
+.. mchoice:: AP3-2-2
+    :practice: T
+
+    Consider the following code segment.
+
+    .. code-block:: java
+
+        int x = 5;
+
+        if (x < 5)
+        {
+           x = 3 * x;
+        }
+
+        if (x % 2 == 1)
+        {
+           x = x / 2;
+        }
+
+        System.out.print(2*x + 1);
+
+    What is printed as a result of executing the code segment?
+
+    - 3
+
+      - Take a look at the second if statement again!
+
+    - 11
+
+      - Take a look at the second if statement again!
+
+    - 31
+
+      - The first if statement condition is false. 
+
+    - 15
+
+      - The first if statement condition is false. 
+
+    - 5
+
+      + Correct! The first if statement is not true. The second one is true since 5 is odd, and x becomes 2. And 2*2 + 1 = 5 is printed out.
+
+
+

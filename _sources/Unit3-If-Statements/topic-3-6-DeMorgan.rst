@@ -231,7 +231,7 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 5. Test your answers using the active code window below.
 
-6. Complete the following exercises 3-6-3 through 3-6-7 in your POGIL groups.
+6. Complete the following multiple choice exercises in your POGIL groups. Show the application of DeMorgan's laws or the truth tables in each question on paper.
 
 .. activecode:: challenge3-6-booleanExpr
    :language: java
@@ -287,9 +287,9 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :answer_d: (x <= 2) && (y >= 4)
    :correct: c
    :feedback_a: The negation of x > 2 is x <= 2
-   :feedback_b: Don't forget that the and is changed to an or
+   :feedback_b: Don't forget that the "and" is changed to an "or"
    :feedback_c: The x > 2 becomes x <= 2, the y < 4 becomes y >= 4 and the and changes to or
-   :feedback_d: Don't forget that the and is changed to an or
+   :feedback_d: Don't forget that the "and" is changed to an "or"
 
    Which of the following is the same as the code below? 
    
@@ -353,23 +353,7 @@ Explore the following problems with your group. You may use |this worksheet| to 
      !(x<= 5 && y > 7)
 
 
-**AP CSA Sample Question**
 
-.. mchoice:: apcsa-sample5
-   :practice: T
-   :answer_a: The value is always true.
-   :answer_b: The value is always false.
-   :answer_c: The value is true when a has the value false, and is false otherwise.
-   :answer_d: The value is true when b has the value false, and is false otherwise.
-   :answer_e: The value is true when either a or b has the value true, and is false otherwise.
-   :correct: b
-   :feedback_a: Try simplifying !(b ||a) or consider what happens if a and b are true.
-   :feedback_b: Yes, a && !(b || a) = a && !b && !a. Since (a && !a) can never be true, the result will always be false.
-   :feedback_c: Try the expression with a = false. Is the result true? 
-   :feedback_d: Try the expression with b = false with a = true and then try it with a = false. Is the result ever true?
-   :feedback_e: Try the expression with a = true. Is the result true?
-
-    Which of the following best describes the value of the Boolean expression: a && !(b || a)
 
 
    
@@ -394,3 +378,24 @@ Summary
 - Truth tables can be used to prove that 2 Boolean expressions are identical.
 
 - Equivalent Boolean expressions will evaluate to the same value in all cases.
+
+
+AP Practice
+------------
+
+.. mchoice:: apcsa-sample5
+   :practice: T
+   :answer_a: The value is always true.
+   :answer_b: The value is always false.
+   :answer_c: The value is true when a has the value false, and is false otherwise.
+   :answer_d: The value is true when b has the value false, and is false otherwise.
+   :answer_e: The value is true when either a or b has the value true, and is false otherwise.
+   :correct: b
+   :feedback_a: Try simplifying !(b ||a) or consider what happens if a and b are true.
+   :feedback_b: Yes, a && !(b || a) = a && !b && !a. Since (a && !a) can never be true, the result will always be false.
+   :feedback_c: Try the expression with a = false. Is the result true? 
+   :feedback_d: Try the expression with b = false with a = true and then try it with a = false. Is the result ever true?
+   :feedback_e: Try the expression with a = true. Is the result true?
+
+    Which of the following best describes the value of the Boolean expression: a && !(b || a)
+
