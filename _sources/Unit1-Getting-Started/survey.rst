@@ -50,7 +50,7 @@ Please log into Runestone and fill out the following survey.  You do not have to
    :option_1: African-American/Black
    :option_2: American Indian/Alaska Native
    :option_3: Asian
-   :option_4: Hispanic/Latino
+   :option_4: Hispanic/Latina/o
    :option_5: Native Hawaiian/Pacific Islander
    :option_6: White
    :option_7: Multiple races/ethnicities

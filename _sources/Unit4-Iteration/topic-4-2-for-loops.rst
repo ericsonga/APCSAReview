@@ -646,3 +646,111 @@ Summary
 - A for loop can be rewritten into an equivalent while loop and vice versa.
 
 
+AP Practice
+------------
+
+.. mchoice:: AP4-2-1
+    :practice: T
+
+    Consider the following code segment.
+
+    .. code-block:: java
+
+        int count = 0, sum = 0;
+        while (count <= 6)
+        {
+            count++;
+            if (count % 2 == 0)
+            {
+                sum += count;
+            }
+        }
+        System.out.println(sum);
+
+    Which of the following code segments will produce the same output as the code segment above?
+
+    .. code-block:: java
+     
+        I.  int sum = 0;
+            for(int count = 0; count <= 6; count++)
+            {
+                count++;
+                if (count % 2 == 0)
+                {
+                     sum += count;
+                }
+            } 
+            System.out.println(sum);
+
+        II. int sum = 0;
+            for(int i = 0; i <= 6; i += 2)
+            {
+               sum += i;
+            }
+            System.out.println(sum);
+        
+        III. int sum = 0;
+             for(int j = 7; j > 1; j--)
+             {
+                if (j % 2 == 0)
+                {
+                     sum += j;
+                }
+             }
+             System.out.println(sum);
+
+    - I and II only
+
+      - Note that I has an extra count++ at the beginning of the loop body that should be deleted. 
+
+    - II and III only
+
+      + Correct! In the II, the loop counter increments by 2's making sure it visits only even numbers and III generates the same sum but backwards. 
+
+    - I and III only
+
+      - Note that I has an extra count++ at the beginning of the loop body that should be deleted. 
+
+    - III only
+
+      - This is partially correct.
+    
+    - I, II, and III
+
+      - Note that I has an extra count++ at the beginning of the loop body that should be deleted. 
+
+.. mchoice:: AP4-2-2
+    :practice: T
+
+    Consider the following code segment.
+
+    .. code-block:: java
+
+        int result = 1;
+        for(int i = 3; i < 6; i += 2) 
+        {
+          result *= i;
+        }
+        System.out.println(result);
+        
+    Which of the following best explains how changing the for loop header to ``for (int i = 4; i <= 6; i += 2)`` affects the output of the code segment?
+
+    - The output of the code segment will be unchanged.
+
+      - One will multiply odd numbers and the other even numbers.
+
+    - The output will be the same, but the new loop will iterate more times.
+
+      - One will multiply odd numbers and the other even numbers.
+
+    - The output will be different, but both versions of the loop will iterate two times.
+
+      + Correct! One will multiply 3*5 and the other 4*6.
+
+    - The output will be different, and the new loop will iterate more times.
+
+      - The output is different but they both would iterate 2 times.
+
+    - This will cause an error.
+
+      - It will not cause an error.

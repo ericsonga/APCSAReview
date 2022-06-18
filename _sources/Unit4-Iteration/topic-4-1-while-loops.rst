@@ -541,6 +541,91 @@ Summary
 
 - There are standard algorithms to compute a sum or average.
 
+
+AP Practice
+------------
+
+.. mchoice:: AP4-1-1
+    :practice: T
+
+    Consider the following code segment.
+
+    .. code-block:: java
+
+        int n = 35;
+        int result = 1;
+        while (n > 0)
+        {
+            int d = n % 10;
+            result *= d;
+            n /= 10;
+        }
+        System.out.println(result);
+
+    What is the output after the code has been executed?
+
+    - 35
+
+      - Keep track of the variables n, d, and result. Watch the tracing video in lesson 4.1.
+
+    - 15
+
+      + Correct! The digits in n = 35 are 3 and 5 and 3*5 = 15.
+
+    - 10
+
+      - Keep track of the variables n, d, and result. Watch the tracing video in lesson 4.1.
+
+    - 8
+
+      - Although the sum of the digits in 35 are 8. This code uses multiplication.  
+
+    - 33
+
+      - Keep track of the variables n, d, and result. Watch the tracing video in lesson 4.1.
+
+.. mchoice:: AP4-1-2
+    :practice: T
+
+    Consider the following code segment which is intended to print out the even numbers from 0 to 8 (including 8).
+
+    .. code-block:: java
+
+        int count = 0;
+        /* missing loop header */
+        {
+            if (count % 2 == 0)
+            {
+                System.out.println(count);
+            }
+            count++;
+        }
+
+    Which of the following could replace the missing loop header to ensure that the code segment 
+    will work as intended to print out the even numbers from 0 to 8?
+
+
+    - while (count > 0)
+
+      - This would cause an infinite loop.
+
+    - while (count >= 8)
+
+      - This would not print out anything since count is 0 before the loop and not greater than 8. 
+
+    - while (count < 8)
+
+      - This would print out one too few numbers and would stop before it printed out 8.
+
+    - while (count < 10)
+
+      + Correct! This would stop the loop when count is 10.
+    
+    - while (count <= 10)
+
+      - This would print out one too many numbers, 0, 2, 4, 6, 8, 10.  
+
+
 .. Here is an example ``while`` loop that just prints the numbers until 0 is reached. Can you modify it to print 0 too?
     
 .. .. activecode:: while_loop_ex1
