@@ -2,7 +2,7 @@
    :prefix: 3-9-
    :start: 1
 
-Toggle Mixed Up or Write Code Practice
+Toggle Mixed Up or Write Code Practice (Hard)
 =========================================================
 
  For each of the problems below, if you need help, you can pull down the toggle menu to choose the associated mixed up code problem to help you get started.
