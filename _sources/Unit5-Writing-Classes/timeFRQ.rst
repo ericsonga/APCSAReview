@@ -1,9 +1,6 @@
 .. .. qnum::
    :prefix: 5-11-
    :start: 1
-
-.. highlight:: java
-   :linenothreshold: 4
    
 Free Response Question - Time
 -------------------------------

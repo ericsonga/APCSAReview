@@ -10,8 +10,6 @@ Teacher PD Post Test for Units 1-6
 
 Please complete the following post-test for Units 1-6. 
 
-.. .. highlight:: java
-   :linenothreshold: 3
 
 .. timed:: teacherPD-posttest
      :nofeedback:

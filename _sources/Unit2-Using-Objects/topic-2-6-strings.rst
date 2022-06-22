@@ -19,8 +19,6 @@
     :align: middle
     :alt: groupwork
     
-.. highlight:: java
-   :linenothreshold: 4
 
    
 ..	index::

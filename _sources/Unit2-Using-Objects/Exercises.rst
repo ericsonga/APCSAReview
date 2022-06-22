@@ -7,8 +7,6 @@ Multiple Choice Exercises
 
 These questions are mostly about Strings, but more questions on using other objects will be added in the future.
 
-.. highlight:: java
-   :linenothreshold: 3
 
 Easier Multiple Choice Questions
 ---------------------------------

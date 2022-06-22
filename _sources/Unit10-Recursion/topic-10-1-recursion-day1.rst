@@ -2,8 +2,6 @@
    :prefix: 10-1-
    :start: 1
 
-.. highlight:: java
-   :linenothreshold: 4
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
