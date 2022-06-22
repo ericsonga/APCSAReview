@@ -216,6 +216,7 @@ Try nested loops with turtles to create a snowflake design!
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
+          world.setSpeed(25); // fast 0 - 100 slow 
           yertle.setColor(Color.blue); 
           
            // Outer loop will do inner loop to draw a square,
@@ -322,6 +323,7 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
+          world.setSpeed(25); // fast 0 - 100 slow 
           yertle.setColor(Color.blue); 
    
           // Use this variable in the loops

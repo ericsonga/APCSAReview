@@ -38,6 +38,9 @@ import java.util.Base64;
         /** the height of the world */
         private int height = 480;
 
+        /** speed/delay in drawing */
+        private int delay = 50;
+
         /** the list of turtles in the world */
         private List<Turtle> turtleList = new ArrayList<Turtle>();
 
@@ -144,7 +147,7 @@ import java.util.Base64;
         }
 
         /**
-         * Metod to get the last turtle in this world
+         * Method to get the last turtle in this world
          * @return the last turtle added to this world
          */
         public Turtle getLastTurtle()
@@ -194,6 +197,16 @@ import java.util.Base64;
         public int getHeight() { return height; }
 
         /**
+         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * 50 is the default.
+         * @param speed
+         */
+        public void setSpeed(int d) { 
+           if (d >= 0 && d <= 100) 
+               delay = d;
+        }
+
+        /**
          * Method that allows the model to notify the display
          */
         public void modelChanged()
@@ -225,7 +238,7 @@ import java.util.Base64;
                     for(int i = 0; i < this.worldHistory.size(); i++) {
                         images[i] = ((Picture) this.worldHistory.get(i)).getBufferedImage();
                     }
-                    Giffer.generateFromBI(images, "history.gif", 100, false);
+                    Giffer.generateFromBI(images, "history.gif", delay, false);
 
                     File history = new File("history.gif");
 

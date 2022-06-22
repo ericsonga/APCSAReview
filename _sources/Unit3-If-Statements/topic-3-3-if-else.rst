@@ -1,10 +1,6 @@
 .. qnum::
    :prefix: 3-3-
-   :start: 1
-   
-.. highlight:: java
-   :linenothreshold: 4
-   
+   :start: 1   
    
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px

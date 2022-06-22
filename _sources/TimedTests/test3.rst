@@ -34,7 +34,7 @@ The following 20 questions are similar to what you might see on the AP CS A exam
 
 Click the |start| button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
-.. timed:: postexam3
+.. timed:: practiceexam2
     :timelimit: 45
     
     .. mchoice:: pe3_1
