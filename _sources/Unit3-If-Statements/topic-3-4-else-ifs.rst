@@ -2,9 +2,6 @@
    :prefix: 3-4-
    :start: 1
    
-.. highlight:: java
-   :linenothreshold: 4
-   
    
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
@@ -517,45 +514,43 @@ AP Practice
 
     .. code-block:: java
 
-        // I.
-        if (x > 66)
-        {
-           System.out.println("High");
-        }
-        else if (x > 33)
-        {
-           System.out.println("Medium");
-        }
-        else {
-           System.out.println("Low");
-        }
+       I.   if (x > 66)  
+            {
+              System.out.println("High");
+            }
+            else if (x > 33)
+            {
+              System.out.println("Medium");
+            }
+            else {
+              System.out.println("Low");
+            }
 
-        // II.
-        if (x < 33)
-        {
-           System.out.println("Low");
-        }
-        else if (x < 66)
-        {
-           System.out.println("Medium");
-        }
-        else {
-           System.out.println("High");
-        }
+       II.  if (x < 33) 
+            {
+              System.out.println("Low");
+            }
+            else if (x < 66)
+            {
+              System.out.println("Medium");
+            }
+            else {
+              System.out.println("High");
+            }
 
-        // III.
-        if (x >= 66)
-        {
-           System.out.println("High");
-        }
-        if (x >= 33)
-        {
-           System.out.println("Medium");
-        }
-        if (x < 33) 
-        {
-           System.out.println("Low");
-        }
+       III. if (x >= 66)   
+            {
+              System.out.println("High");
+            }
+            if (x >= 33)
+            {
+              System.out.println("Medium");
+            }
+            if (x < 33) 
+            {
+              System.out.println("Low");
+            }
+
 
     - I only
 
