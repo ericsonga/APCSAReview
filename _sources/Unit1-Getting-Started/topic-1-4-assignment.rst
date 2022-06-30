@@ -470,38 +470,92 @@ In this programming challenge, you will calculate your age, and your pet's age f
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    public class RunestoneTests extends CodeTestHelper
-    {
-       @Test
-       public void testAsgn1() throws IOException
-       {
-           String target = "age = currentYear - birthYear";
-           boolean passed = checkCodeContains("formula for age", target);
-           assertTrue(passed);
-       }
-       @Test
-       public void testAsgn2() throws IOException
-       {
-           String target = "dogAge = currentYear - dogBirthYear";
-           boolean passed = checkCodeContains("formula for dogAge", target);
-           assertTrue(passed);
-       }
-       @Test
-       public void testAsgn3() throws IOException
-       {       
-           String target1 = removeSpaces("dogYearsAge = dogAge * 7");
-           String target2 = removeSpaces("dogYearsAge = 7 * dogAge");
-           String code = removeSpaces(getCode());
+   import org.junit.*;
+   
+   //import jdk.jfr.Timestamp;
+   
+   import java.io.*;
+   
+   /* Do NOT change Main or CodeTestHelper.java.
+      Put the active code exercise in a file like ForLoop.java.
+      Put your Junit test in the file RunestoneTests.java.
+      Run. Test by changing ForLoop.java (student code).
+      */
+   public class RunestoneTests extends CodeTestHelper {
+      @Test
+      public void checkVariables() throws IOException {
+         String code = removeSpaces(getCode());
+         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
+   
+         boolean passed1 = code.matches(".*intcurrentYear=[0-9]{2,4};.*");
+         boolean passed2 = code.matches(".*intbirthYear=[0-9]{2,4};.*");
+         boolean passed3 = code.matches(".*intbirthYear=[0-9]{1,4};.*");
+   
+         boolean passed = passed1 && passed2 && passed3;
+   
+         getResults("true", "" + passed, "Checking that you initialized the three variables");
+         assertTrue(passed);
+      }
 
-           boolean passed1 = code.contains(target1);
-           boolean passed2 = code.contains(target2);
-           boolean passed = passed1 || passed2;
-           getResults("true", ""+passed, "formula for dogYearsAge using dogAge", passed);
-           assertTrue(passed);
-       }
-    }
+      @Test
+      public void checkOutput() throws IOException {
+         String output = getMethodOutput("main");
+         int num = output.length();
+         boolean passed = num >= 5;
+         getResults("1+ characters", "" + num, "Checking that you have some output", passed);
+         assertTrue(passed);
+      }
+   
+      @Test
+      public void checkPrintlines() throws IOException {
+         String code = removeSpaces(getCode());
+         int num = countOccurences(code, "System.out.print");
+   
+         boolean passed = num >= 1;
+         getResults("At least one", "" + num, "Checking that you have at least one print statement", passed);
+         assertTrue(passed);
+      }
+   
+      @Test
+      public void testAsgn1() throws IOException {
+         /*
+          * String target = "age = currentYear - birthYear"; boolean passed =
+          * checkCodeContains("formula for age", target); assertTrue(passed);
+          */
+         String target = removeSpaces("age = currentYear - birthYear");
+         String code = removeSpaces(getCode());
+         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
+   
+         boolean passed = code.contains(target);
+         getResults("true", "" + passed, "Checking that code contains formula for age", passed);
+         assertTrue(passed);
+      }
+   
+      @Test
+      public void testAsgn2() throws IOException {
+         String target = removeSpaces("dogAge = currentYear - dogBirthYear");
+         String code = removeSpaces(getCode());
+         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
+   
+         boolean passed = code.contains(target);
+         getResults("true", "" + passed, "Checking that code contains formula for dogAge", passed);
+         assertTrue(passed);
+      }
+   
+      @Test
+      public void testAsgn3() throws IOException {
+         String target1 = removeSpaces("dogYearsAge = dogAge * 7");
+         String target2 = removeSpaces("dogYearsAge = 7 * dogAge");
+         String code = removeSpaces(getCode());
+         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
+   
+         boolean passed1 = code.contains(target1);
+         boolean passed2 = code.contains(target2);
+         boolean passed = passed1 || passed2;
+         getResults("true", "" + passed, "Checking that code contains formula for dogYearsAge using dogAge", passed);
+         assertTrue(passed);
+      }
+   }
    
 
 .. |repl| raw:: html
