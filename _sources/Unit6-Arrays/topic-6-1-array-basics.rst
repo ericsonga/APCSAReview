@@ -611,7 +611,7 @@ In this challenge, you will create a guide to different countries using arrays.
   - **Languages:** Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
   - **Filenames for map images:** China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
 
-2. You are encouraged to add additional country, capital, and language names that match in position in the parallel arrays to represent your family origins. Although we do not have image files for each country in the CSAwesome map images collection, we do have the regional map images called south-america.png, central-america.png, americas.png, asia-pacific.png, europe.png, africa.png, and middle-east.png which you can use. If you create more maps for your project, you can have your teacher share it in the teaching-csawesome google group to contribute to this map image collection.
+2. You are encouraged to add additional country, capital, and language names that match in position in the parallel arrays to represent your family origins. Although we do not have image files for each country in the CSAwesome map images collection, we do have the regional map images called south-america.png, central-america.png, north-america.png, asia-pacific.png, europe.png, africa.png, and middle-east.png which you can use. Note that these are png files and not jpg. If you create more maps for your project, you can have your teacher share it in the teaching-csawesome google group to contribute to this map image collection.
 
 3. Choose a random number using Math.random() and the **length** of one of the arrays and save it in a variable called index. 
 
