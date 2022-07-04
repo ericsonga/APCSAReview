@@ -611,13 +611,13 @@ In this challenge, you will create a guide to different countries using arrays.
   - **Languages:** Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
   - **Filenames for map images:** China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
 
-2. You are encouraged to add additional country, capital, and language names that match in position in the parallel arrays to represent your family origins. Although we do not have image files for each country in the CSAwesome map images collection, we do have the regional map images called south-america.png, central-america.png, north-america.png, asia-pacific.png, europe.png, africa.png, and middle-east.png which you can use. Note that these are png files and not jpg. If you create more maps for your project, you can have your teacher share it in the teaching-csawesome google group to contribute to this map image collection.
+2. You are encouraged to add additional country, capital, and language names that match in position in the parallel arrays to represent your family origins or places you would like to visit. Although we do not have image files for each country in the CSAwesome map images, we do have regional map images called south-america.png, central-america.png, north-america.png, asia-pacific.png, europe.png, africa.png, and middle-east.png which you can use. Note that these are png files and not jpg. If you create more maps for your project, you can have your teacher share it in the teaching-csawesome google group to contribute to this map image collection.
 
 3. Choose a random number using Math.random() and the **length** of one of the arrays and save it in a variable called index. 
 
 4. Print out the country name, its capital, and its language, and the map image for that country using the random index to access the corresponding item in each parallel array. For the images, the printHTMLimage method has been given to get the image URL online and print it out as an HTML image.
 
-5. Optional Extra Challenge: If you have more time, you can combine what you learned in the last unit to **refactor** your code (which means restructure without changing the functionality) to make it object-oriented. Create a Country class that stores the country name, capital, language, and image file. In the main method, create an array of 10 country objects with the data for each country, and use a random number to choose a country object from the array and display its attributes.
+5. Optional Extra Challenge: If you have more time for this project, you can combine what you learned in the last unit to **refactor** your code (which means restructure without changing the functionality) to make it object-oriented. Create a Country class that stores the country name, capital, language, and image file. In the main method, create an array of 10 country objects with the data for each country, and use a random number to choose a country object from the array and display its attributes.
 
 .. activecode:: challenge-1-6-countries
    :language: java
