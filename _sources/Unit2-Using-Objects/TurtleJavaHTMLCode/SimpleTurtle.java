@@ -218,6 +218,14 @@
         public void setPicture(Picture pict) { this.picture = pict; }
 
         /**
+         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * 50 is the default. We pass this to the World's setSpeed method.
+         * @param d
+         */
+        public void setSpeed(int d) { 
+           ((World)modelDisplay).setSpeed(d);
+        }
+        /**
          * Method to get the model display for this simple turtle
          * @return the model display if there is one else null
          */

@@ -110,9 +110,11 @@ Run the code below to see the output from the String methods ``length``, ``subst
         @Test
         public void testMain() throws IOException
         {
-            String output = getMethodOutput("main");
+            String output = getMethodOutput("main").trim();
             String expect = "14\n11\nThi\ni\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
+            boolean passed = output.contains(expect);
+          
+            getResults(expect, output, "Expected output from main", passed);
             assertTrue(passed);
         }
     }
@@ -432,9 +434,11 @@ The following code shows some common mistakes with strings.
         @Test
         public void testMain() throws IOException
         {
-            String output = getMethodOutput("main");
+            String output = getMethodOutput("main").trim();
             String expect = "The first letter in Hello!:H\nThe last char. in Hello!:!\nIn lowercase: hello!";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = output.contains(expect);
+          
+            getResults(expect, output, "Expected output from main", passed);
             assertTrue(passed);
         } 
     }

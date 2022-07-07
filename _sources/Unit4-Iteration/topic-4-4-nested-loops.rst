@@ -157,7 +157,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :adaptive:
    :noindent:
 
-   The main method in the following class should print 10 rows with 5 <code>*</code> in each row.   But, the blocks have been mixed up and include one extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The main method in the following class should print 10 rows with 5 *'s in each row.   But, the blocks have been mixed up and include one extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public class Test1
    {
@@ -203,8 +203,10 @@ Try nested loops with turtles to create a snowflake design!
     :datafile: turtleClasses.jar
     :autograde: unittest
 
-    The turtle below is trying to draw a square many times to create a snowflake pattern. Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15. 
+    The turtle below is trying to draw a square many times to create a snowflake pattern. 
+    Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15. 
     
+    To make the drawing faster, you can call the World or Turtle object's setSpeed method with a 0-100 delay value where 0 is the fastest.
     If the code below does not work in your browser, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.
     ~~~~
     import java.util.*;
@@ -216,7 +218,7 @@ Try nested loops with turtles to create a snowflake design!
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
-          world.setSpeed(25); // fast 0 - 100 slow 
+          yertle.setSpeed(25); // fast 0 - 100 slow 
           yertle.setColor(Color.blue); 
           
            // Outer loop will do inner loop to draw a square,
@@ -310,8 +312,10 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Use nested for-loops to have the turtle draw a snowflake of polygons. Use the variable turnAmount to turn after each shape and the variable n for the sides of the polygon.
+    Use nested for-loops to have the turtle draw a snowflake of polygons. 
+    Use the variable turnAmount to turn after each shape and the variable n for the sides of the polygon.
     
+    To make the drawing faster, you can call the World or Turtle object's setSpeed method with a 0-100 delay value where 0 is the fastest.
     If the code below does not work in your browser, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.
     ~~~~
     import java.util.*;
@@ -323,7 +327,7 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
-          world.setSpeed(25); // fast 0 - 100 slow 
+          yertle.setSpeed(25); // fast 0 - 100 slow 
           yertle.setColor(Color.blue); 
    
           // Use this variable in the loops
