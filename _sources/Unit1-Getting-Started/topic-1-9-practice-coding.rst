@@ -956,16 +956,14 @@ Coding Practice
                 @Test
                   public void testFormulaMiles() throws IOException
                   {
-                    String target1 = removeSpaces("double miles = numGallons * milesPerGallon;");
-                    String target2 = removeSpaces("double miles = milesPerGallon * numGallons;");
+                    String target1 = removeSpaces("numGallons * milesPerGallon");
+                    String target2 = removeSpaces("milesPerGallon * numGallons");
+   
                     String code = removeSpaces(getCode());
-
-                    boolean passed1 = code.contains(target1);
-                    boolean passed2 = code.contains(target2);
-
-                    boolean passed = passed1 || passed2;
-
-                    getResults("true", ""+passed, "formula for miles using milesPerGallon and numGallons", passed);
+                    code = code.replaceAll("(", "").replaceAll(")", "");
+   
+                    boolean passed = code.contains(target1) || code.contains(target2);
+                    getResults("true", "" + passed, "Formula variant for miles using milesPerGallon and numGallons", passed);
                     assertTrue(passed);
                   }  
                 }
