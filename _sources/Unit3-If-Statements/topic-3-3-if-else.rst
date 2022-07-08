@@ -242,8 +242,14 @@ If/else statements can also be used with relational operators and numbers like b
         }
         @Test
         public void testCodeContains(){
-            boolean ifCheck1 = checkCodeContains("if testing with 20", "if (score <= 20)");
-            assertTrue(ifCheck1);
+           String target1 = removeSpaces("score <= 20");
+           String target2 = removeSpaces("score > 20");
+
+           String code = removeSpaces(getCode());
+
+           boolean passed = code.contains(target1) || code.contains(target2);
+           getResults("true", "" + passed, "Checks testing for score <= 20 or score > 20", passed);
+           assertTrue(passed);
         }
     }
 
