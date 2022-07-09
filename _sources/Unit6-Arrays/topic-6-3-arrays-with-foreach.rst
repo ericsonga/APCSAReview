@@ -619,13 +619,15 @@ start with ``class`` instead of ``public class``.
   public class StudentArray
   {
       private Student[] array; 
-      private int size = 5;
-        
+      private int size = 3;
+
+      // Creates an array of the default size  
       public StudentArray() 
       {
          array = new Student[size];
       }
         
+      // Creates aan array of the given size
       public StudentArray(int size) 
       {
          array = new Student[size];
@@ -652,7 +654,9 @@ start with ``class`` instead of ``public class``.
         
       public static void main(String[] args)
       {
+         // Create an object of this class and pass in size 3
          StudentArray roster = new StudentArray(3);
+         // Add new Student objects at indices 0-2
          roster.add(0, new Student("Skyler", "skyler@sky.com", 123456));
          roster.add(1, new Student("Ayanna", "ayanna@gmail.com", 789012));
          roster.add(2, new Student("Dakota", "dak@gmail.com", 112233));
@@ -745,7 +749,11 @@ start with ``class`` instead of ``public class``.
 
 Copy your array of objects code from lesson 6.2. 
 Using the ``StringArray`` class above as your guide, separate it into your class and a public 
-array class that puts the array of objects in a private instance variable. The main method should be in this class.  
+array class that puts the array of objects in a private instance variable. 
+The main method should be in this class.  Then, write a print() method that uses an enhanced for-loop
+to print out the array elements. And write a findAndPrint() method with an argument
+that looks for a certain attribute of the objects in the array using an enhanced for-loop, and prints out all the 
+data for the object it finds.
 
 
 .. activecode:: community-challenge-6-3
@@ -767,18 +775,19 @@ array class that puts the array of objects in a private instance variable. The m
 
     // Write a print() method using an enhanced for loop
 
-    // Write a findAndPrint(name) method using an enhanced for loop
+    // Write a findAndPrint(attribute) method using an enhanced for loop
 
     public static void main(String[] args)
     {
        // Declare an object of ClassNameArray with your class name
-       // Call its add method to add 2 or 3 new objects to the array
+       // Call its add method to add enough new objects to fill the array
        // Call its print method
        // Call its findAndPrint method         
     }
   }
 
-  class          // Add your class name here!
+  // Copy in your class but do not make it public
+  class          // Add your class name here - do not make it public
   {
       // Copy your class from lesson 6.2 below. 
 

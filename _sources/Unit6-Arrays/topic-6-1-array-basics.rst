@@ -855,8 +855,9 @@ community.  In this unit, you will create an array to hold objects of your class
             String code = getCode();
             String target = "new";
             int count = countOccurences(code, target);
-            boolean passed = getResults("3 x " + target, count + " x " + target,  
-            "Did you declare 3 objects of your class using new and your constructor?");
+            boolean passed = (count >= 4); 
+            getResults("4+ " + target, count + "+ " + target,  
+            "Did you declare 3 objects of your class using new and your constructor?",passed);
             assertTrue(passed);
         }
         

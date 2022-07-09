@@ -1162,9 +1162,11 @@ traverse your array to print out each object.
         @Test
         public void testLoop()
         {
-           String target = "for(int * = *; * ? *; *~)";
-           boolean passed = checkCodeContainsRegex("for loop", target);
-           assertTrue(passed);
+           //String target = "for(int * = *; * ? *; *~)";
+           //boolean passed = checkCodeContainsRegex("for loop", target);
+            String target = "for";
+            boolean passed = checkCodeContains("for loop", target);
+            assertTrue(passed);
         }
 
         @Test
