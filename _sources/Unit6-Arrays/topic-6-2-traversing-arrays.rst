@@ -1003,7 +1003,10 @@ The following Active Code uses a dictionary array of the most common 100 English
 
 .. activecode:: challenge-6-2-spellchecker
    :language: java
-   :autograde: unittest    
+   :autograde: unittest  
+   :stdin: catz  
+   
+   import java.util.Scanner;
    
    public class SpellChecker
    {

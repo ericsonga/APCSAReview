@@ -487,9 +487,12 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    :autograde: unittest
+   :stdin: catz
    
    Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found.
    ~~~~
+   import java.util.Scanner;
+   
    public class SpellChecker
    {
       // This dictionary includes the 1000 most frequent words in English
@@ -509,6 +512,12 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
         SpellChecker checker = new SpellChecker();
         /* // Uncomment to test your method
         String word = "catz";
+
+        // Or you may be able to use this code to read input from the textbox below 
+        // System.out.print("Enter a word to spell check in the Input for Program textbox below: ");
+        // Scanner scan = new Scanner(System.in);
+        // word = scan.nextLine();  
+
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
         else
