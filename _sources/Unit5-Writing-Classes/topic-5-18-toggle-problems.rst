@@ -37,3 +37,15 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 .. selectquestion:: select_u5_muc_wc7
    :fromid: u5_muc_wc7, ch7ex7muc
    :toggle: lock
+
+.. selectquestion:: select_u5_muc_wc8
+   :fromid: u5_muc_wc8, ch7ex8muc
+   :toggle: lock
+
+.. selectquestion:: select_u5_muc_wc9
+   :fromid: u5_muc_wc9, ch7ex9muc
+   :toggle: lock
+
+.. selectquestion:: select_u5_muc_wc10
+   :fromid: u5_muc_wc10, ch7ex10muc
+   :toggle: lock

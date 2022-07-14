@@ -371,86 +371,47 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that completes the ``Character`` class. Each ``Character`` instance has an integer ``healthPoints`` (abbreviated HP) attribute and a String ``name`` attribute. They also have the associated ``getHP``, ``setHP``, and ``getName`` methods. Using these, write code that finishes the ``fight(Character other)`` method that lets a character fight another. If the character's ``healthPoints`` are more than ``other``'s, ``other``'s HP should be set to zero, the current character's HP should be set to the difference, and the program should print ``"Outcome: {the character's name} wins with {the character's HP} HP remaining"``. That entire section is already completed. On the other hand, if ``other``'s HP is greater, the current character's HP should be set to zero, ``other``'s HP should be set to the difference, and the program should print ``”Outcome: {other’s name} wins with {other’s HP} HP remaining”``. Finally, if they have the same HP, the program should print ``”Outcome: Tie”`` and set both HPs to 0.
+        Write code that completes the ``CelestialBody`` class. Each ``CelestialBody`` instance has an integer ``orbitLength`` (in days) and a integer ``daysSinceDiscovered`` attribute. Using these, write the ``orbit(int numberOfTimes)`` method that adds ``numberOfTimes * orbitLength`` to ``daysSinceDiscovered`` (e.g., if Planet X has done two orbits with an orbit length of 12 days, it was discovered 24 days ago. If it then orbits another three times, it was discovered 60 days ago). Also, fix the two errors in the class.
         ~~~~
-        public class Character {
-            private int healthPoints; // current HP of the character
-            private String name;
+        public class CelestialBody {
+            private int orbitLength;
+            private int daysSinceDiscovered;
 
-            public Character(int healthPoints, String name) {
-                this.healthPoints = healthPoints;
-                this.name = name;
+            public CelestialBody(int orbitLength) { // There is an error in this function or in the header
+                this.daysSinceDiscovered = 0;
             }
 
-            public int getHP() {
-                return this.healthPoints;
+            public String orbit(int numberOfTimes) { // There is an error in this header
+
+                // YOUR CODE HERE
+
             }
 
-            public void setHP(int newHP) {
-                this.healthPoints = newHP;
+            // You can ignore the rest of the methods
+
+            public int getOrbitLength() {
+                return this.orbitLength;
             }
 
-            public String getName() {
-                return this.name;
+            public void setOrbitLength(int orbitLength) {
+                this.orbitLength = orbitLength;
             }
 
-            public void fight(Character other) {
-                
-                if (this.getHP() > other.getHP()) {
+            public int getDaysSinceDiscovered() {
+                return this.daysSinceDiscovered;
+            }
 
-                    // This part of the function is finished for you
-
-                    this.setHP(this.getHP() - other.getHP()); // update the healthPoints (HP) of this object to be the difference between its HP and other's HP
-
-
-                    other.setHP(0); // update other's HP to be 0
-
-
-                    System.out.println("Outcome: " + this.getName() + " wins with " + this.getHP() + "HP remaining"); // print outcome
-                }
-
-                else if (this.getHP() < other.getHP()) {
-
-                    // YOUR CODE HERE //
-                    
-                    // TODO: update the healthPoints (HP) of other to be the difference between its HP and this object's HP
-
-                    // TODO: update this object's HP to be 0
-
-                    // TODO: print "Outcome: {other's name} wins with {other's HP} HP remaining"
-                }
-
-                else { // This is the case where the characters have the same HP
-
-                    // YOUR CODE HERE //
-                    
-                    // TODO: set both healths to 0
-                    // TODO: print "Outcome: Tie"
-                
-                }
+            public void setDaysSinceDiscovered(int daysSinceDiscovered) {
+                this.daysSinceDiscovered = daysSinceDiscovered;
             }
 
             public static void main(String[] args) {
-                Character hero = new Character(10, "oiraM");
-                Character villain1 = new Character(3, "abmooG");
-                Character villain2 = new Character(7, "igiulaW");
-                System.out.println("---Fight between oiraM and abmooG---");
-                hero.fight(villain1); // Prints "Outcome: oiraM wins with 7HP remaining"
-                System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and abmooG: " + villain1.getHP()); // Prints "Remaining HPs -- oiraM: 7 and abmooG: 0"
-
-                System.out.println("---Fight between oiraM and igiulaW---");
-                hero.fight(villain2); // Should print "Outcome: Tie"
-                System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and igiulaW: " + villain2.getHP()); // Should print "Remaining HPs -- oiraM: 0 and igiulaW: 0"
-                System.out.println("oiraM used health pot to regain 5 HP");
-                hero.setHP(5);
-
-                Character villain3 = new Character(13, "reswoB");
-                System.out.println("---Fight between oiraM and reswoB---");
-                hero.fight(villain3); // Should print "Winner: reswoB, Remaining HP: 8"
-                System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and reswoB: " + villain3.getHP()); // Should print "Remaining HPs -- oiraM: 0 and reswoB: 8"
+                CelestialBody moon = new CelestialBody(28);
+                moon.orbit(5);
+                System.out.println("If the moon has orbited five times, it was discovered " + moon.getDaysSinceDiscovered() + " days ago.");
             }
             
-            }
+        }
         ====
 		// ch7ex6muc
         import static org.junit.Assert.*;
@@ -459,29 +420,30 @@ This is the write code problems associated with the mixed up code problems.
         import jdk.jfr.Timestamp;
 
         import java.io.*;
-    
+
         public class RunestoneTests extends CodeTestHelper
         {
             public RunestoneTests() {
-                super("Character");
+                super("CelestialBody");
             }
-          
+        
             @Test
             public void testMain() throws IOException {
                 String output = getMethodOutput("main");
-                String expect = "---Fight between oiraM and abmooG---\nOutcome: oiraM wins with 7HP remaining\nRemaining HPs -- oiraM: 7 and abmooG: 0\n---Fight between oiraM and igiulaW---\nOutcome: Tie\nRemaining HPs -- oiraM: 0 and igiulaW: 0\noiraM used health pot to regain 5 HP\n---Fight between oiraM and reswoB---\nOutcome: reswoB wins with 8HP remaining\nRemaining HPs -- oiraM: 0 and reswoB: 8\n";
+                String expect = "If the moon has orbited five times, it was discovered 140 days ago.\nIf it has orbited one more time, it was discovered 168 days ago.\n";
                 boolean passed = getResults(expect, output, "Expected output from main");
                 assertTrue(passed);
             }
 
             @Test 
             public void testCheckHardcode() throws IOException {
-                String target = "System.out.println(\"Winner: oiraM, Remaining HP: 7\")";
+                String target = "System.out.println(\"If it has orbited one more time, it was discovered 168 days ago\")";
                 String desc = "hardcoded print statements";
                 boolean doesntManuallyPrint = checkCodeContains(false, desc, target, false);
                 assertTrue(doesntManuallyPrint);
             }
         }
+
 .. activecode:: u5_muc_wc7
         :language: java
         :practice: T
@@ -572,4 +534,282 @@ This is the write code problems associated with the mixed up code problems.
             }
 
             // TODO: Add tests for the setter methods
+        }
+
+.. activecode:: u5_muc_wc8
+        :language: java
+        :practice: T
+        :autograde: unittest
+   
+        Write code to create a ``Point`` class. Each ``Point`` instance should have integer ``x`` and ``y`` attributes (and the constructor should take those in that order). There should be getter methods for each: ``getX`` and ``getY``. There should be a ``getDistance`` method that takes in another ``Point`` object as an argument and calculates the distance from this object to that one (which would be sqrt((this.x - other.x) ^ 2 + (this.y - other.y) ^ 2)). Finally, there should to be a ``toString`` method that returns ``“(Point.x, Point.y)”`` (e.g., ``Point(3, 4)``’s toString method would return ``”(3, 4)”``).
+        ~~~~
+        public class Point {
+            private int x;
+            private int y;
+
+            public Point(int x, int y) {
+                // YOUR CODE HERE
+            }
+
+            public double getDistance(Point other) {
+                // YOUR CODE HERE
+                // HINT: Use Math.pow and Math.sqrt (from your reference sheet)
+            }
+
+            public int getX() {
+                // YOUR CODE HERE
+            }
+
+            public int getY() {
+                // YOUR CODE HERE
+            }
+
+            public String toString() {
+                // YOUR CODE HERE
+            }
+
+            public static void main(String[] args) {
+                Point origin = new Point(0, 0);
+                Point C = new Point(3, 4);
+                System.out.println("The origin is at " + origin); // Should print "The origin is at (0, 0)"
+                System.out.println("That is " + origin.getDistance(C) + " units away from " + C); // Should print "That is 5.0 units away from (3, 4)"
+                Point D = new Point(5, 6);
+                System.out.println("And " + Math.round(origin.getDistance(D) * 100) / 100.0 + " units away from " + D); // Should print "And 7.81 units away from (5, 6)"
+                System.out.println(C + " and " + D + " are " + Math.round(C.getDistance(D) * 100) / 100.0 + " units away from each other"); // Should print "(3, 4) and (5, 6) are 2.83 units away from each other"
+            }
+        }
+        ====
+        // ch7ex8muc
+        import static org.junit.Assert.*;
+        import org.junit.*;
+
+        import jdk.jfr.Timestamp;
+
+        import java.io.*;
+
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Point");
+            }
+        
+            @Test
+            public void testMain() throws IOException {
+                String output = getMethodOutput("main");
+                String expect = "The origin is at (0, 0)\nThat\nis 5.0 units away from (3, 4)\nAnd 7.81 units away from (5, 6)\n(3, 4) and (5, 6) are 2.83 units away from each other";
+                boolean passed = getResults(expect, output, "Expected output from main");
+                assertTrue(passed);
+            }
+
+            @Test 
+            public void testCheckHardcode() throws IOException {
+                String target = "System.out.println(\"The origin is at (0, 0)\")";
+                String desc = "hardcoded print statements";
+                boolean doesntManuallyPrint = checkCodeContains(false, desc, target, false);
+                assertTrue(doesntManuallyPrint);
+            }
+
+            @Test
+            public void testGetX() throws IOException {
+                Object[] params = {2, 3};
+                setDefaultValues(params);
+                String output = "" + getMethodOutput("getX");
+                String expect = "2";
+                boolean passed = getResults(expect, output, "Expected output from getX");
+                assertTrue(passed);
+            }
+            @Test
+            public void testGetY() throws IOException {
+                Object[] params = {2, 3};
+                setDefaultValues(params);
+                String output = getMethodOutput("getY");
+                String expect = "3";
+                boolean passed = getResults(expect, output, "Expected output from getY");
+            }
+
+            // TODO: Add test for getDistance
+        }
+
+.. activecode:: u5_muc_wc9
+        :language: java
+        :practice: T
+        :autograde: unittest
+   
+        Write code to create an ``Account`` class. Each ``Account`` instance should have integer ``balance`` and String ``owner`` attributes (and the constructor should take those in that order). To increase ``balance``, there should be a ``deposit`` method that takes in an integer argument and adds that to ``balance``. To decrease ``balance``, there should be a ``withdraw`` method that takes in an integer argument and subtracts that from ``balance``. However, if ``balance`` would end as a negative number, it should just be set to zero. Finally, there should be a ``toString`` method that returns ``"Account.owner: $Account.balance"`` (so for ``Account(5, "Tom")`` it should return ``"Tom: $5"``). 
+        ~~~~
+        public class Account {
+            private int balance;
+            private String owner;
+
+            // Create a constructor
+
+            // create the deposit method
+
+            // create the withdraw method
+
+            // create the toString method
+
+            public static void main(String[] args) {
+                System.out.println("Creating account with $500...");
+                Account tomsAccount = new Account(500, "Tom");
+                System.out.println(tomsAccount); // Should output "Tom: $500"
+                System.out.println("Depositing $5...");
+                tomsAccount.deposit(5);
+                System.out.println(tomsAccount); // Should output "Tom: $505"
+                System.out.println("Withdrawing $10...");
+                tomsAccount.withdraw(10);
+                System.out.println(tomsAccount); // Should output "Tom: $495"
+                System.out.println("Withdrawing $500...");
+                tomsAccount.withdraw(500);
+                System.out.println(tomsAccount); // should output "Tom: $0"
+            }
+        }
+        ====
+        // ch7ex9muc
+        import static org.junit.Assert.*;
+        import org.junit.*;
+
+        import jdk.jfr.Timestamp;
+
+        import java.io.*;
+
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Account");
+            }
+        
+            @Test
+            public void testMain() throws IOException {
+                String output = getMethodOutput("main");
+                String expect = "Creating account with $500...\nTom: $500\nDepositing $5...\nTom: $505\nWithdrawing $10...\nTom: $495\nWithdrawing $500...\nTom: $0";
+                boolean passed = getResults(expect, output, "Expected output from main");
+                assertTrue(passed);
+            }
+
+            @Test 
+            public void testCheckHardcode() throws IOException {
+                String target = "System.out.println(\"Tom: $500\")";
+                String desc = "hardcoded print statements";
+                boolean doesntManuallyPrint = checkCodeContains(false, desc, target, false);
+                assertTrue(doesntManuallyPrint);
+            }
+
+        }
+
+.. activecode:: u5_muc_wc10
+        :language: java
+        :practice: T
+        :autograde: unittest
+   
+        Write code that completes the ``Character`` class. Each ``Character`` instance has an integer ``healthPoints`` (abbreviated HP) attribute and a String ``name`` attribute. They also have the associated ``getHP``, ``setHP``, and ``getName`` methods. Using these, write code that finishes the ``fight(Character other)`` method that lets a character fight another. If the character's ``healthPoints`` are more than ``other``'s, ``other``'s HP should be set to zero, the current character's HP should be set to the difference, and the program should print ``"Outcome: {the character's name} wins with {the character's HP} HP remaining"``. That entire section is already completed. On the other hand, if ``other``'s HP is greater, the current character's HP should be set to zero, ``other``'s HP should be set to the difference, and the program should print ``”Outcome: {other’s name} wins with {other’s HP} HP remaining”``. Finally, if they have the same HP, the program should print ``”Outcome: Tie”`` and set both HPs to 0.
+        ~~~~
+        public class Character {
+            private int healthPoints; // current HP of the character
+            private String name;
+
+            public Character(int healthPoints, String name) {
+                this.healthPoints = healthPoints;
+                this.name = name;
+            }
+
+            public int getHP() {
+                return this.healthPoints;
+            }
+
+            public void setHP(int newHP) {
+                this.healthPoints = newHP;
+            }
+
+            public String getName() {
+                return this.name;
+            }
+
+            public void fight(Character other) {
+                
+                if (this.getHP() > other.getHP()) {
+
+                    // This part of the function is finished for you
+
+                    this.setHP(this.getHP() - other.getHP()); // update the healthPoints (HP) of this object to be the difference between its HP and other's HP
+
+
+                    other.setHP(0); // update other's HP to be 0
+
+
+                    System.out.println("Outcome: " + this.getName() + " wins with " + this.getHP() + "HP remaining"); // print outcome
+                }
+
+                else if (this.getHP() < other.getHP()) {
+
+                    // YOUR CODE HERE //
+                    
+                    // TODO: update the healthPoints (HP) of other to be the difference between its HP and this object's HP
+
+                    // TODO: update this object's HP to be 0
+
+                    // TODO: print "Outcome: {other's name} wins with {other's HP} HP remaining"
+                }
+
+                else { // This is the case where the characters have the same HP
+
+                    // YOUR CODE HERE //
+                    
+                    // TODO: set both healths to 0
+                    // TODO: print "Outcome: Tie"
+                
+                }
+            }
+
+            public static void main(String[] args) {
+                Character hero = new Character(10, "oiraM");
+                Character villain1 = new Character(3, "abmooG");
+                Character villain2 = new Character(7, "igiulaW");
+                System.out.println("---Fight between oiraM and abmooG---");
+                hero.fight(villain1); // Prints "Outcome: oiraM wins with 7HP remaining"
+                System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and abmooG: " + villain1.getHP()); // Prints "Remaining HPs -- oiraM: 7 and abmooG: 0"
+
+                System.out.println("---Fight between oiraM and igiulaW---");
+                hero.fight(villain2); // Should print "Outcome: Tie"
+                System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and igiulaW: " + villain2.getHP()); // Should print "Remaining HPs -- oiraM: 0 and igiulaW: 0"
+                System.out.println("oiraM used health pot to regain 5 HP");
+                hero.setHP(5);
+
+                Character villain3 = new Character(13, "reswoB");
+                System.out.println("---Fight between oiraM and reswoB---");
+                hero.fight(villain3); // Should print "Winner: reswoB, Remaining HP: 8"
+                System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and reswoB: " + villain3.getHP()); // Should print "Remaining HPs -- oiraM: 0 and reswoB: 8"
+            }
+            
+            }
+        ====
+		// ch7ex10muc
+        import static org.junit.Assert.*;
+        import org.junit.*;
+
+        import jdk.jfr.Timestamp;
+
+        import java.io.*;
+    
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Character");
+            }
+          
+            @Test
+            public void testMain() throws IOException {
+                String output = getMethodOutput("main");
+                String expect = "---Fight between oiraM and abmooG---\nOutcome: oiraM wins with 7HP remaining\nRemaining HPs -- oiraM: 7 and abmooG: 0\n---Fight between oiraM and igiulaW---\nOutcome: Tie\nRemaining HPs -- oiraM: 0 and igiulaW: 0\noiraM used health pot to regain 5 HP\n---Fight between oiraM and reswoB---\nOutcome: reswoB wins with 8HP remaining\nRemaining HPs -- oiraM: 0 and reswoB: 8\n";
+                boolean passed = getResults(expect, output, "Expected output from main");
+                assertTrue(passed);
+            }
+
+            @Test 
+            public void testCheckHardcode() throws IOException {
+                String target = "System.out.println(\"Winner: oiraM, Remaining HP: 7\")";
+                String desc = "hardcoded print statements";
+                boolean doesntManuallyPrint = checkCodeContains(false, desc, target, false);
+                assertTrue(doesntManuallyPrint);
+            }
         }
