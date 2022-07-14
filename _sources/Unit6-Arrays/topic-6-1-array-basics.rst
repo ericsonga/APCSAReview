@@ -916,6 +916,82 @@ Summary
 - The valid index values for an array are 0 through one less than the number of elements in the array, inclusive. Using an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown.
 
 
+AP Practice
+------------
+
+.. mchoice:: AP6-1-1
+        :practice: T
+        :answer_a: [8, 20, 30]
+        :answer_b: [4, 8, 15]
+        :answer_c: [8, 10, 15] 
+        :answer_d: [4, 10, 20]
+        :answer_e: [4, 8, 30]
+        :correct: d
+        :feedback_a: This would only be true if all elements were doubled by the method.   
+        :feedback_b: This would only be true if the call was ``mystery(array, 1)``. Remember that array indexing starts at 0.
+        :feedback_c: This would only be true if the method body had ``a[i-1] = a[i-1] * 2;``
+        :feedback_d: Correct. array[2] = array[1] * 2 = 10 * 2 = 20.  
+        :feedback_e: Note that only 1 array element is changed.
+
+        Consider the following method. Given an ``array`` initialized to ``{4, 10, 15}``, which of the following represents the contents of the array after a call to ``mystery(array, 2)``?
+       
+        .. code-block:: java
+
+           public void mystery(int[] a, int i)
+           {
+              a[i] = a[i-1] * 2;
+           }
+
+.. mchoice:: AP6-1-2
+        :practice: T
+
+        Consider the following method. Which of the following code segments, appearing in the same class as the ``mystery`` method, 
+        will result in ``array2`` having the contents ``{5, 10, 20}``?
+        
+        .. code-block:: java
+ 
+           public int[] mystery(int[] a, int i, int value)
+    	   {
+    	      a[i + 1] = a[i] + value;
+    	      return a;
+    	   }
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 10, 15};
+            int[] array2 = mystery(array1, 0, 10);
+
+          - This would result in ``{5, 15, 15}``.
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 15, 20};
+            int[] array2 = mystery(array1, 0, 0);
+
+          - This would result in ``{5, 5, 20}``.
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 10, 15};
+            int[] array2 = mystery(array1, 1, 10);
+
+          + Correct! a[i+1] = a[2] = a[i] + value = a[1] + 10 = 10 + 10 = 20.
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 15, 20};
+            int[] array2 = mystery(array1, 2, 0);
+
+          - This would result in an ``ArrayIndexOutOfBoundsException``.
+
+        - .. code-block:: java
+	
+            int[] array1 = {5, 10, 15};
+            int[] array2 = mystery(array1, 1, 20);
+
+          - This would result in ``{5, 10, 30}``.        
+       	    
+
 Arrays Game
 --------------------------
 
