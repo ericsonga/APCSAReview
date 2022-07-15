@@ -36,7 +36,7 @@ import javax.tools.ToolProvider;
  * @since 2022-07-08
  * 
  * @update 2.0.1 - added getMethodOutputChangedCode - can change the program to
- *         change values in static code
+ *         change values in static code, fixed for loop regex for .length
  * @update 2.0.0 - standard version since 2020
  */
 public class CodeTestHelper {
@@ -1395,7 +1395,7 @@ public class CodeTestHelper {
             else if (ch == '~')
                 b.append("[+-=]+[0-9]*");
             else if (ch == '*')
-                b.append("[A-Za-z0-9 <>=!+/\\-*\\(\\)]+");
+                b.append("[A-Za-z0-9 <>=!+/\\-*\\(\\)\\,.]+");
             else if ("\\.^$|?*+[]{}()".indexOf(ch) != -1)
                 b.append('\\').append(ch);
             else
