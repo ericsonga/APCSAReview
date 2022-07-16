@@ -252,7 +252,7 @@ If/else statements can also be used with relational operators and numbers like b
             getResults("true", "" + passed, "Checking for score <= 20 or score > 20", passed);
             assertTrue(passed);
         }
-      /*
+      
         @Test
         public void testCodeChange1() throws Exception {
             String className = "Test1";
@@ -284,7 +284,7 @@ If/else statements can also be used with relational operators and numbers like b
             getResults(expected2, output2, "Checking output if score is 5", passed2);
             assertTrue(passed2);
         }
-        */
+        
     }
 
 
