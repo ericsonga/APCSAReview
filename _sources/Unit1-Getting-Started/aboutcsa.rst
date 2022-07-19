@@ -56,12 +56,12 @@ The 4 free response questions allow students to write code to answer a problem a
    
 .. |AP CS A Reference Sheet| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank" style="text-decoration:underline">AP CS A Java Quick Reference Sheet</a>
    
    
 .. |AP CS A past FRQs| raw:: html
 
-   <a href="https://apcentral-stg.collegeboard.org/courses/ap-computer-science-a/exam/past-exam-questions" target="_blank" style="text-decoration:underline">AP CS A Past Free Response Questions</a>  
+   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank" style="text-decoration:underline">AP CS A Past Free Response Questions</a>  
    
 .. |FRQ resource| raw:: html
 

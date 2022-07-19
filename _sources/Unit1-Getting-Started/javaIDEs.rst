@@ -22,14 +22,19 @@ replit
 
 Replit (https://replit.com/) is a great free online development environment. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Repl is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Replit also has a paid school plan called Teams (https://replit.com/teams-for-education) where teachers can set up virtual classrooms and grade assignments.
 
-Some of the Active Code samples in this e-book also include a link to a replit project. These projects are public and as soon as you try to change the code, it will make a copy for you in your own replit account. If you are pair programming, there is also a multiplayer icon on the left in repl where you can share your code with another person, and you can both make changes at the same time. 
+Some of the Active Code samples in this e-book also include a link to a replit project. 
+These projects are public and as soon as you try to change the code, it will make a copy for you in your own replit account. If you are pair programming, there is also a multiplayer icon on the left in repl where you can share your code with another person, and you can both make changes at the same time. 
 
-Online IDEs usually cannot use graphical user interfaces and just do input and output as text. However, repl.it has a new beta that does allow the use of the javax.swing graphical user interface library! You need to choose Java Swing instead of just Java to get this environment when you start a new repl project. 
+Online IDEs usually cannot use graphical user interfaces and just do input and output as text. 
+However, replit has a built-in javax.swing graphical user interface. 
+You need to choose Java Swing instead of just Java to get this environment when you start a new repl project. 
 
 CodingRooms
 -----------
 
-Coding Rooms (https://www.codingrooms.com/) is also a great online coding environment that has both free and paid versions. In Coding Rooms, you can set up a virtual classroom and watch all of your students code in real time, and grade their assignments. Coding Rooms has an AP CSA classroom template with short exercises.
+Coding Rooms (https://www.codingrooms.com/) is also a great online coding environment that has both free and paid versions. 
+In Coding Rooms, you can set up a virtual classroom and watch all of your students code in real time. 
+You can also make a copy of CSAwesome inside Coding Rooms and change the content.
 
 Dr. Java
 --------
