@@ -919,6 +919,13 @@ Summary
 AP Practice
 ------------
 
+We will see in the next lesson that the index of an array is often a variable named ``i`` 
+that is used in loops to traverse an array.  
+In challenging AP problems, you will see mathematical expressions inside the array brackets []. 
+For example, ``array[i-1]`` refers to the previous element right before the ith element in array, 
+and ``array[i+1]`` refers to the next element after the ith element.  In the problems below, note that
+arrays can be passed in as arguments to methods and returned as values, just like any variable.
+
 .. mchoice:: AP6-1-1
         :practice: T
         :answer_a: [8, 20, 30]
