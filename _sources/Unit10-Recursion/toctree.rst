@@ -17,6 +17,7 @@ AP CS A Exam Weighting: 5-7.5%
    summary.rst
    rParsonsPractice.rst
    rMixedUpCodePractice.rst
+   topic-10-4-toggle-problems.rst
    recursionCodePractice.rst
    Exercises.rst
 

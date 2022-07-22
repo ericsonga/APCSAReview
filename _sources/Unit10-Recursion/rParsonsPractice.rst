@@ -39,7 +39,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following method should multiply the two passed-in positive integers (using the fact that multiplcation is repeated addition) -- so multipy(3, 4) should become 12 (3+3+3+3).  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The following method should multiply the two passed-in positive integers (using the fact that multiplication is repeated addition) -- so multiply(3, 4) should become 12 (3+3+3+3).  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int multiply(int a, int b)
    {
@@ -126,7 +126,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should return the base multiplied power times. In otherwords, the base ^ power -- so exponent(2, 4) should return 16.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The following method should return the base multiplied power times. In other words, the base ^ power -- so exponent(2, 4) should return 16.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int exponent(int base, int power)
    {
