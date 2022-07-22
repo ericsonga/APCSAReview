@@ -2,20 +2,17 @@
    :prefix:  7-4-11-
    :start: 1
 
-Free Response - Grid World A (Not Complete)
+Free Response - Grid World A 
 --------------------------------------------------------
 
 ..	index::
 	  single: Grid World
       single: free response
 
-This FRQ does not currently work in Runestone because it is missing the Grid World library.
-
 The following is a free response question from 2013. It was question 3 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 
-
-3.   This question involves reasoning about the GridWorld case study that was formerly required knowledge for the APCSA exam. It is no longer expected that you know this information and it will be provided to you in this question.
+This question involves reasoning about the GridWorld case study that was formerly required knowledge for the APCSA exam. It is no longer expected that you know this information and it will be provided to you in this question.
 Because there is a lot of extra material that you need to read and understand, this question may seem more challenging and will require more time than a typical FRQ you would expect on your AP exam. It is still good practice nonetheless.
 In part (a) you will write a method to return an ``Arraylist`` of all empty ``Location`` objects in a given grid. The ``GridWorldUtilities`` class contains ``static`` methods. A partial declaration of the ``GridWorldUtilities`` class is shown below.
 
@@ -236,15 +233,15 @@ in grid, the method returns an empty ``Arraylist``. Otherwise, it returns an ``A
 grid. Each empty location should appear exactly once in the ``Arraylist``.
 
 Write the method ``getEmptyLocations`` in the code below.
-The code does not currently work in Runestone because it is missing the Grid World library.
 
 .. activecode:: frq2013Q3A-grid
    :language: java
-   :datafile: GridWorld.jar
+   :datafile: GridWorldjar
 
-   This FRQ does not currently work in Runestone because it is missing the Grid World library. You can write the method getEmpty Locations, but it will not compile.
+   Complete the getEmptyLocations() method below. 
    ~~~~
-   
+   import java.util.*;
+
    public class GridWorldUtilities
    {
 
@@ -260,52 +257,98 @@ The code does not currently work in Runestone because it is missing the Grid Wor
 
        public static void main(String[] args)
        {
-          System.out.println("Running Test 1");
-          BoundedGrid example = new BroundedGrid(2,2);
-          Location loc1 = new Location (0,0);
-          Location loc2 = new Location (1,0);
-          Location loc3 = new Location (0,1);
-          Location loc4 = new Location (1,1);
-          example.put(loc1, loc1);
-          example.put(loc2, loc2);
-          example.put(loc3, loc3);
+            System.out.println("Running Test 1");
+            BoundedGrid<Location> example = new BoundedGrid<Location>(2,2);
+            Location loc1 = new Location(0,0);
+            Location loc2 = new Location(1,0);
+            Location loc3 = new Location(0,1);
+            Location loc4 = new Location(1,1);
+            example.put(loc1, loc1);
+            example.put(loc2, loc2);
+            example.put(loc3, loc3);
 
-          ArrayList<Location> locsCorrect = new ArrayList<Location>();
-          locsCorrect.add(loc4);
+            ArrayList<Location> locsCorrect = new ArrayList<Location>();
+            locsCorrect.add(loc4);
 
-          ArrayList<Location> studentAnswer = new ArrayList<Location>();
-          studentAnswer = getEmptyLocations(example);
+            ArrayList<Location> studentAnswer = new ArrayList<Location>();
+            studentAnswer = getEmptyLocations(example);
 
-          System.out.println("This is the correct output for test 1, compare the result with your output");
-          for (int i = 0; i < locsCorrect.size(); ++i) {
-              System.out.println(locsCorrect[i]);
-          }
+            System.out.println("This is the correct output for test 1, compare the result with your output");
+            for (int i = 0; i < locsCorrect.size(); i++) {
+                System.out.println(locsCorrect.get(i));
+            }
 
-          System.out.println("Student output:");
-          for (int j = 0; j < locsCorrect.size(); ++j) {
-              System.out.println(studentAnswer[i]);
-          }
+            System.out.println("Student output:");
+            for (int j = 0; j < studentAnswer.size(); j++) {
+                System.out.println(studentAnswer.get(j));
+            }
+            
+            System.out.println("Running Test 2: returns empty ArrayList if no empty");
+            example.put(loc4, loc4);
+            locsCorrect.clear();
+            studentAnswer = getEmptyLocations(example);
 
-          System.out.println("Running Test 2");
-          example.put(loc4, loc4);
-          locsCorrect.clear();
-          studentAnswer = getEmptyLocations(example);
+            System.out.println("This is the correct output for test 2 (empty), compare the result with your output");
+            for (int i = 0; i < locsCorrect.size(); i++) {
+                System.out.println(locsCorrect[i]);
+            }
 
-          System.out.println("This is the correct output for test 1, compare the result with your output");
-          for (int i = 0; i < locsCorrect.size(); ++i) {
-              System.out.println(locsCorrect[i]);
-          }
+            System.out.println("Student output:");
+            for (int j = 0; j < studentAnswer.size(); j++) {
+                System.out.println(studentAnswer[i]);
+            }
 
-          System.out.println("Student output:");
-          for (int j = 0; j < locsCorrect.size(); ++j) {
-              System.out.println(studentAnswer[i]);
-          }
+        }
+     }
+   ====
+   import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.*;
 
+    public class RunestoneTests extends CodeTestHelper
+    {
+      public RunestoneTests() 
+      {
+        super("GridWorldUtilities");
+      }
 
-       }
-       }
+      @Test
+      public void testMain() throws IOException
+      {
+        String output = getMethodOutput("main");
+        String expect = "Student output:\n(1, 1)\n";
 
-.. datafile:: GridWorld.jar
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+      }
+
+      @Test
+      public void test1()
+      {
+         BoundedGrid<Location> example = new BoundedGrid<Location>(2,2);
+         Location loc1 = new Location(0,0);
+         Location loc2 = new Location(1,0);
+         Location loc3 = new Location(0,1);
+         Location loc4 = new Location(1,1);
+         example.put(loc1, loc1);
+         example.put(loc2, loc2);
+         example.put(loc3, loc3);
+
+         ArrayList<Location> locsCorrect = new ArrayList<Location>();
+         locsCorrect.add(loc4);
+         ArrayList<Location> studentAnswer = new ArrayList<Location>();
+         studentAnswer = GridWorldUtilities.getEmptyLocations(example);
+         
+         String output =  studentAnswer.get(0); 
+         String expect = "(1, 1)";
+
+         boolean passed = getResults(expect, output, "Test 1 call to getEmptyLocations()");
+         assertTrue(passed);
+      }
+    }
+
+.. datafile:: GridWorldjar
         :hide:
 
         import java.util.ArrayList;
@@ -402,7 +445,7 @@ The code does not currently work in Runestone because it is missing the Grid Wor
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid occupied locations adjacent to
-             * loc in this grid
+             * loc in this grid
              */
             ArrayList<Location> getOccupiedAdjacentLocations(Location loc);
 
@@ -724,6 +767,7 @@ The code does not currently work in Runestone because it is missing the Grid Wor
                 return theLocations;
             }
 
+            @SuppressWarnings("unchecked")
             public E get(Location loc)
             {
                 if (!isValid(loc))

@@ -1003,7 +1003,10 @@ The following Active Code uses a dictionary array of the most common 100 English
 
 .. activecode:: challenge-6-2-spellchecker
    :language: java
-   :autograde: unittest    
+   :autograde: unittest  
+   :stdin: catz  
+   
+   import java.util.Scanner;
    
    public class SpellChecker
    {
@@ -1109,8 +1112,92 @@ The following Active Code uses a dictionary array of the most common 100 English
  
 3. Optional Challenge: Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take 
 a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string. This is not autograded.
-
  
+|Groupwork| Design an Array of Objects for your Community
+----------------------------------------------------------
+
+In Unit 5, you came up with a class of your own choice relevant to you or your 
+community.  In the last lesson 6.1, you created an array to hold objects of your class.
+Copy your array of objects code from lesson 6.1. In this challenge, add a loop to 
+traverse your array to print out each object. 
+
+.. activecode:: community-challenge-6-2
+  :language: java
+  :autograde: unittest
+
+  Copy your class from the last lesson 6.1 below. 
+  It should create an array of 3 objects of your class and initialize
+  them to new objects. Instead of calling their print() methods individually, write a loop that
+  traverses your array to print out each object using the index i. 
+  ~~~~
+  public class          // Add your class name here!
+  {
+      // Copy your class from lesson 6.1 below. 
+
+
+
+      public static void main(String[] args)
+      {  
+         // Create an array of 3 objects of your class. 
+         
+         // Initialize array elements 0-2 to new objects of your class.
+
+         
+         // Write a for loop that traverses the array and calls
+         // the print method of each object in the array using the array index i. 
+
+
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        @Test
+        public void testArrayDeclaration() throws IOException {
+           boolean passed = checkCodeContains("an array declaration of size 3", "[3]");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void testLoop()
+        {
+           //String target = "for(int * = *; * ? *; *~)";
+           //boolean passed = checkCodeContainsRegex("for loop", target);
+            String target = "for";
+            boolean passed = checkCodeContains("for loop", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testprint()  {
+           boolean passed = checkCodeContains("call to print() using index [i] in the loop", "[i].print();");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");//.split("\n");
+            String expect = "3+ line(s) of text";
+            String actual = " line(s) of text";
+            int len = output.split("\n").length;
+
+            if (output.length() > 0) {
+                actual = len + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = len >= 3;
+
+            getResults(expect, actual, "Checking output", passed);
+            assertTrue(passed);
+        }
+    }
+
 Summary
 -------
 

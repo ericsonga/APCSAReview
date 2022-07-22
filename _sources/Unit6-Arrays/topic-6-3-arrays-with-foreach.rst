@@ -487,9 +487,12 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    :autograde: unittest
+   :stdin: catz
    
    Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found.
    ~~~~
+   import java.util.Scanner;
+   
    public class SpellChecker
    {
       // This dictionary includes the 1000 most frequent words in English
@@ -509,6 +512,12 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
         SpellChecker checker = new SpellChecker();
         /* // Uncomment to test your method
         String word = "catz";
+
+        // Or you may be able to use this code to read input from the textbox below 
+        // System.out.print("Enter a word to spell check in the Input for Program textbox below: ");
+        // Scanner scan = new Scanner(System.in);
+        // word = scan.nextLine();  
+
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
         else
@@ -589,6 +598,246 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
             assertTrue(passed);
         }
       }
+
+|Groupwork| Design an Array of Objects for your Community
+----------------------------------------------------------
+
+In Unit 5, you came up with a class of your own choice relevant to your 
+community.  In lessons 6.1 and 6.2, you created an array to hold objects of your class 
+and traversed the array with a loop. In this challenge, we will create a new class that
+holds your array of objects and add a method that print the array elements and a method that 
+finds a certain object in the array using enhanced for loops. We encourage you to continue working in pairs.
+
+Here is an example of a Student class and a StudentArray class that searches for a student with a
+specific name. In Java, when you are working with multiple classes on your own computer, each
+class is usually in its own file that matches the class name. On Runestone, when you are working 
+with multiple classes, only the class that has the main method should be public, and the other classes should 
+start with ``class`` instead of ``public class``.
+
+.. activecode:: student-array
+  :language: java
+  :autograde: unittest
+
+  Run the StudentArray class below. Note that it uses the class Student below it and creates 
+  an array of Students. Using the StudentArray print() method as a guide, 
+  write a StudentArray method called findAndPrint() which takes a String name as an argument,
+  and uses an enhanced for-loop to traverse the array to find a Student in the array with the same name. 
+  If the argument equals the Student object's name (using its getName() method), then print out that student's info. 
+  Call it from the main method to test it.
+  ~~~~
+  public class StudentArray
+  {
+      private Student[] array; 
+      private int size = 3;
+
+      // Creates an array of the default size  
+      public StudentArray() 
+      {
+         array = new Student[size];
+      }
+        
+      // Creates aan array of the given size
+      public StudentArray(int size) 
+      {
+         array = new Student[size];
+      }
+        
+      // Adds Student s to the array at index i 
+      public void add(int i, Student s)
+      {
+        array[i] = s;  
+      }
+
+      // prints the array of students  
+      public void print()
+      {
+          for(Student s : array)
+          {
+              // this will call Student's toString() method
+              System.out.println(s); 
+          }
+      }
+
+      /* Write a findAndPrint(name) method */  
+       
+        
+      public static void main(String[] args)
+      {
+         // Create an object of this class and pass in size 3
+         StudentArray roster = new StudentArray(3);
+         // Add new Student objects at indices 0-2
+         roster.add(0, new Student("Skyler", "skyler@sky.com", 123456));
+         roster.add(1, new Student("Ayanna", "ayanna@gmail.com", 789012));
+         roster.add(2, new Student("Dakota", "dak@gmail.com", 112233));
+         roster.print(); 
+         System.out.println("Finding student Ayanna: ");
+         // uncomment to test
+         // roster.findAndPrint("Ayanna");
+      }
+    }
+
+    class Student
+    {
+        private String name;
+        private String email;
+        private int id;
+
+        public Student(String initName, String initEmail, int initId)
+        {
+            name = initName;
+            email = initEmail;
+            id = initId;
+        }
+
+        public String getName() { return name; }
+        public String getEmail() { return email; }    
+        public int getId() { return id; }
+                            
+        // toString() method
+        public String toString()
+        {
+            return id + ": " + name + ", " + email;
+        }
+    }
+  ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("StudentArray");
+        }
+
+    @Test 
+    public void test1()
+    {
+        String target = "findAndPrint(String";
+        boolean passed = checkCodeContains("findAndPrint method header with String paramenter",target);
+        assertTrue(passed);
+    }
+    
+    @Test 
+    public void test2()
+    {
+        String target = "roster.findAndPrint(";
+        boolean passed = checkCodeContains("call to roster.findAndPrint method (uncommented in main)",target);
+        assertTrue(passed);
+    }
+    
+
+    @Test
+    public void testForEach() 
+    {
+        String target = "for(Student";
+        String code = getCode().replaceAll("\\s", "");
+        int index = code.indexOf("findAndPrint(String");
+        boolean passed = false;
+        if (index > 0) {
+            code = code.substring(index, index + 200);
+            int num = countOccurences(code, target);
+            passed = num == 1;
+            } 
+        getResults("true", ""+passed, "Checking that findAndPrint() contains an enhanced for loop for Student in array", passed);
+            assertTrue(passed);  
+        }
+    @Test
+    public void testEquals() 
+    {
+            boolean passed = checkCodeContains("use of equals method", ".equals(");
+            assertTrue(passed);
+    }
+    @Test
+    public void testGetName() 
+        {
+            boolean passed = checkCodeContains("use of getName() method", ".getName()");
+            assertTrue(passed);
+        }
+    }
+
+Copy your array of objects code from lesson 6.2. 
+Using the ``StringArray`` class above as your guide, separate it into your class and a public 
+array class that puts the array of objects in a private instance variable. 
+The main method should be in this class.  Then, write a print() method that uses an enhanced for-loop
+to print out the array elements. And write a findAndPrint() method with an argument
+that looks for a certain attribute of the objects in the array using an enhanced for-loop, and prints out all the 
+data for the object it finds.
+
+
+.. activecode:: community-challenge-6-3
+  :language: java
+  :autograde: unittest
+
+  Copy your class from the last lesson 6.2 below after the ClassNameArray class. Delete the public from in front of that class.
+  On Runestone, only the class that has the main method should be public. 
+  Complete the ClassNameArray class substituting in your Class name and using the StudentArray class above as a guide. 
+  You should add a print() method and a findAndPrint() method that uses enhanced for loops.
+  ~~~~
+  public class ClassNameArray  // Change ClassName to your class name
+  {
+    // Declare an array of your class type
+
+    // Write a constructor 
+
+    // Write an add() method that adds an object to your array at a certain index 
+
+    // Write a print() method using an enhanced for loop
+
+    // Write a findAndPrint(attribute) method using an enhanced for loop
+
+    public static void main(String[] args)
+    {
+       // Declare an object of ClassNameArray with your class name
+       // Call its add method to add enough new objects to fill the array
+       // Call its print method
+       // Call its findAndPrint method         
+    }
+  }
+
+  // Copy in your class but do not make it public
+  class          // Add your class name here - do not make it public
+  {
+      // Copy your class from lesson 6.2 below. 
+
+
+
+      
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        @Test
+        public void testLoop()
+        {
+           String target = "for";
+           String code = getCode();
+           int num = countOccurences(code, target);
+           boolean passed = num >= 2;
+           getResults("2", ""+num, "Checking that at least 2 enhanced for loops are used", passed);
+           assertTrue(passed);
+        }
+
+        @Test 
+            public void testPrint()
+            {
+                String target = "public void print(";
+                boolean passed = checkCodeContains("print() method",target);
+                assertTrue(passed);
+            }
+        @Test 
+            public void test1()
+            {
+                String target = "findAndPrint(";
+                boolean passed = checkCodeContains("findAndPrint method",target);
+                assertTrue(passed);
+            }
+    }
+       
 
 Summary
 -------

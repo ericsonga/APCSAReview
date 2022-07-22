@@ -537,9 +537,9 @@ In the previous lessons, you came up with a class of your own choice relevant to
   public class RunestoneTests extends CodeTestHelper
   {
        @Test
-        public void test()
+        public void testPrintFormat()
         {
-            String target = "public void print*(String *)";
+            String target = "public void print(String";
             boolean passed = checkCodeContains("print method with String argument", target);
             assertTrue(passed);
         }

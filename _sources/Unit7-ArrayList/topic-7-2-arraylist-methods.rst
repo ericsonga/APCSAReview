@@ -39,7 +39,7 @@ ArrayList Methods
 
 .. |AP CS A Reference Sheet| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
    
 The following are the ``ArrayList`` methods that you need to know for the AP CS A exam.  These are included on the |AP CS A Reference Sheet| that you will receive during the exam so you do not need to memorize them. The E in the method headers below stands for the type of the element in the ArrayList; this type E can be any Object type. We will look at how these methods work below.
 
