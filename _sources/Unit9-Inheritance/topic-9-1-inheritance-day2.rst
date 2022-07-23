@@ -196,13 +196,17 @@ If you aren't sure if a class should inherit from another class ask yourself if 
 
    <a href="https://creately.com" target="_blank">Creately.com</a> 
 
+.. |app diagrams| raw:: html
+
+   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a> 
+
 Working in pairs or groups, design an online store with classes for Store, ItemForSale, Book, Movie, and Author. 
 
 - First, do some research in an online store like Amazon to see what information they store on books, movies, and authors, and what type of information is the same for all items for sale. 
 
 - List at least 2 attributes for each class. Which attributes should be in ItemForSale and which in Book, Movie or Author?
 
-- What is the relationship between ItemForSale and Book? between ItemForSale and Movie? between Book and Author? between Store and ItemForSale? You may want to draw UML Class Diagrams for these classes on paper or using an online drawing tool like |Creately.com| (choose Class Diagrams, click to connect classes and choose the relationship)
+- What is the relationship between ItemForSale and Book? between ItemForSale and Movie? between Book and Author? between Store and ItemForSale? You may want to draw UML Class Diagrams for these classes on paper or using an online drawing tool like |app diagrams| or |Creately.com| (choose UML Class Diagrams, click to connect classes and choose the relationship)
 
 - Use the ActiveCode window below to declare each class and specify their relationship to one another with inheritance or association. (Note that usually, each public class would be in a separate file, but since we only have 1 file in Active Code, we only make 1 class public).  Only put in the instance variables for each class. We will learn how to make constructors and methods in the next lessons.
 

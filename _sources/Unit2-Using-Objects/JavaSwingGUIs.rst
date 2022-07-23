@@ -22,7 +22,7 @@
 
 .. |repl| raw:: html
 
-   <a href="https://repl.it" target="_blank" style="text-decoration:underline">repl.it</a>
+   <a href="https://replit.com" target="_blank" style="text-decoration:underline">replit</a>
    
 .. |Java Swing Example| raw:: html
 

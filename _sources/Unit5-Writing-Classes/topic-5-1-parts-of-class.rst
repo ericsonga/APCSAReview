@@ -292,8 +292,12 @@ Object-Oriented Design
 
    <a href="https://creately.com" target="_blank">Creately.com</a> 
 
+.. |app diagrams| raw:: html
 
-In **Object-Oriented Design** (OOD), programmers first decide which classes are needed to solve a problem and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CS A exam). If you want to draw your own, |Creately.com| is a good free online drawing tool for class diagrams.
+   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a> 
+
+
+In **Object-Oriented Design** (OOD), programmers first decide which classes are needed to solve a problem and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CS A exam). If you want to draw your own, |app diagrams| or |Creately.com| are good free online drawing tools for UML class diagrams.
 
 
 .. figure:: Figures/turtleUMLClassDiagram.png
@@ -339,7 +343,7 @@ In this project, you will create a class that can tell riddles like the followin
 - Riddle Question: Why did the chicken cross the playground?
 - Riddle Answer: To get to the other slide!
 
-1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |Creately.com|, although it is not required). 
+1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |app diagrams| or |Creately.com|, although it is not required). 
 
 2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Don't name your instance variables initQuestion and initAnswer since they are used as constructor parameter variables. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
@@ -501,11 +505,16 @@ In this project, you will create a class that can tell riddles like the followin
    <a href="https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing" target="_blank">worksheet</a>
 
 
-In this unit, you will design a class of your own choice that is relevant to your community. You will improve the class in each lesson of this unit. You can work in pairs on this project. 
+In this unit, you will design a class of your own choice that is relevant to your community. 
+You will improve the class in each lesson of this unit. If you would rather work on this project 
+as 1 stand-alone lab project rather than a piece at a time at the end of each lesson, 
+you can do this in lesson 5.18 at the end of Unit 5. You can work in pairs on this project. 
 
 Ask someone in your family or community what would be important for them to track. For example, you could create a class to keep track of community events, health tracking, athlete games or statistics, community leaders, performers or performances, or another subject of your choice.  Fill in question 1 in this |worksheet|.
 
-In this lesson, come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be. You will add constructors and other methods to this class in the next lessons. You can use this |worksheet| to design your class, and then fill in the class below. Your class will not print out anything yet, but it should run without errors.
+In this lesson, come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be. 
+You will add constructors and other methods to this class in the next lessons.
+You can use this |worksheet| to design your class, and then fill in the class below. Your class will not print out anything yet, but it should run without errors.
 
 .. activecode:: community-challenge-5-1
   :language: java
