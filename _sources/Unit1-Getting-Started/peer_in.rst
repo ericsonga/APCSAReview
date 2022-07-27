@@ -25,3 +25,25 @@ Peer Instruction: Unit 1 Multiple Choice Questions
         System.out.println(x == 3);
         int z = x + y;
         System.out.println(z);
+
+
+.. mchoice:: bs-binary-05-05
+    :author: Beth Simon
+    :practice: T
+    :answer_a: Deep Red (a channel)
+    :answer_b: White (all channels maximum)
+    :answer_c: Black (all channels minimum)
+    :answer_d: 1
+    :answer_e: 255
+    :correct: e
+    :feedback_a: Incorrect! 11111111 means 255 in binary, not Deep Red.
+    :feedback_b: Incorrect! 11111111 means 255 in binary, not White.
+    :feedback_c: Incorrect! 11111111 means 255 in binary, not Black.
+    :feedback_d: Incorrect! 11111111 means 255 in binary. 1 in binary is 1. 
+    :feedback_e: Correct! 11111111 means 255 in binary.
+
+    What does this data stored in a computer represent?
+
+    .. code-block:: java
+
+        11111111

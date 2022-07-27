@@ -1,20 +1,21 @@
 Peer Instruction: Unit 2 Multiple Choice Questions
 --------------------------------------------------------
 
-.. mchoice:: bs-objectsandclasses-02-19
+.. mchoice:: bs-strings-05-08
     :author: Beth Simon
     :practice: T
-    :answer_a: Type, method/message name, parameter list
-    :answer_b: Class, method/message name, parameter list
-    :answer_c: Object, method/message name, parameter list
-    :correct: c
-    :feedback_a: Incorrect! Turtle is a "type" (similar to int or double types) but turtle1 is an object.
-    :feedback_b: Incorrect! Turtle is the specific class "type" that turtle1 is. turtle1 itself is an object.
-    :feedback_c: Correct! turtle1 is a Turtle object.
+    :answer_a: “Bob”
+    :answer_b: Bob
+    :answer_c: The address in memory where “Bob” is stored
+    :answer_d: new String(“Bob”)
+    :correct: b
+    :feedback_a: Incorrect! name stores the string Bob, not including the quotes.
+    :feedback_b: Correct! Bob is stored in the variable name after the code is executed.
+    :feedback_c: Incorrect! The address in memory is not stored in the variable name. Instead, the string Bob is stored.
+    :feedback_d: Incorrect! Bob is stored in the variable name after the code is executed, not new String("Bob")
 
-    What are the components of the second line of code?
+    What is stored in the variable name after the following line of code is executed?
 
     .. code-block:: java
 
-        Turtle turtle1 = new Turtle();
-        turtle1.turn(-45);
+        String name = "Bob";
