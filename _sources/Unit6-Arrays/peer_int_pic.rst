@@ -51,3 +51,67 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     .. image:: https://i.postimg.cc/KcDCVXTH/lecture07-Q07.png
       :width: 200
 
+.. mchoice:: bs-array-09-05
+    :author: Beth Simon
+    :practice: T
+    :answer_a: A
+    :answer_b: B
+    :answer_c: C
+    :answer_d: None of the above.
+    :correct: c
+    :feedback_a: Incorrect! Each time the for loop executes, p is assigned the pixel value at the current index and q is assigned the pixel value at the next index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+    :feedback_b: Incorrect! Each time the for loop executes, p is assigned the pixel value at the current index and q is assigned the pixel value at the next index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+    :feedback_c: Correct! Each time the for loop executes, p is assigned the pixel value at the current index and q is assigned the pixel value at the next index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+    :feedback_d: Incorrect! One of the choices above accurately represents what this code does. Each time the for loop executes, p is assigned the pixel value at the current index and q is assigned the pixel value at the next index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+
+    What picture most accurately describes what this code does ?
+
+    .. code-block:: java
+
+        Pixel[] pixelArray = this.getPixels();
+        int value = 0;
+        Pixel p  = null;
+        for(int index = 0; index < pixelArray.length-1; index++)
+        {
+            p = pixelArray[index];
+            q = pixelArray[index+1];
+            p.setRed(q.getRed());
+            p.setBlue(q.getRed());
+            p.setGreen(q.getGreen());
+        }  
+
+    .. image:: https://i.postimg.cc/SRhMBw8D/lecture09-Q05.png
+      :width: 400
+
+.. mchoice:: bs-array-09-06
+    :author: Beth Simon
+    :practice: T
+    :answer_a: A
+    :answer_b: B
+    :answer_c: C
+    :answer_d: None of the above.
+    :correct: b
+    :feedback_a: Incorrect! Each time the for loop executes, p is assigned the pixel value at the next index and q is assigned the pixel value at the current index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+    :feedback_b: Correct! Each time the for loop executes, p is assigned the pixel value at the next index and q is assigned the pixel value at the current index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+    :feedback_c: Incorrect! Each time the for loop executes, p is assigned the pixel value at the next index and q is assigned the pixel value at the current index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+    :feedback_d: Incorrect! One of the choices above accurately represents what this code does. Each time the for loop executes, p is assigned the pixel value at the next index and q is assigned the pixel value at the current index. p's red value is replaced with q's red value and q's blue value. Then p's green value is replaced with q's green value. Each time the code runs, p is changed and q stays the same.
+
+    What picture most accurately describes what this code does ?
+
+    .. code-block:: java
+
+        Pixel[] pixelArray = this.getPixels();
+        int value = 0;
+        Pixel p  = null;
+        for(int index = 0; index < pixelArray.length-1; index++)
+        {
+          p = pixelArray[index+1];
+          q = pixelArray[index];
+          p.setRed(q.getRed());
+          p.setBlue(q.getRed());
+          p.setGreen(q.getGreen());
+        }  
+
+    .. image:: https://i.postimg.cc/SRhMBw8D/lecture09-Q05.png
+      :width: 400
+
