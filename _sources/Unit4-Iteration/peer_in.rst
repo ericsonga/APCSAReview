@@ -64,6 +64,65 @@ Peer Instruction: Unit 4 Multiple Choice Questions
     .. image:: https://i.postimg.cc/HLSgbHZy/lecture09-Q04.png
       :width: 400
 
+.. mchoice:: bs-nestedloops-10-04
+    :author: Beth Simon
+    :practice: T
+    :answer_a: A
+    :answer_b: B
+    :answer_c: C
+    :answer_d: D
+    :correct: c
+    :feedback_a: Incorrect! The outer loop iterates through the index values of the width, while the inner loop iterates through the index values of the height. The first pass of the outer loop (width) triggers all of the passes of the inner loop (height). For this reason, all of the heights (inner loop) for a given width (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from top to bottom moving rightward.
+    :feedback_b: Incorrect! Remember that (0,0) for pixels starts at the top left. The outer loop iterates through the index values of the width, while the inner loop iterates through the index values of the height. The first pass of the outer loop (width) triggers all of the passes of the inner loop (height). For this reason, all of the heights (inner loop) for a given width (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from top to bottom moving rightward.
+    :feedback_c: Correct! The outer loop iterates through the index values of the width, while the inner loop iterates through the index values of the height. The first pass of the outer loop (width) triggers all of the passes of the inner loop (height). For this reason, all of the heights (inner loop) for a given width (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from top to bottom moving rightward.
+    :feedback_d: Incorrect! Remember that (0,0) for pixels starts at the top left. The outer loop iterates through the index values of the width, while the inner loop iterates through the index values of the height. The first pass of the outer loop (width) triggers all of the passes of the inner loop (height). For this reason, all of the heights (inner loop) for a given width (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from top to bottom moving rightward.
+
+    What picture most accurately describes what this code does?
+
+    .. code-block:: java
+
+        Pixel p;
+        for (int foo = 0; foo < getWidth();  bar++)
+        {
+            for (int bar = 0; bar < getHeight(); foo++)
+            {
+                p = getPixel(foo, bar);
+                p.setColor(Color.BLACK);
+            }
+        }
+
+    .. image:: https://i.postimg.cc/50RwmVh5/lecture10-Q04.png
+      :width: 400
+      
+.. mchoice:: bs-nestedloops-10-05
+    :author: Beth Simon
+    :practice: T
+    :answer_a: A
+    :answer_b: B
+    :answer_c: C
+    :answer_d: D
+    :correct: a
+    :feedback_a: Correct! The outer loop iterates through the index values of the height, while the inner loop iterates through the index values of the width. The first pass of the outer loop (height) triggers all of the passes of the inner loop (width). For this reason, all of the widths (inner loop) for a given height (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from right to left, downward.
+    :feedback_b: Incorrect! Remember that (0,0) for pixels starts at the top left. The outer loop iterates through the index values of the height, while the inner loop iterates through the index values of the width. The first pass of the outer loop (height) triggers all of the passes of the inner loop (width). For this reason, all of the widths (inner loop) for a given height (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from right to left, downward.
+    :feedback_c: Incorrect! The outer loop iterates through the index values of the height, while the inner loop iterates through the index values of the width. The first pass of the outer loop (height) triggers all of the passes of the inner loop (width). For this reason, all of the widths (inner loop) for a given height (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from right to left, downward.
+    :feedback_d: Incorrect! Remember that (0,0) for pixels starts at the top left. The outer loop iterates through the index values of the height, while the inner loop iterates through the index values of the width. The first pass of the outer loop (height) triggers all of the passes of the inner loop (width). For this reason, all of the widths (inner loop) for a given height (outer loop) are changed before moving to the next iteration of the outer loop. This motion goes from right to left, downward.
+
+    What picture most accurately describes what this code does?
+
+    .. code-block:: java
+
+        Pixel p;
+        for (int bar = 0; bar < getHeight();  bar++)
+        {
+            for (int foo = 0; foo < getWidth(); foo++)
+            {
+                p = getPixel(foo, bar);
+                p.setColor(Color.BLACK);
+            }
+        }
+
+    .. image:: https://i.postimg.cc/50RwmVh5/lecture10-Q04.png
+      :width: 400
 
 
 
