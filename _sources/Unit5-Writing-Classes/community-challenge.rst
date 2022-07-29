@@ -39,6 +39,10 @@ Come up with your class name for your community data-tracking class
 that are attributes of things in that class. Think about what data type each variable should be. 
 You can use this |worksheet| to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using |app diagrams| or |Creately.com| (see |tutorial on class diagrams|).
 
+
+Code your Class
+=================
+
 1. Create your class and its instance variables below. 
 
 2. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters. 
@@ -206,14 +210,18 @@ You can use this |worksheet| to design your class. Optionally, you may want to d
 
 You will continue this project in Unit 6 in lessons 6.1-6.3 to create an array of objects using your class. 
 
+
+Optional Swing GUI
+=====================
+
 .. |Java Swing Example| raw:: html
 
    <a href="https://replit.com/@BerylHoffman/Java-Swing-Input-Form" target="_blank" style="text-decoration:underline">Java Swing Example</a>
    
 An optional additional project is to build a GUI (graphical user interface) for your class (GUIs are not on the AP exam). 
-Here's a |Java Swing Example| on repl that sets up a JFrame with JTextfields, JLabels, and a JButton.
+Here's a |Java Swing Example| on repl and below that sets up a JFrame with JTextfields, JLabels, and a JButton.
 It calls a special method called addActionListener where you can put the code to be executed 
-when you click on the button. 
+when you click on the button. This program prints out the entered data into a file, although more advanced systems would use a database. 
 You can fork this project in replit or copy the code to your local computer to design
 an input form for your class. You can uncomment the code in the actionlistener that prints the entered data into a file. 
 To learn more about Java Swing, click on the different Swing components in the left navigation column of https://www.javatpoint.com/java-swing.
