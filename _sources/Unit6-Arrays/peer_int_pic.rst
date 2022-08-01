@@ -115,3 +115,73 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     .. image:: https://i.postimg.cc/SRhMBw8D/lecture09-Q05.png
       :width: 400
 
+.. mchoice:: bs-soundarray-20-05
+    :author: Beth Simon
+    :practice: T
+    :answer_a: A
+    :answer_b: B
+    :answer_c: C
+    :answer_d: D
+    :correct: b
+    :feedback_a: Incorrect! Since the sample rate is 3 Hz, there are 3 samples per second. Though there are 3 samples in this example, they do not convey a broad range of sample points.
+    :feedback_b: Correct! Since the sample rate is 3 Hz, there are 3 samples per second. There are 3 samples in this example and they convey a broad range of sample points.
+    :feedback_c: Incorrect! Since the sample rate is 3 Hz, there should be 3 samples per second, not 6. 
+    :feedback_d: Incorrect! Since the sample rate is 3 Hz, there should be 3 samples per second, not 6. 
+
+    How would we fill in this SampleSound[]?
+
+    .. image:: https://i.postimg.cc/gcVpRjS3/lecture20-Q05.png
+      :width: 500
+
+.. mchoice:: bs-soundarray-20-09
+    :author: Beth Simon
+    :practice: T
+    :answer_a: A
+    :answer_b: B
+    :answer_c: C
+    :correct: b
+    :feedback_a: Incorrect! This code adjusts the entire array rather than the second half.
+    :feedback_b: Correct! This code adjusts the second half of the array.
+    :feedback_c: Incorrect! This code adjusts the entire array rather than the second half. 
+
+    Which code which makes the following changes?
+
+    .. code-block:: java
+
+        String fileName = FileChooser.pickAFile();
+        Sound noise = new Sound(fileName);
+        SoundSample[] noiseArray = noise.getSamples();
+        <<<  PICK SOME CODE  >>>
+ 
+
+    .. image:: https://i.postimg.cc/qM1r7YqK/lecture20-Q09.png
+      :width: 400
+
+.. mchoice:: bs-soundarray-20-14
+    :author: Beth Simon
+    :practice: T
+    :answer_a: Makes a lower pitched sound during first half of play
+    :answer_b: Makes a quieter sound during first half of play
+    :answer_c: Makes a lower pitched sound during second half of play
+    :answer_d: Makes a quieter sound during second half of play
+    :answer_e: For each SoundSample element if the array it gets the Value and stores that in an int and then sets the Value with something that is half that
+    :correct: c
+    :feedback_a: Incorrect! This code adjusts the second half of the sound array, not the first half. 
+    :feedback_b: Incorrect! This code adjusts the second half of the sound array, not the first half.
+    :feedback_c: Correct! This code adjusts the second half of the array, specifically halving the pitch.
+    :feedback_d: Incorrect! Although this code adjusts the second half of the array, it does not impact the sound.
+    :feedback_e: Incorrect! This code only adjusts the second half of the array, not the whole array.
+
+    What does this code do?
+
+    .. code-block:: java
+
+        String fileName = FileChooser.pickAFile();
+        Sound noise = new Sound(fileName);
+        SoundSample[] noiseArray = noise.getSamples();
+        for (int i = noiseArray.length/2; i < noiseArray.length)
+        {
+          SoundSample sample = noiseArray[i];
+          int foo = sample.getValue();
+          sample.setValue(foo/2);
+        }

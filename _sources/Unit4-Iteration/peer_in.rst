@@ -124,5 +124,36 @@ Peer Instruction: Unit 4 Multiple Choice Questions
     .. image:: https://i.postimg.cc/50RwmVh5/lecture10-Q04.png
       :width: 400
 
+.. mchoice:: bs-nestedloops-11-10
+    :author: Beth Simon
+    :practice: T
+    :answer_a: A
+    :answer_b: B
+    :answer_c: C
+    :answer_d: D
+    :correct: b
+    :feedback_a: Incorrect! In the first iteration, x and y are both 0 so leftP is (0,0), and rightP is (getWidth - 1 - x), which is 99 (100 - 1 - 0). In the second iteration, x is 1 and y is still 0, so leftP is (1,0) and rightP is (getWidth - 1 - x), which is 98 (100 - 1 - 1). In the third iteration, x is 2 and y is 0 so leftP is (2,0) and rightP is (getWidth - 1 - 2), which is 97 (100 - 1 - 2).
+    :feedback_b: Correct! In the first iteration, x and y are both 0 so leftP is (0,0), and rightP is (getWidth - 1 - x), which is 99 (100 - 1 - 0). In the second iteration, x is 1 and y is still 0, so leftP is (1,0) and rightP is (getWidth - 1 - x), which is 98 (100 - 1 - 1). In the third iteration, x is 2 and y is 0 so leftP is (2,0) and rightP is (getWidth - 1 - 2), which is 97 (100 - 1 - 2).
+    :feedback_c: Incorrect! In the first iteration, x and y are both 0 so leftP is (0,0), and rightP is (getWidth - 1 - x), which is 99 (100 - 1 - 0). In the second iteration, x is 1 and y is still 0, so leftP is (1,0) and rightP is (getWidth - 1 - x), which is 98 (100 - 1 - 1). In the third iteration, x is 2 and y is 0 so leftP is (2,0) and rightP is (getWidth - 1 - 2), which is 97 (100 - 1 - 2).
+    :feedback_d: Incorrect! In the first iteration, x and y are both 0 so leftP is (0,0), and rightP is (getWidth - 1 - x), which is 99 (100 - 1 - 0). In the second iteration, x is 1 and y is still 0, so leftP is (1,0) and rightP is (getWidth - 1 - x), which is 98 (100 - 1 - 1). In the third iteration, x is 2 and y is 0 so leftP is (2,0) and rightP is (getWidth - 1 - 2), which is 97 (100 - 1 - 2).
+
+    What are the parameter values we use to index leftPixel and rightPixel for the first three iterations of the loop? (assume picture has a height = 50 and width = 100)
+
+    .. code-block:: java
+
+        int mirrorPt = getWidth()/2;  
+        Pixel leftP, rightP;
+        for (int y = 0; y < getHeight);  y++)
+        {
+            for (int x = 0; x < mirrorPt; x++)
+            {
+                leftP = getPixel(x,y);
+                rightP = getPixel(getWidth()-1-x,y);
+                rightP.setColor(leftP.getColor());   
+            }
+        }
+
+    .. image:: https://i.postimg.cc/9Qc5jQPJ/lecture11-Q10.png
+      :width: 400
 
 
