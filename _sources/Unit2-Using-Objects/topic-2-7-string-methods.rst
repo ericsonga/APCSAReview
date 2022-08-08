@@ -21,7 +21,7 @@
     
 .. |AP CS A Reference Sheet| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
     
 .. image:: ../../_static/time90.png
     :width: 250
@@ -110,9 +110,11 @@ Run the code below to see the output from the String methods ``length``, ``subst
         @Test
         public void testMain() throws IOException
         {
-            String output = getMethodOutput("main");
+            String output = getMethodOutput("main").trim();
             String expect = "14\n11\nThi\ni\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
+            boolean passed = output.contains(expect);
+          
+            getResults(expect, output, "Expected output from main", passed);
             assertTrue(passed);
         }
     }
@@ -432,9 +434,11 @@ The following code shows some common mistakes with strings.
         @Test
         public void testMain() throws IOException
         {
-            String output = getMethodOutput("main");
+            String output = getMethodOutput("main").trim();
             String expect = "The first letter in Hello!:H\nThe last char. in Hello!:!\nIn lowercase: hello!";
-            boolean passed = getResults(expect, output, "Expected output from main");
+            boolean passed = output.contains(expect);
+          
+            getResults(expect, output, "Expected output from main", passed);
             assertTrue(passed);
         } 
     }

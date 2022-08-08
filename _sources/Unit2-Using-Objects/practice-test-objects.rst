@@ -9,8 +9,6 @@ The following 10 questions are similar to what you might see on the AP CS A exam
 
 We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.
 
-.. highlight:: java
-   :linenothreshold: 3
 
 
 .. timed:: practice-exam-2a

@@ -487,13 +487,17 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    :autograde: unittest
+   :stdin: catz
    
    Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found.
    ~~~~
+   import java.util.Scanner;
+   
    public class SpellChecker
    {
-     private String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
-
+      // This dictionary includes the 1000 most frequent words in English
+      private String[] dictionary = { "a", "able", "about", "above", "act", "add", "afraid", "after", "again", "against", "age", "ago", "agree", "air", "all", "allow", "also", "always", "am", "among", "an", "and", "anger", "animal", "answer", "any", "appear", "apple", "are", "area", "arm", "arrange", "arrive", "art", "as", "ask", "at", "atom", "baby", "back", "bad", "ball", "band", "bank", "bar", "base", "basic", "bat", "be", "bear", "beat", "beauty", "bed", "been", "before", "began", "begin", "behind", "believe", "bell", "best", "better", "between", "big", "bird", "bit", "black", "block", "blood", "blow", "blue", "board", "boat", "body", "bone", "book", "born", "both", "bottom", "bought", "box", "boy", "branch", "bread", "break", "bright", "bring", "broad", "broke", "brother", "brought", "brown", "build", "burn", "busy", "but", "buy", "by", "call", "came", "camp", "can", "capital", "captain", "car", "card", "care", "carry", "case", "cat", "catch", "cats", "caught", "cause", "cell", "cent", "center", "century", "certain", "chair", "chance", "change", "character", "charge", "chart", "check", "chick", "chief", "child", "children", "choose", "chord", "circle", "city", "claim", "class", "clean", "clear", "climb", "clock", "close", "clothe", "cloud", "coast", "coat", "cold", "collect", "colony", "color", "column", "come", "common", "company", "compare", "complete", "condition", "connect", "consider", "consonant", "contain", "continent", "continue", "control", "cook", "cool", "copy", "corn", "corner", "correct", "cost", "cotton", "could", "count", "country", "course", "cover", "cow", "crease", "create", "crop", "cross", "crowd", "cry", "current", "cut", "dad", "dance", "danger", "dark", "day", "dead", "deal", "dear", "death", "decide", "decimal", "deep", "degree", "depend", "describe", "desert", "design", "determine", "develop", "dictionary", "did", "die", "differ", "difficult", "direct", "discuss", "distant", "divide", "division", "do", "doctor", "does", "dog", "dogs", "dollar", "don't", "done", "door", "double", "down", "draw", "dream", "dress", "drink", "drive", "drop", "dry", "duck", "during", "each", "ear", "early", "earth", "ease", "east", "eat", "edge", "effect", "egg", "eight", "either", "electric", "element", "else", "end", "enemy", "energy", "engine", "enough", "enter", "equal", "equate", "especially", "even", "evening", "event", "ever", "every", "exact", "example", "except", "excite", "exercise", "expect", "experience", "experiment", "eye", "face", "fact", "fair", "fall", "family", "famous", "far", "farm", "fast", "fat", "father", "favor", "fear", "feed", "feel", "feet", "fell", "felt", "few", "field", "fig", "fight", "figure", "fill", "final", "find", "fine", "finger", "finish", "fire", "first", "fish", "fit", "five", "flat", "floor", "flow", "flower", "fly", "follow", "food", "foot", "for", "force", "forest", "form", "forward", "found", "four", "fraction", "free", "fresh", "friend", "from", "front", "fruit", "full", "fun", "game", "garden", "gas", "gather", "gave", "general", "gentle", "get", "girl", "give", "glad", "glass", "go", "gold", "gone", "good", "got", "govern", "grand", "grass", "gray", "great", "green", "grew", "ground", "group", "grow", "guess", "guide", "gun", "had", "hair", "half", "hand", "happen", "happy", "hard", "has", "hat", "have", "he", "head", "hear", "heard", "heart", "heat", "heavy", "held", "help", "her", "here", "high", "hill", "him", "his", "history", "hit", "hold", "hole", "home", "hope", "horse", "hot", "hour", "house", "how", "huge", "human", "hundred", "hunt", "hurry", "I", "ice", "idea", "if", "imagine", "in", "inch", "include", "indicate", "industry", "insect", "instant", "instrument", "interest", "invent", "iron", "is", "island", "it", "job", "join", "joy", "jump", "just", "keep", "kept", "key", "kill", "kind", "king", "knew", "know", "lady", "lake", "land", "language", "large", "last", "late", "laugh", "law", "lay", "lead", "learn", "least", "leave", "led", "left", "leg", "length", "less", "let", "letter", "level", "lie", "life", "lift", "light", "like", "line", "liquid", "list", "listen", "little", "live", "locate", "log", "lone", "long", "look", "lost", "lot", "loud", "love", "low", "machine", "made", "magnet", "main", "major", "make", "man", "many", "map", "mark", "market", "mass", "master", "match", "material", "matter", "may", "me", "mean", "meant", "measure", "meat", "meet", "melody", "men", "metal", "method", "middle", "might", "mile", "milk", "million", "mind", "mine", "minute", "miss", "mix", "modern", "molecule", "moment", "money", "month", "moon", "more", "morning", "most", "mother", "motion", "mount", "mountain", "mouth", "move", "much", "multiply", "music", "must", "my", "name", "nation", "natural", "nature", "near", "necessary", "neck", "need", "neighbor", "never", "new", "next", "night", "nine", "no", "noise", "noon", "nor", "north", "nose", "not", "note", "nothing", "notice", "noun", "now", "number", "numeral", "object", "observe", "occur", "ocean", "of", "off", "offer", "office", "often", "oh", "oil", "old", "on", "once", "one", "only", "open", "operate", "opposite", "or", "order", "organ", "original", "other", "our", "out", "over", "own", "oxygen", "page", "paint", "pair", "paper", "paragraph", "parent", "part", "particular", "party", "pass", "past", "path", "pattern", "pay", "people", "perhaps", "period", "person", "phrase", "pick", "picture", "piece", "pitch", "place", "plain", "plan", "plane", "planet", "plant", "play", "please", "plural", "poem", "point", "poor", "populate", "port", "pose", "position", "possible", "post", "pound", "power", "practice", "prepare", "present", "press", "pretty", "print", "probable", "problem", "process", "produce", "product", "proper", "property", "protect", "prove", "provide", "pull", "push", "put", "quart", "question", "quick", "quiet", "quite", "quotient", "race", "radio", "rail", "rain", "raise", "ran", "range", "rather", "reach", "read", "ready", "real", "reason", "receive", "record", "red", "region", "remember", "repeat", "reply", "represent", "require", "rest", "result", "rich", "ride", "right", "ring", "rise", "river", "road", "rock", "roll", "room", "root", "rope", "rose", "round", "row", "rub", "rule", "run", "safe", "said", "sail", "salt", "same", "sand", "sat", "save", "saw", "say", "scale", "school", "science", "score", "sea", "search", "season", "seat", "second", "section", "see", "seed", "seem", "segment", "select", "self", "sell", "send", "sense", "sent", "sentence", "separate", "serve", "set", "settle", "seven", "several", "shall", "shape", "share", "sharp", "she", "sheet", "shell", "shine", "ship", "shoe", "shop", "shore", "short", "should", "shoulder", "shout", "show", "side", "sight", "sign", "silent", "silver", "similar", "simple", "since", "sing", "single", "sister", "sit", "six", "size", "skill", "skin", "sky", "slave", "sleep", "slip", "slow", "small", "smell", "smile", "snow", "so", "soft", "soil", "soldier", "solution", "solve", "some", "son", "song", "soon", "sound", "south", "space", "speak", "special", "speech", "speed", "spell", "spend", "spoke", "spot", "spread", "spring", "square", "stand", "star", "start", "state", "station", "stay", "stead", "steam", "steel", "step", "stick", "still", "stone", "stood", "stop", "store", "story", "straight", "strange", "stream", "street", "stretch", "string", "strong", "student", "study", "subject", "substance", "subtract", "success", "such", "sudden", "suffix", "sugar", "suggest", "suit", "summer", "sun", "supply", "support", "sure", "surface", "surprise", "swim", "syllable", "symbol", "system", "table", "tail", "take", "talk", "tall", "teach", "team", "teeth", "tell", "temperature", "ten", "term", "test", "than", "thank", "that", "the", "their", "them", "then", "there", "these", "they", "thick", "thin", "thing", "think", "third", "this", "those", "though", "thought", "thousand", "three", "through", "throw", "thus", "tie", "time", "tiny", "tire", "to", "together", "told", "tone", "too", "took", "tool", "top", "total", "touch", "toward", "town", "track", "trade", "train", "travel", "tree", "triangle", "trip", "trouble", "truck", "try", "tube", "turn", "twenty", "two", "type", "under", "unit", "until", "up", "us", "use", "usual", "valley", "value", "vary", "verb", "very", "view", "village", "visit", "voice", "vowel", "wait", "walk", "wall", "want", "war", "warm", "was", "wash", "watch", "water", "wave", "way", "we", "wear", "weather", "week", "weight", "well", "went", "were", "west", "what", "wheel", "when", "where", "whether", "which", "while", "white", "who", "whole", "whose", "why", "wide", "wife", "wild", "will", "win", "wind", "window", "wing", "winter", "wire", "wish", "with", "woman", "women", "won't", "wonder", "wood", "word", "work", "world", "would", "write", "written", "wrong", "wrote", "yard", "year", "yellow", "yes", "yet", "you", "young", "your", "zoo" };
+  
       // Re-write the spellcheck(word) (and optionally the printStartsWith(firstLetters)) methods to use enhanced for-each loops.
        
       /* Write a spellcheck() method using an enhanced for-each loop 
@@ -506,8 +510,14 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
-        /* Uncomment to test your method
+        /* // Uncomment to test your method
         String word = "catz";
+
+        // Or you may be able to use this code to read input from the textbox below 
+        // System.out.print("Enter a word to spell check in the Input for Program textbox below: ");
+        // Scanner scan = new Scanner(System.in);
+        // word = scan.nextLine();  
+
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
         else
@@ -588,6 +598,246 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
             assertTrue(passed);
         }
       }
+
+|Groupwork| Design an Array of Objects for your Community
+----------------------------------------------------------
+
+In Unit 5, you came up with a class of your own choice relevant to your 
+community.  In lessons 6.1 and 6.2, you created an array to hold objects of your class 
+and traversed the array with a loop. In this challenge, we will create a new class that
+holds your array of objects and add a method that print the array elements and a method that 
+finds a certain object in the array using enhanced for loops. We encourage you to continue working in pairs.
+
+Here is an example of a Student class and a StudentArray class that searches for a student with a
+specific name. In Java, when you are working with multiple classes on your own computer, each
+class is usually in its own file that matches the class name. On Runestone, when you are working 
+with multiple classes, only the class that has the main method should be public, and the other classes should 
+start with ``class`` instead of ``public class``.
+
+.. activecode:: student-array
+  :language: java
+  :autograde: unittest
+
+  Run the StudentArray class below. Note that it uses the class Student below it and creates 
+  an array of Students. Using the StudentArray print() method as a guide, 
+  write a StudentArray method called findAndPrint() which takes a String name as an argument,
+  and uses an enhanced for-loop to traverse the array to find a Student in the array with the same name. 
+  If the argument equals the Student object's name (using its getName() method), then print out that student's info. 
+  Call it from the main method to test it.
+  ~~~~
+  public class StudentArray
+  {
+      private Student[] array; 
+      private int size = 3;
+
+      // Creates an array of the default size  
+      public StudentArray() 
+      {
+         array = new Student[size];
+      }
+        
+      // Creates aan array of the given size
+      public StudentArray(int size) 
+      {
+         array = new Student[size];
+      }
+        
+      // Adds Student s to the array at index i 
+      public void add(int i, Student s)
+      {
+        array[i] = s;  
+      }
+
+      // prints the array of students  
+      public void print()
+      {
+          for(Student s : array)
+          {
+              // this will call Student's toString() method
+              System.out.println(s); 
+          }
+      }
+
+      /* Write a findAndPrint(name) method */  
+       
+        
+      public static void main(String[] args)
+      {
+         // Create an object of this class and pass in size 3
+         StudentArray roster = new StudentArray(3);
+         // Add new Student objects at indices 0-2
+         roster.add(0, new Student("Skyler", "skyler@sky.com", 123456));
+         roster.add(1, new Student("Ayanna", "ayanna@gmail.com", 789012));
+         roster.add(2, new Student("Dakota", "dak@gmail.com", 112233));
+         roster.print(); 
+         System.out.println("Finding student Ayanna: ");
+         // uncomment to test
+         // roster.findAndPrint("Ayanna");
+      }
+    }
+
+    class Student
+    {
+        private String name;
+        private String email;
+        private int id;
+
+        public Student(String initName, String initEmail, int initId)
+        {
+            name = initName;
+            email = initEmail;
+            id = initId;
+        }
+
+        public String getName() { return name; }
+        public String getEmail() { return email; }    
+        public int getId() { return id; }
+                            
+        // toString() method
+        public String toString()
+        {
+            return id + ": " + name + ", " + email;
+        }
+    }
+  ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            super("StudentArray");
+        }
+
+    @Test 
+    public void test1()
+    {
+        String target = "findAndPrint(String";
+        boolean passed = checkCodeContains("findAndPrint method header with String paramenter",target);
+        assertTrue(passed);
+    }
+    
+    @Test 
+    public void test2()
+    {
+        String target = "roster.findAndPrint(";
+        boolean passed = checkCodeContains("call to roster.findAndPrint method (uncommented in main)",target);
+        assertTrue(passed);
+    }
+    
+
+    @Test
+    public void testForEach() 
+    {
+        String target = "for(Student";
+        String code = getCode().replaceAll("\\s", "");
+        int index = code.indexOf("findAndPrint(String");
+        boolean passed = false;
+        if (index > 0) {
+            code = code.substring(index, index + 200);
+            int num = countOccurences(code, target);
+            passed = num == 1;
+            } 
+        getResults("true", ""+passed, "Checking that findAndPrint() contains an enhanced for loop for Student in array", passed);
+            assertTrue(passed);  
+        }
+    @Test
+    public void testEquals() 
+    {
+            boolean passed = checkCodeContains("use of equals method", ".equals(");
+            assertTrue(passed);
+    }
+    @Test
+    public void testGetName() 
+        {
+            boolean passed = checkCodeContains("use of getName() method", ".getName()");
+            assertTrue(passed);
+        }
+    }
+
+Copy your array of objects code from lesson 6.2. 
+Using the ``StringArray`` class above as your guide, separate it into your class and a public 
+array class that puts the array of objects in a private instance variable. 
+The main method should be in this class.  Then, write a print() method that uses an enhanced for-loop
+to print out the array elements. And write a findAndPrint() method with an argument
+that looks for a certain attribute of the objects in the array using an enhanced for-loop, and prints out all the 
+data for the object it finds.
+
+
+.. activecode:: community-challenge-6-3
+  :language: java
+  :autograde: unittest
+
+  Copy your class from the last lesson 6.2 below after the ClassNameArray class. Delete the public from in front of that class.
+  On Runestone, only the class that has the main method should be public. 
+  Complete the ClassNameArray class substituting in your Class name and using the StudentArray class above as a guide. 
+  You should add a print() method and a findAndPrint() method that uses enhanced for loops.
+  ~~~~
+  public class ClassNameArray  // Change ClassName to your class name
+  {
+    // Declare an array of your class type
+
+    // Write a constructor 
+
+    // Write an add() method that adds an object to your array at a certain index 
+
+    // Write a print() method using an enhanced for loop
+
+    // Write a findAndPrint(attribute) method using an enhanced for loop
+
+    public static void main(String[] args)
+    {
+       // Declare an object of ClassNameArray with your class name
+       // Call its add method to add enough new objects to fill the array
+       // Call its print method
+       // Call its findAndPrint method         
+    }
+  }
+
+  // Copy in your class but do not make it public
+  class          // Add your class name here - do not make it public
+  {
+      // Copy your class from lesson 6.2 below. 
+
+
+
+      
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        @Test
+        public void testLoop()
+        {
+           String target = "for";
+           String code = getCode();
+           int num = countOccurences(code, target);
+           boolean passed = num >= 2;
+           getResults("2", ""+num, "Checking that at least 2 enhanced for loops are used", passed);
+           assertTrue(passed);
+        }
+
+        @Test 
+            public void testPrint()
+            {
+                String target = "public void print(";
+                boolean passed = checkCodeContains("print() method",target);
+                assertTrue(passed);
+            }
+        @Test 
+            public void test1()
+            {
+                String target = "findAndPrint(";
+                boolean passed = checkCodeContains("findAndPrint method",target);
+                assertTrue(passed);
+            }
+    }
+       
 
 Summary
 -------

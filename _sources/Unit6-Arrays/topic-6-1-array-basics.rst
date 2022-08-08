@@ -25,7 +25,7 @@
 
 
 Array Creation and Access
---------------------------
+==========================
 
 ..	index::
 	single: array
@@ -76,7 +76,7 @@ Arrays and lists in most programming languages start counting elements from the 
 
 
 Declaring and Creating an Array
-===============================
+-------------------------------
 
 When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, ``int[] scores`` means we have an array called scores that contains int values.
 
@@ -103,7 +103,7 @@ Watch the following |video2| which shows the two ways of creating an array with 
     :align: center
 
 Using new to Create Arrays
-==========================
+--------------------------
 
 To create an empty array after declaring the variable, use the **new** keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array names below. The size of an array is set at the time of creation and cannot be changed after that.
 
@@ -208,7 +208,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
     Figure 3: Two 5 element arrays with their values set to the default values for integer and object arrays.
 
 Initializer Lists to Create Arrays
-======================================
+------------------------------------
 
 Another way to create an array is to use an **initializer list**. You can initialize (set) the values in the array to a list of values in curly brackets { } when you create it, like below.  In this case you don't specify the size of the array, it will be determined from the number of values that you specify.  
 
@@ -243,7 +243,7 @@ Watch the following |video3| which shows an array of String objects with a physi
 	pair: array; length
 
 Array length
-=============
+--------------------------
 
 Arrays know their length (how many elements they can store).  It is a public read-only instance variable so you can use **dot-notation** to access the instance variable (``arrayName.length``).  **Dot-notation** is using variable name followed by a ``.`` and then the instance variable (property) name or a method name. Try the following.
 
@@ -321,7 +321,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
  
 
 Access and Modify Array Values 
-=====================================
+-------------------------------------
 
 To access the items in an array, we use an **indexed array variable** which is the array name and the index inside of square bracket [ ]. Remember that an **index** is a number that indicates the position of an item in a list, starting at 0. Here's a comparison of App Inventor, AP CSP Pseudocode, and Java array access.
 
@@ -566,7 +566,7 @@ Here's a fun String array of image filenames. The following code displays an onl
      public void printHTMLimage(String filename)
      {
         String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("<img src=" + baseURL + filename + ">");
+        System.out.print("<img src=" + baseURL + filename + " width=500px />");
       }
     }
     ====
@@ -596,7 +596,7 @@ Here's a fun String array of image filenames. The following code displays an onl
      }
 
 |Groupwork| Programming Challenge : Countries Array
-===================================================
+---------------------------------------------------------
 
 .. image:: 6-1-images/US.jpg
     :width: 200
@@ -604,19 +604,20 @@ Here's a fun String array of image filenames. The following code displays an onl
     
 In this challenge, you will create a guide to different countries using arrays. 
 
-1. Use the Active Code window below to create 4 parallel arrays and intialize them using initialization lists that represent the data below. Remember that the order of these arrays has to match so that you can use the same index and get corresponding values out.
+1. Use the Active Code window below to create 4 parallel arrays and initialize them using initialization lists that represent the data below. Remember that the order of these arrays has to match so that you can use the same index and get corresponding values out.
 
   - **Countries:** China, Egypt, France, Germany, India, Japan, Kenya, Mexico, United Kingdom, United States
   - **Capitals:** Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi, Mexico City, London, Washington D.C.
   - **Languages:** Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
   - **Filenames for map images:** China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
 
+2. You are encouraged to add additional country, capital, and language names that match in position in the parallel arrays to represent your family origins or places you would like to visit. Although we do not have image files for each country in the CSAwesome map images, we do have regional map images called south-america.png, central-america.png, north-america.png, asia-pacific.png, europe.png, africa.png, and middle-east.png which you can use. Note that these are png files and not jpg. If you create more maps for your project, you can have your teacher share it in the teaching-csawesome google group to contribute to this map image collection.
 
+3. Choose a random number using Math.random() and the **length** of one of the arrays and save it in a variable called index. 
 
+4. Print out the country name, its capital, and its language, and the map image for that country using the random index to access the corresponding item in each parallel array. For the images, the printHTMLimage method has been given to get the image URL online and print it out as an HTML image.
 
-2. Choose a random number using Math.random() and the **length** of one of the arrays and save it in a variable called index. 
-
-3. Print out the country name, its capital, and its language, and the map image for that country using the random index to access the corresponding item in each parallel array. For the images, the printHTMLimage method has been given to get the image URL online and print it out as an HTML image.
+5. Optional Extra Challenge: If you have more time for this project, you can combine what you learned in the last unit to **refactor** your code (which means restructure without changing the functionality) to make it object-oriented. Create a Country class that stores the country name, capital, language, and image file. In the main method, create an array of 10 Country objects with the data for each country passed to its constructor, and use a random number to choose a country object from the array and display its attributes. See the array of turtles in the next section below for help on how to create an array of objects.
 
 .. activecode:: challenge-1-6-countries
    :language: java
@@ -647,7 +648,7 @@ In this challenge, you will create a guide to different countries using arrays.
       public void printHTMLimage(String filename)
       {
         String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("<img src=" + baseURL + filename + ">");
+        System.out.print("<img src=" + baseURL + filename + " width=500px />");
       }
      }
      ====
@@ -725,8 +726,175 @@ In this challenge, you will create a guide to different countries using arrays.
         }
      }
     
+|Groupwork| Design an Array of Objects for your Community
+----------------------------------------------------------
+
+So far, we have seen arrays of ints and Strings, but we can create an array of any type.
+For example, the following program creates an array of Turtle objects. 
+Notice that for an array of objects, we must call the constructor of each object to 
+initialize the array elements, for example ``array[index] = new ClassName();``.
+And we can use ``array[index].method()`` to call a method of an object in the array.
+
+.. code-block:: java 
+
+   // Declaring an array of objects type ClassName
+   ClassName[] array = new ClassName[size];
+   // initialize array element by calling ClassName constructor
+   array[index] = new ClassName();
+   // call a method of the object in the array at index
+   array[index].method();
+
+.. activecode:: TurtleArray
+    :language: java
+    :autograde: unittest
+    :datafile: turtleClasses.jar
+
+    Run the code below to see the 2 turtles in the array.
+    Can you change the array size to 3 and create and add 1 more Turtle object to the array? 
+    Make this new turtle turnRight and go forward using its indexed array variable.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class TurtleArray
+    {
+      public static void main(String[] args)
+      {
+          World world = new World(300,300);
+          // Declare an array for 2 Turtle objects
+          Turtle[] turtarray = new Turtle[2];
+          // Initialize the array elements by constructing each turtle object 
+          turtarray[0] = new Turtle(world);
+          turtarray[1] = new Turtle(world);
+          // Call each turtle's methods
+          turtarray[0].forward();
+          turtarray[1].turnLeft();
+          turtarray[1].forward();
+            
+          world.show(true);
+      }
+    }    
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testArrayDeclaration() throws IOException {
+           boolean passed = checkCodeContains("an array declaration of size 3", "Turtle[3]");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void testInit()  {
+           boolean passed = checkCodeContains("initialization for array element 2", "[2] = new Turtle");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void testprint()  {
+           boolean passed = checkCodeContains("call forward() of array element 2", "[2].forward();");
+           assertTrue(passed);
+        }      
+    }
+
+
+In Unit 5, you came up with a class of your own choice relevant to you or your 
+community.  In this unit, you will create an array to hold objects of your class.
+
+1. Copy your class from lesson 5.6 below. 
+
+2. In the main method, create an array of 3 objects of your class. 
+
+3. Initialize array elements indexed 0 to 2 to new objects of your class using its constructor.
+
+4. Call the print method of each object in the array using the array index.
+
+.. activecode:: community-challenge-6-1
+  :language: java
+  :autograde: unittest
+
+  Community Challenge: Copy your class from lesson 5.6 below. Create an array of 3 objects of your class, initialize
+  them to new objects and call their print methods. 
+  ~~~~
+  public class          // Add your class name here!
+  {
+      // 1. Copy your class from lesson 5.6 below. 
+
+
+
+      public static void main(String[] args)
+      {  
+         // 2. Create an array of 3 objects of your class. 
+         
+         // 3. Initialize array elements 0-2 to new objects of your class.
+
+         
+         // 4. Call the print method of each object in the array using the array index. 
+
+
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        @Test
+        public void testArrayDeclaration() throws IOException {
+           boolean passed = checkCodeContains("an array declaration of size 3", "[3]");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void testObjs() throws IOException {
+            String code = getCode();
+            String target = "new";
+            int count = countOccurences(code, target);
+            boolean passed = (count >= 4); 
+            getResults("4+ " + target, count + "+ " + target,  
+            "Did you declare 3 objects of your class using new and your constructor?",passed);
+            assertTrue(passed);
+        }
+        
+        @Test
+        public void testInit()  {
+           boolean passed = checkCodeContains("initialization for array element 0", "[0]=");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void testprint()  {
+           boolean passed = checkCodeContains("call to print() of array element 0", "[0].print();");
+           assertTrue(passed);
+        }
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");//.split("\n");
+            String expect = "3+ line(s) of text";
+            String actual = " line(s) of text";
+            int len = output.split("\n").length;
+
+            if (output.length() > 0) {
+                actual = len + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = len >= 3;
+
+            getResults(expect, actual, "Checking output", passed);
+            assertTrue(passed);
+        }
+    }
+
 Summary
-=========
+--------------------------
 
 - Arrays represent collections of related data all of the same data type. 
 
@@ -748,8 +916,91 @@ Summary
 - The valid index values for an array are 0 through one less than the number of elements in the array, inclusive. Using an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown.
 
 
+AP Practice
+------------
+
+We will see in the next lesson that the index of an array is often a variable named ``i`` 
+that is used in loops to traverse an array.  
+In challenging AP problems, you will see mathematical expressions inside the array brackets []. 
+For example, ``array[i-1]`` refers to the previous element right before the ith element in array, 
+and ``array[i+1]`` refers to the next element after the ith element.  In the problems below, note that
+arrays can be passed in as arguments to methods and returned as values, just like any variable.
+
+.. mchoice:: AP6-1-1
+        :practice: T
+        :answer_a: [8, 20, 30]
+        :answer_b: [4, 8, 15]
+        :answer_c: [8, 10, 15] 
+        :answer_d: [4, 10, 20]
+        :answer_e: [4, 8, 30]
+        :correct: d
+        :feedback_a: This would only be true if all elements were doubled by the method.   
+        :feedback_b: This would only be true if the call was ``mystery(array, 1)``. Remember that array indexing starts at 0.
+        :feedback_c: This would only be true if the method body had ``a[i-1] = a[i-1] * 2;``
+        :feedback_d: Correct. array[2] = array[1] * 2 = 10 * 2 = 20.  
+        :feedback_e: Note that only 1 array element is changed.
+
+        Consider the following method. Given an ``array`` initialized to ``{4, 10, 15}``, which of the following represents the contents of the array after a call to ``mystery(array, 2)``?
+       
+        .. code-block:: java
+
+           public void mystery(int[] a, int i)
+           {
+              a[i] = a[i-1] * 2;
+           }
+
+.. mchoice:: AP6-1-2
+        :practice: T
+
+        Consider the following method. Which of the following code segments, appearing in the same class as the ``mystery`` method, 
+        will result in ``array2`` having the contents ``{5, 10, 20}``?
+        
+        .. code-block:: java
+ 
+           public int[] mystery(int[] a, int i, int value)
+    	   {
+    	      a[i + 1] = a[i] + value;
+    	      return a;
+    	   }
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 10, 15};
+            int[] array2 = mystery(array1, 0, 10);
+
+          - This would result in ``{5, 15, 15}``.
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 15, 20};
+            int[] array2 = mystery(array1, 0, 0);
+
+          - This would result in ``{5, 5, 20}``.
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 10, 15};
+            int[] array2 = mystery(array1, 1, 10);
+
+          + Correct! a[i+1] = a[2] = a[i] + value = a[1] + 10 = 10 + 10 = 20.
+
+        - .. code-block:: java
+
+            int[] array1 = {5, 15, 20};
+            int[] array2 = mystery(array1, 2, 0);
+
+          - This would result in an ``ArrayIndexOutOfBoundsException``.
+
+        - .. code-block:: java
+	
+            int[] array1 = {5, 10, 15};
+            int[] array2 = mystery(array1, 1, 20);
+
+          - This would result in ``{5, 10, 30}``.        
+       	    
+
 Arrays Game
-=============
+--------------------------
 
 .. |game| raw:: html
 

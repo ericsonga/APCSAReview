@@ -6,6 +6,8 @@ import java.util.*;
       {
           World world = new World(300,300);
           Turtle timmy = new Turtle(world);
+          timmy.setSpeed(25);
+          
           timmy.forward(100);
           timmy.turnRight();
           timmy.forward(100);

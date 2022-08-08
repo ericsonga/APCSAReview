@@ -2283,6 +2283,15 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         public void setPicture(Picture pict) { this.picture = pict; }
 
         /**
+         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * 50 is the default. We pass this to the World's setSpeed method.
+         * @param d
+         */
+        public void setSpeed(int d) { 
+           ((World)modelDisplay).setSpeed(d);
+        }
+        
+        /**
          * Method to get the model display for this simple turtle
          * @return the model display if there is one else null
          */
@@ -3046,6 +3055,9 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         /** the height of the world */
         private int height = 480;
 
+        /** speed/delay in drawing */
+        private int delay = 50;
+
         /** the list of turtles in the world */
         private List<Turtle> turtleList = new ArrayList<Turtle>();
 
@@ -3152,7 +3164,7 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         }
 
         /**
-         * Metod to get the last turtle in this world
+         * Method to get the last turtle in this world
          * @return the last turtle added to this world
          */
         public Turtle getLastTurtle()
@@ -3202,6 +3214,16 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         public int getHeight() { return height; }
 
         /**
+         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * 50 is the default.
+         * @param speed
+         */
+        public void setSpeed(int d) { 
+           if (d >= 0 && d <= 100) 
+               delay = d;
+        }
+
+        /**
          * Method that allows the model to notify the display
          */
         public void modelChanged()
@@ -3233,7 +3255,7 @@ Try these AP practice questions that will help to prepare you for the AP Classro
                     for(int i = 0; i < this.worldHistory.size(); i++) {
                         images[i] = ((Picture) this.worldHistory.get(i)).getBufferedImage();
                     }
-                    Giffer.generateFromBI(images, "history.gif", 100, false);
+                    Giffer.generateFromBI(images, "history.gif", delay, false);
 
                     File history = new File("history.gif");
 

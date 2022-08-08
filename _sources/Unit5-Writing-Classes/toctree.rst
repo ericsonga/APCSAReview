@@ -31,6 +31,7 @@ AP CS A Exam Weighting: 5-7.5%
    APLine.rst
    midterm_unit5.rst
    CBLabs.rst
+   community-challenge.rst
    
 
   

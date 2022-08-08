@@ -1,10 +1,6 @@
 .. qnum::
    :prefix: 3-3-
-   :start: 1
-   
-.. highlight:: java
-   :linenothreshold: 4
-   
+   :start: 1   
    
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
@@ -227,29 +223,70 @@ If/else statements can also be used with relational operators and numbers like b
    } 
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
+    import org.junit.*;
     import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
+    
+    public class RunestoneTests extends CodeTestHelper {
         @Test
         public void testChangedCode() {
             String origCode = "public class ScoreTest   {      public static void main(String[] args)      {        int score = 8;        if (score <= 9)         {            System.out.println(\"Try for a higher score!\");        }      }} ";
-
+    
             boolean changed = codeChanged(origCode);
             assertTrue(changed);
         }
+    
         @Test
-        public void testCodeContainsElse(){
-          boolean ifCheck2 = checkCodeContains("else", "else");
-          assertTrue(ifCheck2);
+        public void testCodeContainsElse() {
+            boolean ifCheck2 = checkCodeContains("else", "else");
+            assertTrue(ifCheck2);
         }
+    
         @Test
-        public void testCodeContains(){
-            boolean ifCheck1 = checkCodeContains("if testing with 20", "if (score <= 20)");
-            assertTrue(ifCheck1);
+        public void testCodeContains20() {
+            String target1 = removeSpaces("score <= 20");
+            String target2 = removeSpaces("score > 20");
+    
+            String code = removeSpaces(getCode());
+    
+            boolean passed = code.contains(target1) || code.contains(target2);
+            getResults("true", "" + passed, "Checking for score <= 20 or score > 20", passed);
+            assertTrue(passed);
+        }
+       
+        @Test
+        public void testCodeChange1() throws Exception {
+            String className = "Test1";
+    
+            String program = getCode();
+            program = program.replace("ScoreTest", className).replace("public class", "class");
+            program = program.replaceAll("= *[0-9]+;", "= 25;");
+    
+            String output = getMethodOutputChangedCode(program, className, "main");
+    
+            String expected = "Good job!";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if score is 25", passed);
+            assertTrue(passed);
+        }
+        
+
+        @Test
+        public void testCodeChange2() throws Exception {
+            String className2 = "Test2";
+    
+            String program2 = getCode();
+            program2 = program2.replace("ScoreTest", className2).replace("public class", "class");
+            program2 = program2.replaceAll("= *[0-9]+;", "= 5;");
+    
+            String output2 = getMethodOutputChangedCode(program2, className2, "main");
+    
+            String expected2 = "Try for a higher score!";
+            boolean passed2 = output2.contains(expected2);
+            getResults(expected2, output2, "Checking output if score is 5", passed2);
+            assertTrue(passed2);
         }
     }
+
 
 
 
