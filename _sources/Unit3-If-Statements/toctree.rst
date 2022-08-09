@@ -21,7 +21,7 @@ AP CS A Exam Weighting: 15-17.5%
    topic-3-6-DeMorgan.rst
    topic-3-7-comparing-objects.rst
    topic-3-8-summary.rst
-   topic-3-9-practice-mixed-code-with-write.rst
+   topic-3-9-practice-mixed-code.rst
    topic-3-9-practice-mixed-code-toggle.rst
    topic-3-10-practice-coding.rst
    Exercises.rst
