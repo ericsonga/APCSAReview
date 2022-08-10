@@ -219,8 +219,8 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         public class Square {
 
-            // Your code here — define variables //
-            // hint — numberOfSquares should be static & initialized //
+            // Your code here: define variables //
+            // hint: numberOfSquares should be static & initialized //
             
             public Square(int length) { 
                 this.length = length;
@@ -298,7 +298,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that completes the ``Rectangle`` class. It should have three constructors that can take zero, one, or two integer parameters. With zero arguments passed, the ``Rectangle`` should be initialized with a ``length`` of 10 and a ``width`` of 10. With one integer passed, the ``Rectangle`` should have a ``length`` and ``width`` equal to that argument (i.e., you assume it's a square). With two integers passed, the ``Rectangle`` should have a ``length`` equal to the first argument and a ``width`` equal to the second argument. There should also be an ``getArea`` method that returns the area ``length`` times ``width``. Finally, there should be a ``toString`` method which returns ``"Length: length, Width: width"`` (such that ``Rectangle(5, 7)``'s toString method would return ``"Length: 5, Width: 7"``. 
+        Write code that completes the ``Rectangle`` class. It should have constructors that can take zero or two integer parameters. With zero arguments passed, the ``Rectangle`` should be initialized with a ``length`` of 10 and a ``width`` of 10. With two integers passed, the ``Rectangle`` should have a ``length`` equal to the first argument and a ``width`` equal to the second argument. There should also be a ``getArea`` method that returns the area ``length`` times ``width``. 
         ~~~~
         public class Rectangle {
 
@@ -309,27 +309,15 @@ This is the write code problems associated with the mixed up code problems.
                 // Add code here
             }
 
-            public Rectangle(int length) {
-                // Add code here
-            }
-
             // Add two-parameter constructor
 
             // Add getArea method
 
-            // Add toString method
-
-            
             public static void main(String[] args) {
                 Rectangle rect1 = new Rectangle();
-                Rectangle rect2 = new Rectangle(6);
-                Rectangle rect3 = new Rectangle(5, 8);
+                Rectangle rect2 = new Rectangle(5, 8);
                 System.out.println("Rect1 area: " + rect1.getArea()); // Should print "Rect1 area: 100"
-                System.out.println("Rect2 area: " + rect2.getArea()); // Should print "Rect2 area: 36"
-                System.out.println("Rect3 area: " + rect3.getArea()); // Should print "Rect3 area: 40"
-                System.out.println(rect1); // Should print "Length: 10, Width: 10"
-                System.out.println(rect2); // Should print "Length: 6, Width: 6"
-                System.out.println(rect3); // Shuld print "Length: 5, Width: 8"
+                System.out.println("Rect2 area: " + rect2.getArea()); // Should print "Rect2 area: 40"
             }
         }
         ====
@@ -347,23 +335,12 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void testMain() throws IOException {
                 String output = getMethodOutput("main");
-                String expect = "Rect1 area: 100\nRect2 area: 36\nRect3 area: 40\nLength: 10, Width: 10\nLength: 6, Width: 6\nLength: 5, Width: 8";
+                String expect = "Rect1 area: 100\nRect2 area: 40\n";
                 boolean passed = getResults(expect, output, "Expected output from main");
                 assertTrue(passed);
             }
-    
-            
-            @Test
-            public void testNoParameters() throws IOException {
-                String output = "" + getMethodOutput("toString");
-                String expect = "Length: 10, Width: 10";
 
-                boolean passed = getResults(expect, output, "Expected output from toString() for no parameters");
-                assertTrue(passed);
-            }
-
-            // TODO: Add tests for one parameter and two parameters
-    
+            // TODO: Add tests for two parameters
         }
 
 .. activecode:: u5_muc_wc6
@@ -371,7 +348,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that completes the ``CelestialBody`` class. Each ``CelestialBody`` instance has an integer ``orbitLength`` (in days) and a integer ``daysSinceDiscovered`` attribute. Using these, write the ``orbit(int numberOfTimes)`` method that adds ``numberOfTimes * orbitLength`` to ``daysSinceDiscovered`` (e.g., if Planet X has done two orbits with an orbit length of 12 days, it was discovered 24 days ago. If it then orbits another three times, it was discovered 60 days ago). Also, fix the two errors in the class.
+        Write code that completes the ``CelestialBody`` class. Each ``CelestialBody`` instance has an integer ``orbitLength`` (in days) and a integer ``daysSinceDiscovered`` attribute (which is initially 0). Using these, write the ``orbit(int numberOfTimes)`` method that adds ``numberOfTimes * orbitLength`` to ``daysSinceDiscovered`` (e.g., if Planet X has done two orbits with an orbit length of 12 days, it was discovered 24 days ago. If it then orbits another three times, it was discovered 60 days ago). Also, fix the two errors in the class.
         ~~~~
         public class CelestialBody {
             private int orbitLength;
@@ -387,22 +364,8 @@ This is the write code problems associated with the mixed up code problems.
 
             }
 
-            // You can ignore the rest of the methods
-
-            public int getOrbitLength() {
-                return this.orbitLength;
-            }
-
-            public void setOrbitLength(int orbitLength) {
-                this.orbitLength = orbitLength;
-            }
-
             public int getDaysSinceDiscovered() {
                 return this.daysSinceDiscovered;
-            }
-
-            public void setDaysSinceDiscovered(int daysSinceDiscovered) {
-                this.daysSinceDiscovered = daysSinceDiscovered;
             }
 
             public static void main(String[] args) {
@@ -430,14 +393,14 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void testMain() throws IOException {
                 String output = getMethodOutput("main");
-                String expect = "If the moon has orbited five times, it was discovered 140 days ago.\nIf it has orbited one more time, it was discovered 168 days ago.\n";
+                String expect = "If the moon has orbited five times, it was discovered 140 days ago.\n";
                 boolean passed = getResults(expect, output, "Expected output from main");
                 assertTrue(passed);
             }
 
             @Test 
             public void testCheckHardcode() throws IOException {
-                String target = "System.out.println(\"If it has orbited one more time, it was discovered 168 days ago\")";
+                String target = "System.out.println(\"If the moon has orbited five times, it was discovered 140 days ago.\")";
                 String desc = "hardcoded print statements";
                 boolean doesntManuallyPrint = checkCodeContains(false, desc, target, false);
                 assertTrue(doesntManuallyPrint);
@@ -449,7 +412,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code to create a ``Person`` class. Each ``Person`` instance should have a String ``name`` attribute and a integer ``age`` attribute. There should be setter/getter methods for each: ``getName``, ``setName``, ``getAge``, ``setAge``. Finally, there should to be a ``toString`` method that returns ``“{name} is {age} years old”`` (e.g., ``Person(“Carol”, 12)``’s toString method would return ``”Carol is 12 years old”``).
+        Write code to create a ``Person`` class. Each ``Person`` instance should have a String ``name`` attribute and a integer ``age`` attribute. There should also be ``getName`` and ``setName`` methods. Finally, there should to be a ``toString`` method that returns ``“{name} is {age} years old”`` (e.g., ``Person(“Carol”, 12)``’s toString method would return ``”Carol is 12 years old”``).
         ~~~~
         public class Person {
             // define a String instance variable "name"
@@ -462,26 +425,17 @@ This is the write code problems associated with the mixed up code problems.
             
             // create a setName method
 
-            // create a getAge method
-
-            // create a setAge method
-
             // create a toString method that should return "{name} is {age} years old"
             // see the main method for an example
 
             public static void main(String[] args) {
-                Person p = new Person("Joe", 1);
+                Person p = new Person("Joe", 2);
                 
                 System.out.println("p's name: " + p.getName()); // Should print "p's name: Joe"
-                System.out.println("p's age: " + p.getAge()); // Should print "p's age: 1"
                 
                 p.setName("Joseph"); // Changing name to Joseph
 
                 System.out.println("p's new name: " + p.getName()); // Should print "p's new name: Joseph"
-
-                p.setAge(35); // Changing age to 5
-
-                System.out.println("p's new age: " + p.getAge()); // Should print "p's new age: 35"
 
                 System.out.println(p); // Should print "Joseph is 35 years old"
             }
@@ -502,7 +456,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void testMain() throws IOException {
                 String output = getMethodOutput("main");
-                String expect = "p's name: Joe\np's age: 1\np's new name: Joseph\np's new age: 35\nJoseph is 35 years old\n";
+                String expect = "p's name: Joe\np's new name: Joseph\nJoseph is 2 years old\n";
                 boolean passed = getResults(expect, output, "Expected output from main");
                 assertTrue(passed);
             }
@@ -524,16 +478,8 @@ This is the write code problems associated with the mixed up code problems.
                 boolean passed = getResults(expect, output, "Expected output from getName");
                 assertTrue(passed);
             }
-            @Test
-            public void testGetAge() throws IOException {
-                Object[] params = {"Jimmy", 3};
-                setDefaultValues(params);
-                String output = getMethodOutput("getAge");
-                String expect = "" + 3;
-                boolean passed = getResults(expect, output, "Expected output from getAge");
-            }
 
-            // TODO: Add tests for the setter methods
+            // TODO: Add tests for the setter method
         }
 
 .. activecode:: u5_muc_wc8
@@ -541,7 +487,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code to create a ``Point`` class. Each ``Point`` instance should have integer ``x`` and ``y`` attributes (and the constructor should take those in that order). There should be getter methods for each: ``getX`` and ``getY``. There should be a ``getDistance`` method that takes in another ``Point`` object as an argument and calculates the distance from this object to that one (which would be sqrt((this.x - other.x) ^ 2 + (this.y - other.y) ^ 2)). Finally, there should to be a ``toString`` method that returns ``“(Point.x, Point.y)”`` (e.g., ``Point(3, 4)``’s toString method would return ``”(3, 4)”``).
+        Write code to create a ``Point`` class. Each ``Point`` instance should have integer ``x`` and ``y`` attributes (and the constructor should take those in that order). There should be getter methods for each: ``getX`` and ``getY``. There should be a ``getDistance`` method that takes in another ``Point`` object as an argument and calculates the euclidean distance from this object to that one (which would be sqrt((this.x - other.x) ^ 2 + (this.y - other.y) ^ 2)). Finally, there should to be a ``toString`` method that returns ``“(Point.x, Point.y)”`` (e.g., ``Point(3, 4)``’s toString method would return ``”(3, 4)”``).
         ~~~~
         public class Point {
             private int x;
@@ -596,7 +542,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void testMain() throws IOException {
                 String output = getMethodOutput("main");
-                String expect = "The origin is at (0, 0)\nThat\nis 5.0 units away from (3, 4)\nAnd 7.81 units away from (5, 6)\n(3, 4) and (5, 6) are 2.83 units away from each other";
+                String expect = "The origin is at (0, 0)\nThat is 5.0 units away from (3, 4)\nAnd 7.81 units away from (5, 6)\n(3, 4) and (5, 6) are 2.83 units away from each other";
                 boolean passed = getResults(expect, output, "Expected output from main");
                 assertTrue(passed);
             }
@@ -702,7 +648,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write code that completes the ``Character`` class. Each ``Character`` instance has an integer ``healthPoints`` (abbreviated HP) attribute and a String ``name`` attribute. They also have the associated ``getHP``, ``setHP``, and ``getName`` methods. Using these, write code that finishes the ``fight(Character other)`` method that lets a character fight another. If the character's ``healthPoints`` are more than ``other``'s, ``other``'s HP should be set to zero, the current character's HP should be set to the difference, and the program should print ``"Outcome: {the character's name} wins with {the character's HP} HP remaining"``. That entire section is already completed. On the other hand, if ``other``'s HP is greater, the current character's HP should be set to zero, ``other``'s HP should be set to the difference, and the program should print ``”Outcome: {other’s name} wins with {other’s HP} HP remaining”``. Finally, if they have the same HP, the program should print ``”Outcome: Tie”`` and set both HPs to 0.
+        Write code that completes the ``Character`` class. Each ``Character`` instance has an integer ``healthPoints`` (abbreviated HP) attribute and a String ``name`` attribute. They also have the associated ``getHP``, ``setHP``, and ``getName`` methods. Using these, write code that finishes the ``fight(Character other)`` method that lets a character fight another. If the character's ``healthPoints`` are the same or more than ``other``'s, ``other``'s HP should be set to zero, the current character's HP should be set to the difference, and the program should print ``"{the character's name} wins"``. That entire section is already completed. On the other hand, if ``other``'s HP is greater, the current character's HP should be set to zero, ``other``'s HP should be set to the difference, and the program should print ``”{other’s name} wins”``.
         ~~~~
         public class Character {
             private int healthPoints; // current HP of the character
@@ -727,7 +673,7 @@ This is the write code problems associated with the mixed up code problems.
 
             public void fight(Character other) {
                 
-                if (this.getHP() > other.getHP()) {
+                if (this.getHP() >= other.getHP()) {
 
                     // This part of the function is finished for you
 
@@ -737,10 +683,10 @@ This is the write code problems associated with the mixed up code problems.
                     other.setHP(0); // update other's HP to be 0
 
 
-                    System.out.println("Outcome: " + this.getName() + " wins with " + this.getHP() + "HP remaining"); // print outcome
+                    System.out.println(this.getName() + " wins"); // print outcome
                 }
 
-                else if (this.getHP() < other.getHP()) {
+                else {
 
                     // YOUR CODE HERE //
                     
@@ -748,16 +694,7 @@ This is the write code problems associated with the mixed up code problems.
 
                     // TODO: update this object's HP to be 0
 
-                    // TODO: print "Outcome: {other's name} wins with {other's HP} HP remaining"
-                }
-
-                else { // This is the case where the characters have the same HP
-
-                    // YOUR CODE HERE //
-                    
-                    // TODO: set both healths to 0
-                    // TODO: print "Outcome: Tie"
-                
+                    // TODO: print "{other's name} wins"
                 }
             }
 
@@ -766,18 +703,18 @@ This is the write code problems associated with the mixed up code problems.
                 Character villain1 = new Character(3, "abmooG");
                 Character villain2 = new Character(7, "igiulaW");
                 System.out.println("---Fight between oiraM and abmooG---");
-                hero.fight(villain1); // Prints "Outcome: oiraM wins with 7HP remaining"
+                hero.fight(villain1); // Prints "oiraM wins"
                 System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and abmooG: " + villain1.getHP()); // Prints "Remaining HPs -- oiraM: 7 and abmooG: 0"
 
                 System.out.println("---Fight between oiraM and igiulaW---");
-                hero.fight(villain2); // Should print "Outcome: Tie"
+                hero.fight(villain2); // Should print "oiraM wins"
                 System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and igiulaW: " + villain2.getHP()); // Should print "Remaining HPs -- oiraM: 0 and igiulaW: 0"
-                System.out.println("oiraM used health pot to regain 5 HP");
+                System.out.println("oiraM used health potion to regain 5 HP");
                 hero.setHP(5);
 
                 Character villain3 = new Character(13, "reswoB");
                 System.out.println("---Fight between oiraM and reswoB---");
-                hero.fight(villain3); // Should print "Winner: reswoB, Remaining HP: 8"
+                hero.fight(villain3); // Should print "reswoB wins"
                 System.out.println("Remaining HPs -- oiraM: " + hero.getHP() + " and reswoB: " + villain3.getHP()); // Should print "Remaining HPs -- oiraM: 0 and reswoB: 8"
             }
             
@@ -800,14 +737,14 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void testMain() throws IOException {
                 String output = getMethodOutput("main");
-                String expect = "---Fight between oiraM and abmooG---\nOutcome: oiraM wins with 7HP remaining\nRemaining HPs -- oiraM: 7 and abmooG: 0\n---Fight between oiraM and igiulaW---\nOutcome: Tie\nRemaining HPs -- oiraM: 0 and igiulaW: 0\noiraM used health pot to regain 5 HP\n---Fight between oiraM and reswoB---\nOutcome: reswoB wins with 8HP remaining\nRemaining HPs -- oiraM: 0 and reswoB: 8\n";
+                String expect = "---Fight between oiraM and abmooG---\noiraM wins\nRemaining HPs -- oiraM: 7 and abmooG: 0\n---Fight between oiraM and igiulaW---\noiraM wins\nRemaining HPs -- oiraM: 0 and igiulaW: 0\noiraM used health potion to regain 5 HP\n---Fight between oiraM and reswoB---\nreswoB wins\nRemaining HPs -- oiraM: 0 and reswoB: 8\n";
                 boolean passed = getResults(expect, output, "Expected output from main");
                 assertTrue(passed);
             }
 
             @Test 
             public void testCheckHardcode() throws IOException {
-                String target = "System.out.println(\"Winner: oiraM, Remaining HP: 7\")";
+                String target = "System.out.println(\"oiraM wins\")";
                 String desc = "hardcoded print statements";
                 boolean doesntManuallyPrint = checkCodeContains(false, desc, target, false);
                 assertTrue(doesntManuallyPrint);
