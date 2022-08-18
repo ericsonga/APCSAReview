@@ -1349,7 +1349,9 @@ public class CodeTestHelper {
             endLine = code.indexOf("\n", startLine + 1);
             if (endLine >= 0)
                 code = code.substring(0, startLine) + code.substring(endLine);
-
+            else {
+                code = code.substring(0, startLine);
+            }
             startLine = code.indexOf("//");
         }
 
