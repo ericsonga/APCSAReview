@@ -30,19 +30,19 @@ Peer Instruction: Unit 1 Multiple Choice Questions
 .. mchoice:: bs-binary-05-05
     :author: Beth Simon
     :practice: T
-    :answer_a: Deep Red (a channel)
-    :answer_b: White (all channels maximum)
-    :answer_c: Black (all channels minimum)
+    :answer_a: Deep Red
+    :answer_b: White 
+    :answer_c: Black
     :answer_d: 1
     :answer_e: 255
     :correct: e
-    :feedback_a: Incorrect! 11111111 means 255 in binary, not Deep Red.
-    :feedback_b: Incorrect! 11111111 means 255 in binary, not White.
-    :feedback_c: Incorrect! 11111111 means 255 in binary, not Black.
+    :feedback_a: Incorrect! 11111111 means 255 in binary, not deep red. Red is (255, 0, 0) in RGB so 11111111 00000000 00000000 represents red in binary.
+    :feedback_b: Incorrect! 11111111 means 255 in binary, not white. White is typically interpreted as 1 in bits. Since white is (255, 255, 255) in RGB, it would be 11111111 11111111 11111111 in binary.
+    :feedback_c: Incorrect! 11111111 means 255 in binary, not black. Black is typically interpreted as 0 in bits. Since black is (0, 0, 0) in RGB, it would be 00000000 00000000 00000000 in binary.
     :feedback_d: Incorrect! 11111111 means 255 in binary. 1 in binary is 1. 
     :feedback_e: Correct! 11111111 means 255 in binary.
 
-    What does this data stored in a computer represent?
+    What does this data stored in a computer represent (in binary)?
 
     .. code-block:: java
 
@@ -57,13 +57,13 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :answer_d: Red - bar, Green - foo
     :answer_e: None of the above
     :correct: c
-    :feedback_a: Incorrect! The red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
-    :feedback_b: Incorrect! The red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
-    :feedback_c: Correct! The red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
-    :feedback_d: Incorrect! The red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
-    :feedback_e: Incorrect! One of the answers above is correct. The red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
+    :feedback_a: Incorrect! In this situation, the red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
+    :feedback_b: Incorrect! In this situation, the red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
+    :feedback_c: Correct! In this situation, the red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
+    :feedback_d: Incorrect! In this situation, the red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
+    :feedback_e: Incorrect! One of the answers above is correct. In this situation, the red box is replaced by foo, which places the space image in the background. The green box is replaced by bar, which places the image of the girl in the center, at the forefront of the image.
 
-    What goes in the result of the red box? What goes in the result of the green box?
+    Chromakey is a technique in which a block of one color can be replaced by another. What goes in the result of the red box? What goes in the result of the green box?
 
     .. image:: https://i.postimg.cc/GprMxkrk/lecture17-Q11.png
       :width: 400
@@ -76,12 +76,12 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :answer_c: Depends on the colors at coordinate x, y in bar
     :answer_d: Depends on the colors at coordinates x, y in foo compared to those in bar
     :correct: c
-    :feedback_a: Incorrect! The coordinates do not indicate what part of the image you are in. The colors in bar determine what part of the image you are in. If the background color was red, the colors in bar at the x, y coordinates would determine which part of the image you are in.
-    :feedback_b: Incorrect! The colors in foo do not determine what part you are in. The colors in bar determine what part of the image you are in. If the background color was red, the colors in bar at the x, y coordinates would determine which part of the image you are in.
-    :feedback_c: Correct! The colors in bar determine what part of the image you are in. If the background color was red, the colors in bar at the x, y coordinates would determine which part of the image you are in.
-    :feedback_d: Incorrect! The colors in foo at a certain coordinate compared to those in bar does not determine what part of the image you are in. The colors in bar determine what part of the image you are in. If the background color was red, the colors in bar at the x, y coordinates would determine which part of the image you are in.
+    :feedback_a: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color. 
+    :feedback_b: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color. 
+    :feedback_c: Correct! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color. 
+    :feedback_d: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color.
 
-    How will you know which part (say red) you are in?
+    Chromakey is a technique in which a block of one color can be replaced by another. How will you know if you are in the red part of the image?
 
     .. image:: https://i.postimg.cc/Kcw4kfrs/lecture17-Q12.png
       :width: 400
@@ -101,7 +101,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :feedback_d: Correct! A louder sound equates to a larger amplitude and stronger compressions/rarefactions.
     :feedback_e: Incorrect! One of the answers above are correct. 
 
-    If the following sound were modified to be louder it would
+    Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound were modified to be louder it would
 
     .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png 
       :width: 400
@@ -119,7 +119,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :feedback_c: Incorrect! A higher pitch causes the frequency to increase. It does not remain the same.
     :feedback_d: Incorrect! A higher pitch causes the frequency to increase. It does not alter the shape of the sound wave.
 
-    If the following sound were modified to have a higher pitch it would look like which of the following options:
+    Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound was modified to have a higher pitch it would look like which of the following options:
 
     .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png 
       :width: 400

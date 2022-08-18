@@ -8,9 +8,9 @@ Peer Instruction: Unit 2 Turtle Multiple Choice Questions
     :answer_b: Class, method/message name, parameter list
     :answer_c: Object, method/message name, parameter list
     :correct: c
-    :feedback_a: Incorrect! Turtle is a "type" (similar to int or double types) but turtle1 is an object.
-    :feedback_b: Incorrect! Turtle is the specific class "type" that turtle1 is. turtle1 itself is an object.
-    :feedback_c: Correct! turtle1 is a Turtle object.
+    :feedback_a: Incorrect! Turtle is a "type" (similar to int or double types) but turtle1 is an object. An object is an instance of a class. In this case, turtle1 is an instance of the Turtle class. 
+    :feedback_b: Incorrect! Turtle is the specific class "type" that turtle1 is. turtle1 itself is an object. An object is an instance of a class. In this case, turtle1 is an instance of the Turtle class. 
+    :feedback_c: Correct! turtle1 is a Turtle object. An object is an instance of a class. In this case, turtle1 is an instance of the Turtle class. 
 
     What are the components of the second line of code?
 
@@ -30,11 +30,11 @@ Peer Instruction: Unit 2 Turtle Multiple Choice Questions
     :correct: b, c, e
     :feedback_a: Incorrect! There are multiple places where the code is incorrect.
     :feedback_b: Correct! This is a method of the Turtle class. It should have a return type of void. It doesn’t produce a number – it causes an action to happen.  
-    :feedback_c: Correct! The parameter "size" is not used in the method. Perhaps it could replace the "100" in the method calls.
+    :feedback_c: Correct! The bethsSquare parameter "size" is not used in the method. Perhaps it could replace the "100" in the method calls (ex. turtle1.forward(size)).
     :feedback_d: Incorrect! Although it is true that you could use turnRight instead of turnLeft, this is not necessarily an incorrect aspect of the code because turnLeft still produces the expected response.
-    :feedback_e: Correct! Because this is a method of the turtle class, it is callable by any turtle object. Whichever turtle calls it is the turtle that should be controlled (turned, moved forward). The object “this” can be used instead of "turtle 1" to refer to the object performing the method.
+    :feedback_e: Correct! Because this is a method of the turtle class, it is callable by any turtle object. Whichever turtle calls it is the turtle that should be controlled (turned, moved forward). The object “this” can be used instead of "turtle1" to refer to the object performing the method.
 
-    Why is this code incorrect? (There are multiple correct answers)
+    Why is this code incorrect? Assume this method is a method of the Turtle class (There are multiple correct answers)
 
     .. code-block:: java
 
@@ -53,7 +53,7 @@ Peer Instruction: Unit 2 Turtle Multiple Choice Questions
    :author: Beth Simon
    :practice: T
 
-   What’s the right way to “call” that method to draw a square?
+   What’s the right way to “call” the bethsSquare method to draw a square (void method that takes one parameter)?
 
    -   
        ::

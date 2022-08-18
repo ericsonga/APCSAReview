@@ -16,7 +16,7 @@ Peer Instruction: Unit 3 Multiple Choice Questions
     :feedback_d: Incorrect! The code compares the top pixel (topP) and the pixel below it (botP). If they are similar, then the top pixel becomes white; else, it becomes black. Since each vertical column is composed of the same color, the pixels on top and below will always be the same color, turning all pixels white. 
     :feedback_e: Incorrect! One of the answers above represents the code accurately. The code compares the top pixel (topP) and the pixel below it (botP). If they are similar, then the top pixel becomes white; else, it becomes black. Since each vertical column is composed of the same color, the pixels on top and below will always be the same color, turning all pixels white. 
 
-    What’s the result of running that code on this input?
+    What’s the result of running this pixel-adjusting code on this green, red, and purple input?
 
     .. code-block:: java
 

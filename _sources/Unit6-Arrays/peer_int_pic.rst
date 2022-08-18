@@ -14,7 +14,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     :feedback_c: Incorrect! The larger highlighted section (1) represents the array Pixel[ ], which is composed of the smaller highlighted section (2), Pixel objects, not Color objects.
     :feedback_d: Incorrect! The larger highlighted section (1) represents the array Pixel[ ] which is composed of the smaller highlighted section (2), Pixel objects. Pixel[ ] cannot be composed of Color objects and a Pixel object is not an array so it cannot contain other objects.
 
-    What is the type of the indicated variable?
+    What is the type of each indicated variable?
 
     .. image:: https://i.postimg.cc/VNFVKKsM/lecture06-Q09.png
       :width: 400
@@ -28,13 +28,13 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     :answer_d: D
     :answer_e: None of the above
     :correct: d
-    :feedback_a: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
+    :feedback_a: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed.
     :feedback_b: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
     :feedback_c: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
     :feedback_d: Correct! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
     :feedback_e: Incorrect! One of the answers above correctly represents what pixels this code modifies. The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
 
-    What pixels does this code modify?
+    What pixels does this code modify (assuming Pixel objects in pixelArray follow this pattern: [(0,0), (0,1), (0,2)...])?
 
     .. code-block:: java
 
@@ -169,7 +169,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     :feedback_a: Incorrect! This code adjusts the second half of the sound array, not the first half. 
     :feedback_b: Incorrect! This code adjusts the second half of the sound array, not the first half.
     :feedback_c: Correct! This code adjusts the second half of the array, specifically halving the pitch.
-    :feedback_d: Incorrect! Although this code adjusts the second half of the array, it does not impact the sound.
+    :feedback_d: Incorrect! Although this code adjusts the second half of the array, it does not impact the loudness/quietness of the sound. Rather, it impacts the pitch.
     :feedback_e: Incorrect! This code only adjusts the second half of the array, not the whole array.
 
     What does this code do?
