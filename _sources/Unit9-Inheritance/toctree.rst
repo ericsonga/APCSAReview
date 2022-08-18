@@ -26,7 +26,7 @@ AP CS A Exam Weighting: 5-10%
    topic-9-7-Object.rst
    ooSummary.rst
    freeResponse.rst
-   ooParsonsPractice.rst
+   topic-9-10-toggle-problems.rst
    ooCodePractice.rst
    Exercises.rst
    CBLabs.rst
