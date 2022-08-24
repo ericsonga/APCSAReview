@@ -7,22 +7,22 @@ Preface
 
 ..  index::
     single: license
-    
-CSAwesome is a free AP CS A curriculum that was created in 2019 by adapting the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. 
+
+CSAwesome is a free AP CS A curriculum that was created in 2019 by adapting the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan.
 
 CSAwesome is an official College Board CS A curriculum and PD provider as of 2020. Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CS A 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, Beth Simon, Colleen Lewis (for her awesome Java memory model videos), John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, Kyle Gillette, and Peter Bowers for feedback, edits, and ideas. In the summer 2020, we are very grateful to CSA teacher extraordinaire Kate McDonnell who created a JUnit test code suite for our Java server, and many volunteers including Pat Clark, Emma Brown, Emma Pinnell, Megha Sharma, Arjun Balaji, and Anvita Gollu who helped to add many junit tests to each active code to make them auto-gradable. Our hopes are that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
 
 .. |form| raw:: html
 
    <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">form</a>
-   
+
 If you see errors or bugs, please report them with this |form|.
 
 
 **Acknowledgements**
 
 
-We gratefully acknowledge the use of the Runestone platform and Jobe server run by Brad Miller, and the past use of the Jobe server from the University of Canterbury, New Zealand. 
+We gratefully acknowledge the use of the Runestone platform and Jobe server run by Brad Miller, and the past use of the Jobe server from the University of Canterbury, New Zealand.
 
 Special thanks also to the following people that we have collaborated with:
 
@@ -69,6 +69,12 @@ Several students at Georgia Tech have helped review the eBook:
 * Bhavika Devnani
 * Stephanie Remy
 
+Several students from the University of Michigan have contributed to the eBook
+* Emma Brown - unit tests
+* Emma Pinnell - unit tests
+* Kira Woodhouse - Added Peer Instruction questions
+
+
 Several students at the University of California, San Diego have been involved in creating multiple choice questions for the EBook.
 
 * Matthew Crooks
@@ -97,23 +103,24 @@ Many others have been involved in the creation of content for the eBook (includi
 * Srikar Yendapally - added code problems to the 2D array chapter
 * Kiran Ruston - added new questions to the free response problems at the end of the ebook.
 * Arvindh Manian — formatted video interviews into the Stories unit of the ebook
+* Sanjana Duttagupta - added Peer Instruction questions from http://peerinstruction4cs.com/
 
 **License**
 
 .. figure:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
    :align: center
-   
+
 .. |creative commons| raw:: html
 
    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="text-decoration:underline">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
 
 This work is licensed under a |creative commons|.
 
-Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_ 
+Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_
 2014
 All rights reserved.
 
-Beryl Hoffman `hoffmanb@elms.edu <mailto://hoffmanb@elms.edu>`_ 
+Beryl Hoffman `hoffmanb@elms.edu <mailto://hoffmanb@elms.edu>`_
 2019
 All rights reserved.
 
@@ -140,5 +147,3 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
