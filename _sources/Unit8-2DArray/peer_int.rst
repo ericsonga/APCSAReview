@@ -161,7 +161,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
         while (index < pixelArray.length)
         {
             Pixel pix = pixelArray[index];
-            <<CODE GOES HERE>>
+            **CODE GOES HERE**
             index++;
         }
 
@@ -345,34 +345,26 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
 .. mchoice:: bs-2d-arrays-12-8
    :author: Beth Simon
    :practice: T
-   :answer_a: 
-   for (int w = 0; w <= x; w++)
-   for (int h = 0; h <= y; h++)
-   :answer_b: 
-   for (int w = 10; w < x +10; w++)
-   for (int h = 20; h < y + 20; h++)
-   :answer_c: 
-   for (int w = 0; w < x; w++)
-   for (int h = 0; h < y; h++)
-   :answer_d: 
-   for (int w = 10; w <= x+10; w++)
-   for (int h = 20; h <= y+20; h++)
+   :answer_a: for (int w = 0; w &lt;= x; w++)   for (int h = 0; h &lt;= y; h++)
+   :answer_b: for (int w = 10; w &lt; x +10; w++)   for (int h = 20; h &lt; y + 20; h++)
+   :answer_c: for (int w = 0; w &lt; x; w++)    for (int h = 0; h &lt; y; h++)
+   :answer_d:  for (int w = 10; w &lt;= x+10; w++) for (int h = 20; h &lt;= y+20; h++)
    :correct: c
    :feedback_a: Incorrect. The range from 0 to x inclusive has has a total size of x+1. In addition, the call to getPixel(w,h) could be out of range. Think about our use of zero-based indexing.
    :feedback_b: Incorrect. Even though the range from 10 to x+10 does have a size of x, the call to getPixel(w,h) could fall out of range if x + 10 is greater than the width of the drawing area. 
    :feedback_c: Correct. The range of 0 to <x has a total size of x. By starting the w and h variables at 0, we can ensure that we will not go out of bounds by calling getPixel(w,h) as long as x and y are valid values.
    :feedback_d: Incorrect. The range from 10 to x inclusive has has a total size of x+1. In addition, the call to getPixel(w,h) could be out of range. Think about our use of zero-based indexing.
 
-    What are the correct loop headers to make a black box of width x and height y?
+   What are the correct loop headers to make a black box of width x and height y?
 
     .. code-block:: java
 
         public void foo(int x, int y)
         {
             Pixel foo;
-            <<<<LOOP HEADER 1>>>>
+            **LOOP HEADER 1**
             {
-                <<<<LOOP HEADER 2>>>>
+                **LOOP HEADER 2**
                 {
                     foo = getPixel(w,h);
                     foo.setColor(Color.BLACK);
@@ -444,8 +436,8 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
 
 .. mchoice:: bs-2d-arrays-14-9
    :practice: T
-   :answer_a: if(bbb<this.getWidth()/2)
-   :answer_b: if(bbb<this.getHeight()/2)
+   :answer_a: if(bbb &lt; this.getWidth()/2)
+   :answer_b: if(bbb &lt; this.getHeight()/2)
    :answer_c: if((bbb %2) == 0)
    :answer_d: if((this.getPixel(bbb,aaa)%2) == 0)
    :correct: c
@@ -466,7 +458,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
                 //inner for loop 
                 for (int bbb = 0; bbb < this.getWidth(); bbb++)
                 {
-                    <<Add If Statement Here>>
+                    **Add If Statement Here**
                     {
                         pix = this.getPixel(bbb,aaa);
                         pix.setColor(newColor);
@@ -590,22 +582,10 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
 
 .. mchoice:: bs-2d-arrays-16-6
    :practice: T
-   :answer_a: 
-   Picture changed = new Picture(p);
-   p.mystery(changed);
-   changed.show();
-   :answer_b: 
-   Picture changed = new Picture();
-   p.mystery(changed);
-   changed.show();
-   :answer_c: 
-   Picture changed = new Picture(p);
-   changed.mystery(p);
-   changed.show();
-   :answer_d: 
-   Picture changed = new Picture();
-   changed.mystery(p);
-   changed.show();
+   :answer_a:    Picture changed = new Picture(p);  p.mystery(changed);   changed.show();
+   :answer_b:    Picture changed = new Picture();   p.mystery(changed);   changed.show();
+   :answer_c:    Picture changed = new Picture(p);  changed.mystery(p);   changed.show();
+   :answer_d:    Picture changed = new Picture();   changed.mystery(p);   changed.show();
    :answer_e: None of the above
    :correct: d
    :feedback_a: Incorrect. Calling the mystery function on the object "p" will not alter the "changed" object, and thus changed.show() will display a picture identical to "p".
@@ -614,7 +594,8 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :feedback_d: Correct. The "changed" object can be initialized with the default constructor, as the next line calls the mystery function with the parameter "p". This is the simplest correct way to successfully accomplish this. 
    :feedback_e: Incorrect. One of the above answers is correct. 
 
-    How would you call and display a flipped picture of Picture p?
+   How would you call and display a flipped picture of Picture p?
+
 
 .. mchoice:: bs-2d-arrays-16-7
    :author: Beth Simon
@@ -705,9 +686,9 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :feedback_c: Incorrect. Line B can only be executed after Line A, and is only executed 0 or 1 time every time Line A is called. It cannot be executed more times than Line A. 
    :feedback_d: Correct. Line B will be executed the same number of times or fewer times than Line A. If the if statement in Line A is always satisfied, Line B will be executed the same number of times as line A. Else, Line B will be executed fewer times. 
 
-    Which of these statments is true? 
+   Which of these statements is true? 
 
-    .. code-block:: java
+   .. code-block:: java
 
         public void makeConvict()
         {
