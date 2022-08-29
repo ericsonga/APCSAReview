@@ -459,13 +459,13 @@ In the last lesson, you came up with a class of your own choice relevant to you 
 
 3. Write a print() method that uses System.out.println to print out all the instance variables. 
 
-4. Write a main method that constructs at least 2 objects of your class using the 3 different constructors and then calls their print() methods.
+4. Write a main method that constructs at least 2 objects of your class using the 2 different constructors and then calls their print() methods.
 
 .. activecode:: community-challenge-5-2
   :language: java
   :autograde: unittest
 
-  Copy your class with its 3 instance variables from the last lesson. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the 3 different constructors and then calls their print() methods. 
+  Copy your class with its 3 instance variables from the last lesson. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the 2 different constructors and then calls their print() methods. 
   ~~~~
   public class          // Add your class name here!
   {

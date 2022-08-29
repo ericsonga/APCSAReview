@@ -252,7 +252,7 @@ If/else statements can also be used with relational operators and numbers like b
             getResults("true", "" + passed, "Checking for score <= 20 or score > 20", passed);
             assertTrue(passed);
         }
-      
+       
         @Test
         public void testCodeChange1() throws Exception {
             String className = "Test1";
@@ -268,7 +268,8 @@ If/else statements can also be used with relational operators and numbers like b
             getResults(expected, output, "Checking output if score is 25", passed);
             assertTrue(passed);
         }
-    
+        
+
         @Test
         public void testCodeChange2() throws Exception {
             String className2 = "Test2";
@@ -284,7 +285,6 @@ If/else statements can also be used with relational operators and numbers like b
             getResults(expected2, output2, "Checking output if score is 5", passed2);
             assertTrue(passed2);
         }
-        
     }
 
 
@@ -332,18 +332,73 @@ The rule is that the else clause will always be a part of the closest unmatched 
       }
    }
    ====
-   import static org.junit.Assert.*;
+    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "";
-            boolean passed = getResults(expect, output, "Expected no output from main");
+        public void testCodeChange1() throws Exception {
+            String className = "Test1";
+
+            String program = getCode();
+            program = program.replace("DangleElse", className).replace("public class", "class");
+            program = program.replaceAll("sunny = true;", "sunny = false;");
+
+            String output = getMethodOutputChangedCode(program, className, "main");
+
+            String expected = "Bring your umbrella!";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if sunny is false", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeChange2() throws Exception {
+            String className = "Test2";
+
+            String program = getCode();
+            program = program.replace("DangleElse", className).replace("public class", "class");
+            program = program.replaceAll("hot = false", "hot = true");
+
+            String output = getMethodOutputChangedCode(program, className, "main");
+
+            String expected = "Head for the beach!";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if hot is true", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeChange3() throws Exception {
+            String className = "Test3";
+
+            String program = getCode();
+            program = program.replace("DangleElse", className).replace("public class", "class");
+            program = program.replaceAll("hot = false", "hot = true");
+            program = program.replaceAll("sunny = true;", "sunny = false;");
+
+            String output = getMethodOutputChangedCode(program, className, "main");
+
+            String expected = "Bring your umbrella!";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if sunny is false and hot is true", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeChange4() throws Exception {
+            String className = "Test3";
+
+            String program = getCode();
+            program = program.replace("DangleElse", className).replace("public class", "class");
+
+            String output = getMethodOutputChangedCode(program, className, "main");
+
+            String expected = "";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if sunny is false and hot is true (no output if correct)", passed);
             assertTrue(passed);
         }
     }

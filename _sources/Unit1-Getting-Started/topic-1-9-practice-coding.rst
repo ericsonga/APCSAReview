@@ -960,7 +960,7 @@ Coding Practice
                     String target2 = removeSpaces("milesPerGallon * numGallons");
    
                     String code = removeSpaces(getCode());
-                    code = code.replaceAll("(", "").replaceAll(")", "");
+                    code = code.replaceAll("\\(", "").replaceAll("\\)", "");
    
                     boolean passed = code.contains(target1) || code.contains(target2);
                     getResults("true", "" + passed, "Formula variant for miles using milesPerGallon and numGallons", passed);

@@ -1003,10 +1003,7 @@ The following Active Code uses a dictionary array of the most common 100 English
 
 .. activecode:: challenge-6-2-spellchecker
    :language: java
-   :autograde: unittest  
-   :stdin: catz  
-   
-   import java.util.Scanner;
+   :autograde: unittest    
    
    public class SpellChecker
    {
@@ -1031,11 +1028,6 @@ The following Active Code uses a dictionary array of the most common 100 English
         
 	    /* // Uncomment to test Part 2
         String word = "catz";
-            
-        // Or you may be able to use this code to read input from the textbox below 
-        // System.out.print("Enter a word to spell check in the Input for Program textbox below: ");
-        // Scanner scan = new Scanner(System.in);
-        // String word = scan.nextLine();  
 
         if (checker.spellcheck(word) == true)
         {
@@ -1045,6 +1037,9 @@ The following Active Code uses a dictionary array of the most common 100 English
         {
             System.out.println(word + " is misspelled!");
         }
+
+        word = "cat";
+        System.out.println(word + " is spelled correctly? " + checker.spellcheck(word));
         */
         
         // 3. optional and not autograded
