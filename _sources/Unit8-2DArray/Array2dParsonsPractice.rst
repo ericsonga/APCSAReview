@@ -151,6 +151,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following program segment is a method that should accept a two-dimensional array of ints and a desired int and return the number of occurrences of the desired int in the two-dimensional array.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
@@ -183,6 +184,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following program segment is a method that should accept a two-dimensional int array and return a single dimensional (normal) int array containing the average of each of the columns.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
@@ -217,6 +219,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following program segment is a method that should accept a two-dimensional int array and return a new two-dimensional int array containing only the odd index rows.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
@@ -254,6 +257,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following program segment is a method that should accept a two-dimensional String array, in which each row contains the characters of a word.  The method should return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array.
 
@@ -290,6 +294,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following program segment is a method that should accept a two-dimensional int array, and return a single-dimensional (normal) int array containing the max of each row.  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.
    -----

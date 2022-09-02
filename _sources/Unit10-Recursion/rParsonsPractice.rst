@@ -37,8 +37,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
-   The following method should multiply the two passed-in positive integers (using the fact that multiplcation is repeated addition) -- so multipy(3, 4) should become 12 (3+3+3+3).  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The following method should multiply the two passed-in positive integers (using the fact that multiplication is repeated addition) -- so multiply(3, 4) should become 12 (3+3+3+3).  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int multiply(int a, int b)
    {
@@ -97,6 +98,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following method should remove any occurrence of an asterisk "*" from a passed-in string -- so "ab*c**d" should become "abcd".  But the blocks have been mixed up.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
@@ -124,7 +126,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :noindent:
    :adaptive:
 
-   The following method should return the base multiplied power times. In otherwords, the base ^ power -- so exponent(2, 4) should return 16.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The following method should return the base multiplied power times. In other words, the base ^ power -- so exponent(2, 4) should return 16.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static int exponent(int base, int power)
    {
@@ -186,6 +188,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following method should repeat the passed-in string a set number of times -- so repeatThis("hi", 3) should return "hihihi".  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
@@ -251,6 +254,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
    The following method should return a string counting from 1 to the specified number -- so countTo(4) should return "1...2...3...4...".  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
