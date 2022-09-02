@@ -2,8 +2,8 @@
    :prefix: 5-12-
    :start: 1
    
-Exercises
-=========
+Multiple-Choice Exercises
+============================
 
 
 .. mchoice:: AP5-1-3

@@ -12,7 +12,9 @@ CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an i
 
 To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
 
-.. ATTN high school women, genderqueer, and non-binary technologists: Apply now for the NCWIT Award for Aspirations in Computing to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. #NCWITAiC22
+ATTENTION high school women, genderqueer, and non-binary technologists: 
+Apply now until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) 
+in technology. Visit http://www.aspirations.org/AiCHSAward for details. #NCWITAiC23
 
 .. ATTN high school seniors: apply for the https://www.amazonfutureengineer.com/scholarship for college scholarships and Amazon summer internships for students with financial need.  
 
