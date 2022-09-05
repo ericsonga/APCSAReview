@@ -338,6 +338,7 @@ The rule is that the else clause will always be a part of the closest unmatched 
 
     public class RunestoneTests extends CodeTestHelper
     {
+        /*
         @Test
         public void testCodeChange1() throws Exception {
             String className = "Test1";
@@ -386,20 +387,15 @@ The rule is that the else clause will always be a part of the closest unmatched 
             getResults(expected, output, "Checking output if sunny is false and hot is true", passed);
             assertTrue(passed);
         }
+        */
 
         @Test
-        public void testCodeChange4() throws Exception {
-            String className = "Test3";
-
-            String program = getCode();
-            program = program.replace("DangleElse", className).replace("public class", "class");
-
-            String output = getMethodOutputChangedCode(program, className, "main");
-
-            String expected = "";
-            boolean passed = output.contains(expected);
-            getResults(expected, output, "Checking output if sunny is false and hot is true (no output if correct)", passed);
-            assertTrue(passed);
+        public void testMain() throws IOException
+        {
+              String output = getMethodOutput("main");
+              String expect = "";
+              boolean passed = getResults(expect, output, "Expected output from main (no output if correct)");
+              assertTrue(passed);
         }
     }
 
