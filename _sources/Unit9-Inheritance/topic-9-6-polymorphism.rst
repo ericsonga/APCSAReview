@@ -269,7 +269,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
 .. |repl.it link| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
    
 .. image:: Figures/shoppingcart.png
     :width: 100

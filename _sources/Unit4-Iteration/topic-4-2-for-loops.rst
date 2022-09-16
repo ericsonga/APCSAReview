@@ -519,7 +519,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
 .. |repl link| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
 
 In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops. We encourage you to work in pairs.
 

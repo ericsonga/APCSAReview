@@ -352,16 +352,16 @@ Here are some rules to follow with if statements to avoid some common errors:
     :alt: Magic 8 Ball
  
  
-.. |video| raw:: html
+.. |simulator| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=WSaS17CSS4c" target="_blank">video</a>
+   <a href="https://magic-8ball.com/" target="_blank">simulator</a>
 
 
 .. |lesson 2.9| raw:: html
 
    <a href="https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html" target="_blank">lesson 2.9</a>
  
-Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like ``Signs point to yes!``, ``Very doubtful``, etc. If you've never seen a Magic 8 ball, check out this |video|.
+Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like ``Signs point to yes!``, ``Very doubtful``, etc. If you've never seen a Magic 8 ball, check out this |simulator|.
 
 We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see |lesson 2.9|.
 
@@ -445,14 +445,14 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 
 .. |repl version| raw:: html
 
-    <a href="https://replit.com/@BerylHoffman/Magic8BallTemplate" target="_blank" style="text-decoration:underline">repl version</a>
+    <a href="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate" target="_blank" style="text-decoration:underline">repl version</a>
 
 
-Here's a |repl version| that uses the Scanner class to first have the user ask a question. You can add your code in from above and try running it. 
+Here's a |repl version| that uses the Scanner class to first have the user ask a question. You can click on Open in Replit below, and click on Fork to make your own copy, and add your code in from above to try your code with user input.
 
 .. raw:: html
 
-    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://replit.com/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     
 Summary
 -------------------  

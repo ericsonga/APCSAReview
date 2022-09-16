@@ -191,7 +191,7 @@ Input with Variables
 
 .. |repl JavaIOExample| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/JavaIOExample" target="_blank">repl JavaIOExample</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank">repl JavaIOExample</a>
 
 
 
@@ -200,7 +200,7 @@ Variables are a powerful abstraction in programming because the same algorithm c
 
 .. raw:: html
 
-    <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://replit.com/@BerylHoffman/JavaIOExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/JavaIOExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     
 Although you will not be tested in the AP CS A exam on using the Java System.in and Scanner classes, learning how to do input in Java is still very useful. More information on using the Scanner class can be found here https://www.w3schools.com/java/java_user_input.asp 
 
@@ -569,7 +569,7 @@ In this programming challenge, you will calculate your age, and your pet's age f
    
 .. |repl template| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
 
 Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
 

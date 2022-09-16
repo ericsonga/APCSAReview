@@ -15,15 +15,15 @@ The tool that we use to compile a Java source file into a Java class file is cal
 
 You can learn Java by just using the interactive coding panels called **Active Code** in this e-book. If you are logged in, the Active Code will remember your changes and even show you a history of your changes to the code if you click on Load History.  
 
-However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CS A teachers:
+However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CSA teachers:
 
 replit
 -------
 
-Replit (https://replit.com/) is a great free online development environment. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Repl is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Replit also has a paid school plan called Teams (https://replit.com/teams-for-education) where teachers can set up virtual classrooms and grade assignments.
+Replit (https://replit.com/) is a great free online development environment. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Replit is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Replit also has a  free for teachers plan called Teams for Education (https://replit.com/teams-for-education) where teachers can set up virtual classrooms.  There is now a firewalled replit domain for schools at https://firewealled.replit.com that filters content so that students stay within the school filters, see https://docs.replit.com/firewalled-replit/firewalled-replit-faq.
 
-Some of the Active Code samples in this e-book also include a link to a replit project. 
-These projects are public and as soon as you try to change the code, it will make a copy for you in your own replit account. If you are pair programming, there is also a multiplayer icon on the left in repl where you can share your code with another person, and you can both make changes at the same time. 
+Some of the Active Code samples in this e-book also include a link to a firewalled replit project. 
+These projects can be forked to make your own copy. If you are pair programming, replit has an Invite button where you can generate a join link to share your code with another person, and you can both make changes at the same time. 
 
 Online IDEs usually cannot use graphical user interfaces and just do input and output as text. 
 However, replit has a built-in javax.swing graphical user interface. 

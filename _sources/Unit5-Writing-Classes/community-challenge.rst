@@ -216,7 +216,7 @@ Optional Swing GUI
 
 .. |Java Swing Example| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Input-Form" target="_blank" style="text-decoration:underline">Java Swing Example</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Input-Form" target="_blank" style="text-decoration:underline">Java Swing Example</a>
    
 An optional additional project is to build a GUI (graphical user interface) for your class (GUIs are not on the AP exam). 
 Here's a |Java Swing Example| on repl and below that sets up a JFrame with JTextfields, JLabels, and a JButton.
@@ -228,5 +228,5 @@ To learn more about Java Swing, click on the different Swing components in the l
 
 .. raw:: html
 
-    <iframe height="800px" width="100%" style="max-width:90%; margin-left:5%" src="https://replit.com/@BerylHoffman/Java-Swing-Input-Form?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="800px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Input-Form?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 

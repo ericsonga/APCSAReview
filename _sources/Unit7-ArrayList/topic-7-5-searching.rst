@@ -516,7 +516,7 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 
 .. |repl.it| raw:: html
 
-   <a href= "https://replit.com/@BerylHoffman/SpellCheckerArrayListSearches" style="text-decoration:underline" target="_blank">repl.it</a>
+   <a href= "https://firewalledreplit.com/@BerylHoffman/SpellCheckerArrayListSearches" style="text-decoration:underline" target="_blank">repl.it</a>
 
 .. |Google doc| raw:: html
 
@@ -533,7 +533,7 @@ Here is a version of the spellchecker on |repl.it| that uses an ArrayList for th
    
 .. raw:: html
 
-    <iframe height="600px" width="100%" src="https://replit.com/@BerylHoffman/SpellCheckerArrayListSearches?lite=true" scrolling="no" style="max-width:90%; margin-left:5%"  frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="600px" width="100%" src="https://firewalledreplit.com/@BerylHoffman/SpellCheckerArrayListSearches?lite=true" scrolling="no" style="max-width:90%; margin-left:5%"  frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Now, login to repl and start changing the code to save the |repl.it|  as your own project. The SpellChecker.java file also has a binarySpellCheck(word) method defined, but it does not print out the number of words checked. Looking at the linearSpellCheck(word) method as a guide, add in a counter variable, and increment it in the binary search loop after finding the middle of the list, and print it out before returning true or false. Change the Main.java code to call the binarySpellCheck method instead of the linearSpellCheck method, and try all the same test case words again. Record the runtimes for binary search and compare with the linear search times. What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
 

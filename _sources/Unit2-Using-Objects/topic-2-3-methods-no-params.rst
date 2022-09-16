@@ -382,7 +382,7 @@ Here are some simple turtle methods that you can use:
 
 .. |repl link| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
 
 You may notice that it is challenging to have your turtle draw with these simple methods. In the next lesson, we will use more complex ``Turtle`` methods where you can indicate how many steps to take or what angle to turn that will make drawing a lot easier!
 

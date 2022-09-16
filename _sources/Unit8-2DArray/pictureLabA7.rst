@@ -4,7 +4,7 @@
     
 .. |Explorer Repl| raw:: html
 
-   <a href= "https://replit.com/@BerylHoffman/PictureExplorer" style="text-decoration:underline" target="_blank" >Picture Explorer Repl</a>
+   <a href= "https://firewalledreplit.com/@BerylHoffman/PictureExplorer" style="text-decoration:underline" target="_blank" >Picture Explorer Repl</a>
    
 Picture Lab A7: Mirroring Part of a Picture
 =====================================================

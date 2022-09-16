@@ -445,7 +445,7 @@ The |Animal Guessing program| below uses the following decision tree:
     
 .. |Animal Guessing program| raw:: html
 
-    <a href="https://replit.com/@BerylHoffman/GuessAnimal" target="_blank" style="text-decoration:underline">Animal Guessing program</a>
+    <a href="https://firewalledreplit.com/@BerylHoffman/GuessAnimal" target="_blank" style="text-decoration:underline">Animal Guessing program</a>
 
 1. Try the |Animal Guessing program| below and run it a couple times thinking of an animal and answering the questions with y or n for yes or no. Did it guess your animal? Probably not! It's not very good. It can only guess 3 animals. Let's try to expand it!
 
@@ -470,7 +470,7 @@ The |Animal Guessing program| below uses the following decision tree:
 
 .. raw:: html
 
-    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://replit.com/@BerylHoffman/GuessAnimal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/GuessAnimal?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 After you complete your code on repl.it, paste in your code below to run it through the auto-grader. Also include a link to your code on repl.it in comments.
 

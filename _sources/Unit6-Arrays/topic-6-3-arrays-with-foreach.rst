@@ -480,7 +480,7 @@ If you want to step through the correct code to see what it does in the Java Vis
    
 .. |repl.it| raw:: html
 
-   <a href= "https://replit.com/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
+   <a href= "https://firewalledreplit.com/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
    
 Copy the spellcheck method that you used in the Spell Checker Challenge in the last lesson. Re-write the method  to use an enhanced for-each loop instead of an indexed for-loop. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
 

@@ -42,7 +42,7 @@ Up until this unit, you wrote all your code in the main method, but now we are u
 - Reusing Code: avoid repetition of code. Reuse code by putting it in a method and calling it whenever needed.
 - Maintainability and Debugging: smaller methods are easier to debug and understand than searching through a large main method.
 
-Let's look at an example with lots of repetition of code and create methods to reduce the repetition of code. 
+Let's look at an example with lots of repetition of code and create methods to reduce the repetition of code. You can sing along here https://www.youtube.com/watch?v=Di23O5cN4ZU&ab_channel=Rock%27NLearn .
 
 
 
@@ -64,7 +64,7 @@ Let's look at an example with lots of repetition of code and create methods to r
         :click-correct:System.out.println("This old man came rolling home.");:endclick:
     :click-incorrect:}:endclick:
             
-Did you find some repeated lines of the This Old Man song? You may have noticed that the chorus is repeated "With a knick knack paddy whack, give a dog a bone. This old man came rolling home." When you see repeated code, that is a signal for you to make a new method!
+Did you find some repeated lines of the `This Old Man song <https://www.youtube.com/watch?v=Di23O5cN4ZU&ab_channel=Rock%27NLearn>`_? You may have noticed that the chorus is repeated "With a knick knack paddy whack, give a dog a bone. This old man came rolling home." When you see repeated code, that is a signal for you to make a new method!
 
 There are three steps to creating and calling a method:
 
@@ -405,39 +405,39 @@ Methods can also return values of any type back to the calling method. The calli
 
    <a href="https://youtu.be/QPwEZ8Vv2YQ" target="_blank">The Ants Go Marching</a>
 
-Here's another song, |The Ants Go Marching|, that is very similar to the This Old Man song in its repetitive structure. 
+Here's another song, |The Ants Go Marching|, that is very similar to the This Old Man song in its repetitive structure. Notice that the verses below have a lot of repeated words and phrases. Click on the words or phrases that are different in each verse. These will be the arguments that you will pass to the methods in your song code.
 
-.. raw:: html
-  
-   <pre>
-    The ants go marching one by one, hurrah, hurrah
-    The ants go marching one by one, hurrah, hurrah
-    The ants go marching one by one
-    The little one stops to suck a thumb
-    And they all go marching down to the ground
-    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
+.. clickablearea:: differentAntsWords
+    :question: Click on the phrases that are different in each verse.
+    :iscode:
+    :feedback: Look for words that are different in verse 1, 2, and 3.  
 
-    The ants go marching two by two, hurrah, hurrah
-    The ants go marching two by two, hurrah, hurrah
-    The ants go marching two by two
-    The little one stops to tie a shoe
-    And they all go marching down to the ground
-    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
+    :click-incorrect:The ants go marching :endclick::click-correct:one by one:endclick::click-incorrect:, hurrah, hurrah:endclick:
+    :click-incorrect:The ants go marching :endclick::click-correct:one by one:endclick::click-incorrect:, hurrah, hurrah:endclick:
+    :click-incorrect:The ants go marching :endclick::click-correct:one by one:endclick:
+    :click-incorrect:The little one stops to :endclick::click-correct:suck a thumb:endclick:
+    :click-incorrect:And they all go marching down to the ground:endclick:
+    :click-incorrect:To get out of the rain, BOOM! BOOM! BOOM! BOOM!:endclick:
+    
+    :click-incorrect:The ants go marching :endclick::click-correct:two by two:endclick::click-incorrect:, hurrah, hurrah:endclick:
+    :click-incorrect:The ants go marching :endclick::click-correct:two by two:endclick::click-incorrect:, hurrah, hurrah:endclick:
+    :click-incorrect:The ants go marching :endclick::click-correct:two by two:endclick:
+    :click-incorrect:The little one stops to :endclick::click-correct:tie a shoe:endclick:
+    :click-incorrect:And they all go marching down to the ground:endclick:
+    :click-incorrect:To get out of the rain, BOOM! BOOM! BOOM! BOOM!:endclick:
+    
+    :click-incorrect:The ants go marching :endclick::click-correct:three by three:endclick::click-incorrect:, hurrah, hurrah:endclick:
+    :click-incorrect:The ants go marching :endclick::click-correct:three by three:endclick::click-incorrect:, hurrah, hurrah:endclick:
+    :click-incorrect:The ants go marching :endclick::click-correct:three by three:endclick:
+    :click-incorrect:The little one stops to :endclick::click-correct:climb a tree:endclick:
+    :click-incorrect:And they all go marching down to the ground:endclick:
+    :click-incorrect:To get out of the rain, BOOM! BOOM! BOOM! BOOM!:endclick:
+        
 
-    The ants go marching three by three, hurrah, hurrah
-    The ants go marching three by three, hurrah, hurrah
-    The ants go marching three by three
-    The little one stops to climb a tree
-    And they all go marching down to the ground
-    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
-    </pre>
 
-1. Print out the |The Ants Go Marching| song and circle the repeated parts of the song.
+1. In the active code window below, create a method or methods that takes parameters to print out a verse. The method(s) should be abstract enough to work for all 3 verses.  Use good commenting for your methods that describe the @param. For the autograder, make sure you create a method called verse that takes 2 parameters. 
 
-
-2. In the active code window below, create a method or methods that takes parameters to print out a verse. The method(s) should be abstract enough to work for all 3 verses.  Use good commenting for your methods that describe the @param. For the autograder, make sure you create a method called verse that takes 2 parameters. 
-
-3. In the main method, create an object of the class and call the method(s) you created in the last step to print out 3 verses of the song. Can you add more verses?
+2. In the main method, create an object of the class and call the method(s) you created in the last step to print out 3 verses of the song. Can you add more verses?
 
 .. activecode:: challenge-5-6-song
   :language: java

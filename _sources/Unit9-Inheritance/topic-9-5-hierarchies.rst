@@ -336,7 +336,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
 
 .. |repl.it link| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
    
 .. image:: Figures/shoppingcart.png
     :width: 100

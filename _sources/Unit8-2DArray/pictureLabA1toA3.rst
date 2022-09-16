@@ -99,7 +99,7 @@ Try the following Color Chooser by moving the sliders to see the RGB values for 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://www.cssscript.com/demo/rgb-color-picker-slider/"></iframe>
   
     
-In Java, there is a ColorChooser that you can use in code, see https://replit.com/@BerylHoffman/ColorChooser and click on the RGB tab. Java represents color using the java.awt.Color class described here https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html. This is the full name for the Color class,  which includes the package name of java.awt followed by a period and then the class name Color. Java groups related classes into packages. The awt stands for Abstract Windowing Toolkit, which is the package that contains the original Graphical User Interface (GUI) classes developed for Java. You can use just the short name for a class, like Color, as long as you include an import statement at the beginning of a class source file, as shown below. The Picture class contains the following import statement ``import java.awt.Color;``.
+In Java, there is a ColorChooser that you can use in code, see https://firewalledreplit.com/@BerylHoffman/ColorChooser and click on the RGB tab. Java represents color using the java.awt.Color class described here https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html. This is the full name for the Color class,  which includes the package name of java.awt followed by a period and then the class name Color. Java groups related classes into packages. The awt stands for Abstract Windowing Toolkit, which is the package that contains the original Graphical User Interface (GUI) classes developed for Java. You can use just the short name for a class, like Color, as long as you include an import statement at the beginning of a class source file, as shown below. The Picture class contains the following import statement ``import java.awt.Color;``.
 
 
 Questions:
@@ -127,9 +127,9 @@ enter button to update the display. You can also use the menu to change the zoom
 
 .. raw:: html
 
-    <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://replit.com/@BerylHoffman/PictureExplorer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/PictureExplorer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-If you fork to make a copy of this program https://replit.com/@BerylHoffman/PictureExplorer, you can upload your own images, or try this site https://imagecolorpicker.com/ where you can upload your own images and explore their RGB values.
+If you fork to make a copy of this program https://firewalledreplit.com/@BerylHoffman/PictureExplorer, you can upload your own images, or try this site https://imagecolorpicker.com/ where you can upload your own images and explore their RGB values.
 Images are often stored as jpg or jpeg files. A JPEG file is one that follows an international standard for
 storing picture data using lossy compression. Lossy compression means that the amount of data that is
 stored is much smaller than the available data, but the part that is not stored is data we won't miss.

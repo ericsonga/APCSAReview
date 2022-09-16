@@ -22,11 +22,11 @@
 
 .. |repl| raw:: html
 
-   <a href="https://replit.com" target="_blank" style="text-decoration:underline">replit</a>
+   <a href="https://firewalledreplit.com" target="_blank" style="text-decoration:underline">replit</a>
    
 .. |Java Swing Example| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/JavaSwingHello" target="_blank" style="text-decoration:underline">Java Swing Example</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/JavaSwingHello" target="_blank" style="text-decoration:underline">Java Swing Example</a>
    
 .. |JButton Class| raw:: html
 
@@ -81,6 +81,6 @@ Here's a |Java Swing Example| on repl that sets up a JFrame with a JButton and a
 
 .. raw:: html
 
-    <iframe height="800px" width="100%" style="max-width:90%; margin-left:5%" src="https://replit.com/@BerylHoffman/JavaSwingHello?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe><br>
+    <iframe height="800px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/JavaSwingHello?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe><br>
 
 To learn more about Java Swing, click on the different Swing components in the left navigation column of https://www.javatpoint.com/java-swing and try them out!

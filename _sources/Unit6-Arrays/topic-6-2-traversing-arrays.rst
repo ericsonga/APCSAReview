@@ -990,7 +990,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
    
 .. |repl.it| raw:: html
 
-   <a href= "https://replit.com/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
+   <a href= "https://firewalledreplit.com/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
    
 We encourage you to work in pairs for this challenge. Make sure you have done the last coding exercise above which will help you with this challenge.
 
