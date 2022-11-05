@@ -149,9 +149,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
       }
    }
    ====
-   // Test Code for Lesson 4.1 - For Loop
-
-    import static org.junit.Assert.*;
+   import static org.junit.Assert.*;
 
     import org.junit.After;
     import org.junit.Before;
