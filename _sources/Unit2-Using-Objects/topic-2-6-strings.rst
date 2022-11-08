@@ -310,6 +310,16 @@ You can even add other items to a string using the ``+`` operator.  The other it
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
+	
+	@Test
+	public void testParen() throws IOException {
+            String code = removeSpaces(getCodeWithoutComments());
+            String expect = "(4+3)";
+            boolean passed = code.contains(expect);
+
+            passed = getResults(""+true, ""+passed, "Checking code for added parentheses");
+            assertTrue(passed);
+        }
     }
    
 .. note::
