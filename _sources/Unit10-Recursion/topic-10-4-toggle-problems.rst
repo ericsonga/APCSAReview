@@ -50,9 +50,8 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
    :fromid: u10_muc_wc10, ch12ex10muc
    :toggle: lock
 
-.. selectquestion:: select_u10_muc_wc11
-   :fromid: u10_muc_wc1, ch12p2ex1muc
-   :toggle: lock
+
+
 
 .. selectquestion:: select_u10_muc_wc12
    :fromid: u10_p2_muc_wc2, ch12p2ex2muc

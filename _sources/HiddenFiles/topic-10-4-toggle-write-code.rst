@@ -390,7 +390,7 @@ This is the write code problems associated with the mixed up code problems. Reme
    
         Write the ``findNumX`` function. This should take in a String ``s`` and return the number of occurrences of the character ``'x'`` (NOT including ``'X'``). For example, ``findNumX("axbcx")`` would return ``2``.
         ~~~~
-        public class ListTest {
+        public class Test1 {
 
             public static int findNumX(String s) {
 
@@ -406,7 +406,36 @@ This is the write code problems associated with the mixed up code problems. Reme
             }
         }
         ====
-        TEST
+        import static org.junit.Assert.*;
+        import org.junit.*;
+        import java.io.*;
+
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
+
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "Before: xHihxixx\nAfter: 4";
+
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
+            @Test
+            public void test2()
+            {
+                String str = "axbcx";
+                String expected = "2";
+                String actual = Test1.findNumX(str);
+
+                boolean passed = getResults(""+expected, ""+actual, "Testing findNumX(" + str +")");
+                assertTrue(passed);
+            }
+         }
 
 .. activecode:: u10_muc_wc9
         :language: java

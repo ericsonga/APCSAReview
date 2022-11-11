@@ -486,7 +486,8 @@ For this project, you will need to use the |Scanner class| for input and |repl.i
         @Test
         public void test4()
         {
-            boolean passed = checkCodeContainsRegex("while loop", "while(*)");
+            //boolean passed = checkCodeContainsRegex("while loop", "while(*)");
+            boolean passed = checkCodeContains("while loop", "while");
             assertTrue(passed);
         }
 
