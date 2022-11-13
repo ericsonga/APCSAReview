@@ -429,10 +429,11 @@ This is the write code problems associated with the mixed up code problems. Reme
             public void test2()
             {
                 String str = "axbcx";
-                String expected = "2";
-                String actual = Test1.findNumX(str);
+                int expected = 2;
+                int actual = Test1.findNumX(str);
 
-                boolean passed = getResults(""+expected, ""+actual, "Testing findNumX(" + str +")");
+                boolean passed = (expected == actual);
+                getResults(""+expected, ""+actual, "Testing findNumX(" + str +")");
                 assertTrue(passed);
             }
          }
