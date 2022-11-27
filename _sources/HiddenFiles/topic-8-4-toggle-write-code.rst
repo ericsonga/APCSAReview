@@ -120,12 +120,12 @@ This is the write code problems associated with the mixed up code problems.
 
             public static void main(String[] args) {
                 // You don't need to make any changes to this method
-                int[][] arr1 = {{-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
+                int[][] arr1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8} };
                 int out1 = sumVals(arr1);
 
                 System.out.println("sumVals(arr1) --> " + out1);
 
-                int[][] arr2 = {{7, -3}, {-5, 1}};
+                int[][] arr2 = { {7, -3}, {-5, 1} };
                 int out2 = sumVals(arr2);
 
                 System.out.println("sumVals(arr2) --> " + out2);
@@ -157,7 +157,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = {{2, 4, 8, 10}, {6, 0, 4, 12}};
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12} };
                 int expect = 46;
                 int output = Test1.sumVals(inArr);
 
@@ -188,7 +188,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Fill in the ``flipImage`` method. This should accept a two-dimensional String array ``image`` and flip the "image” 180 degrees vertically. For example, ``{{"green", "red", "blue"}, {"cat", "dog", "yellow"}}`` would become ``{{"blue", "red", "green"}, {"yellow", "dog", "cat"}}``.
+        Fill in the ``flipImage`` method. This should accept a two-dimensional String array ``image`` and flip the "image” 180 degrees vertically. For example, ``{ {"green", "red", "blue"}, {"cat", "dog", "yellow"} }`` would become ``{ {"blue", "red", "green"}, {"yellow", "dog", "cat"} }``.
         ~~~~
         import java.util.Arrays;
 
@@ -205,7 +205,7 @@ This is the write code problems associated with the mixed up code problems.
             } //end method
 
             public static void main(String[] args) {
-                String [][]test = {{"this", "is", "a", "test"}, {"hello", "world", "good", "luck"}};
+                String [][]test = { {"this", "is", "a", "test"}, {"hello", "world", "good", "luck"} };
                 System.out.println("Before: " + Arrays.deepToString(test));
                 flipImage(test);
                 System.out.println("After: " + Arrays.deepToString(test));
@@ -240,7 +240,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write the ``makeEvenNumbersZero`` method such that it iterates through the two-dimensional ``int`` array ``nums`` and replaces each instance of an even number with 0. For example, ``{{3, 4, 5}, {6, 7, 8}}`` would become ``{{3, 0, 5}, {0, 7, 0}}``.
+        Write the ``makeEvenNumbersZero`` method such that it iterates through the two-dimensional ``int`` array ``nums`` and replaces each instance of an even number with 0. For example, ``{ {3, 4, 5}, {6, 7, 8} }`` would become ``{ {3, 0, 5}, {0, 7, 0} }``.
         ~~~~
         import java.util.Arrays;
 
@@ -253,9 +253,9 @@ This is the write code problems associated with the mixed up code problems.
 
             // necessary main method
             public static void main(String[] args) {
-                int[][] a = {{1,2,3,4,}, {4,3,2,1}, {0,9,4,5}};
+                int[][] a = { {1,2,3,4,}, {4,3,2,1}, {0,9,4,5} };
                 makeEvenNumsZero(a);
-                System.out.println(Arrays.deepToString(nums));
+                System.out.println(Arrays.deepToString(a));
             }
         }
         ====
@@ -288,7 +288,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Fill in the ``numOccurrences`` method. It should take in a two-dimension ``int`` array ``nums`` and an ``int`` ``desired`` and return the number of times that ``desired`` appears in ``nums``. E.g., with ``{{3, 1, 2}, {3, 4, 1}}`` as ``nums``, ``numOccurrences(nums, 1)`` should return ``2``.
+        Fill in the ``numOccurrences`` method. It should take in a two-dimension ``int`` array ``nums`` and an ``int`` ``desired`` and return the number of times that ``desired`` appears in ``nums``. E.g., with ``{ {3, 1, 2}, {3, 4, 1} }`` as ``nums``, ``numOccurrences(nums, 1)`` should return ``2``.
         ~~~~
         public class Test1 {
 
@@ -300,7 +300,7 @@ This is the write code problems associated with the mixed up code problems.
                 return occurrences;
             }
             public static void main(String[] args) {
-                int[][] numbers = {{0,1,2}, {3,1,5}, {6,1,1}};
+                int[][] numbers = { {0,1,2}, {3,1,5}, {6,1,1} };
                 int output = numOccurrences(numbers, 1);
                 System.out.println("The number of times that 1 appears in the data set: " + output);
             }
@@ -332,7 +332,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Fill in the ``averageCols`` method. It should accept a two-dimensional int array ``nums`` and return a one-dimensional (normal) ``int`` array containing the integer average of each of the columns (NOT the rows). E.g., with ``nums`` as ``{{3, 5, 2}, {1, 1, 6}}``, ``averageCols(nums)`` should return ``{2, 3, 4}`` as that is ``(3 + 1) / 2``, ``(5 + 1) / 2``, and ``(2 + 6) / 2``. 
+        Fill in the ``averageCols`` method. It should accept a two-dimensional int array ``nums`` and return a one-dimensional (normal) ``int`` array containing the integer average of each of the columns (NOT the rows). E.g., with ``nums`` as ``{ {3, 5, 2}, {1, 1, 6} }``, ``averageCols(nums)`` should return ``{2, 3, 4}`` as that is ``(3 + 1) / 2``, ``(5 + 1) / 2``, and ``(2 + 6) / 2``. 
         ~~~~
         import java.util.Arrays;
 
@@ -349,7 +349,7 @@ This is the write code problems associated with the mixed up code problems.
             } //end method
 
             public static void main(String[] args) {
-                int[][] test = {{0,1,2}, {3,4,5}, {6,7,8}};
+                int[][] test = { {0,1,2}, {3,4,5}, {6,7,8} };
                 int[] output = averageCols(test);
                 System.out.println("Averages: " + Arrays.toString(output));
             }
@@ -384,7 +384,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write the ``oddRows`` method. This should take in a two-dimensional ``int`` array ``nums`` and return a new two-dimensional ``int`` array containing only the odd-index rows. For example, with ``nums`` equal to ``{{3, 2, 1}, {4, 5, 6}, {1, 5, 7}}``, ``oddRows(nums)`` would return ``{{4, 5, 6}}`` as that was the row at index 1, which is the only odd index present.
+        Write the ``oddRows`` method. This should take in a two-dimensional ``int`` array ``nums`` and return a new two-dimensional ``int`` array containing only the odd-index rows. For example, with ``nums`` equal to ``{ {3, 2, 1}, {4, 5, 6}, {1, 5, 7} }``, ``oddRows(nums)`` would return ``{ {4, 5, 6} }`` as that was the row at index 1, which is the only odd index present.
         ~~~~
         import java.util.Arrays;
 
@@ -401,13 +401,13 @@ This is the write code problems associated with the mixed up code problems.
             } //end method
 
             public static void main(String[] args) {
-                int[][] arr1 = {{-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
+                int[][] arr1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8} };
                 int[][] out1 = oddRows(arr1);
 
                 // Arrays.deepToString is a method that prints 2d arrays nicely
                 System.out.println("oddRows(arr1) --> " + Arrays.deepToString(out1));
 
-                int[][] arr2 = {{7, -3}, {-5, 1}, {2, 4}, {8, 5}};
+                int[][] arr2 = { {7, -3}, {-5, 1}, {2, 4}, {8, 5} };
                 int[][] out2 = oddRows(arr2);
 
                 System.out.println("oddRows(arr2) --> " + Arrays.deepToString(out2));
@@ -439,7 +439,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = {{2, 4, 8, 10}, {6, 0, 4, 12}, {1, 3, 5, 7}, {8, 6, 4, 2}};
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12}, {1, 3, 5, 7}, {8, 6, 4, 2} };
                 String expect = "[[6, 0, 4, 12], [8, 6, 4, 2]]";
                 String output = Arrays.deepToString(Test1.oddRows(inArr));
 
@@ -457,7 +457,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write the ``breakIntoLetters`` method. It should accept a two-dimensional String array, in which each row contains the characters of a word. It should then return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array. For example, calling ``breakIntoLetters`` on {{“b”, “a”, “t”, “h”}, {“t”, “e”, “n”, “s”}, {“j”, “a”, “c”, “k”}, {“l”, “a”, “z”, “y”}} should return {“bath”, “tens”, “jack”, “lazy”}.
+        Write the ``breakIntoLetters`` method. It should accept a two-dimensional String array, in which each row contains the characters of a word. It should then return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array. For example, calling ``breakIntoLetters`` on { {“b”, “a”, “t”, “h”}, {“t”, “e”, “n”, “s”}, {“j”, “a”, “c”, “k”}, {“l”, “a”, “z”, “y”} } should return {“bath”, “tens”, “jack”, “lazy”}.
         ~~~~
         import java.util.Arrays;
 
@@ -474,7 +474,7 @@ This is the write code problems associated with the mixed up code problems.
                 String[][] mat1 = { {"b", "a", "t", "h"},
                                                 {"t", "e", "n", "s"},
                                                 {"j", "a", "c", "k"},
-                                                {"l", "a", "z", "y"}};
+                                                {"l", "a", "z", "y"} };
                 String[] out1 = breakIntoLetters(mat1);
 
                 System.out.println("mat1 --> " + Arrays.deepToString(mat1));
@@ -529,7 +529,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
    
-        Write the ``maxEachRow`` method. It that should accept a two-dimensional ``int`` array ``nums``, and return a single-dimensional (normal) ``int`` array containing the max of each row. For example, the returned array for {{3}, {4, 9, 6, -1}, {45, 1}} should be {3, 9, 45}. 
+        Write the ``maxEachRow`` method. It that should accept a two-dimensional ``int`` array ``nums``, and return a single-dimensional (normal) ``int`` array containing the max of each row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} } should be {3, 9, 45}. 
         ~~~~
         import java.util.Arrays;
 
@@ -543,13 +543,13 @@ This is the write code problems associated with the mixed up code problems.
             } //end method
 
             public static void main(String[] args) {
-                int[][] mat1 = {{-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
+                int[][] mat1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8} };
                 int[] out1 = maxEachRow(mat1);
 
                 System.out.println("mat1 --> " + Arrays.deepToString(mat1));
                 System.out.println("maxEachRow(mat1) --> " + Arrays.toString(out1));
 
-                int[][] mat2 = {{7, -3}, {-5, 1}};
+                int[][] mat2 = { {7, -3}, {-5, 1} };
                 int[] out2 = maxEachRow(mat2);
 
                 System.out.println("mat2 --> " + Arrays.deepToString(mat2));
@@ -583,7 +583,7 @@ This is the write code problems associated with the mixed up code problems.
             @Test
             public void test2()
             {
-                int[][] inArr = {{2, 4, 8, 10}, {6, 0, 4, 12}};
+                int[][] inArr = { {2, 4, 8, 10}, {6, 0, 4, 12} };
                 String expect = "[10, 12]";
                 String output = Arrays.toString(Test1.maxEachRow(inArr));
 
