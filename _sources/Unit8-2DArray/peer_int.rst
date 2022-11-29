@@ -1,3 +1,7 @@
+.. qnum::
+   :prefix: 8-10-
+   :start: 1
+
 Peer Instruction: 2D Arrays Multiple Choice Questions
 -----------------------------------------------------
 
@@ -74,7 +78,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :correct: d
    :feedback_a: Incorrect. This statement will only print once, and most of the code has yet to be called
    :feedback_b: Incorrect. This would result in the print statement being run in a loop, instead of the contents inside the brackets 
-   :feedback_c: Incorrect. This way, the statment will print new information each time the code is run 
+   :feedback_c: Incorrect. This way, the statement will print new information each time the code is run 
    :feedback_d: Correct. Location D allows you to assess and print the all varibales used in this code block. This gives you the most data, and makes it the optiomal location. 
 
     For debugging, where is the best place to put a print statement?
@@ -148,7 +152,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :correct: c
    :feedback_a: Incorrect. The value of the blue component is successfully changed, however the value of component is not.
    :feedback_b: Incorrect. The value of the blue component is successfully changed, however the value of component is not.  
-   :feedback_c: Correct. In this case, "value" is the tempory variable we use to remember the original value of pix.getRed(), even after the red component is changed.
+   :feedback_c: Correct. In this case, "value" is the temporary variable we use to remember the original value of pix.getRed(), even after the red component is changed.
    :feedback_d: Incorrect. If value is set to pix.getRed(), the call to pix.setRed(value) will leave the red component unchanged.  
 
     Which code chunk should be inserted into the marked location to swap the red and blue components at each pixel?
@@ -266,9 +270,9 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :correct: c
    :feedback_a: Incorrect. Since the x parameter increases as countingDown increases (also used as an x paramter), there transformation involves mirroring. 
    :feedback_b: Incorrect. Since the x parameter increases as countingDown increases (also used as an x paramter), there transformation involves mirroring.
-   :feedback_c: Correct. There is mirroring occuring, and this happens within the second for loop. The values are changing around one given x value, so the transformation is around a vertical axis. 
-   :feedback_d: Incorrect. There is mirroring occuring, and this happens within the second for loop. If the values are changing around one given x value, which axis are they transforming around? 
-   :feedback_e: Incorrect. Examine the options again. Hint: There is mirroring occuring in the second for loop. 
+   :feedback_c: Correct. There is mirroring occurring, and this happens within the second for loop. The values are changing around one given x value, so the transformation is around a vertical axis. 
+   :feedback_d: Incorrect. There is mirroring occurring, and this happens within the second for loop. If the values are changing around one given x value, which axis are they transforming around? 
+   :feedback_e: Incorrect. Examine the options again. Hint: There is mirroring occurring in the second for loop. 
 
     What does this code do?
 
@@ -390,12 +394,12 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
 
     .. code-block:: java
 
-        public void everyOtherColumn(Color newColor)
+        public void everyColumn(Color newColor)
         {
             Pixel pix;
             for (int aaa = 0; aaa < this.getHeight(); aaa++)
             {
-                for (int bbb = 0; bbb < this.getWidth(); bbb = bbb + 2)
+                for (int bbb = 0; bbb < this.getWidth(); bbb++)
                 {
                     pix = this.getPixel(bbb,aaa);
                     pix.setColor(newColor);
