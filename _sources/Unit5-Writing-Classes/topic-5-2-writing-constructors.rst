@@ -355,97 +355,72 @@ We encourage you to work in pairs for this challenge to create a Student class w
    }
    ====
    // Test Code for Lesson 5.2.1 - Challenge - Student
-    import static org.junit.Assert.*;
+       import static org.junit.Assert.*;
     import org.junit.After;
     import org.junit.Before;
     import org.junit.Test;
-
+    
     import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
+    
+    public class RunestoneTests extends CodeTestHelper {
         public RunestoneTests() {
             super("Student");
-
-            Object[] values = new Object[]{"Name", 0};
+    
+            Object[] values = new Object[] { "Name", 0 };
             setDefaultValues(values);
         }
-
+    
         @Test
-        public void testDefaultConstructor()
-        {
-            String output = checkDefaultConstructor();
-            String expect = "pass";
-
-            boolean passed = getResults(expect, output, "Checking default constructor");
+        public void testCallConstructors() {
+            String code = getCodeWithoutComments();
+            String search = "= new Student(";
+    
+            int num = countOccurences(code, search);
+    
+            String expect = search + "...) x 3";
+            String actual = search + "...) x " + num;
+    
+            boolean passed = getResults(expect, actual, "Checking that you made three Student objects");
             assertTrue(passed);
         }
-
+    
         @Test
-        public void testConstructor4()
-        {
-            String output = checkConstructor(4);
-            String expect = "pass";
-
-            boolean passed = getResults(expect, output, "Checking constructor with 4 parameters");
+        public void testConstructors() {
+            String code = getCodeWithoutComments();
+            String search = "public Student(";
+    
+            int num = countOccurences(code, search);
+    
+            String expect = search + "...) x 3";
+            String actual = search + "...) x " + num;
+    
+            boolean passed = getResults(expect, actual, "Checking that you made three constructors");
             assertTrue(passed);
         }
-
+    
         @Test
-        public void testConstructor1()
-        {
-            String output = checkConstructor(1);
-            String expect = "pass";
-
-            boolean passed = getResults(expect, output, "Checking constructor with 1 parameter");
+        public void testPrint() {
+            String code = getCodeWithoutComments();
+            String search = ".print()";
+    
+            int num = countOccurences(code, search);
+    
+            String expect = search + " x 3";
+            String actual = search + " x " + num;
+    
+            boolean passed = getResults(expect, actual, "Checking that you called print three times");
             assertTrue(passed);
         }
-
+    
         @Test
-        public void testPrivateVariables()
-        {
+        public void testPrivateVariables() {
             String expect = "4 Private";
             String output = testPrivateInstanceVariables();
-
-            boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+    
+            boolean passed = getResults(expect, output, "Checking for 4 Private Instance Variable(s)");
             assertTrue(passed);
         }
-
-        @Test
-        public void testPrint()
-        {
-            String output = getMethodOutput("print");
-            String expect = "More than 15 characters";
-            String actual = " than 15 characters";
-
-            if (output.length() < 15) {
-                actual = "Less" + actual;
-            } else {
-                actual = "More" + actual;
-            }
-            boolean passed = getResults(expect, actual, "Checking print method");
-            assertTrue(passed);
-        }
-
-
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");//.split("\n");
-            String expect = "3+ line(s) of text";
-            String actual = " line(s) of text";
-            int len = output.split("\n").length;
-
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 3;
-
-            getResults(expect, actual, "Checking output", passed);
-            assertTrue(passed);
-        }
+    
     }
     
 |Groupwork| Design a Class for your Community 
