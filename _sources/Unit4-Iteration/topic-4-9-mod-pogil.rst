@@ -30,11 +30,6 @@ Group Work on the Modulo Operator (%)
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
 
-.. note::
-
-   If you work in a group, have only one member of the group fill in the answers on this page.  You will be able to share your answers with the group at the bottom of the page.
-
-
 ..	index::
 	single: modulus
   single: modulo operator
@@ -48,14 +43,14 @@ in groups on activities and each member has an assigned role.  For more informat
    {
       public static void main(String[] args)
       {
-          System.out.println(9 % 4)
-          System.out.println(10 % 4)
-          System.out.println(11 % 4)
-          System.out.println(12 % 4)
-          System.out.println(13 % 4)
-          System.out.println(14 % 4)
-          System.out.println(15 % 4)
-          System.out.println(16 % 4)
+          System.out.println(9 % 4);
+          System.out.println(10 % 4);
+          System.out.println(11 % 4);
+          System.out.println(12 % 4);
+          System.out.println(13 % 4);
+          System.out.println(14 % 4);
+          System.out.println(15 % 4);
+          System.out.println(16 % 4);
       }
    }
 
@@ -173,9 +168,3 @@ Describe the Modulo (%) Operator
 .. shortanswer:: mod-describe-mod-sa
 
    Describe what % does in your own words.  Use complete sentences.
-
-
-If you worked in a group, you can copy the answers from this page to the other group members.  Select the group members below and click the button to share the answers.
-
-.. groupsub:: mod-intro-groupsub
-   :limit: 4
