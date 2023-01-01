@@ -19,7 +19,7 @@
     :align: middle
     :alt: groupwork
 
-.. image:: ../../_static/time90.png
+.. image:: ../../_static/time20.png
     :width: 225
     :align: right
 
@@ -65,7 +65,7 @@ Look at the expressions in the code above and the output.  Then answer the follo
 
 .. fillintheblank:: mod-next-returns-zero
 
-    Review the code above.  What is the next number (n) (after 16) such that ``n % 4`` returns zero?
+    Review the code above.  What is the next number (n) (greater than 16) such that ``n % 4`` returns zero?
 
     - :20: Four goes into twenty 5 times with a remainder of 0.
       :.*: Which next number larger than 16 is evenly divisible by 4 (num % 4 returns 0)?
@@ -115,7 +115,7 @@ More Practice
 
     What is the number returned from ``19 % 5``?
 
-    - :3: Five goes into 19 three times (15) with a remainder of 4.
+    - :4: Five goes into 19 three times (15) with a remainder of 4.
       :.*: What is the remainder when you divide 19 by 5?
 
 .. fillintheblank:: mod-19-mod-6
