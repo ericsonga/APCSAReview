@@ -24,7 +24,7 @@
     :align: right
 
 
-Group Work on the Modulo Operator (%)
+Group Work - Modulo Operator (%)
 ========================================
 
 It is best to use a POGIL approach with the following. In POGIL students work
@@ -87,7 +87,7 @@ Going Beyond Mod 4
     - :10: Five goes into ten two times with a remainer of 0.
       :.*: What is the last number from to 1 to 10 that is evenly divisible by five?
 
-Looking Deeper
+Look Deeper
 -----------------------
 
 .. shortanswer:: mod-returns-one-sa
@@ -131,7 +131,7 @@ Long Division with a Remainder
 Consider how you did long division in elementary school where you determined
 what number goes evenly into another number and the remainder.
 
-.. image:: https://postimg.cc/pywLP5Z5
+.. image:: https://i.postimg.cc/VL6rBj0g/mod-ex.png
 
 .. fillintheblank:: mod-79-mod-5
 
@@ -140,7 +140,7 @@ what number goes evenly into another number and the remainder.
     - :4: Five goes into 79 - 15 times (15 * 5 is 75) with a reminder of 4.
       :.*: What is the remainder when you divide 79 evenly by 5?
 
-Evenly Dividing
+Dividing Evenly 
 ------------------
 
 Imagine if you were given candies to evenly divide amoung members of a group of four people.
