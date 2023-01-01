@@ -29,6 +29,7 @@ Group Work - Modulo Operator (%)
 
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
+This page is based on a POGIL activity from Helen Hu at that site.  
 
 ..	index::
 	single: modulus
@@ -135,12 +136,12 @@ what number goes evenly into another number and the remainder.
 
 .. fillintheblank:: mod-79-mod-5
 
-    What number is returned from ``79 % 5``?
+    What number is the remainder when you divide 75 by 5?
 
     - :4: Five goes into 79 - 15 times (15 * 5 is 75) with a reminder of 4.
       :.*: What is the remainder when you divide 79 evenly by 5?
 
-Dividing Evenly 
+Dividing Evenly
 ------------------
 
 Imagine if you were given candies to evenly divide amoung members of a group of four people.
