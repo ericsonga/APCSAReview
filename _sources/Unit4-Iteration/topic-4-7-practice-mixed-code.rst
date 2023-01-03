@@ -301,7 +301,6 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
-   :noindent:
 
    The ``even_div(str, num)`` function in the ``NumWorker`` class should return the
    number of digits in str (a string representation of a number) that are
