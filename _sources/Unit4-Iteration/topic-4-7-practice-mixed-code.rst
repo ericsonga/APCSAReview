@@ -303,7 +303,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The ``even_div(s, n)`` function in the ``NumWorker`` class should return the
+   The ``ev_div(s, n)`` function in the ``NumWorker`` class should return the
    number of digits in ``s`` (a string representation of a number) that are
    evenly divisible by ``n``.  For example, ``even_div('6892',3)`` should return
    2 since both 6 and 9 are evenly divisible by 3.
@@ -311,7 +311,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    public class NumWorker
    {
    =====
-       public static int even_div(String s, int n)
+       public static int ev_div(String s, int n)
        {
    =====
            int c_num = 0;
@@ -327,7 +327,6 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                /* if is evely divisible by n */
                if (c_num % n == 0)
-   =====
                {
    =====
                    count += 1;
