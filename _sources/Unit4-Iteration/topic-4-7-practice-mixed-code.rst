@@ -262,8 +262,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The ``get_mid(str)`` function in the following class should return the middle character if the string has an odd number of characters and the middle two characters if the string has an even number of characters.  For example, get_mid("way") should return "a" and get_mid("away") should return "wa".
-   Define the main method after the get_mid(str) method.
+   The ``get_mid(str)`` function in a ``StringWorker`` class should return the
+   middle character if the string has an odd number of characters and the middle
+   two characters if the string has an even number of characters.  For example,
+   ``get_mid("way")`` should return ``"a"`` and ``get_mid("away")`` should
+   return ``"wa"``.
    -----
    public class StringWorker
    {
@@ -288,14 +291,6 @@ Try to solve each of the following. Click the *Check Me* button to check each so
                 return str.substring(mid-1, mid+1);
    =====
            }
-   =====
-       }
-   =====
-       public static void main(String[] args)
-       {
-   =====
-           System.out.println(get_mid("way"));
-           System.out.println(get_mid("away"));
    =====
        }
    =====
