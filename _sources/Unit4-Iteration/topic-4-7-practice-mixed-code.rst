@@ -301,31 +301,32 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :practice: T
    :adaptive:
+   :noindent:
 
-   The ``even_div(str, num)`` function in the ``NumWorker`` class should return the
-   number of digits in str (a string representation of a number) that are
-   evenly divisible by num.  For example, ``even_div('6892',3)`` should return
+   The ``even_div(s, n)`` function in the ``NumWorker`` class should return the
+   number of digits in ``s`` (a string representation of a number) that are
+   evenly divisible by ``n``.  For example, ``even_div('6892',3)`` should return
    2 since both 6 and 9 are evenly divisible by 3.
    -----
    public class NumWorker
    {
    =====
-       public static int even_div(String str, int num)
+       public static int even_div(String s, int n)
        {
    =====
-           int curr_num = 0;
-           String curr_digit = "";
+           int c_num = 0;
+           String c_digit = "";
            int count = 0;
    =====
            for (int i = 0; i < str.length(); i++)
            {
    =====
-              curr_digit = str.substring(i, i+1);
+              c_digit = str.substring(i, i+1);
    =====
-              curr_num = Integer.parseInt(curr_digit);
+              c_num = Integer.parseInt(curr_digit);
    =====
-              /* if curr_num is evely divisible by num */
-              if (curr_num % num == 0)
+              /* if is evely divisible by num */
+              if (c_num % num == 0)
    =====
               {
    =====
