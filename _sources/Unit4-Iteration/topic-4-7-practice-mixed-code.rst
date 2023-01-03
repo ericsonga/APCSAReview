@@ -318,15 +318,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            String c_digit = "";
            int count = 0;
    =====
-           for (int i = 0; i < str.length(); i++)
+           for (int i = 0; i < s.length(); i++)
            {
    =====
-              c_digit = str.substring(i, i+1);
+              c_digit = s.substring(i, i+1);
    =====
               c_num = Integer.parseInt(c_digit);
    =====
-              /* if is evely divisible by num */
-              if (c_num % num == 0)
+              /* if is evely divisible by n */
+              if (c_num % n == 0)
    =====
               {
    =====
