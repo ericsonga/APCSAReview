@@ -262,7 +262,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The ``get_mid(str)`` function in a ``StringWorker`` class should return the
+   The ``get_mid(str)`` function in the ``StringWorker`` class should return the
    middle character if the string has an odd number of characters and the middle
    two characters if the string has an even number of characters.  For example,
    ``get_mid("way")`` should return ``"a"`` and ``get_mid("away")`` should
@@ -277,7 +277,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            int str_len = str.length();
            int mid = str_len / 2;
    =====
-           /* check if the string has an odd number of characters */
+           /* if odd number of chars */
            if (str_len % 2 == 1)
            {
    =====
@@ -288,9 +288,55 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            else
            {
    =====
-                return str.substring(mid-1, mid+1);
+               return str.substring(mid-1, mid+1);
    =====
            }
+   =====
+       }
+   =====
+   }
+
+
+.. parsonsprob:: ch6ex12muc
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The ``even_div(str, num)`` function in the ``NumWorker`` class should return the
+   number of digits in str (a string representation of a number) that are
+   evenly divisible by num.  For example, ``even_div('6892',3)`` should return
+   2 since both 6 and 9 are evenly divisible by 3.
+   -----
+   public class NumWorker
+   {
+   =====
+       public static int even_div(String str, int num)
+       {
+   =====
+           int curr_num = 0;
+           String curr_digit = "";
+           int count = 0;
+   =====
+           for (int i = 0; i < str.length(); i++)
+           {
+   =====
+              curr_digit = str.substring(i, i+1);
+   =====
+              curr_num = Integer.parseInt(curr_digit);
+   =====
+              /* if curr_num is evely divisible by num */
+              if (curr_num % num == 0)
+   =====
+              {
+   =====
+                  count += 1;
+   =====
+              }
+   =====
+          }
+   =====
+          return count;
    =====
        }
    =====
