@@ -1,12 +1,12 @@
 .. qnum::
    :prefix: 4-7-
    :start: 1
-   
+
 Mixed Up Code Practice
 ------------------------------
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
-                
+
 .. parsonsprob:: ch6ex1muc
    :numbered: left
    :practice: T
@@ -24,8 +24,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        x++;
    =====
    }
-                   
-      
+
+
 .. parsonsprob:: ch6ex2muc
    :numbered: left
    :practice: T
@@ -40,7 +40,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           for (int i = 15; i >=0; i--) 
+           for (int i = 15; i >=0; i--)
    =====
            for (int i = 15; i > 0; i--) #paired
    =====
@@ -50,7 +50,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
 
-   
+
 .. parsonsprob:: ch6ex3muc
    :numbered: left
    :practice: T
@@ -79,8 +79,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        }
    }
-           
-  
+
+
 .. parsonsprob:: ch6ex4muc
    :numbered: left
    :practice: T
@@ -94,8 +94,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        public static void main(String[] args)
        {
-   =====    
-          for (int i = 0; i <= 100; i+=20) 
+   =====
+          for (int i = 0; i <= 100; i+=20)
    =====
           for (int i = 100; i >= 0; i-=20) #paired
    =====
@@ -104,8 +104,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        }
    =====
    }
-        
-   
+
+
 .. parsonsprob:: ch6ex5muc
    :numbered: left
    :practice: T
@@ -120,19 +120,16 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           for (int i = 100; i >= 0; i -= 10) 
+           for (int i = 100; i >= 0; i -= 10)
    =====
            for (int i = 0; i <= 100; i += 10) #paired
    =====
                System.out.println(i);
    =====
-       } 
+       }
    =====
    }
-           
-               
 
-           
 .. parsonsprob:: ch6ex7muc
    :numbered: left
    :practice: T
@@ -161,11 +158,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                System.out.println();
    =====
-           }   
+           }
        }
    }
 
-       
+
 .. parsonsprob:: ch6ex8muc
    :numbered: left
    :practice: T
@@ -189,12 +186,12 @@ Try to solve each of the following. Click the *Check Me* button to check each so
                    System.out.print(x);
    =====
                }
-               System.out.println(); 
+               System.out.println();
            }
    =====
        }
    }
-          
+
 .. parsonsprob:: ch6ex9muc
    :numbered: left
    :practice: T
@@ -220,15 +217,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
                    System.out.print(y); #paired
    =====
                } //end inner loop
-               System.out.println(); 
+               System.out.println();
    =====
            } //end outer loop
    =====
        }
    }
-  
 
-          
+
+
 .. parsonsprob:: ch6ex10muc
    :numbered: left
    :practice: T
@@ -252,13 +249,54 @@ Try to solve each of the following. Click the *Check Me* button to check each so
                    System.out.print(x); #paired
    =====
                } //end inner loop
-               System.out.println(); 
+               System.out.println();
    =====
            } //end outer loop
    =====
        }
    }
-   
 
+.. parsonsprob:: ch6ex11muc
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
 
-   
+   The ``get_mid(str)`` function in the following class should return the middle character if the string has an odd number of characters and the middle two characters if the string has an even number of characters.  For example, get_mid("way") should return "a" and get_mid("away") should return "wa".
+   Define the main method after the get_mid(str) method.
+   -----
+   public class StringWorker
+   {
+   =====
+       public static String get_mid(String str)
+       {
+   =====
+           int str_len = str.length();
+           int mid = str_len / 2;
+   =====
+           /* check if the string has an odd number of characters */
+           if (str_len % 2 == 1)
+           {
+   =====
+               return str.substring(mid, mid+1);
+   =====
+           }
+   =====
+           else
+           {
+   =====
+                return str.substring(mid-1, mid+1);
+   =====
+           }
+   =====
+       }
+   =====
+       public static void main(String[] args)
+       {
+   =====
+           System.out.println(get_mid("way"));
+           System.out.println(get_mid("away"));
+   =====
+       }
+   =====
+   }
