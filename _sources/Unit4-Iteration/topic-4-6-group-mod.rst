@@ -19,9 +19,7 @@
     :align: middle
     :alt: groupwork
 
-.. image:: ../../_static/time20.png
-    :width: 225
-    :align: right
+
 
 
 Group Work - Modulo Operator (%)

@@ -921,7 +921,8 @@ Be careful not to jump out of loop too early when you are looking for a value in
             String output = getMethodOutput("main");
             String expect = "1".replaceAll(" ", "\n");
 
-            boolean passed = getResults(expect, output, "Testing main()", true);
+            boolean passed = (output.equals(expect));
+            getResults(expect, output, "Testing main() output", passed);
             assertTrue(passed);
         }
 

@@ -203,7 +203,7 @@ Summary
 -------------------
 
 - Compound assignment operators (+=, -=, \*=, /=, %=) can be used in place of the assignment operator.
-- The increment operator (++) and decrement operator (--) are used to add 1 or subtract 1 from the stored value of a variable. The new value is assigned to the variable.
+- The increment operator (``++``) and decrement operator (``--``) are used to add 1 or subtract 1 from the stored value of a variable. The new value is assigned to the variable.
 - The use of increment and decrement operators in prefix form (i.e., ++x) and inside other expressions (i.e., arr[x++]) is outside the scope of this course and the AP Exam. 
 
 

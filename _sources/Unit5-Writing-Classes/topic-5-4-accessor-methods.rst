@@ -405,9 +405,13 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 |Groupwork| Design a Class for your Community 
 ----------------------------------------------------------
 
+.. |lesson 5.2| raw:: html
+
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 5.2</a>
+ 
 In the previous lessons, you came up with a class of your own choice relevant to your community. 
 
-1. Copy your class with its 3 instance variables and constructors from lesson 5.2.  
+1. Copy your class with its 3 instance variables and constructors from |lesson 5.2|.  
 
 2. Create accessor (get) methods for each of the instance variables. 
 

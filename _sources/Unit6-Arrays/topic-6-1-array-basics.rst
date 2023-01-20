@@ -800,11 +800,14 @@ And we can use ``array[index].method()`` to call a method of an object in the ar
         }      
     }
 
+.. |lesson 5.6| raw:: html
 
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 5.6</a>
+ 
 In Unit 5, you came up with a class of your own choice relevant to you or your 
 community.  In this unit, you will create an array to hold objects of your class.
 
-1. Copy your class from lesson 5.6 below. 
+1. Copy your class from |lesson 5.6| below. 
 
 2. In the main method, create an array of 3 objects of your class. 
 
@@ -816,7 +819,7 @@ community.  In this unit, you will create an array to hold objects of your class
   :language: java
   :autograde: unittest
 
-  Community Challenge: Copy your class from lesson 5.6 below. Create an array of 3 objects of your class, initialize
+  Community Challenge: Copy your class from |lesson 5.6| below. Create an array of 3 objects of your class, initialize
   them to new objects and call their print methods. 
   ~~~~
   public class          // Add your class name here!
