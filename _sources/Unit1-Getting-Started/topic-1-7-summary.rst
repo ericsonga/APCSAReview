@@ -54,7 +54,7 @@ Java Keyword Summary
 - **System.out.print()** - used to print output to the user
 - **System.out.println()** - used to print output followed by a newline to the user
 - **=** - used for assignment to a variable
-- **+, -, *, /, %** - aritmetic operators
+- **+, -, *, /, %** - arithmetic operators
 
 
 
