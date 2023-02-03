@@ -18,7 +18,7 @@ To make sure the site saves your answers on questions, please click on the perso
 
 ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships for college scholarships and Amazon summer internships for students with financial need.  
 
-Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/page/csta-acm-cutler-bell-prize until Jan. 27th.
+..Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/page/csta-acm-cutler-bell-prize until Jan. 27th.
 
 ATTENTION high school women of color taking AP CSA or CSP: 
 if you identify as a woman/girl and as Black, Hispanic/Latina, and/or Native American 
@@ -105,7 +105,7 @@ Index
    
 If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CSAwesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 11/26/2022)
+(last revised 2/3/2023)
 
 © Copyright 2015 Barb Ericson, Univ. Michigan, 2019 revised by Beryl Hoffman (Elms College). Created using `Runestone  <http://runestone.academy>`_.
 

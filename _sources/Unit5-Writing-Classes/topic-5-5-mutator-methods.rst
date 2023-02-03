@@ -145,9 +145,9 @@ Try the Student class below which this time has set methods added. You will need
   ====
   import static org.junit.Assert.*;
     import org.junit.*;
-
     import java.io.*;
 
+    // activeCode StudentObjExample2
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests()
@@ -276,9 +276,9 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
    ====
    import static org.junit.Assert.*;
     import org.junit.*;
-
     import java.io.*;
 
+    // activecode challenge-5-5-Pet-Class
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests()
@@ -428,6 +428,7 @@ In the previous lessons, you came up with a class of your own choice relevant to
   import org.junit.*;
   import java.io.*;
 
+  // community-challenge-5-5
   public class RunestoneTests extends CodeTestHelper
   {
          @Test

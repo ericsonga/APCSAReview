@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 5-13-
+   :prefix: 5-14-
    :start: 1
    
 .. |CodingEx| image:: ../../_static/codingExercise.png
@@ -204,8 +204,10 @@ You will receive at least 1 point if you write the class header and a constructo
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
+    import org.junit.*;
     import java.io.*;
+
+    // Tests for ActiveCode StepTrackerCode1
     public class RunestoneTests extends CodeTestHelper
     {
       @Test

@@ -573,7 +573,8 @@ Here's a fun String array of image filenames. The following code displays an onl
     import static org.junit.Assert.*;
      import org.junit.*;;
      import java.io.*;
-
+     
+     // ActiveCode imageArray
      public class RunestoneTests extends CodeTestHelper
      {
          @Test
