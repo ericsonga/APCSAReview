@@ -5,7 +5,7 @@
 Peer Instruction: 2D Arrays Multiple Choice Questions
 -----------------------------------------------------
 
-.... mchoice:: bs-2d-arrays-6-6   This question refers to (int) as rounding instead of truncating
+.. .. mchoice:: bs-2d-arrays-6-6   This question refers to (int) as rounding instead of truncating
    :author: Beth Simon 
    :practice: T
    :answer_a: 1, 2, 3, and 4
