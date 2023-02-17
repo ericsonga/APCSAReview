@@ -32,24 +32,36 @@ The first activity in Magpie is to explore some existing chatbots.  We encourage
 Activity 1: Exploring Chatbots
 ------------------------------
 
+.. |ELIZA| raw:: html
+
+   <a href="https://web.njit.edu/~ronkowit/eliza.html" target="_blank">ELIZA</a>
+
+.. |ALICE| raw:: html
+
+   <a href="http://www.mfellmann.net/content/alice.html" target="_blank">A.L.I.C.E.</a>
+
 .. |chatbots| raw:: html
 
-   <a href="https://sites.google.com/site/webtoolsbox/bots" target="_blank">chatbots here</a>
+   <a href="https://beta.character.ai/" target="_blank">chatbots</a>
    
-1. Working in pairs or groups, try out some |chatbots|.  
+1. Working in pairs or groups, try out some chatbots, for example:  
+
+   - |ELIZA| the therapist bot from the 1970s: 
+   - |ALICE| from the 1990s: 
+   - Modern |chatbots| which use AI and machine learning 
    
 2. Record the chatbot response to each of the following.
 
-* Where do you come from?
-* asdfghjkl;
-* My mother and I talked last night.
-* The weather is nice.
-* I said no!
+   * Where do you come from?
+   * asdfghjkl;
+   * My mother and I talked last night.
+   * The weather is nice.
+   * I said no!
 
 3. Ask the chatbot other questions. 
 
-* Record the most interesting response.
-* Record the most peculiar response.  
+   * Record the most interesting response.
+   * Record the most peculiar response.  
 
 4. Work with another student or group to have two chatbots chat with each other.  Type the responses from one chatbot into the input area for the other and vice-versa.  
 
