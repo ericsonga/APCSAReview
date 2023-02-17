@@ -194,8 +194,8 @@ different **method signature**, where it requires a different number or type of 
             String code = getCode();
             int numColors = countOccurences(code, "Color(");
 
-            boolean passed = numColors >= 4;
-            passed = getResults("4 or more", ""+numColors, "Changing color at least 4 times", passed);
+            boolean passed = numColors >= 3;
+            passed = getResults("3 or more", ""+numColors, "Changes color at least 3 times", passed);
             assertTrue(passed);
         }
 
@@ -205,8 +205,8 @@ different **method signature**, where it requires a different number or type of 
             String code = getCode();
             int numTurns = countOccurences(code, ".turn");
 
-            boolean passed = numTurns >= 4;
-            passed = getResults("4 or more", ""+numTurns, "Number of turns", passed);
+            boolean passed = numTurns >= 3;
+            passed = getResults("3 or more", ""+numTurns, "Turns at least 3 times", passed);
             assertTrue(passed);
         }
 
