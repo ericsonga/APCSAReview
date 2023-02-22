@@ -9,10 +9,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``has22(int[] arr)`` that takes an array of ints, ``arr`` and returns true if the array contains a 2 next to a 2 somewhere.
+   Create the function ``has22(int[] nums)`` that takes an array of ints, ``nums`` and returns true if the array contains a 2 next to a 2 somewhere.
    For example, has22([1, 2, 2]) returns ``true`` and ``has22([1, 2, 1, 2])`` returns ``false``.
    -----
-   public boolean hasTwoAdjacent(int[] nums) {
+   public boolean has22(int[] nums) {
    =====
        for (int i = 0; i < nums.length - 1; i++) {
    =====
@@ -32,10 +32,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``has22(int[] arr)`` that takes an array of ints, ``arr`` and returns true if the array contains a 2 next to a 2 somewhere.
+   Create the function ``has22(int[] nums)`` that takes an array of ints, ``nums`` and returns true if the array contains a 2 next to a 2 somewhere.
    For example, has22([1, 2, 2]) returns ``true`` and ``has22([1, 2, 1, 2])`` returns ``false``.
    -----
-   public boolean hasTwoAdjacent(int[] nums) {
+   public boolean has22(int[] nums) {
    =====
        for (int i = 0; i < nums.length - 1; i++) {
    =====
@@ -55,20 +55,45 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    }
 
-.. parsonsprob:: ex-array-nd-has3OddOrEven
+.. parsonsprob:: ex-array-nd-twoOdd
    :numbered: left
    :adaptive:
 
-   Create the function ``has3OddOrEven(int[] arr)`` that takes an array of ints, ``arr`` and returns true if the array contains either 3 even or 3 odd values all next to each other.
-   For example ``modThree([2, 1, 3, 5])`` returns ``true`` and ``modThree([2, 1, 2, 5])`` returns ``false``.
+   Create the function ``twoOdd(int[] n)`` that takes an array of ints, ``n`` and returns true if the array contains 2 odd values next to each other.
+   For example ``twoOdd([2, 1, 3])`` returns ``true`` and ``tooOdd([2, 1, 2])`` returns ``false``.
    -----
-   public boolean has3OddOrEven(int[] nums) {
+   public boolean twoOdd(int[] n) {
    =====
-       int count = 0;
+       for (int i = 0; i < n.length - 1; i++) {
    =====
-       for (int i = 0; i < nums.length - 2; i++) {
+           if (n[i] % 2 == 1 && n[i+1] % 2 == 1) {
    =====
-           if (nums[i] % 2 == nums[i+1] % 2 && nums[i+1] % 2 == nums[i+2] % 2) {
+               return true;
+   =====
+           }
+   =====
+       }
+   =====
+       return false;
+   =====
+   }
+
+.. parsonsprob:: ex-array-wd-twoOdd
+   :numbered: left
+   :adaptive:
+
+   Create the function ``twoOdd(int[] n)`` that takes an array of ints, ``n`` and returns true if the array contains 2 odd values next to each other.
+   For example ``twoOdd([2, 1, 3])`` returns ``true`` and ``tooOdd([2, 1, 2])`` returns ``false``.
+   -----
+   public boolean twoOdd(int[] n) {
+   =====
+       for (int i = 0; i < n.length - 1; i++) {
+   =====
+       for (int i = 0; i < n.length; i++) { #paired: must stop at one less than the length since comparing current and next
+   =====
+           if (n[i] % 2 == 1 && n[i+1] % 2 == 1) {
+   =====
+           if (n[i] % 2 == 0 && n[i+1] % 2 == 0) { #paired: this tests for even numbers 
    =====
                return true;
    =====
