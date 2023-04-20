@@ -575,3 +575,96 @@ AP Practice
       + Correct! The semicolon should go after each command but not in the comment.
 
 
+.. hparsons:: mp-main-method-order-1
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 
+
+    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    public static 
+    void main(
+    String[] 
+    args)
+    public Static
+
+.. hparsons:: mp-main-method-order-2
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5
+
+    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    public 
+    static 
+    void 
+    main(
+    String[] 
+    args)
+    Void
+    Public
+
+.. hparsons:: mp-main-method-order-3
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5 6 7 8 
+
+    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    public 
+    static 
+    void 
+    main
+    (
+    String
+    [] 
+    args
+    )
+    ()
+   
+
+
+.. hparsons:: mp-print-order-1
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5 6 7 8 9 10 
+
+    Put the blocks in order to create a Java statement that will print "Hi!". There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    System
+    .
+    out
+    .
+    println
+    (
+    "
+    Hi!
+    "
+    )
+    ;
+    system
+
+.. hparsons:: mp-print-order-2
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5 6 7 8 9 10 
+
+    Put the blocks in order to create a Java statement that will print "Bye!". There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    System
+    .
+    out
+    .
+    println
+    (
+    "
+    Bye!
+    "
+    )
+    ;
+    Out

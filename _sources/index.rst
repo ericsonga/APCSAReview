@@ -79,6 +79,7 @@ Table of Contents
    MixedFreeResponse/toctree.rst
    FreeResponse/toctree.rst
    Stories/toctree.rst
+   _hidden/toctree.rst
    
 
 Index
