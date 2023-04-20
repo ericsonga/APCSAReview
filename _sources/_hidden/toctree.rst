@@ -5,4 +5,4 @@ Hidden Items
    :hidden:
    :maxdepth: 2
 
-   Ex-ArrayParsons.rst
+   Ex-array-orig.rst
