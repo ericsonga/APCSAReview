@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 4-1-
+   :prefix: 4-7-
    :start: 1
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
@@ -134,7 +134,7 @@ what number goes evenly into another number and the remainder.
 
 .. fillintheblank:: mod-79-mod-5
 
-    What number is the remainder when you divide 75 by 5?
+    What number is the remainder when you divide 79 by 5?
 
     - :4: Five goes into 79 - 15 times (15 * 5 is 75) with a reminder of 4.
       :.*: What is the remainder when you divide 79 evenly by 5?

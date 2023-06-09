@@ -75,7 +75,6 @@ To step through this code in the Java Visualizer click on the following link: `H
          return iMax;
       }
       
-More Practice
--------------
 
-For more practice with 2D arrays see http://coweb.cc.gatech.edu/ice-gt/1277 Question 4 from 2012 and Question 4 from 2011.
+
+.. broken link For more practice with 2D arrays see http://coweb.cc.gatech.edu/ice-gt/1277 Question 4 from 2012 and Question 4 from 2011.

@@ -185,7 +185,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                System.out.println("100");
    =====
-           else
+           else if (speed >= 85)
                System.out.println("200");
    =====
        }
