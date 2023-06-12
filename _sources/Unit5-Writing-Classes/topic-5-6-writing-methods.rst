@@ -296,7 +296,7 @@ If you pass in an argument that holds a reference to an object, like a String or
 (Advanced topics warning): Although String objects are not mutable, the classes that you create will have mutable objects. If the reference parameter is for a mutable object, the method could change the actual object. However, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification. Methods can even access the private data and methods of a parameter that is a reference to an object if the parameter is the same type as the method’s enclosing class. Note that Strings are immutable objects, so they cannot be changed by the method; only a new changed copy of them can be made.
 
 
-Methods can also return values of any type back to the calling method. The calling method should do something with this return value, like printing it out or saving it in a variable. Try the problems below to practice with a String method that takes a parameter and returns a boolean value.
+Methods can also return values of any type back to the calling method. The calling method should do something with this return value, like printing it out or assigning it to a variable. Try the problems below to practice with a String method that takes a parameter and returns a boolean value.
 
 |CodingEx| **Coding Exercise**
 
