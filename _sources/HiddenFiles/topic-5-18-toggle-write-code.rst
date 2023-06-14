@@ -38,7 +38,7 @@ This is the write code problems associated with the mixed up code problems.
         }
         ====
         // ch7ex1muc
-		import static org.junit.Assert.*;
+        import static org.junit.Assert.*;
         import org.junit.*;
         import java.io.*;
 
@@ -158,7 +158,7 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch7ex3muc
+        // ch7ex3muc
         import static org.junit.Assert.*;
         import org.junit.*;
         import java.io.*;
@@ -247,7 +247,7 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch7ex4muc
+        // ch7ex4muc
         import static org.junit.Assert.*;
         import org.junit.*;
         import java.io.*;
@@ -321,7 +321,7 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch7ex5muc
+        // ch7ex5muc
         import static org.junit.Assert.*;
         import org.junit.*;
         import java.io.*;
@@ -376,7 +376,7 @@ This is the write code problems associated with the mixed up code problems.
 
         }
         ====
-		// ch7ex6muc
+        // ch7ex6muc
         import static org.junit.Assert.*;
         import org.junit.*;
 

@@ -272,44 +272,44 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "Your fav is not junk";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "Your fav is not junk";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test2()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, ".equals(");
+            @Test
+            public void test2()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, ".equals(");
                 boolean passed = count >= 2;
-				passed = getResults(""+2, ""+count, "Counting number of calls to .equals()", passed);
-				assertTrue(passed);
-			}
+                passed = getResults(""+2, ""+count, "Counting number of calls to .equals()", passed);
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test3()
-			{
-				boolean passed = checkCodeContains("||");
-				assertTrue(passed);
-			}
+            @Test
+            public void test3()
+            {
+                boolean passed = checkCodeContains("||");
+                assertTrue(passed);
+            }
 
-		}
+        }
 
 .. activecode:: u3_muc_wc6
         :language: java
@@ -327,41 +327,41 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "200";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "200";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test2()
-			{
-				boolean passed = checkCodeContains("speed > 65 && speed < 75");
-				assertTrue(passed);
-			}
+            @Test
+            public void test2()
+            {
+                boolean passed = checkCodeContains("speed > 65 && speed < 75");
+                assertTrue(passed);
+            }
 
 
-			@Test
-			public void test3()
-			{
-				boolean passed = checkCodeContains("speed >= 75 && speed < 85");
-				assertTrue(passed);
-			}
-		}
+            @Test
+            public void test3()
+            {
+                boolean passed = checkCodeContains("speed >= 75 && speed < 85");
+                assertTrue(passed);
+            }
+        }
 
 .. activecode:: u3_muc_wc7
         :language: java
@@ -445,51 +445,51 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "Can't text now";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "Can't text now";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test2()
-			{
-				boolean passed = checkCodeContains("!driving && !eating");
-				assertTrue(passed);
-			}
+            @Test
+            public void test2()
+            {
+                boolean passed = checkCodeContains("!driving && !eating");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test3()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, "if");
-				boolean passed = getResults(""+1, ""+count, "Counting number of ifs");
-				assertTrue(passed);
-			}
+            @Test
+            public void test3()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, "if");
+                boolean passed = getResults(""+1, ""+count, "Counting number of ifs");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test4()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, "else");
-				boolean passed = getResults(""+1, ""+count, "Counting number of elses");
-				assertTrue(passed);
-			}
-		}
+            @Test
+            public void test4()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, "else");
+                boolean passed = getResults(""+1, ""+count, "Counting number of elses");
+                assertTrue(passed);
+            }
+        }
 
 
 
@@ -512,48 +512,48 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "Starts with a consonant";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "Starts with a consonant";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test2()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, "substring(0,1)");
-				boolean passed = count >= 1;
+            @Test
+            public void test2()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, "substring(0,1)");
+                boolean passed = count >= 1;
 
-				getResults("1 or more", ""+count, "Counting number of substring(0, 1)", passed);
-				assertTrue(passed);
-			}
+                getResults("1 or more", ""+count, "Counting number of substring(0, 1)", passed);
+                assertTrue(passed);
+            }
 
-		   @Test
-			public void test3()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, ".equals(");
-				boolean passed = count == 5;
+           @Test
+            public void test3()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, ".equals(");
+                boolean passed = count == 5;
 
-				getResults("1 or more", ""+count, "Counting number of .equals()", passed);
-				assertTrue(passed);
-			}
-		}
+                getResults("1 or more", ""+count, "Counting number of .equals()", passed);
+                assertTrue(passed);
+            }
+        }
 
 
 .. activecode:: u3_muc_wc10
@@ -572,50 +572,50 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "C";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "C";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test2()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, "if");
-				boolean passed = getResults(""+4, ""+count, "Counting number of ifs");
-				assertTrue(passed);
-			}
+            @Test
+            public void test2()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, "if");
+                boolean passed = getResults(""+4, ""+count, "Counting number of ifs");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test3()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, "else");
-				boolean passed = getResults(""+4, ""+count, "Counting number of elses");
-				assertTrue(passed);
-			}
+            @Test
+            public void test3()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, "else");
+                boolean passed = getResults(""+4, ""+count, "Counting number of elses");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test4()
-			{
-				String code = getCodeWithoutComments();
-				int count = countOccurences(code, "else if");
-				boolean passed = getResults(""+3, ""+count, "Counting number of else ifs");
-				assertTrue(passed);
-			}
-		}
+            @Test
+            public void test4()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, "else if");
+                boolean passed = getResults(""+3, ""+count, "Counting number of else ifs");
+                assertTrue(passed);
+            }
+        }

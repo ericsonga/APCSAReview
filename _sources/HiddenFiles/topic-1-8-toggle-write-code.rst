@@ -192,29 +192,29 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch3ex2muc
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        // ch3ex2muc
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				double result = Double.parseDouble(output);
-				double expect = 35.692;
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                double result = Double.parseDouble(output);
+                double expect = 35.692;
 
-				boolean passed = getResults(expect, result, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, result, "Running main");
+                assertTrue(passed);
+            }
 
-		}
+        }
 
 
 .. activecode:: u1_muc_wc6
@@ -319,28 +319,28 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch4ex5muc
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        // ch4ex5muc
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "Your name is Layla\nYour age is 16";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "Your name is Layla\nYour age is 16";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-		}
+        }
 
 
 .. activecode:: u1_muc_wc9
@@ -363,28 +363,28 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch4ex6muc
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        // ch4ex6muc
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "Your name is Julian\nYour favorite food is chicken wings";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "Your name is Julian\nYour favorite food is chicken wings";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-		}
+        }
 
 
 .. activecode:: u1_muc_wc10
@@ -404,28 +404,28 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch3ex6muc
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        // ch3ex6muc
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
                 String expect = "10.476190476190476";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-		}
+        }
 
 
 .. activecode:: u1_muc_wc11
@@ -542,27 +542,27 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch3ex9muc
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        // ch3ex9muc
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "21.196";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "21.196";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
-		}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
+        }
 
 .. activecode:: u1_muc_wc14
         :language: java
@@ -583,42 +583,42 @@ This is the write code problems associated with the mixed up code problems.
             }
         }
         ====
-		// ch3ex10muc
-		import static org.junit.Assert.*;
-		import org.junit.*;;
-		import java.io.*;
+        // ch3ex10muc
+        import static org.junit.Assert.*;
+        import org.junit.*;;
+        import java.io.*;
 
-		public class RunestoneTests extends CodeTestHelper
-		{
-			public RunestoneTests() {
-				super("Test1");
-			}
+        public class RunestoneTests extends CodeTestHelper
+        {
+            public RunestoneTests() {
+                super("Test1");
+            }
 
-			@Test
-			public void test1()
-			{
-				String output = getMethodOutput("main");
-				String expect = "26.66";
+            @Test
+            public void test1()
+            {
+                String output = getMethodOutput("main");
+                String expect = "26.66";
 
-				boolean passed = getResults(expect, output, "Running main");
-				assertTrue(passed);
-			}
+                boolean passed = getResults(expect, output, "Running main");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test2()
-			{
-				boolean passed = checkCodeContains("*2");
-				assertTrue(passed);
-			}
+            @Test
+            public void test2()
+            {
+                boolean passed = checkCodeContains("*2");
+                assertTrue(passed);
+            }
 
-			@Test
-			public void test3()
-			{
-				boolean passed = checkCodeContains("/3");
-				assertTrue(passed);
-			}
+            @Test
+            public void test3()
+            {
+                boolean passed = checkCodeContains("/3");
+                assertTrue(passed);
+            }
 
-		}
+        }
 
 
 
