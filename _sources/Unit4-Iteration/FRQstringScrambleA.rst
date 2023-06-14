@@ -87,11 +87,11 @@ Try to figure out the last two examples on your own.
 Figuring out the algorithm
 ===========================
 
-It can help to write out what you need to do to get each of the characters to compare.  
+It can help to write out what you need to do to get each of the characters to compare.
 
 .. activecode:: lcfrssa3
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    The following shows what to do to solve the example with "ABRACADABRA".
    ~~~~
@@ -142,7 +142,7 @@ In this example we are looping through the characters from left to right one at 
 
 .. activecode:: lcfrssa4
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    The following shows what to do to solve the example with "WHOA".
    ~~~~
@@ -187,7 +187,7 @@ Write the method scrambleWord below.
 
 .. activecode:: lcfrssa5
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    FRQ StringScramble A: Write the method scrambleWord.
    ~~~~
@@ -253,7 +253,7 @@ Write the method scrambleWord below.
       }
 
       @Test
-      public void testCodeContains() 
+      public void testCodeContains()
       {
          String target = ".substring(";
          boolean passed = checkCodeContains("substring method", target);

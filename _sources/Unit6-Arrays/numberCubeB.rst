@@ -34,7 +34,7 @@ The following is a free response question from 2009.  It was question 1 on the e
 series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A
 run is defined as the repeated occurrence of the same value in two or more consecutive positions in the
 array.  In the example array shown above there are two runs of length 4.  One starts at index 6 and one at index 14.  The method
-may return either of those indicies.  
+may return either of those indicies.
 
 If there are no runs of any value, the method returns -1.
 
@@ -48,7 +48,7 @@ Click to reveal the algorithm for solving this problem.
    :hidetitle: Hide Algorithm
    :optional:
 
-   You are going to need to keep track of the current run length, the maximum run length, the index where the max run started (which should start at -1).  You want to compare one value to an adjacent value 
+   You are going to need to keep track of the current run length, the maximum run length, the index where the max run started (which should start at -1).  You want to compare one value to an adjacent value
    so you will need to be careful that you don't go out of bounds.  If you find two values that are adjacent that are equal then increment the current run length and set the start index.  If the two adjacent values
    are not equal then reset the current run length to 0.  Return the starting index of the maximum length run.
 
@@ -101,7 +101,7 @@ Try and Solve Part B
 
 .. activecode:: FRQNumberCubeB
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    FRQ Number Cube B: Write the method ``getLongestRun`` that takes as its parameter an array of integer values representing a series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A run is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.
    ~~~~
@@ -178,5 +178,5 @@ Try and Solve Part B
 
             boolean passed = getResults(expect, actual, "Checking output with " + Arrays.toString(values));
             assertTrue(passed);
-        }  
+        }
     }

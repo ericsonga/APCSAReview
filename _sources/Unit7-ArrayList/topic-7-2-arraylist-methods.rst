@@ -21,13 +21,13 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 .. raw:: html
 
     <style>    td { text-align: left; } </style>
 
-ArrayList Methods 
+ArrayList Methods
 =========================
 
 ..	index::
@@ -67,14 +67,14 @@ Size()
 
 As we saw in the last lesson, you can get the number of items in a ArrayList using its ``size()`` method.  The ArrayList starts out empty with a size of 0.
 
-.. code-block:: java 
+.. code-block:: java
 
     ArrayList<String> list = new ArrayList<String>();
     System.out.println( list.size() );
 
-.. note:: 
+.. note::
 
-   With arrays, you use the ``length`` field to get the number of items in the array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the ArrayList. You will not be penalized if you mix up length and size() in the CS A exam. The number of items in an empty ArrayList is 0.  
+   With arrays, you use the ``length`` field to get the number of items in the array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the ArrayList. You will not be penalized if you mix up length and size() in the CS A exam. The number of items in an empty ArrayList is 0.
 
 Add(obj) to an ArrayList
 -----------------------------
@@ -82,7 +82,7 @@ Add(obj) to an ArrayList
 ..	index::
 	pair: arraylist; add
 
-You can add values to an ArrayList by using the method ``add(obj)`` which will add the object to the end of the list, just like you would join the end of the line to board a bus.  
+You can add values to an ArrayList by using the method ``add(obj)`` which will add the object to the end of the list, just like you would join the end of the line to board a bus.
 
 |CodingEx| **Coding Exercise**
 
@@ -105,7 +105,7 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
           System.out.println(nameList);
           nameList.add("Grace");
           System.out.println(nameList);
-          nameList.add("Diego"); 
+          nameList.add("Diego");
           System.out.println(nameList);
           System.out.println(nameList.size());
       }
@@ -144,11 +144,11 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
 
 ..	index::
 	pair: list; autoboxing
-	pair: list; unboxing 
+	pair: list; unboxing
 
 When adding Integer objects to the list, you can use the Integer constructor like ``add(new Integer(5))`` in Java version 7 which is used on the exam (although this is deprecated and no longer used in Java version 9)  or you can just add the int value directly like ``add(5)`` in any Java version and it will be changed into an ``Integer`` object automatically.  This is called **autoboxing**. When you pull an ``int`` value out of a list of ``Integers`` that is called **unboxing**.
 
-.. code-block:: java 
+.. code-block:: java
 
     ArrayList<Integer> list = new ArrayList<Integer>();
     list.add(new Integer(5)); // this will only work in Java 7
@@ -158,13 +158,13 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
 
 .. activecode:: StudentArrayList
   :language: java
-  :autograde: unittest 
+  :autograde: unittest
 
   An example of an ArrayList of Student objects. Add a new student with your name and info in it.
   ~~~~
   import java.util.*;
 
-  public class StudentList 
+  public class StudentList
   {
      // main method for testing
      public static void main(String[] args)
@@ -177,7 +177,7 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
      }
    }
 
-  class Student 
+  class Student
   {
      private String name;
      private String email;
@@ -191,11 +191,11 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
      }
 
      // toString() method
-     public String toString() 
-     { 
+     public String toString()
+     {
        return id + ": " + name + ", " + email;
      }
-  } 
+  }
   ====
   import static org.junit.Assert.*;
     import org.junit.*;;
@@ -221,7 +221,7 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
 Add(index,obj) in an ArrayList
 ------------------------------
 
-There are actually two different ``add`` methods in the ``ArrayList`` class.  The ``add(obj)`` method adds the passed object to the end of the list. The ``add(index,obj)`` method adds the passed object at the passed index, but first moves over any existing values to higher indicies to make room for the new object.  
+There are actually two different ``add`` methods in the ``ArrayList`` class.  The ``add(obj)`` method adds the passed object to the end of the list. The ``add(index,obj)`` method adds the passed object at the passed index, but first moves over any existing values to higher indicies to make room for the new object.
 
 
 |CodingEx| **Coding Exercise**
@@ -233,7 +233,7 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
    :autograde: unittest
 
    What will the code below print out? Try figuring it out before running it. Remember that ArrayLists start at index 0 and that the add(index,obj) always has the index as the first argument.
-   ~~~~    
+   ~~~~
    import java.util.*;  // import all classes in this package.
    public class listAddInt2
    {
@@ -295,7 +295,7 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
 
    What will print when the following code executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
@@ -316,7 +316,7 @@ You can step through the code above by clicking on this |Java Visualizer 1|.
    :answer_b: ["Anaya", "Layla", "Sharrie", "Sarah"]
    :answer_c: ["Sarah", "Anaya", "Layla", "Sharrie"]
    :answer_d: ["Anaya", "Layla", "Sarah", "Sharrie"]
-   :correct: a 
+   :correct: a
    :feedback_a: The <code>add(1, "Sarah")</code> will move any current items to the right and then put "Sarah" at index 1.
    :feedback_b: This would be true if the last one was <code>add("Sarah")</code>
    :feedback_c: This would be true if the last one was <code>add(0, "Sarah")</code>
@@ -324,7 +324,7 @@ You can step through the code above by clicking on this |Java Visualizer 1|.
 
    What will print when the following code executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       ArrayList<String> list1 = new ArrayList<String>();
       list1.add("Anaya");
@@ -353,7 +353,7 @@ You can step through the code above by clicking on the following |Java visualize
 
    What will print when the following code executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(5);
@@ -370,14 +370,14 @@ You can step through the code above by clicking on the following |Java visualize
    :answer_c: [1, 1, 2, 3]
    :answer_d: [1, 2, 3]
    :correct: b
-   :feedback_a: You can add duplicate objects to a list so this list will have two 1's.  
+   :feedback_a: You can add duplicate objects to a list so this list will have two 1's.
    :feedback_b: The add method adds each object to the end of the list and lists can hold duplicate objects.
    :feedback_c: This would be true if the list was sorted as you add to it, but this is not true.
-   :feedback_d: This would be true if the list was sorted and you couldn't add duplicate objects, but lists are not sorted and you can add duplicate objects.  
+   :feedback_d: This would be true if the list was sorted and you couldn't add duplicate objects, but lists are not sorted and you can add duplicate objects.
 
    What will print when the following code executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
@@ -392,7 +392,7 @@ Remove(index) from ArrayList
 ..	index::
 	pair: arraylist; removing an item
 
-You can also remove values from an ArrayList by using **remove(index)** to remove the item at the given index from the list. This will move all the other items over in the underlying array and decrease the size of the ArrayList by 1. 
+You can also remove values from an ArrayList by using **remove(index)** to remove the item at the given index from the list. This will move all the other items over in the underlying array and decrease the size of the ArrayList by 1.
 
 |CodingEx| **Coding Exercise**
 
@@ -457,7 +457,7 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
 
    What will print when the following code executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       List<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
@@ -484,7 +484,7 @@ You can step through the code above by clicking on the following `RemoveExample 
          System.out.println(nameList);
          nameList.add("Grace");
          System.out.println(nameList);
-         nameList.remove(1); 
+         nameList.remove(1);
          System.out.println(nameList);
          System.out.println(nameList.size());
       }
@@ -497,7 +497,7 @@ ArrayList get/set Methods
 	pair: arraylist; getting an item
     pair: arraylist; setting an item
 
-You can get the object at an index using ``obj = listName.get(index)`` and set the object at an index using ``listName.set(index,obj)``. Set/Get are used after you add and remove elements to an ArrayList to change or retrieve them. 
+You can get the object at an index using ``obj = listName.get(index)`` and set the object at an index using ``listName.set(index,obj)``. Set/Get are used after you add and remove elements to an ArrayList to change or retrieve them.
 
 Notice that ArrayLists use set/get methods instead of using the square brackets array[index] that arrays use. This is because ArrayList is a class with methods that provide access to the underlying array.
 
@@ -519,12 +519,12 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
           ArrayList<String> nameList = new ArrayList<String>();
           nameList.add("Diego");
           nameList.add("Grace");
-          nameList.add("Deja"); 
+          nameList.add("Deja");
           System.out.println(nameList);
           System.out.println(nameList.get(0));
           System.out.println(nameList.get(1));
           nameList.set(1, "John");
-          System.out.println(nameList);         
+          System.out.println(nameList);
       }
    }
    ====
@@ -574,7 +574,7 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
 
    What will print when the following code executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       List<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
@@ -600,7 +600,7 @@ You can step through the code above by clicking on the following `Example1 <http
 
    What will print when the following code executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       List<String> list1 = new ArrayList<String>();
       list1.add("Anaya");
@@ -623,7 +623,7 @@ When do you use arrays and when do you use ArrayLists? Use an array when you wan
 
 Here is a comparison of how to create arrays and ArrayLists:
 
-.. code-block:: java 
+.. code-block:: java
 
    // arrays must specify a size!
    int[ ] highScores = new int[5];
@@ -659,7 +659,7 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
 
    Rewrite the following code that uses an array to use an ArrayList instead. In the comments write why you think an ArrayList is a better data structure to use than an array for this problem.
    ~~~~
-   import java.util.*;  
+   import java.util.*;
 
    public class ToDoList
    {
@@ -675,16 +675,16 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
           toDoList[1] = "Order pizza";
 
           System.out.println(toDoList.length + " things to do!");
-          System.out.println("Here's the first thing to do: " 
+          System.out.println("Here's the first thing to do: "
               + toDoList[0] );
 
-          // remove item 0 and move everything down 
+          // remove item 0 and move everything down
           //  (this can be done in 1 command with ArrayList)
           toDoList[0] = toDoList[1];
           toDoList[1] = toDoList[2];
           toDoList[2] = "";
 
-          System.out.println("Here's the next thing to do: " 
+          System.out.println("Here's the next thing to do: "
               + toDoList[0] );
 
           // Why is an ArrayList better than an array for a toDoList?

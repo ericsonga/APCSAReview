@@ -5,7 +5,7 @@
 Inheritance Summary
 -------------------------
 
-In this chapter you learned about **inheritance**.  In an object-oriented program you write classes that define what objects of each class know (instance variables) and can do (methods).  One class can inherit object instance variables and methods from another, which makes the amount of code that you have to write smaller and makes the classes easier to test and extend.   
+In this chapter you learned about **inheritance**.  In an object-oriented program you write classes that define what objects of each class know (instance variables) and can do (methods).  One class can inherit object instance variables and methods from another, which makes the amount of code that you have to write smaller and makes the classes easier to test and extend.
 
 ..	index::
     single: object
@@ -28,18 +28,18 @@ In this chapter you learned about **inheritance**.  In an object-oriented progra
 Concept Summary
 =================
 
-- **object** - Objects do the action in an object-oriented program. An object can have things it knows (attributes) and things it can do (methods).  An object is created by a class and keeps a reference to the class that created it.  
+- **object** - Objects do the action in an object-oriented program. An object can have things it knows (attributes) and things it can do (methods).  An object is created by a class and keeps a reference to the class that created it.
 - **class** - A class defines what all objects of that class know (attributes) and can do (methods).  You can also have data and behavior in the object that represents the class (class instance variables and methods).  All objects of a class have access to class instance variables and class methods, but these can also be accessed using ``className.variable`` or ``className.method()``.
-- **inheritance** - One class can inherit object instance variables and methods from another.  This makes it easy to reuse another class by extending it (inheriting from it).  This is called specialization.  You can also pull out common instance variables and/or methods from several related classes and put those in a common parent class.  This is called generalization. 
-- **polymorphism** - The runtime type of an object can be that type or any subclass of the declared type. All method calls are resolved starting with the class that created the object.  If the method isn't found in the class that created the object, then it will look in the parent class and keep looking up the inheritance tree until it finds the method.  The method must exist, or the code would not have complied.   
-- **parent class** - One class can inherit from another and the class that it is inheriting from is called the parent class.  The parent class is specified in the class declaration using the ``extends`` keyword followed by the parent class name. 
+- **inheritance** - One class can inherit object instance variables and methods from another.  This makes it easy to reuse another class by extending it (inheriting from it).  This is called specialization.  You can also pull out common instance variables and/or methods from several related classes and put those in a common parent class.  This is called generalization.
+- **polymorphism** - The runtime type of an object can be that type or any subclass of the declared type. All method calls are resolved starting with the class that created the object.  If the method isn't found in the class that created the object, then it will look in the parent class and keep looking up the inheritance tree until it finds the method.  The method must exist, or the code would not have complied.
+- **parent class** - One class can inherit from another and the class that it is inheriting from is called the parent class.  The parent class is specified in the class declaration using the ``extends`` keyword followed by the parent class name.
 - **child class** - The class that is doing the inheriting is called the child class.  It inherits access to the object instance variables and methods in the parent class.
 - **subclass** - A child class is also called a subclass.
 - **superclass** - A parent class is also called a superclass.
 - **declared type** - The type that was used in the declaration.  ``List aList = new ArrayList()`` has a declared type of ``List``.  This is used at compile time to check that the object has the methods that are being used in the code.
-- **run-time type** - The type of the class that created the object. ``List aList = new ArrayList()`` has a run-time type of ``ArrayList``.  This is used at run-time to find the method to execute. 
-- **overrides** - A child class can have the same method signature (method name and parameter list) as a parent class. Since methods are resolved starting with the class that created the object, that method will be called instead of the inherited parent method, so the child method overrides the parent method. 
-- **overload** - At least two methods with the same name but different parameter lists.  The parameter lists can differ by the number of parameters and/or the types.  
+- **run-time type** - The type of the class that created the object. ``List aList = new ArrayList()`` has a run-time type of ``ArrayList``.  This is used at run-time to find the method to execute.
+- **overrides** - A child class can have the same method signature (method name and parameter list) as a parent class. Since methods are resolved starting with the class that created the object, that method will be called instead of the inherited parent method, so the child method overrides the parent method.
+- **overload** - At least two methods with the same name but different parameter lists.  The parameter lists can differ by the number of parameters and/or the types.
 - **getter** - A method that returns the value of an instance variable in an object.
 - **setter** - A method that sets the value of am instance variable in an object.
 - **accessor** - Another name for a getter method - one that returns the value of a instance variable.
@@ -49,9 +49,9 @@ Concept Summary
 Java Keyword Summary
 =========================
 
-- **extends** - Used to specify the parent class to inherit from.  It is followed by the name of the parent class, like this: ``public class ChildName extends ParentName``.  If no ``extends`` keyword is used in the class declaration, then the class will automatically inherit from the ``Object`` class. 
-- **static** - Keyword used to indicate that a instance variable or method is part of the class and not part of each object created by the class. 
-- **super** - Keyword used to call a method in a parent class.  This is useful if a child class overrides an inherited method, but still wants to call it. 
+- **extends** - Used to specify the parent class to inherit from.  It is followed by the name of the parent class, like this: ``public class ChildName extends ParentName``.  If no ``extends`` keyword is used in the class declaration, then the class will automatically inherit from the ``Object`` class.
+- **static** - Keyword used to indicate that a instance variable or method is part of the class and not part of each object created by the class.
+- **super** - Keyword used to call a method in a parent class.  This is useful if a child class overrides an inherited method, but still wants to call it.
 
 Vocabulary Practice
 =======================

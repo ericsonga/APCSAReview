@@ -25,7 +25,7 @@ Try each of the following as the value for the ``statement`` in the main method 
 * Do you like me?
 * You confuse me.
 
-You can also step through the code in the |Java Visualizer|. It may take a minute or two to load.  Click the forward button at the bottom of the code to execute the next statement. 
+You can also step through the code in the |Java Visualizer|. It may take a minute or two to load.  Click the forward button at the bottom of the code to execute the next statement.
 
 
 
@@ -37,7 +37,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
     * A program to carry on conversations with a human user.
     * This version:
     *<ul><li>
-    *   Uses advanced search for keywords 
+    *   Uses advanced search for keywords
     *</li><li>
     *   Will transform statements as well as react to keywords
     *</li></ul>
@@ -49,9 +49,9 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
    {
 
       /**
-       * Get a default greeting  
+       * Get a default greeting
        * @return a greeting
-       */ 
+       */
       public String getGreeting()
       {
          return "Hello, let's talk.";
@@ -59,7 +59,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 
       /**
        * Gives a response to a user statement
-       * 
+       *
        * @param statement
        *            the user statement
        * @return a response based on the rules given
@@ -113,7 +113,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
       }
 
       /**
-       * Take a statement with "I want to <something>." and transform it into 
+       * Take a statement with "I want to <something>." and transform it into
        * "What would it mean to <something>?"
        * @param statement the user statement, assumed to contain "I want to"
        * @return the transformed statement
@@ -135,20 +135,20 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
       }
 
       /**  ADD CODE HERE!
-       * Take a statement with "I want <something>." and transform it into 
+       * Take a statement with "I want <something>." and transform it into
        * Would you really be happy if you had <something>?
        * @param statement the user statement, assumed to contain "I want"
        * @return the transformed statement
        */
       private String transformIWantStatement(String statement)
       {
-         // ADD CODE HERE 
+         // ADD CODE HERE
 
          return "Would you really be happy if you had ...";
       }
 
       /**
-       * Take a statement with "you <something> me" and transform it into 
+       * Take a statement with "you <something> me" and transform it into
        * "What makes you think that I <something> you?"
        * @param statement the user statement, assumed to contain "you" followed by "me"
        * @return the transformed statement
@@ -173,7 +173,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
       }
 
      /**  ADD THIS
-       * Take a statement with "I <something> you" and transform it into 
+       * Take a statement with "I <something> you" and transform it into
        * "Why do you <something> me?"
        * @param statement the user statement, assumed to contain "I" followed by something "you"
        * @return the transformed statement
@@ -187,7 +187,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
       /**
        * Search for one word in phrase.  The search is not case sensitive.
        * This method will check that the given goal is not a substring of a longer string
-       * (so, for example, "I know" does not contain "no").  
+       * (so, for example, "I know" does not contain "no").
        * @param statement the string to search
        * @param goal the string to search for
        * @param startPos the character of the string to begin the search at
@@ -199,11 +199,11 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          //  The only change to incorporate the startPos is in the line below
          int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
 
-         //  Refinement--make sure the goal isn't part of a word 
-         while (psn >= 0) 
+         //  Refinement--make sure the goal isn't part of a word
+         while (psn >= 0)
          {
             //  Find the string of length 1 before and after the word
-            String before = " ", after = " "; 
+            String before = " ", after = " ";
             if (psn > 0)
             {
                before = phrase.substring (psn - 1, psn).toLowerCase();
@@ -231,7 +231,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
       /**
        * Search for one word in phrase.  The search is not case sensitive.
        * This method will check that the given goal is not a substring of a longer string
-       * (so, for example, "I know" does not contain "no").  The search begins at the beginning of the string.  
+       * (so, for example, "I know" does not contain "no").  The search begins at the beginning of the string.
        * @param statement the string to search
        * @param goal the string to search for
        * @return the index of the first occurrence of goal in statement or -1 if it's not found
@@ -277,7 +277,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 		Magpie4 maggie = new Magpie4();
 		String statement = "I want to build a robot.";
 		System.out.println("Statement: " + statement);
-		System.out.println("Response: " + maggie.getResponse(statement));	
+		System.out.println("Response: " + maggie.getResponse(statement));
 	  }
 
    }
@@ -292,7 +292,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 
 
 
-Exercises: 
+Exercises:
 -------------
 
 In this activity, the chatbot is altered to look not only for keywords, but also specific phrases.  Magpie4.java adds two new methods, transformIWantToStatement and transformYouMeStatement and getResponse has been modified to add tests to find "I want to something" statements and "You something me" statements.

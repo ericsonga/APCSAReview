@@ -34,7 +34,7 @@ Post-Survey
    :option_5: strongly disagree
    :option_6: prefer not to answer
 
-   I am confident in my Java programming skills. 
+   I am confident in my Java programming skills.
 
 .. poll:: qenjoypost
    :option_1: strongly agree

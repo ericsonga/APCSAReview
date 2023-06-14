@@ -11,9 +11,9 @@ Java Development Environments
     single: BlueJ
     single: Netbeans
 
-The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs. 
+The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs.
 
-You can learn Java by just using the interactive coding panels called **Active Code** in this e-book. If you are logged in, the Active Code will remember your changes and even show you a history of your changes to the code if you click on Load History.  
+You can learn Java by just using the interactive coding panels called **Active Code** in this e-book. If you are logged in, the Active Code will remember your changes and even show you a history of your changes to the code if you click on Load History.
 
 However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CSA teachers:
 
@@ -22,24 +22,24 @@ replit
 
 Replit (https://replit.com/) is a great free online development environment. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Replit is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Replit also has a  free for teachers plan called Teams for Education (https://replit.com/teams-for-education) where teachers can set up virtual classrooms.  There is now a firewalled replit domain for schools at https://firewealled.replit.com that filters content so that students stay within the school filters, see https://docs.replit.com/firewalled-replit/firewalled-replit-faq.
 
-Some of the Active Code samples in this e-book also include a link to a firewalled replit project. 
-These projects can be forked to make your own copy. If you are pair programming, replit has an Invite button where you can generate a join link to share your code with another person, and you can both make changes at the same time. 
+Some of the Active Code samples in this e-book also include a link to a firewalled replit project.
+These projects can be forked to make your own copy. If you are pair programming, replit has an Invite button where you can generate a join link to share your code with another person, and you can both make changes at the same time.
 
-Online IDEs usually cannot use graphical user interfaces and just do input and output as text. 
-However, replit has a built-in javax.swing graphical user interface. 
-You need to choose Java Swing instead of just Java to get this environment when you start a new repl project. 
+Online IDEs usually cannot use graphical user interfaces and just do input and output as text.
+However, replit has a built-in javax.swing graphical user interface.
+You need to choose Java Swing instead of just Java to get this environment when you start a new repl project.
 
 CodingRooms
 -----------
 
-Coding Rooms (https://www.codingrooms.com/) is also a great online coding environment that has both free and paid versions. 
-In Coding Rooms, you can set up a virtual classroom and watch all of your students code in real time. 
+Coding Rooms (https://www.codingrooms.com/) is also a great online coding environment that has both free and paid versions.
+In Coding Rooms, you can set up a virtual classroom and watch all of your students code in real time.
 You can also make a copy of CSAwesome inside Coding Rooms and change the content.
 
 Dr. Java
 --------
 
-DrJava (from http://DrJava.org) is a free, simple, easy to install and use development environment.  One nice feature is the interactions pane at the bottom which lets you try out Java code without having to create a class first. 
+DrJava (from http://DrJava.org) is a free, simple, easy to install and use development environment.  One nice feature is the interactions pane at the bottom which lets you try out Java code without having to create a class first.
 
 
 BlueJ

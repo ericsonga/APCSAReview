@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 4-1-
-   :start: 1 
+   :start: 1
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
@@ -39,9 +39,9 @@ While Loops
     :width: 125
     :align: left
 
-When you play a song, you can set it to loop, which means that when it reaches the end it starts over at the beginning.  A **loop** in programming, also called **iteration** or **repetition**,  is a way to repeat one or more statements. If you didn't have loops to allow you to repeat code, your programs would get very long very quickly! Using a sequence of code, selection (ifs), and repetition (loops), the **control structures** in programming, you can construct an algorithm to solve almost any programming problem! 
+When you play a song, you can set it to loop, which means that when it reaches the end it starts over at the beginning.  A **loop** in programming, also called **iteration** or **repetition**,  is a way to repeat one or more statements. If you didn't have loops to allow you to repeat code, your programs would get very long very quickly! Using a sequence of code, selection (ifs), and repetition (loops), the **control structures** in programming, you can construct an algorithm to solve almost any programming problem!
 
-A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false, we exit the loop and continue with the statements that are after the body of the ``while`` loop.  If the condition is false the first time you check it, the body of the loop will not execute.  
+A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false, we exit the loop and continue with the statements that are after the body of the ``while`` loop.  If the condition is false the first time you check it, the body of the loop will not execute.
 
 Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs more than once. The curly brackets { } are optional when there is just 1 statement following the condition, but required if there are more than 1 statement in the loop. In the AP exam, they will always use curly brackets, which is a good practice to follow.
 
@@ -69,7 +69,7 @@ If you took AP CSP with a block programming language like App Inventor, you may 
     Figure 1: Comparing App Inventor and Java for while loops
 
 
-If you're used to a language like Snap! or Scratch, you may be familiar with the Repeat Until loop. However, you have to be very careful comparing repeat until to while loops. The while test is the opposite of the repeat until test. For example, if you are repeatedly moving until reaching x position 100, you must create a Java while loop that repeatedly moves while it has *not* yet reached x position 100 or is less than 100 as below. 
+If you're used to a language like Snap! or Scratch, you may be familiar with the Repeat Until loop. However, you have to be very careful comparing repeat until to while loops. The while test is the opposite of the repeat until test. For example, if you are repeatedly moving until reaching x position 100, you must create a Java while loop that repeatedly moves while it has *not* yet reached x position 100 or is less than 100 as below.
 
 
 .. figure:: Figures/ScratchRepeatUntilLoop.png
@@ -77,7 +77,7 @@ If you're used to a language like Snap! or Scratch, you may be familiar with the
     :align: center
     :figclass: align-center
 
-    Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java while loop 
+    Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java while loop
 
 
 The following `video <https://www.youtube.com/watch?v=Uw9mv53Jnfs>`_ introduces while loops.
@@ -110,7 +110,7 @@ The simplest loops are **counter-controlled loops** like below, where the **loop
     Figure 4: Three Steps of Writing a Loop
 
 
-.. note:: 
+.. note::
 
     Remember these 3 steps to writing a loop:
 
@@ -128,7 +128,7 @@ The simplest loops are **counter-controlled loops** like below, where the **loop
    :autograde: unittest
    :practice: T
 
-   Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of writing a loop. Can you change it to count from 2 to 10? 
+   Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of writing a loop. Can you change it to count from 2 to 10?
    ~~~~
    public class LoopTest1
    {
@@ -164,7 +164,7 @@ The simplest loops are **counter-controlled loops** like below, where the **loop
         }
     }
 
-Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is standard practice to do so.  
+Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is standard practice to do so.
 
 .. note::
 
@@ -184,9 +184,9 @@ Java doesn't require your code to be correctly indented (code moved to the right
    :feedback_c: Yes, try it in the Active Code window above.
    :feedback_d: This would not print out anything because count = 0 at the start of the loop, so it is not greater than 10.
 
-   Consider the following code segment. Which of the following can be used as a replacement for the missing loop header so that the loop prints out "0 2 4 6 8 10"? 
+   Consider the following code segment. Which of the following can be used as a replacement for the missing loop header so that the loop prints out "0 2 4 6 8 10"?
 
-   .. code-block:: java 
+   .. code-block:: java
 
         int count = 0;
         /* missing loop header */
@@ -206,7 +206,7 @@ Tracing Loops
 
    <a href="https://www.youtube.com/watch?v=TZss5ukwN8s" target="_blank">video</a>
 
-A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.  
+A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.
 
 You can create a tracing table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
 
@@ -217,7 +217,7 @@ You can create a tracing table that keeps track of the variable values each time
 
     Figure 5: A trace table showing the values of all of the variables each time through the loop.  Iteration 0 means before the loop.
 
-Watch the following |video| for a tracing demo. When you are tracing through code, pretend to be the computer running the code line by line, repeating the code in the loop, and keeping track of the variable values and output. 
+Watch the following |video| for a tracing demo. When you are tracing through code, pretend to be the computer running the code line by line, repeating the code in the loop, and keeping track of the variable values and output.
 
 .. youtube:: TZss5ukwN8s
     :width: 600
@@ -227,7 +227,7 @@ Watch the following |video| for a tracing demo. When you are tracing through cod
 
 .. |visualizer| raw:: html
 
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20TraceLoop%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20int%20count%20%3D%201%3B%0A%20%20%20%20%20%20while%20%28count%20%3C%3D%2010%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20count%20*%3D%202%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20count%20%3D%20count%20-%2010%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">visualizer</a>    
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20TraceLoop%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20int%20count%20%3D%201%3B%0A%20%20%20%20%20%20while%20%28count%20%3C%3D%2010%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20count%20*%3D%202%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20count%20%3D%20count%20-%2010%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">visualizer</a>
 
 
 |Exercise| **Check your understanding**
@@ -239,14 +239,14 @@ Watch the following |video| for a tracing demo. When you are tracing through cod
    :answer_c: 16
    :answer_d: 6
    :correct: d
-   :feedback_a: Count is changed inside the loop and after the loop. 
-   :feedback_b: Count is changed inside the loop and after the loop. 
+   :feedback_a: Count is changed inside the loop and after the loop.
+   :feedback_b: Count is changed inside the loop and after the loop.
    :feedback_c: Don't forget to subtract 10 from count after the loop.
-   :feedback_d: Yes, the loop will keep multiplying count by 2 to get 2, 4, 8, 16 and then it subtracts 10 from 16 after the loop. 
+   :feedback_d: Yes, the loop will keep multiplying count by 2 to get 2, 4, 8, 16 and then it subtracts 10 from 16 after the loop.
 
    Consider the following code segment. What is count's value after running this code segment? (To trace through the code, keep track of the variable count and its value through each iteration of the loop.)
 
-   .. code-block:: java 
+   .. code-block:: java
 
      int count = 1;
      while (count <= 10)
@@ -263,18 +263,18 @@ Step through the code above with the |visualizer|.
    :answer_b: -5 -4 -3 -2 -1
    :answer_c: -4 -3 -2 -1 0
    :correct: c
-   :feedback_a: x is initialized (set) to -5 to start. 
+   :feedback_a: x is initialized (set) to -5 to start.
    :feedback_b: x is incremented (x++) before the print statement executes.
    :feedback_c: x is set to -5 to start but then incremented by 1 so it first prints -4.
 
-   What does the following code print? (To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.)  
+   What does the following code print? (To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.)
 
-   .. code-block:: java 
+   .. code-block:: java
 
      int x = -5;
-     while (x < 0) 
-     { 
-        x++; 
+     while (x < 0)
+     {
+        x++;
         System.out.print(x + " ");
      }
 
@@ -288,9 +288,9 @@ Common Errors with Loops
 	single: infinite loop
 	pair: loop; infinite
 
-One common error with loops is **infinite loops**.  An infinite loop is one that never stops (the condition is always true). 
+One common error with loops is **infinite loops**.  An infinite loop is one that never stops (the condition is always true).
 
-.. code-block:: java 
+.. code-block:: java
 
    // an infinite loop
    while (true)
@@ -413,7 +413,7 @@ For this project, you will need to use the |Scanner class| for input and |repl.i
 
 .. activecode:: challenge4-1-loop-GuessingGame-autograde
   :language: java
-  :autograde: unittest  
+  :autograde: unittest
 
   Copy and paste all of your code from your repl.it and run to see if it passes the autograder tests. Include the link to your repl.it code in comments. Note that this code will only run with the autograder's input and will not ask the user for input.
   ~~~~
@@ -538,7 +538,7 @@ Summary
 
 - If the Boolean expression evaluates to false initially, the loop body is not executed at all.
 
-- **Input-controlled loops** often use a **sentinel value** that is input by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CS A exam, but are very useful to accept data from the user. 
+- **Input-controlled loops** often use a **sentinel value** that is input by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CS A exam, but are very useful to accept data from the user.
 
 - There are standard algorithms to compute a sum or average.
 
@@ -579,7 +579,7 @@ AP Practice
 
     - 8
 
-      - Although the sum of the digits in 35 are 8. This code uses multiplication.  
+      - Although the sum of the digits in 35 are 8. This code uses multiplication.
 
     - 33
 
@@ -602,7 +602,7 @@ AP Practice
             count++;
         }
 
-    Which of the following could replace the missing loop header to ensure that the code segment 
+    Which of the following could replace the missing loop header to ensure that the code segment
     will work as intended to print out the even numbers from 0 to 8?
 
 
@@ -612,7 +612,7 @@ AP Practice
 
     - while (count >= 8)
 
-      - This would not print out anything since count is 0 before the loop and not greater than 8. 
+      - This would not print out anything since count is 0 before the loop and not greater than 8.
 
     - while (count < 8)
 
@@ -624,7 +624,7 @@ AP Practice
 
     - while (count <= 10)
 
-      - This would print out one too many numbers, 0, 2, 4, 6, 8, 10.  
+      - This would print out one too many numbers, 0, 2, 4, 6, 8, 10.
 
 
 .. Here is an example ``while`` loop that just prints the numbers until 0 is reached. Can you modify it to print 0 too?
@@ -661,7 +661,7 @@ AP Practice
       }
    }
 
-.. Which of the two loops above takes less code?  While you can write any loop with either a ``while`` or ``for``, programmers tend to use the ``while`` when they don't know how many times the loop will execute and the ``for`` when they know the number of times to execute the loop.  The problem with using a ``while`` loop to execute a loop a certain number of times is that you have to remember to update the variable in the loop.  The ``for`` loop allows you to specify all of the important things about a loop in one place (what value do variables start at, what is the condition to test, and how the loop variables change).  
+.. Which of the two loops above takes less code?  While you can write any loop with either a ``while`` or ``for``, programmers tend to use the ``while`` when they don't know how many times the loop will execute and the ``for`` when they know the number of times to execute the loop.  The problem with using a ``while`` loop to execute a loop a certain number of times is that you have to remember to update the variable in the loop.  The ``for`` loop allows you to specify all of the important things about a loop in one place (what value do variables start at, what is the condition to test, and how the loop variables change).
 
 .. **Check your understanding**
 

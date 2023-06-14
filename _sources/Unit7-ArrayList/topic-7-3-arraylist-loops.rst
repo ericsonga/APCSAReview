@@ -34,7 +34,7 @@ Enhanced For Each Loop
 ..	index::
 	pair: list; for-each loop
 
-You can use a enhanced for-each loop to traverse through all of the items in a list, just like you do with an array as shown in the main method below.  
+You can use a enhanced for-each loop to traverse through all of the items in a list, just like you do with an array as shown in the main method below.
 
 |CodingEx| **Coding Exercise**
 
@@ -42,14 +42,14 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
 
 .. activecode:: listForEachLoop
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
    :practice: T
 
    What does the following code do? Guess before you run it. Then, add another enhanced for each loop that computes the product of all the elements in myList by multiplying them. Print out the product after the new loop.
    ~~~~
    import java.util.*;  // import all classes in this package.
    public class Test1
-   {  
+   {
        public static void main(String[] args)
        {
            ArrayList<Integer> myList = new ArrayList<Integer>();
@@ -63,7 +63,7 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
            }
            System.out.println("Sum of all elements: " + total);
 
-           // Write a for-each loop that computes the product 
+           // Write a for-each loop that computes the product
            // of all the elements in myList and print out the product.
 
        }
@@ -95,7 +95,7 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
         }
         @Test
         public void countForLoops()
-        { 
+        {
             String code = removeSpaces(getCode());
             int count = countOccurences(code,"for(Integer");
             boolean passed = count >= 2;
@@ -107,7 +107,7 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
 For Loop
 ----------------------
 
-You can also use a 	``while`` or ``for`` loop to process list elements using the index. The ArrayList index starts at 0 just like arrays, but instead of using the square brackets [] to access elements, you  use the ``get(index)`` to get the value at the index and ``set(index,value)`` to set the element at an index to a new value. 
+You can also use a 	``while`` or ``for`` loop to process list elements using the index. The ArrayList index starts at 0 just like arrays, but instead of using the square brackets [] to access elements, you  use the ``get(index)`` to get the value at the index and ``set(index,value)`` to set the element at an index to a new value.
 If you try to use an index that is outside of the range of 0 to the number of elements − 1 in an ArrayList, your code will throw an **ArrayIndexOutOfBoundsException**, just like in arrays.
 
 |CodingEx| **Coding Exercise**
@@ -121,9 +121,9 @@ If you try to use an index that is outside of the range of 0 to the number of el
 
    The following code will throw an ArrayIndexOutOfBoundsException. Can you fix it?
    ~~~~
-   import java.util.*;  
+   import java.util.*;
    public class TestForLoop
-   {  
+   {
        public static void main(String[] args)
        {
            ArrayList<Integer> myList = new ArrayList<Integer>();
@@ -165,7 +165,7 @@ If you try to use an index that is outside of the range of 0 to the number of el
 While Loop
 ----------------------
 
-The example below demonstrates a while loop and an object-oriented approach where the list is a field of the current object and you use an object method rather than a class (static) method to loop through the list. 
+The example below demonstrates a while loop and an object-oriented approach where the list is a field of the current object and you use an object method rather than a class (static) method to loop through the list.
 
 |CodingEx| **Coding Exercise**
 
@@ -178,10 +178,10 @@ The example below demonstrates a while loop and an object-oriented approach wher
 
    The following code removes a name from a list. Set the found variable to the appropriate true or false values at line 13 and line 20 to make the code work.
    ~~~~
-   import java.util.*;  
+   import java.util.*;
    public class ListWorker
    {
-      private ArrayList<String> nameList; 
+      private ArrayList<String> nameList;
 
       public ListWorker(ArrayList<String> theNames)
       {
@@ -195,7 +195,7 @@ The example below demonstrates a while loop and an object-oriented approach wher
           while (index < nameList.size())
           {
               if (name.equals(nameList.get(index)))
-              { 
+              {
                   nameList.remove(index);
                   found =    // true or false?
               }
@@ -214,7 +214,7 @@ The example below demonstrates a while loop and an object-oriented approach wher
            ListWorker listWorker = new ListWorker(myList);
            System.out.println(listWorker.nameList);
            listWorker.removeName("Ethan");
-           System.out.println("After removing Ethan: " 
+           System.out.println("After removing Ethan: "
                      + listWorker.nameList);
        }
    }
@@ -236,9 +236,9 @@ The example below demonstrates a while loop and an object-oriented approach wher
     }
 
 
-Be careful when you remove items from a list as you loop through it.  Remember that removing an item from a list will shift the remaining items to the left.   Notice that the method above only increments the current index if an item was not removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the rest of the items shift left when you remove one. 
+Be careful when you remove items from a list as you loop through it.  Remember that removing an item from a list will shift the remaining items to the left.   Notice that the method above only increments the current index if an item was not removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the rest of the items shift left when you remove one.
 
-Do not use the enhanced for each loop if you want to add or remove elements when traversing a list because it will throw a **ConcurrentModificationException** error. Since for each loops do not use an index, you cannot do this special case of incrementing only if it is changed. So if you are going to add or remove items or you need the index, use a regular for-loop or a while loop. 
+Do not use the enhanced for each loop if you want to add or remove elements when traversing a list because it will throw a **ConcurrentModificationException** error. Since for each loops do not use an index, you cannot do this special case of incrementing only if it is changed. So if you are going to add or remove items or you need the index, use a regular for-loop or a while loop.
 
 |Exercise| **Check your understanding**
 
@@ -255,7 +255,7 @@ Do not use the enhanced for each loop if you want to add or remove elements when
 
    Assume that ``nums`` has been created as an ``ArrayList`` object and it initially contains the following ``Integer`` values [0, 0, 4, 2, 5, 0, 3, 0]. What will ``nums`` contain as a result of executing ``numQuest``?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       ArrayList<Integer> list1 = new ArrayList<Integer>();
       private ArrayList<Integer> nums;
@@ -281,7 +281,7 @@ You can step through the code above by clicking on the following `Example <http:
 
 .. parsonsprob:: list_1
    :numbered: left
-   :adaptive: 
+   :adaptive:
 
    The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
    -----
@@ -290,10 +290,10 @@ You can step through the code above by clicking on the following `Example <http:
    =====
      int score = 0;
 
-     for (String word : wordList) 
+     for (String word : wordList)
      {
    =====
-       if (word.length() == 3) 
+       if (word.length() == 3)
    =====
        {
          score++;
@@ -308,7 +308,7 @@ You can step through the code above by clicking on the following `Example <http:
        {
          score = score + 3;
        }
-   =====  
+   =====
      } // end for
    =====
      return score;
@@ -328,7 +328,7 @@ You can step through the code above by clicking on the following `Example <http:
    =====
      int index = 0;
    =====
-     while (index < nameList.size() && 
+     while (index < nameList.size() &&
             nameList.get(index).compareTo(name) < 0)
      {
    =====
@@ -347,7 +347,7 @@ ArrayList of Student Objects
 
 |CodingEx| **Coding Exercise**
 
-You can put any kind of Objects into an ArrayList. For example, here is an ArrayList of Students. Although the print statement works here, you may want a nicer printout. 
+You can put any kind of Objects into an ArrayList. For example, here is an ArrayList of Students. Although the print statement works here, you may want a nicer printout.
 
 .. activecode:: StudentList
   :language: java
@@ -358,7 +358,7 @@ You can put any kind of Objects into an ArrayList. For example, here is an Array
   ~~~~
   import java.util.*;
 
-  public class StudentList 
+  public class StudentList
   {
      // main method for testing
      public static void main(String[] args)
@@ -371,7 +371,7 @@ You can put any kind of Objects into an ArrayList. For example, here is an Array
      }
    }
 
-  class Student 
+  class Student
   {
      private String name;
      private String email;
@@ -385,11 +385,11 @@ You can put any kind of Objects into an ArrayList. For example, here is an Array
      }
 
      // toString() method
-     public String toString() 
-     { 
+     public String toString()
+     {
        return id + ": " + name + ", " + email;
      }
-  } 
+  }
   ====
   import static org.junit.Assert.*;
     import org.junit.*;;
@@ -427,7 +427,7 @@ This challenge is based on the |2018 Free Response Question #2 WordPair|. We enc
 
 You are given a class called WordPair that can store pairs of words.
 
-.. code-block:: java 
+.. code-block:: java
 
     class WordPair {
         private String word1;
@@ -456,7 +456,7 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
 
    Create an Arraylist of WordPair objects.
    ~~~~
-   import java.util.*; 
+   import java.util.*;
 
    public class WordPairTest {
         public static void main(String[] args)
@@ -534,18 +534,18 @@ In the class WordPairsList below, you will write the constructor which takes the
 
 .. activecode:: challenge-7-3-WordPairs
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
 
    FRQ WordPairs Challenge: Complete the constructor for WordPairsList below which will add pairs of words from a given array to the ArrayList. Then, complete the method numMatches().
    ~~~~
-   import java.util.*; 
+   import java.util.*;
 
     public class WordPairsList
     {
         private ArrayList<WordPair> allPairs;
 
-        public WordPairsList(String[] words) 
-        {   
+        public WordPairsList(String[] words)
+        {
             // WRITE YOUR CODE HERE
             // initialize allPairs to an empty ArrayList of WordPair objects
 
@@ -554,7 +554,7 @@ In the class WordPairsList below, you will write the constructor which takes the
 
         }
 
-        public int numMatches() 
+        public int numMatches()
         {
             //Write the code for the second part described below
             return 0;
@@ -573,7 +573,7 @@ In the class WordPairsList below, you will write the constructor which takes the
             // For second part below, uncomment this test:
             //System.out.println("The number of matched pairs is: " + list.numMatches());
         }
-    }      
+    }
 
     class WordPair {
         private String word1;
@@ -659,14 +659,14 @@ In the class WordPairsList below, you will write the constructor which takes the
         }
     }
 
-In the next part of the FRQ challenge, you are asked to write a method called numMatches() that counts and returns the number of pairs where the first word is the same as the second word. For example, if the word array is ["hi","bye","hi"], the pairs generated would be ["hi","bye"], ["hi","hi"], and ["bye","hi"]. In the second pair ["hi","hi"], the first word is the same as the second word, so numMatches() would return 1. 
+In the next part of the FRQ challenge, you are asked to write a method called numMatches() that counts and returns the number of pairs where the first word is the same as the second word. For example, if the word array is ["hi","bye","hi"], the pairs generated would be ["hi","bye"], ["hi","hi"], and ["bye","hi"]. In the second pair ["hi","hi"], the first word is the same as the second word, so numMatches() would return 1.
 
 For this method, you will need a loop that goes through the ArrayList allPairs and for each WordPair in allPairs, it checks to see if its first word (using the getFirst() method) equals the second word (using the getSecond() method). If there is a match, it increments a counter which it returns at the end of the method. To test this method, add another "there" into the words array and then uncomment the call to numMatches().
 
 Summary
 -----------
 
-- ArrayLists can be traversed with an enhanced for each loop, or a while or for loop using an index. 
+- ArrayLists can be traversed with an enhanced for each loop, or a while or for loop using an index.
 
 
 - Deleting elements during a traversal of an ArrayList requires using special techniques to avoid skipping elements, since remove moves all the elements down.

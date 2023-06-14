@@ -32,7 +32,7 @@ Scope and Access
     single: local variable
 
 
-The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly brackets { } -- this is its scope.  
+The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly brackets { } -- this is its scope.
 
 Java has 3 levels of scope that correspond to different types of variables:
 
@@ -42,7 +42,7 @@ Java has 3 levels of scope that correspond to different types of variables:
 
 - **Block Level Scope** for **loop variables** and other local variables defined inside of blocks of code with { }.
 
-The image below shows these 3 levels of scope. 
+The image below shows these 3 levels of scope.
 
 .. figure:: Figures/scopeDiagram.png
     :width: 500px
@@ -69,7 +69,7 @@ The image below shows these 3 levels of scope.
             :click-incorrect:first = firstName;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-    :click-incorrect:}:endclick:    
+    :click-incorrect:}:endclick:
 
 .. clickablearea:: name_method_scope
     :question: Click on all the variable declarations that are at Method Level Scope.
@@ -86,9 +86,9 @@ The image below shows these 3 levels of scope.
             :click-incorrect:first = firstName;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-    :click-incorrect:}:endclick:        
+    :click-incorrect:}:endclick:
 
-**Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to declare any variables that are used by just one method as local variables in that method. 
+**Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to declare any variables that are used by just one method as local variables in that method.
 
 Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have Class scope regardless of whether they are public or private.
 
@@ -103,9 +103,9 @@ Another way to look at scope is that a variable's scope is where it lives and ex
   :language: java
   :autograde: unittest
 
-  Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope. 
+  Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope.
   ~~~~
-  public class Person 
+  public class Person
   {
      private String name;
      private String email;
@@ -116,11 +116,11 @@ Another way to look at scope is that a variable's scope is where it lives and ex
         email = initEmail;
      }
 
-     public String toString() 
-     { 
+     public String toString()
+     {
        for (int i=0; i < 5; i++) {
           int id = i;
-       } 
+       }
        // Can you access the blockScope variables i or id?
        System.out.println("i at the end of the loop is " + i);
        System.out.println("The last id is " + id);
@@ -165,7 +165,7 @@ If there is a local variable with the same name as an instance variable, the var
 
   In this example, the local variable is used instead of the instance variable of the same name. What will the code print out? Try it with the CodeLens button.
   ~~~~
-  public class Person 
+  public class Person
   {
      private String name;
      private String email;
@@ -176,8 +176,8 @@ If there is a local variable with the same name as an instance variable, the var
         email = initEmail;
      }
 
-     public String toString() 
-     { 
+     public String toString()
+     {
        String name = "unknown";
        // The local variable name here will be used,
        //  not the instance variable name.
@@ -221,7 +221,7 @@ If there is a local variable with the same name as an instance variable, the var
 
   Debug the following program that has scope violations. You may need to add methods or use methods that are in the class Fraction appropriately. Then, add comments that label the variable declarations as class, method, or block scope.
   ~~~~
-  public class TesterClass 
+  public class TesterClass
   {
      public static void main(String[] args)
      {
@@ -229,7 +229,7 @@ If there is a local variable with the same name as an instance variable, the var
         Fraction f2 = new Fraction(1,2);
         System.out.println(f1);
         System.out.println(f2.numerator / f2.denominator);
-     }   
+     }
    }
 
   /** Class Fraction */
@@ -353,7 +353,7 @@ AP Practice
                 boxesOfFood = updatedAmountOfFood;
             }
 
-            public void eatFoodBoxes(int eatenBoxes) 
+            public void eatFoodBoxes(int eatenBoxes)
             {
                 boxesOfFood = updatedAmountOfFood - eatenBoxes;
             }

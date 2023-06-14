@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 8-5-
-   :start: 1			
+   :start: 1
 
 Code Practice with 2D Arrays
 ------------------------------
@@ -11,22 +11,22 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx1q
               :language: java
-              :autograde: unittest 
-              :practice: T              
+              :autograde: unittest
+              :practice: T
 
               Replace the "ADD CODE HERE" below with the code to declare and create a 3 by 3 two-dimensional int array named ``table``. The finished code will print the values 0 to 8.
               ~~~~
               public class Test1
-              {              	
+              {
                   public static void main(String[] args)
                   {
                       // ADD CODE HERE //
 
                       // Should print the values in table
                       int count = 0;
-                      for (int row = 0; row < table.length; row++) 
+                      for (int row = 0; row < table.length; row++)
                       {
-                          for (int col = 0; col < table.length; col++) 
+                          for (int col = 0; col < table.length; col++)
                           {
                      	      table[row][col] = count;
                      	      count++;
@@ -76,9 +76,9 @@ Code Practice with 2D Arrays
                       int[][] table = new int[3][3];
 
                       int count = 0;
-                      for (int row = 0; row < table.length; row++) 
+                      for (int row = 0; row < table.length; row++)
                       {
-                          for (int col = 0; col < table[0].length; col++) 
+                          for (int col = 0; col < table[0].length; col++)
                           {
                      	      table[row][col] = count;
                      	      count++;
@@ -89,7 +89,7 @@ Code Practice with 2D Arrays
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -101,22 +101,22 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx2q
               :language: java
-              :autograde: unittest      
+              :autograde: unittest
               :practice: T
 
-              Replace the "ADD CODE HERE" below with the code to declare and initialize a two-dimensional String array called ``students`` with the names "Brice, Marvin, Anna" in the first row and "Kamal, Maria, Elissa" in the second. The finished code will print all the names in the array starting with all in the first row followed by all in the second row. 
-              ~~~~     
+              Replace the "ADD CODE HERE" below with the code to declare and initialize a two-dimensional String array called ``students`` with the names "Brice, Marvin, Anna" in the first row and "Kamal, Maria, Elissa" in the second. The finished code will print all the names in the array starting with all in the first row followed by all in the second row.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      // ADD CODE HERE // 
+                      // ADD CODE HERE //
 
 
                       // Should print the values in students in order
-                      for (int row = 0; row < students.length; row++) 
+                      for (int row = 0; row < students.length; row++)
                       {
-                          for (int col = 0; col < students[0].length; col++) 
+                          for (int col = 0; col < students[0].length; col++)
                           {
                      	      System.out.print(students[row][col] + " ");
                      	  }
@@ -163,12 +163,12 @@ Code Practice with 2D Arrays
                   public static void main(String[] args)
                   {
                       // Can declare and initialize in one line
-                      String[][] students = { {"Brice", "Marvin", "Anna"}, 
+                      String[][] students = { {"Brice", "Marvin", "Anna"},
                                              {"Kamal", "Maria", "Elissa"} };
 
-                      for (int row = 0; row < students.length; row++) 
+                      for (int row = 0; row < students.length; row++)
                       {
-                          for (int col = 0; col < students[0].length; col++) 
+                          for (int col = 0; col < students[0].length; col++)
                           {
                      	      System.out.print(students[row][col] + " ");
                      	  }
@@ -177,11 +177,11 @@ Code Practice with 2D Arrays
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_arr2Dex2d                
+                :identifier: javareview_arr2Dex2d
 
 .. tabbed:: arr2DEx3
 
@@ -189,7 +189,7 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx3q
               :language: java
-              :autograde: unittest      
+              :autograde: unittest
               :practice: T
 
               Print the values 47, 51, and 20 by accessing them in  the given two-dimensional array.
@@ -238,7 +238,7 @@ Code Practice with 2D Arrays
         .. tab:: Answer
 
            Use ``arr[row][col]`` to get the value at a particular row and column.
-           Remember that the index for the first row is 0 and the index for the first column is also 0. 
+           Remember that the index for the first row is 0 and the index for the first column is also 0.
 
            .. activecode::  arr2DEx3a
               :language: java
@@ -253,15 +253,15 @@ Code Practice with 2D Arrays
                       // Prints 47, 51, 20 in that order
                       System.out.println(arr[0][0]);
                       System.out.println(arr[1][0]);
-                      System.out.println(arr[1][2]);   
+                      System.out.println(arr[1][2]);
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_arr2Dex3d  
+                :identifier: javareview_arr2Dex3d
 
 .. tabbed:: arr2DEx4
 
@@ -269,7 +269,7 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx4q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
               :practice: T
 
               Print the values 8, 3, 87, and 34 by accessing them from the given two-dimensional array.
@@ -348,25 +348,25 @@ Code Practice with 2D Arrays
                	      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
 
                	      // Prints 8, 3, 87, and 34 in order
-               	      System.out.println(arr[0][2]);  
-               	      System.out.println(arr[1][0]);  
-               	      System.out.println(arr[2][1]);  
-               	      System.out.println(arr[4][0]);  
+               	      System.out.println(arr[0][2]);
+               	      System.out.println(arr[1][0]);
+               	      System.out.println(arr[2][1]);
+               	      System.out.println(arr[4][0]);
 
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_arr2Dex4d  
+                :identifier: javareview_arr2Dex4d
 
 .. tabbed:: arr2DEx5
 
         .. tab:: Question
 
-           Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array. 
+           Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array.
 
            **Ex.** The array { {"hello","there","world"},{"how","are","you"} } should print:
 
@@ -381,7 +381,7 @@ Code Practice with 2D Arrays
 
               Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array.
               ~~~~
-              public class Test1 
+              public class Test1
               {
 
                   public static void main(String[] args)
@@ -390,10 +390,10 @@ Code Practice with 2D Arrays
                                         {"how","are","you"} };
 
                       System.out.print("Rows:");
-                      // ADD CODE TO PRINT NUMBER OF ROWS HERE using arr // 
+                      // ADD CODE TO PRINT NUMBER OF ROWS HERE using arr //
 
                       System.out.print("Columns:");
-                      // ADD CODE TO PRINT NUMBER OF COLUMNS HERE using arr // 
+                      // ADD CODE TO PRINT NUMBER OF COLUMNS HERE using arr //
 
                   }
               }
@@ -413,14 +413,14 @@ Code Practice with 2D Arrays
                        assertTrue(passed);
                    }
                    @Test
-                   public void test2() 
+                   public void test2()
                    {
                        String target = "arr.length";
                        boolean passed = checkCodeContains("using arr and length to get number of rows", target);
                       assertTrue(passed);
                    }
                    @Test
-                   public void test3() 
+                   public void test3()
                    {
                        String target = "arr[0].length";
                        boolean passed = checkCodeContains("using arr[0] and length to get number of columns", target);
@@ -430,8 +430,8 @@ Code Practice with 2D Arrays
 
         .. tab:: Answer
 
-          To get the number of rows, or the length of the outer array, use ``arrayName.length`` . 
-          To get the number of columns, or the length of an inner array, use ``arrayName[0].length``. 
+          To get the number of rows, or the length of the outer array, use ``arrayName.length`` .
+          To get the number of columns, or the length of an inner array, use ``arrayName[0].length``.
 
           .. activecode::  arr2DEx5a
               :language: java
@@ -451,11 +451,11 @@ Code Practice with 2D Arrays
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_arr2Dex5d  
+                :identifier: javareview_arr2Dex5d
 
 .. tabbed:: arr2DEx6
 
@@ -465,16 +465,16 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx6q
               :language: java
-              :autograde: unittest 
+              :autograde: unittest
 
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "}, 
+                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "},
                                         {"you ", "are "}, {"doing ", "well"} };
 
-                      // ADD CODE HERE // 
+                      // ADD CODE HERE //
 
                   }
               }
@@ -495,7 +495,7 @@ Code Practice with 2D Arrays
                    }
                    @Test
                   public void test1()
-                  {     
+                  {
                    String code = getCode();
                    String target = "for";
 
@@ -504,7 +504,7 @@ Code Practice with 2D Arrays
 
                    getResults("2", ""+num, "2 for loops", passed);
                    assertTrue(passed);
-                 }   
+                 }
                }
 
         .. tab:: Answer
@@ -520,12 +520,12 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "}, 
+                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "},
                                         {"you ", "are "}, {"doing ", "well"} };
 
-                      for (int row = 0; row < arr.length; row++) 
+                      for (int row = 0; row < arr.length; row++)
                       {
-                          for (int col = 0; col < arr[0].length; col++) 
+                          for (int col = 0; col < arr[0].length; col++)
                           {
                               System.out.println(arr[row][col]);
                           }
@@ -533,7 +533,7 @@ Code Practice with 2D Arrays
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -545,7 +545,7 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx7q
               :language: java
-              :autograde: unittest      
+              :autograde: unittest
               :practice: T
 
               Declare and create a two-dimensional array of strings named ``colors``.  Put the colors ("red", "yellow", "blue") in the first row, and the colors ("orange", "green", "purple") in the second row. Then print every value in the array.
@@ -595,13 +595,13 @@ Code Practice with 2D Arrays
               public class Test1
               {
                   public static void main(String[] args)
-                  {         
+                  {
                       String[][] colors = { {"red","yellow","blue"},
                                            {"orange","green","purple"} };
 
-                      for (int row = 0; row < colors.length; row++) 
+                      for (int row = 0; row < colors.length; row++)
                       {
-                          for (int col = 0; col < colors[0].length; col++) 
+                          for (int col = 0; col < colors[0].length; col++)
                           {
                     	      System.out.println(colors[row][col]);
                     	  }
@@ -609,7 +609,7 @@ Code Practice with 2D Arrays
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -621,12 +621,12 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx8q
               :language: java
-              :autograde: unittest      
+              :autograde: unittest
 
               Replace the "ADD CODE HERE" below with the code to count and print the number of 7's that are in the 2d array. It should print 2.
               ~~~~
               public class Test1
-              {	
+              {
                   public static void main(String[] args)
                   {
                       int[][] array = { {4,7,8},{8,8,7} };
@@ -652,7 +652,7 @@ Code Practice with 2D Arrays
                        assertTrue(passed);
                    }
                    @Test
-                   public void test1() 
+                   public void test1()
                    {
                        String target = "for";
                        int num = countOccurences(getCode(), target);
@@ -661,7 +661,7 @@ Code Practice with 2D Arrays
                        assertTrue(passed);
                    }
                    @Test
-                   public void test2() 
+                   public void test2()
                    {
                        String target = "if (array[*][*] == 7)";
                        boolean passed = checkCodeContains("if statement checking if array[*][*] element equals 7", target);
@@ -686,9 +686,9 @@ Code Practice with 2D Arrays
 
                       int count = 0;
 
-                      for (int row = 0; row < array.length; row++) 
+                      for (int row = 0; row < array.length; row++)
                       {
-                          for (int col = 0; col < array[0].length; col++) 
+                          for (int col = 0; col < array[0].length; col++)
                           {
                               if (array[row][col]==7)
                                   count++;
@@ -701,7 +701,7 @@ Code Practice with 2D Arrays
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -713,10 +713,10 @@ Code Practice with 2D Arrays
 
            .. activecode::  arr2DEx9q
               :language: java
-              :autograde: unittest      
+              :autograde: unittest
 
               Replace the "ADD CODE HERE" below with the code to print out the sum of the numbers in the second row of the "table" array.  It should print 18.
-              ~~~~    
+              ~~~~
               public class Test1
               {
 
@@ -769,7 +769,7 @@ Code Practice with 2D Arrays
                        int[][] table = { {1,4,9},{11,4,3},{2,2,3} };
                        int sum = 0;
 
-                       for (int col = 0; col < table[0].length; col++) 
+                       for (int col = 0; col < table[0].length; col++)
                        {
                            sum += table[1][col];
                        }
@@ -780,7 +780,7 @@ Code Practice with 2D Arrays
 
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -860,7 +860,7 @@ Code Practice with 2D Arrays
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -907,7 +907,7 @@ Code Practice with 2D Arrays
                    }
 
                    @Test
-                   public void test1() 
+                   public void test1()
                    {
                        String target = "for";
                        int num = countOccurences(getCode(), target);
@@ -928,13 +928,13 @@ Code Practice with 2D Arrays
 
               public class Test1
               {
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                       int[][] numbers = { {1,2,3}, {4,5,6} };
 
-                      for (int row = 0; row < numbers.length; row++) 
+                      for (int row = 0; row < numbers.length; row++)
                       {
-                          for (int col = 0; col < numbers[0].length; col++) 
+                          for (int col = 0; col < numbers[0].length; col++)
                           {
                               System.out.println(numbers[row][col]);
                           }
@@ -989,7 +989,7 @@ Code Practice with 2D Arrays
                      assertTrue(passed);
                    }
                       @Test
-                   public void test2() 
+                   public void test2()
                    {
                        String target = "for";
                        int num = countOccurences(getCode(), target);
@@ -1013,9 +1013,9 @@ Code Practice with 2D Arrays
                   public static void main(String[] args)
                   {
                       int[][] numbers = { {1,2,3}, {4,5,6}, {7,8,9} };
-                      for (int row = 0; row < numbers.length; row++) 
+                      for (int row = 0; row < numbers.length; row++)
                       {
-                          for (int col = 0; col < numbers[1].length; col++) 
+                          for (int col = 0; col < numbers[1].length; col++)
                           {
                               System.out.println(numbers[row][col]);
                           }
@@ -1100,9 +1100,9 @@ Code Practice with 2D Arrays
 
                       arr[0][2] = "yellow";
 
-                      for (int row = 0; row < arr.length; row++) 
+                      for (int row = 0; row < arr.length; row++)
                       {
-                          for (int col = 0; col < arr[1].length; col++) 
+                          for (int col = 0; col < arr[1].length; col++)
                           {
                               System.out.println(arr[row][col]);
                           }

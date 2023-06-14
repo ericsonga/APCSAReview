@@ -76,7 +76,7 @@ You can test this with the createCollage method below.
     :autograde: unittest
     :datafile: pictureClasses.jar, flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg
 
-    Picture Lab A8: Run to see createCollage() working.  
+    Picture Lab A8: Run to see createCollage() working.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -84,7 +84,7 @@ You can test this with the createCollage method below.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -163,8 +163,8 @@ You can test this with the createCollage method below.
         return output;
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
+      /**
+        zeroBlue() method sets the blue values at all pixels to zero
      */
       public void zeroBlue()
       {
@@ -204,28 +204,28 @@ You can test this with the createCollage method below.
          * @param startRow the start row to copy to
          * @param startCol the start col to copy to
          */
-       public void copy(Picture fromPic, 
+       public void copy(Picture fromPic,
                       int startRow, int startCol)
        {
          Pixel fromPixel = null;
          Pixel toPixel = null;
          Pixel[][] toPixels = this.getPixels2D();
          Pixel[][] fromPixels = fromPic.getPixels2D();
-         for (int fromRow = 0, toRow = startRow; 
+         for (int fromRow = 0, toRow = startRow;
               fromRow < fromPixels.length &&
-              toRow < toPixels.length; 
+              toRow < toPixels.length;
               fromRow++, toRow++)
          {
-           for (int fromCol = 0, toCol = startCol; 
+           for (int fromCol = 0, toCol = startCol;
                 fromCol < fromPixels[0].length &&
-                toCol < toPixels[0].length;  
+                toCol < toPixels[0].length;
                 fromCol++, toCol++)
            {
              fromPixel = fromPixels[fromRow][fromCol];
              toPixel = toPixels[toRow][toCol];
              toPixel.setColor(fromPixel.getColor());
            }
-         }   
+         }
        }
 
       public void createCollage()
@@ -245,14 +245,14 @@ You can test this with the createCollage method below.
            this.show();
       }
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
          Picture p = new Picture(500,500);
          p.createCollage();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -263,13 +263,13 @@ You can test this with the createCollage method below.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void createCollage()";
          boolean passed = checkCodeContains("createCollage() method",target);
          assertTrue(passed);
-       }          
+       }
       }
 
 
@@ -286,8 +286,8 @@ You can test this with the createCollage method below.
     :align: left
 
 1. Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the
-fromPic. You will need to add parameters that specify the start row, end row, start column, 
-and end column to copy from. 
+fromPic. You will need to add parameters that specify the start row, end row, start column,
+and end column to copy from.
 
 
 .. activecode:: picture-lab-A8-createCollage-copyPartial
@@ -303,7 +303,7 @@ and end column to copy from.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -382,8 +382,8 @@ and end column to copy from.
         return output;
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
+      /**
+        zeroBlue() method sets the blue values at all pixels to zero
      */
       public void zeroBlue()
       {
@@ -423,34 +423,34 @@ and end column to copy from.
          * @param startRow the start row to copy to
          * @param startCol the start col to copy to
          */
-       public void copy(Picture fromPic, 
+       public void copy(Picture fromPic,
                       int startRow, int startCol)
        {
          Pixel fromPixel = null;
          Pixel toPixel = null;
          Pixel[][] toPixels = this.getPixels2D();
          Pixel[][] fromPixels = fromPic.getPixels2D();
-         for (int fromRow = 0, toRow = startRow; 
+         for (int fromRow = 0, toRow = startRow;
               fromRow < fromPixels.length &&
-              toRow < toPixels.length; 
+              toRow < toPixels.length;
               fromRow++, toRow++)
          {
-           for (int fromCol = 0, toCol = startCol; 
+           for (int fromCol = 0, toCol = startCol;
                 fromCol < fromPixels[0].length &&
-                toCol < toPixels[0].length;  
+                toCol < toPixels[0].length;
                 fromCol++, toCol++)
            {
              fromPixel = fromPixels[fromRow][fromCol];
              toPixel = toPixels[toRow][toCol];
              toPixel.setColor(fromPixel.getColor());
            }
-         }   
+         }
        }
 
-      /**  Create a second copy method called copyPartial 
-          that adds parameters to allow you to copy just part of 
-          fromPic. You will need to add parameters that specify the 
-          start row, start column, end row, end column to copy from 
+      /**  Create a second copy method called copyPartial
+          that adds parameters to allow you to copy just part of
+          fromPic. You will need to add parameters that specify the
+          start row, start column, end row, end column to copy from
           as well as the start row and start column to copy to like the method above.
 
          Write your method here and use it in createCollage below
@@ -461,23 +461,23 @@ and end column to copy from.
       {
           Picture snowflake = new Picture("snowflake.jpg");
 
-          // copy just the (0,0) to (50,50) portion of the snowflake to (0,0) 
+          // copy just the (0,0) to (50,50) portion of the snowflake to (0,0)
           this.copyPartial(snowflake,0,0,50,50, 0,0);
-          // copy just the (0,50) to (50,100) portion of the snowflake to (0,0)  
+          // copy just the (0,50) to (50,100) portion of the snowflake to (0,0)
           this.copyPartial(snowflake,0,45,50,90,70,50);
 
           this.mirrorVertical();
           this.show();
       }
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
          Picture p = new Picture(500,500);
          p.createCollage();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -488,13 +488,13 @@ and end column to copy from.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void copyPartial(";
          boolean passed = checkCodeContains("copyPartial method",target);
          assertTrue(passed);
-       }  
+       }
 
        @Test
          public void test2()
@@ -507,10 +507,10 @@ and end column to copy from.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 6;
-            } 
+            }
             getResults("true", ""+passed, "Checking that copyPartial contains 6 int parameters", passed);
-            assertTrue(passed);     
-         } 
+            assertTrue(passed);
+         }
 
          @Test
          public void test3()
@@ -523,14 +523,14 @@ and end column to copy from.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that copyPartial() contains 2 for loops", passed);
-            assertTrue(passed);     
-         } 
+            assertTrue(passed);
+         }
       }
 
 2. Create a myCollage method that has at least three pictures (can be the same picture) copied
-three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
+three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 
 .. |repl.it project| raw:: html
@@ -549,7 +549,7 @@ three times with three different picture manipulations and at least one mirrorin
     :autograde: unittest
     :datafile: pictureClasses.jar, flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg
 
-    Picture Lab A8: Create a myCollage method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring. 
+    Picture Lab A8: Create a myCollage method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -557,7 +557,7 @@ three times with three different picture manipulations and at least one mirrorin
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -636,8 +636,8 @@ three times with three different picture manipulations and at least one mirrorin
         return output;
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
+      /**
+        zeroBlue() method sets the blue values at all pixels to zero
      */
       public void zeroBlue()
       {
@@ -677,28 +677,28 @@ three times with three different picture manipulations and at least one mirrorin
          * @param startRow the start row to copy to
          * @param startCol the start col to copy to
          */
-       public void copy(Picture fromPic, 
+       public void copy(Picture fromPic,
                       int startRow, int startCol)
        {
          Pixel fromPixel = null;
          Pixel toPixel = null;
          Pixel[][] toPixels = this.getPixels2D();
          Pixel[][] fromPixels = fromPic.getPixels2D();
-         for (int fromRow = 0, toRow = startRow; 
+         for (int fromRow = 0, toRow = startRow;
               fromRow < fromPixels.length &&
-              toRow < toPixels.length; 
+              toRow < toPixels.length;
               fromRow++, toRow++)
          {
-           for (int fromCol = 0, toCol = startCol; 
+           for (int fromCol = 0, toCol = startCol;
                 fromCol < fromPixels[0].length &&
-                toCol < toPixels[0].length;  
+                toCol < toPixels[0].length;
                 fromCol++, toCol++)
            {
              fromPixel = fromPixels[fromRow][fromCol];
              toPixel = toPixels[toRow][toCol];
              toPixel.setColor(fromPixel.getColor());
            }
-         }   
+         }
        }
 
       public void createCollage()
@@ -719,19 +719,19 @@ three times with three different picture manipulations and at least one mirrorin
            this.show();
       }
 
-     /**  Create a myCollage() method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring. 
+     /**  Create a myCollage() method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring.
 
        Write your method here.
       */
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
          Picture p = new Picture(500,500);
          p.myCollage();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -742,13 +742,13 @@ three times with three different picture manipulations and at least one mirrorin
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void myCollage(";
          boolean passed = checkCodeContains("myCollage method",target);
          assertTrue(passed);
-       }  
+       }
 
        @Test
          public void test2()
@@ -762,10 +762,10 @@ three times with three different picture manipulations and at least one mirrorin
              code = code.substring(index);
              num = countOccurences(code, target);
              passed = num >= 3;
-            } 
+            }
             getResults("3", ""+num, "Checking that myCollage contains 3 copy calls", passed);
-            assertTrue(passed);     
-         } 
+            assertTrue(passed);
+         }
 
          @Test
          public void test3()
@@ -778,10 +778,10 @@ three times with three different picture manipulations and at least one mirrorin
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 1;
-            } 
+            }
             getResults("true", ""+passed, "Checking that myCollage() calls a mirror method", passed);
-            assertTrue(passed);     
-         } 
+            assertTrue(passed);
+         }
       }
 
 You can use these images in this lesson:

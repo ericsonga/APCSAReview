@@ -86,7 +86,7 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_d: nums.remove(2);
    :correct: c
    :feedback_a: This would remove the value at index 3 which is 1.
-   :feedback_b: This would remove the value at index 0 which is 5. 
+   :feedback_b: This would remove the value at index 0 which is 5.
    :feedback_c: This would remove the value at index 1 which is 3.
    :feedback_d: This would remove the value at index 2 which is 2.
 

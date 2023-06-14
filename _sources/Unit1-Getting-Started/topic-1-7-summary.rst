@@ -5,7 +5,7 @@
 Unit 1 Summary
 ===============
 
-In this unit you learned about the three primitive data types on the exam: ``int``, ``double``, and ``boolean``.  You also learned how to declare (name) and change the value of variables.  You learned about operators, casting, and integer constants for the min and max integer values.  
+In this unit you learned about the three primitive data types on the exam: ``int``, ``double``, and ``boolean``.  You also learned how to declare (name) and change the value of variables.  You learned about operators, casting, and integer constants for the min and max integer values.
 
 ..	index::
     single: static
@@ -27,7 +27,7 @@ In this unit you learned about the three primitive data types on the exam: ``int
 Concept Summary
 ---------------
 - **Compiler** - Software that translates the Java source code into the Java class file which can be run on the computer.
-- **Compiler or syntax error** - An error that is found during the compilation.  
+- **Compiler or syntax error** - An error that is found during the compilation.
 - **Main method** - Where execution starts in a Java program.
 - **Variable** -  A name associated with a memory location in the computer.
 - **Declare a Variable** - Specifying the type and name for a variable.  This sets aside memory for a variable of that type and associates the name with that memory location.
@@ -36,11 +36,11 @@ Concept Summary
 - **integer** - a whole number like 2 or -3
 - **boolean** - An expression that is either ``true`` or ``false``.
 - **Camel case** - One way to create a variable name by appending several words together and uppercasing the first letter of each word after the first word (``myScore``).
-- **Casting a Variable** - Changing the type of a variable using *(type) name*. 
-- **Operator** - Common mathematical symbols such as ``+`` for addition and ``*`` for multiplication.    
+- **Casting a Variable** - Changing the type of a variable using *(type) name*.
+- **Operator** - Common mathematical symbols such as ``+`` for addition and ``*`` for multiplication.
 - **Compound assignment or shortcut operators** - Operators like ``x++`` which means ``x = x + 1`` or ``x *=y`` which means ``x = x * y``.
 - **modulo** - The ``%`` operator which returns the remainder from one number divide by another.
-- **arithmetic expression** - a sequence of operands and operators that describe a calculation to be performed, for example ``3*(2 + x)`` 
+- **arithmetic expression** - a sequence of operands and operators that describe a calculation to be performed, for example ``3*(2 + x)``
 - **operator precedence** - some operators are done before others, for example ``*, /, %`` have precedence over + and -, unless parentheses are used.
 
 
@@ -65,7 +65,7 @@ Vocabulary Practice
 
 .. dragndrop:: ch3_var1
     :feedback: Review the summaries above.
-    :match_1: Specifying the type and name for a variable|||declaring a variable 
+    :match_1: Specifying the type and name for a variable|||declaring a variable
     :match_2: A whole number|||integer
     :match_3: A name associated with a memory location.|||variable
     :match_4: An expression that is either true or false|||Boolean
@@ -99,7 +99,7 @@ Common Mistakes
 
   -  forgetting to specify the type when declaring a variable (using ``name = value;`` instead of ``type name = value;``)
 
-  -  using a variable name, but never declaring the variable.  
+  -  using a variable name, but never declaring the variable.
 
   -  using the wrong name for the variable.  For example calling it ``studentTotal`` when you declare it, but later calling it ``total``.
 

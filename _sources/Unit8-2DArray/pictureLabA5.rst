@@ -2,11 +2,11 @@
     :width: 250
     :align: right
 
-Picture Lab A5: Modifying a Picture 
+Picture Lab A5: Modifying a Picture
 =====================================================
 
 Even though digital pictures have millions of pixels, modern computers are so fast that they can process
-all of them quickly. You will write methods in the ``Picture`` class that modify digital pictures. 
+all of them quickly. You will write methods in the ``Picture`` class that modify digital pictures.
 
 Picture Classes: UML and Inheritance
 -------------------------------------
@@ -27,7 +27,7 @@ The straight line links show associations between classes. Association is also c
 For example, it shows that one ``Pixel`` object has one ``Color`` object associated with it and that a ``Color`` object can have zero to many ``Pixel`` objects associated with it.
 You may notice that the UML class diagram doesn't look exactly like Java code. UML isn't language specific.
 
-The following questions require some knowledge about inheritance which is covered in the next unit, Unit 9. You may want to come back to do these questions after Unit 9. 
+The following questions require some knowledge about inheritance which is covered in the next unit, Unit 9. You may want to come back to do these questions after Unit 9.
 
 
 .. |Picture Lab project| raw:: html
@@ -45,7 +45,7 @@ The following questions require some knowledge about inheritance which is covere
         :answer_a: Yes
         :answer_b: No, but it is inherited
         :correct: b
-        :feedback_a: The Picture.java class does not have the getPixels2D() method defined in it but it inherits it from the class SimplePicture. 
+        :feedback_a: The Picture.java class does not have the getPixels2D() method defined in it but it inherits it from the class SimplePicture.
         :feedback_b: Correct, this class inherits that method from the class SimplePicture.
         :optional:
 
@@ -56,7 +56,7 @@ The following questions require some knowledge about inheritance which is covere
         :answer_b: No
         :correct: a
         :feedback_a: Yes, the SimplePicture class contains the method getPixels2D.
-        :feedback_b: The SimplePicture class contains the method getPixels2D. 
+        :feedback_b: The SimplePicture class contains the method getPixels2D.
         :optional:
 
         Open ``SimplePicture.java`` and look for the method ``getPixels2D``. Is it there?
@@ -65,8 +65,8 @@ The following questions require some knowledge about inheritance which is covere
         :answer_a: yes
         :answer_b: no
         :correct: b
-        :feedback_a: We cannot create an object from an interface because it is abstract. 
-        :feedback_b: Correct! We cannot create an object from an interface because it is abstract. 
+        :feedback_a: We cannot create an object from an interface because it is abstract.
+        :feedback_b: Correct! We cannot create an object from an interface because it is abstract.
         :optional:
 
         This question is about interfaces which are not covered in the AP exam. Interfaces are like abstract templates of a class that specify the method headers but not the definitions. Does the following code compile? Try it in the main method if you do not know.
@@ -109,7 +109,7 @@ The following questions require some knowledge about inheritance which is covere
         :answer_a: yes
         :answer_b: no
         :correct: b
-        :feedback_a: Picture inherits from SimplePicture, but not the other way around. 
+        :feedback_a: Picture inherits from SimplePicture, but not the other way around.
         :feedback_b: Picture inherits from SimplePicture, but not the other way around.
         :optional:
 
@@ -130,7 +130,7 @@ value for a Pixel object. For example,
 
       Picture pict = new Picture("beach.jpg");
       Pixel[][] pixels = pict.getPixels2D();
-      Pixel p = pixels[0][0]; // get the first pixel      
+      Pixel p = pixels[0][0]; // get the first pixel
       int blue = p.getBlue(); // get its blue value
       System.out.println("Pixel (0,0) has a blue value of " + blue );
       p.setBlue(255);  // set its blue value to 255
@@ -169,7 +169,7 @@ to a Pixel object named pixelObj. It uses a nested for-each loop to loop through
 pixels in the picture. Inside the body of the nested for-each loop it sets the blue value for the
 current pixel to zero. Note that you cannot change the elements of an array when you use a for-each
 loop. If, however, the array elements are references to objects that have methods that allow changes,
-you can change the internal state of objects referenced in the array (pixels). 
+you can change the internal state of objects referenced in the array (pixels).
 
 The following code is the zeroBlue method in the Picture class.
 
@@ -218,7 +218,7 @@ Another option is to use for loops with indices to visit each pixel in the pictu
     :width: 250
     :align: left
 
-1. You may have done this exercise in the programming challenge in lesson 8.2. Using the zeroBlue method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the main method. 
+1. You may have done this exercise in the programming challenge in lesson 8.2. Using the zeroBlue method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the main method.
 
 .. |repl.it project| raw:: html
 
@@ -243,7 +243,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -323,8 +323,8 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
 
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
+      /**
+        zeroBlue() method sets the blue values at all pixels to zero
      */
       public void zeroBlue()
       {
@@ -340,13 +340,13 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
       }
 
 
-     /* 
+     /*
         keepOnlyBlue() method sets the blue values at all pixels to zero.
 
         Add new method here and call it from main.
      */
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -355,7 +355,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
         pict.zeroBlue(); // Change this to call keepOnlyBlue()
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -366,14 +366,14 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void keepOnlyBlue()";
          boolean passed = checkCodeContains("keepOnlyBlue() method",target);
          assertTrue(passed);
        }
-       @Test 
+       @Test
        public void test1b()
        {
          String target = ".keepOnlyBlue()";
@@ -381,14 +381,14 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = ".setGreen(0);";
          boolean passed = checkCodeContains("keepOnlyBlue() setting green pixels to the number 0",target);
          assertTrue(passed);
        }
-        @Test 
+        @Test
        public void test2b()
        {
          String target = ".setRed(0);";
@@ -408,10 +408,10 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
-            assertTrue(passed);     
-         }       
+            assertTrue(passed);
+         }
       }
 
 .. image:: Figures/negate.jpg
@@ -436,7 +436,7 @@ method.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -517,23 +517,23 @@ method.
       }
 
 
-     /* 
-        negate() method negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
+     /*
+        negate() method negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.
 
         Add new method here.
      */
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
         Picture pict = new Picture("puppies.jpg");
-        pict.show();      
-        System.out.println("Negate: "); 
+        pict.show();
+        System.out.println("Negate: ");
         pict.negate();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -544,7 +544,7 @@ method.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void negate()";
@@ -552,7 +552,7 @@ method.
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = "255";
@@ -560,7 +560,7 @@ method.
          assertTrue(passed);
        }
 
-        @Test 
+        @Test
        public void test2b()
        {
          String target = ".getRed()";
@@ -579,10 +579,10 @@ method.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that negate() contains 2 for loops", passed);
-            assertTrue(passed);     
-         }       
+            assertTrue(passed);
+         }
       }
 
 .. image:: Figures/grayscale.jpg
@@ -606,7 +606,7 @@ divide by 3).  Be sure to call the new test method in the main method.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -687,23 +687,23 @@ divide by 3).  Be sure to call the new test method in the main method.
       }
 
 
-     /* 
-        grayscale() method sets the red, green, andblue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
+     /*
+        grayscale() method sets the red, green, andblue values to the average of the current red, green, and blue values (add all three values and divide by 3).
 
         Add new method here.
      */
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
         Picture pict = new Picture("blueMotorcycle.jpg");
-        pict.show();      
-        System.out.println("Gray Scale: "); 
+        pict.show();
+        System.out.println("Gray Scale: ");
         pict.grayscale();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -714,7 +714,7 @@ divide by 3).  Be sure to call the new test method in the main method.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void grayscale()";
@@ -722,7 +722,7 @@ divide by 3).  Be sure to call the new test method in the main method.
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = ".getRed()";
@@ -730,7 +730,7 @@ divide by 3).  Be sure to call the new test method in the main method.
          assertTrue(passed);
        }
 
-        @Test 
+        @Test
        public void test2b()
        {
          String target = "/3";
@@ -749,10 +749,10 @@ divide by 3).  Be sure to call the new test method in the main method.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that grayscale() contains 2 for loops", passed);
-            assertTrue(passed);     
-         }       
+            assertTrue(passed);
+         }
       }
 
 .. image:: Figures/water.jpg
@@ -779,7 +779,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -859,23 +859,23 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
 
       }
 
-     /* 
+     /*
         fixUnderwater() modifies the pixel colors to make the fish easier to see.
 
         Add new method here.
      */
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
         Picture pict = new Picture("water.jpg");
-        pict.show();      
-        System.out.println("Fix Underwater: "); 
+        pict.show();
+        System.out.println("Fix Underwater: ");
         pict.fixUnderwater();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -886,7 +886,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void fixUnderwater()";
@@ -894,7 +894,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
          assertTrue(passed);
        }
 
-        @Test 
+        @Test
        public void test2()
        {
          String target = ".setRed(";
@@ -913,10 +913,10 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that fixUnderwater() contains 2 for loops", passed);
-            assertTrue(passed);     
-         }       
+            assertTrue(passed);
+         }
       }
 
 .. image:: Figures/changetshirt.png
@@ -938,7 +938,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -1018,8 +1018,8 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
 
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
+      /**
+        zeroBlue() method sets the blue values at all pixels to zero
      */
       public void zeroBlue()
       {
@@ -1035,23 +1035,23 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
       }
 
 
-     /* 
-       changeTshirt(): Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). 
+     /*
+       changeTshirt(): Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100).
 
         Add new method here.
      */
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
         Picture pict = new Picture("student.jpg");
-        pict.show();      
-        System.out.println("Change tshirt color: "); 
+        pict.show();
+        System.out.println("Change tshirt color: ");
         pict.changeTshirt();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -1062,7 +1062,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void changeTshirt()";
@@ -1070,7 +1070,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = "if";
@@ -1078,7 +1078,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2b()
        {
          String target = ".getRed() >";
@@ -1086,7 +1086,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2c()
        {
          String target = ".setRed(0)";
@@ -1105,10 +1105,10 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that changeTshirt() contains 2 for loops", passed);
-            assertTrue(passed);     
-         }       
+            assertTrue(passed);
+         }
       }
 
 
@@ -1148,7 +1148,7 @@ Choose from these images:
 
 
 .. datafile:: pictureClasses1.jar
-        :hide:    
+        :hide:
 
         import java.awt.Image;
         import java.awt.image.BufferedImage;

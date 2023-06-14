@@ -1,4 +1,4 @@
-Free Response Practice 
+Free Response Practice
 :::::::::::::::::::::::::::::
 
 .. toctree::

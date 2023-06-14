@@ -51,7 +51,7 @@ To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 
 
 .. activecode:: lcfrsda2
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    public class TestMod
    {
@@ -85,7 +85,7 @@ To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remain
 
 .. activecode:: lcfrsda3
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    public class TestSelfDivisor
    {
@@ -131,7 +131,7 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
 
    .. activecode:: lcfrsda4
        :language: java
-       :autograde: unittest  
+       :autograde: unittest
 
        public class TestDigits
        {
@@ -168,7 +168,7 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
    :hidetitle: Hide Algorithm
    :optional:
 
-   **Algorithm**: 
+   **Algorithm**:
 
    We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.
 
@@ -203,7 +203,7 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
 
 .. activecode:: lcfrsda5
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    FRQ SelfDivisor: Write the method isSelfDivisor.
    ~~~~

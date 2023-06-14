@@ -22,31 +22,31 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 super Keyword
 ============================================
 
-Sometimes you want the subclass to do more than what a superclass' method is doing.  You want to still execute the superclass method, but you also want to override the method to do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.  
+Sometimes you want the subclass to do more than what a superclass' method is doing.  You want to still execute the superclass method, but you also want to override the method to do something else.  But, since you have overridden the parent method how can you still call it?  You can use ``super.method()`` to force the parent's method to be called.
 
 We've used super() before to call the superclass' constructor. There are two uses of the keyword super:
 
-1. **super();** or **super(arguments);** calls just the super constructor if put in as the first line of a subclass constructor. 
+1. **super();** or **super(arguments);** calls just the super constructor if put in as the first line of a subclass constructor.
 2. **super.method();** calls a superclass' method (not constructors).
 
 The keyword super is very useful in allowing us to first execute the superclass method and then add on to it in the subclass.
 
 |CodingEx| **Coding Exercise**
 
-In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Taco". 
+In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Taco".
 
 .. activecode:: SuperEx
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    Add another subclass called Vegan that inherits from the Student class. Add a Vegan contructor that takes a name as an argument and passes it to the super constructor. Override the getFood() method in Vegan to call the superclass getFood() but add a "No " in front of it and then say "but " and add a vegan food. Change Javier to a Vegan object in main() and try it out!
    ~~~~
-   public class Person 
+   public class Person
    {
          private String name = null;
 
@@ -55,7 +55,7 @@ In the example below, the Student class overrides the getFood() method of the Pe
             name = theName;
          }
 
-         public String getFood() 
+         public String getFood()
          {
             return "Hamburger";
          }
@@ -86,11 +86,11 @@ In the example below, the Student class overrides the getFood() method of the Pe
          }
 
          public int getId() {return this.id;}
-         public void setId (int theId) 
+         public void setId (int theId)
          {
             this.id = theId;
          }
-      } 
+      }
       ====
       import static org.junit.Assert.*;
           import org.junit.*;
@@ -106,10 +106,10 @@ In the example below, the Student class overrides the getFood() method of the Pe
 
             @Test
             public void testMain() throws IOException
-            { 
+            {
               String output = getMethodOutput("main");
 
-              String expect = "No Hamburger and Pizza but * \n";  
+              String expect = "No Hamburger and Pizza but * \n";
 
               boolean passed = getResults(expect, output, "Expected output from main");
               assertTrue(passed);
@@ -126,9 +126,9 @@ In the example below, the Student class overrides the getFood() method of the Pe
 
 
 
-How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method, all the way up to the Object class.  The method has to be there, or else the code would not have compiled. 
+How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn't find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method, all the way up to the Object class.  The method has to be there, or else the code would not have compiled.
 
-When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and  return the string ``"Hamburger and Taco"``. 
+When the student ``getFood()`` method is executed it will start executing the ``getFood`` method in ``Student``.  When it gets to ``super.getFood()`` it will execute the ``getFood`` method in ``Person``.  This method will return the string ``"Hamburger"``.  Then execution will continue in the ``getFood`` method of ``Student`` and  return the string ``"Hamburger and Taco"``.
 
 |Exercise| **Check your understanding**
 
@@ -181,17 +181,17 @@ When the student ``getFood()`` method is executed it will start executing the ``
 
 You can step through this example using the Java Visualizer by clicking on the following link: `Super Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
 
-The toString() method is a common method that is overridden. A subclass can override the superclass toString() method and call the super.toString() before adding on its own instance variables.  
+The toString() method is a common method that is overridden. A subclass can override the superclass toString() method and call the super.toString() before adding on its own instance variables.
 
 .. code-block:: java
 
    // overridden toString() in subclass
-   public String toString() 
+   public String toString()
    {
      return super.toString() + "\n" + subclassInstanceVariables;
    }
 
-|Groupwork| Programming Challenge : Customer Info 
+|Groupwork| Programming Challenge : Customer Info
 -------------------------------------------------
 
 The Customer class below keeps track of the names and addresses of customers. It has a toString() method that prints out the name and address of the object.
@@ -206,7 +206,7 @@ The Customer class below keeps track of the names and addresses of customers. It
 
 .. activecode:: challenge-9-4-Customer-super
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    Complete the OnlineCustomer class below to inherit from Customer and add an email address, a constructor, and override the toString() method.
    ~~~~
@@ -216,7 +216,7 @@ The Customer class below keeps track of the names and addresses of customers. It
        private String address;
 
        public Customer(String n, String a)
-       { 
+       {
           name = n;
           address = a;
        }
@@ -238,11 +238,11 @@ The Customer class below keeps track of the names and addresses of customers. It
     }
 
     // Complete the OnlineCustomer class to inherit from Customer
-    // It should have an email attribute, 
-    // a constructor with 3 arguments (name, address, email) that uses the super constructor, 
-    // and an overridden toString() method that calls the super toString() method 
+    // It should have an email attribute,
+    // a constructor with 3 arguments (name, address, email) that uses the super constructor,
+    // and an overridden toString() method that calls the super toString() method
     //  and then prints "\nEmail:" and the email variable.
-    class OnlineCustomer 
+    class OnlineCustomer
     {
 
     }
@@ -263,8 +263,8 @@ The Customer class below keeps track of the names and addresses of customers. It
          String expect = "Name: Fran Santiago\n" +
                          "Address: 123 Main St., Anytown, USA\n" +
                          "Name: Jasper Smith\n" +
-                         "Address: 456 High St., Anytown, USA\n" + 
-                         "Email: jsmith456@gmail.com";       
+                         "Address: 456 High St., Anytown, USA\n" +
+                         "Email: jsmith456@gmail.com";
          boolean passed = getResults(expect, output, "Expected output from main");
          assertTrue(passed);
        }
@@ -278,7 +278,7 @@ The Customer class below keeps track of the names and addresses of customers. It
 
        @Test
         public void test1()
-        {     
+        {
          String code = getCode();
          String target = "public String toString()";
 

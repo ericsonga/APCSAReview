@@ -27,10 +27,10 @@ FRQ Question 1 on Control Structures will probably involve:
 
 On question 1, you will get points for:
 
-- constructing the loop correctly, 
-- calling the correct methods, 
-- calculating the correct value, 
-- and returning the value. 
+- constructing the loop correctly,
+- calling the correct methods,
+- calculating the correct value,
+- and returning the value.
 
 Try to have some code for each of these steps. Do not use arrays or other more complex code. You may need to use Math or string methods.
 
@@ -40,7 +40,7 @@ Try to have some code for each of these steps. Do not use arrays or other more c
 
 The 2019 FRQ 1 is a good example of what to expect. It is available as question 1 on pages 3-6 of https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf , reproduced below.
 
-Question 1. 
+Question 1.
 
 The APCalendar class contains methods used to calculate information about a calendar. You will write two methods of the class.
 
@@ -129,15 +129,15 @@ Also, circle what the return type of what you need to return. In this case, the 
 Next, plan your loop. Click to reveal some problems that may help you to plan the loop.
 
 .. reveal:: call_loop_type_r1
-   :showtitle: Reveal Problems 
-   :hidetitle: Hide Problems 
+   :showtitle: Reveal Problems
+   :hidetitle: Hide Problems
    :optional:
 
    .. mchoice:: callooptype
         :answer_a: for loop
         :answer_b: while loop
         :correct: a
-        :feedback_a: Use a for loop when you know how many times a loop needs to execute.  
+        :feedback_a: Use a for loop when you know how many times a loop needs to execute.
         :feedback_b: Although you could use a while loop. It is  easier to use a for loop in this case. Use a while loop when you don't know how many times a loop needs to execute.
 
         Which loop should you use to count the number of leap years between year1 and year2?
@@ -151,7 +151,7 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
         :feedback_a: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
         :feedback_b: You need to count the leap years between year1 and year2. The problem does not mention starting at year 0.
         :feedback_c: You need to count the leap years between year1 and year2. The problem does not mention starting at year 2020.
-        :feedback_d: You need to count the leap years between year1 and year2. 
+        :feedback_d: You need to count the leap years between year1 and year2.
 
         What is the starting and ending values for the loop to count the leap years between year 1 and year 2?
 
@@ -176,7 +176,7 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
       if (isLeapYear(i))
           ...
 
-   Put all of the code together to solve this problem. 
+   Put all of the code together to solve this problem.
 
 .. activecode:: APCalendarFRQPartA
    :language: java
@@ -192,14 +192,14 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
 
     /** Returns the number of leap years between year1 and year2, inclusive.
      * Precondition: 0 <= year1 <= year2
-    */ 
+    */
     public static int numberOfLeapYears(int year1, int year2)
     {
       // WRITE YOUR CODE HERE
 
     }
 
-    /** Returns true if year is a leap year and false otherwise. */ 
+    /** Returns true if year is a leap year and false otherwise. */
     private static boolean isLeapYear(int year)
     {
     	return new GregorianCalendar().isLeapYear(year);
@@ -239,7 +239,7 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
             int expect = 27;
 
             boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(1990, 2100)");
-            assertTrue(passed);   
+            assertTrue(passed);
         }
 
         @Test
@@ -249,7 +249,7 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
             int expect = 0;
 
             boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(2001, 2002)");
-            assertTrue(passed);   
+            assertTrue(passed);
         }
     }
 
@@ -273,7 +273,7 @@ In part B of the AP Calendar FRQ, you need to write the code inside a static met
 
 - **firstDayOfYear(year)** returns the integer value representing the day of the week for the first day of year, where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday. For example, since 2019 began on a Tuesday, firstDayOfYear(2019) returns 2.
 
-- **dayOfYear(month, day, year)** returns n, where month, day, and year specify the nth day of the year. For the first day of the year, January 1 (month = 1, day = 1), the value 1 is returned. This method accounts for whether year is a leap year. For example, dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year, while dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year. 
+- **dayOfYear(month, day, year)** returns n, where month, day, and year specify the nth day of the year. For the first day of the year, January 1 (month = 1, day = 1), the value 1 is returned. This method accounts for whether year is a leap year. For example, dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year, while dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year.
 
 
 If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples by revealing the problems below.
@@ -289,12 +289,12 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
         :answer_c: Friday (5)
         :answer_d: Saturday (6)
         :correct: c
-        :feedback_a: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
-        :feedback_b: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
-        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later on a Friday. 
-        :feedback_d: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
+        :feedback_a: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later.
+        :feedback_b: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later.
+        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later on a Friday.
+        :feedback_d: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later.
 
-        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019? 
+        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019?
 
 .. reveal:: dow_r2
    :showtitle: Reveal Problem
@@ -302,7 +302,7 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
    :optional:
 
    .. mchoice:: dow2
-        :answer_a: firstDayOfYear(2019) + dayOfYear(1,4,2019)   
+        :answer_a: firstDayOfYear(2019) + dayOfYear(1,4,2019)
         :answer_b: firstDayOfYear(2019) + dayOfYear(1,4,2019) - 1
         :answer_c: firstDayOfYear(2019) - dayOfYear(1,4,2019)
         :answer_d: firstDayOfYear(2019) * dayOfYear(1,4,2019)
@@ -327,10 +327,10 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
         :correct: b
         :feedback_a: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
         :feedback_b: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later so would fall on the same day of the week.
-        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later. 
+        :feedback_c: Since 1/1/19 is a Tuesday, Jan. 8th 2019 is 7 days later.
         :feedback_d: Since 1/1/19 is a Tuesday (2), Jan. 8th 2019, the 8th day of the year, is 7 days later, but since there are only 7 days of the week, so we need to start over at 0 on each Sunday.
 
-        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019? 
+        If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019?
 
 
    If we used the formula in the exercise above for the date 1/8/2019, we would get 9:
@@ -374,7 +374,7 @@ Try the mod operator below.
             System.out.println("Remainder of " + day2 + "/" + divisor + " is " + (day2 % divisor) );
             System.out.println("Remainder of " + day3 + "/" + divisor + " is " + (day3 % divisor) );
           }
-       }  
+       }
        ====
        import static org.junit.Assert.*;
         import org.junit.*;;
@@ -403,15 +403,15 @@ Try the mod operator below.
    :optional:
 
    .. mchoice:: dow4
-        :answer_a: firstDayOfYear(2019) + dayOfYear(1,8,2019)   
-        :answer_b: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 
+        :answer_a: firstDayOfYear(2019) + dayOfYear(1,8,2019)
+        :answer_b: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1
         :answer_c: firstDayOfYear(2019) + dayOfYear(1,8,2019) % 7
         :answer_d: firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 % 4
         :answer_e: (firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1) % 7
         :correct: e
         :feedback_a: This would return 10 but there are only 7 days of the week.
         :feedback_b: This would return 9 but there are only 7 days of the week.
-        :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3 
+        :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3
         :feedback_d: Mod 4 does not make sense because there are 7 days of the week.
         :feedback_e: This would return (2 + 8 - 1) % 7 = 2.
 
@@ -435,7 +435,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
      * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,
      * and 6 denotes Saturday.
      * Precondition: The date represented by month, day, year is a valid date.
-     */ 
+     */
     public static int dayOfWeek(int month, int day, int year)
     {
         // WRITE YOUR CODE HERE using methods firstDayOfYear and dayOfYear
@@ -460,7 +460,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
     /** Returns n, where month, day, and year specify the nth day of the year.
     * Returns 1 for January 1 (month = 1, day = 1) of any year.
     * Precondition: The date represented by month, day, year is a valid date.
-    */ 
+    */
     private static int dayOfYear(int month, int day, int year)
     {
         GregorianCalendar gc = new GregorianCalendar(year, month - 1, day);
@@ -495,7 +495,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
             int expect = 4;
 
             boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(7, 2, 2020)");
-            assertTrue(passed);   
+            assertTrue(passed);
         }
 
         @Test
@@ -505,7 +505,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
             int expect = 2;
 
             boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(2, 29, 2022)");
-            assertTrue(passed);   
+            assertTrue(passed);
         }
     }
 

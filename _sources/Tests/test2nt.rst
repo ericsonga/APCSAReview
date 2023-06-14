@@ -5,10 +5,10 @@
 Exam 2 for the AP CS A Exam (not timed)
 ----------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability. 
+The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.
 
 .. mchoice:: qtnt2_1
-   :answer_a: I only 
+   :answer_a: I only
    :answer_b: II only
    :answer_c: III only
    :answer_d: I and II only
@@ -18,7 +18,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_b: II is correct, but III is correct as well. A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal.
    :feedback_c: III is correct, but II is correct as well. A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal.
    :feedback_d: II is correct, but a Fish is NOT a type of Goldfish. A Fish cannot be instantiated as a Goldfish object, because the Fish class does not inherit from the Goldfish class.
-   :feedback_e: A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal. The Goldfish class inherits from the Fish class, and the Fish class inherits from the Animal class. 
+   :feedback_e: A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal. The Goldfish class inherits from the Fish class, and the Fish class inherits from the Animal class.
 
    Consider the ``Animal``, ``Fish``, and ``Goldfish`` classes shown below.  Which of the following object declarations will compile without error?
 
@@ -43,10 +43,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
      II. Animal glub = new Fish();
 
-     III. Fish glub = new Goldfish();  
+     III. Fish glub = new Goldfish();
 
 .. mchoice:: qtnt2_2
-   :answer_a: [6, 2, 7, 5] 
+   :answer_a: [6, 2, 7, 5]
    :answer_b: [6, 4, 2, 7, 5]
    :answer_c: [4, 7, 9, 5]
    :answer_d: [6, 4, 7, 5]
@@ -55,7 +55,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_a: When the add method is used with two parameters, the value is added at the specific index, not at the end of the list. In this list, 4 has been added at index 1.
    :feedback_b: This would be correct if 7 had been placed in the list using add, not set. Remember that the set method replaces the value at the index. It does not move the previous value to the right.
    :feedback_c: Remember that in ArrayLists, indexing starts at 0, not 1.
-   :feedback_d: The 9 at index 2 is removed, resulting in [6, 2], then a 4 is added at index 1 resulting in [6, 4, 2]. A 5 is added to the end of the list resulting in [6,4,2,5], and the value at 2 is replaced with a 7 resulting in [6,4,7,5]. 
+   :feedback_d: The 9 at index 2 is removed, resulting in [6, 2], then a 4 is added at index 1 resulting in [6, 4, 2]. A 5 is added to the end of the list resulting in [6,4,2,5], and the value at 2 is replaced with a 7 resulting in [6,4,7,5].
    :feedback_e: Remember that in ArrayLists, indexing starts at 0, not 1. The set method replaces the value at the specified index with a new value, so the original value is deleted.
 
    Assume that ``list`` has been instantiated as an ArrayList of integers containing ``[6, 2, 9]`` . What are the contents of ``list`` after the code is executed?
@@ -100,7 +100,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
    .. code-block:: java
 
-      I.   int[][] arr = new int [7][9]; 
+      I.   int[][] arr = new int [7][9];
 
       II.  int[][] arr = new int [7][9];
            int count = 1;
@@ -112,7 +112,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                  arr[i][j] = count * 2;
                  count++;
               }
-           } 
+           }
 
       III. int[][] arr = new int [7][9];
            int count = 1;
@@ -125,7 +125,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               row++;
               col++;
               count++;
-           } 
+           }
 
 .. mchoice:: qtnt2_5
    :answer_a: hciwdnas
@@ -140,7 +140,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: This would occur if the print statement included s.substring(1). Each call of the printString method prints only one letter at a time, because the substring that is printed is s.substring(0,1).
    :feedback_e: This method ends when s.length() equals zero, so the base case is reached after eight passes for the word "sandwich". An infinite loop will not occur.
 
-   Consider the method ``printString`` shown below. What is printed as a result of printString("sandwich")?  
+   Consider the method ``printString`` shown below. What is printed as a result of printString("sandwich")?
 
    .. code-block:: java
 
@@ -201,7 +201,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
 
 .. mchoice:: qtnt2_7
-   :answer_a: I only 
+   :answer_a: I only
    :answer_b: II only
    :answer_c: III only
    :answer_d: I and II only
@@ -255,12 +255,12 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
          if (x <= y)
              return x;
-         else 
+         else
              return mystery(x, y * 10);
       }
 
 .. mchoice:: qtnt2_9
-   :answer_a: Cats! 
+   :answer_a: Cats!
    :answer_b: Cats!  Cool!
    :answer_c: Cool!
    :answer_d: Cool! Cats!
@@ -268,11 +268,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: c
    :feedback_a: This would be the case if obj was a Cat at run-time. At run-time, obj is a FluffyCat, so the overwritten method in the Cat class is used.
    :feedback_b: This would be the case if the display method in FluffyCat used 'super' to call on the display method in the Cat class before it printed "Cool!".
-   :feedback_c: Although obj is declared to be a Cat at compile time, at run-time it is actually a FluffyCat. The overwritten display method defined in the FluffyCat class will be called. 
+   :feedback_c: Although obj is declared to be a Cat at compile time, at run-time it is actually a FluffyCat. The overwritten display method defined in the FluffyCat class will be called.
    :feedback_d: The method has been overwritten in FluffyCat, so the display method present in the Cat Class ("Cats! ") will not be printed.
    :feedback_e: This code compiles and runs correctly. A FluffyCat IS-A Cat object, so the code will compile and run without issue.
 
-   Consider the following classes ``Cat`` and ``FluffyCat``. What is the result of executing the following code?           
+   Consider the following classes ``Cat`` and ``FluffyCat``. What is the result of executing the following code?
    ``Cat obj = new FluffyCat();``
 
    ``obj.display();``
@@ -296,10 +296,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
 
 .. mchoice:: qtnt2_10
-   :answer_a: 1 
+   :answer_a: 1
    :answer_b: 0
-   :answer_c: 10 9 8 7 6 5 4 3 2 1 
-   :answer_d: 1 2 3 4 5 6 7 8 9 10 
+   :answer_c: 10 9 8 7 6 5 4 3 2 1
+   :answer_d: 1 2 3 4 5 6 7 8 9 10
    :answer_e: 10
    :correct: a
    :feedback_a: After the recursive call reaches the base case (where arg = 1), the compiler prints "1". The recursive calls all just return and don't print anything.
@@ -361,13 +361,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: II and III
    :answer_e: I, II, and III
    :correct: d
-   :feedback_a: I will find the sum of all the values in the matrix, but it does not find the sum of a specific row. 
+   :feedback_a: I will find the sum of all the values in the matrix, but it does not find the sum of a specific row.
    :feedback_b: II is correct, but III is also correct. This method can be completed by using a while loop or a for loop.
    :feedback_c: III is correct, but II is also correct. This method can be completed by using a for loop or a while loop.
    :feedback_d: II and III both correctly add the values in the specified row.
    :feedback_e: II and III are correct, but I adds every value in the matrix, not just the specified row.
 
-   You are trying to write a method ``sumRow`` that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace ``/* to be determined */`` to make the code work correctly? 
+   You are trying to write a method ``sumRow`` that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace ``/* to be determined */`` to make the code work correctly?
 
    .. code-block:: java
 
@@ -405,7 +405,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
 .. mchoice:: qtnt2_13
    :answer_a: (int) (Math.random() + 1) * 50
-   :answer_b: (int) (Math.random() * 50) + 1 
+   :answer_b: (int) (Math.random() * 50) + 1
    :answer_c: (int) (Math.random() + 1 * 50)
    :answer_d: (int) Math.random() * 50
    :answer_e: (int) (Math.random() * 50)
@@ -426,7 +426,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: 18
    :correct: c
    :feedback_a: Eventually, the recursive calls will reach mystery(5). 5 is less than 10, so the base case will have been reached and the method will end.
-   :feedback_b: This would be correct if the method found the sum of the digits in the given value, with an extra 1. Instead, the method finds the number of digits.											
+   :feedback_b: This would be correct if the method found the sum of the digits in the given value, with an extra 1. Instead, the method finds the number of digits.
    :feedback_c: This method finds the number of digits in num.
    :feedback_d: This method finds the number of digits in num. Check your recursive call to make sure you reached the base case correctly.
    :feedback_e: This would be correct if the method added the digits in the value. Instead, the method simply finds the number of digits. Check the recursive call again.
@@ -436,16 +436,16 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    .. code-block:: java
 
      public static int mystery(int num)
-     { 
-        if (num < 10) 
-        { 
-           return 1; 
-        } 
+     {
+        if (num < 10)
+        {
+           return 1;
+        }
 
-        else 
-        { 
-           return 1 + mystery(num / 10); 
-        } 
+        else
+        {
+           return 1 + mystery(num / 10);
+        }
      }
 
 
@@ -538,7 +538,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (A && B). !(y < 12) and (y >=12) mean the same thing; changing this does not make the statement the opposite.
    :feedback_e: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (!A && B). Changing !(y < 12) to (y >= 12) does not negate the statement; these two are equivalent.
 
-   Which statement is equivalent to ``!( (x > 7) && !(y < 12) )``? 
+   Which statement is equivalent to ``!( (x > 7) && !(y < 12) )``?
 
 .. mchoice:: qtnt2_19
    :answer_a: I only
@@ -549,7 +549,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: a
    :feedback_a: The modulo operator (%) can be used to find if numbers are even or odd. I checks that x is even correctly using x % 2 == 0.
    :feedback_b: II uses the modulo operator to count the number of odd numbers in the array. If x % 2 == 1, then the number is odd, not even.
-   :feedback_c: III and IV use the division operator, not the modulo operator. This does not check if the number is even. 
+   :feedback_c: III and IV use the division operator, not the modulo operator. This does not check if the number is even.
    :feedback_d: I is correct, but II increments the counter for odd numbers, not even numbers.
    :feedback_e: II counts the odd numbers instead of the even numbers. If x % 2 == 1, the number is odd, not even. IV does not use the modulo operator (%), which checks if numbers are even or odd.
 
@@ -595,9 +595,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: Every value in the array is less than 0.
    :correct: e
    :feedback_a: This method will not work correctly for all arrays. Look at the starting value for maxVal, and how maxVal is compared to all the values of the array. What happens if every value in the array is less than maxVal?
-   :feedback_b: Although this might present a problem if EVERY value in the array is less than 0, the compiler will move on to the next index without issue if the first value in the array is less than 0.  
+   :feedback_b: Although this might present a problem if EVERY value in the array is less than 0, the compiler will move on to the next index without issue if the first value in the array is less than 0.
    :feedback_c: This will not present a problem, as the if-statement has not been met and the for-loop will simply continue to the second element.
-   :feedback_d: If every value in the array is greater than 0, the method will work properly. 
+   :feedback_d: If every value in the array is greater than 0, the method will work properly.
    :feedback_e: maxVal is set to zero, so if every number in the array is less than 0, the maxVal will remain 0. A better idea would be to set maxVal to the value of the first element in the array.
 
 

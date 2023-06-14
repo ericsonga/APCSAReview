@@ -48,8 +48,8 @@ Concept Summary
 Java Keyword Summary
 =========================
 
-- **for** - starts both a general for loop and a for-each loop.  The syntax for a for each loop is ``for (type variable : array)``.  Each time through the loop the variable will take on the next value in the array.  The first time through the loop it will hold the value at index 0, then the value at index 1, then the value at index 2, etc.  
-- **static** - used to create a class method, which is a method that can be called using the class name like ``Math.abs(-3)``.  
+- **for** - starts both a general for loop and a for-each loop.  The syntax for a for each loop is ``for (type variable : array)``.  Each time through the loop the variable will take on the next value in the array.  The first time through the loop it will hold the value at index 0, then the value at index 1, then the value at index 2, etc.
+- **static** - used to create a class method, which is a method that can be called using the class name like ``Math.abs(-3)``.
 
 Vocabulary Practice
 =====================
@@ -87,5 +87,5 @@ Common Mistakes
   -  using ``array.length`` as the last valid index in an array, not ``array.length - 1``.
   -  using ``array.length()`` instead of ``array.length`` (not penalized on the free response)
   -  using ``array.get(0)`` instead of ``array[0]`` (not penalized on the free response)
-  -  going out of bounds when looping through an array  (using ``index <= array.length``).  You will get an ``ArrayIndexOutOfBoundsException``.  
-  -  jumping out an loop too early by using one or more return statements before every value has been processed.  
+  -  going out of bounds when looping through an array  (using ``index <= array.length``).  You will get an ``ArrayIndexOutOfBoundsException``.
+  -  jumping out an loop too early by using one or more return statements before every value has been processed.

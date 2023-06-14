@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 5-18-
-   :start: 1   
+   :start: 1
 
 Mixed Up Code Practice
 =========================================================
@@ -59,7 +59,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.name = name;
       this.age = age;
   =====
-      name = name; 
+      name = name;
       age = age; #paired: When the parameter name is the same as an attribute, you MUST use "this" to refer to the attribute
   =====
     } // end constructor
@@ -79,7 +79,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     private String name;
     private int age;
 
-    public Cat(String name, int age) { 
+    public Cat(String name, int age) {
   =====
       this.name = name;
       this.age = age;
@@ -88,7 +88,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
     public void makeSound() {
   =====
-    } // end constructor 
+    } // end constructor
 
     public String makeSound() { #paired: When a method returns nothing, its return type should be "void"
   =====
@@ -116,10 +116,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     public static int numberOfSquares = 0;
     private int length;
   =====
-    private int numberOfSquares = 0; 
+    private int numberOfSquares = 0;
     private int length; #paired: When you need a variable to be accessible for every object of a class, it should be static
   =====
-    public Square(int length) { 
+    public Square(int length) {
   =====
       this.length = length;
       numberOfSquares++;
@@ -147,7 +147,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     private int length;
     private int width;
 
-    public Rectangle() { 
+    public Rectangle() {
   =====
       this.length = 10;
       this.width = 10;
@@ -181,7 +181,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     private int orbitLength;
     private int daysSinceDiscovered;
   =====
-    public CelestialBody(int orbitLength) { 
+    public CelestialBody(int orbitLength) {
   =====
       this.daysSinceDiscovered = 0;
       this.orbitLength = orbitLength;
@@ -190,7 +190,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   =====
     } // end constructor
 
-    public void orbit(int numberOfTimes) { 
+    public void orbit(int numberOfTimes) {
   =====
     } // end constructor
 
@@ -241,7 +241,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   :noindent:
 
   The following program should define a ``Point`` class. Each ``Point`` instance should have integer ``x`` and ``y`` attributes (there are associated ``getX`` and ``getY`` methods whose implementations aren't shown). There should be a ``getDistance`` method that takes in another ``Point`` object as an argument and calculates the distance from this object to that one (which would be sqrt((this.x - other.x) ^ 2 + (this.y - other.y) ^ 2)). But the blocks have been mixed up and include pairs of lines where one is unneeded. Drag the necessary code from the left to the right and put them in order so that the code would work correctly. Click the Check button to check your solution.
-  -----  
+  -----
   public class Point {
   =====
     private int x;
@@ -270,7 +270,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   :noindent:
 
   The following program should define an ``Account`` class. Each ``Account`` instance should have integer ``balance`` and String ``owner`` attributes (and the constructor should take those in that order). To decrease ``balance``, there should be a ``withdraw`` method that takes in an integer argument and subtracts that from ``balance``. However, if ``balance`` would end as a negative number, it should just be set to zero. But the blocks have been mixed up and include pairs of lines where one is unneeded. Drag the necessary code from the left to the right and put them in order so that the code would work correctly. Click the Check button to check your solution.
-  -----  
+  -----
   public class Account {
   =====
     private int balance;

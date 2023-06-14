@@ -26,12 +26,12 @@
 Expressions and Assignment Statements
 =====================================
 
-In this lesson, you will learn about assignment statements and expressions that contain math operators and variables. 
+In this lesson, you will learn about assignment statements and expressions that contain math operators and variables.
 
 Assignment Statements
 ---------------------
 
-**Assignment statements** initialize or change the value stored in a variable using the assignment operator =.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the = sign is stored in the variable on the left.  
+**Assignment statements** initialize or change the value stored in a variable using the assignment operator =.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the = sign is stored in the variable on the left.
 
 
 .. figure:: Figures/assignment.png
@@ -55,7 +55,7 @@ The following |video| by Dr. Colleen Lewis shows how variables can change values
     :align: center
 
 
-As we saw in the video, we can set one variable's value to a *copy* of the value of another variable like ``y = x;``.  This won't change the value of the variable that you are copying from.  
+As we saw in the video, we can set one variable's value to a *copy* of the value of another variable like ``y = x;``.  This won't change the value of the variable that you are copying from.
 
 
 
@@ -67,7 +67,7 @@ Let's step through the following code in the |Java visualizer| to see the values
 
 
 .. codelens:: asgn_viz1
-    :language: java 
+    :language: java
     :optional:
 
     public class Test2
@@ -109,7 +109,7 @@ Let's step through the following code in the |Java visualizer| to see the values
 
    What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this |Java visualizer2| link.
 
-   .. code-block:: java 
+   .. code-block:: java
 
        int x = 0;
        int y = 1;
@@ -129,7 +129,7 @@ Let's step through the following code in the |Java visualizer| to see the values
    :adaptive:
    :noindent:
 
-   The following has the correct code to 'swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.  
+   The following has the correct code to 'swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.
    -----
    int x = 3;
    int y = 5;
@@ -150,7 +150,7 @@ If you use a variable to keep score you would probably increment it (add one to 
 
 .. activecode:: lccv1
    :language: java
-   :autograde: unittest   
+   :autograde: unittest
 
    Try the code below to see how score is incremented by 1. Try substituting 2 instead of 1 to see what happens.
    ~~~~
@@ -202,7 +202,7 @@ Variables are a powerful abstraction in programming because the same algorithm c
 
     <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/JavaIOExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Although you will not be tested in the AP CS A exam on using the Java System.in and Scanner classes, learning how to do input in Java is still very useful. More information on using the Scanner class can be found here https://www.w3schools.com/java/java_user_input.asp 
+Although you will not be tested in the AP CS A exam on using the Java System.in and Scanner classes, learning how to do input in Java is still very useful. More information on using the Scanner class can be found here https://www.w3schools.com/java/java_user_input.asp
 
 
 
@@ -224,13 +224,13 @@ Java uses the standard mathematical operators for addition (+), subtraction (-),
 
 Java uses the operator **==** to test if the value on the left is equal to the value on the right and **!=** to test if two items are not equal.   Don't get one equal sign = confused with two equal signs ==. They mean different things in Java. One equal sign is used to assign a value to a variable. Two equal signs are used to test a variable to see if it is a certain value and that returns true or false as you'll see below.  Use == and != only with int values and not doubles because double values are an approximation and 3.3333 will not equal 3.3334 even though they are very close.
 
-|CodingEx| **Coding Exercise:** 
+|CodingEx| **Coding Exercise:**
 
 
 
 .. activecode:: lcop1
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn't it surprising that it prints 0?  See the note below.
    ~~~~
@@ -276,15 +276,15 @@ Java uses the operator **==** to test if the value on the left is equal to the v
 
 With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
 
-Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
+Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.
 
-|CodingEx| **Coding Exercise:** 
+|CodingEx| **Coding Exercise:**
 
 
 
 .. activecode:: compound1
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**. How do the parentheses change the precedence?
    ~~~~
@@ -346,11 +346,11 @@ Here is a |video2| about mod.
     :align: center
 
 
-|CodingEx| **Coding Exercise:** 
+|CodingEx| **Coding Exercise:**
 
 .. activecode:: lcop2
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    In the example below, try to guess what it will print out and then run it to see if you are right.
    ~~~~
@@ -387,7 +387,7 @@ Here is a |video2| about mod.
 
 
 .. note::
-   The result of x % y when x is smaller than y is always x.  The value y can't go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.  
+   The result of x % y when x is smaller than y is always x.  The value y can't go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.
 
 ..	index::
 	single: modulo
@@ -404,7 +404,7 @@ Here is a |video2| about mod.
    :correct: c
    :feedback_a: This would be the result of 158 divided by 10.  modulo gives you the remainder.
    :feedback_b: modulo gives you the remainder after the division.
-   :feedback_c: When you divide 158 by 10 you get a remainder of 8.  
+   :feedback_c: When you divide 158 by 10 you get a remainder of 8.
 
    What is the result of 158 % 10?
 
@@ -416,7 +416,7 @@ Here is a |video2| about mod.
    :correct: a
    :feedback_a: 8 goes into 3 no times so the remainder is 3.  The remainder of a smaller number divided by a larger number is always the smaller number!
    :feedback_b: This would be the remainder if the question was 8 % 3 but here we are asking for the reminder after we divide 3 by 8.
-   :feedback_c: What is the remainder after you divide 3 by 8?  
+   :feedback_c: What is the remainder after you divide 3 by 8?
 
    What is the result of 3 % 8?
 
@@ -433,7 +433,7 @@ Here is a |video2| about mod.
     :align: left
     :alt: dog
 
-In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code. 
+In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code.
 
 .. activecode:: challenge1-4
    :language: java
@@ -447,17 +447,17 @@ In this programming challenge, you will calculate your age, and your pet's age f
       public static void main(String[] args)
       {
           // Fill in values for these variables
-          int currentYear = 
-          int birthYear = 
-          int dogBirthYear = 
+          int currentYear =
+          int birthYear =
+          int dogBirthYear =
 
-          // Write a formula to calculate your age 
-          // from the currentYear and your birthYear variables 
-          int age = 
+          // Write a formula to calculate your age
+          // from the currentYear and your birthYear variables
+          int age =
 
-          // Write a formula to calculate your dog's age 
-          // from the currentYear and dogBirthYear variables 
-          int dogAge = 
+          // Write a formula to calculate your dog's age
+          // from the currentYear and dogBirthYear variables
+          int dogAge =
 
           // Calculate the age of your dog in dogYears (7 times your dog's age in human years)
           int dogYearsAge =
@@ -588,7 +588,7 @@ Summary
 
 - During evaluation, operands are associated with operators according to **operator precedence** to determine how they are grouped. (\*, /, % have precedence over + and -, unless parentheses are used to group those.)
 
-- An attempt to divide an integer by zero will result in an ArithmeticException to occur. 
+- An attempt to divide an integer by zero will result in an ArithmeticException to occur.
 
 - The assignment operator (=) allows a program to initialize or change the value stored in a variable.  The value of the expression on the right is stored in the variable on the left.
 
@@ -609,15 +609,15 @@ The following is a 2019 AP CSA sample question.
    :answer_d: 11.5
    :answer_e: 14.0
    :correct: c
-   :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence. 
+   :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence.
    :feedback_b: Don't forget that division and multiplication will be done first due to operator precedence.
-   :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).   
+   :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).
    :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.
    :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
 
    Consider the following code segment.
 
-   .. code-block:: java 
+   .. code-block:: java
 
        int a = 5;
        int b = 2;

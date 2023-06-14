@@ -21,7 +21,7 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Intro to ArrayLists
 =======================
@@ -66,13 +66,13 @@ Import Package
 ..	index::
 	single: import statement
 
-The ``ArrayList`` class is in the ``java.util`` package.  A **package** is a set or library of related classes. The java.lang package is the main Java language classes that you get automatically without importing it. The java.util package has a lot of utility classes that you can use if you import the package.    If you want to use any class other than those in ``java.lang`` you will need to either use the full name (packageName.ClassName) like (``java.util.ArrayList``) or use one or more import statements to import in that package. 
+The ``ArrayList`` class is in the ``java.util`` package.  A **package** is a set or library of related classes. The java.lang package is the main Java language classes that you get automatically without importing it. The java.util package has a lot of utility classes that you can use if you import the package.    If you want to use any class other than those in ``java.lang`` you will need to either use the full name (packageName.ClassName) like (``java.util.ArrayList``) or use one or more import statements to import in that package.
 
-Import statements have to be the first code in a Java source file.  An import statement tells Java which class you mean when you use a short name (like ``ArrayList``).  It tells Java where to find the definition of that class. 
+Import statements have to be the first code in a Java source file.  An import statement tells Java which class you mean when you use a short name (like ``ArrayList``).  It tells Java where to find the definition of that class.
 
-You can import just the classes you need from a package as shown below.  Just provide an ``import`` statement for each class that you want to use.    
+You can import just the classes you need from a package as shown below.  Just provide an ``import`` statement for each class that you want to use.
 
-.. code-block:: java 
+.. code-block:: java
 
   import java.util.ArrayList; // import just the ArrayList class
 
@@ -83,7 +83,7 @@ You can import just the classes you need from a package as shown below.  Just pr
 Another option is to import everything at the same level in a package using ``import packageName.*``.
 
 
-.. code-block:: java 
+.. code-block:: java
 
   import java.util.*; // import everything in package including ArrayList
 
@@ -96,12 +96,12 @@ Another option is to import everything at the same level in a package using ``im
 .. mchoice:: qlib_1
    :answer_a: You can only have one import statement in a source file.
    :answer_b: You must specify the class to import.
-   :answer_c: Import statements must be before other code in a Java source file.  
+   :answer_c: Import statements must be before other code in a Java source file.
    :answer_d: You must import java.lang.String to use the short name of String.
    :correct: c
    :feedback_a: You can have an many import statements as you need.
    :feedback_b: You can use * to import all classes at the specified level.
-   :feedback_c: Import statements have to be the first Java statements in a source file.  
+   :feedback_c: Import statements have to be the first Java statements in a source file.
    :feedback_d: You do not have to import any classes that are in the java.lang package.
 
    Which of the following is true about import statements?
@@ -109,11 +109,11 @@ Another option is to import everything at the same level in a package using ``im
 Declaring and Creating ArrayLists
 ----------------------------------
 
-To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList, for example ``String`` as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what to allow in your ArrayList.  Using a type ArrayList<Type> is preferred over just using ArrayList because it allows the compiler to find errors that would otherwise be missed until run-time. 
+To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList, for example ``String`` as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what to allow in your ArrayList.  Using a type ArrayList<Type> is preferred over just using ArrayList because it allows the compiler to find errors that would otherwise be missed until run-time.
 
 
 
-.. code-block:: java 
+.. code-block:: java
 
     // ArrayList<Type> name = new ArrayList<Type>();
     // An ArrayList of Strings:
@@ -128,9 +128,9 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
 
 .. activecode:: ArrayListDeclare
    :language: java
-   :autograde: unittest   
+   :autograde: unittest
 
-   In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). 
+   In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``).
    ~~~~
    import java.util.*; // import for ArrayList
 
@@ -167,16 +167,16 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
 
 
 
-Declaring a ArrayList doesn't actually create a ArrayList. It only creates a variable that can refer to a ArrayList.  To actually create a ArrayList use ``new ArrayList<Type>()``. If you leave off the ``<Type>`` it will default to ``Object``.   
+Declaring a ArrayList doesn't actually create a ArrayList. It only creates a variable that can refer to a ArrayList.  To actually create a ArrayList use ``new ArrayList<Type>()``. If you leave off the ``<Type>`` it will default to ``Object``.
 
 You can get the number of items in a ArrayList using the ``size()`` method.  Notice that an empty ArrayList has a size of 0 because the ArrayList constructor constructs an empty list.  Also notice that you can't get the size of a ArrayList that is currently set to ``null`` on line 9.  You will get a ``NullPointerException`` instead, which means that you tried to do something with an object reference that was ``null`` (doesn't exist).
 
 .. activecode:: ArrayListCreateStr
    :language: java
-   :autograde: unittest   
+   :autograde: unittest
    :practice: T
 
-   The following code demonstrates a NullPointerException. Change the list2 declaration so that it creates a new Arraylist to remove the NullPointerException. 
+   The following code demonstrates a NullPointerException. Change the list2 declaration so that it creates a new Arraylist to remove the NullPointerException.
    ~~~~
    import java.util.*; // import needed for ArrayList
    public class ArrayListCreateStr
@@ -212,12 +212,12 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
      }
 
 
-You can also create ArrayLists of integer values.  However, you have to use ``Integer`` as the type because ArrayLists can only hold objects, not primitive values.  All primitive types must be **wrapped** in objects before they are added to an ArrayList.  For example, ``int`` values can be wrapped in ``Integer`` objects, ``double`` values can be wrapped in ``Double`` objects. You can actually put in any kind of Objects in an ArrayList, even for a class that you wrote in Unit 5 like Student or Person or Pet. 
+You can also create ArrayLists of integer values.  However, you have to use ``Integer`` as the type because ArrayLists can only hold objects, not primitive values.  All primitive types must be **wrapped** in objects before they are added to an ArrayList.  For example, ``int`` values can be wrapped in ``Integer`` objects, ``double`` values can be wrapped in ``Double`` objects. You can actually put in any kind of Objects in an ArrayList, even for a class that you wrote in Unit 5 like Student or Person or Pet.
 
 
 .. activecode:: ArrayListCreateInt
    :language: java
-   :autograde: unittest 
+   :autograde: unittest
 
    Here's an example of a Integer ArrayList.
    ~~~~
@@ -263,7 +263,7 @@ You can also create ArrayLists of integer values.  However, you have to use ``In
    :correct: d
    :feedback_a: The square brackets [] are only used with arrays, not ArrayLists.
    :feedback_b: String is not the correct type since this is for an array of integers, and the type should be next to ArrayList on both sides.
-   :feedback_c: ArrayLists cannot hold primitive types like int. You must use the wrapper class Integer.   
+   :feedback_c: ArrayLists cannot hold primitive types like int. You must use the wrapper class Integer.
    :feedback_d: The wrapper class Integer is used to hold integers in an ArrayList.
 
    Which of the following is the correct way to create an ArrayList of integers?
@@ -274,16 +274,16 @@ Although it is not on the AP exam, you can convert arrays to ArrayLists using it
 
 .. activecode:: ArrayListFromArray
    :language: java
-   :autograde: unittest 
+   :autograde: unittest
 
    Example code creating an ArrayList from an array.
    ~~~~
-   import java.util.*; 
+   import java.util.*;
    public class ArrayListFromArray
    {
        public static void main(String[] args)
        {
-          String[] names = {"Dakota", "Madison", "Brooklyn"}; 
+          String[] names = {"Dakota", "Madison", "Brooklyn"};
           ArrayList<String> namesList = new ArrayList<String>(Arrays.asList(names));
           System.out.println(namesList);
        }
@@ -312,15 +312,15 @@ Although it is not on the AP exam, you can convert arrays to ArrayLists using it
 
 |CodingEx| **Coding Exercise**
 
-You can add values to an ArrayList by using its **add** method, described in detail in the next lesson. Try the code below. Note that the type of the ArrayList, String or Integer, also determines the type of parameters and return types for all of its methods, so add and print work for any type of ArrayList. 
+You can add values to an ArrayList by using its **add** method, described in detail in the next lesson. Try the code below. Note that the type of the ArrayList, String or Integer, also determines the type of parameters and return types for all of its methods, so add and print work for any type of ArrayList.
 
 .. activecode:: listAdd
    :language: java
    :autograde: unittest
 
-   Can you add another item to the shopping list? 
+   Can you add another item to the shopping list?
    ~~~~
-   import java.util.*;  
+   import java.util.*;
    public class Shopping
    {
       public static void main(String[] args)
@@ -331,7 +331,7 @@ You can add values to an ArrayList by using its **add** method, described in det
           System.out.println(shoppingList);
           shoppingList.add("bread");
           System.out.println(shoppingList);
-          shoppingList.add("chocolate"); 
+          shoppingList.add("chocolate");
           System.out.println(shoppingList);
           System.out.println("Size: " + shoppingList.size());
           ArrayList<Integer> quantities = new ArrayList<Integer>();
@@ -498,7 +498,7 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
 Summary
 -----------
 
-- ArrayList are re-sizable arrays that allow adding and removing items to change their size during run time. 
+- ArrayList are re-sizable arrays that allow adding and removing items to change their size during run time.
 
 - The ArrayList class is in the java.util package. You must import java.util.* to use it.
 
@@ -506,7 +506,7 @@ Summary
 
 - The ArrayList constructor ArrayList() constructs an empty list of size 0.
 
-- Java allows the generic type ArrayList<E>, where the generic type E specifies the type of the elements, like String or Integer. Without it, the type will be Object.  
+- Java allows the generic type ArrayList<E>, where the generic type E specifies the type of the elements, like String or Integer. Without it, the type will be Object.
 
 - ArrayList<E> is preferred over ArrayList because it allows the compiler to find errors that would otherwise be found at run-time.
 

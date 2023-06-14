@@ -17,15 +17,15 @@ Dr. Gloria Opoku-Boateng
 
 *"At the time [when] I was done with high school, I wanted to be a doctor. I found that the school that I wanted to get my medical degree from had computer science. I weighed my options and realized that I could always come after college and become a physician, but I cannot go back and learn computing. And so, with my really naive understanding, I decided to get my head steady in computer science and learn more about it. But when I started first year computer science... I found that I was interested in computing. So I never went back into medicine."*
 
-**How did she pursue computing?** 
+**How did she pursue computing?**
 
 *"[Computing education in Ghana] was non-existent. On a scale of one to 100, United States computing education was like 95. Ghanaian computing education when I was an undergrad was like two. We coded on the blackboard, like in the chalkboard. We would code on that. And you can imagine, you don't even know when there's an error. And in the classes we had only two females per like a class of 67... It just taught me how to be resilient."*
 
-Dr. Opoku-Boateng started in computing in Ghana, as an undergrad (although she planned to eventually switch to medicine). Ghana's lack of resources was a double-edged sword — it made learning harder, but it made the students more resilient. After finishing her undergrad, she went to the United States for her postgraduate studies, eventually earning her PhD. 
+Dr. Opoku-Boateng started in computing in Ghana, as an undergrad (although she planned to eventually switch to medicine). Ghana's lack of resources was a double-edged sword — it made learning harder, but it made the students more resilient. After finishing her undergrad, she went to the United States for her postgraduate studies, eventually earning her PhD.
 
 **What subfield is she working in?**
 
-Dr. Opoku-Boateng works in UX — the subfield that manages user experience. In other words, she helps design interactions between the user and the back-end code that does the actual computations. 
+Dr. Opoku-Boateng works in UX — the subfield that manages user experience. In other words, she helps design interactions between the user and the back-end code that does the actual computations.
 
 **What discourages her in computing?**
 

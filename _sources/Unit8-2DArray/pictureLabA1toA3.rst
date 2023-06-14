@@ -55,9 +55,9 @@ Questions:
    :answer_c: 8
    :answer_d: 16
    :correct: c
-   :feedback_a: You can only represent 4 numbers, decimal 0-3, with 2 bits: 00, 01, 10, 11. 
-   :feedback_b: You can only represent decimal 0-15 with 4 bits: 0000-1111. 
-   :feedback_c: Yes, you can represent decimal 0-255 with 8 bits: 00000000-11111111. 
+   :feedback_a: You can only represent 4 numbers, decimal 0-3, with 2 bits: 00, 01, 10, 11.
+   :feedback_b: You can only represent decimal 0-15 with 4 bits: 0000-1111.
+   :feedback_c: Yes, you can represent decimal 0-255 with 8 bits: 00000000-11111111.
    :feedback_d: You could use 16 bits, but you could use much less to represent 0-255.
 
    How many bits does it take to represent the values from 0 to 255? See https://mobile-csp.org/webapps/numbers/binaryConverter.html for help.
@@ -69,8 +69,8 @@ Questions:
    :answer_d: 4
    :correct: c
    :feedback_a: A byte is 8 bits which can store 1 color value 0-255, but we want 3 color values for red, green, and blue.
-   :feedback_b: 2 bytes would store 2 color values. 
-   :feedback_c: Yes, you can store 3 color values 0-255 for R, G, B in 3 bytes. 
+   :feedback_b: 2 bytes would store 2 color values.
+   :feedback_c: Yes, you can store 3 color values 0-255 for R, G, B in 3 bytes.
    :feedback_d: 4 bytes could store 4 color values.
 
    How many bytes does it take to represent a color in the RGB color model?

@@ -22,7 +22,7 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 is-a vs. has-a (Day 2)
 ---------------------------------------
@@ -41,7 +41,7 @@ Another type of relationship between classes is the **has-a** relationship or **
 
     Figure 3: A UML Class Diagram showing Association
 
-In the code, the ``Course`` class **has** an array or ArrayList of ``CoursePeriod`` objects as an attribute inside it.  
+In the code, the ``Course`` class **has** an array or ArrayList of ``CoursePeriod`` objects as an attribute inside it.
 
 .. code-block:: java
 
@@ -75,7 +75,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
 
 .. activecode:: apclass
   :language: java
-  :autograde: unittest      
+  :autograde: unittest
 
   What do you think the following code will print out?
   ~~~~
@@ -155,7 +155,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    :practice: T
    :answer_a: An is-a relationship. The Author class should be a subclass of the Book class.
    :answer_b: An is-a relationship. The Book class should be a subclass of the Author class.
-   :answer_c: A has-a relationship. The Book class has an Author attribute. 
+   :answer_c: A has-a relationship. The Book class has an Author attribute.
    :correct: c
    :feedback_a: Is an Author a type of Book?  Or, does a Book have an Author associated with it?
    :feedback_b: Is a Book a type of Author?  Or, does a Book have an Author associated with it?
@@ -189,20 +189,20 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    What Java keyword is used to set up an inheritance relationship between a subclass and a superclass?
 
 
-|Groupwork| Programming Challenge : Online Store 
+|Groupwork| Programming Challenge : Online Store
 -------------------------------------------------
 
 .. |Creately.com| raw:: html
 
-   <a href="https://creately.com" target="_blank">Creately.com</a> 
+   <a href="https://creately.com" target="_blank">Creately.com</a>
 
 .. |app diagrams| raw:: html
 
-   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a> 
+   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
 
-Working in pairs or groups, design an online store with classes for Store, ItemForSale, Book, Movie, and Author. 
+Working in pairs or groups, design an online store with classes for Store, ItemForSale, Book, Movie, and Author.
 
-- First, do some research in an online store like Amazon to see what information they store on books, movies, and authors, and what type of information is the same for all items for sale. 
+- First, do some research in an online store like Amazon to see what information they store on books, movies, and authors, and what type of information is the same for all items for sale.
 
 - List at least 2 attributes for each class. Which attributes should be in ItemForSale and which in Book, Movie or Author?
 
@@ -212,9 +212,9 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
 .. activecode:: challenge-9-1-online-store
   :language: java
-  :autograde: unittest      
+  :autograde: unittest
 
-  Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them. 
+  Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them.
   ~~~~
   class ItemForSale
   {
@@ -236,7 +236,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
   }
 
-  public class Store 
+  public class Store
   {
        // instance variable (could be an array or ArrayList of one of the classes above)
 
@@ -260,7 +260,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
         @Test
         public void test1()
-        { 
+        {
             String output = getMethodOutput("main");
             String expect = "true";
 

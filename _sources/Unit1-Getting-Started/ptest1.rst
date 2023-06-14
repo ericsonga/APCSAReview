@@ -37,7 +37,7 @@ Pretest for the AP CS A Exam
 
 Please try the following pretest. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. If you have no idea on the answer, it is okay to skip questions or to make your best guess.
 
-You will take the same test at the end of the class, and the goal is to see how much you improve. We hope that everyone will see a big improvement!  
+You will take the same test at the end of the class, and the goal is to see how much you improve. We hope that everyone will see a big improvement!
 
 Please make sure you are logged into Runestone before beginning. Click the |start| button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
@@ -57,7 +57,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_d: This would be true if the index was incrementing by 1 instead of 2.
         :feedback_e: This would be true if the loop stopped when index was less than the string length instead of one less than the string length.
 
-        Given the following code segment, what is printed when it is executed? 
+        Given the following code segment, what is printed when it is executed?
 
         .. code-block:: java
 
@@ -68,15 +68,15 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             }
 
     .. mchoice:: qpret_2
-        :answer_a: It is the length of the array nums. 
+        :answer_a: It is the length of the array nums.
         :answer_b: It is the length of the first consecutive block of the value target in nums.
-        :answer_c: It is the number of occurrences of the value target in nums.  
+        :answer_c: It is the number of occurrences of the value target in nums.
         :answer_d: It is the length of the shortest consecutive block of the value target in nums.
-        :answer_e: It is the length of the last consecutive block of the value target in nums.    
+        :answer_e: It is the length of the last consecutive block of the value target in nums.
         :correct: c
         :feedback_a: This can not be true. There is no nums.length in the code and the only count happens lenCount is incremented when nums[k] == target.
         :feedback_b: It does not reset the count ever so it just counts all the times the target value appears in the array.
-        :feedback_c: The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen. 
+        :feedback_c: The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.
         :feedback_d: It does not reset the count ever so it just counts all the times the target value appears in the array.
         :feedback_e: It does not reset the count ever so it just counts all the times the target value appears in the array.
 
@@ -115,11 +115,11 @@ Please make sure you are logged into Runestone before beginning. Click the |star
    	        }
 
     .. mchoice:: qpret_3
-        :answer_a: var1=1, var2=1 
+        :answer_a: var1=1, var2=1
         :answer_b: var1=3, var2=-1
-        :answer_c: var1=0, var2=2    
+        :answer_c: var1=0, var2=2
         :answer_d: var1=2, var2=0
-        :answer_e: The loop won't finish executing because of a division by zero.   
+        :answer_e: The loop won't finish executing because of a division by zero.
         :correct: d
         :feedback_a: This would be true if the body of the while loop only executed one time, but it executes twice.
         :feedback_b: This would be true if the body of the while loop executed 3 times, but it exectues twice.
@@ -137,15 +137,15 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             while ((var2 != 0) && ((var1 / var2) >= 0))
             {
                var1 = var1 + 1;
-               var2 = var2 - 1; 
+               var2 = var2 - 1;
             }
 
     .. mchoice:: qpret_4
         :answer_a: I and III only
         :answer_b: II only
-        :answer_c: III only    
+        :answer_c: III only
         :answer_d: I and II only
-        :answer_e: I, II, and III  
+        :answer_e: I, II, and III
         :correct: a
         :feedback_a: Choice I uses multiple if's with logical ands in the conditions to check that the numbers are in range. Choice Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". Choice III uses ifs with else if to make sure that only one conditional is executed.
         :feedback_b: Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.
@@ -160,7 +160,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             I.  if (score >= 93)
                    grade = "A";
                 if (score >= 84 && score <= 92)
-                   grade = "B"; 
+                   grade = "B";
                 if (score >= 75 && score <= 83)
                    grade = "C";
                 if (score < 75)
@@ -187,9 +187,9 @@ Please make sure you are logged into Runestone before beginning. Click the |star
     .. mchoice:: qpret_5
         :answer_a: x = 0;
         :answer_b: if (x > 0) x = 0;
-        :answer_c: if (x < 0) x = 0;   
+        :answer_c: if (x < 0) x = 0;
         :answer_d: if (x > 0) x = -x; else x = 0;
-        :answer_e: if ( x < 0) x = 0; else x = -1;  
+        :answer_e: if ( x < 0) x = 0; else x = -1;
         :correct: a
         :feedback_a: No matter what x is set to originally, the code will reset it to 0.
         :feedback_b: Even if x is < 0, the above code will set it to 0.
@@ -201,14 +201,14 @@ Please make sure you are logged into Runestone before beginning. Click the |star
 
         .. code-block:: java
 
-            if ( x > 0) x = -x; 
+            if ( x > 0) x = -x;
             if (x < 0) x = 0;
 
     .. mchoice:: qpret_6
         :answer_a: (s == m - 5) && (s - 3 == 2 * (m - 3))
         :answer_b: (s == (m + 5)) && ((s + 3) == (2 * m + 3))
-        :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3) 
-        :answer_d: s == m + 5 && s + 3 == 2 * m + 6  
+        :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3)
+        :answer_d: s == m + 5 && s + 3 == 2 * m + 6
         :answer_e: None of the answers are correct
         :correct: d
         :feedback_a: This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?
@@ -231,9 +231,9 @@ Please make sure you are logged into Runestone before beginning. Click the |star
     .. mchoice:: qpret_7
         :answer_a: 0 1 2 0 1 2 0 1
         :answer_b: 0 2 1 0 2 1 0 2
-        :answer_c: 0 2 1 0 2 1 0 2 1  
+        :answer_c: 0 2 1 0 2 1 0 2 1
         :answer_d: 2 1 0 2 1 0 2 1
-        :answer_e: 0 2 1 0 2 1 0  
+        :answer_e: 0 2 1 0 2 1 0
         :correct: b
         :feedback_a: The second time through the loop the value of num is 2 and 2 % 3 is 2 not 1.
         :feedback_b: The while loop will iterate 8 times. The value of num each time through the loop is: 0, 2, 4, 6, 8, 10, 12, and 14. The corresponding remainder operator of 3 is: 0, 2, 1, 0, 2, 1, 0, 2, which is print to the console.
@@ -248,15 +248,15 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             public static void test()
             {
                int num = 0;
-               while(num <= 14) 
+               while(num <= 14)
                {
 
-                  if(num % 3 == 1) 
+                  if(num % 3 == 1)
                   {
                      System.out.print("1 ");
                   }
 
-                  else if (num % 3 == 2) 
+                  else if (num % 3 == 2)
                   {
                      System.out.print("2 ");
                   }
@@ -266,14 +266,14 @@ Please make sure you are logged into Runestone before beginning. Click the |star
                      System.out.print("0 ");
                   }
 
-                  num += 2; 
-               }    
+                  num += 2;
+               }
            }
 
     .. mchoice:: qpret_8
         :answer_a: hours = hours + minutes / 60; minutes = minutes % 60;
         :answer_b: minutes = minutes % 60;
-        :answer_c: minutes = minutes + hours % 60; 
+        :answer_c: minutes = minutes + hours % 60;
         :answer_d: hours = hours + minutes % 60; minutes = minutes / 60;
         :answer_e: hours = hours + minutes / 60;
         :correct: a
@@ -325,7 +325,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
     .. mchoice:: qpret_9
         :answer_a: (c || d)
         :answer_b: (c && d)
-        :answer_c: (!c) && (!d)   
+        :answer_c: (!c) && (!d)
         :answer_d: !(c && d)
         :answer_e: (!c) || (!d)
         :correct: c
@@ -335,7 +335,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_d: This would be equivalent to (!c || !d)
         :feedback_e: This would be equivalent to (!(c && d))
 
-        Which of the following expressions is equivalent to the following? 
+        Which of the following expressions is equivalent to the following?
 
         .. code-block:: java
 
@@ -354,7 +354,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_d: When a contains a value that is equal to zero then multiplying that value by 2 will always be 0 and will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
         :feedback_e: Values equal to temp will not cause the infinite loop.
 
-        Which of the following will cause an infinite loop when ``temp`` is greater than zero and ``a`` is an array of integers.  
+        Which of the following will cause an infinite loop when ``temp`` is greater than zero and ``a`` is an array of integers.
 
         .. code-block:: java
 
@@ -369,12 +369,12 @@ Please make sure you are logged into Runestone before beginning. Click the |star
     .. mchoice:: qpret_11
         :answer_a: 4
         :answer_b: 2
-        :answer_c: 16  
+        :answer_c: 16
         :answer_d: 7
         :answer_e: 3
         :correct: b
-        :feedback_a: This would be true if it was return (a[1] *= 2); 
-        :feedback_b: The statement a[1]--; is the same as a[1] = a[1] - 1; so this will change to 3 to 2.  The return (a[1] * 2) does not change the value at a[1].  
+        :feedback_a: This would be true if it was return (a[1] *= 2);
+        :feedback_b: The statement a[1]--; is the same as a[1] = a[1] - 1; so this will change to 3 to 2.  The return (a[1] * 2) does not change the value at a[1].
         :feedback_c: This would be true if it was return (a[0] *= 2);
         :feedback_d: This would be true if it was a[0]--;
         :feedback_e: This can't be true because a[1]--; means the same as a[1] = a[1] - 1; so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.
@@ -392,9 +392,9 @@ Please make sure you are logged into Runestone before beginning. Click the |star
     .. mchoice:: qpret_12
         :answer_a: Hi There
         :answer_b: hi there
-        :answer_c: HI THERE  
+        :answer_c: HI THERE
         :answer_d: null
-        :answer_e: hI tHERE 
+        :answer_e: hI tHERE
         :correct: a
         :feedback_a: Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change
         :feedback_b: This would only be correct if we had s1 = s2; after s2.toLowerCase(); was executed. Strings are immutable and so any change to a string returns a new string.
@@ -415,11 +415,11 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             s4 = null;
 
     .. mchoice:: qpret_13
-        :answer_a: Many digits are printed due to infinite recursion. 
+        :answer_a: Many digits are printed due to infinite recursion.
         :answer_b: 3443
         :answer_c: 12344321
         :answer_d: 1441
-        :answer_e: 43211234  
+        :answer_e: 43211234
         :correct: e
         :feedback_a: When the recursive call to mystery(1) occurs (the 4th call to mystery), the division of x /10 equals .01--this becomes 0 because this is integer division and the remainder is thrown away. Therefore the current call will be completed and all of the previous calls to mystery will be completed.
         :feedback_b: The first call to mystery with the integer 1234 will print 1234 % 10. The '%' means modulo or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
@@ -463,7 +463,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
     .. mchoice:: qpret_15
         :answer_a: [1, 2, 3, 4, 5]
         :answer_b: [1, 2, 4, 5, 6]
-        :answer_c: [1, 2, 5, 4, 6] 
+        :answer_c: [1, 2, 5, 4, 6]
         :answer_d: [1, 5, 2, 4, 6]
         :answer_e: [1, 6, 2, 4, 5]
         :correct: c
@@ -471,7 +471,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_b: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.
         :feedback_c: The add method that takes just a value as a parameter adds that value to the end of the list. The set replaces the value at that index with the new value. The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index). So the list looks like: 1 // add 1 1 2 // add 2 1 2 3 // add 3 1 2 4 // set index 2 to 4 1 2 5 4 // add 5 to index 2 (move rest right) 1 2 5 4 6 // add 6 to end
         :feedback_d: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.
-        :feedback_e: How did the 6 get in position 2?  
+        :feedback_e: How did the 6 get in position 2?
 
         Given the following code segment, what will be printed when it is executed?
 
@@ -497,7 +497,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_b: This would be true if the first value when you create a 2-d array was the number of columns and the second was the number of rows. Also you would need to set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.
         :feedback_c: This would be true if the first value when you create a 2-d array was the number of columns and the second was the number of rows.
         :feedback_d: This would be true if you set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.
-        :feedback_e: This would be true if you set the value to the row index. 
+        :feedback_e: This would be true if you set the value to the row index.
 
         Given the following code segment, What are the contents of ``mat`` after the code segment has been executed?
 
@@ -592,7 +592,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             }
 
     .. mchoice:: qpret_19
-        :answer_a: Data (fields) can be directly accessed by all code in all classes. 
+        :answer_a: Data (fields) can be directly accessed by all code in all classes.
         :answer_b: Data (fields) can be hidden inside of an object using the abstract visibility modifier.
         :answer_c: Data (fields) can be hidden inside an object using the visibility modifier private.
         :answer_d: Data (fields) are directly accessible by objects in the same package and in subclasses.
@@ -623,9 +623,9 @@ Please make sure you are logged into Runestone before beginning. Click the |star
 
         .. code-block:: java
 
-            I.   Methods from a superclass can be used in a subclass without 
+            I.   Methods from a superclass can be used in a subclass without
                  rewriting or copying code.
-            II.  Objects from subclasses can be passed as arguments to a method 
+            II.  Objects from subclasses can be passed as arguments to a method
                  designed for the superclass
             III. Objects from subclasses can be stored in the same array
             IV.  All of the above

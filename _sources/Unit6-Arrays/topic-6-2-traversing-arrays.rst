@@ -31,7 +31,7 @@ Index Variables
 
 In the last lesson, we mentioned that you can use a variable for the index of an array. You can even do math with that index and have an arithmetic expression inside the [], like below.
 
-.. code-block:: java 
+.. code-block:: java
 
   // highScores array declaration
   int[] highScores = { 10, 9, 8, 8};
@@ -64,7 +64,7 @@ What does the code above print out? You can follow the code in this |visualizer|
 
 .. activecode:: arraytrace1
    :language: java
-   :autograde: unittest    
+   :autograde: unittest
 
    What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. You can also follow it in the |visualizer2| by clicking on the Show Code Lens button.
    ~~~~
@@ -72,7 +72,7 @@ What does the code above print out? You can follow the code in this |visualizer|
    {
       public static void main(String[] args)
       {
-        String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"}; 
+        String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
 
         int index = 1;
         System.out.println(names[index - 1]);
@@ -116,7 +116,7 @@ For Loop to Traverse Arrays
     single: for loop
 	pair: loop; from front to back
 
-We can use iteration with a **for loop** to visit each element of an array.  This is called **traversing** the array. Just start the index at **0** and loop while the index is less than the **length** of the array. Note that the variable **i** (short for index) is often used in loops as the loop counter variable and is used here to access each element of an array with its index. 
+We can use iteration with a **for loop** to visit each element of an array.  This is called **traversing** the array. Just start the index at **0** and loop while the index is less than the **length** of the array. Note that the variable **i** (short for index) is often used in loops as the loop counter variable and is used here to access each element of an array with its index.
 
 .. figure:: Figures/arrayForLoop.png
     :width: 500
@@ -131,13 +131,13 @@ For example, here is a loop traversing the highScores array to print every score
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%0A%20%20%20%20%7B%0A%0A%20%20%20%20%20%20%20%20int%5B%5D%20highScores%20%3D%20%7B%2010,%209,%208,%208%7D%3B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20highScores.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20highScores%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">visualizer</a>
 
-.. code-block:: java 
+.. code-block:: java
 
   int[] highScores = { 10, 9, 8, 11};
   for (int i = 0; i < highScores.length; i++)
   {
       System.out.println(  highScores[i] );
-  } 
+  }
 
 .. note::
 
@@ -147,7 +147,7 @@ For example, here is a loop traversing the highScores array to print every score
 
 .. activecode:: arraytrace2
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. Try the Code Lens button. Then, try adding your name and a friend's name to the array names and run the code again. Did the code work without changing the loop?
    ~~~~
@@ -155,7 +155,7 @@ For example, here is a loop traversing the highScores array to print every score
    {
       public static void main(String[] args)
       {
-        String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"}; 
+        String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
 
         for (int i = 0; i < names.length; i++)
         {
@@ -208,7 +208,7 @@ The following code demonstrates a loop that changes the values in an array. In t
 
 .. |Java visualizer| raw:: html
 
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%20%20%20%7B%0A%0A%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20multAll%28int%5B%5D%20values,%20int%20amt%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%5D%20*%20amt%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20printValues%28int%5B%5D%20values%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20values%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20numArray%20%3D%20%20%7B2,%206,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20multAll%28numArray,%202%29%3B%0A%20%20%20%20%20%20%20%20printValues%28numArray%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%20%20%20%7B%0A%0A%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20multAll%28int%5B%5D%20values,%20int%20amt%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%5D%20*%20amt%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20printValues%28int%5B%5D%20values%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20values%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20numArray%20%3D%20%20%7B2,%206,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20multAll%28numArray,%202%29%3B%0A%20%20%20%20%20%20%20%20printValues%28numArray%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 |CodingEx| **Coding Exercise**
 
@@ -216,7 +216,7 @@ The following code demonstrates a loop that changes the values in an array. In t
 
 .. activecode:: lcal1
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    What does the following code print out? Trace through it keeping track of the array values and the output. Then run it to see if you're right. Notice that in this code, the array is passed as an argument to the methods. You can also try the code in the |Java visualizer| with the Code Lens button.
    ~~~~
@@ -229,8 +229,8 @@ The following code demonstrates a loop that changes the values in an array. In t
         for (int i = 0; i < values.length; i++)
         {
           values[i] = values[i] * amt;
-        } 
-      } 
+        }
+      }
 
       // What does this method do?
       public static void printValues(int[] values)
@@ -238,7 +238,7 @@ The following code demonstrates a loop that changes the values in an array. In t
         for (int i = 0; i < values.length; i++)
         {
            System.out.println(  values[i] );
-        }         
+        }
       }
 
       public static void main(String[] args)
@@ -289,12 +289,12 @@ The following code demonstrates a loop that changes the values in an array. In t
    public static void subAll(int[] values, int amt)
    {
    =====
-        for (int i = 0; 
+        for (int i = 0;
    =====
-           i < values.length; 
+           i < values.length;
    =====
            i++)
-   =====              
+   =====
       {
    =====
          values[i] = values[i] - amt;
@@ -320,7 +320,7 @@ You don't have to loop through an array from the front to the back.  You can loo
 
 .. activecode:: lcbf1
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
    :practice: T
 
    What does the following code print out? Notice that the array and the target are passed in as arguments to the getIndexOfLastElementSmallerThanTarget method. Trace through it keeping track of the array values and the output. Then run it to see if you're right.  You can also try the code in the |visualizerBF| with the Code Lens button. Can you add another method that finds the index of the last element greater than the target instead of smaller than the target and have main print out a test of it? Call this method getIndexOfLastElementGreaterThanTarget and give it 2 arguments and a return value like the method below.
@@ -328,7 +328,7 @@ You don't have to loop through an array from the front to the back.  You can loo
    public class ArrayFindSmallest
    {
 
-      /** @return index of the last number smaller than target */     
+      /** @return index of the last number smaller than target */
       public static int getIndexOfLastElementSmallerThanTarget(int[ ] values, int target)
       {
          for (int index = values.length - 1; index >= 0; index--)
@@ -339,10 +339,10 @@ You don't have to loop through an array from the front to the back.  You can loo
          return -1;
       }
 
-      /** Add a method called getIndexOfLastElementGreaterThanTarget 
+      /** Add a method called getIndexOfLastElementGreaterThanTarget
           @param int array
           @param int target
-          @return index of the last number greater than target 
+          @return index of the last number greater than target
       */
 
 
@@ -420,24 +420,24 @@ You don't have to loop through an array from the front to the back.  You can loo
    :answer_a: -1
    :answer_b: -15
    :answer_c: 1
-   :answer_d: You will get an out of bounds error.  
+   :answer_d: You will get an out of bounds error.
    :correct: c
-   :feedback_a: The method will only return -1 if no value in the array is less than the passed value.  
+   :feedback_a: The method will only return -1 if no value in the array is less than the passed value.
    :feedback_b: The method returns the index of the first item in the array that is less than the value, not the value.
-   :feedback_c: Since the method loops from the back towards the front -15 is the last value in the array that is less than -13 and it is at index 1. 
-   :feedback_d: No, the method correctly starts the index at values.length - 1 and continues as long as i is greater than or equal to 0.  
+   :feedback_c: Since the method loops from the back towards the front -15 is the last value in the array that is less than -13 and it is at index 1.
+   :feedback_d: No, the method correctly starts the index at values.length - 1 and continues as long as i is greater than or equal to 0.
 
    Given the following code segment (which is identical to the method above) what will be returned when you execute: getIndexOfLastElementSmallerThanTarget(values,-13);
 
-   .. code-block:: java 
+   .. code-block:: java
 
       private int[ ] values = {-20, -15, 2, 8, 16, 33};
 
       public static int getIndexOfLastElementSmallerThanTarget(int[ ] values, int compare)
-      { 
+      {
          for (int i = values.length - 1; i >=0; i--)
          {
-            if (values[i] < compare) 
+            if (values[i] < compare)
                return i;
          }
          return -1; // to show none found
@@ -448,9 +448,9 @@ You don't have to loop through an array from the front to the back.  You can loo
    :answer_a: -1
    :answer_b: 1
    :answer_c: 2
-   :answer_d: You will get an out of bounds error.  
+   :answer_d: You will get an out of bounds error.
    :correct: d
-   :feedback_a: The method will only return -1 if no value in the array is less than the passed value.  
+   :feedback_a: The method will only return -1 if no value in the array is less than the passed value.
    :feedback_b: Check the starting index.   Is it correct?
    :feedback_c: Check the starting index.   Is it correct?
    :feedback_d: You can not start the index at the length of the array.  You must start at the length of the array minus one.  This is a common mistake.
@@ -465,7 +465,7 @@ You don't have to loop through an array from the front to the back.  You can loo
       {
          for (int i = values.length; i >=0; i--)
          {
-            if (values[i] < compare) 
+            if (values[i] < compare)
                return i;
          }
          return -1; // to show none found
@@ -480,11 +480,11 @@ Looping through Part of an Array
 ..	index::
 	pair: loop; range
 
-You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (``&&``) on line 14 to make sure that the loop doesn't go beyond the length of the array, because if you had an array that had less than 5 elements, you wouldn't want the code to try to double the 5th element which doesn't exist! Notice that in this code, the array is a private instance variable of the class ArrayWorker. It is created in the constructor and changed or accessed by the methods. 
+You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (``&&``) on line 14 to make sure that the loop doesn't go beyond the length of the array, because if you had an array that had less than 5 elements, you wouldn't want the code to try to double the 5th element which doesn't exist! Notice that in this code, the array is a private instance variable of the class ArrayWorker. It is created in the constructor and changed or accessed by the methods.
 
 .. activecode:: lclp1
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
    :practice: T
 
    What will the following code print out? Can you write a similar method called tripleFirstFour() that triples the first 4 elements of the array? Make sure you test it in main.
@@ -501,7 +501,7 @@ You don't have to loop through all of the elements of an array.  You can loop th
       /** Doubles the first 5 elements of the array */
       public void doubleFirstFive()
       {
-        // Notice: && i < 5 
+        // Notice: && i < 5
         for (int i = 0; i < values.length && i < 5; i++)
         {
           values[i] = values[i] * 2;
@@ -517,7 +517,7 @@ You don't have to loop through all of the elements of an array.  You can loop th
         for (int i = 0; i < values.length; i++)
          {
            System.out.println(  values[i] );
-         }  
+         }
       }
 
       public static void main(String[] args)
@@ -573,11 +573,11 @@ You don't have to loop through all of the elements of an array.  You can loop th
 
 |CodingEx| **Coding Exercise**
 
-You can even start in the middle and loop through the rest of the array.  
+You can even start in the middle and loop through the rest of the array.
 
 .. activecode:: lclp2
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    Does this work for arrays that have an even number of elements?  Does it work for arrays that have an odd number of elements?  Modify the main code below to test with both arrays with an even number of items and an odd number.
    ~~~~
@@ -655,16 +655,16 @@ You can even start in the middle and loop through the rest of the array.
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 32}
    :answer_c: {-20, -15, 2, 16, 32, 66}
-   :answer_d: {-20, -15, 2, 8, 16, 33} 
+   :answer_d: {-20, -15, 2, 8, 16, 33}
    :correct: c
    :feedback_a: This would true if it looped through the whole array.  Does it?
    :feedback_b: This would be true if it looped from the beginning to the middle.  Does it?
-   :feedback_c: It loops from the middle to the end doubling each value. Since there are 6 elements it will start at index 3.  
-   :feedback_d: This would be true if array elements didn't change, but they do.  
+   :feedback_c: It loops from the middle to the end doubling each value. Since there are 6 elements it will start at index 3.
+   :feedback_d: This would be true if array elements didn't change, but they do.
 
    Given the following values of a and the method doubleLast what will the values of a be after you execute: doubleLast()?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       private int[ ] a = {-20, -15, 2, 8, 16, 33};
 
@@ -687,8 +687,8 @@ You can even start in the middle and loop through the rest of the array.
    :correct: d
    :feedback_a: This would true if it looped through the whole array and doubled each.  Does it?
    :feedback_b: This would be true if it looped from the beginning to the middle and doubled each.  Does it?
-   :feedback_c: This would be true if it looped from the middle to the end and doubled each.  Does it?  
-   :feedback_d: This loops from the beginning to the middle and doubles every other element (i+=2 is the same as i = i + 2). 
+   :feedback_c: This would be true if it looped from the middle to the end and doubled each.  Does it?
+   :feedback_d: This loops from the beginning to the middle and doubles every other element (i+=2 is the same as i = i + 2).
    :feedback_e: This would be true if it looped through the whole array and doubled every other element.  Does it?
 
    Given the following values of a and the method mystery what will the values of a be after you execute: mystery()?
@@ -722,7 +722,7 @@ You can even start in the middle and loop through the rest of the array.
      int temp = 0;
      int half = a.length / 2;
      int max = a.length - 1;
-   =====     
+   =====
      for (int i = 0; i < half; i++)
      {
    =====
@@ -764,7 +764,7 @@ You can even start in the middle and loop through the rest of the array.
 Common Errors When Looping Through an Array
 -------------------------------------------------
 
-When processing all array elements, be careful to start at the first index which is ``0`` and end at the last index. Usually loops are written so that the index starts at 0 and continues while the index is less than ``arrayName.length`` since (arrayName.length - 1) is the index for the last element in the array. Make sure you do not use <= instead of <! If the index is less than 0 or greater than (arrayName.length - 1), an **ArrayIndexOutOfBoundsException** will be  thrown.  **Off by one** errors, where you go off the array by 1 element, are easy to make when traversing an array which result in an **ArrayIndexOutOfBoundsException** being thrown. 
+When processing all array elements, be careful to start at the first index which is ``0`` and end at the last index. Usually loops are written so that the index starts at 0 and continues while the index is less than ``arrayName.length`` since (arrayName.length - 1) is the index for the last element in the array. Make sure you do not use <= instead of <! If the index is less than 0 or greater than (arrayName.length - 1), an **ArrayIndexOutOfBoundsException** will be  thrown.  **Off by one** errors, where you go off the array by 1 element, are easy to make when traversing an array which result in an **ArrayIndexOutOfBoundsException** being thrown.
 
 |Exercise| **Check Your Understanding**
 
@@ -780,7 +780,7 @@ When processing all array elements, be careful to start at the first index which
 
    - for (int i = 1; i < scores.length; i++)
 
-     - This loop will not cause an error even though it will not visit the element at index 0. 
+     - This loop will not cause an error even though it will not visit the element at index 0.
 
    - for (int i = 0; i <= scores.length; i++)
 
@@ -792,7 +792,7 @@ When processing all array elements, be careful to start at the first index which
 
    - for (int i = scores.length - 1; i >= 0; i++)
 
-     + This will cause an error because i++ will continue to increment the index past the end of the array. It should be replaced with i-- to avoid this error. 
+     + This will cause an error because i++ will continue to increment the index past the end of the array. It should be replaced with i-- to avoid this error.
 
 
 |CodingEx| **Coding Exercise**
@@ -801,7 +801,7 @@ When processing all array elements, be careful to start at the first index which
 
 .. activecode:: offbyone
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
    :practice: T
 
    The following code has an ArrayIndexOutOfBoundsException. It has 2 common off-by-one errors in the loop. Can you fix it and make the loop print out all the scores?
@@ -811,11 +811,11 @@ When processing all array elements, be careful to start at the first index which
       public static void main(String[] args)
       {
           int[] scores = { 10, 9, 8, 7};
-          // Make this loop print out all the scores! 
+          // Make this loop print out all the scores!
           for (int i = 1; i <= scores.length; i++)
           {
                System.out.println(  scores[i] );
-          }          
+          }
       }
     }
     ====
@@ -869,9 +869,9 @@ Be careful not to jump out of loop too early when you are looking for a value in
 
 .. activecode:: lcap1
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
-   What is wrong with the code below?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)? 
+   What is wrong with the code below?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)?
    ~~~~
    public class StringWorker
    {
@@ -966,7 +966,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
 
    Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an int variable initialized to be greater than zero and that ``a`` is an array of integers.
 
-   .. code-block:: java 
+   .. code-block:: java
 
       for ( int k = 0; k < a.length; k++ )
       {
@@ -976,7 +976,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
          }
       }
 
-|Groupwork| Programming Challenge : SpellChecker 
+|Groupwork| Programming Challenge : SpellChecker
 --------------------------------------------------
 
 .. image:: Figures/spellcheck.png
@@ -1004,18 +1004,18 @@ The following Active Code uses a dictionary array of the most common 100 English
 
 .. activecode:: challenge-6-2-spellchecker
    :language: java
-   :autograde: unittest    
+   :autograde: unittest
 
    public class SpellChecker
    {
       // This dictionary includes the 1000 most frequent words in English
       private String[] dictionary = { "a", "able", "about", "above", "act", "add", "afraid", "after", "again", "against", "age", "ago", "agree", "air", "all", "allow", "also", "always", "am", "among", "an", "and", "anger", "animal", "answer", "any", "appear", "apple", "are", "area", "arm", "arrange", "arrive", "art", "as", "ask", "at", "atom", "baby", "back", "bad", "ball", "band", "bank", "bar", "base", "basic", "bat", "be", "bear", "beat", "beauty", "bed", "been", "before", "began", "begin", "behind", "believe", "bell", "best", "better", "between", "big", "bird", "bit", "black", "block", "blood", "blow", "blue", "board", "boat", "body", "bone", "book", "born", "both", "bottom", "bought", "box", "boy", "branch", "bread", "break", "bright", "bring", "broad", "broke", "brother", "brought", "brown", "build", "burn", "busy", "but", "buy", "by", "call", "came", "camp", "can", "capital", "captain", "car", "card", "care", "carry", "case", "cat", "catch", "cats", "caught", "cause", "cell", "cent", "center", "century", "certain", "chair", "chance", "change", "character", "charge", "chart", "check", "chick", "chief", "child", "children", "choose", "chord", "circle", "city", "claim", "class", "clean", "clear", "climb", "clock", "close", "clothe", "cloud", "coast", "coat", "cold", "collect", "colony", "color", "column", "come", "common", "company", "compare", "complete", "condition", "connect", "consider", "consonant", "contain", "continent", "continue", "control", "cook", "cool", "copy", "corn", "corner", "correct", "cost", "cotton", "could", "count", "country", "course", "cover", "cow", "crease", "create", "crop", "cross", "crowd", "cry", "current", "cut", "dad", "dance", "danger", "dark", "day", "dead", "deal", "dear", "death", "decide", "decimal", "deep", "degree", "depend", "describe", "desert", "design", "determine", "develop", "dictionary", "did", "die", "differ", "difficult", "direct", "discuss", "distant", "divide", "division", "do", "doctor", "does", "dog", "dogs", "dollar", "don't", "done", "door", "double", "down", "draw", "dream", "dress", "drink", "drive", "drop", "dry", "duck", "during", "each", "ear", "early", "earth", "ease", "east", "eat", "edge", "effect", "egg", "eight", "either", "electric", "element", "else", "end", "enemy", "energy", "engine", "enough", "enter", "equal", "equate", "especially", "even", "evening", "event", "ever", "every", "exact", "example", "except", "excite", "exercise", "expect", "experience", "experiment", "eye", "face", "fact", "fair", "fall", "family", "famous", "far", "farm", "fast", "fat", "father", "favor", "fear", "feed", "feel", "feet", "fell", "felt", "few", "field", "fig", "fight", "figure", "fill", "final", "find", "fine", "finger", "finish", "fire", "first", "fish", "fit", "five", "flat", "floor", "flow", "flower", "fly", "follow", "food", "foot", "for", "force", "forest", "form", "forward", "found", "four", "fraction", "free", "fresh", "friend", "from", "front", "fruit", "full", "fun", "game", "garden", "gas", "gather", "gave", "general", "gentle", "get", "girl", "give", "glad", "glass", "go", "gold", "gone", "good", "got", "govern", "grand", "grass", "gray", "great", "green", "grew", "ground", "group", "grow", "guess", "guide", "gun", "had", "hair", "half", "hand", "happen", "happy", "hard", "has", "hat", "have", "he", "head", "hear", "heard", "heart", "heat", "heavy", "held", "help", "her", "here", "high", "hill", "him", "his", "history", "hit", "hold", "hole", "home", "hope", "horse", "hot", "hour", "house", "how", "huge", "human", "hundred", "hunt", "hurry", "I", "ice", "idea", "if", "imagine", "in", "inch", "include", "indicate", "industry", "insect", "instant", "instrument", "interest", "invent", "iron", "is", "island", "it", "job", "join", "joy", "jump", "just", "keep", "kept", "key", "kill", "kind", "king", "knew", "know", "lady", "lake", "land", "language", "large", "last", "late", "laugh", "law", "lay", "lead", "learn", "least", "leave", "led", "left", "leg", "length", "less", "let", "letter", "level", "lie", "life", "lift", "light", "like", "line", "liquid", "list", "listen", "little", "live", "locate", "log", "lone", "long", "look", "lost", "lot", "loud", "love", "low", "machine", "made", "magnet", "main", "major", "make", "man", "many", "map", "mark", "market", "mass", "master", "match", "material", "matter", "may", "me", "mean", "meant", "measure", "meat", "meet", "melody", "men", "metal", "method", "middle", "might", "mile", "milk", "million", "mind", "mine", "minute", "miss", "mix", "modern", "molecule", "moment", "money", "month", "moon", "more", "morning", "most", "mother", "motion", "mount", "mountain", "mouth", "move", "much", "multiply", "music", "must", "my", "name", "nation", "natural", "nature", "near", "necessary", "neck", "need", "neighbor", "never", "new", "next", "night", "nine", "no", "noise", "noon", "nor", "north", "nose", "not", "note", "nothing", "notice", "noun", "now", "number", "numeral", "object", "observe", "occur", "ocean", "of", "off", "offer", "office", "often", "oh", "oil", "old", "on", "once", "one", "only", "open", "operate", "opposite", "or", "order", "organ", "original", "other", "our", "out", "over", "own", "oxygen", "page", "paint", "pair", "paper", "paragraph", "parent", "part", "particular", "party", "pass", "past", "path", "pattern", "pay", "people", "perhaps", "period", "person", "phrase", "pick", "picture", "piece", "pitch", "place", "plain", "plan", "plane", "planet", "plant", "play", "please", "plural", "poem", "point", "poor", "populate", "port", "pose", "position", "possible", "post", "pound", "power", "practice", "prepare", "present", "press", "pretty", "print", "probable", "problem", "process", "produce", "product", "proper", "property", "protect", "prove", "provide", "pull", "push", "put", "quart", "question", "quick", "quiet", "quite", "quotient", "race", "radio", "rail", "rain", "raise", "ran", "range", "rather", "reach", "read", "ready", "real", "reason", "receive", "record", "red", "region", "remember", "repeat", "reply", "represent", "require", "rest", "result", "rich", "ride", "right", "ring", "rise", "river", "road", "rock", "roll", "room", "root", "rope", "rose", "round", "row", "rub", "rule", "run", "safe", "said", "sail", "salt", "same", "sand", "sat", "save", "saw", "say", "scale", "school", "science", "score", "sea", "search", "season", "seat", "second", "section", "see", "seed", "seem", "segment", "select", "self", "sell", "send", "sense", "sent", "sentence", "separate", "serve", "set", "settle", "seven", "several", "shall", "shape", "share", "sharp", "she", "sheet", "shell", "shine", "ship", "shoe", "shop", "shore", "short", "should", "shoulder", "shout", "show", "side", "sight", "sign", "silent", "silver", "similar", "simple", "since", "sing", "single", "sister", "sit", "six", "size", "skill", "skin", "sky", "slave", "sleep", "slip", "slow", "small", "smell", "smile", "snow", "so", "soft", "soil", "soldier", "solution", "solve", "some", "son", "song", "soon", "sound", "south", "space", "speak", "special", "speech", "speed", "spell", "spend", "spoke", "spot", "spread", "spring", "square", "stand", "star", "start", "state", "station", "stay", "stead", "steam", "steel", "step", "stick", "still", "stone", "stood", "stop", "store", "story", "straight", "strange", "stream", "street", "stretch", "string", "strong", "student", "study", "subject", "substance", "subtract", "success", "such", "sudden", "suffix", "sugar", "suggest", "suit", "summer", "sun", "supply", "support", "sure", "surface", "surprise", "swim", "syllable", "symbol", "system", "table", "tail", "take", "talk", "tall", "teach", "team", "teeth", "tell", "temperature", "ten", "term", "test", "than", "thank", "that", "the", "their", "them", "then", "there", "these", "they", "thick", "thin", "thing", "think", "third", "this", "those", "though", "thought", "thousand", "three", "through", "throw", "thus", "tie", "time", "tiny", "tire", "to", "together", "told", "tone", "too", "took", "tool", "top", "total", "touch", "toward", "town", "track", "trade", "train", "travel", "tree", "triangle", "trip", "trouble", "truck", "try", "tube", "turn", "twenty", "two", "type", "under", "unit", "until", "up", "us", "use", "usual", "valley", "value", "vary", "verb", "very", "view", "village", "visit", "voice", "vowel", "wait", "walk", "wall", "want", "war", "warm", "was", "wash", "watch", "water", "wave", "way", "we", "wear", "weather", "week", "weight", "well", "went", "were", "west", "what", "wheel", "when", "where", "whether", "which", "while", "white", "who", "whole", "whose", "why", "wide", "wife", "wild", "will", "win", "wind", "window", "wing", "winter", "wire", "wish", "with", "woman", "women", "won't", "wonder", "wood", "word", "work", "world", "would", "write", "written", "wrong", "wrote", "yard", "year", "yellow", "yes", "yet", "you", "young", "your", "zoo" };
 
-      /* 1. Write a print10() method that prints out the first 
+      /* 1. Write a print10() method that prints out the first
        * 10 words of the dictionary array.
        */
 
-      /* 2. Write a spellcheck() method that takes a word as a 
+      /* 2. Write a spellcheck() method that takes a word as a
        * parameter and returns true if it is in the dictionary array.
        * Return false if it is not found.
        */
@@ -1023,7 +1023,7 @@ The following Active Code uses a dictionary array of the most common 100 English
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
-        // Uncomment to test Part 1 
+        // Uncomment to test Part 1
         // checker.print10();
 
 
@@ -1098,7 +1098,7 @@ The following Active Code uses a dictionary array of the most common 100 English
             assertTrue(passed);
         }
         @Test
-        public void testEquals() 
+        public void testEquals()
         {
             boolean passed = checkCodeContains("use of equals method", ".equals(");
             assertTrue(passed);
@@ -1106,41 +1106,41 @@ The following Active Code uses a dictionary array of the most common 100 English
     }
 
 
-3. Optional Challenge: Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take 
+3. Optional Challenge: Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take
 a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string. This is not autograded.
 
 |Groupwork| Design an Array of Objects for your Community
 ----------------------------------------------------------
 
-In Unit 5, you came up with a class of your own choice relevant to you or your 
+In Unit 5, you came up with a class of your own choice relevant to you or your
 community.  In the last lesson 6.1, you created an array to hold objects of your class.
-Copy your array of objects code from lesson 6.1. In this challenge, add a loop to 
-traverse your array to print out each object. 
+Copy your array of objects code from lesson 6.1. In this challenge, add a loop to
+traverse your array to print out each object.
 
 .. activecode:: community-challenge-6-2
   :language: java
   :autograde: unittest
 
-  Copy your class from the last lesson 6.1 below. 
+  Copy your class from the last lesson 6.1 below.
   It should create an array of 3 objects of your class and initialize
   them to new objects. Instead of calling their print() methods individually, write a loop that
-  traverses your array to print out each object using the index i. 
+  traverses your array to print out each object using the index i.
   ~~~~
   public class          // Add your class name here!
   {
-      // Copy your class from lesson 6.1 below. 
+      // Copy your class from lesson 6.1 below.
 
 
 
       public static void main(String[] args)
-      {  
-         // Create an array of 3 objects of your class. 
+      {
+         // Create an array of 3 objects of your class.
 
          // Initialize array elements 0-2 to new objects of your class.
 
 
          // Write a for loop that traverses the array and calls
-         // the print method of each object in the array using the array index i. 
+         // the print method of each object in the array using the array index i.
 
 
       }

@@ -19,18 +19,18 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_b: Objects know what class they are created as and all methods are resolved starting with that class at run time. If the method isn't found in that class the parent class is checked (and so on until it is found). So it will first look for <code>getInfo</code> in <code>GradStudent</code> and when it doesn't find it it will look in <code>Student</code>. In <code>getInfo</code> it calls <code>this.getFood</code>. Again, it will first look for this method in <code>GradStudent</code>. It will find the <code>getFood</code> method there and return "Taco".
    :feedback_c: This would be true if it was <code>Student s1 = new Student();</code>
    :feedback_d: An object of a subclass can be substituted for a parent class object. A <code>GradStudent</code> is a <code>Student</code>.
-   :feedback_e: In object methods if you leave off the <code>this.</code> when invoking an object method it will be added for you by the compiler. The keyword <code>this</code> refers to the current object which is implicitly passed to all object methods.  
+   :feedback_e: In object methods if you leave off the <code>this.</code> when invoking an object method it will be added for you by the compiler. The keyword <code>this</code> refers to the current object which is implicitly passed to all object methods.
 
    Given the following class declarations, what is the output from ``Student s1 = new GradStudent();`` followed by ``s1.getInfo();``?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       public class Student {
          public String getFood() {
             return "Pizza";
          }
-         public String getInfo()  { 
-            return this.getFood(); 
+         public String getInfo()  {
+            return this.getFood();
          }
       }
 
@@ -56,7 +56,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
    Given the following class declarations, and ``EnhancedItem enItemObj = new EnhancedItem();`` in a client class, which of the following statements would compile?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       public class Item
       {
@@ -101,7 +101,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
    Given the following class declarations and initializations in a client program, which of the following is a correct call to ``method1``?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       public class Test1
       {
@@ -138,9 +138,9 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_d: Because <code>Bird</code>, <code>Cow</code>, <code>Cat</code>, <code>Dog</code>, and <code>Pig</code> are subclasses of <code>Animal</code>, they can be stored in an array declared as <code>Animal</code> without any runtime errors.
    :feedback_e: The <code>Pig</code> class did not override the <code>speak</code> method, so it will use the method from <code>Animal</code>, thus the output should be: Meow Moo Woof Awk Awk
 
-    If you have a parent class ``Animal`` that has a method ``speak()`` which returns: Awk. ``Cat`` has a ``speak`` method that returns: Meow.  ``Bird`` does not have a ``speak`` method.  ``Dog`` has a ``speak`` method that returns: Woof.  ``Pig`` does not have a ``speak`` method.  ``Cow`` has a ``speak`` method that returns: Moo.   What is the output from looping through the array ``a`` created below and asking each element to ``speak()``? 
+    If you have a parent class ``Animal`` that has a method ``speak()`` which returns: Awk. ``Cat`` has a ``speak`` method that returns: Meow.  ``Bird`` does not have a ``speak`` method.  ``Dog`` has a ``speak`` method that returns: Woof.  ``Pig`` does not have a ``speak`` method.  ``Cow`` has a ``speak`` method that returns: Moo.   What is the output from looping through the array ``a`` created below and asking each element to ``speak()``?
 
-    .. code-block:: java 
+    .. code-block:: java
 
 	  Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
 
@@ -160,13 +160,13 @@ These problems are similar to those you will see on the AP CS A exam.
 
    Given the following class declarations and code, what is the result when the code is run?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       public class Car
       {
          private int fuel;
 
-         public Car() { fuel = 0; } 
+         public Car() { fuel = 0; }
          public Car(int g) { fuel = g; }
 
          public void addFuel() { fuel++; }
@@ -205,11 +205,11 @@ These problems are similar to those you will see on the AP CS A exam.
 
    Given the following class declarations and code, what is the result when the code is run?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       public class Book
       {
-         public String getISBN() 
+         public String getISBN()
          {
             // implementation not shown
          }

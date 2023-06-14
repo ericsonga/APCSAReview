@@ -95,7 +95,7 @@ The method call ``goodies.removeVariety("Brownie")`` returns `0` and does not ch
 How to Solve This
 --------------------
 
-Click to reveal multiple choice questions that may help you write your solution.  
+Click to reveal multiple choice questions that may help you write your solution.
 
 .. reveal:: fr_cookieB_r1
    :showtitle: Reveal Problems
@@ -129,7 +129,7 @@ Click to reveal multiple choice questions that may help you write your solution.
         :answer_b: if (str1.equals(str2))
         :answer_c: if (str1 = str2)
         :correct: b
-        :feedback_a: Strings cannot be compared with a double equals sign. 
+        :feedback_a: Strings cannot be compared with a double equals sign.
         :feedback_b: Correct! the equals() method in the String class will compare two strings.
         :feedback_c: A single = should only be used for assigning values!
 
@@ -179,7 +179,7 @@ Solve Part B
 
 .. activecode:: FRQCookieOrderB
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   FRQ Cookie Order B: Complete the method ``removeVariety`` below.
   ~~~~

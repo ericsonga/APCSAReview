@@ -22,12 +22,12 @@ A partial declaration of the ``Sound`` class is shown below.
        /** the array of values in this sound; guaranteed not to be null */
        private int[] samples;
 
-       /** Changes those values in this sound that have an amplitude 
+       /** Changes those values in this sound that have an amplitude
         *  greater than limit */
         *  Values greater than limit are changed to limit.
         *  @param limit the amplitude limit
         *         Precondition: limit >= 0
-        *  @return the number of values in this sound that this 
+        *  @return the number of values in this sound that this
         *         method changed
         */
        public int limitAmplitude(int limit)
@@ -36,13 +36,13 @@ A partial declaration of the ``Sound`` class is shown below.
        /** Removes all silence from the beginning of this sound.
         *  Silence is represented by a value of 0.
         *  Precondition: samples contains at least one nonzero value
-        *  Postcondition: the length of samples reflects the removal 
+        *  Postcondition: the length of samples reflects the removal
         *               of starting silence
         */
        public void trimSilenceFromBeginning()
        { /* to be implemented in part (b) */ }
 
-       // There may be instance variables, constructors, and methods 
+       // There may be instance variables, constructors, and methods
        // that are not shown.
    }
 
@@ -83,14 +83,14 @@ Click to reveal problems and the algorithm to help you write your solution.
    :hidetitle: Hide Algorithm
    :optional:
 
-   We will have to loop through each value in the array and compare the value to the limit. We will need to keep track of the number of values changed.  
+   We will have to loop through each value in the array and compare the value to the limit. We will need to keep track of the number of values changed.
 
-   If the current value is greater than the 
-   limit, it should be reset to the limit and the count of the values changed should be incremented. 
+   If the current value is greater than the
+   limit, it should be reset to the limit and the count of the values changed should be incremented.
 
-   If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.   
+   If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.
 
-   We will have to return the count of values changed. 
+   We will have to return the count of values changed.
 
 .. reveal:: fr_sounda_r1
    :showtitle: Reveal Problems
@@ -104,7 +104,7 @@ Click to reveal problems and the algorithm to help you write your solution.
         :correct: b
         :feedback_a: You could use a while loop, but if you are looping through all values in an array it is better to use a for loop.  It is easier to make mistakes with a while loop and forget to increment a value in the body of the loop so that the loop eventually stops.
         :feedback_b: Use a for loop when you want to loop through all or part of an array and need to change some of the values in the array.
-        :feedback_c: You could use a for-each loop to loop through all of the values in the array, but you wouldn't be able to change the values. 
+        :feedback_c: You could use a for-each loop to loop through all of the values in the array, but you wouldn't be able to change the values.
 
         Which loop would be best for this problem?
 
@@ -114,7 +114,7 @@ Click to reveal problems and the algorithm to help you write your solution.
         :answer_c: samples[i] = -limit;
         :correct: c
         :feedback_a: There is no set method on arrays.
-        :feedback_b: This would set the value at index i to limit rather than the negative of the limit.  
+        :feedback_b: This would set the value at index i to limit rather than the negative of the limit.
         :feedback_c: This will set the value at index i to the negative of the limit.
 
         Which is the correct code for changing the current value to the negative of the limit?
@@ -138,17 +138,17 @@ Click to reveal the Mixed Up Code for the solution of this problem.
       public int limitAmplitude(int limit) {
       =====
         int numChanged = 0;
-        for (int i = 0; i < samples.length; i++) 
+        for (int i = 0; i < samples.length; i++)
         {
       =====
-           if (samples[i] > limit) 
+           if (samples[i] > limit)
            {
       =====
               samples[i] = limit;
               numChanged++;
       =====
            } // end first if
-           if (samples[i] < -limit) 
+           if (samples[i] < -limit)
            {
       =====
               samples[i] = -limit;
@@ -169,7 +169,7 @@ Try and Solve Part A
 
 .. activecode:: FRQSoundA
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    FRQ Sound A: Write the method ``limitAmplitude`` that will change any value that has an amplitude greater than the given limit. Values that are greater than ``limit`` are replaced with ``limit``, and values that are less than ``-limit`` are replaced with ``–limit``. The method returns the total number of values that were changed in the array.  The ``main`` method has code to test your solution.
    ~~~~

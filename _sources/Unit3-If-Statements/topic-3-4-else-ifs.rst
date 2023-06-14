@@ -27,7 +27,7 @@
 Multi-Selection: else-if Statements
 ===================================
 
-Using if/else statements, you can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if**, and **else** before the last possibility.  
+Using if/else statements, you can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if**, and **else** before the last possibility.
 
 .. code-block:: java
 
@@ -40,7 +40,7 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
     {
        statement2;
     }
-    else  
+    else
     {
        statement3;
     }
@@ -60,15 +60,15 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
       public static void main(String[] args)
       {
         int x = 2;
-        if (x < 0) 
+        if (x < 0)
         {
           System.out.println("x is negative");
         }
-        else if (x == 0) 
-        {      
+        else if (x == 0)
+        {
            System.out.println("x is 0");
         }
-        else 
+        else
         {
           System.out.println("x is positive");
         }
@@ -90,7 +90,7 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
         }
     }
 
-Here is a flowchart for a conditional with 3 options like in the code above. 
+Here is a flowchart for a conditional with 3 options like in the code above.
 
 .. figure:: Figures/Condition-three.png
     :width: 450px
@@ -99,7 +99,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
     Figure 1: The order that statements execute in a conditional with 3 options: if, else if, and else
 
-.. note:: 
+.. note::
 
     Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
 
@@ -112,25 +112,25 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :answer_b: x is zero
    :answer_c: x is positive
    :correct: a
-   :feedback_a: When x is equal to -5 the condition of x < 0 is true. 
+   :feedback_a: When x is equal to -5 the condition of x < 0 is true.
    :feedback_b: This will only print if x has been set to 0.  Has it?
    :feedback_c: This will only print if x is greater than zero.  Is it?
 
    What does the following code print when x has been set to -5?
 
-   .. code-block:: java 
+   .. code-block:: java
 
-     if (x < 0) 
+     if (x < 0)
      {
         System.out.println("x is negative");
      }
-     else if (x == 0) 
+     else if (x == 0)
      {
-        System.out.println("x is zero"); 
+        System.out.println("x is zero");
      }
      else
      {
-        System.out.println("x is positive"); 
+        System.out.println("x is positive");
      }
 
 .. mchoice:: qcb3_4_2
@@ -139,25 +139,25 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :answer_b: x is zero
    :answer_c: x is positive
    :correct: c
-   :feedback_a: This will only print if x has been set to a number less than zero. Has it? 
+   :feedback_a: This will only print if x has been set to a number less than zero. Has it?
    :feedback_b: This will only print if x has been set to 0.  Has it?
-   :feedback_c: The first condition is false and x is not equal to zero so the else will execute.  
+   :feedback_c: The first condition is false and x is not equal to zero so the else will execute.
 
    What does the following code print when x has been set to 2000?
 
-   .. code-block:: java 
+   .. code-block:: java
 
-     if (x < 0) 
+     if (x < 0)
      {
         System.out.println("x is negative");
      }
      else if (x == 0)
      {
-        System.out.println("x is zero"); 
+        System.out.println("x is zero");
      }
      else
      {
-        System.out.println("x is positive"); 
+        System.out.println("x is positive");
      }
 
 .. mchoice:: qcb3_4_3
@@ -174,21 +174,21 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
    What does the following code print when x has been set to .8?
 
-   .. code-block:: java 
+   .. code-block:: java
 
-     if (x < .25) 
+     if (x < .25)
      {
          System.out.println("first quartile");
      }
-     else if (x < .5) 
+     else if (x < .5)
      {
-         System.out.println("second quartile"); 
+         System.out.println("second quartile");
      }
-     else if (x < .75) 
+     else if (x < .75)
      {
          System.out.println("third quartile");
      }
-     else 
+     else
      {
          System.out.println("fourth quartile");
      }
@@ -211,19 +211,19 @@ Here is a flowchart for a conditional with 3 options like in the code above.
           int score = 93;
           String grade = "";
 
-          if (score >= 90) 
+          if (score >= 90)
           {
              grade = "A";
           }
-          if (score >= 80) 
+          if (score >= 80)
           {
             grade = "B";
           }
-          if (score >= 70) 
+          if (score >= 70)
           {
              grade = "C";
           }
-          if (score >= 60) 
+          if (score >= 60)
           {
              grade = "D";
           }
@@ -351,17 +351,17 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
 We encourage you to work in pairs for this challenge which is on repl.it (you will need an account there if you want to save your version).
 
-One of the first games coded for early computers in the 1970s was called |Colossal Cave Adventure|. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try |playing adventure| recreated online following some of the commands in this |walkthrough|. Part of the challenge is finding the commands that the code will understand. 
+One of the first games coded for early computers in the 1970s was called |Colossal Cave Adventure|. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try |playing adventure| recreated online following some of the commands in this |walkthrough|. Part of the challenge is finding the commands that the code will understand.
 
-In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.  
+In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.
 
 1. Try the program below or with this |repl link|. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
 
-2. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. 
+2. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction.
 
 2. How many test-cases are needed to test all branches of your code?
 
-3. If your class has time, your teacher may ask you to expand this game further or to come up with a different adventure location. 
+3. If your class has time, your teacher may ask you to expand this game further or to come up with a different adventure location.
 
 
 .. raw:: html
@@ -370,7 +370,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
 
 .. activecode:: challenge3-4-ElseIf-Adventure-autograde
   :language: java
-  :autograde: unittest  
+  :autograde: unittest
 
   Copy and paste your all of your code from repl.it and run to see if it passes the autograder tests. Include the link to your repl.it code in comments. Note that this code will only run with the autograder's input and will not ask the user for input.
   ~~~~
@@ -482,7 +482,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
 Summary
 --------
 
-- A multi-way selection is written when there are a series of conditions with different statements for each condition. 
+- A multi-way selection is written when there are a series of conditions with different statements for each condition.
 
 - Multi-way selection is performed using if-else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
 
@@ -494,10 +494,10 @@ Summary
        statement1;
     }
     else if (boolean expression)
-    { 
+    {
        statement2;
     }
-    else  
+    else
     {
         statement3;
     }
@@ -509,12 +509,12 @@ AP Practice
     :practice: T
 
     Assume an int variable x has been properly declared and initialized.
-    Which of the following code segments will print out "High" if *x* is 66 and above, 
+    Which of the following code segments will print out "High" if *x* is 66 and above,
     "Medium" is *x* is between 33-65, and "Low" if *x* is below 33.
 
     .. code-block:: java
 
-       I.   if (x > 66)  
+       I.   if (x > 66)
             {
               System.out.println("High");
             }
@@ -526,7 +526,7 @@ AP Practice
               System.out.println("Low");
             }
 
-       II.  if (x < 33) 
+       II.  if (x < 33)
             {
               System.out.println("Low");
             }
@@ -538,7 +538,7 @@ AP Practice
               System.out.println("High");
             }
 
-       III. if (x >= 66)   
+       III. if (x >= 66)
             {
               System.out.println("High");
             }
@@ -546,7 +546,7 @@ AP Practice
             {
               System.out.println("Medium");
             }
-            if (x < 33) 
+            if (x < 33)
             {
               System.out.println("Low");
             }

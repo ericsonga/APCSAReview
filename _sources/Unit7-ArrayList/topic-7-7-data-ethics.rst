@@ -21,7 +21,7 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Ethics of Data Collection and Data Privacy
 ==========================================
@@ -31,7 +31,7 @@ Ethics of Data Collection and Data Privacy
    <a href="https://www.youtube.com/watch?v=bqWuioPHhz0" target="_blank" style="text-decoration:underline">video</a>
 
 
-Watch the following |video1| about the massive amounts of data our smart phones and computers collect about us. 
+Watch the following |video1| about the massive amounts of data our smart phones and computers collect about us.
 
 .. youtube:: bqWuioPHhz0
     :height: 315

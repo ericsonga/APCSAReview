@@ -48,7 +48,7 @@ String parts will be represented by the ``StringPart`` class shown below.
       public int getLength()
       { /* implementation not shown */ }
 
-      // There may be other instance variables, constructors, and methods 
+      // There may be other instance variables, constructors, and methods
    }
 
 The class ``StringCoder`` provides methods to encode and decode words using a given master string. When
@@ -67,20 +67,20 @@ provided to choose a string part within the master string that matches the begin
       public StringCoder(String master)
       { masterString = master; }
 
-      /** @param parts an ArrayList of string parts that are valid in the 
+      /** @param parts an ArrayList of string parts that are valid in the
         * master string
         * Precondition: parts.size() > 0
-        * @return the string obtained by concatenating the parts of the 
+        * @return the string obtained by concatenating the parts of the
         *  master string
         */
       public String decodeString(ArrayList<StringPart> parts)
       { /* to be implemented in part (a) */ }
 
       /** @param str the string to encode using the master string
-        * Precondition: all of the characters in str appear in the master 
+        * Precondition: all of the characters in str appear in the master
         * string;
         * str.length() > 0
-        * @return a string part in the master string that matches the 
+        * @return a string part in the master string that matches the
         * beginning of str.
         * The returned string part has length at least 1.
         */
@@ -88,10 +88,10 @@ provided to choose a string part within the master string that matches the begin
       { /* implementation not shown */ }
 
       /** @param word the string to be encoded
-        * Precondition: all of the characters in word appear in the 
+        * Precondition: all of the characters in word appear in the
         * master string;
         * word.length() > 0
-        * @return an ArrayList of string parts of the master string 
+        * @return an ArrayList of string parts of the master string
         * that can be combined to create word
         */
       public ArrayList<StringPart> encodeString(String word)
@@ -107,7 +107,7 @@ Try and Solve It
 string represented by each of the ``StringPart`` objects in parts, concatenates them in the order in
 which they appear in parts, and returns the result.
 
-The code below contains a main method for testing the ``decodeString`` method. 
+The code below contains a main method for testing the ``decodeString`` method.
 
 .. activecode:: StringCoderA
    :language: java
@@ -169,10 +169,10 @@ The code below contains a main method for testing the ``decodeString`` method.
          masterString=master;
       }
 
-      /** @param parts an ArrayList of string parts that are 
+      /** @param parts an ArrayList of string parts that are
         * valid in the master string
         * Precondition: parts.size() > 0
-        * @return the string obtained by concatenating the parts 
+        * @return the string obtained by concatenating the parts
         * of the master string
         */
       public String decodeString(ArrayList<StringPart> parts)

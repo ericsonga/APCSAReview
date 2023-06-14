@@ -57,7 +57,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
       public void talk()
       {
-         System.out.println("Hello!");  
+         System.out.println("Hello!");
       }
    }
 

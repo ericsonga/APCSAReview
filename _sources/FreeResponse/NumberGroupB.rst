@@ -25,8 +25,8 @@ Try and Solve It
 
    Complete the class ``Range`` below with instance variables, a constructor, and a contains method.
    ~~~~
-   class NumberGroup 
-   { 
+   class NumberGroup
+   {
       /* Implementation not shown */
    }
 
@@ -38,7 +38,7 @@ Try and Solve It
        // for the minimum and maximum values in the range
 
 
-       // Write the contains method which tests whether a 
+       // Write the contains method which tests whether a
        // given number is in the range.
 
        //Main method to test the class

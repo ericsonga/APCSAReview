@@ -9,16 +9,16 @@ Free Response - Horse Barn A
 	single: horse barn
     single: free response
 
-The following FRQ is a great example of working with an array of objects. It is a variation of part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
+The following FRQ is a great example of working with an array of objects. It is a variation of part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 The original question had an interface called Horse, but the problem below has been changed to a class Horse instead of the interface. Interfaces are no longer covered on the AP CS A exam. However, you can still solve problems that have interfaces in them by changing them to a class, since an interface just describes the methods that a class must have.
 
 
 
-**Question 3.**  Consider a software system that models a horse barn. 
+**Question 3.**  Consider a software system that models a horse barn.
 
 
-.. code-block:: java 
+.. code-block:: java
 
    public class Horse
    {
@@ -38,7 +38,7 @@ Another class called HorseBarn consists of N numbered spaces where each space ca
 
 
 
-.. code-block:: java 
+.. code-block:: java
 
    public class HorseBarn
    {
@@ -47,11 +47,11 @@ Another class called HorseBarn consists of N numbered spaces where each space ca
       */
       private Horse[] spaces;
 
-      /** Returns the index of the space that contains the horse with the specified 
+      /** Returns the index of the space that contains the horse with the specified
        *  name.
        * Precondition: No two horses in the barn have the same name.
        * @param name the name of the horse to find
-       * @return the index of the space containing the horse with the specified 
+       * @return the index of the space containing the horse with the specified
        *      name;
        *      -1 if no horse with the specified name is in the barn.
        */
@@ -85,8 +85,8 @@ We will have to watch out for spaces that are empty (are null).  Click to reveal
         :answer_c: spaces.get(index).getName();
         :correct: b
         :feedback_a: Getter methods are needed to access private class variables.
-        :feedback_b: This is the syntax for getting the value of an element in an array.  
-        :feedback_c: This is the syntax for getting the value of an element in an arrayList.   
+        :feedback_b: This is the syntax for getting the value of an element in an array.
+        :feedback_c: This is the syntax for getting the value of an element in an arrayList.
 
         Which of the following correctly retrieves the name of a "Horse" object from the "spaces" array?
 
@@ -103,10 +103,10 @@ Once we have the name of the current ``Horse`` object, we need to compare this n
         :answer_c: str.equals(anotherString);
         :correct: c
         :feedback_a: This String method is used for comparing two strings alphabetically. It returns 0 if they are equal so you would need to check the return value.
-        :feedback_b: This would only return true if the two variables refer to the same object.  
+        :feedback_b: This would only return true if the two variables refer to the same object.
         :feedback_c: This String method will compare the characters in both strings and return true if they are the same.
 
-        What is the best way to compare two strings for equality?  
+        What is the best way to compare two strings for equality?
 
 Try It!
 ========

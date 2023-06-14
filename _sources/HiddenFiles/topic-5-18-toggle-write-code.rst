@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 5-18-
-   :start: 1   
+   :start: 1
 
 Unit 5 Write Code for Toggle Code
 =========================================================
@@ -12,9 +12,9 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Fix the following code so that the ``Dog`` class has a constructor that takes in a String argument ``name`` and assigns that value to the instance variable ``name``. 
+        Fix the following code so that the ``Dog`` class has a constructor that takes in a String argument ``name`` and assigns that value to the instance variable ``name``.
         ~~~~
-        public class Dog 
+        public class Dog
         {
             private String name;
 
@@ -28,7 +28,7 @@ This is the write code problems associated with the mixed up code problems.
                 return this.name;
             }
 
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 Dog Bill = new Dog("Bill");
                 Dog Dot = new Dog("Dot");
@@ -140,7 +140,7 @@ This is the write code problems associated with the mixed up code problems.
             private String name;
             private int age;
 
-            public Cat(String name, int age) { 
+            public Cat(String name, int age) {
                 this.name = name;
                 this.age = age;
             }
@@ -185,7 +185,7 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(doesntManuallyPrint);
             }
 
-            @Test 
+            @Test
             public void testMakeSound() throws IOException {
                 Object[] params = {"Leo", 6};
                 setDefaultValues(params);
@@ -222,18 +222,18 @@ This is the write code problems associated with the mixed up code problems.
             // Your code here: define variables //
             // hint: numberOfSquares should be static & initialized //
 
-            public Square(int length) { 
+            public Square(int length) {
                 this.length = length;
                 numberOfSquares++;
-            } 
+            }
 
             public int getArea() {
                 // Your code here //
-            } 
+            }
 
             public String toString() {
                 // Your code here //
-            } 
+            }
 
             public static void main(String[] args) {
                 Square.numberOfSquares = 0;  // this is only set for evaluation
@@ -298,14 +298,14 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code that completes the ``Rectangle`` class. It should have constructors that can take zero or two integer parameters. With zero arguments passed, the ``Rectangle`` should be initialized with a ``length`` of 10 and a ``width`` of 10. With two integers passed, the ``Rectangle`` should have a ``length`` equal to the first argument and a ``width`` equal to the second argument. There should also be a ``getArea`` method that returns the area ``length`` times ``width``. 
+        Write code that completes the ``Rectangle`` class. It should have constructors that can take zero or two integer parameters. With zero arguments passed, the ``Rectangle`` should be initialized with a ``length`` of 10 and a ``width`` of 10. With two integers passed, the ``Rectangle`` should have a ``length`` equal to the first argument and a ``width`` equal to the second argument. There should also be a ``getArea`` method that returns the area ``length`` times ``width``.
         ~~~~
         public class Rectangle {
 
             private int length;
             private int width;
 
-            public Rectangle() { 
+            public Rectangle() {
                 // Add code here
             }
 
@@ -398,7 +398,7 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
 
-            @Test 
+            @Test
             public void testCheckHardcode() throws IOException {
                 String target = "System.out.println(\"If the moon has orbited five times, it was discovered 140 days ago.\")";
                 String desc = "hardcoded print statements";
@@ -461,7 +461,7 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
 
-            @Test 
+            @Test
             public void testCheckHardcode() throws IOException {
                 String target = "System.out.println(\"Joseph is 35 years old\")";
                 String desc = "hardcoded print statements";
@@ -547,7 +547,7 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
 
-            @Test 
+            @Test
             public void testCheckHardcode() throws IOException {
                 String target = "System.out.println(\"The origin is at (0, 0)\")";
                 String desc = "hardcoded print statements";
@@ -581,7 +581,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code to create an ``Account`` class. Each ``Account`` instance should have integer ``balance`` and String ``owner`` attributes (and the constructor should take those in that order). To increase ``balance``, there should be a ``deposit`` method that takes in an integer argument and adds that to ``balance``. To decrease ``balance``, there should be a ``withdraw`` method that takes in an integer argument and subtracts that from ``balance``. However, if ``balance`` would end as a negative number, it should just be set to zero. Finally, there should be a ``toString`` method that returns ``"Account.owner: $Account.balance"`` (so for ``Account(5, "Tom")`` it should return ``"Tom: $5"``). 
+        Write code to create an ``Account`` class. Each ``Account`` instance should have integer ``balance`` and String ``owner`` attributes (and the constructor should take those in that order). To increase ``balance``, there should be a ``deposit`` method that takes in an integer argument and adds that to ``balance``. To decrease ``balance``, there should be a ``withdraw`` method that takes in an integer argument and subtracts that from ``balance``. However, if ``balance`` would end as a negative number, it should just be set to zero. Finally, there should be a ``toString`` method that returns ``"Account.owner: $Account.balance"`` (so for ``Account(5, "Tom")`` it should return ``"Tom: $5"``).
         ~~~~
         public class Account {
             private int balance;
@@ -633,7 +633,7 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
 
-            @Test 
+            @Test
             public void testCheckHardcode() throws IOException {
                 String target = "System.out.println(\"Tom: $500\")";
                 String desc = "hardcoded print statements";
@@ -742,7 +742,7 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
 
-            @Test 
+            @Test
             public void testCheckHardcode() throws IOException {
                 String target = "System.out.println(\"oiraM wins\")";
                 String desc = "hardcoded print statements";

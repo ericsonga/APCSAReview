@@ -14,7 +14,7 @@ Coding Practice with Loops
               :autograde: unittest
               :practice: T
 
-              Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 1 (inclusive).  
+              Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 1 (inclusive).
               ~~~~
               public class Test1
               {
@@ -74,7 +74,7 @@ Coding Practice with Loops
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -130,7 +130,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.  
+           Answer: You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.
 
            .. activecode::  ch6ex2a
               :language: java
@@ -146,10 +146,10 @@ Coding Practice with Loops
                           System.out.println(x);
                           x++;
                       }
-                  }  
+                  }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -157,14 +157,14 @@ Coding Practice with Loops
 
 .. tabbed:: ch6ex3
 
-        .. tab:: Question  
+        .. tab:: Question
 
            .. activecode::  ch6ex3q
               :language: java
               :autograde: unittest
               :practice: T
 
-              Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 15 (inclusive).  
+              Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 15 (inclusive).
               ~~~~
               public class Test1
               {
@@ -223,7 +223,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -277,7 +277,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.  		
+           Answer: You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.
 
            .. activecode::  ch6ex4a
               :language: java
@@ -296,7 +296,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -322,8 +322,8 @@ Coding Practice with Loops
                       while (x < 10)
                       {
                           System.out.println(x);
-                      } 
-                  }    
+                      }
+                  }
               }
               ====
               import static org.junit.Assert.*;
@@ -357,7 +357,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: On line 6 it should be ``while (x <= 10)``.  Add line 9 at the end of the loop body to increment ``x`` so that the loop ends (isn't an infinite loop).    
+           Answer: On line 6 it should be ``while (x <= 10)``.  Add line 9 at the end of the loop body to increment ``x`` so that the loop ends (isn't an infinite loop).
 
            .. activecode::  ch6ex5a
               :language: java
@@ -372,11 +372,11 @@ Coding Practice with Loops
                       {
                           System.out.println(x);
                           x++;
-                      } 
-                  }    
+                      }
+                  }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -427,7 +427,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Remove the ``x--;`` at the end of the body of the loop.  The change area in the for loop decrements ``x`` by 1, so this line isn't needed. 
+           Answer: Remove the ``x--;`` at the end of the body of the loop.  The change area in the for loop decrements ``x`` by 1, so this line isn't needed.
 
            .. activecode::  ch6ex6a
               :language: java
@@ -445,7 +445,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -471,7 +471,7 @@ Coding Practice with Loops
                       {
                          x--;
                          System.out.println(x);
-                      } 
+                      }
                   }
               }
               ====
@@ -515,7 +515,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -531,7 +531,7 @@ Coding Practice with Loops
               :practice: T
 
               Finish the code below to print a countdown from 100 to 0 by 10's using a for or while loop.
-              ~~~~           
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -584,7 +584,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -594,14 +594,14 @@ Coding Practice with Loops
 
 .. tabbed:: ch6ex10n
 
-        .. tab:: Question  
+        .. tab:: Question
 
            .. activecode::  ch6ex10nq
               :language: java
               :autograde: unittest
-              :practice: T   
+              :practice: T
 
-              Finish the code to print the value of ``x`` and ``" is even"`` if ``x`` is even and ``" is odd"`` if it is odd for all values from 10 to 1. 
+              Finish the code to print the value of ``x`` and ``" is even"`` if ``x`` is even and ``" is odd"`` if it is odd for all values from 10 to 1.
               ~~~~
               public class Test1
               {
@@ -642,7 +642,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Use a ``for`` loop to loop from 10 to 1.  Use a conditional to test if x is even (x % 2 == 0).  
+           Answer: Use a ``for`` loop to loop from 10 to 1.  Use a conditional to test if x is even (x % 2 == 0).
 
            .. activecode::  ch6ex10na
               :language: java
@@ -662,7 +662,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -670,7 +670,7 @@ Coding Practice with Loops
 
 .. tabbed:: ch6ex11n
 
-        .. tab:: Question  
+        .. tab:: Question
 
            .. activecode::  ch6ex11nq
               :language: java
@@ -703,7 +703,7 @@ Coding Practice with Loops
                         assertTrue(passed);
                     }
                      @Test
-                    public void testForLoop() 
+                    public void testForLoop()
                     {
                        // String target = "for (";
                        // boolean passed = checkCodeContains("for loop", target);
@@ -722,7 +722,7 @@ Coding Practice with Loops
               :language: java
               :optional:
 
-              Answer: Use a ``for`` loop with ``x`` changing from 0 to 10 and print the value of ``x`` and ``10 * x``. 
+              Answer: Use a ``for`` loop with ``x`` changing from 0 to 10 and print the value of ``x`` and ``10 * x``.
               ~~~~
               public class Test1
               {
@@ -730,12 +730,12 @@ Coding Practice with Loops
                   {
                       for (int x = 0; x <= 10; x++)
                       {
-                         System.out.println(x * 10);             
+                         System.out.println(x * 10);
                       }
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -750,8 +750,8 @@ Coding Practice with Loops
               :autograde: unittest
               :practice: T
 
-              Finish the following code so that it prints a string message minus the last character each time through the loop until there are no more characters in message.     
-              ~~~~       
+              Finish the following code so that it prints a string message minus the last character each time through the loop until there are no more characters in message.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -776,7 +776,7 @@ Coding Practice with Loops
                         assertTrue(passed);
                     }
                     @Test
-                    public void testForLoop() 
+                    public void testForLoop()
                     {
                        String code = getCode();
                        boolean passed = code.contains("for") || code.contains("while");
@@ -789,7 +789,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Add a ``while`` loop and loop while there is still at least one character in the string. At the end of the body of the loop reset the message to all characters except the last one.   
+           Answer: Add a ``while`` loop and loop while there is still at least one character in the string. At the end of the body of the loop reset the message to all characters except the last one.
 
            .. activecode::  ch6ex9na
               :language: java
@@ -809,7 +809,7 @@ Coding Practice with Loops
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -818,14 +818,14 @@ Coding Practice with Loops
 
 .. tabbed:: ch6ex12n
 
-        .. tab:: Question  
+        .. tab:: Question
 
            .. activecode::  ch6ex12nq
               :language: java
               :autograde: unittest
               :practice: T
 
-              Finish the code to loop printing the message each time through the loop and remove an ``x`` from the message until all the ``x``'s are gone. 
+              Finish the code to loop printing the message each time through the loop and remove an ``x`` from the message until all the ``x``'s are gone.
               ~~~~
               public class Test1
               {
@@ -855,7 +855,7 @@ Coding Practice with Loops
                         assertTrue(passed);
                     }
                      @Test
-                    public void testForLoop() 
+                    public void testForLoop()
                     {
                        String code = getCode();
                        boolean passed = code.contains("for") || code.contains("while");
@@ -866,7 +866,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Use a ``while`` loop.  Loop while ``x`` has been found in the message (using ``indexOf``).  Remove the ``x`` (using substring). Use indexOf again to get the position of the next ``x`` or -1 if there are none left in the message. 
+           Answer: Use a ``while`` loop.  Loop while ``x`` has been found in the message (using ``indexOf``).  Remove the ``x`` (using substring). Use indexOf again to get the position of the next ``x`` or -1 if there are none left in the message.
 
            .. activecode::  ch6ex12na
               :language: java
@@ -888,7 +888,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -931,7 +931,7 @@ Coding Practice with Loops
                         assertTrue(passed);
                     }
                     @Test
-                    public void testForLoop() 
+                    public void testForLoop()
                     {
                        String code = getCode();
                        boolean passed = code.contains("for") || code.contains("while");
@@ -942,7 +942,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Use indexOf to find the next ``x``.  Loop while pos is greater than or equal to 0.  Use substring to reset message beyond the next ``x``.   
+           Answer: Use indexOf to find the next ``x``.  Loop while pos is greater than or equal to 0.  Use substring to reset message beyond the next ``x``.
 
            .. activecode::  ch6ex16na
               :language: java
@@ -966,7 +966,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
            .. disqus::
                 :shortname: cslearn4u
@@ -976,7 +976,7 @@ Coding Practice with Loops
 
 .. tabbed:: ch6ex14n
 
-        .. tab:: Question 
+        .. tab:: Question
 
            .. activecode::  ch6ex14nq
               :language: java
@@ -1023,7 +1023,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row. 
+           Answer: Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row.
 
            .. activecode::  ch6ex14na
               :language: java
@@ -1044,7 +1044,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -1060,7 +1060,7 @@ Coding Practice with Loops
               :autograde: unittest
               :practice: T
 
-              Write the code below to print a rectangle of stars (``*``) with 3 rows of stars and 5 stars per row. 
+              Write the code below to print a rectangle of stars (``*``) with 3 rows of stars and 5 stars per row.
               ~~~~
               public class Test1
               {
@@ -1102,7 +1102,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row. 
+           Answer: Use nested ``for`` loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row.
 
            .. activecode::  ch6ex15na
               :language: java
@@ -1123,7 +1123,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
            .. disqus::
                 :shortname: cslearn4u
@@ -1132,21 +1132,21 @@ Coding Practice with Loops
 
 .. tabbed:: ch6ex13n
 
-        .. tab:: Question 
+        .. tab:: Question
 
            .. activecode::  ch6ex13nq
               :language: java
               :autograde: unittest
               :practice: T
 
-              Write the code below to print 55555, 4444, 333, 22, 1 with each on a different line. 
+              Write the code below to print 55555, 4444, 333, 22, 1 with each on a different line.
               ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
                   }
-              }    
+              }
               ====
               import static org.junit.Assert.*;
                 import org.junit.*;
@@ -1180,7 +1180,7 @@ Coding Practice with Loops
 
         .. tab:: Answer
 
-           Answer: Use nested ``for`` loops. The outer loop controls what is printed on each row and the number of rows.  The inner loop controls the number of values printer per row. 
+           Answer: Use nested ``for`` loops. The outer loop controls what is printed on each row and the number of rows.  The inner loop controls the number of values printer per row.
 
            .. activecode::  ch6ex13na
               :language: java
@@ -1201,7 +1201,7 @@ Coding Practice with Loops
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u

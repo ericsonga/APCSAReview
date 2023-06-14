@@ -37,4 +37,4 @@ A lack of relatable peers can also lead to similar feelings of isolation. Studen
 
 The solution to a lack of relatable peers is to seek out support groups or communities for your demographic. As :ref:`Briceida-Mariscal` explains:
 
-    “One thing that I started doing was mentoring other Latinas. Helping them has made me feel like I'm being part of something bigger than myself. I'm not only paying it forward, but I'm also no longer feeling lonely.” 
+    “One thing that I started doing was mentoring other Latinas. Helping them has made me feel like I'm being part of something bigger than myself. I'm not only paying it forward, but I'm also no longer feeling lonely.”

@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 8-4-
-   :start: 1   
+   :start: 1
 
 Toggle Mixed Up or Write Code Practice
 =========================================================

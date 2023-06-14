@@ -6,11 +6,11 @@
 Using Objects
 :::::::::::::::::::::
 
-In this unit, you will learn how to create and use objects in Java. 
+In this unit, you will learn how to create and use objects in Java.
 
 Class Periods: 13-15
 
-AP CS A Exam Weighting: 5-7.5% 
+AP CS A Exam Weighting: 5-7.5%
 
 .. toctree::
    :caption: Unit 2 Table of Contents

@@ -27,8 +27,8 @@ and ``toLowerCase`` methods.  Do they do what you thought they would?  The metho
    Run the code below. Why do you think you might want to change the string to all lowercase characters? Why doesn't the value of ``sample`` change? Do string methods change the string? Try some other string methods.
    ~~~~
    /**
-    * A program to allow students to try out different 
-    * String methods. 
+    * A program to allow students to try out different
+    * String methods.
     * @author Laurie White
     * @version April 2012
     */
@@ -75,7 +75,7 @@ and ``toLowerCase`` methods.  Do they do what you thought they would?  The metho
    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String in Java documentation|</a>
 
 Open the API for |String in Java documentation| in another tab. Scroll down to the Method Summary section and find the
-``indexOf(String str)`` method. Follow the link and read the description of the ``indexOf`` method. 
+``indexOf(String str)`` method. Follow the link and read the description of the ``indexOf`` method.
 
 .. fillintheblank:: fill-lab1b1
 
@@ -107,7 +107,7 @@ string has nothing to do with the animal. In this activity, you will trace a met
 word in the string. It will check the substring before and after the string to ensure that the keyword is
 actually found.
 
-Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it which we haven't seen before.  A ``while`` loop repeats the code in the block below it while a condition is true.  A block is all the code inside of an open curly brace ``{`` and a close curly brace ``}``.  
+Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it which we haven't seen before.  A ``while`` loop repeats the code in the block below it while a condition is true.  A block is all the code inside of an open curly brace ``{`` and a close curly brace ``}``.
 
 .. code-block:: java
 
@@ -117,7 +117,7 @@ Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it 
      String phrase = statement.trim();
 	 // The only change to incorporate the startPos is in
 	 // the line below
-	 int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), 
+	 int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(),
 	                                        startPos);
 
 	 // Refinement--make sure the goal isn't part of a word
@@ -142,9 +142,9 @@ Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it 
 
 		// If before and after aren't letters, we've
 		// found the word
-		if (((before.compareTo("a") < 0) || 
+		if (((before.compareTo("a") < 0) ||
 		     (before.compareTo("z") > 0)) // before is not a letter
-			&& ((after.compareTo("a") < 0) || 
+			&& ((after.compareTo("a") < 0) ||
 			    (after.compareTo("z") > 0)))
 		{
 			return psn;
@@ -192,11 +192,11 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
    ~~~~
    /**
     * A program to carry on conversations with a human user.
-    * This version: 
+    * This version:
     * <ul><li>
-    *    Uses advanced search for keywords 
-    * </li></ul> 
-    *    
+    *    Uses advanced search for keywords
+    * </li></ul>
+    *
     * @author Laurie White
     * @version April 2012
     */
@@ -204,7 +204,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
    {
 	  /**
 	   * Get a default greeting
-	   * 
+	   *
 	   * @return a greeting
 	   */
 	  public String getGreeting()
@@ -214,7 +214,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
 
 	  /**
 	   * Gives a response to a user statement
-	   * 
+	   *
 	   * @param statement
 	   *            the user statement
 	   * @return a response based on the rules given
@@ -249,7 +249,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
 	   * sensitive. This method will check that the given goal
 	   * is not a substring of a longer string (so, for
 	   * example, "I know" does not contain "no").
-	   * 
+	   *
 	   * @param statement
 	   *            the string to search
 	   * @param goal
@@ -318,7 +318,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
 	   * is not a substring of a longer string (so, for
 	   * example, "I know" does not contain "no"). The search
 	   * begins at the beginning of the string.
-	   * 
+	   *
 	   * @param statement
 	   *            the string to search
 	   * @param goal
@@ -333,7 +333,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
 
 	  /**
 	   * Pick a default response to use if nothing else fits.
-	   * 
+	   *
 	   * @return a non-committal string
 	   */
 	  private String getRandomResponse()

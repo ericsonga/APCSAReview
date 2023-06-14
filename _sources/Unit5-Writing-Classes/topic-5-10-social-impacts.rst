@@ -35,7 +35,7 @@ Social Impacts of CS
 
    <a href="https://www.wired.com/2016/06/self-driving-cars-will-power-kill-wont-conscience/" target="_blank">Wired article</a>
 
-We are living in an age of rapid development in technology and automation. Software and hardware developers increasingly have real impacts on people's lives. In computer science, we follow the following |ACM professional code of ethics| which includes guidelines such as "Avoid harm" and "Respect privacy". 
+We are living in an age of rapid development in technology and automation. Software and hardware developers increasingly have real impacts on people's lives. In computer science, we follow the following |ACM professional code of ethics| which includes guidelines such as "Avoid harm" and "Respect privacy".
 
 However, sometimes programs have unintended consequences, and sometimes, it is hard to ensure **system reliability**, where everything will work as intended. Software developers also need to be aware of the legal implications and intellectual property laws.
 
@@ -52,7 +52,7 @@ Another problem in machine learning is **bias** in algorithms or data. Machine l
 
    <a href="https://www.poetofcode.com/" target="_blank" style="text-decoration:underline">Joy Buolamwini</a>
 
-Watch the following |video1| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League). 
+Watch the following |video1| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League).
 
 .. youtube:: TWWsW1w-BVo
     :height: 400

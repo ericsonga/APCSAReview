@@ -45,7 +45,7 @@ Watch this short video to review the vocabulary in object-oriented programming:
    <a href="https://www.youtube.com/watch?v=1JJL0YszYik" target="_blank">video</a>
 
 
-.. Here is a fun |video| demonstrating the difference between the class  
+.. Here is a fun |video| demonstrating the difference between the class
 
 You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. For example, the class House below is a blueprint of a house and the objects which are individual houses built from that blueprint. You can't live on a blueprint although it describes a house! But you can use it to build houses and live in those.
 
@@ -61,7 +61,7 @@ To write your own class, you typically start a class declaration with ``public``
 
 .. code-block:: java
 
-    public class House 
+    public class House
     {
        // define class here - a blueprint
 
@@ -71,14 +71,14 @@ To write your own class, you typically start a class declaration with ``public``
     House neighborsHouse = new House();
 
 
-Remember that objects have attributes and behaviors. These correspond to **instance variables** and **methods** in the class definition.   Instance variables hold the data for objects where as the methods code the behaviors or the actions the object can do.   A class also has **constructors** which initialize the instance variables when the object is created, for example new House() above.  And a class can also have a **main method** which can be used to test the class.  
+Remember that objects have attributes and behaviors. These correspond to **instance variables** and **methods** in the class definition.   Instance variables hold the data for objects where as the methods code the behaviors or the actions the object can do.   A class also has **constructors** which initialize the instance variables when the object is created, for example new House() above.  And a class can also have a **main method** which can be used to test the class.
 
 Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email. Here's a possible Person class with instance variables, constructor, and methods.
 
 .. figure:: Figures/personClassDefn.png
     :width: 500px
     :align: center
-    :alt: Person 
+    :alt: Person
     :figclass: align-center
 
     Figure 1: Person class
@@ -95,11 +95,11 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
   :language: java
   :autograde: unittest
 
-  Run the following class. Try changing the Person p2 object in main to your name. 
+  Run the following class. Try changing the Person p2 object in main to your name.
   ~~~~
-  public class Person 
+  public class Person
   {
-     // instance variables 
+     // instance variables
      private String name;
      private String email;
      private String phoneNumber;
@@ -162,7 +162,7 @@ Instance Variables
 	pair: class; instance variables
 
 
-**Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance variables are also called **attributes**, **fields**, or **properties**. 
+**Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance variables are also called **attributes**, **fields**, or **properties**.
 
 Instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
 
@@ -170,9 +170,9 @@ Instance variables in general and on the AP CS A exam should be declared **priva
 
    Instance variables are declared right after the class declaration.  They usually start with ``private`` then the *type* of the variable and then a *name* for the variable. Private means only the code in this class has access to it.
 
-The ``Person`` class declares 3 private instance variables: name, email, and phoneNumber. These are things that you might want to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
+The ``Person`` class declares 3 private instance variables: name, email, and phoneNumber. These are things that you might want to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them.
 
-Once we have created a class like Person, we can have many objects declared of the class.  The class is like a blueprint or cookie cutter that defines the variables and methods for that class. Each object will have their own copies of the same instance variables but with possibly different values in them (as seen in the cookie decorations below). 
+Once we have created a class like Person, we can have many objects declared of the class.  The class is like a blueprint or cookie cutter that defines the variables and methods for that class. Each object will have their own copies of the same instance variables but with possibly different values in them (as seen in the cookie decorations below).
 
 
 .. figure:: Figures/PersonClassWithCookies.png
@@ -183,7 +183,7 @@ Once we have created a class like Person, we can have many objects declared of t
 
     Figure 2: Person Class and Objects
 
-**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables (encapsulated in the pink box above).  
+**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables (encapsulated in the pink box above).
 
 When designing a class, programmers make decisions about what data to make accessible and/or modifiable from an external class. The private access modifier is used to encapsulate and protect the data from external access. Private instance variables can only be accessed by methods within the class in which they are defined.
 
@@ -212,7 +212,7 @@ When designing a class, programmers make decisions about what data to make acces
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
 
-    :click-incorrect:}:endclick:      
+    :click-incorrect:}:endclick:
 
 
 
@@ -228,9 +228,9 @@ Methods
 
 .. note::
 
-   Methods define what the object can do.  They typically start with ``public`` then a type, then the name of the method followed by parentheses for optional parameters. Methods defined for an object can access and use its instance variables!  
+   Methods define what the object can do.  They typically start with ``public`` then a type, then the name of the method followed by parentheses for optional parameters. Methods defined for an object can access and use its instance variables!
 
-The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** (also called getters) and **mutator** (also called setters or modifier) methods in the next lessons which allow get and set access to the instance variables.  
+The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** (also called getters) and **mutator** (also called setters or modifier) methods in the next lessons which allow get and set access to the instance variables.
 
 Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
 The **void** return type is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber. The instance variables are shared by all the methods of the class.
@@ -279,22 +279,22 @@ To call a method to do its job, we create an object of the class and then use th
             :click-correct:last = theLast;:endclick:
          :click-correct:}:endclick:
 
-    :click-incorrect:}:endclick: 
+    :click-incorrect:}:endclick:
 
 Object-Oriented Design
 ----------------------
 
 .. |tutorial on class diagrams| raw:: html
 
-   <a href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" target="_blank">tutorial on class diagrams</a> 
+   <a href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" target="_blank">tutorial on class diagrams</a>
 
 .. |Creately.com| raw:: html
 
-   <a href="https://creately.com" target="_blank">Creately.com</a> 
+   <a href="https://creately.com" target="_blank">Creately.com</a>
 
 .. |app diagrams| raw:: html
 
-   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a> 
+   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
 
 
 In **Object-Oriented Design** (OOD), programmers first decide which classes are needed to solve a problem and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CS A exam). If you want to draw your own, |app diagrams| or |Creately.com| are good free online drawing tools for UML class diagrams.
@@ -314,7 +314,7 @@ When you are given a problem specification, look for the **nouns** to identify w
 
 .. shortanswer:: OOD1
 
-    You've been hired by your school to create a program that keeps track of "students at your school and the courses they are taking". Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class. 
+    You've been hired by your school to create a program that keeps track of "students at your school and the courses they are taking". Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class.
 
 
 The two nouns in the problem description above, **Student** and **Course** would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!
@@ -343,7 +343,7 @@ In this project, you will create a class that can tell riddles like the followin
 - Riddle Question: Why did the chicken cross the playground?
 - Riddle Answer: To get to the other slide!
 
-1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |app diagrams| or |Creately.com|, although it is not required). 
+1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |app diagrams| or |Creately.com|, although it is not required).
 
 2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Don't name your instance variables initQuestion and initAnswer since they are used as constructor parameter variables. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
@@ -355,7 +355,7 @@ In this project, you will create a class that can tell riddles like the followin
   :language: java
   :autograde: unittest
 
-  Complete the Riddle class below and complete the main method to construct 2 Riddle objects and call their printQuestion() and printAnswer() methods.  
+  Complete the Riddle class below and complete the main method to construct 2 Riddle objects and call their printQuestion() and printAnswer() methods.
   ~~~~
   public class Riddle
   {
@@ -386,7 +386,7 @@ In this project, you will create a class that can tell riddles like the followin
       // main method for testing
       public static void main(String[] args)
       {
-          // call the Riddle constructor to create 2 new Riddle objects 
+          // call the Riddle constructor to create 2 new Riddle objects
           // with the arguments for the riddle question and answer.
 
           // call the riddle objects' printQuestion() and printAnswer methods
@@ -497,7 +497,7 @@ In this project, you will create a class that can tell riddles like the followin
         }
     }
 
-|Groupwork| Design a Class for your Community 
+|Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
 .. |worksheet| raw:: html
@@ -505,14 +505,14 @@ In this project, you will create a class that can tell riddles like the followin
    <a href="https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing" target="_blank">worksheet</a>
 
 
-In this unit, you will design a class of your own choice that is relevant to your community. 
-You will improve the class in each lesson of this unit. If you would rather work on this project 
-as 1 stand-alone lab project rather than a piece at a time at the end of each lesson, 
-you can do this in lesson 5.18 at the end of Unit 5. You can work in pairs on this project. 
+In this unit, you will design a class of your own choice that is relevant to your community.
+You will improve the class in each lesson of this unit. If you would rather work on this project
+as 1 stand-alone lab project rather than a piece at a time at the end of each lesson,
+you can do this in lesson 5.18 at the end of Unit 5. You can work in pairs on this project.
 
 Ask someone in your family or community what would be important for them to track. For example, you could create a class to keep track of community events, health tracking, athlete games or statistics, community leaders, performers or performances, or another subject of your choice.  Fill in question 1 in this |worksheet|.
 
-In this lesson, come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be. 
+In this lesson, come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be.
 You will add constructors and other methods to this class in the next lessons.
 You can use this |worksheet| to design your class, and then fill in the class below. Your class will not print out anything yet, but it should run without errors.
 
@@ -588,7 +588,7 @@ AP Practice
               /* missing code */
             }
 
-            Which of the following replacements for /* missing code */ is the most appropriate 
+            Which of the following replacements for /* missing code */ is the most appropriate
             implementation of the class?
 
         - .. code-block:: java
@@ -634,7 +634,7 @@ AP Practice
             private Cat(String name, int age)
             { /* implementation not shown */ }
 
-          - Constructor should be public.          
+          - Constructor should be public.
 
 .. mchoice:: AP5-1-2
     :practice: T
@@ -648,7 +648,7 @@ AP Practice
         /* missing code */
         }
 
-        Which of the following replacements for /* missing code */ is the most appropriate 
+        Which of the following replacements for /* missing code */ is the most appropriate
         implementation of the class?
 
     - .. code-block:: java

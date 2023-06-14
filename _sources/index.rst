@@ -3,7 +3,7 @@
     :align: center
 
 ==========================================
-AP CS A Java Course 
+AP CS A Java Course
 ==========================================
 
 Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
@@ -12,20 +12,20 @@ CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an i
 
 To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
 
-.. ATTENTION high school women, genderqueer, and non-binary technologists: 
-.. Apply now until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) 
+.. ATTENTION high school women, genderqueer, and non-binary technologists:
+.. Apply now until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do)
 .. in technology. Visit http://www.aspirations.org/AiCHSAward for details. #NCWITAiC23
 
-ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships for college scholarships and Amazon summer internships for students with financial need.  
+ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships for college scholarships and Amazon summer internships for students with financial need.
 
 .. Apply for the  ACM Cutler-Bell Scholarship https://csteachers.org/page/csta-acm-cutler-bell-prize until Jan. 27th.
 
-ATTENTION high school women of color taking AP CSA or CSP: 
-if you identify as a woman/girl and as Black, Hispanic/Latina, and/or Native American 
-you can participate in **Sisters Rise Up**.  
-The goal of Sisters Rise Up is to help you succeed in your Advanced Placement Computer Science course and on the exam.  
-It offers remote help sessions run by undergraduate students from the University of Michigan.  
-You can express interest in the program by filling at the form at https://forms.gle/4516SWpPrgnGPi55A. 
+ATTENTION high school women of color taking AP CSA or CSP:
+if you identify as a woman/girl and as Black, Hispanic/Latina, and/or Native American
+you can participate in **Sisters Rise Up**.
+The goal of Sisters Rise Up is to help you succeed in your Advanced Placement Computer Science course and on the exam.
+It offers remote help sessions run by undergraduate students from the University of Michigan.
+You can express interest in the program by filling at the form at https://forms.gle/4516SWpPrgnGPi55A.
 
 
 
@@ -98,11 +98,11 @@ Index
 
 .. |teaching CSAwesome group| raw:: html
 
-   <a href="https://groups.google.com/forum/#!forum/teaching-csawesome" target="_blank" style="text-decoration:underline">teaching CSAwesome group</a>   
+   <a href="https://groups.google.com/forum/#!forum/teaching-csawesome" target="_blank" style="text-decoration:underline">teaching CSAwesome group</a>
 
 .. |csawesome| raw:: html
 
-   <a href="http://csawesome.org" target="_blank" style="text-decoration:underline">csawesome.org</a>   
+   <a href="http://csawesome.org" target="_blank" style="text-decoration:underline">csawesome.org</a>
 
 If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CSAwesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 

@@ -20,17 +20,17 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    if (guess < answer)
    =====
-   {   
+   {
        System.out.println("Your guess is too low");
    }
    =====
    else if (guess == answer)
    =====
-   {       
+   {
        System.out.println("You are right!");
    }
    =====
-   else 
+   else
    =====
    {
         System.out.println("Your guess is too high");
@@ -50,7 +50,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====
-           boolean homeworkLeft = false; 
+           boolean homeworkLeft = false;
            boolean cleaned = true;
    =====
            if (!homeworkLeft && cleaned)
@@ -59,7 +59,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                System.out.println("You can go out");
    =====
-           else 
+           else
    =====
                System.out.println("You can not go out");
    =====
@@ -83,13 +83,13 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            int x = 3;
    =====
-           if (x >= 1 && x <= 10) 
+           if (x >= 1 && x <= 10)
    =====
            if (x >= 1 || x <= 10) #paired
    =====
                System.out.println("1 <= x <= 10");
    =====
-           else 
+           else
    =====
                System.out.println("x is not in range");
    =====
@@ -110,7 +110,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        public static void main(String[] args)
        {
-   =====    
+   =====
           String message = "Is that the phone ringing?";
    =====
           if (message.indexOf("ringing") >= 0)
@@ -154,7 +154,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                System.out.println("Your fav is not junk");
    =====
-       } 
+       }
    }
 
 
@@ -239,11 +239,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (!driving && !eating)
    =====
-           if (!driving || !eating) #paired     
+           if (!driving || !eating) #paired
    =====
                System.out.println("Can text now");
    =====
-           else 
+           else
    =====
                System.out.println("Can't text now");
    =====
@@ -313,10 +313,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            else if (score >= 70)
                System.out.println("C");
    =====
-           else if (score >= 60) 
+           else if (score >= 60)
                System.out.println("D");
    =====
-           else 
+           else
                System.out.println("E");
    =====
        }

@@ -5,10 +5,10 @@
 Unit 3 - Summary
 =========================
 
-In this chapter you learned about **conditionals**.  **Conditionals** are used to execute code when a Boolean expression is true or false.  A Boolean expression is one that is either true or false like ``x > 0``.  
+In this chapter you learned about **conditionals**.  **Conditionals** are used to execute code when a Boolean expression is true or false.  A Boolean expression is one that is either true or false like ``x > 0``.
 
 ..	index::
-    single: conditional 
+    single: conditional
     single: boolean expression
     single: boolean variable
     single: complex conditional
@@ -23,10 +23,10 @@ Concept Summary
 ---------------
 
 - **Block of statements** - One or more statements enclosed in an open curly brace '{' and a closing curly brace '}'.
-- **Boolean expression** - A mathematical or logical expression that is either true or false.  
+- **Boolean expression** - A mathematical or logical expression that is either true or false.
 - **compound Boolean expressions** - A Boolean expression with two or more conditions joined by a logical **and** '&&' or a logical **or** '||'.
 - **conditional** - Used to execute code only if a Boolean expression is true.
-- **DeMorgan's Laws** - Rules about how to distribute a negation on a complex conditional.  
+- **DeMorgan's Laws** - Rules about how to distribute a negation on a complex conditional.
 - **logical and** - Used in compound boolean expressions that are true if both conditions are true.
 - **logical or** - Used in compound boolean expressions that are true if one of the conditions is true.
 - **negation** - turns a true statement false and a false statement true
@@ -36,7 +36,7 @@ Java Keyword Summary
 --------------------
 
 - **if (Boolean expression)** - used to start a conditional statement.  This is followed by a statement or a block of statements that will be executed if the Boolean expression is true.
-- **else** - used to execute a statement or block of statements if the Boolean expression on the if part was false.  
+- **else** - used to execute a statement or block of statements if the Boolean expression on the if part was false.
 - **else if (Boolean expression)** - used to have 3 or more possible outcomes such as if x is equal, x is greater than, or x is less than some value.  It will only execute if the condition in the 'if' was false and the condition in the else if is true.
 
 Vocabulary Practice
@@ -70,16 +70,16 @@ For more practice, see this |Quizlet|.
 Common Mistakes
 ---------------
 
-  -  Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==. 
+  -  Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==.
 
   - Putting a ; at the end of ``if (test);``. Remember that the if statement ends after ``if (test) statement;`` or use curly brackets ``if (test) { statements; }``.
 
-  -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.    
+  -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.
 
-  -  Trouble with compound boolean expressions which are two or more Boolean expressions joined by **and (&&)`` or **or (||)**.  
+  -  Trouble with compound boolean expressions which are two or more Boolean expressions joined by **and (&&)`` or **or (||)**.
 
   - Not understanding that `||` is an inclusive-or where one or *both* conditions must be true.
 
-  -  Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.   
+  -  Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.
 
-  -  Not understanding short circuit evaluation which is that if evaluation of the first Boolean expression is enough to determine the truth of a complex conditional the second expression will not be evaluated.  
+  -  Not understanding short circuit evaluation which is that if evaluation of the first Boolean expression is enough to determine the truth of a complex conditional the second expression will not be evaluated.

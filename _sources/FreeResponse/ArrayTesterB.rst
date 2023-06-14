@@ -50,8 +50,8 @@ Try and Solve It
 
       }
 
-      /** Copy in your solution of getColumn from the previous section   
-      */ 
+      /** Copy in your solution of getColumn from the previous section
+      */
       public static int[] getColumn(int[][] arr2D, int c)
       {
          // put your solution here
@@ -98,7 +98,7 @@ Try and Solve It
       }
 
       /** Returns true if arr contains any duplicate values;
-        * false otherwise. 
+        * false otherwise.
         */
       public static boolean containsDuplicates(int[] arr){
         for(int i = 0; i < arr.length - 1; i++){

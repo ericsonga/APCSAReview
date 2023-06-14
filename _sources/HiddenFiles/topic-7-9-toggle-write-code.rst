@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 5-18-
-   :start: 1   
+   :start: 1
 
 Unit 7 Write Code for Toggle Code
 =========================================================
@@ -92,7 +92,7 @@ This is the write code problems associated with the mixed up code problems.
 
             public static void printBackwards(ArrayList<String> myList) {
 
-                for (int i = myList.size() - 1; i > 0; i--) { 
+                for (int i = myList.size() - 1; i > 0; i--) {
 
                     System.out.print(myList[i] + ", ");
 
@@ -155,7 +155,7 @@ This is the write code problems associated with the mixed up code problems.
                 // That means you CANNOT use an enhanced for loop
                 // And it also means you need to carefully handle when you increment your index variable
 
-            } 
+            }
 
             public static void main(String[] args) {
 
@@ -214,7 +214,7 @@ This is the write code problems associated with the mixed up code problems.
             public static int findSmallest(ArrayList<Integer> nums) {
                 int min = nums.get(0);
 
-                // YOUR CODE HERE // 
+                // YOUR CODE HERE //
 
                 return min;
             }
@@ -315,7 +315,7 @@ This is the write code problems associated with the mixed up code problems.
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
-            }   
+            }
         }
 
 .. activecode:: u7_muc_wc6
@@ -323,7 +323,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Fill out the ``average`` method. It should take in an ArrayList ``nums`` and calculate the arithmetic mean (the sum divided by the length). For example, ``average`` called on ``{5, 9, 6}`` should return ``6.66666666667`` as that is ``(5 + 9 + 6) / 3``. 
+        Fill out the ``average`` method. It should take in an ArrayList ``nums`` and calculate the arithmetic mean (the sum divided by the length). For example, ``average`` called on ``{5, 9, 6}`` should return ``6.66666666667`` as that is ``(5 + 9 + 6) / 3``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
@@ -597,5 +597,5 @@ This is the write code problems associated with the mixed up code problems.
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
-            }   
+            }
         }

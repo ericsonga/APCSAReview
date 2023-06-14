@@ -21,7 +21,7 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Set Value(s) in a 2D Array (Day 2)
 ----------------------------------------
@@ -30,9 +30,9 @@ Set Value(s) in a 2D Array (Day 2)
 	pair: 2D Array; initialization
 	pair: 2D Array; set value
 
-When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in brackets followed by the column index in brackets and then an ``=`` followed by a value.  
+When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in brackets followed by the column index in brackets and then an ``=`` followed by a value.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] ticketInfo = new int[2][3];
   ticketInfo[0][0] = 15;
@@ -48,11 +48,11 @@ Try the code below. Did it print what you expected?  When you print a two dimens
 
 .. activecode:: 2DArraySet
   :language: java
-  :autograde: unittest   
+  :autograde: unittest
 
-  Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows. 
+  Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows.
   ~~~~
-  public class TwoDArraySet 
+  public class TwoDArraySet
   {
      public static void main(String[] args)
      {
@@ -156,7 +156,7 @@ Initializer Lists for 2D Arrays
 
 You can also initialize (set) the values for the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the values you give.  The code below creates an array called ``ticketInfo`` with 2 rows and 3 columns.  It also creates an array called ``seatingInfo`` with 3 rows and 2 columns.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] ticketInfo = { {25,20,25}, {25,20,25} };
   String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
@@ -178,14 +178,14 @@ Get a Value from a 2D Array
 ..	index::
 	pair: 2D Array; access value
 
-To get the value in a 2D array give the name of the array followed by the row and column indicies in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``. 
+To get the value in a 2D array give the name of the array followed by the row and column indicies in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] ticketInfo = { {25,20,25}, {25,20,25} };
   String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
   int value = ticketInfo[1][0];
-  String name = seatingInfo[0][1]; 
+  String name = seatingInfo[0][1];
 
 |Exercise| **Check your understanding**
 
@@ -203,7 +203,7 @@ To get the value in a 2D array give the name of the array followed by the row an
    :feedback_d: This would be true for if <code>name</code> was set to <code>seatingInfo[1][1];</code> instead.
    :feedback_e: This would be true for if <code>name</code> was set to <code>seatingInfo[2][1];</code> instead.
 
-   What is the value of ``name`` after the code above executes?  
+   What is the value of ``name`` after the code above executes?
 
 |CodingEx| **Coding Exercise**
 
@@ -211,16 +211,16 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 .. activecode:: 2DArrayInitGet
   :language: java
-  :autograde: unittest   
+  :autograde: unittest
 
   Add another row to seatingInfo initialized to your name and a friend's name. Get these names out of the array using the correct indices and then print them out.
   ~~~~
-  public class TwoDArrayInitGet 
+  public class TwoDArrayInitGet
   {
      public static void main(String[] args)
      {
-        String[][] seatingInfo = { {"Jamal", "Maria"}, 
-                                   {"Jake", "Suzy"}, 
+        String[][] seatingInfo = { {"Jamal", "Maria"},
+                                   {"Jake", "Suzy"},
                                    {"Emma", "Luke"} };
         String name = seatingInfo[0][0];
         System.out.println(name + " is at [0,0]");
@@ -292,7 +292,7 @@ To get the value in a 2D array give the name of the array followed by the row an
 
             passed = getResults("Name is at "+ expected, actual, "Add second name to new row and print it out", passed);
             assertTrue(passed);
-        }  
+        }
     }
 
 |Groupwork| Programming Challenge : ASCII Art
@@ -306,22 +306,22 @@ ASCII is a commonly used character encoding standard where each key you press on
 
 We can represent ASCII art in a 2D array of rows and columns. What do you think the following code will print out? Try to guess before you run it. The loops to print out the 2D array will be explained in the next lesson. Then, do the following:
 
-1. Change the code to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it. 
+1. Change the code to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it.
 
-2. Add a new asciiArt array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``. 
+2. Add a new asciiArt array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``.
 
 .. activecode:: challenge-8-1-ascii-art
   :language: java
   :autograde: unittest
 
-  Part 1: Add 2 assignment statements for the 2D array asciiArt to change the "o" characters to "@" characters. Part 2: Create a new asciiArt array and print it out.   
+  Part 1: Add 2 assignment statements for the 2D array asciiArt to change the "o" characters to "@" characters. Part 2: Create a new asciiArt array and print it out.
   ~~~~
   public class AsciiArt
   {
      public static void main(String[] args)
      {
 
-        String[][] asciiArt = {  
+        String[][] asciiArt = {
               {" ", " ", "_", "_", "_", " ", " "},
               {" ", "(", "o", " ", "o", ")", " "},
               {"(", " ", " ", "V", " ", " ", ")"},
@@ -336,7 +336,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
         for(String[] row : asciiArt) {
           for(String column : row)
             System.out.print(column);
-          System.out.println();    
+          System.out.println();
         }
 
         //Part 2: Create your own ASCII art array and print it out!
@@ -365,7 +365,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
             assertTrue(passed);
         }
 
-        /* removed because doesn't work if their own art has o 
+        /* removed because doesn't work if their own art has o
         @Test
         public void test1()
         {
@@ -375,7 +375,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
             boolean passed = output.contains("@") && !output.contains("o");
             passed = getResults(expect, output, "changed o to @", passed);
             assertTrue(passed);
-        } 
+        }
         */
 
         @Test

@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 4-7-
-   :start: 1   
+   :start: 1
 
 Unit 4 Write Code for Toggle Code
 =========================================================
@@ -12,11 +12,11 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Finish the code to print out all the values from 20 to 30 (20, 21, 22, … 30). 
+        Finish the code to print out all the values from 20 to 30 (20, 21, 22, … 30).
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -65,9 +65,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print a countdown from 15 to 0 (15, 14, 13, … 0).
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -112,9 +112,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print up from 0 to 50 by 5 (0, 5, 10, 15 … 50).
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -159,9 +159,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print out the values from 0 to 100 by 20’s (0, 20, 40, .. 100).
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -204,9 +204,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print out the values from 100 to 0 by 10’s (100, 90, 80, … 0).
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -251,9 +251,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print 3 rows with 6 ``*`` in each row. Be sure to use two loops.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -298,9 +298,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print 1 (followed by a newline), then 22 (followed by a newline), and then 333 (followed by a newline). Be sure to use two loops.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -344,9 +344,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print 11111, 22222, 33333, 44444, and 55555. Be sure to use two loops.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 
@@ -391,9 +391,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Finish the code to print 11111, 2222, 333, 44, 5. Be sure to use two loops.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 // Add your code here
 

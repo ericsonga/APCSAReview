@@ -56,7 +56,7 @@ Click to reveal the algorithm and problems to help you write your solution.
         :answer_c: Math.random(6);
         :correct: a
         :feedback_a: This expression correctly generates a random number between 1 and 6.
-        :feedback_b: This expression generates a random number from 0 to 5.  
+        :feedback_b: This expression generates a random number from 0 to 5.
         :feedback_c: This isn't valid
 
         Which Java expression correctly generates a random number between 1 and 6?
@@ -124,10 +124,10 @@ Try and Solve Part A
 
 .. activecode:: FRQNumberCubeA
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    FRQ Number Cube A: Write the method ``getCubeTosses`` that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.
-   ~~~~ 
+   ~~~~
     import java.util.Arrays;
     public class NumberCube
     {

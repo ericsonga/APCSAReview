@@ -19,7 +19,7 @@ in the table below.
     :align: center
     :figclass: align-center
 
-    Figure 1: Example values with the region for the getAverage outlined 
+    Figure 1: Example values with the region for the getAverage outlined
 
 .. figure:: Figures/SkyViewClassInfo.png
     :align: center
@@ -35,9 +35,9 @@ Try and Solve It
    :language: java
    :autograde: unittest
 
-   Finish writing the ``getAverage`` method in the class below.  
+   Finish writing the ``getAverage`` method in the class below.
    ~~~~
-   public class SkyView 
+   public class SkyView
    {
        private double[][] view;
 
@@ -78,16 +78,16 @@ Try and Solve It
            }
        }
 
-       /** Returns the average of the values in a rectangular section of view. 
-         * 
-         * @param startRow the first row index of the section 
-         * @param endRow the last row index of the section 
-         * @param startCol the first column index of the section 
-         * @param endCol the last column index of the section 
-         * Precondition: 0 <= startRow <= endRow < view.length 
-         * Precondition: 0 <= startCol <= endCol < view[0].length 
-         * @return the average of the values in the specified section of view */ 
-       public double getAverage(int startRow, int endRow, int startCol, int endCol) 
+       /** Returns the average of the values in a rectangular section of view.
+         *
+         * @param startRow the first row index of the section
+         * @param endRow the last row index of the section
+         * @param startCol the first column index of the section
+         * @param endCol the last column index of the section
+         * Precondition: 0 <= startRow <= endRow < view.length
+         * Precondition: 0 <= startCol <= endCol < view[0].length
+         * @return the average of the values in the specified section of view */
+       public double getAverage(int startRow, int endRow, int startCol, int endCol)
        {
            //*** Finish writing this method! ***
        }

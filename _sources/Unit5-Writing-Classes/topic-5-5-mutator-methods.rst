@@ -59,10 +59,10 @@ Here's an example of the Student class with a mutator method called setName():
      }
 
      public static void main(String[] args)
-     { 
+     {
         // To call a set method, use objectName.setVar(newValue)
         Student s = new Student();
-        s.setName("Ayanna");  
+        s.setName("Ayanna");
      }
     }
 
@@ -86,7 +86,7 @@ Try the Student class below which this time has set methods added. You will need
 
   Fix the main method to include a call to the appropriate set method.
   ~~~~
-  public class TesterClass 
+  public class TesterClass
   {
      // main method for testing
      public static void main(String[] args)
@@ -97,10 +97,10 @@ Try the Student class below which this time has set methods added. You will need
         // Main doesn't have access to email, use set method!
         s1.email = "skyler2@gmail.com";
         System.out.println(s1);
-     }   
+     }
    }
 
-  class Student 
+  class Student
   {
      private String name;
      private String email;
@@ -114,28 +114,28 @@ Try the Student class below which this time has set methods added. You will need
      }
      // mutator methods - setters
      public void setName(String newName)
-     { 
-       name = newName; 
+     {
+       name = newName;
      }
      public void setEmail(String newEmail)
-     { 
-       email = newEmail; 
+     {
+       email = newEmail;
      }
      public void setId(int newId)
-     { 
-       id = newId; 
+     {
+       id = newId;
      }
-     // accessor methods - getters 
-     public String getName() 
-     { 
+     // accessor methods - getters
+     public String getName()
+     {
         return name;
      }
-     public String getEmail() 
-     { 
+     public String getEmail()
+     {
         return email;
      }
-     public int getId() 
-     { 
+     public int getId()
+     {
         return id;
      }
      public String toString() {
@@ -189,7 +189,7 @@ Try the Student class below which this time has set methods added. You will need
         public class Party
         {
             //number of people at the party
-            private int numOfPeople; 
+            private int numOfPeople;
 
             /* Missing header of set method */
             {
@@ -223,14 +223,14 @@ Try the Student class below which this time has set methods added. You will need
     :feedback: Review the vocabulary.
     :match_1: gets and returns the value of an instance variable|||accessor method
     :match_2: sets the instance variable to a value in its parameter|||mutator method
-    :match_3: initializes the instance variables to values|||constructor 
+    :match_3: initializes the instance variables to values|||constructor
     :match_4: accessible from outside the class|||public
     :match_5: accessible only inside the class|||private
 
 
     Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.
 
-Mutator methods do not have to have a name with "set" in it, although most do. They can be any methods that change the value of an instance variable or a static variable in the class, as can be seen in the AP Practice questions below.     
+Mutator methods do not have to have a name with "set" in it, although most do. They can be any methods that change the value of an instance variable or a static variable in the class, as can be seen in the AP Practice questions below.
 
 
 |Groupwork| Programming Challenge : Class Pet Setters
@@ -241,7 +241,7 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
     :align: left
     :alt: Animal Clinic
 
-1. Copy your Awesome Animal Clinic Pet class from the last lesson into this Active Code window. 
+1. Copy your Awesome Animal Clinic Pet class from the last lesson into this Active Code window.
 2. Add set methods for each of the 5 instance variables. Make sure you use good commenting!
 3. Test each of the set methods in the main method.
 
@@ -255,24 +255,24 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
   /**
       Pet class (complete comments)
       @author
-      @since 
+      @since
 
   */
-  class Pet 
+  class Pet
   {
      // complete class definition with set methods
 
   }
 
-  public class TesterClass 
+  public class TesterClass
   {
      // main method for testing
      public static void main(String[] args)
      {
         // Create Pet objects and test all your set methods
 
-     }   
-   }  
+     }
+   }
    ====
    import static org.junit.Assert.*;
     import org.junit.*;
@@ -387,14 +387,14 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
         }
     }
 
-|Groupwork| Design a Class for your Community 
+|Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
-In the previous lessons, you came up with a class of your own choice relevant to your community. 
+In the previous lessons, you came up with a class of your own choice relevant to your community.
 
-1. Copy your class with its instance variables, constructors, and accessors from the last lesson. 
+1. Copy your class with its instance variables, constructors, and accessors from the last lesson.
 
-2. Add mutator set methods for each of the instance variables. 
+2. Add mutator set methods for each of the instance variables.
 
 3. Test each of the set methods in the main method.
 
@@ -404,22 +404,22 @@ In the previous lessons, you came up with a class of your own choice relevant to
   :language: java
   :autograde: unittest
 
-  Copy your class with its instance variables, constructors, and accessors from the last lesson. Add mutator set methods for each of the instance variables. Test each of the set methods in the main method. 
+  Copy your class with its instance variables, constructors, and accessors from the last lesson. Add mutator set methods for each of the instance variables. Test each of the set methods in the main method.
   ~~~~
   public class          // Add your class name here!
   {
-      // 1. Copy your class with its instance variables, constructors, and accessors from the last lesson. 
+      // 1. Copy your class with its instance variables, constructors, and accessors from the last lesson.
 
-      // 2. Add mutator set methods for each of the instance variables. 
+      // 2. Add mutator set methods for each of the instance variables.
 
-      /// 3. Test each of the set methods in the main method. 
+      /// 3. Test each of the set methods in the main method.
 
       public static void main(String[] args)
-      {  
-         // Construct an object of your class  
+      {
+         // Construct an object of your class
 
 
-         // call the objects' mutator methods and toString methods and print them out. 
+         // call the objects' mutator methods and toString methods and print them out.
 
       }
   }

@@ -60,11 +60,11 @@ A conditional uses the keyword ``if`` followed by Boolean expression inside of  
     if (boolean expression)
         Do statement;
     // Or a single if with {}
-    if (boolean expression) 
+    if (boolean expression)
     {
        Do statement;
     }
-    // A block if statement: { } required    
+    // A block if statement: { } required
     if (boolean expression)
     {
        Do Statement1;
@@ -75,9 +75,9 @@ A conditional uses the keyword ``if`` followed by Boolean expression inside of  
 
 .. note::
 
-    Note that there is no semicolon (;) at the end of the boolean expression in an if statement even if it is the end of that line. The semicolon goes at the end of the whole if statement, often on the next line. Or { } are used to mark the beginning and end of the block of code under the if condition. 
+    Note that there is no semicolon (;) at the end of the boolean expression in an if statement even if it is the end of that line. The semicolon goes at the end of the whole if statement, often on the next line. Or { } are used to mark the beginning and end of the block of code under the if condition.
 
-Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).  
+Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).
 
 .. activecode:: lccb1
    :language: java
@@ -90,9 +90,9 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
       public static void main(String[] args)
       {
         boolean isRaining = true;
-        if (isRaining) 
+        if (isRaining)
         {
-           System.out.println("Take an umbrella!"); 
+           System.out.println("Take an umbrella!");
         }
         System.out.println("Drive carefully");
       }
@@ -130,7 +130,7 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
 Relational Operators in If Statements
 ---------------------------------------
 
-Most if statements have a boolean condition that uses relational operators like ==, !=, <, >, <=, >=, as we saw in the last lesson. 
+Most if statements have a boolean condition that uses relational operators like ==, !=, <, >, <=, >=, as we saw in the last lesson.
 
 
 |CodingEx| **Coding Exercise**
@@ -258,8 +258,8 @@ Most if statements have a boolean condition that uses relational operators like 
    :answer_e: The code will not compile
    :correct: c
    :feedback_a: x is changed by the if statements.
-   :feedback_b: What happens when x is greater than 2 and then greater than 4? Do both if statements.  
-   :feedback_c: If x is greater than 2, it's always doubled, and then that result is always greater than 4, so it's set to 0 in the second if statement.  
+   :feedback_b: What happens when x is greater than 2 and then greater than 4? Do both if statements.
+   :feedback_c: If x is greater than 2, it's always doubled, and then that result is always greater than 4, so it's set to 0 in the second if statement.
    :feedback_d: x is changed by the if statements.
    :feedback_e: This code will compile.
 
@@ -268,11 +268,11 @@ Most if statements have a boolean condition that uses relational operators like 
    .. code-block:: java
 
      int x = 3;
-     if (x > 2) 
+     if (x > 2)
      {
          x = x * 2;
      }
-     if (x > 4) 
+     if (x > 4)
      {
         x = 0;
      }
@@ -288,9 +288,9 @@ Common Errors with If Statements
 
 Here are some rules to follow with if statements to avoid some common errors:
 
-   - Always use curly brackets ``{`` and ``}`` to enclose the block of statements under the if condition. Java doesn't care if you indent the code -- it goes by the { }. 
+   - Always use curly brackets ``{`` and ``}`` to enclose the block of statements under the if condition. Java doesn't care if you indent the code -- it goes by the { }.
 
-   - Don't put in a semicolon ``;`` after the first line of the if statement, if (test);. The if statement is a multiline block of code that starts with the if condition and then { the body of the if statement }. 
+   - Don't put in a semicolon ``;`` after the first line of the if statement, if (test);. The if statement is a multiline block of code that starts with the if condition and then { the body of the if statement }.
 
    - Always use **==**, not =, in the condition of an if statement to test a variable. One = assigns, two == tests!
 
@@ -310,7 +310,7 @@ Here are some rules to follow with if statements to avoid some common errors:
       public static void main(String[] args)
       {
           boolean isCold = false;
-          if (isCold = true); 
+          if (isCold = true);
               System.out.println("Wear a coat");
               System.out.println("Wear gloves");
 
@@ -375,8 +375,8 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
       {
         // Get a random number from 1 to 8
 
-        // Use if statements to test the random number 
-        // and print out 1 of 8 random responses 
+        // Use if statements to test the random number
+        // and print out 1 of 8 random responses
 
 
       }
@@ -455,7 +455,7 @@ Here's a |repl version| that uses the Scanner class to first have the user ask a
     <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Summary
--------------------  
+-------------------
 
 - if statements test a boolean expression and if it is true, go on to execute the following statement or block of statements surrounded by curly brackets { } like below.
 
@@ -464,7 +464,7 @@ Summary
     // A single if statement
     if (boolean expression)
         Do statement;
-    // A block if statement    
+    // A block if statement
     if (boolean expression)
     {
        Do Statement1;
@@ -473,7 +473,7 @@ Summary
        Do StatementN;
     }
 
-- Relational operators (==, !=, <, >, <=, >=) are used in boolean expressions to compare values and arithmetic expressions. 
+- Relational operators (==, !=, <, >, <=, >=) are used in boolean expressions to compare values and arithmetic expressions.
 
 - Conditional (if) statements affect the flow of control by executing different statements based on the value of a Boolean expression.
 
@@ -513,7 +513,7 @@ AP Practice
 
     - 28
 
-      - Some of the if statement conditions are false so they will not run.  
+      - Some of the if statement conditions are false so they will not run.
 
     - 35
 
@@ -521,7 +521,7 @@ AP Practice
 
     - 38
 
-      + Correct! The first if statement condition is false, and the second and third if conditions are true. 
+      + Correct! The first if statement condition is false, and the second and third if conditions are true.
 
     - 25
 
@@ -529,7 +529,7 @@ AP Practice
 
     - 33
 
-      - The second if statement would run since rain is false. 
+      - The second if statement would run since rain is false.
 
 
 
@@ -566,11 +566,11 @@ AP Practice
 
     - 31
 
-      - The first if statement condition is false. 
+      - The first if statement condition is false.
 
     - 15
 
-      - The first if statement condition is false. 
+      - The first if statement condition is false.
 
     - 5
 

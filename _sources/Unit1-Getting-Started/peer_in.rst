@@ -11,9 +11,9 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :answer_e: None of the above
     :correct: b
     :feedback_a: Incorrect! The first print statement outputs whether the x value equals 3 or not. Remember, == checks for equality and = sets a variable to a value.
-    :feedback_b: Correct! The first print statment outputs whether the x value equals to 3 and the second statement prints out z, the sum of x and y. 
+    :feedback_b: Correct! The first print statment outputs whether the x value equals to 3 and the second statement prints out z, the sum of x and y.
     :feedback_c: Incorrect! The first print statement outputs whether the x value equals 3 or not. Remember, == checks for equality and = sets a value to a variable. The second print statement outputs z, which is the sum of x and y.
-    :feedback_d: Incorrect! Although it is true that the first print statement outputs whether the x value equals 3 or not, the second statement prints out z, the sum of x and y. 
+    :feedback_d: Incorrect! Although it is true that the first print statement outputs whether the x value equals 3 or not, the second statement prints out z, the sum of x and y.
     :feedback_e: Incorrect! One of the answers above is true! Remember that == checks for equality and = sets a value to a variable.
 
     What is the output of this code?
@@ -31,7 +31,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :author: Beth Simon
     :practice: T
     :answer_a: Deep Red
-    :answer_b: White 
+    :answer_b: White
     :answer_c: Black
     :answer_d: 1
     :answer_e: 255
@@ -39,7 +39,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :feedback_a: Incorrect! 11111111 means 255 in binary, not deep red. Red is (255, 0, 0) in RGB so 11111111 00000000 00000000 represents red in binary.
     :feedback_b: Incorrect! 11111111 means 255 in binary, not white. White is typically interpreted as 1 in bits. Since white is (255, 255, 255) in RGB, it would be 11111111 11111111 11111111 in binary.
     :feedback_c: Incorrect! 11111111 means 255 in binary, not black. Black is typically interpreted as 0 in bits. Since black is (0, 0, 0) in RGB, it would be 00000000 00000000 00000000 in binary.
-    :feedback_d: Incorrect! 11111111 means 255 in binary. 1 in binary is 1. 
+    :feedback_d: Incorrect! 11111111 means 255 in binary. 1 in binary is 1.
     :feedback_e: Correct! 11111111 means 255 in binary.
 
     What does this data stored in a computer represent (in binary)?
@@ -76,9 +76,9 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :answer_c: Depends on the colors at coordinate x, y in bar
     :answer_d: Depends on the colors at coordinates x, y in foo compared to those in bar
     :correct: c
-    :feedback_a: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color. 
-    :feedback_b: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color. 
-    :feedback_c: Correct! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color. 
+    :feedback_a: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color.
+    :feedback_b: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color.
+    :feedback_c: Correct! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color.
     :feedback_d: Incorrect! The colors in bar determine what part of the image you are in because bar contains the red block that is being replaced by another color.
 
     Chromakey is a technique in which a block of one color can be replaced by another. How will you know if you are in the red part of the image?
@@ -99,11 +99,11 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :feedback_b: Incorrect! A feeble sounds has a smaller ampltitude. A louder sound equates to a larger amplitude and stronger compressions/rarefactions.
     :feedback_c: Incorrect! Frequency is not impacted by feeble or loud sound. A louder sound equates to a larger amplitude and stronger compressions/rarefactions.
     :feedback_d: Correct! A louder sound equates to a larger amplitude and stronger compressions/rarefactions.
-    :feedback_e: Incorrect! One of the answers above are correct. 
+    :feedback_e: Incorrect! One of the answers above are correct.
 
     Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound were modified to be louder it would
 
-    .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png 
+    .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png
       :width: 400
 
 .. mchoice:: bs-soundwaves-18-16
@@ -114,15 +114,15 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     :answer_c: C
     :answer_d: D
     :correct: a
-    :feedback_a: Correct! A higher pitch causes the frequency to increase. 
+    :feedback_a: Correct! A higher pitch causes the frequency to increase.
     :feedback_b: Incorrect! A higher pitch causes the frequency to increase. It does not cause the amplitude to change.
     :feedback_c: Incorrect! A higher pitch causes the frequency to increase. It does not remain the same.
     :feedback_d: Incorrect! A higher pitch causes the frequency to increase. It does not alter the shape of the sound wave.
 
     Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound was modified to have a higher pitch it would look like which of the following options:
 
-    .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png 
+    .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png
       :width: 400
 
-    .. image:: https://i.postimg.cc/FHZ3jCvm/lecture18-Q16.png 
+    .. image:: https://i.postimg.cc/FHZ3jCvm/lecture18-Q16.png
       :width: 400

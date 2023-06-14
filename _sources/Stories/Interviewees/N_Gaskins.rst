@@ -32,7 +32,7 @@ Dr. Gaskins originally focused on using technology to create art. Eventually, sh
 
 **What difficulties has she faced?**
 
-Like many black women, Dr. Gaskins struggled to find people she could relate to. Sometimes, she was excluded for being a woman. Other times, she was excluded for being black. 
+Like many black women, Dr. Gaskins struggled to find people she could relate to. Sometimes, she was excluded for being a woman. Other times, she was excluded for being black.
 
 Additionally, taking an unconventional career path (artistic computing but not computer graphics) meant that she had to forge her own path. That meant that institutions often had to create special roles for her, and she couldn't really find a mentor.
 

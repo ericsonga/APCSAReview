@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 3-6-
-   :start: 1 
+   :start: 1
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
@@ -36,14 +36,14 @@ Equivalent Boolean Expressions (De Morgan's Laws)
 
 What if you heard a rumor about a senior at your high school? And then you heard that the rumor wasn't true - it wasn't a senior at your high school. Which part of "a senior at your high school" wasn't true? Maybe they weren't a senior? Or maybe they didn't go to your high school? You could write this as a logic statement like below using negation (!) and the **and** (&&) operator since both parts have to be true for the whole statement to be true. (Thank you to Kevin Saxton from Kent School, CT for this example.)
 
-.. code-block:: java 
+.. code-block:: java
 
         !(a && b)
 
         a = "senior"
         b = "at our high school"
 
-        // This means it is not true that (a) it is a senior 
+        // This means it is not true that (a) it is a senior
         // and (b) someone at our high school.
 
 In this lesson, you will learn about De Morgan's Laws which simplify statements like this. We know that !(a senior at our high school) could mean !(a senior) or !(at our high school). Let's learn more about De Morgan's Laws.
@@ -65,11 +65,11 @@ In Java, De Morgan's Laws are written with the following operators:
 
     -  **!(a && b)** is equivalent to **!a || !b**
 
-    -  **!(a || b)** is equivalent to **!a && !b** 
+    -  **!(a || b)** is equivalent to **!a && !b**
 
 Going back to our example above, !(a senior && at our high school) is equivalent to !(a senior) or !(at our high school) using De Morgan's Laws:
 
-.. code-block:: java 
+.. code-block:: java
 
         !(a && b) is equivalent to !a || !b
 
@@ -106,7 +106,7 @@ Although you do not have to memorize De Morgan's Laws for the CS A Exam, you sho
 Simplifying Boolean Expressions
 ----------------------------------
 
-Often, you can simplify boolean expressions to create equivalent expressions. For example, applying De Morgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)`` as seen in the figure below. This can then be simplified further by flipping the relational operators to remove the not.  So, ``!(x < 3) || !(y > 2)`` is simplified to ``(x >= 3 || y <= 2)`` where the relational operators are flipped and the negation is removed. These two simplification steps are seen below. 
+Often, you can simplify boolean expressions to create equivalent expressions. For example, applying De Morgan's Laws to ``!(x < 3 && y > 2)`` yields ``!(x < 3) || !(y > 2)`` as seen in the figure below. This can then be simplified further by flipping the relational operators to remove the not.  So, ``!(x < 3) || !(y > 2)`` is simplified to ``(x >= 3 || y <= 2)`` where the relational operators are flipped and the negation is removed. These two simplification steps are seen below.
 
 .. figure:: Figures/demorganex.png
     :width: 400px
@@ -159,17 +159,17 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 .. mchoice:: qcbdm1_8
    :practice: T
    :answer_a: first case
-   :answer_b: second case 
+   :answer_b: second case
    :correct: b
    :feedback_a: This will be printed if x is greater or equal to 3 and y is less than or equal to 2.  The first part is true but the second is false.  Since the statements are joined by an and the complex expression is false.
    :feedback_b: This will be printed if x is less than 3 or y is greater than 2.  In this case the first will be false, but the second true so since the statements are joined with an or the complex expression is true.
 
-   What is printed when the following code executes and x equals 4 and y equals 3?   
+   What is printed when the following code executes and x equals 4 and y equals 3?
 
-   .. code-block:: java 
+   .. code-block:: java
 
-     int x = 4, y = 3;         
-     if (!(x < 3 || y > 2)) 
+     int x = 4, y = 3;
+     if (!(x < 3 || y > 2))
      {
         System.out.println("first case");
      }
@@ -181,17 +181,17 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 .. mchoice:: qcbdm2_9
    :practice: T
    :answer_a: first case
-   :answer_b: second case 
+   :answer_b: second case
    :correct: a
    :feedback_a: This will be printed if x is greater than or equal to 3 or y is less than or equal to 2.  In this case x is greater than 3 so the first condition is true.
-   :feedback_b: This will be printed if x is less than 3 and y is greater than 2.  
+   :feedback_b: This will be printed if x is less than 3 and y is greater than 2.
 
-   What is printed when the following code executes and x equals 4 and y equals 3?   
+   What is printed when the following code executes and x equals 4 and y equals 3?
 
-   .. code-block:: java 
+   .. code-block:: java
 
-     int x = 4, y = 3; 
-     if (!(x < 3 && y > 2)) 
+     int x = 4, y = 3;
+     if (!(x < 3 && y > 2))
      {
         System.out.println("first case");
      }
@@ -216,9 +216,9 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 
    <a href="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing" target="_blank" style="text-decoration:underline">this worksheet</a>
 
-We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns. 
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
 
-Explore the following problems with your group. You may use |this worksheet| to complete your truth tables. Assume that x is an integer value, for example -1, 0, or 1. 
+Explore the following problems with your group. You may use |this worksheet| to complete your truth tables. Assume that x is an integer value, for example -1, 0, or 1.
 
 1. Complete a truth table for the boolean expression: !(x == 0 || x >= 1). Is this the set of positive or negative numbers?  Is the expression true when x is positive? Or is it true when x is negative? You can try out the values when x is 1 or -1 or 0. Note that 0 is not positive or negative. You can try running the code below to check your answer.
 
@@ -291,9 +291,9 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :feedback_c: The x > 2 becomes x <= 2, the y < 4 becomes y >= 4 and the and changes to or
    :feedback_d: Don't forget that the "and" is changed to an "or"
 
-   Which of the following is the same as the code below? 
+   Which of the following is the same as the code below?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      !(x > 2 && y < 4)
 
@@ -309,9 +309,9 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :feedback_c: Don't forget that the and is changed to an or
    :feedback_d: The and is changed to an or, the (x == 2) becomes (x != 2) and (y > 4) becomes (y <= 4)
 
-   Which of the following is the same as the code below? 
+   Which of the following is the same as the code below?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      !(x == 2 && y > 4)
 
@@ -319,7 +319,7 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :practice: T
    :answer_a: (x == 5) || (y == 7)
    :answer_b: (x == 5) && (y == 7)
-   :answer_c: (x != 5) || (y != 7) 
+   :answer_c: (x != 5) || (y != 7)
    :answer_d: (x < 5) || (x > 5) || (y > 7) || (y < 7)
    :correct: a
    :feedback_a: The negation of && is || and the negation of != is ==
@@ -327,9 +327,9 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :feedback_c: The negation of x != 5 is x == 5.  The negation of y !=  7 is y == 7.
    :feedback_d: The negation of == is != which is the same as < or >.  The negation of != is ==.
 
-   Which of the following is the same as the code below? 
+   Which of the following is the same as the code below?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      !(x!=5 && y!=7)
 
@@ -346,9 +346,9 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :feedback_d: The negation of (x <= 5) is (x > 5).  The negation of && is ||.  The negation of (y > 7) is (y <= 7).
 
 
-   Which of the following is the same as the code below? 
+   Which of the following is the same as the code below?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      !(x<= 5 && y > 7)
 
@@ -363,10 +363,10 @@ Summary
 
 - De Morgan’s Laws can be applied to Boolean expressions to create equivalent ones:
 
-  - !(a && b) is equivalent to !a || !b 
-  - !(a || b) is equivalent to !a && !b 
+  - !(a && b) is equivalent to !a || !b
+  - !(a || b) is equivalent to !a && !b
 
-- A negated expression with a relational operator can be simplified by flipping the relational operator to its opposite sign. 
+- A negated expression with a relational operator can be simplified by flipping the relational operator to its opposite sign.
 
   - !(c == d) is equivalent to (c != d)
   - !(c != d) is equivalent to (c == d)
@@ -393,7 +393,7 @@ AP Practice
    :correct: b
    :feedback_a: Try simplifying !(b ||a) or consider what happens if a and b are true.
    :feedback_b: Yes, a && !(b || a) = a && !b && !a. Since (a && !a) can never be true, the result will always be false.
-   :feedback_c: Try the expression with a = false. Is the result true? 
+   :feedback_c: Try the expression with a = false. Is the result true?
    :feedback_d: Try the expression with b = false with a = true and then try it with a = false. Is the result ever true?
    :feedback_e: Try the expression with a = true. Is the result true?
 

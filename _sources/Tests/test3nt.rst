@@ -5,10 +5,10 @@
 Exam 3 for the AP CS A Exam (not timed)
 ----------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability. 
+The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.
 
 .. mchoice:: qtnt3_1
-   :answer_a: 4 
+   :answer_a: 4
    :answer_b: 15
    :answer_c: 9
    :answer_d: 14
@@ -17,7 +17,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_a: The method makes more than 4 calls. Remember that the method must make a call to check every value of n, even if n is the value in the base case.
    :feedback_b: This would be correct if t(6) was used. Try tracing the code again.
    :feedback_c: t(5) returns t(4) - t(3). t(4) returns t(3) - t(2), while t(3) returns t(2) - t(1). If you trace the code throughout the calls, t is called 9 times.
-   :feedback_d: This would be correct if the method reached the base case when n equaled 1 or 0, not 1 or 2. Check the code to see when a recursive call is made. 
+   :feedback_d: This would be correct if the method reached the base case when n equaled 1 or 0, not 1 or 2. Check the code to see when a recursive call is made.
    :feedback_e: This would be correct if t(4) was called. Try tracing the code again.
 
    Consider the following segment of code.  For the method call ``t(5)``, how many calls to ``t`` will be made, including the original call?
@@ -34,7 +34,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      }
 
 .. mchoice:: qtnt3_2
-   :answer_a: I only 
+   :answer_a: I only
    :answer_b: II only
    :answer_c: III only
    :answer_d: I and II only
@@ -73,7 +73,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           {
               return color;
           }
-      } 
+      }
 
       public class Swan extends Bird
       {
@@ -141,7 +141,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       	  }
 
       	  return ans;
-      } 
+      }
 
 .. mchoice:: qtnt3_5
    :answer_a: 1
@@ -150,13 +150,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: 4
    :answer_e: 5
    :correct: c
-   :feedback_a: 30 would not have been located in 1 iteration of the while loop. After one iteration, low would equal 0, mid would equal 3, and high would equal 7. Because list[3] is equal to 11, not 30, nothing is returned, low becomes 4, and the while-loop continues. 
+   :feedback_a: 30 would not have been located in 1 iteration of the while loop. After one iteration, low would equal 0, mid would equal 3, and high would equal 7. Because list[3] is equal to 11, not 30, nothing is returned, low becomes 4, and the while-loop continues.
    :feedback_b: 30 would not have been located in 2 iterations of the while loop. After two iterations, mid would equal 5. Because list[5] is equal to 24, not 30, low would increase, and the while-loop would run again. Try one more iteration of the while loop.
    :feedback_c: 30 would be found in 3 iterations. After the third iteration of the while loop, mid would equal 6. list[6] equals 30, so 6 is returned and the while-loop is exited.
    :feedback_d: 4 iterations is too many iterations. Only 3 iterations are needed to find 30 in the array. After 4 iterations for an array with 7 elements, either the key is not present in the array or the key is at the first or last index of the array.
    :feedback_e: Only 3 iterations of the while loop are needed to find 30 in the array. After 5 iterations for an array with seven elements, it must be that the key was not found.
 
-   Consider the following method ``binSearch``, which uses binary search to locate an element ``key`` in an array of integers ``arr``. If ``list`` is an array of integers containing ``{4, 7, 9, 11, 20, 24, 30, 41}``, how many iterations of the while loop occur in ``binSearch(30, list)``? 
+   Consider the following method ``binSearch``, which uses binary search to locate an element ``key`` in an array of integers ``arr``. If ``list`` is an array of integers containing ``{4, 7, 9, 11, 20, 24, 30, 41}``, how many iterations of the while loop occur in ``binSearch(30, list)``?
 
    .. code-block:: java
 
@@ -208,7 +208,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
 
 .. mchoice:: qtnt3_7
-   :answer_a: I only 
+   :answer_a: I only
    :answer_b: II only
    :answer_c: III only
    :answer_d: I and III only
@@ -249,7 +249,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: I and II only
    :answer_e: I and III only
    :correct: b
-   :feedback_a: name and age are private instance variables in the Person class. Children classes do not have direct access to private variables in the parent class. 
+   :feedback_a: name and age are private instance variables in the Person class. Children classes do not have direct access to private variables in the parent class.
    :feedback_b: This answer correctly calls on the constructor in the Person class using super. Then, it correctly instantiates the instance variable grade, located in the Student class.
    :feedback_c: name and age are private instance variables in the Person class. Children classes do not have direct access to private variables in the parent class. Although the Person constructor has correctly been implemented using the super keyword, name and age cannot be accessed by the Student class.
    :feedback_d: II is correct, but name and age instance variables found in the Person class. Instance variables are not inherited and cannot be modified by sub classes.
@@ -294,7 +294,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
            grade = theGrade;
 
 .. mchoice:: qtnt3_9
-   :answer_a: [62, 45, 30, 12, 7, 8, 10, 3] 
+   :answer_a: [62, 45, 30, 12, 7, 8, 10, 3]
    :answer_b: [30, 12, 8, 7, 62, 45, 10, 3]
    :answer_c: [62, 45, 30, 7, 12, 8, 10, 3]
    :answer_d: [62, 45, 30, 12, 7, 8, 10, 3]
@@ -312,7 +312,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_a: "My name is Piglet!"
    :answer_b: "Piglet"
    :answer_c: "My name is Animal!"
-   :answer_d: "Animal" 
+   :answer_d: "Animal"
    :answer_e: "Oink"
    :correct: a
    :feedback_a: At run-time, piglet is a Pig object. The compiler uses the overwritten getName method located in the Pig class, which prints out "My name is " before calling on the getName method in the Animal class.
@@ -407,7 +407,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: 13
    :answer_e: 14
    :correct: e
-   :feedback_a: Trace the recursive call and the return statements. 
+   :feedback_a: Trace the recursive call and the return statements.
    :feedback_b: Examine the recursive call and the return statements. This method adds the values of the digits in a number; it does not find the number of digits.
    :feedback_c: Examine the return statements. Although the last digit of the number is 0, 0 is returned to the previous calls, where it is added to the other digits.
    :feedback_d: Try tracing the recursive calls again.
@@ -435,7 +435,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: a
    :feedback_a: This answer checks every index in the list, correctly selects the values in the list and compares them to zero. If a value is not equal to zero, the method returns false, and the array is NOT empty. Otherwise, the method returns true.
    :feedback_b: The variable list is a List, not an array. List values are not directly accessible, so list.get(i) should be used instead of list[i].
-   :feedback_c: This method returns true if the list has at least one value in it that is not zero.  
+   :feedback_c: This method returns true if the list has at least one value in it that is not zero.
    :feedback_d: I is correct, but II is incorrect. Because list is not an array, the get method must be used to find the value at a certain index.
    :feedback_e: You can not use list[i] to get a value from a list so II is incorrect.  III would return true if at least one value in the list is not zero.
 
@@ -480,12 +480,12 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: (int) (Math.random() * 25) + 1
    :correct: e
    :feedback_a: This returns a value between 0 and 24, not 1 and 25. This would be correct if the last part of the expression had + 1 instead of * 1.
-   :feedback_b: This always returns 25. Math.random() + 1 becomes 1 when it is cast to an integer, and 1 * 25 equals 25.				
+   :feedback_b: This always returns 25. Math.random() + 1 becomes 1 when it is cast to an integer, and 1 * 25 equals 25.
    :feedback_c: This always returns 25. Math.random() produces a number between 0 and 1, so when it is added to 25 and cast as an integer, the number always becomes 25.
    :feedback_d: This always returns 1. Math.random() produces a value between 0 and 1, so casting Math.random() to an int results in 0. 0 * 25 remains 0, and 0 + 1 equals 1.
    :feedback_e: Math.random() * 25 finds a random double value between 0 and 24.9999. This is cast to an integer, and 1 is added so the range becomes 1 to 25.
 
-   You need to find a random integer in the range 1 to 25, inclusive. Which of the following always returns a value that satisfies this condition? 
+   You need to find a random integer in the range 1 to 25, inclusive. Which of the following always returns a value that satisfies this condition?
 
 
 .. mchoice:: qtnt3_15
@@ -574,7 +574,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
 
       public class SeedlessGrape extends Grape
-      {     
+      {
           public SeedlessGrape(String theName, String theColor)
           {
               super(theName, theColor);
@@ -584,7 +584,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
       I. Fruit a = new SeedlessGrape("grape", "red");
       II. Grape b = new Grape("grape");
-      III. SeedlessGrape c = new Grape("grape", "green");      
+      III. SeedlessGrape c = new Grape("grape", "green");
 
 .. mchoice:: qtnt3_18
    :answer_a: System.out.print(arr[x] + " ");
@@ -641,7 +641,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_a: This would be correct if the recursive method called 3 + mystery (num - 1). Check the recursive call and try again.
    :feedback_b: This method calculates 3 ^ num. 3 ^ 4 is not equal to 243, so check your tracing and try again.
    :feedback_c: This method calculates 3 ^ num. It goes through the recursive calls until num reaches 1, then 3 is multiplied by itself (num) times. The method has been called four times, and 3 ^ 4 is 81.
-   :feedback_d: This would be correct if the recursive method called 3 + mystery (num - 1), and num was equal to 5. Check the base case and the parameter and try again. 
+   :feedback_d: This would be correct if the recursive method called 3 + mystery (num - 1), and num was equal to 5. Check the base case and the parameter and try again.
    :feedback_e: This method calculates 3 ^ num. 3 ^ 4 is not equal to 27, so check your tracing and try again.
 
 

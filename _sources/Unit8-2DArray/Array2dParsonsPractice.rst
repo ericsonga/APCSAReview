@@ -22,7 +22,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        for (int col = 0; col < table[row].length; col++) {
    =====
            table[row][col] = col + 10 * row;
-   ===== 
+   =====
            table[row][col] = row + 10 * col; #paired
    =====
            System.out.print(table[row][col] + "\t");
@@ -96,7 +96,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :adaptive:
    :noindent:
 
-   The following program segment is a method that should accept a two-dimensional String array "image" and flip the "image" 180 degrees vertically. For example:   1 2 3 4  ->    4 3 2 1. 
+   The following program segment is a method that should accept a two-dimensional String array "image" and flip the "image" 180 degrees vertically. For example:   1 2 3 4  ->    4 3 2 1.
    But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static void flipImage(String[][] image) {
@@ -155,7 +155,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should accept a two-dimensional array of ints and a desired int and return the number of occurrences of the desired int in the two-dimensional array.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static int numOccurrences(int[][] nums, 
+   public static int numOccurrences(int[][] nums,
                                     int desired) {
    =====
        int occurrences = 0;

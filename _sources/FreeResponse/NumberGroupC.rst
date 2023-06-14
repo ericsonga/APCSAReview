@@ -34,7 +34,7 @@ The following table shows the results of several calls to ``contains``.
 Try and Solve It
 ----------------
 
-Write the method ``contains`` below in the class MultiGroups. (Note that the original AP Question involved a NumberGroup interface which has been replaced with inheritance here). 
+Write the method ``contains`` below in the class MultiGroups. (Note that the original AP Question involved a NumberGroup interface which has been replaced with inheritance here).
 
 
 .. activecode:: NumberGroupC
@@ -45,8 +45,8 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
    ~~~~
    import java.util.ArrayList;
 
-   class NumberGroup 
-   { 
+   class NumberGroup
+   {
       public boolean contains(int num)
       {
        /* Implementation not shown */
@@ -72,7 +72,7 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
          groupList.add(r3);
      }
 
-     /** Returns true if at least one of the number groups 
+     /** Returns true if at least one of the number groups
       *  in this multiple group contains num;
       *  false otherwise
      */
@@ -86,7 +86,7 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
      //Main method to test the class
      public static void main(String[] args)
      {
-       MultiGroups multiple1 = new MultiGroups(new Range(5, 8),new Range(10, 12),new Range(1, 6));   
+       MultiGroups multiple1 = new MultiGroups(new Range(5, 8),new Range(10, 12),new Range(1, 6));
        System.out.println("Multiple1 contains 2 (should be true)? " + multiple1.contains(2));
        System.out.println("Multiple1 contains 9 (should be false)? " + multiple1.contains(9));
        System.out.println("Multiple1 contains 6 (should be true)? " + multiple1.contains(6));

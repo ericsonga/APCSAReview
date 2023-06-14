@@ -28,7 +28,7 @@ Free Response Question (FRQ) for Classes
 As of 2019, the AP exam's second free response question (FRQ) is on classes, where students design and implement a described class.  This question involves creating a class with private instance variables and public methods. The College Board will provide a description of the class and the methods. This question does not involve more complex topics such as arrays.
 
 
-To succeed on the FRQ Question 2 on Classes, you must know how to: 
+To succeed on the FRQ Question 2 on Classes, you must know how to:
 
 - Create a class using ``public class Classname { }``
 
@@ -91,7 +91,7 @@ The following table contains a sample code execution sequence and the correspond
 
 
 This question asks you to write the complete StepTracker class, including the constructor and any required instance variables and
-methods. Your implementation must meet all specifications and conform to the example. 
+methods. Your implementation must meet all specifications and conform to the example.
 
 |Groupwork| Determining the Instance Variables
 ==============================================
@@ -105,19 +105,19 @@ It may help to first identify the variables that are needed for the constructor 
          :feedback: Think about phrases that indicate a value that is being stored or changed or returned.
          :iscode:
 
-         This question involves the implementation of :click-incorrect:a fitness tracking system that is represented by the **StepTracker** class.:endclick: 
+         This question involves the implementation of :click-incorrect:a fitness tracking system that is represented by the **StepTracker** class.:endclick:
 
          :click-incorrect:A StepTracker object:endclick: is created with a parameter that defines :click-correct:the minimum number of steps that must be taken for a day to be considered active. :endclick:
 
-         :click-incorrect:The StepTracker class:endclick: provides a constructor and the following methods. 
+         :click-incorrect:The StepTracker class:endclick: provides a constructor and the following methods.
 
-              - addDailySteps, which accumulates :click-correct:information about steps:endclick:, in readings taken once per day. 
+              - addDailySteps, which accumulates :click-correct:information about steps:endclick:, in readings taken once per day.
 
               - activeDays, which returns :click-correct:the number of active days.:endclick:
 
               - averageSteps, which returns :click-correct:the average number of steps per day:endclick:, calculated by dividing :click-correct:the total number of steps taken:endclick: by :click-correct:the number of days tracked.:endclick:
 
-Click to reveal multiple choice questions that will help you to determine the instance variables through the constructor parameters and accessor and mutator methods. 
+Click to reveal multiple choice questions that will help you to determine the instance variables through the constructor parameters and accessor and mutator methods.
 
 .. reveal:: steptraker_ctor_r1
    :showtitle: Reveal Problem
@@ -132,7 +132,7 @@ Click to reveal multiple choice questions that will help you to determine the in
         :answer_e: number of days tracked
         :correct: a
         :feedback_a: Yes, the problem definition describes this as a parameter to create a StepTracker object.
-        :feedback_b: This is not described as a parameter to create an StepTracker object. 
+        :feedback_b: This is not described as a parameter to create an StepTracker object.
         :feedback_c: This is not described as a parameter to create an StepTracker object.
         :feedback_d: This is not described as a parameter to create an StepTracker object.
         :feedback_e: This is not described as a parameter to create an StepTracker object.
@@ -149,7 +149,7 @@ Click to reveal multiple choice questions that will help you to determine the in
         :answer_b: tr.addDailysteps(1000);
         :answer_c: tr.activeDays();
         :correct: c
-        :feedback_a: This is a call to the constructor. 
+        :feedback_a: This is a call to the constructor.
         :feedback_b: No, addDailySteps(1000) probably adds the given steps to an instance variable as a mutator method.
         :feedback_c: Yes, activeDays() is an accessor method that returns the number of active days (a great instance variable!).
 
@@ -166,7 +166,7 @@ Click to reveal multiple choice questions that will help you to determine the in
         :answer_c: tr.activeDays();
         :answer_d: tr.averageSteps();
         :correct: b
-        :feedback_a: No, this is a call to the constructor. 
+        :feedback_a: No, this is a call to the constructor.
         :feedback_b: Yes, addDailySteps(1000) is a mutator method that adds the steps given as a parameter to an instance variable that keeps track of the steps taken so far.
         :feedback_c: No, activeDays() is an accessor method that returns the number of active days.
         :feedback_d: No, averageSteps() is a complex accessor method that calculates and returns the average number of steps from the instance variable.
@@ -181,11 +181,11 @@ Click to reveal multiple choice questions that will help you to determine the in
 Writing the Class Header and Constructor
 ========================================
 
-You will receive at least 1 point if you write the class header and a constructor that has the same name as the class and no return type. You will receive another point for creating **private** instance variables inside the class. Complete the class definition below with the class name, the instance variables you determined above, and the constructor. Remember that for this problem, a StepTracker object is created (with a constructor) with a parameter that defines the minimum number of steps that must be taken for a day to be considered active. The constructor will often have a parameter which it should assign to an instance variable. It should also assign default values to the other instance variables. 
+You will receive at least 1 point if you write the class header and a constructor that has the same name as the class and no return type. You will receive another point for creating **private** instance variables inside the class. Complete the class definition below with the class name, the instance variables you determined above, and the constructor. Remember that for this problem, a StepTracker object is created (with a constructor) with a parameter that defines the minimum number of steps that must be taken for a day to be considered active. The constructor will often have a parameter which it should assign to an instance variable. It should also assign default values to the other instance variables.
 
 .. activecode:: stepTrackerCode1
    :language: java
-   :autograde: unittest 
+   :autograde: unittest
 
    Write the first draft of the class StepTracker below with the class name, the instance variables, and the constructor with a parameter for the minimum number of steps threshold for active days. Make sure it compiles.
    ~~~~
@@ -256,7 +256,7 @@ Here is the rubric for the instance variables and the constructor for this probl
 Writing the Accessor Method activeDays
 ========================================
 
-Each method in the FRQ is worth 1 - 3 points. The method header is usually worth 1 point and the code in the method body is usually worth another point or two depending on how complex it is. 
+Each method in the FRQ is worth 1 - 3 points. The method header is usually worth 1 point and the code in the method body is usually worth another point or two depending on how complex it is.
 
 This problem asks you to write a simple accessor method called **activeDays** which returns the number of active days (which should be an instance variable) for 1 point.
 
@@ -264,8 +264,8 @@ Remember that accessor methods usually look like the following:
 
 .. code-block:: java
 
-   class ExampleClass 
-   { 
+   class ExampleClass
+   {
      //Instance variable declaration
      private typeOfVar varName;
 
@@ -294,7 +294,7 @@ Click to reveal a multiple choice problem to help you determine the accessor met
         :feedback_b: Accessor methods should not be private.
         :feedback_c: Accessor methods do not usually take parameters.
         :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
-        :feedback_e: Correct, accessor methods are public, have a return type, and no parameter.  
+        :feedback_e: Correct, accessor methods are public, have a return type, and no parameter.
 
         Which of the following is a good method header for the accessor method activeDays()?
 
@@ -370,13 +370,13 @@ Here is the rubric for the accessor method activeDays() for this problem. The se
 Writing the Mutator Method addDailySteps
 ========================================
 
-This problem asks you to write a more complex mutator method called addDailySteps worth 3 points. 
+This problem asks you to write a more complex mutator method called addDailySteps worth 3 points.
 
 Remember that mutator methods often look like the following:
 
 .. code-block:: java
 
-     class Example 
+     class Example
      {
          //Instance variable declaration
          private typeOfVar varName;
@@ -429,7 +429,7 @@ The code for this mutator method is a little more complex than the template abov
     </table><p>
 
 
-Consider each of your instance variables and whether this method should change them. The problem which you can reveal below may help you. 
+Consider each of your instance variables and whether this method should change them. The problem which you can reveal below may help you.
 
 .. reveal:: steptracker_mutator_r2
    :showtitle: Reveal Problem
@@ -530,7 +530,7 @@ Here is the rubric for the mutator method for this problem. The second column is
 Writing the Accessor Method averageSteps
 ==========================================
 
-This problem asks you to write a more complex accessor method which uses the instance variables to calculate and return the **averageSteps** for 2 points. This method returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked. 
+This problem asks you to write a more complex accessor method which uses the instance variables to calculate and return the **averageSteps** for 2 points. This method returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked.
 
 Click to reveal a multiple choice problem to help you determine the accessor method header.
 
@@ -547,7 +547,7 @@ Click to reveal a multiple choice problem to help you determine the accessor met
         :answer_e: public int averageSteps(int numSteps)
         :correct: c
         :feedback_a: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables.
-        :feedback_b: When you compute an average using division, you usually end up with a double value, not int. 
+        :feedback_b: When you compute an average using division, you usually end up with a double value, not int.
         :feedback_c: Correct, accessor methods are public, have a return type, and no parameter. In this case, returning an average requires a double return type.
         :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
         :feedback_e: Accessor methods do not usually take parameters.
@@ -560,7 +560,7 @@ The complex accessor method **averageSteps()** must calculate the average number
 
     <style>    th,td { text-align: left;  padding-left: 4px; }
     table, tr, td, th { border: 1px solid black;} </style>
-    <table border width="100%"><tr><th>Statements and Expressions</th><th width="15%">Value Returned (blank if no value)</th><th>Comment</th> </tr>    
+    <table border width="100%"><tr><th>Statements and Expressions</th><th width="15%">Value Returned (blank if no value)</th><th>Comment</th> </tr>
     <tr><td>tr.averageSteps(); </td>
     <td>0.0</td><td>When no step data have been recorded, the averageSteps method returns 0.0.</td></tr>
     </table><p>

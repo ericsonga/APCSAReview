@@ -21,7 +21,7 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Nested Loops for 2D Arrays (Day 1)
 -----------------------------------
@@ -34,11 +34,11 @@ Getting the Number of Rows and Columns
 	pair: 2D Array; number of rows
 	pair: 2D Array; number of columns
 
-Arrays know their length (how many elements they can store).  The length is a public read-only field so you can use *dot-notation* to access the field (``arrayName.length``). The length of the outer array is the number of rows and the length of one of the inner arrays is the number of columns. 
+Arrays know their length (how many elements they can store).  The length is a public read-only field so you can use *dot-notation* to access the field (``arrayName.length``). The length of the outer array is the number of rows and the length of one of the inner arrays is the number of columns.
 
 
 
-.. code-block:: java 
+.. code-block:: java
 
   ticketInfo.length // returns the number of rows
   ticketInfo[0].length // returns the number of columns
@@ -59,7 +59,7 @@ Arrays know their length (how many elements they can store).  The length is a pu
    :feedback_b: The size of the inner list is the number of columns.
    :feedback_c: This is the total number of items in the array.
 
-   How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?	
+   How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?
 
 .. mchoice:: qa2ldb_3
    :practice: T
@@ -68,9 +68,9 @@ Arrays know their length (how many elements they can store).  The length is a pu
    :answer_c: nums[2][1]
    :answer_d: nums[1][2]
    :correct: c
-   :feedback_a: This would be true if array indices started with 1 but they start with 0. 
+   :feedback_a: This would be true if array indices started with 1 but they start with 0.
    :feedback_b: This would be true if array indicies started with 1 and the column was specified first.  However, array indices start at 0 and the row is given first in row-major order.
-   :feedback_c: Array indices start with 0 so the third row has an index of 2 and the second column has an index of 1.  
+   :feedback_c: Array indices start with 0 so the third row has an index of 2 and the second column has an index of 1.
    :feedback_d: This would be true if the column index was first, but in row-major order the row index is first.
 
    Which of the following would I use to get the value in the third row and second column from a 2D array called ``nums``?
@@ -83,9 +83,9 @@ Looping Through a 2D Array
 	pair: 2D Array; looping through
 	pair: loop; nested
 
-Since you can find out the number of rows and columns in a 2D array you can use a **nested for loop** (one loop inside of another loop) to loop/traverse through all of the elements of a 2D array. 
+Since you can find out the number of rows and columns in a 2D array you can use a **nested for loop** (one loop inside of another loop) to loop/traverse through all of the elements of a 2D array.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] array = { {1,2,3},{4,5,6}};
   for (int row = 0; row < array.length; row++)
@@ -101,10 +101,10 @@ Since you can find out the number of rows and columns in a 2D array you can use 
 
 
 .. activecode:: lcgetAverage
-   :language: java 
+   :language: java
    :autograde: unittest
 
-   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Use the CodeLens button to trace through the code. Note that an array can be passed in as an argument to a method.  
+   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Use the CodeLens button to trace through the code. Note that an array can be passed in as an argument to a method.
    ~~~~
    public class Test1
    {
@@ -165,11 +165,11 @@ Since you can find out the number of rows and columns in a 2D array you can use 
 
 Some key things to notice about this code are:
 
-- ``total`` is declared to be a double so that the result will be a double.  If ``total`` was declared to be an ``int`` then the result would be an integer and the values after the decimal point would be thrown away.  
+- ``total`` is declared to be a double so that the result will be a double.  If ``total`` was declared to be an ``int`` then the result would be an integer and the values after the decimal point would be thrown away.
 - The array is passed in as an argument to the method.
 - The number of rows is ``a.length``
 - The number of columns is ``a[0].length``
-- The number of times this loop executes is the number of rows times the number of columns.  
+- The number of times this loop executes is the number of rows times the number of columns.
 
 
 
@@ -219,10 +219,10 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
 
 
 .. activecode:: ColumnMajorTraversal
-   :language: java 
+   :language: java
    :autograde: unittest
 
-   What will the following code print out? Try to guess before you run it. 
+   What will the following code print out? Try to guess before you run it.
    ~~~~
    public class ColumnMajorTraversal
    {
@@ -235,7 +235,7 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
             {
                 System.out.println( array[row][col] );
             }
-        }     
+        }
       }
    }
    ====
@@ -274,7 +274,7 @@ AP Practice
    :feedback_d: Correct!
    :feedback_e: Trace through the code. Notice that the inner loop works through the row backwards.
 
-   Consider the following code segment. What is the last row of numbers printed when this code segment is executed? 
+   Consider the following code segment. What is the last row of numbers printed when this code segment is executed?
 
    .. code-block:: java
 
@@ -294,6 +294,6 @@ AP Practice
 
 
 
-This lesson is continued on the next page. 
+This lesson is continued on the next page.
 
 

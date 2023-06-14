@@ -1,11 +1,11 @@
 About the AP CS A Exam
 ======================
 
-This curriculum will prepare you for the Advanced Placement Computer Science A Exam. This exam tests your programming skills in Java. 
+This curriculum will prepare you for the Advanced Placement Computer Science A Exam. This exam tests your programming skills in Java.
 
 The AP CS A exam is 3 hours long and has two sections — multiple choice and free-response. You will be given one hour and 30 minutes for each part.  The first part has 40 multiple-choice questions, and the second part has 4 free response questions where you have to write Java code by hand. Each part is worth 50% of your grade. During the exam, you will have access to the |AP CS A Reference Sheet|.
 
-Starting in 2020, the AP CS A exam will cover the following units and will provide formative assessments called Personal Progress Checks for each unit in the AP portal. 20 hours of lab time is required in AP CS A courses to allow students to practice Java programming. Note that abstract classes, interfaces, and binary/hex conversion have been removed from AP CS A starting in 2020. This curriculum is arranged to follow the AP CS A units and provides many interactive exercises in each unit. 
+Starting in 2020, the AP CS A exam will cover the following units and will provide formative assessments called Personal Progress Checks for each unit in the AP portal. 20 hours of lab time is required in AP CS A courses to allow students to practice Java programming. Note that abstract classes, interfaces, and binary/hex conversion have been removed from AP CS A starting in 2020. This curriculum is arranged to follow the AP CS A units and provides many interactive exercises in each unit.
 
 .. raw:: html
 
@@ -24,16 +24,16 @@ Starting in 2020, the AP CS A exam will cover the following units and will provi
     </td></tr>
     <tr><td>Unit 7 </td><td> ArrayList </td><td>        2.5–7.5%   </td><td> 10-12 </td><td>3-6</td>
     </tr>
-    <tr><td>Unit 8 </td><td> 2D Array  </td><td>        7.5–10%   </td><td>  10-12   </td><td>4-7 
+    <tr><td>Unit 8 </td><td> 2D Array  </td><td>        7.5–10%   </td><td>  10-12   </td><td>4-7
     </td></tr>
-    <tr><td>Unit 9 </td><td> Inheritance </td><td>      5-10%  </td><td>     14-15  </td><td>3-6 
+    <tr><td>Unit 9 </td><td> Inheritance </td><td>      5-10%  </td><td>     14-15  </td><td>3-6
     </td></tr>
     <tr><td>Unit 10 </td><td>Recursion  </td><td>       5–7.5%    </td><td>  3-5  <td></td>
     </td></tr>
     </tbody></table><p>
 
 
-The 4 free response questions allow students to write code to answer a problem and cover the following areas. 
+The 4 free response questions allow students to write code to answer a problem and cover the following areas.
 
 
 - Question 1: Methods and Control Structures, where students call methods and work with control structures without the added complexity of data structures.
@@ -61,11 +61,11 @@ The 4 free response questions allow students to write code to answer a problem a
 
 .. |AP CS A past FRQs| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank" style="text-decoration:underline">AP CS A Past Free Response Questions</a>  
+   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank" style="text-decoration:underline">AP CS A Past Free Response Questions</a>
 
 .. |FRQ resource| raw:: html
 
-   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank" style="text-decoration:underline">FRQ resource</a>  
+   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank" style="text-decoration:underline">FRQ resource</a>
 
 
 .. |AP Audit|  raw:: html
@@ -75,5 +75,5 @@ The 4 free response questions allow students to write code to answer a problem a
 
 For more information on the exam see the College Board |AP CS A site| and the 200+ page |AP CS A CED|. The |AP CS A past FRQs| are available online. Here is an |FRQ resource| that categorizes the past FRQs by topic and provides links to their solutions (which are available online in many places). The College Board provides a question bank and formative assessment quizzes for each unit online for registered AP classes.
 
-Also check out this list of |CS Careers| that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!  
+Also check out this list of |CS Careers| that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!
 

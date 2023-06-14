@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 3-10-
-   :start: 1   
+   :start: 1
 
 Unit 3 Write Code for Toggle Code
 =========================================================
@@ -14,9 +14,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Write code that tests guess to see if it is equal to answer or too high or too low. If it is too high as in the example below, it should print out ``Your guess is too high``.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 int guess = 10;
                 int answer = 5;
@@ -81,11 +81,11 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code that prints ``You can go out`` if you don’t have any homework and have cleaned and otherwise prints ``You can not go out``. 
+        Write code that prints ``You can go out`` if you don’t have any homework and have cleaned and otherwise prints ``You can not go out``.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                boolean homeworkLeft = false;
                boolean cleaned = true;
@@ -142,9 +142,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Write code that tests if x is between 1 and 10, and prints ``1 <= x <= 10`` or ``x is not in range``.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                int x = 3;
 
@@ -207,9 +207,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Write code that prints out if the string ``message`` has the word ``ringing`` in it or not. It should print out ``Answer the phone!`` if ``ringing`` is in ``message``, and ``I don't hear anything.`` if not.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-           public static void main(String[] args) 
+           public static void main(String[] args)
            {
                String message = "Is that the phone ringing?";
                // Add your code here
@@ -260,7 +260,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code that prints if your favorite food is junk food (pizza or wings) or not. Your code should check to see if the variable ``favFood`` value is ``pizza`` or ``wings``. If it is, it should print out ``Your fav is junk food``. If not, it should print ``Your fav is not junk``. 
+        Write code that prints if your favorite food is junk food (pizza or wings) or not. Your code should check to see if the variable ``favFood`` value is ``pizza`` or ``wings``. If it is, it should print out ``Your fav is junk food``. If not, it should print ``Your fav is not junk``.
         ~~~~
         public class Test1
         {
@@ -316,7 +316,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code that prints your fine if you are speeding. If you are going over 65 but less than 75, the fine is ``50``. If you are going at least 75 and less than 85, the fine is ``100``. Over that the fine is ``200``. It should not print anything if you are not speeding. 
+        Write code that prints your fine if you are speeding. If you are going over 65 but less than 75, the fine is ``50``. If you are going at least 75 and less than 85, the fine is ``100``. Over that the fine is ``200``. It should not print anything if you are not speeding.
         ~~~~
         public class Test1
         {

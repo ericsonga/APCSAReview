@@ -31,7 +31,7 @@ SkyView class, shown below. In this question you will write a constructor and a 
 
    public class SkyView
    {
-       /** A rectangular array that holds the data representing a rectangular 
+       /** A rectangular array that holds the data representing a rectangular
         *  area of the sky. */
        private double[][] view;
 
@@ -40,10 +40,10 @@ SkyView class, shown below. In this question you will write a constructor and a 
          * Precondition: numRows > 0
          * @param numCols the number of columns represented in the view
          * Precondition: numCols > 0
-         * @param scanned the scan data received from the telescope, stored in 
+         * @param scanned the scan data received from the telescope, stored in
          *        telescope order
          * Precondition: scanned.length == numRows * numCols
-         * Postcondition: view has been created as a rectangular 
+         * Postcondition: view has been created as a rectangular
          *        2-dimensional array
          * with numRows rows and numCols columns and the values in
          * scanned have been copied to view and are ordered as
@@ -66,7 +66,7 @@ SkyView class, shown below. In this question you will write a constructor and a 
                                 int startCol, int endCol)
        { /* to be implemented in part (b) */ }
 
-       // There may be other instance variables, constructors, and methods 
+       // There may be other instance variables, constructors, and methods
    }
 
 **Part a.**   Write the constructor for the ``SkyView`` class. The constructor initializes the ``view`` instance variable to a
@@ -114,7 +114,7 @@ Try and Solve It
 
 Complete the ``SkyView`` constructor in the class below.
 
-The code below declares the class, the view, and a constructor for you to finish writing.  It also has a main method for testing the constructor.  
+The code below declares the class, the view, and a constructor for you to finish writing.  It also has a main method for testing the constructor.
 
 .. activecode:: SkyViewA
    :language: java
@@ -122,7 +122,7 @@ The code below declares the class, the view, and a constructor for you to finish
 
    Complete the ``SkyView`` constructor in the class below.
    ~~~~
-   public class SkyView  
+   public class SkyView
    {
        private double[][] view;
 
@@ -185,7 +185,7 @@ The code below declares the class, the view, and a constructor for you to finish
 
         } // end of main
 
-        public String toString() 
+        public String toString()
         {
            String output = "";
            for (int row = 0; row < view.length; row++)

@@ -75,7 +75,7 @@ In Unit 7, we learned about two search algorithms, linear search and binary sear
 
 Watch the iterative binary search code running in the |Java Visualizer|.
 
-Let's write a recursive version of Binary Search. Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code. 
+Let's write a recursive version of Binary Search. Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.
 
 |Exercise| **Check Your Understanding**
 
@@ -85,7 +85,7 @@ Let's write a recursive version of Binary Search. Note that you can write soluti
 
 .. shortanswer:: recursiveCallQ
 
-    Given a recursive binary search method with the method signature "boolean binarySearch(int[] array, int startIndex, int endIndex, int target)", what recursive method call would search the array from index 0 to the middle index? 
+    Given a recursive binary search method with the method signature "boolean binarySearch(int[] array, int startIndex, int endIndex, int target)", what recursive method call would search the array from index 0 to the middle index?
 
 Here is the Java code for a recursive binary search:
 
@@ -106,11 +106,11 @@ Here is the Java code for a recursive binary search:
         // base case: check middle element
         if (target == array[middle]) {
             return middle;
-        }	
+        }
         // base case: check if we've run out of elements
         if(end < start){
             return -1; // not found
-        } 
+        }
         // recursive call: search start to middle
         if (target < array[middle]){
             return recursiveBinarySearch(array, start, middle - 1, target);
@@ -253,7 +253,7 @@ To identify a merge sort look for the following:
      }
   }
 
-You can see this executing using the |Java visualizer for merge sort|. 
+You can see this executing using the |Java visualizer for merge sort|.
 
 .. |Java visualizer for merge sort| raw:: html
 
@@ -296,7 +296,7 @@ You can trace through a merge sort algorithm given an array by using parentheses
 ==========================================================
 
 
-Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a |video3| that shows merge sort with cards. 
+Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a |video3| that shows merge sort with cards.
 
 .. |video3| raw:: html
 
@@ -305,11 +305,11 @@ Working in pairs, practice the recursive binary search and merge sort algorithms
 .. youtube:: AMJjtTo1LLE
     :align: center
 
-Work in pairs to do the following tracing problems. 
+Work in pairs to do the following tracing problems.
 
 .. shortanswer:: challenge-10-2-mergesort
 
-    Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.  
+    Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.
 
 .. shortanswer:: challenge-10-2-binary-search
 

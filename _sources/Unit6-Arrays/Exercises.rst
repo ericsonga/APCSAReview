@@ -35,7 +35,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_b: You can provide the values for an array when you declare it.
    :feedback_c: You can declare and array and create the array using the <code>new</code> operator in the same statement.
    :feedback_d: You can not put integers into an array of String objects.
-   :feedback_e: You can declare and array and create it in the same statement.  Use the <code>new</code> operator to create the array and specify the size in square brackets.  
+   :feedback_e: You can declare and array and create it in the same statement.  Use the <code>new</code> operator to create the array and specify the size in square brackets.
 
    Which of the following declarations will cause a compile time error?
 
@@ -48,12 +48,12 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_e: 4
    :correct: b
    :feedback_a: This would be returned from <code>arr[2]</code>.
-   :feedback_b: This returns the value in <code>arr</code> at index 3.  Remember that the first item in an array is at index 0. 
+   :feedback_b: This returns the value in <code>arr</code> at index 3.  Remember that the first item in an array is at index 0.
    :feedback_c: This would be returned from <code>arr[1]</code>.
    :feedback_d: This would be returned from <code>arr[0]</code>.
    :feedback_e: This would be returned from <code>arr.length</code>
 
-   What is returned from ``arr[3]`` if ``arr={6, 3, 1, 2}``?  
+   What is returned from ``arr[3]`` if ``arr={6, 3, 1, 2}``?
 
 .. mchoice:: qaeasy_4
    :practice: T
@@ -63,11 +63,11 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_d: 32
    :answer_e: 32.5
    :correct: e
-   :feedback_a: This would be true if the loop stopped at <code>arr.length - 1</code>.  
-   :feedback_b: This would be true if the loop started at 1 instead of 0.  
-   :feedback_c: This would be true if it returned <code>output</code> rather than <code>output / arr.length</code> 
-   :feedback_d: This would be true if <code>output</code> was declared to be an int rather than a double. 
-   :feedback_e: This sums all the values in the array and then returns the sum divided by the number of items in the array.  This is the average.  
+   :feedback_a: This would be true if the loop stopped at <code>arr.length - 1</code>.
+   :feedback_b: This would be true if the loop started at 1 instead of 0.
+   :feedback_c: This would be true if it returned <code>output</code> rather than <code>output / arr.length</code>
+   :feedback_d: This would be true if <code>output</code> was declared to be an int rather than a double.
+   :feedback_e: This sums all the values in the array and then returns the sum divided by the number of items in the array.  This is the average.
 
    What is returned from ``mystery`` when it is passed ``{10, 30, 30, 60}``?
 
@@ -90,16 +90,16 @@ You can step through the code above using the Java Visualizer by clicking on the
    :answer_a: {-20, -10, 2, 8, 16, 60}
    :answer_b: {-20, -10, 2, 4, 8, 30}
    :answer_c: {-10, -5, 1, 8, 16, 60}
-   :answer_d: {-10, -5, 1, 4, 8, 30} 
+   :answer_d: {-10, -5, 1, 4, 8, 30}
    :correct: c
    :feedback_a: This would true if it looped through the whole array.  Does it?
    :feedback_b: This would be true if it looped from the beginning to the middle.  Does it?
-   :feedback_c: It loops from the middle to the end doubling each value. Since there are 6 elements it will start at index 3.  
-   :feedback_d: This would be true if array elements didn't change, but they do.  
+   :feedback_c: It loops from the middle to the end doubling each value. Since there are 6 elements it will start at index 3.
+   :feedback_d: This would be true if array elements didn't change, but they do.
 
    Given the following values of ``a`` and the method ``doubleLast`` what will the values of ``a`` be after you execute: ``doubleLast()``?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       private int[ ] a = {-10, -5, 1, 4, 8, 30};
 
@@ -122,14 +122,14 @@ You can step through the code above using the Java Visualizer by clicking on the
    :answer_c: {2, 6, -10, -4}
    :answer_d: The code will never stop executing due to an infinite loop
    :correct: b
-   :feedback_a: This would be true if the contents of arrays could not be changed but they can. 
+   :feedback_a: This would be true if the contents of arrays could not be changed but they can.
    :feedback_b: This code multiplies each value in a by the passed amt which is 3 in this case.
    :feedback_c: This would be correct if we called multAll(2) instead of multAll(3).
-   :feedback_d: The variable i starts at 0 and increments each time through the loop and stops when it equals the number of items in a.  
+   :feedback_d: The variable i starts at 0 and increments each time through the loop and stops when it equals the number of items in a.
 
    What are the values in a after multAll(3) executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      private int[ ] a = {1, 3, -5, -2};
 
@@ -141,7 +141,7 @@ You can step through the code above using the Java Visualizer by clicking on the
            a[i] = a[i] * amt;
            i++;
         } // end while
-     } // end method  
+     } // end method
 
 .. mchoice:: qaeasy
    :practice: T
@@ -153,11 +153,11 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_a: Does the value of i ever change inside the loop?
    :feedback_b: Does the value of i ever change inside the loop?
    :feedback_c: Does the value of i ever change inside the loop?
-   :feedback_d: The value of i is initialized to 0 and then never changes inside the body of the loop, so this loop will never stop.  It is an infinite loop.   
+   :feedback_d: The value of i is initialized to 0 and then never changes inside the body of the loop, so this loop will never stop.  It is an infinite loop.
 
    What are the values in a after mult(2) executes?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      private int[ ] a = {1, 3, -5, -2};
 
@@ -168,7 +168,7 @@ You can step through the code above using the Java Visualizer by clicking on the
         {
            a[i] = a[i] * amt;
         } // end while
-     } // end method  
+     } // end method
 
 
 
@@ -195,7 +195,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_d: The only value that must not have a duplicate is <code>b[0]</code>
    :feedback_e: <code>b[0]</code> can be any value, so long as no other array element is equal to it.
 
-   Which of the following statements is a valid conclusion. Assume that variable ``b`` is an array of ``k`` integers and that the following is true: 
+   Which of the following statements is a valid conclusion. Assume that variable ``b`` is an array of ``k`` integers and that the following is true:
 
    .. code-block:: java
 
@@ -211,7 +211,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :correct: c
    :feedback_a: It is the last value in <code>a</code> that controls the final state of <code>temp</code>, as the loop is progressing through the array from 0 to the end.
    :feedback_b: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false.
-   :feedback_c: Because each time through the loop <code>temp</code> is reset, it will only be returned as true if the last value in <code>a</code> is equal to <code>val</code>.  
+   :feedback_c: Because each time through the loop <code>temp</code> is reset, it will only be returned as true if the last value in <code>a</code> is equal to <code>val</code>.
    :feedback_d: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for just the last value to be equal to <code>val</code>.
    :feedback_e: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for several elements to be equal to <code>val</code>.
 
@@ -229,11 +229,11 @@ You can step through the code above with the Java Visualizer by clicking the fol
 
 .. mchoice:: qamed_3
    :practice: T
-   :answer_a: It is the length of the shortest consecutive block of the value <code>target</code>  in <code>nums</code> 
-   :answer_b: It is the length of the array <code>nums</code> 
-   :answer_c: It is the length of the first consecutive block of the value <code>target</code>  in <code>nums</code> 
-   :answer_d: It is the number of occurrences of the value <code>target</code>  in <code>nums</code> 
-   :answer_e: It is the length of the last consecutive block of the value <code>target</code>  in <code>nums</code> 
+   :answer_a: It is the length of the shortest consecutive block of the value <code>target</code>  in <code>nums</code>
+   :answer_b: It is the length of the array <code>nums</code>
+   :answer_c: It is the length of the first consecutive block of the value <code>target</code>  in <code>nums</code>
+   :answer_d: It is the number of occurrences of the value <code>target</code>  in <code>nums</code>
+   :answer_e: It is the length of the last consecutive block of the value <code>target</code>  in <code>nums</code>
    :correct: d
    :feedback_a: It doesn't reset <code>lenCount</code> ever, so it just counts all the times the <code>target</code> value appears in the array.
    :feedback_b: The only count happens when <code>lenCount</code> is incremented when <code>nums[k] == target</code>. <code>nums.length</code> is only used to stop the loop.
@@ -249,7 +249,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
 
      public int findLongest(int target) {
         int lenCount = 0; // length of current consecutive numbers
-        int maxLen = 0;   // max length of consecutive numbers 
+        int maxLen = 0;   // max length of consecutive numbers
         for (int k = 0; k < nums.length; k++) {
            if (nums[k] == target) {
               lenCount++;
@@ -341,14 +341,14 @@ You can step through the code above with the Java Visualizer by clicking the fol
         :practice: T
         :answer_a: 4
         :answer_b: 2
-        :answer_c: 12 
+        :answer_c: 12
         :answer_d: 6
         :answer_e: 3
         :correct: b
-        :feedback_a: This would be true if it was <code>return (a[1] *= 2);</code>, which would change the value at <code>a[1]</code>. 
-        :feedback_b: The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to 2.  The <code>return (a[1] * 2)</code> does not change the value at <code>a[1]</code>.  
-        :feedback_c: This would be true if array indicies started at 1 instead of 0 and if the code changed the value at index 1 to the current value times two.  
-        :feedback_d: This would be true if array indices started at 1 rather than 0.   
+        :feedback_a: This would be true if it was <code>return (a[1] *= 2);</code>, which would change the value at <code>a[1]</code>.
+        :feedback_b: The statement <code>a[1]--;</code> is the same as <code>a[1] = a[1] - 1;</code> so this will change the 3 to 2.  The <code>return (a[1] * 2)</code> does not change the value at <code>a[1]</code>.
+        :feedback_c: This would be true if array indicies started at 1 instead of 0 and if the code changed the value at index 1 to the current value times two.
+        :feedback_d: This would be true if array indices started at 1 rather than 0.
         :feedback_e: This can't be true because <code>a[1]--;</code>  means the same as <code>a[1] = a[1] - 1;</code>  so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.
 
         Given the following field and method declaration, what is the value in ``a[1]`` when ``m1(a)`` is run?
@@ -369,23 +369,23 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :practice: T
    :answer_a: k - 1
    :answer_b: k + 1
-   :answer_c: k 
+   :answer_c: k
    :answer_d: 1
    :answer_e: 0
    :correct: a
-   :feedback_a: This loop will start at 1 and continue until <code>k</code> is reached as long as <code>arr[i] < someValue</code> is true.  The last time the loop executes, <code>i</code> will equal <code>k-1</code>, if the condition is always true.  The number of times a loop executes is equal to the largest value when the loop executes minus the smallest value plus one.  In this case that is <code>(k - 1) - 1 + 1</code> which equals <code>k - 1</code>.  
+   :feedback_a: This loop will start at 1 and continue until <code>k</code> is reached as long as <code>arr[i] < someValue</code> is true.  The last time the loop executes, <code>i</code> will equal <code>k-1</code>, if the condition is always true.  The number of times a loop executes is equal to the largest value when the loop executes minus the smallest value plus one.  In this case that is <code>(k - 1) - 1 + 1</code> which equals <code>k - 1</code>.
    :feedback_b: This would be true if <code>arr[i] < someValue</code> was always true and the loop started at 0 instead of 1 and continued while it was less than or equal to <code>k</code>.
-   :feedback_c: This would be true if <code>arr[i] < someValue</code> was always true and the loop started at 0 instead of 1.  
+   :feedback_c: This would be true if <code>arr[i] < someValue</code> was always true and the loop started at 0 instead of 1.
    :feedback_d: This would be the case if only one element in the array would fulfill the condition that <code>arr[i] < someValue</code>.
-   :feedback_e: This is the minimum number of times that <code>HELLO</code> could be executed.  This would be true if <code>k</code> was less than <code>i</code> initially.  
+   :feedback_e: This is the minimum number of times that <code>HELLO</code> could be executed.  This would be true if <code>k</code> was less than <code>i</code> initially.
 
    Consider the following code. What is the *maximum* amount of times that ``HELLO`` could possibly be printed?
 
    .. code-block:: java
 
-      for (int i = 1; i < k; i++) 
+      for (int i = 1; i < k; i++)
       {
-         if (arr[i] < someValue) 
+         if (arr[i] < someValue)
          {
            System.out.print("HELLO")
          }
@@ -427,11 +427,11 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :answer_d: [1, 5, 3, -8, 6]
    :answer_e: [1, 5, -2, -5, 2]
    :correct: c
-   :feedback_a: This would be true if <code>i</code> started at 0 instead of <code>arr1.length / 2</code>.  
+   :feedback_a: This would be true if <code>i</code> started at 0 instead of <code>arr1.length / 2</code>.
    :feedback_b: This would be true if <code>i</code> started at 0 and ended when it reached <code>arr1.length / 2</code>.
    :feedback_c: This loop starts at <code>arr2.length / 2</code> which is 2 and loops to the end of the array copying from <code>arr2</code> to <code>arr1</code>.
-   :feedback_d: This would be correct if this loop didn't change <code>arr1</code>, but it does.  
-   :feedback_e: This would be correct if it set <code>arr1[i]</code> equal to <code>arr[i] + arr[2]</code> instead.  
+   :feedback_d: This would be correct if this loop didn't change <code>arr1</code>, but it does.
+   :feedback_e: This would be correct if it set <code>arr1[i]</code> equal to <code>arr[i] + arr[2]</code> instead.
 
    Assume that ``arr1={1, 5, 3, -8, 6}`` and ``arr2={-2, -1, -5, 3, -4}`` what will the contents of ``arr1`` be after ``copyArray`` finishes executing?
 
@@ -463,7 +463,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
 
    Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an ``int`` variable initialized to be greater than zero and that ``a`` is an array of ints.
 
-   .. code-block:: java 
+   .. code-block:: java
 
       for ( int k = 0; k < a.length; k++ )
       {
@@ -487,11 +487,11 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_a: Mystery steps backwards through the array until the first value less than the passed num (<i>n</i>) is found and then it returns the index where this value is found.
    :feedback_b: This would be true if mystery looped forward through the array and returned when it found a value greater than the passed num (<i>n</i>).
    :feedback_c: This would be true if it returned when it found a value at the current index that was greater than num (<i>n</i>).
-   :feedback_d: It returns the first time the condition is met so nothing is known about the values which are unchecked. 
+   :feedback_d: It returns the first time the condition is met so nothing is known about the values which are unchecked.
 
    Given the following array instance variable and method, which of the following best describes the contents of ``myStuff`` after (``int m = mystery(n);``) has been executed?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      // private field in the class
      private int[ ] myStuff;

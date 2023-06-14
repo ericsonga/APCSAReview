@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 6-6-
-   :start: 1   
+   :start: 1
 
 Unit 6 Write Code for Toggle Code
 =========================================================
@@ -14,9 +14,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Write a loop that traverses the array arr from 0 to less than the length of the array. In the loop, double each element in the array arr and print out each new value on the same line separated by ", ". The finished code should print "2, 4, 6, 8, 10, ".
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 int[] arr = {1, 2, 3, 4, 5};
 
@@ -63,9 +63,9 @@ This is the write code problems associated with the mixed up code problems.
 
         Write a for loop that fills an array with elements that count up from 0 to 50 by 5 (0 5 10 15 20 … 50) and prints out each element on a separate line.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 int[] arr = new int[11];
 
@@ -110,11 +110,11 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write an enhanced for each loop to traverse the array and print out an element if it is even. 
+        Write an enhanced for each loop to traverse the array and print out an element if it is even.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 int[] arr = {14, -5, 2, 17, 29, -8, 36};
 
@@ -157,13 +157,13 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Finish the method to return the smallest integer in an array arr given as the parameter.  
+        Finish the method to return the smallest integer in an array arr given as the parameter.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 
+        public class Test1
         {
-            public static int findSmallest(int[] arr) 
+            public static int findSmallest(int[] arr)
             {
                 int smallest = arr[0];
 
@@ -178,7 +178,7 @@ This is the write code problems associated with the mixed up code problems.
 
 
             // Do not change the code below
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 int[] arr1 = { -1, 2, 0, 6, -4, 5, 3 };
                 double out1 = findSmallest(arr1);
@@ -241,9 +241,9 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 
+        public class Test1
         {
-            public static double findAverage(int[] arr) 
+            public static double findAverage(int[] arr)
             {
 
                 double sum = 0;
@@ -320,10 +320,10 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 
+        public class Test1
         {
 
-            public static int findLargest(int[] arr) 
+            public static int findLargest(int[] arr)
             {
                 // Add your code here
 
@@ -396,10 +396,10 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 
+        public class Test1
         {
 
-            public static int[] shiftRight(int[] arr) 
+            public static int[] shiftRight(int[] arr)
             {
 
                 int[] result = new int[ arr.length ];
@@ -415,7 +415,7 @@ This is the write code problems associated with the mixed up code problems.
 
 
             // Don't change any code beyond this point
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
                 int[] arr1 = { 1, 2, 3, 4, 5, 6 };
                 int[] arr1o = shiftRight(arr1);
@@ -475,20 +475,20 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Finish the method to return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) – so ``{1,2,3,4}`` should return ``{2,3}``. 
+        Finish the method to return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) – so ``{1,2,3,4}`` should return ``{2,3}``.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 
+        public class Test1
         {
-            public static int[] makeMiddle(int[] arr) 
+            public static int[] makeMiddle(int[] arr)
             {
                 int[] result = new int[2];
 
                 // Finish this code (no loop necessary)
-                int middleIndex = 
-                result[0] = 
-                result[1] = 
+                int middleIndex =
+                result[0] =
+                result[1] =
 
                 return result;
 
@@ -555,14 +555,14 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Finish the method that should return string array that is in reverse order – so ``{"b", "a", "z"}`` should return ``{"z", "a", "b"}``. 
+        Finish the method that should return string array that is in reverse order – so ``{"b", "a", "z"}`` should return ``{"z", "a", "b"}``.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 
+        public class Test1
         {
 
-            public static String[] reverse(String[] arr) 
+            public static String[] reverse(String[] arr)
             {
 
                 String[] result = new String[arr.length];
@@ -640,10 +640,10 @@ This is the write code problems associated with the mixed up code problems.
         ~~~~
         import java.util.Arrays;
 
-        public class Test1 
+        public class Test1
         {
 
-            public static int[] firstHalf(int[] arr) 
+            public static int[] firstHalf(int[] arr)
             {
 
                 // Add your code here

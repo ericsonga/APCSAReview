@@ -9,7 +9,7 @@ Trio Student Solution 2
 	single: trio
     single: free response
 
-The following is a free response question from 2014.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
+The following is a free response question from 2014.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 4.**  The menu at a lunch counter includes a variety of sandwiches, salads, and drinks. The menu also allows a
 customer to create a "trio," which consists of three menu items: a sandwich, a salad, and a drink. The price
@@ -17,7 +17,7 @@ of the trio is the sum of the two highest-priced menu items in the trio; one ite
 Each menu item has a name and a price. The four types of menu items are represented by the four classes
 ``Sandwich``, ``Salad``, ``Drink``, and ``Trio``. All four classes implement the following ``MenuItem`` interface.
 
-.. code-block:: java 
+.. code-block:: java
 
    public interface MenuItem
    {
@@ -44,7 +44,7 @@ For example, assume that the menu includes the following items. The objects list
     :align: center
     :figclass: align-center
 
-    Figure 2: Example objects 
+    Figure 2: Example objects
 
 The menu allows customers to create Trio menu items, each of which includes a sandwich, a salad, and a
 drink. The name of the Trio consists of the names of the sandwich, salad, and drink, in that order, each
@@ -54,7 +54,7 @@ A trio consisting of a cheeseburger, spinach salad, and an orange soda would hav
 ``"Cheeseburger/Spinach Salad/Orange Soda Trio"``
 and a price of $4.00 (the two highest prices
 are $2.75 and $1.25). Similarly, a trio consisting of a club sandwich, coleslaw, and a cappuccino would have the
-name ``"Club Sandwich/Coleslaw/Cappuccino Trio"`` 
+name ``"Club Sandwich/Coleslaw/Cappuccino Trio"``
 and a price of $6.25 (the two highest prices
 are $2.75 and $3.50).
 
@@ -74,7 +74,7 @@ Below is the grading rubric for the Trio class problem.
 Practice Grading
 ===================
 
-The following is the second sample student response.  
+The following is the second sample student response.
 
 .. figure:: Figures/TrioStudentSol2a.png
     :width: 700px
@@ -90,7 +90,7 @@ The following is the second sample student response.
 
     Figure 5: The end of the second sample student response to the Trio class problem.
 
-Apply the grading rubric shown above as you answer the following questions. 
+Apply the grading rubric shown above as you answer the following questions.
 
 *Apply the Grading Rubric*
 
@@ -107,7 +107,7 @@ Apply the grading rubric shown above as you answer the following questions.
    :answer_a: Yes
    :answer_b: No
    :correct: b
-   :feedback_a: Remember that all instance variables should be declared private so that the class controls access to the variables.  
+   :feedback_a: Remember that all instance variables should be declared private so that the class controls access to the variables.
    :feedback_b: The student did not make the instance variables private, so the student does not get this point.
 
    Should the student earn 1 point for declaring the private instance variables (sandwich, salad, and drink or name and price)?
@@ -135,7 +135,7 @@ Apply the grading rubric shown above as you answer the following questions.
    :answer_b: No
    :correct: a
    :feedback_a: This solution contains correct declarations for <code>public String getName()</code> and <code>public double getPrice()</code>.
-   :feedback_b: To implement an interface the class must have a getName and getPrice method as defined by the MenuItem interface.  
+   :feedback_b: To implement an interface the class must have a getName and getPrice method as defined by the MenuItem interface.
 
    Should the student earn 1 point for correctly delcaring the methods in the ``MenuItem`` interface (getName and getPrice)?
 
@@ -143,8 +143,8 @@ Apply the grading rubric shown above as you answer the following questions.
    :answer_a: Yes
    :answer_b: No
    :correct: b
-   :feedback_a: Look at what <code>getName</code> is supposed to return. 
-   :feedback_b: This solution doesn't include the "/" between the sandwich and salad and between the salad and the drink and is also missing the "Trio" at the end of the name, so it loses this point. 
+   :feedback_a: Look at what <code>getName</code> is supposed to return.
+   :feedback_b: This solution doesn't include the "/" between the sandwich and salad and between the salad and the drink and is also missing the "Trio" at the end of the name, so it loses this point.
 
    Should the student earn 1 point for correctly constructing the string to return from ``getName`` and making it available to be returned?
 
@@ -153,7 +153,7 @@ Apply the grading rubric shown above as you answer the following questions.
    :answer_b: No
    :correct: a
    :feedback_a: This solution does return the constructed string, even if the string is not completely correct.
-   :feedback_b: Even though the string is not correct it was constructed and returned.  
+   :feedback_b: Even though the string is not correct it was constructed and returned.
 
    Should the student earn 1 point for returning a constructed string from ``getName``?
 
@@ -162,7 +162,7 @@ Apply the grading rubric shown above as you answer the following questions.
    :answer_b: No
    :correct: b
    :feedback_a: What if b is equal to c but both are greater than a?
-   :feedback_b: This does not always compute the price correctly (when b is equal to c and they are both greater than a, it should return b+c, not a+b).  
+   :feedback_b: This does not always compute the price correctly (when b is equal to c and they are both greater than a, it should return b+c, not a+b).
 
    Should the student earn 1 point for correctly calculating the price and making it available to be returned from ``getPrice``?
 

@@ -12,7 +12,7 @@
 Activity 2: Running Simplified Magpie Code
 ===========================================
 
-The College Board activity asks you to enter input using the ``Scanner`` class and record the responses.  But, instead you can run this simplified version below and just call the ``getResponse`` method with each string as input as shown in the ``main`` method below. 
+The College Board activity asks you to enter input using the ``Scanner`` class and record the responses.  But, instead you can run this simplified version below and just call the ``getResponse`` method with each string as input as shown in the ``main`` method below.
 
 In this lab, the main method creates a Magpie object called maggie, and calls its methods maggie.getGreeting() and maggie.getResponse(input) where the input can be one of the following strings as input and a response is printed out.
 
@@ -27,7 +27,7 @@ Run the following code and see the responses to these 4 inputs.
    :language: java
    :autograde: unittest
 
-   Run to see the results. Try changing the input in main. 
+   Run to see the results. Try changing the input in main.
    ~~~~
    public class Magpie2
    {
@@ -115,7 +115,7 @@ Run the following code and see the responses to these 4 inputs.
 When different methods are called from the main method, the control flows to these methods and then comes back to main exactly where it was left when the methods finish. Click on the cool |Java visualizer Chatbot| below to step through the code. Click on the Forward button at the bottom of the code to step through the code to see the flow of control from the main method to the other methods and back.
 
 .. codelens:: magpieviz
-    :language: java 
+    :language: java
     :optional:
 
     public class Magpie2
@@ -128,18 +128,18 @@ When different methods are called from the main method, the control flows to the
         public String getResponse(String statement)
         {
           String response = "";
-          if (statement.indexOf("no") >= 0) 
+          if (statement.indexOf("no") >= 0)
           {
             response = "Why so negative?";
           }
           else if (statement.indexOf("mother") >= 0
                       || statement.indexOf("father") >= 0
                       || statement.indexOf("sister") >= 0
-                      || statement.indexOf("brother") >= 0) 
+                      || statement.indexOf("brother") >= 0)
           {
             response = "Tell me more about your family.";
-          } 
-          else 
+          }
+          else
           {
             response = getRandomResponse();
           }
@@ -153,19 +153,19 @@ When different methods are called from the main method, the control flows to the
           int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
           String response = "";
 
-          if (whichResponse == 0) 
+          if (whichResponse == 0)
           {
             response = "Interesting, tell me more.";
-          } 
-          else if (whichResponse == 1) 
+          }
+          else if (whichResponse == 1)
           {
             response = "Hmmm.";
           }
-          else if (whichResponse == 2) 
+          else if (whichResponse == 2)
           {
             response = "Do you really think so?";
           }
-          else if (whichResponse == 3) 
+          else if (whichResponse == 3)
           {
             response = "You don't say.";
           }
@@ -190,7 +190,7 @@ When different methods are called from the main method, the control flows to the
 
 You can also run a version of the |Magpie lab on repl.it| that uses the Scanner class for input so that you can type in your own input to interact with it.
 
-As you can see the ``getResponse`` method of Magpie2 looks for certain keywords like ``"mother"`` and ``"brother"``.  Why do you think the response to "Do you know my brother?" isn't "Tell me more about your family."?  Discuss this with partner in pairs and see if you can figure it out. 
+As you can see the ``getResponse`` method of Magpie2 looks for certain keywords like ``"mother"`` and ``"brother"``.  Why do you think the response to "Do you know my brother?" isn't "Tell me more about your family."?  Discuss this with partner in pairs and see if you can figure it out.
 
 The response to "The weather is nice." is one of the random responses. Look at the code to see how the ``if`` statement assigns a value to the response and returns that response.
 The method ``getRandomResponse`` generates a random number and uses that to assign the response. Modify the code above to add other random responses.
@@ -233,9 +233,9 @@ Alter the code above or in your own IDE (see section below) to do the following.
 Activity 2: Actual Code - (Optional)
 -------------------------------------
 
-You can do all of Activity 2 with the actual code using the Scanner class for input instead if you prefer. 
+You can do all of Activity 2 with the actual code using the Scanner class for input instead if you prefer.
 
-Here is the actual code for the |Magpie lab on repl.it|.  It uses the ``Scanner`` class to read input from the user.  The ``Scanner`` class is not on the AP CS A exam. You can log in to repl.it and use this code and change it to do this lab. 
+Here is the actual code for the |Magpie lab on repl.it|.  It uses the ``Scanner`` class to read input from the user.  The ``Scanner`` class is not on the AP CS A exam. You can log in to repl.it and use this code and change it to do this lab.
 
 Or you can copy and paste in the code from below into any Integrated Development Environment (IDE) like DrJava or JGrasp to run on your computer.
 

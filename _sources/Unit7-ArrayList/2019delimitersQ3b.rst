@@ -150,7 +150,7 @@ of the following conditions are satisfied; otherwise they are not balanced.
 
 .. activecode:: frq2019Q3B-delim
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
 
    Write the method ``isBalanced`` in the code below. The ``main`` method contains code to test your solution.
    ~~~~
@@ -227,10 +227,10 @@ of the following conditions are satisfied; otherwise they are not balanced.
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() 
+        public RunestoneTests()
         {
             super("Delimiters");
-        } 
+        }
 
         @Test
         public void test0()
@@ -253,8 +253,8 @@ of the following conditions are satisfied; otherwise they are not balanced.
 
           boolean passed = getResults("true", ""+res1, "isBalanced works on a balanced set of delimiters "+ Arrays.toString(tokens));
 
-          assertTrue(passed); 
-        }  
+          assertTrue(passed);
+        }
 
         @Test
         public void test2()
@@ -268,8 +268,8 @@ of the following conditions are satisfied; otherwise they are not balanced.
 
           boolean passed = getResults("false", ""+res2, "isBalanced on a non-balanced set of delimiters " +  Arrays.toString(tokens2));
 
-          assertTrue(passed); 
-        }  
+          assertTrue(passed);
+        }
 
         @Test
         public void test3()
@@ -283,8 +283,8 @@ of the following conditions are satisfied; otherwise they are not balanced.
 
           boolean passed = getResults("false", ""+res3, "isBalanced on a non-balanced set of delimiters " + Arrays.toString(tokens3));
 
-          assertTrue(passed); 
-        }  
+          assertTrue(passed);
+        }
 
         @Test
         public void test4()
@@ -298,7 +298,7 @@ of the following conditions are satisfied; otherwise they are not balanced.
 
           boolean passed = getResults("false", ""+res4, "isBalanced on a non-balanced set of delimiters " + Arrays.toString(tokens4));
 
-          assertTrue(passed); 
-        }  
+          assertTrue(passed);
+        }
         }
 

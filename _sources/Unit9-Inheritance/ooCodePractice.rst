@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 9-11-
-   :start: 1			
+   :start: 1
 
 Code Practice with Object Oriented Concepts
 ---------------------------------------------
@@ -11,20 +11,20 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx1q
               :language: java
-              :autograde: unittest      
+              :autograde: unittest
 
               Write a method that overloads the talk method by taking in a name and printing ``Hello`` with that name.
               ~~~~
               public class Test1
               {
-                  public static void talk() 
+                  public static void talk()
                   {
                   	System.out.println("hello there!");
                   }
 
-                  public static // FINISH THE METHOD HERE // 
+                  public static // FINISH THE METHOD HERE //
 
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                   	talk("Matthew");
                   }
@@ -49,7 +49,7 @@ Code Practice with Object Oriented Concepts
                    assertTrue(passed);
                  }
 
-               @Test 
+               @Test
                  public void testtalk_name()
                  {
                    String target = "public static void talk(String *)";
@@ -61,7 +61,7 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Answer
 
-           Overloading is when several methods have the same name but different parameter types, order, or number. 
+           Overloading is when several methods have the same name but different parameter types, order, or number.
            In this case, the original method had no parameters and we overloaded it by creating a talk method with a String parameter.
 
            .. activecode::  ooEx1a
@@ -70,23 +70,23 @@ Code Practice with Object Oriented Concepts
 
               public class Test1
               {
-                  public static void talk() 
+                  public static void talk()
                   {
                   	System.out.println("hello there!");
                   }
 
-                  public static void talk(String name) 
+                  public static void talk(String name)
                   {
                   	System.out.println("Hello " + name);
                   }
 
-                  public static void main(String[] args)  
+                  public static void main(String[] args)
                   {
                   	talk("Matthew");
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -99,13 +99,13 @@ Code Practice with Object Oriented Concepts
 
            .. activecode:: ooEx3q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Edit this code so the class Beagle is a subclass of the Dog class.  When you run the code it should print "woof!" and then "arf arf".
               ~~~~
-              public class Dog 
+              public class Dog
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("woof!");
                   }
@@ -119,12 +119,12 @@ Code Practice with Object Oriented Concepts
                   }
               }
 
-              class Beagle 
+              class Beagle
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("arf arf");
-                  }   
+                  }
               }
               ====
               import static org.junit.Assert.*;
@@ -140,14 +140,14 @@ Code Practice with Object Oriented Concepts
                  public void testMain() throws IOException
                  {
                    String output = getMethodOutput("main");
-                   String expect = "woof!\n" +  
-                                   "arf arf\n";        
+                   String expect = "woof!\n" +
+                                   "arf arf\n";
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
 
-               @Test 
+               @Test
                  public void testBeagleExtendsDog()
                  {
                    String target = "class Beagle extends Dog";
@@ -165,9 +165,9 @@ Code Practice with Object Oriented Concepts
               :language: java
               :optional:
 
-              public class Dog 
+              public class Dog
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("woof!");
                   }
@@ -183,13 +183,13 @@ Code Practice with Object Oriented Concepts
 
               class Beagle extends Dog
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("arf arf");
-                  }   
+                  }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -201,11 +201,11 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx4q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Add an equals method to this class that returns true if the current Dog and passed Dog have the same name.  The code should print false twice then true twice.
               ~~~~
-              public class Dog 
+              public class Dog
               {
                   private String name;
 
@@ -216,7 +216,7 @@ Code Practice with Object Oriented Concepts
 
                   public boolean equals(Object other)
                   {
-                      // ADD CODE HERE 
+                      // ADD CODE HERE
                   }
 
                   public static void main(String[] args)
@@ -245,18 +245,18 @@ Code Practice with Object Oriented Concepts
                  public void testMain() throws IOException
                  {
                    String output = getMethodOutput("main");
-                   String expect = "false\n" + 
-                                   "false\n" + 
-                                   "true\n" + 
-                                   "true\n" ;       
+                   String expect = "false\n" +
+                                   "false\n" +
+                                   "true\n" +
+                                   "true\n" ;
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
-               @Test 
+               @Test
                  public void test1()
                  {
-                   String target = "Dog * = (Dog)other";    
+                   String target = "Dog * = (Dog)other";
 
                    boolean passed = checkCodeContainsRegex("casting of Object other to type Dog", target);
                    assertTrue(passed);
@@ -266,7 +266,7 @@ Code Practice with Object Oriented Concepts
                  public void test2()
                  {
                    Dog d1 = new Dog("Rufus");
-                   Dog d2 = new Dog("Sally");   
+                   Dog d2 = new Dog("Sally");
 
                    String result = String.valueOf(!(d1.equals(d2)));
 
@@ -277,7 +277,7 @@ Code Practice with Object Oriented Concepts
                  @Test
                  public void test3()
                  {
-                   Dog d1 = new Dog("Rufus");    
+                   Dog d1 = new Dog("Rufus");
                    Dog d3 = new Dog("Rufus");
 
                    String result = String.valueOf((d1.equals(d3)));
@@ -289,14 +289,14 @@ Code Practice with Object Oriented Concepts
 
         .. tab:: Answer
 
-           In order to override the equals method, 
+           In order to override the equals method,
            the method header has to have the same return type and parameters as the equals method for the Object class.  The code should print false twice then true twice.
 
            .. activecode::  ooEx4a
               :language: java
               :optional:
 
-              public class Dog 
+              public class Dog
               {
                   private String name;
 
@@ -325,7 +325,7 @@ Code Practice with Object Oriented Concepts
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -338,29 +338,29 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx5q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Override the taste method from the Candy class in the Chocolate class to return ``tastes chocolately``.  It should print ``tastes sweet!`` and then ``tastes chocolately``.
               ~~~~
-              public class Candy 
+              public class Candy
               {
-                  public String taste() 
+                  public String taste()
                   {
                       return "tastes sweet!";
                   }
 
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                       Candy c1 = new Candy();
                       System.out.println(c1.taste());
                       Candy c2 = new Chocolate();
                       System.out.println(c2.taste());
                   }
-              } 
+              }
 
-              class Chocolate extends Candy 
+              class Chocolate extends Candy
               {
-                  // ADD CODE HERE              
+                  // ADD CODE HERE
               }
               ====
               import static org.junit.Assert.*;
@@ -376,14 +376,14 @@ Code Practice with Object Oriented Concepts
                  public void testMain() throws IOException
                  {
                    String output = getMethodOutput("main");
-                   String expect = "tastes sweet!\n" + 
-                                   "tastes chocolately\n";       
+                   String expect = "tastes sweet!\n" +
+                                   "tastes chocolately\n";
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
                @Test
-                 public void test1() 
+                 public void test1()
                  {
                    String code = getCode();
                    String target = "public String taste()";
@@ -405,32 +405,32 @@ Code Practice with Object Oriented Concepts
               :language: java
               :optional:
 
-              public class Candy 
+              public class Candy
               {
-                  public String taste() 
+                  public String taste()
                   {
                       return "tastes sweet!";
                   }
 
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                       Candy c1 = new Candy();
                       System.out.println(c1.taste());
                       Candy c2 = new Chocolate();
                       System.out.println(c2.taste());
                   }
-              } 
+              }
 
-              class Chocolate extends Candy 
+              class Chocolate extends Candy
               {
-                  public String taste() 
+                  public String taste()
                   {
                       return ("tastes chocolately");
                   }
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -443,13 +443,13 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx6q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Overload the greet method to just print ``Hello`` if not given any parameters.  It should print ``Hello`` and then ``Hello Sansa``.
               ~~~~
-              public class Student 
+              public class Student
               {
-                  public static void greet(String name) 
+                  public static void greet(String name)
                   {
                       System.out.println("Hello " + name);
                   }
@@ -474,14 +474,14 @@ Code Practice with Object Oriented Concepts
                  public void testMain() throws IOException
                  {
                    String output = getMethodOutput("main");
-                   String expect = "Hello\nHello Sansa";  
+                   String expect = "Hello\nHello Sansa";
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
 
                  @Test
-                 public void test1() 
+                 public void test1()
                  {
                    String target = "greet();";
                    boolean passed = checkCodeContains("overridden greet method", target);
@@ -497,15 +497,15 @@ Code Practice with Object Oriented Concepts
               :language: java
               :optional:
 
-              public class Student 
+              public class Student
               {
 
-                  public static void greet() 
+                  public static void greet()
                   {
                       System.out.println("Hello");
                   }
 
-                  public static void greet(String name) 
+                  public static void greet(String name)
                   {
                       System.out.println("Hello " + name);
                   }
@@ -517,7 +517,7 @@ Code Practice with Object Oriented Concepts
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -529,19 +529,19 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx7q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Add a call to Pet's brag method before printing anything in Dog's brag method (hint: use super to call an overridden method).  It should print ``I have the best pet!`` and then ``I have the best dog``.
               ~~~~
-              public class Pet 
+              public class Pet
               {
 
-                  public void brag() 
+                  public void brag()
                   {
                       System.out.println("I have the best pet!");
                   }
 
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                       Dog d1 = new Dog();
                       d1.brag();
@@ -550,7 +550,7 @@ Code Practice with Object Oriented Concepts
 
               class Dog extends Pet
               {
-                  public void brag() 
+                  public void brag()
                   {
                       // ADD CODE HERE
 
@@ -572,14 +572,14 @@ Code Practice with Object Oriented Concepts
                  {
                    String output = getMethodOutput("main");
                    String expect = "I have the best pet!\n" +
-                                   "I have the best dog!\n";       
+                                   "I have the best dog!\n";
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
 
                  @Test
-                 public void test1() 
+                 public void test1()
                  {
                    String target = "super.brag();";
                    boolean passed = checkCodeContains("super to override method brag", target);
@@ -595,15 +595,15 @@ Code Practice with Object Oriented Concepts
               :language: java
               :optional:
 
-              public class Pet 
+              public class Pet
               {
 
-                  public void brag() 
+                  public void brag()
                   {
                       System.out.println("I have the best pet!");
                   }
 
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                       Dog d1 = new Dog();
                       d1.brag();
@@ -612,7 +612,7 @@ Code Practice with Object Oriented Concepts
 
               class Dog extends Pet
               {
-                  public void brag() 
+                  public void brag()
                   {
                       super.brag();
                       System.out.println("I have the best dog!");
@@ -620,11 +620,11 @@ Code Practice with Object Oriented Concepts
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ooex7d	
+                :identifier: javareview_ooex7d
 
 
 .. tabbed:: ooEx8
@@ -633,16 +633,16 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx8q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
-              Finish the Teacher constructor.  Use super to use the Person construtor to set the fields inherited from Person.  It should print ``Destini 20`` followed by ``Erica 55 Masters in Teaching``.   
+              Finish the Teacher constructor.  Use super to use the Person construtor to set the fields inherited from Person.  It should print ``Destini 20`` followed by ``Erica 55 Masters in Teaching``.
               ~~~~
-              public class Person 
+              public class Person
               {
                   private String name;
                   private int age;
 
-                  public Person(String name, int age) 
+                  public Person(String name, int age)
                   {
                       this.name = name;
                       this.age = age;
@@ -674,10 +674,10 @@ Code Practice with Object Oriented Concepts
 
                   public String toString()
                   {
-                      return getName() + " " + getAge() + " " + getDegree();                  
+                      return getName() + " " + getAge() + " " + getDegree();
                   }
 
-                  public Teacher(String name, int age, String theDegree) 
+                  public Teacher(String name, int age, String theDegree)
                   {
                       // ADD CODE HERE
                   }
@@ -696,15 +696,15 @@ Code Practice with Object Oriented Concepts
                  public void testMain() throws IOException
                  {
                    String output = getMethodOutput("main");
-                   String expect = "Destini 20\n" +    
-                                   "Erica 55 Masters in Teaching\n";       
+                   String expect = "Destini 20\n" +
+                                   "Erica 55 Masters in Teaching\n";
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
 
                  @Test
-                 public void test1() 
+                 public void test1()
                  {
                    Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
 
@@ -726,12 +726,12 @@ Code Practice with Object Oriented Concepts
               :language: java
               :optional:
 
-              public class Person 
+              public class Person
               {
                   private String name;
                   private int age;
 
-                  public Person(String name, int age) 
+                  public Person(String name, int age)
                   {
                       this.name = name;
                       this.age = age;
@@ -763,21 +763,21 @@ Code Practice with Object Oriented Concepts
 
                   public String toString()
                   {
-                      return getName() + " " + getAge() + " " + getDegree();                  
+                      return getName() + " " + getAge() + " " + getDegree();
                   }
 
-                  public Teacher(String name, int age, String theDegree) 
+                  public Teacher(String name, int age, String theDegree)
                   {
                       super(name,age);
                       this.degree = theDegree;
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ooex8d	             
+                :identifier: javareview_ooex8d
 
 .. tabbed:: ooEx9
 
@@ -785,11 +785,11 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx9q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Add public getter and setter methods to the Store class so its variables can be accessed by other classes.  It should print the store's name and address and then change both and print the new values.
               ~~~~
-              public class Store 
+              public class Store
               {
                   private String name;
                   private String address;
@@ -807,10 +807,10 @@ Code Practice with Object Oriented Concepts
                   public static void main(String[] args)
                   {
                       Store myStore = new Store("Barb's Store", "333 Main St.");
-                      System.out.println(myStore); 
+                      System.out.println(myStore);
                       myStore.setName("Barbara's Store");
                       myStore.setAddress("555 Pine St.");
-                      System.out.println(myStore); 
+                      System.out.println(myStore);
 
                   }
               }
@@ -829,16 +829,16 @@ Code Practice with Object Oriented Concepts
                  {
                    String output = getMethodOutput("main");
                    String expect = "Barb's Store\n" +
-                                   "333 Main St.\n" +  
+                                   "333 Main St.\n" +
                                    "Barbara's Store\n" +
-                                   "555 Pine St.\n";  
+                                   "555 Pine St.\n";
 
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
                  @Test
-                 public void test1() 
+                 public void test1()
                  {
                    Store myStore = new Store("A Store", "An Address");
 
@@ -864,7 +864,7 @@ Code Practice with Object Oriented Concepts
               :language: java
               :optional:
 
-              public class Store 
+              public class Store
               {
                   private String name;
                   private String address;
@@ -885,20 +885,20 @@ Code Practice with Object Oriented Concepts
                   public static void main(String[] args)
                   {
                       Store myStore = new Store("Barb's Store", "333 Main St.");
-                      System.out.println(myStore); 
+                      System.out.println(myStore);
                       myStore.setName("Barbara's Store");
                       myStore.setAddress("555 Pine St.");
-                      System.out.println(myStore); 
+                      System.out.println(myStore);
 
                   }
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ooex9d	
+                :identifier: javareview_ooex9d
 
 .. tabbed:: ooEx10
 
@@ -906,11 +906,11 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx10q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Correctly finish the Dog subclass for the following Animal class.  Override the methods speak() to print ``woof`` and eat() to print ``num num``.
               ~~~~
-              class Animal 
+              class Animal
               {
                   public String name;
                   public int numLegs;
@@ -918,7 +918,7 @@ Code Practice with Object Oriented Concepts
                   public void eat() { System.out.println("crunch"); }
               }
 
-              public class Dog extends Animal 
+              public class Dog extends Animal
               {
                   // ADD CODE HERE
 
@@ -945,14 +945,14 @@ Code Practice with Object Oriented Concepts
                  {
                    String output = getMethodOutput("main");
                    String expect = "woof\n" +
-                                   "num num\n";  
+                                   "num num\n";
 
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
                  @Test
-                 public void test1() 
+                 public void test1()
                  {
                    String target = " public void speak()";
                    boolean passed = checkCodeContains("speak method", target);
@@ -960,7 +960,7 @@ Code Practice with Object Oriented Concepts
                  }
 
                  @Test
-                 public void test2() 
+                 public void test2()
                  {
                    String target = " public void eat()";
                    boolean passed = checkCodeContains("eat method", target);
@@ -976,7 +976,7 @@ Code Practice with Object Oriented Concepts
               :language: java
               :optional:
 
-              class Animal 
+              class Animal
               {
                   public String name;
                   public int numLegs;
@@ -984,14 +984,14 @@ Code Practice with Object Oriented Concepts
                   public void eat() { System.out.println("crunch"); }
               }
 
-              public class Dog extends Animal 
+              public class Dog extends Animal
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("woof");
                   }
 
-                  public void eat() 
+                  public void eat()
                   {
                       System.out.println("num num");
                   }
@@ -1005,11 +1005,11 @@ Code Practice with Object Oriented Concepts
               }
 
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ooex10d						
+                :identifier: javareview_ooex10d
 
 .. tabbed:: ooEx11
 
@@ -1017,7 +1017,7 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx11q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
               Override the compareTo method so that it returns a postive number if the current Person is older than the passed other and a negative number if they are younger. If their age is the same then return the compareTo result on the names.
               ~~~~
@@ -1065,7 +1065,7 @@ Code Practice with Object Oriented Concepts
                  public void testMain() throws IOException
                  {
                    String output = getMethodOutput("main");
-                   String expect = "-1\n1\n-2\n11\n1\n";  
+                   String expect = "-1\n1\n-2\n11\n1\n";
 
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
@@ -1073,7 +1073,7 @@ Code Practice with Object Oriented Concepts
 
 
                  @Test
-                 public void test1() 
+                 public void test1()
                  {
                    Person p1 = new Person("Carlos",17);
                    Person p2 = new Person("Lia",18);
@@ -1086,7 +1086,7 @@ Code Practice with Object Oriented Concepts
                  }
 
                  @Test
-                 public void test2() 
+                 public void test2()
                  {
                    Person p2 = new Person("Lia",18);
                    Person p3 = new Person("Asraf", 17);
@@ -1099,7 +1099,7 @@ Code Practice with Object Oriented Concepts
                  }
 
                  @Test
-                 public void test3() 
+                 public void test3()
                  {
                    Person p4 = new Person("Lia", 17);
                    Person p5 = new Person("Karla", 17);
@@ -1136,14 +1136,14 @@ Code Practice with Object Oriented Concepts
 
                   public int compareTo(Person other)
                   {
-                      if (this.age != other.age) 
-                      { 
+                      if (this.age != other.age)
+                      {
                       	return this.age - other.age;
                       }
 
-                      else 
+                      else
                       {
-                          return this.name.compareTo(other.name); 
+                          return this.name.compareTo(other.name);
                       }
                   }
 
@@ -1162,7 +1162,7 @@ Code Practice with Object Oriented Concepts
                    }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
@@ -1174,25 +1174,25 @@ Code Practice with Object Oriented Concepts
 
            .. activecode::  ooEx12q
               :language: java
-              :autograde: unittest  
+              :autograde: unittest
 
-              Override the Person class's speak function inside the Student class. Make the function print ``I'm a student``. 
+              Override the Person class's speak function inside the Student class. Make the function print ``I'm a student``.
               ~~~~
               public class Person
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("I'm a person");
                   }
 
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                       Person p1 = new Student();
                       p1.speak();
                   }
               }
 
-              class Student extends Person 
+              class Student extends Person
               {
                   // ADD CODE HERE
               }
@@ -1210,14 +1210,14 @@ Code Practice with Object Oriented Concepts
                  public void testMain() throws IOException
                  {
                    String output = getMethodOutput("main");
-                   String expect = "I'm a student\n";  
+                   String expect = "I'm a student\n";
 
                    boolean passed = getResults(expect, output, "Expected output from main");
                    assertTrue(passed);
                  }
 
                @Test
-                 public void test1() 
+                 public void test1()
                  {
                    String code = getCode();
                    String target = "public void speak()";
@@ -1243,27 +1243,27 @@ Code Practice with Object Oriented Concepts
 
               public class Person
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("I'm a person");
                   }
 
-                  public static void main(String[] args) 
+                  public static void main(String[] args)
                   {
                       Person p1 = new Student();
                       p1.speak();
                   }
               }
 
-              class Student extends Person 
+              class Student extends Person
               {
-                  public void speak() 
+                  public void speak()
                   {
                       System.out.println("I'm a student");
                   }
               }
 
-        .. tab:: Discussion 
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u

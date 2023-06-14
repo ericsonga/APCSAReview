@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 8-4-
-   :start: 1   
+   :start: 1
 
 Unit 8 Write Code for Toggle Code
 =========================================================
@@ -56,7 +56,7 @@ This is the write code problems associated with the mixed up code problems.
 
         This program is supposed to create an 8x8 two-dimensional ``int`` array that is filled with a checkered patterns of 0s and 1s, starting with a 1 in the top left corner. It should also print the output in row-column order, separating each element with a space. The only missing part is the ``if`` statement that decides if a specific cell should be a 0 or a 1. Fill that in to finish the problem.
 
-        Hint: Try drawing out a smaller version (around 4x4) of a checkered two-dimensional array. Can you notice a pattern in the row numbers and column numbers of the 1s? 
+        Hint: Try drawing out a smaller version (around 4x4) of a checkered two-dimensional array. Can you notice a pattern in the row numbers and column numbers of the 1s?
 
         ~~~~
         public class Test1 {
@@ -332,7 +332,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Fill in the ``averageCols`` method. It should accept a two-dimensional int array ``nums`` and return a one-dimensional (normal) ``int`` array containing the integer average of each of the columns (NOT the rows). E.g., with ``nums`` as ``{ {3, 5, 2}, {1, 1, 6} }``, ``averageCols(nums)`` should return ``{2, 3, 4}`` as that is ``(3 + 1) / 2``, ``(5 + 1) / 2``, and ``(2 + 6) / 2``. 
+        Fill in the ``averageCols`` method. It should accept a two-dimensional int array ``nums`` and return a one-dimensional (normal) ``int`` array containing the integer average of each of the columns (NOT the rows). E.g., with ``nums`` as ``{ {3, 5, 2}, {1, 1, 6} }``, ``averageCols(nums)`` should return ``{2, 3, 4}`` as that is ``(3 + 1) / 2``, ``(5 + 1) / 2``, and ``(2 + 6) / 2``.
         ~~~~
         import java.util.Arrays;
 
@@ -395,7 +395,7 @@ This is the write code problems associated with the mixed up code problems.
 
                 int[][] odds = new int[nums.length / 2][nums[0].length];
 
-                // YOUR CODE HERE                     
+                // YOUR CODE HERE
 
                 return odds;
             } //end method
@@ -517,7 +517,7 @@ This is the write code problems associated with the mixed up code problems.
                 //String output = Arrays.toString(outArr);
                 //String expect = Arrays.toString(expArr);
 
-                boolean passed = getResults(expect, output, "Running breakIntoLetters() with " + input); 
+                boolean passed = getResults(expect, output, "Running breakIntoLetters() with " + input);
                 assertTrue(passed);/**/
             }
 
@@ -529,7 +529,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write the ``maxEachRow`` method. It that should accept a two-dimensional ``int`` array ``nums``, and return a single-dimensional (normal) ``int`` array containing the max of each row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} } should be {3, 9, 45}. 
+        Write the ``maxEachRow`` method. It that should accept a two-dimensional ``int`` array ``nums``, and return a single-dimensional (normal) ``int`` array containing the max of each row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} } should be {3, 9, 45}.
         ~~~~
         import java.util.Arrays;
 

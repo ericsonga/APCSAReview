@@ -17,23 +17,23 @@ These problems are harder than those that you will typically see on the AP CS A 
    :correct: c
    :feedback_a: Check the starting values on the nested loops.
    :feedback_b: Notice that there are two if's, not an if and else.
-   :feedback_c: The first if will change an odd number to an even.  The second if will also execute after an odd number has been made even.  Both loops start at index 1 so this only changes the items in the second row and second and third column.   
-   :feedback_d: Both if's will execute.  Also, check the bounds on the nested loop. 
-   :feedback_e: Both if's will execute.  Check the bounds on the inner loop.  When does it stop?    
+   :feedback_c: The first if will change an odd number to an even.  The second if will also execute after an odd number has been made even.  Both loops start at index 1 so this only changes the items in the second row and second and third column.
+   :feedback_d: Both if's will execute.  Also, check the bounds on the nested loop.
+   :feedback_e: Both if's will execute.  Check the bounds on the inner loop.  When does it stop?
 
-   What are the contents of ``arr`` after the following code has been executed? 
+   What are the contents of ``arr`` after the following code has been executed?
 
-   .. code-block:: java 
+   .. code-block:: java
 
       int[][] arr = { {3,2,1},{1,2,3}};
       int value = 0;
       for (int row = 1; row < arr.length; row++) {
          for (int col = 1; col < arr[0].length; col++) {
-            if (arr[row][col] % 2 == 1) 
+            if (arr[row][col] % 2 == 1)
             {
                 arr[row][col] = arr[row][col] + 1;
             }
-            if (arr[row][col] % 2 == 0) 
+            if (arr[row][col] % 2 == 0)
             {
                 arr[row][col] = arr[row][col] * 2;
             }

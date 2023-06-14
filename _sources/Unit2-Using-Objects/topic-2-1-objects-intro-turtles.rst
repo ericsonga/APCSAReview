@@ -41,17 +41,17 @@
     :width: 250
     :align: right
 
-Objects - Instances of Classes 
+Objects - Instances of Classes
 ===============================
 
 What are Objects and Classes?
 ------------------------------
 
-Java is an **object-oriented programming** language that can be used to model objects in the real world. We've seen that Java programs start with ``public class``.  A **class** is used to define a new data type or a blueprint for objects. 
+Java is an **object-oriented programming** language that can be used to model objects in the real world. We've seen that Java programs start with ``public class``.  A **class** is used to define a new data type or a blueprint for objects.
 
 **Objects** are the variables created from a **class** definition, and they are **instances** of a class. We've created String objects in Unit 1 using the String class, for example ``String name;``. In this unit we'll work with a class called Turtle for animated turtles as well as the String class. In Unit 5, you'll learn to write your own classes.
 
-You can think of a class like a blueprint or a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  
+You can think of a class like a blueprint or a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.
 
 .. figure:: Figures/cookieCutterLabelled.png
     :width: 500px
@@ -60,7 +60,7 @@ You can think of a class like a blueprint or a cookie cutter.  It is used to cre
 
     Figure 1: Using a cookie cutter (class) to make cookies (objects)
 
-You can think of a class as the type or classification.  Each type can have **attributes** (the object's properties or what it knows about itself) and **behaviors** (what an object does). In Java code, the attributes are written as **instance variables** in the class, and the behaviors are written as **methods**. 
+You can think of a class as the type or classification.  Each type can have **attributes** (the object's properties or what it knows about itself) and **behaviors** (what an object does). In Java code, the attributes are written as **instance variables** in the class, and the behaviors are written as **methods**.
 
 The following picture has lots of cats (objects of the type cat).  They are all different, but they share the same attributes and behaviors that make up a cat. They are all **instances** of a cat with different values for their attributes. Name some of the attributes and behaviors of the cats below. For example, the color (*attribute*) of the first cat is black (*attribute value*) and it is playing (*behavior*).
 
@@ -199,7 +199,7 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
 
    <a href="https://www.youtube.com/watch?v=TFmmG4_KK8I&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
 
-The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.  
+The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.
 
 .. youtube:: TFmmG4_KK8I
     :width: 650
@@ -208,7 +208,7 @@ The following |video2| shows how the program creates a ``World`` object called `
     :optional:
 
 
-The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again. 
+The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again.
 
 |Exercise| **Check your understanding**
 
@@ -279,7 +279,7 @@ The **dot operator** (.) is used to run an object's method. You can think of the
    :adaptive:
    :noindent:
 
-   The following program uses a turtle to draw a sort-of sideways capital L as seen in the image, but the lines are mixed up.  The program should do all necessary set-up: import items, start the class definition, start the main method, and create a habitat and turtle. Then it should ask the turtle to turn right, go forward, turn left, and then go forward 50 pixels. Next, it should ask the habitat to show itself.  Finally, it should close the main method and class definition. We have added a compass to the picture to indicate the directions north, south, west, and east. Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There are three extra blocks that are not needed in a correct solution.  Then click on Check Me to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.  
+   The following program uses a turtle to draw a sort-of sideways capital L as seen in the image, but the lines are mixed up.  The program should do all necessary set-up: import items, start the class definition, start the main method, and create a habitat and turtle. Then it should ask the turtle to turn right, go forward, turn left, and then go forward 50 pixels. Next, it should ask the habitat to show itself.  Finally, it should close the main method and class definition. We have added a compass to the picture to indicate the directions north, south, west, and east. Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There are three extra blocks that are not needed in a correct solution.  Then click on Check Me to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.
    -----
    import java.util.*;
    import java.awt.*;
@@ -2283,11 +2283,11 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         public void setPicture(Picture pict) { this.picture = pict; }
 
         /**
-         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * Method to set the speed of animation by setting the delay to between 0-100.
          * 50 is the default. We pass this to the World's setSpeed method.
          * @param d
          */
-        public void setSpeed(int d) { 
+        public void setSpeed(int d) {
            ((World)modelDisplay).setSpeed(d);
         }
 
@@ -2830,7 +2830,7 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         {
           // let the parent constructor handle it
           super(p);
-        }   
+        }
 
       } // this is the end of class Turtle, put all new methods before this
       /**
@@ -3214,12 +3214,12 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         public int getHeight() { return height; }
 
         /**
-         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * Method to set the speed of animation by setting the delay to between 0-100.
          * 50 is the default.
          * @param speed
          */
-        public void setSpeed(int d) { 
-           if (d >= 0 && d <= 100) 
+        public void setSpeed(int d) {
+           if (d >= 0 && d <= 100)
                delay = d;
         }
 

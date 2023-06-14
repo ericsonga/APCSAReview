@@ -9,14 +9,14 @@ Free Response - Horse Barn B
 	single: horse barn
     single: free response
 
-The following is a variation of part b of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
+The following is a variation of part b of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 The original question had an interface called Horse, but the problem below has been changed to a class Horse instead of the interface. Interfaces are no longer covered on the AP CS A exam. However, you can still solve problems that have interfaces in them by changing them to a class, since an interface just describes the methods that a class must have.
 
-**Question 3.**  Consider a software system that models a horse barn. 
+**Question 3.**  Consider a software system that models a horse barn.
 
 
-.. code-block:: java 
+.. code-block:: java
 
    public class Horse
    {
@@ -37,24 +37,24 @@ A horse barn consists of N numbered spaces. Each space can hold at most one hors
 
 
 
-.. code-block:: java 
+.. code-block:: java
 
    public class HorseBarn
    {
       /** The spaces in the barn. Each array element holds a reference to the horse
-       * that is currently occupying the space. A null value indicates an empty 
+       * that is currently occupying the space. A null value indicates an empty
        * space.
        */
       private Horse[] spaces;
 
-      /** Consolidates the barn by moving horses so that the horses are in 
-       *  adjacent spaces, starting at index 0, with no empty space between 
+      /** Consolidates the barn by moving horses so that the horses are in
+       *  adjacent spaces, starting at index 0, with no empty space between
        *  any two horses.
-       * Postcondition: The order of the horses is the same as before the 
+       * Postcondition: The order of the horses is the same as before the
        *  consolidation.
        */
       public void consolidate()
-      { /* to be implemented in part (b) */ } 
+      { /* to be implemented in part (b) */ }
    }
 
 **Part b.**  Write the HorseBarn method consolidate. This method consolidates the barn by moving horses so that the horses are in adjacent spaces, starting at index 0, with no empty spaces between any two horses. After the barn is consolidated, the horses are in the same order as they were before the consolidation.
@@ -69,16 +69,16 @@ A horse barn consists of N numbered spaces. Each space can hold at most one hors
 How to solve this problem
 ===========================
 
-One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array. What kind of loop should you use? A for loop or an enhanced for loop would work for this problem. You will need an index for at least the temporary array. 
+One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array. What kind of loop should you use? A for loop or an enhanced for loop would work for this problem. You will need an index for at least the temporary array.
 
 .. (teachers complained that you could use either because you need a 2nd index anyway) .. mchoice:: frhbb_1
-   :answer_a: for 
+   :answer_a: for
    :answer_b: for each
    :answer_c: while
    :correct: a
    :feedback_a: Use a for loop when you know how many times a loop needs to execute and need the index.
    :feedback_b: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a for each loop if you want to loop through all the elements in a collection and don't need an index.
-   :feedback_c: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a while loop when you don't know how many times a loop needs to execute.  
+   :feedback_c: Although you could use a for each loop, a for loop a may be the better choice because you need to use the index. Use a while loop when you don't know how many times a loop needs to execute.
 
    Which loop is a good one to use to solve this problem?
 
@@ -98,9 +98,9 @@ While we are looping through the ``spaces`` array, we need to check for non-null
         :feedback_b: Is null() a standard Java method? Comparing an object with a null value is simpler.
         :feedback_c: "!=" is the best way to compare an element with a null value.
 
-        How do we check if the space at the current index isn't null? 
+        How do we check if the space at the current index isn't null?
 
-Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.   
+Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.
 
 .. activecode:: lcfrhbb1
    :language: java

@@ -57,7 +57,7 @@ You can test this with the mirrorTemple method below.
     :autograde: unittest
     :datafile: pictureClasses.jar, temple.jpg
 
-    Picture Lab A7: Run to see mirrorTemple() working.  
+    Picture Lab A7: Run to see mirrorTemple() working.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -65,7 +65,7 @@ You can test this with the mirrorTemple method below.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -167,7 +167,7 @@ You can test this with the mirrorTemple method below.
        }
 
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -176,7 +176,7 @@ You can test this with the mirrorTemple method below.
         pict.mirrorTemple();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -187,7 +187,7 @@ You can test this with the mirrorTemple method below.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void mirrorTemple()";
@@ -244,7 +244,7 @@ equals 263 times. The total is 70 * 263, which equals 18,410.
 
    How many times would the body of this nested for loop execute?
 
-   .. code-block:: 
+   .. code-block::
 
       for (int row = 5; row <= 11; row++)
           for (int col = 3; col <= 18; col++)
@@ -274,7 +274,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -379,7 +379,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
        }
 
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -388,7 +388,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
         pict.mirrorTemple();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -399,7 +399,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "count = 0";
@@ -407,13 +407,13 @@ inside the body of the loop. Print the value of count after the nested loop ends
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = "count++";
          boolean passed = checkCodeContains("mirrorTemple() has count++",target);
          assertTrue(passed);
-       } 
+       }
       }
 
 .. image:: Figures/mirrorarms.png
@@ -427,7 +427,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
     :autograde: unittest
     :datafile: pictureClasses.jar, snowperson.jpg
 
-    Picture Lab A7 Mirroring: Write the method mirrorArms to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. 
+    Picture Lab A7 Mirroring: Write the method mirrorArms to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -435,7 +435,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -521,7 +521,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
 
 
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -530,7 +530,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
         pict.mirrorArms();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -541,7 +541,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void mirrorArms()";
@@ -549,7 +549,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = "row = 155";
@@ -557,7 +557,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2b()
        {
          String target = "191";
@@ -577,10 +577,10 @@ inside the body of the loop. Print the value of count after the nested loop ends
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 4;
-            } 
+            }
             getResults("true", ""+passed, "Checking that mirrorArms() contains 4 (2 nested) for loops for mirroring arms", passed);
-            assertTrue(passed);     
-         }   
+            assertTrue(passed);
+         }
       }
 
 .. image:: Figures/mirrorgull.png
@@ -604,7 +604,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -690,7 +690,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
 
 
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -699,7 +699,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
         pict.mirrorGull();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -710,7 +710,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void mirrorGull()";
@@ -718,7 +718,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = "row = 225";
@@ -726,7 +726,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2b()
        {
          String target = "350";
@@ -746,10 +746,10 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that mirrorGull() contains 2 for loops", passed);
-            assertTrue(passed);     
-         }   
+            assertTrue(passed);
+         }
       }
 
 Images to use:

@@ -23,10 +23,10 @@ Peer Instruction: Unit 2 Multiple Choice Questions
 .. mchoice:: bs-objects-11-07
     :author: Beth Simon
     :practice: T
-    :answer_a: 1-A, 2-C, 3-C, 4-D 
-    :answer_b: 1-B, 2-B, 3-A, 4-D 
-    :answer_c: 1-A, 2-C, 3-D, 4-D 
-    :answer_d: 1-B, 2-C, 3-D, 4-D 
+    :answer_a: 1-A, 2-C, 3-C, 4-D
+    :answer_b: 1-B, 2-B, 3-A, 4-D
+    :answer_c: 1-A, 2-C, 3-D, 4-D
+    :answer_d: 1-B, 2-C, 3-D, 4-D
     :correct: d
     :feedback_a: Incorrect! Scenario 1 creates a picture from "filename.jpg." Scenario 2 uses 'other' as the picture that it is copying. Scenario 3 uses aNum and bNum to determine the dimensions of the image. Scenario 4 uses aNum and bNum to set the width and height as the same dimensions as another image.
     :feedback_b: Incorrect! Scenario 1 creates a picture from "filename.jpg." Scenario 2 uses 'other' as the picture that it is copying. Scenario 3 uses aNum and bNum to determine the dimensions of the image. Scenario 4 uses aNum and bNum to set the width and height as the same dimensions as another image.

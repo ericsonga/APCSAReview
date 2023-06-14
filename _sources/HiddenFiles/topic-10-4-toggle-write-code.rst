@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 10-4-
-   :start: 1   
+   :start: 1
 
 Unit 10 Write Code for Toggle Code
 =========================================================
@@ -65,7 +65,7 @@ This is the write code problems associated with the mixed up code problems. Reme
             }
 
             @Test
-            public void test2() 
+            public void test2()
             {
                 String str = "this is a test";
                 String expected = "tset a si siht";
@@ -189,7 +189,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :autograde: unittest
 
         Finish the ``removeStar`` method. It should remove any occurrence of an asterisk (“*”) from a passed-in string. For example, calling ``removeStar`` on ``"ab*c**d”`` would return ``“abcd”``.
-        ~~~~    
+        ~~~~
         public class ListTest {
 
             public static String removeStar(String myText) {
@@ -344,7 +344,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :practice: T
         :autograde: unittest
 
-        Write the ``repeatThis`` method. It should take in two parameters - a String ``s`` and an int ``i`` - and return a new String composed of ``s`` ``i`` times. For example, ``repeatThis("Cat", 2)`` would return ``"CatCat"``. 
+        Write the ``repeatThis`` method. It should take in two parameters - a String ``s`` and an int ``i`` - and return a new String composed of ``s`` ``i`` times. For example, ``repeatThis("Cat", 2)`` would return ``"CatCat"``.
         ~~~~
         public class ListTest {
 
@@ -380,7 +380,7 @@ This is the write code problems associated with the mixed up code problems. Reme
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
-            }   
+            }
         }
 
 .. activecode:: u10_muc_wc8
@@ -627,7 +627,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :practice: T
         :autograde: unittest
 
-        Create the ``spaceDash`` method. It should take in a String ``str`` and return a new String that has all of the spaces in ``str`` replaced by dashes. 
+        Create the ``spaceDash`` method. It should take in a String ``str`` and return a new String that has all of the spaces in ``str`` replaced by dashes.
         ~~~~
         public class Test1 {
             public static String spaceDash(String str) {
@@ -709,7 +709,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :practice: T
         :autograde: unittest
 
-        Write the ``sum`` function. It should take in an integer ``n`` and recursively find and return the sum of the digits of ``n``. For example, ``sum(362)`` would return ``11``, as that is 3+6+2. 
+        Write the ``sum`` function. It should take in an integer ``n`` and recursively find and return the sum of the digits of ``n``. For example, ``sum(362)`` would return ``11``, as that is 3+6+2.
         ~~~~
         public class Test1 {
             public static int sum(int n) {
@@ -749,7 +749,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :practice: T
         :autograde: unittest
 
-        Write the ``evenDigits`` function. This should take in an integer ``n`` and recursively return the number of even digits in ``n``. 
+        Write the ``evenDigits`` function. This should take in an integer ``n`` and recursively return the number of even digits in ``n``.
         ~~~~
         public class Test1
         {

@@ -45,20 +45,20 @@
 Calling Methods that Return Values
 ===================================
 
-If a method is a **void method** and has **void** as its return type, like most of the methods we have seen so far, that means that it does not return anything. But some methods **return** a value back that the program can use. 
+If a method is a **void method** and has **void** as its return type, like most of the methods we have seen so far, that means that it does not return anything. But some methods **return** a value back that the program can use.
 
 Get Methods
 ------------
 
-Get methods return the value of instance variables, for example getWidth() and getHeight() to get the height and width for a Turtle object. 
+Get methods return the value of instance variables, for example getWidth() and getHeight() to get the height and width for a Turtle object.
 
-In the previous lesson, we used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value. 
+In the previous lesson, we used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value.
 
-When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()* means getWidth will return an int (an integer number). 
+When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()* means getWidth will return an int (an integer number).
 
-Here are some examples of using get methods for the turtle object yertle. 
+Here are some examples of using get methods for the turtle object yertle.
 
-.. code-block:: java 
+.. code-block:: java
 
     Turtle yertle = new Turtle(world);
     int width = yertle.getWidth();
@@ -71,7 +71,7 @@ Here are some examples of using get methods for the turtle object yertle.
 
 .. note::
 
-    A common error is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like saving it into a variable or printing it out.  
+    A common error is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like saving it into a variable or printing it out.
 
 |CodingEx| **Coding Exercise:**
 
@@ -88,20 +88,20 @@ Here are some examples of using get methods for the turtle object yertle.
     ~~~~
     import java.util.*;
     import java.awt.*;
-    import java.lang.Math; 
+    import java.lang.Math;
 
     public class TurtleTestGetSet
     {
       public static void main(String[] args)
       {
           World world = new World(300,300);
-          Turtle yertle = new Turtle(world);           
-          System.out.println("Yertle's width is: " + yertle.getWidth()); 
+          Turtle yertle = new Turtle(world);
+          System.out.println("Yertle's width is: " + yertle.getWidth());
           yertle.setWidth(200);
           yertle.setHeight(200);
           System.out.println("Yertle's width is: " + yertle.getWidth());
           yertle.turnRight();
-          world.show(true); 
+          world.show(true);
       }
     }
     ====
@@ -124,7 +124,7 @@ Here are some examples of using get methods for the turtle object yertle.
         }
     }
 
-|CodingEx| **Coding Exercise:**    
+|CodingEx| **Coding Exercise:**
 
 .. activecode:: TurtleArea
     :language: java
@@ -135,7 +135,7 @@ Here are some examples of using get methods for the turtle object yertle.
     ~~~~
     import java.util.*;
     import java.awt.*;
-    import java.lang.Math; 
+    import java.lang.Math;
 
     public class TurtleArea
     {
@@ -200,7 +200,7 @@ toString() Methods
 
 Another common method that returns a value is the **toString()** method. This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement. In the Turtle class, the toString() method returns a String description of the turtle.
 
-.. code-block:: java 
+.. code-block:: java
 
     Turtle yertle = new Turtle(world);
     yertle.setName("yertle"); // set name before you use toString()
@@ -220,7 +220,7 @@ Another common method that returns a value is the **toString()** method. This me
     ~~~~
     import java.util.*;
     import java.awt.*;
-    import java.lang.Math; 
+    import java.lang.Math;
 
     public class TurtleTestMethods2
     {
@@ -233,7 +233,7 @@ Another common method that returns a value is the **toString()** method. This me
 
 
 
-          world.show(true); 
+          world.show(true);
       }
     }
     ====
@@ -316,7 +316,7 @@ You will not write your own methods until Unit 5, but you should be able to trac
 
    .. code-block:: java
 
-      public class MethodTrace 
+      public class MethodTrace
       {
         public int square(int x)
         {
@@ -342,7 +342,7 @@ Try this |visualization| to see this code in action.
 |Groupwork| Programming Challenge : Turtle Distances
 ----------------------------------------------------
 
-1. The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)? 
+1. The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)?
 
 2. Add another turtle and make both turtles move. Then find the distance between them. You must use the getXPos() and getYPos() methods as well as the getDistance() method.
 
@@ -353,7 +353,7 @@ Try this |visualization| to see this code in action.
 
     import java.util.*;
     import java.awt.*;
-    import java.lang.Math; 
+    import java.lang.Math;
 
     public class TurtleTestDistance
     {
@@ -362,13 +362,13 @@ Try this |visualization| to see this code in action.
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
 
-          // Can you find yertle's distance from the point (0,0)? 
+          // Can you find yertle's distance from the point (0,0)?
 
           // Can you find the distance between 2 turtles?
 
 
 
-          world.show(true); 
+          world.show(true);
       }
     }
     ====
@@ -467,7 +467,7 @@ AP Practice
 
     - result = calculatePizzaBoxes(45, 9);
 
-      - The variable result has not been declared (with an appropriate data type). 
+      - The variable result has not been declared (with an appropriate data type).
 
 .. mchoice:: AP2-5-2
     :practice: T
@@ -510,11 +510,11 @@ AP Practice
 
     - \-10
 
-      - The Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it. 
+      - The Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it.
 
     - 50
 
-      - The Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it. 
+      - The Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it.
 
     - water.getTemp()
 

@@ -21,7 +21,7 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Sorting Algorithms
 ==================
@@ -82,7 +82,7 @@ The code for ``selectionSort`` below is from the AP CS A course description.
 
 .. activecode:: selSort
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   Demonstration of selection sort. Click on the Code Lens button or the link below to step through the code.
   ~~~~
@@ -231,7 +231,7 @@ The code for ``insertionSort`` below is from the AP CS A course description.
 
 .. activecode:: insertionSort
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   Demonstration of insertion sort. Click on the Code Lens button or the link below to step through the code.
   ~~~~
@@ -333,7 +333,7 @@ You can step through the code above by clicking on the following `Visualization 
 |Groupwork| Programming Challenge : Sort Runtimes
 ---------------------------------------------------
 
-Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data. 
+Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data.
 
 In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this |Google doc| (login to Google to make your own copy) also seen below.
 
@@ -347,7 +347,7 @@ In the Active code windows for Selection sort and Insertion sort above, add in a
 
 .. shortanswer:: challenge7-6-sorting
 
-   Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.   
+   Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.
 
 Summary
 ---------

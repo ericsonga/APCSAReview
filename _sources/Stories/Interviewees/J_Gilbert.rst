@@ -21,7 +21,7 @@ Dr. Juan Gilbert
 
 *"What encourages me is the pervasiveness of computing and its ability to solve societal problems. There are plenty of problems in society and I think using computing and technology to address them, that encourages me."*
 
-**What barriers has he faced?** 
+**What barriers has he faced?**
 
 Dr. Gilbert's biggest problem was a lack of diversity. For a long time, he was the only African American he knew that was pursuing a PhD. Once he ran into another, though, he found a community of peers that helped him through his journey.
 

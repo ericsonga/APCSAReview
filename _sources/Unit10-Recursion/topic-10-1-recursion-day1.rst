@@ -121,7 +121,7 @@ Recursion can also be used to create fractals.  A simple example is Sierpinski's
 
     Figure 1: A sequence of Sierpinski's triangles
 
-Recursion can also be used to traverse String, array, and ArrayList objects, much like a loop. In fact, any recursive solution could be written with iteration (loops) instead. 
+Recursion can also be used to traverse String, array, and ArrayList objects, much like a loop. In fact, any recursive solution could be written with iteration (loops) instead.
 
 Factorial Method
 =================

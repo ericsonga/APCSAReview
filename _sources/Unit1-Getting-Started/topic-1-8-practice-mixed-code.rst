@@ -1,11 +1,11 @@
 .. qnum::
    :prefix: 1-8-
-   :start: 1   
+   :start: 1
 
 Mixed Up Code Practice
 ==============================
 
-Try to solve each of the following mixed-up code problems or try the experimental switch between mixed up or write code versions of these problems on the next page instead. 
+Try to solve each of the following mixed-up code problems or try the experimental switch between mixed up or write code versions of these problems on the next page instead.
 
 For these mixed up code problems, drag the blocks into the correct order. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems may have an extra block that isn't needed in the correct solution. After 3 tries, you can ask for help and some of the blocks will be combined. You can solve these on your phone or other mobile device!
 
@@ -127,11 +127,11 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
        public static void main(String[] args)
        {
-   =====    
+   =====
            int sInMin = 60;
            int mInHour = 60;
            int hInDay = 24;
-   ===== 
+   =====
            int sInDay = sInMin * mInHour * hInDay;
    =====
            int total = sInDay * 5;
@@ -139,7 +139,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
            System.out.println(total);
    =====
        } // end main method
-   =====          
+   =====
    } // end class
    =====
    public Class Test1
@@ -255,7 +255,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
            double totalCost = numGalls * price;
    =====
-           System.out.println(totalCost); 
+           System.out.println(totalCost);
    =====
        }
    =====
@@ -285,7 +285,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
            double miles = numGalls * mpg;
    =====
-           System.out.println(miles); 
+           System.out.println(miles);
    =====
        }
    =====
@@ -350,7 +350,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
    }
    =====
-           int price = 52.99; 
+           int price = 52.99;
            int discount = 0.6; #distractor
 
 .. parsonsprob:: ch3ex10muc

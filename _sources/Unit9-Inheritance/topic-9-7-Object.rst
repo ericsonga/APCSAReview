@@ -22,11 +22,11 @@
 
 .. |AP CS A Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a> 
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Object Superclass
 ====================
@@ -41,14 +41,14 @@ The **Object** class is the superclass of all other classes in Java and a part o
 toString() method
 -----------------
 
-One commonly overridden Object method is toString(), which is often used to print out the attributes of an object. It is a good idea to write your own toString() method in every class. In a subclass, toString() can call the superclass toString() method using super.toString() and then add on its own attributes. 
+One commonly overridden Object method is toString(), which is often used to print out the attributes of an object. It is a good idea to write your own toString() method in every class. In a subclass, toString() can call the superclass toString() method using super.toString() and then add on its own attributes.
 
 |CodingEx| **Coding Exercise**
 
-In the following code, the Person class overrides the Object toString() method and the Student class overrides the Person toString() method. They each add on their attributes. 
+In the following code, the Person class overrides the Object toString() method and the Student class overrides the Person toString() method. They each add on their attributes.
 
 .. activecode:: toStringDemo
-  :language: java 
+  :language: java
   :autograde: unittest
 
   After trying the code below, complete the subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Uncomment the APStudent object in the main method to test it.
@@ -60,17 +60,17 @@ In the following code, the Person class overrides the Object toString() method a
        {
           this.name = name;
        }
-       public String toString() 
+       public String toString()
        {
           return name;
-       }   
+       }
        public static void main(String[] args)
        {
           Person p = new Person("Sila");
           Student s = new Student("Tully", 1001);
           System.out.println(p); //call Person toString
           System.out.println(s);  //call Student toString
-          // Uncomment the code below to test the APStudent class 
+          // Uncomment the code below to test the APStudent class
           /*
           APStudent ap = new APStudent("Ayanna", 1002, 5);
           System.out.println(ap);
@@ -116,7 +116,7 @@ In the following code, the Person class overrides the Object toString() method a
 
          @Test
          public void test1()
-         { 
+         {
              String output = getMethodOutput("main");
              String expect = "Sila\nTully 1001\nAyanna 1002 5";
 
@@ -139,7 +139,7 @@ In the following code, the Person class overrides the Object toString() method a
 
 
 
-equals Method 
+equals Method
 -----------------
 
 One of the important things that gets inherited from the Object superclass is the ``equals(Object obj)`` method.  This method is used to test if the current object and the passed object called ``obj`` are equal. But what does that mean?
@@ -148,7 +148,7 @@ One of the important things that gets inherited from the Object superclass is th
     single: override
     single: equals
 
-As seen in the code below, the ``equals`` method that is inherited from the ``Object`` class only returns true if the two objects references refer to the same object.  
+As seen in the code below, the ``equals`` method that is inherited from the ``Object`` class only returns true if the two objects references refer to the same object.
 
 |CodingEx| **Coding Exercise**
 
@@ -195,7 +195,7 @@ As seen in the code below, the ``equals`` method that is inherited from the ``Ob
 
          @Test
          public void test1()
-         { 
+         {
              String output = getMethodOutput("main");
              String expect = "false\nfalse\nfalse\ntrue";
 
@@ -218,7 +218,7 @@ The ``equals`` method inherited from the ``Object`` class only returns true when
 Overriding the equals Method
 -----------------------------
 
-If you want to change how the inherited ``equals`` method works you can **override** it so that the new method is called instead of the inherited one.  The ``String`` class **overrides** the inherited equals method to return true when the two objects have the same characters in the same order as shown in the code below.  
+If you want to change how the inherited ``equals`` method works you can **override** it so that the new method is called instead of the inherited one.  The ``String`` class **overrides** the inherited equals method to return true when the two objects have the same characters in the same order as shown in the code below.
 
 |CodingEx| **Coding Exercise**
 
@@ -254,7 +254,7 @@ If you want to change how the inherited ``equals`` method works you can **overri
 
          @Test
          public void test1()
-         { 
+         {
              String output = getMethodOutput("main");
              String expect = "false\nfalse\ntrue";
 
@@ -304,7 +304,7 @@ Any class can override the inherited ``equals`` method by providing a method wit
          System.out.println(p1.equals(p2));
          System.out.println(p2.equals(p3));
          System.out.println(p1.equals(p3));
-         System.out.println(p3.equals(p4));         
+         System.out.println(p3.equals(p4));
       }
    }
    ====
@@ -320,7 +320,7 @@ Any class can override the inherited ``equals`` method by providing a method wit
 
          @Test
          public void test1()
-         { 
+         {
              String output = getMethodOutput("main");
              String expect = "false\nfalse\ntrue\ntrue";
 
@@ -345,40 +345,40 @@ To write your own equals method, you must:
 2. Type cast other to your Classname
 3. Return whether this object's attribute(s) equals the other object's attribute(s) with == for primitive types like int and double, or equals for reference types like String or another class.
 
-.. code-block:: java 
+.. code-block:: java
 
     public boolean equals(Object other)
     {
        // Type cast other to your Classname
        Classname otherObj = (Classname) other;
        // Check if attributes are equal
-       return (this.attribute == otherObj.attribute); 
+       return (this.attribute == otherObj.attribute);
        // or this.attribute.equals(otherObj.attribute) if attribute a String
     }
 
 If you need to check multiple attributes, for example a name and an address for Person objects, you can use && to combine tests.
 
-.. code-block:: java 
+.. code-block:: java
 
     return (this.attribute1 == otherObj.attribute1) &&
            this.attribute2.equals(otherObj.attribute2)
 
 If you are writing an equals method for a subclass, you can call the superclass equals using the **super** keyword to check the attributes in the superclass and then check the attributes in the subclass.
 
-.. code-block:: java 
+.. code-block:: java
 
-    return super.equals(otherObj) && 
+    return super.equals(otherObj) &&
            (this.attribute == otherObj.attribute)
 
 
 |Groupwork| Programming Challenge : Savings Account
 ---------------------------------------------------
 
-In the following code, a bank account class contains the account holder's name and the money balance in the account. 
+In the following code, a bank account class contains the account holder's name and the money balance in the account.
 
 Work in pairs to write the following code and test each part before moving on to the next step:
 
-1. Write a subclass called SavingsAccount that extends Account and  adds an interest rate variable. 
+1. Write a subclass called SavingsAccount that extends Account and  adds an interest rate variable.
 
 2. Write a constructor with 3 arguments (name, balance, interest rate) for the SavingsAccount class that uses the super constructor.
 
@@ -391,9 +391,9 @@ Work in pairs to write the following code and test each part before moving on to
    :language: java
    :autograde: unittest
 
-   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a constructor with 3 arguments, a toString, and an equals method for it. Uncomment the code in main to test your new class and methods. 
+   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a constructor with 3 arguments, a toString, and an equals method for it. Uncomment the code in main to test your new class and methods.
    ~~~~
-   public class Account 
+   public class Account
    {
        private String name;
        private double balance;
@@ -416,7 +416,7 @@ Work in pairs to write the following code and test each part before moving on to
        }
 
        public static void main(String[] args)
-       {  
+       {
            Account acct1 = new Account("Armani Smith",1500);
 		   System.out.println(acct1);
            // Uncomment this code to test SavingsAccount
@@ -428,7 +428,7 @@ Work in pairs to write the following code and test each part before moving on to
            */
        }
    }
-   /* Write the SavingsAccount class which inherits from Account 
+   /* Write the SavingsAccount class which inherits from Account
       and has an interest rate and a constructor, toString, and
       equals methods.
    */
@@ -449,7 +449,7 @@ Work in pairs to write the following code and test each part before moving on to
 
          @Test
          public void test1()
-         { 
+         {
              String output = getMethodOutput("main");
              String expect = "Armani Smith, 1500.0\nDakota Jones, 1500.0, 4.5\ntrue";
 
@@ -459,7 +459,7 @@ Work in pairs to write the following code and test each part before moving on to
 
          @Test
          public void test3()
-         { 
+         {
              String target = "public String toString()";
 
              String code = getCode();
@@ -473,7 +473,7 @@ Work in pairs to write the following code and test each part before moving on to
 
          @Test
          public void test30()
-         { 
+         {
              String target = "super.toString()";
 
              String code = getCode();
@@ -495,7 +495,7 @@ Work in pairs to write the following code and test each part before moving on to
 
          @Test
          public void test31()
-         { 
+         {
              String target = "public boolean equals(Object";
 
              String code = getCode();
@@ -510,7 +510,7 @@ Work in pairs to write the following code and test each part before moving on to
 
          @Test
          public void test32()
-         { 
+         {
              String target = "super.equals(";
 
              String code = getCode();

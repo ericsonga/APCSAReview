@@ -23,16 +23,16 @@ Concept Summary
 
 - **instance variables** - define the attributes for objects.
 
-- **methods** - define the behaviors or functions for objects. 
+- **methods** - define the behaviors or functions for objects.
 
-- **dot (.) operator** - used to access an object's methods.  
+- **dot (.) operator** - used to access an object's methods.
 
 - **parameters (arguments)** - the values or data passed to an object's method inside the parentheses in the method call to help the method do its job.
 
 - **return values** - values returned by methods to the calling method.
 
 
-- **immutable** - String methods do not change the String object. Any method that seems to change a string actually creates a new string. 
+- **immutable** - String methods do not change the String object. Any method that seems to change a string actually creates a new string.
 
 - **wrapper classes** - classes that create objects from primitive types, for example the Integer class and Double class.
 
@@ -46,11 +46,11 @@ Java Keyword Summary
 
   - **String(String str)** : Constructs a new String object that represents the same sequence of characters as str.
 
-  - **int length()** : returns the number of characters in a String object. 
+  - **int length()** : returns the number of characters in a String object.
 
   - **String substring(int from, int to)** : returns the substring beginning at index from and ending at index (to -1). The single element substring at position index can be created by calling substring(index, index + 1).
 
-  - **String substring(int from)** : returns substring(from, length()). 
+  - **String substring(int from)** : returns substring(from, length()).
 
   - **int indexOf(String str)** : returns the index of the first occurrence of str; returns -1 if not found.
 
@@ -77,7 +77,7 @@ Java Keyword Summary
 
   - **int abs(int)** : Returns the absolute value of an int value (which means no negatives).
   - **double abs(double)** : Returns the absolute value of a double value.
-  - **double pow(double, double)** : Returns the value of the first parameter raised to the power of the second parameter. 
+  - **double pow(double, double)** : Returns the value of the first parameter raised to the power of the second parameter.
   - **double sqrt(double)** :  Returns the positive square root of a double value.
   - **double random()** :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
 
@@ -111,7 +111,7 @@ For more practice, see this |Quizlet| embedded below.
 
     <iframe style="max-width:90%; margin-left:5%" src="https://quizlet.com/434063730/flashcards/embed?i=2cxqxx&x=1jj1" height="500" width="100%" style="border:0"></iframe>
 
-Common Mistakes 
+Common Mistakes
 ----------------------------
 
 - Forgetting to declare an object to call a method from main or from outside of the class, for example ``object.method();``
@@ -122,12 +122,12 @@ Common Mistakes
 
 - Forgetting to save, print, or use the return value from a method that returns a value, for example ``int result = Math.pow(2,3);``
 
--  Using ``==`` to test if two strings or objects are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals(String)`` or ``compareTo(String)`` instead.    
+-  Using ``==`` to test if two strings or objects are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals(String)`` or ``compareTo(String)`` instead.
 
--  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.  
+-  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.
 
--  Thinking that substrings include the character at the last index when they don't. 
+-  Thinking that substrings include the character at the last index when they don't.
 
--  Thinking that strings can change when they can't.  They are immutable.  
+-  Thinking that strings can change when they can't.  They are immutable.
 
 -  Trying to call a method like ``str1.indexOf(str2)`` with a string reference ``str1`` that is null.  You will get a null pointer exception.

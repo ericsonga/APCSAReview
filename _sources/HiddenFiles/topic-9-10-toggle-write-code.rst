@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 9-10-
-   :start: 1   
+   :start: 1
 
 Unit 9 Write Code for Toggle Code
 =========================================================
@@ -12,7 +12,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Fix the class header so that the ``Dog`` class inherits from the ``Animal`` class. 
+        Fix the class header so that the ``Dog`` class inherits from the ``Animal`` class.
         ~~~~
         class Animal {
             /* implementation not shown */
@@ -359,7 +359,7 @@ This is the write code problems associated with the mixed up code problems.
 
             @Test
             public void testMain() throws IOException {
-                // as opposed to testFight, this method checks that 
+                // as opposed to testFight, this method checks that
                     // Entity's fight() method has not been changed
                 String expected = "e HP: 105\nAttacked the hero!\nHero HP: 100\nAttacked the enemy!";
                 String output = getMethodOutput("main");
@@ -369,7 +369,7 @@ This is the write code problems associated with the mixed up code problems.
 
             @Test
             public void testFight() throws IOException {
-                // this is useful in case the student hardcoded 
+                // this is useful in case the student hardcoded
                     // a print statement to get past testMain()
                 String expected = "Attacked the enemy!";
                 String output = getMethodOutput("fight");

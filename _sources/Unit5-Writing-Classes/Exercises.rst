@@ -17,7 +17,7 @@ Multiple-Choice Exercises
         {
            /* missing code */
         }
-        Which of the following replacements for /* missing code */ is the most appropriate 
+        Which of the following replacements for /* missing code */ is the most appropriate
         implementation of the class?
 
     - .. code-block:: java
@@ -77,7 +77,7 @@ Multiple-Choice Exercises
         {
           /* missing code */
         }
-        Which of the following replacements for /* missing code */ is the most appropriate 
+        Which of the following replacements for /* missing code */ is the most appropriate
         implementation of the class?
 
     - .. code-block:: java
@@ -187,7 +187,7 @@ Multiple-Choice Exercises
    :practice: T
    :random:
    :answer_a: I only
-   :answer_b: I and II 
+   :answer_b: I and II
    :answer_c: I and III
    :answer_d: I, II, and III
    :answer_e: II and III
@@ -248,7 +248,7 @@ Multiple-Choice Exercises
 
          Party p = new Party(10, 5.0);
 
-         Which of the following can be used to replace /* missing constructor */ 
+         Which of the following can be used to replace /* missing constructor */
          so that the object p is correctly created?
 
     - .. code-block:: java
@@ -314,21 +314,21 @@ Multiple-Choice Exercises
             /* Other methods not shown */
         }
 
-    Which of the following preconditions is reasonable for the Liquid constructor? 
+    Which of the following preconditions is reasonable for the Liquid constructor?
 
-    - Precondition: fp \> 0 
+    - Precondition: fp \> 0
 
       - Incorrect. The freezing point could be negative.
 
-    - Precondition: currentTemp \> 0 
+    - Precondition: currentTemp \> 0
 
       - Incorrect. Unable to make this assumption for all liquids.
 
-    - Precondition: fp < ct < bp 
+    - Precondition: fp < ct < bp
 
       + Correct!
 
-    - Precondition: fp > ct > bp 
+    - Precondition: fp > ct > bp
 
       - Incorrect. This would again result in freezing point being > boiling point which is impossible.
 
@@ -618,7 +618,7 @@ Multiple-Choice Exercises
              else
              {
                 return false;
-             }           
+             }
 
 .. mchoice:: AP5-8-3
     :practice: T
@@ -721,7 +721,7 @@ Multiple-Choice Exercises
             return boxesOfFood;
         }
 
-        public void eatFood(int eatenBoxes) 
+        public void eatFood(int eatenBoxes)
         {
             boxesOfFood = updatedAmountOfFood - eatenBoxes;
         }
@@ -731,7 +731,7 @@ Multiple-Choice Exercises
 .. mchoice:: AP5-9-3
     :practice: T
 
-    Consider the following class definitions. 
+    Consider the following class definitions.
 
     .. code-block:: java
 
@@ -810,7 +810,7 @@ Multiple-Choice Exercises
 
     - Party by Kerry rejected; Party by Jules accepted;
 
-      - Kerry's party should be accepted because it is in the 10th month. Jules' party should be rejected because it is not in the 10th month. 
+      - Kerry's party should be accepted because it is in the 10th month. Jules' party should be rejected because it is not in the 10th month.
 
     - Party by Kerry accepted; Party by Jules rejected;
 
@@ -818,7 +818,7 @@ Multiple-Choice Exercises
 
     - Party by Kerry accepted; Party by Jules accepted;
 
-      - Jules' party should be rejected because it is not in the 10th month.    
+      - Jules' party should be rejected because it is not in the 10th month.
 
 
 

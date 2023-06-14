@@ -30,7 +30,7 @@ Enhanced For-Loop (For-Each) for Arrays
 	single: for-each
 	pair: loop; for-each
 
-There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively. 
+There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively.
 
 To set up a for-each loop, use **for (type variable : arrayname)** where the type is the type for elements in the array, and read it as "for each variable value in arrayname". You may have used a similar loop in AP CSP Pseudocode or App Inventor with lists like below.
 
@@ -44,7 +44,7 @@ To set up a for-each loop, use **for (type variable : arrayname)** where the typ
 
 See the examples below in Java that loop through an int and a String array. Notice the type of the loop variable is the type of the array.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[] highScores = { 10, 9, 8, 8};
   String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
@@ -59,10 +59,10 @@ See the examples below in Java that loop through an int and a String array. Noti
   // the type for variable name is String!
   for (String name : names)
   {
-      System.out.println(name); 
+      System.out.println(name);
   }
 
-Use the enhanced for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don't need to know their index and don't need to change their values.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array. This type of loop can only be used with arrays and some other collections of items like ArrayLists which we will see in the next unit.  
+Use the enhanced for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don't need to know their index and don't need to change their values.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array. This type of loop can only be used with arrays and some other collections of items like ArrayLists which we will see in the next unit.
 
 |CodingEx| **Coding Exercise**
 
@@ -75,7 +75,7 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
    Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.
    ~~~~
    public class ForEachDemo
-   {      
+   {
       public static void main(String[] args)
       {
         int[] highScores = { 10, 9, 8, 8};
@@ -141,7 +141,7 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
    Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!
    ~~~~
    public class EvenLoop
-   {      
+   {
       public static void main(String[] args)
       {
           int[ ] values = {6, 2, 1, 7, 12, 5};
@@ -179,7 +179,7 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
         }
 
         @Test
-        public void test2() 
+        public void test2()
         {
             boolean passed = checkCodeContains("for each loop", "for(int * : values)");
             assertTrue(passed);
@@ -191,9 +191,9 @@ Foreach Loop Limitations
 
 .. |visualizer| raw:: html
 
-   <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
+   <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
-What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop changes, not the real array values. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the |visualizer| by clicking the CodeLens button and step through the code to see why it doesn't work. 
+What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop changes, not the real array values. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the |visualizer| by clicking the CodeLens button and step through the code to see why it doesn't work.
 
 |CodingEx| **Coding Exercise**
 
@@ -206,7 +206,7 @@ What if we had a loop that incremented all the elements in the array. Would that
    The for-each loop below cannot change the values in the array because only the loop variable value will change. Run it with the CodeLens button to see why this is. Then, change the loop to an indexed for loop to make it change the array values.
    ~~~~
    public class IncrementLoop
-   {      
+   {
       public static void main(String[] args)
       {
           int[ ] values = {6, 2, 1, 7, 12, 5};
@@ -248,7 +248,7 @@ What if we had a loop that incremented all the elements in the array. Would that
         }
 
         @Test
-        public void test2() 
+        public void test2()
         {
             String target = "for (int * = #; * ? *.length; *~)";
             boolean passed = checkCodeContains("for loop", target);
@@ -259,7 +259,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 
 .. note::
 
-   Enhanced for each loops cannot be used in all situations. Only use for-each loops when you want to loop through **all** the values in an array without changing their values. 
+   Enhanced for each loops cannot be used in all situations. Only use for-each loops when you want to loop through **all** the values in an array without changing their values.
 
    - Do not use for each loops if you need the index.
    - Do not use for each loops if  you need to change the values in the array.
@@ -280,7 +280,7 @@ What if we had a loop that incremented all the elements in the array. Would that
    :feedback_a: This style of loop does access every element of the array, but using a for-each loop also means the user can access elements through the variable name.
    :feedback_b: Correct! For-each loops access all elements and enable users to use a variable name to refer to array elements, but do not allow users to modify elements directly.
    :feedback_c: For-each loops, as well as allowing users to refer to array elements, run through every element. For-each loops also do not allow users to modify elements directly.
-   :feedback_d: For-each loops access all of an array's elements and allow users to refer to elements through a variable, but do not allow users to modify elements directly.  
+   :feedback_d: For-each loops access all of an array's elements and allow users to refer to elements through a variable, but do not allow users to modify elements directly.
 
 
    What are some of the reasons you would use an enhanced for-each loop instead of a for loop?
@@ -289,7 +289,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 
       I: If you wish to access every element of an array.
       II: If you wish to modify elements of the array.
-      III: If you wish to refer to elements through a variable name instead of an array index. 
+      III: If you wish to refer to elements through a variable name instead of an array index.
 
 
 .. mchoice:: qfor-each
@@ -321,7 +321,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 
      - Remember that the foreach loop cannot modify the array elements. Only the variable num will be doubled, not the original array values.
 
-   - The code will not compile. 
+   - The code will not compile.
 
      - This code will compile.
 
@@ -333,17 +333,17 @@ Foreach Loop Algorithms
 
 .. |Java visualizer| raw:: html
 
-   <a href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getAverage())%3B%0A+++%7D%0A%7D%0A%0A&mode=display&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
+   <a href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getAverage())%3B%0A+++%7D%0A%7D%0A%0A&mode=display&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 
-Here is an object-oriented example that has the array as a private instance variable in the class and provides a public method average that uses a for-each loop.  You can use the |Java Visualizer| or the Code Lens button to step through this code. 
+Here is an object-oriented example that has the array as a private instance variable in the class and provides a public method average that uses a for-each loop.  You can use the |Java Visualizer| or the Code Lens button to step through this code.
 
 
 .. activecode:: lcaf2
    :language: java
    :autograde: unittest
 
-   Try the code below. 
+   Try the code below.
    ~~~~
    public class ArrayWorker
    {
@@ -367,7 +367,7 @@ Here is an object-oriented example that has the array as a private instance vari
        public static void main(String[] args)
        {
            int[] numArray =  {2, 6, 7, 12, 5};
-           ArrayWorker aWorker = new ArrayWorker(numArray); 
+           ArrayWorker aWorker = new ArrayWorker(numArray);
            System.out.println(aWorker.getAverage());
        }
    }
@@ -420,7 +420,7 @@ Here is an object-oriented example that has the array as a private instance vari
    =====
          largest = item;
    =====
-       }  // end if 
+       }  // end if
    =====
      } // end for
      return largest;
@@ -446,20 +446,20 @@ If you want to step through the correct code to see what it does in the Java Vis
    :answer_c: Whenever the last element in <i>array</i> is equal to <i>target</i>.
    :answer_d: Whenever only 1 element in <i>array</i> is equal to <i>target</i>.
    :correct: c
-   :feedback_a: This would be true if the loop started at the end of the array and moved toward the beginning.  But, it will loop from the first element to the last.  
+   :feedback_a: This would be true if the loop started at the end of the array and moved toward the beginning.  But, it will loop from the first element to the last.
    :feedback_b: This would be true if temp was only set to the result of checking if the current element in the array is equal to <i>target</i> when it is <i>false</i>.  But, it is reset each time through the loop.
    :feedback_c: The variable <i>temp</i> is assigned to the result of checking if the current element in the array is equal to <i>target</i>.  The last time through the loop it will check if the last element is equal to <i>val</i>.
-   :feedback_d: There is no count of the number of times the array element is equal to <i>target</i>.  
+   :feedback_d: There is no count of the number of times the array element is equal to <i>target</i>.
 
 
    Given that ``array`` is an array of integers and ``target`` is an integer value, which of the following best describes the conditions under which the following code segment will return true?
 
-   .. code-block:: java 
+   .. code-block:: java
 
      boolean temp = false;
      for (int val : array)
-     { 
-       temp = ( target == val ); 
+     {
+       temp = ( target == val );
      }
      return temp;
 
@@ -500,8 +500,8 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
 
       // Re-write the spellcheck(word) (and optionally the printStartsWith(firstLetters)) methods to use enhanced for-each loops.
 
-      /* Write a spellcheck() method using an enhanced for-each loop 
-       * that takes a word as a parameter and returns true if it is 
+      /* Write a spellcheck() method using an enhanced for-each loop
+       * that takes a word as a parameter and returns true if it is
        * in the dictionary array. Return false if it is not found.
        */
 
@@ -513,10 +513,10 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
         /* // Uncomment to test your method
         String word = "catz";
 
-        // Or you may be able to use this code to read input from the textbox below 
+        // Or you may be able to use this code to read input from the textbox below
         // System.out.print("Enter a word to spell check in the Input for Program textbox below: ");
         // Scanner scan = new Scanner(System.in);
-        // word = scan.nextLine();  
+        // word = scan.nextLine();
 
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
@@ -586,13 +586,13 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
         }
 
         @Test
-        public void testForEach() 
+        public void testForEach()
         {
             boolean passed = checkCodeContains("for each loop", "for(String * : dictionary)");
             assertTrue(passed);
         }
         @Test
-        public void testEquals() 
+        public void testEquals()
         {
             boolean passed = checkCodeContains("use of equals method", ".equals(");
             assertTrue(passed);
@@ -602,63 +602,63 @@ Copy the spellcheck method that you used in the Spell Checker Challenge in the l
 |Groupwork| Design an Array of Objects for your Community
 ----------------------------------------------------------
 
-In Unit 5, you came up with a class of your own choice relevant to your 
-community.  In lessons 6.1 and 6.2, you created an array to hold objects of your class 
+In Unit 5, you came up with a class of your own choice relevant to your
+community.  In lessons 6.1 and 6.2, you created an array to hold objects of your class
 and traversed the array with a loop. In this challenge, we will create a new class that
-holds your array of objects and add a method that print the array elements and a method that 
+holds your array of objects and add a method that print the array elements and a method that
 finds a certain object in the array using enhanced for loops. We encourage you to continue working in pairs.
 
 Here is an example of a Student class and a StudentArray class that searches for a student with a
 specific name. In Java, when you are working with multiple classes on your own computer, each
-class is usually in its own file that matches the class name. On Runestone, when you are working 
-with multiple classes, only the class that has the main method should be public, and the other classes should 
+class is usually in its own file that matches the class name. On Runestone, when you are working
+with multiple classes, only the class that has the main method should be public, and the other classes should
 start with ``class`` instead of ``public class``.
 
 .. activecode:: student-array
   :language: java
   :autograde: unittest
 
-  Run the StudentArray class below. Note that it uses the class Student below it and creates 
-  an array of Students. Using the StudentArray print() method as a guide, 
+  Run the StudentArray class below. Note that it uses the class Student below it and creates
+  an array of Students. Using the StudentArray print() method as a guide,
   write a StudentArray method called findAndPrint() which takes a String name as an argument,
-  and uses an enhanced for-loop to traverse the array to find a Student in the array with the same name. 
-  If the argument equals the Student object's name (using its getName() method), then print out that student's info. 
+  and uses an enhanced for-loop to traverse the array to find a Student in the array with the same name.
+  If the argument equals the Student object's name (using its getName() method), then print out that student's info.
   Call it from the main method to test it.
   ~~~~
   public class StudentArray
   {
-      private Student[] array; 
+      private Student[] array;
       private int size = 3;
 
-      // Creates an array of the default size  
-      public StudentArray() 
+      // Creates an array of the default size
+      public StudentArray()
       {
          array = new Student[size];
       }
 
       // Creates aan array of the given size
-      public StudentArray(int size) 
+      public StudentArray(int size)
       {
          array = new Student[size];
       }
 
-      // Adds Student s to the array at index i 
+      // Adds Student s to the array at index i
       public void add(int i, Student s)
       {
-        array[i] = s;  
+        array[i] = s;
       }
 
-      // prints the array of students  
+      // prints the array of students
       public void print()
       {
           for(Student s : array)
           {
               // this will call Student's toString() method
-              System.out.println(s); 
+              System.out.println(s);
           }
       }
 
-      /* Write a findAndPrint(name) method */  
+      /* Write a findAndPrint(name) method */
 
 
       public static void main(String[] args)
@@ -669,7 +669,7 @@ start with ``class`` instead of ``public class``.
          roster.add(0, new Student("Skyler", "skyler@sky.com", 123456));
          roster.add(1, new Student("Ayanna", "ayanna@gmail.com", 789012));
          roster.add(2, new Student("Dakota", "dak@gmail.com", 112233));
-         roster.print(); 
+         roster.print();
          System.out.println("Finding student Ayanna: ");
          // uncomment to test
          // roster.findAndPrint("Ayanna");
@@ -690,7 +690,7 @@ start with ``class`` instead of ``public class``.
         }
 
         public String getName() { return name; }
-        public String getEmail() { return email; }    
+        public String getEmail() { return email; }
         public int getId() { return id; }
 
         // toString() method
@@ -710,7 +710,7 @@ start with ``class`` instead of ``public class``.
             super("StudentArray");
         }
 
-    @Test 
+    @Test
     public void test1()
     {
         String target = "findAndPrint(String";
@@ -718,7 +718,7 @@ start with ``class`` instead of ``public class``.
         assertTrue(passed);
     }
 
-    @Test 
+    @Test
     public void test2()
     {
         String target = "roster.findAndPrint(";
@@ -728,7 +728,7 @@ start with ``class`` instead of ``public class``.
 
 
     @Test
-    public void testForEach() 
+    public void testForEach()
     {
         String target = "for(Student";
         String code = getCode().replaceAll("\\s", "");
@@ -738,30 +738,30 @@ start with ``class`` instead of ``public class``.
             code = code.substring(index, index + 200);
             int num = countOccurences(code, target);
             passed = num == 1;
-            } 
+            }
         getResults("true", ""+passed, "Checking that findAndPrint() contains an enhanced for loop for Student in array", passed);
-            assertTrue(passed);  
+            assertTrue(passed);
         }
     @Test
-    public void testEquals() 
+    public void testEquals()
     {
             boolean passed = checkCodeContains("use of equals method", ".equals(");
             assertTrue(passed);
     }
     @Test
-    public void testGetName() 
+    public void testGetName()
         {
             boolean passed = checkCodeContains("use of getName() method", ".getName()");
             assertTrue(passed);
         }
     }
 
-Copy your array of objects code from lesson 6.2. 
-Using the ``StringArray`` class above as your guide, separate it into your class and a public 
-array class that puts the array of objects in a private instance variable. 
+Copy your array of objects code from lesson 6.2.
+Using the ``StringArray`` class above as your guide, separate it into your class and a public
+array class that puts the array of objects in a private instance variable.
 The main method should be in this class.  Then, write a print() method that uses an enhanced for-loop
 to print out the array elements. And write a findAndPrint() method with an argument
-that looks for a certain attribute of the objects in the array using an enhanced for-loop, and prints out all the 
+that looks for a certain attribute of the objects in the array using an enhanced for-loop, and prints out all the
 data for the object it finds.
 
 
@@ -770,17 +770,17 @@ data for the object it finds.
   :autograde: unittest
 
   Copy your class from the last lesson 6.2 below after the ClassNameArray class. Delete the public from in front of that class.
-  On Runestone, only the class that has the main method should be public. 
-  Complete the ClassNameArray class substituting in your Class name and using the StudentArray class above as a guide. 
+  On Runestone, only the class that has the main method should be public.
+  Complete the ClassNameArray class substituting in your Class name and using the StudentArray class above as a guide.
   You should add a print() method and a findAndPrint() method that uses enhanced for loops.
   ~~~~
   public class ClassNameArray  // Change ClassName to your class name
   {
     // Declare an array of your class type
 
-    // Write a constructor 
+    // Write a constructor
 
-    // Write an add() method that adds an object to your array at a certain index 
+    // Write an add() method that adds an object to your array at a certain index
 
     // Write a print() method using an enhanced for loop
 
@@ -791,14 +791,14 @@ data for the object it finds.
        // Declare an object of ClassNameArray with your class name
        // Call its add method to add enough new objects to fill the array
        // Call its print method
-       // Call its findAndPrint method         
+       // Call its findAndPrint method
     }
   }
 
   // Copy in your class but do not make it public
   class          // Add your class name here - do not make it public
   {
-      // Copy your class from lesson 6.2 below. 
+      // Copy your class from lesson 6.2 below.
 
 
 
@@ -822,14 +822,14 @@ data for the object it finds.
            assertTrue(passed);
         }
 
-        @Test 
+        @Test
             public void testPrint()
             {
                 String target = "public void print(";
                 boolean passed = checkCodeContains("print() method",target);
                 assertTrue(passed);
             }
-        @Test 
+        @Test
             public void test1()
             {
                 String target = "findAndPrint(";

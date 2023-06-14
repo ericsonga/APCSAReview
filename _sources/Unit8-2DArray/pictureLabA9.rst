@@ -69,7 +69,7 @@ You can test this with the edgeDetection method below.
     :autograde: unittest
     :datafile: pictureClasses.jar, swan.jpg, temple2.jpg
 
-    Picture Lab A9: Run to see edgeDetection working.  
+    Picture Lab A9: Run to see edgeDetection working.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -77,7 +77,7 @@ You can test this with the edgeDetection method below.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -178,7 +178,7 @@ You can test this with the edgeDetection method below.
            }
       }
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -188,7 +188,7 @@ You can test this with the edgeDetection method below.
         pict.edgeDetection(12);
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -199,13 +199,13 @@ You can test this with the edgeDetection method below.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void edgeDetection(";
          boolean passed = checkCodeContains("edgeDetection( method",target);
          assertTrue(passed);
-       }          
+       }
       }
 
 
@@ -235,7 +235,7 @@ color distance is greater than the specified edge distance.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -338,7 +338,7 @@ color distance is greater than the specified edge distance.
            }
       }
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -348,7 +348,7 @@ color distance is greater than the specified edge distance.
         pict.edgeDetection(12);
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -359,13 +359,13 @@ color distance is greater than the specified edge distance.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void edgeDetection(";
          boolean passed = checkCodeContains("edgeDetection method",target);
          assertTrue(passed);
-       }  
+       }
        @Test
          public void test3()
          {
@@ -377,9 +377,9 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 4;
-            } 
+            }
             getResults("true", ""+passed, "Checking that edgeDetection contains 4 (2 nested) for loops", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
          @Test
          public void test2()
@@ -392,9 +392,9 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that edgeDetection calls colorDistance twice", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
 
       }
@@ -415,7 +415,7 @@ color distance is greater than the specified edge distance.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -516,14 +516,14 @@ color distance is greater than the specified edge distance.
            }
       }
 
-      /** Come up with another algorithm for edgeDetection 
+      /** Come up with another algorithm for edgeDetection
           in a method called myEdgeDetection
       */
 
 
 
 
-      /* Main method for testing 
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -533,7 +533,7 @@ color distance is greater than the specified edge distance.
         pict.myEdgeDetection();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -544,13 +544,13 @@ color distance is greater than the specified edge distance.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void myEdgeDetection(";
          boolean passed = checkCodeContains("myEdgeDetection( method",target);
          assertTrue(passed);
-       } 
+       }
        @Test
          public void test3()
          {
@@ -562,9 +562,9 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that myEdgeDetection contains at least 2 for loops", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
 
          @Test
@@ -578,9 +578,9 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 1;
-            } 
+            }
             getResults("true", ""+passed, "Checking that myEdgeDetection calls colorDistance at least once", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
       }
 
@@ -594,7 +594,7 @@ color distance is greater than the specified edge distance.
 
 
 
-Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
+Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. datafile:: swan.jpg
    :image:
@@ -646,7 +646,7 @@ challenges in physics today.
 Cecilia Aragon is also one of the most skilled aerobatic pilots flying today.
 A two-time member of the U.S. Aerobatic Team, she was a medalist at the
 1993 U.S. National Championships and the 1994 World Aerobatic
-Championships, and was the California State Aerobatic Champion. 
+Championships, and was the California State Aerobatic Champion.
 
 
 Steganography Lab

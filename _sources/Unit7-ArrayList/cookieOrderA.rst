@@ -154,7 +154,7 @@ Solve Part A
 
 .. activecode:: FRQCookieOrderA
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
 
    FRQ Cookie Order Part A: Complete the method ``getTotalBoxes`` below.
    ~~~~

@@ -43,7 +43,7 @@ Your class must produce the indicated results when the main method below is run.
 
 .. activecode:: APLineFRQ
    :language: java
-   :autograde: unittest   
+   :autograde: unittest
 
    Write a class APLine with instance variables, a constructor with 3 paramaters for a, b, c, and the methods getSlope() and isOnLine(x,y).
    ~~~~
@@ -59,7 +59,7 @@ Your class must produce the indicated results when the main method below is run.
     /** method isOnLine(x,y): Determine if coordinates (x,y) represent a point on this APLine. */
 
     /** Test with this main method */
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         APLine line1 = new APLine(5, 4, -17);
         double slope1 = line1.getSlope(); // slope1 is assigned -1.25
@@ -70,7 +70,7 @@ Your class must produce the indicated results when the main method below is run.
         boolean onLine2 = line2.isOnLine(5, -2); // false because -25(5) + 40(-2) + 30 != 0
         // Should print out true and false
         System.out.println(onLine1 + " " + onLine2);
-     }  
+     }
    }
    ====
    // Test Code for Lesson 5.15 - FRQ - APLine

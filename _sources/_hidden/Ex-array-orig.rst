@@ -9,8 +9,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``boolean has22(int[] arr)`` that takes an array of ints, ``arr``, 
-   and returns ``true`` if there are at least two items in the array ``arr`` that are adjacent 
+   Create the function ``boolean has22(int[] arr)`` that takes an array of ints, ``arr``,
+   and returns ``true`` if there are at least two items in the array ``arr`` that are adjacent
    and both equal to ``2``.
    For example, ``has22({1, 2, 2})`` returns ``true`` and ``has22({1, 2, 1, 2})`` returns ``false``.
    -----
@@ -34,8 +34,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``has22(int[] arr)`` that takes an array of ints, ``arr`` and 
-   returns ``true`` if there are at least two items in the array ``arr`` that are adjacent 
+   Create the function ``has22(int[] arr)`` that takes an array of ints, ``arr`` and
+   returns ``true`` if there are at least two items in the array ``arr`` that are adjacent
    and both equal to ``2``.
    For example, ``has22({1, 2, 2})`` returns ``true`` and ``has22({1, 2, 1, 2})`` returns ``false``.
    -----
@@ -63,8 +63,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     :language: java
     :autograde: unittest
 
-    Write the function ``has22(int[] arr)`` that takes an array of ints, ``arr`` and 
-    returns ``true`` if there are at least two items in the array ``arr`` that are 
+    Write the function ``has22(int[] arr)`` that takes an array of ints, ``arr`` and
+    returns ``true`` if there are at least two items in the array ``arr`` that are
     adjacent and both equal to ``2``.
     For example, ``has22({1, 2, 2})`` returns ``true`` and ``has22({1, 2, 1, 2})`` returns ``false``.
     ~~~~
@@ -121,7 +121,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``has3OddOrEven(int[] arr)`` that takes an array of ints, ``arr`` 
+   Create the function ``has3OddOrEven(int[] arr)`` that takes an array of ints, ``arr``
    and returns ``true`` if the array contains either 3 odd or even values that are adjacent.
    For example ``has3OddOrEven({2, 1, 3, 5})`` returns ``true`` and ``has3OddOrEven({2, 1, 2, 5})`` returns ``false``.
    -----
@@ -129,7 +129,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        int count = 0;
    =====
-       for (int i = 0; i < arr.length - 1; i++) { 
+       for (int i = 0; i < arr.length - 1; i++) {
    =====
        for (int i = 0; i < arr.length - 2; i++) { #paired: need to stop two less than the length since looking at current and next two
    =====
@@ -149,7 +149,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``has3OddOrEven(int[] arr)`` that takes an array of ints, ``arr`` 
+   Create the function ``has3OddOrEven(int[] arr)`` that takes an array of ints, ``arr``
    and returns ``true`` if the array contains either 3 odd or even values that are adjacent.
    For example ``has3OddOrEven({2, 1, 3, 5})`` returns ``true`` and ``has3OddOrEven({2, 1, 2, 5})`` returns ``false``.
    -----
@@ -175,8 +175,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     :language: java
     :autograde: unittest
 
-    Write the function ``has3OddOrEven(int[] arr)`` that takes an array of ints, ``arr`` 
-    and returns ``true`` if the array contains either 3 even or 3 odd values all next to each other. 
+    Write the function ``has3OddOrEven(int[] arr)`` that takes an array of ints, ``arr``
+    and returns ``true`` if the array contains either 3 even or 3 odd values all next to each other.
     For example ``has3OddOrEven({2, 1, 3, 5})`` returns ``true`` and ``has3OddOrEven({2, 1, 2, 5})`` returns ``false``.
     ~~~~
     public class StudentCode {
@@ -233,9 +233,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``isAscending(int[] arr)`` that takes an array of ints, ``arr`` and 
+   Create the function ``isAscending(int[] arr)`` that takes an array of ints, ``arr`` and
    returns ``true`` if the all of the elements in the array are in ascending order.
-   For example, ``isAscending({1, 2, 3})`` returns ``true`` and ``isAscending({1, 2, 3, 2})`` 
+   For example, ``isAscending({1, 2, 3})`` returns ``true`` and ``isAscending({1, 2, 3, 2})``
    returns ``false``.
    -----
    public boolean isAscending(int[] arr) {
@@ -258,9 +258,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``isAscending(int[] arr)`` that takes an array of ints, ``arr`` and 
+   Create the function ``isAscending(int[] arr)`` that takes an array of ints, ``arr`` and
    returns ``true`` if the all of the elements in the array are in ascending order.
-   For example, ``isAscending({1, 2, 3})`` returns ``true`` and ``isAscending({1, 2, 3, 2})`` 
+   For example, ``isAscending({1, 2, 3})`` returns ``true`` and ``isAscending({1, 2, 3, 2})``
    returns ``false``.
    -----
    public boolean isAscending(int[] arr) {
@@ -287,16 +287,16 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     :language: java
     :autograde: unittest
 
-    Write the function ``isAscending(int[] arr)`` that takes an array of ints, ``arr`` and 
-    returns ``true`` if the all of the elements in the array are in ascending order. 
-    For example, ``isAscending({1, 2, 3})`` returns ``true`` and ``isAscending({1, 2, 3, 2})`` 
+    Write the function ``isAscending(int[] arr)`` that takes an array of ints, ``arr`` and
+    returns ``true`` if the all of the elements in the array are in ascending order.
+    For example, ``isAscending({1, 2, 3})`` returns ``true`` and ``isAscending({1, 2, 3, 2})``
     returns ``false``.
     ~~~~
     public class StudentCode {
 
         public static boolean isAscending(int[] arr) {
 
-            // write code here 
+            // write code here
 
         }
 
@@ -345,9 +345,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``isDescending(int[] arr)`` that takes an array of ints, ``arr`` and 
+   Create the function ``isDescending(int[] arr)`` that takes an array of ints, ``arr`` and
    returns true if the all of the elements in the array are in descending order.
-   For example, ``isDescending({3, 2, 1})`` returns ``true`` and ``isDescending({3, 2, 1, 2})`` 
+   For example, ``isDescending({3, 2, 1})`` returns ``true`` and ``isDescending({3, 2, 1, 2})``
    returns ``false``.
    -----
    public boolean isDescending(int[] arr) {
@@ -370,9 +370,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``isDescending(int[] arr)`` that takes an array of ints, ``arr`` and 
+   Create the function ``isDescending(int[] arr)`` that takes an array of ints, ``arr`` and
    returns true if the all of the elements in the array are in descending order.
-   For example, ``isDescending({3, 2, 1})`` returns ``true`` and ``isDescending({3, 2, 1, 2})`` 
+   For example, ``isDescending({3, 2, 1})`` returns ``true`` and ``isDescending({3, 2, 1, 2})``
    returns ``false``.
    -----
    public boolean isDescending(int[] arr) {
@@ -399,9 +399,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     :language: java
     :autograde: unittest
 
-    Write the function ``isDescending(int[] arr)`` that takes an array of ints, ``arr`` 
-    and returns true if the all of the elements in the array are in descending order. 
-    For example, ``isDescending({3, 2, 1})`` returns ``true`` and ``isDescending({3, 2, 1, 2})`` 
+    Write the function ``isDescending(int[] arr)`` that takes an array of ints, ``arr``
+    and returns true if the all of the elements in the array are in descending order.
+    For example, ``isDescending({3, 2, 1})`` returns ``true`` and ``isDescending({3, 2, 1, 2})``
     returns ``false``.
     ~~~~
     public class StudentCode {
@@ -457,7 +457,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``isLevel(int[] arr, int x)`` that takes an array of ints, ``arr`` and returns ``false`` if the 
+   Create the function ``isLevel(int[] arr, int x)`` that takes an array of ints, ``arr`` and returns ``false`` if the
    difference between any two adjacent values is greater than the passed value, ``x``.
    For example, ``isLevel({3, 4, 6}, 2)`` returns ``true`` and ``isLevel({3, 5, 8, 6}, 2)`` returns ``false``.
    -----
@@ -481,7 +481,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    :numbered: left
    :adaptive:
 
-   Create the function ``isLevel(int[] arr, int x)`` that takes an array of ints, ``arr`` and returns ``false`` if the 
+   Create the function ``isLevel(int[] arr, int x)`` that takes an array of ints, ``arr`` and returns ``false`` if the
    difference between any two adjacent values is greater than the passed value, ``x``.
    For example, ``isLevel({3, 4, 6}, 2)`` returns ``true`` and ``isLevel({3, 5, 8, 6}, 2)`` returns ``false``.
    -----
@@ -509,9 +509,9 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     :language: java
     :autograde: unittest
 
-    Write the function ``isLevel(int[] arr, int x)`` that takes an array of ints, ``arr`` 
-    and returns ``false`` if the difference between any two adjacent values is greater 
-    than a passed value, ``x``. For example, ``isLevel({3, 4, 6}, 2)`` returns ``true`` 
+    Write the function ``isLevel(int[] arr, int x)`` that takes an array of ints, ``arr``
+    and returns ``false`` if the difference between any two adjacent values is greater
+    than a passed value, ``x``. For example, ``isLevel({3, 4, 6}, 2)`` returns ``true``
     and ``isLevel({3, 5, 8, 6}, 2)`` returns ``false``.
     ~~~~
     public class StudentCode {
