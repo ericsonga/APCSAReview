@@ -28,36 +28,36 @@ Code Practice with 2D Arrays
                       {
                           for (int col = 0; col < table.length; col++)
                           {
-                     	      table[row][col] = count;
-                     	      count++;
-                     	      System.out.print(table[row][col] + " ");
-                      	  }
+                              table[row][col] = count;
+                              count++;
+                              System.out.print(table[row][col] + " ");
+                          }
                       }
                   }
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "0 1 2 3 4 5 6 7 8";
-                       boolean passed = getResults(expect, output, "Expected output from main");
-                       assertTrue(passed);
-                   }
-                   @Test
-                   public void testContains()
-                   {
-                       String target = "int[][] table = new int[3][3];";
-                       boolean passed = checkCodeContains("3x3 declaration of int array table", target);
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "0 1 2 3 4 5 6 7 8";
+                      boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
-                   }
-               }
+                  }
+                  @Test
+                  public void testContains()
+                  {
+                      String target = "int[][] table = new int[3][3];";
+                      boolean passed = checkCodeContains("3x3 declaration of int array table", target);
+                     assertTrue(passed);
+                  }
+              }
 
 
         .. tab:: Answer
@@ -80,10 +80,10 @@ Code Practice with 2D Arrays
                       {
                           for (int col = 0; col < table[0].length; col++)
                           {
-                     	      table[row][col] = count;
-                     	      count++;
-                     	      System.out.print(table[row][col] + " ");
-                      	  }
+                              table[row][col] = count;
+                              count++;
+                              System.out.print(table[row][col] + " ");
+                          }
                       }
                   }
               }
@@ -118,34 +118,34 @@ Code Practice with 2D Arrays
                       {
                           for (int col = 0; col < students[0].length; col++)
                           {
-                     	      System.out.print(students[row][col] + " ");
-                     	  }
+                              System.out.print(students[row][col] + " ");
+                          }
                       }
                   }
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "Brice Marvin Anna Kamal Maria Elissa";
-                       boolean passed = getResults(expect, output, "Expected output from main");
-                       assertTrue(passed);
-                   }
-                   @Test
-                   public void testContains()
-                   {
-                       String target = "String[][] students";
-                       boolean passed = checkCodeContains("2D String array called students", target);
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Brice Marvin Anna Kamal Maria Elissa";
+                      boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
-                   }
-               }
+                  }
+                  @Test
+                  public void testContains()
+                  {
+                      String target = "String[][] students";
+                      boolean passed = checkCodeContains("2D String array called students", target);
+                     assertTrue(passed);
+                  }
+              }
 
 
 
@@ -170,8 +170,8 @@ Code Practice with 2D Arrays
                       {
                           for (int col = 0; col < students[0].length; col++)
                           {
-                     	      System.out.print(students[row][col] + " ");
-                     	  }
+                              System.out.print(students[row][col] + " ");
+                          }
                       }
                   }
               }
@@ -206,33 +206,33 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testDigitOne() throws IOException
-                   {
-                       String target = "arr[0][0]";
-                       boolean passed = checkCodeContains("using arr to access 47", target);
-                      assertTrue(passed);
-                   }
-                   @Test
-                   public void testDigit2() throws IOException
-                   {
-                       String target = "arr[1][0]";
-                       boolean passed = checkCodeContains("using arr to access 51", target);
-                      assertTrue(passed);
-                   }
-                   @Test
-                   public void testDigit3() throws IOException
-                   {
-                       String target = "arr[1][2]";
-                       boolean passed = checkCodeContains("using arr to access 20", target);
-                      assertTrue(passed);
-                   }
-               }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testDigitOne() throws IOException
+                  {
+                      String target = "arr[0][0]";
+                      boolean passed = checkCodeContains("using arr to access 47", target);
+                     assertTrue(passed);
+                  }
+                  @Test
+                  public void testDigit2() throws IOException
+                  {
+                      String target = "arr[1][0]";
+                      boolean passed = checkCodeContains("using arr to access 51", target);
+                     assertTrue(passed);
+                  }
+                  @Test
+                  public void testDigit3() throws IOException
+                  {
+                      String target = "arr[1][2]";
+                      boolean passed = checkCodeContains("using arr to access 20", target);
+                     assertTrue(passed);
+                  }
+              }
 
 
         .. tab:: Answer
@@ -278,57 +278,57 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-               	      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
+                      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
 
-               	      // ADD CODE HERE //
+                      // ADD CODE HERE //
 
                   }
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testOutput() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "8\n3\n87\n34";
-                       boolean passed = getResults(expect, output, "Expected output from main");
-                       assertTrue(passed);
-                   }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testOutput() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "8\n3\n87\n34";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                   @Test
-                   public void testDigitOne() throws IOException
-                   {
-                     String target = "arr[0][2]";
-                     boolean passed = checkCodeContains("Correct accessing of 8", target);
-                     assertTrue(passed);
-                   }
-                   @Test
-                   public void testDigitTwo() throws IOException
-                   {
-                     String target = "arr[1][0]";
-                     boolean passed = checkCodeContains("Correct accessing of 3", target);
-                     assertTrue(passed);
-                   }
-                   @Test
-                   public void testDigitThree() throws IOException
-                   {
-                     String target = "arr[2][1]";
-                     boolean passed = checkCodeContains("Correct accessing of 87", target);
-                     assertTrue(passed);
-                   }
-                   @Test
-                   public void testDigitFour() throws IOException
-                   {
-                     String target = "arr[4][0]";
-                     boolean passed = checkCodeContains("Correct accessing of 34", target);
-                     assertTrue(passed);
-                   }
-               }
+                  @Test
+                  public void testDigitOne() throws IOException
+                  {
+                      String target = "arr[0][2]";
+                      boolean passed = checkCodeContains("Correct accessing of 8", target);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void testDigitTwo() throws IOException
+                  {
+                      String target = "arr[1][0]";
+                      boolean passed = checkCodeContains("Correct accessing of 3", target);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void testDigitThree() throws IOException
+                  {
+                      String target = "arr[2][1]";
+                      boolean passed = checkCodeContains("Correct accessing of 87", target);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void testDigitFour() throws IOException
+                  {
+                      String target = "arr[4][0]";
+                      boolean passed = checkCodeContains("Correct accessing of 34", target);
+                      assertTrue(passed);
+                  }
+              }
 
 
 
@@ -345,13 +345,13 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-               	      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
+                      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
 
-               	      // Prints 8, 3, 87, and 34 in order
-               	      System.out.println(arr[0][2]);
-               	      System.out.println(arr[1][0]);
-               	      System.out.println(arr[2][1]);
-               	      System.out.println(arr[4][0]);
+                      // Prints 8, 3, 87, and 34 in order
+                      System.out.println(arr[0][2]);
+                      System.out.println(arr[1][0]);
+                      System.out.println(arr[2][1]);
+                      System.out.println(arr[4][0]);
 
                   }
               }
@@ -399,34 +399,34 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "Rows:2\nColumns:3";
-                       boolean passed = getResults(expect, output, "Expected output from main");
-                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test2()
-                   {
-                       String target = "arr.length";
-                       boolean passed = checkCodeContains("using arr and length to get number of rows", target);
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Rows:2\nColumns:3";
+                      boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test3()
-                   {
-                       String target = "arr[0].length";
-                       boolean passed = checkCodeContains("using arr[0] and length to get number of columns", target);
+                  }
+                  @Test
+                  public void test2()
+                  {
+                      String target = "arr.length";
+                      boolean passed = checkCodeContains("using arr and length to get number of rows", target);
                       assertTrue(passed);
-                   }
-               }
+                  }
+                  @Test
+                  public void test3()
+                  {
+                      String target = "arr[0].length";
+                      boolean passed = checkCodeContains("using arr[0] and length to get number of columns", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -480,32 +480,32 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "Hey there! \nI hope \nyou are \ndoing well ";
-                       boolean passed = getResults(expect, output, "Expected output from main");
-                       assertTrue(passed);
-                   }
-                   @Test
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Hey there! \nI hope \nyou are \ndoing well ";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+                  @Test
                   public void test1()
                   {
-                   String code = getCode();
-                   String target = "for";
+                      String code = getCode();
+                      String target = "for";
 
-                   int num = countOccurences(code, target);
-                   boolean passed = (num >= 2);
+                      int num = countOccurences(code, target);
+                      boolean passed = (num >= 2);
 
-                   getResults("2", ""+num, "2 for loops", passed);
-                   assertTrue(passed);
-                 }
-               }
+                      getResults("2", ""+num, "2 for loops", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -559,30 +559,30 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testArrayDec() throws IOException
-                   {
-                       String code = removeSpaces(getCode());
-                       String expect =removeSpaces("String[][] colors = { {\"red\", \"yellow\", \"blue\"},{\"orange\", \"green\", \"purple\"}}");
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testArrayDec() throws IOException
+                  {
+                      String code = removeSpaces(getCode());
+                      String expect =removeSpaces("String[][] colors = { {\"red\", \"yellow\", \"blue\"},{\"orange\", \"green\", \"purple\"}}");
 
-                       boolean passed = code.contains(expect);
-                       getResults("true", passed+"", "correct initialization of array", passed);
-                     assertTrue(passed);
-                   }
-                   @Test
-                   public void testOutput() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "red yellow blue \norange green purple";
-                       boolean passed = getResults(expect, output, "Expected output from main");
-                       assertTrue(passed);
-                   }
-               }
+                      boolean passed = code.contains(expect);
+                      getResults("true", passed+"", "correct initialization of array", passed);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void testOutput() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "red yellow blue \norange green purple";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -603,8 +603,8 @@ Code Practice with 2D Arrays
                       {
                           for (int col = 0; col < colors[0].length; col++)
                           {
-                    	      System.out.println(colors[row][col]);
-                    	  }
+                              System.out.println(colors[row][col]);
+                          }
                       }
                   }
               }
@@ -637,37 +637,37 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "2";
-                        boolean passed = output.contains(expect);
-                         getResults(expect, output, "Expected output from main", passed);
-                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test1()
-                   {
-                       String target = "for";
-                       int num = countOccurences(getCode(), target);
-                       boolean passed = (num == 2);
-                       getResults("2", num+"","2 for loops",passed);
-                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test2()
-                   {
-                       String target = "if (array[*][*] == 7)";
-                       boolean passed = checkCodeContains("if statement checking if array[*][*] element equals 7", target);
-                       assertTrue(passed);
-                   }
-               }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "2";
+                      boolean passed = output.contains(expect);
+                      getResults(expect, output, "Expected output from main", passed);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void test1()
+                  {
+                      String target = "for";
+                      int num = countOccurences(getCode(), target);
+                      boolean passed = (num == 2);
+                      getResults("2", num+"","2 for loops",passed);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void test2()
+                  {
+                      String target = "if (array[*][*] == 7)";
+                      boolean passed = checkCodeContains("if statement checking if array[*][*] element equals 7", target);
+                      assertTrue(passed);
+                  }
+              }
 
 
         .. tab:: Answer
@@ -730,27 +730,27 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "18";
-                        boolean passed = output.contains(expect);
-                         getResults(expect, output, "Expected output from main", passed);
-                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test1()
-                   {
-                     boolean passed = checkCodeContains("1 for loop", "for");
-                     assertTrue(passed);
-                   }
-               }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "18";
+                      boolean passed = output.contains(expect);
+                      getResults(expect, output, "Expected output from main", passed);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void test1()
+                  {
+                      boolean passed = checkCodeContains("1 for loop", "for");
+                      assertTrue(passed);
+                  }
+              }
 
 
         .. tab:: Answer
@@ -809,8 +809,8 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
                public class RunestoneTests extends CodeTestHelper
                {
@@ -826,8 +826,8 @@ Code Practice with 2D Arrays
                    @Test
                    public void test1()
                    {
-                     boolean passed = checkCodeContains("1 for loop", "for");
-                     assertTrue(passed);
+                       boolean passed = checkCodeContains("1 for loop", "for");
+                       assertTrue(passed);
                    }
                }
 
@@ -885,37 +885,37 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                     String output = getMethodOutput("main");
-                     String expect = "1 2 3\n4 5 6";
-                     boolean passed = getResults(expect, output, "Expected output from main");
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "1 2 3\n4 5 6";
+                      boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
-                   }
-                   @Test
-                   public void testArray()
-                   {
-                     String expect = "int[][] numbers = { {1,2,3},{4,5,6}}";
-                     boolean passed = checkCodeContains("correct array initialization", expect);
-                     assertTrue(passed);
-                   }
+                  }
+                  @Test
+                  public void testArray()
+                  {
+                      String expect = "int[][] numbers = { {1,2,3},{4,5,6}}";
+                      boolean passed = checkCodeContains("correct array initialization", expect);
+                      assertTrue(passed);
+                  }
 
-                   @Test
-                   public void test1()
-                   {
-                       String target = "for";
-                       int num = countOccurences(getCode(), target);
-                       boolean passed = (num == 2);
-                       getResults("2", num+"","2 for loops",passed);
-                       assertTrue(passed);
-                   }
-               }
+                  @Test
+                  public void test1()
+                  {
+                      String target = "for";
+                      int num = countOccurences(getCode(), target);
+                      boolean passed = (num == 2);
+                      getResults("2", num+"","2 for loops",passed);
+                      assertTrue(passed);
+                  }
+              }
 
 
         .. tab:: Answer
@@ -968,37 +968,37 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
-                   public void testMain() throws IOException
-                   {
-                     String output = getMethodOutput("main");
-                     String expect = "1 2 3\n4 5 6\n7 8 9";
-                     boolean passed = getResults(expect, output, "Expected output from main");
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "1 2 3\n4 5 6\n7 8 9";
+                      boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test1()
-                   {
-                     String expect = "int[][] numbers = { {1,2,3},{4,5,6}, {7,8,9}}";
-                     boolean passed = checkCodeContains("correct array initialization", expect);
-                     assertTrue(passed);
-                   }
-                      @Test
-                   public void test2()
-                   {
-                       String target = "for";
-                       int num = countOccurences(getCode(), target);
-                       boolean passed = (num == 2);
-                       getResults("2", num+"","2 for loops",passed);
-                       assertTrue(passed);
-                   }
+                  }
+                  @Test
+                  public void test1()
+                  {
+                      String expect = "int[][] numbers = { {1,2,3},{4,5,6}, {7,8,9}}";
+                      boolean passed = checkCodeContains("correct array initialization", expect);
+                      assertTrue(passed);
+                  }
+                  @Test
+                  public void test2()
+                  {
+                      String target = "for";
+                      int num = countOccurences(getCode(), target);
+                      boolean passed = (num == 2);
+                      getResults("2", num+"","2 for loops",passed);
+                      assertTrue(passed);
+                  }
 
-               }
+              }
 
         .. tab:: Answer
 
@@ -1061,27 +1061,27 @@ Code Practice with 2D Arrays
               }
               ====
               import static org.junit.Assert.*;
-               import org.junit.*;;
-               import java.io.*;
+              import org.junit.*;
+              import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                     String output = getMethodOutput("main");
-                     String expect = "red\norange\nyellow\ngreen\nblue\nindigo\n";
-                     boolean passed = getResults(expect, output, "Expected output from main");
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "red\norange\nyellow\ngreen\nblue\nindigo\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test1() throws IOException
-                   {
-                       String expect = "arr[0][2] = \"yellow\"";
-                       boolean passed = checkCodeContains("replacing correct array element with yellow", expect);
-                       assertTrue(passed);
-                   }
-               }
+                  }
+                  @Test
+                  public void test1() throws IOException
+                  {
+                      String expect = "arr[0][2] = \"yellow\"";
+                      boolean passed = checkCodeContains("replacing correct array element with yellow", expect);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
