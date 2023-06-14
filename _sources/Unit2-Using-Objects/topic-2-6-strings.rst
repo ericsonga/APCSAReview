@@ -22,10 +22,10 @@
 
 
 ..	index::
-	single: String
-	single: object reference
-	single: reference
-	pair: String; definition
+   single: String
+   single: object reference
+   single: reference
+   pair: String; definition
 
 .. image:: ../../_static/time45.png
     :width: 250
@@ -87,7 +87,7 @@ Object variables **refer** to objects in memory.  A reference is a way to find t
     Figure 1: Initial value for an object reference
 
 ..	index::
-	pair: String; creation
+   pair: String; creation
 
 In Java there are two ways to create an object of the ``String`` class.  You can use the ``new`` keyword followed by a space and then the class constructor and then in parentheses you can include values used to initialize the fields of the object.  This is the standard way to create a new object of a class in Java.
 
@@ -180,12 +180,12 @@ In both cases an object of the ``String`` class will be created in memory and th
     }
 
 ..	index::
-	single: parent class
-	single: superclass
-	single: inheritance
-	single: package
-	single: java.lang
-	pair: package; java.lang
+   single: parent class
+   single: superclass
+   single: inheritance
+   single: package
+   single: java.lang
+   pair: package; java.lang
 
 The code above will first print ``class java.lang.String`` since ``greeting`` was created by the ``String`` class.  The full name for the ``String`` class is ``java.lang.String``.  The ``java.lang`` part is the **package** name.  Every class in the Java language is in a package and the standard classes like ``String`` are in the ``java.lang`` package.  Every object in Java knows the class that created it.  Also, every class knows its **parent** class.  Yes, a class can have a parent class, just as people have parents.  But, in Java a class can only have one parent.  A class can ``inherit`` object fields and methods from a parent class, just like you might inherit musical ability from a parent.  The fourth line will print ``class java.lang.Object`` because the parent class (**superclass**) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.
 
@@ -205,7 +205,7 @@ String Operators - Concatenation
 --------------------------------
 
 ..	index::
-	pair: String; append
+   pair: String; append
 
 Strings can be **appended** to each other to create a new string using the ``+`` or ``+=`` operator . This is also called **concatenation**.
 
@@ -273,8 +273,8 @@ Strings can be **appended** to each other to create a new string using the ``+``
 
 
 ..	index::
-	single: toString
-	pair: Object; toString
+   single: toString
+   pair: Object; toString
 
 You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.
 

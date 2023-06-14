@@ -31,11 +31,11 @@ Searching Algorithms
 ======================
 
 ..	index::
-	single: sequential search
-	single: binary search
-	single: recursion
-	pair: search; sequential
-	pair: search; binary
+   single: sequential search
+   single: binary search
+   single: recursion
+   pair: search; sequential
+   pair: search; binary
 
 Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
 
@@ -60,10 +60,10 @@ Sequential Search
 ------------------
 
 ..	index::
-	single: sequential search
-	single: linear search
-	pair: search; sequential
-	pair: search; linear
+   single: sequential search
+   single: linear search
+   pair: search; sequential
+   pair: search; linear
 
 Sequential or linear search is the only method that can be used to find a value in unsorted data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns the index it found it at, or it loops until the end of the array or list and then it returns a -1 to show that it didn't find the value in the array or list.
 
@@ -274,8 +274,8 @@ Binary Search
 --------------
 
 ..	index::
-	single: binary search
-	pair: search; binary
+   single: binary search
+   pair: search; binary
 
 Binary search can only be used if the data is sorted.
 

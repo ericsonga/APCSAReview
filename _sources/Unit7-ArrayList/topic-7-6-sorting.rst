@@ -29,10 +29,10 @@ Sorting Algorithms
 There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CS A exam are:
 
 ..	index::
-	single: selection sort
-	single: insertion sort
-	pair: sort; selection
-	pair: sort; insertion
+   single: selection sort
+   single: insertion sort
+   pair: sort; selection
+   pair: sort; insertion
 
 * Selection Sort - Select the smallest item from the current location on to the end of the array and swap it with the value at the current position.  Do this from index 0 to the array length - 2.  You don't have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.
 * Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right.  Start at index 1 and loop through the entire array.
@@ -46,8 +46,8 @@ Selection Sort
 ---------------
 
 ..	index::
-	single: selection sort
-	pair: sort; selection
+   single: selection sort
+   pair: sort; selection
 
 The selection sort that you need to know for the exam starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
 
@@ -191,8 +191,8 @@ Insertion Sort
 ---------------
 
 ..	index::
-	single: insertion sort
-	pair: sort; insertion
+   single: insertion sort
+   pair: sort; insertion
 
 The insertion sort that you need to know for the exam starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.
 

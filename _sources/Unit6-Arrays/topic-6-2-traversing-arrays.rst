@@ -308,7 +308,7 @@ The following code demonstrates a loop that changes the values in an array. In t
 Looping From Back to Front
 --------------------------
 ..	index::
-	pair: loop; from back to front
+   pair: loop; from back to front
 
 You don't have to loop through an array from the front to the back.  You can loop by starting at the back of the array and move toward the front during each time through the loop.  In the example below,  the method ``getIndexOfLastElementSmallerThanTarget`` returns the index of the last element in the array that is smaller than the given argument.  The **return** statement inside the loop stops the execution of the loop and the method and returns the index that is found immediately back to the main method. It returns -1 if there is no number in the array that is smaller than the given number.
 
@@ -478,7 +478,7 @@ Looping through Part of an Array
 --------------------------------
 
 ..	index::
-	pair: loop; range
+   pair: loop; range
 
 You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (``&&``) on line 14 to make sure that the loop doesn't go beyond the length of the array, because if you had an array that had less than 5 elements, you wouldn't want the code to try to double the 5th element which doesn't exist! Notice that in this code, the array is a private instance variable of the class ArrayWorker. It is created in the constructor and changed or accessed by the methods.
 

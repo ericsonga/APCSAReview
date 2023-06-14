@@ -2,7 +2,7 @@ Growth Mindset and Pair Programming
 ===================================
 
 ..	index::
-	single: growth mindset
+   single: growth mindset
 
 Growth Mindset
 ---------------
@@ -45,7 +45,7 @@ It’s good enough.	          How can I improve this?
 ============================  =======================================
 
 ..	index::
-	single: pair programming
+   single: pair programming
 
 Pair Programming
 -----------------

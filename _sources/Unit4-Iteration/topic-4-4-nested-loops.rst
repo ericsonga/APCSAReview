@@ -27,8 +27,8 @@ Nested For Loops
 ================
 
 ..	index::
-	single: nested for loop
-	pair: loop; nested
+   single: nested for loop
+   pair: loop; nested
 
 A **nested loop** has one loop inside of another.  These are typically used for working with two dimensions such as printing stars in rows and columns as shown below.   When a loop is nested inside another loop, the inner loop runs many times inside the outer loop. In each iteration of the outer loop, the inner loop will be re-started. The inner loop must finish all of its iterations before the outer loop can continue to its next iteration.
 

@@ -141,8 +141,8 @@ Merge Sort
 ==========================
 
 ..	index::
-	single: merge sort
-	pair: sort; merge
+   single: merge sort
+   pair: sort; merge
 
 In Unit 7, we looked at two sorting algorithms, Selection Sort and Insertion Sort. In this lesson, we will look at a third sorting algorithm, Merge Sort, which uses recursion. Merge Sort is actually more efficient (faster) than Selection Sort and Insertion Sort because it divides the problem in half each time like binary search. This is called a **divide and conquer** algorithm.
 

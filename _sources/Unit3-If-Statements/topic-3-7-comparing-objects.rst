@@ -33,8 +33,8 @@ String Equality
 ---------------
 
 ..	index::
-	pair: String; equality
-	pair: String; equals
+   pair: String; equality
+   pair: String; equals
 
 The **equals** method for Strings compares two strings letter by letter. ``s1.equals(s2)`` is true if s1 and s2 have all the same characters in the same order. With Strings and other objects, you almost always use equals instead of == to check their equality.
 

@@ -31,8 +31,8 @@ Equivalent Boolean Expressions (De Morgan's Laws)
 =================================================
 
 ..	index::
-	single: De Morgan's Laws
-	single: negation
+   single: De Morgan's Laws
+   single: negation
 
 What if you heard a rumor about a senior at your high school? And then you heard that the rumor wasn't true - it wasn't a senior at your high school. Which part of "a senior at your high school" wasn't true? Maybe they weren't a senior? Or maybe they didn't go to your high school? You could write this as a logic statement like below using negation (!) and the **and** (&&) operator since both parts have to be true for the whole statement to be true. (Thank you to Kevin Saxton from Kent School, CT for this example.)
 

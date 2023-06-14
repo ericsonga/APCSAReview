@@ -33,8 +33,8 @@ Loops and Strings
 =================
 
 ..	index::
-	single: string processing
-	pair: string; loop
+   single: string processing
+   pair: string; loop
 
 Loops are often used for **String Traversals** or **String Processing** where the code steps through a string character by character. In lesson 2.6 and 2.7, we learned to use String objects and built-in string methods to process strings. In this lesson, we will write our own loops to process strings.
 

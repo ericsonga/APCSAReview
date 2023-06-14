@@ -31,8 +31,8 @@ In this lesson, you will learn how to use nested loops to traverse a 2D Array.
 Getting the Number of Rows and Columns
 ---------------------------------------
 ..	index::
-	pair: 2D Array; number of rows
-	pair: 2D Array; number of columns
+   pair: 2D Array; number of rows
+   pair: 2D Array; number of columns
 
 Arrays know their length (how many elements they can store).  The length is a public read-only field so you can use *dot-notation* to access the field (``arrayName.length``). The length of the outer array is the number of rows and the length of one of the inner arrays is the number of columns.
 
@@ -80,8 +80,8 @@ Looping Through a 2D Array
 --------------------------
 
 ..	index::
-	pair: 2D Array; looping through
-	pair: loop; nested
+   pair: 2D Array; looping through
+   pair: loop; nested
 
 Since you can find out the number of rows and columns in a 2D array you can use a **nested for loop** (one loop inside of another loop) to loop/traverse through all of the elements of a 2D array.
 

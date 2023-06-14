@@ -22,7 +22,7 @@
 
 
 ..	index::
-	pair: class; constructor
+   pair: class; constructor
 
 .. |repl link| raw:: html
 

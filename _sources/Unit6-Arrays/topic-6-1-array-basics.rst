@@ -28,9 +28,9 @@ Array Creation and Access
 ==========================
 
 ..	index::
-	single: array
-	single: index
-	pair: array; index
+   single: array
+   single: index
+   pair: array; index
 
 To keep track of 10 exam scores, we could declare 10 separate variables:  int score1, score2, score3, … , score10;
 But what if we had 100 exam scores? That would be a lot of variables! Most programming languages have a simple **data structure** for a collection of related data that makes this easier. In many block-based programming languages like App Inventor and Scratch, this is called a list. In Java and many programming languages, this is called an **array**.
@@ -189,7 +189,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
     }
 
 ..	index::
-	pair: array; initialization
+   pair: array; initialization
 
 .. note::
 

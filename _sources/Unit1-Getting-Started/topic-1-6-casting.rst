@@ -121,7 +121,7 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
 
 
 ..	index::
-	pair: double; number of digits
+   pair: double; number of digits
 
 
 What happens to repeating decimal numbers like 3.333333...?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.
@@ -161,7 +161,7 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
     }
 
 ..	index::
-	pair: double; precision format
+   pair: double; precision format
 
 Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:
 

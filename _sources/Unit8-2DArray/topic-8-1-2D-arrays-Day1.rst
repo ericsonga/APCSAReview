@@ -50,12 +50,12 @@ Array Storage
 ---------------
 
 ..	index::
-	single: row-major order
-	single: column-major order
-	single: array of arrays
-	pair: 2D Array; row-major order
-	pair: 2D Array; column-major order
-	pair: 2D Array; array of arrays
+   single: row-major order
+   single: column-major order
+   single: array of arrays
+   pair: 2D Array; row-major order
+   pair: 2D Array; column-major order
+   pair: 2D Array; array of arrays
 
 Many programming languages actually store two-dimensional array data in a one-dimensional array.  The typical way to do this is to store all the data for the first row followed by all the data for the second row and so on.  This is called **row-major** order.  Some languages store all the data for the first column followed by all the data for the second column and so on.  This called **column-major** order.
 
@@ -163,7 +163,7 @@ Declaring 2D Arrays
 -------------------------------
 
 ..	index::
-	pair: 2D Array; declaration
+   pair: 2D Array; declaration
 
 To declare a 2D array, specify the type of elements that will be stored in the array, then (``[][]``) to show that it is a 2D array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).
 
@@ -175,7 +175,7 @@ To declare a 2D array, specify the type of elements that will be stored in the a
 
 
 ..	index::
-	pair: 2D Array; creation
+   pair: 2D Array; creation
 
 To create an array use the **new** keyword, followed by a space, then the type, and then the number of rows in square brackets followed by the number of columns in square brackets, like this ``new int[numRows][numCols]``.
 

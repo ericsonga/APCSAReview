@@ -32,12 +32,12 @@ Compound Boolean Expressions
 ============================
 
 ..	index::
-	single: and
-	single: or
-	single: truth table
-	pair: logical; and
-	pair: logical; or
-	single: compound boolean
+   single: and
+   single: or
+   single: truth table
+   pair: logical; and
+   pair: logical; or
+   single: compound boolean
 
 And (&&), Or (||), and Not (!)
 --------------------------------
@@ -359,8 +359,8 @@ Short Circuit Evaluation
 ------------------------
 
 ..	index::
-	single: short circuit evaluation
-	pair: conditional; short circuit evaluation
+   single: short circuit evaluation
+   pair: conditional; short circuit evaluation
 
 Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second expression (on the right of the operator) isn't necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:
 

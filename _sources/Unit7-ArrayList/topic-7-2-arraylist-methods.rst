@@ -31,11 +31,11 @@ ArrayList Methods
 =========================
 
 ..	index::
-	pair: arraylist; size
-	pair: arraylist; add
-	pair: arraylist; get
-	pair: arraylist; set
-	pair: arraylist; remove
+   pair: arraylist; size
+   pair: arraylist; add
+   pair: arraylist; get
+   pair: arraylist; set
+   pair: arraylist; remove
 
 .. |AP CS A Reference Sheet| raw:: html
 
@@ -63,7 +63,7 @@ Size()
 -------
 
 ..	index::
-	pair: arraylist; size
+   pair: arraylist; size
 
 As we saw in the last lesson, you can get the number of items in a ArrayList using its ``size()`` method.  The ArrayList starts out empty with a size of 0.
 
@@ -80,7 +80,7 @@ Add(obj) to an ArrayList
 -----------------------------
 
 ..	index::
-	pair: arraylist; add
+   pair: arraylist; add
 
 You can add values to an ArrayList by using the method ``add(obj)`` which will add the object to the end of the list, just like you would join the end of the line to board a bus.
 
@@ -143,8 +143,8 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
     }
 
 ..	index::
-	pair: list; autoboxing
-	pair: list; unboxing
+   pair: list; autoboxing
+   pair: list; unboxing
 
 When adding Integer objects to the list, you can use the Integer constructor like ``add(new Integer(5))`` in Java version 7 which is used on the exam (although this is deprecated and no longer used in Java version 9)  or you can just add the int value directly like ``add(5)`` in any Java version and it will be changed into an ``Integer`` object automatically.  This is called **autoboxing**. When you pull an ``int`` value out of a list of ``Integers`` that is called **unboxing**.
 
@@ -390,7 +390,7 @@ Remove(index) from ArrayList
 ----------------------------------
 
 ..	index::
-	pair: arraylist; removing an item
+   pair: arraylist; removing an item
 
 You can also remove values from an ArrayList by using **remove(index)** to remove the item at the given index from the list. This will move all the other items over in the underlying array and decrease the size of the ArrayList by 1.
 

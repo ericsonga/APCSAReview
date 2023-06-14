@@ -25,13 +25,13 @@ Why Programming? Why Java?
 ============================
 
 ..	index::
-	single: Java
-	single: javac
-	single: compile
-	single: programming language
-	pair: programming; language
-	pair: Java; source file
-	pair: Java; class file
+   single: Java
+   single: javac
+   single: compile
+   single: programming language
+   pair: programming; language
+   pair: Java; source file
+   pair: Java; class file
 
 
 
@@ -57,12 +57,12 @@ First Java Program
 
 
 ..	index::
-	single: class
-	single: keyword
-	pair: class; field
-	pair: class; constructor
-	pair: class; method
-	pair: class; main method
+   single: class
+   single: keyword
+   pair: class; field
+   pair: class; constructor
+   pair: class; method
+   pair: class; main method
 
 Every program in Java is written as a **class**. Java is an **object-oriented language** and we'll learn more about classes and objects in Unit 2. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
 
@@ -124,8 +124,8 @@ Print Commands
 -------------------
 
 ..	index::
-	single: String
-	single: String literal
+   single: String
+   single: String literal
 
 Java has two different print commands to print output to the screen:
 

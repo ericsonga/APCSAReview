@@ -28,9 +28,9 @@ if Statements and Control Flow
 ===============================
 
 ..	index::
-	single: conditional
-	single: if
-	pair: conditional; if
+   single: conditional
+   single: if
+   pair: conditional; if
 
 If you took an AP CSP course or used a block programming language like Scratch, you've probably seen if blocks or statements before. *If statements* are found in all programming languages as a way to make choices. Here's a comparison of ifs in App Inventor blocks, AP CSP block and pseudocode and Java ifs.
 

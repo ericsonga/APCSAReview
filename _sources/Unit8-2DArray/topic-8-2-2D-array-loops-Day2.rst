@@ -27,7 +27,7 @@ Enhanced For-Each Loop for 2D Arrays (Day 2)
 ----------------------------------------------------
 
 ..	index::
-	pair: 2D Array; for-each loop
+   pair: 2D Array; for-each loop
 
 Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row, String[] in the example below for a 2D String array. The type of the variables in the for-each loops must match the type of the array. For-each loops are much simpler since you don't have to use the indices and the []'s, but you can only use them if you are not going to change the values in an array of primitive types since the variable val below will not change the original array.
 
@@ -176,7 +176,7 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
 
 
 ..	index::
-	pair: 2D Array; loop range
+   pair: 2D Array; loop range
 
 You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array.
 
@@ -300,13 +300,13 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 
 ..	index::
-	single: images
+   single: images
 
 ..	index::
-	single: pictures
+   single: pictures
 
 ..	index::
-	single: pixels
+   single: pixels
 
 .. figure:: ../../_static/arch.jpg
     :width: 200px

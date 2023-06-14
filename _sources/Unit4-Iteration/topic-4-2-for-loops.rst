@@ -31,8 +31,8 @@ For Loops
 =========
 
 ..	index::
-	single: for loop
-	pair: loop; for
+   single: for loop
+   pair: loop; for
 
 
 Another type of loop in Java is a **for loop**. This is usually used when you know how many times you want the loop to execute. It is often a simple **counter-controlled loop** to do the loop body a set number of times.

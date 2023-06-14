@@ -285,8 +285,8 @@ Common Errors with Loops
 ------------------------
 
 ..	index::
-	single: infinite loop
-	pair: loop; infinite
+   single: infinite loop
+   pair: loop; infinite
 
 One common error with loops is **infinite loops**.  An infinite loop is one that never stops (the condition is always true).
 

@@ -27,8 +27,8 @@ Set Value(s) in a 2D Array (Day 2)
 ----------------------------------------
 
 ..	index::
-	pair: 2D Array; initialization
-	pair: 2D Array; set value
+   pair: 2D Array; initialization
+   pair: 2D Array; set value
 
 When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in brackets followed by the column index in brackets and then an ``=`` followed by a value.
 
@@ -176,7 +176,7 @@ Get a Value from a 2D Array
 ------------------------------
 
 ..	index::
-	pair: 2D Array; access value
+   pair: 2D Array; access value
 
 To get the value in a 2D array give the name of the array followed by the row and column indicies in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``.
 

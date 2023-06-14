@@ -27,8 +27,8 @@ Enhanced For-Loop (For-Each) for Arrays
 =======================================
 
 ..	index::
-	single: for-each
-	pair: loop; for-each
+   single: for-each
+   pair: loop; for-each
 
 There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively.
 

@@ -33,7 +33,7 @@ What is a Variable?
 -------------------
 
 ..	index::
-	single: variable
+   single: variable
 
 A **variable** is a name associated with a memory location in the computer, where you can store a value that can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
 
@@ -56,18 +56,18 @@ Data Types
 ----------
 
 ..	index::
-	single: integer
-	single: int
-	single: double
-	single: boolean
-	single: String
-	pair: variable; types
-	pair: variable; primitive type
-	pair: variable; object type
-	pair: variable; integer
-	pair: variable; floating point
-	pair: variable; Boolean
-	pair: variable; String
+   single: integer
+   single: int
+   single: double
+   single: boolean
+   single: String
+   pair: variable; types
+   pair: variable; primitive type
+   pair: variable; object type
+   pair: variable; integer
+   pair: variable; floating point
+   pair: variable; Boolean
+   pair: variable; String
 
 There are two types of variables in Java: **primitive variables** that hold primitive types and **object or reference variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are:
 
@@ -164,10 +164,10 @@ Declaring Variables in Java
 ---------------------------
 
 ..	index::
-	single: bit
-	single: binary digit
-	single: declare
-	pair: variable; declare
+   single: bit
+   single: binary digit
+   single: declare
+   pair: variable; declare
 
 
 To create a variable, you must tell Java its data type and its name.  Creating a variable is also called **declaring a variable**.  The type is a keyword like int, double, or boolean, but you get to make up the name for the variable.  When you create a **primitive variable** Java will set aside enough bits in memory for that primitive type and associate that memory location with the name that you used.
@@ -471,7 +471,7 @@ Naming Variables
 --------------------
 
 ..	index::
-	pair: variable; names
+   pair: variable; names
 
 While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores ``_``. It must be all one word with no spaces.
 

@@ -27,7 +27,7 @@ Writing Constructors
 ====================
 
 ..	index::
-	pair: class; constructor
+   pair: class; constructor
 
 In Unit 2, we learned how to create objects using constructor. Objects are created in programs by declaring a variable of the class and using the keyword new followed by a call to a constructor. **Constructors**  set the initial values for the object's instance variables.    For example, here is how we create World, Turtle, and Person objects.
 

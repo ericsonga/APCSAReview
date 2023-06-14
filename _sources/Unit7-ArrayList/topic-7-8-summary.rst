@@ -6,13 +6,13 @@ ArrayList Summary
 -------------------------
 
 ..	index::
-	single: List
-	single: ArrayList
-	single: interface
-	single: index
-	single: abstract method
-	pair: method; abstract
-	pair: list; index
+   single: List
+   single: ArrayList
+   single: interface
+   single: index
+   single: abstract method
+   pair: method; abstract
+   pair: list; index
 
 In this chapter you learned about **ArrayLists** which are dynamic re-sizable arrays.  You learned how to declare and create ArrayLists, add and remove objects from them, set the object at an index, and get the object at an index.
 

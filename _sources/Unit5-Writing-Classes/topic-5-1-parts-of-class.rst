@@ -159,7 +159,7 @@ Instance Variables
 ---------------------------
 
 ..	index::
-	pair: class; instance variables
+   pair: class; instance variables
 
 
 **Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance variables are also called **attributes**, **fields**, or **properties**.
@@ -222,7 +222,7 @@ Methods
 -------
 
 ..	index::
-	pair: class; method
+   pair: class; method
 
 **Methods** define what an object can do or the behavior of the object.   Most methods are ``public`` which means they can be accessed from outside the class. Some methods can be marked as``private`` if they are helper methods that are just used internally by other methods inside the same class. They will not be accessible outside of the class. The private and public keywords determine the external access and visibility of classes, data, constructors, and methods.
 

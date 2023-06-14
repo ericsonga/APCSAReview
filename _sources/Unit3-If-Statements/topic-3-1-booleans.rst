@@ -21,9 +21,9 @@
     :alt: groupwork
 
 ..	index::
-	single: Boolean
-	pair: Variable; boolean
-	pair: boolean; variable
+   single: Boolean
+   pair: Variable; boolean
+   pair: boolean; variable
 
 .. image:: ../../_static/time45.png
     :width: 250
