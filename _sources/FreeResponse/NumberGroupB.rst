@@ -6,7 +6,7 @@ NumberGroup - Part B
 ===============================
 
 .. index::
-	single: NumberGroup
+    single: NumberGroup
     single: free response
 
 **Part b.**  A range represents a number group that contains all (and only) the integers between a minimum value and

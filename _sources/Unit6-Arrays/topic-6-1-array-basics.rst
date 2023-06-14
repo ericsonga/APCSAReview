@@ -240,7 +240,7 @@ Watch the following |video3| which shows an array of String objects with a physi
 
 .. index::
     single: dot-notation
-	pair: array; length
+    pair: array; length
 
 Array length
 --------------------------

@@ -97,7 +97,7 @@ In Java there are two ways to create an object of the ``String`` class.  You can
 
 .. index::
     single: String literal
-	pair: String; literal
+    pair: String; literal
 
 
 In Java you can also use just a **string literal**, which is a set of characters enclosed in double quotes (``"``), to create a ``String`` object.

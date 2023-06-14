@@ -6,7 +6,7 @@ RandomStringChooser - Part B
 ===============================
 
 .. index::
-	single: RandomLetterChooser
+    single: RandomLetterChooser
     single: free response
 
 **Part b.**   The following partially completed ``RandomLetterChooser`` class is a subclass of the ``RandomStringChooser`` class.  You will write the constructor for the ``RandomLetterChooser`` class.

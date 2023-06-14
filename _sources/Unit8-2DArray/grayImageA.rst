@@ -6,7 +6,7 @@ Free Response - Gray Image A
 -------------------------------
 
 .. index::
-	single: gray image
+    single: gray image
     single: free response
 
 The following is part a of a free response question from 2012.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

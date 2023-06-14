@@ -30,7 +30,7 @@ in groups on activities and each member has an assigned role.  For more informat
 This page is based on a POGIL activity from Helen Hu at that site.
 
 .. index::
-	single: modulus
+  single: modulus
   single: modulo operator
 
 .. activecode:: mod-model-1

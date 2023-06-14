@@ -6,7 +6,7 @@ StudentAnswerSheet - Part A
 ===============================
 
 .. index::
-	single: StudentAnswerSheet
+    single: StudentAnswerSheet
     single: free response
 
 The following is a free response question from 2007.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

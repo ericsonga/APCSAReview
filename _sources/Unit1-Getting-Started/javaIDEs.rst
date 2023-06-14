@@ -2,11 +2,11 @@ Java Development Environments
 ====================================
 
 .. index::
-	single: IDE
-	single: Integrated Development Environment
-	single: DrJava
-	single: compiler
-	single: repl.it
+    single: IDE
+    single: Integrated Development Environment
+    single: DrJava
+    single: compiler
+    single: repl.it
     single: Eclipse
     single: BlueJ
     single: Netbeans

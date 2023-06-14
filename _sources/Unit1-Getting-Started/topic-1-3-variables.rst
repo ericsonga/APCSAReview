@@ -490,7 +490,7 @@ your variables crazy things like ``thisIsAReallyLongName``, especially on the AP
 
 .. index::
     single: camel case
-	pair: variable; naming convention
+    pair: variable; naming convention
 
 The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word, for example ``gameScore``. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case** because it looks like the humps of a camel. Another option is to use underscore ``_`` to separate words, but you cannot have spaces in a variable name.
 

@@ -6,8 +6,8 @@ Free Response - Grid World A
 --------------------------------------------------------
 
 .. index::
-	  single: Grid World
-      single: free response
+   single: Grid World
+   single: free response
 
 The following is a free response question from 2013. It was question 3 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 

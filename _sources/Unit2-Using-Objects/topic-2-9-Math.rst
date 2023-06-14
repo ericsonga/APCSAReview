@@ -28,8 +28,8 @@ Using the Math Class
 
 .. index::
     single: Math methods
-	single: random method
-	pair: Math; random method
+    single: random method
+    pair: Math; random method
 
 Games would be boring if the same thing happened each time you played the game.  Games often use random numbers
 to generate different possibilities.  You need to know how to use the ``Math.random()`` method to generate a random number.

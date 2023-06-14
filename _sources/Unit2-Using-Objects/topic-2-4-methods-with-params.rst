@@ -20,7 +20,7 @@
     :alt: groupwork
 
 .. index::
-	single: method
+    single: method
     single: parameter
     single: argument
 

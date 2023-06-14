@@ -6,8 +6,8 @@ ArrayTester - Part B
 ===============================
 
 .. index::
-	  single: ArrayTester
-    single: free response
+   single: ArrayTester
+   single: free response
 
 **Part b.**   Write the static method ``isLatin``, which returns ``true`` if a given two-dimensional square array is a ``Latin square``, and otherwise, returns false.
 

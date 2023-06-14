@@ -91,18 +91,18 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    public class interface Person { #distractor
    =====
-   	public void walk() {
-   		System.out.println("walk");
-   	}
-   	public void talk() {
-   		System.out.println("talk");
-   	} #distractor
+      public void walk() {
+         System.out.println("walk");
+      }
+      public void talk() {
+         System.out.println("talk");
+      } #distractor
    =====
-   	public walk();
-   	public talk(); #distractor
+      public walk();
+      public talk(); #distractor
    =====
-   	public void walk();
-   	public void talk();
+      public void walk();
+      public void talk();
    =====
    } // end class
 

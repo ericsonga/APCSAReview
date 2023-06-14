@@ -28,11 +28,11 @@ While Loops
 ============
 
 .. index::
-	single: loop
-	single: looping
+    single: loop
+    single: looping
     single: iteration
-	single: while
-	pair: loop; while
+    single: while
+    pair: loop; while
 
 
 .. image:: Figures/loops.png

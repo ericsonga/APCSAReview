@@ -114,7 +114,7 @@ For Loop to Traverse Arrays
 
 .. index::
     single: for loop
-	pair: loop; from front to back
+    pair: loop; from front to back
 
 We can use iteration with a **for loop** to visit each element of an array.  This is called **traversing** the array. Just start the index at **0** and loop while the index is less than the **length** of the array. Note that the variable **i** (short for index) is often used in loops as the loop counter variable and is used here to access each element of an array with its index.
 

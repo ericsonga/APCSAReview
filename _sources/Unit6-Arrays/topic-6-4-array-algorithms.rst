@@ -27,9 +27,9 @@ Array Algorithms (FRQs)
 =======================
 
 .. index::
-	single: array
-	single: algorithms
-	pair: array; algorithms
+    single: array
+    single: algorithms
+    pair: array; algorithms
     pair: array; FRQ
 
 In this lesson, you will study different Free Response Questions and responses that develop algorithms using arrays.

@@ -6,7 +6,7 @@ StringCoder - Part B
 ===============================
 
 .. index::
-	single: StringCoder
+    single: StringCoder
     single: free response
 
 

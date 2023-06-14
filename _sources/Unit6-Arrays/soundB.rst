@@ -6,7 +6,7 @@ Free Response - Sound B
 =======================
 
 .. index::
-	single: soundb
+    single: soundb
     single: free response
 
 The following is a free response question from 2011.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

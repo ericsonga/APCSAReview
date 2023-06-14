@@ -25,11 +25,11 @@
 
 
 .. index::
-	single: operators
-	pair: math; operators
-	pair: operators; addition
-	pair: operators; subtraction
-	pair: operators; multiplication
+    single: operators
+    pair: math; operators
+    pair: operators; addition
+    pair: operators; subtraction
+    pair: operators; multiplication
     pair: operators; division
     pair: operators; equality
     pair: operators; inequality

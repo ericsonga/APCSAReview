@@ -27,7 +27,7 @@ Loop Analysis
 ==============
 
 .. index::
-	pair: loop; analysis
+    pair: loop; analysis
     pair: loop; tracing
     pair: tracing; loop
     pair: loop; counting iterations

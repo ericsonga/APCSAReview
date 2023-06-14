@@ -6,7 +6,7 @@ Free Response - String Scramble B
 -----------------------------------
 
 .. index::
-	single: string scramble
+    single: string scramble
     single: free response
 
 The following is part b of a free response question from 2014.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

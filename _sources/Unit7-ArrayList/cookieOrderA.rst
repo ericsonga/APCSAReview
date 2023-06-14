@@ -6,7 +6,7 @@ Free Response - CookieOrder A
 =============================
 
 .. index::
-	single: cookieorder
+    single: cookieorder
     single: free response
 
 The following is a free response question from 2010.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

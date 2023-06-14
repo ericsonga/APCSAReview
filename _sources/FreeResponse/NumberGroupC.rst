@@ -6,7 +6,7 @@ NumberGroup - Part C
 ===============================
 
 .. index::
-	single: NumberGroup
+    single: NumberGroup
     single: free response
 
 **Part c.**  The ``MultipleGroups`` class represents a collection of ``NumberGroup`` objects and is

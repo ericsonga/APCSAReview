@@ -494,7 +494,7 @@ ArrayList get/set Methods
 ------------------------------------
 
 .. index::
-	pair: arraylist; getting an item
+    pair: arraylist; getting an item
     pair: arraylist; setting an item
 
 You can get the object at an index using ``obj = listName.get(index)`` and set the object at an index using ``listName.set(index,obj)``. Set/Get are used after you add and remove elements to an ArrayList to change or retrieve them.

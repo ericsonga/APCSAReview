@@ -31,11 +31,11 @@ String Methods
 =================
 
 .. index::
-	pair: String; length
-	pair: String; substring
-	pair: String; indexOf
-	pair: String; compareTo
-	pair: String; equals
+    pair: String; length
+    pair: String; substring
+    pair: String; indexOf
+    pair: String; compareTo
+    pair: String; equals
     pair: String; methods
 
 A string holds characters in a sequence.  Each character is at a position or **index** which starts with 0 as shown below.  An **index** is a number associated with a position in a string.  The length of a string is the number of characters in it including any spaces or special characters.  The string below has a length of 14.
@@ -588,7 +588,7 @@ Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings*
     single: substring
     single: string
     single: reference
-	single: object reference
+    single: object reference
 
 
 

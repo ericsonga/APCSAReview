@@ -6,7 +6,7 @@ Free Response - StringFormatter B
 -----------------------------------
 
 .. index::
-	single: trio
+    single: trio
     single: free response
 
 The following is a free response question from 2016. It was question 4 part B on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

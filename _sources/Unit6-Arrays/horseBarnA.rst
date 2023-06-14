@@ -6,7 +6,7 @@ Free Response - Horse Barn A
 -------------------------------
 
 .. index::
-	single: horse barn
+    single: horse barn
     single: free response
 
 The following FRQ is a great example of working with an array of objects. It is a variation of part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

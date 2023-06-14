@@ -10,19 +10,19 @@ In this unit you learned about the three primitive data types on the exam: ``int
 .. index::
     single: static
     single: variable
-	single: int
-	single: double
-	single: boolean
-	single: camel case
-	single: declaring
-	single: initializing
-	single: shortcut operator
-	single: modulo operator
-	single: casting
-	single: integer
-	single: modulo
-	single: true
-	single: false
+    single: int
+    single: double
+    single: boolean
+    single: camel case
+    single: declaring
+    single: initializing
+    single: shortcut operator
+    single: modulo operator
+    single: casting
+    single: integer
+    single: modulo
+    single: true
+    single: false
 
 Concept Summary
 ---------------
