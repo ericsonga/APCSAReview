@@ -60,8 +60,8 @@ Click to reveal the algorithm and problems to help you write your solution.
         :feedback_c: This isn't valid
 
         Which Java expression correctly generates a random number between 1 and 6?
-   
-   
+
+
    .. mchoice:: numbercubea_2
         :answer_a: int[] tossArray = new int[];
         :answer_b: int[] tossArray = new int(numTosses);
@@ -72,7 +72,7 @@ Click to reveal the algorithm and problems to help you write your solution.
         :feedback_c: This will create an array of size numTosses.
 
         Which of the following correctly creates an array of size numTosses?
-   
+
    .. mchoice:: numbercubea_3
         :answer_a: for (int i = 0; i <= numTosses; i++)
         :answer_b: for (int i = 1; i < numTosses; i++)
@@ -83,7 +83,7 @@ Click to reveal the algorithm and problems to help you write your solution.
         :feedback_c: This will execute numTosses times.
 
         Which of the following correctly loops numTosses number of times?
-   
+
 
 Mixed Up Code
 -------------------
@@ -125,7 +125,7 @@ Try and Solve Part A
 .. activecode:: FRQNumberCubeA
    :language: java
    :autograde: unittest      
-   
+
    FRQ Number Cube A: Write the method ``getCubeTosses`` that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.
    ~~~~ 
     import java.util.Arrays;
@@ -160,7 +160,7 @@ Try and Solve Part A
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test

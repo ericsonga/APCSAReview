@@ -4,7 +4,7 @@ Multiple Choice Exercises
 .. qnum::
    :prefix: 1-11-
    :start: 1
-   
+
 
 
 .. mchoice:: qve_1
@@ -20,11 +20,11 @@ Multiple Choice Exercises
    :feedback_d: This would be correct if it was 3 % 2 since 2 would go into 3 one time with a remainder of 1.
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      System.out.println(2 % 3);
-     
+
 .. mchoice:: qve_2
    :practice: T
    :answer_a: 3
@@ -38,11 +38,11 @@ Multiple Choice Exercises
    :feedback_d: This would be correct if it was 19 % 2, but here we are dividing by 5.  
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      System.out.println(19 % 5);
-     
+
 .. mchoice:: qve_3
    :practice: T
    :answer_a: 0.3333333333333333
@@ -58,11 +58,11 @@ Multiple Choice Exercises
    :feedback_e: Integer division is allowed in Java.  It gives an integer result.
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      System.out.println(1 / 3);
-     
+
 .. mchoice:: qve_4
    :practice: T
    :answer_a: 24
@@ -76,11 +76,11 @@ Multiple Choice Exercises
    :feedback_d: The multiplication is done first (3 * 5 = 15) and then the addition (2 + 15 = 17) and finally the subtraction (17 - 1 = 16).
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
     System.out.println(2 + 3 * 5 - 1);
-     
+
 .. mchoice:: qve_5
    :practice: T
    :answer_a: 9.6982
@@ -94,13 +94,13 @@ Multiple Choice Exercises
    :feedback_d: When a double is converted into an integer in Java, it truncates (throws away) the digits after the decimal.
 
    Given the following code segment, what is the value of b when it finishes executing?
-   
+
     .. code-block:: java 
 
       double a = 9.6982;
       int b = 12;
       b = (int) a;
-      
+
 .. mchoice:: qve_new7
    :practice: T
    :answer_a: It will print 0
@@ -114,11 +114,11 @@ Multiple Choice Exercises
    :feedback_d: This would be true if it was System.out.println(5 / 1) 
 
    What does the following code do when it is executed?
-   
+
     .. code-block:: java 
 
       System.out.println(5 / 0);
-      
+
 
 .. mchoice:: qve_new9
    :practice: T
@@ -133,11 +133,11 @@ Multiple Choice Exercises
    :feedback_d: The computer can not represent an infinite number of 3's after the decimal point.
 
    What will the following code print?
-   
+
     .. code-block:: java 
 
       System.out.println(1.0 / 3);
-      
+
 .. mchoice:: qve_new10
    :practice: T
    :answer_a: x = 3, y = 3, z = 9
@@ -151,23 +151,23 @@ Multiple Choice Exercises
    :feedback_d: You might think that y = x means that if x is incremented that y will also be incremented, but y = x only sets y to a copy of x's value and doesn't keep them in sync.  
 
    What are the values of x, y, and z after the following code executes?
-   
+
     .. code-block:: java 
 
       int x = 3;
       int y = x;
       int z = x * y;
       x++;
-    
 
-    
 
- 
+
+
+
 The Mark Complete button and green check mark are intentionally not included for this page because there may be many quiz-bank exercises on this page.
 
-   
 
 
 
-     
+
+
 

@@ -51,26 +51,26 @@ The APCalendar class contains methods used to calculate information about a cale
      /** Returns true if year is a leap year and false otherwise. */
      private static boolean isLeapYear(int year)
      { /* implementation not shown */ }
-     
+
      /** Returns the number of leap years between year1 and year2, inclusive.
      * Precondition: 0 <= year1 <= year2
      */
      public static int numberOfLeapYears(int year1, int year2)
      { /* to be implemented in part (a) */ }
-     
+
      /** Returns the value representing the day of the week for the first day of year,
      * where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
      */
      private static int firstDayOfYear(int year)
      { /* implementation not shown */ }
-     
+
      /** Returns n, where month, day, and year specify the nth day of the year.
      * Returns 1 for January 1 (month = 1, day = 1) of any year.
      * Precondition: The date represented by month, day, year is a valid date.
      */
      private static int dayOfYear(int month, int day, int year)
      { /* implementation not shown */ }
-     
+
      /** Returns the value representing the day of the week for the given date
      * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,
      * and 6 denotes Saturday.
@@ -78,7 +78,7 @@ The APCalendar class contains methods used to calculate information about a cale
      */
      public static int dayOfWeek(int month, int day, int year)
      { /* to be implemented in part (b) */ }
-     
+
      // There may be instance variables, constructors, and other methods not shown.
     }
 
@@ -100,7 +100,7 @@ Complete method numberOfLeapYears below. You must use isLeapYear appropriately t
      */
      public static int numberOfLeapYears(int year1, int year2)
 
-  
+
 
 How to solve numberOfLeapYears()
 ================================
@@ -122,7 +122,7 @@ Also, circle what the return type of what you need to return. In this case, the 
      {
         int numLeapYears = 0;
         // Your loop will go in here
-        
+
         return numLeapYears;
      }
 
@@ -159,7 +159,7 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
    :showtitle: Reveal Algorithm
    :hidetitle: Hide Algorithm
    :optional:
-   
+
    It is usually easiest to use a **for loop** if you know how many times the loop should execute using the given information. Figure out what the initial and ending values of the loop variable should be. Some of the method parameters will usually be used for these. In this case, we need to loop from year1 to year2.  The preconditions stated for the method tells us that we don't have to worry about year1 and year2 being out of order or below 0. So don't waste time on error-checking these values. Here's a possible loop:
 
    .. code-block:: java
@@ -189,22 +189,22 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
 
    public class APCalendar
    {
-    
+
     /** Returns the number of leap years between year1 and year2, inclusive.
      * Precondition: 0 <= year1 <= year2
     */ 
     public static int numberOfLeapYears(int year1, int year2)
     {
       // WRITE YOUR CODE HERE
-           
+
     }
-    
+
     /** Returns true if year is a leap year and false otherwise. */ 
     private static boolean isLeapYear(int year)
     {
     	return new GregorianCalendar().isLeapYear(year);
     }
-    
+
     public static void main(String[] args)
     {
         int answer = APCalendar.numberOfLeapYears(2000, 2050);
@@ -264,7 +264,7 @@ In the 2019 AP exam, part A numberOfLeapYears method was worth 5 points using th
     :figclass: align-center
 
     Figure 1: Rubric for the numberOfLeapYears method
-    
+
 
 Part B: dayOfWeek()
 ===========================
@@ -295,7 +295,7 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
         :feedback_d: Since 1/1/19 is a Tuesday, Jan. 4th 2019 is 3 days later. 
 
         If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019? 
-   
+
 .. reveal:: dow_r2
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
@@ -396,7 +396,7 @@ Try the mod operator below.
                 assertTrue(passed);
             }
         }
-    
+
 .. reveal:: dow_r4
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
@@ -414,9 +414,9 @@ Try the mod operator below.
         :feedback_c: Remember that % has precedence so this would return 2 + (8 % 7) = 2 + 1 = 3 
         :feedback_d: Mod 4 does not make sense because there are 7 days of the week.
         :feedback_e: This would return (2 + 8 - 1) % 7 = 2.
-   
+
         Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?
-   
+
 Complete the code for the method dayOfWeek below for Part B of this FRQ.
 
 .. activecode:: APCalendarFRQPartB
@@ -430,7 +430,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
 
    public class APCalendar
    {
-    
+
      /** Returns the value representing the day of the week for the given date
      * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,
      * and 6 denotes Saturday.
@@ -439,15 +439,15 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
     public static int dayOfWeek(int month, int day, int year)
     {
         // WRITE YOUR CODE HERE using methods firstDayOfYear and dayOfYear
-        
+
     }
-    
+
     public static void main(String[] args)
     {
         int answer = APCalendar.dayOfWeek(1, 8, 2019);
         System.out.println("Your answer should be 2: " + answer);
     }
-   
+
     /** Returns the value representing the day of the week for the first day of year,
     * where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
     */
@@ -456,7 +456,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
         GregorianCalendar gc = new GregorianCalendar(year, Calendar.JANUARY, 1);
         return gc.get(Calendar.DAY_OF_WEEK) - 1;
     }
-    
+
     /** Returns n, where month, day, and year specify the nth day of the year.
     * Returns 1 for January 1 (month = 1, day = 1) of any year.
     * Precondition: The date represented by month, day, year is a valid date.
@@ -508,7 +508,7 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
             assertTrue(passed);   
         }
     }
-    
+
 
 In the 2019 AP exam, part B dayOfWeek method was worth 4 points using the rubric below. Did you receive all 4 points? In class, your teacher may have you grade each others' code.
 

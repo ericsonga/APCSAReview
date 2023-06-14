@@ -57,7 +57,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex1a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.*;
@@ -96,7 +96,7 @@ Code Practice with ArrayLists
               Fix the following class so that it will compile and the method ``reverse`` will return an ArrayList containing Integers in the reversed order of the ArrayList parameter ``list``. Hint: for this solution, only one line needs to be added to the for-loop inside of the ``reverse`` method.
               ~~~~
               import java.util.*;
-              
+
               public class Test1
               {
                   public static ArrayList<Integer> reverse(ArrayList<Integer> list)
@@ -163,7 +163,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex2a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.*;
@@ -246,7 +246,7 @@ Code Practice with ArrayLists
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                   @Test
@@ -285,11 +285,11 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex3a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.*;
-              
+
               public class Test1
               {
                   public static void printEvenIndex(ArrayList<Integer> list)
@@ -407,7 +407,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex4a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.*;
@@ -510,7 +510,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex5a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.List;
@@ -618,7 +618,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex6a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.List;
@@ -734,7 +734,7 @@ Code Practice with ArrayLists
                     assertTrue(passed);
                   }
                 }
-        
+
         .. tab:: Answer
 
            Loop through all of the elements of the ArrayList ``list``. In each iteration, check if the length of each element is strictly greater ``>`` than 4; if it is, remove that element.
@@ -742,7 +742,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex7a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.List;
@@ -867,7 +867,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex8a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.List;
@@ -997,7 +997,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex9a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.List;
@@ -1117,7 +1117,7 @@ Code Practice with ArrayLists
            .. activecode::  ch8Ex10a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               import java.util.List;

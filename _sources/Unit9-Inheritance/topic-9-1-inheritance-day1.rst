@@ -7,23 +7,23 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
-    
+
 Inheritance (Day 1)
 -------------------
 
@@ -37,39 +37,39 @@ When one class inherits from another, we can say that it is the *same kind of th
     :figclass: align-center
 
     Figure 1: A UML Class Diagram Showing Inheritance
-    
+
 A **UML (Unified Modeling Language) class diagram** shows classes and the relationships between the classes as seen in Figure 1.  An open triangle points to the parent class.  The parent class for ``Car`` and ``Motorcycle`` is ``Vehicle``. The ``Vehicle`` class has two child classes or subclasses: ``Car`` and ``Motorcycle``.  
 
 Subclass extends Superclass
 ---------------------------
-    
+
 To make a subclass inherit from a superclass, use the Java keyword **extends** with the superclass name when creating a new subclass as shown below. 
 
 .. code-block:: java 
 
   public class Car extends Vehicle 
   public class Motorcycle extends Vehicle
-  
+
 ..	index::
     single: extends
-    
+
 .. note::
-  
+
    While a person can have two parents, a Java class can only inherit from one parent class.  If you leave off the **extends** keyword when you declare a class then the class will inherit from the ``Object`` class that is already defined in Java.  
-   
+
 .. The ``Person`` class declared below will inherit from the ``Object`` class.
 
 .. .. code-block:: java 
 
   public class Person
-  
+
 Why Use Inheritance?
 ---------------------
 
 ..	index::
     single: generalization
     single: specialization
-    
+
 Inheritance allows you to reuse data and behavior from the parent class.  If you notice that several classes share the same data and/or behavior,  you can pull that out into a parent class.  This is called **generalization**. For example,  Customers and Employees are both people so it makes sense use the general Person class as seen below. 
 
 Inheritance is also useful for **specialization** which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  The example below can also be seen as specialization.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.
@@ -82,7 +82,7 @@ Inheritance is also useful for **specialization** which is when you want most of
     Figure 2: A UML Class Diagram Showing Inheritance
 
 |Exercise| **Check your understanding**
-    
+
 .. mchoice:: qoo10-1-1
    :practice: T
    :answer_a: It doesn't have a parent class.
@@ -96,7 +96,7 @@ Inheritance is also useful for **specialization** which is when you want most of
    :feedback_d: There isn't a class named Parent.
 
    If you don't specify the parent class in a class declaration which of the following is true?
-   
+
 .. mchoice:: qoo10-1-2
    :practice: T
    :answer_a: Yes
@@ -106,7 +106,7 @@ Inheritance is also useful for **specialization** which is when you want most of
    :feedback_b: Why would inheritance be useful if you didn't actually get anything from the parent class?
 
    If the class Vehicle has the instance fields make and model and the class Car inherits from the class Vehicle, will a car object have a make and model?  
-   
+
 .. mchoice:: qoo10-1-3
    :practice: T
    :answer_a: Yes
@@ -116,7 +116,7 @@ Inheritance is also useful for **specialization** which is when you want most of
    :feedback_b: No, a parking garage is not a kind of vehicle.  Instead it has vehicles in it which implies that the ParkingGarage class would have a field that tracks the vehicles in it.
 
    If I had a class ParkingGarage should it inherit from the class Vehicle?  
-   
+
 .. mchoice:: qoo10-1-4
    :practice: T
    :answer_a: 0
@@ -130,7 +130,7 @@ Inheritance is also useful for **specialization** which is when you want most of
    :feedback_d: This is true for interfaces, but not parent classes.  
 
    In Java how many parents can a class have? 
-  
+
 
 |CodingEx| **Coding Exercise**
 
@@ -140,7 +140,7 @@ The Student class can also inherit from the class Person just like Employee and 
   :language: java
   :autograde: unittest      
   :practice: T
-  
+
   What do you need to add to the Student class declaration below to make it inherit from type Person? When you fix the code, the **instanceof** operator will return true that Student s is an instance of both the Student and the Person class. What other private instance variables could you add to Person and Student? In which class would you put an address attribute? Where would you put gpa?
   ~~~~
   class Person
@@ -164,7 +164,7 @@ The Student class can also inherit from the class Person just like Employee and 
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test

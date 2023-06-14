@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 1-4-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,7 +22,7 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Expressions and Assignment Statements
 =====================================
 
@@ -38,7 +38,7 @@ Assignment Statements
     :width: 350px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Assignment Statement (variable = expression;)
 
 Instead of saying equals for the = in an assignment statement, say "gets" or "is assigned" to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.
@@ -46,15 +46,15 @@ Instead of saying equals for the = in an assignment statement, say "gets" or "is
 .. |video| raw:: html
 
    <a href="https://www.youtube.com/watch?v=MZwIgM__5C8&ab_channel=colleenlewis" target="_blank">video</a>
-   
+
 The following |video| by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
 
 .. youtube:: MZwIgM__5C8
     :width: 700
     :height: 415
     :align: center
-    
-   
+
+
 As we saw in the video, we can set one variable's value to a *copy* of the value of another variable like ``y = x;``.  This won't change the value of the variable that you are copying from.  
 
 
@@ -65,11 +65,11 @@ As we saw in the video, we can set one variable's value to a *copy* of the value
 
 Let's step through the following code in the |Java visualizer| to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.
 
- 
+
 .. codelens:: asgn_viz1
     :language: java 
     :optional:
- 
+
     public class Test2
     {
       public static void main(String[] args)
@@ -88,13 +88,13 @@ Let's step through the following code in the |Java visualizer| to see the values
     }
 
 
-   
+
 |Exercise| **Check your understanding**
 
 .. |Java visualizer2| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-   
+
 .. mchoice:: q2_1
    :practice: T
    :answer_a: x = 0, y = 1, z = 2
@@ -118,7 +118,7 @@ Let's step through the following code in the |Java visualizer| to see the values
        y = y * 2;
        z = 3;
 
-      
+
 |Exercise| **Mixed Up Code**
 
 
@@ -151,7 +151,7 @@ If you use a variable to keep score you would probably increment it (add one to 
 .. activecode:: lccv1
    :language: java
    :autograde: unittest   
-   
+
    Try the code below to see how score is incremented by 1. Try substituting 2 instead of 1 to see what happens.
    ~~~~
    public class Test1
@@ -201,7 +201,7 @@ Variables are a powerful abstraction in programming because the same algorithm c
 .. raw:: html
 
     <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/JavaIOExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-    
+
 Although you will not be tested in the AP CS A exam on using the Java System.in and Scanner classes, learning how to do input in Java is still very useful. More information on using the Scanner class can be found here https://www.w3schools.com/java/java_user_input.asp 
 
 
@@ -231,7 +231,7 @@ Java uses the operator **==** to test if the value on the left is equal to the v
 .. activecode:: lcop1
    :language: java
    :autograde: unittest      
-   
+
    Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn't it surprising that it prints 0?  See the note below.
    ~~~~
    public class Test1
@@ -266,14 +266,14 @@ Java uses the operator **==** to test if the value on the left is equal to the v
             assertTrue(passed);
         }
     }
-   
+
 
 
 .. note::
 
    When Java sees you doing integer division (or any operation with integers) it assumes you want an integer result so it throws away anything after the decimal point in the answer. If you need a double answer, you should make at least one of the values in the expression a double like 2.0.
 
-   
+
 With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
 
 Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.  
@@ -285,7 +285,7 @@ Operators can be used to create compound expressions with more than one operator
 .. activecode:: compound1
    :language: java
    :autograde: unittest      
-   
+
    In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**. How do the parentheses change the precedence?
    ~~~~
    public class TestCompound
@@ -317,11 +317,11 @@ Operators can be used to create compound expressions with more than one operator
         }
     }
 
-   
-   
 
-   
-   
+
+
+
+
 The Modulo Operator
 --------------------
 
@@ -331,9 +331,9 @@ The percent sign operator (%) is the **mod (modulo)** or **remainder** operator.
     :width: 150px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Long division showing the integer result and the remainder
-    
+
 .. |video2| raw:: html
 
    <a href="https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis" target="_blank">video</a>
@@ -344,14 +344,14 @@ Here is a |video2| about mod.
     :width: 700
     :height: 415
     :align: center
-    
+
 
 |CodingEx| **Coding Exercise:** 
 
 .. activecode:: lcop2
    :language: java
    :autograde: unittest      
-   
+
    In the example below, try to guess what it will print out and then run it to see if you are right.
    ~~~~
    public class Test1
@@ -388,14 +388,14 @@ Here is a |video2| about mod.
 
 .. note::
    The result of x % y when x is smaller than y is always x.  The value y can't go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.  
-  
+
 ..	index::
 	single: modulo
 	single: remainder
 	pair: operators; modulo
-	
+
 |Exercise| **Check Your Understanding**
-	
+
 .. mchoice:: q3_4_1
    :practice: T
    :answer_a: 15
@@ -407,7 +407,7 @@ Here is a |video2| about mod.
    :feedback_c: When you divide 158 by 10 you get a remainder of 8.  
 
    What is the result of 158 % 10?
-   
+
 .. mchoice:: q3_4_2
    :practice: T
    :answer_a: 3
@@ -419,11 +419,11 @@ Here is a |video2| about mod.
    :feedback_c: What is the remainder after you divide 3 by 8?  
 
    What is the result of 3 % 8?
-	
 
 
 
-   
+
+
 
 |Groupwork| Programming Challenge : Dog Years
 ------------------------------------------------
@@ -450,32 +450,32 @@ In this programming challenge, you will calculate your age, and your pet's age f
           int currentYear = 
           int birthYear = 
           int dogBirthYear = 
-          
+
           // Write a formula to calculate your age 
           // from the currentYear and your birthYear variables 
           int age = 
-          
+
           // Write a formula to calculate your dog's age 
           // from the currentYear and dogBirthYear variables 
           int dogAge = 
-          
+
           // Calculate the age of your dog in dogYears (7 times your dog's age in human years)
           int dogYearsAge =
-         
+
           // Print out your age, your dog's age, and your dog's age in dog years. Make sure you print out text too so that the user knows what is being printed out.
-        
-      
-      
+
+
+
       }
    }
    ====
    import static org.junit.Assert.*;
    import org.junit.*;
-   
+
    //import jdk.jfr.Timestamp;
-   
+
    import java.io.*;
-   
+
    /* Do NOT change Main or CodeTestHelper.java.
       Put the active code exercise in a file like ForLoop.java.
       Put your Junit test in the file RunestoneTests.java.
@@ -486,13 +486,13 @@ In this programming challenge, you will calculate your age, and your pet's age f
       public void checkVariables() throws IOException {
          String code = removeSpaces(getCode());
          code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-   
+
          boolean passed1 = code.matches(".*intcurrentYear=[0-9]{2,4};.*");
          boolean passed2 = code.matches(".*intbirthYear=[0-9]{2,4};.*");
          boolean passed3 = code.matches(".*intbirthYear=[0-9]{1,4};.*");
-   
+
          boolean passed = passed1 && passed2 && passed3;
-   
+
          getResults("true", "" + passed, "Checking that you initialized the three variables");
          assertTrue(passed);
       }
@@ -505,17 +505,17 @@ In this programming challenge, you will calculate your age, and your pet's age f
          getResults("1+ characters", "" + num, "Checking that you have some output", passed);
          assertTrue(passed);
       }
-   
+
       @Test
       public void checkPrintlines() throws IOException {
          String code = removeSpaces(getCode());
          int num = countOccurences(code, "System.out.print");
-   
+
          boolean passed = num >= 1;
          getResults("At least one", "" + num, "Checking that you have at least one print statement", passed);
          assertTrue(passed);
       }
-   
+
       @Test
       public void testAsgn1() throws IOException {
          /*
@@ -525,30 +525,30 @@ In this programming challenge, you will calculate your age, and your pet's age f
          String target = removeSpaces("age = currentYear - birthYear");
          String code = removeSpaces(getCode());
          code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-   
+
          boolean passed = code.contains(target);
          getResults("true", "" + passed, "Checking that code contains formula for age", passed);
          assertTrue(passed);
       }
-   
+
       @Test
       public void testAsgn2() throws IOException {
          String target = removeSpaces("dogAge = currentYear - dogBirthYear");
          String code = removeSpaces(getCode());
          code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-   
+
          boolean passed = code.contains(target);
          getResults("true", "" + passed, "Checking that code contains formula for dogAge", passed);
          assertTrue(passed);
       }
-   
+
       @Test
       public void testAsgn3() throws IOException {
          String target1 = removeSpaces("dogYearsAge = dogAge * 7");
          String target2 = removeSpaces("dogYearsAge = 7 * dogAge");
          String code = removeSpaces(getCode());
          code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-   
+
          boolean passed1 = code.contains(target1);
          boolean passed2 = code.contains(target2);
          boolean passed = passed1 || passed2;
@@ -556,17 +556,17 @@ In this programming challenge, you will calculate your age, and your pet's age f
          assertTrue(passed);
       }
    }
-   
+
 
 .. |repl| raw:: html
 
    <a href="https://repl.it" target="_blank">repl.it</a>
-   
+
 
 .. |Scanner| raw:: html
 
    <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-   
+
 .. |repl template| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
@@ -614,16 +614,16 @@ The following is a 2019 AP CSA sample question.
    :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).   
    :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.
    :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
-   
+
    Consider the following code segment.
-   
+
    .. code-block:: java 
-   
+
        int a = 5;
        int b = 2;
        double c = 3.0;
        System.out.println(5 + a / b * c - 1);
-   
+
    What is printed when the code segment is executed?
 
 

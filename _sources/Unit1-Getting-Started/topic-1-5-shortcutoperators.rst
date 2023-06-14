@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,8 +22,8 @@
 .. raw:: html
 
     <style>    td { text-align: left; } </style>
-    
-    
+
+
 ..	index::
 	single: operators
 	pair: math; operators
@@ -37,10 +37,10 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Compound Assignment Operators 
 =============================
-   
+
 Compound assignment operators are shortcuts that do a math operation and assignment in one step. For example, ``x += 1`` adds 1 to x and assigns the sum to x. It is the same as ``x = x + 1``. This pattern is possible with any operator put in front of the = sign, as seen below.
 
 +------------+------------+-----------+----------+----------+
@@ -58,7 +58,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
 .. activecode:: lcpp
    :language: java
    :autograde: unittest    
-  
+
    Run the code below to see what the ++ and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Try creating more compound assignment statements with shortcut operators and work with a partner to guess what they would print out before running the code.
    ~~~~
    public class Test2
@@ -80,7 +80,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -93,7 +93,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
             assertTrue(passed);
         }
     }
-   
+
 .. note::
 
    On the exam you can use ``x++`` or ``++x`` to add one to the value of ``x``.  These two shortcuts only have different results if you assign the value of ``x`` to another variable as in ``int y = ++x;`` (where the value of x is incremented before y is set to it) or ``int y = x++;`` (where y is set to a copy of x's value before x is incremented).  The AP exam will never use a shortcut in an assignment statement, so you don't need to worry about the difference between ``++x`` or ``x++``.  
@@ -117,7 +117,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
    :feedback_e: This code subtracts one from x, adds one to y, and then sets z to to the value in z plus the current value of y.
 
    What are the values of x, y, and z after the following code executes?
-   
+
    .. code-block:: java 
 
      int x = 0;
@@ -126,7 +126,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
      x--; 
      y++;
      z+=y;
-     
+
 .. mchoice:: q3_4_4
    :practice: T
    :answer_a: x = 6, y = 2.5, z = 2
@@ -142,7 +142,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
    :feedback_e: This code sets x to z * 2 (4), y to y divided by 2 (5 / 2 = 2) and z = to z + 1 (2 + 1 = 3).
 
    What are the values of x, y, and z after the following code executes?
-   
+
    .. code-block:: java 
 
      int x = 3;
@@ -151,7 +151,7 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
      x = z * 2;
      y = y / 2;
      z++;
-     
+
 |Groupwork| Code Tracing Challenge and Operators Maze
 -----------------------------------------------------
 
@@ -194,7 +194,7 @@ Trace through the following code:
 .. |Operators Maze game| raw:: html
 
    <a href="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing" target="_blank" style="text-decoration:underline">Operators Maze game</a>
-   
+
 
 
 After doing this challenge, play the |Operators Maze game|. See if you and your partner can get the highest score!

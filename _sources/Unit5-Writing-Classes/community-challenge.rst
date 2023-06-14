@@ -69,7 +69,7 @@ Code your Class
   public class          // Add your class name here!
   {
       // 1. write 3 instance variables for class: private type variableName;
-          
+
       // 2. Add a constructor with no parameters that initializes the instance variables to default values
       // and a constructor with 3 parameters to set all of the instance variables to the given parameters. 
 
@@ -91,10 +91,10 @@ Code your Class
       public static void main(String[] args)
       {  
          // Construct 2 objects of your class to test the 2 constructors 
-         
-         
+
+
          // call all of the objects methods to test them
-      
+
       }
   }
   ====
@@ -198,7 +198,7 @@ Code your Class
             getResults("3", ""+num, "Checking mutator (set) methods for each variable", passed);
             assertTrue(passed);
         }
-        
+
         @Test
         public void test3()
         {
@@ -217,7 +217,7 @@ Optional Swing GUI
 .. |Java Swing Example| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Input-Form" target="_blank" style="text-decoration:underline">Java Swing Example</a>
-   
+
 An optional additional project is to build a GUI (graphical user interface) for your class (GUIs are not on the AP exam). 
 Here's a |Java Swing Example| on repl and below that sets up a JFrame with JTextfields, JLabels, and a JButton.
 It calls a special method called addActionListener where you can put the code to be executed 

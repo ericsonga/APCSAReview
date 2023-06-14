@@ -78,7 +78,7 @@ The code below has a main method for testing.  Write the constructor for the ``R
 
    // Add in class RandomStringChooser from the previous lesson. 
    // Do not make it public
-   
+
    public class RandomLetterChooser extends RandomStringChooser
    {
        /** Constructs a random letter chooser using the given string str.

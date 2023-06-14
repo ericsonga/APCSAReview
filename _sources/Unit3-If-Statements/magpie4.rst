@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: lab-1d-
    :start: 1
-   
+
 .. highlight:: java
    :linenothreshold: 4
 
@@ -32,7 +32,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 
 .. activecode:: lc-magpie4
    :language: java
-   
+
    /**
     * A program to carry on conversations with a human user.
     * This version:
@@ -47,7 +47,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
     */
    public class Magpie4
    {
-   
+
       /**
        * Get a default greeting  
        * @return a greeting
@@ -56,7 +56,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
       {
          return "Hello, let's talk.";
       }
- 
+
       /**
        * Gives a response to a user statement
        * 
@@ -89,9 +89,9 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          {
             response = transformIWantToStatement(statement);
          }
-  
+
          // ADD Responses which require transformations!
-         
+
 
          else
          {
@@ -111,7 +111,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          }
          return response;
       }
- 
+
       /**
        * Take a statement with "I want to <something>." and transform it into 
        * "What would it mean to <something>?"
@@ -133,7 +133,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          String restOfStatement = statement.substring(psn + 9).trim();
          return "What would it mean to " + restOfStatement + "?";
       }
- 
+
       /**  ADD CODE HERE!
        * Take a statement with "I want <something>." and transform it into 
        * Would you really be happy if you had <something>?
@@ -143,7 +143,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
       private String transformIWantStatement(String statement)
       {
          // ADD CODE HERE 
-         
+
          return "Would you really be happy if you had ...";
       }
 
@@ -164,10 +164,10 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
             statement = statement.substring(0, statement
                                                .length() - 1);
          }
-  
+
          int psnOfYou = findKeyword (statement, "you", 0);
          int psnOfMe = findKeyword (statement, "me", psnOfYou + 3);
-  
+
          String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
          return "What makes you think that I " + restOfStatement + " you?";
       }
@@ -198,7 +198,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          String phrase = statement.trim();
          //  The only change to incorporate the startPos is in the line below
          int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
-  
+
          //  Refinement--make sure the goal isn't part of a word 
          while (psn >= 0) 
          {
@@ -212,22 +212,22 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
             {
                after = phrase.substring(psn + goal.length(), psn + goal.length() + 1).toLowerCase();
             }
-   
+
             //  If before and after aren't letters, we've found the word
             if (((before.compareTo ("a") < 0 ) || (before.compareTo("z") > 0))  //  before is not a letter
             && ((after.compareTo ("a") < 0 ) || (after.compareTo("z") > 0)))
             {
                return psn;
             }
-   
+
             //  The last position didn't work, so let's find the next, if there is one.
             psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
-   
+
          }
-  
+
          return -1;
       }
- 
+
       /**
        * Search for one word in phrase.  The search is not case sensitive.
        * This method will check that the given goal is not a substring of a longer string
@@ -251,7 +251,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          double r = Math.random();
          int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
          String response = "";
-  
+
          if (whichResponse == 0)
          {
             response = "Interesting, tell me more.";
@@ -271,7 +271,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 
          return response;
       }
-      
+
 	  public static void main(String[] args)
 	  {
 		Magpie4 maggie = new Magpie4();
@@ -281,14 +281,14 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 	  }
 
    }
-   
+
 .. |Java Visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Magpie4%0A%20%20%20%7B%20%0A%20%20%20%20%20%20public%20String%20getResponse%28String%20statement%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20String%20response%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%20%20%20if%20%28statement.length%28%29%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20response%20%3D%20%22Say%20something,%20please.%22%3B%0A%0A%20%20%20%20%20%20%20%20%20else%20if%20%28findKeyword%28statement,%20%22no%22%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20response%20%3D%20%22Why%20so%20negative%3F%22%3B%0A%20%20%20%20%20%20%20%20%20else%20if%20%28findKeyword%28statement,%20%22mother%22%29%20%3E%3D%200%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%20findKeyword%28statement,%20%22father%22%29%20%3E%3D%200%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%20findKeyword%28statement,%20%22sister%22%29%20%3E%3D%200%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7C%7C%20findKeyword%28statement,%20%22brother%22%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20response%20%3D%20%22Tell%20me%20more%20about%20your%20family.%22%3B%0A%0A%20%20%20%20%20%20%20%20%20else%20if%20%28findKeyword%28statement,%20%22I%20want%20to%22,%200%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20response%20%3D%20transformIWantToStatement%28statement%29%3B%0A%20%20%20%20%20%20%20%20%20else%20if%20%28findKeyword%28statement,%20%22I%20want%22,%200%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20response%20%3D%20transformIWantStatement%28statement%29%3B%0A%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20int%20psn%20%3D%20findKeyword%28statement,%20%22you%22,%200%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28psn%20%3E%3D%200%20%26%26%20findKeyword%28statement,%20%22me%22,%20psn%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20response%20%3D%20transformYouMeStatement%28statement%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20response%20%3D%20getRandomResponse%28%29%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20return%20response%3B%0A%20%20%20%20%20%20%7D%0A%20%0A%20%20%20%20%20%20private%20String%20transformIWantToStatement%28String%20statement%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20statement%20%3D%20statement.trim%28%29%3B%0A%20%20%20%20%20%20%20%20%20String%20lastChar%20%3D%20statement.substring%28statement.length%28%29%20-%201%29%3B%0A%20%20%20%20%20%20%20%20%20if%20%28lastChar.equals%28%22.%22%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20statement%20%3D%20statement.substring%280,%20statement.length%28%29%20-%201%29%3B%0A%20%20%20%20%20%20%20%20%20int%20psn%20%3D%20findKeyword%20%28statement,%20%22I%20want%20to%22,%200%29%3B%0A%20%20%20%20%20%20%20%20%20String%20restOfStatement%20%3D%20statement.substring%28psn%20%2B%209%29.trim%28%29%3B%0A%20%20%20%20%20%20%20%20%20return%20%22What%20would%20it%20mean%20to%20%22%20%2B%20restOfStatement%20%2B%20%22%3F%22%3B%0A%20%20%20%20%20%20%7D%0A%20%0A%20%20%20%20%20%20private%20String%20transformIWantStatement%28String%20statement%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20statement%20%3D%20statement.trim%28%29%3B%0A%20%20%20%20%20%20%20%20%20String%20lastChar%20%3D%20statement.substring%28statement.length%28%29%20-%201%29%3B%0A%20%20%20%20%20%20%20%20%20if%20%28lastChar.equals%28%22.%22%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20statement%20%3D%20statement.substring%280,%20statement.length%28%29%20-%201%29%3B%0A%20%20%20%20%20%20%20%20%20int%20psn%20%3D%20findKeyword%20%28statement,%20%22I%20want%22,%200%29%3B%0A%20%20%20%20%20%20%20%20%20String%20restOfStatement%20%3D%20statement.substring%28psn%20%2B%207%29%3B%0A%20%20%20%20%20%20%20%20%20return%20%22Would%20you%20really%20be%20happy%20if%20you%20had%20%22%20%2B%20restOfStatement%20%2B%20%22%3F%22%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20private%20String%20transformYouMeStatement%28String%20statement%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20statement%20%3D%20statement.trim%28%29%3B%0A%20%20%20%20%20%20%20%20%20String%20lastChar%20%3D%20statement.substring%28statement.length%28%29%20-%201%29%3B%0A%20%20%20%20%20%20%20%20%20if%20%28lastChar.equals%28%22.%22%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20statement%20%3D%20statement.substring%280,%20statement.length%28%29%20-%201%29%3B%20%20%0A%20%20%20%20%20%20%20%20%20int%20psnOfYou%20%3D%20findKeyword%20%28statement,%20%22you%22,%200%29%3B%0A%20%20%20%20%20%20%20%20%20int%20psnOfMe%20%3D%20findKeyword%20%28statement,%20%22me%22,%20psnOfYou%20%2B%203%29%3B%0A%20%20%0A%20%20%20%20%20%20%20%20%20String%20restOfStatement%20%3D%20statement.substring%28psnOfYou%20%2B%203,%20psnOfMe%29.trim%28%29%3B%0A%20%20%20%20%20%20%20%20%20return%20%22What%20makes%20you%20think%20that%20I%20%22%20%2B%20restOfStatement%20%2B%20%22%20you%3F%22%3B%0A%20%20%20%20%20%20%7D%0A%20%0A%20%20%20%20%20%20private%20int%20findKeyword%28String%20statement,%20String%20goal,%20int%20startPos%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20String%20phrase%20%3D%20statement.trim%28%29%3B%0A%20%20%20%20%20%20%20%20%20int%20psn%20%3D%20phrase.toLowerCase%28%29.indexOf%28goal.toLowerCase%28%29,%20startPos%29%3B%0A%20%20%20%20%20%20%20%20%20while%20%28psn%20%3E%3D%200%29%20%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20String%20before%20%3D%20%22%20%22,%20after%20%3D%20%22%20%22%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28psn%20%3E%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20before%20%3D%20phrase.substring%20%28psn%20-%201,%20psn%29.toLowerCase%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28psn%20%2B%20goal.length%28%29%20%3C%20phrase.length%28%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20after%20%3D%20phrase.substring%28psn%20%2B%20goal.length%28%29,%20psn%20%2B%20goal.length%28%29%20%2B%201%29.toLowerCase%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28%28%28before.compareTo%20%28%22a%22%29%20%3C%200%20%29%20%7C%7C%20%28before.compareTo%28%22z%22%29%20%3E%200%29%29%20%20%26%26%20%28%28after.compareTo%20%28%22a%22%29%20%3C%200%20%29%20%7C%7C%20%28after.compareTo%28%22z%22%29%20%3E%200%29%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20psn%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20psn%20%3D%20phrase.indexOf%28goal.toLowerCase%28%29,%20psn%20%2B%201%29%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20return%20-1%3B%0A%20%20%20%20%20%20%7D%0A%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20private%20int%20findKeyword%28String%20statement,%20String%20goal%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20return%20findKeyword%20%28statement,%20goal,%200%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20private%20String%20getRandomResponse%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20return%20%22Interesting,%20tell%20me%20more.%22%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Magpie4%20maggie%20%3D%20new%20Magpie4%28%29%3B%0A%20%20%20%20%20%20%20%20String%20statement%20%3D%20%22I%20want%20to%20build%20a%20robot.%22%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Statement%3A%20%22%20%2B%20statement%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Response%3A%20%22%20%2B%20maggie.getResponse%28statement%29%29%3B%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D&cumulative=false&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-   
+
 
 .. This is giving a code too long error:  http://www.pythontutor.com/visualize.html#code=public+class+Magpie4%0A+++%7B%0A+++%0A++++++public+String+getGreeting(%29%0A++++++%7B%0A+++++++++return+%22Hello,+let's+talk.%22%3B%0A++++++%7D%0A+%0A++++++public+String+getResponse(String+statement%29%0A++++++%7B%0A+++++++++String+response+%3D+%22%22%3B%0A+++++++++if+(statement.length(%29+%3D%3D+0%29%0A+++++++++%7B%0A++++++++++++response+%3D+%22Say+something,+please.%22%3B%0A+++++++++%7D%0A%0A+++++++++else+if+(findKeyword(statement,+%22no%22%29+%3E%3D+0%29%0A+++++++++%7B%0A++++++++++++response+%3D+%22Why+so+negative%3F%22%3B%0A+++++++++%7D%0A+++++++++else+if+(findKeyword(statement,+%22mother%22%29+%3E%3D+0%0A++++++++++++++++++%7C%7C+findKeyword(statement,+%22father%22%29+%3E%3D+0%0A++++++++++++++++++%7C%7C+findKeyword(statement,+%22sister%22%29+%3E%3D+0%0A++++++++++++++++++%7C%7C+findKeyword(statement,+%22brother%22%29+%3E%3D+0%29%0A+++++++++%7B%0A++++++++++++response+%3D+%22Tell+me+more+about+your+family.%22%3B%0A+++++++++%7D%0A%0A+++++++++else+if+(findKeyword(statement,+%22I+want+to%22,+0%29+%3E%3D+0%29%0A+++++++++%7B%0A++++++++++++response+%3D+transformIWantToStatement(statement%29%3B%0A+++++++++%7D%0A++%0A+++++++++else+if+(findKeyword(statement,+%22I+want%22,+0%29+%3E%3D+0%29%0A+++++++++%7B%0A++++++++++++response+%3D+transformIWantStatement(statement%29%3B%0A+++++++++%7D%0A%0A+++++++++else%0A+++++++++%7B%0A++++++++++++int+psn+%3D+findKeyword(statement,+%22you%22,+0%29%3B%0A%0A++++++++++++if+(psn+%3E%3D+0%0A++++++++++++++++%26%26+findKeyword(statement,+%22me%22,+psn%29+%3E%3D+0%29%0A++++++++++++%7B%0A+++++++++++++++response+%3D+transformYouMeStatement(statement%29%3B%0A++++++++++++%7D%0A++++++++++++else%0A++++++++++++%7B%0A+++++++++++++++response+%3D+getRandomResponse(%29%3B%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++return+response%3B%0A++++++%7D%0A+%0A++++++private+String+transformIWantToStatement(String+statement%29%0A++++++%7B%0A+++++++++statement+%3D+statement.trim(%29%3B%0A+++++++++String+lastChar+%3D+statement.substring(statement%0A+++++++++++++++++++++++++++++++++++++++++++++++.length(%29+-+1%29%3B%0A+++++++++if+(lastChar.equals(%22.%22%29%29%0A+++++++++%7B%0A++++++++++++statement+%3D+statement.substring(0,+statement%0A+++++++++++++++++++++++++++++++++++++++++++++++.length(%29+-+1%29%3B%0A+++++++++%7D%0A+++++++++int+psn+%3D+findKeyword+(statement,+%22I+want+to%22,+0%29%3B%0A+++++++++String+restOfStatement+%3D+statement.substring(psn+%2B+9%29.trim(%29%3B%0A+++++++++return+%22What+would+it+mean+to+%22+%2B+restOfStatement+%2B+%22%3F%22%3B%0A++++++%7D%0A+%0A++++++private+String+transformIWantStatement(String+statement%29%0A++++++%7B%0A+++++++++//++Remove+the+final+period,+if+there+is+one%0A+++++++++statement+%3D+statement.trim(%29%3B%0A+++++++++String+lastChar+%3D+statement.substring(statement%0A+++++++++++++++++++++++++++++++++++++++++++++++.length(%29+-+1%29%3B%0A+++++++++if+(lastChar.equals(%22.%22%29%29%0A+++++++++%7B%0A++++++++++++statement+%3D+statement.substring(0,+statement%0A+++++++++++++++++++++++++++++++++++++++++++++++.length(%29+-+1%29%3B%0A+++++++++%7D%0A+++++++++int+psn+%3D+findKeyword+(statement,+%22I+want%22,+0%29%3B%0A+++++++++String+restOfStatement+%3D+statement.substring(psn+%2B+7%29%3B%0A+++++++++return+%22Would+you+really+be+happy+if+you+had+%22+%2B+restOfStatement+%2B+%22%3F%22%3B%0A++++++%7D%0A%0A++++++private+String+transformYouMeStatement(String+statement%29%0A++++++%7B%0A+++++++++statement+%3D+statement.trim(%29%3B%0A+++++++++String+lastChar+%3D+statement.substring(statement%0A+++++++++++++++++++++++++++++++++++++++++++++++.length(%29+-+1%29%3B%0A+++++++++if+(lastChar.equals(%22.%22%29%29%0A+++++++++%7B%0A++++++++++++statement+%3D+statement.substring(0,+statement%0A+++++++++++++++++++++++++++++++++++++++++++++++.length(%29+-+1%29%3B%0A+++++++++%7D%0A++%0A+++++++++int+psnOfYou+%3D+findKeyword+(statement,+%22you%22,+0%29%3B%0A+++++++++int+psnOfMe+%3D+findKeyword+(statement,+%22me%22,+psnOfYou+%2B+3%29%3B%0A++%0A+++++++++String+restOfStatement+%3D+statement.substring(psnOfYou+%2B+3,+psnOfMe%29.trim(%29%3B%0A+++++++++return+%22What+makes+you+think+that+I+%22+%2B+restOfStatement+%2B+%22+you%3F%22%3B%0A++++++%7D%0A%0A++++++%0A++++++private+int+findKeyword(String+statement,+String+goal,+int+startPos%29%0A++++++%7B%0A+++++++++String+phrase+%3D+statement.trim(%29%3B%0A+++++++++int+psn+%3D+phrase.toLowerCase(%29.indexOf(goal.toLowerCase(%29,+startPos%29%3B%0A++%0A+++++++++while+(psn+%3E%3D+0%29+%0A+++++++++%7B%0A++++++++++++String+before+%3D+%22+%22,+after+%3D+%22+%22%3B+%0A++++++++++++if+(psn+%3E+0%29%0A++++++++++++%7B%0A+++++++++++++++before+%3D+phrase.substring+(psn+-+1,+psn%29.toLowerCase(%29%3B%0A++++++++++++%7D%0A++++++++++++if+(psn+%2B+goal.length(%29+%3C+phrase.length(%29%29%0A++++++++++++%7B%0A+++++++++++++++after+%3D+phrase.substring(psn+%2B+goal.length(%29,+psn+%2B+goal.length(%29+%2B+1%29.toLowerCase(%29%3B%0A++++++++++++%7D%0A+++%0A++++++++++++if+(((before.compareTo+(%22a%22%29+%3C+0+%29+%7C%7C+(before.compareTo(%22z%22%29+%3E+0%29%29++%26%26+((after.compareTo+(%22a%22%29+%3C+0+%29+%7C%7C+(after.compareTo(%22z%22%29+%3E+0%29%29%29%0A++++++++++++%7B%0A+++++++++++++++return+psn%3B%0A++++++++++++%7D%0A+++%0A++++++++++++psn+%3D+phrase.indexOf(goal.toLowerCase(%29,+psn+%2B+1%29%3B%0A+++%0A+++++++++%7D%0A++%0A+++++++++return+-1%3B%0A++++++%7D%0A+%0A++++++%0A++++++private+int+findKeyword(String+statement,+String+goal%29%0A++++++%7B%0A+++++++++return+findKeyword+(statement,+goal,+0%29%3B%0A++++++%7D%0A%0A++++++private+String+getRandomResponse(%29%0A++++++%7B%0A+++++++++final+int+NUMBER_OF_RESPONSES+%3D+4%3B%0A+++++++++double+r+%3D+Math.random(%29%3B%0A+++++++++int+whichResponse+%3D+(int%29(r+*+NUMBER_OF_RESPONSES%29%3B%0A+++++++++String+response+%3D+%22%22%3B%0A++%0A+++++++++if+(whichResponse+%3D%3D+0%29%0A+++++++++%7B%0A++++++++++++response+%3D+%22Interesting,+tell+me+more.%22%3B%0A+++++++++%7D%0A+++++++++else+if+(whichResponse+%3D%3D+1%29%0A+++++++++%7B%0A++++++++++++response+%3D+%22Hmmm.%22%3B%0A+++++++++%7D%0A+++++++++else+if+(whichResponse+%3D%3D+2%29%0A+++++++++%7B%0A++++++++++++response+%3D+%22Do+you+really+think+so%3F%22%3B%0A+++++++++%7D%0A+++++++++else+if+(whichResponse+%3D%3D+3%29%0A+++++++++%7B%0A++++++++++++response+%3D+%22You+don't+say.%22%3B%0A+++++++++%7D%0A%0A+++++++++return+response%3B%0A++++++%7D%0A++++++%0A%09++public+static+void+main(String%5B%5D+args%29%0A%09++%7B%0A%09%09Magpie4+maggie+%3D+new+Magpie4(%29%3B%0A%09%09String+statement+%3D+%22I+want+to+build+a+robot.%22%3B%0A%09%09System.out.println(%22Statement%3A+%22+%2B+statement%29%3B%0A%09%09System.out.println(%22Response%3A+%22+%2B+maggie.getResponse(statement%29%29%3B%09%0A%09++%7D%0A%0A+++%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-   
+
 
 
 
@@ -303,7 +303,7 @@ Look at the code. See how it handles “I want to” and you/me statements.
 .. |repl.it version 4| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4" target="_blank">repl.it version 4</a>
-   
+
 
 Then add two new methods, transformIWantStatement and transformIYouStatement, and calls to each as described below. Alter the code either above in the active code window or on |repl.it version 4| or in an IDE of your choice:
 
@@ -311,12 +311,12 @@ Then add two new methods, transformIWantStatement and transformIYouStatement, an
 
   * Statement: I want fried chicken.
   * Response: Would you really be happy if you had fried chicken?
-  
+
 * In a method transformIYouStatement, have it respond to statements of the form "I something you" with the restructuring "Why do you something me?". You can use the transformYouMeStatement method as a guide. Test with the following:
 
   * Statement: I like you.
   * Response: Why do you like me?
-  
+
 Find an example of when this structure does not work well. How can you improve it?
 
 

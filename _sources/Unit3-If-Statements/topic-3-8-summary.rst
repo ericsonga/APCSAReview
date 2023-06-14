@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 3-8-
    :start: 1
-   
+
 Unit 3 - Summary
 =========================
 
@@ -48,16 +48,16 @@ Vocabulary Practice
     :match_2: used to execute code only when a Boolean condition is true|||conditional
     :match_3: an expression that is either true or false|||Boolean expression
     :match_4: an expression with two or more expressions joined together with logical ands or ors|||compound boolean expression
-    
+
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
-    
+
 .. dragndrop:: ch5_cond2
     :feedback: Review the summaries above.
     :match_1: used to execute code when at least one of two conditions is true|||logical or
     :match_2: one or more statements enclosed in a open curly brace and a close curly brace|||block(s) of statements
     :match_3: used to start a conditional and execute code if a condition is true|||if
     :match_4: used to distribute a negation on a compound boolean expression|||DeMorgan's Laws
-    
+
     Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
 
 .. |Quizlet| raw:: html
@@ -71,15 +71,15 @@ Common Mistakes
 ---------------
 
   -  Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==. 
-  
+
   - Putting a ; at the end of ``if (test);``. Remember that the if statement ends after ``if (test) statement;`` or use curly brackets ``if (test) { statements; }``.
-  
+
   -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.    
-  
+
   -  Trouble with compound boolean expressions which are two or more Boolean expressions joined by **and (&&)`` or **or (||)**.  
-  
+
   - Not understanding that `||` is an inclusive-or where one or *both* conditions must be true.
 
   -  Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.   
-  
+
   -  Not understanding short circuit evaluation which is that if evaluation of the first Boolean expression is enough to determine the truth of a complex conditional the second expression will not be evaluated.  

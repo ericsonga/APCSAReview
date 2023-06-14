@@ -8,7 +8,7 @@ Free Response - StringFormatter B
 ..	index::
 	single: trio
     single: free response
-    
+
 The following is a free response question from 2016. It was question 4 part B on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year. 
 
 This question involves the process of taking a list of words, called ``wordList``, and producing a formatted string of a specified length. 
@@ -18,7 +18,7 @@ The equal number of spaces inserted into each gap is referred to as the basic ga
 Any leftover spaces are inserted one at a time into the gaps from left to right until there are no more leftover spaces. 
 
 The following three examples illustrate these concepts. In each example, the list of words is to be placed into a formatted string of length 20. 
- 
+
 .. figure:: Figures/2016FRQ4A1.png
     :width: 700px
     :align: center
@@ -36,7 +36,7 @@ Part B
 
 Assume that ``totalLetters`` works as specified regardless of what you wrote in part (a). 
 You must use ``totalLetters`` appropriately to receive full credit.
-  
+
 Complete method ``basicGapWidth`` below.
 
 .. code-block:: java 
@@ -48,7 +48,7 @@ Complete method ``basicGapWidth`` below.
    */ 
    public static int basicGapWidth(List<String> wordList,                                  
                                     int formattedLen)
-   
+
 How to Solve Part B
 =====================
 
@@ -58,7 +58,7 @@ Click to reveal the algorithm and multiple choice questions that may help you wr
    :showtitle: Reveal Algorithm
    :hidetitle: Hide Algorithm
    :optional:
-   
+
    To calculate ``basicGapWidth`` we need to find the number of spaces left after the characters fill the ``formattedLen`` and divide that 
    by the number of gaps between words.  We can use ``totalLetters`` (written in part A) to get the total number of characters for all the strings in ``wordList``. 
    The number of gaps between words is the number of words in ``wordList`` minus 1.  The ``basicGapWidth`` is the number of spaces left divided by the number of gaps between words.  Remember that if we do an integer division any fractional part will be thrown away, which is what we want to happen in this case.
@@ -121,14 +121,14 @@ Put the Code in Order
          return numSpaces / numGaps;
       =====
       } //end method
-  
-             
-   
+
+
+
 Write the Code
 ==================
 
 
-   
+
 .. activecode:: lcfrsbasicGapWidth
    :language: java 
    :autograde: unittest      
@@ -147,7 +147,7 @@ Write the Code
                                        int formattedLen) 
        {
        }
-       
+
        public static int totalLetters(List<String> wordList)
        {
            int numLetters = 0; 
@@ -157,7 +157,7 @@ Write the Code
            }
            return numLetters;
        }
-   
+
        public static void main(String[] args)
        {
            List<String> wordList = new ArrayList<String>();
@@ -166,14 +166,14 @@ Write the Code
            wordList.add("SCI");
            wordList.add("ROCKS");
            System.out.println("Should print 2 and prints: " + basicGapWidth(wordList,20));
-            
+
            List<String>words2 = new ArrayList<String>();
            words2.add("GREEN");
            words2.add("EGGS");
            words2.add("AND");
            words2.add("HAM");
            System.out.println("Should print 1 and prints: " + basicGapWidth(words2,20));
-           
+
            List<String>words3 = new ArrayList<String>();
            words3.add("BEACH");
            words3.add("BALL");

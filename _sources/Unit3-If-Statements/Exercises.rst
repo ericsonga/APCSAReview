@@ -2,7 +2,7 @@
    :prefix: 3-12-
    :start: 1
 
-   
+
 Multiple Choice Exercises
 =================================
 
@@ -22,7 +22,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: The first condition is false and x is not equal to zero so the else will execute.  
 
    What does the following code print when x has been set to 187?
-   
+
    .. code-block:: java 
 
      if (x < 0)
@@ -37,7 +37,7 @@ These problems are easier than most of those that you will usually see on the AP
      {
          System.out.println("x is positive");
      }
-      
+
 .. mchoice:: qce_2
    :practice: T
    :answer_a: first case
@@ -47,7 +47,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_b: This will print if x is less than 3 or y is greater than 2.  
 
    What is printed when the following code executes and x equals 4 and y equals 3?   
-   
+
    .. code-block:: java 
 
      if (!(x < 3 || y > 2)) 
@@ -70,7 +70,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: This will only be true when score is less than 60.   
 
    What is the value of grade when the following code executes and score is 80?  
-   
+
    .. code-block:: java 
 
      if (score >= 90) grade = "A";
@@ -90,7 +90,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: The first condition will be false so the second one will be executed and lead to an error since you can't divide by zero.
 
    What is printed when the following code executes and x has been set to zero and y is set to 3?  
-   
+
    .. code-block:: java 
 
      if (x > 0 || (y / x) == 3) 
@@ -120,7 +120,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: This would be equivalent to !(c && d)
 
    Which of the following expressions is equivalent to !(c || d) ?  
-   
+
 .. mchoice:: qcm_2
    :practice: T
    :answer_a: x = 0;
@@ -134,7 +134,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_d: In the original what happens if x is less than 2?  Does this give the same result?
 
    Which of the following is equivalent to the code segment below?  
-   
+
    .. code-block:: java
 
      if (x > 2) 
@@ -157,7 +157,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x.
 
    Which of the following is equivalent to the code segment below?  
-   
+
    .. code-block:: java
 
      if (x > 0) 
@@ -180,7 +180,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.
 
    At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 is a B, 75 to 83 is a C, and below 75 is an F. Which of the following code segments will assign the correct string to grade for a given integer score?
-   
+
    .. code-block:: java
 
      I.   if (score >= 93)
@@ -210,14 +210,14 @@ These problems are similar to those you will see on the AP CS A exam.
           else
              grade = "F";
 
-   
+
 Hard Multiple Choice Questions
 ----------------------------------
 
 These problems are harder than most of those that you will usually see on the AP CS A exam.
 
 
-    
+
 .. .. mchoice:: qch_2
    :practice: T
    :answer_a: s == (m - 5) && (2 * s + 3) == (m + 3)
@@ -233,7 +233,7 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_e: s == m + 5 && s + 3 == 2 * m + 6 is correct
 
    Susan is 5 years older than Matt. Three years from now Susan's age will be twice Matt's age. What should be in place of the following condition to solve this problem?
-   
+
    .. code-block:: java
 
      for (int s = 1; s <=100; s++) {
@@ -256,11 +256,11 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_d: This is the negation of the original statement, thus returning incorrect values.
 
    Assuming that x and y have been declared as valid integer values, which of the following is equivalent to this statement?
-   
+
    .. code-block:: java
 
      (x > 15 && x < 18) || (x > 10 || y < 20)
-     
+
 .. mchoice:: qch_4
    :practice: T
    :answer_a: first
@@ -274,11 +274,11 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_c: Are you sure about the "second"?  This only prints if y is less than 3, and while it was originally, it changes.
    :feedback_d: The first will print since x will be greater than 2 and the second won't print since y is equal to 3 and not less than it.  The third will always print.
    :feedback_e: This will print, but so will something else.
-   
+
    What would the following print?  
-   
+
    .. code-block:: java
-   
+
       int x = 3;
       int y = 2;
       if (x > 2) 
@@ -290,7 +290,7 @@ These problems are harder than most of those that you will usually see on the AP
       if (y < 3) 
          System.out.print("second ");
       System.out.print("third");
-   
+
 .. mchoice:: qch_5
    :practice: T
    :answer_a: first 
@@ -302,18 +302,18 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_b: The first will not print because integer division will mean that y / x is 0.  The second will print since it is not in the body of the if (it would be if there were curly braces around it).  
    :feedback_c: Do you see any curly braces?  Indention does not matter in Java. 
    :feedback_d: This would be true if there were curly braces around the two indented statements.  Indention does not matter in Java.  If you don't have curly braces then only the first statement following an if is executed if the condition is true.
-   
+
    What would the following print?  
-   
+
    .. code-block:: java
-   
+
       int x = 3;
       int y = 2;
       if (y / x > 0) 
          System.out.print("first ");
          System.out.print("second ");
-   
-   
+
+
 The Mark Complete button and green check mark are intentionally not included in the Exercises.html pages because these pages may be used for many quiz-bank exercises.   
 
 

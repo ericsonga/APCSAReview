@@ -1,32 +1,32 @@
 .. qnum::
    :prefix: 13-2-
    :start: 1
-   
+
 .. |start| image:: Figures/start.png
     :height: 24px
     :align: top
     :alt: start
-    
+
 .. |next| image:: Figures/next.png
     :height: 24px
     :align: top
     :alt: next
-    
+
 .. |prev| image:: Figures/prev.png
     :height: 24px
     :align: top
     :alt: previous
-    
+
 .. |pause| image:: Figures/pause.png
     :height: 24px
     :align: top
     :alt: pause
-    
+
 .. |finish| image:: Figures/finishExam.png
     :height: 24px
     :align: top
     :alt: finish exam
-   
+
 Practice Exam 2 for the AP CS A Exam
 -------------------------------------
 
@@ -36,7 +36,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
 .. timed:: practiceexam2
     :timelimit: 45
-    
+
     .. mchoice:: pe3_1
        :answer_a: 10
        :answer_b: 15
@@ -51,11 +51,11 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: This would be true if it was adding up all the values in the first row, but the row changes each time through the for loop.
 
        What is the value of total after the following code executes?
-       
+
        .. code-block:: java
 
            int[][] matrix = { {4, 5, 6, 7}, {0, 1, 2, 3}, {3, 2, 1, 0}, {8, 9, 1, 2}}; 
-	       
+
            int total = 0;
            for (int row = 0; row < matrix.length; row++)
            {
@@ -76,9 +76,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: This would be true if the call was mystery(3) instead of mystery(4).  Then it would move the first 3 values in the list to the end of the list.
 
        Assume that list has been initialized with the following Integer objects: [9, 3, 17, 2, 16, 4, 1].  Which of the following shows the values in list after a call of mystery(4)?
-       
+
        .. code-block:: java
-       
+
           private List list<Integer>;
           public void mystery(int n)
           {
@@ -104,16 +104,16 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: Overloading is when a class has two methods with the same name but the parameter lists are different.  It is not a type of relationship between classes.
 
        Given the following two class declarations, what is the relationship between Dog and DogOwner? 
-       
+
        .. code-block:: java
-       
+
           public class Dog {
              private String name;
- 
+
              public void setName(String n) {
                 name = n;
              }
- 
+
              public String getName() {
                 return name;
              }
@@ -123,7 +123,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              private String name;
              private Dog[] dogs;
           } 
-          
+
     .. mchoice:: pe3_5
        :answer_a: return 9 * y;
        :answer_b: return 7 * y;
@@ -138,16 +138,16 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: Remember that 2 * y + y is the same as 3 * y.
 
        Which of the following expressions can be use to replace the body of mystery so that mystery will return the same result for all values of y?
-       
+
        .. code-block:: java
-       
+
           public static int mystery(int y)
           {
              y = 2 * y + y;
              y = 2 * y + y;
              return y;
           }
-	      
+
     .. mchoice:: pe3_6
        :answer_a: test();
        :answer_b: super.super.test();
@@ -162,7 +162,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: You can use super to force the runtime to run a method in a parent class, but there is no way to force a call to a method in a grandparent (parent of your parent) class.
 
        Class C extends class B, which extends class A. Also, all of the three classes implement a public method test(). How can a method in an object of class C invoke the test() method defined in class A (without creating a new instance of class A)?
-	      
+
     .. mchoice:: pe3_7
        :answer_a: v.test(sporty,v);
        :answer_b: sporty.test(c,c);
@@ -177,19 +177,19 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: The test method takes a Car object and a SportsCar object.  Only this answer correctly passes a SportsCar object as the second parameter.  You can use a SportsCar object as a Car object since it is a subclass of Car.  The test method can be called on any child of Vehicle.
 
        Which of the following is a correct call to test?
-       
+
        .. code-block:: java
-       
+
           public class Vehicle {
              public void test(Car x, SportsCar y) {}
           }
-      
+
           public class Car extends Vehicle {
           }
 
           public class SportsCar extends Car {
           }
-	      
+
           public class VechicleTest
           {
              public static void main(String[] args)
@@ -200,7 +200,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              }
           }
 
-	      
+
     .. mchoice:: pe3_8
        :answer_a: 8
        :answer_b: 1
@@ -215,16 +215,16 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: This would be true if the call was recur(3).  This would return recur(2) + recur(1).  The call to recur(1) would return 1.  The call to recur(2) would return recur(1) + recur(0).  Both recur(1) and recur(0) would return 1 so recur(2) would return 1 + 1 = 2. Thus recur(3) would return 2 + 1 = 3.  
 
        Given the following method declaration. What value is returned from recur(5)?
-       
+
        .. code-block:: java
-       
+
           public static int recur(int n) 
           {
              if (n <= 1) return 1;
              else return (recur(n-1) + recur(n-2));
           }
 
-	      
+
     .. mchoice:: pe3_9
        :answer_a: 1 3 5 7 9 11 13 15 17 19
        :answer_b: 0 2 4 6 8 10 12 14 16 18
@@ -239,9 +239,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: The loop will stop when k has the value of 20.  So it won't print a 20. 
 
        What is printed when the following code is run?
-       
+
        .. code-block:: java
-       
+
           for (int k = 0; k < 20; k = k + 1)
           {
              if (k % 2 == 0)
@@ -262,9 +262,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: This would be true if all of the sets were adds.  
 
        What is printed when the following code executes (runs)?
-       
+
        .. code-block:: java
-       
+
           List<String> list = new ArrayList<String>();
           list.add("a");
           list.add("b");
@@ -273,7 +273,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           list.set(2, "e");
           list.add("g");
           System.out.println(list);
-  
+
     .. mchoice:: pe3_11
        :answer_a: pm1pm2cm2cm1
        :answer_b: pm1pm2
@@ -288,15 +288,15 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: This would be true if the m1 method in Parent didn't call m2() and the p was actually an object of the Parent class.
 
        Assume that Parent p = new Child(); appears in a client program.  What is the result of the call p.m1()?
-       
+
        .. code-block:: java
-       
+
           public class Parent {
              public void m1() {
                System.out.print("pm1");
                m2();
              }
-          
+
              public void m2() {
                 System.out.print("pm2");
              }
@@ -314,7 +314,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                 System.out.print("cm2");
              }
           }
-	      
+
     .. mchoice:: pe3_12
        :answer_a: I only
        :answer_b: II only
@@ -329,9 +329,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: Does Animal have a growl method? Remember that the compiler checks for the method using the declared type.
 
        Assume the following classes.
-       
+
        .. code-block:: java
-       
+
           public class Animal {
              // constructors not shown
              public void eat() 
@@ -353,7 +353,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           I.	b.eat();
           II.	b.growl;
           III.	((Bear) b).growl();
-          
+
     .. mchoice:: pe3_13
        :answer_a: Mirrors the values from the top half to the bottom half of the 2D array
        :answer_b: Mirrors the values from the left halt to the right half of the 2D array
@@ -368,9 +368,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: How can this be true since p[row][col] = p[height - row - 1][col]?
 
        Which of the following best explains what the method m does?
-       
+
        .. code-block:: java
-       
+
           public void m(int[][]p)
           {
              int height = p.length;
@@ -397,9 +397,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: How does the 3 get printed first?  Remember that x % 10 returns the right most digit in x.
 
        What is the output from mystery(4321) when mystery is defined as follows?
-       
+
        .. code-block:: java
-       
+
           //precondition: x >=0
           public static void mystery (int x) {
              System.out.print(x % 10); 
@@ -424,7 +424,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: You can't extend two classes in Java so this can't be right.
 
        A classroom is a room and a building has many rooms. If the three classes Room, Classroom, and Building create objects that have the same relationship which of the following is the most appropriate set of declarations?
-	      
+
     .. mchoice:: pe3_16
        :answer_a: Whenever the first element in a is equal to val 
        :answer_b: Whenever a contains any element which equals val. 
@@ -439,9 +439,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: This could be one line of code return (a[a.length-1] == val).  
 
        Given the following code which of the answers best describes the conditions needed for temp to be true when it is returned?
-       
+
        .. code-block:: java
-       
+
           boolean temp = false; 
           int count = 0;
           for ( int testVal : a)
@@ -451,7 +451,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           temp = count > 1;
           return temp; 
 
-	      
+
     .. mchoice:: pe3_17
        :answer_a: 1 1 1 2 2 1 2 2 3 1 3 2 4 1 4 2 5 1 5 2
        :answer_b: 1 2 2 4 3 6 4 8 
@@ -466,15 +466,15 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: This prints j * k and for each value of j from 1 to 5, k changes from 1 to 2.  So when j is 1 it will print 1 2.  When j is 2 it will print 2 4.  When j is 3 it will print 3 6.  When j is 4 it will print 4 8.  When j is 5 it will print 5 10. 
 
        What is the output from the following code segment?
-       
+
        .. code-block:: java
-       
+
           for (int j = 1; j <=5; j++) {
              for (int k = 1; k < 3; k++) 
                 System.out.print(j * k + " "); 
           } 
 
-	      
+
     .. mchoice:: pe3_18
        :answer_a: method1 and method3
        :answer_b: method1 only
@@ -489,9 +489,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: Two will work, but one will not.
 
        Consider the following methods. Which of method1, method2, and method3 would give the same result as sample?
-       
+
        .. code-block:: java
-       
+
           public void sample(int num1, int num2) {
              int result = 99;
              if (num1==num2) {result = 0;} 
@@ -499,7 +499,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              else {result = -1;}
              System.out.println(result);
           }
-          
+
           public void method1(int num1, int num2) {
              int result=99;
 	         if (num1 == num2) {result = 0;}
@@ -541,9 +541,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: How could it print 1 for the value of t when t is set to 13 initially?
 
        What are the first and last values output by the following code segment?
-       
+
        .. code-block:: java
-       
+
           int t = 13;
           while (t < 29)
           {
@@ -551,7 +551,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
              t++;
           }
 
-	      
+
     .. mchoice:: pe3_20
        :answer_a: I and III 
        :answer_b: All are true
@@ -566,23 +566,23 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_e: These are both true, but one more is also true.
 
        Given the following code.
-       
+
        .. code-block:: java
-       
+
           String s1 = new String("hi");
           String s2 = new String("hi");
           String s3 = s2;
-          
+
           Which of the following would return true:
           I.  s1.equals(s2)
           II. s1 == s2
           III. s2.equals(s3);
           IV. s2 == s3;
-          
 
-	      
-	      
-	      
-	      
-	      
-	    
+
+
+
+
+
+
+

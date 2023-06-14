@@ -7,14 +7,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -23,13 +23,13 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Polymorphism
 =============
 
 ..	index::
     single: polymorphism
-    
+
 **Polymorphism** is a big word that you can break down into "poly" which means many and "morphism" which means form.  So, it just means many forms.  In Java it means that the method that gets called at **run-time** (when the code is run) depends on the *type* of the object at run-time.  
 
 This is simliar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal. 
@@ -41,7 +41,7 @@ This is simliar to a toddler toy that has pictures of animals and when a handle 
 
     Figure 1: A see n say toy
 
-   
+
 If you were simulating this toy in software you could create an Animal class that had a makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
 
 ..	index::
@@ -56,21 +56,21 @@ If you were simulating this toy in software you could create an Animal class tha
 .. note::
 
    In Java an object variable has both a **declared (compile-time) type** and an **actual (run-time) type**.  The *declared (compile-time) type*  of a variable is the type that is used in the declaration.  The *actual (run-time) type* is the class that actually creates the object using new.  
-   
+
 The variable ``nameList`` declared below has a **declared type** of ``List`` and an **actual** or **run-time type** of ``ArrayList``.  The complier will check if the declared type has the methods or inherits the methods being used in the code and give an error if it doesn't find the method(s).  The List interface does have an ``add`` method so this code will compile.  At run-time the execution environment will first look for the ``add`` method in the ``ArrayList`` class since that is the actual or run-time type. If it doesn't find it there it will look in the parent class and keep looking up the inheritance tree until it finds the method. It may go up all the way to the Object class.  The method will be found, since otherwise the code would not have compiled.
 
 .. code-block:: java 
 
   List<String> nameList = new ArrayList<String>(); 
   nameList.add("Hi");
-  
+
 The variable ``message`` declared below has a **declared type** of ``Object`` and an **actual** or **run-time type** of ``String``.  Since the declared type of ``message`` is ``Object`` the code ``message.indexOf("h");`` will cause a compiler error since the ``Object`` class does not have an ``indexOf`` method.
-  
+
 .. code-block:: java 
 
   Object message = new String("hi");
   message.indexOf("h"); // ERROR!! Objects don't have indexOf!
-  
+
 .. .. note::
 
    Any object variable can refer to an object of the declared type or *any descendant (subclass) of the declared type* at run-time. The class ``String`` inherits from the class ``Object`` so an ``Object`` variable can hold a reference to a ``String`` object.  But, you can only call methods that are available in the ``Object`` class unless you cast it back to the ``String`` class.
@@ -102,14 +102,14 @@ In all of these cases, there are no errors at compile-time because the compiler 
    :feedback_e: The Circle class does override the what method so this can't be right.  
 
    What is the output from running the main method in the Shape class?
-   
+
    .. code-block:: java 
-   
+
       public class Shape {
          public void what() { System.out.print("Shape ");}
-         
+
          public static void main(String[] args) {
-         
+
             Shape[] shapes = {new Shape(), new Rectangle(), new Square(), 
                               new Circle()};
             for (Shape s : shapes)
@@ -127,7 +127,7 @@ In all of these cases, there are no errors at compile-time because the compiler 
 
       class Square extends Rectangle {
       }
-      
+
       class Oval extends Shape {
          public void what() { System.out.print("Oval "); }
       }
@@ -135,9 +135,9 @@ In all of these cases, there are no errors at compile-time because the compiler 
       class Circle extends Oval {
          public void what() { System.out.print("Circle ");}
       }
-      
+
 You can step through this code using the Java Visualizer by clicking on the following link `Shape Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Shape+%22)%3B%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++++++%0A++++++Shape%5B%5D+shapes+%3D+%7Bnew+Shape(),+new+Rectangle(),+new+Square(),+%0A++++++++++++++++++++++++++++++new+Circle()%7D%3B%0A++++++for+(Shape+s+%3A+shapes)%0A++++++%7B%0A+++++++++s.what()%3B%0A+++++++++System.out.print(%22+%22)%3B%0A++++++%7D%0A+++%7D%0A%0A%7D+%0A%0Aclass+Rectangle+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Rectangle+%22)%3B+%7D%0A%7D%0A%0Aclass+Square+extends+Rectangle+%7B%0A%7D%0A++++++%0Aclass+Oval+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Oval+%22)%3B+%7D%0A%7D%0A%0Aclass+Circle+extends+Oval+%7B%0A+++public+void+what()+%7B+System.out.print(%22Circle+%22)%3B%7D%0A%7D%0A%0A&mode=display&curInstr=38>`_.
-      
+
 
 .. mchoice:: qoo_11
    :practice: T
@@ -152,19 +152,19 @@ You can step through this code using the Java Visualizer by clicking on the foll
    :feedback_d: There is no problem at run-time. 
 
    What is the output from running the main method in the Student class?
-   
+
    .. code-block:: java 
-   
+
       public class Student {
-      
+
          public String getFood() {
             return "Pizza";
          }
-         
+
          public String getInfo()  { 
            return this.getFood(); 
          }
-         
+
          public static void main(String[] args)
          {
            Student s1 = new GradStudent();
@@ -173,16 +173,16 @@ You can step through this code using the Java Visualizer by clicking on the foll
       }
 
       class GradStudent extends Student {
-      
+
         public String getFood() {
            return "Taco";
         }
-        
+
       }
-      
+
 You can step through this code using the Java Visualizer by clicking on the following link `Student Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A+++%0A+++public+String+getInfo()++%7B+%0A++++++return+this.getFood()%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Student+s1+%3D+new+GradStudent()%3B%0A++++++System.out.println(s1.getInfo())%3B%0A+++%7D%0A%7D%0A%0Aclass+GradStudent+extends+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Taco%22%3B%0A+++%7D%0A++++++++%0A+++%0A%7D%0A&mode=display&curInstr=10>`_.
- 
- 
+
+
 .. mchoice:: qoo_12
    :practice: T
    :answer_a: 5 6 10 11
@@ -196,9 +196,9 @@ You can step through this code using the Java Visualizer by clicking on the foll
    :feedback_d: RaceCar inherits from the Car class so all the public object methods in Car can be accessed by any object of the RaceCar class.
 
    What is the output from running the main method in the Car class?
-   
+
    .. code-block:: java
-   
+
       public class Car
       {
         private int fuel;
@@ -208,7 +208,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
 
         public void addFuel() { fuel++; }
         public void display() { System.out.print(fuel + " "); }
-        
+
         public static void main(String[] args)
         {
            Car car = new Car(5);
@@ -220,16 +220,16 @@ You can step through this code using the Java Visualizer by clicking on the foll
            fastCar.addFuel();
            fastCar.display();
         }
-        
+
       }
 
       class RaceCar extends Car
       {
         public RaceCar(int g) { super(2*g); }
       } 
-      
+
 You can step through the code using the Java Visualizer by clicking on the following link: `Car Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&mode=display&curInstr=0>`_.
-      
+
 .. mchoice:: qoo_13
    :practice: T
    :answer_a: b.getISBN();
@@ -241,16 +241,16 @@ You can step through the code using the Java Visualizer by clicking on the follo
    :feedback_c: Casting to Dictionary means that the compiler will check the Dictionary class for the getDefinition method.
 
    Given the following class definitions and a declaration of Book b = new Dictionary which of the following will cause a compile-time error?
-   
+
    .. code-block:: java 
-   
+
       public class Book
       {
          public String getISBN() 
          {
             // implementation not shown
          }
-   
+
          // constructors, fields, and other methods not shown
       }
 
@@ -261,7 +261,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
             // implementation not shown
          }
       } 
-      
+
 
 
 |Groupwork| Programming Challenge : Shopping Cart 2
@@ -270,7 +270,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
 .. |repl.it link| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
-   
+
 .. image:: Figures/shoppingcart.png
     :width: 100
     :align: left
@@ -292,7 +292,7 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
 .. activecode:: challenge-9-6-shopping2
   :language: java   
   :autograde: unittest
-  
+
   Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceof to test items to see if they are a DiscountedItem.
   ~~~~
   import java.util.*;
@@ -320,7 +320,7 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
     {
         // Copy your code from the last lesson's challenge here!
     }
-    
+
     // Add a method called countDiscountedItems()
     class ShoppingCart 
     {
@@ -466,8 +466,8 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
 
             }
         }
-    
-    
+
+
 Summary
 ----------
 

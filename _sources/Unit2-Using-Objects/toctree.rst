@@ -1,7 +1,7 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 
 Using Objects
 :::::::::::::::::::::
@@ -32,7 +32,7 @@ AP CS A Exam Weighting: 5-7.5%
    practice-test-objects.rst
    Exercises.rst
    JavaSwingGUIs.rst
-   
+
 .. Old TOC
     whatIsJava.rst
    introClassObject.rst

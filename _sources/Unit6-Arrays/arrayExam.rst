@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 6-10-
    :start: 1
-   
+
 Practice Exam for Arrays
 -------------------------
 
@@ -27,7 +27,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
       What is the value of ``i`` after the following code has executed?
 
-   
+
       .. code-block:: java
 
         int[] x = {2, 1, 4, 5, 7};
@@ -54,7 +54,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_d: The very first time through the loop the values at the two indicies are equal and count is incremented.  
 
       What is the value of ``count`` after the following code has executed?
-   
+
       .. code-block:: java
 
         int[] x1 = {1, 2, 4, 7};
@@ -93,9 +93,9 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_c: This changes b[x[i]] to true and then counts the number of true in b.  Since x only has 3 distinct values in it the answer will be 3.  
       :feedback_d: This would be true if there were 4 distinct values in x.  
       :feedback_e: This would be true if it was ``b[i] = true`` instead of ``b[x[i]] = true``.
-      
+
       What is the value of ``count`` after the following code has executed?
-   
+
       .. code-block:: java
 
         int [] x = {1, 2, 3, 3, 3};
@@ -126,7 +126,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_e: This code only increments i2 when a match is found, which means that the 2 at position 2 in x1 matches both 2's in x2. 
 
       What is the value of ``count`` after the following code has executed? 
-   
+
       .. code-block:: java
 
         int[ ] x1 = {0, 1, 2, 3};
@@ -151,7 +151,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
               i2++;
            }
         }
-     
+
    .. mchoice:: arrayEx5
       :practice: T
       :answer_a: {3,2,2,0}
@@ -165,11 +165,11 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_c: This would be true if the code simply reversed the values in the array, but what happens when x[j] = 2 * temp?
       :feedback_d: This would be true if the code just multiplied all the original values by 2.  Is that what it does?  Why would you need to use temp for that?
       :feedback_e: This would be true if the code multiplied the original values by 2 and reversed the values.  Is that what it does?  The loop only continues while i is less than j, so it doesn't loop through all the values in x.
-      
+
       After the following code is executed which of the following are the values in ``x``?
-      
+
       .. code-block:: java
-   
+
          int[ ] x = {0, 1, 2, 3};
          int temp;
          int i = 0;
@@ -182,7 +182,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             i++;
             j--;
          }
-   
+
    .. mchoice:: arrayEx6
       :practice: T
       :answer_a: A
@@ -198,14 +198,14 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_e: This returns as soon as it finds a value that is out of order, but returns true instead of false.
 
       Which of the following is the missing code from the method ``isSorted`` so that it correctly checks that all elements in ``x`` are sorted in ascending order?
-   
+
       .. code-block:: java
-   
+
          public static boolean isSorted(int[] x)
          {
             //missing code goes here
          }
-          
+
 
         A. 
         boolean b = true;
@@ -217,7 +217,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
               b = true;
         }
         return b;
-        
+
         B.
         for (int i=0; i < x.length - 1; i++)
         {
@@ -225,7 +225,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
               return false;
         }
         return true;
-        
+
         C.
         boolean b = false;
         for (int i=0; i<x.length - 1; i++)
@@ -234,7 +234,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
               b = false;
         }
         return b;
-        
+
         D.  
         boolean b = false;
         for (int i=0;i<x.length - 1;i++)
@@ -243,7 +243,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
               b = true;
         }
         return b;
-        
+
         E.
         for (int i=0;i<x.length - 1;i++)
         {
@@ -251,7 +251,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
               return true;
         }
         return false;
-        
+
 
    .. mchoice:: arrayEx7
       :answer_a: 0
@@ -267,9 +267,9 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_e: This would be true if it was <code>sum <= limit</code>.  
 
       What is the value of ``i`` after the following code executes?  
-   
+
       .. code-block:: java
-   
+
          int[] x = {2, 1, 4, 5, 7};
          int limit = 7;
          int i = 0;
@@ -279,7 +279,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             sum += x[i];
             i++;
          }
-    
+
    .. mchoice:: arrayEx8
       :practice: T
       :answer_a: <code>for (int j=0 ; j < x.length; j++)</code>
@@ -291,9 +291,9 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_b: The inner loop should start at the outer loop current position plus one to not double count inversions.
       :feedback_c: This correctly starts at the outer loop current index plus one and loops through the rest of the array.
       :feedback_d: This misses checking the last value in the array since it is <code>j < x.length-1</code>.  
-    
+
       If any two numbers in an array of integers, not necessarily consecutive numbers in the array, are out of order (i.e. the number that occurs first in the array is larger than the number that occurs second), then that is called an inversion. For example, consider an array “x” that has the values {1, 4, 3, 2}.  Then there are three inversions since 4 is greater than both 3 and 2 and 3 is greater than 2.  Which of the following can be used to replace the missing code so that the code correctly counts the number of inversions?
-   
+
       .. code-block:: java
 
 
@@ -306,8 +306,8 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
                   inversionCount++;
             }
          }
-            
-      
+
+
    .. mchoice:: arrayEx9
       :practice: T
       :answer_a: A
@@ -321,9 +321,9 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_d: This increments a2 before copying the value into array2 and so puts it in the wrong place. 
 
       Which of the following correctly copies all the even numbers from ``array1`` to ``array2`` in the same order as they are in ``array1`` without any errors?  Assume that ``array2`` is large enough for all the copied values.  
-   
+
       .. code-block:: java
-      
+
          A. 
          int a2 = 0;
          for (int a1=0 ; a1 < array1.length ; a1++)
@@ -337,7 +337,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
                array2[a2] = array1[a1];
             }
          }
-         
+
          B. 
          int a2 = 0;
          for (int a1=0 ; a1 < array1.length ; a1++)
@@ -351,7 +351,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
                a2++;
             }
          }
-         
+
          C. 
          int a2 = 0;
          for ( int a1=0 ; a1 <= array1.length ; a1++)
@@ -365,7 +365,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
                a2++;
             }
          }
-         
+
          D. 
          int a2 = 0;
          for (int a1=0 ; a1 <= array1.length ; a1++)
@@ -380,7 +380,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
             }
          }
 
-          
+
    .. mchoice:: arrayEx10
       :practice: T
       :answer_a: {4, 3, 0, 0}
@@ -394,9 +394,9 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_d: This would be true if we were asking for the values in array1.  
 
       After the following code executes what are the values in ``array2``?
-   
+
       .. code-block:: java
-   
+
          int[] array1 = {2, 4, 1, 3};
          int[] array2 = {0, 0, 0, 0};
          int a2 = 0;
@@ -408,5 +408,5 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
                a2++;
             }
          }
-         
-  
+
+

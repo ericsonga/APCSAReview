@@ -190,13 +190,13 @@ Try and Solve Part A
        }
 
        public static void main(String[] args){
-       
+
            Sound s = new Sound();
            System.out.println("The original array is: " + Arrays.toString(s.samples));
            System.out.println("limitAmplitude(2000) should return 5 " +
                               "and returned " + s.limitAmplitude(2000));
            System.out.println("The changed array is: " + Arrays.toString(s.samples));
-    
+
        }
    }
    ====

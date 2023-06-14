@@ -11,7 +11,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write a loop that traverses the array arr from 0 to less than the length of the array. In the loop, double each element in the array arr and print out each new value on the same line separated by ", ". The finished code should print "2, 4, 6, 8, 10, ".
         ~~~~
         public class Test1 
@@ -60,7 +60,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write a for loop that fills an array with elements that count up from 0 to 50 by 5 (0 5 10 15 20 … 50) and prints out each element on a separate line.
         ~~~~
         public class Test1 
@@ -109,7 +109,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write an enhanced for each loop to traverse the array and print out an element if it is even. 
         ~~~~
         public class Test1 
@@ -156,7 +156,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the method to return the smallest integer in an array arr given as the parameter.  
         ~~~~
         import java.util.Arrays;
@@ -236,7 +236,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the method to return the average of the elements in an array arr given as the parameter. The method should return the average.
         ~~~~
         import java.util.Arrays;
@@ -315,7 +315,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the method to return the largest integer in an array arr given as the parameter.
         ~~~~
         import java.util.Arrays;
@@ -391,7 +391,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the method that given an array as a parameter, returns the elements "right shifted" by one – so ``{6, 2, 5, 3}`` returns ``{3, 6, 2, 5}``.
         ~~~~
         import java.util.Arrays;
@@ -474,7 +474,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the method to return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) – so ``{1,2,3,4}`` should return ``{2,3}``. 
         ~~~~
         import java.util.Arrays;
@@ -554,7 +554,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the method that should return string array that is in reverse order – so ``{"b", "a", "z"}`` should return ``{"z", "a", "b"}``. 
         ~~~~
         import java.util.Arrays;
@@ -635,7 +635,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the method so that it copies the first half of an array given as an argument to the method into a result array which is returned.
         ~~~~
         import java.util.Arrays;
@@ -710,4 +710,4 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
- 
+

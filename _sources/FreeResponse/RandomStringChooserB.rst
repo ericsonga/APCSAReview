@@ -73,7 +73,7 @@ The code below has a main method for testing.  Write the constructor for the ``R
 
    import java.util.List;
    import java.util.ArrayList;
-   
+
    public class RandomStringChooser
    {
        /* field */
@@ -116,8 +116,8 @@ The code below has a main method for testing.  Write the constructor for the ``R
 
    // Copy in your RandomStringChoose class from the last lesson.
    // Do not include public.
-   
-   
+
+
    public class RandomLetterChooser extends RandomStringChooser
    {
        /** Constructs a random letter chooser using the given string str.
@@ -126,8 +126,8 @@ The code below has a main method for testing.  Write the constructor for the ``R
        public RandomLetterChooser (String str)
        {
          /** write the constructor here **/
-         
-         
+
+
        }
 
        /** Returns an array of single-letter strings.

@@ -6,21 +6,21 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Why Programming? Why Java?
 ============================
 
@@ -32,8 +32,8 @@ Why Programming? Why Java?
 	pair: programming; language
 	pair: Java; source file
 	pair: Java; class file
-    
-    
+
+
 
 
 What do Android phones, Minecraft, and Netflix have in common? They're all programmed in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you've used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a **programming language** that is used worldwide to create software that we all use.
@@ -50,8 +50,8 @@ The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces 
     :height: 20px
     :align: top
     :alt: run button
-    
-    
+
+
 First Java Program
 -------------------
 
@@ -63,7 +63,7 @@ First Java Program
 	pair: class; constructor
 	pair: class; method
 	pair: class; main method
-	
+
 Every program in Java is written as a **class**. Java is an **object-oriented language** and we'll learn more about classes and objects in Unit 2. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
 
 .. code-block:: java 
@@ -75,13 +75,13 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
          // Put your code here!
       }
    }
-   
+
 .. note::
 
    In Java every open curly brace ``{`` must have a matched close curly brace ``}``.  These are used to start and end class definitions and method definitions.       
 
 |CodingEx| **Coding Exercise**: Click on the |runbutton| button below to have the computer execute the ``main`` method in the following class. Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.
- 
+
 .. activecode:: lcfc1
    :language: java
    :autograde: unittest    
@@ -95,7 +95,7 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
           System.out.println("Hi there!");
       }
    }
-     
+
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
@@ -119,7 +119,7 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
 You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name. 
 
 
-   
+
 Print Commands
 -------------------
 
@@ -150,7 +150,7 @@ Java has two different print commands to print output to the screen:
           System.out.print("!");
       }
    }
-        
+
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
@@ -183,7 +183,7 @@ Java has two different print commands to print output to the screen:
            assertTrue(passed);
         }
    }
-   
+
 Most command keywords in Java must be in lowercase, but class names such as System and String are capitalized. Commands in Java must end with a semicolon (;). Think of the semicolon (;) in Java like a period (.) in English. You use a semicolon (``;``) to show the end of a Java **statement**, just the way you use a period (.) to show the end of an English sentence.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
 
 Syntax Errors and Debugging
@@ -194,12 +194,12 @@ Computers don't actually speak Java so we have to **compile** (translate) Java s
 .. |Grace Hopper| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>
-   
+
 .. |Rubber duck debugging| raw:: html
 
    <a href="https://rubberduckdebugging.com/" target="_blank">Rubber duck debugging</a>
-   
-   
+
+
 **Syntax errors** are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon ``;`` missing or if the code has a open curly brace ``{`` or open quote ``"``, but no close curly brace ``}`` or close quote ``"``. Informally, a syntax error is called a **bug**, and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
 
 .. figure:: Figures/firstbug.jpg
@@ -218,10 +218,10 @@ Watch the following video to see that all coders get bugs. Debugging is a normal
     :width: 700
     :height: 400
     :align: center
-    
+
 Let's practice debugging some code! 
 
-   
+
 |Exercise| **Check Your Understanding: Mixed up programs**
 
 
@@ -243,7 +243,7 @@ Let's practice debugging some code!
       }
       =====
    }
-   
+
 .. parsonsprob:: fourthClass
    :numbered: left
    :adaptive:
@@ -270,7 +270,7 @@ Let's practice debugging some code!
       }
       =====
    }
-    
+
 
 |CodingEx| **Coding Exercise: Compile Time Error 1**
 
@@ -292,7 +292,7 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
           System.out.println("Hi there!);
       }
    }
-           
+
    ====
    import static org.junit.Assert.*;
    import org.junit.*;;
@@ -311,7 +311,7 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
    }
 
 
-    
+
 |CodingEx| **Coding Exercise: Compile Time Error 2**
 
 
@@ -331,7 +331,7 @@ Click on the |runbutton| button below to try and run the following code.  Look f
           System.out.println("Hi there!";
       }
    }
-           
+
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
@@ -350,8 +350,8 @@ Click on the |runbutton| button below to try and run the following code.  Look f
         }
    }
 
-    
-    
+
+
 |CodingEx| **Coding Exercise: Compile Time Error 3**
 
 Click on the |runbutton| button below to try and run the following code.  What is wrong this time?  Can you fix it?  After you fix the first error, you may encounter a 2nd error! Fix that one too! Hints: How do you end a command in Java? Also, check for capitalization. 
@@ -370,7 +370,7 @@ Click on the |runbutton| button below to try and run the following code.  What i
           system.out.println("Hi there!")
       }
    }
-           
+
    ====
    // should pass if/when they run code
    // This doesn't really work because it filters out the \n
@@ -392,8 +392,8 @@ Click on the |runbutton| button below to try and run the following code.  What i
 
 
 Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon? 
-   
-   
+
+
 Comments
 --------
 
@@ -405,9 +405,9 @@ In Java and many text-based coding languages, // is used to mark the beginning o
        Programmer: My Name
        Date: 
     */   
-    
+
     int max = 10; // this keeps track of the max score
-    
+
 
 |Groupwork| Debugging Challenge
 -----------------------------------
@@ -416,7 +416,7 @@ In Java and many text-based coding languages, // is used to mark the beginning o
     :width: 150
     :align: left
     :alt: Rubber Duck
-    
+
 In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
 
 Working in pairs, debug the following code. Can you find all the bugs and get the code to run? 
@@ -436,9 +436,9 @@ Working in pairs, debug the following code. Can you find all the bugs and get th
           System.out.print("Good morning! ")
           system.out.print("Good afternoon!);
           System.Print " And good evening!";
-      
+
    }
-           
+
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
@@ -473,8 +473,8 @@ Summary
           System.out.println("Hi there!");
       }
    }
-   
-   
+
+
 - A Java program starts with **public class NameOfClass { }**. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.
 
 - Most Java classes have a main method that will be run automatically. It looks like this: **public static void main(String[] args) { }**.
@@ -494,7 +494,7 @@ AP Practice
 
 .. mchoice:: AP1-2-1
     :practice: T
-    
+
     Consider the following code segment.
 
     .. code-block:: java
@@ -504,45 +504,45 @@ AP Practice
        System.out.print("and cool!");
 
     What is printed as a result of executing the code segment?       
-    
+
     - .. raw:: html
-    
+
          <pre>Java is fun and cool!</pre>
 
       - Notice the println in line 2.
 
     - .. raw:: html
-    
+
          <pre>
          Java isfun 
          and cool!
          </pre>
 
       - Notice the space after is in the first line. 
-      
+
     - .. raw:: html
-      
+
          <pre>Java is
          fun 
          and cool!  </pre>
 
       - Notice that the first line is a print, not println.
-      
+
     - .. raw:: html
-      
+
          <pre>Java is fun
          and cool!  </pre>
-      
+
       + Correct! Pay attention to which lines are print or println.
-      
- 
+
+
 .. mchoice:: AP1-2-2
     :practice: T
-    
+
     Consider the following code segment.
 
     .. code-block:: java
-    
+
        System.out.println("Roses are red, ")      // Line 1;
        System.out.println("Violets are blue, ")  // Line 2;
        System.out.print("Unexpected '}' ")        // Line 3;
@@ -551,27 +551,27 @@ AP Practice
     The code segment is intended to produce the following output but may not work as intended.
 
     .. raw:: html
-      
+
        <pre>Roses are red,
        Violets are blue,
        Unexpected '}' on line 32.</pre>
 
     Which change, if any, can be made so that the code segment produces the intended output?
-    
+
     - Replacing print with println on lines 3 and 4.
-    
+
       - These should print on the same line without a newline in between.
-      
+
     - Replacing println with print on lines 1 and 2.
-    
+
       - These should print out with a newline in between.
-      
+
     - Removing the single quotes in line 3.
-    
+
       - The single quotes are fine in this line.
-    
+
     - Putting the semicolon after the ) on each line.
-    
+
       + Correct! The semicolon should go after each command but not in the comment.
 
 
@@ -624,7 +624,7 @@ AP Practice
     args
     )
     ()
-   
+
 
 
 .. hparsons:: mp-print-order-1

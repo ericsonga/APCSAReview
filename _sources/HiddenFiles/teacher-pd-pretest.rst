@@ -1,10 +1,10 @@
 .. qnum::
    :prefix: 1-
    :start: 1
-   
-   
 
-   
+
+
+
 Teacher PD Pretest for Units 1-6
 ---------------------------------
 
@@ -13,7 +13,7 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
 .. timed:: teacherPD-pretest
      :nofeedback:
-     
+
      .. mchoice:: PDpretest1
 
           Unit 1 Primitive Types Skills and Learning Objectives:

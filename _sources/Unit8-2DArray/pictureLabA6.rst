@@ -1,7 +1,7 @@
 .. image:: ../../_static/time90.png
     :width: 250
     :align: right
-    
+
 Picture Lab A6: Mirroring Pictures
 =====================================================
 
@@ -15,9 +15,9 @@ like if we placed a mirror on a vertical line in the center of the width of the 
     :width: 450px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Original picture (left) and picture after mirroring (right)
-    
+
 How can we write a method to mirror a picture in this way? One way to figure out the algorithm, which
 is a description of the steps for solving a problem, is to try it on smaller and simpler data. Figure 2 shows
 the result of mirroring a two-dimensional array of numbers from left to right vertically.
@@ -26,7 +26,7 @@ the result of mirroring a two-dimensional array of numbers from left to right ve
     :width: 450px
     :align: center
     :figclass: align-center
-    
+
     Figure 2: Two-Dimensional array of numbers (left) and mirrored result (right)
 
 Can you figure out the algorithm for this process? Test your algorithm on different sizes of twodimensional arrays of integers. Will it work for 2D arrays with an odd number of columns? Will it work
@@ -47,7 +47,7 @@ assuming there are at least 3 pixels in a row,
 The following method implements this algorithm. Note that, because the method is not looping through all the pixels, it cannot use a nested for-each loop.
 
 .. code-block:: java
- 
+
  public void mirrorVertical()
  {
       Pixel[][] pixels = this.getPixels2D();
@@ -64,7 +64,7 @@ The following method implements this algorithm. Note that, because the method is
            }
       }
  }
- 
+
 You can see mirrorVertical() in action by running the active code in the exercise below.
 
 
@@ -72,7 +72,7 @@ You can see mirrorVertical() in action by running the active code in the exercis
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 |CodingEx| **Coding Exercises**
 
 
@@ -83,13 +83,13 @@ You can see mirrorVertical() in action by running the active code in the exercis
 .. |repl 2| raw:: html
 
    <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
-   
+
 You can use caterpillar.jpg or one of the images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. image:: Figures/mirrorright.png
     :width: 150
     :align: left
-    
+
 1. Write the method mirrorVerticalRightToLeft that mirrors a picture around a mirror
 placed vertically from right to left, so that you get 2 tails for the caterpillar instead of two heads. Hint: you can copy the body of mirrorVertical and
 only change one line in the body of the method to accomplish this. 
@@ -209,14 +209,14 @@ only change one line in the body of the method to accomplish this.
 		}
 	   }
 
-      
+
       /* 
         Write a method mirrorVerticalRightToLeft that mirrors a picture around a mirror placed vertically from right to left. Hint: you can copy the body of mirrorVertical() above and only change one line in the body of the method to accomplish this. 
-        
+
         Add new method here. Change the method call in main to test this.
       */
-     
-     
+
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -224,9 +224,9 @@ only change one line in the body of the method to accomplish this.
         // or try puppy.jpg
         Picture pict = new Picture("caterpillar.jpg");
         pict.show();
-        
+
         pict.mirrorVertical(); // change this to pict.mirrorVerticalRightToLeft();        
-        
+
         pict.show();
       }
     } 
@@ -255,7 +255,7 @@ only change one line in the body of the method to accomplish this.
          boolean passed = checkCodeContains("mirrorVerticalRightToLeft() sets leftPixel's color",target);
          assertTrue(passed);
        }
-       
+
         @Test 
        public void test2b()
        {
@@ -282,7 +282,7 @@ only change one line in the body of the method to accomplish this.
       }
 
 
-      
+
 2. Write the method mirrorHorizontal that mirrors a picture around a mirror placed
 horizontally at the middle of the height of the picture. Mirror from top to bottom as shown in the
 pictures below (Figure 3). 
@@ -291,7 +291,7 @@ pictures below (Figure 3).
     :width: 500px
     :align: center
     :figclass: align-center
-    
+
     Figure 3: Original picture (left) and mirrored from top to bottom (right)
 
 .. activecode:: picture-lab-A6-mirrorHorizontal
@@ -408,14 +408,14 @@ pictures below (Figure 3).
 		}
 	   }
 
-      
+
       /* 
         Write a method mirrorHorizontal that mirrors a picture around a mirror placed horizontally at the middle of the height of the picture from top to bottom. 
-        
+
         Add new method here.
       */
-     
-     
+
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -452,7 +452,7 @@ pictures below (Figure 3).
          boolean passed = checkCodeContains("mirrorHorizontal() sets height to pixels.length",target);
          assertTrue(passed);
        }
-       
+
         @Test 
        public void test2b()
        {
@@ -460,7 +460,7 @@ pictures below (Figure 3).
          boolean passed = checkCodeContains("mirrorHorizontal() uses height/2",target);
          assertTrue(passed);
        }
-       
+
        @Test 
        public void test2c()
        {
@@ -476,7 +476,7 @@ pictures below (Figure 3).
          boolean passed = checkCodeContains("mirrorHorizontal() uses bottomPixel.setColor to change the bottom pixel",target);
          assertTrue(passed);
        }
-       
+
        @Test
          public void test3()
          {
@@ -497,8 +497,8 @@ pictures below (Figure 3).
 .. image:: Figures/horizontalbot2top.png
     :width: 150
     :align: left
-    
-    
+
+
 3. Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. 
 
 .. activecode:: picture-lab-A6-mirrorHorizontalBotToTop
@@ -594,14 +594,14 @@ pictures below (Figure 3).
 
       }
 
-      
+
       /* 
         Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this. 
-        
+
         Add new method here.
       */
-     
-     
+
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -638,7 +638,7 @@ pictures below (Figure 3).
          boolean passed = checkCodeContains("mirrorHorizontalBotToTop() sets height to pixels.length",target);
          assertTrue(passed);
        }
-       
+
         @Test 
        public void test2b()
        {
@@ -646,7 +646,7 @@ pictures below (Figure 3).
          boolean passed = checkCodeContains("mirrorHorizontalBotToTop() uses height/2",target);
          assertTrue(passed);
        }
-       
+
        @Test 
        public void test2c()
        {
@@ -662,7 +662,7 @@ pictures below (Figure 3).
          boolean passed = checkCodeContains("mirrorHorizontalBotToTop() uses setColor to change the topPixel variable",target);
          assertTrue(passed);
        }
-       
+
        @Test
          public void test3()
          {
@@ -679,7 +679,7 @@ pictures below (Figure 3).
             assertTrue(passed);     
          }       
       }
-      
+
 4. Challenge — Work in groups to figure out the algorithm for the method mirrorDiagonal that mirrors just a square part of the picture from bottom left to top right around a mirror placed
 on the diagonal line (the diagonal line is the one where the row index equals the column index).
 This will copy the triangular area to the left and below the diagonal line as shown below. This is
@@ -692,10 +692,10 @@ paint would be copied from the bottom left to the top right as shown in the pict
     :width: 500px
     :align: center
     :figclass: align-center
-    
+
     Figure 4: Original picture (left) and mirrored around the diagonal line with copying from bottom left to top right (right)
-    
-    
+
+
 .. activecode:: picture-lab-A6-mirrorDiagonal
     :language: java
     :autograde: unittest
@@ -810,14 +810,14 @@ paint would be copied from the bottom left to the top right as shown in the pict
 		}
 	   }
 
-      
+
       /* 
         Write a method method mirrorDiagonal that mirrors just a square part of the picture from bottom left to top right around a mirror placed on the diagonal line (the diagonal line is the one where the row index equals the column index).
-        
+
         Add new method here.
       */
-     
-     
+
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -854,7 +854,7 @@ paint would be copied from the bottom left to the top right as shown in the pict
          boolean passed = checkCodeContains("mirrorDiagonal() loops for col < row",target);
          assertTrue(passed);
        }
-       
+
 
        @Test
          public void test3()
@@ -872,7 +872,7 @@ paint would be copied from the bottom left to the top right as shown in the pict
             assertTrue(passed);     
          }       
       }
-      
+
 Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
 
 .. datafile:: caterpillar.jpg
@@ -887,14 +887,14 @@ Choose from these images in this lesson.  To use your own images, you can fork t
 .. datafile:: puppy.jpg
    :image:
    :fromfile: Figures/puppy.jpg
-   
+
 .. datafile:: beach2.jpg
    :image:
    :fromfile: Figures/beach.jpg
 
 .. datafile:: pictureClasses2.jar
         :hide:    
-      
+
         import java.awt.Image;
         import java.awt.image.BufferedImage;
 

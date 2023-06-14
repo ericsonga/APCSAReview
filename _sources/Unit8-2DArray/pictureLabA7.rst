@@ -1,11 +1,11 @@
 .. image:: ../../_static/time90.png
     :width: 250
     :align: right
-    
+
 .. |Explorer Repl| raw:: html
 
    <a href= "https://firewalledreplit.com/@BerylHoffman/PictureExplorer" style="text-decoration:underline" target="_blank" >Picture Explorer Repl</a>
-   
+
 Picture Lab A7: Mirroring Part of a Picture
 =====================================================
 
@@ -19,9 +19,9 @@ starting and ending points for the row and column values to mirror just part of 
     :width: 500px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Greek temple before (left) and after (right) mirroring the pediment
-    
+
 To work with just part of a picture, change the starting and ending values for the nested for loops
 as shown in the following mirrorTemple method. This method also calculates the distance the
 current column is from the mirrorPoint and then adds that distance to the mirrorPoint
@@ -166,7 +166,7 @@ You can test this with the mirrorTemple method below.
            }
        }
 
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -195,7 +195,7 @@ You can test this with the mirrorTemple method below.
          assertTrue(passed);
        }
 
-          
+
       }
 
 
@@ -225,12 +225,12 @@ equals 263 times. The total is 70 * 263, which equals 18,410.
    :feedback_d: The loops do not start at 0.
 
    How many times would the body of this nested for loop execute?
-   
+
    .. code-block:: java
-   
+
       for (int row = 7; row < 17; row++)
           for (int col = 6; col < 15; col++)
-          
+
 .. mchoice:: picture-A7-2
    :answer_a: 11
    :answer_b: 11 - 5 = 6
@@ -243,18 +243,18 @@ equals 263 times. The total is 70 * 263, which equals 18,410.
    :feedback_d: Yes, the loops do not start at 0 and use <=.
 
    How many times would the body of this nested for loop execute?
-   
+
    .. code-block:: 
-   
+
       for (int row = 5; row <= 11; row++)
           for (int col = 3; col <= 18; col++)
- 
- 
+
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 |CodingEx| **Coding Exercises**
 
 1. Check the calculation of the number of times the body of the nested loop executes by adding an
@@ -378,7 +378,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
            }
        }
 
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -419,7 +419,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
 .. image:: Figures/mirrorarms.png
     :width: 150
     :align: left
-    
+
 2. Write the method mirrorArms to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork |Explorer Repl| and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
 .. activecode:: picture-lab-A7-mirrorArms
@@ -518,9 +518,9 @@ inside the body of the loop. Print the value of count after the nested loop ends
 
 
       /** Write the method mirrorArms() to add more arms to snowperson.jpg */
-  
 
-     
+
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -556,7 +556,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
          boolean passed = checkCodeContains("starts looping at row = 155",target);
          assertTrue(passed);
        }
-       
+
        @Test 
        public void test2b()
        {
@@ -564,7 +564,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
          boolean passed = checkCodeContains("mirrors at pixel 191",target);
          assertTrue(passed);
        }
-       
+
 
        @Test
          public void test3()
@@ -586,7 +586,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
 .. image:: Figures/mirrorgull.png
     :width: 150
     :align: left
-    
+
 3. Write the method mirrorGull to mirror the seagull ("seagull.jpg") to the right so
 that there are two seagulls on the beach near each other. Fork |Explorer Repl| and change it to explore seagull.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
@@ -687,9 +687,9 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
 
 
       /** Write the method mirrorGull to mirror the seagull to the right so that there are two seagulls on the beach near each other.*/
-  
 
-     
+
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -725,7 +725,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
          boolean passed = checkCodeContains("starts looping at row = 225",target);
          assertTrue(passed);
        }
-       
+
        @Test 
        public void test2b()
        {
@@ -733,7 +733,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
          boolean passed = checkCodeContains("mirrors at pixel 350",target);
          assertTrue(passed);
        }
-       
+
 
        @Test
          public void test3()
@@ -751,7 +751,7 @@ that there are two seagulls on the beach near each other. Fork |Explorer Repl| a
             assertTrue(passed);     
          }   
       }
-      
+
 Images to use:
 
 .. datafile:: temple.jpg

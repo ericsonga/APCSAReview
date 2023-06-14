@@ -2,7 +2,7 @@
    :prefix: 4-11-
    :start: 1
 
-   
+
 Multiple Choice Exercises
 =================================
 
@@ -24,7 +24,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_d: The value of i starts at 3 and this loop will execute until i equals 12.  The last time through the loop the value of i is 12 at the begininng and then it will be incremented to 13 which stops the loop since 13 is not less than or equal to 12.  
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      for (int i = 3; i <= 12; i++) 
@@ -45,7 +45,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_d: This would be true if i started at 0 and ended when i was 10.  Does it?
 
    How many times does the following method print a ``*``?  
-   
+
    .. code-block:: java 
 
      for (int i = 3; i < 9; i++) 
@@ -64,7 +64,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: x is set to -5 to start but then incremented by 1 so it first prints -4.
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      int x = -5;
@@ -73,7 +73,7 @@ These problems are easier than most of those that you will usually see on the AP
         x++; 
         System.out.print(x + " ");
      }
-     
+
 .. mchoice:: qle_4
    :practice: T
    :answer_a: 7
@@ -87,14 +87,14 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_d: This would be true if i started at 0.  
 
    How many times does the following method print a ``*``?  
-   
+
    .. code-block:: java 
 
      for (int i = 5; i <= 12; i++) 
      {  
         System.out.print("*"); 
      }
-     
+
 .. mchoice:: qle_5
    :practice: T
    :answer_a: 4
@@ -106,14 +106,14 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: This would be true if i started at 0 and ended when it reached 6 (i <= 5). 
 
    How many times does the following method print a ``*``?  
-   
+
    .. code-block:: java 
 
      for (int i = 1; i < 5; i++) 
      {  
         System.out.print("*"); 
      }
-     
+
 .. mchoice:: qle_6
    :practice: T
    :answer_a: 7
@@ -125,14 +125,14 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: This loop starts with i = 0 and continues till it reaches 9 so (9 - 0 = 9).  
 
    How many times does the following method print a ``*``?  
-   
+
    .. code-block:: java 
 
      for (int i = 0; i <= 8; i++) 
      {  
         System.out.print("*"); 
      }
-     
+
 .. mchoice:: qle_7
    :practice: T
    :answer_a: 4
@@ -144,14 +144,14 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: This would be true if the condition was x <= 5 instead of x = 5.
 
    How many times does the following method print a ``*``?  
-   
+
    .. code-block:: java 
 
      for (int x = 0; x < 5; x++) 
      {  
         System.out.print("*"); 
      }
-     
+
 .. mchoice:: qle_8
    :practice: T
    :answer_a: 6
@@ -163,7 +163,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_c: This would be true if the loop started with x = 0.
 
    How many times does the following method print a ``*``?  
-   
+
    .. code-block:: java 
 
      for (int x = 2; x < 8; x++) 
@@ -184,7 +184,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_d: This loop starts with x = 0 and ends when it reaches 6.  
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      int x = 0;
@@ -193,7 +193,7 @@ These problems are easier than most of those that you will usually see on the AP
         System.out.print(x + " ");
         x++;
      }
-     
+
 .. mchoice:: qle_10
    :practice: T
    :answer_a: 3 4 5 6 7 8 
@@ -209,7 +209,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: Since x is never changed in the loop this is an infinite loop.  
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      int x = 3;
@@ -220,7 +220,7 @@ These problems are easier than most of those that you will usually see on the AP
 
 
 
-   
+
 
 
 Medium Multiple Choice Questions
@@ -243,7 +243,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: The second loop executes 5 times for each of the 5 times the first loop executes, so the answer should be 5 * 5.
 
    How many stars are output when the following code is executed?  
-   
+
    .. code-block:: java
 
      for (int i = 0; i < 5; i++) {
@@ -266,7 +266,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: This will loop with i changing from 0 to 4 and j from 0 to i.  
 
    Which of the following code segments will produce the displayed output?  
-   
+
    .. code-block:: java
 
      1
@@ -325,7 +325,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: This will loop with k having a value of 0 to 18 (it will stop when k = 20). It will print out the value of k followed by a space when the remainder of dividing k by 3 is 1.
 
    What is printed as a result of the following code segment?  
-   
+
    .. code-block:: java
 
      for (int k = 0; k < 20; k+=2) {
@@ -348,7 +348,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: This loops with j from 1 to 5 and k from j to 5 and prints out the value of k, printing 1 through 5 on the first line, 2 through 5 on the next, and so on.
 
    Which of the following code segments will produce the displayed output?  
-   
+
    .. code-block:: java
 
      11111
@@ -407,7 +407,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: 0/2 won't cause a division by zero. The result is just zero.
 
    What are the values of var1 and var2 after the following code segment is executed and the while loop finishes?
-   
+
    .. code-block:: java
 
      int var1 = 0;
@@ -441,7 +441,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: To get n! as big-oh we would need n nested loops.
 
    Which best characterizes the running time of the following code segment?
-   
+
    .. code-block:: java
 
      for (int j = 1; j <= n; j++) {
@@ -456,7 +456,7 @@ These problems are similar to those you will see on the AP CS A exam.
 
 More Practice
 --------------
-     
+
 For more practice with loops and strings see http://codingbat.com/java/Warmup-2.  For practice with loops and arrays see http://codingbat.com/java/Array-2.
 
 Here are some recommended problems

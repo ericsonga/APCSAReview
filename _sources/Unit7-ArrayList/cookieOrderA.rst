@@ -82,7 +82,7 @@ Click to reveal multiple choice questions that may help you write your solution.
         :feedback_a: While loops are better for problems where you are looping until a condition is true or false.
         :feedback_b: This will work, but it is more concise to use a for-each loop.
         :feedback_c: Correct! This is the most concise way to access every CookieOrder.
-         
+
         What type of loop is best for this problem?
 
    .. mchoice:: fr_cookieA_2
@@ -93,7 +93,7 @@ Click to reveal multiple choice questions that may help you write your solution.
         :feedback_a: The number of cookie orders is the length of the orders List. We are going one step farther in counting boxes. Try again!
         :feedback_b: Correct!
         :feedback_c: We don't know how many cookies are in each box. Try again!
-         
+
         What will you return at the end of this method?
 
    .. mchoice:: fr_cookieA_3
@@ -104,7 +104,7 @@ Click to reveal multiple choice questions that may help you write your solution.
         :feedback_a: Correct! int sum must be initialized before the loop.
         :feedback_b: co.getNumBoxes returns the number of boxes for a CookieOrder.
         :feedback_c: Take a closer look inside the loop.
-         
+
         What is wrong with this code?
 
         .. code-block:: java

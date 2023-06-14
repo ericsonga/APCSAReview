@@ -8,7 +8,7 @@ Free Response - Trio A
 ..	index::
 	single: trio
     single: free response
-    
+
 The following is a free response question from 2014.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
 **Question 4.**  The menu at a lunch counter includes a variety of sandwiches, salads, and drinks. The menu also allows a
@@ -29,7 +29,7 @@ Interfaces are no longer on the AP CSA exam, but you can just treat an interface
      /** @return the price of the menu item */
      double getPrice();
    }
-   
+
 The following diagram shows the relationship between the ``MenuItem`` interface and the ``Sandwich``, ``Salad``, ``Drink``, and ``Trio`` classes.
 
 .. figure:: Figures/trioUML.png
@@ -38,7 +38,7 @@ The following diagram shows the relationship between the ``MenuItem`` interface 
     :figclass: align-center
 
     Figure 1: UML class diagram showing MenuItem is implemented by Sandwich, Salad, Drink, and Trio.
-    
+
 For example, assume that the menu includes the following items. The objects listed under each heading are instances of the class indicated by the heading.
 
 .. figure:: Figures/menuItemObjs.png
@@ -68,13 +68,13 @@ Try and Solve It
 .. activecode:: frqTrio
    :language: java
    :autograde: unittest
-   
+
    Write the Trio class (near the end of the code below) that implements the MenuItem interface (which is like extending a class). Your implementation must include a constructor that takes three parameters representing a sandwich, salad, and drink.  The main method has code to test the result.
    ~~~~
    import java.util.List;
    import java.util.ArrayList;
    import java.text.*;
-   
+
    interface MenuItem
    {
       /** @return the name of the menu item */
@@ -83,12 +83,12 @@ Try and Solve It
       /** @return the price of the menu item */
       double getPrice();
    }
-   
+
    class SimpleLunchItem implements MenuItem
    {
       private String name;
       private double price;
-  
+
       public SimpleLunchItem(String aName, double aPrice)
       {
          name = aName;
@@ -97,26 +97,26 @@ Try and Solve It
 
       public String getName() { return name; }
       public double getPrice() { return price; }
-  
+
       public String toString ()
       {
          DecimalFormat money = new DecimalFormat("0.00");
          return getName() + " " + money.format(getPrice());
       }
    }
-   
+
    class Drink extends SimpleLunchItem
    {
       public Drink(String name, double price)
       { super(name, price); }
    }
-   
+
    class Salad extends SimpleLunchItem
    {
       public Salad(String name, double price)
       { super(name, price); }
    }
-   
+
    class Sandwich extends SimpleLunchItem
    {
       public Sandwich(String name, double price)
@@ -127,15 +127,15 @@ Try and Solve It
    public class Trio implements MenuItem
    {
       // declare the instance variables that you need for a trio object
-   
+
       // write a constructor that takes a Sandwich, Salad, and a Drink, in that order
-      
+
       // write the getName method it should return 
       // sandwich name/salad name/drink name Trio
-      
+
       // write the getPrice method
       // it should return the price of the two highest price items in the trio.
-  
+
       public static void main(String[] args)
       {
          Sandwich burger = new Sandwich("Cheeseburger",2.75);
@@ -244,4 +244,4 @@ Try and Solve It
         }
     }
 
-  
+

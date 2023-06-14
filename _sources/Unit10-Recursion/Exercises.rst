@@ -1,7 +1,7 @@
 .. qnum::
    :prefix:  10-7-
    :start: 1
-   
+
 Exercises
 -----------
 

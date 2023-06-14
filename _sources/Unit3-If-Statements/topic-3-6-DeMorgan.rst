@@ -1,32 +1,32 @@
 .. qnum::
    :prefix: 3-6-
    :start: 1 
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. raw:: html
 
     <style>    td { text-align: left; } </style>
-    
+
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Equivalent Boolean Expressions (De Morgan's Laws)
 =================================================
 
@@ -39,10 +39,10 @@ What if you heard a rumor about a senior at your high school? And then you heard
 .. code-block:: java 
 
         !(a && b)
-        
+
         a = "senior"
         b = "at our high school"
-        
+
         // This means it is not true that (a) it is a senior 
         // and (b) someone at our high school.
 
@@ -57,25 +57,25 @@ De Morgan's Laws were developed by Augustus De Morgan in the 1800s.  They show h
     :width: 400px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: De Morgan's Laws to simplify complex expressions
 
 
 In Java, De Morgan's Laws are written with the following operators:
 
     -  **!(a && b)** is equivalent to **!a || !b**
-    
+
     -  **!(a || b)** is equivalent to **!a && !b** 
-    
+
 Going back to our example above, !(a senior && at our high school) is equivalent to !(a senior) or !(at our high school) using De Morgan's Laws:
 
 .. code-block:: java 
 
         !(a && b) is equivalent to !a || !b
-        
+
         a = "senior"
         b = "at our high school"
-        
+
 You can also simplify negated boolean expressions that have relational operators like <, >, ==. You can move the negation inside the parentheses by flipping the relational operator to its opposite sign. For example, not (c equals d) is the same as saying c does not equal d.  An easy way to remember this is **To move the NOT, flip the sign**. Notice that == becomes !=, but < becomes >=,  > becomes <=, <= becomes >, and >= becomes < where the sign is flipped and an equal sign may also be added or removed.
 
 
@@ -112,7 +112,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
     :width: 400px
     :align: center
     :figclass: align-center
-    
+
     Figure 2: An example boolean expression simplified
 
 
@@ -141,7 +141,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -153,7 +153,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
         }
     }
 
- 
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qcbdm1_8
@@ -165,7 +165,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
    :feedback_b: This will be printed if x is less than 3 or y is greater than 2.  In this case the first will be false, but the second true so since the statements are joined with an or the complex expression is true.
 
    What is printed when the following code executes and x equals 4 and y equals 3?   
-   
+
    .. code-block:: java 
 
      int x = 4, y = 3;         
@@ -177,7 +177,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
      {
         System.out.println("second case");
      }
-     
+
 .. mchoice:: qcbdm2_9
    :practice: T
    :answer_a: first case
@@ -187,7 +187,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
    :feedback_b: This will be printed if x is less than 3 and y is greater than 2.  
 
    What is printed when the following code executes and x equals 4 and y equals 3?   
-   
+
    .. code-block:: java 
 
      int x = 4, y = 3; 
@@ -200,14 +200,14 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
         System.out.println("second case");
      }
 
-     
+
 |Groupwork| Programming Challenge : Truth Tables POGIL
 ------------------------------------------------------
 
 .. |pogil| raw:: html
 
    <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank" style="text-decoration:underline">POGIL</a>
-   
+
 .. |pogil role| raw:: html
 
    <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank" style="text-decoration:underline">POGIL role</a>
@@ -215,7 +215,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 .. |this worksheet| raw:: html
 
    <a href="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing" target="_blank" style="text-decoration:underline">this worksheet</a>
-   
+
 We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns. 
 
 Explore the following problems with your group. You may use |this worksheet| to complete your truth tables. Assume that x is an integer value, for example -1, 0, or 1. 
@@ -236,7 +236,7 @@ Explore the following problems with your group. You may use |this worksheet| to 
 .. activecode:: challenge3-6-booleanExpr
    :language: java
    :autograde: unittest
-   
+
    Are these 3 boolean expressions equivalent? 1. !(x == 0 || x >= 1) , 2. !(x == 0) && !(x >= 1) , 3. (x != 0) && (x < 1)
    ~~~~
    public class EquivalentExpressions
@@ -247,15 +247,15 @@ Explore the following problems with your group. You may use |this worksheet| to 
           System.out.println(!(x == 0 || x >= 1));
           // add print statements for expressions in #2 and #3
           // to see if they are equivalent when x = -1, 0, and 1.
-          
-        
+
+
       }
    }
    ====
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
        @Test
@@ -292,11 +292,11 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :feedback_d: Don't forget that the "and" is changed to an "or"
 
    Which of the following is the same as the code below? 
-   
+
    .. code-block:: java 
 
      !(x > 2 && y < 4)
-     
+
 .. mchoice:: qcbdm4_2
    :practice: T
    :answer_a: (x != 2) || (y < 4)
@@ -310,11 +310,11 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :feedback_d: The and is changed to an or, the (x == 2) becomes (x != 2) and (y > 4) becomes (y <= 4)
 
    Which of the following is the same as the code below? 
-   
+
    .. code-block:: java 
 
      !(x == 2 && y > 4)
-     
+
 .. mchoice:: qcbdm5_3
    :practice: T
    :answer_a: (x == 5) || (y == 7)
@@ -328,11 +328,11 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :feedback_d: The negation of == is != which is the same as < or >.  The negation of != is ==.
 
    Which of the following is the same as the code below? 
-   
+
    .. code-block:: java 
 
      !(x!=5 && y!=7)
-     
+
 .. mchoice:: qcbdm6_4
    :practice: T
    :answer_a: (x > 5) && (y < 7)
@@ -347,7 +347,7 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 
    Which of the following is the same as the code below? 
-   
+
    .. code-block:: java 
 
      !(x<= 5 && y > 7)
@@ -356,8 +356,8 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 
 
-   
-     
+
+
 Summary
 --------
 
@@ -374,7 +374,7 @@ Summary
   - !(c > d) is equivalent to (c <= d)
   - !(c <= d) is equivalent to (c > d)
   - !(c >= d) is equivalent to (c < d)
-  
+
 - Truth tables can be used to prove that 2 Boolean expressions are identical.
 
 - Equivalent Boolean expressions will evaluate to the same value in all cases.

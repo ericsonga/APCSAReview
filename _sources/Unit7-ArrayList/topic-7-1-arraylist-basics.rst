@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,7 +22,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
-    
+
 Intro to ArrayLists
 =======================
 
@@ -37,10 +37,10 @@ Intro to ArrayLists
     :figclass: align-center
 
     Figure 1: A couple of lists
-    
+
 In the last unit, we learned about arrays to hold collections of related data. But arrays have limitations. The size of an array is established at the time of creation and cannot be changed. What if you don't know how big the collection of data will be? What if you want to add and remove items from the collection and change the size of the collection while the program is running? For example, if you wanted to represent a shopping list, you might add to the list throughout the week and remove things from the list while you are shopping. You probably would not know how many items will be on the list at the beginning of the week.
 
-    
+
 Luckily, Java has a class  called **ArrayList** which is a re-sizable array. An ArrayList has an underlying array that grows or shrinks as needed. You can use ArrayList instead of arrays whenever you don't know the size of the array you need or you know that you will add and remove items and may need to change the array's size dynamically during run time. An ArrayList is **mutable**, meaning it can change during runtime by adding and removing objects from it.
 
 An ArrayList is often called just a **list** on the CS A exam. In past AP CS A exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
@@ -65,7 +65,7 @@ Import Package
 
 ..	index::
 	single: import statement
-	
+
 The ``ArrayList`` class is in the ``java.util`` package.  A **package** is a set or library of related classes. The java.lang package is the main Java language classes that you get automatically without importing it. The java.util package has a lot of utility classes that you can use if you import the package.    If you want to use any class other than those in ``java.lang`` you will need to either use the full name (packageName.ClassName) like (``java.util.ArrayList``) or use one or more import statements to import in that package. 
 
 Import statements have to be the first code in a Java source file.  An import statement tells Java which class you mean when you use a short name (like ``ArrayList``).  It tells Java where to find the definition of that class. 
@@ -75,22 +75,22 @@ You can import just the classes you need from a package as shown below.  Just pr
 .. code-block:: java 
 
   import java.util.ArrayList; // import just the ArrayList class
-  
+
 ..	index::
 	single: package
 	pair: statement; import
-  
+
 Another option is to import everything at the same level in a package using ``import packageName.*``.
-  
+
 
 .. code-block:: java 
 
   import java.util.*; // import everything in package including ArrayList
-  
+
 .. note::
 
    Don't worry about adding import statements on the AP CS A exam.  Any that you need will be provided for you.
-  
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qlib_1
@@ -103,7 +103,7 @@ Another option is to import everything at the same level in a package using ``im
    :feedback_b: You can use * to import all classes at the specified level.
    :feedback_c: Import statements have to be the first Java statements in a source file.  
    :feedback_d: You do not have to import any classes that are in the java.lang package.
-   
+
    Which of the following is true about import statements?
 
 Declaring and Creating ArrayLists
@@ -133,7 +133,7 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
    In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). 
    ~~~~
    import java.util.*; // import for ArrayList
-   
+
    public class ArrayListDeclare
    {
        public static void main(String[] args)
@@ -210,8 +210,8 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
             assertTrue(passed);
         }
      }
- 
-  
+
+
 You can also create ArrayLists of integer values.  However, you have to use ``Integer`` as the type because ArrayLists can only hold objects, not primitive values.  All primitive types must be **wrapped** in objects before they are added to an ArrayList.  For example, ``int`` values can be wrapped in ``Integer`` objects, ``double`` values can be wrapped in ``Double`` objects. You can actually put in any kind of Objects in an ArrayList, even for a class that you wrote in Unit 5 like Student or Person or Pet. 
 
 
@@ -251,7 +251,7 @@ You can also create ArrayLists of integer values.  However, you have to use ``In
             assertTrue(passed);
         }
     }
-    
+
 
 |Exercise| **Check your understanding**
 
@@ -265,11 +265,11 @@ You can also create ArrayLists of integer values.  However, you have to use ``In
    :feedback_b: String is not the correct type since this is for an array of integers, and the type should be next to ArrayList on both sides.
    :feedback_c: ArrayLists cannot hold primitive types like int. You must use the wrapper class Integer.   
    :feedback_d: The wrapper class Integer is used to hold integers in an ArrayList.
-   
+
    Which of the following is the correct way to create an ArrayList of integers?
 
 
-  
+
 Although it is not on the AP exam, you can convert arrays to ArrayLists using its constructor with an argument Arrays.asList(arrayname) like the following. Note that ArrayLists have a toString() method that is automatically called to print the list in a nice format.
 
 .. activecode:: ArrayListFromArray
@@ -309,7 +309,7 @@ Although it is not on the AP exam, you can convert arrays to ArrayLists using it
             assertTrue(passed);
         }
     }
-            
+
 |CodingEx| **Coding Exercise**
 
 You can add values to an ArrayList by using its **add** method, described in detail in the next lesson. Try the code below. Note that the type of the ArrayList, String or Integer, also determines the type of parameters and return types for all of its methods, so add and print work for any type of ArrayList. 
@@ -365,7 +365,7 @@ You can add values to an ArrayList by using its **add** method, described in det
 
     }
 
- 
+
 
 |Groupwork| Programming Challenge : FRQ Digits
 ---------------------------------------------------
@@ -409,18 +409,18 @@ First, let's discuss how to break up a number into its digits. Try the code belo
         public void test1()
         {
             String origCode = "public class DivideBy10{public static void main(String[] args){int number = 154;System.out.println(number / 10);System.out.println(number % 10);}}";
-        
+
             boolean changed = codeChanged(origCode);
 
             assertTrue(changed);
 
         }
     }
-   
+
 We can use a while loop to print out each digit in reverse order starting from the right (4, 5, 1 for the number 154) while dividing it by 10. You can try it in the active code above. Here is the pseudocode:
 
     - while number is greater than 0
-      
+
       - print out the last digit using %
       - change the number to cut off the last digit using /
 
@@ -433,29 +433,29 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
    Complete the challenge below to put the digits of a number in an ArrayList.
    ~~~~
    import java.util.*;
-   
+
    public class Digits
    {
       /** A list of digits */
       private ArrayList<Integer> digitList;
-      
+
       /** Constructs a list of digits from the given number */
       public Digits(int number)
       {
           // initialize digitList to an empty ArrayList of Integers
-         
+
           // Use a while loop to add each digit in number to digitList
-         
+
           //Use Collections.reverse(digitList); to reverse the digits
-      
+
       }
-      
+
       /** returns the string representation of the digits list */
       public String toString()
       {
          return digitList.toString();
       }
-      
+
       public static void main(String[] args)
       {
          Digits d1 = new Digits(154);
@@ -494,7 +494,7 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
             assertTrue(passed);
         }
     }
-   
+
 Summary
 -----------
 

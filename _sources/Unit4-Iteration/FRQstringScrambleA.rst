@@ -123,7 +123,7 @@ It can help to write out what you need to do to get each of the characters to co
    import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
       @Test
@@ -135,7 +135,7 @@ It can help to write out what you need to do to get each of the characters to co
         assertTrue(passed);
       }
     }
-  
+
 
 In this example we are looping through the characters from left to right one at a time and comparing the two adjacent characters.  If the first is an "A" and the second is not we will swap the characters and then need to increment the index to not check the ones we swapped again.  So we start checking the characters at index 0 and 1 and then swap them, but then move to comparing 2 and 3 rather than 1 and 2 which means we increment the current index by 2.  If we don't swap the characters we only increment the index by 1.
 
@@ -162,7 +162,7 @@ In this example we are looping through the characters from left to right one at 
    import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
       @Test
@@ -174,7 +174,7 @@ In this example we are looping through the characters from left to right one at 
         assertTrue(passed);
       }
     }
-  
+
 
 In this case since we didn't swap any characters we only increment the index by 1 each time through the loop.
 
@@ -310,9 +310,9 @@ Write the method scrambleWord below.
          assertTrue(passed);
       }
    }
-  
 
-  
+
+
 
 Video - One way to code the solution
 =====================================

@@ -49,12 +49,12 @@ These problems are mostly easier than what you will see on the AP CS A exam.
    :feedback_c: These are attributes of the object or class.
    :feedback_d: scaryMovie is an instance of the Movie class.
    :feedback_e: scaryMovie is an instance of the Movie class.
-  
+
     A student has created a Movie class. The class contains variables to represent the following.
     - A String variable called title to represent the title of the movie
     - A String variable called director to represent the director of the movie
     - A double variable called rating to represent the rating of the movie
-    
+
     The object scaryMovie will be declared as type Movie.
     Which of the following descriptions is accurate?
 
@@ -170,7 +170,7 @@ These problems are similar to those that you will see on the AP CS A exam.
     Consider the following class.  Which of the following code segments would successfully create a new Movie object?
 
     .. code-block:: java 
-    
+
         public class Movie
         {
             private String title;
@@ -194,7 +194,7 @@ These problems are similar to those that you will see on the AP CS A exam.
                 inTheaters = false;
             }
         }
- 
+
 .. mchoice:: qse_6
    :practice: T
    :answer_a: 100.00
@@ -236,7 +236,7 @@ These problems are similar to those that you will see on the AP CS A exam.
         {
             System.out.print(total);
         }
-    
+
         public static void main(String[] args)
         {
             BankAccount newAccount = new BankAccount(12345, 100.00);
@@ -261,14 +261,14 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_d: This would be true if Math.random returned a value between 0 and 1, but it won't ever return 1.  The cast to int results in a number from 0 to 4.  Adding 5 gives a value from 5 to 9.  
 
    Given the following code segment, what is the value of ``num`` when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.
-   
+
     .. code-block:: java 
 
       double value = Math.random();
       int num = (int) (value * 5) + 5;
-      
 
-      
+
+
 .. mchoice:: qve_new8
    :practice: T
    :answer_a: a random number from 0 to 10
@@ -282,13 +282,13 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_d: Math.random returns a random value from 0 to not quite 1.  After it is multipied by 11 and cast to integer it will be a value from 0 to 10.  Subtracting 5 means it will range from -5 to 5.  
 
    Given the following code segment, what is the value of ``num`` when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.
-   
+
     .. code-block:: java 
 
       double value = Math.random();
       int num = (int) (value * 11) - 5;
-      
-      
+
+
 .. mchoice:: qsm_1
    :practice: T
    :answer_a: I, II, III

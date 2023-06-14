@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 4-4-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -36,9 +36,9 @@ A **nested loop** has one loop inside of another.  These are typically used for 
     :width: 350px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Nested Loops
-    
+
 .. |Java visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
@@ -52,7 +52,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :language: java
    :autograde: unittest 
    :practice: T
-   
+
    Can you change the code to print a rectangle with 10 rows and 8 columns of stars? You can also try replacing line 10 with this print statement to see the rows and columns: ``System.out.print(row + "-" + col + " ");``  
    ~~~~
    public class NestedLoops
@@ -98,7 +98,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
           assertTrue(passed);
         }
     }
-    
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: nested1
@@ -114,7 +114,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :feedback_d: This would be true if the inner loop continued while <code>y < 5</code>.    
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      for (int i = 1; i < 7; i++) 
@@ -125,7 +125,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
          }
          System.out.println();
      }
-     
+
 .. mchoice:: nested2
    :practice: T
    :answer_a: A rectangle of 4 rows with 3 star per row.
@@ -139,7 +139,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :feedback_d: Try the code in an Active Code window and you will see that it does run.    
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      for (int i = 0; i < 5; i++) 
@@ -195,7 +195,7 @@ Try nested loops with turtles to create a snowflake design!
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-   
+
 
 
 .. activecode:: TurtleNestedLoop
@@ -205,7 +205,7 @@ Try nested loops with turtles to create a snowflake design!
 
     The turtle below is trying to draw a square many times to create a snowflake pattern. 
     Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15. 
-    
+
     To make the drawing faster, you can call the World or Turtle object's setSpeed method with a 0-100 delay value where 0 is the fastest.
     If the code below does not work in your browser, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.
     ~~~~
@@ -220,12 +220,12 @@ Try nested loops with turtles to create a snowflake design!
           Turtle yertle = new Turtle(world);
           yertle.setSpeed(25); // fast 0 - 100 slow 
           yertle.setColor(Color.blue); 
-          
+
            // Outer loop will do inner loop to draw a square,
            // and then turn a little each time
            // How many times should the outer loop run to complete the pattern? Try some numbers between 5 and 15.
           for (int i = 1; i <= 5; i++) {
-           
+
              // inner loop draws a square
              for(int sides = 1; sides <= 4; sides++) {
                  yertle.forward();
@@ -279,7 +279,7 @@ Try nested loops with turtles to create a snowflake design!
           assertTrue(passed);
         }
     }
-   
+
 
 
 |Groupwork| Programming Challenge : Turtle Snowflakes
@@ -293,7 +293,7 @@ Try nested loops with turtles to create a snowflake design!
 .. |Color| raw:: html
 
    <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
-   
+
 In the last exercise, you used nested for-loops to have the turtle draw a square repeatedly to make a snowflake. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using nested loops. We encourage you to work in pairs on this.
 
 1. Complete the code in the active code window below to draw a snowflake of triangles. Remember that triangles have 3 sides and you will need to turn 120 degrees (external angle) 3 times to draw the triangle. Use the **turnAmount** variable for the single turn after drawing a triangle. How many times did you need to run the outer loop to go all the way around? Try changing the turnAmount variable to 40 to see how many times you need to loop with a wider distance between the triangles.
@@ -314,7 +314,7 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
 
     Use nested for-loops to have the turtle draw a snowflake of polygons. 
     Use the variable turnAmount to turn after each shape and the variable n for the sides of the polygon.
-    
+
     To make the drawing faster, you can call the World or Turtle object's setSpeed method with a 0-100 delay value where 0 is the fastest.
     If the code below does not work in your browser, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.
     ~~~~
@@ -329,22 +329,22 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
           Turtle yertle = new Turtle(world);
           yertle.setSpeed(25); // fast 0 - 100 slow 
           yertle.setColor(Color.blue); 
-   
+
           // Use this variable in the loops
           int turnAmount = 30;
-          
+
           // 1. Write a for loop that runs many times 
           // 2. Change it to use turnAmount to figure out how many times to run
-          
+
              // 1 & 2. Write an inner loop that draws a triangle (3 sides, 120 degree turns)
              // 3. Then change it to be any polygon with a variable n
-             
-             
-             
+
+
+
              // turn turnAmount degrees before drawing the polygon again
-             
+
              // 4. Add an if statement that changes the colors depending on the loop variables
-          
+
           world.show(true); 
       }
     }
@@ -433,4 +433,4 @@ Summary
 - When a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.
 
 
-   
+

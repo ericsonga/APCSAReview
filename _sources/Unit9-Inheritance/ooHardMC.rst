@@ -20,7 +20,7 @@ These problems are harder than those that you will typically see on the AP CS A 
    :feedback_d: The call to <code>methodTwo</code> in <code>super.methodOne</code> is to <code>this.methodTwo</code> which is the method from the <code>Derived</code> class. Consequently the "D" is also printed. 
 
    Assume that ``Base b = new Derived();`` appears in a client program.  What is the result of the call ``b.methodOne();``?
-   
+
    .. code-block:: java 
 
       public class Base
@@ -51,7 +51,7 @@ These problems are harder than those that you will typically see on the AP CS A 
             System.out.print("D");
          }
       }
-      
+
 .. mchoice:: qooh_2
    :practice: T
    :answer_a: II only
@@ -67,9 +67,9 @@ These problems are harder than those that you will typically see on the AP CS A 
    :feedback_e: <code>Point2D</code> does have a no-arg constructor and since the constructor in <code>Point3D</code> doesn't have an explicit call to super as the first line of code in the constructor one will be added for the no-arg constructor. However, both II and III are okay as well.  
 
    If you have the following classes.  Which of the following constructors would be valid for ``Point3D``?
-   
+
    .. code-block:: java 
-    
+
       public class Point2D {
          public int x;
          public int y;
@@ -86,10 +86,10 @@ These problems are harder than those that you will typically see on the AP CS A 
       public class Point3D extends Point2D
       {
          public int z;
-   
+
          // other code
       }
-      
+
       I.  public Point3D() {}
       II. public Point3D(int x, int y, int z) 
           {
@@ -102,4 +102,4 @@ These problems are harder than those that you will typically see on the AP CS A 
               this.y = y;
               this.z = 0;
            }
-           
+

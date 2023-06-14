@@ -8,7 +8,7 @@ Free Response - Horse Barn B
 ..	index::
 	single: horse barn
     single: free response
-    
+
 The following is a variation of part b of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
 The original question had an interface called Horse, but the problem below has been changed to a class Horse instead of the interface. Interfaces are no longer covered on the AP CS A exam. However, you can still solve problems that have interfaces in them by changing them to a class, since an interface just describes the methods that a class must have.
@@ -27,9 +27,9 @@ The original question had an interface called Horse, but the problem below has b
       /** @return the horse's weight */
       public int getWeight()
       { implementation not shown }
- 
+
       // There may be other methods that are not shown
-      
+
    }
 
 
@@ -99,9 +99,9 @@ While we are looping through the ``spaces`` array, we need to check for non-null
         :feedback_c: "!=" is the best way to compare an element with a null value.
 
         How do we check if the space at the current index isn't null? 
-   
+
 Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.   
-   
+
 .. activecode:: lcfrhbb1
    :language: java
    :autograde: unittest

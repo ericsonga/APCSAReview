@@ -81,8 +81,8 @@ Try and Solve It
       public static int[] getColumn(int[] [] arr2D, int c)
       {
           /** Complete this method **/
-          
-          
+
+
       }
 
       // Main method to test getColumn method

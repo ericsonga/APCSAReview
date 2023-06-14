@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 3-2-
    :start: 1
-   
-   
+
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -49,7 +49,7 @@ The statements in a Java main method normally run or execute one at a time in th
     :figclass: align-center
 
     Figure 2: The order that statements execute in a conditional
-    
+
 
 A conditional uses the keyword ``if`` followed by Boolean expression inside of  an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  The single statement or block of statements are only executed if the condition is true.  The open curly brace ``{`` and a close curly brace ``}`` are used to group a block of statements together.  It is recommended to always put in the curly braces even if you have just one statement under the if statement. The questions you will see on the AP exam will use curly braces.
 
@@ -76,13 +76,13 @@ A conditional uses the keyword ``if`` followed by Boolean expression inside of  
 .. note::
 
     Note that there is no semicolon (;) at the end of the boolean expression in an if statement even if it is the end of that line. The semicolon goes at the end of the whole if statement, often on the next line. Or { } are used to mark the beginning and end of the block of code under the if condition. 
-    
+
 Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).  
 
 .. activecode:: lccb1
    :language: java
    :autograde: unittest
-  
+
    The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code below to see this.
    ~~~~
    public class Test1
@@ -113,7 +113,7 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
             assertTrue(passed);
         }
     }
-  
+
 
 
 
@@ -125,7 +125,7 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
 
    -    :^Drive carefully$: Correct.  If the boolean is false, it will skip executing the print statement after the if.
         :.*: Try it and see
-        
+
 
 Relational Operators in If Statements
 ---------------------------------------
@@ -141,7 +141,7 @@ Most if statements have a boolean condition that uses relational operators like 
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Run the following active code a couple times until you see all the possible outputs. It prints out whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.
    ~~~~
    public class TestNumbers
@@ -151,7 +151,7 @@ Most if statements have a boolean condition that uses relational operators like 
           // Get a random number from -10 up to 10.
           int number = (int) (Math.random()*21) - 10;
           System.out.println("The number is " + number);
-        
+
           // is it positive?
           if (number > 0)
           {
@@ -164,7 +164,7 @@ Most if statements have a boolean condition that uses relational operators like 
           }
           // is it negative?
           // Add another if statement
-          
+
       }
    }
    ====
@@ -246,7 +246,7 @@ Most if statements have a boolean condition that uses relational operators like 
 .. note::
 
     A common mistake in if statements is using = instead of == in the condition by mistake. You should always **use ==**, not =, in the condition of an if statement to test a variable. One equal sign (=) assigns a value to a variable, and two equal signs (==) test if a variable has a certain value.
-    
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qcb1_2
@@ -264,7 +264,7 @@ Most if statements have a boolean condition that uses relational operators like 
    :feedback_e: This code will compile.
 
    Consider the following code segment. What is printed as a result of executing the code segment?
-   
+
    .. code-block:: java
 
      int x = 3;
@@ -277,27 +277,27 @@ Most if statements have a boolean condition that uses relational operators like 
         x = 0;
      }
      System.out.print(x);
-     
+
 
 .. More practice with if == and < > Active code.
     Note always use == not = in an if statement! Test not assign.
 
-        
+
 Common Errors with If Statements
 ---------------------------------
 
 Here are some rules to follow with if statements to avoid some common errors:
 
    - Always use curly brackets ``{`` and ``}`` to enclose the block of statements under the if condition. Java doesn't care if you indent the code -- it goes by the { }. 
-   
+
    - Don't put in a semicolon ``;`` after the first line of the if statement, if (test);. The if statement is a multiline block of code that starts with the if condition and then { the body of the if statement }. 
-   
+
    - Always use **==**, not =, in the condition of an if statement to test a variable. One = assigns, two == tests!
 
 
 |CodingEx| **Coding Exercise**
 
-   
+
 .. activecode:: lccb2-indent
    :language: java
    :autograde: unittest
@@ -313,7 +313,7 @@ Here are some rules to follow with if statements to avoid some common errors:
           if (isCold = true); 
               System.out.println("Wear a coat");
               System.out.println("Wear gloves");
-        
+
       }
    }
    ====
@@ -342,7 +342,7 @@ Here are some rules to follow with if statements to avoid some common errors:
             assertTrue(passed);
         }
     }
-   
+
 |Groupwork| Programming Challenge : Magic 8 Ball
 ------------------------------------------------
 
@@ -350,8 +350,8 @@ Here are some rules to follow with if statements to avoid some common errors:
     :width: 100
     :align: left
     :alt: Magic 8 Ball
- 
- 
+
+
 .. |simulator| raw:: html
 
    <a href="https://magic-8ball.com/" target="_blank">simulator</a>
@@ -360,7 +360,7 @@ Here are some rules to follow with if statements to avoid some common errors:
 .. |lesson 2.9| raw:: html
 
    <a href="https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html" target="_blank">lesson 2.9</a>
- 
+
 Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like ``Signs point to yes!``, ``Very doubtful``, etc. If you've never seen a Magic 8 ball, check out this |simulator|.
 
 We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see |lesson 2.9|.
@@ -368,17 +368,17 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 .. activecode:: challenge3-2-if-Magic8ball
    :language: java
    :autograde: unittest
-   
+
    public class Magic8Ball
    {
       public static void main(String[] args)
       {
         // Get a random number from 1 to 8
-        
+
         // Use if statements to test the random number 
         // and print out 1 of 8 random responses 
-        
-          
+
+
       }
    }
    ====
@@ -453,7 +453,7 @@ Here's a |repl version| that uses the Scanner class to first have the user ask a
 .. raw:: html
 
     <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-    
+
 Summary
 -------------------  
 

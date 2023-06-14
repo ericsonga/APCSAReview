@@ -6,19 +6,19 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
@@ -26,7 +26,7 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 For Loops
 =========
 
@@ -44,7 +44,7 @@ If you took AP CSP with a block programming language like App Inventor, you prob
     :width: 100%
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Comparing App Inventor and Java for loops
 
 
@@ -60,7 +60,7 @@ A for-loop combines all 3 parts of writing a loop in one line to initialize, tes
   {
      loop body
   }
-  
+
 The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line.  
 
 .. figure:: Figures/compareForAndWhile.png
@@ -77,7 +77,7 @@ Watch the following `video <https://www.youtube.com/watch?v=SEDnzXeb2hU&list=PLH
     :height: 400
     :align: center
     :optional:
-    
+
 Here is a control flow diagram for a for loop.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.
 
 .. figure:: Figures/ForLoopFlow.png
@@ -86,7 +86,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
     :figclass: align-center
 
     Figure 2: Control flow in a for loop
-    
+
 |CodingEx| **Coding Exercise**
 
 
@@ -94,7 +94,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10? 
    ~~~~
    public class ForLoop
@@ -107,7 +107,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
         } 
       }
    }
-   
+
    ====
    import static org.junit.Assert.*;
    import org.junit.*;;
@@ -124,7 +124,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
             assertTrue(passed);
         }
    }
-   
+
 
 
 
@@ -133,7 +133,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Here is a while loop that counts from 5 to 10. Run it and see what it does. Can you change it to a for-loop? Run your for-loop. Does it do the same thing?
    ~~~~
    public class ForLoopFromWhile
@@ -191,11 +191,11 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
     }
 
 .. note::
-   
+
    Two common patterns in for-loops are to count from 0 up to an number (using <) or count from 1 to the number including the number (using <=). Remember that if you start at 0 use <, and if you start at 1, use <=. The two loops below using these two patterns both run 10 times. The variable i (for index) is often used as a counter in for-loops.
-   
+
    .. code-block:: java 
-   
+
       // These loops both run 10 times
       // If you start at 0, use <
       for(int i = 0; i < 10; i++)
@@ -207,7 +207,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
       {
          System.out.println(i);
       }
-  
+
 
 |Exercise| **Check your understanding**
 
@@ -224,14 +224,14 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :feedback_d: The value of i is set to 3 before the loop executes and the loop stops when i is equal to 8.  So the last time through the loop i is equal to 7.  
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      for (int i = 3; i < 8; i++) 
      {  
         System.out.print(i + " ");
      }
-     
+
 .. mchoice:: qlb_3_2
    :practice: T
    :answer_a: 3 4 5 6 7 8
@@ -245,14 +245,14 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :feedback_d: This loop changes i by 1 each time in the change area.  
 
    What does the following code print?
-   
+
    .. code-block:: java 
 
      for (int i = 1; i <= 10; i++) 
      {  
         System.out.print(i + " ");
      }
-     
+
 .. mchoice:: qlb_3_3
    :practice: T
    :answer_a: 10
@@ -266,15 +266,15 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :feedback_d: This would be true if i started at 0 and the value of i the last time through the loop it was 8.   
 
    How many times does the following method print a ``*``?  
-   
+
    .. code-block:: java 
 
      for (int i = 3; i <= 9; i++) 
      {  
         System.out.print("*"); 
      }
-     
-     
+
+
 
 .. parsonsprob:: print_evens
    :numbered: left
@@ -296,12 +296,12 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
       } // end for
    =====
    } // end method
-   
+
 
 
 Decrementing Loops
 -------------------
-   
+
 You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, "for (int i=5; i > 0; i--)`` counts from 5 down to 1.
 
 |CodingEx| **Coding Exercise**
@@ -309,7 +309,7 @@ You can also count backwards in a loop starting from the last number and decreme
 .. activecode:: lcfcp1
    :language: java
    :autograde: unittest
-   
+
    What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3? Try the Code Lens button to visualize and trace through this code.
    ~~~~
    public class SongTest
@@ -320,7 +320,7 @@ You can also count backwards in a loop starting from the last number and decreme
          String line1 = " bottles of pop on the wall";
          String line2 = " bottles of pop";  
          String line3 = "Take one down and pass it around";  
-  
+
          // loop 5 times (5, 4, 3, 2, 1)
          for (int i = 5; i > 0; i--)
          {
@@ -331,7 +331,7 @@ You can also count backwards in a loop starting from the last number and decreme
             System.out.println();
          }
       }
-      
+
       public static void main(String[] args)
       {
          SongTest.printPopSong();
@@ -380,7 +380,7 @@ You can also count backwards in a loop starting from the last number and decreme
             assertTrue(passed);
         }
     }
-  
+
 The method **printPopSong** prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.  
 
 
@@ -389,7 +389,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop. 
    ~~~~
    public class ForLoop
@@ -402,7 +402,7 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
         } 
       }
    }
-   
+
    ====
    import static org.junit.Assert.*;
    import org.junit.*;;
@@ -419,14 +419,14 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
             assertTrue(passed);
         }
    }
-     
+
 
 
 
 Turtle Loops
 ------------
 
-        
+
 |CodingEx| **Coding Exercise**
 
 Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 forward and 1 turn command in the loop. Whenever you find yourself repeating code, try to use a loop instead!
@@ -449,7 +449,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
-          
+
           // Change the following code to use a for loop to draw the square
           yertle.forward();
           yertle.turn(90);
@@ -459,11 +459,11 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
           yertle.turn(90);
           yertle.forward();
           yertle.turn(90);
-          
+
           world.show(true); 
       }
     }
-    
+
     ====
     import static org.junit.Assert.*;
     import org.junit.*;;
@@ -547,11 +547,11 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
           yertle.moveTo(100,200);
           yertle.penDown();
           yertle.setColor(Color.blue); 
-          
+
           // Add your loop here!
           yertle.forward(100);
           yertle.turn(90);
-          
+
           world.show(true); 
       }
     }
@@ -629,9 +629,9 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
             assertTrue(passed);
         }
     }
-    
-   
-   
+
+
+
 Summary
 -------
 
@@ -668,7 +668,7 @@ AP Practice
     Which of the following code segments will produce the same output as the code segment above?
 
     .. code-block:: java
-     
+
         I.  int sum = 0;
             for(int count = 0; count <= 6; count++)
             {
@@ -686,7 +686,7 @@ AP Practice
                sum += i;
             }
             System.out.println(sum);
-        
+
         III. int sum = 0;
              for(int j = 7; j > 1; j--)
              {
@@ -712,7 +712,7 @@ AP Practice
     - III only
 
       - This is partially correct.
-    
+
     - I, II, and III
 
       - Note that I has an extra count++ at the beginning of the loop body that should be deleted. 
@@ -730,7 +730,7 @@ AP Practice
           result *= i;
         }
         System.out.println(result);
-        
+
     Which of the following best explains how changing the for loop header to ``for (int i = 4; i <= 6; i += 2)`` affects the output of the code segment?
 
     - The output of the code segment will be unchanged.

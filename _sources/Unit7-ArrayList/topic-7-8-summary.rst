@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 7-8-
    :start: 1
-   
+
 ArrayList Summary
 -------------------------
 
@@ -50,9 +50,9 @@ Vocabulary Practice
     :match_2: The number of elements in the list|||size()
     :match_3: The index of the first element|||0
     :match_4: The index of the second element|||1
-    
+
     Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. dragndrop:: ch10_17_match_2
     :feedback: Review the summaries above.
     :match_1: Declare an integer list named numList|||List&lt;Integer&gt; numList = null;
@@ -60,7 +60,7 @@ Vocabulary Practice
     :match_3: Declare and create a list of integers named list1 |||List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
     :match_4: Get the first object in a list named list1|||list1.get(0);
     :match_5: Get the last object in a list named list1|||list1.get(list1.size() - 1);
-   
+
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
 
 .. |Quizlet| raw:: html

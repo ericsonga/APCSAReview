@@ -1,18 +1,18 @@
 .. qnum::
    :prefix: 4-13-
    :start: 1
-   
+
 Consumer Review Lab
 ====================
 
 .. |student guide| raw:: html
 
    <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-consumer-review-lab-student-guide.pdf" target="_blank" style="text-decoration:underline">student guide</a>
- 
+
 .. |cleansentiment.csv| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit4-Iteration/ConsumerReviewLabFiles/cleanSentiment.csv" target="_blank" style="text-decoration:underline">cleanSentiment.csv</a>
-   
+
 .. |ConsumerReviewLabFiles| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit4-Iteration/ConsumerReviewLabFiles/" target="_blank" style="text-decoration:underline">ConsumerReviewLabFiles</a>
@@ -25,7 +25,7 @@ Consumer Review Lab
 
    <a href="https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html#while-find-and-replace-loop" target="_blank" style="text-decoration:underline">Lesson 4.3 Loops and Strings</a>
 
-  
+
 The Consumer Review Lab is a new AP CS A Lab released in 2019 to practice loops and calling methods to prepare for the free response question on control structures and methods. Here is a link to the |student guide|. The teacher guide and the code files are available in the AP Course Audit Portal. The code files are also below.
 
 Activity 0 Analyzing Reviews
@@ -54,7 +54,7 @@ This method uses a **try catch** block for error-checking which is not covered i
 
 
 .. code-block:: java 
- 
+
     /**
      * @returns the sentiment value of word as a number between -1 (very negative) to 1 (very positive sentiment) 
     */
@@ -85,7 +85,7 @@ Notice that sentimentVal() is a static method. We've seen static methods before 
    :feedback_c: sentimentVal returns a value and is a static method in the class Review.
    :feedback_d: That's right1 sentimentVal takes a String argument and returns a double value and is a static method that can be called with the class name Review.
    :feedback_e: sentimentVal returns a double value, not int, and it's a static method in the class Review.
-   
+
 
    Which of the following correctly calls the method sentimentVal?
 

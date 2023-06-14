@@ -6,19 +6,19 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
@@ -40,7 +40,7 @@ An **array** is a block of memory that stores a collection of data items (**elem
 .. |video| raw:: html
 
    <a href="https://youtu.be/G7aF-OuLfl4" target="_blank">video</a>
-   
+
 Here's a fun |video| that introduces the concept of an array and gives an example.
 
 .. youtube:: G7aF-OuLfl4
@@ -66,13 +66,13 @@ Arrays and lists in most programming languages start counting elements from the 
     :width: 100%
     :align: center
     :figclass: align-center
-    
+
     Figure 2: Comparing App Inventor lists and Java arrays
-    
+
 .. shortanswer:: arrayAnalogy
 
    Can you think of another example of something that is like an array (like a row of lockers)?
-   
+
 
 
 Declaring and Creating an Array
@@ -81,7 +81,7 @@ Declaring and Creating an Array
 When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, ``int[] scores`` means we have an array called scores that contains int values.
 
 .. code-block:: java 
-   
+
    // Declaration for a single int variable 
    int score;
    // Declaration for an array of ints
@@ -94,7 +94,7 @@ There are two ways to create an array. You can use the keyword **new** to get ne
 .. |video2| raw:: html
 
    <a href="https://youtu.be/IbPFjw1FNkE" target="_blank">video</a>
-   
+
 Watch the following |video2| which shows the two ways of creating an array with a physical model of Java memory.
 
 .. youtube:: IbPFjw1FNkE
@@ -108,14 +108,14 @@ Using new to Create Arrays
 To create an empty array after declaring the variable, use the **new** keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array names below. The size of an array is set at the time of creation and cannot be changed after that.
 
 .. code-block:: java 
-   
+
   //declare an array variable
   int[] highScores;
   // create the array
   highScores = new int[5];
   // declare and create array in 1 step!
   String[] names = new String[5];
-  
+
 
 
 |Exercise| **Check Your Understanding**
@@ -131,7 +131,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
    :feedback_b: Yes correct!
    :feedback_c: This declares the array but does not create it with new.
    :feedback_d: This is not the correct syntax.
-   
+
    Which of the following creates an array of 10 doubles called prices?
 
 |CodingEx| **Coding Exercise**
@@ -143,7 +143,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    In the following code, add another array declaration that creates an array of 5 doubles called prices and another array of 5 Strings called names and corresponding System.out.println commands.
    ~~~~
    public class Test1
@@ -153,9 +153,9 @@ To create an empty array after declaring the variable, use the **new** keyword w
           // Array example
           int[] highScores = new int[10];
           // Add an array of 5 doubles called prices.
-          
+
           // Add an array of 5 Strings called names.
-      
+
           System.out.println("Array highScores declared with size " + highScores.length);
           // Print out the length of the new arrays
       }
@@ -190,11 +190,11 @@ To create an empty array after declaring the variable, use the **new** keyword w
 
 ..	index::
 	pair: array; initialization
-    
+
 .. note::
-  
+
    Array elements are initialized to default values like the following. 
-   
+
    - 0 for elements of type ``int`` 
    - 0.0 for elements of type ``double`` 
    - false for elements of type ``boolean``
@@ -216,8 +216,8 @@ Another way to create an array is to use an **initializer list**. You can initia
 
   int[ ] highScores = {99,98,98,88,68};
   String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
-  
-  
+
+
 When you create an array of a **primitive type** (like ``int``) with initial values specified, space is allocated for the specified number of items of that type and the values in the array are set to the specified values.  When you create an array of an **object type** (like ``String``) with initial values, space is set aside for that number of object references.  The objects are created and the object references set so that the objects can be found. 
 
 .. figure:: Figures/intAndStringArrays.png
@@ -230,14 +230,14 @@ When you create an array of a **primitive type** (like ``int``) with initial val
 .. |video3| raw:: html
 
    <a href="https://youtu.be/T-YZvVvPOac" target="_blank">video</a>
-   
+
 Watch the following |video3| which shows an array of String objects with a physical model of Java memory.
 
 .. youtube:: T-YZvVvPOac
     :width: 650
     :height: 415
     :align: center
-    
+
 ..	index::
     single: dot-notation
 	pair: array; length
@@ -254,7 +254,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
 .. activecode:: lcab2
    :language: java
    :autograde: unittest   
-   
+
    Try running the code below to see the length. Try adding another value to the highScores initializer list and run again to see the length value change.
    ~~~~
    public class Test2
@@ -304,11 +304,11 @@ Arrays know their length (how many elements they can store).  It is a public rea
 .. note::
 
    Note that length is an instance variable and not a method, unlike the String ``length()`` method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. The length instance variable is declared as a ``public final int``.  ``public`` means you can access it and ``final`` means the value can't change.
-   
+
 
 
 |Exercise| **Check your understanding**
-   
+
 .. mchoice:: qab_2
    :practice: T
    :answer_a: <code>highScores.length</code>
@@ -318,7 +318,7 @@ Arrays know their length (how many elements they can store).  It is a public rea
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
 
    Which index is for the last element of an array called ``highScores``?
- 
+
 
 Access and Modify Array Values 
 -------------------------------------
@@ -330,19 +330,19 @@ To access the items in an array, we use an **indexed array variable** which is t
     :width: 100%
     :align: center
     :figclass: align-center
-    
+
     Figure 5: Comparing Access to App Inventor lists and Java arrays
 
 An indexed variable like **arrayname[index]** can be used anywhere a regular variable can be used, for example to assign a new value or to get a value from the array like below.
 
 
 .. code-block:: java 
- 
+
   // assign a new value 99 to the first element in the array
   highScores[0] = 99;
   // print the first element of the array
   System.out.println( highScores[0] );
-  
+
 .. note::
 
     The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access or modify array items.
@@ -350,7 +350,7 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
 .. |video4| raw:: html
 
    <a href="https://youtu.be/uagEJw6bTM4" target="_blank">video</a>
-   
+
 Watch the following |video4| which shows a physical model of Java memory setting array values.
 
 .. youtube:: uagEJw6bTM4
@@ -362,27 +362,27 @@ Watch the following |video4| which shows a physical model of Java memory setting
 |Exercise| **Check your understanding**
 
 .. fillintheblank:: array-access1
-    
+
     Fill in the blank with code to access the cars array.
 
-    
+
    String[] cars = {"Honda", "Volvo", "BMW"};
-   
+
    // Access cars array to get Volvo
-   
+
    String v = |blank|;
 
    -   :cars\[1\]: Correct.
        :x: Use the array name cars with [ ] with a number in it. Don't use spaces or ; in your answer!
-       
+
 .. fillintheblank:: array-access2
 
     Fill in the blank with code to access the cars array.  NOTE: The semicolon is provided for you after the box.
-    
+
    String[] cars = {"Honda", "Volvo", "BMW"};
-   
+
    // Set the first item of the cars array to be Toyota
-   
+
    |blank|  = "Toyota";  
 
    -   :cars\[0\]: Correct.
@@ -394,7 +394,7 @@ Watch the following |video4| which shows a physical model of Java memory setting
         :table:
         :correct: 1,2;1,4
         :incorrect: 1,1;1,3;
-        
+
         +----+----+----+----+
         | 3  | 2  | 1  | -3 |
         +----+----+----+----+
@@ -408,14 +408,14 @@ Watch the following |video4| which shows a physical model of Java memory setting
    :feedback_b: While this matches with how we number some things, the first item in an array is at index 0.
 
    At what index do you find the first element of an array?
-   
+
 .. .. clickablearea:: arrayClick2
         :question: Click on the values at index 0 and 2 in the following array.
         :feedback: Remember that the first value is at index 0.  Click on an area again to unselect it and try again.
         :table:
         :correct: 1,1;1,3
         :incorrect: 1,2;1,4;
-        
+
         +----+----+----+----+
         | 4  | -2 |  8 | 7  |
         +----+----+----+----+
@@ -427,7 +427,7 @@ Watch the following |video4| which shows a physical model of Java memory setting
 
 .. .. activecode:: arrayAccess
    :language: java
-   
+
    public class Test1
    {
       public static void main(String[] args)
@@ -450,7 +450,7 @@ Watch the following |video4| which shows a physical model of Java memory setting
    }
 
 
-   
+
 
 
 
@@ -463,7 +463,7 @@ If you want to keep track of the top 5 highest scores in a game and the names of
 .. activecode:: array-set
    :language: java
    :autograde: unittest   
-   
+
    Try out the following code which has two parallel arrays, highScores and names. Can you print out Mateo's score? Can you change Sofia's score to 97 using an assignment statement in the code? Can you change the arrays so that they have 6 elements and add your name and score and print them out? 
    ~~~~
    public class Test1
@@ -473,7 +473,7 @@ If you want to keep track of the top 5 highest scores in a game and the names of
         // declare, create, initialize arrays
         int[ ] highScores = {99,98,98,88,68};
         String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"}; 
-        
+
         // Print corresponding names and scores
         System.out.println(names[0] + " has a score of " + highScores[0]);
         System.out.println(names[1] + " has a score of " + highScores[1]);
@@ -516,18 +516,18 @@ If you want to keep track of the top 5 highest scores in a game and the names of
             assertTrue(passed);
         }
     }
-   
+
 What happens if you try to access an element that is not there? Try to access a highScore or name at index 7 above to see what happens. The index must be between 0 and the length of the array - 1 or it will give an error message called ArrayIndexOutOfBoundsException. 
 
 .. note::
 
     Using an index value outside of 0 - (length-1) will result in an ArrayIndexOutOfBoundsException being thrown.  
- 
+
 
 One powerful feature in the array **data abstraction** is that we can use variables for the index! As long as the variable holds an integer, we can use it as an index. 
 
 .. code-block:: java 
- 
+
   // use a variable for the index
   int index = 3;
   System.out.println(  highScores[index] );
@@ -535,17 +535,17 @@ One powerful feature in the array **data abstraction** is that we can use variab
 .. image:: 6-1-images/cow.jpg
     :width: 150
     :align: left
-    
+
 |CodingEx| **Coding Exercise**
 
 Here's a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is "cow.jpg". The images array holds 5 images. 
 
 
-    
+
 .. activecode:: imageArray
    :language: java
    :autograde: unittest
-   
+
    Can you change the index variable's value so that it prints out the puppy image? Can you print out the reindeer? Try all of them! What indices did you need to use? Then try using a random number for the index instead. Remember that (int)(Math.random()*max) will return a number from 0 up to max. What's the maximum number it can be for this array?
    ~~~~
    public class ImageEx
@@ -554,14 +554,14 @@ Here's a fun String array of image filenames. The following code displays an onl
     {
         String[] images = {"cow.jpg", "kitten.jpg", 
                   "puppy.jpg", "pig.jpg", "reindeer.jpg"};
-   
+
         ImageEx obj = new ImageEx();
         // Change index to see different images in the array!
         // Can you have it pick out a random image?
         int index = 0;
         obj.printHTMLimage( images[index] );
      }
-      
+
      // This method will just work in Active Code which interprets html
      public void printHTMLimage(String filename)
      {
@@ -573,7 +573,7 @@ Here's a fun String array of image filenames. The following code displays an onl
     import static org.junit.Assert.*;
      import org.junit.*;;
      import java.io.*;
-     
+
      // ActiveCode imageArray
      public class RunestoneTests extends CodeTestHelper
      {
@@ -602,7 +602,7 @@ Here's a fun String array of image filenames. The following code displays an onl
 .. image:: 6-1-images/US.jpg
     :width: 200
     :align: left
-    
+
 In this challenge, you will create a guide to different countries using arrays. 
 
 1. Use the Active Code window below to create 4 parallel arrays and initialize them using initialization lists that represent the data below. Remember that the order of these arrays has to match so that you can use the same index and get corresponding values out.
@@ -623,7 +623,7 @@ In this challenge, you will create a guide to different countries using arrays.
 .. activecode:: challenge-1-6-countries
    :language: java
    :autograde: unittest        
-   
+
    public class Countries
    {
      public static void main(String[] args)
@@ -633,18 +633,18 @@ In this challenge, you will create a guide to different countries using arrays.
           // Capitals: Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi, Mexico City, London, Washington D.C.
           // Languages: Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
           // Filenames for map images: China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
-        
+
           // 2. Pick a random number up to the length of one of the arrays and save in the variable index
-        
+
           // 3. Print out the info in each array using the random index
-        
+
           // Example of showing image files using an array called images (your array name above may be different)
           // (this will only work in Active Code)
           // Countries obj = new Countries();
           // obj.printHTMLimage( images[index] );
 
       }
-      
+
       // This method will just work in Active Code which interprets html
       public void printHTMLimage(String filename)
       {
@@ -726,7 +726,7 @@ In this challenge, you will create a guide to different countries using arrays.
             assertTrue(passed);
         }
      }
-    
+
 |Groupwork| Design an Array of Objects for your Community
 ----------------------------------------------------------
 
@@ -771,7 +771,7 @@ And we can use ``array[index].method()`` to call a method of an object in the ar
           turtarray[0].forward();
           turtarray[1].turnLeft();
           turtarray[1].forward();
-            
+
           world.show(true);
       }
     }    
@@ -804,7 +804,7 @@ And we can use ``array[index].method()`` to call a method of an object in the ar
 .. |lesson 5.6| raw:: html
 
    <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 5.6</a>
- 
+
 In Unit 5, you came up with a class of your own choice relevant to you or your 
 community.  In this unit, you will create an array to hold objects of your class.
 
@@ -832,10 +832,10 @@ community.  In this unit, you will create an array to hold objects of your class
       public static void main(String[] args)
       {  
          // 2. Create an array of 3 objects of your class. 
-         
+
          // 3. Initialize array elements 0-2 to new objects of your class.
 
-         
+
          // 4. Call the print method of each object in the array using the array index. 
 
 
@@ -864,7 +864,7 @@ community.  In this unit, you will create an array to hold objects of your class
             "Did you declare 3 objects of your class using new and your constructor?",passed);
             assertTrue(passed);
         }
-        
+
         @Test
         public void testInit()  {
            boolean passed = checkCodeContains("initialization for array element 0", "[0]=");
@@ -912,7 +912,7 @@ Summary
   - Elements of type double are initialized to 0.0
   - Elements of type boolean are initialized to false
   - Elements of a reference type are initialized to the reference value null. No objects are automatically created.
-  
+
 - Initializer lists can be used to create and initialize arrays.
 
 - Square brackets ([ ]) are used to access and modify an element in an array using an index. The indexed array variable, for example array[index], can be used anywhere a regular variable can be used, for example to get or assign values.
@@ -945,7 +945,7 @@ arrays can be passed in as arguments to methods and returned as values, just lik
         :feedback_e: Note that only 1 array element is changed.
 
         Consider the following method. Given an ``array`` initialized to ``{4, 10, 15}``, which of the following represents the contents of the array after a call to ``mystery(array, 2)``?
-       
+
         .. code-block:: java
 
            public void mystery(int[] a, int i)
@@ -958,9 +958,9 @@ arrays can be passed in as arguments to methods and returned as values, just lik
 
         Consider the following method. Which of the following code segments, appearing in the same class as the ``mystery`` method, 
         will result in ``array2`` having the contents ``{5, 10, 20}``?
-        
+
         .. code-block:: java
- 
+
            public int[] mystery(int[] a, int i, int value)
     	   {
     	      a[i + 1] = a[i] + value;
@@ -996,12 +996,12 @@ arrays can be passed in as arguments to methods and returned as values, just lik
           - This would result in an ``ArrayIndexOutOfBoundsException``.
 
         - .. code-block:: java
-	
+
             int[] array1 = {5, 10, 15};
             int[] array2 = mystery(array1, 1, 20);
 
           - This would result in ``{5, 10, 30}``.        
-       	    
+
 
 Arrays Game
 --------------------------
@@ -1009,8 +1009,8 @@ Arrays Game
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
+
+
 Try the game below to practice arrays. Click on **Arrays** and click on the element of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html

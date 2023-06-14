@@ -7,14 +7,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -133,7 +133,7 @@ The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It intr
     :width: 800
     :height: 315
     :align: center
-    
+
 ..	index::
     single: factorial
 
@@ -234,7 +234,7 @@ Every recursive method must have at least one **base case** which halts the recu
         :click-incorrect:else:endclick:
             :click-incorrect:return n * factorial(n-1);:endclick:
     :click-incorrect:}:endclick:
-    
+
 .. mchoice:: qrb_3
    :practice: T
    :answer_a: 0
@@ -303,6 +303,6 @@ Every recursive method must have at least one **base case** which halts the recu
          }
          return total;
       }
-      
-      
+
+
 Continue to the next page for Day 2 of the Recursion lesson.

@@ -297,11 +297,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
         Which of the following statements are TRUE about local variables?
 
         I.   Local variables can be declared in the body of constructors and methods.
-        
+
         II.  Local variables may only be used within the constructor or method and cannot be declared to be public or private.
-        
+
         III. When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable.
-        
+
 
      .. mchoice:: mid_1_9
         :answer_a: I and II only
@@ -319,9 +319,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
         Which of the following statements are TRUE about **static** methods?
 
         I.   Static methods and variables include the keyword static before their name in the header or declaration and can be public or private.
-        
+
         II.  Static methods can access or change the values of instance variables.
-        
+
         III.  Static methods are associated with the class, not objects of the class.
 
      .. mchoice:: mid_1_10

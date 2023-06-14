@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 4-3-
    :start: 1
-        
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -28,14 +28,14 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Loops and Strings
 =================
 
 ..	index::
 	single: string processing
 	pair: string; loop
-	
+
 Loops are often used for **String Traversals** or **String Processing** where the code steps through a string character by character. In lesson 2.6 and 2.7, we learned to use String objects and built-in string methods to process strings. In this lesson, we will write our own loops to process strings. 
 
 Remember that strings are a sequence of characters where each character is at a position or **index** starting at 0. 
@@ -55,7 +55,7 @@ Remember that strings are a sequence of characters where each character is at a 
 The String methods (covered in lesson 2.7 and given in the |AP CS A Reference Sheet|) that are most often used to process strings are:
 
 - **int length()** : returns the number of characters in a String object. 
-  
+
 - **int indexOf(String str)** : returns the index of the first occurrence of str; returns -1 if not found.
 
 - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to – 1). Note that s.substring(i,i+1) returns the character at index i. 
@@ -94,7 +94,7 @@ A while loop can be used with the String indexOf method to find certain characte
 The example in the mixed up code below finds and removes all the letter a's in a string. You can watch it in action in this |Java visualizer1|.
 
 |Exercise| **Check Your Understanding**
-  
+
 
 .. parsonsprob:: removeA
    :numbered: left
@@ -128,8 +128,8 @@ The example in the mixed up code below finds and removes all the letter a's in a
       System.out.println("String with a's removed:" + s);
    =====
    } // end method
-   
-   
+
+
 Google has been scanning old books and then using software to read the scanned text.  But, the software can get things mixed up like using the number 1 for the letter l. Try the code below (and in the |Java visualizer|) to clean up scanning mistakes like this.
 
 |CodingEx| **Coding Exercise**
@@ -139,7 +139,7 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
 .. activecode:: lclw1
    :language: java
    :autograde: unittest
-   
+
    Change the code to add code for a counter variable to count the number of 1's replaced in the message and print it out. Change the message to have more mistakes with 1's to test it.
    ~~~~
    public class FindAndReplace
@@ -148,7 +148,7 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
       {
         String message = "Have a 1ong and happy 1ife"; 
         int index = 0;
-        
+
         // while more 1's in the message
         while (message.indexOf("1") >= 0)
         {
@@ -195,8 +195,8 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
             assertTrue(passed);
          }
         }
-  
- 
+
+
 For Loops: Reverse String
 --------------------------
 
@@ -221,7 +221,7 @@ For loops with strings usually start at 0 and use the string's length() for the 
    }
 
 |Exercise| **Check Your Understanding**
-  
+
 
 .. parsonsprob:: countEs
    :numbered: left
@@ -249,8 +249,8 @@ For loops with strings usually start at 0 and use the string's length() for the 
         System.out.println(count);  
    =====
    }
-    
-    
+
+
 Here is a for-loop that creates a new string that reverses the string s.  We start with a blank string sReversed and build up our reversed string in that variable by copying in characters from the string s. You can also run this code in this |Java visualizer link| or by clicking on the Code Lens button below. 
 
 
@@ -258,14 +258,14 @@ Here is a for-loop that creates a new string that reverses the string s.  We sta
 .. |Java visualizer link| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20ReverseString%0A%20%20%20%7B%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20String%20s%20%3D%20%22Hello%22%3B%0A%20%20%20%20%20%20%20%20String%20sReversed%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%20%20String%20ithLetter%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20for%28int%20i%3D0%3B%20i%20%3C%20s.length%28%29%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20ithLetter%20%3D%20s.substring%28i,i%2B1%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20//%20add%20the%20letter%20at%20index%20i%20to%20what%20is%20already%20reversed.%0A%20%20%20%20%20%20%20%20%20%20%20%20sReversed%20%3D%20ithLetter%20%2B%20sReversed%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20System.out.println%28s%20%2B%20%22%20reversed%20is%20%22%20%2B%20sReversed%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&cumulative=false&curInstr=25&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank">Java visualizer link</a>
-   
+
 |CodingEx| **Coding Exercise**
 
 
 .. activecode:: reverseString
    :language: java
    :autograde: unittest
-   
+
    What would happen if you started the loop at 1 instead? What would happen if you used <= instead of <? What would happen if you changed the order in which you added the ithLetter in line 12?
    ~~~~
    public class ReverseString
@@ -275,7 +275,7 @@ Here is a for-loop that creates a new string that reverses the string s.  We sta
         String s = "Hello";
         String sReversed = "";
         String ithLetter;
-        
+
         for(int i=0; i < s.length(); i++) {
             ithLetter = s.substring(i,i+1);
             // add the letter at index i to what's already reversed.
@@ -315,7 +315,7 @@ Here is a for-loop that creates a new string that reverses the string s.  We sta
     :width: 150
     :align: left
     :alt: Cat or Dog
-    
+
 Are you a cat person or a dog person? The code below prints a nice message about cats, but if you're a dog person, you might not agree. 
 
 1. Write some code below that changes every occurrence of "cat" to "dog" in the message. This code will be more like the first program in this lesson where we replaced 1's with l's. 
@@ -330,7 +330,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Write a while loop that replaces every occurrence of "cat" in the message with "dog" using the indexOf and substring methods.
    ~~~~
    public class ChallengeReplace
@@ -341,9 +341,9 @@ Are you a cat person or a dog person? The code below prints a nice message about
 
           // Write a loop here that replaces every occurrence of "cat" 
           // in the message with "dog", using indexOf and substring.
-        
-        
-        
+
+
+
           System.out.println(message);
       }
    }
@@ -381,7 +381,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
             boolean passed = checkCodeContains("while loop", target);
             assertTrue(passed);
         }
-        
+
         @Test
         public void testSubString() 
         {
@@ -389,7 +389,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
             boolean passed = checkCodeContains("substring", target);
             assertTrue(passed);
         }
-        
+
         @Test
         public void testReplace() throws IOException
         {

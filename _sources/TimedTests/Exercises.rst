@@ -1,10 +1,10 @@
 .. qnum::
    :prefix: 13-4-
    :start: 1
-   
+
 .. highlight:: java
    :linenothreshold: 4
-   
+
 
 .. |start| image:: Figures/start.png
     :height: 24px
@@ -45,7 +45,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
 .. timed:: practiceExamX
    :timelimit: 40
-   
+
    .. mchoice:: mt1_3
       :answer_a: I only
       :answer_b: II only

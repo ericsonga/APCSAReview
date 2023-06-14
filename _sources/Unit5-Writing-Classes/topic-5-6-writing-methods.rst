@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -32,7 +32,7 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Writing Methods
 =================
 
@@ -63,7 +63,7 @@ Let's look at an example with lots of repetition of code and create methods to r
         :click-correct:System.out.println("With a knick knack paddy whack, give a dog a bone.");:endclick:
         :click-correct:System.out.println("This old man came rolling home.");:endclick:
     :click-incorrect:}:endclick:
-            
+
 Did you find some repeated lines of the `This Old Man song <https://www.youtube.com/watch?v=Di23O5cN4ZU&ab_channel=Rock%27NLearn>`_? You may have noticed that the chorus is repeated "With a knick knack paddy whack, give a dog a bone. This old man came rolling home." When you see repeated code, that is a signal for you to make a new method!
 
 There are three steps to creating and calling a method:
@@ -96,18 +96,18 @@ There are three steps to creating and calling a method:
 For example, here is a chorus() method definition that we could write for the "This Old Man Song":
 
 .. code-block:: java
-     
+
         public void chorus() 
         { 
               System.out.println("With a knick knack paddy whack, give a dog a bone.");
               System.out.println("This old man came rolling home.");
         }
-        
+
 
 .. |Java visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Song%20%0A%20%20%7B%20%0A%20%20%20%20//%20The%20chorus%20method%0A%20%20%20%20public%20void%20chorus%28%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22With%20a%20knick%20knack%20paddy%20whack,%20give%20a%20dog%20a%20bone.%22%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22This%20old%20man%20came%20rolling%20home.%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%20args%5B%5D%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20Song%20mySong%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20System.out.println%28%22This%20old%20man,%20he%20played%20one.%22%29%3B%0A%20%20%20%20%20%20System.out.println%28%22He%20played%20knick%20knack%20on%20my%20thumb.%20%22%29%3B%0A%20%20%20%20%20%20mySong.chorus%28%29%3B%0A%0A%20%20%20%20%20%20System.out.println%28%22This%20old%20man,%20he%20played%20two.%22%29%3B%0A%20%20%20%20%20%20System.out.println%28%22He%20played%20knick%20knack%20on%20my%20shoe.%20%22%29%3B%0A%20%20%20%20%20%20mySong.chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=22&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-   
+
 |CodingEx| **Coding Exercise**
 
 
@@ -126,7 +126,7 @@ For example, here is a chorus() method definition that we could write for the "T
        System.out.println("With a knick knack paddy whack, give a dog a bone.");
        System.out.println("This old man came rolling home.");
     }
-    
+
     public static void main(String args[]) 
     {
         Song mySong = new Song();
@@ -145,7 +145,7 @@ For example, here is a chorus() method definition that we could write for the "T
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -176,7 +176,7 @@ For example, here is a chorus() method definition that we could write for the "T
         }
 
     }
-  
+
 Parameters
 -----------
 
@@ -200,11 +200,11 @@ We can make methods even more powerful and more abstract by giving them paramete
        System.out.println("This old man, he played " + number);
        System.out.println("He played knick knack on my " + rhyme);
     }
-    
+
 .. |visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Song%20%0A%20%20%7B%20%0A%20%20%20%20%0A%20%20%20%20/**%20Verse%0A%20%20%20%20%20*%20%40param%20number%20-%20a%20String%20like%20%22one%22,%20%22two%22,%20etc.%0A%20%20%20%20%20*%20%40param%20rhyme%20-%20a%20String%20like%20%22thumb%22,%20%22shoe%22,%20etc.%0A%20%20%20%20%20*/%0A%20%20%20%20%20public%20void%20verse%28String%20number,%20String%20rhyme%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22This%20old%20man,%20he%20played%20%22%20%2B%20number%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22He%20played%20knick%20knack%20on%20my%20%22%20%2B%20rhyme%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20//%20The%20chorus%20method%0A%20%20%20%20public%20void%20chorus%28%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22With%20a%20knick%20knack%20paddy%20whack,%20give%20a%20dog%20a%20bone.%22%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22This%20old%20man%20came%20rolling%20home.%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%20args%5B%5D%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20Song%20mySong%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20mySong.verse%28%22one%22,%20%22thumb%22%29%3B%0A%20%20%20%20%20%20mySong.chorus%28%29%3B%0A%20%20%20%20%20%20mySong.verse%28%22two%22,%20%22shoe%22%29%3B%0A%20%20%20%20%20%20mySong.chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=24&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-   
+
 |CodingEx| **Coding Exercise**
 
 
@@ -218,7 +218,7 @@ We can make methods even more powerful and more abstract by giving them paramete
   ~~~~
   public class Song 
   { 
-    
+
     /** Verse - prints out a verse of the song
      * @param number - a String like "one", "two", etc.
      * @param rhyme - a String like "thumb", "shoe", etc.
@@ -228,14 +228,14 @@ We can make methods even more powerful and more abstract by giving them paramete
        System.out.println("This old man, he played " + number);
        System.out.println("He played knick knack on my " + rhyme);
      }
-     
+
     // The chorus method
     public void chorus() 
     {
        System.out.println("With a knick knack paddy whack, give a dog a bone.");
        System.out.println("This old man came rolling home.");
     }
-    
+
     public static void main(String args[]) 
     {
         Song mySong = new Song();
@@ -249,7 +249,7 @@ We can make methods even more powerful and more abstract by giving them paramete
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-   
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -266,7 +266,7 @@ We can make methods even more powerful and more abstract by giving them paramete
             assertTrue(passed);
         }
     }
-  
+
 When you create your own method, the variables you define for it in the method header are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in these local parameter variables. 
 
 When a method is called, the right method definition is found by checking the **method signature** or **header** at the top of the method definition to match the method name, the number of arguments, the data types for the arguments and the return type. 
@@ -290,9 +290,9 @@ If you pass in an argument that holds a reference to an object, like a String or
     :width: 500px
     :align: center
     :figclass: align-center
-    
+
     Figure 2: Turtle Reference Equality
-    
+
 (Advanced topics warning): Although String objects are not mutable, the classes that you create will have mutable objects. If the reference parameter is for a mutable object, the method could change the actual object. However, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification. Methods can even access the private data and methods of a parameter that is a reference to an object if the parameter is the same type as the method’s enclosing class. Note that Strings are immutable objects, so they cannot be changed by the method; only a new changed copy of them can be made.
 
 
@@ -330,7 +330,7 @@ Methods can also return values of any type back to the calling method. The calli
          }
          return flag;
       }
-    
+
       public static void main(String args[]) 
       {
           StringFind test = new StringFind();
@@ -397,7 +397,7 @@ Methods can also return values of any type back to the calling method. The calli
             assertTrue(passed);
         }
     }
-  
+
 |Groupwork| Programming Challenge : Song with Parameters
 ---------------------------------------------------------
 
@@ -418,21 +418,21 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
     :click-incorrect:The little one stops to :endclick::click-correct:suck a thumb:endclick:
     :click-incorrect:And they all go marching down to the ground:endclick:
     :click-incorrect:To get out of the rain, BOOM! BOOM! BOOM! BOOM!:endclick:
-    
+
     :click-incorrect:The ants go marching :endclick::click-correct:two by two:endclick::click-incorrect:, hurrah, hurrah:endclick:
     :click-incorrect:The ants go marching :endclick::click-correct:two by two:endclick::click-incorrect:, hurrah, hurrah:endclick:
     :click-incorrect:The ants go marching :endclick::click-correct:two by two:endclick:
     :click-incorrect:The little one stops to :endclick::click-correct:tie a shoe:endclick:
     :click-incorrect:And they all go marching down to the ground:endclick:
     :click-incorrect:To get out of the rain, BOOM! BOOM! BOOM! BOOM!:endclick:
-    
+
     :click-incorrect:The ants go marching :endclick::click-correct:three by three:endclick::click-incorrect:, hurrah, hurrah:endclick:
     :click-incorrect:The ants go marching :endclick::click-correct:three by three:endclick::click-incorrect:, hurrah, hurrah:endclick:
     :click-incorrect:The ants go marching :endclick::click-correct:three by three:endclick:
     :click-incorrect:The little one stops to :endclick::click-correct:climb a tree:endclick:
     :click-incorrect:And they all go marching down to the ground:endclick:
     :click-incorrect:To get out of the rain, BOOM! BOOM! BOOM! BOOM!:endclick:
-        
+
 
 
 1. In the active code window below, create a method or methods that takes parameters to print out a verse. The method(s) should be abstract enough to work for all 3 verses.  Use good commenting for your methods that describe the @param. For the autograder, make sure you create a method called verse that takes 2 parameters. 
@@ -449,22 +449,22 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
   { 
      // Create at least 1 method called verse that takes 2 parameters
      // that can be used to print out the verses of the song The Ants Go Marching
-     
-     
+
+
      public static void main(String args[]) 
      {
          // Create a Song object and call its method(s) to print out 
          // the verses of The Ants Go Marching
          // There should be atleast 1 method called verse that takes 2 arguments.
-          
-          
+
+
     }
   }
   ====
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
       @Test
@@ -523,10 +523,10 @@ In the previous lessons, you came up with a class of your own choice relevant to
       public static void main(String[] args)
       {  
          // Construct an object of your class  
-         
-         
+
+
          // call the object's method
-      
+
       }
   }
   ====
@@ -592,7 +592,7 @@ AP Practice
     :practice: T
 
     Consider the following class, which uses the instance variable dollars to represent the money in a wallet in dollars.
-        
+
     .. code-block:: java
 
         public class Wallet
@@ -606,49 +606,49 @@ AP Practice
         }
 
     The putMoneyInWallet method is intended to increase the dollars in the wallet by the parameter amount and then return the updated dollars in the wallet. Which of the following code segments should replace  *missing code* so that the putMoneyInWallet method will work as intended?
-    
+
     - .. code-block:: java
 
         amount += dollars;
         return dollars;
 
       - dollars should be incremented by amount.
-        
+
     - .. code-block:: java
 
         dollars = amount;
         return amount;
-        
+
       - dollars should be incremented by amount.
-        
+
     - .. code-block:: java
 
         dollars += amount;
         return dollars;
-        
+
       + Correct.
 
     - .. code-block:: java
 
         dollars = dollars + amount;
         return amount;
-       
+
       - amount is returned instead of dollars.
-        
+
     - .. code-block:: java
 
         amount = dollars + amount;
         return dollars;
-        
+
       - dollars should be incremented by amount.
-        
+
 
 
 .. mchoice:: AP5-6-2
     :practice: T
 
     Consider the Liquid class below.
-    
+
     .. code-block:: java
 
         public class Liquid
@@ -669,7 +669,7 @@ AP Practice
         }
 
     The isBoiling method is intended to return true if increasing the currentTemp by the parameter amount is greater than or equal to the boilingPoint, or otherwise return false. Which of the following code segments can replace *missing code* to ensure that the isBoiling method works as intended? 
-    
+
     .. code-block:: java
 
        I.   if (currentTemp + amount < boilingPoint)
@@ -698,22 +698,22 @@ AP Practice
             }
 
     - I only
-          
+
       - I would work but it is not the only code that would work.
 
     - II only
-    
+
       - II does not check against the boilingPoint and does not return only boolean values.
-  
+
     - III only
-    
+
       - III would work but it is not the only code that would work.
 
     - I and III only.
-  
+
       + Correct! 
-      
+
     - I, II, III
-    
+
       - II does not check against the boilingPoint and does not return only boolean values.
 

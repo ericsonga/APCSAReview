@@ -1,6 +1,6 @@
 Growth Mindset and Pair Programming
 ===================================
-    
+
 ..	index::
 	single: growth mindset
 
@@ -14,7 +14,7 @@ Watch this |video| about the Growth Mindset:
 .. |video| raw:: html
 
    <a href="https://youtu.be/WtKJrB5rOKs" target="_blank">video</a>
-   
+
 .. youtube:: WtKJrB5rOKs
     :height: 400
     :width: 600
@@ -46,7 +46,7 @@ It’s good enough.	          How can I improve this?
 
 ..	index::
 	single: pair programming
-    
+
 Pair Programming
 -----------------
 
@@ -57,9 +57,9 @@ Watch this |video2| about pair programming:
 .. |video2| raw:: html
 
    <a href="https://www.youtube.com/watch?v=q7d_JtyCq1A" target="_blank">video</a>
-   
+
 .. youtube:: q7d_JtyCq1A
     :height: 400
     :width: 600
     :align: left
-    
+

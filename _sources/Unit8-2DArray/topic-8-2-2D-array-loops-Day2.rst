@@ -6,19 +6,19 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
@@ -47,7 +47,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
 .. activecode:: getAvgForEach
    :language: java
    :autograde: unittest      
-   
+
    Nested for-each loops demo. Click on the CodeLens button to trace through the code.
    ~~~~
    public class Average
@@ -65,7 +65,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
          }
          return total / (a.length * a[0].length);
       }
-      
+
       public static void main(String[] args)
       {
          int[][] theArray = {  {80, 90, 70}, {20, 80, 75}};
@@ -76,7 +76,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -88,7 +88,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
             assertTrue(passed);
         }
     }
-  
+
 In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
 
 
@@ -107,7 +107,7 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
 .. activecode:: lca2dloopPart
    :language: java 
    :autograde: unittest      
- 
+
    What will the following code print out? Can you complete the  method called ``getTotalForCol`` that gets the total for a column? To do this, you must loop through the rows. The array's length will tell you how many rows you have since it is an array of arrays, while the length of the array's first element will tell you how many columns. 
    ~~~~
    public class Total
@@ -122,17 +122,17 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
          }
          return total;
       }
-      
+
       // Complete the method getTotalForCol below
       public static int getTotalForCol(int col, int[][] a)
       {
           int total = 0;
           // Add a loop here to total a column col
-           
-           
+
+
           return total;
       }
-      
+
       public static void main(String[] args)
       {
          int[][] matrix = {  {1,2,3},{4,5,6}};
@@ -203,7 +203,7 @@ You can loop through just part of a 2D array. You can change the starting value 
          }
          return count;
       } 
-      
+
       public static void main(String[] args)
       {
          int[][] matrix = {  {3,2,3},{4,3,6},{8,9,3},{10,3,3}};
@@ -214,7 +214,7 @@ You can loop through just part of a 2D array. You can change the starting value 
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -237,7 +237,7 @@ Here is a linear search algorithm where we access each row and then apply a line
 .. activecode:: linearSearch2DArrays
    :language: java 
    :autograde: unittest      
-   
+
    What will the following code print? Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints.
    ~~~~
    public class Search
@@ -255,13 +255,13 @@ Here is a linear search algorithm where we access each row and then apply a line
          }
          return found;
       } 
-      
+
       public static void main(String[] args)
       {
          int[][] matrix = { {3,2,3},{4,3,6},{8,9,3},{10,3,3} };
          System.out.println(search(matrix,10));
          System.out.println(search(matrix,11));
-         
+
         // Comment out the code above, and try these:
         // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
         // System.out.println(search(matrix2, "b")); 
@@ -272,7 +272,7 @@ Here is a linear search algorithm where we access each row and then apply a line
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests() {
@@ -294,7 +294,7 @@ Here is a linear search algorithm where we access each row and then apply a line
                 assertTrue(passed);
             }  
     }
-   
+
 |Groupwork| Programming Challenge : Picture Lab
 ---------------------------------------------------
 
@@ -307,15 +307,15 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 ..	index::
 	single: pixels
-    
+
 .. figure:: ../../_static/arch.jpg
     :width: 200px
     :align: left
-    
+
 .. |CB Picture Lab| raw:: html
 
    <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >College Board Picture Lab</a>
-   
+
 .. |RGB Color Mixer| raw:: html
 
    <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
@@ -331,12 +331,12 @@ Here is a linear search algorithm where we access each row and then apply a line
 .. |picture lab A1 to A3| raw:: html
 
    <a href= "pictureLabA1toA3.html" style="text-decoration:underline" target="_blank">Picture Lab sections A1 to A3</a>
-   
+
 .. |Picture Lab| raw:: html
 
    <a href= "CBLabs.html" style="text-decoration:underline" target="_blank">Picture Lab</a>
 
-    
+
 Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  The color of a pixel is  represented using the RGB (Red, Green, Blue) color
 model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? If your class has time, do the reading and exercises for |picture lab A1 to A3| to first learn about digital pictures and RGB values.
 
@@ -462,12 +462,12 @@ You can test the methods in the active code below or in this |repl.it project| o
         }
       }
 
-      
+
      /* Add new methods here.
         keepOnlyBlue() method sets the blue values at all pixels to zero.
         switchColors() method swaps the color values of pixels.
      */
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -476,7 +476,7 @@ You can test the methods in the active code below or in this |repl.it project| o
         arch.show();
         arch.zeroBlue();
         arch.show();
-        
+
         //Uncomment the follow code to test your keepOnlyBlue method.    
         /*
         Picture arch2 = new Picture("arch.jpg");
@@ -554,7 +554,7 @@ You can test the methods in the active code below or in this |repl.it project| o
       }
 
 
- 
+
 
 Here are some more exercises from the |Picture Lab|:
 
@@ -603,7 +603,7 @@ AP Practice
    Consider the following code segment. What is the value of sum as a result of executing the code segment?
 
    .. code-block:: java
-    
+
       int[][] arr = { {1, 2, 3, 4},
                       {5, 6, 7, 8},
                       {9, 10, 11, 12} };
@@ -615,11 +615,11 @@ AP Practice
                sum += x[y];
           }
       }
- 
+
 
 .. datafile:: pictureClasses.jar
         :hide:    
-      
+
         import java.awt.Image;
         import java.awt.image.BufferedImage;
 
@@ -1725,8 +1725,8 @@ AP Practice
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
+
+
 Try the game below to practice loops with 2D arrays. Click on **Arrays** and then check **2D** and check **Loops** and then click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html

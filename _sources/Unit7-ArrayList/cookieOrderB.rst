@@ -110,7 +110,7 @@ Click to reveal multiple choice questions that may help you write your solution.
         :feedback_a: While loops are better for problems where you are looping until a condition is true or false.
         :feedback_b: Correct! A for loop will allow you to access every CookieOrder and change its contents.
         :feedback_c: This will not work because you will be changing values by removing boxes.
-         
+
         What type of loop is best to check the variety of each cookie order in the list of orders?
 
    .. mchoice:: fr_cookieB_2
@@ -121,7 +121,7 @@ Click to reveal multiple choice questions that may help you write your solution.
         :feedback_a: The remove method in the ArrayList class requires the object to call its function with a dot operator.
         :feedback_b: The remove method in the ArrayList class requires an integer as its argument, not a String.
         :feedback_c: Correct! Use the dot operator with list and the index you want to remove as the argument.
-         
+
         How would you remove the third item from an ArrayList<String> list of size 6?
 
    .. mchoice:: fr_cookieB_3
@@ -132,7 +132,7 @@ Click to reveal multiple choice questions that may help you write your solution.
         :feedback_a: Strings cannot be compared with a double equals sign. 
         :feedback_b: Correct! the equals() method in the String class will compare two strings.
         :feedback_c: A single = should only be used for assigning values!
-         
+
         How would you compare the values of two Strings str1 and str2?
 
 Mixed Up Code

@@ -6,7 +6,7 @@ Hard Multiple Choice Questions
 ----------------------------------
 
 These problems are harder than those that you will typically see on the AP CS A exam.
-      
+
 .. mchoice:: qa2dh_1
    :practice: T
    :answer_a: { {6, 4, 2}, {2, 4, 6}}
@@ -22,7 +22,7 @@ These problems are harder than those that you will typically see on the AP CS A 
    :feedback_e: Both if's will execute.  Check the bounds on the inner loop.  When does it stop?    
 
    What are the contents of ``arr`` after the following code has been executed? 
-   
+
    .. code-block:: java 
 
       int[][] arr = { {3,2,1},{1,2,3}};
@@ -39,7 +39,7 @@ These problems are harder than those that you will typically see on the AP CS A 
             }
          }
       }
-      
+
 To step through this code in the Java Visualizer click on the following link: `Hard 1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+arr+%3D+%7B%7B3,2,1%7D,%7B1,2,3%7D%7D%3B%0A++++++for+(int+row+%3D+1%3B+row+%3C+arr.length%3B+row%2B%2B)+%7B%0A+++++++++for+(int+col+%3D+1%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)+%7B%0A++++++++++++if+(arr%5Brow%5D%5Bcol%5D+%25+2+%3D%3D+1)+%0A++++++++++++%7B%0A+++++++++++++++arr%5Brow%5D%5Bcol%5D+%3D+arr%5Brow%5D%5Bcol%5D+%2B+1%3B%0A++++++++++++%7D%0A++++++++++++if+(arr%5Brow%5D%5Bcol%5D+%25+2+%3D%3D+0)+%0A++++++++++++%7B%0A+++++++++++++++arr%5Brow%5D%5Bcol%5D+%3D+arr%5Brow%5D%5Bcol%5D+*+2%3B%0A++++++++++++%7D%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qa2hard_2
@@ -57,7 +57,7 @@ To step through this code in the Java Visualizer click on the following link: `H
    :feedback_e: This would be accomplished by instead of having an if statement to track the currentmax, simply using, sum += imagePixels[r][c];
 
    A two-dimensional array, ``imagePixels``, holds the brightness values for the pixels in an image. The brightness can range from 0 to 255. What does the following method compute?
-   
+
    .. code-block:: java
      :linenos:
 
@@ -74,7 +74,7 @@ To step through this code in the Java Visualizer click on the following link: `H
          }
          return iMax;
       }
-      
+
 
 
 .. broken link For more practice with 2D arrays see http://coweb.cc.gatech.edu/ice-gt/1277 Question 4 from 2012 and Question 4 from 2011.

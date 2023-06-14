@@ -1,7 +1,7 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 
 Getting Started and Primitive Types
 :::::::::::::::::::::::::::::::::::::::::::
@@ -28,5 +28,5 @@ Unit 1 AP CS A Exam Weighting: 2.5-5%
    topic-1-9-practice-coding.rst
    Exercises.rst
 
-   
-   
+
+

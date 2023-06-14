@@ -85,7 +85,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
 
     .. image:: https://i.postimg.cc/Kcw4kfrs/lecture17-Q12.png
       :width: 400
-    
+
 .. mchoice:: bs-soundwaves-18-15
     :author: Beth Simon
     :practice: T
@@ -123,6 +123,6 @@ Peer Instruction: Unit 1 Multiple Choice Questions
 
     .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png 
       :width: 400
-    
+
     .. image:: https://i.postimg.cc/FHZ3jCvm/lecture18-Q16.png 
       :width: 400

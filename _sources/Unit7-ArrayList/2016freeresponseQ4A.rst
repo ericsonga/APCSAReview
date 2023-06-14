@@ -8,7 +8,7 @@ Free Response - StringFormatter A
 ..	index::
 	single: trio
     single: free response
-    
+
 The following is a free response question from 2016. It was question 4 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year. 
 
 This question involves the process of taking a list of words, called ``wordList``, and producing a formatted string of a specified length. 
@@ -18,12 +18,12 @@ The equal number of spaces inserted into each gap is referred to as the basic ga
 Any leftover spaces are inserted one at a time into the gaps from left to right until there are no more leftover spaces. 
 
 The following three examples illustrate these concepts. In each example, the list of words is to be placed into a formatted string of length 20. 
- 
+
 .. figure:: Figures/2016FRQ4A1.png
     :width: 700px
     :align: center
     :figclass: align-center
-    
+
 The leftover spaces are inserted one at a time between the words from left to right until there are no more leftover spaces. 
 In this example, the first two gaps get an extra space.
 
@@ -31,7 +31,7 @@ In this example, the first two gaps get an extra space.
     :width: 700px
     :align: center
     :figclass: align-center
-    
+
 You will implement three static methods in a class named ``StringFormatter`` that is not shown.
 
 Part A
@@ -49,7 +49,7 @@ Complete method ``totalLetters`` below.
    *  Precondition: wordList contains at least two words, consisting of letters only. 
    */ 
    public static int totalLetters(List<String> wordList)
-   
+
 How to Solve Part A
 =====================
 
@@ -130,11 +130,11 @@ Write the Code
 ==================
 
 
-   
+
 .. activecode:: lcfrsTotalLetters
    :language: java 
    :autograde: unittest      
-   
+
    Finish writing the ``totalLetters`` method below so that it returns the number of letters for all the strings in ``wordList``.  The ``main`` method below will test your code to check that you solved it correctly.
    ~~~~
    import java.util.*;
@@ -146,7 +146,7 @@ Write the Code
        public static int totalLetters(List<String> wordList)
        {
        }
-       
+
        public static void main(String[] args)
        {
             List<String> myWords = new ArrayList<String>();
@@ -154,7 +154,7 @@ Write the Code
             myWords.add("frog");
             myWords.add("is");
             System.out.println("Should print 7 and prints: " + totalLetters(myWords));
-            
+
             List<String>words2 = new ArrayList<String>();
             words2.add("Hi");
             words2.add("Bye");
@@ -200,8 +200,8 @@ Write the Code
         assertTrue(passed);
       }
     }
-   
-   
 
 
-  
+
+
+

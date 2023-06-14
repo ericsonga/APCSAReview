@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 3-4-
    :start: 1
-   
-   
+
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -23,7 +23,7 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Multi-Selection: else-if Statements
 ===================================
 
@@ -44,7 +44,7 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
     {
        statement3;
     }
-    
+
 |CodingEx| **Coding Exercise**
 
 
@@ -52,7 +52,7 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
 .. activecode:: lccbElseIf
    :language: java
    :autograde: unittest
-   
+
    Run the code below and try changing the value of x to get each of the three possible lines in the conditional to print.
    ~~~~
    public class TestElseIf
@@ -79,7 +79,7 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -98,7 +98,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
     :figclass: align-center
 
     Figure 1: The order that statements execute in a conditional with 3 options: if, else if, and else
-    
+
 .. note:: 
 
     Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
@@ -117,7 +117,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :feedback_c: This will only print if x is greater than zero.  Is it?
 
    What does the following code print when x has been set to -5?
-   
+
    .. code-block:: java 
 
      if (x < 0) 
@@ -132,7 +132,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
      {
         System.out.println("x is positive"); 
      }
-     
+
 .. mchoice:: qcb3_4_2
    :practice: T
    :answer_a: x is negative
@@ -144,7 +144,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :feedback_c: The first condition is false and x is not equal to zero so the else will execute.  
 
    What does the following code print when x has been set to 2000?
-   
+
    .. code-block:: java 
 
      if (x < 0) 
@@ -159,7 +159,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
      {
         System.out.println("x is positive"); 
      }
-     
+
 .. mchoice:: qcb3_4_3
    :practice: T
    :answer_a: first quartile
@@ -173,7 +173,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :feedback_d: This will print whenever x is greater than or equal to 0.75.
 
    What does the following code print when x has been set to .8?
-   
+
    .. code-block:: java 
 
      if (x < .25) 
@@ -192,7 +192,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
      {
          System.out.println("fourth quartile");
      }
- 
+
 |CodingEx| **Coding Exercise**
 
 
@@ -210,7 +210,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
       {
           int score = 93;
           String grade = "";
-        
+
           if (score >= 90) 
           {
              grade = "A";
@@ -231,7 +231,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
           {
              grade = "F";
           }
-        
+
           System.out.println(grade);
       }
    }
@@ -278,7 +278,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
   :language: java
   :autograde: unittest
   :practice: T
-     
+
   Finish the following code so that it prints "Plug in your phone!" if the battery is below 50, "Unplug your phone!" if it is above 100, and "All okay!" otherwise. Change the battery value to test all 3 conditions.
   ~~~~
   public class BatteryTest
@@ -286,7 +286,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
       public static void main(String[] args)
       {
           int battery = 60;
-          
+
           System.out.println("All okay!");
       }
   }
@@ -331,15 +331,15 @@ Here is a flowchart for a conditional with 3 options like in the code above.
     :width: 200
     :align: left
     :alt: Adventure map
-    
+
 .. |Colossal Cave Adventure| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" target="_blank" style="text-decoration:underline">Colossal Cave Adventure</a>
-   
+
 .. |playing Adventure| raw:: html
 
    <a href="http://www.web-adventures.org/cgi-bin/webfrotz?s=Adventure" target="_blank" style="text-decoration:underline">playing Adventure</a>
-   
+
 .. |walkthrough| raw:: html
 
    <a href="http://www.sierrahelp.com/Walkthroughs/AdventureWalkthrough.html#in" target="_blank" style="text-decoration:underline">walkthrough</a>
@@ -376,7 +376,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
   ~~~~
   // Copy in your link to your code on repl.it here:
   // Copy in all of your code from repl.it below (include import and public class Main)
-       
+
 
   ====
   import static org.junit.Assert.*;
@@ -478,7 +478,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
 
 
 
-   
+
 Summary
 --------
 

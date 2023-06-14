@@ -13,7 +13,7 @@ multiple-choice test.
    public class TestResults
    {
       private List<StudentAnswerSheet> sheets; 
-      
+
       /** Precondition: sheets.size() > 0;
        *                all answer sheets in sheets have the same number of answers
        *  @param key the list of correct answers represented as strings of length one
@@ -25,10 +25,10 @@ multiple-choice test.
      {
        /* to be implemented in part (b) */
      }
-     
+
      // There may be fields, constructors, and methods that are not shown.
    }
-   
+
 Write the ``TestResults`` method ``highestScoringStudent``, which returns the name of the
 student who received the highest score on the test represented by the parameter ``key``.  If there
 is more than one student with the highest score, the name of any one of these highest-scoring 
@@ -89,7 +89,7 @@ The code below has a main method for testing the ``highestScoringStudent`` metho
         return name;
       }
    }
-   
+
    public class TestResults
    {
       private ArrayList<StudentAnswerSheet> sheets;
@@ -127,17 +127,17 @@ The code below has a main method for testing the ``highestScoringStudent`` metho
                                       new String[] {"A", "?", "D", "E", "A", "C", "?", "B", "D", "C"}));
          StudentAnswerSheet s2 = new StudentAnswerSheet("S2", answers2);
          System.out.println("Your score for s2 is: " + s2.getScore(key) + " and should be 5.5");
-         
+
          ArrayList<String> answers3 = new ArrayList<String>(Arrays.asList(
               new String[] {"A", "?", "D", "E", "A", "C", "E", "B", "D", "C"}));
          StudentAnswerSheet s3 = new StudentAnswerSheet("S3", answers3);
          System.out.println("Your score for s3 is: " + s3.getScore(key) + " and should be 6.5");
-         
+
          ArrayList<String> answers4 = new ArrayList<String>(Arrays.asList(
               new String[] {"A", "C", "D", "E", "A", "C", "E", "B", "D", "C"}));
          StudentAnswerSheet s4 = new StudentAnswerSheet("S4", answers4);
          System.out.println("Your score for s4 is: " + s4.getScore(key) + " and should be 7.5");
-         
+
          ArrayList<StudentAnswerSheet> sheets = new ArrayList<StudentAnswerSheet>();
          sheets.add(s1);
          sheets.add(s2);
@@ -217,4 +217,4 @@ The code below has a main method for testing the ``highestScoringStudent`` metho
          }
      }
 
-     
+

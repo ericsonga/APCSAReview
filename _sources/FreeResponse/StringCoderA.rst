@@ -21,7 +21,7 @@ shown below.
     :figclass: align-center
 
     Figure 1: An example string with indices
-    
+
 An encoded string is defined by a list of string parts. A string part is defined by its starting index in the
 master string and its length. For example, the string ``"overeager"`` is encoded as the list of string parts
 [ (37, 3), (14, 2), (46, 2), (9, 2) ] denoting the substrings ``"ove"``, ``"re"``, ``"ag"``, and ``"er"``.
@@ -37,12 +37,12 @@ String parts will be represented by the ``StringPart`` class shown below.
         */
       public StringPart(int start, int length)
       { /* implementation not shown */ }
-      
+
       /** @return the starting position of the substring in a master string
         */
       public int getStart()
       { /* implementation not shown */ }
-      
+
       /** @return the length of the substring in a master string
        */
       public int getLength()
@@ -50,7 +50,7 @@ String parts will be represented by the ``StringPart`` class shown below.
 
       // There may be other instance variables, constructors, and methods 
    }
-   
+
 The class ``StringCoder`` provides methods to encode and decode words using a given master string. When
 encoding, there may be multiple matching string parts of the master string. The helper method ``findPart`` is
 provided to choose a string part within the master string that matches the beginning of a given string.
@@ -60,13 +60,13 @@ provided to choose a string part within the master string that matches the begin
    public class StringCoder
    {
       private String masterString;
-      
+
       /** @param master the master string for the StringCoder
         * Precondition: the master string contains all the letters of the alphabet
         */
       public StringCoder(String master)
       { masterString = master; }
-      
+
       /** @param parts an ArrayList of string parts that are valid in the 
         * master string
         * Precondition: parts.size() > 0
@@ -75,7 +75,7 @@ provided to choose a string part within the master string that matches the begin
         */
       public String decodeString(ArrayList<StringPart> parts)
       { /* to be implemented in part (a) */ }
-      
+
       /** @param str the string to encode using the master string
         * Precondition: all of the characters in str appear in the master 
         * string;
@@ -86,7 +86,7 @@ provided to choose a string part within the master string that matches the begin
         */
       private StringPart findPart(String str)
       { /* implementation not shown */ }
-      
+
       /** @param word the string to be encoded
         * Precondition: all of the characters in word appear in the 
         * master string;
@@ -96,10 +96,10 @@ provided to choose a string part within the master string that matches the begin
         */
       public ArrayList<StringPart> encodeString(String word)
       { /* to be implemented in part (b) */ }
-      
+
       // There may be other instance variables, constructors, and methods
     }
-    
+
 Try and Solve It
 ----------------
 
@@ -112,50 +112,50 @@ The code below contains a main method for testing the ``decodeString`` method.
 .. activecode:: StringCoderA
    :language: java
    :autograde: unittest
-   
+
    Finish writing the ``StringCoder`` method ``decodeString``.
    ~~~~
    import java.util.*;
-   
+
    class StringPart
    {
       private int start;
       private int len;
-  
+
       public StringPart(int theStart, int theLen)
       {
          // initialise instance variables
          start = theStart;
          len=theLen;
       }
-      
+
       public StringPart()
       {
          start = 0;
          len = 0;
       }
-  
+
       public int getStart()
       {
          return start;
       }
-  
+
       public int getLength()
       {
         return len;
       }
-      
+
       public String toString()
       {
         return "(" + getStart() + ", " + getLength() + ")";
       }
    }
-   
+
    public class StringCoder
    {
-  
+
       private String masterString;
-  
+
       /**
         * Constructor for objects of class StringCoder
         */
@@ -163,12 +163,12 @@ The code below contains a main method for testing the ``decodeString`` method.
       {
          masterString="sixtyzipperswerequicklypickedfromthewovenjutebag";
       }
-      
+
       public StringCoder(String master)
       {
          masterString=master;
       }
-  
+
       /** @param parts an ArrayList of string parts that are 
         * valid in the master string
         * Precondition: parts.size() > 0
@@ -179,7 +179,7 @@ The code below contains a main method for testing the ``decodeString`` method.
       {
          //*** Finish writing this method! ***
       }
-      
+
       private StringPart findPart(String str)
       {
          int start=0;
@@ -195,7 +195,7 @@ The code below contains a main method for testing the ``decodeString`` method.
           }
           return new StringPart(start, length);
       }
-  
+
       public static void main(String[] args)
       {
          ArrayList<StringPart> overeager = new ArrayList<StringPart>();
@@ -207,7 +207,7 @@ The code below contains a main method for testing the ``decodeString`` method.
          StringCoder key = new StringCoder();
          System.out.println("Decoding we get " + key.decodeString(overeager) + " and should be overeager");
       }
-  
+
    }
    ====
    import static org.junit.Assert.*;
@@ -262,4 +262,4 @@ The code below contains a main method for testing the ``decodeString`` method.
          }
      }
 
-   
+

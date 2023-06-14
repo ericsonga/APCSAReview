@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 5-2-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,13 +22,13 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Writing Constructors
 ====================
 
 ..	index::
 	pair: class; constructor
-	
+
 In Unit 2, we learned how to create objects using constructor. Objects are created in programs by declaring a variable of the class and using the keyword new followed by a call to a constructor. **Constructors**  set the initial values for the object's instance variables.    For example, here is how we create World, Turtle, and Person objects.  
 
 .. code-block:: java 
@@ -38,7 +38,7 @@ In Unit 2, we learned how to create objects using constructor. Objects are creat
     World world = new World();
     Turtle t = new Turtle(world);
     Person p = new Person("Pat","pat@gmail.com","123-456-7890");
-    
+
 
 In a new class, constructors are usually written after the instance variables and before any methods.    They typically start with ``public`` and then the *name* of the class: ``public ClassName()``. Unlike other methods, they do not have a return type, not even void, after the access modifier public.  They can take **parameters** (specified in parentheses) for the data which is used to initialize the instance variables. 
 
@@ -55,11 +55,11 @@ In a new class, constructors are usually written after the instance variables an
         /* Implementation not shown */
       }
    }
-    
+
 .. note::
 
    Constructors must have the same name as the class! Constructors have no return type!
-   
+
 Classes usually have more than one constructor. There are usually at least 2 constructors:
 
 - a constructor that takes no parameters  
@@ -88,36 +88,36 @@ Here are two constructors that could be written for the Person class. Notice tha
      }
 
 If there are no constructors written for a class, Java provides a no-argument **default constructor** where the instance variables are set to their default values. For int and double variables, the default value used is **0**, and for String and other object variables, the default is **null**. However, if you do write at least one constructor, Java will not generate the default constructor for you, so you should write at least a constructor with no parameters and one with many parameters.
- 
-   
+
+
 |Exercise| **Check Your Understanding** 
 
-     
+
 .. clickablearea:: name_constructor
     :question: Click on all the lines of code that are part of constructors in the following class.
     :iscode:
     :feedback: Constructors are public and have the same name as the class.  
 
     :click-incorrect:public class Name {:endclick:
-    
+
         :click-incorrect:private String first;:endclick:
         :click-incorrect:private String last;:endclick:
-        
+
         :click-correct:public Name(String theFirst, String theLast) {:endclick:
             :click-correct:first = theFirst;:endclick:
             :click-correct:last = theLast;:endclick:
          :click-correct:}:endclick:
-         
+
          :click-incorrect:public void setFirst(String theFirst) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
          :click-incorrect:}:endclick:
-         
+
          :click-incorrect:public void setLast(String theLast) {:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-         
+
     :click-incorrect:}:endclick:  
-    
+
 .. mchoice:: qsse_5
    :practice: T
    :answer_a: Determines the amount of space needed for an object and creates the object
@@ -129,9 +129,9 @@ If there are no constructors written for a class, Java provides a no-argument **
    :feedback_b: Constructors do not name the object.  
    :feedback_c: Constructors do not free any memory. In Java the freeing of memory is done when the object is no longer referenced.
    :feedback_d: A constructor  initializes the instance variables to their default values or in the case of a parameterized constructor, to the values passed in to the constructor.
-   
+
    What best describes the purpose of a class's constructor?
-   
+
 
 |CodingEx| **Coding Exercise**
 
@@ -151,27 +151,27 @@ If there are no constructors written for a class, Java provides a no-argument **
      //  instance variables
      private int numerator;
      private int denominator;
-     
+
      // constructor: set instance variables to default values
      public Fraction()
      {
         numerator = 1;
         denominator = 1;
      }
-     
+
      // constructor: set instance variables to init parameters
      public Fraction(int initNumerator, int initDenominator)
      {
         numerator = initNumerator;
         denominator = initDenominator;
      }
-     
+
      // Print fraction
      public void print()
      {
        System.out.println(numerator + "/" + denominator);
      }
-     
+
      // main method for testing
      public static void main(String[] args)
      {
@@ -204,14 +204,14 @@ If there are no constructors written for a class, Java provides a no-argument **
         }
 
     }
-  
+
 |CodingEx| **Coding Exercise**
 
 .. activecode:: class-Car
   :language: java
   :autograde: unittest
   :practice: T
-  
+
   The following class defines a Car with the instance variables model and year, for example a Honda 2010 car. However, some of the code is missing. Fill in the code for the 2 constructors that are numbered 1 and 2. And fill in the code to call the constructors in the main method numbered 3. The car1 object should test the first constructor with default values and the car2 object should test the second constructor to create a Honda 2010 car. Run your program and make sure it works and prints out the information for both cars.
   ~~~~
   public class Car
@@ -219,30 +219,30 @@ If there are no constructors written for a class, Java provides a no-argument **
      //  instance variables
      private String model;
      private int year;
-     
+
      // constructor: set instance variables to default values
      public Car()
      {
          // 1. set the instance variables to default values "" and 2019
-        
-     
+
+
      }
-     
+
      // constructor: set instance variables to init parameters
      public Car(String initModel, int initYear)
      {
          // 2. set the instance variables to the init parameter variables
-     
-     
+
+
      }
-     
+
      // Print Car info
      public void print()
      {
        System.out.println("Car model: " + model);
        System.out.println("Car year: " + year);
      }
-     
+
      // main method for testing
      public static void main(String[] args)
      {
@@ -252,7 +252,7 @@ If there are no constructors written for a class, Java provides a no-argument **
          // car2 should be a Honda 2010 car.
          Car car1 = 
          Car car2 = 
-        
+
          car1.print();
          car2.print();
      }
@@ -290,7 +290,7 @@ Constructors are used to set the initial state of an object by initializing its 
      {
        private String name;
        private Address addr; //Assumes an Address class is already defined
-       
+
        // constructor: initialize instance variable and call Address constructor to make a copy
        public Person(String initName, Address initAddr)
        {
@@ -299,7 +299,7 @@ Constructors are used to set the initial state of an object by initializing its 
                      initAddr.getCity(), initAddr.getState());
        }
       }
-     
+
 
 |Groupwork| Programming Challenge : Student Class
 --------------------------------------------------
@@ -328,29 +328,29 @@ We encourage you to work in pairs for this challenge to create a Student class w
    public class Student 
    {
        // Write 4 instance variables
-      
-      
+
+
        // Write 3 constructors to initialize the instance variables
        //  1. no parameters using default values
        //  2. 1 parameter and the rest default values
        //  3. 4 parameters
-       
-      
+
+
        // Write a print method that prints all the instance variables
        public void print()
        {
-      
-      
+
+
        }
-      
+
       // main method 
       public static void main(String[] args)
       {  
          // Construct 3 Student objects using the 3 different constructors 
-         
-         
+
+
          // call their print() methods
-      
+
       }
    }
    ====
@@ -359,70 +359,70 @@ We encourage you to work in pairs for this challenge to create a Student class w
     import org.junit.After;
     import org.junit.Before;
     import org.junit.Test;
-    
+
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper {
         public RunestoneTests() {
             super("Student");
-    
+
             Object[] values = new Object[] { "Name", 0 };
             setDefaultValues(values);
         }
-    
+
         @Test
         public void testCallConstructors() {
             String code = getCodeWithoutComments();
             String search = "= new Student(";
-    
+
             int num = countOccurences(code, search);
-    
+
             String expect = search + "...) x 3";
             String actual = search + "...) x " + num;
-    
+
             boolean passed = getResults(expect, actual, "Checking that you made three Student objects");
             assertTrue(passed);
         }
-    
+
         @Test
         public void testConstructors() {
             String code = getCodeWithoutComments();
             String search = "public Student(";
-    
+
             int num = countOccurences(code, search);
-    
+
             String expect = search + "...) x 3";
             String actual = search + "...) x " + num;
-    
+
             boolean passed = getResults(expect, actual, "Checking that you made three constructors");
             assertTrue(passed);
         }
-    
+
         @Test
         public void testPrint() {
             String code = getCodeWithoutComments();
             String search = ".print()";
-    
+
             int num = countOccurences(code, search);
-    
+
             String expect = search + " x 3";
             String actual = search + " x " + num;
-    
+
             boolean passed = getResults(expect, actual, "Checking that you called print three times");
             assertTrue(passed);
         }
-    
+
         @Test
         public void testPrivateVariables() {
             String expect = "4 Private";
             String output = testPrivateInstanceVariables();
-    
+
             boolean passed = getResults(expect, output, "Checking for 4 Private Instance Variable(s)");
             assertTrue(passed);
         }
-    
+
     }
-    
+
 |Groupwork| Design a Class for your Community 
 ----------------------------------------------------------
 
@@ -445,7 +445,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
   public class          // Add your class name here!
   {
       // 1. copy in your instance variables for class from the last lesson
-          
+
       // 2. Add a constructor with no parameters that initializes the instance variables to default values
       // and a constructor with 3 parameters to set all of the instance variables to the given parameters. 
 
@@ -457,10 +457,10 @@ In the last lesson, you came up with a class of your own choice relevant to you 
       public static void main(String[] args)
       {  
          // Construct 2 objects of your class to test the 2 constructors 
-         
-         
+
+
          // call the objects print() methods
-      
+
       }
   }
   ====
@@ -557,7 +557,7 @@ AP Practice
     :practice: T
 
     Consider the definition of the Cat class below. The class uses the instance variable isSenior to indicate whether a cat is old enough to be considered a senior cat or not.
-        
+
     .. code-block:: java
 
         public class Cat
@@ -581,23 +581,23 @@ AP Practice
         }
 
     Which of the following statements will create a Cat object that represents a cat that is considered a senior cat?
-    
+
     - Cat c = new Cat ("Oliver", 7);
 
       - The age 7 is less than 10, so this cat would not be considered a senior cat.
-      
+
     - Cat c = new Cat ("Max", "15");
 
       - An integer should be passed in as the second parameter, not a string.
-      
+
     - Cat c = new Cat ("Spots", true);
 
       - An integer should be passed in as the second parameter, not a boolean.
-      
+
     - Cat c = new Cat ("Whiskers", 10);
 
       + Correct!
-        
+
     - Cat c = new Cat ("Bella", isSenior);
 
       - An integer should be passed in as the second parameter and isSenior would be undefined outside of the class.
@@ -620,7 +620,7 @@ AP Practice
    :feedback_e: Option II will create a cat that is 0 years old with 5 kittens.
 
    Consider the following class definition. Each object of the class Cat will store the cat’s name as name, the cat’s age as age, and the number of kittens the cat has as kittens. Which of the following code segments, found in a class other than Cat, can be used to create a cat that is 5 years old with no kittens?
-   
+
    .. code-block:: java
 
     public class Cat
@@ -647,12 +647,12 @@ AP Practice
     I.   Cat c = new Cat("Sprinkles", 5, 0);
     II.  Cat c = new Cat("Lucy", 0, 5);
     III. Cat c = new Cat("Luna", 5);
-    
+
 .. mchoice:: AP5-2-3
     :practice: T
 
     Consider the following class definition.
-        
+
     .. code-block:: java
 
         public class Cat
@@ -663,13 +663,13 @@ AP Practice
         }
 
     The following statement appears in a method in a class other than Cat. It is intended to create a new Cat object c with its attributes set to "black" and true. Which of the following can be used to replace  **missing constructor code** in the class definition so that the object c below is correctly created?
-    
+
     .. code-block:: java
-  
+
         Cat c = new Cat("black", true);
-        
+
     - .. code-block:: java
-    
+
         public Cat(String c, boolean h)
         {
             c = "black";
@@ -679,7 +679,7 @@ AP Practice
       - The constructor should be changing the instance variables, not the local variables.
 
     - .. code-block:: java
-    
+
         public Cat(String c, boolean h)
         {
             c = "black";
@@ -689,7 +689,7 @@ AP Practice
       - The constructor should be changing the instance variables, not the local variables.
 
     - .. code-block:: java
-    
+
         public Cat(String c, boolean h)
         {
             c = color;
@@ -699,7 +699,7 @@ AP Practice
       - The constructor should be changing the instance variables, not the local variables.
 
     - .. code-block:: java
-    
+
         public Cat(String c, boolean h)
         {
             color = black;
@@ -709,7 +709,7 @@ AP Practice
       - The constructor should be using  the local variables to set the instance variables.
 
     - .. code-block:: java
-    
+
         public Cat(String c, boolean h)
         {
             color = c;

@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 8-1-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -43,7 +43,7 @@ Arrays in Java can store many items of the same type.  You can even store items 
     :figclass: align-center
 
     Figure 1: Lockers in rows and columns 
-   
+
 Two dimensional arrays are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, or a picture.  In battleship, letters map to the rows (A is the first row, B is the second row, and so on) and the column indices start with 1.    
 
 Array Storage
@@ -65,7 +65,7 @@ Many programming languages actually store two-dimensional array data in a one-di
     :figclass: align-center
 
     Figure 2: A 2D array stored in row-major order or column-major order as a 1D array.
-    
+
 How Java Stores 2D Arrays
 ---------------------------
 
@@ -77,7 +77,7 @@ Java actually stores a two-dimensional array as an array of arrays.  Each elemen
     :figclass: align-center
 
     Figure 3: Java arrays of arrays
-    
+
 On the exam assume that any 2 dimensional (2D) array is in row-major order.  The outer array can be thought of as the rows and the inner arrays the columns.  On the exam all inner arrays will have the same length even though it is possible in Java to have inner arrays of different lengths (also called **ragged arrays**).  
 
 |Exercise| **Check your understanding**
@@ -98,7 +98,7 @@ Try to answer the following questions.  Click on the value or values to select t
    +----+----+----+----+
    | 2  | -3 | -4 | -5 |
    +----+----+----+----+
-   
+
 .. clickablearea:: clicktd2
    :question: Click on all the values in the column at index 1
    :feedback: Rows are horizontal and columns are vertical and both start with index 0.
@@ -128,7 +128,7 @@ Try to answer the following questions.  Click on the value or values to select t
    +----+----+----+----+
    | 2  | -3 | -4 | -5 |
    +----+----+----+----+
-   
+
 .. clickablearea:: clicktd4
    :question: Click on the value at row index 0 and column index 2
    :feedback: Rows are horizontal and columns are vertical and both start with index 0.
@@ -143,7 +143,7 @@ Try to answer the following questions.  Click on the value or values to select t
    +----+----+----+----+
    | 2  | -3 | -4 | -5 |
    +----+----+----+----+
-   
+
 .. clickablearea:: clicktd5
    :question: Click on the value at row index 1 and column index 1
    :feedback: Rows are horizontal and columns are vertical and both start with index 0.
@@ -166,7 +166,7 @@ Declaring 2D Arrays
 	pair: 2D Array; declaration
 
 To declare a 2D array, specify the type of elements that will be stored in the array, then (``[][]``) to show that it is a 2D array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).  
- 
+
 .. code-block:: java 
 
   int[][] ticketInfo;
@@ -176,7 +176,7 @@ To declare a 2D array, specify the type of elements that will be stored in the a
 
 ..	index::
 	pair: 2D Array; creation
-	
+
 To create an array use the **new** keyword, followed by a space, then the type, and then the number of rows in square brackets followed by the number of columns in square brackets, like this ``new int[numRows][numCols]``. 
 
 
@@ -187,7 +187,7 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
 
   ticketInfo = new int [2][3];
   seatingChart = new String [3][2];
-  
+
 |Exercise| **Check your understanding**
 
 .. fillintheblank:: 2daNumElfill
@@ -196,7 +196,7 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
 
    -    :6$: Correct.  2 * 3 = 6
         :.*: Multiply the number of rows and the number of columns
-  
+
 |CodingEx| **Coding Exercise**
 
 
@@ -205,7 +205,7 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
   :language: java
   :autograde: unittest  
   :practice: T
-  
+
   What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained in the next lesson.
   ~~~~
   public class TicketInfo 
@@ -248,7 +248,7 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
             assertTrue(passed);
         }
     }
-  
+
 This lesson is continued on the next page. 
 
 

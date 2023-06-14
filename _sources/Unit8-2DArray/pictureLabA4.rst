@@ -1,7 +1,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Picture Lab A4: 2D Arrays in Java 
 =======================================================
 
@@ -22,7 +22,7 @@ to bottom and the column number (index) increases from left to right.
     :figclass: align-center
 
     Figure 1: A 2D array stored in row-major order or column-major order as a 1D array.
-    
+
 
 .. mchoice:: picture-lab-A4-0a
    :answer_a: [1, 2, 3, 4, 5, 6]
@@ -52,7 +52,7 @@ to bottom and the column number (index) increases from left to right.
    :optional:
 
    Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in column-major order?
-   
+
 Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
 The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.
 
@@ -62,7 +62,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
     :figclass: align-center
 
     Figure 2: Java arrays of arrays
-    
+
 To loop through the values in a 2D array you must have two indexes. One index is used to change the
 row index and one is used to change the column index. You can use nested loops, which is one for
 loop inside of another, to loop through all the values in a 2D array. Let's try some nested loops with 2D arrays.
@@ -142,7 +142,7 @@ you don't need to know the row index or column index.
      }
      return total;
  }
- 
+
 
 .. mchoice:: picture-lab-A4-3a
 
@@ -219,7 +219,7 @@ you don't need to know the row index or column index.
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 |CodingEx| **Coding Exercises**
 
 1. Write a ``getCount`` method in the ``IntArrayWorker`` class that returns the count of the
@@ -289,10 +289,10 @@ this in IntArrayWorkerTester.
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
-        
+
          public RunestoneTests() {
             super("IntArrayWorker");
         }
@@ -397,10 +397,10 @@ in the matrix. There is already a method to test this in IntArrayWorkerTester.
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
-        
+
          public RunestoneTests() {
             super("IntArrayWorker");
         }
@@ -496,10 +496,10 @@ IntArrayWorkerTester.
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
-        
+
          public RunestoneTests() {
             super("IntArrayWorker");
         }

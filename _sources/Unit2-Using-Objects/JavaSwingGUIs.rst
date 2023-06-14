@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 2-14-
    :start: 1
-   
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -23,15 +23,15 @@
 .. |repl| raw:: html
 
    <a href="https://firewalledreplit.com" target="_blank" style="text-decoration:underline">replit</a>
-   
+
 .. |Java Swing Example| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/JavaSwingHello" target="_blank" style="text-decoration:underline">Java Swing Example</a>
-   
+
 .. |JButton Class| raw:: html
 
    <a href="https://www.javatpoint.com/java-jbutton" target="_blank" style="text-decoration:underline">JButton Class</a>
-      
+
 
 Java Swing GUIs (optional)
 ==============================
@@ -51,7 +51,7 @@ To use Java Swing, you usually need to import the following libraries:
     import java.swing.*;
     import java.awt.*;
     import java.awt.event.*;
-    
+
 To set up a JFrame window for your UI, declare an object of type JFrame, set its size in pixels, its layout, and make it visible:
 
 .. code-block:: java 

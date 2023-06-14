@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 9-5-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,7 +22,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Inheritance Hierarchies
 ===========================
 
@@ -41,14 +41,14 @@ instance variables and methods from a superclass are inherited and can be used i
 
 .. shortanswer:: hierarchy1
    :optional:
-   
+
    What variables and methods might be inherited from the superclass Shape in the inheritance hierarchy above?
-   
+
 .. shortanswer:: hierarchy2
    :optional:
-   
+
    Can you make a 3 level inheritance hierarchy for living things on Earth?
-   
+
 Superclass References
 ----------------------
 
@@ -68,8 +68,8 @@ Notice that the opposite is not true. You cannot declare a variable of the subcl
     // A subclass variable cannot hold the superclass object!
     // A Square is-a Shape, but not all Shapes are Squares.
     // Square q = new Shape(); // ERROR!!
-    
-    
+
+
 Why is using a superclass reference for subclass objects useful? Because now, we can write methods with parameters of type Shape or have arrays of type Shape and use them with any of its subclasses as seen in the next sections.
 
 |Exercise| **Check your understanding**
@@ -100,7 +100,7 @@ Another advantage of an inheritance hierarchy is that we can write methods with 
     {
        ...
     }
- 
+
 |CodingEx| **Coding Exercise**
 
 Notice that in the following code, the print method has a parameter of type Person, but it can be called with Student or Person objects in the main method. Which toString() method is called? It depends on whether a Person or Student is passed in at runtime. What would happen if you commented out the Student toString() method? Which one would be called now?
@@ -108,7 +108,7 @@ Notice that in the following code, the print method has a parameter of type Pers
 .. activecode:: superclassMethod
   :language: java 
   :autograde: unittest
-  
+
   Which toString() method is called below? What would happen if you commented out the Student toString() method? Which one would be called now?
   ~~~~
   public class Tester 
@@ -127,7 +127,7 @@ Notice that in the following code, the print method has a parameter of type Pers
           t.print(s); //call print with a Student
        }
     }
-    
+
     class Person
     {
        private String name;
@@ -176,7 +176,7 @@ Notice that in the following code, the print method has a parameter of type Pers
 
         }
     }
-      
+
 Superclass Arrays and ArrayLists
 ---------------------------------
 
@@ -205,7 +205,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
   Scroll down to look at the Dog class and add a similar Cat class that extends Pet. Don't make the Cat class public because there can only be 1 public class in a file. Scroll back to the main method and add some Cat objects to the ArrayList too. Does the petList work with Cats too?
   ~~~~
   import java.util.*; // for ArrayList
-   
+
    public class Pet
    {
        private String name;
@@ -220,7 +220,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
        {
           return name + " is a " + type;
        }
-    
+
        public static void main(String[] args)
        {
            ArrayList<Pet> petList = new ArrayList<Pet>();
@@ -305,7 +305,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
 
         }
     }
-    
+
 
 |Exercise| **Check your understanding**
 
@@ -322,14 +322,14 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
    :feedback_c: III is also valid. In some cases you might want to store objects of subclasses together in a single array declared to be of the parent type, and inheritance allows for this.
    :feedback_d: II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method if it takes an argument of the parent type, instead of writing individual methods for each subclass.
    :feedback_e: I and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.
-    
+
     Which of the following reasons for using an inheritance hierarchy are valid?
     I.   Object methods from a superclass can be used in a subclass without rewriting or copying code.
     II.  Objects from subclasses can be passed as arguments to a method that takes an argument of the parent type.
     III. Objects from subclasses can be stored in the same array of the parent type.
     IV.  All of the above
     V.   None of the above
-    
+
 
 |Groupwork| Programming Challenge : Shopping Cart
 --------------------------------------------------
@@ -337,7 +337,7 @@ The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice
 .. |repl.it link| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
-   
+
 .. image:: Figures/shoppingcart.png
     :width: 100
     :align: left
@@ -364,7 +364,7 @@ In the DiscountedItem subclass,
 .. activecode:: challenge-9-5-shopping
   :language: java  
   :autograde: unittest
-  
+
   Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Uncomment the testing code in main to add discounted items to the cart.
   ~~~~
   import java.util.*;
@@ -381,7 +381,7 @@ In the DiscountedItem subclass,
         ShoppingCart cart = new ShoppingCart();
         cart.add(new Item("bread", 3.25));
         cart.add(new Item("milk", 2.50));
-         
+
         // Uncomment these to test 
         //cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
         //cart.add(new DiscountedItem("apples", 1.35, 0.25));
@@ -407,7 +407,7 @@ In the DiscountedItem subclass,
         // and then the discount in parentheses using the super.valueToString() method
 
     }
-    
+
     class ShoppingCart 
     {
         private ArrayList<Item> order;
@@ -580,8 +580,8 @@ In the DiscountedItem subclass,
 
             }
         }
-    
-    
+
+
 Summary
 --------
 

@@ -40,11 +40,11 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
 .. activecode:: NumberGroupC
    :language: java
    :autograde: unittest
-   
+
    Write the method ``contains`` below in the class MultiGroups.
    ~~~~
    import java.util.ArrayList;
-   
+
    class NumberGroup 
    { 
       public boolean contains(int num)
@@ -53,15 +53,15 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
         return true;
       }
    }
-   
+
    class Range extends NumberGroup
    {
      // copy in your Range class from the previous lesson here
    }
-   
+
    public class MultiGroups extends NumberGroup
    {
-   
+
      private ArrayList<NumberGroup> groupList;
 
      public MultiGroups(Range r1, Range r2, Range r3)
@@ -71,7 +71,7 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
          groupList.add(r2);
          groupList.add(r3);
      }
-     
+
      /** Returns true if at least one of the number groups 
       *  in this multiple group contains num;
       *  false otherwise
@@ -79,10 +79,10 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
      public boolean contains(int num)
      {
 	   // Write the MultiGroup contains method here
-       
-       
+
+
      }
-    
+
      //Main method to test the class
      public static void main(String[] args)
      {

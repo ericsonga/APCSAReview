@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 8-1-
    :start: 8
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,7 +22,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
-  
+
 Set Value(s) in a 2D Array (Day 2)
 ----------------------------------------
 
@@ -36,8 +36,8 @@ When arrays are created their contents are automatically initialized to 0 for nu
 
   int[][] ticketInfo = new int[2][3];
   ticketInfo[0][0] = 15;
-  
-  
+
+
 .. |Java visualizer| raw:: html
 
    <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%0A++%7B%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++//+declare+arrays%0A++++++++int%5B%5D%5B%5D+ticketInfo%3B%0A++++++++String%5B%5D%5B%5D+seatingChart%3B%0A++++++++%0A++++++++//+create+arrays%0A++++++++ticketInfo+%3D+new+int+%5B2%5D%5B3%5D%3B%0A++++++++seatingChart+%3D++new+String+%5B3%5D%5B2%5D%3B%0A++++++++%0A++++++++//+initialize+the+array+elements%0A++++++++ticketInfo%5B0%5D%5B0%5D+%3D+15%3B%0A++++++++ticketInfo%5B0%5D%5B1%5D+%3D+10%3B%0A++++++++ticketInfo%5B0%5D%5B2%5D+%3D+15%3B%0A++++++++ticketInfo%5B1%5D%5B0%5D+%3D+25%3B%0A++++++++ticketInfo%5B1%5D%5B1%5D+%3D+20%3B%0A++++++++ticketInfo%5B1%5D%5B2%5D+%3D+25%3B%0A++++++++seatingChart%5B0%5D%5B0%5D+%3D+%22Jamal%22%3B%0A++++++++seatingChart%5B0%5D%5B1%5D+%3D+%22Maria%22%3B%0A++++++++seatingChart%5B1%5D%5B0%5D+%3D+%22Jacob%22%3B%0A++++++++seatingChart%5B1%5D%5B1%5D+%3D+%22Suzy%22%3B%0A++++++++seatingChart%5B2%5D%5B0%5D+%3D+%22Emma%22%3B%0A++++++++seatingChart%5B2%5D%5B1%5D+%3D+%22Luke%22%3B%0A++++++++%0A++++++++//+print+the+contents%0A++++++++System.out.println(ticketInfo)%3B%0A++++++++System.out.println(seatingChart)%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
@@ -49,7 +49,7 @@ Try the code below. Did it print what you expected?  When you print a two dimens
 .. activecode:: 2DArraySet
   :language: java
   :autograde: unittest   
-  
+
   Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows. 
   ~~~~
   public class TwoDArraySet 
@@ -59,11 +59,11 @@ Try the code below. Did it print what you expected?  When you print a two dimens
         // declare arrays
         int[][] ticketInfo;
         String[][] seatingChart;
-        
+
         // create arrays
         ticketInfo = new int [2][3];
         seatingChart =  new String [3][2];
-        
+
         // initialize the array elements
         ticketInfo[0][0] = 15;
         ticketInfo[0][1] = 10;
@@ -77,7 +77,7 @@ Try the code below. Did it print what you expected?  When you print a two dimens
         seatingChart[1][1] = "Suzy";
         seatingChart[2][0] = "Emma";
         seatingChart[2][1] = "Luke";
-        
+
         // print the contents
         System.out.println(ticketInfo);
         System.out.println(seatingChart);
@@ -131,10 +131,10 @@ Try the code below. Did it print what you expected?  When you print a two dimens
             assertTrue(passed);
         }
     }
-  
 
 
-  
+
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qa2dab_1
@@ -170,8 +170,8 @@ You can also initialize (set) the values for the array when you create it.  In t
    -    :Luke$: Correct.  The string at row index 2 and column index 1 is Luke.
         :.*: Indicies start at 0 and the row is first then the column
 
-        
-  
+
+
 Get a Value from a 2D Array
 ------------------------------
 
@@ -186,7 +186,7 @@ To get the value in a 2D array give the name of the array followed by the row an
   String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
   int value = ticketInfo[1][0];
   String name = seatingInfo[0][1]; 
-  
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qa2dab_2
@@ -212,7 +212,7 @@ To get the value in a 2D array give the name of the array followed by the row an
 .. activecode:: 2DArrayInitGet
   :language: java
   :autograde: unittest   
-  
+
   Add another row to seatingInfo initialized to your name and a friend's name. Get these names out of the array using the correct indices and then print them out.
   ~~~~
   public class TwoDArrayInitGet 
@@ -224,7 +224,7 @@ To get the value in a 2D array give the name of the array followed by the row an
                                    {"Emma", "Luke"} };
         String name = seatingInfo[0][0];
         System.out.println(name + " is at [0,0]");
-  
+
      }
   }
   ====
@@ -294,7 +294,7 @@ To get the value in a 2D array give the name of the array followed by the row an
             assertTrue(passed);
         }  
     }
-     
+
 |Groupwork| Programming Challenge : ASCII Art
 ---------------------------------------------------
 
@@ -313,24 +313,24 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
 .. activecode:: challenge-8-1-ascii-art
   :language: java
   :autograde: unittest
-  
+
   Part 1: Add 2 assignment statements for the 2D array asciiArt to change the "o" characters to "@" characters. Part 2: Create a new asciiArt array and print it out.   
   ~~~~
   public class AsciiArt
   {
      public static void main(String[] args)
      {
-    
+
         String[][] asciiArt = {  
               {" ", " ", "_", "_", "_", " ", " "},
               {" ", "(", "o", " ", "o", ")", " "},
               {"(", " ", " ", "V", " ", " ", ")"},
               {" ", "-", "m", "-", "m", "-", " "},
          };
-        
+
         //Part 1: Add 2 assignment statements to change "o" to "@"
 
-     
+
         // print the asciiArt for Part 1
         System.out.println("ASCII Art:");
         for(String[] row : asciiArt) {
@@ -338,10 +338,10 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
             System.out.print(column);
           System.out.println();    
         }
-        
+
         //Part 2: Create your own ASCII art array and print it out!
-         
-         
+
+
      }
   }
   ====
@@ -438,8 +438,8 @@ Summary
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
+
+
 Try the game below to practice 2D Arrays. Click on **Arrays** and then check on **2D** and click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html

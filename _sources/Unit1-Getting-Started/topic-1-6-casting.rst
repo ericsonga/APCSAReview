@@ -6,23 +6,23 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right    
-    
+
 Casting and Ranges of Variables
 ===============================
 
@@ -31,7 +31,7 @@ In Java, **type casting** is used to convert variable values from one type to an
 .. figure:: Figures/casting.jpg
     :width: 300px
     :figclass: align-center
-    
+
     Figure 1: Casting a pot in clay. 
 
 
@@ -40,7 +40,7 @@ The casting operators (int) and (double) are used right next to a number or vari
 .. activecode:: lcct1
    :language: java
    :autograde: unittest
-   
+
    What happens when you divide an int by an int or with a double operand or with the type cast (double) on one of the operands?
    ~~~~
    public class OperatorTest
@@ -69,7 +69,7 @@ The casting operators (int) and (double) are used right next to a number or vari
             assertTrue(passed);
         }
     }
-	
+
 Java assumes that if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.  But, if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result. If there is at least one double in the operation, Java will widen the type of the other operand to double too and return the result in a double. If you have integers and you want a double result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.  
 
 Values of type double can be rounded to the nearest integer by adding or subtracting .5 and casting with (int) using formulas like the following. 
@@ -78,13 +78,13 @@ Values of type double can be rounded to the nearest integer by adding or subtrac
 
     int nearestInt = (int)(number + 0.5); 
     int nearestNegInt = (int)(negNumber – 0.5);
-    
+
 For example, if you divide 5/3 using integer division, Java will truncate 1.67 to 1 to give an int result. However, we usually round up any answer .5 and above. Using the formula above, if we add 1.67 + 0.50, we get 2.17 and then casting it to an int throws away what's after the decimal point, just leaving 2.  
 
 .. activecode:: nearestInt
    :language: java
    :autograde: unittest
-   
+
    Run the code below to see how the formula of adding or subtracting .5 and then casting with (int) rounds a positive or negative double number to the closest int.
    ~~~~
    public class NearestInt
@@ -131,7 +131,7 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
 .. activecode:: overfl
    :language: java
    :autograde: unittest
-   
+
    Try the code below to see two integer overflows for a positive and negative number. An int cannot hold that many digits! Fix the integer overflow by deleting the last 0 in the numbers to store less digits.
    ~~~~
    public class TestOverflow
@@ -162,13 +162,13 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
 
 ..	index::
 	pair: double; precision format
-    
+
 Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:
 
 .. activecode:: double_precision
    :language: java
    :autograde: unittest
-   
+
    Run the code below to see how a decimal number can be formatted to show 2 digits after the decimal point.
    ~~~~
    public class TestFormat
@@ -184,7 +184,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
    import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -199,7 +199,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
     }
 
 
-   
+
 
 |Exercise| **Check your understanding**
 
@@ -212,7 +212,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
    :feedback_b: Java throws away any values after the decimal point if you do integer division.  It does not round up automatically.  
 
    True or false: Java rounds up automatically when you do integer division.  
-   
+
 .. mchoice:: q2_6
    :practice: T
    :answer_a: true
@@ -222,7 +222,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
    :feedback_b: Casting results in the type that you cast to. However, if you can't really cast the value to the specified type then you will get an error.  
 
    True or false: casting always results in a double type.  
-   
+
 .. mchoice:: q2_7
    :practice: T
    :answer_a: (double) (total / 3);
@@ -234,7 +234,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
    :feedback_c: This will convert total to a double value and then divide by 3 to return a double result.
 
    Which of the following returns the correct average for a total that is the sum of 3 int values?
-   
+
 |Groupwork| Programming Challenge : Average 3 Numbers
 ------------------------------------------------------
 
@@ -254,19 +254,19 @@ This would be a good project to work together in pairs, and switch drivers (who 
       {
          // 1. Declare 3 int variables called grade1, grade2, grade3
          // and initialize them to 3 values
-  
-         
+
+
          // 2. Declare an int variable called sum for the sum of the grades
-         
+
          // 3. Declare a variable called average for the average of the grades
-         
+
          // 4. Write a formula to calculate the sum of the 3 grades (add them up). 
-         
+
          // 5. Write a formula to calculate the average of the 3 grades from the sum using division and type casting.
-         
+
          // 6. Print out the average
-         
-      
+
+
       }
    }
    ====
@@ -285,11 +285,11 @@ This would be a good project to work together in pairs, and switch drivers (who 
        }
     }
 
- 
+
 .. |repl| raw:: html
 
    <a href="https://repl.it" target="_blank">repl.it</a>
-   
+
 
 .. |Scanner| raw:: html
 
@@ -305,15 +305,15 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 .. |Unicode| raw:: html
 
    <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank">Unicode</a>
-   
+
 .. |Chinese| raw:: html
 
    <a href="https://unicodelookup.com/#cjk/1" target="_blank">Chinese characters</a> 
-   
+
 .. |Unicode Lookup| raw:: html
 
    <a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a>
-   
+
 If you get done early with this challenge, here's something else fun you can do in Java, although it's not covered in the AP exam. Java was one of the first programming languages to use |UNICODE| for its characters. Unicode is an international standard where each letter in any alphabet is represented by a number.  Unicode uses hex code (a base 16 code that uses the digits 0-9 and the letters A-F for 10-15), but you can give Java an equivalent decimal number and type cast it to the type char (for character) to show the unicode character. 
 
 Try the following program which prints out |Chinese|. Look up other characters at this |Unicode Lookup| site and print them out in the Active Code window below by using the decimal number (see Dec column in site) and type casting to char. Can you print out a letter from 3 different languages?
@@ -330,8 +330,8 @@ Try the following program which prints out |Chinese|. Look up other characters a
         System.out.println("A in ASCII and Unicode is the decimal number 65: " + (char)65);
         System.out.println("You can typecast a decimal number to char for the Chinese character for sun: " + (char)11932);
         System.out.println("Or you can print out the Chinese character for moon using unicode hex: \u2E9D"); 
-        
-       
+
+
       }
    }
    ====
@@ -350,7 +350,7 @@ Try the following program which prints out |Chinese|. Look up other characters a
         }
     }
 
-   
+
 Summary
 -------------------
 

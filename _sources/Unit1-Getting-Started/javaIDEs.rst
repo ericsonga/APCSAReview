@@ -1,6 +1,6 @@
 Java Development Environments
 ====================================
-    
+
 ..	index::
 	single: IDE
 	single: Integrated Development Environment
@@ -10,7 +10,7 @@ Java Development Environments
     single: Eclipse
     single: BlueJ
     single: Netbeans
-    
+
 The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs. 
 
 You can learn Java by just using the interactive coding panels called **Active Code** in this e-book. If you are logged in, the Active Code will remember your changes and even show you a history of your changes to the code if you click on Load History.  

@@ -1,28 +1,28 @@
 .. qnum::
    :prefix: 3-7-
    :start: 1 
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Comparing Objects
 =================
 
@@ -38,7 +38,7 @@ String Equality
 
 The **equals** method for Strings compares two strings letter by letter. ``s1.equals(s2)`` is true if s1 and s2 have all the same characters in the same order. With Strings and other objects, you almost always use equals instead of == to check their equality. 
 
- 
+
 
 When the operator ``==`` is used to compare object variables, it returns true when the two variables *refer to the same object*. These variables are called **object references** and **aliases** for the same object. With strings this happens when one string variable is set to another. 
 
@@ -56,7 +56,7 @@ When the operator ``==`` is used to compare object variables, it returns true wh
 .. activecode:: lcse1
    :language: java
    :autograde: unittest    
-   
+
    If you run the following, what will be printed?
    ~~~~
    public class Test1
@@ -87,7 +87,7 @@ When the operator ``==`` is used to compare object variables, it returns true wh
             assertTrue(passed);
         }
     }
- 
+
 
 The following `video <https://www.youtube.com/watch?v=hhYBVgmC-vw>`_ traces through the code above and shows how ``==`` and ``equals`` work with String objects in memory.
 
@@ -96,7 +96,7 @@ The following `video <https://www.youtube.com/watch?v=hhYBVgmC-vw>`_ traces thro
     :height: 400
     :align: center
     :optional:
-    
+
 Here's the representation of memory where s2 and s3 refer to the same String object.
 
 .. figure:: Figures/s2ands3.jpg
@@ -105,10 +105,10 @@ Here's the representation of memory where s2 and s3 refer to the same String obj
     :figclass: align-center
 
     Figure 2: s2 and s3 are aliases referring to the same String object
-     
-    
 
-    
+
+
+
 Equality with New Strings
 --------------------------
 
@@ -117,7 +117,7 @@ If you use the ``new`` keyword to create a string, it will always create a new s
 .. activecode:: lcse2
    :language: java
    :autograde: unittest    
-   
+
    What will the following print?
    ~~~~
    public class Test2
@@ -134,7 +134,7 @@ If you use the ``new`` keyword to create a string, it will always create a new s
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -154,7 +154,7 @@ Watch the `video below <https://www.youtube.com/watch?v=xZroaSGhgxA>`_ to see ho
     :height: 400
     :align: center
     :optional:
-    
+
 Here is the representation of these String objects in memory. 
 
 .. figure:: Figures/s1ands2.jpg
@@ -163,14 +163,14 @@ Here is the representation of these String objects in memory.
     :figclass: align-center
 
     Figure 3: Two strings that are equal with equals but not with ==.
-   
+
 Note that you can also create Strings using string literals instead of new, like ``String s = "Hello"``. String literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and == on the AP exam.
 
 
 .. note::
-    
+
     Only use ``==`` with primitive types like int or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings to test if they are equal letter by letter. 
-  
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qsbeq_1
@@ -184,14 +184,14 @@ Note that you can also create Strings using string literals instead of new, like
    :feedback_c: Did you miss that s2 was set to refer to the same object as s1?
 
    Which of the following is true after the code executes?
-   
+
    .. code-block:: java
 
      String s1 = new String("hi");
      String s2 = new String("bye");
      String s3 = new String("hi");
      s2 = s1;
-     
+
 .. mchoice:: qsbeq_2
    :practice: T
    :answer_a: s1 == s2 && s1 == s3
@@ -203,13 +203,13 @@ Note that you can also create Strings using string literals instead of new, like
    :feedback_c: s1 and s3 refer to different string objects but they  contain the same characters "hi" in the same order.   
 
    Which of the following is true after the code executes?
-   
+
    .. code-block:: java
 
      String s1 = new String("hi");
      String s2 = new String("bye");
      String s3 = new String("hi");
-     
+
 .. mchoice:: qsbeq_3
    :practice: T
    :answer_a: s1 == s3 && s1.equals(s3)
@@ -221,14 +221,14 @@ Note that you can also create Strings using string literals instead of new, like
    :feedback_c: All of the variables refer to different objects.  But, s1.equals(s3) would be true since they have the same characters in the same order.
 
    Which of the following is true after the code executes?
-   
+
    .. code-block:: java
 
      String s1 = new String("hi");
      String s2 = new String("bye");
      String s3 = new String("hi");
-     
-     
+
+
 Comparing with null
 --------------------
 
@@ -261,7 +261,7 @@ One common place to use == or != with objects is to compare them to **null** to 
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests() {
@@ -298,7 +298,7 @@ One common place to use == or != with objects is to compare them to **null** to 
             assertTrue(passed);
         }
     }
-     
+
 The `following video <https://www.youtube.com/watch?v=GPdoHm1K8HA>`_ shows how the null string reference works in memory.
 
 .. youtube:: GPdoHm1K8HA
@@ -306,7 +306,7 @@ The `following video <https://www.youtube.com/watch?v=GPdoHm1K8HA>`_ shows how t
     :height: 400
     :align: center
     :optional:    
-    
+
 |Groupwork| Programming Challenge : Tracing Code 
 ------------------------------------------------
 
@@ -328,12 +328,12 @@ What will the following code print out? Trace through the code by drawing diagra
        System.out.println("s3 and s4 refer to the same object");
     if (s1.equals(s2) && s2.equals(s3))
         System.out.println("s1, s2, s3 are equal");
-      
+
 .. shortanswer:: challenge3-7-tracingStrings
 
    Write your tracing table here that keeps track of s1, s2, s3, s4 and the output.
-   
-   
+
+
 Summary
 -------------------
 
@@ -364,7 +364,7 @@ AP Practice
         if (message.equals(note) && !message.equals("memo"))
         {
             message = note;
-        
+
             if (message == note && message.length() > i)
             {
                i = 3;
@@ -373,7 +373,7 @@ AP Practice
         }
 
     Which of the following expressions evaluate to ``true`` after the code segment above executes?
-   
+
     - message == note && message == memo
 
       - Message does not refer to the same object as memo.

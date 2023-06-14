@@ -1,32 +1,32 @@
 .. qnum::
    :prefix: 11-
    :start: 1
-   
+
 .. |start| image:: Figures/start.png
     :height: 24px
     :align: top
     :alt: start
-    
+
 .. |next| image:: Figures/next.png
     :height: 24px
     :align: top
     :alt: next
-    
+
 .. |prev| image:: Figures/prev.png
     :height: 24px
     :align: top
     :alt: previous
-    
+
 .. |pause| image:: Figures/pause.png
     :height: 24px
     :align: top
     :alt: pause
-    
+
 .. |finish| image:: Figures/finishExam.png
     :height: 24px
     :align: top
     :alt: finish exam
-   
+
 Post Test 
 ==========
 
@@ -39,7 +39,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
 
 .. timed:: postexam2
-    
+
     .. mchoice:: pe2_1-14
        :answer_a: The value you are searching for is the first element in the array.
        :answer_b: The value you are searching for is the last element in the array
@@ -69,7 +69,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: NOTing (negating) an OR expression is the same as the AND of the individual values NOTed (negated). See De Morgans laws.
 
        Which of the following expressions is equivalent to the following? 
-   
+
        .. code-block:: java
 
            !(c || d)
@@ -103,7 +103,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: When a contains a value equal to zero then multiplying that value by 2 will always be 0 and never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
 
        Which of the following will cause an infinite loop when ``temp`` is greater than zero and ``a`` is an array of integers.  
-   
+
        .. code-block:: java
 
          for (int k = 0; k < a.length; k++ )
@@ -113,7 +113,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                a[k] *= 2;
             }
          }
-     
+
     .. mchoice:: pe2_5-5
        :answer_a: if (x > 0) x = 0;
        :answer_b: x = 0;
@@ -128,12 +128,12 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x
 
        Given the following code segment, which of the following is this equivalent to?
-   
+
        .. code-block:: java
 
          if ( x > 0) x = -x; 
          if (x < 0) x = 0;
-     
+
     .. mchoice:: pe2_6-15
        :answer_a: [1, 2, 3, 4, 5]
        :answer_b: [1, 2, 4, 5, 6]
@@ -148,9 +148,9 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The add method that takes just a value as a parameter adds that value to the end of the list. The set replaces the value at that index with the new value. The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index). So the list looks like: 1 // add 1 1 2 // add 2 1 2 3 // add 3 1 2 4 // set index 2 to 4 1 2 5 4 // add 5 to index 2 (move rest right) 1 2 5 4 6 // add 6 to end
 
        Given the following code segment, what will be printed when it is executed?
-   
+
        .. code-block:: java
-   
+
           List<Integer> list1 = new ArrayList<Integer>();
           list1.add(new Integer(1));
           list1.add(new Integer(2));
@@ -159,7 +159,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
           list1.add(2, new Integer(5));
           list1.add(new Integer(6));
           System.out.println(list1);
-     
+
     .. mchoice:: pe2_7-20
        :answer_a: IV
        :answer_b: I and II
@@ -174,7 +174,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.
 
        Which of the following reasons for using an inheritance heirarchy are valid?
-   
+
        .. code-block:: java
 
           I.   Methods from a superclass can be used in a subclass without 
@@ -184,7 +184,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
           III. Objects from subclasses can be stored in the same array
           IV.  All of the above
           V.   None of the above
-            
+
 
     .. mchoice:: pe2_8-13
        :answer_a: Many digits are printed due to infinite recursion. 
@@ -200,9 +200,9 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The first call to mystery with the integer 1234 will print 1234 % 10. The '%' means modulo or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
 
        Which of the following is printed as the result of the call ``mystery(1234);``?
-   
+
        .. code-block:: java
-     
+
          //precondition:  x >=0
          public void mystery (int x)
          {
@@ -229,7 +229,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: Actually i = 6 and t = 6 and a = 13 after the loop finishes.
 
        Given the following code segment, what are the values of ``a`` and ``b`` after the ``for`` loop finishes?
-   
+
        .. code-block:: java
 
           int a = 10, b = 3, t;
@@ -239,7 +239,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
              a = i + b;
              b = t - i;
           }
-    
+
     .. mchoice:: pe2_10-1
        :answer_a: 112233445566  
        :answer_b: 123456
@@ -254,7 +254,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This would be true if the loop stopped when index was less than the string length instead of one less than the string length.
 
        Given the following code segment, what is printed when it is executed?
-   
+
        .. code-block:: java
 
          String test = "123456";
@@ -262,7 +262,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
          {
               System.out.print(test.substring(index,index+2));
          }
-     
+
     .. mchoice:: pe2_11-3
        :answer_a: var1=2, var2=0
        :answer_b: var1=3, var2=-1
@@ -277,7 +277,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The operation 0 / 2 won't cause a division by zero. The result is just zero.
 
        Given the following code segment, what are the values of ``var1`` and ``var2`` after the while loop finishes?
-   
+
        .. code-block:: java
 
          int var1 = 0;
@@ -288,8 +288,8 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
             var1 = var1 + 1;
             var2 = var2 - 1;
          }
-     
-     
+
+
     .. mchoice:: pe2_12-6
        :answer_a: (s == m - 5) && (s - 3 == 2 * (m - 3))
        :answer_b: s == m + 5 && s + 3 == 2 * m + 6 
@@ -304,7 +304,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won't be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).
 
        Susan is 5 years older than Matt. Three years from now Susan's age will be twice Matt's age.  What should be in place of ``condition`` in the code segment below to solve this problem?
-   
+
        .. code-block:: java
 
          for (int s = 1; s <= 100; s++) {
@@ -313,8 +313,8 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                    System.out.println("Susan is " + s + " and Matt is " + m);
             }
          }
-    
-     
+
+
     .. mchoice:: pe2_13-16
        :answer_a: { {2 3 3 3}, {1 2 3 3}, {1 1 2 3}}
        :answer_b: { {2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}}
@@ -329,7 +329,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This would be true if you set the value to the row index. 
 
        Given the following code segment, What are the contents of ``mat`` after the code segment has been executed?
-   
+
        .. code-block:: java
 
          int [][] mat = new int [3][4];
@@ -345,7 +345,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                 mat[row][col] = 3;
            }
         }
-    
+
     .. mchoice:: pe2_14-12
        :answer_a: hI tHERE 
        :answer_b: hi there
@@ -360,7 +360,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change
 
        Given the following code segment, what will the value of ``s1`` be after this executes?
-   
+
        .. code-block:: java
 
          String s1 = "Hi There";
@@ -371,7 +371,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
          s3 = s3.toUpperCase();
          s4 = null;
 
-     
+
     .. mchoice:: pe2_15-7
        :answer_a: 0 1 2 0 1 2 0 1
        :answer_b: 0 2 1 0 2 1 0 2
@@ -386,7 +386,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This would be true if the loop stopped when the value of num was less than 14 but it is less than or equal to 14.
 
        Given the following code segment, what is printed when it executes?
-   
+
        .. code-block:: java
 
          public static void test()
@@ -410,7 +410,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
              num += 2; 
            }    
         }
-     
+
 
     .. mchoice:: pe2_16-2
        :answer_a: It is the length of the array nums. 
@@ -428,7 +428,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        Consider the following data field and method ``findLongest``. Method ``findLongest`` is intended to find the longest consecutive block of the value target occurring in the array nums; however, ``findLongest`` does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to ``findLongest``?
 
        .. code-block:: java
-   
+
          private int[] nums;
          public int findLongest(int target)
          {
@@ -455,7 +455,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
            }
            return maxLen;
          }
-      
+
     .. mchoice:: pe2_17-11
        :answer_a: 4
        :answer_b: 3
@@ -470,7 +470,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The statement a[1]--; is the same as a[1] = a[1] - 1; so this will change to 3 to 2.  The return (a[1] * 2) does not change the value at a[1].  
 
        Given the following method declaration, and ``int[] a = {8, 3, 1}``, what is the value in ``a[1]`` after ``m1(a);`` is run?
-   
+
        .. code-block:: java
 
          public static int m1(int[] a)
@@ -478,7 +478,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
             a[1]--;
             return (a[1] * 2);
          }
-      
+
     .. mchoice:: pe2_18-4
        :answer_a: I and II only
        :answer_b: II only
@@ -493,9 +493,9 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.
 
        At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, 75 to 83 inclusive is a C, and below 75 is an F.  Which of the following code segments will assign the correct string to ``grade`` for a given integer score?
-   
+
        .. code-block:: java
-      
+
          I.   if (score >= 93)
                  grade = "A";
               if (score >= 84 && score <= 92)
@@ -522,7 +522,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                  grade = "C";
               else
                  grade = "F";
-    
+
 
     .. mchoice:: pe2_19-8
        :answer_a: hours = hours + minutes % 60; minutes = minutes / 60;
@@ -538,7 +538,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This will correctly update the hours, but not update the minutes.
 
        Given the following incomplete class declaration, which of the following can be used to replace the missing code in the ``advance`` method so that it will correctly update the time?
-   
+
        .. code-block:: java
 
          public class TimeRecord
@@ -574,7 +574,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
            // ... other methods not shown
          }
-     
+
     .. mchoice:: pe2_20-17
        :answer_a: AB
        :answer_b: ABCD
@@ -589,7 +589,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This is not an example of recursion. No method is called from within itself.
 
         Given the following class declarations, and assuming that the following declaration appears in a client program: ``Base b = new Derived();``, what is the result of the call ``b.methodOne();``?
-   
+
         .. code-block:: java
 
          public class Base
@@ -620,10 +620,10 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
               System.out.print("D");
             }
          }
-     
-     
 
-           
 
-           
-  
+
+
+
+
+

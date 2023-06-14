@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 12-2-
    :start: 1
-   
+
 Exam 1 for the AP CS A Exam (not timed)
 ----------------------------------------
 
@@ -21,7 +21,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: Here we forgot to negate our AND (&&) into an OR (||). 
 
    Which of the following is equivalent to the statement below? Recall DeMorgan's Law. 
-   
+
    .. code-block:: java
 
      !((a <= b) && (b < 0))
@@ -41,7 +41,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: This value would be returned from mystery(3). 
 
    Consider the following recursive method. What does ``mystery(4)`` return? 
-   
+
    .. code-block:: java
 
       public int mystery(int m) 
@@ -72,7 +72,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    In which of these cases will an ascending order (from smallest to largest) insertion sort have the fastest run time?
 
    .. code-block:: java
-   
+
       I.   An array that is in reverse order (from largest to smallest). 
       II.  An array that is in sorted order already (from smallest to largest). 
       III. An array that is in random order (not already sorted).
@@ -93,9 +93,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Which of these loops will output ``01234``?  
 
    .. code-block:: java
-    
+
       int max = 5;
-      
+
       //Loop I
       for (int i = 0; i < max; i++) 
       {
@@ -111,7 +111,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          j++;
       }
 
-      
+
       //Loop III
       int k = 0;
       for (int i = max; i > 0; i--) 
@@ -135,7 +135,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Consider the following block of code. What are the first and last numbers printed after running the code?  
 
    .. code-block:: java
-   
+
       int value = 15;
       while (value < 30) 
       {
@@ -159,7 +159,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Consider the following block of code. What value is returned from ``solution(5)``?
 
    .. code-block:: java
-   
+
       public int solution(int limit) 
       {
         int s = 0;
@@ -193,7 +193,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Given that both ``count`` and ``n`` are integer values, which of the following statements is true about both code blocks? 
 
    .. code-block:: java
-   
+
       // Code block I
       for (count = 0; count <= n; count++) 
       {
@@ -224,7 +224,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Consider the following class declarations. Which statements are true? 
 
    .. code-block:: java
-     
+
       public class Animal 
       {
        /* Some code */
@@ -255,7 +255,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Consider the following code. What is the maximum amount of times that ``HELLO`` could possibly be printed?
 
    .. code-block:: java
-     
+
       for (int i = 0; i <= k; i++) 
       {
          if (arr[i] < someValue) 
@@ -280,7 +280,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    When will the method ``stringRecursion`` produce a run time error? 
 
    .. code-block:: java
-     
+
       public void stringRecursion(String s) 
       {
 
@@ -305,7 +305,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: Methods II and III will both produce compile time errors, but method I works because class C inherits all the public methods of class B.
 
    Consider the following class definitions. Which of I, II and III below would cause an error when used in place of the missing code in the main method?
-   
+
    .. code-block:: java
 
       public class A 
@@ -326,7 +326,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       public class C extends B 
       {
         //Instance variables and other methods not shown
-        
+
         public void method2(C o) 
         {
            /* implementation not shown */ 
@@ -361,7 +361,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Which of these declarations will *not* cause an error? 
 
    .. code-block:: java
-     
+
       I ArrayList<String> stringList = new List<String>();
       II ArrayList<int> intList = new ArrayList<int>();
       III ArrayList<String> stringList = new ArrayList<String>();
@@ -382,7 +382,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Suppose that the following method takes in a two dimensional array called ``matrix``. After the method call ``printMatrix(matrix)`` what will the output be? Possible options are listed below the method definition.
 
    .. code-block:: java
-      
+
       /* assume that matrix has the following values */
       7654
       3210
@@ -409,7 +409,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       3210
       4567
       0123
-      
+
       II.
       7
       32
@@ -442,7 +442,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: After we add 5 and 7 to the end of the array we remove the element at index 2 (which was 2). Then we use the index we had previously obtained (also 2) to add a new element 4. This pushes the element already at that index (and the ones after it) one space to the right. Fianlly, we set the element at index 1 to be 8. This sets the value at index 1 to 8.
    :feedback_e: This is what we would have happened if we thought the add method would add elements to the beggining of the ArrayList and not the end.
 
-   
+
    If randomList is an ``ArrayList`` of ``Integer`` objects and is initially set to {0, 1, 2, 3}, what will randomList look like after the following code is executed?
 
    .. code-block:: java
@@ -468,11 +468,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: The first substring element has a start value of index 1 and so f will not be printed out. Also because each substring is a single character, no character will be repeated in the substring. 
    :feedback_e: This is what we would have happened if the substring had started at index counter (and not index counter + 1).
 
-   
+
    Consider the following code segment. What will be printed as a result of executing the code below? 
 
    .. code-block:: java
-     
+
       String str = "fedcba";
       int counter = 0;
       while(counter < str.length() - 1) 
@@ -493,7 +493,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_c: Since class C is a subclass of class B, you can upcast an object of type C to be of type B.  
    :feedback_d: This statement is creating a new object using the second constructor of the B class. This is also a valid way to create a B object. 
    :feedback_e: Even though class C has a super class with a constructor that takes in a single int argument, class C does not have a constructor that takes an int value. 
-   
+
    Consider the following class declarations. Which of the following statements will not compile? 
 
    .. code-block:: java
@@ -536,11 +536,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: Since strings are immutable any change returns a new string and doesn't affect what s refers to.  Also the value of primitive types are copied and nothing done in test affects the orignal primitive value.
    :feedback_e: The string that s refers to is not changed by the test method.  All changes to string result in a new string object.
 
-   
+
    Consider the following method.  Assume that ``String s = "rain";`` and ``int b = 4;`` have been executed.  What are the values of ``s`` and ``b`` after ``test(s,b)`` is executed?
 
    .. code-block:: java
-     
+
       public static void test(String str, int y)
       {
          str = str + "bow";
@@ -560,11 +560,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: Statement III is true but statement I is false since mergesort often utilizes a temporary array and will actually require more storage space than insertion sort. 
    :feedback_e: Merge sort uses the "divide and conquer" approach to sort an array. This will end up being more efficient than insertion sort in the case where we have long unordered array. However if we have a very small almost sorted array, then insertion sort will outperform merge sort. 
 
-   
+
    Which of the following is/are true about using insertion sort versus using merge sort?
 
    .. code-block:: java
-     
+
       I. Insertion sort requires more storage space than mergesort.  
       II. Insertion sort is only more efficient than mergesort in the case that we have a very small and nearly sorted array. 
       III. Insertion sort is almost always less efficient than mergesort.
@@ -582,12 +582,12 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: This is what would happen if we were shifting rows instead of columns in the alter method. 
    :feedback_e: Method alter shifts the values in the columns, starting at column c + 1, one column to the left. It also overwrites column c. Here are the replacements made for the method call alter(1): matrix[0][1] = matrix[0][2], matrix[0][2] = matrix[0][3], matrix[1][1] = matrix[1][2], matrix[1][2] = matrix[1][3], matrix[2][1] = matrix[2][2], matrix[2][2] = matrix[2][3]
 
-   
+
    What would the contents of ``matrix``, a 2-D array of integers, be after a call to ``alter(1)``? The method alter is defined below. 
- 
+
 
    .. code-block:: java
-     
+
       private int[][] matrix;
 
       /* matrix looks like this initially
@@ -618,7 +618,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
     III. 1 3 5 7
          3 5 7 9
-    
+
     IV. 1 3 5 7
         3 5 7 9
         3 5 7 9
@@ -627,4 +627,4 @@ The following problems are similar to what you might see on the AP CS A exam.  P
        2 6 8 8
        3 7 9 9
 
-     
+

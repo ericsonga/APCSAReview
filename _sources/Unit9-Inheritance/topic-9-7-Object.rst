@@ -7,27 +7,27 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. |AP CS A Reference Sheet| raw:: html
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a> 
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
-    
+
 Object Superclass
 ====================
 
@@ -50,7 +50,7 @@ In the following code, the Person class overrides the Object toString() method a
 .. activecode:: toStringDemo
   :language: java 
   :autograde: unittest
-  
+
   After trying the code below, complete the subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Uncomment the APStudent object in the main method to test it.
   ~~~~
   public class Person
@@ -91,7 +91,7 @@ In the following code, the Person class overrides the Object toString() method a
           return super.toString() + " " + id;
        }
     }
-    
+
     class APStudent extends Student
     {
        private int score;
@@ -101,7 +101,7 @@ In the following code, the Person class overrides the Object toString() method a
           this.score = score;
        }
        // Add a toString() method here that calls the super class toString
-       
+
     }
     ====
     import static org.junit.Assert.*;
@@ -136,9 +136,9 @@ In the following code, the Person class overrides the Object toString() method a
            assertTrue(passed);
          }
      }
-      
 
-    
+
+
 equals Method 
 -----------------
 
@@ -163,12 +163,12 @@ As seen in the code below, the ``equals`` method that is inherited from the ``Ob
    public class Person
    {
       private String name;
-      
+
       public Person(String theName)
       {
          this.name = theName;
       }
-      
+
       public static void main(String[] args)
       {
          Person p1 = new Person("Kairen");
@@ -179,7 +179,7 @@ As seen in the code below, the ``equals`` method that is inherited from the ``Ob
          System.out.println(p2.equals(p3));
          System.out.println(p1.equals(p3));
          System.out.println(p3.equals(p4));
-         
+
       }
    }
    ====
@@ -204,8 +204,8 @@ As seen in the code below, the ``equals`` method that is inherited from the ``Ob
 
          }
      }
-   
-   
+
+
 The ``equals`` method inherited from the ``Object`` class only returns true when the two references point to the same object as shown in the code above and figure 1 below.
 
 .. figure:: Figures/equalsEx.png
@@ -214,10 +214,10 @@ The ``equals`` method inherited from the ``Object`` class only returns true when
     :figclass: align-center
 
     Figure 1: A picture from the Java Visualizer showing that only p3 and p4 refer to the same object.
-    
+
 Overriding the equals Method
 -----------------------------
-   
+
 If you want to change how the inherited ``equals`` method works you can **override** it so that the new method is called instead of the inherited one.  The ``String`` class **overrides** the inherited equals method to return true when the two objects have the same characters in the same order as shown in the code below.  
 
 |CodingEx| **Coding Exercise**
@@ -278,12 +278,12 @@ Any class can override the inherited ``equals`` method by providing a method wit
    public class Person
    {
       private String name;
-      
+
       public Person(String theName)
       {
          this.name = theName;
       }
-      
+
       /** overridden equals method that checks if names are equal
           in this Person object and an the other Object.
           */
@@ -294,7 +294,7 @@ Any class can override the inherited ``equals`` method by providing a method wit
          // Check if names are equal
          return this.name.equals(otherPerson.name);
       }
-      
+
       public static void main(String[] args)
       {
          Person p1 = new Person("Gabe");
@@ -329,14 +329,14 @@ Any class can override the inherited ``equals`` method by providing a method wit
 
          }
      }
-   
+
 .. figure:: Figures/overrideEquals.png
     :width: 300px
     :align: center
     :figclass: align-center
 
     Figure 2: A picture from the Java Visualizer showing the object references and objects.
-   
+
 You can step through this code in the Java Visualizer by clicking on the following link: `OverrideEquals Ex <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person%0A%7B%0A++++++private+String+name%3B%0A++++++%0A++++++public+Person(String+theName)%0A++++++%7B%0A+++++++++this.name+%3D+theName%3B%0A++++++%7D%0A++++++%0A++++++public+boolean+equals(Object+other)%0A++++++%7B%0A+++++++++Person+otherPerson+%3D+(Person)+other%3B%0A+++++++++return+this.name.equals(otherPerson.name)%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++Person+p1+%3D+new+Person(%22Gabe%22)%3B%0A+++++++++Person+p2+%3D+new+Person(%22Gus%22)%3B%0A+++++++++Person+p3+%3D+new+Person(%22Gabe%22)%3B%0A+++++++++Person+p4+%3D+p3%3B%0A+++++++++System.out.println(p1.equals(p2))%3B%0A+++++++++System.out.println(p2.equals(p3))%3B%0A+++++++++System.out.println(p1.equals(p3))%3B%0A+++++++++System.out.println(p3.equals(p4))%3B%0A+++++++++%0A++++++%7D%0A%7D&mode=display&curInstr=23>`_.
 
 To write your own equals method, you must:
@@ -346,7 +346,7 @@ To write your own equals method, you must:
 3. Return whether this object's attribute(s) equals the other object's attribute(s) with == for primitive types like int and double, or equals for reference types like String or another class.
 
 .. code-block:: java 
-    
+
     public boolean equals(Object other)
     {
        // Type cast other to your Classname
@@ -369,7 +369,7 @@ If you are writing an equals method for a subclass, you can call the superclass 
 
     return super.equals(otherObj) && 
            (this.attribute == otherObj.attribute)
-           
+
 
 |Groupwork| Programming Challenge : Savings Account
 ---------------------------------------------------
@@ -390,24 +390,24 @@ Work in pairs to write the following code and test each part before moving on to
 .. activecode:: challenge-9-7-savingsaccount
    :language: java
    :autograde: unittest
-   
+
    Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a constructor with 3 arguments, a toString, and an equals method for it. Uncomment the code in main to test your new class and methods. 
    ~~~~
    public class Account 
    {
        private String name;
        private double balance;
-   
+
        public Account(String name, double balance)
        {
           this.name = name;
           this.balance = balance;
        }
-       
+
        public String toString() {
         return name + ", " + balance;
        }
-       
+
        public boolean equals(Object other)
        {
     	  Account otherAccount = (Account) other;
@@ -434,7 +434,7 @@ Work in pairs to write the following code and test each part before moving on to
    */
    class SavingsAccount
    {
-   
+
    }
    ====
    import static org.junit.Assert.*;
@@ -524,8 +524,8 @@ Work in pairs to write the following code and test each part before moving on to
 
          }
      }
-   
-   
+
+
 Summary
 ---------
 
@@ -538,5 +538,5 @@ Summary
 
 
 - Subclasses of Object often override the equals and toString methods with class-specific implementations.
-   
-     
+
+

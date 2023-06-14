@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,7 +22,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
-    
+
 Nested Loops for 2D Arrays (Day 1)
 -----------------------------------
 
@@ -42,7 +42,7 @@ Arrays know their length (how many elements they can store).  The length is a pu
 
   ticketInfo.length // returns the number of rows
   ticketInfo[0].length // returns the number of columns
-  
+
 .. note::
 
      Note that length is a field and not a method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. Since for the AP CS A exam all two-dimensional arrays are rectangular arrays (arrays that have the same number of columns in each row) you can just use the length of the first inner array as the number of columns as shown by ``ticketInfo[0].length``.
@@ -60,7 +60,7 @@ Arrays know their length (how many elements they can store).  The length is a pu
    :feedback_c: This is the total number of items in the array.
 
    How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?	
-   
+
 .. mchoice:: qa2ldb_3
    :practice: T
    :answer_a: nums[3][2]
@@ -74,8 +74,8 @@ Arrays know their length (how many elements they can store).  The length is a pu
    :feedback_d: This would be true if the column index was first, but in row-major order the row index is first.
 
    Which of the following would I use to get the value in the third row and second column from a 2D array called ``nums``?
-   
- 
+
+
 Looping Through a 2D Array
 --------------------------
 
@@ -95,7 +95,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
            System.out.println( array[row][col] );
       }
    }
-   
+
 |CodingEx| **Coding Exercise**
 
 
@@ -103,7 +103,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
 .. activecode:: lcgetAverage
    :language: java 
    :autograde: unittest
-   
+
    What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Use the CodeLens button to trace through the code. Note that an array can be passed in as an argument to a method.  
    ~~~~
    public class Test1
@@ -123,7 +123,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
          }
          return total / (a.length * a[0].length);
       }
-      
+
       public static void main(String[] args)
       {
          int[][] matrix = { {1,2,3},{4,5,6}};
@@ -162,7 +162,7 @@ Since you can find out the number of rows and columns in a 2D array you can use 
             assertTrue(passed);
         }
     }
-   
+
 Some key things to notice about this code are:
 
 - ``total`` is declared to be a double so that the result will be a double.  If ``total`` was declared to be an ``int`` then the result would be an integer and the values after the decimal point would be thrown away.  
@@ -203,7 +203,7 @@ Some key things to notice about this code are:
     return largest;
    =====
    } // end method
-   
+
 You can step through this code using the Java Visualizer by clicking on the following |Java Visualizer|.
 
 .. |Java Visualizer| raw:: html
@@ -213,7 +213,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
 
 Most nested loops with 2D Arrays use "row-major order" where the outer loop goes through each row. However, you can write nested loops that traverse in "column-major order" like below.
 
-   
+
 |CodingEx| **Coding Exercise**
 
 
@@ -221,7 +221,7 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
 .. activecode:: ColumnMajorTraversal
    :language: java 
    :autograde: unittest
-   
+
    What will the following code print out? Try to guess before you run it. 
    ~~~~
    public class ColumnMajorTraversal
@@ -255,7 +255,7 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
             assertTrue(passed);
         }
     }
-         
+
 
 AP Practice
 ------------
@@ -277,7 +277,7 @@ AP Practice
    Consider the following code segment. What is the last row of numbers printed when this code segment is executed? 
 
    .. code-block:: java
-    
+
       int[][] points = { {11, 12, 13, 14, 15},
                          {21, 22, 23, 24, 25},
                          {31, 32, 33, 34, 35},

@@ -6,19 +6,19 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. raw:: html
 
     <style>    td { text-align: left; } </style>
@@ -26,7 +26,7 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Searching Algorithms
 ======================
 
@@ -109,7 +109,7 @@ Sequential or linear search is the only method that can be used to find a value 
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -173,7 +173,7 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -255,7 +255,7 @@ Of course you can also look for a string in an array or list.  But, when you loo
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-   
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -351,7 +351,7 @@ The code for ``binarySearch`` below is from the AP CS A course description. A re
             assertTrue(passed);
         }
     }
-    
+
 To see this executing using the Java Visualizer click on the following link: `BinarySearch Ex <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0>`_
 
 You can also use binary search with a string array.  But, when you look for a string be sure to use ``compareTo()`` method rather than ``<`` or ``>`` which can only be used with primitive types.  Remember how the String method compareTo() works:
@@ -361,7 +361,7 @@ You can also use binary search with a string array.  But, when you look for a st
 .. activecode:: binSearchStrings
   :language: java
   :autograde: unittest        
-  
+
   Demonstration of binary search with strings using compareTo. Click on the Code Lens button to step through the code.
   ~~~~
   public class BinSearchStrings
@@ -412,7 +412,7 @@ You can also use binary search with a string array.  But, when you look for a st
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -424,7 +424,7 @@ You can also use binary search with a string array.  But, when you look for a st
             assertTrue(passed);
         }
     }
-  
+
 Runtimes
 --------
 
@@ -521,7 +521,7 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 .. |Google doc| raw:: html
 
    <a href= "https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" style="text-decoration:underline" target="_blank" >Google document</a>
-   
+
 Let's go back to the spell checker that we programmed in Unit 6. Remember that it used linear search to find a word in the dictionary. The dictionary file was actually in alphabetical order though, so we could have used a much faster binary search. 
 
 Here is a version of the spellchecker on |repl.it| that uses an ArrayList for the dictionary and a linear search method. Notice that get(i) is used instead of [] to get an element in the ArrayList dictionary at index i. The search also prints out the index where it found the word. This is an informal runtime that tells us how many words it had to check.  Run the code in the window below or on |repl.it| with the following test cases and record the runtime for each word in this |Google doc| (do File/Make a Copy) also seen below to record your answers. 
@@ -530,7 +530,7 @@ Here is a version of the spellchecker on |repl.it| that uses an ArrayList for th
 
     <iframe height="400px" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&rm=minimal" style="max-width:90%; margin-left:5%" ></iframe>
 
-   
+
 .. raw:: html
 
     <iframe height="600px" width="100%" src="https://firewalledreplit.com/@BerylHoffman/SpellCheckerArrayListSearches?lite=true" scrolling="no" style="max-width:90%; margin-left:5%"  frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -542,7 +542,7 @@ Now, login to repl and start changing the code to save the |repl.it|  as your ow
 .. shortanswer:: challenge7-5-binary-search
 
    After you complete your code on repl, paste in a link (click on share) here. Also, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?
-   
+
 
 Summary
 ---------

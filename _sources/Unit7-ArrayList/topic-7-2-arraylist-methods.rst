@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,11 +22,11 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
-    
+
 .. raw:: html
 
     <style>    td { text-align: left; } </style>
-    
+
 ArrayList Methods 
 =========================
 
@@ -40,23 +40,23 @@ ArrayList Methods
 .. |AP CS A Reference Sheet| raw:: html
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
-   
+
 The following are the ``ArrayList`` methods that you need to know for the AP CS A exam.  These are included on the |AP CS A Reference Sheet| that you will receive during the exam so you do not need to memorize them. The E in the method headers below stands for the type of the element in the ArrayList; this type E can be any Object type. We will look at how these methods work below.
 
     -  **int size()** returns the number of elements in the list
-    
+
     -  **boolean add(E obj)** appends obj to the end of the list and returns true
-    
+
     -   **E remove(int index)** removes the item at the index and shifts remaining items to the left (to a lower index)
-    
+
     -  **void add(int index, E obj)**  moves any current objects at index or beyond to the right (to a higher index) and inserts obj at the index
 
     -   **E get(int index)** returns the item in the list at the index
-    
+
     -   **E set(int index, E obj)** replaces the item at index with obj
-    
- 
-    
+
+
+
 
 
 Size()
@@ -71,11 +71,11 @@ As we saw in the last lesson, you can get the number of items in a ArrayList usi
 
     ArrayList<String> list = new ArrayList<String>();
     System.out.println( list.size() );
-    
+
 .. note:: 
 
    With arrays, you use the ``length`` field to get the number of items in the array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the ArrayList. You will not be penalized if you mix up length and size() in the CS A exam. The number of items in an empty ArrayList is 0.  
-   
+
 Add(obj) to an ArrayList
 -----------------------------
 
@@ -145,7 +145,7 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
 ..	index::
 	pair: list; autoboxing
 	pair: list; unboxing 
-    
+
 When adding Integer objects to the list, you can use the Integer constructor like ``add(new Integer(5))`` in Java version 7 which is used on the exam (although this is deprecated and no longer used in Java version 9)  or you can just add the int value directly like ``add(5)`` in any Java version and it will be changed into an ``Integer`` object automatically.  This is called **autoboxing**. When you pull an ``int`` value out of a list of ``Integers`` that is called **unboxing**.
 
 .. code-block:: java 
@@ -153,7 +153,7 @@ When adding Integer objects to the list, you can use the Integer constructor lik
     ArrayList<Integer> list = new ArrayList<Integer>();
     list.add(new Integer(5)); // this will only work in Java 7
     list.add(5); // this will work in all Java versions
-    
+
 You can put any kind of Objects into an ArrayList. Even objects for a class that you wrote. For example, here is an ArrayList of Students.
 
 .. activecode:: StudentArrayList
@@ -163,7 +163,7 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
   An example of an ArrayList of Student objects. Add a new student with your name and info in it.
   ~~~~
   import java.util.*;
-  
+
   public class StudentList 
   {
      // main method for testing
@@ -176,20 +176,20 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
          System.out.println(roster);
      }
    }
-  
+
   class Student 
   {
      private String name;
      private String email;
      private int id;
-     
+
      public Student(String initName, String initEmail, int initId)
      {
         name = initName;
         email = initEmail;
         id = initId;
      }
-     
+
      // toString() method
      public String toString() 
      { 
@@ -217,7 +217,7 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
             assertTrue(passed);
         }
     }
- 
+
 Add(index,obj) in an ArrayList
 ------------------------------
 
@@ -275,11 +275,11 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
             assertTrue(passed);
         }
     }
-    
+
 .. note::
 
     ArrayLists like arrays start numbering their elements from 0.
-    
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qalAdd1
@@ -294,9 +294,9 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
    :feedback_d: This would be true if the <code>add(2, 4)</code> replaced what was at index 2, but it actually moves the value currently at index 2 to index 3.
 
    What will print when the following code executes?
-   
+
    .. code-block:: java 
-   
+
       ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
       list1.add(2);
@@ -308,9 +308,9 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
 .. |Java visualizer 1| raw:: html
 
    <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0" target="_blank">Java Visualizer</a>
-   
+
 You can step through the code above by clicking on this |Java Visualizer 1|.
-      
+
 .. mchoice:: qalAdd2
    :answer_a: ["Anaya", "Sarah", "Layla", "Sharrie"]
    :answer_b: ["Anaya", "Layla", "Sharrie", "Sarah"]
@@ -321,22 +321,22 @@ You can step through the code above by clicking on this |Java Visualizer 1|.
    :feedback_b: This would be true if the last one was <code>add("Sarah")</code>
    :feedback_c: This would be true if the last one was <code>add(0, "Sarah")</code>
    :feedback_d: This would be true if the last one was <code>add(2, "Sarah")</code>
-   
+
    What will print when the following code executes?
-   
+
    .. code-block:: java 
-   
+
       ArrayList<String> list1 = new ArrayList<String>();
       list1.add("Anaya");
       list1.add("Layla");
       list1.add("Sharrie");
       list1.add(1, "Sarah");
       System.out.println(list1);
-      
+
 .. |Java visualizer 2| raw:: html
 
    <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0" target="_blank">Java Visualizer</a>
-   
+
 You can step through the code above by clicking on the following |Java visualizer 2|.
 
 
@@ -352,18 +352,18 @@ You can step through the code above by clicking on the following |Java visualize
    :feedback_d: This adds the 2 to index 1, but first moves all other values past that index to the right.
 
    What will print when the following code executes?
-   
+
    .. code-block:: java 
-   
+
       ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(5);
       list1.add(4);
       list1.add(3);
       list1.add(1, 2);
       System.out.println(list1);
-      
+
 .. You can step through the code above by clicking on the following `Example-8-5-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+2)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
+
 .. .. mchoice:: qalAdd4
    :answer_a: [1, 3, 2]
    :answer_b: [1, 3, 2, 1]
@@ -376,9 +376,9 @@ You can step through the code above by clicking on the following |Java visualize
    :feedback_d: This would be true if the list was sorted and you couldn't add duplicate objects, but lists are not sorted and you can add duplicate objects.  
 
    What will print when the following code executes?
-   
+
    .. code-block:: java 
-   
+
       ArrayList<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
       list1.add(3);
@@ -439,11 +439,11 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
             assertTrue(passed);
         }
     }
-   
+
 .. note::
 
    The ``remove(int index)`` method will remove the object at the index and shift left any values to the right of the current index.  It doesn't remove the object that matches the integer value given. In the example above it doesn't remove the value 1.  It removes the value 2 at index 1.
-   
+
 .. mchoice:: qListRem
    :answer_a: [2, 3]
    :answer_b: [1, 2, 3]
@@ -456,19 +456,19 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
    :feedback_d: This would be true if it was <code>remove(1)</code>
 
    What will print when the following code executes?
-   
+
    .. code-block:: java 
-   
+
       List<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
       list1.add(2);
       list1.add(3);
       list1.remove(2);
       System.out.println(list1);
-      
+
 You can step through the code above by clicking on the following `RemoveExample  <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(2)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
-   
+
+
 .. Run the code below to see how the list changes. Can you add your name to the list and print it out and then remove it and print it out?
 
 .. .. activecode:: listremove
@@ -502,7 +502,7 @@ You can get the object at an index using ``obj = listName.get(index)`` and set t
 Notice that ArrayLists use set/get methods instead of using the square brackets array[index] that arrays use. This is because ArrayList is a class with methods that provide access to the underlying array.
 
 |CodingEx| **Coding Exercise**
- 
+
 
 
 .. activecode:: listGetSet
@@ -573,9 +573,9 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
    :feedback_d: The <code>add</code> with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.
 
    What will print when the following code executes?
-   
+
    .. code-block:: java 
-   
+
       List<Integer> list1 = new ArrayList<Integer>();
       list1.add(1);
       list1.add(2);
@@ -584,9 +584,9 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
       list1.add(2, 5);
       list1.add(6);
       System.out.println(list1);
-      
+
 You can step through the code above by clicking on the following `Example1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++ArrayList%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(1)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(6)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
+
 .. mchoice:: qListRem2
    :answer_a: ["Sarah", "Destini", "Layla", "Sharrie"]
    :answer_b: ["Sarah", "Destini", "Anaya", "Layla", "Sharrie"]
@@ -597,11 +597,11 @@ You can step through the code above by clicking on the following `Example1 <http
    :feedback_b: <code>set</code> changes the value and the first index is 0 not 1.
    :feedback_c: <code>add</code> at index 1 adds the new value at that index but moves right any existing values.
    :feedback_d: The list is first ["Anaya", "Layla", "Sharrie"] and then changes to ["Anaya", Destini", "Sharrie"] and then to ["Anaya", "Sarah", "Destini", "Sharrie"]
-   
+
    What will print when the following code executes?
-   
+
    .. code-block:: java 
-   
+
       List<String> list1 = new ArrayList<String>();
       list1.add("Anaya");
       list1.add("Layla");
@@ -609,12 +609,12 @@ You can step through the code above by clicking on the following `Example1 <http
       list1.set(1, "Destini");
       list1.add(1, "Sarah");
       System.out.println(list1);
-      
+
 You can step through the code above by clicking on the following `Example2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(1,+%22Destini%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-      
 
 
- 
+
+
 
 Comparing arrays and ArrayLists
 ---------------------------------
@@ -628,7 +628,7 @@ Here is a comparison of how to create arrays and ArrayLists:
    // arrays must specify a size!
    int[ ] highScores = new int[5];
    String[ ] names = new String[5];
-   
+
    // ArrayLists are empty to start with
    ArrayList<Integer> highScoreList = new ArrayList<Integer>();
    ArrayList<String> nameList = new ArrayList<String>();
@@ -647,7 +647,7 @@ Modify      array[index] = value;     list.set(index,value);
 =========== ========================  ========================
 
 Note that the ArrayList methods add and remove do not have a simple equivalent in arrays because they actually change the size of the underlying array and move elements over.
-   
+
 |Groupwork| Programming Challenge : Array to ArrayList
 -------------------------------------------------------
 
@@ -660,7 +660,7 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
    Rewrite the following code that uses an array to use an ArrayList instead. In the comments write why you think an ArrayList is a better data structure to use than an array for this problem.
    ~~~~
    import java.util.*;  
-   
+
    public class ToDoList
    {
       public static void main(String[] args)
@@ -670,23 +670,23 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
           toDoList[0] = "Do homework";
           toDoList[1] = "Help make dinner";
           toDoList[2] = "Call grandma";
-          
+
           // changing element 1
           toDoList[1] = "Order pizza";
-         
+
           System.out.println(toDoList.length + " things to do!");
           System.out.println("Here's the first thing to do: " 
               + toDoList[0] );
-         
+
           // remove item 0 and move everything down 
           //  (this can be done in 1 command with ArrayList)
           toDoList[0] = toDoList[1];
           toDoList[1] = toDoList[2];
           toDoList[2] = "";
-          
+
           System.out.println("Here's the next thing to do: " 
               + toDoList[0] );
-              
+
           // Why is an ArrayList better than an array for a toDoList?
           // Answer:
       }

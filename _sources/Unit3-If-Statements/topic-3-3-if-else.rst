@@ -1,34 +1,34 @@
 .. qnum::
    :prefix: 3-3-
    :start: 1   
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Two-way Selection: if-else Statements
 ======================================
 
 What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might flip a coin and do one thing if it lands as heads and another if it is tails.  In programming, you can use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.  
 
-   
+
 .. code-block:: java
 
     // A block if/else statement    
@@ -70,7 +70,7 @@ The following flowchart demonstrates that if the condition (the boolean expressi
 .. activecode:: lccb2
    :language: java
    :autograde: unittest
-   
+
    Try the following code. If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after conditional``.  
    ~~~~
    public class Test2
@@ -93,7 +93,7 @@ The following flowchart demonstrates that if the condition (the boolean expressi
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -107,7 +107,7 @@ The following flowchart demonstrates that if the condition (the boolean expressi
        }
 
     }
-   
+
 
 
 |Exercise| **Check your understanding**
@@ -118,7 +118,7 @@ The following flowchart demonstrates that if the condition (the boolean expressi
 
    -    :^Let's watch a movie$: Correct.  If the boolean value is false, the statement following the else will execute
         :.*: Try it and see
-        
+
 
 
 
@@ -131,7 +131,7 @@ If/else statements can also be used with relational operators and numbers like b
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age's value to 15 and then run it again to see the result of the print statement in the else part. 
    Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements. 
    ~~~~
@@ -154,7 +154,7 @@ If/else statements can also be used with relational operators and numbers like b
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
          @Test
@@ -171,7 +171,7 @@ If/else statements can also be used with relational operators and numbers like b
    :practice: T
    :adaptive:
    :noindent:
-   
+
    The following program should print out "x is even" if the remainder of x divided by 2 is 0 and "x is odd" otherwise, but the code is mixed up.   Drag the blocks from the left and place them in the correct order on the right.  Click on Check Me to see if you are right. 
    -----
    public class EvenOrOdd
@@ -207,7 +207,7 @@ If/else statements can also be used with relational operators and numbers like b
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Try the following code. Add an else statement to the if statement that prints out "Good job!" if the score is greater than 9. Change the value of score to test it. Can you change the boolean test to only print out "Good job" if the score is greater than 20?
    ~~~~
    public class ScoreTest
@@ -225,61 +225,61 @@ If/else statements can also be used with relational operators and numbers like b
    import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper {
         @Test
         public void testChangedCode() {
             String origCode = "public class ScoreTest   {      public static void main(String[] args)      {        int score = 8;        if (score <= 9)         {            System.out.println(\"Try for a higher score!\");        }      }} ";
-    
+
             boolean changed = codeChanged(origCode);
             assertTrue(changed);
         }
-    
+
         @Test
         public void testCodeContainsElse() {
             boolean ifCheck2 = checkCodeContains("else", "else");
             assertTrue(ifCheck2);
         }
-    
+
         @Test
         public void testCodeContains20() {
             String target1 = removeSpaces("score <= 20");
             String target2 = removeSpaces("score > 20");
-    
+
             String code = removeSpaces(getCode());
-    
+
             boolean passed = code.contains(target1) || code.contains(target2);
             getResults("true", "" + passed, "Checking for score <= 20 or score > 20", passed);
             assertTrue(passed);
         }
-       
+
         @Test
         public void testCodeChange1() throws Exception {
             String className = "Test1";
-    
+
             String program = getCode();
             program = program.replace("ScoreTest", className).replace("public class", "class");
             program = program.replaceAll("= *[0-9]+;", "= 25;");
-    
+
             String output = getMethodOutputChangedCode(program, className, "main");
-    
+
             String expected = "Good job!";
             boolean passed = output.contains(expected);
             getResults(expected, output, "Checking output if score is 25", passed);
             assertTrue(passed);
         }
-        
+
 
         @Test
         public void testCodeChange2() throws Exception {
             String className2 = "Test2";
-    
+
             String program2 = getCode();
             program2 = program2.replace("ScoreTest", className2).replace("public class", "class");
             program2 = program2.replaceAll("= *[0-9]+;", "= 5;");
-    
+
             String output2 = getMethodOutputChangedCode(program2, className2, "main");
-    
+
             String expected2 = "Try for a higher score!";
             boolean passed2 = output2.contains(expected2);
             getResults(expected2, output2, "Checking output if score is 5", passed2);
@@ -305,8 +305,8 @@ The rule is that the else clause will always be a part of the closest unmatched 
           Do statement;
        else  // belongs to closest if
           Do other statement;
-        
-        
+
+
 |CodingEx| **Coding Exercise**
 
 
@@ -315,7 +315,7 @@ The rule is that the else clause will always be a part of the closest unmatched 
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Try the following code with a dangling else. Notice that the indentation does not matter to the compiler (but you should make it your habit to use good indentation just as a best practice). How could you get the else to belong to the first if statement?
    ~~~~
    public class DanglingElseTest
@@ -421,8 +421,8 @@ You can use curly brackets { } to enclose a nested if and have the else clause b
 .. image:: Figures/questionmark.jpg
     :width: 100
     :align: left
-    
-    
+
+
 .. |Akinator| raw:: html
 
    <a href="https://en.akinator.com/" style="text-decoration:underline" target="_blank">Akinator</a>
@@ -442,7 +442,7 @@ The |Animal Guessing program| below uses the following decision tree:
     :figclass: align-center
 
     Figure 2: Animal Guessing Game Decision Tree
-    
+
 .. |Animal Guessing program| raw:: html
 
     <a href="https://firewalledreplit.com/@BerylHoffman/GuessAnimal" target="_blank" style="text-decoration:underline">Animal Guessing program</a>
@@ -482,7 +482,7 @@ After you complete your code on repl.it, paste in your code below to run it thro
   ~~~~
   // Copy in your link to your code on repl.it here:
   // Copy in all of your code from repl.it below (include import and public class Main)
-       
+
 
   ====
   import static org.junit.Assert.*;
@@ -569,7 +569,7 @@ After you complete your code on repl.it, paste in your code below to run it thro
         }
     }   
 
-   
+
 Summary
 -------
 

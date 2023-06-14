@@ -282,7 +282,7 @@ Write the method ``getEmptyLocations`` in the code below.
             for (int j = 0; j < studentAnswer.size(); j++) {
                 System.out.println(studentAnswer.get(j));
             }
-            
+
             System.out.println("Running Test 2: returns empty ArrayList if no empty locations");
             example.put(loc4, loc4);
             locsCorrect.clear();
@@ -410,7 +410,7 @@ Write the method ``getEmptyLocations`` in the code below.
             ArrayList<E> getNeighbors(Location loc);
         }
          // End of Class Grid
-         
+
         // Location Class
 
         /**
@@ -652,7 +652,7 @@ Write the method ``getEmptyLocations`` in the code below.
         // End of Class
 
         // BoundedGrid Class
-        
+
 
         /**
          * A BoundedGrid is a rectangular grid with a finite number of
@@ -752,9 +752,9 @@ Write the method ``getEmptyLocations`` in the code below.
         }
 
         // End of Class
-        
+
         // Class AbstractGrid
-        
+
 
         /**
          * AbstractGrid contains the methods that are common to grid
@@ -865,7 +865,7 @@ Write the method ``getEmptyLocations`` in the code below.
          locsCorrect.add(loc4);
          ArrayList<Location> studentAnswer = new ArrayList<Location>();
          studentAnswer = GridWorldUtilities.getEmptyLocations(example);
-         
+
          String output =  studentAnswer.get(0).toString(); 
          String expect = "(1, 1)";
 
@@ -986,7 +986,7 @@ Write the method ``getEmptyLocations`` in the code below.
             ArrayList<E> getNeighbors(Location loc);
         }
          // End of Class Grid
-         
+
         // Location Class
 
         /**
@@ -1228,7 +1228,7 @@ Write the method ``getEmptyLocations`` in the code below.
         // End of Class
 
         // BoundedGrid Class
-        
+
         import java.util.ArrayList;
 
         /**
@@ -1329,9 +1329,9 @@ Write the method ``getEmptyLocations`` in the code below.
         }
 
         // End of Class
-        
+
         // Class AbstractGrid
-        
+
         import java.util.ArrayList;
 
         /**

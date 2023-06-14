@@ -11,7 +11,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Fix the class header so that the ``Dog`` class inherits from the ``Animal`` class. 
         ~~~~
         class Animal {
@@ -44,7 +44,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Overload the ``talk`` method in the ``Person`` class so it can take in a String ``name`` and print ``"Hello {name}!"`` (e.g., calling ``p.talk("Sarah")`` on a ``Person`` ``p`` would print ``"Hello Sarah!"``).
         ~~~~
         class GenericPerson {
@@ -91,7 +91,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``Car`` class whose with a private int instance variable ``numWheels`` set to ``4`` and a private int instance variable ``numSeats`` whose value is set in the constructor. The ``Sedan`` class inherits from ``Car``. Fill in the ``Sedan`` constructor so that ``numSeats`` is already initialized as ``5``.
         ~~~~
         class Car {
@@ -138,7 +138,7 @@ This is the write code problems associated with the mixed up code problems.
             public RunestoneTests() {
                 super("Sedan");
             }
-        
+
             @Test
             public void testMain() throws IOException {
                 String expected = "c has 4 seats\ns has 5 seats";
@@ -152,7 +152,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``Person`` class with private String instance variables ``firstName`` and ``lastName`` and a constructor that takes them in that order. There is also a ``Customer`` class that should inherit from ``Person``, adding an ``id`` String instance variable. The only missing component is a ``Customer`` constructor that should take ``firstName``, ``lastName``, and ``id`` in that order.
         ~~~~
         class Person {
@@ -230,7 +230,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``House`` class with private int instance variables ``numWindows`` and ``numDoors`` and a constructor that takes those in that order. Create a ``MobileHouse`` class that inherits from ``House`` while adding a ``numWheels`` instance variable (and thus has a constructor that takes ``numWindows``, ``numDoors``, and ``numWheels`` in that order) and a ``getNumWheels()`` method. your solution.
         ~~~~
         public class House {
@@ -303,7 +303,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``Entity`` class with private int instance variable ``healthPoints`` and a constructor that takes that as an argument. Finish the ``Hero`` class so that it initializes with a ``healthPoints`` of ``100`` and so that its ``fight()`` method prints ``"Attacked the enemy!"``.
         ~~~~
         class Entity {
@@ -325,7 +325,7 @@ This is the write code problems associated with the mixed up code problems.
         }
 
         public class Hero extends Entity {
-            
+
             // TODO: Create a constructor
 
             // TODO: Override the fight() method
@@ -382,7 +382,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``Furniture`` class with a String instance variable ``material`` and an int instance variable ``cost``. The ``Furniture`` class also includes an ``equals()`` method that should return ``true`` if two ``Furniture`` objects have the same ``material`` and ``cost``. Fill in this ``equals()`` method.
         ~~~~
         public class Furniture {
@@ -442,7 +442,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``Car`` class with a method called ``drive()`` that prints ``"vroom"``. There is a subclass of ``Car`` called ``Racecar``. The ``Racecar`` class should override ``drive()`` with a new ``drive()`` function that prints ``"vroom"`` twice by calling ``Car``'s ``drive()`` function twice.
         ~~~~
         class Car {
@@ -495,7 +495,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``Computer`` class with private String instance variables ``name`` and ``company``. You should override the Object ``equals`` method to evaluate whether both ``Computers`` have the same ``name`` and ``company``, in which case they are "equal". There is also a ``Laptop`` class that inherits from ``Computer`` while adding a String ``keyboardType`` instance variable. The ``Laptop`` class should override the ``equals`` method from ``Computer``, instead evaluating whether the ``name``, ``company``, and ``keyboardType`` are the same (remember that ``name`` and ``company`` are not readable to ``Laptop`` so some polymorphism might be needed). Fill in the code so that both ``equals()`` methods work.
         ~~~~
         class Computer {
@@ -565,7 +565,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         There is a ``Food`` class with a private ``numCalories`` integer instance variable. ``Food`` has a ``chomp()`` method that returns nothing and prints ``"{numCalories} calories consumed"`` (e.g., ``"5 calories consumed"``). There should also be a ``Fruit`` subclass that inherits from ``Food`` and adds the private ``color`` String instance variable. The ``Fruit`` class should override the ``Food`` ``chomp()`` method to return nothing, print ``"{numCalories} calories consumed"``, and print ``"the fruit is {color}"`` (on a new line). Finally, there should be an ``Apple`` subclass that inherits from ``Fruit``, sets ``color`` to ``"red"``, and adds a ``variety`` String private instance variable. The ``Apple`` class should have an overriden ``chomp()`` method that returns nothing, prints ``"{numCalories} calories consumed"``, prints ``"the fruit is {color}"``, and prints ``"ate {variety} apple"`` (all separated by new lines). Remember that the ``numCalories`` and ``color`` variables are private, so the ``Apple`` class does NOT have access to their values.
         ~~~~
         class Food {

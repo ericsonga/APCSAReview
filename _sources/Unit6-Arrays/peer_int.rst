@@ -123,7 +123,7 @@ Peer Instruction: Arrays Multiple Choice Questions
     .. code-block:: java
 
         int a,b = 0;
-        
+
         for (int i=0;i<noiseArray.length; i++)
         {
             SoundSample sample = noiseArray[i];

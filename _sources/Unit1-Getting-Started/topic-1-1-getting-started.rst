@@ -1,7 +1,7 @@
 .. image:: ../../_static/time90.png
     :width: 250
     :align: right
-    
+
 Getting Started
 ==================
 
@@ -21,4 +21,4 @@ Follow the links below to learn more about the AP CS A course and exam and Java 
    growthMindset.rst
    ptest1.rst
    survey.rst
-   
+

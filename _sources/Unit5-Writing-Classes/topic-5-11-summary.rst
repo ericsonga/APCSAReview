@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 5-11-
    :start: 1
-   
+
 Unit 5 Summary
 ================
 
@@ -52,18 +52,18 @@ Vocabulary Practice
     :match_2: defines a type|||class
     :match_3: A programming language that you can use to tell a computer what to do.|||Java
     :match_4: Translates a Java source file (ends in .java) into a Java class file (ends in .class)|||compiler
-    
+
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
-    
+
 .. dragndrop:: ch2_vocab2
     :feedback: Review the summaries above.
     :match_1: initializes the fields of an object after it has been created|||constructor
     :match_2: defines behavior|||method
     :match_3: holds data or a property|||field
     :match_4: where execution starts|||main method
-    
+
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. |Quizlet| raw:: html
 
    <a href="https://quizlet.com/434080544/cs-awesome-unit-5-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>

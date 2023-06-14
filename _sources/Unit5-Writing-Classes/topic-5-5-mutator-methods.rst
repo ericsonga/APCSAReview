@@ -6,32 +6,32 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Mutator Methods
 =================
 
 Corresponding to each get method, programmers also provide a public **set method** to change the value of a private instance variable in a class. These are called **mutator methods** (or settters or set or modifier methods). They are **void methods** meaning that they do not return a value, but they do take a **parameter**, the new value for the instance variable. Here are some examples of how to write a set method for an instance variable:
 
 .. code-block:: java
-     
+
      class ExampleTemplate {
- 
+
          //Instance variable declaration
          private typeOfVar varName;
 
@@ -41,23 +41,23 @@ Corresponding to each get method, programmers also provide a public **set method
             varName = newValue;
          }
      }
-     
+
 Here's an example of the Student class with a mutator method called setName():
 
 .. code-block:: java
 
   class Student {
- 
+
      //Instance variable name
      private String name;
-     
+
      /** setName sets name to newName
       *  @param newName                */
      public void setName(String newName)
      {
         name = newName;
      }
-     
+
      public static void main(String[] args)
      { 
         // To call a set method, use objectName.setVar(newValue)
@@ -65,7 +65,7 @@ Here's an example of the Student class with a mutator method called setName():
         s.setName("Ayanna");  
      }
     }
-     
+
 Notice the difference between set (mutator) and get (accessor) methods in the following figure. Getters return an instance variable's value and have the same return type as this variable and no parameters. Setters have a void return type and take a new value as a parameter to change the value of the instance variable.
 
 .. figure:: Figures/get-set-comparison.png
@@ -74,8 +74,8 @@ Notice the difference between set (mutator) and get (accessor) methods in the fo
     :figclass: align-center
 
     Figure 1: Comparison of set and get methods
-    
-    
+
+
 |CodingEx| **Coding Exercise**
 
 Try the Student class below which this time has set methods added. You will need to fix one error. The main method is in a separate Tester class and does not have access to the private instance variables in the other Student class. Change the main method so that it uses a public mutator method (set method) to access the value instead.
@@ -99,13 +99,13 @@ Try the Student class below which this time has set methods added. You will need
         System.out.println(s1);
      }   
    }
-  
+
   class Student 
   {
      private String name;
      private String email;
      private int id;
-     
+
      public Student(String initName, String initEmail, int initId)
      {
         name = initName;
@@ -173,7 +173,7 @@ Try the Student class below which this time has set methods added. You will need
             assertTrue(passed);
         }
     }
-  
+
 |Exercise| **Check your understanding**
 
 
@@ -183,7 +183,7 @@ Try the Student class below which this time has set methods added. You will need
     :practice: T
 
     Consider the class Party which keeps track of the number of people at the party.
-    
+
     .. code-block:: java
 
         public class Party
@@ -196,29 +196,29 @@ Try the Student class below which this time has set methods added. You will need
                 numOfPeople = people;
             }
         }
-    
+
     Which of the following method signatures could replace the missing header for the set method in the code above so that the method will work as intended?
 
     - public int getNum(int people)
-   
+
       - The set method should not have a return value and is usually named set, not get.
-     
+
     - public int setNum()
-   
+
       - The set method should not have a return value and needs a parameter.
-     
+
     - public int setNum(int people)
-   
+
       - The set method should not have a return value.
-     
+
     - public void setNum(int people)
-   
+
       + Yes, the set method should take a parameter called people and have a void return value. The name of the set method is usually set followed by the full instance variable name, but it does not have to be an exact match.
-     
+
     - public int setNumOfPeople(int p)
-   
+
       - The parameter of this set method should be called people in order to match the code in the method body.
-   
+
 .. dragndrop:: AccessorMutator
     :feedback: Review the vocabulary.
     :match_1: gets and returns the value of an instance variable|||accessor method
@@ -227,11 +227,11 @@ Try the Student class below which this time has set methods added. You will need
     :match_4: accessible from outside the class|||public
     :match_5: accessible only inside the class|||private
 
-    
+
     Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.
 
 Mutator methods do not have to have a name with "set" in it, although most do. They can be any methods that change the value of an instance variable or a static variable in the class, as can be seen in the AP Practice questions below.     
-    
+
 
 |Groupwork| Programming Challenge : Class Pet Setters
 -----------------------------------------------------
@@ -240,7 +240,7 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
     :width: 150
     :align: left
     :alt: Animal Clinic
-    
+
 1. Copy your Awesome Animal Clinic Pet class from the last lesson into this Active Code window. 
 2. Add set methods for each of the 5 instance variables. Make sure you use good commenting!
 3. Test each of the set methods in the main method.
@@ -249,28 +249,28 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 .. activecode:: challenge-5-5-Pet-Class
   :language: java
   :autograde: unittest
-  
+
   Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with 2 constructors, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
   ~~~~
   /**
       Pet class (complete comments)
       @author
       @since 
-      
+
   */
   class Pet 
   {
      // complete class definition with set methods
-     
+
   }
-  
+
   public class TesterClass 
   {
      // main method for testing
      public static void main(String[] args)
      {
         // Create Pet objects and test all your set methods
-        
+
      }   
    }  
    ====
@@ -417,10 +417,10 @@ In the previous lessons, you came up with a class of your own choice relevant to
       public static void main(String[] args)
       {  
          // Construct an object of your class  
-         
-         
+
+
          // call the objects' mutator methods and toString methods and print them out. 
-      
+
       }
   }
   ====
@@ -484,7 +484,7 @@ In the previous lessons, you came up with a class of your own choice relevant to
             assertTrue(passed);
         }
     }
-    
+
 Summary
 --------
 
@@ -499,9 +499,9 @@ AP Practice
     :practice: T
 
     Consider the following class definition.
-    
+
     .. code-block:: java
-    
+
         public class Liquid
         {
             private int currentTemp;
@@ -518,25 +518,25 @@ AP Practice
         }
 
     Which of the following best identifies the reason the class does not compile?
-    
+
     - The constructor header does not have a return type.
-        
+
       - The constructor should not have a return type.
-      
+
     - The resetTemp method is missing a return type.
-    
+
       - Mutator methods usually have a void return type.
-      
+
     - The constructor should not have a parameter.
-    
+
       - Constructors can have parameters.
-      
+
     - The resetTemp method should have a parameter.
-    
+
       + Correct! The resetTemp method should have a parameter for the newTemp value to set the currentTemp.
-      
+
     - The instance variable currentTemp should be public instead of private.
-    
+
       - Instance variables should be private variables.
 
 
@@ -555,7 +555,7 @@ AP Practice
     :feedback_e: Mutator methods should have a void return type.
 
     In the Party class below, the addPeople method is intended to increase the value of the instance variable numOfPeople by the value of the parameter additionalPeople. The method does not work as intended.
-    
+
     .. code-block:: java
 
         public class Party

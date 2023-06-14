@@ -174,9 +174,9 @@ Try and Solve Part B
 
        public static void main(String[] args)
        {
-    
+
          Sound s = new Sound();
-      
+
          System.out.println("The original array of samples is " + Arrays.toString(s.samples));
          s.trimSilenceFromBeginning();
          System.out.println("The new array of samples is " + Arrays.toString(s.samples));

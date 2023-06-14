@@ -26,8 +26,8 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
         =====
         System.out.printlln(firstname); #distractor
 
- 
-  
+
+
 .. parsonsprob:: ch4ex2muc
         :numbered: left
         :practice: T
@@ -72,7 +72,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    } // end of class
    =====
            System.out.println(Name); #distractor
-           
+
 
 .. parsonsprob:: ch3ex1muc
    :numbered: left
@@ -89,8 +89,8 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    double pricePerShirt = totalCost / 3;
    =====
    System.out.println(pricePerShirt);
-           
-      
+
+
 .. parsonsprob:: ch3ex2muc
    :numbered: left
    :practice: T
@@ -111,9 +111,9 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    System.out.println(perPersonCost);
    =====
    System.out.println(perpersoncost); #distractor
-   
 
-  
+
+
 .. parsonsprob:: ch3ex4muc
    :numbered: left
    :practice: T
@@ -144,7 +144,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
    public Class Test1
    { #distractor
-   
+
 .. parsonsprob:: ch3ex5muc
    :numbered: left
    :practice: T
@@ -173,7 +173,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
        public void main(String[] args)
        { #distractor
-       
+
 
 .. parsonsprob:: ch4ex5muc
    :numbered: left
@@ -230,7 +230,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    }
    =====
            System.println("Your name is " + name); #distractor
-       
+
 
 .. parsonsprob:: ch3ex6muc
    :numbered: left
@@ -262,7 +262,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    }
    =====
            System.println(totalCost); #distractor
-           
+
 .. parsonsprob:: ch3ex7muc
    :numbered: left
    :practice: T
@@ -292,7 +292,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    }
    =====
        public static main(String[] args) #distractor
-       
+
 .. parsonsprob:: ch3ex8muc
    :numbered: left
    :practice: T
@@ -321,7 +321,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
            int cost = 0.6;
            int money = 3.5; #distractor
-          
+
 .. parsonsprob:: ch3ex9muc
    :numbered: left
    :practice: T
@@ -352,7 +352,7 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    =====
            int price = 52.99; 
            int discount = 0.6; #distractor
-          
+
 .. parsonsprob:: ch3ex10muc
    :numbered: left
    :practice: T
@@ -381,5 +381,5 @@ For these mixed up code problems, drag the blocks into the correct order. Click 
    }
    =====
            double priceForTwo = price * 2 #distractor
-   
+
 

@@ -1,24 +1,24 @@
 .. qnum::
    :prefix: 6-3-
    :start: 1
- 
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
@@ -29,7 +29,7 @@ Enhanced For-Loop (For-Each) for Arrays
 ..	index::
 	single: for-each
 	pair: loop; for-each
-   
+
 There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively. 
 
 To set up a for-each loop, use **for (type variable : arrayname)** where the type is the type for elements in the array, and read it as "for each variable value in arrayname". You may have used a similar loop in AP CSP Pseudocode or App Inventor with lists like below.
@@ -39,13 +39,13 @@ To set up a for-each loop, use **for (type variable : arrayname)** where the typ
     :width: 100%
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Comparing App Inventor, AP CSP, and Java for each
-    
+
 See the examples below in Java that loop through an int and a String array. Notice the type of the loop variable is the type of the array.
 
 .. code-block:: java 
- 
+
   int[] highScores = { 10, 9, 8, 8};
   String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
   // for each loop: for each value in highScores
@@ -71,7 +71,7 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
 .. activecode:: foreach1
    :language: java
    :autograde: unittest
-   
+
    Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.
    ~~~~
    public class ForEachDemo
@@ -128,7 +128,7 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
             assertTrue(passed);
         }
     }
-  
+
 |CodingEx| **Coding Exercise**
 
 
@@ -137,7 +137,7 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!
    ~~~~
    public class EvenLoop
@@ -192,7 +192,7 @@ Foreach Loop Limitations
 .. |visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
-   
+
 What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop changes, not the real array values. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the |visualizer| by clicking the CodeLens button and step through the code to see why it doesn't work. 
 
 |CodingEx| **Coding Exercise**
@@ -256,15 +256,15 @@ What if we had a loop that incremented all the elements in the array. Would that
 
         }
     }
-   
+
 .. note::
 
    Enhanced for each loops cannot be used in all situations. Only use for-each loops when you want to loop through **all** the values in an array without changing their values. 
-   
+
    - Do not use for each loops if you need the index.
    - Do not use for each loops if  you need to change the values in the array.
    - Do not use for each loops if you want to loop through only part of an array or in a different order.
-  
+
 
 
 
@@ -284,7 +284,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 
 
    What are some of the reasons you would use an enhanced for-each loop instead of a for loop?
-   
+
    .. code-block:: java
 
       I: If you wish to access every element of an array.
@@ -294,11 +294,11 @@ What if we had a loop that incremented all the elements in the array. Would that
 
 .. mchoice:: qfor-each
    :practice: T
-   
+
    What is the output of the following code segment?
-   
+
    .. code-block:: java
-   
+
       int[ ] numbers = {44, 33, 22, 11};
       for (int num : numbers)
       {
@@ -308,23 +308,23 @@ What if we had a loop that incremented all the elements in the array. Would that
       {
           System.out.print(num + " ");
       }
-      
+
    - 44 33 22 11
-    
+
      + The array is unchanged because the foreach loop cannot modify the array elements.
-      
+
    - 46 35 24 13
-    
+
      - Remember that the foreach loop cannot modify the array elements, but it also uses multiplication, not addition.
-    
+
    - 88 66 44 22
-    
+
      - Remember that the foreach loop cannot modify the array elements. Only the variable num will be doubled, not the original array values.
-         
+
    - The code will not compile. 
-    
+
      - This code will compile.
-    
+
 
 Foreach Loop Algorithms
 --------------------------
@@ -334,26 +334,26 @@ Foreach Loop Algorithms
 .. |Java visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getAverage())%3B%0A+++%7D%0A%7D%0A%0A&mode=display&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
-   
+
 
 Here is an object-oriented example that has the array as a private instance variable in the class and provides a public method average that uses a for-each loop.  You can use the |Java Visualizer| or the Code Lens button to step through this code. 
-     
+
 
 .. activecode:: lcaf2
    :language: java
    :autograde: unittest
-   
+
    Try the code below. 
    ~~~~
    public class ArrayWorker
    {
        private int[ ] values;
-      
+
        public ArrayWorker(int[] theValues)
        {
           values = theValues;
        }
-      
+
        public double getAverage()
        {
           double total = 0;
@@ -363,7 +363,7 @@ Here is an object-oriented example that has the array as a private instance vari
           }
           return total / values.length;
        }
-      
+
        public static void main(String[] args)
        {
            int[] numArray =  {2, 6, 7, 12, 5};
@@ -426,12 +426,12 @@ Here is an object-oriented example that has the array as a private instance vari
      return largest;
    =====
    } // end method
-   
+
 
 .. |Java visualizer link| raw:: html
 
    <a href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A+++%0A+++public+int+getLargest()%0A+++%7B%0A++%0A+++++int+largest+%3D+values%5B0%5D%3B%0A%0A+++++for+(int+item+%3A+values)%0A+++++%7B%0A%0A+++++++if+(item+%3E+largest)%0A+++++++%7B%0A%0A+++++++++largest+%3D+item%3B%0A%0A+++++++%7D++//+end+if+%0A%0A+++++%7D+//+end+for%0A+++++return+largest%3B%0A%0A+++%7D+//+end+method%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getLargest())%3B%0A+++%7D%0A%7D%0A%0A&mode=display&curInstr=0" target="_blank">Java visualizer link</a>
-   
+
 If you want to step through the correct code to see what it does in the Java Visualizer click on the following |Java visualizer link|.
 
 
@@ -453,7 +453,7 @@ If you want to step through the correct code to see what it does in the Java Vis
 
 
    Given that ``array`` is an array of integers and ``target`` is an integer value, which of the following best describes the conditions under which the following code segment will return true?
-   
+
    .. code-block:: java 
 
      boolean temp = false;
@@ -462,7 +462,7 @@ If you want to step through the correct code to see what it does in the Java Vis
        temp = ( target == val ); 
      }
      return temp;
-     
+
 
 
 |Groupwork| Programming Challenge : SpellChecker 2
@@ -477,36 +477,36 @@ If you want to step through the correct code to see what it does in the Java Vis
 .. |startsWith()| raw:: html
 
    <a href= "https://www.w3schools.com/java/ref_string_startswith.asp" target="_blank">startsWith()</a>
-   
+
 .. |repl.it| raw:: html
 
    <a href= "https://firewalledreplit.com/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
-   
+
 Copy the spellcheck method that you used in the Spell Checker Challenge in the last lesson. Re-write the method  to use an enhanced for-each loop instead of an indexed for-loop. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
 
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    :autograde: unittest
    :stdin: catz
-   
+
    Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found.
    ~~~~
    import java.util.Scanner;
-   
+
    public class SpellChecker
    {
       // This dictionary includes the 1000 most frequent words in English
       private String[] dictionary = { "a", "able", "about", "above", "act", "add", "afraid", "after", "again", "against", "age", "ago", "agree", "air", "all", "allow", "also", "always", "am", "among", "an", "and", "anger", "animal", "answer", "any", "appear", "apple", "are", "area", "arm", "arrange", "arrive", "art", "as", "ask", "at", "atom", "baby", "back", "bad", "ball", "band", "bank", "bar", "base", "basic", "bat", "be", "bear", "beat", "beauty", "bed", "been", "before", "began", "begin", "behind", "believe", "bell", "best", "better", "between", "big", "bird", "bit", "black", "block", "blood", "blow", "blue", "board", "boat", "body", "bone", "book", "born", "both", "bottom", "bought", "box", "boy", "branch", "bread", "break", "bright", "bring", "broad", "broke", "brother", "brought", "brown", "build", "burn", "busy", "but", "buy", "by", "call", "came", "camp", "can", "capital", "captain", "car", "card", "care", "carry", "case", "cat", "catch", "cats", "caught", "cause", "cell", "cent", "center", "century", "certain", "chair", "chance", "change", "character", "charge", "chart", "check", "chick", "chief", "child", "children", "choose", "chord", "circle", "city", "claim", "class", "clean", "clear", "climb", "clock", "close", "clothe", "cloud", "coast", "coat", "cold", "collect", "colony", "color", "column", "come", "common", "company", "compare", "complete", "condition", "connect", "consider", "consonant", "contain", "continent", "continue", "control", "cook", "cool", "copy", "corn", "corner", "correct", "cost", "cotton", "could", "count", "country", "course", "cover", "cow", "crease", "create", "crop", "cross", "crowd", "cry", "current", "cut", "dad", "dance", "danger", "dark", "day", "dead", "deal", "dear", "death", "decide", "decimal", "deep", "degree", "depend", "describe", "desert", "design", "determine", "develop", "dictionary", "did", "die", "differ", "difficult", "direct", "discuss", "distant", "divide", "division", "do", "doctor", "does", "dog", "dogs", "dollar", "don't", "done", "door", "double", "down", "draw", "dream", "dress", "drink", "drive", "drop", "dry", "duck", "during", "each", "ear", "early", "earth", "ease", "east", "eat", "edge", "effect", "egg", "eight", "either", "electric", "element", "else", "end", "enemy", "energy", "engine", "enough", "enter", "equal", "equate", "especially", "even", "evening", "event", "ever", "every", "exact", "example", "except", "excite", "exercise", "expect", "experience", "experiment", "eye", "face", "fact", "fair", "fall", "family", "famous", "far", "farm", "fast", "fat", "father", "favor", "fear", "feed", "feel", "feet", "fell", "felt", "few", "field", "fig", "fight", "figure", "fill", "final", "find", "fine", "finger", "finish", "fire", "first", "fish", "fit", "five", "flat", "floor", "flow", "flower", "fly", "follow", "food", "foot", "for", "force", "forest", "form", "forward", "found", "four", "fraction", "free", "fresh", "friend", "from", "front", "fruit", "full", "fun", "game", "garden", "gas", "gather", "gave", "general", "gentle", "get", "girl", "give", "glad", "glass", "go", "gold", "gone", "good", "got", "govern", "grand", "grass", "gray", "great", "green", "grew", "ground", "group", "grow", "guess", "guide", "gun", "had", "hair", "half", "hand", "happen", "happy", "hard", "has", "hat", "have", "he", "head", "hear", "heard", "heart", "heat", "heavy", "held", "help", "her", "here", "high", "hill", "him", "his", "history", "hit", "hold", "hole", "home", "hope", "horse", "hot", "hour", "house", "how", "huge", "human", "hundred", "hunt", "hurry", "I", "ice", "idea", "if", "imagine", "in", "inch", "include", "indicate", "industry", "insect", "instant", "instrument", "interest", "invent", "iron", "is", "island", "it", "job", "join", "joy", "jump", "just", "keep", "kept", "key", "kill", "kind", "king", "knew", "know", "lady", "lake", "land", "language", "large", "last", "late", "laugh", "law", "lay", "lead", "learn", "least", "leave", "led", "left", "leg", "length", "less", "let", "letter", "level", "lie", "life", "lift", "light", "like", "line", "liquid", "list", "listen", "little", "live", "locate", "log", "lone", "long", "look", "lost", "lot", "loud", "love", "low", "machine", "made", "magnet", "main", "major", "make", "man", "many", "map", "mark", "market", "mass", "master", "match", "material", "matter", "may", "me", "mean", "meant", "measure", "meat", "meet", "melody", "men", "metal", "method", "middle", "might", "mile", "milk", "million", "mind", "mine", "minute", "miss", "mix", "modern", "molecule", "moment", "money", "month", "moon", "more", "morning", "most", "mother", "motion", "mount", "mountain", "mouth", "move", "much", "multiply", "music", "must", "my", "name", "nation", "natural", "nature", "near", "necessary", "neck", "need", "neighbor", "never", "new", "next", "night", "nine", "no", "noise", "noon", "nor", "north", "nose", "not", "note", "nothing", "notice", "noun", "now", "number", "numeral", "object", "observe", "occur", "ocean", "of", "off", "offer", "office", "often", "oh", "oil", "old", "on", "once", "one", "only", "open", "operate", "opposite", "or", "order", "organ", "original", "other", "our", "out", "over", "own", "oxygen", "page", "paint", "pair", "paper", "paragraph", "parent", "part", "particular", "party", "pass", "past", "path", "pattern", "pay", "people", "perhaps", "period", "person", "phrase", "pick", "picture", "piece", "pitch", "place", "plain", "plan", "plane", "planet", "plant", "play", "please", "plural", "poem", "point", "poor", "populate", "port", "pose", "position", "possible", "post", "pound", "power", "practice", "prepare", "present", "press", "pretty", "print", "probable", "problem", "process", "produce", "product", "proper", "property", "protect", "prove", "provide", "pull", "push", "put", "quart", "question", "quick", "quiet", "quite", "quotient", "race", "radio", "rail", "rain", "raise", "ran", "range", "rather", "reach", "read", "ready", "real", "reason", "receive", "record", "red", "region", "remember", "repeat", "reply", "represent", "require", "rest", "result", "rich", "ride", "right", "ring", "rise", "river", "road", "rock", "roll", "room", "root", "rope", "rose", "round", "row", "rub", "rule", "run", "safe", "said", "sail", "salt", "same", "sand", "sat", "save", "saw", "say", "scale", "school", "science", "score", "sea", "search", "season", "seat", "second", "section", "see", "seed", "seem", "segment", "select", "self", "sell", "send", "sense", "sent", "sentence", "separate", "serve", "set", "settle", "seven", "several", "shall", "shape", "share", "sharp", "she", "sheet", "shell", "shine", "ship", "shoe", "shop", "shore", "short", "should", "shoulder", "shout", "show", "side", "sight", "sign", "silent", "silver", "similar", "simple", "since", "sing", "single", "sister", "sit", "six", "size", "skill", "skin", "sky", "slave", "sleep", "slip", "slow", "small", "smell", "smile", "snow", "so", "soft", "soil", "soldier", "solution", "solve", "some", "son", "song", "soon", "sound", "south", "space", "speak", "special", "speech", "speed", "spell", "spend", "spoke", "spot", "spread", "spring", "square", "stand", "star", "start", "state", "station", "stay", "stead", "steam", "steel", "step", "stick", "still", "stone", "stood", "stop", "store", "story", "straight", "strange", "stream", "street", "stretch", "string", "strong", "student", "study", "subject", "substance", "subtract", "success", "such", "sudden", "suffix", "sugar", "suggest", "suit", "summer", "sun", "supply", "support", "sure", "surface", "surprise", "swim", "syllable", "symbol", "system", "table", "tail", "take", "talk", "tall", "teach", "team", "teeth", "tell", "temperature", "ten", "term", "test", "than", "thank", "that", "the", "their", "them", "then", "there", "these", "they", "thick", "thin", "thing", "think", "third", "this", "those", "though", "thought", "thousand", "three", "through", "throw", "thus", "tie", "time", "tiny", "tire", "to", "together", "told", "tone", "too", "took", "tool", "top", "total", "touch", "toward", "town", "track", "trade", "train", "travel", "tree", "triangle", "trip", "trouble", "truck", "try", "tube", "turn", "twenty", "two", "type", "under", "unit", "until", "up", "us", "use", "usual", "valley", "value", "vary", "verb", "very", "view", "village", "visit", "voice", "vowel", "wait", "walk", "wall", "want", "war", "warm", "was", "wash", "watch", "water", "wave", "way", "we", "wear", "weather", "week", "weight", "well", "went", "were", "west", "what", "wheel", "when", "where", "whether", "which", "while", "white", "who", "whole", "whose", "why", "wide", "wife", "wild", "will", "win", "wind", "window", "wing", "winter", "wire", "wish", "with", "woman", "women", "won't", "wonder", "wood", "word", "work", "world", "would", "write", "written", "wrong", "wrote", "yard", "year", "yellow", "yes", "yet", "you", "young", "your", "zoo" };
-  
+
       // Re-write the spellcheck(word) (and optionally the printStartsWith(firstLetters)) methods to use enhanced for-each loops.
-       
+
       /* Write a spellcheck() method using an enhanced for-each loop 
        * that takes a word as a parameter and returns true if it is 
        * in the dictionary array. Return false if it is not found.
        */
-       
-       
-      
+
+
+
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
@@ -635,13 +635,13 @@ start with ``class`` instead of ``public class``.
       {
          array = new Student[size];
       }
-        
+
       // Creates aan array of the given size
       public StudentArray(int size) 
       {
          array = new Student[size];
       }
-        
+
       // Adds Student s to the array at index i 
       public void add(int i, Student s)
       {
@@ -659,8 +659,8 @@ start with ``class`` instead of ``public class``.
       }
 
       /* Write a findAndPrint(name) method */  
-       
-        
+
+
       public static void main(String[] args)
       {
          // Create an object of this class and pass in size 3
@@ -692,7 +692,7 @@ start with ``class`` instead of ``public class``.
         public String getName() { return name; }
         public String getEmail() { return email; }    
         public int getId() { return id; }
-                            
+
         // toString() method
         public String toString()
         {
@@ -717,7 +717,7 @@ start with ``class`` instead of ``public class``.
         boolean passed = checkCodeContains("findAndPrint method header with String paramenter",target);
         assertTrue(passed);
     }
-    
+
     @Test 
     public void test2()
     {
@@ -725,7 +725,7 @@ start with ``class`` instead of ``public class``.
         boolean passed = checkCodeContains("call to roster.findAndPrint method (uncommented in main)",target);
         assertTrue(passed);
     }
-    
+
 
     @Test
     public void testForEach() 
@@ -802,7 +802,7 @@ data for the object it finds.
 
 
 
-      
+
   }
   ====
   import static org.junit.Assert.*;
@@ -837,7 +837,7 @@ data for the object it finds.
                 assertTrue(passed);
             }
     }
-       
+
 
 Summary
 -------
@@ -851,4 +851,4 @@ Summary
 - Assigning a new value to the enhanced for loop variable does not change the value stored in the array.
 
 - Program code written using an enhanced for loop to traverse and access elements in an array can be rewritten using an indexed for loop or a while loop.
- 
+

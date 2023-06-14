@@ -38,7 +38,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Calling Methods Without Parameters
 ===========================================
 
@@ -258,7 +258,7 @@ When you call the chorus() method, it skips to the chorus code, executes and pri
 .. codelens:: songviz1
     :language: java 
     :optional:
-    
+
     public class Song 
     {
       public void print() 
@@ -269,7 +269,7 @@ When you call the chorus() method, it skips to the chorus code, executes and pri
         animal();
         chorus();
       }
-        
+
       public void chorus()
       {
         System.out.println("E-I-E-I-O");
@@ -279,14 +279,14 @@ When you call the chorus() method, it skips to the chorus code, executes and pri
       {
         System.out.println("duck");
       }
-        
+
       public static void main(String[] args) 
       {
         Song s = new Song();
         s.print();
       }
     }
-    
+
 
 
 Methods inside the same class can call each other using just ``methodName()``, but to call non-static methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
@@ -330,7 +330,7 @@ Methods inside the same class can call each other using just ``methodName()``, b
             eat();
             fruit();
         }
-        
+
         public void fruit()
         {
             System.out.println("apples and bananas!");
@@ -340,7 +340,7 @@ Methods inside the same class can call each other using just ``methodName()``, b
         {
            System.out.print("eat ");
         }
-        
+
         public static void main(String[] args) 
         {
            Song s = new Song();
@@ -578,4 +578,4 @@ AP Practice
 
       - This would just print "Meow ".
 
-  
+

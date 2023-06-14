@@ -22,7 +22,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: This would be true if we were adding the values in the 3rd row (row = 2) instead of the 3rd column.  This would be 1 + 2 + 3 + 4 which is 10.   
 
    Given the following code segment, what is the value of sum after this code executes?
-   
+
    .. code-block:: java 
 
       int[][] matrix = { {1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
@@ -33,9 +33,9 @@ These problems are similar to those you will see on the AP CS A exam.
       {
          sum = sum + matrix[row][col];
       }
-      
+
 You can step through this code using the following link `Example-9-8-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D%5B%5D+matrix+%3D+%7B%7B1,1,2,2%7D,%7B1,2,2,4%7D,%7B1,2,3,4%7D,%7B1,4,1,2%7D%7D%3B%0A%0A++++++int+sum+%3D+0%3B%0A++++++int+col+%3D+matrix%5B0%5D.length+-+2%3B%0A++++++for+(int+row+%3D+0%3B+row+%3C+4%3B+row%2B%2B)%0A++++++%7B%0A+++++++++sum+%3D+sum+%2B+matrix%5Brow%5D%5Bcol%5D%3B%0A++++++%7D%0A++++++System.out.println(sum)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=2>`_.
-      
+
 .. mchoice:: qa2dm_2
    :practice: T
    :answer_a: { {2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}} 
@@ -51,7 +51,7 @@ You can step through this code using the following link `Example-9-8-1 <http://c
    :feedback_e: This code creates a 2D array with 4 rows and 3 columns so this can't be right.    
 
    What are the contents of ``mat`` after the following code segment has been executed? 
-   
+
    .. code-block:: java 
 
       int [][] mat = new int [4][3];
@@ -63,7 +63,7 @@ You can step through this code using the following link `Example-9-8-1 <http://c
                mat[row][col] = 2; 
             else 
                mat[row][col] = 3; } } 
-               
+
 You can step through this code using the following link `Example-9-8-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int+%5B%5D%5B%5D+mat+%3D+new+int+%5B4%5D%5B3%5D%3B%0A++++++for+(int+row+%3D+0%3B+row+%3C+mat.length%3B+row%2B%2B)+%7B+%0A+++++++++for+(int+col+%3D+0%3B+col+%3C+mat%5B0%5D.length%3B+col%2B%2B)+%7B+%0A++++++++++++if+(row+%3C+col)+%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+1%3B%0A++++++++++++else+if+(row+%3D%3D+col)++++%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+2%3B+%0A++++++++++++else+%0A+++++++++++++++mat%5Brow%5D%5Bcol%5D+%3D+3%3B+%7D+%7D+%0A++++++%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qa2dm_3
@@ -81,7 +81,7 @@ You can step through this code using the following link `Example-9-8-2 <http://c
    :feedback_e: This would be correct if it was adding up all the values in the last row.    
 
    Given the following code segment, what is the value of sum after this code executes?
-   
+
    .. code-block:: java 
 
       int[][] m = { {1,1,1,1},{1,2,3,4},{2,2,2,2},{2,4,6,8}};
@@ -90,7 +90,7 @@ You can step through this code using the following link `Example-9-8-2 <http://c
       for (int k = 0; k < m.length; k++) {
           sum = sum + m[m.length-1-k][1];
       }
-      
+
 You can step through this code using the following link `Example-9-8-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0Apublic+class+Test+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++int%5B%5D%5B%5D+m+%3D+%7B%7B1,1,1,1%7D,%7B1,2,3,4%7D,%7B2,2,2,2%7D,%7B2,4,6,8%7D%7D%3B%0A%0A+++++int+sum+%3D+0%3B%0A+++++for+(int+k+%3D+0%3B+k+%3C+m.length%3B+k%2B%2B)+%7B%0A+++++++++sum+%3D+sum+%2B+m%5Bm.length-1-k%5D%5B1%5D%3B%0A+++++%7D%0A+++++System.out.println(sum)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
-      
+

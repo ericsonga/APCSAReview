@@ -20,7 +20,7 @@ in the table below.
     :figclass: align-center
 
     Figure 1: Example values with the region for the getAverage outlined 
-    
+
 .. figure:: Figures/SkyViewClassInfo.png
     :align: center
     :figclass: align-center
@@ -77,7 +77,7 @@ Try and Solve It
                 }
            }
        }
-       
+
        /** Returns the average of the values in a rectangular section of view. 
          * 
          * @param startRow the first row index of the section 
@@ -91,7 +91,7 @@ Try and Solve It
        {
            //*** Finish writing this method! ***
        }
-    
+
        /** This is a main method for testing getAverage */
        public static void main(String[] args)
        {

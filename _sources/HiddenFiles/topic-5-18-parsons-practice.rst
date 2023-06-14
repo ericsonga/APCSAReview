@@ -29,7 +29,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.name = name;
   =====
     } // end constructor
-    
+
     public String getName() {
   =====
       return this.name;
@@ -173,7 +173,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   :practice: T
   :adaptive:
   :noindent:
-  
+
   The following program should define a ``CelestialBody`` class. The class should have two instance variables: ``orbitLength`` and ``daysSinceDiscovered``. The ``orbitLength`` variable should be initialized through the constructor, while ``daysSinceDiscovered`` should be derived from ``orbitLength`` and the ``orbit`` method. The ``orbit(int numberOfTimes)`` should add ``orbitLength * numberOfTimes`` to ``daysSinceDiscovered`` (e.g., if Planet X has done two orbits with an orbit length of 12 days, it was discovered 24 days ago. If it then orbits another three times, it was discovered 60 days ago). But the blocks have been mixed up and include pairs of lines where one is unneeded. Drag the necessary code from the left to the right and put them in order so that the code would work correctly. Click the Check button to check your solution.
   -----
   public class CelestialBody {
@@ -189,7 +189,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.orbitLength = orbitLength; #paired: daysSinceDiscovered needs to be initialized
   =====
     } // end constructor
-  
+
     public void orbit(int numberOfTimes) { 
   =====
     } // end constructor
@@ -253,7 +253,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.y = y;
   =====
     } // end constructor
-  
+
     public double getDistance(Point other) {
   =====
       return Math.sqrt(Math.pow(this.x - other.getX(), 2) + Math.pow(this.y - other.getY(), 2));
@@ -282,7 +282,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.owner = owner;
   =====
     } // end constructor
-  
+
     public void withdraw(int amount) {
   =====
       if (amount > this.balance) {
@@ -290,7 +290,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
         this.balance = 0;
   =====
       } // end if
-  
+
       else {
   =====
         this.balance -= amount;

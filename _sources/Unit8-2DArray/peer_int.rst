@@ -17,7 +17,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :feedback_b: Correct. (int) casts the result of the multiplication to match the variable type of value, and this results in rounding to a whole number. 
    :feedback_c: Incorrect. While (int) does round and set value to a whole number, consider ALL the functionalities present
    :feedback_d: Incorrect. While (int) does cast the result and set value to a whole number, consider ALL the functionalities present
-     
+
     In the decreaseRed method we see
 
     .. code-block:: java
@@ -52,7 +52,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :feedback_c: Incorrect. Based on the while loop, this code modifies every pixel, not just half 
    :feedback_d: Correct. This code takes the original red value of a pixel, halves it, and then sets the red value of this pixel to our new value
    :feedback_e: Incorrect. The value of each color must be an int, which 0.5 is not
-     
+
     What does this code do?
 
     .. code-block:: java
@@ -129,7 +129,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
             pixelArray[index].setBlue(value);
             index++;
         } 
- 
+
 .. mchoice:: bs-2d-arrays-8-9
    :author: Beth Simon
    :practice: T

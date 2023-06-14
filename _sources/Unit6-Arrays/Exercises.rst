@@ -7,7 +7,7 @@ Multiple-Choice Exercises
 
 
 
-   
+
 Easier Multiple Choice Questions
 ----------------------------------
 
@@ -22,7 +22,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
 
    Which index is the last element in an array called ``nums`` at?
-   
+
 .. mchoice:: qaeasy_2new
    :practice: T
    :answer_a: <code>int[] scores = null;</code>
@@ -38,7 +38,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: You can declare and array and create it in the same statement.  Use the <code>new</code> operator to create the array and specify the size in square brackets.  
 
    Which of the following declarations will cause a compile time error?
-   
+
 .. mchoice:: qaeasy_3
    :practice: T
    :answer_a: 1
@@ -54,7 +54,7 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: This would be returned from <code>arr.length</code>
 
    What is returned from ``arr[3]`` if ``arr={6, 3, 1, 2}``?  
-   
+
 .. mchoice:: qaeasy_4
    :practice: T
    :answer_a: 17.5
@@ -70,9 +70,9 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: This sums all the values in the array and then returns the sum divided by the number of items in the array.  This is the average.  
 
    What is returned from ``mystery`` when it is passed ``{10, 30, 30, 60}``?
-   
+
    .. code-block:: java
-   
+
       public static double mystery(int[] arr)
       {
       	 double output = 0;
@@ -82,7 +82,7 @@ These problems are easier than most of those that you will usually see on the AP
          }
          return output / arr.length;
       }
-      
+
 You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-4 <http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+double+mystery(int%5B%5D+arr)%0A+++%7B%0A++++++double+output+%3D+0%3B%0A++++++for+(int+i+%3D+0%3B+i+%3C+arr.length%3B+i%2B%2B)%0A++++++%7B%0A+++++++++output+%3D+output+%2B+arr%5Bi%5D%3B%0A++++++%7D%0A++++++return+output+/+arr.length%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+test+%3D+%7B10,+30,+30,+60%7D%3B%0A++++++System.out.println(mystery(test))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qaeasy_5old3
@@ -98,20 +98,20 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: This would be true if array elements didn't change, but they do.  
 
    Given the following values of ``a`` and the method ``doubleLast`` what will the values of ``a`` be after you execute: ``doubleLast()``?
-   
+
    .. code-block:: java 
-   
+
       private int[ ] a = {-10, -5, 1, 4, 8, 30};
 
       public void doubleLast()
       {
-    
+
          for (int i = a.length / 2; i < a.length; i++)
          {
             a[i] = a[i] * 2;
          }
       }
-      
+
 You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-9-5 <http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++private+int%5B+%5D+a+%3D+%7B-10,+-5,+1,+4,+8,+30%7D%3B%0A%0A+++public+void+doubleLast()%0A+++%7B%0A++++%0A+++++++for+(int+i+%3D+a.length+/+2%3B+i+%3C+a.length%3B+i%2B%2B)%0A+++++++%7B%0A+++++++++++a%5Bi%5D+%3D+a%5Bi%5D+*+2%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++Test+myTest+%3D+new+Test()%3B%0A++++++myTest.doubleLast()%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 
@@ -128,11 +128,11 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: The variable i starts at 0 and increments each time through the loop and stops when it equals the number of items in a.  
 
    What are the values in a after multAll(3) executes?
-   
+
    .. code-block:: java 
 
      private int[ ] a = {1, 3, -5, -2};
-     
+
      public void multAll(int amt)
      {
         int i = 0;
@@ -142,7 +142,7 @@ You can step through the code above using the Java Visualizer by clicking on the
            i++;
         } // end while
      } // end method  
-     
+
 .. mchoice:: qaeasy
    :practice: T
    :answer_a: {1, 3, -5, -2}
@@ -156,11 +156,11 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: The value of i is initialized to 0 and then never changes inside the body of the loop, so this loop will never stop.  It is an infinite loop.   
 
    What are the values in a after mult(2) executes?
-   
+
    .. code-block:: java 
 
      private int[ ] a = {1, 3, -5, -2};
-     
+
      public void mult(int amt)
      {
         int i = 0;
@@ -169,9 +169,9 @@ You can step through the code above using the Java Visualizer by clicking on the
            a[i] = a[i] * amt;
         } // end while
      } // end method  
-     
 
-     
+
+
 
 
 
@@ -196,7 +196,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: <code>b[0]</code> can be any value, so long as no other array element is equal to it.
 
    Which of the following statements is a valid conclusion. Assume that variable ``b`` is an array of ``k`` integers and that the following is true: 
-   
+
    .. code-block:: java
 
      b[0] != b[i] for all i from 1 to k-1
@@ -216,7 +216,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: Because <code>temp</code> is reset every time through the loop, only the last element controls whether the final value is true or false, so it is possible for several elements to be equal to <code>val</code>.
 
    Consider the following code segment. Which of the following statements best describes the condition when it returns true?
-   
+
    .. code-block:: java
 
      boolean temp = false;
@@ -224,7 +224,7 @@ These problems are similar to those you will see on the AP CS A exam.
         temp = (a[i] == val);
      }
      return temp;
-     
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-2 <http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+test(int%5B%5D+a,int+val)+%7B%0A++++++boolean+temp+%3D+false%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+a.length%3B+i%2B%2B)+%7B%0A++++++++temp+%3D+(a%5Bi%5D+%3D%3D+val)%3B%0A+++++%7D%0A+++++return(temp)%3B%0A+++%7D%0A++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+myArray+%3D+%7B9,+-3,+81,+-3028,+5%7D%3B%0A++++++System.out.println(test(myArray,9))%3B%0A++++++System.out.println(test(myArray,5))%3B%0A++++++System.out.println(test(myArray,0))%3B%0A++++++System.out.println(test(myArray,-3))%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qamed_3
@@ -242,11 +242,11 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_e: It doesn't reset <code>lenCount</code> ever, so it just counts all the times the <code>target</code> value appears in the array.
 
    Consider the following data field and method ``findLongest``. Method ``findLongest`` is intended to find the longest consecutive block of the value ``target`` occurring in the array ``nums``; however, ``findLongest`` does not work as intended. For example given the code below the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value actually returned by a call to ``findLongest``?
-   
+
    .. code-block:: java
 
      private int[] nums = {7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10};
-     
+
      public int findLongest(int target) {
         int lenCount = 0; // length of current consecutive numbers
         int maxLen = 0;   // max length of consecutive numbers 
@@ -262,7 +262,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
         }
         return maxLen;
      }
-     
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-3 <http://www.pythontutor.com/java.html#code=public+class+ArrayWorker+%7B%0A+++%0A++++private+int%5B%5D+nums%3B%0A+++%0A++++public+ArrayWorker(int%5B%5D+theNums)%0A++++%7B%0A+++++++nums+%3D+theNums%3B%0A++++%7D%0A+++%0A+++++public+int+findLongest(int+target)+%7B%0A++++++++int+lenCount+%3D+0%3B%0A++++++++int+maxLen+%3D+0%3B%0A++++++++for+(int+k+%3D+0%3B+k+%3C+nums.length%3B+k%2B%2B)+%7B%0A+++++++++++if+(nums%5Bk%5D+%3D%3D+target)+%7B%0A++++++++++++++lenCount%2B%2B%3B%0A+++++++++++%7D+else+if+(lenCount+%3E+maxLen)+%7B%0A++++++++++++++maxLen+%3D+lenCount%3B%0A+++++++++++%7D%0A++++++++%7D%0A++++++++if+(lenCount+%3E+maxLen)+%7B%0A+++++++++++maxLen+%3D+lenCount%3B%0A++++++++%7D%0A++++++++return+maxLen%3B%0A+++++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+10,+10,+15,+15,+15,+15,+10,+10,+10,+15,+10,+10%7D%3B%0A++++++ArrayWorker+arrayWorker+%3D+new+ArrayWorker(temp)%3B%0A++++++System.out.println(arrayWorker.findLongest(10))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.  Can you fix the code in the Java Visualizer so that it works as intended?
 
 .. mchoice:: qamed_4
@@ -280,7 +280,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_e: The condition checks for any value that is smaller than the passed <code>num</code> and returns from <code>mystery</code> the first time that the condition is encountered. The values are not ordered so we don't know if this is the largest value smaller than <code>n</code>.
 
    Consider the following data field and method. Which of the following best describes the contents of ``myStuff`` in terms of ``m`` and ``n`` after the following statement has been executed?
-   
+
    .. code-block:: java
 
      private int[] myStuff;
@@ -297,7 +297,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
      }
 
      int m = mystery(n)
-     
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-4 <http://www.pythontutor.com/java.html#code=public+class+ArrayWorker+%7B%0A+++%0A++++private+int%5B%5D+myStuff%3B%0A+++%0A++++public+ArrayWorker(int%5B%5D+theStuff)%0A++++%7B%0A+++++++myStuff+%3D+theStuff%3B%0A++++%7D%0A%0A+++++//precondition%3A+myStuff+contains%0A+++++//+++integers+in+no+particular+order%0A+++++public+int+mystery(int+num)+%7B%0A++++++++for+(int+k+%3D+myStuff.length+-+1%3B+k+%3E%3D+0%3B+k--)+%7B%0A+++++++++++if+(myStuff%5Bk%5D+%3C+num)+%7B%0A+++++++++++++++return+k%3B%0A+++++++++++%7D%0A++++++++%7D%0A++++++++return+-1%3B%0A+++++%7D%0A%0A+++++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B-3,+1,+3,+2,+6%7D%3B%0A++++++ArrayWorker+arrayWorker+%3D+new+ArrayWorker(temp)%3B%0A++++++int+m+%3D+arrayWorker.mystery(2)%3B%0A++++++System.out.println(m)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 
@@ -316,7 +316,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_e: <code>k</code> loops from 0 to <code>arr.length - 1</code>.  So it checks all of the elements in the array.
 
    Consider the following field ``arr`` and method ``checkArray``.  Which of the following best describes what ``checkArray`` returns?
-   
+
    .. code-block:: java
 
      private int[] arr;
@@ -334,9 +334,9 @@ You can step through the code above with the Java Visualizer by clicking the fol
          }
          return loc;
      }
-     
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-5 <http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++private+int%5B%5D+arr+%3D+null%3B%0A+++%0A+++public+Test(int%5B%5D+theArr)%0A+++%7B%0A++++++arr+%3D+theArr%3B%0A+++%7D%0A%0A+++//+precondition%3A+arr.length+!%3D+0%0A+++public+int+checkArray()%0A+++%7B%0A++++++int+loc+%3D+arr.length+/+2%3B%0A++++++for+(int+k+%3D+0%3B+k+%3C+arr.length%3B+k%2B%2B)%0A++++++%7B%0A++++++++if+(arr%5Bk%5D+%3E+arr%5Bloc%5D)%0A++++++++%7B%0A++++++++++++loc+%3D+k%3B%0A++++++++%7D%0A++++++%7D%0A++++++return+loc%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B5,+93,+3,+20,+81%7D%3B%0A++++++Test+myTest+%3D+new+Test(temp)%3B%0A++++++System.out.println(myTest.checkArray())%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-     
+
 .. mchoice:: qamed_6
         :practice: T
         :answer_a: 4
@@ -350,9 +350,9 @@ You can step through the code above with the Java Visualizer by clicking the fol
         :feedback_c: This would be true if array indicies started at 1 instead of 0 and if the code changed the value at index 1 to the current value times two.  
         :feedback_d: This would be true if array indices started at 1 rather than 0.   
         :feedback_e: This can't be true because <code>a[1]--;</code>  means the same as <code>a[1] = a[1] - 1;</code>  so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.
-       
+
         Given the following field and method declaration, what is the value in ``a[1]`` when ``m1(a)`` is run?
-       
+
         .. code-block:: java
 
        	    int[] a = {7, 3, -1};
@@ -362,7 +362,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
                a[1]--;
                return (a[1] * 2);
             }
-            
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-6 <http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+int+m1(int%5B%5D+a)%0A+++%7B%0A++++++a%5B1%5D--%3B%0A++++++return+(a%5B1%5D+*+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+3,+-1%7D%3B%0A++++++System.out.println(temp%5B1%5D)%3B%0A++++++m1(temp)%3B%0A++++++System.out.println(temp%5B1%5D)%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qamed_7
@@ -382,7 +382,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    Consider the following code. What is the *maximum* amount of times that ``HELLO`` could possibly be printed?
 
    .. code-block:: java
-     
+
       for (int i = 1; i < k; i++) 
       {
          if (arr[i] < someValue) 
@@ -390,7 +390,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
            System.out.print("HELLO")
          }
       }
-      
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-7 <http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+arr+%3D+%7B1,+5,+3%7D%3B%0A++++++int+someValue+%3D+10%3B%0A++++++int+k+%3D+3%3B%0A++++++%0A++++++for+(int+i+%3D+1%3B+i+%3C+k%3B+i%2B%2B)%0A++++++%7B%0A+++++++++if+(arr%5Bi%5D+%3C+someValue)%0A+++++++++%7B%0A++++++++++++System.out.print(%22HELLO%22)%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qamed_8
@@ -406,7 +406,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_c: This would be correct if the for-loop began at 1 and continued to <code>data.length - 1</code>. Notice the for-loop indexing.
    :feedback_d: The indexing of this method is correct. The for-loop begins at the last valid index and ends when <code>k</code> is equal to 0, and the method does not access any values other than the ones specified.
    :feedback_e: This method starts at the last valid index of the array and adds the value of the previous element to the element at index <code>k - 1</code>.
-   
+
    Consider the following method ``changeArray``. An array is created that contains ``{2, 8, 10, 9, 6}`` and is passed to ``changeArray``. What are the contents of the array after the ``changeArray`` method executes?
 
    .. code-block:: java
@@ -416,7 +416,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
          for (int k = data.length - 1; k > 0; k--)
             data[k - 1] = data[k] + data[k - 1];
       }
-      
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-8 <http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++public+static+void+changeArray(int%5B%5D+data)%0A+++%7B%0A++++++for+(int+k+%3D+data.length+-+1%3B+k+%3E+0%3B+k--)%0A+++++++++data%5Bk+-+1%5D+%3D+data%5Bk%5D+%2B+data%5Bk+-+1%5D%3B%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+temp+%3D+%7B2,+8,+10,+9,+6%7D%3B%0A++++++changeArray(temp)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qamed_9
@@ -432,7 +432,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_c: This loop starts at <code>arr2.length / 2</code> which is 2 and loops to the end of the array copying from <code>arr2</code> to <code>arr1</code>.
    :feedback_d: This would be correct if this loop didn't change <code>arr1</code>, but it does.  
    :feedback_e: This would be correct if it set <code>arr1[i]</code> equal to <code>arr[i] + arr[2]</code> instead.  
-   
+
    Assume that ``arr1={1, 5, 3, -8, 6}`` and ``arr2={-2, -1, -5, 3, -4}`` what will the contents of ``arr1`` be after ``copyArray`` finishes executing?
 
    .. code-block:: java
@@ -444,7 +444,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
             arr1[i] = arr2[i];
          }
       }
-      
+
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-9 <http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+void+copyArray(int%5B%5D+arr1,+int%5B%5D+arr2)%0A+++%7B%0A+++++++++for+(int+i+%3D+arr1.length+/+2%3B+i+%3C+arr1.length%3B+i%2B%2B)%0A+++++++++%7B%0A++++++++++++arr1%5Bi%5D+%3D+arr2%5Bi%5D%3B%0A+++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp1+%3D+%7B1,+5,+3,+-8,+6%7D%3B%0A++++++int%5B%5D+temp2+%3D+%7B-2,+-1,+-5,+3,+-4%7D%3B%0A++++++copyArray(temp1,temp2)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 .. mchoice:: qamed_10
@@ -462,7 +462,7 @@ You can step through the code above with the Java Visualizer by clicking the fol
    :feedback_e: Values equal to <code>temp</code> will not cause the infinite loop.
 
    Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an ``int`` variable initialized to be greater than zero and that ``a`` is an array of ints.
-   
+
    .. code-block:: java 
 
       for ( int k = 0; k < a.length; k++ )
@@ -472,11 +472,11 @@ You can step through the code above with the Java Visualizer by clicking the fol
             a[ k ] *= 2;
          }
       }
-      
+
 You can step through the code above using the Java Visualizer by clicking on the following link `Prob-7-10-10 <http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+a+%3D+%7B1,+5,+2,+-1,+3%7D%3B%0A++++++int+temp+%3D+10%3B%0A++++++%0A++++++for+(+int+k+%3D+0%3B+k+%3C+a.length%3B+k%2B%2B+)%0A++++++%7B%0A+++++++++while+(+a%5B+k+%5D+%3C+temp+)%0A+++++++++%7B%0A++++++++++++a%5B+k+%5D+*%3D+2%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_. Can you fix the code so that it won't result in an infinite loop?
 
 
-     
+
 .. mchoice:: qab_4
    :practice: T
    :answer_a: All values in positions <i>m+1</i> through <i>myStuff.length-1</i> are greater than or equal to <i>n</i>.
@@ -490,7 +490,7 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: It returns the first time the condition is met so nothing is known about the values which are unchecked. 
 
    Given the following array instance variable and method, which of the following best describes the contents of ``myStuff`` after (``int m = mystery(n);``) has been executed?
-   
+
    .. code-block:: java 
 
      // private field in the class
@@ -509,7 +509,7 @@ You can step through the code above using the Java Visualizer by clicking on the
         }
         return -1;
       }
-   
+
 
 Hard Multiple Choice Questions
 ----------------------------------
@@ -531,7 +531,7 @@ These problems are harder than most of those that you will usually see on the AP
    :feedback_e: Implementation 1 doesn't work and will cause an ArrayIndexOutOfBoundsException.
 
    Consider the following data field and incomplete method, ``partialSum``, which is intended to return an integer array ``sum`` such that for all ``i``, ``sum[i]`` is equal to ``arr[0] + arr[1] + ... + arr[i]``. For instance, if arr contains the values ``{1, 4, 1, 3}``, the array ``sum`` will contain the values ``{1, 5, 6, 9}``. Which of the following is true about the two implementations of ``missing code`` on line 9 that are proposed?
-   
+
    .. code-block:: java
      :linenos:
 
@@ -539,10 +539,10 @@ These problems are harder than most of those that you will usually see on the AP
 
      public int[] partialSum() {
         int[] sum = new int[arr.length];
-        
+
         for (int j = 0; j < sum.length; j++)
            sum[j] = 0;
-        
+
         /* missing code */
         return sum;
      }
@@ -561,7 +561,7 @@ These problems are harder than most of those that you will usually see on the AP
            sum[j] = sum [j] + arr[k];
 
 
-      
+
 
 
 

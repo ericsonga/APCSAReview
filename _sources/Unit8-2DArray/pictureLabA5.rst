@@ -1,7 +1,7 @@
 .. image:: ../../_static/time90.png
     :width: 250
     :align: right
-    
+
 Picture Lab A5: Modifying a Picture 
 =====================================================
 
@@ -38,7 +38,7 @@ The following questions require some knowledge about inheritance which is covere
      :showtitle: Reveal Inheritance Questions
      :hidetitle: Hide Questions
      :optional:
-   
+
      Click on this |Picture Lab project| and click on Show files to answer the following questions.
 
      .. mchoice:: picture-day5-0a
@@ -135,7 +135,7 @@ value for a Pixel object. For example,
       System.out.println("Pixel (0,0) has a blue value of " + blue );
       p.setBlue(255);  // set its blue value to 255
       pict.show();
-           
+
 
 
 Image Modification Exercises
@@ -144,7 +144,7 @@ Image Modification Exercises
 .. image:: Figures/beach.jpg
     :width: 250
     :align: left
-    
+
 What do you think you will see if you modify the beach picture to set all the blue
 values to zero? Do you think you will still see a beach? Run the main method in the Picture class in the Active Code below.
 The body of the main method will create a Picture object named beach from the
@@ -186,9 +186,9 @@ The following code is the zeroBlue method in the Picture class.
            }
       }
  }
- 
+
 Another option is to use for loops with indices to visit each pixel in the picture:
- 
+
 .. code-block:: java
 
  public void zeroBlue()
@@ -203,21 +203,21 @@ Another option is to use for loops with indices to visit each pixel in the pictu
            }
       }
  }
- 
- 
+
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 
 |CodingEx| **Coding Exercises**
 
 .. image:: Figures/keepOnlyBlue.png
     :width: 250
     :align: left
-    
+
 1. You may have done this exercise in the programming challenge in lesson 8.2. Using the zeroBlue method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the main method. 
 
 .. |repl.it project| raw:: html
@@ -227,7 +227,7 @@ Another option is to use for loops with indices to visit each pixel in the pictu
 .. |repl 2| raw:: html
 
    <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
-   
+
 You can use beach.jpg or one of the other images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. activecode:: picture-lab-A5-keepOnlyBlue
@@ -339,13 +339,13 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
         }
       }
 
-      
+
      /* 
         keepOnlyBlue() method sets the blue values at all pixels to zero.
-        
+
         Add new method here and call it from main.
      */
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -395,7 +395,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
          boolean passed = checkCodeContains("keepOnlyBlue() setting red pixels to the number 0",target);
          assertTrue(passed);
        }
-       
+
 
        @Test
          public void test3()
@@ -417,7 +417,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
 .. image:: Figures/negate.jpg
     :width: 250
     :align: left
-    
+
 2. Write the negate method to negate all the pixels in a picture. To negate a picture, set the red
 value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value
 and the blue value to 255 minus the current blue value.  Be sure to call the new test method in the main
@@ -516,13 +516,13 @@ method.
 
       }
 
-      
+
      /* 
         negate() method negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
-        
+
         Add new method here.
      */
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -559,7 +559,7 @@ method.
          boolean passed = checkCodeContains("negate() subtracts from 255",target);
          assertTrue(passed);
        }
-       
+
         @Test 
        public void test2b()
        {
@@ -588,7 +588,7 @@ method.
 .. image:: Figures/grayscale.jpg
     :width: 250
     :align: left
-    
+
 3. Write the grayscale method to turn the picture into shades of gray. Set the red, green, and
 blue values to the average of the current red, green, and blue values (add all three values and
 divide by 3).  Be sure to call the new test method in the main method.
@@ -686,13 +686,13 @@ divide by 3).  Be sure to call the new test method in the main method.
 
       }
 
-      
+
      /* 
         grayscale() method sets the red, green, andblue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
-        
+
         Add new method here.
      */
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -729,7 +729,7 @@ divide by 3).  Be sure to call the new test method in the main method.
          boolean passed = checkCodeContains("grayscale() uses get methods",target);
          assertTrue(passed);
        }
-       
+
         @Test 
        public void test2b()
        {
@@ -758,11 +758,11 @@ divide by 3).  Be sure to call the new test method in the main method.
 .. image:: Figures/water.jpg
     :width: 200
     :align: left
-    
+
 .. image:: Figures/fixunderwater.jpg
     :width: 200
     :align: left
-    
+
 4. Challenge — Explore the water.jpg picture. Write a method
 fixUnderwater() to modify the pixel colors to make the fish easier to see. There are many ways to do this, but you could try increasing one of the colors by a certain factor. Here are some more complex algorithms for increasing the brightness and contrast of images https://ie.nitk.ac.in/blog/2020/01/19/algorithms-for-adjusting-brightness-and-contrast-of-an-image/.
 
@@ -858,13 +858,13 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
         return output;
 
       }
-      
+
      /* 
         fixUnderwater() modifies the pixel colors to make the fish easier to see.
-        
+
         Add new method here.
      */
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -922,7 +922,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
 .. image:: Figures/changetshirt.png
     :width: 150
     :align: left
-    
+
 5. Extra Challenge — This exercise is not in the original picture lab. Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.
 
 .. activecode:: picture-lab-A5-tshirt-color
@@ -1034,13 +1034,13 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
         }
       }
 
-      
+
      /* 
        changeTshirt(): Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). 
-        
+
         Add new method here.
      */
-     
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -1077,7 +1077,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
          boolean passed = checkCodeContains("changeTshirt uses if statement",target);
          assertTrue(passed);
        }
-       
+
        @Test 
        public void test2b()
        {
@@ -1085,7 +1085,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
          boolean passed = checkCodeContains("changeTshirt() chacks if getRed() greater than a value",target);
          assertTrue(passed);
        }
-       
+
        @Test 
        public void test2c()
        {
@@ -1110,8 +1110,8 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
             assertTrue(passed);     
          }       
       }
-      
-      
+
+
 Choose from these images:
 
 .. datafile:: beach.jpg
@@ -1139,17 +1139,17 @@ Choose from these images:
    :image:
    :fromfile: Figures/student.jpg
 
- 
+
 .. datafile:: metalLion.jpg
    :image:
    :fromfile: ../../_static/metalLion.jpg
-   
+
 
 
 
 .. datafile:: pictureClasses1.jar
         :hide:    
-      
+
         import java.awt.Image;
         import java.awt.image.BufferedImage;
 

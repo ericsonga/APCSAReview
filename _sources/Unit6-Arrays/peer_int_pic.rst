@@ -1,6 +1,6 @@
 Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
 ------------------------------------------------------------------
- 
+
 .. mchoice:: bs-array-06-09
     :author: Beth Simon
     :practice: T
@@ -47,7 +47,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
           value = (int) (value * 0.5);
           pixelArray[index].setRed(value);
         }  
-        
+
     .. image:: https://i.postimg.cc/KcDCVXTH/lecture07-Q07.png
       :width: 200
 
@@ -152,7 +152,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
         Sound noise = new Sound(fileName);
         SoundSample[] noiseArray = noise.getSamples();
         <<<  PICK SOME CODE  >>>
- 
+
 
     .. image:: https://i.postimg.cc/qM1r7YqK/lecture20-Q09.png
       :width: 400

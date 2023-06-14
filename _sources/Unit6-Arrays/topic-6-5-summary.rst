@@ -1,8 +1,8 @@
 .. qnum::
    :prefix: 6-5-
    :start: 1
-   
-   
+
+
 Unit 6 Summary
 -------------------------
 
@@ -60,16 +60,16 @@ Vocabulary Practice
     :match_2: The number of elements in the array|||length
     :match_3: The index of the first element|||0
     :match_4: The index of the second element|||1
-    
+
     Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. dragndrop:: ch7_match_2
     :feedback: Review the summaries above.
     :match_1: Declare an integer array named nums|||int[] nums;
     :match_2: Declare and create a String array named list1 that can hold 3 elements|||String[] list1 = new String[3];
     :match_3: Initialize an array of integers named nums to contain the first 3 whole numbers|||int[] nums = {1,2,3};
     :match_4: Initialize a String array named list1 to contain the first 3 letters of the alphabet as separate strings|||String[] list1 = {"a", "b", "c"};
-    
+
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
 
 .. |Quizlet| raw:: html
@@ -78,7 +78,7 @@ Vocabulary Practice
 
 
 For more practice, see this |Quizlet|.
-  
+
 Common Mistakes
 ===============
 

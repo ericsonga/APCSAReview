@@ -110,7 +110,7 @@ Peer Instruction: Unit 2 Turtle Multiple Choice Questions
     :feedback_d: getName returns a String rather than void.
     :feedback_e: Correct! In the Turtle class, turnLeft returns void. getName returns a String. The pickAFile method returns the name of the file, a String. new Picture() calls the constructor to make a new Picture object, so it returns an object of type Picture.  
 
-    
+
     What types are returned by these method calls?
 
     .. code-block:: java

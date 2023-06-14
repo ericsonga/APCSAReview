@@ -1,24 +1,24 @@
 .. qnum::
    :prefix: 5-1-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
@@ -64,9 +64,9 @@ To write your own class, you typically start a class declaration with ``public``
     public class House 
     {
        // define class here - a blueprint
-    
+
     }
-    
+
     House myHouse = new House();
     House neighborsHouse = new House();
 
@@ -94,7 +94,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
 .. activecode:: PersonClass
   :language: java
   :autograde: unittest
-  
+
   Run the following class. Try changing the Person p2 object in main to your name. 
   ~~~~
   public class Person 
@@ -103,7 +103,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
      private String name;
      private String email;
      private String phoneNumber;
-     
+
      // constructor: construct a Person copying in the data into the instance variables
      public Person(String initName, String initEmail, String initPhone)
      {
@@ -111,7 +111,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
         email = initEmail;
         phoneNumber = initPhone;
      }
-     
+
      // Print all the data for a person
      public void print()
      {
@@ -119,7 +119,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
        System.out.println("Email: " + email);
        System.out.println("Phone Number: " + phoneNumber);
      }
-     
+
      // main method for testing
      public static void main(String[] args)
      {
@@ -131,7 +131,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
         p2.print();
      }
   }
-  
+
   ====
   // Test for Lesson 5.1.0 - Person class - should pass if/when they run code
   import static org.junit.Assert.*;
@@ -151,7 +151,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
         }
   }
 
-  
+
 
 
 
@@ -167,7 +167,7 @@ Instance Variables
 Instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
 
 .. note::
- 
+
    Instance variables are declared right after the class declaration.  They usually start with ``private`` then the *type* of the variable and then a *name* for the variable. Private means only the code in this class has access to it.
 
 The ``Person`` class declares 3 private instance variables: name, email, and phoneNumber. These are things that you might want to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
@@ -195,35 +195,35 @@ When designing a class, programmers make decisions about what data to make acces
     :feedback: Remember, instance  variables are private and are declared after the class declaration.
 
     :click-incorrect:public class Name {:endclick:
-    
+
         :click-correct:private String first;:endclick:
         :click-correct:private String last;:endclick:
-        
+
         :click-incorrect:public Name(String theFirst, String theLast) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-         
+
          :click-incorrect:public void setFirst(String theFirst) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
          :click-incorrect:}:endclick:
-         
+
          :click-incorrect:public void setLast(String theLast) {:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-         
+
     :click-incorrect:}:endclick:      
-        
 
 
-  
+
+
 
 Methods
 -------
 
 ..	index::
 	pair: class; method
-	
+
 **Methods** define what an object can do or the behavior of the object.   Most methods are ``public`` which means they can be accessed from outside the class. Some methods can be marked as``private`` if they are helper methods that are just used internally by other methods inside the same class. They will not be accessible outside of the class. The private and public keywords determine the external access and visibility of classes, data, constructors, and methods.
 
 .. note::
@@ -236,14 +236,14 @@ Here is an example of the print() method that prints out all the data stored for
 The **void** return type is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber. The instance variables are shared by all the methods of the class.
 
 .. code-block:: java
-     
+
      public void print()
      {
        System.out.println("Name: " + name);
        System.out.println("Email: " + email);
        System.out.println("Phone Number: " + phoneNumber);
      }
-     
+
 To call a method to do its job, we create an object of the class and then use the dot (.) operator to call its public methods, for example p1.print() means call p1's print method.
 
 .. code-block:: java
@@ -252,8 +252,8 @@ To call a method to do its job, we create an object of the class and then use th
     Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
     // call p1's print method
     p1.print();
-        
-        
+
+
 |Exercise| Check Your Understanding
 
 .. clickablearea:: name_methods
@@ -262,23 +262,23 @@ To call a method to do its job, we create an object of the class and then use th
     :feedback: Methods follow the constructor.  They include a return type in case they returns something from the method.
 
     :click-incorrect:public class Name {:endclick:
-    
+
         :click-incorrect:private String first;:endclick:
         :click-incorrect:private String last;:endclick:
-        
+
         :click-incorrect:public Name(String theFirst, String theLast) {:endclick:
             :click-incorrect:first = theFirst;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-         
+
          :click-correct:public void setFirst(String theFirst) {:endclick:
             :click-correct:first = theFirst;:endclick:
          :click-correct:}:endclick:
-         
+
          :click-correct:public void setLast(String theLast) {:endclick:
             :click-correct:last = theLast;:endclick:
          :click-correct:}:endclick:
-         
+
     :click-incorrect:}:endclick: 
 
 Object-Oriented Design
@@ -307,7 +307,7 @@ In **Object-Oriented Design** (OOD), programmers first decide which classes are 
     :figclass: align-center
 
     Figure 3: Turtle Class Diagram
-    
+
 When you are given a problem specification, look for the **nouns** to identify what classes you need to create. For an example, try the problem below.
 
 |Exercise| **Check Your Understanding**
@@ -315,7 +315,7 @@ When you are given a problem specification, look for the **nouns** to identify w
 .. shortanswer:: OOD1
 
     You've been hired by your school to create a program that keeps track of "students at your school and the courses they are taking". Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class. 
-    
+
 
 The two nouns in the problem description above, **Student** and **Course** would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!
 
@@ -328,7 +328,7 @@ The two nouns in the problem description above, **Student** and **Course** would
 .. shortanswer:: OOD2
 
     Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): "Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything." What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables.
-    
+
 
 |Groupwork| Programming Challenge : Riddle Class
 ----------------------------------------------------------
@@ -360,37 +360,37 @@ In this project, you will create a class that can tell riddles like the followin
   public class Riddle
   {
       // write 2 instance variables for Riddle's question and answer: private type variableName;
-          
-      
+
+
       // constructor
       public Riddle(String initQuestion, String initAnswer)
       {
           // set the instance variables to the init parameter variables
-     
+
       }
-     
+
       // Print riddle question
       public void printQuestion()
       {
           // print out the riddle question with System.out.println
-       
+
       }
-     
+
       // Print riddle answer
       public void printAnswer()
       {
           // print out the riddle answer with System.out.println
-       
+
       }
-     
+
       // main method for testing
       public static void main(String[] args)
       {
           // call the Riddle constructor to create 2 new Riddle objects 
           // with the arguments for the riddle question and answer.
-        
+
           // call the riddle objects' printQuestion() and printAnswer methods
-       
+
       }
   }
   ====
@@ -525,9 +525,9 @@ You can use this |worksheet| to design your class, and then fill in the class be
   public class          // Add your class name here!
   {
       // write 3 instance variables for class: private type variableName;
-          
-      
-    
+
+
+
       public static void main(String[] args)
       {
 
@@ -582,12 +582,12 @@ AP Practice
         Consider the Cat class which will contain a String and an int attribute for a cat’s name and age and a constructor.
 
         .. code-block:: java
- 
+
             public class Cat
             {
               /* missing code */
             }
-    
+
             Which of the following replacements for /* missing code */ is the most appropriate 
             implementation of the class?
 
@@ -628,7 +628,7 @@ AP Practice
           - Instance variables should be private.
 
         - .. code-block:: java
-	
+
             private String name;
             private int age;
             private Cat(String name, int age)
@@ -640,7 +640,7 @@ AP Practice
     :practice: T
 
     Consider the Party class below which will contain three int attributes for numOfPeople, volumeOfMusic, and numOfBoxesOfPizza, a constructor, and a startParty method. The startParty method is intended to be accessed outside the class.
-    
+
     .. code-block:: java
 
         public class Party
@@ -652,7 +652,7 @@ AP Practice
         implementation of the class?
 
     - .. code-block:: java
-    
+
         private int numOfPeople;
         private int volumeOfMusic;
         private int numOfBoxesOfPizza;
@@ -662,9 +662,9 @@ AP Practice
         { /* implementation not shown */ }
 
       - Method startParty() should be public.
-        
+
     - .. code-block:: java
-    
+
         private int numOfPeople;
         private int volumeOfMusic;
         private int numOfBoxesOfPizza;
@@ -674,9 +674,9 @@ AP Practice
         { /* implementation not shown */ }
 
       + Correct, instance variables should be private and the methods should be public.
-      
+
     - .. code-block:: java
-    
+
         public int numOfPeople;
         public int volumeOfMusic;
         public int numOfBoxesOfPizza;
@@ -686,9 +686,9 @@ AP Practice
         { /* implementation not shown */ }
 
       - Instance variables should be private.
-        
+
     - .. code-block:: java
-    
+
         private int numOfPeople;
         private int volumeOfMusic;
         private int numOfBoxesOfPizza;

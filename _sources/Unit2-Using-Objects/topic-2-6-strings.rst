@@ -6,31 +6,31 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
 
-   
+
+
 ..	index::
 	single: String
 	single: object reference
 	single: reference
 	pair: String; definition
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Strings
 ========
 
@@ -47,7 +47,7 @@ You can declare a variable to be of type ``String``.
 .. activecode:: lcsb1
    :language: java
    :autograde: unittest
-   
+
    Run the following code.  What does it print?
    ~~~~
    public class Test1
@@ -62,7 +62,7 @@ You can declare a variable to be of type ``String``.
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -85,7 +85,7 @@ Object variables **refer** to objects in memory.  A reference is a way to find t
     :figclass: align-center
 
     Figure 1: Initial value for an object reference
-    
+
 ..	index::
 	pair: String; creation
 
@@ -94,12 +94,12 @@ In Java there are two ways to create an object of the ``String`` class.  You can
 .. code-block:: java
 
    String greeting = new String("Hello");
-  
+
 ..	index::
     single: String literal
 	pair: String; literal
-	
-  
+
+
 In Java you can also use just a **string literal**, which is a set of characters enclosed in double quotes (``"``), to create a ``String`` object. 
 
 .. code-block:: java 
@@ -148,7 +148,7 @@ In both cases an object of the ``String`` class will be created in memory and th
 .. activecode:: lcsb2
    :language: java
    :autograde: unittest
-   
+
    Now that greeting refers to an actual object we can ask the object what class created it. Try the following.  What does it print? 
    ~~~~
    public class Test2
@@ -166,7 +166,7 @@ In both cases an object of the ``String`` class will be created in memory and th
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -178,7 +178,7 @@ In both cases an object of the ``String`` class will be created in memory and th
             assertTrue(passed);
         }
     }
-   
+
 ..	index::
 	single: parent class
 	single: superclass
@@ -195,9 +195,9 @@ The code above will first print ``class java.lang.String`` since ``greeting`` wa
     :figclass: align-center
 
     Figure 2: Object variable of type String with a reference to a String object which has a reference to the String class which has a reference to the Object class.
-    
 
-    
+
+
 
 
 
@@ -206,14 +206,14 @@ String Operators - Concatenation
 
 ..	index::
 	pair: String; append
-	
+
 Strings can be **appended** to each other to create a new string using the ``+`` or ``+=`` operator . This is also called **concatenation**. 
 
 .. activecode:: lcso1
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Try the following code. Add another variable for a lastname that is "Hernandez". Use += or + to add the lastname variable after name to the result. Use += or + to add 2 more exclamation points (!) to the end of the happy birthday greeting in result. 
    ~~~~
    public class Test1
@@ -243,7 +243,7 @@ Strings can be **appended** to each other to create a new string using the ``+``
             assertTrue(passed);
         }
     }
-  
+
 .. note::
    Note that spaces are not added between strings automatically.  If you want a space between two strings then add one using + " " +. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".  And remember that variables are never put inside the quotes ("") since this would print the variable name out letter by letter instead of its value.
 
@@ -270,21 +270,21 @@ Strings can be **appended** to each other to create a new string using the ``+``
      String s1 = "xy";
      String s2 = s1;
      s1 = s1 + s2 + "z";
-     
+
 
 ..	index::
 	single: toString
 	pair: Object; toString
 
 You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.  
-   
+
 |CodingEx| **Coding Exercise:**
 
 
 .. activecode:: lcso2
    :language: java
    :autograde: unittest
-   
+
    What do you think the following will print? Guess before you hit run. If you want the addition to take place before the numbers are turned into a string what should you do? Try to modify the code  so that it adds 4 + 3 before appending the value to the string. Hint: you used this to do addition before multiplication in arithmetic expressions.
    ~~~~
    public class Test2
@@ -310,7 +310,7 @@ You can even add other items to a string using the ``+`` operator.  The other it
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
-	
+
 	@Test
 	public void testParen() throws IOException {
             String code = removeSpaces(getCodeWithoutComments());
@@ -321,10 +321,10 @@ You can even add other items to a string using the ``+`` operator.  The other it
             assertTrue(passed);
         }
     }
-   
+
 .. note::
    If you are appending a number to a string it will be converted to a string first before being appended.  
-  
+
 Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want to do addition instead, try using parentheses!
 
 What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a **backslash escape sequence**. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \\n which will put in a newline. 
@@ -332,7 +332,7 @@ What if you wanted to print out a double quote " character? Since the double quo
 .. activecode:: bhescape
    :language: java
    :autograde: unittest
-   
+
    Here are the escape sequences that may be used in the AP course.
    ~~~~
    public class TestEscape
@@ -349,7 +349,7 @@ What if you wanted to print out a double quote " character? Since the double quo
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -361,7 +361,7 @@ What if you wanted to print out a double quote " character? Since the double quo
             assertTrue(passed);
         }
     }
-    
+
 |Groupwork| Programming Challenge : Mad Libs
 --------------------------------------------
 
@@ -370,12 +370,12 @@ Have you ever played MAD LIBS? In this game, you first choose a bunch of words w
 .. |repl| raw:: html
 
    <a href="https://repl.it" target="_blank">repl.it</a>
-   
+
 
 .. |Scanner| raw:: html
 
    <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-   
+
 
 Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the words (see input examples using the |Scanner|).
 
@@ -383,7 +383,7 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    If you used repl.it for this challenge, copy the url of your repl here to turn in.
    ~~~~
    public class MadLibs1
@@ -396,23 +396,23 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
         String color2 =
         String food =
         String pluralnoun2 = 
-        
-        
+
+
         // Run to see the silly poem!
         System.out.println("Roses are " + color1);
         System.out.println(pluralnoun1 + " are " + color2);
         System.out.println("I like " + food);
         System.out.println("Do " + pluralnoun2 + " like them too?");
-        
+
         // Now come up with your own silly poem!
-        
+
       }
    }
    ====
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test

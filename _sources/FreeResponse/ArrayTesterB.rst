@@ -55,7 +55,7 @@ Try and Solve It
       public static int[] getColumn(int[][] arr2D, int c)
       {
          // put your solution here
-      
+
       }
 
 
@@ -74,7 +74,7 @@ Try and Solve It
            }
        } // end of main
 
-       
+
 
       /** Returns true if and only if every value in arr1 appears in arr2.
         */

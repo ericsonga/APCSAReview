@@ -1,12 +1,12 @@
 .. qnum::
    :prefix: 3-9-
    :start: 1
-   
+
 Mixed Up Code Practice
 ======================
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
-                
+
 .. parsonsprob:: ch5ex1muc
    :numbered: left
    :practice: T
@@ -35,7 +35,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
         System.out.println("Your guess is too high");
    }
-      
+
 .. parsonsprob:: ch5ex2muc
    :numbered: left
    :practice: T
@@ -66,7 +66,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        }
    }
 
-   
+
 .. parsonsprob:: ch5ex3muc
    :numbered: left
    :practice: T
@@ -95,8 +95,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        }
    }
-           
-  
+
+
 .. parsonsprob:: ch5ex4muc
    :numbered: left
    :practice: T
@@ -125,8 +125,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        }
    }
-        
-   
+
+
 .. parsonsprob:: ch5ex5muc
    :numbered: left
    :practice: T
@@ -156,8 +156,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        } 
    }
-           
-               
+
+
 .. parsonsprob:: ch5ex6muc
    :numbered: left
    :practice: T
@@ -191,7 +191,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        }
    }
 
-           
+
 .. parsonsprob:: ch5ex7muc
    :numbered: left
    :practice: T
@@ -219,7 +219,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        }
    }
 
-       
+
 .. parsonsprob:: ch5ex8muc
    :numbered: left
    :practice: T
@@ -249,7 +249,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        }
    }
-          
+
 .. parsonsprob:: ch5ex9muc
    :numbered: left
    :practice: T
@@ -273,7 +273,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            boolean iF = lowerFirst.equals("i");
            boolean oF = lowerFirst.equals("o");
            boolean uF = lowerFirst.equals("u");
-           
+
    =====
            if (aF || eF || iF || oF || uF)
    =====
@@ -286,7 +286,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        }
    }
 
-          
+
 .. parsonsprob:: ch5ex10muc
    :numbered: left
    :practice: T
@@ -321,7 +321,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        }
    }
-   
 
 
-   
+
+

@@ -32,7 +32,7 @@
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-   
+
 .. |clock| unicode:: x1F567
 
 
@@ -40,7 +40,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Objects - Instances of Classes 
 ===============================
 
@@ -59,7 +59,7 @@ You can think of a class like a blueprint or a cookie cutter.  It is used to cre
     :figclass: align-center
 
     Figure 1: Using a cookie cutter (class) to make cookies (objects)
-    
+
 You can think of a class as the type or classification.  Each type can have **attributes** (the object's properties or what it knows about itself) and **behaviors** (what an object does). In Java code, the attributes are written as **instance variables** in the class, and the behaviors are written as **methods**. 
 
 The following picture has lots of cats (objects of the type cat).  They are all different, but they share the same attributes and behaviors that make up a cat. They are all **instances** of a cat with different values for their attributes. Name some of the attributes and behaviors of the cats below. For example, the color (*attribute*) of the first cat is black (*attribute value*) and it is playing (*behavior*).
@@ -70,7 +70,7 @@ The following picture has lots of cats (objects of the type cat).  They are all 
     :figclass: align-center
 
     Figure 2: Pictures of cats (cat objects)
-    
+
 .. shortanswer:: cats
 
     Discuss with your class: What are some attributes of cats? What are some behaviors of cats? (Note that attributes are often nouns or adjectives describing features of cats, and behaviors are often verbs).
@@ -78,7 +78,7 @@ The following picture has lots of cats (objects of the type cat).  They are all 
 .. |video1| raw:: html
 
    <a href="https://www.youtube.com/watch?v=64DOwDu5SVo&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-   
+
 Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 
 .. youtube:: 64DOwDu5SVo
@@ -96,7 +96,7 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
     :match_2: defines a new data type that is like a blueprint|||class
     :match_3: define what the object knows about itself|||attributes or instance variables
     :match_4: define what an object can do|||behaviors or methods
-    
+
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.
 
 .. mchoice:: q2_2_1
@@ -145,7 +145,7 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 .. image:: Figures/turtleOOD.png
     :width: 200
     :align: left
-    
+
 Intro to Objects with Turtles
 -----------------------------
 
@@ -198,7 +198,7 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
 .. |video2| raw:: html
 
    <a href="https://www.youtube.com/watch?v=TFmmG4_KK8I&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-   
+
 The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.  
 
 .. youtube:: TFmmG4_KK8I
@@ -206,10 +206,10 @@ The following |video2| shows how the program creates a ``World`` object called `
     :height: 415
     :align: center
     :optional:
-    
-    
+
+
 The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again. 
- 
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: 2_1_turle_dir
@@ -272,7 +272,7 @@ The **dot operator** (.) is used to run an object's method. You can think of the
 .. raw:: html
 
      <img src="../_static/turtleForwardLeftForward.png" width="150" align="left" />
-     
+
 .. parsonsprob:: 2_1_Turtle_L
    :practice: T
    :numbered: left
@@ -600,7 +600,7 @@ This |video3| shows another class called Belt and how it has 3 instance variable
     :height: 415
     :align: center
     :optional:
-    
+
 Try these AP practice questions that will help to prepare you for the AP Classroom progress checks.
 
 .. mchoice:: AP2-1-1
@@ -2290,7 +2290,7 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         public void setSpeed(int d) { 
            ((World)modelDisplay).setSpeed(d);
         }
-        
+
         /**
          * Method to get the model display for this simple turtle
          * @return the model display if there is one else null

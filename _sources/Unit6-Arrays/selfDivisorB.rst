@@ -8,7 +8,7 @@ Free Response - Self Divisor B
 ..	index::
 	single: self divisor
     single: free response
-    
+
 The following is part b of a free response question from 2007.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
 **Question 1.**  A positive integer is called a "self-divisor" if every decimal digit of the number is a divisor of the number, that is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a self-divisor because it is evenly divisible by 1, 2, and 8. However, 26 is not a self-divisor because it is not evenly divisible by the digit 6. Note that 0 is not considered to be a divisor of any number, so any number containing a 0 digit is NOT a self-divisor. There are infinitely many self-divisors.
@@ -17,7 +17,7 @@ The following is part b of a free response question from 2007.  It was question 
 For example, the call firstNumSelfDivisors(10, 3) should return an array containing the values 11, 12, and 15, because the first three self-divisors that are greater than or equal to 10 are 11, 12, and 15.  Be sure to use the method isSelfDivisor in your answer which we wrote in a Unit 4.10.
 
 .. code-block:: java 
-   
+
    public class SelfDivisor
    {
 
@@ -40,7 +40,7 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
         }
         return true;
       }
-      
+
       /** 
        * @param start starting point for values to be checked
        * Precondition: start > 0
@@ -59,14 +59,14 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
         for (int n : firstNumSelfDivisors(10, 3))
            System.out.print(n + " ");
         System.out.println();
-        
+
         System.out.println("Self divisors for firstNumSelfDivisors(22, 5)");
         for (int n : firstNumSelfDivisors(22, 5))
            System.out.print(n + " ");
         System.out.println();
       }
     }
-    
+
 How to solve this problem
 ===========================
 
@@ -110,9 +110,9 @@ Click to reveal the algorithm and problems to help you write your solution.
         :feedback_e: This declares the array, but doesn't create it. 
 
         Which of the following correctly declares and creates the array to return?
-   
+
 Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15, and then 22, 24, 33, 36, and 44.
-   
+
 .. activecode:: lcfrsdb
    :language: java
    :autograde: unittest
@@ -141,7 +141,7 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
         }
         return true;
       }
-      
+
       /** 
        * @param start starting point for values to be checked
        * Precondition: start > 0
@@ -160,7 +160,7 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
         for (int n : firstNumSelfDivisors(10, 3))
            System.out.print(n + " ");
         System.out.println();
-        
+
         System.out.println("Self divisors for firstNumSelfDivisors(22, 5):");
         for (int n : firstNumSelfDivisors(22, 5))
            System.out.print(n + " ");
@@ -172,7 +172,7 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
     import org.junit.*;
     import java.io.*;
     import java.util.Arrays;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -194,7 +194,7 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
             assertTrue(passed);
         }
     }
-    
+
 Video - One way to code the solution
 =====================================
 
@@ -203,6 +203,6 @@ There are many possible solutions to this problem.  The video below (at https://
 .. youtube:: 2VBz-pX1Xos
     :width: 800
     :align: center
- 
-   
-   
+
+
+

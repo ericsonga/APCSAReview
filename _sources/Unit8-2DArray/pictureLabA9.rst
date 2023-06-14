@@ -1,7 +1,7 @@
 .. image:: ../../_static/time90.png
     :width: 250
     :align: right
-    
+
 Picture Lab A9: Simple Edge Detection
 =====================================================
 
@@ -21,10 +21,10 @@ not part of an edge and its color should be set to white (Figure 1).
     :width: 450px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Original picture and after edge detection
-    
-    
+
+
 How do you calculate the difference
 between two colors? The formula for the difference between two points (x1,y1) and (x2,y2) is the square
 root of ((x2 - x1)\ :sup:`2` + (y2 - y1)\ :sup:`2` ). The difference between two colors (red1,green1,blue1) and (red2,green2,blue2)
@@ -33,7 +33,7 @@ is the square root of ((red2 - red1)\ :sup:`2` +(green2 - green1)\ :sup:`2` +(bl
 method in the Pixel class uses this calculation to return the difference between the current pixel
 color and a passed color.
 
- 
+
 The following method implements this simple algorithm. Notice that the nested for loop stops earlier
 than when it reaches the number of columns. That is because in the nested loop the current color is
 compared to the color at the pixel in the next column. If the loop continued to the last column this
@@ -61,7 +61,7 @@ would cause an out-of-bounds error.
            }
       }
  }
- 
+
 You can test this with the edgeDetection method below.
 
 .. activecode:: picture-lab-A9-edgeDetection
@@ -155,7 +155,7 @@ You can test this with the edgeDetection method below.
           + " width " + getWidth();
         return output;
       }
-      
+
       public void edgeDetection(int edgeDist)
       {
            Pixel leftPixel = null;
@@ -177,7 +177,7 @@ You can test this with the edgeDetection method below.
                 }
            }
       }
-      
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -213,7 +213,7 @@ You can test this with the edgeDetection method below.
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 |CodingEx| **Coding Exercises**
 
 
@@ -313,7 +313,7 @@ color distance is greater than the specified edge distance.
           + " width " + getWidth();
         return output;
       }
-      
+
       /** Add another nested loop that compares the current pixel with the pixel below it and sets the current pixel color to black as well when the color distance is greater than the specified edge distance.
       */
       public void edgeDetection(int edgeDist)
@@ -337,7 +337,7 @@ color distance is greater than the specified edge distance.
                 }
            }
       }
-      
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -396,9 +396,9 @@ color distance is greater than the specified edge distance.
             getResults("true", ""+passed, "Checking that edgeDetection calls colorDistance twice", passed);
             assertTrue(passed);     
          }
-         
+
       }
-      
+
 2. Work in groups to come up with another algorithm for edge detection and test it below.
 
 
@@ -493,7 +493,7 @@ color distance is greater than the specified edge distance.
           + " width " + getWidth();
         return output;
       }
-      
+
       public void edgeDetection(int edgeDist)
       {
            Pixel leftPixel = null;
@@ -515,14 +515,14 @@ color distance is greater than the specified edge distance.
                 }
            }
       }
-      
+
       /** Come up with another algorithm for edgeDetection 
           in a method called myEdgeDetection
       */
-      
-      
-      
-      
+
+
+
+
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -566,7 +566,7 @@ color distance is greater than the specified edge distance.
             getResults("true", ""+passed, "Checking that myEdgeDetection contains at least 2 for loops", passed);
             assertTrue(passed);     
          }
-         
+
          @Test
          public void test2()
          {
@@ -583,7 +583,7 @@ color distance is greater than the specified edge distance.
             assertTrue(passed);     
          }
       }
-      
+
 .. |repl.it project| raw:: html
 
    <a href= "https://firewalledreplit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
@@ -591,7 +591,7 @@ color distance is greater than the specified edge distance.
 .. |repl 2| raw:: html
 
    <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
-   
+
 
 
 Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
@@ -599,12 +599,12 @@ Choose from these images in this lesson.  To use your own images, you can fork t
 .. datafile:: swan.jpg
    :image:
    :fromfile: Figures/swan.jpg
-   
+
 .. datafile:: temple2.jpg
    :image:
    :fromfile: Figures/temple.jpg
-   
-   
+
+
 How image processing is related to new scientific breakthroughs
 -----------------------------------------------------------------
 
@@ -655,5 +655,5 @@ Steganography Lab
 .. |Steganography lab| raw:: html
 
    <a href= "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-steganography-lab-student-guide.pdf" style="text-decoration:underline" target="_blank" >Steganography Lab</a>
-   
+
 If you enjoyed this lab and have time, continue on with the |Steganography lab| that explores hiding messages in images.

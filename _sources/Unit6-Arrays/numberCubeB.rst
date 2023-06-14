@@ -93,7 +93,7 @@ Click to reveal the Mixed Up Code for the solution to this problem.
          return maxStart;
       =====
       } // end method
-      
+
 
 Try and Solve Part B
 --------------------

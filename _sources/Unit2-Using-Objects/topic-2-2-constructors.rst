@@ -35,7 +35,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Creating and Initializing Objects: Constructors
 ================================================
 
@@ -207,7 +207,7 @@ You can also declare an **object variable** and initialize it to **null** (``Tur
 .. |video1| raw:: html
 
    <a href="https://www.youtube.com/watch?v=5fpjgXAV2BU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-   
+
 Watch the |video1| below about null.
 
 .. youtube:: 5fpjgXAV2BU
@@ -383,12 +383,12 @@ This lesson introduces a lot of vocabulary, but don't worry if you don't underst
 .. image:: Figures/customTurtles.png
     :width: 200
     :align: left
-    
+
 |Groupwork| Programming Challenge: Custom Turtles
 ---------------------------------------------------
 
 
-    
+
 Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors.
 
 First, as a warm up, do the following debugging exercise.
@@ -443,7 +443,7 @@ The CustomTurtle class in the ActiveCode below inherits many of its attributes a
 
   /** Constructs a CustomTurtle in the middle of the world */
   public CustomTurtle(World w)
- 
+
   /** Constructs a CustomTurtle with a specific body color, 
       shell color, and width and height in the middle of the world */
   public CustomTurtle(World w, Color body, Color shell, int w, int h) 
@@ -456,7 +456,7 @@ The CustomTurtle class in the ActiveCode below inherits many of its attributes a
 .. |Color| raw:: html
 
    <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
-   
+
 You will use the constructor(s) to create the CustomTurtles below. You can specify colors like Color.red by using the |Color| class in Java.
 
 1. Create a large 150x200 (width 150 and height 200) CustomTurtle with a green body (Color.green) and a blue shell (Color.blue) at position (150,300)
@@ -487,15 +487,15 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
           // Move it forward to see it.
           CustomTurtle turtle1 = new CustomTurtle(world1); 
           turtle1.forward();
-    
+
 
           // 2. Create a small 25x50 CustomTurtle with a red body 
           // and a yellow shell at position (350,200)
           // Move it forward to see it.
-        
+
 
           // 3. Create a CustomTurtle of your own design
-        
+
           world1.show(true);
       }
     }

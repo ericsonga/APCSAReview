@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 2-9-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -39,7 +39,7 @@ that you might want to use in your programs like ``Math.abs(int)`` which calcula
 
 These methods are in the **Math** class defined in the java.lang package. These are **static methods** which means you can call them by just using ``ClassName.methodName()`` without creating an object. 
 This is why we can just say Math.random() instead of having to define an object of the class Math. 
- 
+
 
 .. note::
 
@@ -65,7 +65,7 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -77,16 +77,16 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
             assertTrue(passed);
         }
     }
-  
 
-   
+
+
 
 
 You can use ``Math.random`` and a cast to integer to return a random integer between some starting and ending value.  The code below will create a random integer from 0 to 9. Remember that casting a double value to integer ``(int)`` will throw away any values after the decimal point.
 
 |CodingEx| **Coding Exercise**
 
-   
+
 .. activecode:: randomRange
    :language: java
    :autograde: unittest
@@ -115,32 +115,32 @@ You can use ``Math.random`` and a cast to integer to return a random integer bet
            assertTrue(passed);
        }
     }
-  
+
 .. note::
 
     - Math.random() returns a random number between 0.0-0.99. 
-    
+
     - **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number. 
-    
+
     - The range is the **(max number - min number + 1)**. 
-    
-    
+
+
 Here are some examples that move a random number into a specific range.
 
 .. code-block:: java 
 
     // Math.random() returns a random number between 0.0-0.99.
     double rnd = Math.random();
-    
+
     // rnd1 is an integer in the range 0-9 (including 9).
     int rnd1 = (int)(Math.random()*10);
-   
+
     // rnd2 is in the range 1-10 (including 10). The parentheses are necessary!
     int rnd2 = (int)(Math.random()*10) + 1;
-    
+
     // rnd3 is in the range 5-10 (including 10). The range is 10-5+1 = 6.
     int rnd3 = (int)(Math.random()*6) + 5;
-    
+
     // rnd4 is in the range -10 up to 9 (including 9). The range is doubled (9 - -10 + 1 = 20) and the minimum is -10.
     int rnd4 = (int)(Math.random()*20) - 10;
 
@@ -158,7 +158,7 @@ Here are some examples that move a random number into a specific range.
    :feedback_c: Do not use == with double values!  Remember that Math.random can return any number between 0 and not quite 1 (about .99999999).  
 
    Which of the following would be true about 40% of the time?
-   
+
 .. mchoice:: qrand_2
    :practice: T
    :answer_a: ((int) (Math.random() * 5))
@@ -170,7 +170,7 @@ Here are some examples that move a random number into a specific range.
    :feedback_c: The first part would return a number between 0 and 4 and when you add 1 you get a number from 1 to 5 inclusive. 
 
    Which of the following would return a random number from 1 to 5 inclusive?
-   
+
 .. mchoice:: qrand_3
    :practice: T
    :answer_a: ((int) (Math.random() * 10))
@@ -182,7 +182,7 @@ Here are some examples that move a random number into a specific range.
    :feedback_c: The first part would return a number between 0 and 9 and when you add 1 you get a number from 1 to 10 inclusive. 
 
    Which of the following would return a random number from 0 to 10 inclusive?
-   
+
 .. mchoice:: qrand_4
    :practice: T
    :answer_a: Math.random() < 0.25
@@ -212,8 +212,8 @@ Here are some examples that move a random number into a specific range.
    :feedback_e: This would give us random numbers from 25 to 85. Remember that you can compute the range you need with (max number - min number + 1).
 
    Which of the following statements assigns a random integer between 25 and 60, inclusive, to rn?
- 
-   
+
+
 Other Math functions that you can use are:
 
 
@@ -231,7 +231,7 @@ Other Math functions that you can use are:
 .. |AP CS A Reference Sheet| raw:: html
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a> 
-   
+
 These are all listed in the |AP CS A Reference Sheet| that you can use during the exam.
 
 |Groupwork| Programming Challenge : Random Numbers
@@ -241,7 +241,7 @@ These are all listed in the |AP CS A Reference Sheet| that you can use during th
     :width: 100
     :align: left
     :alt: lock
-    
+
 You may have a combination lock on your locker at school where you have to spin the dial to 3 separate numbers from 0 up to 40. What if you forgot your combination? Would you be able to guess it? 
 
 1. Write code that will generate 3 random integers from 0 up to 40 (but not including 40) using **Math.random()** in the Active Code window below. Run it a couple times to see it generate different numbers. 
@@ -259,11 +259,11 @@ You may have a combination lock on your locker at school where you have to spin 
 
 Now what about the combination lock for this challenge? It has 3 dials with 0-40 (not including 40) numbers possible on each dial. In general, the formula to use is NumbersPerDial\ :sup:`numberOfDials`. Write this using the **Math.pow()** method in your code and save it into a variable and print out.
 
- 
+
 .. activecode:: challenge2-9-random-math
    :language: java
    :autograde: unittest
-   
+
    Complete the combination lock challenge below.
    ~~~~
    public class MathChallenge
@@ -271,12 +271,12 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
       public static void main(String[] args)
       {
           // 1. Use Math.random() to generate 3 integers from 0-40 (not including 40) and print them out.
-        
-        
+
+
           // 2. Calculate the number of combinations to choose 3 numbers between 0-40 (not including 40) using Math.pow() and print it out. 
           // For example, Math.pow(10,2) is 10^2 and the number of permutations to choose 2 numbers between 0-9.
-        
-        
+
+
       }
    }
    ====
@@ -348,7 +348,7 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
     {
       public static void main(String[] args)
       {
-          
+
           World world = new World(500,400);
           Turtle yertle = new Turtle(world);
 
@@ -364,17 +364,17 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
            // Can you adjust for the 20 pixel height of the turtle,
            // so it doesn't get cut off at the edges?
            int randomY = 
-          
+
            yertle.moveTo(randomX, randomY);
            yertle.turnRight();
-          
+
            // Can you choose a random red, green, and blue value between 0-255?
            int randomR = 
            int randomG = 
            int randomB = 
-          
+
            yertle.setColor(new Color(randomR, randomG, randomB));
-      
+
           } // end of loop
           world.show(true); 
       }
@@ -409,7 +409,7 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
            assertTrue(passed);
         }
     }
-    
+
 
 
 Summary
@@ -424,7 +424,7 @@ Summary
   - **double pow(double, double)** : Returns the value of the first parameter raised to the power of the second parameter. 
   - **double sqrt(double)** :  Returns the positive square root of a double value.
   - **double random()** :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0)!
-  
+
 - The values returned from Math.random can be manipulated to produce a random int or double in a defined range. 
 
 - **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number. The range is the **(max number - min number + 1)**. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: ``(int)(Math.random()*6) + 5``.

@@ -1,7 +1,7 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right 
-    
+
 Two-dimensional (2D) Arrays
 ===========================
 

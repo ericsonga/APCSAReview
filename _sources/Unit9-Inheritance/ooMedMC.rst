@@ -6,7 +6,7 @@ Medium Multiple Choice Questions
 ----------------------------------
 
 These problems are similar to those you will see on the AP CS A exam.
-           
+
 .. mchoice:: qoom_1
    :practice: T
    :answer_a: Won't compile since <code>GradStudent</code> doesn't have a <code>getInfo</code> method
@@ -22,7 +22,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: In object methods if you leave off the <code>this.</code> when invoking an object method it will be added for you by the compiler. The keyword <code>this</code> refers to the current object which is implicitly passed to all object methods.  
 
    Given the following class declarations, what is the output from ``Student s1 = new GradStudent();`` followed by ``s1.getInfo();``?
-   
+
    .. code-block:: java 
 
       public class Student {
@@ -39,7 +39,7 @@ These problems are similar to those you will see on the AP CS A exam.
             return "Taco";
          }
       }
-      
+
 .. mchoice:: qoom_2
    :practice: T
    :answer_a: I only
@@ -55,7 +55,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: I is wrong because <code>y</code>  is a private field and thus can not be directly accessed from code in a client class.
 
    Given the following class declarations, and ``EnhancedItem enItemObj = new EnhancedItem();`` in a client class, which of the following statements would compile?
-   
+
    .. code-block:: java 
 
       public class Item
@@ -84,7 +84,7 @@ These problems are similar to those you will see on the AP CS A exam.
       I. enItemObj.y = 32;
       II. enItemObj.setY(32);
       III. enItemObj.setX(52);
-      
+
 .. mchoice:: qoom_3
    :practice: T
    :answer_a: t1.method1(t1,t1);
@@ -100,7 +100,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: Since <code>method1</code> is a public method of class <code>Test1</code> objects of any subclasses of <code>Test1</code> can invoke the method. So, it can be invoked on <code>t3</code> since it is an object of <code>Test3</code> and this is a subclass of <code>Test1</code>.  And, since <code>method1</code> takes an object of class <code>Test2</code> and <code>Test3</code> as parameters. This actually means it can take an object of <code>Test2</code> or any subclass of <code>Test2</code> and an object of <code>Test3</code> or any subclass of <code>Test3</code>. So it can take <code>t3</code> which is an object of class <code>Test3</code> as an object of <code>Test2</code> since <code>Test3</code> is a subclass of <code>Test2</code>.
 
    Given the following class declarations and initializations in a client program, which of the following is a correct call to ``method1``?
-   
+
    .. code-block:: java 
 
       public class Test1
@@ -118,12 +118,12 @@ These problems are similar to those you will see on the AP CS A exam.
       public class Test3 extends Test2
       {
       }
-      
+
       The following initializations appear in a different class.
       Test1 t1 = new Test1();
       Test2 t2 = new Test2();
       Test3 t3 = new Test3();
-      
+
 .. mchoice:: qoom_4
    :practice: T
    :answer_a: Meow Moo Woof Awk Awk
@@ -139,11 +139,11 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: The <code>Pig</code> class did not override the <code>speak</code> method, so it will use the method from <code>Animal</code>, thus the output should be: Meow Moo Woof Awk Awk
 
     If you have a parent class ``Animal`` that has a method ``speak()`` which returns: Awk. ``Cat`` has a ``speak`` method that returns: Meow.  ``Bird`` does not have a ``speak`` method.  ``Dog`` has a ``speak`` method that returns: Woof.  ``Pig`` does not have a ``speak`` method.  ``Cow`` has a ``speak`` method that returns: Moo.   What is the output from looping through the array ``a`` created below and asking each element to ``speak()``? 
-	
+
     .. code-block:: java 
-	  
+
 	  Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
-	  
+
 .. mchoice:: qoom_5
    :practice: T
    :answer_a: The code compiles and runs with no errors, the output is 5 6 5 6
@@ -159,7 +159,7 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: <code>RaceCar</code> inherits from the <code>Car</code> class so all the public methods in <code>Car</code> can be accessed by any object of the <code>RaceCar</code> class.
 
    Given the following class declarations and code, what is the result when the code is run?
-   
+
    .. code-block:: java 
 
       public class Car
@@ -177,7 +177,7 @@ These problems are similar to those you will see on the AP CS A exam.
       {
          public RaceCar(int g) { super(2*g); }
       }
-      
+
       What is the result when the following code is compiled and run?
 
       Car car = new Car(5);
@@ -188,7 +188,7 @@ These problems are similar to those you will see on the AP CS A exam.
       fastCar.display();
       fastCar.addFuel();
       fastCar.display();
-      
+
 .. mchoice:: qoom_6
    :practice: T
    :answer_a: I only
@@ -204,16 +204,16 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_e: You can't invoke methods in the <code>Dictionary</code> class directly on <code>b</code> since <code>b</code> is declared to be of type <code>Book</code> not type <code>Dictionary</code> and <code>Dictionary</code> is a subclass of <code>Book</code> not a parent class of <code>Book</code>. The compiler checks that the method exists on the declared class, not the run-time class.
 
    Given the following class declarations and code, what is the result when the code is run?
-   
+
    .. code-block:: java 
-      
+
       public class Book
       {
          public String getISBN() 
          {
             // implementation not shown
          }
-   
+
          // constructors, fields, and other methods not shown
       }
 
@@ -223,19 +223,19 @@ These problems are similar to those you will see on the AP CS A exam.
          {
             // implementation not shown
          }
- 
+
          // constructors, fields, and methods not shown
       }
-      
+
       Assume that the following declaration appears in a client class.
-      
+
       Book b = new Dictionary();
-      
+
       Which of the following statements would compile without error?
       I.  b.getISBN();
       II. b.getDefinition("wonderful");
       III. ((Dictionary) b).getDefinition("wonderful");
-      
+
 
 .. mchoice:: qsh_3
    :practice: T

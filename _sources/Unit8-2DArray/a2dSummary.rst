@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 8-3-
    :start: 1
-   
+
 2D Arrays Summary
 ======================
 
@@ -45,18 +45,18 @@ Vocabulary Practice
     :match_2: The number of elements in the array|||arr.length * arr[0].length
     :match_3: The index of the item in the first row and first column|||arr[0][0]
     :match_4: The index of the item in the first row and second column|||arr[0][1]
-    
+
     Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. dragndrop:: ch2darr_match_2
     :feedback: Review the summaries above.
     :match_1: Declare an 2d integer array named nums|||int[][] nums;
     :match_2: Declare and create a String 2d array named list1 that has 3 rows and 2 columns|||String[][] list1 = new String[3][2];
     :match_3: Initialize a 2d array of integers named nums so that it has 1,2,3 in the first row and 4,5,6 in the second row.|||int[][] nums = { {1,2,3},{4,5,6}};
     :match_4: Initialize a 2d String array named list1 so that it has a,b,c in the first row and d,e,f in the second row.|||String[][] list1 = { {"a","b","c"},{"d","e","f"}};
-    
+
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. |Quizlet| raw:: html
 
    <a href="https://quizlet.com/434082842/cs-awesome-unit-8-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>

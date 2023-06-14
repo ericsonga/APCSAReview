@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,8 +22,8 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
-    
+
+
 Comments and Conditions
 =======================
 
@@ -49,7 +49,7 @@ There are 3 types of comments in Java:
 .. |String class| raw:: html
 
    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String class</a>
-   
+
 The special characters ``//`` are used to mark the rest of the line as a comment in many programming languages.  If the comment is going to be multiple lines, we use ``/*`` to start the comment and ``*/`` to end the comment. 
 
 There is also a special version of the multi-line comment, ``/**``  ``*/``, called the documentation comment. Java has a cool tool called |javadoc| that comes with the |Java JDK| that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the |String class|. Although you do not have to use this in the AP exam, it's a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want to use this tool. 
@@ -61,9 +61,9 @@ There is also a special version of the multi-line comment, ``/**``  ``*/``, call
     :match_1: single-line comment|||//
     :match_2: multi-line comment|||/* */
     :match_3: Java documentation comment|||/** */
-    
+
     Drag the definition from the left and drop it on the correct symbols on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 
 The compiler will skip over comments, and they don't affect how your program runs. They are for you, your teacher, and other programmers working with you.  Here are some examples of good commenting:
 
@@ -90,7 +90,7 @@ Notice that there are some special tags that you can use in Java documentation. 
 - @version Version of program 
 - @param   Parameter of a method
 - @return  Return value for a method
- 
+
 Preconditions and  Postconditions
 ---------------------------------
 
@@ -117,7 +117,7 @@ Here is an example of preconditions, postconditions, and @param in the Turtle co
           xPos = x;
           yPos = y;
         }
-        
+
 |CodingEx| **Coding Exercise**
 
 Try to break the preconditions of the Turtle constructor below. Does the Turtle constructor behave properly if you break the preconditions that x and y are between 0 and 300. Try giving the Turtle constructor  x and y values out of these ranges. What happens? Does the method give good results? Does it give any warnings? What about the t.forward() method? Does it have any preconditions that you can break?
@@ -125,11 +125,11 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-   
+
 .. |repl link| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
-   
+
 (If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. activecode:: turtle-preconditions
@@ -172,7 +172,7 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
             assertTrue(passed);
         }
     }
-    
+
 The Turtle constructor's precondition is that x and y should be between 0 and the width and height of the world. If it receives values out of this range, it sets x and y to the closest legal values that it can so that the turtle appears just at the edge of the world. Similarly, the forward() method will not allow the turtle to leave the world.  
 
 |Exercise| **Check your understanding**
@@ -190,7 +190,7 @@ The Turtle constructor's precondition is that x and y should be between 0 and th
     :feedback_c: Correct. It is reasonable that the score and extraCredit should be set to positive values using the parameters s and ec.
     :feedback_d: Correct. It is reasonable that the parameter n which sets the name should be not empty. 
     :feedback_e: The precondition should be about the parameters of the constructor. score is not the parameter variable.
-   
+
     Consider the following class definition.
 
     .. code-block:: java
@@ -211,7 +211,7 @@ The Turtle constructor's precondition is that x and y should be between 0 and th
         }
 
      Which of the following preconditions are reasonable for the TestScore constructor?
-            
+
 
 Let's consider the substring method in Java. This method has a strong precondition that its arguments refer to indices within the given string. 
 
@@ -254,9 +254,9 @@ Let's consider the substring method in Java. This method has a strong preconditi
     }
 
 .. note::
- 
+
     The method str.substring(beginIndex, endIndex) has the precondition that 0 <= beginIndex <= endIndex <= str.length.
-    
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: AP5-3-2
@@ -270,7 +270,7 @@ Let's consider the substring method in Java. This method has a strong preconditi
    :feedback_b: This is true but it could still throw an exception if i is a negative value.   
    :feedback_c: This is true but a little too restrictive.
    :feedback_d: Correct. i can refer to character 0 up to str.length().
-      
+
    The following method is intended to return the substring starting at index i until the end of the string. For example, getiToEnd("012",1) should return "12". Which of the following is the most appropriate precondition for the method so that it does not throw an exception?
 
    .. code-block:: java
@@ -280,7 +280,7 @@ Let's consider the substring method in Java. This method has a strong preconditi
         {
             return str.substring(i, str.length());
         }
-    
+
 
 
 
@@ -303,7 +303,7 @@ Preconditions and postconditions can also help us to design better software syst
     :figclass: align-center
 
     Figure 1: Use-Case Diagram of a Restaurant System
-    
+
 After drawing a Use-Case Diagram, designers write down the preconditions and the postconditions for each Use-Case. Often the successful post-condition for one use-case becomes the preconditions for the next use-case. For example, for the "Order Food" and "Eat Food" Use Cases:
 
 - Preconditions for "Order Food": Customer enters restaurant. Staff is ready to take the order.
@@ -363,8 +363,8 @@ Working in pairs or groups, come up with 4 steps that a user must do to purchase
 .. shortanswer:: challenge-5-3-use-case-preconditions
 
      Write down 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step.
-    
-    
+
+
 Here is a simple class called User that could be used in an online store. Add good commenting to this code before the class, the instance variables, and the methods.
 
 .. activecode:: challenge-5-3-comments
@@ -374,27 +374,27 @@ Here is a simple class called User that could be used in an online store. Add go
     // comments?
     public class User
     {
-    
+
         private String username;
         private String password;
-      
+
         public User()
         {
             username = "guest";
             password = "guest" + (int)(Math.random()*1000);
         }
-      
+
         public User(String nameInit, String pwordInit)
         {
             username = nameInit;
             password = pwordInit;
         }
-      
+
         public void welcome()
         {
             System.out.println("Welcome " + username + "!");
         }
-      
+
         public static void main(String[] args)
         {
             User u1 = new User(); // guest login

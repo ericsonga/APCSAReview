@@ -1,33 +1,33 @@
 .. qnum::
    :prefix: 3-5-
    :start: 1
-   
-   
+
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. raw:: html
 
     <style>    td { text-align: left; } </style>
-    
+
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Compound Boolean Expressions
 ============================
 
@@ -74,7 +74,7 @@ What if you want two things to be true before the body of the conditional is exe
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -148,7 +148,7 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
 .. note::
 
     In English, we often use an exclusive-or like in the sentence "do you want to be player 1 *or* player 2?" where you can't be both player 1 and player 2. In programming, the or-operator is an inclusive-or which means that the whole expression is true if either one or the other or *both* conditions are true. 
-    
+
 With numerical values, the **or** (||) operator is often used to check for error conditions on different ends of the number line, while the **and** (&&) operator is often used to see if a number is in an range. 
 
 |CodingEx| **Coding Exercise**
@@ -158,7 +158,7 @@ With numerical values, the **or** (||) operator is often used to check for error
 .. activecode:: lcccnum
    :language: java
    :autograde: unittest 
-   
+
    Explore how && and || are used with numbers below. Try different values for score like -10 and 110 in the code below.
    ~~~~
    public class TestNum
@@ -174,14 +174,14 @@ With numerical values, the **or** (||) operator is often used to check for error
         {
             System.out.println("Score is in the range 0-100");
         }
- 
+
       }
    }
    ====
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
          @Test
@@ -203,7 +203,7 @@ The **not** (!) operator can be used to negate a boolean value. We've seen ! bef
 .. activecode:: lcccnot
    :language: java
    :autograde: unittest
-      
+
    The code below says if homework is not done, you can't go out. Try different values for ``homeworkDone``.
    ~~~~
    public class TestNot
@@ -220,7 +220,7 @@ The **not** (!) operator can be used to negate a boolean value. We've seen ! bef
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
        @Test
@@ -235,7 +235,7 @@ The **not** (!) operator can be used to negate a boolean value. We've seen ! bef
 .. note::
 
     In Java, ! will be executed before &&, and && will be executed before ||, unless there are parentheses. Anything inside parentheses is executed first.
- 
+
 
 Truth Tables
 ------------
@@ -262,7 +262,7 @@ The following table (also called a **truth table**) shows the result for P && Q 
 
    -    :^false$: Correct.  Both values must be true for && to return true.
         :.*: Try it and see
- 
+
 The following table shows the result for P || Q when P and Q are both expressions that can be true or false.  As you can see below the result of P || Q is true if either P or Q is true.  It is also true when both of them are true.
 
 +-------+-------+-----------+
@@ -285,8 +285,8 @@ The following table shows the result for P || Q when P and Q are both expression
 
    -    :^true$: Correct.  Only one of the two has to be true with || so this will print true.
         :.*: Try it and see
- 
-        
+
+
 
 |Exercise| **Check your understanding**
 
@@ -300,7 +300,7 @@ The following table shows the result for P || Q when P and Q are both expression
    :feedback_b: second case will print either of the conditions are false. 
 
    What is printed when the following code executes and x has been set to 3 and y has been set to 9?  
-   
+
    .. code-block:: java 
 
      if (x > 0 && (y / x) == 3) 
@@ -311,8 +311,8 @@ The following table shows the result for P || Q when P and Q are both expression
      {
         System.out.println("second case");
      }
-     
-     
+
+
 .. mchoice:: qcbc_8
    :practice: T
    :answer_a: first case
@@ -322,7 +322,7 @@ The following table shows the result for P || Q when P and Q are both expression
    :feedback_b: second case will print if either of the conditions are false and the second one is (6 / 3 == 2).
 
    What is printed when the following code executes and x has been set to 3 and y has been set to 6?  
-   
+
    .. code-block:: java 
 
      if (x > 0 && (y / x) == 3) 
@@ -333,7 +333,7 @@ The following table shows the result for P || Q when P and Q are both expression
      {
         System.out.println("second case");
      }
-     
+
 .. mchoice:: qcbc_or
    :practice: T
    :answer_a: first case
@@ -343,7 +343,7 @@ The following table shows the result for P || Q when P and Q are both expression
    :feedback_b: second case will print if both of the conditions are false, but the first condition is true.   
 
    What is printed when the following code executes and x has been set to 3 and y has been set to 6?  Notice that it is now an **or** (||) instead of **and** (&&).
-   
+
    .. code-block:: java 
 
      if (x > 0 || (y / x) == 3) 
@@ -354,22 +354,22 @@ The following table shows the result for P || Q when P and Q are both expression
      {
         System.out.println("second case");
      }
-     
+
 Short Circuit Evaluation
 ------------------------
 
 ..	index::
 	single: short circuit evaluation
 	pair: conditional; short circuit evaluation
-  
+
 Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second expression (on the right of the operator) isn't necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:   
- 
+
 - If two boolean values/expressions are combined with a logical **or** (||) and the first expression is true, then the second expression won’t be executed, since only one needs to be true for the result to be true.
 - If two boolean values/expressions are combined with a logical **and** (&&) and the first expression is false, then the second expression won't be executed.  If the first expression is false, the result will be false, since both sides of the && need to be true for the result to be true. 
 
 
 
- 
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qcbc_5
@@ -383,7 +383,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    :feedback_c: Since the first condition is false when x is equal to zero the second condition won't execute.  Execution moves to the else.    
 
    What is printed when the following code executes and x has been set to 0 and y to 3?  
-   
+
    .. code-block:: java
 
      if (x > 0 && (y / x) == 3) 
@@ -394,7 +394,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
      {
         System.out.println("second case");
      }
-     
+
 .. mchoice:: qcb_7sc
    :practice: T
    :answer_a: first case
@@ -406,7 +406,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    :feedback_c: You won't get an error because of short circuit evaluation.  The (y / x) == 3 won't be evaluated since the first expression is true and an or is used.  
 
    What is printed when the following code executes and x has been set to zero and y is set to 3?  
-   
+
    .. code-block:: java 
 
      if (x == 0 || (y / x) == 3)
@@ -417,7 +417,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
      {
         System.out.println("second case");
      }
-     
+
 .. .. mchoice:: qcb_8sc
    :practice: T
    :answer_a: first case
@@ -427,15 +427,15 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    :feedback_a: Since x is negative the complex conditional will be false and the second condition won't execute. Remember that with <code>&&</code> both parts of the condition must be true for the complex conditional to be true.  Using a negative substring index won't cause an error since that code will only be executed if x is greater than or equal to zero.
    :feedback_b: Since x is negative the second part of the complex conditional won't even execute so the else will be executed.  
    :feedback_c: This would be true if it wasn't using short circuit evaluation, but it is.  
-   
+
    What is printed when the following code executes and x has been set to negative 1?   
-   
+
    .. code-block:: java 
 
      String message = "help";
      if (x >= 0 && message.substring(x).equals("help")) System.out.println("first case");
      else System.out.println("second case");
-     
+
 .. .. mchoice:: qcb_9sc
    :practice: T
    :answer_a: first case
@@ -447,28 +447,28 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    :feedback_c: Since x is equal to zero the evaluation of the first part of the complex conditional will cause a divide by zero error.  You should switch the order of the conditionals to prevent the error because then the first condition would be false and the evaluation would short circuit and not evaluate the second condition. 
 
    What is printed when the following code executes and x has been set to zero and y is set to 3?  
-   
+
    .. code-block:: java 
 
      if ((y / x) == 3 || x = 0) System.out.println("first case");
      else System.out.println("second case");
-     
-     
+
+
 |Groupwork| Programming Challenge : Truth Tables POGIL
 ------------------------------------------------------
 
 .. |pogil| raw:: html
 
    <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank" style="text-decoration:underline">POGIL</a>
-   
+
 .. |pogil role| raw:: html
 
    <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank" style="text-decoration:underline">POGIL role</a>
-   
+
 .. |venn diagram| raw:: html
 
    <a href="https://docs.google.com/document/d/1lpjk0LS_KdAddRurMayJZmaFzeyEg4FyhviZcSTXvtU/edit?usp=sharing" target="_blank" style="text-decoration:underline">Venn diagram</a>
-   
+
 We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns. 
 
 Explore the following problems with your group:
@@ -487,7 +487,7 @@ Explore the following problems with your group:
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Challenge-3-5-truthtables: Test your boolean expression in an if statement below.
    ~~~~
    public class TruthTable
@@ -498,12 +498,12 @@ Explore the following problems with your group:
           boolean sunny = false;
           int temperature = 90;
           boolean raining = false;
-         
+
           // Write an if statement for: If it's sunny, 
           //  OR if the temperature is greater than 80 
           //     and it's not raining, "Go to the beach!"
-          
-          
+
+
       }
    }
    ====
@@ -553,7 +553,7 @@ Explore the following problems with your group:
         }
     }
 
-   
+
 Summary
 --------
 
@@ -586,7 +586,7 @@ AP Practice
         if (x % 2 == 0 && y % 2 == 0 || x > y)
         {
             System.out.print("First ");
-        
+
             if (y * 2 == x || y > 5 && x <= 10)
             {
                System.out.print("Second ");
@@ -596,7 +596,7 @@ AP Practice
                System.out.print("Third ");
             }
         }
-   
+
     - Nothing is printed out.
 
       - Some of these conditions are true.
@@ -624,8 +624,8 @@ Boolean Game
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
+
+
 Try the game below written to practice Booleans. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html

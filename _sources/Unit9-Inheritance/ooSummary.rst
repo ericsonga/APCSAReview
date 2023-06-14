@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 9-8-
    :start: 1
-   
+
 Inheritance Summary
 -------------------------
 
@@ -44,7 +44,7 @@ Concept Summary
 - **setter** - A method that sets the value of am instance variable in an object.
 - **accessor** - Another name for a getter method - one that returns the value of a instance variable.
 - **mutator** - Another name for a setter method - one that changes the value of a instance variable.
-  
+
 
 Java Keyword Summary
 =========================
@@ -62,25 +62,25 @@ Vocabulary Practice
     :match_2: A class that is being extended|||parent class
     :match_3: Using the run-time type of an object to determine which method to call|||polymorphism
     :match_4: Providing a method in a child class with the same declaration as a parent method|||override
-    
+
     Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. dragndrop:: ch10oo_match_2
     :feedback: Review the summaries above.
     :match_1: What does the actual work in an object-oriented program|||object
     :match_2: Defines what all objects of the class know and can do|||class
     :match_3: Returns the value of an instance variable|||getter
     :match_4: Sets the value of an instance variable|||setter
-    
+
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. dragndrop:: ch10oo_match_3
     :feedback: Review the summaries above.
     :match_1: A class that inherits from the specified class|||subclass
     :match_2: Two methods with the same method name in a class, but with different parameters|||overload
     :match_3: The type the object was declared as|||declared type
     :match_4: The class that created the object|||actual type
-    
+
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
 
 .. |Quizlet| raw:: html

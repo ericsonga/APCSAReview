@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 10-2-
    :start: 1
-   
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -23,7 +23,7 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Recursive Searching and Sorting
 -------------------------------
 
@@ -82,7 +82,7 @@ Let's write a recursive version of Binary Search. Note that you can write soluti
 .. shortanswer:: baseCaseQ
 
     What's the base case for a recursive version of Binary Search (where we want the recursion to stop)? Remember that in binary search, we always check the middle element first when looking for a target element from a startIndex to an endIndex.
-    
+
 .. shortanswer:: recursiveCallQ
 
     Given a recursive binary search method with the method signature "boolean binarySearch(int[] array, int startIndex, int endIndex, int target)", what recursive method call would search the array from index 0 to the middle index? 
@@ -95,7 +95,7 @@ Here is the Java code for a recursive binary search:
 
 .. activecode:: recursiveBinarySearch
   :language: java
-  
+
   Run the code below. Try searching for the value 3 and then the value 2 which is not in the array. What would happen if we removed the second base case checking if end < start? Try it and see.
   ~~~~
   public class RecursiveBinarySearch
@@ -151,7 +151,7 @@ A merge sort recursively breaks the values to be sorted in half until there is o
 .. |video| raw:: html
 
    <a href="https://youtu.be/XaqR3G_NVoo" target="_blank">video</a>
-   
+
 Here is a folk dance |video| that shows the merge sort process.
 
 .. youtube:: XaqR3G_NVoo
@@ -161,13 +161,13 @@ Here is a folk dance |video| that shows the merge sort process.
 .. |video2| raw:: html
 
    <a href="https://youtu.be/4VqmGXwpLqc" target="_blank">video</a>
-   
+
 And here is a short |video2| that describes how merge sort works.
 
 .. youtube:: 4VqmGXwpLqc
     :align: center
     :height: 315
-    
+
 
 The code for ``mergeSort`` below is from the AP CS A course description.
 
@@ -301,10 +301,10 @@ Working in pairs, practice the recursive binary search and merge sort algorithms
 .. |video3| raw:: html
 
    <a href="https://youtu.be/AMJjtTo1LLE" target="_blank">video</a>
-   
+
 .. youtube:: AMJjtTo1LLE
     :align: center
-    
+
 Work in pairs to do the following tracing problems. 
 
 .. shortanswer:: challenge-10-2-mergesort

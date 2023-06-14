@@ -1,7 +1,7 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 Inheritance
 ::::::::::::
 
@@ -16,7 +16,7 @@ AP CS A Exam Weighting: 5-10%
 
 .. toctree::
    :maxdepth: 3
-   
+
    topic-9-1-inheritance.rst
    topic-9-2-constructors.rst
    topic-9-3-overriding.rst
@@ -30,5 +30,5 @@ AP CS A Exam Weighting: 5-10%
    ooCodePractice.rst
    Exercises.rst
    CBLabs.rst
-   
+
 

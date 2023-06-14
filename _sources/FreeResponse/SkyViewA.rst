@@ -21,7 +21,7 @@ arrows. The back-and-forth ordering of the values received from the scan is call
     :figclass: align-center
 
     Figure 1: The first row is left to right and the second is right to left and so on.
-    
+
 The telescope records the data in telescope order into a 1-dimensional array of ``double`` values. This
 1-dimensional array of information received from a single scan will be transferred into a 2-dimensional array,
 which reconstructs the original view of the rectangular area of the sky. This 2-dimensional array is part of the
@@ -51,8 +51,8 @@ SkyView class, shown below. In this question you will write a constructor and a 
          */
        public SkyView(int numRows, int numCols, double[] scanned)
        { /* to be implemented in part (a) */ }
-       
-       
+
+
        /** Returns the average of the values in a rectangular section of view.
          * @param startRow the first row index of the section
          * @param endRow the last row index of the section
@@ -82,7 +82,7 @@ For example, suppose ``scanned`` contains values, as shown in the following arra
     :figclass: align-center
 
     Figure 2: First example scanned array values
-    
+
 Using the scanned array above, a ``SkyView`` object created with
 ``new SkyView(4, 3, values)``, would have ``view`` initialized with the following values.
 
@@ -91,7 +91,7 @@ Using the scanned array above, a ``SkyView`` object created with
     :figclass: align-center
 
     Figure 3: The resulting view from the first example scanned array
-    
+
 For another example, suppose ``scanned`` contains the following values.
 
 .. figure:: Figures/SkyViewEx2Array.png
@@ -99,7 +99,7 @@ For another example, suppose ``scanned`` contains the following values.
     :figclass: align-center
 
     Figure 4: Second example scanned array values
-    
+
 A ``SkyView`` object created with ``new SkyView(3, 2, values)``, would have ``view`` initialized
 with the following values.
 
@@ -142,7 +142,7 @@ The code below declares the class, the view, and a constructor for you to finish
        {
           //*** Write the constructor! ***
        }
-    
+
        /** This is a main method for testing the class */
        public static void main(String[] args)
        {
@@ -163,9 +163,9 @@ The code below declares the class, the view, and a constructor for you to finish
                }
                System.out.println();
             }
-            
+
            System.out.println();
-           
+
            double[] val2 = {0.3, 0.7, 0.8, 0.4, 1.4, 1.1};
            sView = new SkyView(3, 2, val2);
            System.out.println("It should print the following:");
@@ -182,9 +182,9 @@ The code below declares the class, the view, and a constructor for you to finish
                }
                System.out.println();
             }
-       
+
         } // end of main
-      
+
         public String toString() 
         {
            String output = "";

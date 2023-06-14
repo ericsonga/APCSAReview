@@ -31,7 +31,7 @@ Code Practice with Arrays
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -100,7 +100,7 @@ Code Practice with Arrays
               :language: java
               :autograde: unittest  
               :practice: T
-              
+
               Fix the following to print the values in the array ``a1`` starting with the value at the last index and then backwards to the value at the first index.
               ~~~~
               public class Test1
@@ -116,7 +116,7 @@ Code Practice with Arrays
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-              
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -201,7 +201,7 @@ Code Practice with Arrays
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -276,7 +276,7 @@ Code Practice with Arrays
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -295,7 +295,7 @@ Code Practice with Arrays
                       assertTrue(passed);
                     }
                 }
-              
+
 
 
         .. tab:: Answer
@@ -455,7 +455,7 @@ Code Practice with Arrays
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -533,7 +533,7 @@ Code Practice with Arrays
               :language: java
               :autograde: unittest  
               :practice: T
-              
+
               Finish the following code to print the strings at the odd indices in the array.
               ~~~~
               public class Test1
@@ -543,7 +543,7 @@ Code Practice with Arrays
                       String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
 
                   }
-              
+
               }
               ====
               import static org.junit.Assert.*;
@@ -606,7 +606,7 @@ Code Practice with Arrays
               :language: java
               :autograde: unittest  
               :practice: T
-              
+
               Finish the method ``getSumChars`` below to return the total number of characters in the array of strings ``strArr``.
               ~~~~ 
               public class Test1
@@ -732,7 +732,7 @@ Code Practice with Arrays
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -817,7 +817,7 @@ Code Practice with Arrays
               :language: java
               :autograde: unittest  
               :practice: T
-              
+
               Finish the method ``getAverage`` to calculate and return the average of all of the values in the array.
               ~~~~
               public class Test1
@@ -877,7 +877,7 @@ Code Practice with Arrays
            .. activecode::  ch7Ex10na
               :language: java
               :optional:
-              
+
               Solution to question above.    
               ~~~~
               public class Test1
@@ -912,7 +912,7 @@ Code Practice with Arrays
 
 More Practice
 ---------------
-   
+
 For practice with simple array manipulation and conditionals, but no loops see http://codingbat.com/java/Array-1. 
 For more practice with loops and arrays go to http://codingbat.com/java/Array-2.
 

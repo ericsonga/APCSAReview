@@ -36,5 +36,5 @@ A lack of relatable peers can also lead to similar feelings of isolation. Studen
     “Everyone had their own study group. All of the international students were very close knit. All of the domestic students, mostly white, were in their own group. And I'm like, 'I don't know. I guess I'm soloing this.'”
 
 The solution to a lack of relatable peers is to seek out support groups or communities for your demographic. As :ref:`Briceida-Mariscal` explains:
-    
+
     “One thing that I started doing was mentoring other Latinas. Helping them has made me feel like I'm being part of something bigger than myself. I'm not only paying it forward, but I'm also no longer feeling lonely.” 

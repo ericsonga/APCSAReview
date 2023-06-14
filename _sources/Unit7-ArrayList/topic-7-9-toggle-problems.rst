@@ -17,7 +17,7 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 .. selectquestion:: select_u7_muc_wc2
    :fromid: u7_muc_wc2, ch8ex2muc
    :toggle: lock
-   
+
 .. selectquestion:: select_u7_muc_wc3
    :fromid: u7_muc_wc3, ch8ex3muc
    :toggle: lock

@@ -1,11 +1,11 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 Writing Classes
 :::::::::::::::
 
- 
+
 Class Periods: 12-14
 
 AP CS A Exam Weighting: 5-7.5%
@@ -13,7 +13,7 @@ AP CS A Exam Weighting: 5-7.5%
 
 .. toctree::
    :maxdepth: 3
-   
+
    topic-5-1-parts-of-class.rst
    topic-5-2-writing-constructors.rst
    topic-5-3-comments-conditions.rst
@@ -33,4 +33,4 @@ AP CS A Exam Weighting: 5-7.5%
    midterm_unit5.rst
    CBLabs.rst 
    community-challenge.rst  
-   
+

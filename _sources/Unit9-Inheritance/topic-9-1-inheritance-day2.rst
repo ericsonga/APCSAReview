@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 9-1-
    :start: 5
-   
-   
+
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -23,7 +23,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right 
-    
+
 is-a vs. has-a (Day 2)
 ---------------------------------------
 
@@ -68,7 +68,7 @@ Here is another example. Consider the classes Student, Course, and  APcourse. An
     :figclass: align-center
 
     Figure 4: A UML Class Diagram for Student, Course, APcourse
- 
+
 |CodingEx| **Coding Exercise**
 
 We can represent the diagram in Figure 4 in the code below. The Course class has an ArrayList of Student objects in it as the roster attribute. And an APcourse extends Course. What do you think the following code will print out?
@@ -76,11 +76,11 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
 .. activecode:: apclass
   :language: java
   :autograde: unittest      
-    
+
   What do you think the following code will print out?
   ~~~~
   import java.util.*;
-    
+
     class Student
     {
       private String name;
@@ -92,7 +92,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
       private String title;
       private ArrayList<Student> roster;
     }
-    
+
     public class APcourse extends Course
     {
        private String APexamDate;
@@ -108,7 +108,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
     import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
       @Test
@@ -120,7 +120,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
         assertTrue(passed);
       }
     }
-  
+
 
 
 is-a Substitution Test
@@ -173,7 +173,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    :feedback_c: A movie showing is not a type of movie and a movie is not a type of movie showing.  A movie showing has a movie associated with it.
 
     A movie theater has multiple showings of a movie each day. Each movie showing has a start time and location (theater number).  What should the relationship be between the Movie class and the MovieShowing class?
-    
+
 .. mchoice:: qoo_3
    :practice: T
    :answer_a: superclass
@@ -213,29 +213,29 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 .. activecode:: challenge-9-1-online-store
   :language: java
   :autograde: unittest      
-  
+
   Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them. 
   ~~~~
   class ItemForSale
   {
-       
+
   }
 
   class Movie
   {
-    
+
   }
-    
+
   class Book
   {
-    
+
   }
-    
+
   class Author
   {
-    
+
   }
-    
+
   public class Store 
   {
        // instance variable (could be an array or ArrayList of one of the classes above)

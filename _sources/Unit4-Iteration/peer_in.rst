@@ -93,7 +93,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
 
     .. image:: https://i.postimg.cc/50RwmVh5/lecture10-Q04.png
       :width: 400
-      
+
 .. mchoice:: bs-nestedloops-10-05
     :author: Beth Simon
     :practice: T

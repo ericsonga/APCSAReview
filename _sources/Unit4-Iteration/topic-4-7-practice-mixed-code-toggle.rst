@@ -16,11 +16,11 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 .. selectquestion:: select_u4_muc_wc2
    :fromid: u4_muc_wc2, ch6ex2muc
    :toggle: lock
-   
+
 .. selectquestion:: select_u4_muc_wc3
    :fromid: u4_muc_wc3, ch6ex3muc
    :toggle: lock
-   
+
 .. selectquestion:: select_u4_muc_wc4
    :fromid: u4_muc_wc4, ch6ex4muc
    :toggle: lock
@@ -28,11 +28,11 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 .. selectquestion:: select_u4_muc_wc5
    :fromid: u4_muc_wc5, ch6ex5muc
    :toggle: lock
-   
 
 
 
-   
+
+
 .. selectquestion:: select_u4_muc_wc7
    :fromid: u4_muc_wc7, ch6ex7muc
    :toggle: lock
@@ -44,9 +44,9 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 .. selectquestion:: select_u4_muc_wc9
    :fromid: u4_muc_wc9, ch6ex9muc
    :toggle: lock
-   
+
 .. selectquestion:: select_u4_muc_wc10
    :fromid: u4_muc_wc10, ch6ex10muc
    :toggle: lock
 
-  
+

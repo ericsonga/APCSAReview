@@ -1,35 +1,35 @@
 .. qnum::
    :prefix: 13-1-
    :start: 1
-  
+
 .. highlight:: java
    :linenothreshold: 4
-   
+
 .. |start| image:: Figures/start.png
     :height: 24px
     :align: top
     :alt: start
-    
+
 .. |next| image:: Figures/next.png
     :height: 24px
     :align: top
     :alt: next
-    
+
 .. |prev| image:: Figures/prev.png
     :height: 24px
     :align: top
     :alt: previous
-    
+
 .. |pause| image:: Figures/pause.png
     :height: 24px
     :align: top
     :alt: pause
-    
+
 .. |finish| image:: Figures/finishExam.png
     :height: 24px
     :align: top
     :alt: finish exam
-   
+
 Practice Exam 1 for the AP CS A Exam
 -------------------------------------
 
@@ -54,7 +54,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This would be true if the call was m(3).
 
       Given the following method.  What is the output when ``m1(5)`` is called?
-   
+
       .. code-block:: java
 
         public int m1 (int a)
@@ -80,7 +80,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This would be true if k started at 0 instead of 1.
 
       What will the following code print when it is executed?
-   
+
       .. code-block:: java
 
         for (int j = 1; j <= 3; j++) { 
@@ -102,7 +102,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This would be the result of mystery(0).
 
       What value is returned as the result of ``mystery(7)``?
-   
+
       .. code-block:: java
 
         public int mystery(int n) 
@@ -126,19 +126,19 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: I and II are also true since they have the same value.  IV is not since they don't refere to the same object.  
 
       Given the following code.  Which of the following would return true?  
-   
+
       .. code-block:: java
 
         Integer int1 = new Integer(3);
         Integer int2 = new Integer(3);
         Integer int3 = int2; 
-     
+
         I. (int3.equals(int2))
         II. (int1.equals(int2))
         III. (int3 == int2)
         IV. (int1 == int2)
         V. (int2 == int3)
-     
+
    .. mchoice:: pe1_5
       :answer_a: The search value is not in the array 
       :answer_b: The search value is the last element in the array  
@@ -153,7 +153,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: When the search value is the first element, sequential will always be faster, as it will only need to check one element whereas a binary search would start in the middle of the array and have to keep looking.
 
       Under which of these conditions will a sequential search be faster than a binary search?
-   
+
    .. mchoice:: pe1_6
       :answer_a: Data set 1 since it has more test cases.
       :answer_b: Data set 2 since it only contains strings with lower case characters.  
@@ -168,14 +168,14 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: You want to test all possible results and data set 1 only contains strings that should return true.  
 
       There is a method called ``checkString`` that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method.  Which is a best set of test cases?
-   
+
       .. code-block:: java
-   
+
          Data set 1: "aba", "abba", "aBa", "z"
          Data set 2: "bcb", "bcd", "c"
 
-     
-   
+
+
    .. mchoice:: pe1_7
       :answer_a: I
       :answer_b: II
@@ -190,59 +190,59 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This will loop with i changing from 0 to 4 and j from 0 to i 
 
       Which of the following code will produce this output:
-   
+
       .. code-block:: java
-   
+
          1
          22
          333
          4444
          55555
-      
+
          I. 
-      
+
          for (int i = 0; i < 5; i++) {
             for (int j = 0; j < i; j++) {
                System.out.print(i);
             }
             System.out.println();
          }
-      
+
          II.
-      
+
          for (int i = 1; i < 5; i++) {
             for (int j = i; j > 0; j--) {
                System.out.print(i);
             }
             System.out.println();
          }
-      
+
          III.  
-      
+
          for (int i  = 1; i <= 5; i++) {  
             for (int j = i; j > 0; j--) {
                System.out.print(i);
             }
             System.out.println();
          }
-      
+
          IV.
-      
+
          for (int i = 1; i < 6; i++) {
             for (int j = 0; j < i; j++) {
                System.out.println(i);
             }
          }
-      
+
          V.
-      
+
          for (int i = 0; i < 5; i++) {
             for (int j = 0; j < i; j++) {
                System.out.print(i+1);
             }
             System.out.println();
          }
-    
+
    .. mchoice:: pe1_8
       :answer_a: [0, 1, 2, 3, 4, 5]
       :answer_b: [0, 1, 2, 4, 5]
@@ -257,7 +257,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: The add method with one parameters will add that value to end of the list.  The method set changes the value at that index in the list.  The method add with an index will move anything at the index or above one to the right and then set the value of that index.
 
       What will the following print?
-   
+
       .. code-block:: java
 
          List<Integer> list1 = new ArrayList<Integer>();
@@ -268,7 +268,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
          list1.add(2, new Integer(1));
          list1.add(new Integer(0));
          System.out.println(list1);
-      
+
    .. mchoice:: pe1_9
       :answer_a: I and III
       :answer_b: I only
@@ -283,9 +283,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: I is okay but II is invalid.  Children inherit all of the fields from a parent but do not have direct access to private fields.  You can use super in a constructor to initialize inherited fields by calling the parent's constructor with the same parameter list.
 
       Consider the following declaration for a class that will be used to represent points in the xy-coordinate plane.  Which of these constructors would be legal for the NamedPoint class?
-   
+
       .. code-block:: java
-   
+
          public class Point
          {
             private int myX; // coordinates
@@ -334,7 +334,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                 super(d1, d2);
                 myName = name;
              }
-          
+
    .. mchoice:: pe1_10
       :answer_a: I
       :answer_b: II
@@ -349,9 +349,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This will add the hour and minutes from the current time record to itself.
 
       Given the following incomplete class declaration:
-   
+
       .. code-block:: java
-   
+
          public class TimeRecord
          {
             private int hours;
@@ -388,12 +388,12 @@ Click the |start| button when you are ready to begin the exam, but only then as 
          // Consider the following declaration that appears in a client program:
 
          TimeRecord[] timeCards = new TimeRecord[100];
-      
-      
+
+
         // Assume that timeCards has been initialized with TimeRecord
         // objects. Consider the following code segment that is intended to compute
         // the total of all the times stored in timeCards.
-    
+
          TimeRecord total = new TimeRecord(0,0);
          for (int k = 0; k < timeCards.length; k++)
          {
@@ -401,22 +401,22 @@ Click the |start| button when you are ready to begin the exam, but only then as 
          }
 
          Which of the following can be used to replace /* missing expression */ so that the code segment will work as intended?
-       
+
          I. 
             total.advance(timeCards[k].getHours(), timeCards[k].getMinutes());
-         
+
          II.
             timeCards[k].advance();
-         
+
          III.
             total += timeCards[k].advance();
-         
+
          IV.
             total.advance(timeCards[k].hours, timeCards[k].minutes);
-         
+
          V. 
             timeCards[k].advance(timeCards[k].getHours(), timeCards[k].getMinutes());
-         
+
    .. mchoice:: pe1_11
       :answer_a: I
       :answer_b: II
@@ -431,29 +431,29 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: To initialize inherited private fields you can use the parent's constructor.  Use super followed by the parameter list as the first line of code in the constructor.
 
       Consider the following class definitions, which of the following can replace the missing code?
-   
+
       .. code-block:: java
-   
+
          public class ContactInfo 
          {
             private String name;
             private String phoneNumber;
-  
+
             public ContactInfo(String theName, String thePhoneNumber)
             {
                this.name = theName;
                this.phoneNumber = thePhoneNumber;
             }
-  
+
             public String getName() { return name; }
-  
+
             public String getPhoneNumber() { return phoneNumber; }
          }
 
          public class ExtendedContactInfo extends ContactInfo
          {
             private String nickname;
-  
+
             public ExtendedContactInfo (String theNickname, 
                                         String theName,
                                         String thePhoneNumber)
@@ -461,29 +461,29 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                // missing code
             }
          }
-      
+
          I.
             super(theNickname, theName, thePhoneNumber);
-         
+
          II.  
             this.name = theName;
             this.phoneNumber = thePhoneNumber;
             this.nickname = theNickname;
-         
+
          III.
             this.nickname = theNickname;
             this.name = theName;
             this.phoneNumber = thePhoneNumber;
-         
+
          IV. 
             this.nickname = theNickname;
             this.name = theName;
             this.phoneNumber = thePhoneNumber;
-      
+
          V.  
             super(theName,thePhoneNumber);
             this.nickname = theNickname;
-         
+
    .. mchoice:: pe1_12
       :answer_a: The value is the first one in the array
       :answer_b: The value is in the middle of the array
@@ -498,7 +498,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This would take 6 executions of the loop.
 
       Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?  
-   
+
    .. mchoice:: pe1_13
       :answer_a: IV
       :answer_b: V
@@ -513,9 +513,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.       
 
       Which of the following reasons for using an inheritance hierarchy are valid?
-   
+
       .. code-block:: java
-   
+
          I.   Methods from a superclass can be used in a subclass without rewriting 
               or copying code.
          II.  Objects from subclasses can be passed as arguments to a method  designed
@@ -523,7 +523,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
          III. Objects from subclasses can be stored in the same array
          IV.  All of the above
          V.   None of the above
-      
+
    .. mchoice:: pe1_14
       :answer_a: 4
       :answer_b: 16
@@ -538,15 +538,15 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This can't be true because <code>a[1]--;</code> means the same as <code>a[1] = a[1] - 1;</code>  So the 3 will become a 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method.  But, since an array is an object a copy of the value is a copy of the reference to the object.  So changes to objects in methods are permanent.  
 
       Consider the following method and if ``int[] a = {8, 3, 1}``, what is the value in ``a[1]`` after ``m1(a);`` is run?
-   
+
       .. code-block:: java
-   
+
          public int m1(int[] a)
          {
             a[1]--;
             return (a[1] * 2);
          }
-   
+
    .. mchoice:: pe1_15
       :answer_a: a = 6 and b = 7
       :answer_b: a = 6 and b = 13   
@@ -561,9 +561,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: No a = 13 and b = 0 after the loop finishes.  
 
       What are the values of ``a`` and ``b`` after the ``for`` loop finishes?
-   
+
       .. code-block:: java
-   
+
          int a = 10, b = 3, t;
          for (int i=1; i<=6; i++)
          {
@@ -571,7 +571,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
             a = i + b;
             b = t - i;
          }
-      
+
    .. mchoice:: pe1_16
       :answer_a: hi there  
       :answer_b: HI THERE
@@ -586,7 +586,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: Strings are immutable and so any changes to a string returns a new string.  
 
       Consider the following code.  What string is referenced by ``s1`` after the code executes?
-    
+
       .. code-block:: java
 
          String s1 = "Hi There";
@@ -596,7 +596,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
          s2 = s2.toLowerCase();
          s3 = s3.toUpperCase();
          s4 = null;
-      
+
    .. mchoice:: pe1_17
       :answer_a: 4
       :answer_b: 8
@@ -611,18 +611,18 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This would be true if we were adding the values in the 3rd row (row = 2) instead of the 3rd column.  This would be 1 + 2 + 3 + 4 which is 10.
 
       Consider the following code segment.  What value is in sum after this code executes?
-   
+
       .. code-block:: java
-   
+
           int[][] matrix = { {1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
-       
+
           int sum = 0;
           int col = matrix[0].length - 2;
           for (int row = 0; row < 4; row++)
           {
              sum = sum + matrix[row][col];
           }
-       
+
    .. mchoice:: pe1_18
       :answer_a: { { 2, 1, 1, 1 }, { 2, 2, 1, 1 }, { 2, 2, 2, 1 } }
       :answer_b: { { 2, 3, 3, 3 }, { 1, 2, 3, 3 }, { 1, 1, 2, 3 } }
@@ -637,9 +637,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This would be true if it filled the mat with 1 if the row and column indices are equal and 2 if the row index is greater than the column index.
 
       Consider the following code segment, what are the contents of mat after the code segment has executed?
-   
+
       .. code-block:: java
-   
+
          int [][] mat = new int [3][4];
          for (int row = 0; row < mat.length; row++)
          {
@@ -653,7 +653,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                   mat[row][col] = 1;
             } 
          }
-      
+
    .. mchoice:: pe1_19
       :answer_a: The values don't matter, this will always cause an infinite loop.         
       :answer_b: Whenever a has a value larger then temp.
@@ -668,9 +668,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: When a contains a value that is less than or equal to zero, then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur. 
 
       Assume that ``temp`` is an ``int`` variable initialized to be greater than zero and that ``a`` is an array of type ``int``.  Also, consider the following code segment.  What of the following will cause an infinite loop?
-   
+
       .. code-block:: java
-   
+
          for ( int k = 0; k < a.length; k++ )
          {
             while ( a[ k ] < temp )
@@ -679,7 +679,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
             }
          }
 
-   
+
    .. mchoice:: pe1_20
       :answer_a: A
       :answer_b: B
@@ -694,7 +694,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code).
 
       Consider the following method.  What is the output from ``conditionTest(3,-2);``?
-   
+
       .. code-block:: java
 
          public static void conditionTest(int num1, int num2)
@@ -719,10 +719,6 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
 
 
-      
-   
-      
-    
 
 
 
@@ -732,13 +728,17 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
 
 
-   
-   
-   
-   
 
 
 
 
 
-     
+
+
+
+
+
+
+
+
+

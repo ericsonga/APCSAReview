@@ -8,12 +8,12 @@ Free Response - Horse Barn A
 ..	index::
 	single: horse barn
     single: free response
-    
+
 The following FRQ is a great example of working with an array of objects. It is a variation of part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
 The original question had an interface called Horse, but the problem below has been changed to a class Horse instead of the interface. Interfaces are no longer covered on the AP CS A exam. However, you can still solve problems that have interfaces in them by changing them to a class, since an interface just describes the methods that a class must have.
 
- 
+
 
 **Question 3.**  Consider a software system that models a horse barn. 
 
@@ -29,9 +29,9 @@ The original question had an interface called Horse, but the problem below has b
       /** @return the horse's weight */
       public int getWeight()
       { implementation not shown }
- 
+
       // There may be other methods that are not shown
-      
+
    }
 
 Another class called HorseBarn consists of N numbered spaces where each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the HorseBarn class is shown below.
@@ -58,7 +58,7 @@ Another class called HorseBarn consists of N numbered spaces where each space ca
       public int findHorseSpace(String name)
       { /* to be implemented in part (a) */ }
    }
-    
+
 **Part a.**  Write the HorseBarn method findHorseSpace. This method returns the index of the space in which the horse with the specified name is located. If there is no horse with the specified name in the barn, the method returns -1.
 
 .. figure:: Figures/horseBarnA.png
@@ -67,7 +67,7 @@ Another class called HorseBarn consists of N numbered spaces where each space ca
     :figclass: align-center
 
     Figure 1: Example calls and results
-    
+
 How to solve this problem
 ===========================
 
@@ -107,12 +107,12 @@ Once we have the name of the current ``Horse`` object, we need to compare this n
         :feedback_c: This String method will compare the characters in both strings and return true if they are the same.
 
         What is the best way to compare two strings for equality?  
-   
+
 Try It!
 ========
-   
+
 Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.  There are 3 tests so if you only see output for 1 or 2 check for errors below the code.
-   
+
 .. activecode:: lcfrhba1
    :language: java
    :autograde: unittest
