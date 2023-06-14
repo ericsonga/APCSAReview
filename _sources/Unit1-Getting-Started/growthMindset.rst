@@ -1,7 +1,7 @@
 Growth Mindset and Pair Programming
 ===================================
 
-..	index::
+.. index::
    single: growth mindset
 
 Growth Mindset
@@ -44,7 +44,7 @@ Plan A didn’t work.	          Let's try something else.
 It’s good enough.	          How can I improve this?
 ============================  =======================================
 
-..	index::
+.. index::
    single: pair programming
 
 Pair Programming

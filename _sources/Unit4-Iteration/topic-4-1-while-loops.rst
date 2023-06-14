@@ -27,7 +27,7 @@
 While Loops
 ============
 
-..	index::
+.. index::
 	single: loop
 	single: looping
     single: iteration
@@ -284,7 +284,7 @@ Step through the code above with the |visualizer|.
 Common Errors with Loops
 ------------------------
 
-..	index::
+.. index::
    single: infinite loop
    pair: loop; infinite
 

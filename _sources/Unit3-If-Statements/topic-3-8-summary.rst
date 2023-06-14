@@ -7,7 +7,7 @@ Unit 3 - Summary
 
 In this chapter you learned about **conditionals**.  **Conditionals** are used to execute code when a Boolean expression is true or false.  A Boolean expression is one that is either true or false like ``x > 0``.
 
-..	index::
+.. index::
     single: conditional
     single: boolean expression
     single: boolean variable

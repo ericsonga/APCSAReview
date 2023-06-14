@@ -5,7 +5,7 @@
 RandomStringChooser - Part B
 ===============================
 
-..	index::
+.. index::
 	single: RandomLetterChooser
     single: free response
 

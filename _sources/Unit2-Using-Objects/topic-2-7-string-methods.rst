@@ -30,7 +30,7 @@
 String Methods
 =================
 
-..	index::
+.. index::
 	pair: String; length
 	pair: String; substring
 	pair: String; indexOf
@@ -578,7 +578,7 @@ Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings*
 
 
 
-..	index::
+.. index::
     single: append
     single:concatenate
     single: immutable

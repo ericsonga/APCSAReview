@@ -21,7 +21,7 @@
 
 
 
-..	index::
+.. index::
    pair: class; constructor
 
 .. |repl link| raw:: html

@@ -26,7 +26,7 @@
 Tracing Recursive Methods (Day 2)
 ===================================
 
-..	index::
+.. index::
     single: call stack
     single: stack
 

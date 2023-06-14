@@ -26,7 +26,7 @@
 Nested For Loops
 ================
 
-..	index::
+.. index::
    single: nested for loop
    pair: loop; nested
 

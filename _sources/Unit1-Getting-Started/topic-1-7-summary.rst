@@ -7,7 +7,7 @@ Unit 1 Summary
 
 In this unit you learned about the three primitive data types on the exam: ``int``, ``double``, and ``boolean``.  You also learned how to declare (name) and change the value of variables.  You learned about operators, casting, and integer constants for the min and max integer values.
 
-..	index::
+.. index::
     single: static
     single: variable
 	single: int

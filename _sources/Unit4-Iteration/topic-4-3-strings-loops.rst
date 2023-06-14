@@ -32,7 +32,7 @@
 Loops and Strings
 =================
 
-..	index::
+.. index::
    single: string processing
    pair: string; loop
 

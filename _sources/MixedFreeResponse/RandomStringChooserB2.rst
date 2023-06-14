@@ -5,7 +5,7 @@
 RandomStringChooser - Part B - 2nd time
 ===============================================
 
-..	index::
+.. index::
 	  single: RandomLetterChooser
     single: free response
 

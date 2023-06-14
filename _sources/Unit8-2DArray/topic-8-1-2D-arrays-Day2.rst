@@ -26,7 +26,7 @@
 Set Value(s) in a 2D Array (Day 2)
 ----------------------------------------
 
-..	index::
+.. index::
    pair: 2D Array; initialization
    pair: 2D Array; set value
 
@@ -175,7 +175,7 @@ You can also initialize (set) the values for the array when you create it.  In t
 Get a Value from a 2D Array
 ------------------------------
 
-..	index::
+.. index::
    pair: 2D Array; access value
 
 To get the value in a 2D array give the name of the array followed by the row and column indicies in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``.

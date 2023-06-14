@@ -27,7 +27,7 @@
 is-a vs. has-a (Day 2)
 ---------------------------------------
 
-..	index::
+.. index::
     single: has-a
     single: association
     pair: relationships; association

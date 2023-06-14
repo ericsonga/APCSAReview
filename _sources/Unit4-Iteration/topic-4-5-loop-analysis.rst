@@ -26,7 +26,7 @@
 Loop Analysis
 ==============
 
-..	index::
+.. index::
 	pair: loop; analysis
     pair: loop; tracing
     pair: tracing; loop

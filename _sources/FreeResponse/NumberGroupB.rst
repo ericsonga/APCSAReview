@@ -5,7 +5,7 @@
 NumberGroup - Part B
 ===============================
 
-..	index::
+.. index::
 	single: NumberGroup
     single: free response
 

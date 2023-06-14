@@ -5,7 +5,7 @@
 Free Response - Sound B
 =======================
 
-..	index::
+.. index::
 	single: soundb
     single: free response
 

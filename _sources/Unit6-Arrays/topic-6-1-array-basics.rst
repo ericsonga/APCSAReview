@@ -27,7 +27,7 @@
 Array Creation and Access
 ==========================
 
-..	index::
+.. index::
    single: array
    single: index
    pair: array; index
@@ -188,7 +188,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
         }
     }
 
-..	index::
+.. index::
    pair: array; initialization
 
 .. note::
@@ -238,7 +238,7 @@ Watch the following |video3| which shows an array of String objects with a physi
     :height: 415
     :align: center
 
-..	index::
+.. index::
     single: dot-notation
 	pair: array; length
 

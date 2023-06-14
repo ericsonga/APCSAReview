@@ -5,7 +5,7 @@
 Free Response - CookieOrder A
 =============================
 
-..	index::
+.. index::
 	single: cookieorder
     single: free response
 

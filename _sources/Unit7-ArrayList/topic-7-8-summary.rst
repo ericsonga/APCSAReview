@@ -5,7 +5,7 @@
 ArrayList Summary
 -------------------------
 
-..	index::
+.. index::
    single: List
    single: ArrayList
    single: interface

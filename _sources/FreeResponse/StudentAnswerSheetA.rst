@@ -5,7 +5,7 @@
 StudentAnswerSheet - Part A
 ===============================
 
-..	index::
+.. index::
 	single: StudentAnswerSheet
     single: free response
 

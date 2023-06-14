@@ -14,7 +14,7 @@ In this chapter you learned about **two dimensional arrays**.  A **two dimension
 
     Figure 1: Java arrays of arrays
 
-..	index::
+.. index::
     pair: 2d-array; index
     pair: 2d-array; declaration
     pair: 2d-array; creation

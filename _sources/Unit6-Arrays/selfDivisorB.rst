@@ -5,7 +5,7 @@
 Free Response - Self Divisor B
 -------------------------------
 
-..	index::
+.. index::
 	single: self divisor
     single: free response
 

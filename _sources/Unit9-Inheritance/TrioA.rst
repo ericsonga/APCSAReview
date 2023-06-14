@@ -5,7 +5,7 @@
 Free Response - Trio A
 -----------------------------------
 
-..	index::
+.. index::
 	single: trio
     single: free response
 

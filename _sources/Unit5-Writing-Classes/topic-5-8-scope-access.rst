@@ -26,7 +26,7 @@
 Scope and Access
 =================
 
-..	index::
+.. index::
     single: scope
     single: access
     single: local variable

@@ -21,7 +21,7 @@
 Free Response Question (FRQ) for Classes
 -----------------------------------------------------
 
-..	index::
+.. index::
     single: class
     single: free response
 

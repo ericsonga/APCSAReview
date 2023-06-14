@@ -5,7 +5,7 @@
 StringCoder - Part B
 ===============================
 
-..	index::
+.. index::
 	single: StringCoder
     single: free response
 

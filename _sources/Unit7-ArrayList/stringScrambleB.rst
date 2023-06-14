@@ -5,7 +5,7 @@
 Free Response - String Scramble B
 -----------------------------------
 
-..	index::
+.. index::
 	single: string scramble
     single: free response
 

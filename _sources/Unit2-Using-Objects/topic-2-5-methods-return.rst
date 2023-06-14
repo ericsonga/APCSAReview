@@ -19,7 +19,7 @@
     :align: middle
     :alt: groupwork
 
-..	index::
+.. index::
 	single: method
     single: parameter
     single: argument

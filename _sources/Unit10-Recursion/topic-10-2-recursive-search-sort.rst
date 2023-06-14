@@ -140,7 +140,7 @@ Try the recursive binary search code in this |Java visualizer link|.
 Merge Sort
 ==========================
 
-..	index::
+.. index::
    single: merge sort
    pair: sort; merge
 

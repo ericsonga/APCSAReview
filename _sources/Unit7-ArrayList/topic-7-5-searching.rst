@@ -30,7 +30,7 @@
 Searching Algorithms
 ======================
 
-..	index::
+.. index::
    single: sequential search
    single: binary search
    single: recursion
@@ -59,7 +59,7 @@ If binary search requires the values in an array or list to be sorted, how can y
 Sequential Search
 ------------------
 
-..	index::
+.. index::
    single: sequential search
    single: linear search
    pair: search; sequential
@@ -273,7 +273,7 @@ To see this executing using the Java Visualizer click on this `String-SeqSearch 
 Binary Search
 --------------
 
-..	index::
+.. index::
    single: binary search
    pair: search; binary
 

@@ -3,7 +3,7 @@
 Free Response Question - APLine
 ================================
 
-..	index::
+.. index::
 	single: apline
     single: free response
 

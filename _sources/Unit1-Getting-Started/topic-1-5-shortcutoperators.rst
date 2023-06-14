@@ -24,7 +24,7 @@
     <style>    td { text-align: left; } </style>
 
 
-..	index::
+.. index::
 	single: operators
 	pair: math; operators
 	pair: operators; addition

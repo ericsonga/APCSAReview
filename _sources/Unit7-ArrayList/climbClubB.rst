@@ -5,7 +5,7 @@
 Free Response - Climbing Club B
 ================================
 
-..	index::
+.. index::
 	single: ClimbingClub
     single: free response
 

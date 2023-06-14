@@ -5,7 +5,7 @@
 ArrayTester - Part A
 ===============================
 
-..	index::
+.. index::
     single: ArrayTester
     single: free response
 

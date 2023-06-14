@@ -30,7 +30,7 @@
 ArrayList Methods
 =========================
 
-..	index::
+.. index::
    pair: arraylist; size
    pair: arraylist; add
    pair: arraylist; get
@@ -62,7 +62,7 @@ The following are the ``ArrayList`` methods that you need to know for the AP CS 
 Size()
 -------
 
-..	index::
+.. index::
    pair: arraylist; size
 
 As we saw in the last lesson, you can get the number of items in a ArrayList using its ``size()`` method.  The ArrayList starts out empty with a size of 0.
@@ -79,7 +79,7 @@ As we saw in the last lesson, you can get the number of items in a ArrayList usi
 Add(obj) to an ArrayList
 -----------------------------
 
-..	index::
+.. index::
    pair: arraylist; add
 
 You can add values to an ArrayList by using the method ``add(obj)`` which will add the object to the end of the list, just like you would join the end of the line to board a bus.
@@ -142,7 +142,7 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
         }
     }
 
-..	index::
+.. index::
    pair: list; autoboxing
    pair: list; unboxing
 
@@ -389,7 +389,7 @@ You can step through the code above by clicking on the following |Java visualize
 Remove(index) from ArrayList
 ----------------------------------
 
-..	index::
+.. index::
    pair: arraylist; removing an item
 
 You can also remove values from an ArrayList by using **remove(index)** to remove the item at the given index from the list. This will move all the other items over in the underlying array and decrease the size of the ArrayList by 1.
@@ -493,7 +493,7 @@ You can step through the code above by clicking on the following `RemoveExample 
 ArrayList get/set Methods
 ------------------------------------
 
-..	index::
+.. index::
 	pair: arraylist; getting an item
     pair: arraylist; setting an item
 

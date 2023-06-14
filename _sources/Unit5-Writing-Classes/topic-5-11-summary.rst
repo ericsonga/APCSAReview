@@ -7,7 +7,7 @@ Unit 5 Summary
 
 
 
-..	index::
+.. index::
     single: class
     single: compiler
 	single: compile time error

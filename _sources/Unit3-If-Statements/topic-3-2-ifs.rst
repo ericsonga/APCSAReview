@@ -27,7 +27,7 @@
 if Statements and Control Flow
 ===============================
 
-..	index::
+.. index::
    single: conditional
    single: if
    pair: conditional; if

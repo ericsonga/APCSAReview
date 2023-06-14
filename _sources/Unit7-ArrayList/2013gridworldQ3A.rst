@@ -5,7 +5,7 @@
 Free Response - Grid World A
 --------------------------------------------------------
 
-..	index::
+.. index::
 	  single: Grid World
       single: free response
 

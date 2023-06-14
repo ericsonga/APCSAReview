@@ -340,7 +340,7 @@ What happens if you change the main method in the Java Visualizer to create a ne
 Inherited Get/Set Methods
 ---------------------------
 
-..	index::
+.. index::
     pair: inheritance; access to private fields
 
 Inheritance means that an object of the child class automatically includes the object instance variables and methods defined in the parent class.  But, if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called getters or get methods) which are methods that get instance variable values and public **mutators**  (also called modifier methods or setters or set methods) which set their values.

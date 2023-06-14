@@ -26,7 +26,7 @@
 Using the Math Class
 ====================
 
-..	index::
+.. index::
     single: Math methods
 	single: random method
 	pair: Math; random method

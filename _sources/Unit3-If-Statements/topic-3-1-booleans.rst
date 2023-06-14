@@ -20,7 +20,7 @@
     :align: middle
     :alt: groupwork
 
-..	index::
+.. index::
    single: Boolean
    pair: Variable; boolean
    pair: boolean; variable

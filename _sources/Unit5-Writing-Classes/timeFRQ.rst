@@ -5,7 +5,7 @@
 Free Response Question - Time
 -------------------------------
 
-..	index::
+.. index::
     single: time
     single: free response
 

@@ -5,7 +5,7 @@
 Free Response - Gray Image B
 -------------------------------
 
-..	index::
+.. index::
 	single: gray image
     single: free response
 

@@ -5,7 +5,7 @@
 Trio Student Solution 1
 ------------------------
 
-..	index::
+.. index::
 	single: trio
     single: free response
 

@@ -26,7 +26,7 @@
 2D Arrays (Day 1)
 -----------------
 
-..	index::
+.. index::
     single: 2D Arrays
     single: row
     single: column
@@ -49,7 +49,7 @@ Two dimensional arrays are especially useful when the data is naturally organize
 Array Storage
 ---------------
 
-..	index::
+.. index::
    single: row-major order
    single: column-major order
    single: array of arrays
@@ -162,7 +162,7 @@ Try to answer the following questions.  Click on the value or values to select t
 Declaring 2D Arrays
 -------------------------------
 
-..	index::
+.. index::
    pair: 2D Array; declaration
 
 To declare a 2D array, specify the type of elements that will be stored in the array, then (``[][]``) to show that it is a 2D array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).
@@ -174,7 +174,7 @@ To declare a 2D array, specify the type of elements that will be stored in the a
 
 
 
-..	index::
+.. index::
    pair: 2D Array; creation
 
 To create an array use the **new** keyword, followed by a space, then the type, and then the number of rows in square brackets followed by the number of columns in square brackets, like this ``new int[numRows][numCols]``.

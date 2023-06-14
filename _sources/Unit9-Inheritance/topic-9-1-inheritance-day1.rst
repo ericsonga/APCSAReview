@@ -50,7 +50,7 @@ To make a subclass inherit from a superclass, use the Java keyword **extends** w
   public class Car extends Vehicle
   public class Motorcycle extends Vehicle
 
-..	index::
+.. index::
     single: extends
 
 .. note::
@@ -66,7 +66,7 @@ To make a subclass inherit from a superclass, use the Java keyword **extends** w
 Why Use Inheritance?
 ---------------------
 
-..	index::
+.. index::
     single: generalization
     single: specialization
 

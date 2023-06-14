@@ -27,7 +27,7 @@
 Inheritance and Constructors
 ============================
 
-..	index::
+.. index::
     pair: constructor; super
 
 Subclasses inherit public methods from the superclass that they extend, but they cannot access the private instance variables of the superclass directly and must use the public accessor and mutator methods. And subclasses do not inherit constructors from the superclass.

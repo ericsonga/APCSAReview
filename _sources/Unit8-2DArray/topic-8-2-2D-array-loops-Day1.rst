@@ -30,7 +30,7 @@ In this lesson, you will learn how to use nested loops to traverse a 2D Array.
 
 Getting the Number of Rows and Columns
 ---------------------------------------
-..	index::
+.. index::
    pair: 2D Array; number of rows
    pair: 2D Array; number of columns
 
@@ -79,7 +79,7 @@ Arrays know their length (how many elements they can store).  The length is a pu
 Looping Through a 2D Array
 --------------------------
 
-..	index::
+.. index::
    pair: 2D Array; looping through
    pair: loop; nested
 

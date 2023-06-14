@@ -11,7 +11,7 @@ Picture Lab A1 - A3
 
 The |Picture Lab| is a fun lab where you learn how to modify digital pictures pixel by pixel using a 2D array.
 
-..	index::
+.. index::
     single: binary
     single: bit
     single: byte

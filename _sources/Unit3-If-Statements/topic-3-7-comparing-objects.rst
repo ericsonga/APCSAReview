@@ -32,7 +32,7 @@ Comparing objects is a little different than comparing primitive typed values li
 String Equality
 ---------------
 
-..	index::
+.. index::
    pair: String; equality
    pair: String; equals
 

@@ -26,7 +26,7 @@
 Array Algorithms (FRQs)
 =======================
 
-..	index::
+.. index::
 	single: array
 	single: algorithms
 	pair: array; algorithms

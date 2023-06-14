@@ -5,7 +5,7 @@
 Free Response Questions (FRQs) for Control Structures
 -----------------------------------------------------
 
-..	index::
+.. index::
     single: control structures
     single: free response
 

@@ -7,7 +7,7 @@ Unit 4 Summary
 
 In this chapter you learned about **loops**.  **Loops** are used to repeat a statement or block of statements inside a pair of curly braces.
 
-..	index::
+.. index::
     single: loop
     single: body of a loop
     single: while loop

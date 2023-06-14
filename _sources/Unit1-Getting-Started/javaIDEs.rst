@@ -1,7 +1,7 @@
 Java Development Environments
 ====================================
 
-..	index::
+.. index::
 	single: IDE
 	single: Integrated Development Environment
 	single: DrJava

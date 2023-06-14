@@ -5,7 +5,7 @@
 Hidden Word - Write Class
 ===============================
 
-..	index::
+.. index::
     single: Hidden Word
     single: free response
 

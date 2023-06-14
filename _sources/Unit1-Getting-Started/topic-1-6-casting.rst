@@ -120,7 +120,7 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
      }
 
 
-..	index::
+.. index::
    pair: double; number of digits
 
 
@@ -160,7 +160,7 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
         }
     }
 
-..	index::
+.. index::
    pair: double; precision format
 
 Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:

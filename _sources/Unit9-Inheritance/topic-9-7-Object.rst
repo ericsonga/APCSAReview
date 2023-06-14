@@ -144,7 +144,7 @@ equals Method
 
 One of the important things that gets inherited from the Object superclass is the ``equals(Object obj)`` method.  This method is used to test if the current object and the passed object called ``obj`` are equal. But what does that mean?
 
-..	index::
+.. index::
     single: override
     single: equals
 

@@ -5,7 +5,7 @@
 Free Response - Delimiters A
 ------------------------------
 
-..	index::
+.. index::
     single: delimiters
     single: free response
 

@@ -21,7 +21,7 @@
 
 
 
-..	index::
+.. index::
    single: String
    single: object reference
    single: reference
@@ -86,7 +86,7 @@ Object variables **refer** to objects in memory.  A reference is a way to find t
 
     Figure 1: Initial value for an object reference
 
-..	index::
+.. index::
    pair: String; creation
 
 In Java there are two ways to create an object of the ``String`` class.  You can use the ``new`` keyword followed by a space and then the class constructor and then in parentheses you can include values used to initialize the fields of the object.  This is the standard way to create a new object of a class in Java.
@@ -95,7 +95,7 @@ In Java there are two ways to create an object of the ``String`` class.  You can
 
    String greeting = new String("Hello");
 
-..	index::
+.. index::
     single: String literal
 	pair: String; literal
 
@@ -179,7 +179,7 @@ In both cases an object of the ``String`` class will be created in memory and th
         }
     }
 
-..	index::
+.. index::
    single: parent class
    single: superclass
    single: inheritance
@@ -204,7 +204,7 @@ The code above will first print ``class java.lang.String`` since ``greeting`` wa
 String Operators - Concatenation
 --------------------------------
 
-..	index::
+.. index::
    pair: String; append
 
 Strings can be **appended** to each other to create a new string using the ``+`` or ``+=`` operator . This is also called **concatenation**.
@@ -272,7 +272,7 @@ Strings can be **appended** to each other to create a new string using the ``+``
      s1 = s1 + s2 + "z";
 
 
-..	index::
+.. index::
    single: toString
    pair: Object; toString
 

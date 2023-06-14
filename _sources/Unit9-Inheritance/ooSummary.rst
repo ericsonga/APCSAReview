@@ -7,7 +7,7 @@ Inheritance Summary
 
 In this chapter you learned about **inheritance**.  In an object-oriented program you write classes that define what objects of each class know (instance variables) and can do (methods).  One class can inherit object instance variables and methods from another, which makes the amount of code that you have to write smaller and makes the classes easier to test and extend.
 
-..	index::
+.. index::
     single: object
     single: class
     single: inheritance

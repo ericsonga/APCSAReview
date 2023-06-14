@@ -28,7 +28,7 @@
 What is Recursion? (Day 1)
 ===============================
 
-..	index::
+.. index::
     single: recursion
     pair: recursion; defintion
 
@@ -43,7 +43,7 @@ What is Recursion? (Day 1)
     neverEnd();
   }
 
-..	index::
+.. index::
     single: infinite recursion
     pair: recursion; infinite
 
@@ -106,7 +106,7 @@ This method will print out "This is the method that never ends!" and then call i
 Why use Recursion?
 ==================
 
-..	index::
+.. index::
     single: fractal
     pair: recursion; purpose
 
@@ -134,7 +134,7 @@ The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It intr
     :height: 315
     :align: center
 
-..	index::
+.. index::
     single: factorial
 
 See the method `factorial` below that calculates the **factorial** of a number.  The **factorial** of a number is defined as 1 for 0 and n * factorial (n-1) for any other number.
@@ -209,7 +209,7 @@ See the method `factorial` below that calculates the **factorial** of a number. 
 Base Case
 ==========
 
-..	index::
+.. index::
     single: base case
     pair: recursion; base case
 

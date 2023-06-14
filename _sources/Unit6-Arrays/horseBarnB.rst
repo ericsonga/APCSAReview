@@ -5,7 +5,7 @@
 Free Response - Horse Barn B
 -------------------------------
 
-..	index::
+.. index::
 	single: horse barn
     single: free response
 

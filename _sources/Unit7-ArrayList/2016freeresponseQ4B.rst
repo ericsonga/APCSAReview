@@ -5,7 +5,7 @@
 Free Response - StringFormatter B
 -----------------------------------
 
-..	index::
+.. index::
 	single: trio
     single: free response
 

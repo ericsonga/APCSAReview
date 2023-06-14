@@ -31,7 +31,7 @@ While loops, for loops, and enhanced for each loops can all be used to traverse 
 Enhanced For Each Loop
 ----------------------
 
-..	index::
+.. index::
    pair: list; for-each loop
 
 You can use a enhanced for-each loop to traverse through all of the items in a list, just like you do with an array as shown in the main method below.

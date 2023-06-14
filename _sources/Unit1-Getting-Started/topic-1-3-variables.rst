@@ -32,7 +32,7 @@ In this lesson, you will learn about variables and primitive data types.
 What is a Variable?
 -------------------
 
-..	index::
+.. index::
    single: variable
 
 A **variable** is a name associated with a memory location in the computer, where you can store a value that can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
@@ -55,7 +55,7 @@ When you play a game, it will often have a score.  Scores often start at 0 and i
 Data Types
 ----------
 
-..	index::
+.. index::
    single: integer
    single: int
    single: double
@@ -163,7 +163,7 @@ A type is a set of values (a domain) and a set of operations on them. For exampl
 Declaring Variables in Java
 ---------------------------
 
-..	index::
+.. index::
    single: bit
    single: binary digit
    single: declare
@@ -470,7 +470,7 @@ The keyword **final** can be used in front of a variable declaration to make it 
 Naming Variables
 --------------------
 
-..	index::
+.. index::
    pair: variable; names
 
 While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores ``_``. It must be all one word with no spaces.
@@ -488,7 +488,7 @@ your variables crazy things like ``thisIsAReallyLongName``, especially on the AP
     - Variable names are case-sensitive and spelling sensitive! Each use of the variable in the code must match the variable name in the declaration exactly.
     - Never put variables inside quotes (" ").
 
-..	index::
+.. index::
     single: camel case
 	pair: variable; naming convention
 

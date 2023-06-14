@@ -31,7 +31,7 @@
 Compound Boolean Expressions
 ============================
 
-..	index::
+.. index::
    single: and
    single: or
    single: truth table
@@ -358,7 +358,7 @@ The following table shows the result for P || Q when P and Q are both expression
 Short Circuit Evaluation
 ------------------------
 
-..	index::
+.. index::
    single: short circuit evaluation
    pair: conditional; short circuit evaluation
 

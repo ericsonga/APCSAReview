@@ -26,7 +26,7 @@
 Intro to ArrayLists
 =======================
 
-..	index::
+.. index::
    single: arraylist
    pair: arraylist; definition
 
@@ -63,7 +63,7 @@ An ArrayList is often called just a **list** on the CS A exam. In past AP CS A e
 Import Package
 ------------------------
 
-..	index::
+.. index::
    single: import statement
 
 The ``ArrayList`` class is in the ``java.util`` package.  A **package** is a set or library of related classes. The java.lang package is the main Java language classes that you get automatically without importing it. The java.util package has a lot of utility classes that you can use if you import the package.    If you want to use any class other than those in ``java.lang`` you will need to either use the full name (packageName.ClassName) like (``java.util.ArrayList``) or use one or more import statements to import in that package.
@@ -76,7 +76,7 @@ You can import just the classes you need from a package as shown below.  Just pr
 
   import java.util.ArrayList; // import just the ArrayList class
 
-..	index::
+.. index::
    single: package
    pair: statement; import
 

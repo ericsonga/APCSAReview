@@ -5,7 +5,7 @@
 Free Response - Route Cipher A
 ==============================
 
-..	index::
+.. index::
 	single: routeciphera
     single: free response
 

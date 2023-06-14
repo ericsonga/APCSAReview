@@ -28,7 +28,7 @@ Sorting Algorithms
 
 There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CS A exam are:
 
-..	index::
+.. index::
    single: selection sort
    single: insertion sort
    pair: sort; selection
@@ -45,7 +45,7 @@ There are many sorting algorithms to put an array or ArrayList elements in alpha
 Selection Sort
 ---------------
 
-..	index::
+.. index::
    single: selection sort
    pair: sort; selection
 
@@ -190,7 +190,7 @@ You can step through the code above by clicking on the following `Ex-12-4-2 <htt
 Insertion Sort
 ---------------
 
-..	index::
+.. index::
    single: insertion sort
    pair: sort; insertion
 

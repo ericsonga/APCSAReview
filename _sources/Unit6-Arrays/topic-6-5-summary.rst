@@ -15,7 +15,7 @@ In this chapter you learned about **Arrays**.  An **array** is consecutive stora
 
     Figure 1: Two 5 element arrays with their values set to the default values for integer and object arrays.
 
-..	index::
+.. index::
     pair: array; index
     pair: array; declaration
     pair: array; creation

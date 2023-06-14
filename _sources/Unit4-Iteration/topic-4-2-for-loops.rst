@@ -30,7 +30,7 @@
 For Loops
 =========
 
-..	index::
+.. index::
    single: for loop
    pair: loop; for
 

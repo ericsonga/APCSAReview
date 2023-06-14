@@ -26,7 +26,7 @@
 Enhanced For-Loop (For-Each) for Arrays
 =======================================
 
-..	index::
+.. index::
    single: for-each
    pair: loop; for-each
 

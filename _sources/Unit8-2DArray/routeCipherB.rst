@@ -5,7 +5,7 @@
 Free Response - Route Cipher B
 ==============================
 
-..	index::
+.. index::
 	single: routecipherb
     single: free response
 

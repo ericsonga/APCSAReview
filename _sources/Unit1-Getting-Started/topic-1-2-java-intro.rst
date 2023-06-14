@@ -24,7 +24,7 @@
 Why Programming? Why Java?
 ============================
 
-..	index::
+.. index::
    single: Java
    single: javac
    single: compile
@@ -56,7 +56,7 @@ First Java Program
 -------------------
 
 
-..	index::
+.. index::
    single: class
    single: keyword
    pair: class; field
@@ -123,7 +123,7 @@ You can copy the Java source code shown in this book into a file and save it if 
 Print Commands
 -------------------
 
-..	index::
+.. index::
    single: String
    single: String literal
 

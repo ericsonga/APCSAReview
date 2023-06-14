@@ -7,7 +7,7 @@ Recursion Summary
 
 In this unit you learned about **recursion**.  A recursive method calls itself (contains a call to the method from inside of the method).  A recursive method should have at least one way to stop the recursion.  This is called a base case.
 
-..	index::
+.. index::
     single: recursion
 
 Concept Summary

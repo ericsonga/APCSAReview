@@ -27,7 +27,7 @@
 Polymorphism
 =============
 
-..	index::
+.. index::
     single: polymorphism
 
 **Polymorphism** is a big word that you can break down into "poly" which means many and "morphism" which means form.  So, it just means many forms.  In Java it means that the method that gets called at **run-time** (when the code is run) depends on the *type* of the object at run-time.
@@ -44,7 +44,7 @@ This is simliar to a toddler toy that has pictures of animals and when a handle 
 
 If you were simulating this toy in software you could create an Animal class that had a makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
 
-..	index::
+.. index::
     single: declared type
     single: actual type
     single: run-time type

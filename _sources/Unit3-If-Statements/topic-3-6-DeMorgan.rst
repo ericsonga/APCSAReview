@@ -30,7 +30,7 @@
 Equivalent Boolean Expressions (De Morgan's Laws)
 =================================================
 
-..	index::
+.. index::
    single: De Morgan's Laws
    single: negation
 

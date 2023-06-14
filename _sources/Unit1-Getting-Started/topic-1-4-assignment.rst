@@ -210,7 +210,7 @@ Operators
 ---------
 
 
-..	index::
+.. index::
 	single: operators
 	pair: math; operators
 	pair: operators; addition
@@ -389,7 +389,7 @@ Here is a |video2| about mod.
 .. note::
    The result of x % y when x is smaller than y is always x.  The value y can't go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.
 
-..	index::
+.. index::
    single: modulo
    single: remainder
    pair: operators; modulo

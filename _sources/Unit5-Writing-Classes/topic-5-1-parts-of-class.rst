@@ -158,7 +158,7 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
 Instance Variables
 ---------------------------
 
-..	index::
+.. index::
    pair: class; instance variables
 
 
@@ -221,7 +221,7 @@ When designing a class, programmers make decisions about what data to make acces
 Methods
 -------
 
-..	index::
+.. index::
    pair: class; method
 
 **Methods** define what an object can do or the behavior of the object.   Most methods are ``public`` which means they can be accessed from outside the class. Some methods can be marked as``private`` if they are helper methods that are just used internally by other methods inside the same class. They will not be accessible outside of the class. The private and public keywords determine the external access and visibility of classes, data, constructors, and methods.
