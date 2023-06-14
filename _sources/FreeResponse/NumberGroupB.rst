@@ -5,8 +5,8 @@
 NumberGroup - Part B
 ===============================
 
-..	index::
-	single: NumberGroup
+.. index::
+    single: NumberGroup
     single: free response
 
 **Part b.**  A range represents a number group that contains all (and only) the integers between a minimum value and
@@ -25,22 +25,22 @@ Try and Solve It
 
    Complete the class ``Range`` below with instance variables, a constructor, and a contains method.
    ~~~~
-   class NumberGroup 
-   { 
+   class NumberGroup
+   {
       /* Implementation not shown */
    }
-   
+
    public class Range extends NumberGroup
    {
        //Write the instance variables for the Range class here
-       
+
        // Write the Range constructor with 2 parameters
        // for the minimum and maximum values in the range
 
 
-       // Write the contains method which tests whether a 
+       // Write the contains method which tests whether a
        // given number is in the range.
-    
+
        //Main method to test the class
        public static void main(String[] args)
        {
@@ -49,7 +49,7 @@ Try and Solve It
            // Test the contains method
            System.out.println("Does the range contain 4 (should be false): " + test.contains(4));
            System.out.println("Does the range contain 5 (should be true): " + test.contains(5));
-		       
+
        } // end of main
 
    } // end of class

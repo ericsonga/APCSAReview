@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 1-9-
    :start: 1
-   
+
 Coding Practice
 =======================
 
@@ -25,7 +25,7 @@ Coding Practice
                       String color = "blue"
                       System.out.println(Name + "'s favorite color is " + color);
                   }
-              }              
+              }
               ====
               import static org.junit.Assert.*;
                 import org.junit.*;;
@@ -50,9 +50,9 @@ Coding Practice
            .. activecode::  ch4Ex2a
               :language: java
               :optional:
-              
+
               This is the answer to the previous question.
-              ~~~~              
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -179,16 +179,16 @@ Coding Practice
            .. activecode::  ch4Ex5a
               :language: java
               :optional:
-              
+
               This is the answer to the previous question.
-              ~~~~              
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
                       String name = "Carly";
                       String color = "red";
-                      System.out.println("Your name is " + name 
+                      System.out.println("Your name is " + name
                             + " and your favorite color is " + color);
                    }
               }
@@ -225,7 +225,7 @@ Coding Practice
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -246,7 +246,7 @@ Coding Practice
            .. activecode::  ch4Ex6a
               :language: java
               :optional:
-              
+
               public class Test1
               {
                   public static void main(String[] args)
@@ -311,7 +311,7 @@ Coding Practice
            .. activecode::  ch4Ex7a
               :language: java
               :optional:
-              
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -357,7 +357,7 @@ Coding Practice
               import static org.junit.Assert.*;
                 import org.junit.*;;
                 import java.io.*;
-              
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                    @Test
@@ -366,9 +366,9 @@ Coding Practice
                       String target1 = "+animal";
                       //boolean passed1 = checkCodeContains("print animal string", target1);
                       String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		              boolean passed1 = code.contains(target1);
+                      boolean passed1 = code.contains(target1);
 
-		              getResults(""+true, ""+passed1, "Code prints animal variable");
+                      getResults(""+true, ""+passed1, "Code prints animal variable");
 
                       assertTrue(passed1);
                     }
@@ -379,9 +379,9 @@ Coding Practice
                         String target1 = "+food";
                         //boolean passed1 = checkCodeContains("print food string", target1);
                         String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		                boolean passed1 = code.contains(target1);
+                        boolean passed1 = code.contains(target1);
 
-		                getResults(""+true, ""+passed1, "Code prints food variable");
+                        getResults(""+true, ""+passed1, "Code prints food variable");
                         assertTrue(passed1);
                     }
                 }
@@ -394,9 +394,9 @@ Coding Practice
            .. activecode::  ch4Ex8a
               :language: java
               :optional:
-              
+
               This is the answer to the previous question.
-              ~~~~              
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -439,7 +439,7 @@ Coding Practice
               import static org.junit.Assert.*;
                 import org.junit.*;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                    @Test
@@ -448,9 +448,9 @@ Coding Practice
                       String target1 = "+movie";
                       //boolean passed1 = checkCodeContains("print movie string", target1);
                       String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		              boolean passed1 = code.contains(target1);
+                      boolean passed1 = code.contains(target1);
 
-		              getResults(""+true, ""+passed1, "Code prints movie variable");
+                      getResults(""+true, ""+passed1, "Code prints movie variable");
                       assertTrue(passed1);
                     }
 
@@ -458,11 +458,11 @@ Coding Practice
                     public void testPrintStringsB() throws IOException
                     {
                         String target1 = "+book";
-                        //boolean passed1 = checkCodeContains("print book string", target1);                
+                        //boolean passed1 = checkCodeContains("print book string", target1);
                         String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		                boolean passed1 = code.contains(target1);
+                        boolean passed1 = code.contains(target1);
 
-		                getResults(""+true, ""+passed1, "Code prints book variable");
+                        getResults(""+true, ""+passed1, "Code prints book variable");
                         assertTrue(passed1);
                     }
                 }
@@ -475,7 +475,7 @@ Coding Practice
            .. activecode::  ch4Ex9a
               :language: java
               :optional:
-              
+
               public class Test1
               {
                   public static void main(String[] args)
@@ -496,13 +496,13 @@ Coding Practice
 
 .. tabbed:: ch3Ex1
 
-        .. tab:: Question  
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex1q
               :language: java
               :autograde: unittest
               :practice: T
-   
+
               The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 30 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.
               ~~~~
               public class Test1
@@ -521,7 +521,7 @@ Coding Practice
               import static org.junit.Assert.*;
                 import org.junit.*;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -537,15 +537,15 @@ Coding Practice
 
 
         .. tab:: Answer
-        
+
            Line 5 is missing a semicolon.  Line 6 has ``Double`` instead of ``double``.  Remember that the primitive types all start with a lowercase letter.  Line 8 has ``tripmiles`` instead of ``tripMiles``.  Remember that you should uppercase the first letter of each new word to make the variable name easier to read (use camel case).
-        
+
            .. activecode::  ch3Ex1a
               :language: java
               :optional:
- 
+
               This is the answer for the previous question.
-              ~~~~   
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -558,24 +558,24 @@ Coding Practice
                       System.out.println(totalCost);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex1d
-                
+
 .. tabbed:: ch3Ex2
 
-        .. tab:: Question  
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex2q
               :language: java
               :autograde: unittest
               :practice: T
-   
+
               The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``. Fix the code so that it compiles and runs correctly.
-              ~~~~  
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -592,7 +592,7 @@ Coding Practice
               import static org.junit.Assert.*;
                 import org.junit.*;
                 import java.io.*;
-              
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                     @Test
@@ -608,13 +608,13 @@ Coding Practice
 
 
         .. tab:: Answer
-        
+
            Line 5 has ``Height`` instead of ``height``.  Remember that variable names should start with a lowercase letter.  Line 6 is missing an equal sign.  Line 7 is missing a ``*`` to square the height.  Line 8 is missing a semicolon at the end of the statement.
-        
+
            .. activecode::  ch3Ex2a
               :language: java
               :optional:
- 
+
               This is the answer for the previous question.
               ~~~~
               public class Test1
@@ -629,24 +629,24 @@ Coding Practice
                       System.out.println(bodyMassIndexMetric);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex2d
-                
+
 .. tabbed:: ch3Ex3
 
-        .. tab:: Question  
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex3q
               :language: java
               :autograde: unittest
               :practice: T
-   
+
               The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
-              ~~~~          
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -654,7 +654,7 @@ Coding Practice
                       gallonPrice = 2.35;
                       40 = double milesPerGallon;
                       double totalFunds = 8.0;
-                      double numGallons = totalFunds gallonPrice; 
+                      double numGallons = totalFunds gallonPrice;
                       double numMiles = numGallons * milesPerGallon;
                       System.out.println(numMiles;
                   }
@@ -678,13 +678,13 @@ Coding Practice
 
 
         .. tab:: Answer
-        
+
            Line 5 is missing the type ``double``.  Line 6 is backwards.  It should be ``double milesPerGallon = 40;``.  Line 8 is missing a ``/``.  Line 10 is missing a ``)``.
-        
+
            .. activecode::  ch3Ex3a
               :language: java
               :optional:
-              
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -694,27 +694,27 @@ Coding Practice
                       double gallonPrice = 2.35;
                       double milesPerGallon = 40;
                       double totalFunds = 8.0;
-                      double numGallons = totalFunds / gallonPrice; 
+                      double numGallons = totalFunds / gallonPrice;
                       double distance = numGallons * milesPerGallon;
                       System.out.println(distance);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex3d
-                
+
 .. tabbed:: ch3Ex4
 
-        .. tab:: Question  
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex4q
               :language: java
               :autograde: unittest
               :practice: T
-   
+
               The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~
               public class Test1
@@ -746,13 +746,13 @@ Coding Practice
 
 
         .. tab:: Answer
-        
+
            Lines 5, 6, and 7 should all be ``double`` versus ``int`` so that the decimal portion of the calculation isn't thrown away.
-        
+
            .. activecode::  ch3Ex4a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -765,24 +765,24 @@ Coding Practice
                       System.out.println(finalPrice);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex4d
-                
-                
+
+
 .. tabbed:: ch3Ex5
 
-        .. tab:: Question 
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex5q
               :language: java
               :autograde: unittest
               :practice: T
-   
-              The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly. 
+
+              The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.
               ~~~~
               public class Test1
               {
@@ -792,7 +792,7 @@ Coding Practice
                       int numHours = numSecs   3600;
                       int numDays = numHours   24;
                       System.out.println numDays);
-                      
+
               }
               ====
               import static org.junit.Assert.*;
@@ -813,13 +813,13 @@ Coding Practice
 
 
         .. tab:: Answer
-        
+
            Lines 6 and 7 are both missing a ``/``.  Line 8 is missing a ``(``.  Line 9 is missing a ``}`` to close the ``main`` method.
-        
+
            .. activecode::  ch3Ex5a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -830,34 +830,34 @@ Coding Practice
                       int numHours = numSecs / 3600;
                       int numDays = numHours / 24;
                       System.out.println(numDays);
-                   }   
+                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex5d
-                
+
 .. tabbed:: ch3Ex6
 
         .. tab:: Question
-           
+
            .. activecode::  ch3Ex6q
               :language: java
               :autograde: unittest
               :practice: T
-   
+
               Complete the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.
               ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                    double goal = 
-                    double weeklyRate = 
-                    double numWeeks = 
-                    double numMonths = 
+                    double goal =
+                    double weeklyRate =
+                    double numWeeks =
+                    double numMonths =
                     System.out.println(numMonths);
                   }
               }
@@ -890,13 +890,13 @@ Coding Practice
 
 
         .. tab:: Answer
-        
-           Calculate how many weeks it would take to make $200.  Next divide the number of weeks by 4 (roughly the number of weeks in a month).  
-        
+
+           Calculate how many weeks it would take to make $200.  Next divide the number of weeks by 4 (roughly the number of weeks in a month).
+
            .. activecode::  ch3Ex6a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -910,29 +910,29 @@ Coding Practice
                       System.out.println(numMonths);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex6d
-                
+
 .. tabbed:: ch3Ex7
 
-        .. tab:: Question 
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex7q
-              :language: java 
+              :language: java
               :autograde: unittest
-              :practice: T  
-                
+              :practice: T
+
               Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon.
               ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                     // Your code should use the variables 
+                     // Your code should use the variables
                      // numGallons, milesPerGallon, and miles
                      // and print out miles
                   }
@@ -941,7 +941,7 @@ Coding Practice
               import static org.junit.Assert.*;
                 import org.junit.*;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                   @Test
@@ -958,26 +958,26 @@ Coding Practice
                   {
                     String target1 = removeSpaces("numGallons * milesPerGallon");
                     String target2 = removeSpaces("milesPerGallon * numGallons");
-   
+
                     String code = removeSpaces(getCode());
                     code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-   
+
                     boolean passed = code.contains(target1) || code.contains(target2);
                     getResults("true", "" + passed, "Formula variant for miles using milesPerGallon and numGallons", passed);
                     assertTrue(passed);
-                  }  
+                  }
                 }
 
 
 
         .. tab:: Answer
-        
-           First calculate the number of gallons you have left and then multiply that by the miles per gallon to get the number of miles you can still drive. 
-        
+
+           First calculate the number of gallons you have left and then multiply that by the miles per gallon to get the number of miles you can still drive.
+
            .. activecode::  ch3Ex7a
               :language: java
               :optional:
-   
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -988,25 +988,25 @@ Coding Practice
                       double milesPerGallon = 32;
                       double miles = numGallons * milesPerGallon;
                       System.out.println(miles);
-                      
+
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex7d
-                
+
 .. tabbed:: ch3Ex8
 
         .. tab:: Question
-           
+
            .. activecode::  ch3Ex8q
               :language: java
               :autograde: unittest
               :practice: T
-   
+
               Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.
               ~~~~
               public class Test1
@@ -1016,7 +1016,7 @@ Coding Practice
                      // Your code should use the variables
                      // secondsInDay and secondsInThreeDays
                      // and print out secondsInThreeDays
-                      
+
                   }
               }
               ====
@@ -1046,18 +1046,18 @@ Coding Practice
                     boolean passed = passed1 || passed2;
                     getResults("true", "" + passed, "formula for secondsInThreeDays using secondsInDay", passed);
                     assertTrue(passed);
-                  } 
-                } 
+                  }
+                }
 
 
         .. tab:: Answer
-        
+
            First compute the number of seconds in 1 day and then multiple that by 3 days.
-           
+
            .. activecode::  ch3Ex8a
               :language: java
               :optional:
- 
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -1072,23 +1072,23 @@ Coding Practice
                       System.out.println(secondsInThreeDays);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u
                 :identifier: javareview_ch3ex8d
-                
+
 
 .. tabbed:: ch3Ex10
 
-        .. tab:: Question 
-           
+        .. tab:: Question
+
            .. activecode::  ch3Ex10q
               :language: java
               :autograde: unittest
               :practice: T
-   
+
               Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can't buy part of a wing.
               ~~~~
               public class Test1
@@ -1096,16 +1096,16 @@ Coding Practice
                   public static void main(String[] args)
                   {
                     // Your code should use the variables
-                    // money, pricePerWing, numWings 
+                    // money, pricePerWing, numWings
                     // and print out numWings
-                      
+
                   }
               }
               ====
               import static org.junit.Assert.*;
                 import org.junit.*;
                 import java.io.*;
-                
+
                 public class RunestoneTests extends CodeTestHelper
                 {
                   @Test
@@ -1123,19 +1123,19 @@ Coding Practice
                     String target = "int numWings = (int)(money / pricePerWing)";
                     boolean passed = checkCodeContains("formula for numWings using money and pricePerWing, and type casting", target);
                     assertTrue(passed);
-                  }  
+                  }
                 }
 
 
 
         .. tab:: Answer
-        
+
            Divide the amount of money you have by the cost of each wing and set the result to an integer since you can't buy a part of a wing.
-           
+
            .. activecode::  ch3Ex10a
               :language: java
               :optional:
-                 
+
               This is the answer to the previous question.
               ~~~~
               public class Test1
@@ -1148,8 +1148,8 @@ Coding Practice
                       System.out.println(numWings);
                   }
               }
-              
-        .. tab:: Discussion 
+
+        .. tab:: Discussion
 
             .. disqus::
                 :shortname: cslearn4u

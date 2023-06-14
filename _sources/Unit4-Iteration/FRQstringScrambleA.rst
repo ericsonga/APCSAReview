@@ -5,7 +5,7 @@
 Free Response - String Scramble A
 -----------------------------------
 
-..	index::
+.. index::
     single: string scramble
     single: free response
 
@@ -87,11 +87,11 @@ Try to figure out the last two examples on your own.
 Figuring out the algorithm
 ===========================
 
-It can help to write out what you need to do to get each of the characters to compare.  
+It can help to write out what you need to do to get each of the characters to compare.
 
 .. activecode:: lcfrssa3
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    The following shows what to do to solve the example with "ABRACADABRA".
    ~~~~
@@ -123,7 +123,7 @@ It can help to write out what you need to do to get each of the characters to co
    import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
       @Test
@@ -135,14 +135,14 @@ It can help to write out what you need to do to get each of the characters to co
         assertTrue(passed);
       }
     }
-  
+
 
 In this example we are looping through the characters from left to right one at a time and comparing the two adjacent characters.  If the first is an "A" and the second is not we will swap the characters and then need to increment the index to not check the ones we swapped again.  So we start checking the characters at index 0 and 1 and then swap them, but then move to comparing 2 and 3 rather than 1 and 2 which means we increment the current index by 2.  If we don't swap the characters we only increment the index by 1.
 
 
 .. activecode:: lcfrssa4
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    The following shows what to do to solve the example with "WHOA".
    ~~~~
@@ -162,7 +162,7 @@ In this example we are looping through the characters from left to right one at 
    import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
       @Test
@@ -174,7 +174,7 @@ In this example we are looping through the characters from left to right one at 
         assertTrue(passed);
       }
     }
-  
+
 
 In this case since we didn't swap any characters we only increment the index by 1 each time through the loop.
 
@@ -187,7 +187,7 @@ Write the method scrambleWord below.
 
 .. activecode:: lcfrssa5
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    FRQ StringScramble A: Write the method scrambleWord.
    ~~~~
@@ -253,7 +253,7 @@ Write the method scrambleWord below.
       }
 
       @Test
-      public void testCodeContains() 
+      public void testCodeContains()
       {
          String target = ".substring(";
          boolean passed = checkCodeContains("substring method", target);
@@ -310,9 +310,9 @@ Write the method scrambleWord below.
          assertTrue(passed);
       }
    }
-  
 
-  
+
+
 
 Video - One way to code the solution
 =====================================

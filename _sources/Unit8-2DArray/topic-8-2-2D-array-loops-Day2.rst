@@ -6,28 +6,28 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Enhanced For-Each Loop for 2D Arrays (Day 2)
 ----------------------------------------------------
 
-..	index::
-	pair: 2D Array; for-each loop
+.. index::
+   pair: 2D Array; for-each loop
 
 Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row, String[] in the example below for a 2D String array. The type of the variables in the for-each loops must match the type of the array. For-each loops are much simpler since you don't have to use the indices and the []'s, but you can only use them if you are not going to change the values in an array of primitive types since the variable val below will not change the original array.
 
@@ -35,7 +35,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
 
       String[][] array;
       // Nested For-each loops that traverse a 2D String array
-      for (String[] innerArray : array) 
+      for (String[] innerArray : array)
       {
          for (String val : innerArray)
          {
@@ -46,8 +46,8 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
 
 .. activecode:: getAvgForEach
    :language: java
-   :autograde: unittest      
-   
+   :autograde: unittest
+
    Nested for-each loops demo. Click on the CodeLens button to trace through the code.
    ~~~~
    public class Average
@@ -65,7 +65,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
          }
          return total / (a.length * a[0].length);
       }
-      
+
       public static void main(String[] args)
       {
          int[][] theArray = {  {80, 90, 70}, {20, 80, 75}};
@@ -76,7 +76,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -88,7 +88,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
             assertTrue(passed);
         }
     }
-  
+
 In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
 
 
@@ -98,17 +98,17 @@ In this case the ``for (int[] colArray : a)`` means to loop through each element
 2D Array Algorithms
 -------------------
 
-All of the array algorithms can be applied to 2D arrays too. For example, counting and searching algorithms work very similarly. The following code adds all of the values in a given row. 
+All of the array algorithms can be applied to 2D arrays too. For example, counting and searching algorithms work very similarly. The following code adds all of the values in a given row.
 
 |CodingEx| **Coding Exercise**
 
 
 
 .. activecode:: lca2dloopPart
-   :language: java 
-   :autograde: unittest      
- 
-   What will the following code print out? Can you complete the  method called ``getTotalForCol`` that gets the total for a column? To do this, you must loop through the rows. The array's length will tell you how many rows you have since it is an array of arrays, while the length of the array's first element will tell you how many columns. 
+   :language: java
+   :autograde: unittest
+
+   What will the following code print out? Can you complete the  method called ``getTotalForCol`` that gets the total for a column? To do this, you must loop through the rows. The array's length will tell you how many rows you have since it is an array of arrays, while the length of the array's first element will tell you how many columns.
    ~~~~
    public class Total
    {
@@ -118,21 +118,21 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
          int total = 0;
          for (int col = 0; col < a[0].length; col++)
          {
-            total = total + a[row][col]; 
+            total = total + a[row][col];
          }
          return total;
       }
-      
+
       // Complete the method getTotalForCol below
       public static int getTotalForCol(int col, int[][] a)
       {
           int total = 0;
           // Add a loop here to total a column col
-           
-           
+
+
           return total;
       }
-      
+
       public static void main(String[] args)
       {
          int[][] matrix = {  {1,2,3},{4,5,6}};
@@ -175,21 +175,21 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
     }
 
 
-..	index::
-	pair: 2D Array; loop range
+.. index::
+   pair: 2D Array; loop range
 
-You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array. 
+You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array.
 
 .. activecode:: lca2dloopPart2
-   :language: java 
-   :autograde: unittest      
+   :language: java
+   :autograde: unittest
 
-   Looping through just part of a 2D array. 
+   Looping through just part of a 2D array.
    ~~~~
    public class Count
    {
-      public static int countValues(int value, int[][] a, 
-                                 int rowStart, int rowEnd, 
+      public static int countValues(int value, int[][] a,
+                                 int rowStart, int rowEnd,
                                  int colStart, int colEnd)
       {
          int count = 0;
@@ -197,24 +197,24 @@ You can loop through just part of a 2D array. You can change the starting value 
          {
             for (int col = colStart; col <= colEnd; col++)
             {
-               if (a[row][col] == value) 
+               if (a[row][col] == value)
                   count++;
             }
          }
          return count;
-      } 
-      
+      }
+
       public static void main(String[] args)
       {
          int[][] matrix = {  {3,2,3},{4,3,6},{8,9,3},{10,3,3}};
          System.out.println(countValues(3,matrix,0,2,0,2));
-      }  
+      }
    }
    ====
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -225,7 +225,7 @@ You can loop through just part of a 2D array. You can change the starting value 
             boolean passed = getResults(expect, output, "Expected output from main", true);
             assertTrue(passed);
         }
-    } 
+    }
 
 
 Here is a linear search algorithm where we access each row and then apply a linear search on it to find an element.
@@ -235,9 +235,9 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 
 .. activecode:: linearSearch2DArrays
-   :language: java 
-   :autograde: unittest      
-   
+   :language: java
+   :autograde: unittest
+
    What will the following code print? Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints.
    ~~~~
    public class Search
@@ -254,25 +254,25 @@ Here is a linear search algorithm where we access each row and then apply a line
             }
          }
          return found;
-      } 
-      
+      }
+
       public static void main(String[] args)
       {
          int[][] matrix = { {3,2,3},{4,3,6},{8,9,3},{10,3,3} };
          System.out.println(search(matrix,10));
          System.out.println(search(matrix,11));
-         
+
         // Comment out the code above, and try these:
         // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
-        // System.out.println(search(matrix2, "b")); 
+        // System.out.println(search(matrix2, "b"));
 
-      }  
+      }
    }
    ====
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests() {
@@ -292,30 +292,30 @@ Here is a linear search algorithm where we access each row and then apply a line
 
                 boolean passed = getResults(expect, output, "Testing search({ {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\" } }, \"b\")");
                 assertTrue(passed);
-            }  
+            }
     }
-   
+
 |Groupwork| Programming Challenge : Picture Lab
 ---------------------------------------------------
 
 
-..	index::
-	single: images
+.. index::
+   single: images
 
-..	index::
-	single: pictures
+.. index::
+   single: pictures
 
-..	index::
-	single: pixels
-    
+.. index::
+   single: pixels
+
 .. figure:: ../../_static/arch.jpg
     :width: 200px
     :align: left
-    
+
 .. |CB Picture Lab| raw:: html
 
    <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >College Board Picture Lab</a>
-   
+
 .. |RGB Color Mixer| raw:: html
 
    <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
@@ -331,26 +331,26 @@ Here is a linear search algorithm where we access each row and then apply a line
 .. |picture lab A1 to A3| raw:: html
 
    <a href= "pictureLabA1toA3.html" style="text-decoration:underline" target="_blank">Picture Lab sections A1 to A3</a>
-   
+
 .. |Picture Lab| raw:: html
 
    <a href= "CBLabs.html" style="text-decoration:underline" target="_blank">Picture Lab</a>
 
-    
+
 Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  The color of a pixel is  represented using the RGB (Red, Green, Blue) color
 model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? If your class has time, do the reading and exercises for |picture lab A1 to A3| to first learn about digital pictures and RGB values.
 
 
-In this challenge, you will do a part of the Picture Lab to modify the pixels of a digital photo. Scroll down to the bottom of the following code and take a look at the zeroBlue() method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. 
+In this challenge, you will do a part of the Picture Lab to modify the pixels of a digital photo. Scroll down to the bottom of the following code and take a look at the zeroBlue() method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0.
 
 Now, write a similar method called keepOnlyBlue() that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called switchColors() that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the getRed(), getGreen(), getBlue() to get the RGB values of the pixel and then swap them around by using the setRed, setGreen, setBlue methods and giving them different color values from the get methods as arguments.
 
-You can test the methods in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does. 
+You can test the methods in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
 
 .. datafile:: arch.jpg
    :image:
    :fromfile: ../../_static/arch.jpg
-   :hide: 
+   :hide:
 
 
 .. activecode:: challenge-8-2-picture
@@ -358,7 +358,7 @@ You can test the methods in the active code below or in this |repl.it project| o
     :autograde: unittest
     :datafile: pictureClasses.jar, arch.jpg
 
-    Picture Lab: 1) write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it. 2) write a method called switchColors() that replaces red values (using p.setRed) with green or blue values (using p.getGreen(), etc.) to change the colors around. Uncomment the code in main to test it. 
+    Picture Lab: 1) write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it. 2) write a method called switchColors() that replaces red values (using p.setRed) with green or blue values (using p.getGreen(), etc.) to change the colors around. Uncomment the code in main to test it.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -366,7 +366,7 @@ You can test the methods in the active code below or in this |repl.it project| o
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -446,8 +446,8 @@ You can test the methods in the active code below or in this |repl.it project| o
 
       }
 
-      /** 
-        zeroBlue() method sets the blue values at all pixels to zero 
+      /**
+        zeroBlue() method sets the blue values at all pixels to zero
      */
       public void zeroBlue()
       {
@@ -462,13 +462,13 @@ You can test the methods in the active code below or in this |repl.it project| o
         }
       }
 
-      
+
      /* Add new methods here.
         keepOnlyBlue() method sets the blue values at all pixels to zero.
         switchColors() method swaps the color values of pixels.
      */
-     
-      /* Main method for testing 
+
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -476,25 +476,25 @@ You can test the methods in the active code below or in this |repl.it project| o
         arch.show();
         arch.zeroBlue();
         arch.show();
-        
-        //Uncomment the follow code to test your keepOnlyBlue method.    
+
+        //Uncomment the follow code to test your keepOnlyBlue method.
         /*
         Picture arch2 = new Picture("arch.jpg");
-        System.out.println("Keep only blue: "); 
+        System.out.println("Keep only blue: ");
         arch2.keepOnlyBlue();// using new method
         arch2.show();
-        */ 
+        */
         System.out.println();
 
         //Uncomment the follow code to test your swithColors method.
-        /*  
+        /*
         Picture arch3 = new Picture("arch.jpg");
         System.out.println("Switch colors: ");
         arch3.switchColors();// using new method
         arch3.show();
-        */  
+        */
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -505,7 +505,7 @@ You can test the methods in the active code below or in this |repl.it project| o
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void keepOnlyBlue()";
@@ -513,7 +513,7 @@ You can test the methods in the active code below or in this |repl.it project| o
          assertTrue(passed);
        }
 
-       @Test 
+       @Test
        public void test2()
        {
          String target = ".setGreen(0);";
@@ -532,11 +532,11 @@ You can test the methods in the active code below or in this |repl.it project| o
              code = code.substring(index, index + 200);
              int num = countOccurences(code, target);
              passed = num == 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
-         @Test 
+         @Test
         public void testSwitch1()
         {
          String target = "public void switchColors()";
@@ -544,7 +544,7 @@ You can test the methods in the active code below or in this |repl.it project| o
          assertTrue(passed);
         }
 
-        @Test 
+        @Test
         public void testSwitch2()
         {
          String target = ".getGreen()";
@@ -554,13 +554,13 @@ You can test the methods in the active code below or in this |repl.it project| o
       }
 
 
- 
+
 
 Here are some more exercises from the |Picture Lab|:
 
-- Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value. 
+- Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.
 
-- Write the grayscale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3). 
+- Write the grayscale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3).
 
 
 You can continue on with the |Picture Lab| to mirror images and create collages and detect edges as the first step in recognizing objects in images.
@@ -570,9 +570,9 @@ Summary
 
 - We can loop through 2D arrays using nested for loops or nested enhanced for each loops.
 
-- The outer loop for a 2D array usually traverses the rows, while the inner loop traverses the columns in a single row. 
+- The outer loop for a 2D array usually traverses the rows, while the inner loop traverses the columns in a single row.
 
-- The 2D array's length gives the number of rows. A row's length array[0].length gives the number of columns. 
+- The 2D array's length gives the number of rows. A row's length array[0].length gives the number of columns.
 
 - Nested iteration statements can be written to traverse the 2D array in "row-major order" or "column-major order."
 
@@ -595,7 +595,7 @@ AP Practice
    :answer_e: 78
    :correct: b
    :feedback_a: Trace through the code.
-   :feedback_b: Correct! 
+   :feedback_b: Correct!
    :feedback_c: Trace through the code.
    :feedback_d: Trace through the code.
    :feedback_e: Notice that the inner loop goes up to but not including x.length - 1.
@@ -603,7 +603,7 @@ AP Practice
    Consider the following code segment. What is the value of sum as a result of executing the code segment?
 
    .. code-block:: java
-    
+
       int[][] arr = { {1, 2, 3, 4},
                       {5, 6, 7, 8},
                       {9, 10, 11, 12} };
@@ -615,11 +615,11 @@ AP Practice
                sum += x[y];
           }
       }
- 
+
 
 .. datafile:: pictureClasses.jar
-        :hide:    
-      
+        :hide:
+
         import java.awt.Image;
         import java.awt.image.BufferedImage;
 
@@ -1725,8 +1725,8 @@ AP Practice
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
+
+
 Try the game below to practice loops with 2D arrays. Click on **Arrays** and then check **2D** and check **Loops** and then click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html

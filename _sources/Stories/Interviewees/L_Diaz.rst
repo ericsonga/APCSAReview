@@ -34,7 +34,7 @@ Lien previously worked at College Board, where she helped develop and create AP 
 
 **What advice does she have?**
 
-Lien wants students to apply their computing skills to real-world problems in their communities. It allows them to build their skills while also uplifting their community. 
+Lien wants students to apply their computing skills to real-world problems in their communities. It allows them to build their skills while also uplifting their community.
 
 .. youtube:: bTDPBoq64EY
     :divid: Lien_Diaz

@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 5-18-
-   :start: 1   
+   :start: 1
 
 Mixed Up Code Practice
 =========================================================
@@ -29,7 +29,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.name = name;
   =====
     } // end constructor
-    
+
     public String getName() {
   =====
       return this.name;
@@ -59,7 +59,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.name = name;
       this.age = age;
   =====
-      name = name; 
+      name = name;
       age = age; #paired: When the parameter name is the same as an attribute, you MUST use "this" to refer to the attribute
   =====
     } // end constructor
@@ -79,7 +79,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     private String name;
     private int age;
 
-    public Cat(String name, int age) { 
+    public Cat(String name, int age) {
   =====
       this.name = name;
       this.age = age;
@@ -88,7 +88,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
     public void makeSound() {
   =====
-    } // end constructor 
+    } // end constructor
 
     public String makeSound() { #paired: When a method returns nothing, its return type should be "void"
   =====
@@ -116,10 +116,10 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     public static int numberOfSquares = 0;
     private int length;
   =====
-    private int numberOfSquares = 0; 
+    private int numberOfSquares = 0;
     private int length; #paired: When you need a variable to be accessible for every object of a class, it should be static
   =====
-    public Square(int length) { 
+    public Square(int length) {
   =====
       this.length = length;
       numberOfSquares++;
@@ -147,7 +147,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     private int length;
     private int width;
 
-    public Rectangle() { 
+    public Rectangle() {
   =====
       this.length = 10;
       this.width = 10;
@@ -173,7 +173,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   :practice: T
   :adaptive:
   :noindent:
-  
+
   The following program should define a ``CelestialBody`` class. The class should have two instance variables: ``orbitLength`` and ``daysSinceDiscovered``. The ``orbitLength`` variable should be initialized through the constructor, while ``daysSinceDiscovered`` should be derived from ``orbitLength`` and the ``orbit`` method. The ``orbit(int numberOfTimes)`` should add ``orbitLength * numberOfTimes`` to ``daysSinceDiscovered`` (e.g., if Planet X has done two orbits with an orbit length of 12 days, it was discovered 24 days ago. If it then orbits another three times, it was discovered 60 days ago). But the blocks have been mixed up and include pairs of lines where one is unneeded. Drag the necessary code from the left to the right and put them in order so that the code would work correctly. Click the Check button to check your solution.
   -----
   public class CelestialBody {
@@ -181,7 +181,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     private int orbitLength;
     private int daysSinceDiscovered;
   =====
-    public CelestialBody(int orbitLength) { 
+    public CelestialBody(int orbitLength) {
   =====
       this.daysSinceDiscovered = 0;
       this.orbitLength = orbitLength;
@@ -189,8 +189,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.orbitLength = orbitLength; #paired: daysSinceDiscovered needs to be initialized
   =====
     } // end constructor
-  
-    public void orbit(int numberOfTimes) { 
+
+    public void orbit(int numberOfTimes) {
   =====
     } // end constructor
 
@@ -241,7 +241,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   :noindent:
 
   The following program should define a ``Point`` class. Each ``Point`` instance should have integer ``x`` and ``y`` attributes (there are associated ``getX`` and ``getY`` methods whose implementations aren't shown). There should be a ``getDistance`` method that takes in another ``Point`` object as an argument and calculates the distance from this object to that one (which would be sqrt((this.x - other.x) ^ 2 + (this.y - other.y) ^ 2)). But the blocks have been mixed up and include pairs of lines where one is unneeded. Drag the necessary code from the left to the right and put them in order so that the code would work correctly. Click the Check button to check your solution.
-  -----  
+  -----
   public class Point {
   =====
     private int x;
@@ -253,7 +253,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.y = y;
   =====
     } // end constructor
-  
+
     public double getDistance(Point other) {
   =====
       return Math.sqrt(Math.pow(this.x - other.getX(), 2) + Math.pow(this.y - other.getY(), 2));
@@ -270,7 +270,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
   :noindent:
 
   The following program should define an ``Account`` class. Each ``Account`` instance should have integer ``balance`` and String ``owner`` attributes (and the constructor should take those in that order). To decrease ``balance``, there should be a ``withdraw`` method that takes in an integer argument and subtracts that from ``balance``. However, if ``balance`` would end as a negative number, it should just be set to zero. But the blocks have been mixed up and include pairs of lines where one is unneeded. Drag the necessary code from the left to the right and put them in order so that the code would work correctly. Click the Check button to check your solution.
-  -----  
+  -----
   public class Account {
   =====
     private int balance;
@@ -282,7 +282,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       this.owner = owner;
   =====
     } // end constructor
-  
+
     public void withdraw(int amount) {
   =====
       if (amount > this.balance) {
@@ -290,7 +290,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
         this.balance = 0;
   =====
       } // end if
-  
+
       else {
   =====
         this.balance -= amount;

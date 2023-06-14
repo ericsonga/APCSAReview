@@ -27,10 +27,10 @@ Group Work - Modulo Operator (%)
 
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
-This page is based on a POGIL activity from Helen Hu at that site.  
+This page is based on a POGIL activity from Helen Hu at that site.
 
-..	index::
-	single: modulus
+.. index::
+  single: modulus
   single: modulo operator
 
 .. activecode:: mod-model-1

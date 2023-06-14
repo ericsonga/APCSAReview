@@ -7,14 +7,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -28,7 +28,7 @@
 What is Recursion? (Day 1)
 ===============================
 
-..	index::
+.. index::
     single: recursion
     pair: recursion; defintion
 
@@ -43,7 +43,7 @@ What is Recursion? (Day 1)
     neverEnd();
   }
 
-..	index::
+.. index::
     single: infinite recursion
     pair: recursion; infinite
 
@@ -67,7 +67,7 @@ This method will print out "This is the method that never ends!" and then call i
    :feedback_a: Where is the call to the same method?
    :feedback_b: There is no call to the same method, so this can not be a recursive method. It uses iteration instead.
 
-	Is the following method recursive?
+    Is the following method recursive?
 
     .. code-block:: java
       :linenos:
@@ -106,7 +106,7 @@ This method will print out "This is the method that never ends!" and then call i
 Why use Recursion?
 ==================
 
-..	index::
+.. index::
     single: fractal
     pair: recursion; purpose
 
@@ -121,7 +121,7 @@ Recursion can also be used to create fractals.  A simple example is Sierpinski's
 
     Figure 1: A sequence of Sierpinski's triangles
 
-Recursion can also be used to traverse String, array, and ArrayList objects, much like a loop. In fact, any recursive solution could be written with iteration (loops) instead. 
+Recursion can also be used to traverse String, array, and ArrayList objects, much like a loop. In fact, any recursive solution could be written with iteration (loops) instead.
 
 Factorial Method
 =================
@@ -133,8 +133,8 @@ The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It intr
     :width: 800
     :height: 315
     :align: center
-    
-..	index::
+
+.. index::
     single: factorial
 
 See the method `factorial` below that calculates the **factorial** of a number.  The **factorial** of a number is defined as 1 for 0 and n * factorial (n-1) for any other number.
@@ -209,7 +209,7 @@ See the method `factorial` below that calculates the **factorial** of a number. 
 Base Case
 ==========
 
-..	index::
+.. index::
     single: base case
     pair: recursion; base case
 
@@ -234,7 +234,7 @@ Every recursive method must have at least one **base case** which halts the recu
         :click-incorrect:else:endclick:
             :click-incorrect:return n * factorial(n-1);:endclick:
     :click-incorrect:}:endclick:
-    
+
 .. mchoice:: qrb_3
    :practice: T
    :answer_a: 0
@@ -303,6 +303,6 @@ Every recursive method must have at least one **base case** which halts the recu
          }
          return total;
       }
-      
-      
+
+
 Continue to the next page for Day 2 of the Recursion lesson.

@@ -32,7 +32,7 @@
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-   
+
 .. |clock| unicode:: x1F567
 
 
@@ -40,18 +40,18 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
-Objects - Instances of Classes 
+
+Objects - Instances of Classes
 ===============================
 
 What are Objects and Classes?
 ------------------------------
 
-Java is an **object-oriented programming** language that can be used to model objects in the real world. We've seen that Java programs start with ``public class``.  A **class** is used to define a new data type or a blueprint for objects. 
+Java is an **object-oriented programming** language that can be used to model objects in the real world. We've seen that Java programs start with ``public class``.  A **class** is used to define a new data type or a blueprint for objects.
 
 **Objects** are the variables created from a **class** definition, and they are **instances** of a class. We've created String objects in Unit 1 using the String class, for example ``String name;``. In this unit we'll work with a class called Turtle for animated turtles as well as the String class. In Unit 5, you'll learn to write your own classes.
 
-You can think of a class like a blueprint or a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.  
+You can think of a class like a blueprint or a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.
 
 .. figure:: Figures/cookieCutterLabelled.png
     :width: 500px
@@ -59,8 +59,8 @@ You can think of a class like a blueprint or a cookie cutter.  It is used to cre
     :figclass: align-center
 
     Figure 1: Using a cookie cutter (class) to make cookies (objects)
-    
-You can think of a class as the type or classification.  Each type can have **attributes** (the object's properties or what it knows about itself) and **behaviors** (what an object does). In Java code, the attributes are written as **instance variables** in the class, and the behaviors are written as **methods**. 
+
+You can think of a class as the type or classification.  Each type can have **attributes** (the object's properties or what it knows about itself) and **behaviors** (what an object does). In Java code, the attributes are written as **instance variables** in the class, and the behaviors are written as **methods**.
 
 The following picture has lots of cats (objects of the type cat).  They are all different, but they share the same attributes and behaviors that make up a cat. They are all **instances** of a cat with different values for their attributes. Name some of the attributes and behaviors of the cats below. For example, the color (*attribute*) of the first cat is black (*attribute value*) and it is playing (*behavior*).
 
@@ -70,7 +70,7 @@ The following picture has lots of cats (objects of the type cat).  They are all 
     :figclass: align-center
 
     Figure 2: Pictures of cats (cat objects)
-    
+
 .. shortanswer:: cats
 
     Discuss with your class: What are some attributes of cats? What are some behaviors of cats? (Note that attributes are often nouns or adjectives describing features of cats, and behaviors are often verbs).
@@ -78,7 +78,7 @@ The following picture has lots of cats (objects of the type cat).  They are all 
 .. |video1| raw:: html
 
    <a href="https://www.youtube.com/watch?v=64DOwDu5SVo&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-   
+
 Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 
 .. youtube:: 64DOwDu5SVo
@@ -96,7 +96,7 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
     :match_2: defines a new data type that is like a blueprint|||class
     :match_3: define what the object knows about itself|||attributes or instance variables
     :match_4: define what an object can do|||behaviors or methods
-    
+
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.
 
 .. mchoice:: q2_2_1
@@ -145,7 +145,7 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 .. image:: Figures/turtleOOD.png
     :width: 200
     :align: left
-    
+
 Intro to Objects with Turtles
 -----------------------------
 
@@ -198,18 +198,18 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
 .. |video2| raw:: html
 
    <a href="https://www.youtube.com/watch?v=TFmmG4_KK8I&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-   
-The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.  
+
+The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.
 
 .. youtube:: TFmmG4_KK8I
     :width: 650
     :height: 415
     :align: center
     :optional:
-    
-    
-The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again. 
- 
+
+
+The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again.
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: 2_1_turle_dir
@@ -272,14 +272,14 @@ The **dot operator** (.) is used to run an object's method. You can think of the
 .. raw:: html
 
      <img src="../_static/turtleForwardLeftForward.png" width="150" align="left" />
-     
+
 .. parsonsprob:: 2_1_Turtle_L
    :practice: T
    :numbered: left
    :adaptive:
    :noindent:
 
-   The following program uses a turtle to draw a sort-of sideways capital L as seen in the image, but the lines are mixed up.  The program should do all necessary set-up: import items, start the class definition, start the main method, and create a habitat and turtle. Then it should ask the turtle to turn right, go forward, turn left, and then go forward 50 pixels. Next, it should ask the habitat to show itself.  Finally, it should close the main method and class definition. We have added a compass to the picture to indicate the directions north, south, west, and east. Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There are three extra blocks that are not needed in a correct solution.  Then click on Check Me to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.  
+   The following program uses a turtle to draw a sort-of sideways capital L as seen in the image, but the lines are mixed up.  The program should do all necessary set-up: import items, start the class definition, start the main method, and create a habitat and turtle. Then it should ask the turtle to turn right, go forward, turn left, and then go forward 50 pixels. Next, it should ask the habitat to show itself.  Finally, it should close the main method and class definition. We have added a compass to the picture to indicate the directions north, south, west, and east. Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There are three extra blocks that are not needed in a correct solution.  Then click on Check Me to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.
    -----
    import java.util.*;
    import java.awt.*;
@@ -600,7 +600,7 @@ This |video3| shows another class called Belt and how it has 3 instance variable
     :height: 415
     :align: center
     :optional:
-    
+
 Try these AP practice questions that will help to prepare you for the AP Classroom progress checks.
 
 .. mchoice:: AP2-1-1
@@ -1397,9 +1397,9 @@ Try these AP practice questions that will help to prepare you for the AP Classro
       import java.awt.geom.*;
 
       import java.io.ByteArrayOutputStream;
-    //  import javax.xml.bind.DatatypeConverter;
+      // import javax.xml.bind.DatatypeConverter;
       // Using java.util.Base64 instead of javax.xml.bind
-	import java.util.Base64;
+      import java.util.Base64;
       import java.util.Scanner;
 
       /**
@@ -1763,10 +1763,10 @@ Try these AP practice questions that will help to prepare you for the AP Classro
                ByteArrayOutputStream output = new ByteArrayOutputStream();
                ImageIO.write(this.bufferedImage, "png", output);
                String result =
-	       // DatatypeConverter.printBase64Binary(output.toByteArray());
+               // DatatypeConverter.printBase64Binary(output.toByteArray());
                // using java.util.Base64 instead of java.xml.bind.DataTypeConverter
-            	Base64.getEncoder().encodeToString(output.toByteArray());
-	       System.out.println("&lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
+               Base64.getEncoder().encodeToString(output.toByteArray());
+               System.out.println("&lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
            } catch (IOException e) {
                System.out.println("Errors occured in image conversion");
            }
@@ -2283,14 +2283,14 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         public void setPicture(Picture pict) { this.picture = pict; }
 
         /**
-         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * Method to set the speed of animation by setting the delay to between 0-100.
          * 50 is the default. We pass this to the World's setSpeed method.
          * @param d
          */
-        public void setSpeed(int d) { 
+        public void setSpeed(int d) {
            ((World)modelDisplay).setSpeed(d);
         }
-        
+
         /**
          * Method to get the model display for this simple turtle
          * @return the model display if there is one else null
@@ -2830,7 +2830,7 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         {
           // let the parent constructor handle it
           super(p);
-        }   
+        }
 
       } // this is the end of class Turtle, put all new methods before this
       /**
@@ -2871,148 +2871,148 @@ Try these AP practice questions that will help to prepare you for the AP Classro
 
       public abstract class Giffer {
 
-      	// Generate gif from an array of filenames
-      	// Make the gif loopable if loop is true
-      	// Set the delay for each frame according to the delay (ms)
-      	// Use the name given in String output for output file
-      	public static void generateFromFiles(String[] filenames, String output, int delay, boolean loop)
-      		throws IIOException, IOException
-      	{
-      		int length = filenames.length;
-      		BufferedImage[] img_list = new BufferedImage[length];
+          // Generate gif from an array of filenames
+          // Make the gif loopable if loop is true
+          // Set the delay for each frame according to the delay (ms)
+          // Use the name given in String output for output file
+          public static void generateFromFiles(String[] filenames, String output, int delay, boolean loop)
+              throws IIOException, IOException
+          {
+              int length = filenames.length;
+              BufferedImage[] img_list = new BufferedImage[length];
 
-      		for (int i = 0; i < length; i++)
-      		{
-      			BufferedImage img = ImageIO.read(new File(filenames[i]));
-      			img_list[i] = img;
-      		}
+              for (int i = 0; i < length; i++)
+              {
+                  BufferedImage img = ImageIO.read(new File(filenames[i]));
+                  img_list[i] = img;
+              }
 
-      		generateFromBI(img_list, output, delay, loop);
-      	}
+              generateFromBI(img_list, output, delay, loop);
+          }
 
-      	// Generate gif from BufferedImage array
-      	// Make the gif loopable if loop is true
-      	// Set the delay for each frame according to the delay, 100 = 1s
-      	// Use the name given in String output for output file
-      	public static void generateFromBI(BufferedImage[] images, String output, int delay, boolean loop)
-      			throws IIOException, IOException
-      	{
-      		int maxWidth = 0;
-      		int maxHeight = 0;
-      		ImageWriter gifWriter = getWriter();
-      		ImageOutputStream ios = getImageOutputStream(output);
-      		IIOMetadata metadata = getMetadata(gifWriter, delay, loop);
+          // Generate gif from BufferedImage array
+          // Make the gif loopable if loop is true
+          // Set the delay for each frame according to the delay, 100 = 1s
+          // Use the name given in String output for output file
+          public static void generateFromBI(BufferedImage[] images, String output, int delay, boolean loop)
+                  throws IIOException, IOException
+          {
+              int maxWidth = 0;
+              int maxHeight = 0;
+              ImageWriter gifWriter = getWriter();
+              ImageOutputStream ios = getImageOutputStream(output);
+              IIOMetadata metadata = getMetadata(gifWriter, delay, loop);
 
-      		//Get bigger Width and Height
-      		for (BufferedImage img: images)
-      		{
-      			if(img.getHeight() > maxHeight){
-      				maxHeight = img.getHeight();
-      			}
-      			if(img.getWidth() > maxWidth){
-      				maxWidth = img.getWidth();
-      			}
-      		}
+              //Get bigger Width and Height
+              for (BufferedImage img: images)
+              {
+                  if(img.getHeight() > maxHeight){
+                      maxHeight = img.getHeight();
+                  }
+                  if(img.getWidth() > maxWidth){
+                      maxWidth = img.getWidth();
+                  }
+              }
 
-      		gifWriter.setOutput(ios);
-      		gifWriter.prepareWriteSequence(null);
-      		for (BufferedImage img: images)
-      		{
-      			BufferedImage dimg = new BufferedImage(maxWidth, maxHeight, BufferedImage.TYPE_INT_ARGB);
-      			Image tmp = img.getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT);
-      			Graphics2D g2d = dimg.createGraphics();
-      			int centerWidth = (maxWidth / 2) - (img.getWidth()/2) ;
-      			g2d.drawImage(tmp, centerWidth, 0, null);
-      		    g2d.dispose();
+              gifWriter.setOutput(ios);
+              gifWriter.prepareWriteSequence(null);
+              for (BufferedImage img: images)
+              {
+                  BufferedImage dimg = new BufferedImage(maxWidth, maxHeight, BufferedImage.TYPE_INT_ARGB);
+                  Image tmp = img.getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT);
+                  Graphics2D g2d = dimg.createGraphics();
+                  int centerWidth = (maxWidth / 2) - (img.getWidth()/2) ;
+                  g2d.drawImage(tmp, centerWidth, 0, null);
+                  g2d.dispose();
 
-      			IIOImage temp = new IIOImage(dimg, null, metadata);
-      			gifWriter.writeToSequence(temp, null);
-      		}
+                  IIOImage temp = new IIOImage(dimg, null, metadata);
+                  gifWriter.writeToSequence(temp, null);
+              }
 
-      		gifWriter.endWriteSequence();
-      	}
+              gifWriter.endWriteSequence();
+          }
 
-      	// Retrieve gif writer
-      	private static ImageWriter getWriter() throws IIOException
-      	{
-      		Iterator<ImageWriter> itr = ImageIO.getImageWritersByFormatName("gif");
-      		if(itr.hasNext())
-      			return (ImageWriter)itr.next();
+          // Retrieve gif writer
+          private static ImageWriter getWriter() throws IIOException
+          {
+              Iterator<ImageWriter> itr = ImageIO.getImageWritersByFormatName("gif");
+              if(itr.hasNext())
+                  return (ImageWriter)itr.next();
 
-      		throw new IIOException("GIF writer doesn't exist on this JVM!");
-      	}
+              throw new IIOException("GIF writer doesn't exist on this JVM!");
+          }
 
-      	// Retrieve output stream from the given file name
-      	private static ImageOutputStream getImageOutputStream(String output) throws IOException
-      	{
-      		File outfile = new File(output);
-      		return ImageIO.createImageOutputStream(outfile);
-      	}
+          // Retrieve output stream from the given file name
+          private static ImageOutputStream getImageOutputStream(String output) throws IOException
+          {
+              File outfile = new File(output);
+              return ImageIO.createImageOutputStream(outfile);
+          }
 
-      	// Prepare metadata from the user input, add the delays and make it loopable
-      	// based on the method parameters
-      	private static IIOMetadata getMetadata(ImageWriter writer, int delay, boolean loop)
-      		throws IIOInvalidTreeException
-      	{
-      		// Get the whole metadata tree node, the name is javax_imageio_gif_image_1.0
-      		// Not sure why I need the ImageTypeSpecifier, but it doesn't work without it
-      		ImageTypeSpecifier img_type = ImageTypeSpecifier.createFromBufferedImageType(BufferedImage.TYPE_INT_ARGB);
-      		IIOMetadata metadata = writer.getDefaultImageMetadata(img_type, null);
-      		String native_format = metadata.getNativeMetadataFormatName();
-      		IIOMetadataNode node_tree = (IIOMetadataNode)metadata.getAsTree(native_format);
+          // Prepare metadata from the user input, add the delays and make it loopable
+          // based on the method parameters
+          private static IIOMetadata getMetadata(ImageWriter writer, int delay, boolean loop)
+              throws IIOInvalidTreeException
+          {
+              // Get the whole metadata tree node, the name is javax_imageio_gif_image_1.0
+              // Not sure why I need the ImageTypeSpecifier, but it doesn't work without it
+              ImageTypeSpecifier img_type = ImageTypeSpecifier.createFromBufferedImageType(BufferedImage.TYPE_INT_ARGB);
+              IIOMetadata metadata = writer.getDefaultImageMetadata(img_type, null);
+              String native_format = metadata.getNativeMetadataFormatName();
+              IIOMetadataNode node_tree = (IIOMetadataNode)metadata.getAsTree(native_format);
 
-      		// Set the delay time you can see the format specification on this page
-      		// https://docs.oracle.com/javase/7/docs/api/javax/imageio/metadata/doc-files/gif_metadata.html
-      		IIOMetadataNode graphics_node = getNode("GraphicControlExtension", node_tree);
-      		graphics_node.setAttribute("delayTime", String.valueOf(delay));
-      		graphics_node.setAttribute("disposalMethod", "none");
-      		graphics_node.setAttribute("userInputFlag", "FALSE");
+              // Set the delay time you can see the format specification on this page
+              // https://docs.oracle.com/javase/7/docs/api/javax/imageio/metadata/doc-files/gif_metadata.html
+              IIOMetadataNode graphics_node = getNode("GraphicControlExtension", node_tree);
+              graphics_node.setAttribute("delayTime", String.valueOf(delay));
+              graphics_node.setAttribute("disposalMethod", "none");
+              graphics_node.setAttribute("userInputFlag", "FALSE");
 
-      		if(loop)
-      			makeLoopy(node_tree);
+              if(loop)
+                  makeLoopy(node_tree);
 
-      		metadata.setFromTree(native_format, node_tree);
+              metadata.setFromTree(native_format, node_tree);
 
-      		return metadata;
-      	}
+              return metadata;
+          }
 
-      	// Add an extra Application Extension node if the user wants it to be loopable
-      	// I am not sure about this part, got the code from StackOverflow
-      	// TODO: Study about this
-      	private static void makeLoopy(IIOMetadataNode root)
-      	{
-      		IIOMetadataNode app_extensions = getNode("ApplicationExtensions", root);
-      		IIOMetadataNode app_node = getNode("ApplicationExtension", app_extensions);
+          // Add an extra Application Extension node if the user wants it to be loopable
+          // I am not sure about this part, got the code from StackOverflow
+          // TODO: Study about this
+          private static void makeLoopy(IIOMetadataNode root)
+          {
+              IIOMetadataNode app_extensions = getNode("ApplicationExtensions", root);
+              IIOMetadataNode app_node = getNode("ApplicationExtension", app_extensions);
 
-      		app_node.setAttribute("applicationID", "NETSCAPE");
-      		app_node.setAttribute("authenticationCode", "2.0");
-      		app_node.setUserObject(new byte[]{ 0x1, (byte) (0 & 0xFF), (byte) ((0 >> 8) & 0xFF)});
+              app_node.setAttribute("applicationID", "NETSCAPE");
+              app_node.setAttribute("authenticationCode", "2.0");
+              app_node.setUserObject(new byte[]{ 0x1, (byte) (0 & 0xFF), (byte) ((0 >> 8) & 0xFF)});
 
-      		app_extensions.appendChild(app_node);
-      		root.appendChild(app_extensions);
-      	}
+              app_extensions.appendChild(app_node);
+              root.appendChild(app_extensions);
+          }
 
-      	// Retrieve the node with the name from the parent root node
-      	// Append the node if the node with the given name doesn't exist
-      	private static IIOMetadataNode getNode(String node_name, IIOMetadataNode root)
-      	{
-      		IIOMetadataNode node = null;
+          // Retrieve the node with the name from the parent root node
+          // Append the node if the node with the given name doesn't exist
+          private static IIOMetadataNode getNode(String node_name, IIOMetadataNode root)
+          {
+              IIOMetadataNode node = null;
 
-      		for (int i = 0; i < root.getLength(); i++)
-      		{
-      			if(root.item(i).getNodeName().compareToIgnoreCase(node_name) == 0)
-      			{
-      				node = (IIOMetadataNode) root.item(i);
-      				return node;
-      			}
-      		}
+              for (int i = 0; i < root.getLength(); i++)
+              {
+                  if(root.item(i).getNodeName().compareToIgnoreCase(node_name) == 0)
+                  {
+                      node = (IIOMetadataNode) root.item(i);
+                      return node;
+                  }
+              }
 
-      		// Append the node with the given name if it doesn't exist
-      		node = new IIOMetadataNode(node_name);
-      		root.appendChild(node);
+              // Append the node with the given name if it doesn't exist
+              node = new IIOMetadataNode(node_name);
+              root.appendChild(node);
 
-      		return node;
-      	}
+              return node;
+          }
       }
       import javax.swing.*;
       import java.util.List;
@@ -3214,12 +3214,12 @@ Try these AP practice questions that will help to prepare you for the AP Classro
         public int getHeight() { return height; }
 
         /**
-         * Method to set the speed of animation by setting the delay to between 0-100. 
+         * Method to set the speed of animation by setting the delay to between 0-100.
          * 50 is the default.
          * @param speed
          */
-        public void setSpeed(int d) { 
-           if (d >= 0 && d <= 100) 
+        public void setSpeed(int d) {
+           if (d >= 0 && d <= 100)
                delay = d;
         }
 
@@ -3243,7 +3243,7 @@ Try these AP practice questions that will help to prepare you for the AP Classro
          * Method to show the frame
          */
         public void show()
-       {
+        {
           this.show(false);
         }
 
@@ -3263,11 +3263,11 @@ Try these AP practice questions that will help to prepare you for the AP Classro
 
                     byte[] imageBytes = downloadUrl(url);
                     String result =
-		            //DatatypeConverter.printBase64Binary(imageBytes);
+                    //DatatypeConverter.printBase64Binary(imageBytes);
                     //BH: using java.util.Base64 instead of javax.xml.bind.DataTypeConverter
                     Base64.getEncoder().encodeToString(imageBytes);
 
-		            System.gc();
+                    System.gc();
                     history.delete();
                     double rand = Math.random();
                     System.out.println("&lt;img src=\'data:image/gif;base64," + result + "\'/>");

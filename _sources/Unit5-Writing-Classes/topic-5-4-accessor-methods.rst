@@ -6,29 +6,29 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Accessor Methods
 =================
 
 Since the instance variables in a class are usually marked as private to the class, programmers provide public methods that allow safe access to the instance variable values in a class. **Accessor methods**, also called **get methods** or **getters**, allow a way to get the value of each instance variable from outside of the class. In the next lesson, we will see **mutator methods**, also called **set methods** or **setters**, that allow a way to change the values of the instance variables. In Unit 2, we also used set/get methods with the Turtle class to get the Turtle object's width, height, xPosition, etc. or to change them.
 
-If you used a language like App Inventor in an AP CSP class, you may have used setter and getter blocks. In App Inventor, you cannot make your own classes, but you can declare UI objects like Button1, Button2 from the Button class and use their get/set methods for any property like below. 
+If you used a language like App Inventor in an AP CSP class, you may have used setter and getter blocks. In App Inventor, you cannot make your own classes, but you can declare UI objects like Button1, Button2 from the Button class and use their get/set methods for any property like below.
 
 .. figure:: Figures/AppInvSetGet.png
     :width: 300px
@@ -36,22 +36,22 @@ If you used a language like App Inventor in an AP CSP class, you may have used s
     :figclass: align-center
 
     Figure 1: App Inventor Set and Get blocks for object Button1
-    
+
 Java programmers write get methods for each instance variable that look like the following. Notice that the get method returns the instance variable's value and it has a return type that is the same type as the variable that it is returning.
 
 .. code-block:: java
 
    class ExampleTemplate {
- 
+
      //Instance variable declaration
      private typeOfVar varName;
-  
+
      // Accessor (getter) method template
      public typeOfVar getVarName()
      {
         return varName;
      }
-     
+
   }
 
 Here's an example of an accessor method called getName() for the Student class which also demonstrates how to call getName() using a Student object:
@@ -59,19 +59,19 @@ Here's an example of an accessor method called getName() for the Student class w
 .. code-block:: java
 
    class Student {
- 
+
      //Instance variable name
      private String name;
-  
+
      /** getName() example
       *  @return name */
      public String getName()
      {
         return name;
      }
-     
+
      public static void main(String[] args)
-     { 
+     {
         // To call a get method, use objectName.getVarName()
         Student s = new Student();
         System.out.println("Name: " + s.getName() );
@@ -80,18 +80,18 @@ Here's an example of an accessor method called getName() for the Student class w
 .. note::
 
     Some common errors with methods that return values are:
-    
+
     - Forgetting a return type like int before the method name.
     - Forgetting to use the return keyword to return a value at the end of the method.
     - Forgetting to do something with the value returned from a method (like saving it into a variable or printing it out).
-    
-    
+
+
 .. |Java visualizer1| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20TesterClass%20%0A%20%20%7B%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Skyler%22,%20%22skyler%40sky.com%22,%20123456%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Name%3A%22%20%2B%20%20s1.getName%28%29%20%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Email%3A%22%20%2B%20%20s1.getEmail%28%29%20%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22ID%3A%20%22%20%2B%20s1.getId%28%29%20%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%0A%20%20class%20Student%20%0A%20%20%7B%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20int%20id%3B%0A%20%20%20%20%20%0A%20%20%20%20%20public%20Student%28String%20initName,%20String%20initEmail,%20int%20initId%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20id%20%3D%20initId%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20accessor%20methods%20-%20getters%20%0A%20%20%20%20%20/**%20getName%28%29%20%20%40return%20name%20*/%0A%20%20%20%20%20public%20String%20getName%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20name%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20/**%20getEmail%28%29%20%20%40return%20email%20*/%0A%20%20%20%20%20public%20String%20getEmail%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20email%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20/**%20getName%28%29%20%20%40return%20id%20*/%0A%20%20%20%20%20public%20int%20getId%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20id%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=26&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-    
-Try the following code. Note that this active code window has 2 classes! The main method is in a separate **Tester** or **Driver** class. It does not have access to the private instance variables in the other Student class. Note that when you use multiple classes in an IDE, you usually put them in separate files, and you give the files the same name as the public class in them. In active code and IDEs, you can put 2 classes in 1 file, as demonstrated here, but only 1 of them can be public and have a main method in it. You can also view the fixed code in the |Java visualizer1|.     
-     
+
+Try the following code. Note that this active code window has 2 classes! The main method is in a separate **Tester** or **Driver** class. It does not have access to the private instance variables in the other Student class. Note that when you use multiple classes in an IDE, you usually put them in separate files, and you give the files the same name as the public class in them. In active code and IDEs, you can put 2 classes in 1 file, as demonstrated here, but only 1 of them can be public and have a main method in it. You can also view the fixed code in the |Java visualizer1|.
+
 |CodingEx| **Coding Exercise**
 
 
@@ -102,7 +102,7 @@ Try the following code. Note that this active code window has 2 classes! The mai
 
   Try the following code. Note that it has a bug! It tries to access the private instance variable email from outside the class Student.  Change the main method in Tester class so that it uses the appropriate public accessor method (get method) to access the email value instead.
   ~~~~
-  public class TesterClass 
+  public class TesterClass
   {
      // main method for testing
      public static void main(String[] args)
@@ -112,36 +112,36 @@ Try the following code. Note that this active code window has 2 classes! The mai
         // Fix the bug here!
         System.out.println("Email:" +  s1.email );
         System.out.println("ID: " + s1.getId() );
-     }   
+     }
    }
   /** Class Student keeps track of name, email, and id of a Student. */
-  class Student 
+  class Student
   {
      private String name;
      private String email;
      private int id;
-     
+
      public Student(String initName, String initEmail, int initId)
      {
         name = initName;
         email = initEmail;
         id = initId;
      }
-     
-     // accessor methods - getters 
+
+     // accessor methods - getters
      /** getName()  @return name */
-     public String getName() 
-     { 
+     public String getName()
+     {
         return name;
      }
      /** getEmail()  @return email */
-     public String getEmail() 
-     { 
+     public String getEmail()
+     {
         return email;
      }
      /** getName()  @return id */
-     public int getId() 
-     { 
+     public int getId()
+     {
         return id;
      }
   }
@@ -149,7 +149,7 @@ Try the following code. Note that this active code window has 2 classes! The mai
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -170,12 +170,12 @@ Try the following code. Note that this active code window has 2 classes! The mai
         }
     }
 
-    
 
-There is a subtle difference in methods that return primitive types versus reference/object types. If the method is returning a primitive type like int, it returns a copy of the value. This is called **return by value**. This means the original value is not changed and it is a safe way to access the instance variables. 
 
-However, object variables really hold a reference to the object in memory. This is not the actual value, but its address in memory. So, if the method is returning an object like String, Java returns a copy of the object reference, not the value itself. Java was especially designed this way because objects tend to be large and we want to avoid copying large objects, so we just pass around references to the objects (their addresses in memory). So, when we call getName(), we actually get back a reference to the String for the name in memory. 
-  
+There is a subtle difference in methods that return primitive types versus reference/object types. If the method is returning a primitive type like int, it returns a copy of the value. This is called **return by value**. This means the original value is not changed and it is a safe way to access the instance variables.
+
+However, object variables really hold a reference to the object in memory. This is not the actual value, but its address in memory. So, if the method is returning an object like String, Java returns a copy of the object reference, not the value itself. Java was especially designed this way because objects tend to be large and we want to avoid copying large objects, so we just pass around references to the objects (their addresses in memory). So, when we call getName(), we actually get back a reference to the String for the name in memory.
+
 toString()
 ----------
 
@@ -183,9 +183,9 @@ toString()
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20TesterClass%20%0A%20%20%7B%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Skyler%22,%20%22skyler%40sky.com%22,%20123456%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28s1%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%0A%20%20class%20Student%20%0A%20%20%7B%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20int%20id%3B%0A%20%20%20%20%20%0A%20%20%20%20%20public%20Student%28String%20initName,%20String%20initEmail,%20int%20initId%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20id%20%3D%20initId%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20toString%28%29%20method%0A%20%20%20%20%20public%20String%20toString%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20return%20id%20%2B%20%22%3A%20%22%20%2B%20name%20%2B%20%22,%20%22%20%2B%20email%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
-Another common method that returns a value is the toString() method which returns a String description of the instance variables of the object. 
+Another common method that returns a value is the toString() method which returns a String description of the instance variables of the object.
 
-This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement. 
+This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement.
 
 Here is the Student class again, but this time with a toString() method. Note that when we call System.out.println(s1); it will automatically call the toString() method to cast the object into a String. The toString() method will return a String that is then printed out. Watch how the control moves to the toString() method and then comes back to main in the |Java visualizer| or by using the Code Lens button.
 
@@ -195,7 +195,7 @@ Here is the Student class again, but this time with a toString() method. Note th
 
   See the toString() method in action.
   ~~~~
-  public class TesterClass 
+  public class TesterClass
   {
      // main method for testing
      public static void main(String[] args)
@@ -204,23 +204,23 @@ Here is the Student class again, but this time with a toString() method. Note th
         System.out.println(s1);
      }
    }
-  
-  class Student 
+
+  class Student
   {
      private String name;
      private String email;
      private int id;
-     
+
      public Student(String initName, String initEmail, int initId)
      {
         name = initName;
         email = initEmail;
         id = initId;
      }
-     
+
      // toString() method
-     public String toString() 
-     { 
+     public String toString()
+     {
        return id + ": " + name + ", " + email;
      }
   }
@@ -228,7 +228,7 @@ Here is the Student class again, but this time with a toString() method. Note th
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -240,8 +240,8 @@ Here is the Student class again, but this time with a toString() method. Note th
             assertTrue(passed);
         }
     }
-  
-  
+
+
 |Groupwork| Programming Challenge : Class Pet
 --------------------------------------------------
 
@@ -249,7 +249,7 @@ Here is the Student class again, but this time with a toString() method. Note th
     :width: 150
     :align: left
     :alt: Animal Clinic
-    
+
 You've been hired to create a software system for the Awesome Animal Clinic! They would like to keep track of their animal patients. Here are some attributes of the pets that they would like to track:
 
 - Name
@@ -260,13 +260,13 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 
 1. Create a class that keeps track of the attributes above for pet records at the animal clinic. Decide what instance variables are needed and their data types. Make sure you use int, double, and String data types. Make the instance variables private.
 
-2. Create 2 constructors, one with no parameters and one with many parameters to initialize all the instance variables. 
+2. Create 2 constructors, one with no parameters and one with many parameters to initialize all the instance variables.
 
 3. Create Accessor (get) methods for each of the instance variables.
 
 4. Create a toString() method that returns all the information in a pet record.
 
-5. In the main method below, create 3 pet objects and call their constructors, accessor methods, and toString methods to test all of your methods. 
+5. In the main method below, create 3 pet objects and call their constructors, accessor methods, and toString methods to test all of your methods.
 
 6. Make sure you use good commenting!
 
@@ -281,26 +281,26 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
       Pet class (complete comments)
       @author
       @since
-      
+
   */
-  class Pet 
+  class Pet
   {
      // keep track of the name, age, weight, type of animal, and breed of the pet
-     
-     
+
+
      // Write 2 constructors, accessor (get) methods, and a toString method. Use good commenting.
-     
-     // Don't forget to complete the main method in the TesterClass below!   
+
+     // Don't forget to complete the main method in the TesterClass below!
   }
-  
-  public class TesterClass 
+
+  public class TesterClass
   {
      // main method for testing
      public static void main(String[] args)
      {
         // Create 3 Pet objects and test all your methods
-        
-     }   
+
+     }
    }
    ====
    import static org.junit.Assert.*;
@@ -401,21 +401,21 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
             assertTrue(passed);
         }
      }
-  
-|Groupwork| Design a Class for your Community 
+
+|Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
 .. |lesson 5.2| raw:: html
 
    <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 5.2</a>
- 
-In the previous lessons, you came up with a class of your own choice relevant to your community. 
 
-1. Copy your class with its 3 instance variables and constructors from |lesson 5.2|.  
+In the previous lessons, you came up with a class of your own choice relevant to your community.
 
-2. Create accessor (get) methods for each of the instance variables. 
+1. Copy your class with its 3 instance variables and constructors from |lesson 5.2|.
 
-3. Create a toString() method that returns all the information in the instance variables. 
+2. Create accessor (get) methods for each of the instance variables.
+
+3. Create a toString() method that returns all the information in the instance variables.
 
 4. Use these methods in the main method. Make sure you use good commenting.
 
@@ -424,24 +424,24 @@ In the previous lessons, you came up with a class of your own choice relevant to
   :language: java
   :autograde: unittest
 
-  Copy your class with its 3 instance variables and constructors from lesson 5.2.  Create accessor (get) methods for each of the instance variables. Create a toString() method that returns all the information in the instance variables. Use these methods in the main method. Make sure you use good commenting. 
+  Copy your class with its 3 instance variables and constructors from lesson 5.2.  Create accessor (get) methods for each of the instance variables. Create a toString() method that returns all the information in the instance variables. Use these methods in the main method. Make sure you use good commenting.
   ~~~~
   public class          // Add your class name here!
   {
-      // 1. Copy your class with its 3 instance variables and constructors from lesson 5.2.  
+      // 1. Copy your class with its 3 instance variables and constructors from lesson 5.2.
 
-      // 2. Create accessor (get) methods for each of the instance variables. 
+      // 2. Create accessor (get) methods for each of the instance variables.
 
-      // 3. Create a toString() method that returns all the information in the instance variables. 
+      // 3. Create a toString() method that returns all the information in the instance variables.
 
       // 4. Use these methods in the main method. Make sure you use good commenting.
       public static void main(String[] args)
-      {  
-         // Construct an object of your class  
-         
-         
-         // call the objects' accessor methods and toString methods and print them out. 
-      
+      {
+         // Construct an object of your class
+
+
+         // call the objects' accessor methods and toString methods and print them out.
+
       }
   }
   ====
@@ -499,7 +499,7 @@ Summary
 
 - A non-void method returns a single value. Its header includes the return type in place of the keyword void.
 
-- Accessor methods that return primitive types use "return by value" where a copy of the value is returned. 
+- Accessor methods that return primitive types use "return by value" where a copy of the value is returned.
 
 - When the return expression is a reference to an object, a copy of that reference is returned, not a copy of the object.
 
@@ -528,7 +528,7 @@ AP Practice
    :feedback_e: The numOfPeople variable is correctly returned.
 
     Consider the following Party class. The getNumOfPeople method is intended to allow methods in other classes to access a Party object’s numOfPeople instance variable value; however, it does not work as intended. Which of the following best explains why the getNumOfPeople method does NOT work as intended?
-    
+
     .. code-block:: java
 
         public class Party
@@ -564,25 +564,25 @@ AP Practice
         }
 
     The accessor method getId is intended to return the id of a Student object. Which of the following best explains why the class does not compile?
-    
+
     - The id instance variable should be public.
-    
+
       - Instance variables should be private.
-    
+
     - The getId method should be declared as private.
-    
+
       - Accessor methods should be public methods.
-    
+
     - The getId method requires a parameter.
-    
+
       - Accessor methods usually do not require parameters.
 
     - The return type of the getId method needs to be defined as void.
-        
+
       - void is not the correct return type.
-      
-    - The return type of the getId method needs to be defined as int. 
-    
+
+    - The return type of the getId method needs to be defined as int.
+
       + Correct! Accessor methods have a return type of the instance variable they are returning.
-      
+
 

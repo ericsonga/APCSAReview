@@ -57,22 +57,22 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    {
       public void talk()
       {
-         System.out.println("Hello!");  
+         System.out.println("Hello!");
       }
    }
-   
+
    public class Person extends GenericPerson {
    =====
-   	public void talk(String name) {
-   		System.out.println("Hello " + name + "!");
-   	}
+      public void talk(String name) {
+         System.out.println("Hello " + name + "!");
+      }
    =====
    public String talk() {
-   	return "Hello!";
+      return "Hello!";
    } #distractor
    =====
    public char talk() {
-   	return 'y';
+      return 'y';
    } #distractor
    =====
    } // end class
@@ -91,18 +91,18 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    public class interface Person { #distractor
    =====
-   	public void walk() {
-   		System.out.println("walk");
-   	}
-   	public void talk() {
-   		System.out.println("talk");
-   	} #distractor
+      public void walk() {
+         System.out.println("walk");
+      }
+      public void talk() {
+         System.out.println("talk");
+      } #distractor
    =====
-   	public walk();
-   	public talk(); #distractor
+      public walk();
+      public talk(); #distractor
    =====
-   	public void walk();
-   	public void talk();
+      public void walk();
+      public void talk();
    =====
    } // end class
 
@@ -144,7 +144,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       private String firstName;
       private String lastName;
    =====
-   	public Person(String firstName, String lastName) {
+      public Person(String firstName, String lastName) {
          this.firstName = firstName;
          this.lastName = lastName;
       }

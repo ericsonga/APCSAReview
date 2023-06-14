@@ -2,12 +2,12 @@
    :prefix:  7-4-11-
    :start: 1
 
-Free Response - Grid World A 
+Free Response - Grid World A
 --------------------------------------------------------
 
-..	index::
-	  single: Grid World
-      single: free response
+.. index::
+   single: Grid World
+   single: free response
 
 The following is a free response question from 2013. It was question 3 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
@@ -238,7 +238,7 @@ Write the method ``getEmptyLocations`` in the code below.
    :language: java
    :datafile: GridWorld.jar
 
-   Complete the getEmptyLocations() method below. 
+   Complete the getEmptyLocations() method below.
    ~~~~
    import java.util.*;
 
@@ -282,7 +282,7 @@ Write the method ``getEmptyLocations`` in the code below.
             for (int j = 0; j < studentAnswer.size(); j++) {
                 System.out.println(studentAnswer.get(j));
             }
-            
+
             System.out.println("Running Test 2: returns empty ArrayList if no empty locations");
             example.put(loc4, loc4);
             locsCorrect.clear();
@@ -305,7 +305,7 @@ Write the method ``getEmptyLocations`` in the code below.
      */
       /**
          * Grid provides an interface for a two-dimensional, grid-like
-         * environment containing arbitrary objects. 
+         * environment containing arbitrary objects.
          */
        interface Grid<E>
         {
@@ -322,7 +322,7 @@ Write the method ``getEmptyLocations`` in the code below.
             int getNumCols();
 
             /**
-             * Checks whether a location is valid in this grid. 
+             * Checks whether a location is valid in this grid.
              * Precondition: loc is not null
              * @param loc the location to check
              * @return true if loc is valid in this grid,
@@ -331,7 +331,7 @@ Write the method ``getEmptyLocations`` in the code below.
             boolean isValid(Location loc);
 
             /**
-             * Puts an object at a given location in this grid. 
+             * Puts an object at a given location in this grid.
              * Precondition: (1) loc is valid in this grid (2)
              * obj is not null
              * @param loc the location at which to put the object
@@ -342,7 +342,7 @@ Write the method ``getEmptyLocations`` in the code below.
             E put(Location loc, E obj);
 
             /**
-             * Removes the object at a given location from this grid. 
+             * Removes the object at a given location from this grid.
              * Precondition: loc is valid in this grid
              * @param loc the location of the object that is to be removed
              * @return the object that was removed (or null if the location
@@ -351,7 +351,7 @@ Write the method ``getEmptyLocations`` in the code below.
             E remove(Location loc);
 
             /**
-             * Returns the object at a given location in this grid. 
+             * Returns the object at a given location in this grid.
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return the object at location loc (or null
@@ -368,7 +368,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the valid locations adjacent to a given location in all eight
              * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest). 
+             * west, and northwest).
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid locations adjacent to loc
@@ -379,7 +379,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the valid empty locations adjacent to a given location in all eight
              * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest). 
+             * west, and northwest).
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid empty locations adjacent to
@@ -390,7 +390,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the valid occupied locations adjacent to a given location in all
              * eight compass directions (north, northeast, east, southeast, south,
-             * southwest, west, and northwest). 
+             * southwest, west, and northwest).
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid occupied locations adjacent to
@@ -401,7 +401,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the neighboring occupants in all eight compass directions (north,
              * northeast, east, southeast, south, southwest, west, and northwest).
-             * 
+             *
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return returns an array list of the objects in the occupied locations
@@ -410,12 +410,12 @@ Write the method ``getEmptyLocations`` in the code below.
             ArrayList<E> getNeighbors(Location loc);
         }
          // End of Class Grid
-         
+
         // Location Class
 
         /**
          * A Location object represents the row and column of a location
-         * in a two-dimensional grid. 
+         * in a two-dimensional grid.
          * The API of this class is testable on the AP CS A and AB exams.
          */
          class Location implements Comparable
@@ -617,7 +617,7 @@ Write the method ``getEmptyLocations`` in the code below.
              * Compares this location to other for ordering. Returns a
              * negative integer, zero, or a positive integer as this location is less
              * than, equal to, or greater than other. Locations are
-             * ordered in row-major order. 
+             * ordered in row-major order.
              * (Precondition: other is a Location object.)
              * @param other the other location to test
              * @return a negative integer if this location is less than
@@ -652,11 +652,11 @@ Write the method ``getEmptyLocations`` in the code below.
         // End of Class
 
         // BoundedGrid Class
-        
+
 
         /**
          * A BoundedGrid is a rectangular grid with a finite number of
-         * rows and columns. 
+         * rows and columns.
          * The implementation of this class is testable on the AP CS AB exam.
          */
          class BoundedGrid<E> extends AbstractGrid<E>
@@ -752,13 +752,13 @@ Write the method ``getEmptyLocations`` in the code below.
         }
 
         // End of Class
-        
+
         // Class AbstractGrid
-        
+
 
         /**
          * AbstractGrid contains the methods that are common to grid
-         * implementations. 
+         * implementations.
          * The implementation of this class is testable on the AP CS AB exam.
          */
          abstract class AbstractGrid<E> implements Grid<E>
@@ -834,7 +834,7 @@ Write the method ``getEmptyLocations`` in the code below.
 
     public class RunestoneTests extends CodeTestHelper
     {
-      public RunestoneTests() 
+      public RunestoneTests()
       {
         super("GridWorldUtilities");
       }
@@ -865,8 +865,8 @@ Write the method ``getEmptyLocations`` in the code below.
          locsCorrect.add(loc4);
          ArrayList<Location> studentAnswer = new ArrayList<Location>();
          studentAnswer = GridWorldUtilities.getEmptyLocations(example);
-         
-         String output =  studentAnswer.get(0).toString(); 
+
+         String output =  studentAnswer.get(0).toString();
          String expect = "(1, 1)";
 
          boolean passed = getResults(expect, output, "Test 1 call to getEmptyLocations()");
@@ -881,7 +881,7 @@ Write the method ``getEmptyLocations`` in the code below.
 
         /**
          * Grid provides an interface for a two-dimensional, grid-like
-         * environment containing arbitrary objects. 
+         * environment containing arbitrary objects.
          */
         public interface Grid<E>
         {
@@ -898,7 +898,7 @@ Write the method ``getEmptyLocations`` in the code below.
             int getNumCols();
 
             /**
-             * Checks whether a location is valid in this grid. 
+             * Checks whether a location is valid in this grid.
              * Precondition: loc is not null
              * @param loc the location to check
              * @return true if loc is valid in this grid,
@@ -907,7 +907,7 @@ Write the method ``getEmptyLocations`` in the code below.
             boolean isValid(Location loc);
 
             /**
-             * Puts an object at a given location in this grid. 
+             * Puts an object at a given location in this grid.
              * Precondition: (1) loc is valid in this grid (2)
              * obj is not null
              * @param loc the location at which to put the object
@@ -918,7 +918,7 @@ Write the method ``getEmptyLocations`` in the code below.
             E put(Location loc, E obj);
 
             /**
-             * Removes the object at a given location from this grid. 
+             * Removes the object at a given location from this grid.
              * Precondition: loc is valid in this grid
              * @param loc the location of the object that is to be removed
              * @return the object that was removed (or null if the location
@@ -927,7 +927,7 @@ Write the method ``getEmptyLocations`` in the code below.
             E remove(Location loc);
 
             /**
-             * Returns the object at a given location in this grid. 
+             * Returns the object at a given location in this grid.
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return the object at location loc (or null
@@ -944,7 +944,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the valid locations adjacent to a given location in all eight
              * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest). 
+             * west, and northwest).
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid locations adjacent to loc
@@ -955,7 +955,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the valid empty locations adjacent to a given location in all eight
              * compass directions (north, northeast, east, southeast, south, southwest,
-             * west, and northwest). 
+             * west, and northwest).
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid empty locations adjacent to
@@ -966,7 +966,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the valid occupied locations adjacent to a given location in all
              * eight compass directions (north, northeast, east, southeast, south,
-             * southwest, west, and northwest). 
+             * southwest, west, and northwest).
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return an array list of the valid occupied locations adjacent to
@@ -977,7 +977,7 @@ Write the method ``getEmptyLocations`` in the code below.
             /**
              * Gets the neighboring occupants in all eight compass directions (north,
              * northeast, east, southeast, south, southwest, west, and northwest).
-             * 
+             *
              * Precondition: loc is valid in this grid
              * @param loc a location in this grid
              * @return returns an array list of the objects in the occupied locations
@@ -986,12 +986,12 @@ Write the method ``getEmptyLocations`` in the code below.
             ArrayList<E> getNeighbors(Location loc);
         }
          // End of Class Grid
-         
+
         // Location Class
 
         /**
          * A Location object represents the row and column of a location
-         * in a two-dimensional grid. 
+         * in a two-dimensional grid.
          * The API of this class is testable on the AP CS A and AB exams.
          */
         public class Location implements Comparable
@@ -1193,7 +1193,7 @@ Write the method ``getEmptyLocations`` in the code below.
              * Compares this location to other for ordering. Returns a
              * negative integer, zero, or a positive integer as this location is less
              * than, equal to, or greater than other. Locations are
-             * ordered in row-major order. 
+             * ordered in row-major order.
              * (Precondition: other is a Location object.)
              * @param other the other location to test
              * @return a negative integer if this location is less than
@@ -1228,12 +1228,12 @@ Write the method ``getEmptyLocations`` in the code below.
         // End of Class
 
         // BoundedGrid Class
-        
+
         import java.util.ArrayList;
 
         /**
          * A BoundedGrid is a rectangular grid with a finite number of
-         * rows and columns. 
+         * rows and columns.
          * The implementation of this class is testable on the AP CS AB exam.
          */
         public class BoundedGrid<E> extends AbstractGrid<E>
@@ -1329,14 +1329,14 @@ Write the method ``getEmptyLocations`` in the code below.
         }
 
         // End of Class
-        
+
         // Class AbstractGrid
-        
+
         import java.util.ArrayList;
 
         /**
          * AbstractGrid contains the methods that are common to grid
-         * implementations. 
+         * implementations.
          * The implementation of this class is testable on the AP CS AB exam.
          */
         public abstract class AbstractGrid<E> implements Grid<E>

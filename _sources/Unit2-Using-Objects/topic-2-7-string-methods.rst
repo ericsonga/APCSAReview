@@ -1,41 +1,41 @@
 .. qnum::
    :prefix: 2-7-
    :start: 1
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. |AP CS A Reference Sheet| raw:: html
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
-    
+
 .. image:: ../../_static/time90.png
     :width: 250
     :align: right
-    
-String Methods 
+
+String Methods
 =================
 
-..	index::
-	pair: String; length
-	pair: String; substring
-	pair: String; indexOf
-	pair: String; compareTo
-	pair: String; equals
+.. index::
+    pair: String; length
+    pair: String; substring
+    pair: String; indexOf
+    pair: String; compareTo
+    pair: String; equals
     pair: String; methods
 
 A string holds characters in a sequence.  Each character is at a position or **index** which starts with 0 as shown below.  An **index** is a number associated with a position in a string.  The length of a string is the number of characters in it including any spaces or special characters.  The string below has a length of 14.
@@ -52,7 +52,7 @@ A string holds characters in a sequence.  Each character is at a position or **i
 
    The first character in a string is at index 0 and the last characters is at **length** -1.
 
-For the AP CS A exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the |AP CS A Reference Sheet| that you get during the exam so you don't have to memorize these.  
+For the AP CS A exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the |AP CS A Reference Sheet| that you get during the exam so you don't have to memorize these.
 
 
     -  **int length()** method returns the number of characters in the string, including spaces and special characters like punctuation.
@@ -69,13 +69,13 @@ For the AP CS A exam, you only need to know how to use the following String meth
 String Methods: length, substring, indexOf
 ------------------------------------------
 
-Run the code below to see the output from the String methods ``length``, ``substring``, and ``indexOf``. The length method returns the number of characters in the string, not the last index which is length -1. The ``str.substring(from,to)`` method returns the substring from the ``from`` index up to (but not including) the ``to`` index. The method ``str.indexOf(substring)`` searches for the substring in str and returns the index of where it finds substring in str or -1 if it is not there.   
+Run the code below to see the output from the String methods ``length``, ``substring``, and ``indexOf``. The length method returns the number of characters in the string, not the last index which is length -1. The ``str.substring(from,to)`` method returns the substring from the ``from`` index up to (but not including) the ``to`` index. The method ``str.indexOf(substring)`` searches for the substring in str and returns the index of where it finds substring in str or -1 if it is not there.
 
 .. activecode:: lcsm1
    :language: java
    :autograde: unittest
 
-   This code shows the output from String methods length, substring, and indexOf. How many letters does substring(0,3) return? What does indexOf return when its argument is not found? 
+   This code shows the output from String methods length, substring, and indexOf. How many letters does substring(0,3) return? What does indexOf return when its argument is not found?
    ~~~~
    public class Test1
    {
@@ -90,11 +90,11 @@ Run the code below to see the output from the String methods ``length``, ``subst
         System.out.println(message1.substring(0,3));
         System.out.println(message1.substring(2,3));
         System.out.println(message1.substring(5));
-        
+
         System.out.println(message1.indexOf("is")); // This will match the is in "This"!
         System.out.println(message1.indexOf("Hello"));
         System.out.println(message2.indexOf("Hello"));
-        
+
         // lowercase and uppercase are not on the AP exam, but still useful
         System.out.println(message2.toLowerCase());
         System.out.println(message2.toUpperCase());
@@ -113,7 +113,7 @@ Run the code below to see the output from the String methods ``length``, ``subst
             String output = getMethodOutput("main").trim();
             String expect = "14\n11\nThi\ni\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
             boolean passed = output.contains(expect);
-          
+
             getResults(expect, output, "Expected output from main", passed);
             assertTrue(passed);
         }
@@ -227,7 +227,7 @@ CompareTo and Equals
 
 We can compare primitive types like int and double using operators like == and < or >, which you will learn about in the next unit. However, with reference types like String, you must use the methods equals and compareTo, not == or < or >.
 
-The method ``compareTo`` compares two strings character by character. If they are equal, it returns 0. If the first string is alphabetically ordered before the second string (which is the argument of compareTo), it returns a negative number. And if the first string is alphabetically ordered after the second string, it returns a positive number. (The actual number that it returns does not matter, but it is the distance in the first letter that is different, e.g. A is 7 letters away from H.) 
+The method ``compareTo`` compares two strings character by character. If they are equal, it returns 0. If the first string is alphabetically ordered before the second string (which is the argument of compareTo), it returns a negative number. And if the first string is alphabetically ordered after the second string, it returns a positive number. (The actual number that it returns does not matter, but it is the distance in the first letter that is different, e.g. A is 7 letters away from H.)
 
 .. figure:: Figures/compareTo.png
     :width: 350px
@@ -237,7 +237,7 @@ The method ``compareTo`` compares two strings character by character. If they ar
 
     Figure 2: compareTo returns a negative or positive value or 0 based on alphabetical order
 
-The equals method compares the two strings character by character and returns true or false. Both compareTo and equals are case-sensitive. There are case-insensitive versions of these methods, ``compareToIgnoreCase`` and ``equalsIgnoreCase``, which are not on the AP exam. 
+The equals method compares the two strings character by character and returns true or false. Both compareTo and equals are case-sensitive. There are case-insensitive versions of these methods, ``compareToIgnoreCase`` and ``equalsIgnoreCase``, which are not on the AP exam.
 
 Run the example below to see the output from ``compareTo`` and ``equals``. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  Notice that equals is case-sensitive.
 
@@ -245,7 +245,7 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Since
    :language: java
    :autograde: unittest
 
-   Run the code to see how the String methods equals and compareTo work. Is equals case-sensitive? When does compareTo return a negative number? 
+   Run the code to see how the String methods equals and compareTo work. Is equals case-sensitive? When does compareTo return a negative number?
    ~~~~
    public class Test2
    {
@@ -283,8 +283,8 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Since
 .. |String class| raw:: html
 
    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String class</a>
-   
-There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam. 
+
+There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam.
 
 An **Application Programming Interface (API)** is a library of prewritten classes that simplify complex programming tasks for us. These classes are grouped together in a **package** like java.lang and we can import these packages (or individual classes) into our programs to make use of them. For instance, we have just discussed the String library built into the default java.lang package - it takes care of the detailed work of manipulating strings for us.  There are many other useful library packages as well, both in the java.lang package and in other packages. Documentation for APIs and libraries are essential to understanding how to use these classes.
 
@@ -296,20 +296,20 @@ An **Application Programming Interface (API)** is a library of prewritten classe
 
 .. dragndrop:: ch4_str1
     :feedback: Review the vocabulary.
-    :match_1: the position of a character in a string|||index 
+    :match_1: the position of a character in a string|||index
     :match_2: a new string that is a part of another string with 0 to all characters copied from the original string|||substring
     :match_3: doesn't change|||immutable
     :match_4: the number of characters in a string|||length
-    
+
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
-    
+
 .. dragndrop:: ch4_str2
     :feedback: Review the vocabulary.
     :match_1: Returns true if the characters in two strings are the same|||equals
     :match_2: Returns the position of one string in another or -1|||indexOf
     :match_3: Returns a number to indicate if one string is less than, equal to, or greater than another|||compareTo
     :match_4: Returns a string representing the object that is passed to this method|||toString
-    
+
     Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
 
 .. mchoice:: qsb_5
@@ -389,9 +389,9 @@ An **Application Programming Interface (API)** is a library of prewritten classe
      String s1 = "Hi";
      String s2 = "Bye";
      int answer = s1.compareTo(s2);
-     
 
-   
+
+
 
 
 Common Mistakes with Strings
@@ -403,7 +403,7 @@ The following code shows some common mistakes with strings.
    :language: java
    :practice: T
    :autograde: unittest
-   
+
    This code contains some common mistakes with strings. Fix the code to use the string methods correctly.
    ~~~~
    public class StringMistakes
@@ -411,17 +411,17 @@ The following code shows some common mistakes with strings.
       public static void main(String[] args)
       {
         String str1 = "Hello!";
-        
+
         // Print out the first letter?
         System.out.println("The first letter in " + str1 + ":" + str1.substring(1,1) );
-   
+
         // Print out the last character?
         System.out.println("The last char. in " + str1 + ":" + str1.substring(8) );
-        
+
         // Print str1 in lower case? Will str1 change?
         str1.toLowerCase();
         System.out.println("In lowercase: " + str1);
-    
+
       }
    }
    ====
@@ -437,25 +437,25 @@ The following code shows some common mistakes with strings.
             String output = getMethodOutput("main").trim();
             String expect = "The first letter in Hello!:H\nThe last char. in Hello!:!\nIn lowercase: hello!";
             boolean passed = output.contains(expect);
-          
+
             getResults(expect, output, "Expected output from main", passed);
             assertTrue(passed);
-        } 
+        }
     }
 
 Here is a list of common mistakes made with Strings.
- 
-  
-  -  Thinking that substrings include the character at the last index when they don't. 
-  
-  -  Thinking that strings can change when they can't.  They are immutable.  
-  
+
+
+  -  Thinking that substrings include the character at the last index when they don't.
+
+  -  Thinking that strings can change when they can't.  They are immutable.
+
   - Trying to access part of a string that is not between index 0 and length -1. This will throw an IndexOutOfBoundsException.
-  
+
   -  Trying to call a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
-  
-  -  Using ``==`` to test if two strings are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals`` or ``compareTo`` instead.    
-  -  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false. 
+
+  -  Using ``==`` to test if two strings are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals`` or ``compareTo`` instead.
+  -  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.
 
 
 |Groupwork| Programming Challenge : Pig Latin
@@ -465,20 +465,20 @@ Here is a list of common mistakes made with Strings.
     :width: 100
     :align: middle
     :alt: pig latin
-    
-|pig| Can you speak Pig Latin? In Pig Latin, you take the first letter and put it at the end of the word and add the letters "ay" to the end. For example, "pig" becomes "igpay". 
+
+|pig| Can you speak Pig Latin? In Pig Latin, you take the first letter and put it at the end of the word and add the letters "ay" to the end. For example, "pig" becomes "igpay".
 
 Create a program that takes a word and transforms it to Pig Latin using String methods. You may need the word's length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).
 
 .. |repl| raw:: html
 
    <a href="https://repl.it" target="_blank">repl.it</a>
-   
+
 
 .. |Scanner| raw:: html
 
    <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-   
+
 Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the word (see input examples using the |Scanner|).
 
 
@@ -486,19 +486,19 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
    :language: java
    :practice: T
    :autograde: unittest
-   
+
    Use the substring method to transform a word into Pig Latin where the first letter is put at the end and "ay" is added. The word pig is igpay in Pig Latin.
    ~~~~
    public class PigLatin
    {
       public static void main(String[] args)
       {
-          
-          String word = 
+
+          String word =
 
           // Use word.substring to construct word in pig latin
-          String pigLatin = 
-        
+          String pigLatin =
+
           System.out.println(word + " in Pig Latin is " + pigLatin);
       }
    }
@@ -506,7 +506,7 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
    import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -518,7 +518,7 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
             assertTrue(passed);
         }
        @Test
-       public void testContainsSubstring() 
+       public void testContainsSubstring()
        {
            String target = "word.substring(";
            int count = countOccurences(getCode(), target);
@@ -526,7 +526,7 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
            passed = getResults("2 substring calls", count + " substring call(s)","Code contains calls to substring method", passed);
            assertTrue(passed);
        }
-    }  
+    }
 
 
 
@@ -534,31 +534,31 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
 Summary
 -------------------
 
-- **index** - A number that represents the position of a character in a string.  The first character in a string is at index 0.  
-- **length** - The number of characters in a string.  
+- **index** - A number that represents the position of a character in a string.  The first character in a string is at index 0.
+- **length** - The number of characters in a string.
 - **substring** - A new string that contains a copy of part of the original string.
 
 - A String object has index values from 0 to length – 1. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
 
-- String objects are **immutable**, meaning that String methods do not change the String object. Any method that seems to change a string actually creates a new string. 
+- String objects are **immutable**, meaning that String methods do not change the String object. Any method that seems to change a string actually creates a new string.
 
 - The following String methods and constructors, including what they do and when they are used, are part of the |AP CS A Reference Sheet| that you can use during the exam:
 
   - **String(String str)** : Constructs a new String object that represents the same sequence of characters as str.
-  
-  - **int length()** : returns the number of characters in a String object. 
+
+  - **int length()** : returns the number of characters in a String object.
 
   - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to -1).
 
   - **String substring(int from)** : returns substring(from, length()).
-  
+
   - **int indexOf(String str)** : searches for str in the current string and returns the index of the first occurrence of str; returns -1 if not found.
-  
+
   - **boolean equals(String other)** : returns true if this (the calling object) is equal to other; returns false otherwise.
-  
+
   - **int compareTo(String other)** : returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other.
 
-- ``str.substring(index, index + 1)`` returns a single character at index in string str. 
+- ``str.substring(index, index + 1)`` returns a single character at index in string str.
 
 
 String Methods Game
@@ -567,8 +567,8 @@ String Methods Game
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
+
+
 Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings** and then on the letters that would be the result of the string method calls. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html
@@ -578,7 +578,7 @@ Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings*
 
 
 
-..	index::
+.. index::
     single: append
     single:concatenate
     single: immutable
@@ -588,7 +588,7 @@ Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings*
     single: substring
     single: string
     single: reference
-	single: object reference
+    single: object reference
 
 
 

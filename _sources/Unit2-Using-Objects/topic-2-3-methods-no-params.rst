@@ -19,8 +19,8 @@
     :align: middle
     :alt: groupwork
 
-..	index::
-	single: method
+.. index::
+    single: method
     single: parameter
     single: argument
 
@@ -38,13 +38,13 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Calling Methods Without Parameters
 ===========================================
 
 **Methods** are a set of instructions that define behaviors for all objects of a class. For example, in the ``Turtle`` class, methods like ``forward()`` and ``turnRight()`` give ``Turtle`` objects the ability to move forward and turn 90 degrees right.
 
-To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, ``yertle.forward();`` calls ``yertle``'s ``forward`` method to move a turtle object forward 100 pixels. These are called **object methods** or **non-static methods**. An object method *must* be called on an object of the class that the method is defined in.  Object methods work with the **attributes** of the object, such as the direction the turtle is heading or its position. 
+To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, ``yertle.forward();`` calls ``yertle``'s ``forward`` method to move a turtle object forward 100 pixels. These are called **object methods** or **non-static methods**. An object method *must* be called on an object of the class that the method is defined in.  Object methods work with the **attributes** of the object, such as the direction the turtle is heading or its position.
 
 Every method call is followed by parentheses. The parentheses ``()`` after method names are there in case you need to give the method parameters (data) to do its job, which we will see in the next lesson. You must always include the parentheses after the method name.
 
@@ -62,7 +62,7 @@ Every method call is followed by parentheses. The parentheses ``()`` after metho
    :adaptive:
    :noindent:
 
-   The following code uses a turtle to draw the digital number 7, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw the line going up (towards the top of the page) and then turn and draw a line to the left to make a 7. Remember that the turtle is facing the top of the page when it is first created. Click on the "Check Me" button to check your solution. 
+   The following code uses a turtle to draw the digital number 7, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw the line going up (towards the top of the page) and then turn and draw a line to the left to make a 7. Remember that the turtle is facing the top of the page when it is first created. Click on the "Check Me" button to check your solution.
    -----
    public class DrawL
    {
@@ -250,18 +250,18 @@ You will learn to write your own methods in Unit 5. In this unit, you should be 
 
    <a href="http://www.pythontutor.com/java.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
-The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song. 
+The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song.
 
-When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it. 
+When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it.
 
 
 .. codelens:: songviz1
-    :language: java 
+    :language: java
     :optional:
-    
-    public class Song 
+
+    public class Song
     {
-      public void print() 
+      public void print()
       {
         System.out.println("Old MacDonald had a farm");
         chorus();
@@ -269,27 +269,27 @@ When you call the chorus() method, it skips to the chorus code, executes and pri
         animal();
         chorus();
       }
-        
+
       public void chorus()
       {
         System.out.println("E-I-E-I-O");
       }
 
-      public void animal() 
+      public void animal()
       {
         System.out.println("duck");
       }
-        
-      public static void main(String[] args) 
+
+      public static void main(String[] args)
       {
         Song s = new Song();
         s.print();
       }
     }
-    
 
 
-Methods inside the same class can call each other using just ``methodName()``, but to call non-static methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
+
+Methods inside the same class can call each other using just ``methodName()``, but to call non-static methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``.
 
 .. figure:: Figures/calling-methods.png
     :width: 450px
@@ -320,9 +320,9 @@ Methods inside the same class can call each other using just ``methodName()``, b
 
    .. code-block:: java
 
-      public class Song 
+      public class Song
       {
-        public void print() 
+        public void print()
         {
             System.out.print("I like to ");
             eat();
@@ -330,18 +330,18 @@ Methods inside the same class can call each other using just ``methodName()``, b
             eat();
             fruit();
         }
-        
+
         public void fruit()
         {
             System.out.println("apples and bananas!");
         }
 
-        public void eat() 
+        public void eat()
         {
            System.out.print("eat ");
         }
-        
-        public static void main(String[] args) 
+
+        public static void main(String[] args)
         {
            Song s = new Song();
            s.print();
@@ -578,4 +578,4 @@ AP Practice
 
       - This would just print "Meow ".
 
-  
+

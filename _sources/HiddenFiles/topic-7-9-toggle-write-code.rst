@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 5-18-
-   :start: 1   
+   :start: 1
 
 Unit 7 Write Code for Toggle Code
 =========================================================
@@ -11,25 +11,25 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         The following program should create a List called ``conversation``, add in some elements(``"hello"``, ``"goodbye"``, ``"how are you"``, and ``"see you later"``), and print out the elements with ``", "`` after each. Fill in the code so that it adds the elements to ``conversation``. The rest of the program is finished for you.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
-        
+
             public static void main(String[] args) {
-        
+
                 List<String> conversation;
                 conversation = new ArrayList<String>();
-        
+
                 // YOUR CODE HERE //
-        
+
                 for (String element: conversation) {
-        
+
                     System.out.print(element + ", ");
-        
+
                 }
             }
         }
@@ -59,7 +59,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String code = getCodeWithoutComments();
                 System.out.println("Stuck here");
-                
+
                 int count = countOccurences(code, "new ArrayList");
                 boolean passed = getResults("1", ""+count, "Counting number of new ArrayList");
                 assertTrue(passed);
@@ -75,40 +75,40 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
 
-        
+
         }
 
 .. activecode:: u7_muc_wc2
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Fix the two errors in the ``printBackwards`` method so that it will correctly iterate through the parameter ``myList`` backwards and print each element.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
 
             public static void printBackwards(ArrayList<String> myList) {
-        
-                for (int i = myList.size() - 1; i > 0; i--) { 
-            
+
+                for (int i = myList.size() - 1; i > 0; i--) {
+
                     System.out.print(myList[i] + ", ");
-            
+
                 }
             }
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<String> conversation;
                 conversation = new ArrayList<String>();
-        
+
                 conversation.add("hello");
                 conversation.add("goodbye");
                 conversation.add("how are you");
                 conversation.add("see you later");
-        
+
                 printBackwards(conversation);
             }
         }
@@ -140,12 +140,12 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code to define the ``removeZeros`` method. This function should take in an ArrayList of integers ``listOfNums`` and delete all of the zeros. For example, ``{3, 0, 5, 0}`` would change into ``{3, 5}``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-        
+
         public class ListTest {
 
             public static void removeZeros(ArrayList<Integer> listOfNums) {
@@ -155,13 +155,13 @@ This is the write code problems associated with the mixed up code problems.
                 // That means you CANNOT use an enhanced for loop
                 // And it also means you need to carefully handle when you increment your index variable
 
-            } 
-        
+            }
+
             public static void main(String[] args) {
-        
+
                 ArrayList<Integer> list;
                 list = new ArrayList<Integer>();
-        
+
                 list.add(1);
                 list.add(0);
                 list.add(0);
@@ -203,27 +203,27 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code for the ``findSmallest`` function. This code segment should take in an ArrayList ``nums`` and return the smallest element present. For example, ``findSmallest`` called on ``{5, 3, 1, 6}`` should return ``1``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
 
             public static int findSmallest(ArrayList<Integer> nums) {
                 int min = nums.get(0);
 
-                // YOUR CODE HERE // 
+                // YOUR CODE HERE //
 
                 return min;
             }
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<Integer> list;
                 list = new ArrayList<Integer>();
-        
+
                 list.add(12);
                 list.add(45);
                 list.add(23);
@@ -263,12 +263,12 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code to flesh out the ``removeOdd`` method. This function should take in a parameter ``nums`` and delete every odd number from it. For example, ``{5, 3, 2, 1, 4}`` should become ``{2, 4}``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
 
             public static void removeOdd(ArrayList<Integer> nums) {
@@ -277,12 +277,12 @@ This is the write code problems associated with the mixed up code problems.
                 // Just like in problem three, be wary about the changing indexes
 
             }
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<Integer> list;
                 list = new ArrayList<Integer>();
-        
+
                 list.add(12);
                 list.add(7);
                 list.add(16);
@@ -315,30 +315,30 @@ This is the write code problems associated with the mixed up code problems.
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
-            }   
+            }
         }
 
 .. activecode:: u7_muc_wc6
         :language: java
         :practice: T
         :autograde: unittest
-   
-        Fill out the ``average`` method. It should take in an ArrayList ``nums`` and calculate the arithmetic mean (the sum divided by the length). For example, ``average`` called on ``{5, 9, 6}`` should return ``6.66666666667`` as that is ``(5 + 9 + 6) / 3``. 
+
+        Fill out the ``average`` method. It should take in an ArrayList ``nums`` and calculate the arithmetic mean (the sum divided by the length). For example, ``average`` called on ``{5, 9, 6}`` should return ``6.66666666667`` as that is ``(5 + 9 + 6) / 3``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
 
             public static double average(ArrayList<Integer> nums) {
                 // YOUR CODE HERE //
             }
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<Integer> list;
                 list = new ArrayList<Integer>();
-        
+
                 list.add(12);
                 list.add(20);
                 list.add(4);
@@ -376,12 +376,12 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Create the ``moveLargest`` function. This should find the largest value in an ArrayList of Integers (the parameter) and move it to the back of the list.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-      
+
         public class ListTest {
 
             public static void moveLargest(ArrayList<Integer> nums) {
@@ -389,12 +389,12 @@ This is the write code problems associated with the mixed up code problems.
                 // YOUR CODE HERE //
 
             } //end moveLargest method
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<Integer> list;
                 list = new ArrayList<Integer>();
-        
+
                 list.add(1);
                 list.add(3);
                 list.add(12);
@@ -434,12 +434,12 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code to finish the ``removeShort`` method. It should take an ArrayList ``words`` and remove all elements that are three characters long or shorter. For example, ``{"Dog", "Monkey", "Lion", "Cat"}`` would become ``{"Monkey", "Lion"}``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
 
             public static void removeShort(ArrayList<String> words) {
@@ -448,12 +448,12 @@ This is the write code problems associated with the mixed up code problems.
                 // Just like in problem three, consider iterating backwards or using a while loop
 
             } //end removeShort method
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<String> list;
                 list = new ArrayList<String>();
-        
+
                 list.add("catch");
                 list.add("dog");
                 list.add("tree");
@@ -491,12 +491,12 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the function ``doubleList``. This should take in an ArrayList ``words`` and insert a copy of each element such that ``{“cat”, “ribbon”, “house”}`` would become ``{“cat”, “cat”, “ribbon”, “ribbon”, “house”, “house”}``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
 
             public static void doubleList(ArrayList<String> words) {
@@ -505,12 +505,12 @@ This is the write code problems associated with the mixed up code problems.
                 // Remember - when you insert elements, you'll change the indexes!
 
             } //end doubleList method
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<String> list;
                 list = new ArrayList<String>();
-        
+
                 list.add("catch");
                 list.add("dog");
                 list.add("tree");
@@ -548,13 +548,13 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the function ``removeElement``. This should take in an ArrayList ``nums`` and an integer ``toRemove`` and remove every instance of that integer from ``nums``. E.g., if nums was ``{3, 6, 5, 3, 4}``, it should become ``{6, 5, 4}`` after calling ``removeElement(nums, 3)``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-        
-        
+
+
         public class ListTest {
 
             public static void removeElement(ArrayList<Integer> nums, int toRemove) {
@@ -562,12 +562,12 @@ This is the write code problems associated with the mixed up code problems.
                 // YOUR CODE HERE
 
             } //end average method
-        
+
             public static void main(String[] args) {
-        
+
                 ArrayList<Integer> list;
                 list = new ArrayList<Integer>();
-        
+
                 list.add(1);
                 list.add(3);
                 list.add(2);
@@ -597,5 +597,5 @@ This is the write code problems associated with the mixed up code problems.
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
-            }   
+            }
         }

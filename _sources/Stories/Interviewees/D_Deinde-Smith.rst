@@ -6,7 +6,7 @@ Destini Deinde-Smith
 .. role:: raw-html(raw)
    :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"I have always identified as someone who really loves being creative but also enjoys things that are sometimes technical.  I feel as though being a software engineer and studying CS —  it's this way to join those two things that I've identified with."</em></font>` 
+:raw-html:`<font color="CadetBlue"><em>"I have always identified as someone who really loves being creative but also enjoys things that are sometimes technical.  I feel as though being a software engineer and studying CS —  it's this way to join those two things that I've identified with."</em></font>`
 
 .. image:: ../../../_static/Interviewees/D_Deinde-Smith.jpg
     :width: 350
@@ -27,7 +27,7 @@ Destini has faced a challenge that many in CS face: impostor syndrome. Since the
 
 **What subfield is she pursuing?**
 
-Destini is studying computer science, a branch of computing that deals with mathematical models, analysis, and algorithms. 
+Destini is studying computer science, a branch of computing that deals with mathematical models, analysis, and algorithms.
 
 **Why did she choose computer science?**
 

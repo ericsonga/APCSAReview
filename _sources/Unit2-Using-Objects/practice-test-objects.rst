@@ -1,11 +1,11 @@
 .. qnum::
    :prefix: 2-14-
    :start: 1
-   
+
 Practice Test for Objects (2.1-2.5)
 ===================================
 
-The following 10 questions are similar to what you might see on the AP CS A exam for Units 2.1-2.5.  You may only take this practice test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed. 
+The following 10 questions are similar to what you might see on the AP CS A exam for Units 2.1-2.5.  You may only take this practice test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.
 
 We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.
 
@@ -46,7 +46,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
        :answer_d: painting1 is an instance of the Artwork class.
        :answer_e: Artwork is an instance of three String objects.
        :correct: d
-       :feedback_a: The String variables are attributes of painting1. 
+       :feedback_a: The String variables are attributes of painting1.
        :feedback_b: These are attributes.
        :feedback_c: painting1 is an instance of Artwork.
        :feedback_d: Correct!
@@ -64,21 +64,21 @@ We estimate that a score of about 50% on this test would correspond to the passi
     .. mchoice:: AP2-2-3
        :practice: T
        :random:
-       :answer_a: I only 
+       :answer_a: I only
        :answer_b: I and II
        :answer_c: II only
        :answer_d: II and III
        :answer_e: I, II, and III
        :correct: c
-       :feedback_a: I needs to initialize the object variable with a call to new Party().   
-       :feedback_b: I needs to initialize the object variable with a call to new Party(). 
+       :feedback_a: I needs to initialize the object variable with a call to new Party().
+       :feedback_b: I needs to initialize the object variable with a call to new Party().
        :feedback_c: Correct!
        :feedback_d: III calls the Party constructor with a double parameter instead of an int.
        :feedback_e: I needs to initialize the object and III needs to use an int instead of a double as the parameter for the constructor.
 
-        Which of the following code segments correctly creates an instance of a new Party object? 
+        Which of the following code segments correctly creates an instance of a new Party object?
 
-        .. code-block:: java 
+        .. code-block:: java
 
             public class Party
             {
@@ -112,7 +112,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
        :answer_d: Liquid l = 98.6;
        :answer_e: Liquid l = Liquid(98.6);
        :correct: a
-       :feedback_a: Correct 
+       :feedback_a: Correct
        :feedback_b: new is incorrectly placed.
        :feedback_c: This creates an object but it does not set its boiling point to 98.6.
        :feedback_d: The call to the constructor is missing.
@@ -120,7 +120,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         Consider the following class. Which of the following code segments, when placed in a method in a class other than Liquid, will construct a Liquid object l with a boilingPoint of 98.6 ?
 
-        .. code-block:: java 
+        .. code-block:: java
 
             public class Liquid
             {
@@ -152,13 +152,13 @@ We estimate that a score of about 50% on this test would correspond to the passi
        :correct: b
        :feedback_a: Method freeze() does not have parameters.
        :feedback_b: Correct
-       :feedback_c: There is no method increaseTemp() in the Liquid class definition. 
+       :feedback_c: There is no method increaseTemp() in the Liquid class definition.
        :feedback_d: The dot operator is required between the object name and the method name.
        :feedback_e: Parentheses are required after a method name.
 
-        Consider the following class. Assume that the Liquid object liquid has been properly declared and initialized in a method in a class other than Liquid.  Which of the following statements are valid? 
+        Consider the following class. Assume that the Liquid object liquid has been properly declared and initialized in a method in a class other than Liquid.  Which of the following statements are valid?
 
-        .. code-block:: java 
+        .. code-block:: java
 
             public class Liquid
             {
@@ -194,7 +194,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         Consider the following class definition.
 
-        .. code-block:: java 
+        .. code-block:: java
 
             public class Dog
             {
@@ -238,12 +238,12 @@ We estimate that a score of about 50% on this test would correspond to the passi
             Dog a = new Dog();
             a.happy();
 
-          - This would print out "Wag Tail Woof ". 
+          - This would print out "Wag Tail Woof ".
 
         - .. code-block:: java
 
             Dog a = new Dog();
-            a.wag(); 
+            a.wag();
             a.happy();
 
           + This would print out "Wag Tail Wag Tail Woof ";
@@ -285,7 +285,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
           - Notice the order of parameters in printTemperature.
 
-        - celsius --> fahrenheit 
+        - celsius --> fahrenheit
 
           - These are variables and their values would be printed.
 
@@ -316,7 +316,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
                 System.out.println("Order " + number + " pizzas ");
             }
 
-        What of the following lines would go into ``/* INSERT CODE HERE */`` in line 4 in order to call the ``printOrder`` method to print the number of pizzas to order correctly? 
+        What of the following lines would go into ``/* INSERT CODE HERE */`` in line 4 in order to call the ``printOrder`` method to print the number of pizzas to order correctly?
 
         - printOrder(numOfPizzas);
 
@@ -324,7 +324,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         - printOrder(numOfPeople);
 
-          - This would always print out an order of how many people you have instead of how many calculated pizzas. 
+          - This would always print out an order of how many people you have instead of how many calculated pizzas.
 
         - printOrder(2);
 
@@ -332,7 +332,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         - printOrder(slicesPerPerson);
 
-          - This would always print out an order of how many slices per person instead of how many calculated pizzas. 
+          - This would always print out an order of how many slices per person instead of how many calculated pizzas.
 
         - calculatePizzaOrder(numOfPizzas);
 
@@ -353,13 +353,13 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         - int result = calculateMovieRating(234, null);
 
-          - The method returns a double which cannot be saved in an int variable. 
+          - The method returns a double which cannot be saved in an int variable.
 
         - double result = calculateMovieRating(100.0, 3.0);
 
           - The first parameter must be an int.
 
-        - int result = calculateMovieRating(455, false); 
+        - int result = calculateMovieRating(455, false);
 
           - The method returns a double which cannot be saved in an int variable.
 
@@ -383,7 +383,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :correct: a
         :feedback_a: oneThing(2,10) returns 2*10 = 20 and anotherThing(5,2) returns 5/2 = 2.5 truncated to 2 with integer division, which adds up to 22.
         :feedback_b: This would return 20 + 0 (which is 0.4 truncated) = 20.
-        :feedback_c: This would return 20 + 1 (which is 1.5 truncated) = 21. 
+        :feedback_c: This would return 20 + 1 (which is 1.5 truncated) = 21.
         :feedback_d: This would return 18 + 0 = 18.
         :feedback_e: This would return (0 * 2 = 0) + (20/1 = 20) = 20.
 

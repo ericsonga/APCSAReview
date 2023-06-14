@@ -19,7 +19,7 @@ Luisa Morales
 
 **What did she study as an undergrad?**
 
-Luisa started college as an English major and eventually transitioned to an economics major. Once she graduated, she started a media consulting company, which included a bit of web development with WordPress and other tools. That kept her engaged in computing, which is why she decided to go further into technology. 
+Luisa started college as an English major and eventually transitioned to an economics major. Once she graduated, she started a media consulting company, which included a bit of web development with WordPress and other tools. That kept her engaged in computing, which is why she decided to go further into technology.
 
 **How does her interdisciplinary experience affect her career now?**
 
@@ -31,7 +31,7 @@ Luisa started college as an English major and eventually transitioned to an econ
 
 **What obstacles has she faced?**
 
-Like many other developers, Luisa dealt with imposter syndrome. This syndrome was compounded by the fact that she is self-taught, Hispanic (a racial minority), and female (a gender minority). 
+Like many other developers, Luisa dealt with imposter syndrome. This syndrome was compounded by the fact that she is self-taught, Hispanic (a racial minority), and female (a gender minority).
 
 She has dealt with impostor syndrome in two ways. First, she's begun to accept that she won't know everything. No matter how much she studies, no matter how much experience she has, there will always be problems she can't solve, and that's okay. Secondly, she's started reading about other people's experiences with impostor syndrome. Realizing that it's a common issue makes her feel less alone.
 

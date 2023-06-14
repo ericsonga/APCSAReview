@@ -6,33 +6,33 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Scope and Access
 =================
 
-..	index::
+.. index::
     single: scope
     single: access
     single: local variable
-    
-    
-The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly brackets { } -- this is its scope.  
+
+
+The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly brackets { } -- this is its scope.
 
 Java has 3 levels of scope that correspond to different types of variables:
 
@@ -42,7 +42,7 @@ Java has 3 levels of scope that correspond to different types of variables:
 
 - **Block Level Scope** for **loop variables** and other local variables defined inside of blocks of code with { }.
 
-The image below shows these 3 levels of scope. 
+The image below shows these 3 levels of scope.
 
 .. figure:: Figures/scopeDiagram.png
     :width: 500px
@@ -51,7 +51,7 @@ The image below shows these 3 levels of scope.
     :figclass: align-center
 
     Figure 1: Class, Method, and Block Level Scope
-    
+
 |Exercise| Check Your Understanding
 
 .. clickablearea:: name_class_scope
@@ -60,35 +60,35 @@ The image below shows these 3 levels of scope.
     :feedback: Remember that the instance variables declared at the top of the class have Class Scope.
 
     :click-incorrect:public class Name {:endclick:
-    
+
         :click-correct:private String first;:endclick:
         :click-correct:public String last;:endclick:
-        
+
         :click-incorrect:public Name(String theFirst, String theLast) {:endclick:
             :click-incorrect:String firstName = theFirst;:endclick:
             :click-incorrect:first = firstName;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-    :click-incorrect:}:endclick:    
-    
+    :click-incorrect:}:endclick:
+
 .. clickablearea:: name_method_scope
     :question: Click on all the variable declarations that are at Method Level Scope.
     :iscode:
     :feedback: Remember that the parameter variables and the local variables declared inside a method have Method Level Scope.
 
     :click-incorrect:public class Name {:endclick:
-    
+
         :click-incorrect:private String first;:endclick:
         :click-incorrect:public String last;:endclick:
-        
+
         :click-correct:public Name(String theFirst, String theLast) {:endclick:
             :click-correct:String firstName = theFirst;:endclick:
             :click-incorrect:first = firstName;:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-    :click-incorrect:}:endclick:        
+    :click-incorrect:}:endclick:
 
-**Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to declare any variables that are used by just one method as local variables in that method. 
+**Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to declare any variables that are used by just one method as local variables in that method.
 
 Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have Class scope regardless of whether they are public or private.
 
@@ -103,32 +103,32 @@ Another way to look at scope is that a variable's scope is where it lives and ex
   :language: java
   :autograde: unittest
 
-  Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope. 
+  Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope.
   ~~~~
-  public class Person 
+  public class Person
   {
      private String name;
      private String email;
-    
+
      public Person(String initName, String initEmail)
      {
         name = initName;
         email = initEmail;
      }
-     
-     public String toString() 
-     { 
+
+     public String toString()
+     {
        for (int i=0; i < 5; i++) {
           int id = i;
-       } 
+       }
        // Can you access the blockScope variables i or id?
        System.out.println("i at the end of the loop is " + i);
        System.out.println("The last id is " + id);
-       
+
        // Can toString() access parameter variables in Person()?
        return  initName + ": " + initEmail;
      }
-     
+
      // main method for testing
      public static void main(String[] args)
      {
@@ -165,25 +165,25 @@ If there is a local variable with the same name as an instance variable, the var
 
   In this example, the local variable is used instead of the instance variable of the same name. What will the code print out? Try it with the CodeLens button.
   ~~~~
-  public class Person 
+  public class Person
   {
      private String name;
      private String email;
-    
+
      public Person(String initName, String initEmail)
      {
         name = initName;
         email = initEmail;
      }
-     
-     public String toString() 
-     { 
+
+     public String toString()
+     {
        String name = "unknown";
        // The local variable name here will be used,
        //  not the instance variable name.
        return  name + ": " + email;
      }
-     
+
      // main method for testing
      public static void main(String[] args)
      {
@@ -196,7 +196,7 @@ If there is a local variable with the same name as an instance variable, the var
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-   
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -221,7 +221,7 @@ If there is a local variable with the same name as an instance variable, the var
 
   Debug the following program that has scope violations. You may need to add methods or use methods that are in the class Fraction appropriately. Then, add comments that label the variable declarations as class, method, or block scope.
   ~~~~
-  public class TesterClass 
+  public class TesterClass
   {
      public static void main(String[] args)
      {
@@ -229,16 +229,16 @@ If there is a local variable with the same name as an instance variable, the var
         Fraction f2 = new Fraction(1,2);
         System.out.println(f1);
         System.out.println(f2.numerator / f2.denominator);
-     }   
+     }
    }
-   
+
   /** Class Fraction */
   class Fraction
   {
      //  instance variables
      private int numerator;
      private int denominator;
-     
+
      // constructor: set instance variables to default values
      public Fraction()
      {
@@ -246,14 +246,14 @@ If there is a local variable with the same name as an instance variable, the var
         numerator = d;
         denominator = d;
      }
-     
+
      // constructor: set instance variables to init parameters
      public Fraction(int initNumerator, int initDenominator)
      {
         numerator = initNumerator;
         denominator = initDenominator;
      }
-     
+
      public String toString()
      {
        // if the denominator is 1, then just return the numerator
@@ -267,7 +267,7 @@ If there is a local variable with the same name as an instance variable, the var
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-   
+
     public class RunestoneTests extends CodeTestHelper
     {
         public RunestoneTests() {
@@ -300,7 +300,7 @@ If there is a local variable with the same name as an instance variable, the var
          }
     }
 
-    
+
 
 Summary
 -------
@@ -333,9 +333,9 @@ AP Practice
    :correct: d
 
    Consider the following class definitions. Which of the following best explains why the class will not compile?
-    
+
    .. code-block:: java
- 
+
         public class Party
         {
             private int boxesOfFood;
@@ -353,17 +353,17 @@ AP Practice
                 boxesOfFood = updatedAmountOfFood;
             }
 
-            public void eatFoodBoxes(int eatenBoxes) 
+            public void eatFoodBoxes(int eatenBoxes)
             {
                 boxesOfFood = updatedAmountOfFood - eatenBoxes;
             }
         }
-        
+
 .. mchoice:: AP5-8-2
     :practice: T
 
     Consider the following class definition.
-    
+
     .. code-block:: java
 
         public class Movie
@@ -392,23 +392,23 @@ AP Practice
     Which of the following reasons explains why the printPrice method is "broken" and only ever prints out a value of 16?
 
     - The private variables currentPrice and movieRating are not properly initialized.
-	
+
       - The constructor will initialize them.
 
     - The private variables currentPrice and movieRating should have been declared public.
-	
+
       - Instance variables should be private.
 
     - The printPrice method should have been declared as private.
-	
+
       - Methods are usually public.
 
     - currentPrice is declared as a local variable in the getCurrentPrice method and set to 16, and will be used instead of the instance variable currentPrice.
-	
+
       + Correct!
 
     - The currentPrice instance variable does not have a value.
-	
+
       - Accessor methods are usually public.
 
 

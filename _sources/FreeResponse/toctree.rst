@@ -1,4 +1,4 @@
-Free Response Practice 
+Free Response Practice
 :::::::::::::::::::::::::::::
 
 .. toctree::
@@ -18,4 +18,4 @@ Free Response Practice
    NumberGroupB.rst
    NumberGroupC.rst
    Exercises.rst
-   
+

@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 5-18-
-   :start: 1   
+   :start: 1
 
 Toggle Mixed Up or Write Code Practice
 =========================================================
@@ -17,7 +17,7 @@ For the mixed up code problems, drag the blocks into the correct order. Click th
 .. selectquestion:: select_u5_muc_wc2
    :fromid: u5_muc_wc2, ch7ex2muc
    :toggle: lock
-   
+
 .. selectquestion:: select_u5_muc_wc3
    :fromid: u5_muc_wc3, ch7ex3muc
    :toggle: lock

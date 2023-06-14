@@ -1,4 +1,4 @@
- 
+
 
 Hidden Files
 :::::::::::::::::::::
@@ -16,4 +16,4 @@ Hidden Files
    topic-4-7-toggle-write-code.rst
    topic-6-6-toggle-write-code.rst
 
-   
+

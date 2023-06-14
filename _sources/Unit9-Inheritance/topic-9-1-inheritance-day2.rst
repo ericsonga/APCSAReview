@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 9-1-
    :start: 5
-   
-   
+
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,12 +22,12 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
-    
+    :align: right
+
 is-a vs. has-a (Day 2)
 ---------------------------------------
 
-..	index::
+.. index::
     single: has-a
     single: association
     pair: relationships; association
@@ -41,7 +41,7 @@ Another type of relationship between classes is the **has-a** relationship or **
 
     Figure 3: A UML Class Diagram showing Association
 
-In the code, the ``Course`` class **has** an array or ArrayList of ``CoursePeriod`` objects as an attribute inside it.  
+In the code, the ``Course`` class **has** an array or ArrayList of ``CoursePeriod`` objects as an attribute inside it.
 
 .. code-block:: java
 
@@ -68,19 +68,19 @@ Here is another example. Consider the classes Student, Course, and  APcourse. An
     :figclass: align-center
 
     Figure 4: A UML Class Diagram for Student, Course, APcourse
- 
+
 |CodingEx| **Coding Exercise**
 
 We can represent the diagram in Figure 4 in the code below. The Course class has an ArrayList of Student objects in it as the roster attribute. And an APcourse extends Course. What do you think the following code will print out?
 
 .. activecode:: apclass
   :language: java
-  :autograde: unittest      
-    
+  :autograde: unittest
+
   What do you think the following code will print out?
   ~~~~
   import java.util.*;
-    
+
     class Student
     {
       private String name;
@@ -92,7 +92,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
       private String title;
       private ArrayList<Student> roster;
     }
-    
+
     public class APcourse extends Course
     {
        private String APexamDate;
@@ -108,7 +108,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
     import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
       @Test
@@ -120,7 +120,7 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
         assertTrue(passed);
       }
     }
-  
+
 
 
 is-a Substitution Test
@@ -155,7 +155,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    :practice: T
    :answer_a: An is-a relationship. The Author class should be a subclass of the Book class.
    :answer_b: An is-a relationship. The Book class should be a subclass of the Author class.
-   :answer_c: A has-a relationship. The Book class has an Author attribute. 
+   :answer_c: A has-a relationship. The Book class has an Author attribute.
    :correct: c
    :feedback_a: Is an Author a type of Book?  Or, does a Book have an Author associated with it?
    :feedback_b: Is a Book a type of Author?  Or, does a Book have an Author associated with it?
@@ -173,7 +173,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    :feedback_c: A movie showing is not a type of movie and a movie is not a type of movie showing.  A movie showing has a movie associated with it.
 
     A movie theater has multiple showings of a movie each day. Each movie showing has a start time and location (theater number).  What should the relationship be between the Movie class and the MovieShowing class?
-    
+
 .. mchoice:: qoo_3
    :practice: T
    :answer_a: superclass
@@ -189,20 +189,20 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    What Java keyword is used to set up an inheritance relationship between a subclass and a superclass?
 
 
-|Groupwork| Programming Challenge : Online Store 
+|Groupwork| Programming Challenge : Online Store
 -------------------------------------------------
 
 .. |Creately.com| raw:: html
 
-   <a href="https://creately.com" target="_blank">Creately.com</a> 
+   <a href="https://creately.com" target="_blank">Creately.com</a>
 
 .. |app diagrams| raw:: html
 
-   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a> 
+   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
 
-Working in pairs or groups, design an online store with classes for Store, ItemForSale, Book, Movie, and Author. 
+Working in pairs or groups, design an online store with classes for Store, ItemForSale, Book, Movie, and Author.
 
-- First, do some research in an online store like Amazon to see what information they store on books, movies, and authors, and what type of information is the same for all items for sale. 
+- First, do some research in an online store like Amazon to see what information they store on books, movies, and authors, and what type of information is the same for all items for sale.
 
 - List at least 2 attributes for each class. Which attributes should be in ItemForSale and which in Book, Movie or Author?
 
@@ -212,31 +212,31 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
 .. activecode:: challenge-9-1-online-store
   :language: java
-  :autograde: unittest      
-  
-  Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them. 
+  :autograde: unittest
+
+  Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them.
   ~~~~
   class ItemForSale
   {
-       
+
   }
 
   class Movie
   {
-    
+
   }
-    
+
   class Book
   {
-    
+
   }
-    
+
   class Author
   {
-    
+
   }
-    
-  public class Store 
+
+  public class Store
   {
        // instance variable (could be an array or ArrayList of one of the classes above)
 
@@ -260,7 +260,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 
         @Test
         public void test1()
-        { 
+        {
             String output = getMethodOutput("main");
             String expect = "true";
 

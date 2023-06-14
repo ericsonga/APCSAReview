@@ -5,9 +5,9 @@
 RandomStringChooser - Part B - 2nd time
 ===============================================
 
-..	index::
-	  single: RandomLetterChooser
-    single: free response
+.. index::
+   single: RandomLetterChooser
+   single: free response
 
 **Part b.**   The following partially completed ``RandomLetterChooser`` class is a subclass of the ``RandomStringChooser`` class.  You will write the constructor for the ``RandomLetterChooser`` class.
 
@@ -76,9 +76,9 @@ The code below has a main method for testing.  Write the constructor for the ``R
    import java.util.List;
    import java.util.ArrayList;
 
-   // Add in class RandomStringChooser from the previous lesson. 
+   // Add in class RandomStringChooser from the previous lesson.
    // Do not make it public
-   
+
    public class RandomLetterChooser extends RandomStringChooser
    {
        /** Constructs a random letter chooser using the given string str.

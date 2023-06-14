@@ -5,8 +5,8 @@
 SkyView - Part A
 ===============================
 
-..	index::
-	single: RandomStringChooser
+.. index::
+    single: RandomStringChooser
     single: free response
 
 The following is a free response question from 2013.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
@@ -21,7 +21,7 @@ arrows. The back-and-forth ordering of the values received from the scan is call
     :figclass: align-center
 
     Figure 1: The first row is left to right and the second is right to left and so on.
-    
+
 The telescope records the data in telescope order into a 1-dimensional array of ``double`` values. This
 1-dimensional array of information received from a single scan will be transferred into a 2-dimensional array,
 which reconstructs the original view of the rectangular area of the sky. This 2-dimensional array is part of the
@@ -31,7 +31,7 @@ SkyView class, shown below. In this question you will write a constructor and a 
 
    public class SkyView
    {
-       /** A rectangular array that holds the data representing a rectangular 
+       /** A rectangular array that holds the data representing a rectangular
         *  area of the sky. */
        private double[][] view;
 
@@ -40,10 +40,10 @@ SkyView class, shown below. In this question you will write a constructor and a 
          * Precondition: numRows > 0
          * @param numCols the number of columns represented in the view
          * Precondition: numCols > 0
-         * @param scanned the scan data received from the telescope, stored in 
+         * @param scanned the scan data received from the telescope, stored in
          *        telescope order
          * Precondition: scanned.length == numRows * numCols
-         * Postcondition: view has been created as a rectangular 
+         * Postcondition: view has been created as a rectangular
          *        2-dimensional array
          * with numRows rows and numCols columns and the values in
          * scanned have been copied to view and are ordered as
@@ -51,8 +51,8 @@ SkyView class, shown below. In this question you will write a constructor and a 
          */
        public SkyView(int numRows, int numCols, double[] scanned)
        { /* to be implemented in part (a) */ }
-       
-       
+
+
        /** Returns the average of the values in a rectangular section of view.
          * @param startRow the first row index of the section
          * @param endRow the last row index of the section
@@ -66,7 +66,7 @@ SkyView class, shown below. In this question you will write a constructor and a 
                                 int startCol, int endCol)
        { /* to be implemented in part (b) */ }
 
-       // There may be other instance variables, constructors, and methods 
+       // There may be other instance variables, constructors, and methods
    }
 
 **Part a.**   Write the constructor for the ``SkyView`` class. The constructor initializes the ``view`` instance variable to a
@@ -82,7 +82,7 @@ For example, suppose ``scanned`` contains values, as shown in the following arra
     :figclass: align-center
 
     Figure 2: First example scanned array values
-    
+
 Using the scanned array above, a ``SkyView`` object created with
 ``new SkyView(4, 3, values)``, would have ``view`` initialized with the following values.
 
@@ -91,7 +91,7 @@ Using the scanned array above, a ``SkyView`` object created with
     :figclass: align-center
 
     Figure 3: The resulting view from the first example scanned array
-    
+
 For another example, suppose ``scanned`` contains the following values.
 
 .. figure:: Figures/SkyViewEx2Array.png
@@ -99,7 +99,7 @@ For another example, suppose ``scanned`` contains the following values.
     :figclass: align-center
 
     Figure 4: Second example scanned array values
-    
+
 A ``SkyView`` object created with ``new SkyView(3, 2, values)``, would have ``view`` initialized
 with the following values.
 
@@ -114,7 +114,7 @@ Try and Solve It
 
 Complete the ``SkyView`` constructor in the class below.
 
-The code below declares the class, the view, and a constructor for you to finish writing.  It also has a main method for testing the constructor.  
+The code below declares the class, the view, and a constructor for you to finish writing.  It also has a main method for testing the constructor.
 
 .. activecode:: SkyViewA
    :language: java
@@ -122,7 +122,7 @@ The code below declares the class, the view, and a constructor for you to finish
 
    Complete the ``SkyView`` constructor in the class below.
    ~~~~
-   public class SkyView  
+   public class SkyView
    {
        private double[][] view;
 
@@ -142,7 +142,7 @@ The code below declares the class, the view, and a constructor for you to finish
        {
           //*** Write the constructor! ***
        }
-    
+
        /** This is a main method for testing the class */
        public static void main(String[] args)
        {
@@ -163,9 +163,9 @@ The code below declares the class, the view, and a constructor for you to finish
                }
                System.out.println();
             }
-            
+
            System.out.println();
-           
+
            double[] val2 = {0.3, 0.7, 0.8, 0.4, 1.4, 1.1};
            sView = new SkyView(3, 2, val2);
            System.out.println("It should print the following:");
@@ -182,10 +182,10 @@ The code below declares the class, the view, and a constructor for you to finish
                }
                System.out.println();
             }
-       
+
         } // end of main
-      
-        public String toString() 
+
+        public String toString()
         {
            String output = "";
            for (int row = 0; row < view.length; row++)

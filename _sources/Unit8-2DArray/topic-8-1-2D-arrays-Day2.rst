@@ -1,19 +1,19 @@
 .. qnum::
    :prefix: 8-1-
    :start: 8
-   
+
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -21,23 +21,23 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
-  
+    :align: right
+
 Set Value(s) in a 2D Array (Day 2)
 ----------------------------------------
 
-..	index::
-	pair: 2D Array; initialization
-	pair: 2D Array; set value
+.. index::
+   pair: 2D Array; initialization
+   pair: 2D Array; set value
 
-When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in brackets followed by the column index in brackets and then an ``=`` followed by a value.  
+When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in brackets followed by the column index in brackets and then an ``=`` followed by a value.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] ticketInfo = new int[2][3];
   ticketInfo[0][0] = 15;
-  
-  
+
+
 .. |Java visualizer| raw:: html
 
    <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%0A++%7B%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++//+declare+arrays%0A++++++++int%5B%5D%5B%5D+ticketInfo%3B%0A++++++++String%5B%5D%5B%5D+seatingChart%3B%0A++++++++%0A++++++++//+create+arrays%0A++++++++ticketInfo+%3D+new+int+%5B2%5D%5B3%5D%3B%0A++++++++seatingChart+%3D++new+String+%5B3%5D%5B2%5D%3B%0A++++++++%0A++++++++//+initialize+the+array+elements%0A++++++++ticketInfo%5B0%5D%5B0%5D+%3D+15%3B%0A++++++++ticketInfo%5B0%5D%5B1%5D+%3D+10%3B%0A++++++++ticketInfo%5B0%5D%5B2%5D+%3D+15%3B%0A++++++++ticketInfo%5B1%5D%5B0%5D+%3D+25%3B%0A++++++++ticketInfo%5B1%5D%5B1%5D+%3D+20%3B%0A++++++++ticketInfo%5B1%5D%5B2%5D+%3D+25%3B%0A++++++++seatingChart%5B0%5D%5B0%5D+%3D+%22Jamal%22%3B%0A++++++++seatingChart%5B0%5D%5B1%5D+%3D+%22Maria%22%3B%0A++++++++seatingChart%5B1%5D%5B0%5D+%3D+%22Jacob%22%3B%0A++++++++seatingChart%5B1%5D%5B1%5D+%3D+%22Suzy%22%3B%0A++++++++seatingChart%5B2%5D%5B0%5D+%3D+%22Emma%22%3B%0A++++++++seatingChart%5B2%5D%5B1%5D+%3D+%22Luke%22%3B%0A++++++++%0A++++++++//+print+the+contents%0A++++++++System.out.println(ticketInfo)%3B%0A++++++++System.out.println(seatingChart)%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
@@ -48,22 +48,22 @@ Try the code below. Did it print what you expected?  When you print a two dimens
 
 .. activecode:: 2DArraySet
   :language: java
-  :autograde: unittest   
-  
-  Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows. 
+  :autograde: unittest
+
+  Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows.
   ~~~~
-  public class TwoDArraySet 
+  public class TwoDArraySet
   {
      public static void main(String[] args)
      {
         // declare arrays
         int[][] ticketInfo;
         String[][] seatingChart;
-        
+
         // create arrays
         ticketInfo = new int [2][3];
         seatingChart =  new String [3][2];
-        
+
         // initialize the array elements
         ticketInfo[0][0] = 15;
         ticketInfo[0][1] = 10;
@@ -77,7 +77,7 @@ Try the code below. Did it print what you expected?  When you print a two dimens
         seatingChart[1][1] = "Suzy";
         seatingChart[2][0] = "Emma";
         seatingChart[2][1] = "Luke";
-        
+
         // print the contents
         System.out.println(ticketInfo);
         System.out.println(seatingChart);
@@ -131,10 +131,10 @@ Try the code below. Did it print what you expected?  When you print a two dimens
             assertTrue(passed);
         }
     }
-  
 
 
-  
+
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qa2dab_1
@@ -156,7 +156,7 @@ Initializer Lists for 2D Arrays
 
 You can also initialize (set) the values for the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the values you give.  The code below creates an array called ``ticketInfo`` with 2 rows and 3 columns.  It also creates an array called ``seatingInfo`` with 3 rows and 2 columns.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] ticketInfo = { {25,20,25}, {25,20,25} };
   String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
@@ -170,23 +170,23 @@ You can also initialize (set) the values for the array when you create it.  In t
    -    :Luke$: Correct.  The string at row index 2 and column index 1 is Luke.
         :.*: Indicies start at 0 and the row is first then the column
 
-        
-  
+
+
 Get a Value from a 2D Array
 ------------------------------
 
-..	index::
-	pair: 2D Array; access value
+.. index::
+   pair: 2D Array; access value
 
-To get the value in a 2D array give the name of the array followed by the row and column indicies in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``. 
+To get the value in a 2D array give the name of the array followed by the row and column indicies in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] ticketInfo = { {25,20,25}, {25,20,25} };
   String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
   int value = ticketInfo[1][0];
-  String name = seatingInfo[0][1]; 
-  
+  String name = seatingInfo[0][1];
+
 |Exercise| **Check your understanding**
 
 .. mchoice:: qa2dab_2
@@ -203,7 +203,7 @@ To get the value in a 2D array give the name of the array followed by the row an
    :feedback_d: This would be true for if <code>name</code> was set to <code>seatingInfo[1][1];</code> instead.
    :feedback_e: This would be true for if <code>name</code> was set to <code>seatingInfo[2][1];</code> instead.
 
-   What is the value of ``name`` after the code above executes?  
+   What is the value of ``name`` after the code above executes?
 
 |CodingEx| **Coding Exercise**
 
@@ -211,20 +211,20 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 .. activecode:: 2DArrayInitGet
   :language: java
-  :autograde: unittest   
-  
+  :autograde: unittest
+
   Add another row to seatingInfo initialized to your name and a friend's name. Get these names out of the array using the correct indices and then print them out.
   ~~~~
-  public class TwoDArrayInitGet 
+  public class TwoDArrayInitGet
   {
      public static void main(String[] args)
      {
-        String[][] seatingInfo = { {"Jamal", "Maria"}, 
-                                   {"Jake", "Suzy"}, 
+        String[][] seatingInfo = { {"Jamal", "Maria"},
+                                   {"Jake", "Suzy"},
                                    {"Emma", "Luke"} };
         String name = seatingInfo[0][0];
         System.out.println(name + " is at [0,0]");
-  
+
      }
   }
   ====
@@ -292,9 +292,9 @@ To get the value in a 2D array give the name of the array followed by the row an
 
             passed = getResults("Name is at "+ expected, actual, "Add second name to new row and print it out", passed);
             assertTrue(passed);
-        }  
+        }
     }
-     
+
 |Groupwork| Programming Challenge : ASCII Art
 ---------------------------------------------------
 
@@ -306,42 +306,42 @@ ASCII is a commonly used character encoding standard where each key you press on
 
 We can represent ASCII art in a 2D array of rows and columns. What do you think the following code will print out? Try to guess before you run it. The loops to print out the 2D array will be explained in the next lesson. Then, do the following:
 
-1. Change the code to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it. 
+1. Change the code to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it.
 
-2. Add a new asciiArt array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``. 
+2. Add a new asciiArt array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``.
 
 .. activecode:: challenge-8-1-ascii-art
   :language: java
   :autograde: unittest
-  
-  Part 1: Add 2 assignment statements for the 2D array asciiArt to change the "o" characters to "@" characters. Part 2: Create a new asciiArt array and print it out.   
+
+  Part 1: Add 2 assignment statements for the 2D array asciiArt to change the "o" characters to "@" characters. Part 2: Create a new asciiArt array and print it out.
   ~~~~
   public class AsciiArt
   {
      public static void main(String[] args)
      {
-    
-        String[][] asciiArt = {  
+
+        String[][] asciiArt = {
               {" ", " ", "_", "_", "_", " ", " "},
               {" ", "(", "o", " ", "o", ")", " "},
               {"(", " ", " ", "V", " ", " ", ")"},
               {" ", "-", "m", "-", "m", "-", " "},
          };
-        
+
         //Part 1: Add 2 assignment statements to change "o" to "@"
 
-     
+
         // print the asciiArt for Part 1
         System.out.println("ASCII Art:");
         for(String[] row : asciiArt) {
           for(String column : row)
             System.out.print(column);
-          System.out.println();    
+          System.out.println();
         }
-        
+
         //Part 2: Create your own ASCII art array and print it out!
-         
-         
+
+
      }
   }
   ====
@@ -365,7 +365,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
             assertTrue(passed);
         }
 
-        /* removed because doesn't work if their own art has o 
+        /* removed because doesn't work if their own art has o
         @Test
         public void test1()
         {
@@ -375,7 +375,7 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
             boolean passed = output.contains("@") && !output.contains("o");
             passed = getResults(expect, output, "changed o to @", passed);
             assertTrue(passed);
-        } 
+        }
         */
 
         @Test
@@ -438,8 +438,8 @@ Summary
 .. |game| raw:: html
 
    <a href="https://csa-games.netlify.app/" target="_blank">game</a>
-   
-   
+
+
 Try the game below to practice 2D Arrays. Click on **Arrays** and then check on **2D** and click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.
 
 .. raw:: html

@@ -1,7 +1,7 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 2D Arrays
 :::::::::::::::::::::::
 
@@ -23,4 +23,4 @@ AP CS A Exam Weighting: 7.5-10%
    freeResponse.rst
    Exercises.rst
    CBLabs.rst
-   
+

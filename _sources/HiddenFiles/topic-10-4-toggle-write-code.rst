@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 10-4-
-   :start: 1   
+   :start: 1
 
 Unit 10 Write Code for Toggle Code
 =========================================================
@@ -11,7 +11,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the ``reverse`` method. This should take in a parameter ``myText`` and return a reversed version of it. For example, ``reverse("Cat")`` would return ``"taC"``. Fill in the missing code (labeled with YOUR CODE HERE comments) to complete the problem.
         ~~~~
         public class Test1
@@ -65,7 +65,7 @@ This is the write code problems associated with the mixed up code problems. Reme
             }
 
             @Test
-            public void test2() 
+            public void test2()
             {
                 String str = "this is a test";
                 String expected = "tset a si siht";
@@ -86,12 +86,12 @@ This is the write code problems associated with the mixed up code problems. Reme
             }
         }
 
-   
+
 .. activecode:: u10_muc_wc2
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Fill in the ``multiply`` method. It should take in two non-negative integers and return their product, using the fact that multiplication is repeated addition (e.g., 3x4 = 3 + 3 + 3 + 3). Thus, ``multiply(3, 4)`` would return ``12``. Do NOT use multiplication; only use addition.
         ~~~~
         public class ListTest {
@@ -108,7 +108,7 @@ This is the write code problems associated with the mixed up code problems. Reme
                     return multiply(a, b - 1) + a;
                 }
             }
-        
+
             public static void main(String[] args) {
                 System.out.println("Before: multiply(3, 4)");
                 System.out.println("After: " + multiply(3, 4));
@@ -140,7 +140,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``sumElements`` function. It should add up all of the elements in the passed-in array from ``index`` onward - so calling ``sumElements(nums, 1)`` with ``nums`` as {1,2,3,12} would return ``17`` (as that is 2 + 3 + 12). Be sure to use recursion when creating the method.
         ~~~~
         public class ListTest {
@@ -155,7 +155,7 @@ This is the write code problems associated with the mixed up code problems. Reme
                     // YOUR CODE HERE
                 }
             }
-        
+
             public static void main(String[] args) {
                 int[] list= {1,2,3,12};
                 System.out.println("Answer: " + sumElements(list,0));
@@ -187,11 +187,11 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Finish the ``removeStar`` method. It should remove any occurrence of an asterisk (“*”) from a passed-in string. For example, calling ``removeStar`` on ``"ab*c**d”`` would return ``“abcd”``.
-        ~~~~    
+        ~~~~
         public class ListTest {
-        
+
             public static String removeStar(String myText) {
 
                 if (myText.length() == 0) {
@@ -208,12 +208,12 @@ This is the write code problems associated with the mixed up code problems. Reme
                     // HINT: Use substring(), removeStar(), and concatenation
                 }
             }
-        
+
             public static void main(String[] args) {
-        
+
                 String myText= "ab*c**d";
                     System.out.println("Before: " + myText);
-                
+
                 System.out.println("After: " + removeStar(myText));
             }
         }
@@ -239,14 +239,14 @@ This is the write code problems associated with the mixed up code problems. Reme
             }
 
 
-        
+
         }
 
 .. activecode:: u10_muc_wc5
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``exponent`` program. This should take in two ``int`` parameters - ``base`` and ``power`` - and return ``base`` ^ ``power`` (``base`` multiplied by itself ``power`` times). For example, ``exponent(3, 5)`` would return ``243`` because that is 3x3x3x3x3.
         ~~~~
         public class ListTest {
@@ -259,9 +259,9 @@ This is the write code problems associated with the mixed up code problems. Reme
                 // Unlike that problem, it's totally fine to do multiplication here
 
             }
-        
+
             public static void main(String[] args) {
-        
+
                 System.out.println("Before: exponent(2,4)");
                 System.out.println("After: " + exponent(2,4));
             }
@@ -294,23 +294,23 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``numFiveOccurrence`` method. It should return the number of times that ``5`` is present in the passed ``int`` array ``arr``. Just as in problem three (``sumElements``), there will also be an ``index`` parameter to make recursion possible. The initial call to ``numFiveOccurrence`` will be with index 0, and, from then on, ``numFiveOccurrence(arr, index)`` should return the number of 5s in ``arr`` from index onward.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
-                
+
         public class ListTest {
             public static int numFiveOccurrence(int[] arr, int index) {
-                
+
                 // YOUR CODE HERE
                 // Hint: Remember that you will have to handle two different possibilities in the recursive case based on arr[index]
                 // If you get stuck, look at sumElements and removeStar
 
             }
-        
+
             public static void main(String[] args) {
-        
+
                 int[] list= {1, 5, 7, 14, 5};
 
                 System.out.println("Before: {1, 5, 7, 14, 5}");
@@ -343,19 +343,19 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
-        Write the ``repeatThis`` method. It should take in two parameters - a String ``s`` and an int ``i`` - and return a new String composed of ``s`` ``i`` times. For example, ``repeatThis("Cat", 2)`` would return ``"CatCat"``. 
+
+        Write the ``repeatThis`` method. It should take in two parameters - a String ``s`` and an int ``i`` - and return a new String composed of ``s`` ``i`` times. For example, ``repeatThis("Cat", 2)`` would return ``"CatCat"``.
         ~~~~
         public class ListTest {
 
             public static String repeatThis(String s, int i) {
 
                 // YOUR CODE HERE
-    
+
             }
-        
+
             public static void main(String[] args) {
-        
+
                 System.out.println("Before: (hi, 3)");
                 System.out.println("After: " + repeatThis("hi", 3));
 
@@ -380,14 +380,14 @@ This is the write code problems associated with the mixed up code problems. Reme
 
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
-            }   
+            }
         }
 
 .. activecode:: u10_muc_wc8
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``findNumX`` function. This should take in a String ``s`` and return the number of occurrences of the character ``'x'`` (NOT including ``'X'``). For example, ``findNumX("axbcx")`` would return ``2``.
         ~~~~
         public class Test1 {
@@ -397,7 +397,7 @@ This is the write code problems associated with the mixed up code problems. Reme
                 // YOUR CODE HERE
 
             }
-        
+
             public static void main(String[] args) {
 
                 System.out.println("Before: xHihxixx");
@@ -442,7 +442,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``countTo`` method. This should take in an integer ``x`` and return a String with the positive numbers from 1 to ``x`` (inclusive) with "..." after each. For example, ``countTo(5)`` would return "1...2...3...4...5...".
         ~~~~
         public class Test1 {
@@ -511,7 +511,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``displayEvenDigits`` method. It should take in an integer ``num`` and return a String version of ``num`` with the odd digits replaced by ``'_'``. For example, ``displayEvenDigits(42356)`` should return ``"42__6".`` To achieve this recursively, you should use modulo and division to get the least-significant digit and then pass a version of ``num`` without that digit (hint: use integer division).
         ~~~~
         public class Test1
@@ -581,7 +581,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``fibonacci`` method. This program should take in an integer ``n`` and return the ``n``th fibonacci number. The 0th fibonacci number is ``0`` and the 1st is ``1``. From then on, the ``n``th fibonacci number is the ``n-1``th fibonacci number + the ``n-2``th fibonacci number. For example, the first few fibonacci numbers are 0, 1, 1, 2, 3, 5, 8. ``fibonacci(4)`` should return ``3``, as that is the 4th fibonacci number (remember that 0 is the 0th!). ``fibonacci(6)`` should return ``8``, as that is the 6th fibonacci number.
         ~~~~
         public class ListTest {
@@ -592,7 +592,7 @@ This is the write code problems associated with the mixed up code problems. Reme
                 // HINT: Unlike most problems, there are TWO base cases
 
             }
-        
+
             public static void main(String[] args) {
 
                 System.out.println("Before: " + " fibonacci(8)" );
@@ -626,12 +626,12 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
-        Create the ``spaceDash`` method. It should take in a String ``str`` and return a new String that has all of the spaces in ``str`` replaced by dashes. 
+
+        Create the ``spaceDash`` method. It should take in a String ``str`` and return a new String that has all of the spaces in ``str`` replaced by dashes.
         ~~~~
         public class Test1 {
             public static String spaceDash(String str) {
-                
+
                 // YOUR CODE HERE
 
             }
@@ -657,7 +657,7 @@ This is the write code problems associated with the mixed up code problems. Reme
             {
                 String output = getMethodOutput("main");
                 String expect = "Hello-World-!";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -667,12 +667,12 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``numberOf2s`` method. It should take in an integer ``n`` and count the number of 2s in the digits. Try to do this without converting ``n`` to a String. Here's a hint: modulo and integer division will both be very useful.
         ~~~~
         public class Test1 {
             public static int numberOf2s(int n){
-            
+
                 // YOUR CODE HERE
 
             }
@@ -697,7 +697,7 @@ This is the write code problems associated with the mixed up code problems. Reme
             {
                 String output = getMethodOutput("main");
                 String expect = "3";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -708,12 +708,12 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
-        Write the ``sum`` function. It should take in an integer ``n`` and recursively find and return the sum of the digits of ``n``. For example, ``sum(362)`` would return ``11``, as that is 3+6+2. 
+
+        Write the ``sum`` function. It should take in an integer ``n`` and recursively find and return the sum of the digits of ``n``. For example, ``sum(362)`` would return ``11``, as that is 3+6+2.
         ~~~~
         public class Test1 {
             public static int sum(int n) {
-                
+
                 // YOUR CODE HERE
 
             }
@@ -738,7 +738,7 @@ This is the write code problems associated with the mixed up code problems. Reme
             {
                 String output = getMethodOutput("main");
                 String expect = "45";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -748,15 +748,15 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
-        Write the ``evenDigits`` function. This should take in an integer ``n`` and recursively return the number of even digits in ``n``. 
+
+        Write the ``evenDigits`` function. This should take in an integer ``n`` and recursively return the number of even digits in ``n``.
         ~~~~
         public class Test1
         {
             public static int evenDigits(int n) {
-        
+
                 // YOUR CODE HERE
-            
+
             }
 
             public static void main(String[] args)
@@ -814,7 +814,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``factorial`` function. This should take in an integer ``n`` and return the factorial of ``n``. The factorial of N is equal to N x (N - 1) x (N - 2)... x 2 x 1. Note that N times the factorial of (N - 1) would be N factorial.
         ~~~~
         public class Test1

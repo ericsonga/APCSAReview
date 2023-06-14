@@ -1,45 +1,45 @@
 .. qnum::
    :prefix: 11-
    :start: 1
-   
+
 .. |start| image:: Figures/start.png
     :height: 24px
     :align: top
     :alt: start
-    
+
 .. |next| image:: Figures/next.png
     :height: 24px
     :align: top
     :alt: next
-    
+
 .. |prev| image:: Figures/prev.png
     :height: 24px
     :align: top
     :alt: previous
-    
+
 .. |pause| image:: Figures/pause.png
     :height: 24px
     :align: top
     :alt: pause
-    
+
 .. |finish| image:: Figures/finishExam.png
     :height: 24px
     :align: top
     :alt: finish exam
-   
-Post Test 
+
+Post Test
 ==========
 
-The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability, and complete the few survey questions at the bottom too. 
+The following 20 questions are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability, and complete the few survey questions at the bottom too.
 
-Please make sure you are logged in on Runestone so that your answers are saved. Click the |start| button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take. Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed. 
+Please make sure you are logged in on Runestone so that your answers are saved. Click the |start| button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take. Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
 
 Please note that this is a difficult exam. We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.
 
 
 
 .. timed:: postexam2
-    
+
     .. mchoice:: pe2_1-14
        :answer_a: The value you are searching for is the first element in the array.
        :answer_b: The value you are searching for is the last element in the array
@@ -68,14 +68,14 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_d: This would be equivalent to (!c || !d)
        :feedback_e: NOTing (negating) an OR expression is the same as the AND of the individual values NOTed (negated). See De Morgans laws.
 
-       Which of the following expressions is equivalent to the following? 
-   
+       Which of the following expressions is equivalent to the following?
+
        .. code-block:: java
 
            !(c || d)
 
     .. mchoice:: pe2_3-19
-       :answer_a: Data (fields) can be directly accessed by all code in all classes. 
+       :answer_a: Data (fields) can be directly accessed by all code in all classes.
        :answer_b: Data (fields) can be hidden inside of an object using the abstract visibility modifier.
        :answer_c: Data (fields) are directly accessible by objects in the same package and in subclasses.
        :answer_d: Data (fields) can be hidden inside an object using the visibility modifier private.
@@ -102,8 +102,8 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_d: Values equal to temp will not cause the infinite loop.
        :feedback_e: When a contains a value equal to zero then multiplying that value by 2 will always be 0 and never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
 
-       Which of the following will cause an infinite loop when ``temp`` is greater than zero and ``a`` is an array of integers.  
-   
+       Which of the following will cause an infinite loop when ``temp`` is greater than zero and ``a`` is an array of integers.
+
        .. code-block:: java
 
          for (int k = 0; k < a.length; k++ )
@@ -113,13 +113,13 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                a[k] *= 2;
             }
          }
-     
+
     .. mchoice:: pe2_5-5
        :answer_a: if (x > 0) x = 0;
        :answer_b: x = 0;
-       :answer_c: if (x < 0) x = 0;   
+       :answer_c: if (x < 0) x = 0;
        :answer_d: if (x > 0) x = -x; else x = 0;
-       :answer_e: if ( x < 0) x = 0; else x = -1;  
+       :answer_e: if ( x < 0) x = 0; else x = -1;
        :correct: b
        :feedback_a: Even if x is < 0, the above code will set it to 0.
        :feedback_b: No matter what x is set to originally, the code will reset it to 0.
@@ -128,29 +128,29 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x
 
        Given the following code segment, which of the following is this equivalent to?
-   
+
        .. code-block:: java
 
-         if ( x > 0) x = -x; 
+         if ( x > 0) x = -x;
          if (x < 0) x = 0;
-     
+
     .. mchoice:: pe2_6-15
        :answer_a: [1, 2, 3, 4, 5]
        :answer_b: [1, 2, 4, 5, 6]
        :answer_c: [1, 6, 2, 4, 5]
        :answer_d: [1, 5, 2, 4, 6]
-       :answer_e: [1, 2, 5, 4, 6] 
+       :answer_e: [1, 2, 5, 4, 6]
        :correct: e
        :feedback_a: The set replaces the 3 with the 4 so this can't be right
        :feedback_b: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.
-       :feedback_c: How did the 6 get in position 2? 
+       :feedback_c: How did the 6 get in position 2?
        :feedback_d: The add with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.
        :feedback_e: The add method that takes just a value as a parameter adds that value to the end of the list. The set replaces the value at that index with the new value. The add with parameters of an index and a value puts the passed value at that index and moves any existing values by one index to the right (increments the index). So the list looks like: 1 // add 1 1 2 // add 2 1 2 3 // add 3 1 2 4 // set index 2 to 4 1 2 5 4 // add 5 to index 2 (move rest right) 1 2 5 4 6 // add 6 to end
 
        Given the following code segment, what will be printed when it is executed?
-   
+
        .. code-block:: java
-   
+
           List<Integer> list1 = new ArrayList<Integer>();
           list1.add(new Integer(1));
           list1.add(new Integer(2));
@@ -159,7 +159,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
           list1.add(2, new Integer(5));
           list1.add(new Integer(6));
           System.out.println(list1);
-     
+
     .. mchoice:: pe2_7-20
        :answer_a: IV
        :answer_b: I and II
@@ -174,20 +174,20 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.
 
        Which of the following reasons for using an inheritance heirarchy are valid?
-   
+
        .. code-block:: java
 
-          I.   Methods from a superclass can be used in a subclass without 
+          I.   Methods from a superclass can be used in a subclass without
                rewriting or copying code.
-          II.  Objects from subclasses can be passed as arguments to a method 
+          II.  Objects from subclasses can be passed as arguments to a method
                designed for the superclass
           III. Objects from subclasses can be stored in the same array
           IV.  All of the above
           V.   None of the above
-            
+
 
     .. mchoice:: pe2_8-13
-       :answer_a: Many digits are printed due to infinite recursion. 
+       :answer_a: Many digits are printed due to infinite recursion.
        :answer_b: 3443
        :answer_c: 43211234
        :answer_d: 1441
@@ -200,9 +200,9 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The first call to mystery with the integer 1234 will print 1234 % 10. The '%' means modulo or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
 
        Which of the following is printed as the result of the call ``mystery(1234);``?
-   
+
        .. code-block:: java
-     
+
          //precondition:  x >=0
          public void mystery (int x)
          {
@@ -229,7 +229,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: Actually i = 6 and t = 6 and a = 13 after the loop finishes.
 
        Given the following code segment, what are the values of ``a`` and ``b`` after the ``for`` loop finishes?
-   
+
        .. code-block:: java
 
           int a = 10, b = 3, t;
@@ -239,36 +239,36 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
              a = i + b;
              b = t - i;
           }
-    
+
     .. mchoice:: pe2_10-1
-       :answer_a: 112233445566  
+       :answer_a: 112233445566
        :answer_b: 123456
-       :answer_c: 1223344556    
-       :answer_d: 123234345456 
-       :answer_e: Nothing will be printed due to an IndexOutOfBoundsException.    
+       :answer_c: 1223344556
+       :answer_d: 123234345456
+       :answer_e: Nothing will be printed due to an IndexOutOfBoundsException.
        :correct: c
-       :feedback_a: This would be true if the loop was printing each character twice and was incrementing the index by 1, but it prints two characters at a time and increments the index by 2.  
+       :feedback_a: This would be true if the loop was printing each character twice and was incrementing the index by 1, but it prints two characters at a time and increments the index by 2.
        :feedback_b: This would be true if the loop was incremented by 2 instead of 1.
        :feedback_c: This code loops through the string printing 2 characters at a time.  The last time through the loop the index is test.length() - 2.
        :feedback_d: This would be true if the loop was printing 3 characters at a time instead of 2.  Remember that the substring doesn't include the character at the specified last index.
        :feedback_e: This would be true if the loop stopped when index was less than the string length instead of one less than the string length.
 
        Given the following code segment, what is printed when it is executed?
-   
+
        .. code-block:: java
 
          String test = "123456";
-         for (int index = 0; index < test.length() - 1; index = index + 1) 
+         for (int index = 0; index < test.length() - 1; index = index + 1)
          {
               System.out.print(test.substring(index,index+2));
          }
-     
+
     .. mchoice:: pe2_11-3
        :answer_a: var1=2, var2=0
        :answer_b: var1=3, var2=-1
-       :answer_c: var1=0, var2=2    
+       :answer_c: var1=0, var2=2
        :answer_d: var1=1, var2=1
-       :answer_e: The loop won't finish executing because of a division by zero.   
+       :answer_e: The loop won't finish executing because of a division by zero.
        :correct: a
        :feedback_a: The loop starts with var1=0 and var2=2. The while checks that var2 isn't 0 (2!=0) and that var1 / var2 is greater than or equal to zero (0/2=0) so this is equal to zero and the body of the while loop will execute. The variable var1 has 1 added to it for a new value of 1. The variable var2 has 1 subtracted from it for a value of 1. At this point var1=1 and var2=1. The while condition is checked again. Since var2 isn't 0 (1!=0) and var1/var2 (1/1=1) is >= 0 so the body of the loop will execute again. The variable var1 has 1 added to it for a new value of 2. The variable var2 has 1 subtracted from it for a value of 0. At this point var1=2 and var2=0. The while condition is checked again. Since var2 is zero the while loop stops and the value of var1 is 2 and var2 is 0.
        :feedback_b: This would be true if the body of the while loop executed 3 times, but it exectues twice.
@@ -277,7 +277,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: The operation 0 / 2 won't cause a division by zero. The result is just zero.
 
        Given the following code segment, what are the values of ``var1`` and ``var2`` after the while loop finishes?
-   
+
        .. code-block:: java
 
          int var1 = 0;
@@ -288,14 +288,14 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
             var1 = var1 + 1;
             var2 = var2 - 1;
          }
-     
-     
+
+
     .. mchoice:: pe2_12-6
        :answer_a: (s == m - 5) && (s - 3 == 2 * (m - 3))
-       :answer_b: s == m + 5 && s + 3 == 2 * m + 6 
-       :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3) 
+       :answer_b: s == m + 5 && s + 3 == 2 * m + 6
+       :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3)
        :answer_d: None of the above is correct
-       :answer_e:  (s == (m + 5)) && ((s + 3) == (2 * m + 3)) 
+       :answer_e:  (s == (m + 5)) && ((s + 3) == (2 * m + 3))
        :correct: b
        :feedback_a: This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?
        :feedback_b: Susan is 5 years older than Matt so s == m + 5 should be true and in 3 years she will be twice as old so s + 3 = 2 * (m + 3) = 2 * m + 6.
@@ -304,7 +304,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won't be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).
 
        Susan is 5 years older than Matt. Three years from now Susan's age will be twice Matt's age.  What should be in place of ``condition`` in the code segment below to solve this problem?
-   
+
        .. code-block:: java
 
          for (int s = 1; s <= 100; s++) {
@@ -313,8 +313,8 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                    System.out.println("Susan is " + s + " and Matt is " + m);
             }
          }
-    
-     
+
+
     .. mchoice:: pe2_13-16
        :answer_a: { {2 3 3 3}, {1 2 3 3}, {1 1 2 3}}
        :answer_b: { {2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}}
@@ -326,10 +326,10 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_b: This would be true if the first value when you create a 2-d array was the number of columns and the second was the number of rows. Also you would need to set the value to 3 when the column index was greater than the row and a 1 when the row index was greater than the column index.
        :feedback_c: This would be true if the first value when you create a 2-d array was the number of columns and the second was the number of rows.
        :feedback_d: When you create a 2-d array the first value is the number of rows and the second is the number of columns. This code will put a 1 in the array when the row index is less than the column index and a 2 in the array when the row and column index are the same, and a 3 in the array when the row index is greater than the column index.
-       :feedback_e: This would be true if you set the value to the row index. 
+       :feedback_e: This would be true if you set the value to the row index.
 
        Given the following code segment, What are the contents of ``mat`` after the code segment has been executed?
-   
+
        .. code-block:: java
 
          int [][] mat = new int [3][4];
@@ -345,11 +345,11 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                 mat[row][col] = 3;
            }
         }
-    
+
     .. mchoice:: pe2_14-12
-       :answer_a: hI tHERE 
+       :answer_a: hI tHERE
        :answer_b: hi there
-       :answer_c: HI THERE  
+       :answer_c: HI THERE
        :answer_d: null
        :answer_e: Hi There
        :correct: e
@@ -360,7 +360,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: Strings are immutable meaning that any changes to a string creates and returns a new string, so the string referred to by s1 does not change
 
        Given the following code segment, what will the value of ``s1`` be after this executes?
-   
+
        .. code-block:: java
 
          String s1 = "Hi There";
@@ -371,13 +371,13 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
          s3 = s3.toUpperCase();
          s4 = null;
 
-     
+
     .. mchoice:: pe2_15-7
        :answer_a: 0 1 2 0 1 2 0 1
        :answer_b: 0 2 1 0 2 1 0 2
-       :answer_c: 0 2 1 0 2 1 0 2 1  
+       :answer_c: 0 2 1 0 2 1 0 2 1
        :answer_d: 2 1 0 2 1 0 2 1
-       :answer_e: 0 2 1 0 2 1 0  
+       :answer_e: 0 2 1 0 2 1 0
        :correct: b
        :feedback_a: The second time through the loop the value of num is 2 and 2 % 3 is 2 not 1.
        :feedback_b: The while loop will iterate 8 times. The value of num each time through the loop is: 0, 2, 4, 6, 8, 10, 12, and 14. The corresponding remainder operator of 3 is: 0, 2, 1, 0, 2, 1, 0, 2, which is print to the console.
@@ -386,19 +386,19 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This would be true if the loop stopped when the value of num was less than 14 but it is less than or equal to 14.
 
        Given the following code segment, what is printed when it executes?
-   
+
        .. code-block:: java
 
          public static void test()
          {
            int num = 0;
-           while(num <= 14) 
+           while(num <= 14)
            {
-             if(num % 3 == 1) 
+             if(num % 3 == 1)
              {
                 System.out.print("1 ");
              }
-             else if (num % 3 == 2) 
+             else if (num % 3 == 2)
              {
                 System.out.print("2 ");
              }
@@ -407,28 +407,28 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                 System.out.print("0 ");
              }
 
-             num += 2; 
-           }    
+             num += 2;
+           }
         }
-     
+
 
     .. mchoice:: pe2_16-2
-       :answer_a: It is the length of the array nums. 
+       :answer_a: It is the length of the array nums.
        :answer_b: It is the length of the first consecutive block of the value target in nums.
        :answer_c:  It is the length of the shortest consecutive block of the value target in nums.
-       :answer_d: It is the number of occurrences of the value target in nums. 
-       :answer_e: It is the length of the last consecutive block of the value target in nums.    
+       :answer_d: It is the number of occurrences of the value target in nums.
+       :answer_e: It is the length of the last consecutive block of the value target in nums.
        :correct: d
        :feedback_a: This can't be true. There is no nums.length in the code and the only count happens lenCount is incremented when nums[k] == target.
        :feedback_b: It doesn't reset the count ever so it just counts all the times the target value appears in the array.
        :feedback_c: It doesn't reset the count ever so it just counts all the times the target value appears in the array.
-       :feedback_d: The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen. 
+       :feedback_d: The variable lenCount is incremented each time the current array element is the same value as the target. It is never reset so it counts the number of occurrences of the value target in nums. The method returns maxLen which is set to lenCount after the loop finishes if lenCount is greater than maxLen.
        :feedback_e: It doesn't reset the count ever so it just counts all the times the target value appears in the array.
 
        Consider the following data field and method ``findLongest``. Method ``findLongest`` is intended to find the longest consecutive block of the value target occurring in the array nums; however, ``findLongest`` does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to ``findLongest``?
 
        .. code-block:: java
-   
+
          private int[] nums;
          public int findLongest(int target)
          {
@@ -455,22 +455,22 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
            }
            return maxLen;
          }
-      
+
     .. mchoice:: pe2_17-11
        :answer_a: 4
        :answer_b: 3
-       :answer_c: 16  
+       :answer_c: 16
        :answer_d: 7
        :answer_e: 2
        :correct: e
-       :feedback_a: This would be true if it was return (a[1] *= 2); 
+       :feedback_a: This would be true if it was return (a[1] *= 2);
        :feedback_b: This can't be true because a[1]--; means the same as a[1] = a[1] - 1; so the 3 changes to 2.  Parameters are all pass by value in Java which means that a copy of the value is passed to a method. But, since an array is an object a copy of the value is a copy of the reference to the object. So changes to objects in methods are permanent.
        :feedback_c: This would be true if it was return (a[0] *= 2);
        :feedback_d: This would be true if it was a[0]--;
-       :feedback_e: The statement a[1]--; is the same as a[1] = a[1] - 1; so this will change to 3 to 2.  The return (a[1] * 2) does not change the value at a[1].  
+       :feedback_e: The statement a[1]--; is the same as a[1] = a[1] - 1; so this will change to 3 to 2.  The return (a[1] * 2) does not change the value at a[1].
 
        Given the following method declaration, and ``int[] a = {8, 3, 1}``, what is the value in ``a[1]`` after ``m1(a);`` is run?
-   
+
        .. code-block:: java
 
          public static int m1(int[] a)
@@ -478,13 +478,13 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
             a[1]--;
             return (a[1] * 2);
          }
-      
+
     .. mchoice:: pe2_18-4
        :answer_a: I and II only
        :answer_b: II only
-       :answer_c: III only    
+       :answer_c: III only
        :answer_d: I and III only
-       :answer_e: I, II, and III  
+       :answer_e: I, II, and III
        :correct: d
        :feedback_a: Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.
        :feedback_b: Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.
@@ -493,9 +493,9 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: Choice II won't work since if you had a score of 94 it would first assign the grade to an "A" but then it would execute the next if and change the grade to a "B" and so on until the grade was set to a "C". This could have been fixed by using else if instead of just if.
 
        At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, 75 to 83 inclusive is a C, and below 75 is an F.  Which of the following code segments will assign the correct string to ``grade`` for a given integer score?
-   
+
        .. code-block:: java
-      
+
          I.   if (score >= 93)
                  grade = "A";
               if (score >= 84 && score <= 92)
@@ -522,12 +522,12 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
                  grade = "C";
               else
                  grade = "F";
-    
+
 
     .. mchoice:: pe2_19-8
        :answer_a: hours = hours + minutes % 60; minutes = minutes / 60;
        :answer_b: minutes = minutes % 60;
-       :answer_c: minutes = minutes + hours % 60; 
+       :answer_c: minutes = minutes + hours % 60;
        :answer_d: hours = hours + minutes / 60; minutes = minutes % 60;
        :answer_e: hours = hours + minutes / 60;
        :correct: d
@@ -538,7 +538,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This will correctly update the hours, but not update the minutes.
 
        Given the following incomplete class declaration, which of the following can be used to replace the missing code in the ``advance`` method so that it will correctly update the time?
-   
+
        .. code-block:: java
 
          public class TimeRecord
@@ -574,7 +574,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
            // ... other methods not shown
          }
-     
+
     .. mchoice:: pe2_20-17
        :answer_a: AB
        :answer_b: ABCD
@@ -589,7 +589,7 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
        :feedback_e: This is not an example of recursion. No method is called from within itself.
 
         Given the following class declarations, and assuming that the following declaration appears in a client program: ``Base b = new Derived();``, what is the result of the call ``b.methodOne();``?
-   
+
         .. code-block:: java
 
          public class Base
@@ -620,10 +620,10 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
               System.out.print("D");
             }
          }
-     
-     
 
-           
 
-           
-  
+
+
+
+
+

@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -22,20 +22,20 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
-    
+
+
 Social Impacts of CS
 ====================
 
 .. |ACM professional code of ethics| raw:: html
 
    <a href="https://ethics.acm.org/" target="_blank">ACM professional code of ethics</a>
-   
+
 .. |Wired article| raw:: html
 
    <a href="https://www.wired.com/2016/06/self-driving-cars-will-power-kill-wont-conscience/" target="_blank">Wired article</a>
 
-We are living in an age of rapid development in technology and automation. Software and hardware developers increasingly have real impacts on people's lives. In computer science, we follow the following |ACM professional code of ethics| which includes guidelines such as "Avoid harm" and "Respect privacy". 
+We are living in an age of rapid development in technology and automation. Software and hardware developers increasingly have real impacts on people's lives. In computer science, we follow the following |ACM professional code of ethics| which includes guidelines such as "Avoid harm" and "Respect privacy".
 
 However, sometimes programs have unintended consequences, and sometimes, it is hard to ensure **system reliability**, where everything will work as intended. Software developers also need to be aware of the legal implications and intellectual property laws.
 
@@ -47,18 +47,18 @@ Another problem in machine learning is **bias** in algorithms or data. Machine l
 .. |video1| raw:: html
 
    <a href="https://www.youtube.com/watch?v=TWWsW1w-BVo" target="_blank" style="text-decoration:underline">Gender Shades video</a>
-   
+
 .. |Joy Buolamwini| raw:: html
 
    <a href="https://www.poetofcode.com/" target="_blank" style="text-decoration:underline">Joy Buolamwini</a>
-   
-Watch the following |video1| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League). 
+
+Watch the following |video1| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League).
 
 .. youtube:: TWWsW1w-BVo
     :height: 400
     :width: 600
     :align: left
-    
+
 
 Here are some other interesting videos to watch about bias in algorithms:
 

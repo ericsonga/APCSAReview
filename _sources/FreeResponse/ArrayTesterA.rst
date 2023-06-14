@@ -5,7 +5,7 @@
 ArrayTester - Part A
 ===============================
 
-..	index::
+.. index::
     single: ArrayTester
     single: free response
 
@@ -81,15 +81,15 @@ Try and Solve It
       public static int[] getColumn(int[] [] arr2D, int c)
       {
           /** Complete this method **/
-          
-          
+
+
       }
 
       // Main method to test getColumn method
       public static void main(String[] args)
       {
-    	   int [][] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 } };
-    	   int[] result = ArrayTester.getColumn(arr2D, 1);
+           int [][] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 } };
+           int[] result = ArrayTester.getColumn(arr2D, 1);
          System.out.println("It should print the values from the second column: 1 4 7 5.");
          for (int i = 0; i < result.length; i++)
          {
@@ -100,62 +100,62 @@ Try and Solve It
    } // end of class
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
+   import org.junit.*;
+   import java.io.*;
 
-     import java.util.Arrays;
-     //import java.util.ArrayList;
+   import java.util.Arrays;
+   //import java.util.ArrayList;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         public RunestoneTests() {
-             super("ArrayTester");
-             //CodeTestHelper.sort = true;
-         }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests() {
+           super("ArrayTester");
+           //CodeTestHelper.sort = true;
+       }
 
-         @Test
-         public void testMain1() {
-             boolean passed = false;
+       @Test
+       public void testMain1() {
+           boolean passed = false;
 
-             String expect = "It should print the values from the second column: 1 4 7 5.\n1 4 7 5";
+           String expect = "It should print the values from the second column: 1 4 7 5.\n1 4 7 5";
 
-             String output = getMethodOutput("main");
+           String output = getMethodOutput("main");
 
-             passed = getResults(expect, output, "Checking for expected output from main");
-             assertTrue(passed);
-         }
+           passed = getResults(expect, output, "Checking for expected output from main");
+           assertTrue(passed);
+       }
 
-         @Test
-         public void testMain2() {
-             boolean passed = false;
+       @Test
+       public void testMain2() {
+           boolean passed = false;
 
-             int [][] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 } };
+           int [][] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 } };
 
-             String arrayStr = "[[0, 1, 2],\n [3, 4, 5],\n [6, 7, 8],\n [9, 5, 3]]";
+           String arrayStr = "[[0, 1, 2],\n [3, 4, 5],\n [6, 7, 8],\n [9, 5, 3]]";
 
-             int[] result = ArrayTester.getColumn(arr2D, 0);
+           int[] result = ArrayTester.getColumn(arr2D, 0);
 
-             String expect = "[0, 3, 6, 9]";
-             String output = Arrays.toString(result);
+           String expect = "[0, 3, 6, 9]";
+           String output = Arrays.toString(result);
 
-             passed = getResults(expect, output, "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
-             assertTrue(passed);
-         }
+           passed = getResults(expect, output, "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
+           assertTrue(passed);
+       }
 
-         @Test
-         public void testMain3() {
-             boolean passed = false;
+       @Test
+       public void testMain3() {
+           boolean passed = false;
 
-             int [][] arr2D = { { 0, 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 5, 3 } };
+           int [][] arr2D = { { 0, 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 5, 3 } };
 
-             String arrayStr = "[[0, 1, 2, 3, 4, 5],\n [6, 7, 8, 9, 5, 3]]";
+           String arrayStr = "[[0, 1, 2, 3, 4, 5],\n [6, 7, 8, 9, 5, 3]]";
 
-             int[] result = ArrayTester.getColumn(arr2D, 2);
+           int[] result = ArrayTester.getColumn(arr2D, 2);
 
-             String expect = "[2, 8]";
-             String output = Arrays.toString(result);
+           String expect = "[2, 8]";
+           String output = Arrays.toString(result);
 
-             passed = getResults(expect, output, "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
-             assertTrue(passed);
-         }
-     }
+           passed = getResults(expect, output, "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
+           assertTrue(passed);
+       }
+   }

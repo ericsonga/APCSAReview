@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -26,7 +26,7 @@
 Tracing Recursive Methods (Day 2)
 ===================================
 
-..	index::
+.. index::
     single: call stack
     single: stack
 
@@ -129,7 +129,7 @@ Another way to see the call stack in action is to download and use the Jeloit so
    :feedback_c: If you remember that factorial(5) was 120 then this is just 6 * 120 = 720.
    :feedback_d: It doesn't return 6 * 5 it returns 6 * factorial(5).
 
-	Given the method defined below what does the following return: factorial(6)?
+    Given the method defined below what does the following return: factorial(6)?
 
     .. code-block:: java
      :linenos:
@@ -154,7 +154,7 @@ Another way to see the call stack in action is to download and use the Jeloit so
    :feedback_c: Check that you didn't miss one of the recursive calls.
    :feedback_d: This would be true if the call was mystery(6).
 
-	Given the method defined below what does the following return: mystery(5)?
+    Given the method defined below what does the following return: mystery(5)?
 
     .. code-block:: java
      :linenos:
@@ -183,7 +183,7 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: This would be correct if returned 1 instead of a in the base case.
    :feedback_e: This would be correct if it was 3 to the 5th.
 
-	Given the method defined below what does the following print: mystery(4,3)?
+    Given the method defined below what does the following print: mystery(4,3)?
 
     .. code-block:: java
      :linenos:
@@ -250,7 +250,7 @@ So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java V
    :feedback_d: This method prints the right most digit and then removes the rightmost digit for the recursive call.  It prints both before and after the recursive call.
    :feedback_e: Since 1234 % 10 returns the rightmost digit, the first thing printed is 4.
 
-	Given the method defined below what does the following print: mystery(1234)?
+    Given the method defined below what does the following print: mystery(1234)?
 
     .. code-block:: java
      :linenos:
@@ -280,7 +280,7 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: This would be correct if the base case returned 1 if the single character was a y.
    :feedback_e: Don't forget about the recursive calls.
 
-	Given the method defined below what does the following return: mystery("xyzxyxy")? Note that this recursive method traverses a String.
+    Given the method defined below what does the following return: mystery("xyzxyxy")? Note that this recursive method traverses a String.
 
     .. code-block:: java
      :linenos:

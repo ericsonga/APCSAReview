@@ -21,7 +21,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: III executes to true if either a||b true, III is true because x-y will become 0 then 0 * a *b... = 0
 
    Suppose ``x, y, and z`` are variables of type ``int``. Consider the following three conditions
-      
+
    I. (x == y) && (y == z)  && (x == z)
    II. (x==y) || (y==z) && (x == z)
    III. (x - y) * (x - z) * (y - z) == 0
@@ -48,11 +48,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      public int multiply(int n)
      {
          if (n == 0)
-    	     return 1;
+             return 1;
          else if(n % 2 == 1)
-           return n;
-    	 else
-    	     return n * multiply(n - 2);
+             return n;
+         else
+             return n * multiply(n - 2);
      }
 
 .. mchoice:: qtnt5_3
@@ -158,7 +158,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
 
       Suppose ``a and b`` are ``boolean`` variables. The expression below
-        
+
       ``!a && !b``
 
       ...will evaluate to ``false`` whenever
@@ -279,7 +279,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
     :feedback_e: Second for loop goes until colum <= row index
 
     A square matrix is declared as
-        
+
     ``int[][] mat = new int [SIZE][SIZE]``
 
     where ``SIZE`` is an appropriate integer constant. Consider the code below.

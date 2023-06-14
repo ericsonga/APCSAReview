@@ -1,6 +1,6 @@
 .. qnum::
    :prefix: 8-4-
-   :start: 1   
+   :start: 1
 
 Unit 8 Write Code for Toggle Code
 =========================================================
@@ -11,7 +11,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Fix the errors (marked by comments) in the code so that it correctly creates a 10x10 array called ``table`` filled with numbers from 0 to 99 in left-right top-bottom order and prints the output (in row-column order) with the numbers separated by tabs. Most of the errors are syntactical, but one is logical.
         ~~~~
         public class Test1 {
@@ -41,22 +41,22 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36   37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74   75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
 
         }
 
-   
+
 .. activecode:: u8_muc_wc2
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         This program is supposed to create an 8x8 two-dimensional ``int`` array that is filled with a checkered patterns of 0s and 1s, starting with a 1 in the top left corner. It should also print the output in row-column order, separating each element with a space. The only missing part is the ``if`` statement that decides if a specific cell should be a 0 or a 1. Fill that in to finish the problem.
 
-        Hint: Try drawing out a smaller version (around 4x4) of a checkered two-dimensional array. Can you notice a pattern in the row numbers and column numbers of the 1s? 
+        Hint: Try drawing out a smaller version (around 4x4) of a checkered two-dimensional array. Can you notice a pattern in the row numbers and column numbers of the 1s?
 
         ~~~~
         public class Test1 {
@@ -88,7 +88,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -98,7 +98,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         The ``sumVals`` function in the below program should iterate through a two-dimensional ``int`` array ``nums`` and return its sum. Fill in the headers for the for loops such that the method  iterates through the entirety of ``nums``.
         ~~~~
         import java.util.Arrays;
@@ -115,7 +115,7 @@ This is the write code problems associated with the mixed up code problems.
                 }
 
                 return sum;
-        
+
             } //end method
 
             public static void main(String[] args) {
@@ -149,7 +149,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "sumVals(arr1) --> 23\nsumVals(arr2) --> 0";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -187,7 +187,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Fill in the ``flipImage`` method. This should accept a two-dimensional String array ``image`` and flip the "image” 180 degrees vertically. For example, ``{ {"green", "red", "blue"}, {"cat", "dog", "yellow"} }`` would become ``{ {"blue", "red", "green"}, {"yellow", "dog", "cat"} }``.
         ~~~~
         import java.util.Arrays;
@@ -228,7 +228,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "Before: [[this, is, a, test], [hello, world, good, luck]]\nAfter: [[test, a, is, this], [luck, good, world, hello]]";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -239,14 +239,14 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``makeEvenNumbersZero`` method such that it iterates through the two-dimensional ``int`` array ``nums`` and replaces each instance of an even number with 0. For example, ``{ {3, 4, 5}, {6, 7, 8} }`` would become ``{ {3, 0, 5}, {0, 7, 0} }``.
         ~~~~
         import java.util.Arrays;
 
         public class Test1 {
             public static void makeEvenNumsZero(int[][] nums) {
-                
+
                 // YOUR CODE HERE
 
             }
@@ -276,7 +276,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "[[1, 0, 3, 0], [0, 3, 0, 1], [0, 9, 0, 5]]";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -287,14 +287,14 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Fill in the ``numOccurrences`` method. It should take in a two-dimension ``int`` array ``nums`` and an ``int`` ``desired`` and return the number of times that ``desired`` appears in ``nums``. E.g., with ``{ {3, 1, 2}, {3, 4, 1} }`` as ``nums``, ``numOccurrences(nums, 1)`` should return ``2``.
         ~~~~
         public class Test1 {
 
             public static int numOccurrences(int[][] nums, int desired) {
                 int occurrences = 0;
-                
+
                 // YOUR CODE HERE //
 
                 return occurrences;
@@ -321,7 +321,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "The number of times that 1 appears in the data set: 4";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -331,8 +331,8 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
-        Fill in the ``averageCols`` method. It should accept a two-dimensional int array ``nums`` and return a one-dimensional (normal) ``int`` array containing the integer average of each of the columns (NOT the rows). E.g., with ``nums`` as ``{ {3, 5, 2}, {1, 1, 6} }``, ``averageCols(nums)`` should return ``{2, 3, 4}`` as that is ``(3 + 1) / 2``, ``(5 + 1) / 2``, and ``(2 + 6) / 2``. 
+
+        Fill in the ``averageCols`` method. It should accept a two-dimensional int array ``nums`` and return a one-dimensional (normal) ``int`` array containing the integer average of each of the columns (NOT the rows). E.g., with ``nums`` as ``{ {3, 5, 2}, {1, 1, 6} }``, ``averageCols(nums)`` should return ``{2, 3, 4}`` as that is ``(3 + 1) / 2``, ``(5 + 1) / 2``, and ``(2 + 6) / 2``.
         ~~~~
         import java.util.Arrays;
 
@@ -341,7 +341,7 @@ This is the write code problems associated with the mixed up code problems.
             public static int[] averageCols(int[][] nums) {
 
                 int[] averages = new int[nums[0].length];
-                
+
                 // Hint: Instead of iterating through rows then columns like we normally do, try iterating by columns then rows
 
                 return averages;
@@ -373,7 +373,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "Averages: [3, 4, 5]";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -383,7 +383,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``oddRows`` method. This should take in a two-dimensional ``int`` array ``nums`` and return a new two-dimensional ``int`` array containing only the odd-index rows. For example, with ``nums`` equal to ``{ {3, 2, 1}, {4, 5, 6}, {1, 5, 7} }``, ``oddRows(nums)`` would return ``{ {4, 5, 6} }`` as that was the row at index 1, which is the only odd index present.
         ~~~~
         import java.util.Arrays;
@@ -392,10 +392,10 @@ This is the write code problems associated with the mixed up code problems.
         {
 
             public static int[][] oddRows(int[][] nums) {
-                
+
                 int[][] odds = new int[nums.length / 2][nums[0].length];
 
-                // YOUR CODE HERE                     
+                // YOUR CODE HERE
 
                 return odds;
             } //end method
@@ -431,7 +431,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "oddRows(arr1) --> [[6, -4, 5]]\noddRows(arr2) --> [[-5, 1], [8, 5]]";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -456,7 +456,7 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write the ``breakIntoLetters`` method. It should accept a two-dimensional String array, in which each row contains the characters of a word. It should then return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array. For example, calling ``breakIntoLetters`` on { {“b”, “a”, “t”, “h”}, {“t”, “e”, “n”, “s”}, {“j”, “a”, “c”, “k”}, {“l”, “a”, “z”, “y”} } should return {“bath”, “tens”, “jack”, “lazy”}.
         ~~~~
         import java.util.Arrays;
@@ -465,9 +465,9 @@ This is the write code problems associated with the mixed up code problems.
         {
 
             public static String[] breakIntoLetters(String[][] words) {
-        
+
                 // YOUR CODE HERE
-        
+
             } //end method
 
             public static void main(String[] args) {
@@ -501,7 +501,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "mat1 --> [[b, a, t, h], [t, e, n, s], [j, a, c, k], [l, a, z, y]]\nbreakIntoLetters(mat1) --> [bath, tens, jack, lazy]";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }
@@ -517,19 +517,19 @@ This is the write code problems associated with the mixed up code problems.
                 //String output = Arrays.toString(outArr);
                 //String expect = Arrays.toString(expArr);
 
-                boolean passed = getResults(expect, output, "Running breakIntoLetters() with " + input); 
+                boolean passed = getResults(expect, output, "Running breakIntoLetters() with " + input);
                 assertTrue(passed);/**/
             }
 
-            
+
         }
 
 .. activecode:: u8_muc_wc10
         :language: java
         :practice: T
         :autograde: unittest
-   
-        Write the ``maxEachRow`` method. It that should accept a two-dimensional ``int`` array ``nums``, and return a single-dimensional (normal) ``int`` array containing the max of each row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} } should be {3, 9, 45}. 
+
+        Write the ``maxEachRow`` method. It that should accept a two-dimensional ``int`` array ``nums``, and return a single-dimensional (normal) ``int`` array containing the max of each row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} } should be {3, 9, 45}.
         ~~~~
         import java.util.Arrays;
 
@@ -537,7 +537,7 @@ This is the write code problems associated with the mixed up code problems.
         {
 
             public static int[] maxEachRow(int[][] nums) {
-        
+
                 // YOUR CODE HERE
 
             } //end method
@@ -575,7 +575,7 @@ This is the write code problems associated with the mixed up code problems.
             {
                 String output = getMethodOutput("main");
                 String expect = "mat1 --> [[-1, 2, 0], [6, -4, 5], [3, 4, 8]]\nmaxEachRow(mat1) --> [2, 6, 8]\nmat2 --> [[7, -3], [-5, 1]]\nmaxEachRow(mat2) --> [7, 1]";
-                
+
                 boolean passed = getResults(expect, output, "Running main");
                 assertTrue(passed);
             }

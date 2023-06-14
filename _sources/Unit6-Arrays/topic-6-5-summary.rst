@@ -1,8 +1,8 @@
 .. qnum::
    :prefix: 6-5-
    :start: 1
-   
-   
+
+
 Unit 6 Summary
 -------------------------
 
@@ -15,7 +15,7 @@ In this chapter you learned about **Arrays**.  An **array** is consecutive stora
 
     Figure 1: Two 5 element arrays with their values set to the default values for integer and object arrays.
 
-..	index::
+.. index::
     pair: array; index
     pair: array; declaration
     pair: array; creation
@@ -48,8 +48,8 @@ Concept Summary
 Java Keyword Summary
 =========================
 
-- **for** - starts both a general for loop and a for-each loop.  The syntax for a for each loop is ``for (type variable : array)``.  Each time through the loop the variable will take on the next value in the array.  The first time through the loop it will hold the value at index 0, then the value at index 1, then the value at index 2, etc.  
-- **static** - used to create a class method, which is a method that can be called using the class name like ``Math.abs(-3)``.  
+- **for** - starts both a general for loop and a for-each loop.  The syntax for a for each loop is ``for (type variable : array)``.  Each time through the loop the variable will take on the next value in the array.  The first time through the loop it will hold the value at index 0, then the value at index 1, then the value at index 2, etc.
+- **static** - used to create a class method, which is a method that can be called using the class name like ``Math.abs(-3)``.
 
 Vocabulary Practice
 =====================
@@ -60,16 +60,16 @@ Vocabulary Practice
     :match_2: The number of elements in the array|||length
     :match_3: The index of the first element|||0
     :match_4: The index of the second element|||1
-    
+
     Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
-    
+
 .. dragndrop:: ch7_match_2
     :feedback: Review the summaries above.
     :match_1: Declare an integer array named nums|||int[] nums;
     :match_2: Declare and create a String array named list1 that can hold 3 elements|||String[] list1 = new String[3];
     :match_3: Initialize an array of integers named nums to contain the first 3 whole numbers|||int[] nums = {1,2,3};
     :match_4: Initialize a String array named list1 to contain the first 3 letters of the alphabet as separate strings|||String[] list1 = {"a", "b", "c"};
-    
+
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
 
 .. |Quizlet| raw:: html
@@ -78,7 +78,7 @@ Vocabulary Practice
 
 
 For more practice, see this |Quizlet|.
-  
+
 Common Mistakes
 ===============
 
@@ -87,5 +87,5 @@ Common Mistakes
   -  using ``array.length`` as the last valid index in an array, not ``array.length - 1``.
   -  using ``array.length()`` instead of ``array.length`` (not penalized on the free response)
   -  using ``array.get(0)`` instead of ``array[0]`` (not penalized on the free response)
-  -  going out of bounds when looping through an array  (using ``index <= array.length``).  You will get an ``ArrayIndexOutOfBoundsException``.  
-  -  jumping out an loop too early by using one or more return statements before every value has been processed.  
+  -  going out of bounds when looping through an array  (using ``index <= array.length``).  You will get an ``ArrayIndexOutOfBoundsException``.
+  -  jumping out an loop too early by using one or more return statements before every value has been processed.

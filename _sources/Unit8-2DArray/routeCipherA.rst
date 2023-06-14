@@ -5,8 +5,8 @@
 Free Response - Route Cipher A
 ==============================
 
-..	index::
-	single: routeciphera
+.. index::
+    single: routeciphera
     single: free response
 
 The following is a free response question from 2011.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
@@ -259,8 +259,8 @@ button below and complete the problem.
     .. parsonsprob:: RouteCipherA
       :adaptive:
 
-      The method fillBlock below contains the correct code for one solution to this problem, 
-      but it is mixed up.  Drag the needed code from the left to the right and put them in order with the 
+      The method fillBlock below contains the correct code for one solution to this problem,
+      but it is mixed up.  Drag the needed code from the left to the right and put them in order with the
       correct indention so that the code would work correctly.
       -----
       public void fillBlock(String str) {

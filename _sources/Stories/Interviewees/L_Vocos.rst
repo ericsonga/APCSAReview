@@ -29,7 +29,7 @@ Lucas couldn't afford college. After high school, he was reintroduced to computi
 
 **What does he work as?**
 
-Lucas works as a freelance web developer. In other words, companies contract him to help build websites but he's not tied down to any specific business. 
+Lucas works as a freelance web developer. In other words, companies contract him to help build websites but he's not tied down to any specific business.
 
 **What advice does he have?**
 

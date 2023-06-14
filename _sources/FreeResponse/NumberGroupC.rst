@@ -5,8 +5,8 @@
 NumberGroup - Part C
 ===============================
 
-..	index::
-	single: NumberGroup
+.. index::
+    single: NumberGroup
     single: free response
 
 **Part c.**  The ``MultipleGroups`` class represents a collection of ``NumberGroup`` objects and is
@@ -34,34 +34,34 @@ The following table shows the results of several calls to ``contains``.
 Try and Solve It
 ----------------
 
-Write the method ``contains`` below in the class MultiGroups. (Note that the original AP Question involved a NumberGroup interface which has been replaced with inheritance here). 
+Write the method ``contains`` below in the class MultiGroups. (Note that the original AP Question involved a NumberGroup interface which has been replaced with inheritance here).
 
 
 .. activecode:: NumberGroupC
    :language: java
    :autograde: unittest
-   
+
    Write the method ``contains`` below in the class MultiGroups.
    ~~~~
    import java.util.ArrayList;
-   
-   class NumberGroup 
-   { 
+
+   class NumberGroup
+   {
       public boolean contains(int num)
       {
        /* Implementation not shown */
         return true;
       }
    }
-   
+
    class Range extends NumberGroup
    {
      // copy in your Range class from the previous lesson here
    }
-   
+
    public class MultiGroups extends NumberGroup
    {
-   
+
      private ArrayList<NumberGroup> groupList;
 
      public MultiGroups(Range r1, Range r2, Range r3)
@@ -71,22 +71,22 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
          groupList.add(r2);
          groupList.add(r3);
      }
-     
-     /** Returns true if at least one of the number groups 
+
+     /** Returns true if at least one of the number groups
       *  in this multiple group contains num;
       *  false otherwise
      */
      public boolean contains(int num)
      {
-	   // Write the MultiGroup contains method here
-       
-       
+         // Write the MultiGroup contains method here
+
+
      }
-    
+
      //Main method to test the class
      public static void main(String[] args)
      {
-       MultiGroups multiple1 = new MultiGroups(new Range(5, 8),new Range(10, 12),new Range(1, 6));   
+       MultiGroups multiple1 = new MultiGroups(new Range(5, 8),new Range(10, 12),new Range(1, 6));
        System.out.println("Multiple1 contains 2 (should be true)? " + multiple1.contains(2));
        System.out.println("Multiple1 contains 9 (should be false)? " + multiple1.contains(9));
        System.out.println("Multiple1 contains 6 (should be true)? " + multiple1.contains(6));

@@ -10,7 +10,7 @@
 .. image:: ../../_static/time45.png
     :width: 225
     :align: right
-    
+
 |Groupwork| Tracing Challenge : Recursion
 ===========================================
 

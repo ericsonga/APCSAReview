@@ -12,16 +12,16 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code that prints a random number from 1 to 50.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
+            public static void main(String[] args)
             {
               // Add your code here
-              
-              
+
+
             }
          }
          ====
@@ -76,22 +76,22 @@ This is the write code problems associated with the mixed up code problems.
               }
           }
 
-   
+
 .. activecode:: u2_muc_wc2
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code that prints the first 2 characters of the message followed by the last 2 characters of the message using the appropriate String methods.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
-            { 
+            public static void main(String[] args)
+            {
                String message = "I hope this works";
                // Add your code here
-              
-              
+
+
             }
          }
          ====
@@ -107,7 +107,7 @@ This is the write code problems associated with the mixed up code problems.
 
               @Test
               public void test1()
-              { 
+              {
                   String output = getMethodOutput("main");
                   String expect = "I ks";
 
@@ -134,20 +134,20 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code that prints the first letters in first, middle, and last in lowercase letters using the appropriate String methods.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
-            { 
+            public static void main(String[] args)
+            {
                  String first = "Gerald";
                  String middle = "Foster";
                  String last= "Jones";
-               
+
                  // Add your code here
-              
-              
+
+
             }
          }
          ====
@@ -176,18 +176,18 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code that prints the message in all uppercase letters using the appropriate String methods.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
-            { 
+            public static void main(String[] args)
+            {
                  String message = "Don't Pokemon and drive!";
-               
+
                  // Add your code here
-              
-              
+
+
             }
          }
          ====
@@ -218,18 +218,18 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code that prints the first 3 letters of the message in uppercase letters using the appropriate String methods.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
-            { 
+            public static void main(String[] args)
+            {
                  String message = "Have a nice day!";
-               
+
                  // Add your code here
-              
-              
+
+
             }
          }
          ====
@@ -248,7 +248,7 @@ This is the write code problems associated with the mixed up code problems.
                 {
                     String output = getMethodOutput("main");
                     String expect = "HAV";
-        
+
                     boolean passed = getResults(expect, output, "Running main");
                     assertTrue(passed);
                 }
@@ -258,18 +258,18 @@ This is the write code problems associated with the mixed up code problems.
         :language: java
         :practice: T
         :autograde: unittest
-   
+
         Write code that print the part of the message starting with the word "nice" using the appropriate String methods.
         ~~~~
-        public class Test1 
+        public class Test1
         {
-            public static void main(String[] args) 
-            { 
+            public static void main(String[] args)
+            {
                  String message = "Have a nice day!";
-               
+
                  // Add your code here
-              
-              
+
+
             }
          }
          ====
@@ -293,4 +293,4 @@ This is the write code problems associated with the mixed up code problems.
                     assertTrue(passed);
                 }
           }
-  
+

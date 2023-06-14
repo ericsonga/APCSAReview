@@ -1,4 +1,4 @@
-import javax.swing.*;
+      import javax.swing.*;
       import java.util.List;
       import java.util.ArrayList;
       import java.util.Iterator;
@@ -7,9 +7,9 @@ import javax.swing.*;
 
       import java.net.*;
       import java.io.*;
-    //  import javax.xml.bind.DatatypeConverter;
-// Using java.util.Base64 instead of javax.xml.bind
-import java.util.Base64;
+      //  import javax.xml.bind.DatatypeConverter;
+      // Using java.util.Base64 instead of javax.xml.bind
+      import java.util.Base64;
       import javax.imageio.*;
       import java.awt.image.*;
       import javax.imageio.stream.*;

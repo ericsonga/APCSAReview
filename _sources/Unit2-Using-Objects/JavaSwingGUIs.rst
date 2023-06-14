@@ -1,20 +1,20 @@
 .. qnum::
    :prefix: 2-14-
    :start: 1
-   
+
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -23,15 +23,15 @@
 .. |repl| raw:: html
 
    <a href="https://firewalledreplit.com" target="_blank" style="text-decoration:underline">replit</a>
-   
+
 .. |Java Swing Example| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/JavaSwingHello" target="_blank" style="text-decoration:underline">Java Swing Example</a>
-   
+
 .. |JButton Class| raw:: html
 
    <a href="https://www.javatpoint.com/java-jbutton" target="_blank" style="text-decoration:underline">JButton Class</a>
-      
+
 
 Java Swing GUIs (optional)
 ==============================
@@ -46,24 +46,24 @@ The graphical components in Java Swing are all classes, and to use them, you mus
 
 To use Java Swing, you usually need to import the following libraries:
 
-.. code-block:: java 
+.. code-block:: java
 
     import java.swing.*;
     import java.awt.*;
     import java.awt.event.*;
-    
+
 To set up a JFrame window for your UI, declare an object of type JFrame, set its size in pixels, its layout, and make it visible:
 
-.. code-block:: java 
+.. code-block:: java
 
-    JFrame frame = new JFrame("My app"); 
+    JFrame frame = new JFrame("My app");
     frame.setSize(500, 500);
     frame.setLayout(null);
     frame.setVisible(true); // usually at the end of the main method
 
 Once you have a JFrame, you can create graphical objects like buttons and labels and add them to the JFrame. You can look up more information about these Java Swing Components and what methods they have. For example, here's more information on the |JButton Class|.
 
-.. code-block:: java 
+.. code-block:: java
 
     JButton button1 = new JButton("Click Me!");
     // if using null layout, set position and size for components
@@ -71,13 +71,13 @@ Once you have a JFrame, you can create graphical objects like buttons and labels
     button1.setBounds(10, 10, 100, 50);
     frame.add(button1);
 
-If you set the layout of the frame to null, you must use setBounds(x position, y position, width, height) for each component to set their position and size on the frame. Remember that the top left corner has the (x,y) coordinates (0,0). The bottom right corner coordinates are the size of your frame, for example (500,500). The width 100 and the height 50 are good sizes for most components. Some Java IDEs have GUI Visual Designers where you can drag and drop in and resize components.  
+If you set the layout of the frame to null, you must use setBounds(x position, y position, width, height) for each component to set their position and size on the frame. Remember that the top left corner has the (x,y) coordinates (0,0). The bottom right corner coordinates are the size of your frame, for example (500,500). The width 100 and the height 50 are good sizes for most components. Some Java IDEs have GUI Visual Designers where you can drag and drop in and resize components.
 
 In |repl|, there is no GUI designer available, but it can display Java Swing GUIs. When creating a new repl, you can choose Java Swing as the file type, instead of just Java, to use a Java Swing UI.
 
 |CodingEx| **Coding Exercise**
 
-Here's a |Java Swing Example| on repl that sets up a JFrame with a JButton and a JLabel. It calls a special method called addActionListener where you can put the code to be executed when you click on a button. Can you add another button to it? Remember that you will need to create a JButton object, setBounds for it, and add it to the frame. Copy the addActionListener code and change it to work for your new button to say Good Bye instead of hello. 
+Here's a |Java Swing Example| on repl that sets up a JFrame with a JButton and a JLabel. It calls a special method called addActionListener where you can put the code to be executed when you click on a button. Can you add another button to it? Remember that you will need to create a JButton object, setBounds for it, and add it to the frame. Copy the addActionListener code and change it to work for your new button to say Good Bye instead of hello.
 
 .. raw:: html
 

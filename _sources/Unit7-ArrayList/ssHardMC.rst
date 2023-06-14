@@ -108,30 +108,30 @@ You can step through the code above by clicking on the following link `Ex-12-8-2
 
    .. code-block:: java
 
-	  public class GuestList
-	  {
-	      public static void main(String[] args)
-	      {
-	          int count = 0;
-	          String[] guestList = {"Anna", "Briana", "Alex", "John"};
-	          String subj1 = null;
-	          String subj2 = null;
-	          for (int j = 0; j < guestList.length; j++)
-	          {
-	              subj1 = guestList[j].substring(0,1);
-	              subj2 = guestList[j].substring(guestList[j].length()-1);
-	              if(subj1.equalsIgnoreCase(subj2))
-	              {
-	                  count--;
-	              }
-	              else if(subj1.equalsIgnoreCase("a"))
-	              {
-	                  count++;
-	              }
-	          }
-	          System.out.println(count);
-	      }
-	  }
+     public class GuestList
+     {
+         public static void main(String[] args)
+         {
+             int count = 0;
+             String[] guestList = {"Anna", "Briana", "Alex", "John"};
+             String subj1 = null;
+             String subj2 = null;
+             for (int j = 0; j < guestList.length; j++)
+             {
+                 subj1 = guestList[j].substring(0,1);
+                 subj2 = guestList[j].substring(guestList[j].length()-1);
+                 if(subj1.equalsIgnoreCase(subj2))
+                 {
+                     count--;
+                 }
+                 else if(subj1.equalsIgnoreCase("a"))
+                 {
+                     count++;
+                 }
+             }
+             System.out.println(count);
+         }
+     }
 
 
 You can step through the code above by clicking on the following link `Ex-12-8-3 <https://goo.gl/MGXSF2>`_.
@@ -152,26 +152,26 @@ You can step through the code above by clicking on the following link `Ex-12-8-3
 
    .. code-block:: java
 
-	  public class OddEvenMod
-	  {
-	      public static void main(String[] args)
-	      {
-	          int[] arr = {8,7,7,3,4,1};
-	          for (int i = 0; i < arr.length; i++)
-	          {
-	              if(arr[i] % 2 == 0)
-	              {
-	                  int temp = arr[0];
-	                  arr[0] = arr[i];
-	                  arr[i] = temp;
-	              }
-	          }
-	          for (int t = 0; t < arr.length; t++)
-	          {
-	              System.out.print((arr[t]) + ",");
-	          }
-	      }
-	  }
+     public class OddEvenMod
+     {
+         public static void main(String[] args)
+         {
+             int[] arr = {8,7,7,3,4,1};
+             for (int i = 0; i < arr.length; i++)
+             {
+                 if(arr[i] % 2 == 0)
+                 {
+                     int temp = arr[0];
+                     arr[0] = arr[i];
+                     arr[i] = temp;
+                 }
+             }
+             for (int t = 0; t < arr.length; t++)
+             {
+                 System.out.print((arr[t]) + ",");
+             }
+         }
+     }
 
 You can step through the code above by clicking on the following link `Ex-12-8-4 <https://goo.gl/Rpc4o4>`_.
 
@@ -191,36 +191,36 @@ You can step through the code above by clicking on the following link `Ex-12-8-4
 
    .. code-block:: java
 
-	  public class PrimeOrNot
-	  {
-	      private static boolean check(int n)
-	      {
-	          for(int i = 2; i < n; i++)
-	          {
-	              if(n % i == 0)
-	                  return false;
-	          }
-	          return true;
-	      }
+     public class PrimeOrNot
+     {
+         private static boolean check(int n)
+         {
+             for(int i = 2; i < n; i++)
+             {
+                 if(n % i == 0)
+                     return false;
+             }
+             return true;
+         }
 
-	      public static void main(String[] args)
-	      {
-	          int[] arr = {5,3,2,9,3,4};
-	          for (int i = 0; i < arr.length; i++)
-	          {
-	              if(check(arr[i]))
-	              {
-	                  int temp = arr[0];
-	                  arr[0] = arr[i];
-	                  arr[i] = temp;
-	              }
-	          }
-	          for (int t = 0; t < arr.length; t++)
-	          {
-	              System.out.print((arr[t]) + ",");
-	          }
-	      }
-	  }
+         public static void main(String[] args)
+         {
+             int[] arr = {5,3,2,9,3,4};
+             for (int i = 0; i < arr.length; i++)
+             {
+                 if(check(arr[i]))
+                 {
+                     int temp = arr[0];
+                     arr[0] = arr[i];
+                     arr[i] = temp;
+                 }
+             }
+             for (int t = 0; t < arr.length; t++)
+             {
+                 System.out.print((arr[t]) + ",");
+             }
+         }
+     }
 
 You can step through the code above by clicking on the following link `Ex-12-8-5 <http://www.pythontutor.com/java.html#code=public%20class%20PrimeOrNot%0A%7B%0A%20%20%20%20private%20static%20boolean%20check%28int%20n%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%28int%20i%20%3D%202%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28n%20%25%20i%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20true%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20arr%20%3D%20%7B5,3,2,9,3,4%7D%3B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20arr.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28check%28arr%5Bi%5D%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20temp%20%3D%20arr%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5B0%5D%20%3D%20arr%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5Bi%5D%20%3D%20temp%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20for%20%28int%20t%20%3D%200%3B%20t%20%3C%20arr.length%3B%20t%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%28arr%5Bt%5D%29%20%2B%20%22,%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=111&heapPrimitives=false&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false>`_.
 
@@ -240,35 +240,35 @@ You can step through the code above by clicking on the following link `Ex-12-8-5
 
    .. code-block:: java
 
-		public class GradeSort
-		{
-		   public static void main(String[] args)
-		   {
-			String[] names = {"Anna","John","Billy","Bob","Roger","Dominic"};
-			int[] grades = {93,100,67,84,86, 93};
-			int i, j, first, temp;
-			String temp2;
-			for (i = grades.length - 1; i > 0; i--)
-			{
-			    first = 0;
-			    for (j = 1; j <= i; j++)
-			    {
-			        if (grades[j] < grades[first])
-			            first = j;
-			    }
-			    temp = grades[first];
-			    grades[first] = grades[i];
-			    grades[i] = temp;
-			    temp2 = names[first];
-			    names[first] = names[i];
-			    names[i] = temp2;
-			}
-			for (int t = 0; t < names.length; t++)
-			{
-			    System.out.print((names[t]) + " ");
-			}
-		   }
-		}
+      public class GradeSort
+      {
+         public static void main(String[] args)
+         {
+            String[] names = {"Anna","John","Billy","Bob","Roger","Dominic"};
+            int[] grades = {93,100,67,84,86, 93};
+            int i, j, first, temp;
+            String temp2;
+            for (i = grades.length - 1; i > 0; i--)
+            {
+                first = 0;
+                for (j = 1; j <= i; j++)
+                {
+                    if (grades[j] < grades[first])
+                        first = j;
+                }
+                temp = grades[first];
+                grades[first] = grades[i];
+                grades[i] = temp;
+                temp2 = names[first];
+                names[first] = names[i];
+                names[i] = temp2;
+            }
+            for (int t = 0; t < names.length; t++)
+            {
+                System.out.print((names[t]) + " ");
+            }
+         }
+      }
 
 You can step through the code above by clicking on the following link `Ex-12-8-6 <https://goo.gl/rXzB1c>`_.
 
@@ -288,34 +288,34 @@ You can step through the code above by clicking on the following link `Ex-12-8-6
 
    .. code-block:: java
 
-	  public class DivisibleBy2or3
-	  {
-	      private static boolean divCheck(int n)
-	      {
-	          if(n % 2 == 0 || n % 3 == 0)
-	          {
-	            return true;
-	          }
-	          return false;
-	      }
+     public class DivisibleBy2or3
+     {
+         private static boolean divCheck(int n)
+         {
+             if(n % 2 == 0 || n % 3 == 0)
+             {
+               return true;
+             }
+             return false;
+         }
 
-	      public static void main(String[] args)
-	      {
-	          int[] arr = {6,7,17,3,2,9,1,5};
-	          for (int i = 0; i < arr.length; i++)
-	          {
-	              if(divCheck(arr[i]))
-	              {
-	                  int temp = arr[0];
-	                  arr[0] = arr[i];
-	                  arr[i] = temp;
-	              }
-	          }
-	          for (int t = 0; t < arr.length; t++)
-	          {
-	              System.out.print((arr[t]) + " ");
-	          }
-	      }
-	  }
+         public static void main(String[] args)
+         {
+             int[] arr = {6,7,17,3,2,9,1,5};
+             for (int i = 0; i < arr.length; i++)
+             {
+                 if(divCheck(arr[i]))
+                 {
+                     int temp = arr[0];
+                     arr[0] = arr[i];
+                     arr[i] = temp;
+                 }
+             }
+             for (int t = 0; t < arr.length; t++)
+             {
+                 System.out.print((arr[t]) + " ");
+             }
+         }
+     }
 
 You can step through the code above by clicking on the following link `Ex-12-8-7 <https://goo.gl/LrbUuu>`_.

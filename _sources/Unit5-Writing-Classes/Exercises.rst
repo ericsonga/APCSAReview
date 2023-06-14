@@ -1,7 +1,7 @@
 .. qnum::
    :prefix: 5-12-
    :start: 1
-   
+
 Multiple-Choice Exercises
 ============================
 
@@ -10,54 +10,54 @@ Multiple-Choice Exercises
     :practice: T
 
     The Liquid class will contain two double attributes for a liquid’s boiling point temperature and freezing point temperature. The class will also contain a constructor.
-    
+
     .. code-block:: java
 
         public class Liquid
         {
            /* missing code */
         }
-        Which of the following replacements for /* missing code */ is the most appropriate 
+        Which of the following replacements for /* missing code */ is the most appropriate
         implementation of the class?
-        
+
     - .. code-block:: java
-    
+
         private double boilingPoint;
         private double freezingPoint;
         public Liquid(double boilingPoint, double freezingPoint)
         { /* implementation not shown */ }
 
       + Correct! The instance variables should be private and the constructor and methods should be public.
-      
+
     - .. code-block:: java
-    
+
         private double boilingPoint;
         private double freezingPoint;
         private Liquid(double boilingPoint, double freezingPoint)
         { /* implementation not shown */ }
 
       - Constructors should be public.
-     
+
     - .. code-block:: java
-    
+
         private double boilingPoint;
         public double freezingPoint;
         private Liquid(double freezingPoint, double boilingPoint)
         { /* implementation not shown */ }
 
       - The instance variables should be private and the constructor and methods should be public.
-     
+
     - .. code-block:: java
-     
+
         public double boilingPoint;
         public double freezingPoint;
         private Liquid(double boilingPoint, double freezingPoint)
         { /* implementation not shown */ }
 
       - The instance variables should be private and the constructor and methods should be public.
-      
+
     - .. code-block:: java
-      
+
           public double freezingPoint;
           public double boilingPoint;
           public Liquid(double freezingPoint, double boilingPoint)
@@ -70,18 +70,18 @@ Multiple-Choice Exercises
     :random:
 
     The Cat class below will contain two String attributes and one int attribute for name, color, and age; a constructor; and an adoptCat method. The adoptCat method is intended to be accessed outside the class.
-    
+
     .. code-block:: java
 
         public class Cat
         {
           /* missing code */
         }
-        Which of the following replacements for /* missing code */ is the most appropriate 
+        Which of the following replacements for /* missing code */ is the most appropriate
         implementation of the class?
-        
+
     - .. code-block:: java
-    
+
         private String name;
         private String color;
         private int age;
@@ -91,9 +91,9 @@ Multiple-Choice Exercises
         { /* implementation not shown */ }
 
       - Method adoptCat() should be public.
-      
+
     - .. code-block:: java
-    
+
         public String name;
         public String color;
         public int age;
@@ -103,9 +103,9 @@ Multiple-Choice Exercises
         { /* implementation not shown */ }
 
       - Method and constructor should be public, and instance variables should be private.
-        
+
     - .. code-block:: java
-        
+
         private String name;
         private String color;
         private int age;
@@ -115,9 +115,9 @@ Multiple-Choice Exercises
         { /* implementation not shown */ }
 
       + Correct! Method and constructor should be public, and instance variables should be private.
-        
+
     - .. code-block:: java
-    
+
         public String name;
         public String color;
         public int age;
@@ -127,9 +127,9 @@ Multiple-Choice Exercises
         { /* implementation not shown */ }
 
       - Instance variables should be private.
-    
+
     - .. code-block:: java
-    
+
         public String name;
         public String color;
         public int age;
@@ -139,20 +139,20 @@ Multiple-Choice Exercises
         { /* implementation not shown */ }
 
       - Instance variables should be private, and the constructor should be public.
-      
+
 .. mchoice:: AP5-2-4
     :practice: T
     :random:
 
     Consider the definition of the Party class below. The class uses the instance variable numOfPeople to indicate how many people are at the party.
-    
+
     .. code-block:: java
 
         public class Party
         {
             private int numOfPeople;
             private String partyHost;
-            
+
             public Party (String name, int people)
             {
                 partyHost = name;
@@ -162,23 +162,23 @@ Multiple-Choice Exercises
 
         Which of the following statements will create a Party object
         that represents a party that has three people at it?
-        
+
     - Party p = new Party ("Natasha", "3");
 
       - An int should be passed in as the second parameter, not a String.
-      
+
     - Party p = new Party ("Eduardo", 3);
 
       + Correct
-    
+
     - Party p = new Party ("Emillio", "three");
 
       - An int should be passed in as the second parameter, not a string.
-      
+
     - Party p = new Party ("Bob", three);
 
       - The word three would be treated as an undeclared variable here.
-      
+
     - Party p = new Party ("Billie", "2+1");
 
       - Strings cannot perform addition.
@@ -187,7 +187,7 @@ Multiple-Choice Exercises
    :practice: T
    :random:
    :answer_a: I only
-   :answer_b: I and II 
+   :answer_b: I and II
    :answer_c: I and III
    :answer_d: I, II, and III
    :answer_e: II and III
@@ -199,7 +199,7 @@ Multiple-Choice Exercises
    :feedback_e: I can also create a correct Party instance
 
    Consider the following class definition. Each object of the class Party will store the party host’s name as partyHost, the number of people as numOfPeople, and the capacity that the event can hold as capacity. Which of the following code segments, found in a class other than Party, can be used to create a party hosted by Charlie without anyone there initially, but the place can hold 78 people ?
-   
+
    .. code-block:: java
 
     public class Party
@@ -232,7 +232,7 @@ Multiple-Choice Exercises
     :random:
 
     Consider the following class definition.
-    
+
     .. code-block:: java
 
         public class Party
@@ -243,16 +243,16 @@ Multiple-Choice Exercises
         }
 
     The following statement appears in a method in a class other than Party. It is intended to create a new Party object p with its attributes set to 10 and 5.0.
-    
+
     .. code-block:: java
 
          Party p = new Party(10, 5.0);
 
-         Which of the following can be used to replace /* missing constructor */ 
+         Which of the following can be used to replace /* missing constructor */
          so that the object p is correctly created?
-     
+
     - .. code-block:: java
-    
+
         public Party(int first, double second)
         {
             numOfPeople = 10;
@@ -262,7 +262,7 @@ Multiple-Choice Exercises
       - The constructor should be using the local variables to set the instance variables.
 
     - .. code-block:: java
-    
+
         public Party(int first, double second)
         {
             numOfPeople = first;
@@ -272,7 +272,7 @@ Multiple-Choice Exercises
       + Correct
 
     - .. code-block:: java
-    
+
         public Party(int first, double second)
         {
             first = 10;
@@ -282,7 +282,7 @@ Multiple-Choice Exercises
       - The constructor should be using the parameters to set the instance variables.
 
     - .. code-block:: java
-    
+
         public Party(int first, double second)
         {
             first = numOfPeople;
@@ -290,7 +290,7 @@ Multiple-Choice Exercises
         }
 
       - The constructor should be changing the instance variables, not the local variables.
-      
+
 .. mchoice:: AP5-3-3
     :practice: T
     :random:
@@ -314,22 +314,22 @@ Multiple-Choice Exercises
             /* Other methods not shown */
         }
 
-    Which of the following preconditions is reasonable for the Liquid constructor? 
-       
-    - Precondition: fp \> 0 
-    
+    Which of the following preconditions is reasonable for the Liquid constructor?
+
+    - Precondition: fp \> 0
+
       - Incorrect. The freezing point could be negative.
-      
-    - Precondition: currentTemp \> 0 
-    
+
+    - Precondition: currentTemp \> 0
+
       - Incorrect. Unable to make this assumption for all liquids.
-    
-    - Precondition: fp < ct < bp 
-    
+
+    - Precondition: fp < ct < bp
+
       + Correct!
-    
-    - Precondition: fp > ct > bp 
-      
+
+    - Precondition: fp > ct > bp
+
       - Incorrect. This would again result in freezing point being > boiling point which is impossible.
 
 .. mchoice:: AP5-4-4
@@ -348,7 +348,7 @@ Multiple-Choice Exercises
    :feedback_e: The accessor method getAge should return the instance variable age.
 
     Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?
-    
+
     .. code-block:: java
 
         public class Cat
@@ -370,9 +370,9 @@ Multiple-Choice Exercises
 .. mchoice:: AP5-4-3
    :practice: T
    :random:
-   
+
    Consider the following Liquid class. The currentTemperature is stored in the method’s int attribute. The getCurrentTemp method is intended to allow methods in other classes to access a Liquid object’s currentTemperature value; however, it does not work as intended. Which of the following best explains why the getCurrentTemperature method does NOT work as intended?
-   
+
    .. code-block:: java
 
         public class Liquid
@@ -391,32 +391,32 @@ Multiple-Choice Exercises
         }
 
    - The getCurrentTemperature method should be declared as private.
-    
+
      - Accessor methods should be public methods.
-    
+
    - The return type of the getCurrentTemperature method should be int.
-    
+
      + Correct! The return type should match the type of the variable being returned.
 
    - The getCurrentTemperature method should have at least one parameter.
-    
+
      - Get methods do not need parameters.
 
    - The variable currentTemperature is not declared inside of the getCurrentTemperature method.
-    
+
      - currentTemperature is an instance variable that is shared by all the methods in the class.
 
    - The instance variable ct should be returned instead of currentTemperature.
-    
+
      - The getCurrentTemperature method does not have access to the ct variable which is the parameter for the constructor.
-     
+
 
 .. mchoice:: AP5-5-3
     :practice: T
     :random:
 
     Consider the following class definition.
-    
+
     .. code-block:: java
 
         public class Liquid
@@ -432,7 +432,7 @@ Multiple-Choice Exercises
             {
               return currentTemp;
             }
-            
+
             public void resetTemp(int new_temp)
             {
                 currentTemp = new_temp;
@@ -440,32 +440,32 @@ Multiple-Choice Exercises
         }
 
     Consider the following code segment, which appears in a method in a class other than Liquid. The code segment does not compile.
-    
+
     .. code-block:: java
 
         Liquid liq = new Liquid(50);
         System.out.println("The temperature of the liquid is " + liq.currentTemp);
 
     Which of the following best identifies the reason the code segment does not compile?
-    
+
     - The Liquid class constructor should not have a parameter.
-        
+
       - The constructor does have a parameter.
-      
+
     - The resetTemperature method does not return a value that can be printed.
-        
+
       - This is a void mutator method.
-      
+
     - The private instance variable cannot be accessed from outside the class unless the accessor method is used.
-    
+
       + Correct! The currentTemp instance variable is private and cannot be accessed outside of the class but the public accessor method getTemp() can be used instead.
-      
+
     - The getTemp method cannot be called from outside the Liquid class.
-      
+
       - The getTemp accessor method should be used from outside the class.
-      
+
     - currentTemp does not have a value.
-      
+
       - currentTemp is initialized to a value by the constructor but it is private and cannot be accessed outside the class.
 
 
@@ -474,7 +474,7 @@ Multiple-Choice Exercises
     :random:
 
     In the Liquid class below, the raiseTemperature method is intended to increase the value of the instance variable currentTemp by the value of the parameter increase. The method does not work as intended.
-    
+
     .. code-block:: java
 
         public class Liquid
@@ -493,27 +493,27 @@ Multiple-Choice Exercises
         }
 
     Which of the following changes should be made so that the class definition compiles without error and the method raiseTemperature works as intended?
-    
+
     - Replace line 12 with ``currentTemp += increase;``
-    
+
       + Correct! This void mutator method should just change the value of currentTemp and not return a value.
-      
+
     - Replace line 12 with ``return currentTemp += increase;``
-    
+
       - This void mutator method should just change the value of currentTemp and not return a value.
-        
+
     - Replace line 12 with  ``increase += currentTemp;``
-    
+
       - This method should  change the value of currentTemp, not increase.
-        
+
     - Replace line 10 with  ``public raiseTemperature(int increase)``
-        
+
       - This mutator method needs a return type of void.
-      
+
     - Replace line 10 with  ``public int raiseTemperature(int increase)``
-        
+
       - This mutator method should have a void return value and just change the value of currentTemp without returning a value.
-      
+
 
 .. mchoice:: AP5-6-3
    :practice: T
@@ -529,10 +529,10 @@ Multiple-Choice Exercises
    :feedback_c: Assume you have 5 boxes at $10 each. You would need to multiply them to get a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
    :feedback_d: Assume you have 5 boxes at $10 each for a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
    :feedback_e: Assume you have 5 boxes at $10 each for a total cost of $50. If you had 10 people at the party, you would need to divide $50 by 10 to get $5 per person.
-   
+
 
    Consider the following class definition. The calculatePizzaCostPerPerson method is intended to calculate the amount each person at the party must pay for pizza. The amount is equal to the total price of all the pizza boxes divided by the number of people at the party. Which of the following code segments should replace *missing code* so that the calculatePizzaCostPerPerson method will work as intended?
-   
+
    .. code-block:: java
 
         public class Party
@@ -569,7 +569,7 @@ Multiple-Choice Exercises
    :feedback_e: III would not work because you cannot put a shortcut assignment operator in the conditional test of an if statement.
 
    Consider the Party class below.
-    
+
    .. code-block:: java
 
         public class Party
@@ -588,11 +588,11 @@ Multiple-Choice Exercises
                 /* missing code */
             }
         }
-    
+
    The class contains the updateNumOfPeople method, which is intended to update the instance variable numOfPeople under certain conditions and return a value indicating whether the  update was successful. If adding additionalPeople to the current number of people would lead to the number going over the capacity, then the update would be unsuccessful. Otherwise, if adding the number of additional people is still below or at the capacity, the update is successful. Which of the following code segments can replace *missing code* to ensure that the updateNumOfPeople method works as intended?
 
    .. code-block:: java
-     
+
         I.  if (numOfPeople + additionalPeople > capacity)
             {
                 return false;
@@ -618,7 +618,7 @@ Multiple-Choice Exercises
              else
              {
                 return false;
-             }           
+             }
 
 .. mchoice:: AP5-8-3
     :practice: T
@@ -651,27 +651,27 @@ Multiple-Choice Exercises
         }
 
     Which of the following best explains why the class will not compile?
-    
+
     - The class is missing an accessor method.
-        
+
       - The class does not necessarily need an accessor method.
-      
+
     - The instance variables currentTemp and boilingPoint should be  public instead of private.
-    
+
       - Instance variables are usually private.
-      
+
     - The Liquid constructor needs a return type.
-    
+
       - Constructors do not have return types.
-        
+
     - The Liquid class is missing a constructor.
-    
+
       - The class includes a constructor.
-      
+
     - The variable newTemp is not defined in the increaseTemp method.
-    
+
       + Correct! newTemp is defined in a different method. The instance variable currentTemp should be used instead.
-      
+
 
 .. mchoice:: AP5-8-4
    :practice: T
@@ -688,14 +688,14 @@ Multiple-Choice Exercises
    :feedback_e: The variables boxesOfFood and numOfPeople are instance variables.
 
    Consider the following class definition for Party.  The following code segment appears in a method in a class other than Party. The code segment is intended to print the value 30, but does not print the correct value because of an error in the Party class. Which of the following best explains why the correct value isn’t printed?
-    
+
    .. code-block:: java
- 
+
        Party p = new Party(20, 15);
        p.orderMoreFood(20);
        p.eatFood(5);
        System.out.println(p.getBoxesOfFood());
-        
+
        public class Party
        {
         private int boxesOfFood;
@@ -721,18 +721,18 @@ Multiple-Choice Exercises
             return boxesOfFood;
         }
 
-        public void eatFood(int eatenBoxes) 
+        public void eatFood(int eatenBoxes)
         {
             boxesOfFood = updatedAmountOfFood - eatenBoxes;
         }
        }
 
-        
+
 .. mchoice:: AP5-9-3
     :practice: T
 
-    Consider the following class definitions. 
-    
+    Consider the following class definitions.
+
     .. code-block:: java
 
         public class Party
@@ -794,9 +794,9 @@ Multiple-Choice Exercises
 
 
     Consider the following code segment, which appears in a class other than Party or PartyOptions.
-    
+
     .. code-block:: java
-     
+
         Party p1 = new Party("Kerry", 10, 7);
         Party p2 = new Party("Jules", 9, 6);
 
@@ -805,20 +805,20 @@ Multiple-Choice Exercises
         p2.addToOptions(options);
 
     - Party by Kerry rejected; Party by Jules rejected;
-    
+
       - Kerry's party should be accepted because it is in the 10th month.
-   
+
     - Party by Kerry rejected; Party by Jules accepted;
-    
-      - Kerry's party should be accepted because it is in the 10th month. Jules' party should be rejected because it is not in the 10th month. 
-   
+
+      - Kerry's party should be accepted because it is in the 10th month. Jules' party should be rejected because it is not in the 10th month.
+
     - Party by Kerry accepted; Party by Jules rejected;
-   
+
       + Kerry's party is accepted because it is in the 10th month, and Jules' party is not.
-      
+
     - Party by Kerry accepted; Party by Jules accepted;
-   
-      - Jules' party should be rejected because it is not in the 10th month.    
+
+      - Jules' party should be rejected because it is not in the 10th month.
 
 
 

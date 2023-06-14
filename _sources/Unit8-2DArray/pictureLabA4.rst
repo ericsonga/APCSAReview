@@ -1,8 +1,8 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
-Picture Lab A4: 2D Arrays in Java 
+
+Picture Lab A4: 2D Arrays in Java
 =======================================================
 
 In this activity you will work with integer data stored in a two-dimensional array. Some programming
@@ -12,7 +12,7 @@ first row is stored before the data for the next row in the 1D array. **Column-m
 means that all the data for the first column is stored before the data for the next column in the 1D array.
 The order matters, because you need to calculate the position in the 1D array based on the order, the
 number of rows and columns, and the current column and row numbers (indices). The rows and
-columns are numbered (indexed) and often that numbering starts at 0 as it does in Java. The top left row 
+columns are numbered (indexed) and often that numbering starts at 0 as it does in Java. The top left row
 has an index of 0 and the top left column has an index of 0. The row number (index) increases from top
 to bottom and the column number (index) increases from left to right.
 
@@ -22,7 +22,7 @@ to bottom and the column number (index) increases from left to right.
     :figclass: align-center
 
     Figure 1: A 2D array stored in row-major order or column-major order as a 1D array.
-    
+
 
 .. mchoice:: picture-lab-A4-0a
    :answer_a: [1, 2, 3, 4, 5, 6]
@@ -52,7 +52,7 @@ to bottom and the column number (index) increases from left to right.
    :optional:
 
    Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in column-major order?
-   
+
 Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
 The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.
 
@@ -62,7 +62,7 @@ The AP Computer Science A course specification tells you to assume that all 2D a
     :figclass: align-center
 
     Figure 2: Java arrays of arrays
-    
+
 To loop through the values in a 2D array you must have two indexes. One index is used to change the
 row index and one is used to change the column index. You can use nested loops, which is one for
 loop inside of another, to loop through all the values in a 2D array. Let's try some nested loops with 2D arrays.
@@ -142,7 +142,7 @@ you don't need to know the row index or column index.
      }
      return total;
  }
- 
+
 
 .. mchoice:: picture-lab-A4-3a
 
@@ -163,7 +163,7 @@ you don't need to know the row index or column index.
          }
        }
 
-     - This method will continue forever and give an index out of bounds error. 
+     - This method will continue forever and give an index out of bounds error.
 
    - .. code-block:: Java
 
@@ -219,16 +219,16 @@ you don't need to know the row index or column index.
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 |CodingEx| **Coding Exercises**
 
 1. Write a ``getCount`` method in the ``IntArrayWorker`` class that returns the count of the
 number of times a passed integer value is found in the matrix. There is already a method to test
-this in IntArrayWorkerTester. 
+this in IntArrayWorkerTester.
 
 .. activecode:: picture-lab-A4-getCount
     :language: java
-    :autograde: unittest      
+    :autograde: unittest
 
     Write a ``getCount`` method in the ``IntArrayWorker`` class that returns the count of the number of times a passed integer value is found in the matrix.
     ~~~~
@@ -289,10 +289,10 @@ this in IntArrayWorkerTester.
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
-        
+
          public RunestoneTests() {
             super("IntArrayWorker");
         }
@@ -315,17 +315,17 @@ this in IntArrayWorkerTester.
                 boolean passed = getResults(expectedCount+"", count+"", "Testing getCount for matrix { {1,4,8},{8,8,8} }");
                 assertTrue(passed);
             }
-    } 
+    }
 
 
 2. Write a ``getLargest`` method in the ``IntArrayWorker`` class that returns the largest value
-in the matrix. There is already a method to test this in IntArrayWorkerTester. 
+in the matrix. There is already a method to test this in IntArrayWorkerTester.
 
 
 
 .. activecode:: picture-lab-A4-getLargest
     :language: java
-    :autograde: unittest      
+    :autograde: unittest
 
     Write a ``getLargest`` method in the ``IntArrayWorker`` class that returns the largest value in the matrix.
     ~~~~
@@ -397,10 +397,10 @@ in the matrix. There is already a method to test this in IntArrayWorkerTester.
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
-        
+
          public RunestoneTests() {
             super("IntArrayWorker");
         }
@@ -418,12 +418,12 @@ in the matrix. There is already a method to test this in IntArrayWorkerTester.
                 IntArrayWorker worker = new IntArrayWorker();
                 worker.setMatrix( new int[][]{ {1,4,8},{6,9,7} });
                 int output = worker.getLargest();
-                int expect = 9;               
+                int expect = 9;
 
                 boolean passed = getResults(expect+"", output+"", "Testing getLargest for matrix { {1, 4,8},{6, 9, 7} }");
                 assertTrue(passed);
             }
-    } 
+    }
 
 3. Write a ``getColTotal`` method in the ``IntArrayWorker`` class that returns the total of all
 integers in a specified column. There is already a method to test this in
@@ -431,7 +431,7 @@ IntArrayWorkerTester.
 
 .. activecode:: picture-lab-A4-getColTotal
     :language: java
-    :autograde: unittest      
+    :autograde: unittest
 
     Write a ``getColTotal`` method in the ``IntArrayWorker`` class that returns the total of all integers in a specified column.
     ~~~~
@@ -496,10 +496,10 @@ IntArrayWorkerTester.
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
-        
+
          public RunestoneTests() {
             super("IntArrayWorker");
         }
@@ -522,5 +522,5 @@ IntArrayWorkerTester.
                 boolean passed = getResults(expectedCount+"", count+"", "Testing getColTotal for matrix { {1,1,1},{0,1,2} }");
                 assertTrue(passed);
             }
-    } 
+    }
 

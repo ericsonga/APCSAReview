@@ -21,8 +21,8 @@
 
 
 
-..	index::
-	pair: class; constructor
+.. index::
+   pair: class; constructor
 
 .. |repl link| raw:: html
 
@@ -35,7 +35,7 @@
 .. image:: ../../_static/time45.png
     :width: 250
     :align: right
-    
+
 Creating and Initializing Objects: Constructors
 ================================================
 
@@ -54,7 +54,7 @@ A new object is created with the ``new`` keyword followed by the class name (``n
 Overloading Constructors
 ---------------------------
 
-There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. 
+There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values.
 
 There can also be other constructors that take parameters like the ``Turtle(habitat)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
 
@@ -202,12 +202,12 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
 Object Variables and References
 ---------------------------------
 
-You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package. 
+You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package.
 
 .. |video1| raw:: html
 
    <a href="https://www.youtube.com/watch?v=5fpjgXAV2BU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-   
+
 Watch the |video1| below about null.
 
 .. youtube:: 5fpjgXAV2BU
@@ -235,7 +235,7 @@ Constructor Signatures
 
    <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
 
-When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. 
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types.
 
 Constructors are **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are two constructors for the ``Turtle`` class that take different parameters:
 
@@ -383,12 +383,12 @@ This lesson introduces a lot of vocabulary, but don't worry if you don't underst
 .. image:: Figures/customTurtles.png
     :width: 200
     :align: left
-    
+
 |Groupwork| Programming Challenge: Custom Turtles
 ---------------------------------------------------
 
 
-    
+
 Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors.
 
 First, as a warm up, do the following debugging exercise.
@@ -443,20 +443,20 @@ The CustomTurtle class in the ActiveCode below inherits many of its attributes a
 
   /** Constructs a CustomTurtle in the middle of the world */
   public CustomTurtle(World w)
- 
-  /** Constructs a CustomTurtle with a specific body color, 
-      shell color, and width and height in the middle of the world */
-  public CustomTurtle(World w, Color body, Color shell, int w, int h) 
 
-  /** Constructs a CustomTurtle with a specific body color, 
+  /** Constructs a CustomTurtle with a specific body color,
+      shell color, and width and height in the middle of the world */
+  public CustomTurtle(World w, Color body, Color shell, int w, int h)
+
+  /** Constructs a CustomTurtle with a specific body color,
       shell color, and width and height at position (x,y) in the world */
-  public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h) 
+  public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h)
 
 
 .. |Color| raw:: html
 
    <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
-   
+
 You will use the constructor(s) to create the CustomTurtles below. You can specify colors like Color.red by using the |Color| class in Java.
 
 1. Create a large 150x200 (width 150 and height 200) CustomTurtle with a green body (Color.green) and a blue shell (Color.blue) at position (150,300)
@@ -475,27 +475,27 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
     import java.util.*;
     import java.awt.*;
 
-    public class CustomTurtleRunner 
+    public class CustomTurtleRunner
     {
-      public static void main(String[] args) 
-      {  
+      public static void main(String[] args)
+      {
           World world1 = new World(400,400);
 
-          // 1. Change the constructor call below to create a large 
+          // 1. Change the constructor call below to create a large
           // 150x200 CustomTurtle with a green body (Color.green)
           // and a blue shell (Color.blue) at position (150,300).
           // Move it forward to see it.
-          CustomTurtle turtle1 = new CustomTurtle(world1); 
+          CustomTurtle turtle1 = new CustomTurtle(world1);
           turtle1.forward();
-    
 
-          // 2. Create a small 25x50 CustomTurtle with a red body 
+
+          // 2. Create a small 25x50 CustomTurtle with a red body
           // and a yellow shell at position (350,200)
           // Move it forward to see it.
-        
+
 
           // 3. Create a CustomTurtle of your own design
-        
+
           world1.show(true);
       }
     }
@@ -513,7 +513,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
      /** Constructor that takes the model display
        * @param modelDisplay the thing that displays the model or world
        */
-      public CustomTurtle(ModelDisplay modelDisplay) 
+      public CustomTurtle(ModelDisplay modelDisplay)
       {
         // let the parent constructor handle it
         super(modelDisplay);
@@ -538,7 +538,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
         height = h;
         width = w;
         setHeight(h);
-        setWidth(w);    
+        setWidth(w);
       }
 
     /** Constructor that takes the x and y and a model
@@ -551,7 +551,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
        * @param w: width
        * @param h: height
        */
-      public CustomTurtle(int x, int y, ModelDisplay m,  Color body, Color shell, int w, int h) 
+      public CustomTurtle(int x, int y, ModelDisplay m,  Color body, Color shell, int w, int h)
       {
         // let the parent constructor handle it
         super(x,y,m);
@@ -562,7 +562,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
         height = h;
         width = w;
         setHeight(h);
-        setWidth(w);    
+        setWidth(w);
       }
     }
     ====

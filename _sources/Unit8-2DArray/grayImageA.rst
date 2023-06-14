@@ -5,8 +5,8 @@
 Free Response - Gray Image A
 -------------------------------
 
-..	index::
-	single: gray image
+.. index::
+    single: gray image
     single: free response
 
 The following is part a of a free response question from 2012.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
@@ -156,7 +156,7 @@ When approaching this problem, it can be helpful to look for keywords or hints t
 .. shortanswer:: gray_image_A
 
    Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.
-   
+
 .. reveal:: 2012GreyScale_alg
    :showtitle: Reveal Class Problem
    :hidetitle: Hide Class Problem

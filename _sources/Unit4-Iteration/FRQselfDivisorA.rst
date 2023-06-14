@@ -5,7 +5,7 @@
 Free Response - Self Divisor A
 -------------------------------
 
-..	index::
+.. index::
     single: self divisor
     single: free response
 
@@ -51,7 +51,7 @@ To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 
 
 .. activecode:: lcfrsda2
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    public class TestMod
    {
@@ -85,7 +85,7 @@ To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remain
 
 .. activecode:: lcfrsda3
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    public class TestSelfDivisor
    {
@@ -122,16 +122,16 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
    :showtitle: Reveal Hints
    :hidetitle: Hide Hints
    :optional:
-   
+
    **Hints:**
-   
+
    So we need to loop through all the digits in the number one at a time and test if the current digit is 0 and if so return false.  Otherwise we need to test if the passed number is evenly divisible (0 remainder) by the current digit.  If it isn't we return false.  If we have looped through all the digits and not found a problem return true.
-   
+
    How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the mod operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
 
    .. activecode:: lcfrsda4
        :language: java
-       :autograde: unittest  
+       :autograde: unittest
 
        public class TestDigits
        {
@@ -167,16 +167,16 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
    :showtitle: Reveal Algorithm
    :hidetitle: Hide Algorithm
    :optional:
-   
-   **Algorithm**: 
-   
+
+   **Algorithm**:
+
    We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.
 
 .. reveal:: frsda_r1
    :showtitle: Reveal Problems
    :hidetitle: Hide Problems
    :optional:
-   
+
    .. mchoice:: frsda_1
         :answer_a: for
         :answer_b: for each
@@ -187,7 +187,7 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
         :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.
 
         Which loop should you use to loop through all the digits of the number?
-        
+
    .. mchoice:: frsda_2
         :answer_a: Loop while the current number is greater than 10.
         :answer_b: Loop while the current number is greater than 9.
@@ -203,7 +203,7 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
 
 .. activecode:: lcfrsda5
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    FRQ SelfDivisor: Write the method isSelfDivisor.
    ~~~~
@@ -325,7 +325,7 @@ There are many possible solutions to this problem. Click to reveal a possible so
 .. reveal:: video_self_divisor_reveal
    :showtitle: Reveal Video
    :hidetitle: Hide Video
-   
+
    The following video is also on YouTube at https://youtu.be/oK1hDTmR3AE.  It walks through creating a solution.
 
    .. youtube:: oK1hDTmR3AE

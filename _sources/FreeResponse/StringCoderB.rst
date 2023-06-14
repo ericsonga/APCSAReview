@@ -5,8 +5,8 @@
 StringCoder - Part B
 ===============================
 
-..	index::
-	single: StringCoder
+.. index::
+    single: StringCoder
     single: free response
 
 
@@ -27,7 +27,7 @@ The code below has a main method for testing your method.
    :language: java
    :autograde: unittest
 
-   Complete method ``encodeString`` below.     
+   Complete method ``encodeString`` below.
    ~~~~
    import java.util.*;
 

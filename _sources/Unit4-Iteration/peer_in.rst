@@ -93,7 +93,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
 
     .. image:: https://i.postimg.cc/50RwmVh5/lecture10-Q04.png
       :width: 400
-      
+
 .. mchoice:: bs-nestedloops-10-05
     :author: Beth Simon
     :practice: T
@@ -141,7 +141,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
 
     .. code-block:: java
 
-        int mirrorPt = getWidth()/2;  
+        int mirrorPt = getWidth()/2;
         Pixel leftP, rightP;
         for (int y = 0; y < getHeight);  y++)
         {
@@ -149,7 +149,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
             {
                 leftP = getPixel(x,y);
                 rightP = getPixel(getWidth()-1-x,y);
-                rightP.setColor(leftP.getColor());   
+                rightP.setColor(leftP.getColor());
             }
         }
 

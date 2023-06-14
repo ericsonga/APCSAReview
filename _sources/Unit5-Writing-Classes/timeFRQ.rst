@@ -1,11 +1,11 @@
 .. .. qnum::
    :prefix: 5-11-
    :start: 1
-   
+
 Free Response Question - Time
 -------------------------------
 
-..	index::
+.. index::
     single: time
     single: free response
 
@@ -115,7 +115,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
 
 .. activecode:: time_part_a
    :language: java
-   :autograde: unittest   
+   :autograde: unittest
 
    /**
     * Objects of the Time class hold a time value for
@@ -243,7 +243,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
 
         @Test
         public void test0() throws IOException
-        {   
+        {
             Time time = new Time(0, 0, 0);
             String label = time.toString() +".tick()";
             time.tick();
@@ -257,7 +257,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
         @Test
         public void test1() throws IOException
         {
-            int i = 1; 
+            int i = 1;
             String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
@@ -268,7 +268,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
         @Test
         public void test2() throws IOException
         {
-            int i = 2; 
+            int i = 2;
             String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
@@ -279,7 +279,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
         @Test
         public void test3() throws IOException
         {
-            int i = 3; 
+            int i = 3;
             String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
@@ -290,7 +290,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
         @Test
         public void test4() throws IOException
         {
-            int i = 4; 
+            int i = 4;
             String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
@@ -301,7 +301,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
         @Test
         public void test5() throws IOException
         {
-            int i = 5; 
+            int i = 5;
             String label = time[i].toString() +".tick()";
             time[i].tick();
             String actual = time[i].toString();
@@ -316,7 +316,7 @@ Use conditionals (if statements) to check for each of these conditions and take 
 
 .. activecode:: time_part_b
    :language: java
-   :autograde: unittest   
+   :autograde: unittest
 
    /**
     * Objects of the Time class hold a time value for

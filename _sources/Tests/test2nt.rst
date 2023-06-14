@@ -1,14 +1,14 @@
 .. qnum::
    :prefix: 12-3-
    :start: 1
-   
+
 Exam 2 for the AP CS A Exam (not timed)
 ----------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability. 
+The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.
 
 .. mchoice:: qtnt2_1
-   :answer_a: I only 
+   :answer_a: I only
    :answer_b: II only
    :answer_c: III only
    :answer_d: I and II only
@@ -18,35 +18,35 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_b: II is correct, but III is correct as well. A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal.
    :feedback_c: III is correct, but II is correct as well. A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal.
    :feedback_d: II is correct, but a Fish is NOT a type of Goldfish. A Fish cannot be instantiated as a Goldfish object, because the Fish class does not inherit from the Goldfish class.
-   :feedback_e: A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal. The Goldfish class inherits from the Fish class, and the Fish class inherits from the Animal class. 
-   
+   :feedback_e: A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal. The Goldfish class inherits from the Fish class, and the Fish class inherits from the Animal class.
+
    Consider the ``Animal``, ``Fish``, and ``Goldfish`` classes shown below.  Which of the following object declarations will compile without error?
-   
+
    .. code-block:: java
 
      public class Animal
      {
          /* no constructors or other methods have been declared */
      }
-     
+
      public class Fish extends Animal
      {
          /* no constructors or other methods have been declared */
      }
-     
+
      public class Goldfish extends Fish
      {
          /* no constructors or other methods have been declared */
      }
-     
+
      I. Goldfish glub = new Fish();
-     
+
      II. Animal glub = new Fish();
-     
-     III. Fish glub = new Goldfish();  
-        
+
+     III. Fish glub = new Goldfish();
+
 .. mchoice:: qtnt2_2
-   :answer_a: [6, 2, 7, 5] 
+   :answer_a: [6, 2, 7, 5]
    :answer_b: [6, 4, 2, 7, 5]
    :answer_c: [4, 7, 9, 5]
    :answer_d: [6, 4, 7, 5]
@@ -55,11 +55,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_a: When the add method is used with two parameters, the value is added at the specific index, not at the end of the list. In this list, 4 has been added at index 1.
    :feedback_b: This would be correct if 7 had been placed in the list using add, not set. Remember that the set method replaces the value at the index. It does not move the previous value to the right.
    :feedback_c: Remember that in ArrayLists, indexing starts at 0, not 1.
-   :feedback_d: The 9 at index 2 is removed, resulting in [6, 2], then a 4 is added at index 1 resulting in [6, 4, 2]. A 5 is added to the end of the list resulting in [6,4,2,5], and the value at 2 is replaced with a 7 resulting in [6,4,7,5]. 
+   :feedback_d: The 9 at index 2 is removed, resulting in [6, 2], then a 4 is added at index 1 resulting in [6, 4, 2]. A 5 is added to the end of the list resulting in [6,4,2,5], and the value at 2 is replaced with a 7 resulting in [6,4,7,5].
    :feedback_e: Remember that in ArrayLists, indexing starts at 0, not 1. The set method replaces the value at the specified index with a new value, so the original value is deleted.
-   
+
    Assume that ``list`` has been instantiated as an ArrayList of integers containing ``[6, 2, 9]`` . What are the contents of ``list`` after the code is executed?
-   
+
    .. code-block:: java
 
       list.remove(2);
@@ -99,12 +99,12 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Which of the following code segments creates a 7 x 9 array of integers and fills every space in the array with multiples of two (not including the value 0)?
 
    .. code-block:: java
-    
-      I.   int[][] arr = new int [7][9]; 
-      
+
+      I.   int[][] arr = new int [7][9];
+
       II.  int[][] arr = new int [7][9];
            int count = 1;
-           
+
            for(int i = 0; i < arr.length; i++)
            {
               for(int j = 0; j < arr[0].length; j++)
@@ -112,21 +112,21 @@ The following problems are similar to what you might see on the AP CS A exam.  P
                  arr[i][j] = count * 2;
                  count++;
               }
-           } 
-      
+           }
+
       III. int[][] arr = new int [7][9];
            int count = 1;
            int row = 0;
            int col = 0;
-           
+
            while (row < arr.length && col < arr[0].length)
            {
               arr[row][col] = count * 2;
               row++;
               col++;
               count++;
-           } 
-      
+           }
+
 .. mchoice:: qtnt2_5
    :answer_a: hciwdnas
    :answer_b: sandwich
@@ -140,10 +140,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: This would occur if the print statement included s.substring(1). Each call of the printString method prints only one letter at a time, because the substring that is printed is s.substring(0,1).
    :feedback_e: This method ends when s.length() equals zero, so the base case is reached after eight passes for the word "sandwich". An infinite loop will not occur.
 
-   Consider the method ``printString`` shown below. What is printed as a result of printString("sandwich")?  
+   Consider the method ``printString`` shown below. What is printed as a result of printString("sandwich")?
 
    .. code-block:: java
-   
+
       public void printString(String s)
       {
          if (s.length() > 0)
@@ -169,39 +169,39 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    The Dog class is shown below. The GoldenRetriever class inherits from the Dog class. Which methods does the GoldenRetriever class inherit?
 
    .. code-block:: java
-   
+
       public class Dog
       {
          private int numLegs = 4;
          private String name = "Spot";
-       
+
          public Dog(String theName)
          {
             /* implementation not shown */
          }
-       
+
          public String bark()
          {
            return "Woof!";
          }
-  
+
          public String getName()
          {
             return name;
          }
       }
-    
+
       I. public Dog(String theName)
-      
+
       II. bark()
-      
+
       III. getName()
-      
-      
+
+
 
 
 .. mchoice:: qtnt2_7
-   :answer_a: I only 
+   :answer_a: I only
    :answer_b: II only
    :answer_c: III only
    :answer_d: I and II only
@@ -216,7 +216,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Which of these loops will output ``02468``?
 
    .. code-block:: java
-   
+
       I. for (int i = 0; i <= 8; i++)
          {
             System.out.print(i);
@@ -228,7 +228,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
              i +=2;
              System.out.print(i);
           }
-          
+
       III. for (int i = 0; i <= 8; i +=2)
            {
               System.out.print(i);
@@ -250,17 +250,17 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    Consider the following method ``mystery``. Assuming x is an integer greater than 1, in which case does ``mystery`` result in an infinite loop?
 
    .. code-block:: java
-     
+
       public int mystery(int x, int y)
       {
          if (x <= y)
              return x;
-         else 
+         else
              return mystery(x, y * 10);
       }
 
 .. mchoice:: qtnt2_9
-   :answer_a: Cats! 
+   :answer_a: Cats!
    :answer_b: Cats!  Cool!
    :answer_c: Cool!
    :answer_d: Cool! Cats!
@@ -268,17 +268,17 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: c
    :feedback_a: This would be the case if obj was a Cat at run-time. At run-time, obj is a FluffyCat, so the overwritten method in the Cat class is used.
    :feedback_b: This would be the case if the display method in FluffyCat used 'super' to call on the display method in the Cat class before it printed "Cool!".
-   :feedback_c: Although obj is declared to be a Cat at compile time, at run-time it is actually a FluffyCat. The overwritten display method defined in the FluffyCat class will be called. 
+   :feedback_c: Although obj is declared to be a Cat at compile time, at run-time it is actually a FluffyCat. The overwritten display method defined in the FluffyCat class will be called.
    :feedback_d: The method has been overwritten in FluffyCat, so the display method present in the Cat Class ("Cats! ") will not be printed.
    :feedback_e: This code compiles and runs correctly. A FluffyCat IS-A Cat object, so the code will compile and run without issue.
-   
-   Consider the following classes ``Cat`` and ``FluffyCat``. What is the result of executing the following code?           
+
+   Consider the following classes ``Cat`` and ``FluffyCat``. What is the result of executing the following code?
    ``Cat obj = new FluffyCat();``
-   
+
    ``obj.display();``
-   
+
    .. code-block:: java
-     
+
       public class Cat
       {
          public String display()
@@ -286,7 +286,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             System.out.print("Cats! ");
          }
       }
-      
+
       public class FluffyCat extends Cat
       {
          public String display()
@@ -296,10 +296,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       }
 
 .. mchoice:: qtnt2_10
-   :answer_a: 1 
+   :answer_a: 1
    :answer_b: 0
-   :answer_c: 10 9 8 7 6 5 4 3 2 1 
-   :answer_d: 1 2 3 4 5 6 7 8 9 10 
+   :answer_c: 10 9 8 7 6 5 4 3 2 1
+   :answer_d: 1 2 3 4 5 6 7 8 9 10
    :answer_e: 10
    :correct: a
    :feedback_a: After the recursive call reaches the base case (where arg = 1), the compiler prints "1". The recursive calls all just return and don't print anything.
@@ -307,18 +307,18 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_c: This would be correct if the method printed out arg + " " before going to the recursive call. Because the print statement is located at the end of the base case and not the recursive call, not every value is printed.
    :feedback_d: This would be correct if the method printed arg + " " after the recursive call in the if statement. Because the method does not return any values or strings, and because only the base case has a print statement, only the last value of arg is printed.
    :feedback_e: This would be correct if the method returned an integer that was the sum of the previous calls. The method does not add any values.
-   
+
    Consider the class ``showMe``, shown below. What is printed as a result of ``showMe(10)``?
 
    .. code-block:: java
-     
+
       public static void showMe(int arg)
       {
          if (arg > 1)
          {
             showMe(arg - 1);
          }
-        
+
          else
          {
             System.out.print(arg + " ");
@@ -339,11 +339,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: This would be correct if the first for-loop began at 1, not at 0.
 
    Consider the following code. What is printed as a result of executing this code?
-   
+
    .. code-block:: java
 
       int sum = 0;
-      
+
       for (int x = 0; x < 5; x++)
       {
          for (int y = x; y < 5; y++)
@@ -351,7 +351,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             sum++;
          }
       }
-      
+
       System.out.println(sum);
 
 .. mchoice:: qtnt2_12
@@ -361,25 +361,25 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: II and III
    :answer_e: I, II, and III
    :correct: d
-   :feedback_a: I will find the sum of all the values in the matrix, but it does not find the sum of a specific row. 
+   :feedback_a: I will find the sum of all the values in the matrix, but it does not find the sum of a specific row.
    :feedback_b: II is correct, but III is also correct. This method can be completed by using a while loop or a for loop.
    :feedback_c: III is correct, but II is also correct. This method can be completed by using a for loop or a while loop.
    :feedback_d: II and III both correctly add the values in the specified row.
    :feedback_e: II and III are correct, but I adds every value in the matrix, not just the specified row.
 
-   You are trying to write a method ``sumRow`` that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace ``/* to be determined */`` to make the code work correctly? 
+   You are trying to write a method ``sumRow`` that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace ``/* to be determined */`` to make the code work correctly?
 
    .. code-block:: java
-     
+
       public int sumRow (int row, int[][] values)
       {
          int sum = 0;
-        
-      	 /* to be determined */
-      	
-      	 return sum;
+
+         /* to be determined */
+
+         return sum;
       }
-      
+
       //I.
       for (int[] rowValues : values)
       {
@@ -388,13 +388,13 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             sum += x;
          }
       }
-      
+
       //II.
       for (int i = 0; i < values[0].length;i++)
       {
          sum += values[row][i];
       }
-      
+
       //III.
       int col = 0;
       while (col < values[0].length)
@@ -405,7 +405,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
 .. mchoice:: qtnt2_13
    :answer_a: (int) (Math.random() + 1) * 50
-   :answer_b: (int) (Math.random() * 50) + 1 
+   :answer_b: (int) (Math.random() * 50) + 1
    :answer_c: (int) (Math.random() + 1 * 50)
    :answer_d: (int) Math.random() * 50
    :answer_e: (int) (Math.random() * 50)
@@ -426,26 +426,26 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: 18
    :correct: c
    :feedback_a: Eventually, the recursive calls will reach mystery(5). 5 is less than 10, so the base case will have been reached and the method will end.
-   :feedback_b: This would be correct if the method found the sum of the digits in the given value, with an extra 1. Instead, the method finds the number of digits.											
+   :feedback_b: This would be correct if the method found the sum of the digits in the given value, with an extra 1. Instead, the method finds the number of digits.
    :feedback_c: This method finds the number of digits in num.
    :feedback_d: This method finds the number of digits in num. Check your recursive call to make sure you reached the base case correctly.
    :feedback_e: This would be correct if the method added the digits in the value. Instead, the method simply finds the number of digits. Check the recursive call again.
 
    Given the following code, what is returned by mystery(5364)?
-   
+
    .. code-block:: java
-      
+
      public static int mystery(int num)
-     { 
-        if (num < 10) 
-        { 
-           return 1; 
-        } 
-      
-        else 
-        { 
-           return 1 + mystery(num / 10); 
-        } 
+     {
+        if (num < 10)
+        {
+           return 1;
+        }
+
+        else
+        {
+           return 1 + mystery(num / 10);
+        }
      }
 
 
@@ -463,9 +463,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: Using insertion sort, we start at the first index and sort the first two values to create a sorted array at the left side of the array. We repeat this step for the second index, creating a sorted array of three elements, and again for the third index, creating a sorted array of four elements.
    :feedback_e: This is the final sorted array. Instead of three passes, it takes seven iterations to reach this state.
 
-   
+
    Consider an array of integers that contains ``[12, 8, 4, 6, 13, 29, 7]``. If the array is sorted from smallest to largest using an insertion sort method, what will be the order of the array after the third iteration of the sorting method?
-   
+
 
 .. mchoice:: qtnt2_16
    :answer_a: Vroom vroom! Let's go!
@@ -480,11 +480,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_d: This would be the case if the parent method had been called after "Let's go! " had been printed.
    :feedback_e: This code correctly compiles, so there are no errors present. The Minivan class can make a call to a method in the Car class using super, because the Minivan class extends the Car class.
 
-   
+
    Consider the classes ``Car`` and ``Minivan``, shown below. If ``obj`` has been instantiated later in the class as a ``Minivan``, what is printed as a result of ``obj.drive()``?
 
    .. code-block:: java
-     
+
       public class Car
       {
          public void drive()
@@ -492,7 +492,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
             System.out.print("Vroom vroom! ");
          }
       }
-      
+
       public class Minivan extends Car
       {
          public void drive()
@@ -514,7 +514,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_c: This would be correct if the for-loop began at 1 and continued to data.length - 1. Notice the for-loop indexing.
    :feedback_d: The indexing of this method is correct. The for-loop begins at the last index and ends at the second index, and the method does not access any values other than the ones specified.
    :feedback_e: This method starts at the second-to-last index of the array and adds the value of the previous element to the element at index k - 1.
-   
+
    Consider the following method ``changeArray``. An array is created that contains ``[2, 8, 10, 9, 6]`` and is passed to ``changeArray``. What are the contents of the array after the ``changeArray`` method executes?
 
    .. code-block:: java
@@ -537,8 +537,8 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_c: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (A || B). It should be (!A || !B). Also, (y >= 12) is equivalent to !(y < 12).
    :feedback_d: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (A && B). !(y < 12) and (y >=12) mean the same thing; changing this does not make the statement the opposite.
    :feedback_e: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (!A && B). Changing !(y < 12) to (y >= 12) does not negate the statement; these two are equivalent.
-   
-   Which statement is equivalent to ``!( (x > 7) && !(y < 12) )``? 
+
+   Which statement is equivalent to ``!( (x > 7) && !(y < 12) )``?
 
 .. mchoice:: qtnt2_19
    :answer_a: I only
@@ -549,43 +549,43 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :correct: a
    :feedback_a: The modulo operator (%) can be used to find if numbers are even or odd. I checks that x is even correctly using x % 2 == 0.
    :feedback_b: II uses the modulo operator to count the number of odd numbers in the array. If x % 2 == 1, then the number is odd, not even.
-   :feedback_c: III and IV use the division operator, not the modulo operator. This does not check if the number is even. 
+   :feedback_c: III and IV use the division operator, not the modulo operator. This does not check if the number is even.
    :feedback_d: I is correct, but II increments the counter for odd numbers, not even numbers.
    :feedback_e: II counts the odd numbers instead of the even numbers. If x % 2 == 1, the number is odd, not even. IV does not use the modulo operator (%), which checks if numbers are even or odd.
 
-   
+
    Consider the following method ``evens``, which finds the number of even numbers present in an array. Which of the following segments of code would correctly replace ``/* to be completed */``?
 
    .. code-block:: java
-     
+
      public int evens(int [] arr)
      {
         int count = 0;
-      
+
         for (int x : arr)
         {
            /* to be completed */
         }
-      
+
         return count;
      }
-    
+
      // I
      if (x % 2 == 0)
         count++;
-     
+
      // II
      if (x % 2 == 1)
         count++;
-       
+
      // III
      if (x / 2 == 0)
         count++;
-       
+
      // IV
      if (x / 2 == 1)
         count++;
-     
+
 
 .. mchoice:: qtnt2_20
    :answer_a: This method will work correctly for all arrays.
@@ -595,22 +595,22 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: Every value in the array is less than 0.
    :correct: e
    :feedback_a: This method will not work correctly for all arrays. Look at the starting value for maxVal, and how maxVal is compared to all the values of the array. What happens if every value in the array is less than maxVal?
-   :feedback_b: Although this might present a problem if EVERY value in the array is less than 0, the compiler will move on to the next index without issue if the first value in the array is less than 0.  
+   :feedback_b: Although this might present a problem if EVERY value in the array is less than 0, the compiler will move on to the next index without issue if the first value in the array is less than 0.
    :feedback_c: This will not present a problem, as the if-statement has not been met and the for-loop will simply continue to the second element.
-   :feedback_d: If every value in the array is greater than 0, the method will work properly. 
+   :feedback_d: If every value in the array is greater than 0, the method will work properly.
    :feedback_e: maxVal is set to zero, so if every number in the array is less than 0, the maxVal will remain 0. A better idea would be to set maxVal to the value of the first element in the array.
 
-   
+
    Consider the method ``findMax``, which uses sequential search to find the index of the largest value of an array. In which case would ``findMax`` not work properly?
- 
+
 
    .. code-block:: java
-     
+
      public int findMax(int[] arr)
      {
         int maxVal = 0;
         int index = 0;
-       
+
         for (int i = 0; i < arr.length; i++)
         {
            if (arr[i] > maxVal)
@@ -622,4 +622,4 @@ The following problems are similar to what you might see on the AP CS A exam.  P
         return index;
      }
 
-     
+

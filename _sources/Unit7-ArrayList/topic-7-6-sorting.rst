@@ -6,14 +6,14 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
@@ -21,18 +21,18 @@
 
 .. image:: ../../_static/time45.png
     :width: 250
-    :align: right 
+    :align: right
 
 Sorting Algorithms
 ==================
 
 There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CS A exam are:
 
-..	index::
-	single: selection sort
-	single: insertion sort
-	pair: sort; selection
-	pair: sort; insertion
+.. index::
+   single: selection sort
+   single: insertion sort
+   pair: sort; selection
+   pair: sort; insertion
 
 * Selection Sort - Select the smallest item from the current location on to the end of the array and swap it with the value at the current position.  Do this from index 0 to the array length - 2.  You don't have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.
 * Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right.  Start at index 1 and loop through the entire array.
@@ -45,16 +45,16 @@ There are many sorting algorithms to put an array or ArrayList elements in alpha
 Selection Sort
 ---------------
 
-..	index::
-	single: selection sort
-	pair: sort; selection
+.. index::
+   single: selection sort
+   pair: sort; selection
 
 The selection sort that you need to know for the exam starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
 
 .. |video| raw:: html
 
    <a href="https://youtu.be/Ns4TPTC8whw" target="_blank">video</a>
-   
+
 Here is a folk dance |video| that shows the selection sort process.
 
 .. youtube:: Ns4TPTC8whw
@@ -65,10 +65,10 @@ And a short |video2| that describes how selection sort works.
 .. |video2| raw:: html
 
    <a href="https://youtu.be/g-PGLbMth_g" target="_blank">video</a>
-   
+
 .. youtube:: g-PGLbMth_g
     :align: center
-    
+
 To identify a selection sort look for the following:
 
 * a nested for loop with the outer loop starting at 0 and ending when the index reaches length - 1 (see line 7 below)
@@ -82,7 +82,7 @@ The code for ``selectionSort`` below is from the AP CS A course description.
 
 .. activecode:: selSort
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   Demonstration of selection sort. Click on the Code Lens button or the link below to step through the code.
   ~~~~
@@ -120,7 +120,7 @@ The code for ``selectionSort`` below is from the AP CS A course description.
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -190,16 +190,16 @@ You can step through the code above by clicking on the following `Ex-12-4-2 <htt
 Insertion Sort
 ---------------
 
-..	index::
-	single: insertion sort
-	pair: sort; insertion
+.. index::
+   single: insertion sort
+   pair: sort; insertion
 
 The insertion sort that you need to know for the exam starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.
 
 .. |video3| raw:: html
 
    <a href="https://youtu.be/ROalU379l3U" target="_blank">video</a>
-   
+
 
 Here is a folk dance |video3| that shows the insertion sort process.
 
@@ -209,12 +209,12 @@ Here is a folk dance |video3| that shows the insertion sort process.
 .. |video4| raw:: html
 
    <a href="https://youtu.be/JU767SDMDvA" target="_blank">video</a>
-   
+
 And a short |video4| that describes how insertion sort works.
 
 .. youtube:: JU767SDMDvA
     :align: center
-    
+
 
 
 To identify an insertion sort look for the following:
@@ -231,7 +231,7 @@ The code for ``insertionSort`` below is from the AP CS A course description.
 
 .. activecode:: insertionSort
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   Demonstration of insertion sort. Click on the Code Lens button or the link below to step through the code.
   ~~~~
@@ -266,7 +266,7 @@ The code for ``insertionSort`` below is from the AP CS A course description.
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-   
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -333,7 +333,7 @@ You can step through the code above by clicking on the following `Visualization 
 |Groupwork| Programming Challenge : Sort Runtimes
 ---------------------------------------------------
 
-Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data. 
+Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data.
 
 In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this |Google doc| (login to Google to make your own copy) also seen below.
 
@@ -342,12 +342,12 @@ In the Active code windows for Selection sort and Insertion sort above, add in a
    <a href= "https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy" style="text-decoration:underline" target="_blank" >Google document</a>
 
 .. raw:: html
-    
+
     <iframe height="300px" width="100%" src="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/edit?usp=sharing&rm=minimal" style="max-width:90%; margin-left:5%" ></iframe>
 
 .. shortanswer:: challenge7-6-sorting
 
-   Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.   
+   Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.
 
 Summary
 ---------

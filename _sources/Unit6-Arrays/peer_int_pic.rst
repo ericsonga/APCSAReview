@@ -1,6 +1,6 @@
 Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
 ------------------------------------------------------------------
- 
+
 .. mchoice:: bs-array-06-09
     :author: Beth Simon
     :practice: T
@@ -29,10 +29,10 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     :answer_e: None of the above
     :correct: d
     :feedback_a: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed.
-    :feedback_b: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
-    :feedback_c: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
-    :feedback_d: Correct! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
-    :feedback_e: Incorrect! One of the answers above correctly represents what pixels this code modifies. The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed. 
+    :feedback_b: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed.
+    :feedback_c: Incorrect! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed.
+    :feedback_d: Correct! The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed.
+    :feedback_e: Incorrect! One of the answers above correctly represents what pixels this code modifies. The while loop continues to iterate as long as the index value is less than the length of the Pixel array divided by 4. For this reason, 1/4 of the pixels are modified as a result of this code. The first 1/4 of the pixels will be changed.
 
     What pixels does this code modify (assuming Pixel objects in pixelArray follow this pattern: [(0,0), (0,1), (0,2)...])?
 
@@ -46,8 +46,8 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
           value = pixelArray[index].getRed();
           value = (int) (value * 0.5);
           pixelArray[index].setRed(value);
-        }  
-        
+        }
+
     .. image:: https://i.postimg.cc/KcDCVXTH/lecture07-Q07.png
       :width: 200
 
@@ -78,7 +78,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
             p.setRed(q.getRed());
             p.setBlue(q.getRed());
             p.setGreen(q.getGreen());
-        }  
+        }
 
     .. image:: https://i.postimg.cc/SRhMBw8D/lecture09-Q05.png
       :width: 400
@@ -110,7 +110,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
           p.setRed(q.getRed());
           p.setBlue(q.getRed());
           p.setGreen(q.getGreen());
-        }  
+        }
 
     .. image:: https://i.postimg.cc/SRhMBw8D/lecture09-Q05.png
       :width: 400
@@ -125,8 +125,8 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     :correct: b
     :feedback_a: Incorrect! Since the sample rate is 3 Hz, there are 3 samples per second. Though there are 3 samples in this example, they do not convey a broad range of sample points.
     :feedback_b: Correct! Since the sample rate is 3 Hz, there are 3 samples per second. There are 3 samples in this example and they convey a broad range of sample points.
-    :feedback_c: Incorrect! Since the sample rate is 3 Hz, there should be 3 samples per second, not 6. 
-    :feedback_d: Incorrect! Since the sample rate is 3 Hz, there should be 3 samples per second, not 6. 
+    :feedback_c: Incorrect! Since the sample rate is 3 Hz, there should be 3 samples per second, not 6.
+    :feedback_d: Incorrect! Since the sample rate is 3 Hz, there should be 3 samples per second, not 6.
 
     How would we fill in this SampleSound[]?
 
@@ -142,7 +142,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     :correct: b
     :feedback_a: Incorrect! This code adjusts the entire array rather than the second half.
     :feedback_b: Correct! This code adjusts the second half of the array.
-    :feedback_c: Incorrect! This code adjusts the entire array rather than the second half. 
+    :feedback_c: Incorrect! This code adjusts the entire array rather than the second half.
 
     Which code which makes the following changes?
 
@@ -152,7 +152,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
         Sound noise = new Sound(fileName);
         SoundSample[] noiseArray = noise.getSamples();
         <<<  PICK SOME CODE  >>>
- 
+
 
     .. image:: https://i.postimg.cc/qM1r7YqK/lecture20-Q09.png
       :width: 400
@@ -166,7 +166,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     :answer_d: Makes a quieter sound during second half of play
     :answer_e: For each SoundSample element if the array it gets the Value and stores that in an int and then sets the Value with something that is half that
     :correct: c
-    :feedback_a: Incorrect! This code adjusts the second half of the sound array, not the first half. 
+    :feedback_a: Incorrect! This code adjusts the second half of the sound array, not the first half.
     :feedback_b: Incorrect! This code adjusts the second half of the sound array, not the first half.
     :feedback_c: Correct! This code adjusts the second half of the array, specifically halving the pitch.
     :feedback_d: Incorrect! Although this code adjusts the second half of the array, it does not impact the loudness/quietness of the sound. Rather, it impacts the pitch.

@@ -5,7 +5,7 @@
 Midterm Test
 --------------
 
-The following 20 questions are similar to what you might see on the AP CS A exam for Units 1 - 5.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed. 
+The following 20 questions are similar to what you might see on the AP CS A exam for Units 1 - 5.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.
 
 We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.
 
@@ -38,9 +38,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
            */
 
            //Loop I
-           for (int i = 1; i <= 5; i++) 
+           for (int i = 1; i <= 5; i++)
            {
-              for (int j = i; j > 0; j--) 
+              for (int j = i; j > 0; j--)
               {
                  System.out.print(i);
               }
@@ -48,9 +48,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
            }
 
            //Loop II
-           for (int i = 0; i < 5; i++) 
+           for (int i = 0; i < 5; i++)
            {
-              for (int j = 0; j < i; j++) 
+              for (int j = 0; j < i; j++)
               {
                  System.out.print(i);
               }
@@ -58,9 +58,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
            }
 
            //Loop III
-           for (int i = 1; i < 5; i++) 
+           for (int i = 1; i < 5; i++)
            {
-              for (int j = i; j > 0; j--) 
+              for (int j = i; j > 0; j--)
               {
                  System.out.print(i);
               }
@@ -68,9 +68,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
            }
 
            //Loop IV
-           for (int i = 1; i < 6; i++) 
+           for (int i = 1; i < 6; i++)
            {
-              for (int j = 0; j < i; j++) 
+              for (int j = 0; j < i; j++)
               {
                  System.out.println(i);
               }
@@ -89,11 +89,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
      .. mchoice:: mid_1_2
         :answer_a: A
         :answer_b: AC
-        :answer_c: C 
+        :answer_c: C
         :answer_d: BD
         :answer_e: E
         :correct: c
-        :feedback_a: num2 is negative 
+        :feedback_a: num2 is negative
         :feedback_b: Only one letter will be printed.
         :feedback_c: Correct because num2 is negative and an or is used.
         :feedback_d: Only one letter will be printed.
@@ -105,22 +105,22 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
            public static void conditionTest(int num1, int num2)
            {
-              if ((num1 > 0) && (num2 > 0)) 
+              if ((num1 > 0) && (num2 > 0))
               {
                  if (num1 > num2)
                     System.out.println("A");
                  else
                     System.out.println("B");
               }
-              else if ((num2 < 0) || (num1 < 0)) 
+              else if ((num2 < 0) || (num1 < 0))
               {
                  System.out.println("C");
               }
-              else if (num2 < 0) 
+              else if (num2 < 0)
               {
                  System.out.println("D");
               }
-              else 
+              else
               {
                  System.out.println("E");
               }
@@ -175,7 +175,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :correct: c
         :feedback_a: This would be the correct answer if there were only two loops nested, but there are three. Try again!
         :feedback_b: Take a look at how many times each inner loop will execute every time the outer loop runs.
-        :feedback_c: Correct! 
+        :feedback_c: Correct!
         :feedback_d: Try again - check the difference between <= and < in each loop.
         :feedback_e: If you got this value you probably made one extra call to the each of the loops, notice that the loops start at 1 and not 0.
 
@@ -206,10 +206,10 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :answer_d: (x <= 10) || (x > 5)
         :answer_e: (x > 10) || (x <= 5)
         :correct: d
-        :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). 
+        :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B).
         :feedback_b: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A && B).
         :feedback_c: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). The AND should be changed to an OR.
-        :feedback_d: Correct! 
+        :feedback_d: Correct!
         :feedback_e: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A || B). Both A and B should also be negated.
 
         Which of the following is equivalent to !((x > 10) && (x <= 5)) ?
@@ -221,11 +221,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :answer_d: s="rain"; b=4;
         :answer_e: s="bow";  b=4;
         :correct: d
-        :feedback_a: Strings are immutable so changing str doesn't affect the string that s refers to. 
-        :feedback_b: Nothing done in the method test affects the value of b. 
-        :feedback_c: Strings are immutable so changing str doesn't affect the string that s refers to. 
+        :feedback_a: Strings are immutable so changing str doesn't affect the string that s refers to.
+        :feedback_b: Nothing done in the method test affects the value of b.
+        :feedback_c: Strings are immutable so changing str doesn't affect the string that s refers to.
         :feedback_d: Correct!
-        :feedback_e: All changes to string s result in a new string object. 
+        :feedback_e: All changes to string s result in a new string object.
 
 
         Consider the following class with the method ``test``. What is the output after the main method is executed calling ``test(s,b)``?
@@ -240,12 +240,12 @@ We estimate that a score of about 50% on this test would correspond to the passi
                 y = y * 2;
              }
 
-             public static void main(String[] args) 
-             { 
-                String s = "rain"; 
-                int b = 4; 
-                test(s, b); 
-                System.out.println("s="+s+"; b="+b); 
+             public static void main(String[] args)
+             {
+                String s = "rain";
+                int b = 4;
+                test(s, b);
+                System.out.println("s="+s+"; b="+b);
              }
             }
 
@@ -297,11 +297,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
         Which of the following statements are TRUE about local variables?
 
         I.   Local variables can be declared in the body of constructors and methods.
-        
+
         II.  Local variables may only be used within the constructor or method and cannot be declared to be public or private.
-        
+
         III. When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable.
-        
+
 
      .. mchoice:: mid_1_9
         :answer_a: I and II only
@@ -319,9 +319,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
         Which of the following statements are TRUE about **static** methods?
 
         I.   Static methods and variables include the keyword static before their name in the header or declaration and can be public or private.
-        
+
         II.  Static methods can access or change the values of instance variables.
-        
+
         III.  Static methods are associated with the class, not objects of the class.
 
      .. mchoice:: mid_1_10
@@ -343,7 +343,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
            int var1 = 0;
            int var2 = 2;
-           while ((var2 != 0) && ((var1 / var2) >= 0)) 
+           while ((var2 != 0) && ((var1 / var2) >= 0))
            {
               var1 = var1 + 1;
               var2 = var2 - 1;
@@ -356,8 +356,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :answer_d: -5 -4 -3 -2 -1 0
         :answer_e: -4 -3 -2 -1
         :correct: c
-        :feedback_a: x is initialized (set) to -5 to start and incremented (x++) before the print statement executes. 
-        :feedback_b: x is incremented (x++) from -5 before the print statement executes. 
+        :feedback_a: x is initialized (set) to -5 to start and incremented (x++) before the print statement executes.
+        :feedback_b: x is incremented (x++) from -5 before the print statement executes.
         :feedback_c: Correct!
         :feedback_d: x is incremented (x++) from -5 before the print statement executes.
         :feedback_e: 0 is printed out the last time through the loop when x is -1 and is incremented.
@@ -377,7 +377,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :answer_a: 0 3 6 9 12
         :answer_b: 0 1 2 3 4 5
         :answer_c: 1 4 7 10 13
-        :answer_d: 0 3 6 9 12 15  
+        :answer_d: 0 3 6 9 12 15
         :answer_e: This code will not print anything.
         :correct: d
         :feedback_a: It would also print 15.
@@ -390,9 +390,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         .. code-block:: java
 
-           for (int i = 0; i <= 15; i++) 
+           for (int i = 0; i <= 15; i++)
            {
-              if (i % 3 == 0) 
+              if (i % 3 == 0)
               {
                  System.out.print(i + " ");
               }
@@ -423,9 +423,9 @@ We estimate that a score of about 50% on this test would correspond to the passi
               void addHours(int addition)
               {
                  hours = hours + addition;
-              }   
+              }
 
-              /** addMinutes adds the given argument to the time stored in hours and minutes. 
+              /** addMinutes adds the given argument to the time stored in hours and minutes.
               The argument additionMinutes is between 0 and 119.  **/
               void addMinutes(int additionMinutes)
               {
@@ -444,8 +444,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
            II.  public void addMinutes(int additionMinutes)
                 {
                     minutes += additionMinutes;
-                    if (minutes >= 60) 
-                    { 
+                    if (minutes >= 60)
+                    {
                        hours += minutes / 60;
                        minutes = minutes % 60;
                     }
@@ -616,11 +616,11 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :answer_d: null
         :answer_e: hI tHERE
         :correct: c
-        :feedback_a: Strings are immutable and so any change to a string returns a new string. 
-        :feedback_b: Strings are immutable and so any change to a string returns a new string. 
+        :feedback_a: Strings are immutable and so any change to a string returns a new string.
+        :feedback_b: Strings are immutable and so any change to a string returns a new string.
         :feedback_c: Correct!
-        :feedback_d: Strings are immutable and so any changes to a string returns a new string. 
-        :feedback_e: Strings are immutable and so any changes to a string returns a new string. 
+        :feedback_d: Strings are immutable and so any changes to a string returns a new string.
+        :feedback_e: Strings are immutable and so any changes to a string returns a new string.
 
         Consider the following code.  What string is referenced by ``s1`` after the code executes?
 
@@ -649,6 +649,6 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         .. code-block:: java
 
-           int a = 5; 
-           int b = 3;  
+           int a = 5;
+           int b = 3;
            int c = 4;

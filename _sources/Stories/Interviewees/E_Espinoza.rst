@@ -14,9 +14,9 @@ Eric Espinoza
 
 Like countless other programmers, Eric enjoys how programming enables him to build whatever he can think of, whether it's helping him, his employer, or the world.
 
-**How did he pursue computing?** 
+**How did he pursue computing?**
 
-Eric studied at a full-stack boot camp — a boot camp that teaches both front-end (constructing the components that users interact with) and back-end development (building the technologies that facilitate the front end). 
+Eric studied at a full-stack boot camp — a boot camp that teaches both front-end (constructing the components that users interact with) and back-end development (building the technologies that facilitate the front end).
 
 **What subfield is he working in?**
 

@@ -6,19 +6,19 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 .. raw:: html
 
     <style>    td { text-align: left; } </style>
@@ -26,16 +26,16 @@
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right
-    
+
 Searching Algorithms
 ======================
 
-..	index::
-	single: sequential search
-	single: binary search
-	single: recursion
-	pair: search; sequential
-	pair: search; binary
+.. index::
+   single: sequential search
+   single: binary search
+   single: recursion
+   pair: search; sequential
+   pair: search; binary
 
 Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
 
@@ -53,17 +53,17 @@ The following video is also on YouTube at https://youtu.be/DHLCXXX1OtE.  It intr
 
 
 
-If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are covered in the next lesson. 
+If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are covered in the next lesson.
 
 
 Sequential Search
 ------------------
 
-..	index::
-	single: sequential search
-	single: linear search
-	pair: search; sequential
-	pair: search; linear
+.. index::
+   single: sequential search
+   single: linear search
+   pair: search; sequential
+   pair: search; linear
 
 Sequential or linear search is the only method that can be used to find a value in unsorted data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns the index it found it at, or it loops until the end of the array or list and then it returns a -1 to show that it didn't find the value in the array or list.
 
@@ -71,7 +71,7 @@ Sequential or linear search is the only method that can be used to find a value 
 
 .. activecode:: seqSearch
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   The code for ``sequentialSearch`` for arrays below is from a previous AP CS A course description. Click on the Code Lens button or the link below to see this code running in the Java visualizer.
   ~~~~
@@ -109,7 +109,7 @@ Sequential or linear search is the only method that can be used to find a value 
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -128,7 +128,7 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
 
 .. activecode:: seqSearchList
     :language: java
-    :autograde: unittest        
+    :autograde: unittest
 
     Here is a linear search using ArrayLists. Notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays. Click on the Code Lens button to step through this code in the visualizer.
     ~~~~
@@ -138,20 +138,20 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
     {
 
       /** Finds the index of a value in an ArrayList of integers.
-        * @param elements an array containing the items to be searched. 
-        * @param target the item to be found in elements. 
-        * @return an index of target in elements if found; -1 otherwise. 
+        * @param elements an array containing the items to be searched.
+        * @param target the item to be found in elements.
+        * @return an index of target in elements if found; -1 otherwise.
         */
-      public static int sequentialSearch(ArrayList<Integer> elements, int target) 
-      { 
-        for (int j = 0; j < elements.size(); j++) 
-        { 
-          if (elements.get(j) == target) 
-          { 
-            return j; 
-          } 
-        } 
-        return -1; 
+      public static int sequentialSearch(ArrayList<Integer> elements, int target)
+      {
+        for (int j = 0; j < elements.size(); j++)
+        {
+          if (elements.get(j) == target)
+          {
+            return j;
+          }
+        }
+        return -1;
       }
 
       public static void main(String[] args)
@@ -173,7 +173,7 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
     import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -219,7 +219,7 @@ Of course you can also look for a string in an array or list.  But, when you loo
 
 .. activecode:: seqSearchStr
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   Demonstration of a linear search for a String. Click on the Code Lens button or the link below to step through this code.
   ~~~~
@@ -255,7 +255,7 @@ Of course you can also look for a string in an array or list.  But, when you loo
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-   
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -273,9 +273,9 @@ To see this executing using the Java Visualizer click on this `String-SeqSearch 
 Binary Search
 --------------
 
-..	index::
-	single: binary search
-	pair: search; binary
+.. index::
+   single: binary search
+   pair: search; binary
 
 Binary search can only be used if the data is sorted.
 
@@ -287,7 +287,7 @@ The code for ``binarySearch`` below is from the AP CS A course description. A re
 
 .. activecode:: binSearch
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   Demonstration of iterative binary search. Click on the Code Lens button or the link below to step through this code.
   ~~~~
@@ -351,7 +351,7 @@ The code for ``binarySearch`` below is from the AP CS A course description. A re
             assertTrue(passed);
         }
     }
-    
+
 To see this executing using the Java Visualizer click on the following link: `BinarySearch Ex <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0>`_
 
 You can also use binary search with a string array.  But, when you look for a string be sure to use ``compareTo()`` method rather than ``<`` or ``>`` which can only be used with primitive types.  Remember how the String method compareTo() works:
@@ -360,8 +360,8 @@ You can also use binary search with a string array.  But, when you look for a st
 
 .. activecode:: binSearchStrings
   :language: java
-  :autograde: unittest        
-  
+  :autograde: unittest
+
   Demonstration of binary search with strings using compareTo. Click on the Code Lens button to step through the code.
   ~~~~
   public class BinSearchStrings
@@ -412,7 +412,7 @@ You can also use binary search with a string array.  But, when you look for a st
   import static org.junit.Assert.*;
     import org.junit.*;;
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -424,11 +424,11 @@ You can also use binary search with a string array.  But, when you look for a st
             assertTrue(passed);
         }
     }
-  
+
 Runtimes
 --------
 
-How do we choose between two algorithms that solve the same problem? They usually have different characteristics and **runtimes** which measures how fast they run. For the searching problem, it depends on your data. 
+How do we choose between two algorithms that solve the same problem? They usually have different characteristics and **runtimes** which measures how fast they run. For the searching problem, it depends on your data.
 
 Binary search is much faster than linear search, especially on large data sets, but it can only be used on sorted data. Often with runtimes, computer scientist think about the **worst case behavior**. With searching, the worst case is usually if you cannot find the item. With linear search, you would have to go through the whole array before realizing that it is not there, but binary search is much faster even in this case because it eliminates half the data set in each step. We can measure an informal runtime by just counting the number of steps.
 
@@ -448,7 +448,7 @@ N    Linear Search  Binary Search
 100  100            7
 ==== ============== ==============
 
-Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (or log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log\ :sub:`2`\ n as n, the data size, grows and see that binary search runs much faster for any n.  You don't need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, etc.) until you reach a number that is slightly above n. 
+Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (or log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log\ :sub:`2`\ n as n, the data size, grows and see that binary search runs much faster for any n.  You don't need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, etc.) until you reach a number that is slightly above n.
 
 
 |Exercise| **Check Your Understanding**
@@ -503,7 +503,7 @@ Runtimes can be described with mathematical functions. For an array of size n, l
    :answer_d: 2 times
    :correct: b
    :feedback_a: How many times can you divide 500 in half?
-   :feedback_b: You can divide 500 in half, 9 times, or you can observe that 2^9 = 512 which is slightly bigger than 500. 
+   :feedback_b: You can divide 500 in half, 9 times, or you can observe that 2^9 = 512 which is slightly bigger than 500.
    :feedback_c: How many times can you divide 500 in half?
    :feedback_d: How many times can you divide 500 in half?
 
@@ -521,16 +521,16 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 .. |Google doc| raw:: html
 
    <a href= "https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" style="text-decoration:underline" target="_blank" >Google document</a>
-   
-Let's go back to the spell checker that we programmed in Unit 6. Remember that it used linear search to find a word in the dictionary. The dictionary file was actually in alphabetical order though, so we could have used a much faster binary search. 
 
-Here is a version of the spellchecker on |repl.it| that uses an ArrayList for the dictionary and a linear search method. Notice that get(i) is used instead of [] to get an element in the ArrayList dictionary at index i. The search also prints out the index where it found the word. This is an informal runtime that tells us how many words it had to check.  Run the code in the window below or on |repl.it| with the following test cases and record the runtime for each word in this |Google doc| (do File/Make a Copy) also seen below to record your answers. 
+Let's go back to the spell checker that we programmed in Unit 6. Remember that it used linear search to find a word in the dictionary. The dictionary file was actually in alphabetical order though, so we could have used a much faster binary search.
+
+Here is a version of the spellchecker on |repl.it| that uses an ArrayList for the dictionary and a linear search method. Notice that get(i) is used instead of [] to get an element in the ArrayList dictionary at index i. The search also prints out the index where it found the word. This is an informal runtime that tells us how many words it had to check.  Run the code in the window below or on |repl.it| with the following test cases and record the runtime for each word in this |Google doc| (do File/Make a Copy) also seen below to record your answers.
 
 .. raw:: html
 
     <iframe height="400px" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&rm=minimal" style="max-width:90%; margin-left:5%" ></iframe>
 
-   
+
 .. raw:: html
 
     <iframe height="600px" width="100%" src="https://firewalledreplit.com/@BerylHoffman/SpellCheckerArrayListSearches?lite=true" scrolling="no" style="max-width:90%; margin-left:5%"  frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -542,7 +542,7 @@ Now, login to repl and start changing the code to save the |repl.it|  as your ow
 .. shortanswer:: challenge7-5-binary-search
 
    After you complete your code on repl, paste in a link (click on share) here. Also, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?
-   
+
 
 Summary
 ---------

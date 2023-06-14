@@ -11,12 +11,12 @@ Picture Lab A1 - A3
 
 The |Picture Lab| is a fun lab where you learn how to modify digital pictures pixel by pixel using a 2D array.
 
-..	index::
+.. index::
     single: binary
     single: bit
     single: byte
     single: picture lab
-    
+
 A1 Introduction to Digital Pictures and Color
 ----------------------------------------------
 
@@ -38,7 +38,7 @@ let you see some of the color beneath it.
     :width: 350px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: RGB values and the resulting colors displayed in rows and columns
 
 How does the computer represent the values from 0 to 255? A decimal number uses the digits 0 to 9 and
@@ -55,13 +55,13 @@ Questions:
    :answer_c: 8
    :answer_d: 16
    :correct: c
-   :feedback_a: You can only represent 4 numbers, decimal 0-3, with 2 bits: 00, 01, 10, 11. 
-   :feedback_b: You can only represent decimal 0-15 with 4 bits: 0000-1111. 
-   :feedback_c: Yes, you can represent decimal 0-255 with 8 bits: 00000000-11111111. 
+   :feedback_a: You can only represent 4 numbers, decimal 0-3, with 2 bits: 00, 01, 10, 11.
+   :feedback_b: You can only represent decimal 0-15 with 4 bits: 0000-1111.
+   :feedback_c: Yes, you can represent decimal 0-255 with 8 bits: 00000000-11111111.
    :feedback_d: You could use 16 bits, but you could use much less to represent 0-255.
 
    How many bits does it take to represent the values from 0 to 255? See https://mobile-csp.org/webapps/numbers/binaryConverter.html for help.
-   
+
 .. mchoice:: picture-lab-A1-2
    :answer_a: 1
    :answer_b: 2
@@ -69,12 +69,12 @@ Questions:
    :answer_d: 4
    :correct: c
    :feedback_a: A byte is 8 bits which can store 1 color value 0-255, but we want 3 color values for red, green, and blue.
-   :feedback_b: 2 bytes would store 2 color values. 
-   :feedback_c: Yes, you can store 3 color values 0-255 for R, G, B in 3 bytes. 
+   :feedback_b: 2 bytes would store 2 color values.
+   :feedback_c: Yes, you can store 3 color values 0-255 for R, G, B in 3 bytes.
    :feedback_d: 4 bytes could store 4 color values.
 
    How many bytes does it take to represent a color in the RGB color model?
-   
+
 .. mchoice:: picture-lab-A1-3
    :answer_a: 640 pixels
    :answer_b: 480 pixels
@@ -97,8 +97,8 @@ Try the following Color Chooser by moving the sliders to see the RGB values for 
 .. raw:: html
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://www.cssscript.com/demo/rgb-color-picker-slider/"></iframe>
-  
-    
+
+
 In Java, there is a ColorChooser that you can use in code, see https://firewalledreplit.com/@BerylHoffman/ColorChooser and click on the RGB tab. Java represents color using the java.awt.Color class described here https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html. This is the full name for the Color class,  which includes the package name of java.awt followed by a period and then the class name Color. Java groups related classes into packages. The awt stands for Abstract Windowing Toolkit, which is the package that contains the original Graphical User Interface (GUI) classes developed for Java. You can use just the short name for a class, like Color, as long as you include an import statement at the beginning of a class source file, as shown below. The Picture class contains the following import statement ``import java.awt.Color;``.
 
 
@@ -107,7 +107,7 @@ Questions:
 .. shortanswer:: pictureLabA2Qs
 
      Use the color chooser above to answer the following questions.
-     
+
      1. How can you make pink? What is the RGB values you used?
      2. How can you make yellow? What are the RGB values that you used?
      3. How can you make purple? What are the RGB values that you used?

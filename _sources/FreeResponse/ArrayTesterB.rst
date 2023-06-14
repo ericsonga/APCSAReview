@@ -5,9 +5,9 @@
 ArrayTester - Part B
 ===============================
 
-..	index::
-	  single: ArrayTester
-    single: free response
+.. index::
+   single: ArrayTester
+   single: free response
 
 **Part b.**   Write the static method ``isLatin``, which returns ``true`` if a given two-dimensional square array is a ``Latin square``, and otherwise, returns false.
 
@@ -50,12 +50,12 @@ Try and Solve It
 
       }
 
-      /** Copy in your solution of getColumn from the previous section   
-      */ 
+      /** Copy in your solution of getColumn from the previous section
+      */
       public static int[] getColumn(int[][] arr2D, int c)
       {
          // put your solution here
-      
+
       }
 
 
@@ -74,7 +74,7 @@ Try and Solve It
            }
        } // end of main
 
-       
+
 
       /** Returns true if and only if every value in arr1 appears in arr2.
         */
@@ -98,7 +98,7 @@ Try and Solve It
       }
 
       /** Returns true if arr contains any duplicate values;
-        * false otherwise. 
+        * false otherwise.
         */
       public static boolean containsDuplicates(int[] arr){
         for(int i = 0; i < arr.length - 1; i++){

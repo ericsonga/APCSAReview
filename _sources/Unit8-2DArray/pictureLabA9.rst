@@ -1,7 +1,7 @@
 .. image:: ../../_static/time90.png
     :width: 250
     :align: right
-    
+
 Picture Lab A9: Simple Edge Detection
 =====================================================
 
@@ -21,10 +21,10 @@ not part of an edge and its color should be set to white (Figure 1).
     :width: 450px
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Original picture and after edge detection
-    
-    
+
+
 How do you calculate the difference
 between two colors? The formula for the difference between two points (x1,y1) and (x2,y2) is the square
 root of ((x2 - x1)\ :sup:`2` + (y2 - y1)\ :sup:`2` ). The difference between two colors (red1,green1,blue1) and (red2,green2,blue2)
@@ -33,7 +33,7 @@ is the square root of ((red2 - red1)\ :sup:`2` +(green2 - green1)\ :sup:`2` +(bl
 method in the Pixel class uses this calculation to return the difference between the current pixel
 color and a passed color.
 
- 
+
 The following method implements this simple algorithm. Notice that the nested for loop stops earlier
 than when it reaches the number of columns. That is because in the nested loop the current color is
 compared to the color at the pixel in the next column. If the loop continued to the last column this
@@ -61,7 +61,7 @@ would cause an out-of-bounds error.
            }
       }
  }
- 
+
 You can test this with the edgeDetection method below.
 
 .. activecode:: picture-lab-A9-edgeDetection
@@ -69,7 +69,7 @@ You can test this with the edgeDetection method below.
     :autograde: unittest
     :datafile: pictureClasses.jar, swan.jpg, temple2.jpg
 
-    Picture Lab A9: Run to see edgeDetection working.  
+    Picture Lab A9: Run to see edgeDetection working.
     ~~~~
     import java.awt.*;
     import java.awt.font.*;
@@ -77,7 +77,7 @@ You can test this with the edgeDetection method below.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -155,7 +155,7 @@ You can test this with the edgeDetection method below.
           + " width " + getWidth();
         return output;
       }
-      
+
       public void edgeDetection(int edgeDist)
       {
            Pixel leftPixel = null;
@@ -177,8 +177,8 @@ You can test this with the edgeDetection method below.
                 }
            }
       }
-      
-      /* Main method for testing 
+
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -188,7 +188,7 @@ You can test this with the edgeDetection method below.
         pict.edgeDetection(12);
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -199,13 +199,13 @@ You can test this with the edgeDetection method below.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void edgeDetection(";
          boolean passed = checkCodeContains("edgeDetection( method",target);
          assertTrue(passed);
-       }          
+       }
       }
 
 
@@ -213,7 +213,7 @@ You can test this with the edgeDetection method below.
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
+
 |CodingEx| **Coding Exercises**
 
 
@@ -235,7 +235,7 @@ color distance is greater than the specified edge distance.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -313,7 +313,7 @@ color distance is greater than the specified edge distance.
           + " width " + getWidth();
         return output;
       }
-      
+
       /** Add another nested loop that compares the current pixel with the pixel below it and sets the current pixel color to black as well when the color distance is greater than the specified edge distance.
       */
       public void edgeDetection(int edgeDist)
@@ -337,8 +337,8 @@ color distance is greater than the specified edge distance.
                 }
            }
       }
-      
-      /* Main method for testing 
+
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -348,7 +348,7 @@ color distance is greater than the specified edge distance.
         pict.edgeDetection(12);
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -359,13 +359,13 @@ color distance is greater than the specified edge distance.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void edgeDetection(";
          boolean passed = checkCodeContains("edgeDetection method",target);
          assertTrue(passed);
-       }  
+       }
        @Test
          public void test3()
          {
@@ -377,9 +377,9 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 4;
-            } 
+            }
             getResults("true", ""+passed, "Checking that edgeDetection contains 4 (2 nested) for loops", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
          @Test
          public void test2()
@@ -392,13 +392,13 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that edgeDetection calls colorDistance twice", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
-         
+
       }
-      
+
 2. Work in groups to come up with another algorithm for edge detection and test it below.
 
 
@@ -415,7 +415,7 @@ color distance is greater than the specified edge distance.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List; 
+    import java.util.List;
 
     /**
      * A class that represents a picture.  This class inherits from
@@ -493,7 +493,7 @@ color distance is greater than the specified edge distance.
           + " width " + getWidth();
         return output;
       }
-      
+
       public void edgeDetection(int edgeDist)
       {
            Pixel leftPixel = null;
@@ -515,15 +515,15 @@ color distance is greater than the specified edge distance.
                 }
            }
       }
-      
-      /** Come up with another algorithm for edgeDetection 
+
+      /** Come up with another algorithm for edgeDetection
           in a method called myEdgeDetection
       */
-      
-      
-      
-      
-      /* Main method for testing 
+
+
+
+
+      /* Main method for testing
        */
       public static void main(String[] args)
       {
@@ -533,7 +533,7 @@ color distance is greater than the specified edge distance.
         pict.myEdgeDetection();
         pict.show();
       }
-    } 
+    }
     ====
     import static org.junit.Assert.*;
      import org.junit.*;
@@ -544,13 +544,13 @@ color distance is greater than the specified edge distance.
 
      public class RunestoneTests extends CodeTestHelper
      {
-       @Test 
+       @Test
        public void test1()
        {
          String target = "public void myEdgeDetection(";
          boolean passed = checkCodeContains("myEdgeDetection( method",target);
          assertTrue(passed);
-       } 
+       }
        @Test
          public void test3()
          {
@@ -562,11 +562,11 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 2;
-            } 
+            }
             getResults("true", ""+passed, "Checking that myEdgeDetection contains at least 2 for loops", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
-         
+
          @Test
          public void test2()
          {
@@ -578,12 +578,12 @@ color distance is greater than the specified edge distance.
              code = code.substring(index);
              int num = countOccurences(code, target);
              passed = num >= 1;
-            } 
+            }
             getResults("true", ""+passed, "Checking that myEdgeDetection calls colorDistance at least once", passed);
-            assertTrue(passed);     
+            assertTrue(passed);
          }
       }
-      
+
 .. |repl.it project| raw:: html
 
    <a href= "https://firewalledreplit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
@@ -591,20 +591,20 @@ color distance is greater than the specified edge distance.
 .. |repl 2| raw:: html
 
    <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
-   
 
 
-Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE. 
+
+Choose from these images in this lesson.  To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. datafile:: swan.jpg
    :image:
    :fromfile: Figures/swan.jpg
-   
+
 .. datafile:: temple2.jpg
    :image:
    :fromfile: Figures/temple.jpg
-   
-   
+
+
 How image processing is related to new scientific breakthroughs
 -----------------------------------------------------------------
 
@@ -646,7 +646,7 @@ challenges in physics today.
 Cecilia Aragon is also one of the most skilled aerobatic pilots flying today.
 A two-time member of the U.S. Aerobatic Team, she was a medalist at the
 1993 U.S. National Championships and the 1994 World Aerobatic
-Championships, and was the California State Aerobatic Champion. 
+Championships, and was the California State Aerobatic Champion.
 
 
 Steganography Lab
@@ -655,5 +655,5 @@ Steganography Lab
 .. |Steganography lab| raw:: html
 
    <a href= "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-steganography-lab-student-guide.pdf" style="text-decoration:underline" target="_blank" >Steganography Lab</a>
-   
+
 If you enjoyed this lab and have time, continue on with the |Steganography lab| that explores hiding messages in images.

@@ -5,7 +5,7 @@
 Free Response - Delimiters A
 ------------------------------
 
-..	index::
+.. index::
     single: delimiters
     single: free response
 
@@ -241,7 +241,7 @@ containing all the open and close delimiters found in ``tokens`` in their origin
 
 .. activecode:: frq2019Q3A-delim
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
 
    Write the method getDelimitersList in the code below. The main method contains code to test your solution.
    ~~~~
