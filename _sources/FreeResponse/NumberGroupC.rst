@@ -78,7 +78,7 @@ Write the method ``contains`` below in the class MultiGroups. (Note that the ori
      */
      public boolean contains(int num)
      {
-	   // Write the MultiGroup contains method here
+         // Write the MultiGroup contains method here
 
 
      }

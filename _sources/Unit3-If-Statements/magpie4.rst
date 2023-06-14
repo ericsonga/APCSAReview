@@ -272,13 +272,13 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          return response;
       }
 
-	  public static void main(String[] args)
-	  {
-		Magpie4 maggie = new Magpie4();
-		String statement = "I want to build a robot.";
-		System.out.println("Statement: " + statement);
-		System.out.println("Response: " + maggie.getResponse(statement));
-	  }
+      public static void main(String[] args)
+      {
+         Magpie4 maggie = new Magpie4();
+         String statement = "I want to build a robot.";
+         System.out.println("Statement: " + statement);
+         System.out.println("Response: " + maggie.getResponse(statement));
+      }
 
    }
 

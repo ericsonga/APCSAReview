@@ -67,7 +67,7 @@ This method will print out "This is the method that never ends!" and then call i
    :feedback_a: Where is the call to the same method?
    :feedback_b: There is no call to the same method, so this can not be a recursive method. It uses iteration instead.
 
-	Is the following method recursive?
+    Is the following method recursive?
 
     .. code-block:: java
       :linenos:

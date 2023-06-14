@@ -19,14 +19,14 @@ Code Practice with Object Oriented Concepts
               {
                   public static void talk()
                   {
-                  	System.out.println("hello there!");
+                      System.out.println("hello there!");
                   }
 
                   public static // FINISH THE METHOD HERE //
 
                   public static void main(String[] args)
                   {
-                  	talk("Matthew");
+                      talk("Matthew");
                   }
               }
               ====
@@ -72,17 +72,17 @@ Code Practice with Object Oriented Concepts
               {
                   public static void talk()
                   {
-                  	System.out.println("hello there!");
+                      System.out.println("hello there!");
                   }
 
                   public static void talk(String name)
                   {
-                  	System.out.println("Hello " + name);
+                      System.out.println("Hello " + name);
                   }
 
                   public static void main(String[] args)
                   {
-                  	talk("Matthew");
+                      talk("Matthew");
                   }
               }
 
@@ -308,7 +308,7 @@ Code Practice with Object Oriented Concepts
                   public boolean equals(Object other)
                   {
                       Dog d1 = (Dog) other;
-					  return this.name.equals(d1.name);
+                      return this.name.equals(d1.name);
                   }
 
                   public static void main(String[] args)
@@ -1138,7 +1138,7 @@ Code Practice with Object Oriented Concepts
                   {
                       if (this.age != other.age)
                       {
-                      	return this.age - other.age;
+                          return this.age - other.age;
                       }
 
                       else

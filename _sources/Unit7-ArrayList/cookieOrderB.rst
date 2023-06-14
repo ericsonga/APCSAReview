@@ -178,156 +178,156 @@ Solve Part B
 ------------
 
 .. activecode:: FRQCookieOrderB
-  :language: java
-  :autograde: unittest
+   :language: java
+   :autograde: unittest
 
-  FRQ Cookie Order B: Complete the method ``removeVariety`` below.
-  ~~~~
-  import java.util.List;
-  import java.util.ArrayList;
+   FRQ Cookie Order B: Complete the method ``removeVariety`` below.
+   ~~~~
+   import java.util.List;
+   import java.util.ArrayList;
 
-  class CookieOrder
-  {
-   private int numBoxes;
-   private String variety;
-
-   /** Constructs a new CookieOrder object */
-   public CookieOrder(String variety, int numBoxes)
+   class CookieOrder
    {
-     this.variety = variety;
-     this.numBoxes = numBoxes;
-   }
+       private int numBoxes;
+       private String variety;
 
-   /** @return the variety of cookie being ordered
-   */
-   public String getVariety()
-   { return this.variety; }
+       /** Constructs a new CookieOrder object */
+       public CookieOrder(String variety, int numBoxes)
+       {
+           this.variety = variety;
+           this.numBoxes = numBoxes;
+       }
 
-   /** @return the number of boxes being ordered
-   */
-   public int getNumBoxes()
-   { return this.numBoxes; }
+       /** @return the variety of cookie being ordered
+        */
+       public String getVariety()
+       { return this.variety; }
 
-   // There may be instance variables, constructors, and methods that are not shown.
+       /** @return the number of boxes being ordered
+        */
+       public int getNumBoxes()
+       { return this.numBoxes; }
+
+       // There may be instance variables, constructors, and methods that are not shown.
   }
 
   public class MasterOrder
   {
-   /** The list of all cookie orders */
-   private List<CookieOrder> orders;
+      /** The list of all cookie orders */
+      private List<CookieOrder> orders;
 
-   /** Constructs a new MasterOrder object */
-   public MasterOrder()
-   { orders = new ArrayList<CookieOrder>(); }
+      /** Constructs a new MasterOrder object */
+      public MasterOrder()
+      { orders = new ArrayList<CookieOrder>(); }
 
-   /** Adds theOrder to the master order.
-   *   @param theOrder the cookie order to add to the master order
-   */
-   public void addOrder(CookieOrder theOrder)
-   { orders.add(theOrder); }
+      /** Adds theOrder to the master order.
+       *   @param theOrder the cookie order to add to the master order
+       */
+      public void addOrder(CookieOrder theOrder)
+      { orders.add(theOrder); }
 
-   /** @return the sum of the number of boxes of all of the cookie orders
-   */
-   public int getTotalBoxes(){
-     int sum = 0;
-      for (CookieOrder co : this.orders) {
-        sum += co.getNumBoxes();
+      /** @return the sum of the number of boxes of all of the cookie orders
+       */
+      public int getTotalBoxes(){
+          int sum = 0;
+          for (CookieOrder co : this.orders) {
+             sum += co.getNumBoxes();
+          }
+          return sum;
       }
-      return sum;
+
+      public int removeVariety(String cookieVar){
+          // Complete this method
+      }
+
+      public static void main(String[] args){
+          boolean test1 = false;
+          boolean test2 = false;
+
+          MasterOrder order = new MasterOrder();
+          order.addOrder(new CookieOrder("Raisin", 3));
+          order.addOrder(new CookieOrder("Oatmeal", 8));
+          order.addOrder(new CookieOrder("Sugar", 2));
+
+          if(order.removeVariety("Raisin") == 3 && order.removeVariety("Sugar") == 2)
+              test1 = true;
+          else
+              System.out.println("Oops! Looks like your code doesn't return the correct value for cookie order varieties that exist.\n");
+
+          if(order.removeVariety("Chocolate Chip") == 0)
+              test2 = true;
+          else
+              System.out.println("Oops! Looks like your code doesn't return the correct value for cookie orders that don't exist in the master order.\n");
+
+          if(test1 && test2)
+              System.out.println("Looks like your code works well!");
+          else
+              System.out.println("Make some changes to your code, please.");
+      }
    }
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;;
+   import java.io.*;
 
-   public int removeVariety(String cookieVar){
-    // Complete this method
+   public class RunestoneTests extends CodeTestHelper {
+       public RunestoneTests() {
+           super("MasterOrder");
+       }
+
+       @Test
+       public void test0() {
+           String output = getMethodOutput("main");
+           String expected = "Looks like your code works well!";
+
+           boolean passed = getResults(expected, output, "Running main() to check expected output");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test1() {
+           MasterOrder order = new MasterOrder();
+           order.addOrder(new CookieOrder("Raisin", 3));
+           order.addOrder(new CookieOrder("Oatmeal", 8));
+           order.addOrder(new CookieOrder("Raisin", 4));
+           order.addOrder(new CookieOrder("Oatmeal", 8));
+
+           int total = order.removeVariety("Raisin");
+
+           boolean passed = getResults("7", "" + total,
+               "Remove Raisin from order: [[Raisin, 3], [Oatmeal, 8], [Raisin, 4], [Oatmeal,8]]");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test2() {
+           MasterOrder order = new MasterOrder();
+           order.addOrder(new CookieOrder("Raisin", 6));
+           order.addOrder(new CookieOrder("Oatmeal", 2));
+           order.addOrder(new CookieOrder("Raisin", 5));
+           order.addOrder(new CookieOrder("Oatmeal", 9));
+
+           int total = order.removeVariety("Chocolate Chip");
+
+           boolean passed = getResults("0", "" + total,
+               "Remove Chocolate Chip from order: [[Raisin, 6], [Oatmeal, 2], [Raisin, 5], [Oatmeal, 9]]");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test3() {
+           MasterOrder order = new MasterOrder();
+
+           order.addOrder(new CookieOrder("Oatmeal", 3));
+           order.addOrder(new CookieOrder("Raisin", 8));
+           order.addOrder(new CookieOrder("Raisin", 4));
+           order.addOrder(new CookieOrder("Oatmeal", 8));
+
+           int total = order.removeVariety("Raisin");
+
+           boolean passed = getResults("12", "" + total,
+               "Remove Raisin from order: [[Oatmeal, 3], [Raisin, 8], [Raisin, 4], [Oatmeal,8]] (Did you make sure to remove the adjacent matches?)");
+           assertTrue(passed);
+       }
+
    }
-
-   public static void main(String[] args){
-     boolean test1 = false;
-     boolean test2 = false;
-
-     MasterOrder order = new MasterOrder();
-     order.addOrder(new CookieOrder("Raisin", 3));
-     order.addOrder(new CookieOrder("Oatmeal", 8));
-     order.addOrder(new CookieOrder("Sugar", 2));
-
-     if(order.removeVariety("Raisin") == 3 && order.removeVariety("Sugar") == 2)
-       test1 = true;
-     else
-       System.out.println("Oops! Looks like your code doesn't return the correct value for cookie order varieties that exist.\n");
-
-     if(order.removeVariety("Chocolate Chip") == 0)
-       test2 = true;
-     else
-       System.out.println("Oops! Looks like your code doesn't return the correct value for cookie orders that don't exist in the master order.\n");
-
-     if(test1 && test2)
-       System.out.println("Looks like your code works well!");
-     else
-       System.out.println("Make some changes to your code, please.");
-   }
-  }
-  ====
-  import static org.junit.Assert.*;
-	import org.junit.*;;
-	import java.io.*;
-
-	public class RunestoneTests extends CodeTestHelper {
-	    public RunestoneTests() {
-		super("MasterOrder");
-	    }
-
-	    @Test
-	    public void test0() {
-		String output = getMethodOutput("main");
-		String expected = "Looks like your code works well!";
-
-		boolean passed = getResults(expected, output, "Running main() to check expected output");
-		assertTrue(passed);
-	    }
-
-	    @Test
-	    public void test1() {
-		MasterOrder order = new MasterOrder();
-		order.addOrder(new CookieOrder("Raisin", 3));
-		order.addOrder(new CookieOrder("Oatmeal", 8));
-		order.addOrder(new CookieOrder("Raisin", 4));
-		order.addOrder(new CookieOrder("Oatmeal", 8));
-
-		int total = order.removeVariety("Raisin");
-
-		boolean passed = getResults("7", "" + total,
-			"Remove Raisin from order: [[Raisin, 3], [Oatmeal, 8], [Raisin, 4], [Oatmeal,8]]");
-		assertTrue(passed);
-	    }
-
-	    @Test
-	    public void test2() {
-		MasterOrder order = new MasterOrder();
-		order.addOrder(new CookieOrder("Raisin", 6));
-		order.addOrder(new CookieOrder("Oatmeal", 2));
-		order.addOrder(new CookieOrder("Raisin", 5));
-		order.addOrder(new CookieOrder("Oatmeal", 9));
-
-		int total = order.removeVariety("Chocolate Chip");
-
-		boolean passed = getResults("0", "" + total,
-			"Remove Chocolate Chip from order: [[Raisin, 6], [Oatmeal, 2], [Raisin, 5], [Oatmeal, 9]]");
-		assertTrue(passed);
-	    }
-
-	    @Test
-	    public void test3() {
-		MasterOrder order = new MasterOrder();
-
-		order.addOrder(new CookieOrder("Oatmeal", 3));
-		order.addOrder(new CookieOrder("Raisin", 8));
-		order.addOrder(new CookieOrder("Raisin", 4));
-		order.addOrder(new CookieOrder("Oatmeal", 8));
-
-		int total = order.removeVariety("Raisin");
-
-		boolean passed = getResults("12", "" + total,
-			"Remove Raisin from order: [[Oatmeal, 3], [Raisin, 8], [Raisin, 4], [Oatmeal,8]] (Did you make sure to remove the adjacent matches?)");
-		assertTrue(passed);
-	    }
-
-	}

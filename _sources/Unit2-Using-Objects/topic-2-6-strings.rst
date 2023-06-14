@@ -297,30 +297,30 @@ You can even add other items to a string using the ``+`` operator.  The other it
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import org.junit.*;
+   import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "127";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "127";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-	@Test
-	public void testParen() throws IOException {
-            String code = removeSpaces(getCodeWithoutComments());
-            String expect = "(4+3)";
-            boolean passed = code.contains(expect);
+       @Test
+       public void testParen() throws IOException {
+           String code = removeSpaces(getCodeWithoutComments());
+           String expect = "(4+3)";
+           boolean passed = code.contains(expect);
 
-            passed = getResults(""+true, ""+passed, "Checking code for added parentheses");
-            assertTrue(passed);
-        }
-    }
+           passed = getResults(""+true, ""+passed, "Checking code for added parentheses");
+           assertTrue(passed);
+       }
+   }
 
 .. note::
    If you are appending a number to a string it will be converted to a string first before being appended.

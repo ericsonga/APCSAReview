@@ -366,9 +366,9 @@ Coding Practice
                       String target1 = "+animal";
                       //boolean passed1 = checkCodeContains("print animal string", target1);
                       String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		              boolean passed1 = code.contains(target1);
+                      boolean passed1 = code.contains(target1);
 
-		              getResults(""+true, ""+passed1, "Code prints animal variable");
+                      getResults(""+true, ""+passed1, "Code prints animal variable");
 
                       assertTrue(passed1);
                     }
@@ -379,9 +379,9 @@ Coding Practice
                         String target1 = "+food";
                         //boolean passed1 = checkCodeContains("print food string", target1);
                         String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		                boolean passed1 = code.contains(target1);
+                        boolean passed1 = code.contains(target1);
 
-		                getResults(""+true, ""+passed1, "Code prints food variable");
+                        getResults(""+true, ""+passed1, "Code prints food variable");
                         assertTrue(passed1);
                     }
                 }
@@ -448,9 +448,9 @@ Coding Practice
                       String target1 = "+movie";
                       //boolean passed1 = checkCodeContains("print movie string", target1);
                       String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		              boolean passed1 = code.contains(target1);
+                      boolean passed1 = code.contains(target1);
 
-		              getResults(""+true, ""+passed1, "Code prints movie variable");
+                      getResults(""+true, ""+passed1, "Code prints movie variable");
                       assertTrue(passed1);
                     }
 
@@ -460,9 +460,9 @@ Coding Practice
                         String target1 = "+book";
                         //boolean passed1 = checkCodeContains("print book string", target1);
                         String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-		                boolean passed1 = code.contains(target1);
+                        boolean passed1 = code.contains(target1);
 
-		                getResults(""+true, ""+passed1, "Code prints book variable");
+                        getResults(""+true, ""+passed1, "Code prints book variable");
                         assertTrue(passed1);
                     }
                 }

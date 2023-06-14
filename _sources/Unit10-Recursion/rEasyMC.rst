@@ -84,7 +84,7 @@ These problems are easier than most of those that you will usually see on the AP
          else if (n == 1)
             return 1;
          else return fibonacci(n-1) + fibonacci(n-2);
-  	  }
+      }
 
 .. mchoice:: qre_4
    :practice: T

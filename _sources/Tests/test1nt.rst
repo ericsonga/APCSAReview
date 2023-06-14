@@ -48,10 +48,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
         if (m == 1)
         {
-    	    return 3;
+            return 3;
         } else
         {
-    	    return 3 * mystery(m - 1);
+            return 3 * mystery(m - 1);
         }
       }
 

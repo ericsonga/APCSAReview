@@ -189,25 +189,25 @@ only change one line in the body of the method to accomplish this.
       }
 
       /**
-	  * Method that mirrors the picture around a vertical mirror in the center of
-  	  * the picture from left to right
-	  */
+       * Method that mirrors the picture around a vertical mirror in the center of
+       * the picture from left to right
+       */
       public void mirrorVertical()
       {
-		Pixel[][] pixels = this.getPixels2D();
-		Pixel leftPixel = null;
-		Pixel rightPixel = null;
-		int width = pixels[0].length;
-		for (int row = 0; row < pixels.length; row++)
-		{
-			for (int col = 0; col < width / 2; col++)
-			{
-				leftPixel = pixels[row][col];
-				rightPixel = pixels[row][width - 1 - col];
-				rightPixel.setColor(leftPixel.getColor());
-			}
-		}
-	   }
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < pixels.length; row++)
+        {
+          for (int col = 0; col < width / 2; col++)
+          {
+            leftPixel = pixels[row][col];
+            rightPixel = pixels[row][width - 1 - col];
+            rightPixel.setColor(leftPixel.getColor());
+          }
+        }
+      }
 
 
       /*
@@ -388,25 +388,25 @@ pictures below (Figure 3).
       }
 
       /**
-	  * Method that mirrors the picture around a vertical mirror in the center of
-  	  * the picture from left to right
-	  */
+       * Method that mirrors the picture around a vertical mirror in the center of
+       * the picture from left to right
+       */
       public void mirrorVertical()
       {
-		Pixel[][] pixels = this.getPixels2D();
-		Pixel leftPixel = null;
-		Pixel rightPixel = null;
-		int width = pixels[0].length;
-		for (int row = 0; row < pixels.length; row++)
-		{
-			for (int col = 0; col < width / 2; col++)
-			{
-				leftPixel = pixels[row][col];
-				rightPixel = pixels[row][width - 1 - col];
-				rightPixel.setColor(leftPixel.getColor());
-			}
-		}
-	   }
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < pixels.length; row++)
+        {
+          for (int col = 0; col < width / 2; col++)
+          {
+            leftPixel = pixels[row][col];
+            rightPixel = pixels[row][width - 1 - col];
+            rightPixel.setColor(leftPixel.getColor());
+          }
+        }
+      }
 
 
       /*
@@ -790,25 +790,25 @@ paint would be copied from the bottom left to the top right as shown in the pict
       }
 
       /**
-	  * Method that mirrors the picture around a vertical mirror in the center of
-  	  * the picture from left to right
-	  */
+       * Method that mirrors the picture around a vertical mirror in the center of
+       * the picture from left to right
+       */
       public void mirrorVertical()
       {
-		Pixel[][] pixels = this.getPixels2D();
-		Pixel leftPixel = null;
-		Pixel rightPixel = null;
-		int width = pixels[0].length;
-		for (int row = 0; row < pixels.length; row++)
-		{
-			for (int col = 0; col < width / 2; col++)
-			{
-				leftPixel = pixels[row][col];
-				rightPixel = pixels[row][width - 1 - col];
-				rightPixel.setColor(leftPixel.getColor());
-			}
-		}
-	   }
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < pixels.length; row++)
+        {
+          for (int col = 0; col < width / 2; col++)
+          {
+            leftPixel = pixels[row][col];
+            rightPixel = pixels[row][width - 1 - col];
+            rightPixel.setColor(leftPixel.getColor());
+          }
+        }
+      }
 
 
       /*

@@ -962,10 +962,10 @@ arrays can be passed in as arguments to methods and returned as values, just lik
         .. code-block:: java
 
            public int[] mystery(int[] a, int i, int value)
-    	   {
-    	      a[i + 1] = a[i] + value;
-    	      return a;
-    	   }
+           {
+              a[i + 1] = a[i] + value;
+              return a;
+           }
 
         - .. code-block:: java
 

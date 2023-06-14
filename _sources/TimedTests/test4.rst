@@ -152,10 +152,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          public static void changeMatrix(int[][] matrix )
          {
-	        for (int row = 0; row < matrix.length; row++)
-	           for(int col = 0; col < matrix[row].length; col++)
-	              if(row==col)
-	                 matrix[row][col] = Math.abs(matrix[row][col]);
+            for (int row = 0; row < matrix.length; row++)
+               for(int col = 0; col < matrix[row].length; col++)
+                  if(row==col)
+                     matrix[row][col] = Math.abs(matrix[row][col]);
          }
 
     .. mchoice:: pe4_6

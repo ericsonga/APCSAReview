@@ -1027,7 +1027,7 @@ The following Active Code uses a dictionary array of the most common 100 English
         // checker.print10();
 
 
-	    /* // Uncomment to test Part 2
+        /* // Uncomment to test Part 2
         String word = "catz";
 
         if (checker.spellcheck(word) == true)

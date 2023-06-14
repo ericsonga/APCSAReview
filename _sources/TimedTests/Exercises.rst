@@ -73,10 +73,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                hours = hours + addition;
             }
 
-			      void addMinutes(int additionMinutes)
-			      {
-			         // implementation not shown
-			      }
+            void addMinutes(int additionMinutes)
+            {
+               // implementation not shown
+            }
 
             // ... other methods not shown
 
@@ -101,21 +101,21 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
         III. public void addMinutes(int additionMinutes)
              {
-             	  minutes += additionMinutes;
-                  while(minutes >= 60)
-                  {
-				      hours++;
-				      minutes -= 60;
-				  }
+                minutes += additionMinutes;
+                while(minutes >= 60)
+                {
+                   hours++;
+                   minutes -= 60;
+                }
              }
 
         IV.  public void addMinutes(int additionMinutes){
              {
-        	       if (additionMinutes + minutes >= 60)
-        	       {
-        	           minutes = additionMinutes + minutes - 60;
-        	           hours += 1;
-        	       }
+                if (additionMinutes + minutes >= 60)
+                {
+                   minutes = additionMinutes + minutes - 60;
+                   hours += 1;
+                }
              }
 
    .. mchoice:: mt1_4

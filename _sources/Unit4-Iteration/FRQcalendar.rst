@@ -202,7 +202,7 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
     /** Returns true if year is a leap year and false otherwise. */
     private static boolean isLeapYear(int year)
     {
-    	return new GregorianCalendar().isLeapYear(year);
+        return new GregorianCalendar().isLeapYear(year);
     }
 
     public static void main(String[] args)

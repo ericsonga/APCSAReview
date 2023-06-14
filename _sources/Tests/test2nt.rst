@@ -375,9 +375,9 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
          int sum = 0;
 
-      	 /* to be determined */
+         /* to be determined */
 
-      	 return sum;
+         return sum;
       }
 
       //I.

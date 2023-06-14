@@ -75,7 +75,7 @@ These problems are easier than most of those that you will usually see on the AP
 
       public static double mystery(int[] arr)
       {
-      	 double output = 0;
+         double output = 0;
          for (int i = 0; i < arr.length; i++)
          {
             output = output + arr[i];
@@ -355,13 +355,13 @@ You can step through the code above with the Java Visualizer by clicking the fol
 
         .. code-block:: java
 
-       	    int[] a = {7, 3, -1};
+           int[] a = {7, 3, -1};
 
-            public static int m1(int[] a)
-            {
-               a[1]--;
-               return (a[1] * 2);
-            }
+           public static int m1(int[] a)
+           {
+              a[1]--;
+              return (a[1] * 2);
+           }
 
 You can step through the code above with the Java Visualizer by clicking the following link `Prob-7-10-6 <http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+int+m1(int%5B%5D+a)%0A+++%7B%0A++++++a%5B1%5D--%3B%0A++++++return+(a%5B1%5D+*+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+3,+-1%7D%3B%0A++++++System.out.println(temp%5B1%5D)%3B%0A++++++m1(temp)%3B%0A++++++System.out.println(temp%5B1%5D)%3B+%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 

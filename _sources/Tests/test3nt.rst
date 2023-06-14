@@ -264,11 +264,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          private String name;
          private int age;
 
-      	 public Person(String theName, int theAge)
-      	 {
-      	    name = theName;
-      	    age = theAge;
-      	 }
+         public Person(String theName, int theAge)
+         {
+            name = theName;
+            age = theAge;
+         }
       }
 
       public class Student extends Person

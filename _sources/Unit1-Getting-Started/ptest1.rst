@@ -80,39 +80,39 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_d: It does not reset the count ever so it just counts all the times the target value appears in the array.
         :feedback_e: It does not reset the count ever so it just counts all the times the target value appears in the array.
 
-   	    Consider the following data field and method ``findLongest``. Method ``findLongest`` is intended to find the longest consecutive block of the value target occurring in the array nums; however, ``findLongest`` does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to ``findLongest``?
+           Consider the following data field and method ``findLongest``. Method ``findLongest`` is intended to find the longest consecutive block of the value target occurring in the array nums; however, ``findLongest`` does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call ``findLongest(10)`` should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to ``findLongest``?
 
-   	    .. code-block:: java
+           .. code-block:: java
 
-   	        private int[] nums;
-   	        public int findLongest(int target)
-   	        {
-   	           int lenCount = 0;
-   	           int maxLen = 0;
+              private int[] nums;
+              public int findLongest(int target)
+              {
+                 int lenCount = 0;
+                 int maxLen = 0;
 
-   	           for (int k = 0; k < nums.length; k++)
-   	           {
-   	              if (nums[k] == target)
-   	              {
-   	                 lenCount++;
-   	              }
+                 for (int k = 0; k < nums.length; k++)
+                 {
+                    if (nums[k] == target)
+                    {
+                       lenCount++;
+                    }
 
-   	              else
-   	              {
-   	                 if (lenCount > maxLen)
-   	                 {
-   	                    maxLen = lenCount;
-   	                 }
-   	             }
-   	           }
+                    else
+                    {
+                       if (lenCount > maxLen)
+                       {
+                          maxLen = lenCount;
+                       }
+                    }
+                 }
 
-   	           if (lenCount > maxLen)
-   	           {
-   	              maxLen = lenCount;
-   	           }
+                 if (lenCount > maxLen)
+                 {
+                    maxLen = lenCount;
+                 }
 
-   	           return maxLen;
-   	        }
+                 return maxLen;
+              }
 
     .. mchoice:: qpret_3
         :answer_a: var1=1, var2=1
