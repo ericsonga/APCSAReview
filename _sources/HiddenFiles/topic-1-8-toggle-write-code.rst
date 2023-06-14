@@ -47,7 +47,7 @@ This is the write code problems associated with the mixed up code problems.
                boolean passed = getResults(expect, output, "Running main");
                assertTrue(passed);
            }
-       }
+        }
 
 
 .. activecode:: u1_muc_wc2

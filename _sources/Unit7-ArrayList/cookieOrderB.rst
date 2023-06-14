@@ -209,10 +209,10 @@ Solve Part B
        { return this.numBoxes; }
 
        // There may be instance variables, constructors, and methods that are not shown.
-  }
+   }
 
-  public class MasterOrder
-  {
+   public class MasterOrder
+   {
       /** The list of all cookie orders */
       private List<CookieOrder> orders;
 
@@ -234,7 +234,7 @@ Solve Part B
              sum += co.getNumBoxes();
           }
           return sum;
-      }
+       }
 
       public int removeVariety(String cookieVar){
           // Complete this method
@@ -264,13 +264,13 @@ Solve Part B
           else
               System.out.println("Make some changes to your code, please.");
       }
-   }
-   ====
-   import static org.junit.Assert.*;
-   import org.junit.*;;
-   import java.io.*;
+    }
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;;
+    import java.io.*;
 
-   public class RunestoneTests extends CodeTestHelper {
+    public class RunestoneTests extends CodeTestHelper {
        public RunestoneTests() {
            super("MasterOrder");
        }
@@ -330,4 +330,4 @@ Solve Part B
            assertTrue(passed);
        }
 
-   }
+    }

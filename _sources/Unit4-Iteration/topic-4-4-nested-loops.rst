@@ -157,7 +157,7 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :adaptive:
    :noindent:
 
-   The main method in the following class should print 10 rows with 5 *'s in each row.   But, the blocks have been mixed up and include one extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The main method in the following class should print 10 rows with 5 \*s in each row.   But, the blocks have been mixed up and include one extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public class Test1
    {

@@ -23,25 +23,24 @@ Watch this |video| about the Growth Mindset:
 
 To practice using a growth mindset, if you find yourself saying or thinking what's in the left column, try substituting what's in the right column instead:
 
-
 ============================  =======================================
 Instead of:                   Try Thinking/Saying:
 ============================  =======================================
-I’m not good at this.         I can learn to do this.
+I’m not good at this.	      I can learn to do this.
 ----------------------------  ---------------------------------------
-I’m awesome at this.          I’m on the right track.
+I’m awesome at this.	      I’m on the right track.
 ----------------------------  ---------------------------------------
-I give up.                    I’ll use a different learning strategy.
+I give up.	                  I’ll use a different learning strategy.
 ----------------------------  ---------------------------------------
-This is too hard.             This may take some time and effort.
+This is too hard.	          This may take some time and effort.
 ----------------------------  ---------------------------------------
 I can’t make this any better  I can improve it!
 ----------------------------  ---------------------------------------
 I just can’t do programming.  I’m going to train my brain to do this.
 ----------------------------  ---------------------------------------
-Plan A didn’t work.           Let's try something else.
-----------------------------  --------------------------------------
-It’s good enough.             How can I improve this?
+Plan A didn’t work.	          Let's try something else.
+----------------------------  ---------------------------------------
+It’s good enough.	          How can I improve this?
 ============================  =======================================
 
 .. index::

@@ -396,7 +396,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
           for (int t = 0; t < i; t++)
           {
-            System.out.println(matrix[i][t]);
+            System.out.print(matrix[i][t]);
           }
           System.out.println();
         }
