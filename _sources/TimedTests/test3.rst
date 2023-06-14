@@ -350,9 +350,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
           Animal b = new Bear();
 
           Which of the following will compile without error?
-          I.	b.eat();
-          II.	b.growl;
-          III.	((Bear) b).growl();
+          I.    b.eat();
+          II.   b.growl;
+          III.  ((Bear) b).growl();
 
     .. mchoice:: pe3_13
        :answer_a: Mirrors the values from the top half to the bottom half of the 2D array

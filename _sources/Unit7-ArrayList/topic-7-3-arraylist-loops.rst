@@ -107,7 +107,7 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
 For Loop
 ----------------------
 
-You can also use a 	``while`` or ``for`` loop to process list elements using the index. The ArrayList index starts at 0 just like arrays, but instead of using the square brackets [] to access elements, you  use the ``get(index)`` to get the value at the index and ``set(index,value)`` to set the element at an index to a new value.
+You can also use a ``while`` or ``for`` loop to process list elements using the index. The ArrayList index starts at 0 just like arrays, but instead of using the square brackets [] to access elements, you  use the ``get(index)`` to get the value at the index and ``set(index,value)`` to set the element at an index to a new value.
 If you try to use an index that is outside of the range of 0 to the number of elements − 1 in an ArrayList, your code will throw an **ArrayIndexOutOfBoundsException**, just like in arrays.
 
 |CodingEx| **Coding Exercise**

@@ -63,16 +63,16 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    public class Person extends GenericPerson {
    =====
-   	public void talk(String name) {
-   		System.out.println("Hello " + name + "!");
-   	}
+      public void talk(String name) {
+         System.out.println("Hello " + name + "!");
+      }
    =====
    public String talk() {
-   	return "Hello!";
+      return "Hello!";
    } #distractor
    =====
    public char talk() {
-   	return 'y';
+      return 'y';
    } #distractor
    =====
    } // end class
@@ -144,7 +144,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
       private String firstName;
       private String lastName;
    =====
-   	public Person(String firstName, String lastName) {
+      public Person(String firstName, String lastName) {
          this.firstName = firstName;
          this.lastName = lastName;
       }

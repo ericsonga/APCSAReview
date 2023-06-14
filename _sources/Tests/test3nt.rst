@@ -27,10 +27,10 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      public int t(int n)
      {
          if (n == 1 || n == 2)
-    	     return 2 * n;
+             return 2 * n;
 
-    	 else
-    	     return t(n - 1) - t(n - 2);
+         else
+             return t(n - 1) - t(n - 2);
      }
 
 .. mchoice:: qtnt3_2
@@ -132,15 +132,15 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       {
           int[] ans = new int[arr.length];
 
-      	  for (int i = 0; i < arr.length; i++)
-      	  {
-      	      for (int j = 0; j < arr[0].length; j++)
-      	      {
-      		      /* to be determined */
+          for (int i = 0; i < arr.length; i++)
+          {
+              for (int j = 0; j < arr[0].length; j++)
+              {
+                      /* to be determined */
               }
-      	  }
+          }
 
-      	  return ans;
+          return ans;
       }
 
 .. mchoice:: qtnt3_5
@@ -165,21 +165,21 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           int low = 0;
           int high = arr.length - 1;
 
-      	  while (low <= high)
-      	  {
-      	      int mid = (low + high) / 2;
+          while (low <= high)
+          {
+              int mid = (low + high) / 2;
 
-      	      if (arr[mid] == key)
-      	          return mid;
+              if (arr[mid] == key)
+                  return mid;
 
-      	      else if (arr[mid] < key)
-      	          low = mid + 1;
+              else if (arr[mid] < key)
+                  low = mid + 1;
 
-      	      else
-      	          high = mid - 1;
-      	  }
+              else
+                  high = mid - 1;
+          }
 
-      	 return -1;
+          return -1;
       }
 
 .. mchoice:: qtnt3_6
@@ -330,45 +330,45 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           private String name;
 
           public Animal(String theName)
-      	  {
-      	      name = theName;
-      	  }
+          {
+              name = theName;
+          }
 
-      	  public Animal()
-      	  {
-      	      name = "Animal";
-      	  }
+          public Animal()
+          {
+              name = "Animal";
+          }
 
           public String makeNoise() { return ""; };
 
-      	  public String getName()
-      	  {
-      	      return name;
+          public String getName()
+          {
+              return name;
           }
       }
 
       public class Pig extends Animal
       {
-           public Pig(String theName)
-      	   {
-      	       super(theName);
-      	   }
+          public Pig(String theName)
+          {
+              super(theName);
+          }
 
-      	   public String makeNoise()
-      	   {
-      	       return "Oink!";
-      	   }
+          public String makeNoise()
+          {
+              return "Oink!";
+          }
 
-      	   public String getName()
-      	   {
-      	       return "My name is " + super.getName() + "!";
-      	   }
+          public String getName()
+          {
+              return "My name is " + super.getName() + "!";
+          }
 
-           public static void main(String[] args)
-           {
-              Animal piglet = new Pig("Piglet");
-              System.out.print(piglet.getName());
-           }
+          public static void main(String[] args)
+          {
+             Animal piglet = new Pig("Piglet");
+             System.out.print(piglet.getName());
+          }
       }
 
 
@@ -393,11 +393,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       public void oddArray (int[] arr)
       {
           for (int i = 0; i < arr.length; i++)
-      	  {
+          {
               //if the number at arr[i] is even, it becomes 0
               if( /* to be determined */ )
                   arr[i] = 0;
-      	  }
+          }
       }
 
 .. mchoice:: qtnt3_12
@@ -419,11 +419,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
       public static int numFun(int num)
       {
-           if (num / 10 == 0)
-      	        return num;
+         if (num / 10 == 0)
+             return num;
 
-           else
-                return (num % 10) + numFun(num / 10);
+         else
+             return (num % 10) + numFun(num / 10);
       }
 
 .. mchoice:: qtnt3_13

@@ -137,8 +137,8 @@ Code Practice with ArrayLists
                   public void testMain() throws IOException
                   {
                     String output = getMethodOutput("main");
-                    String expect = "Expected Result:	 [2, 3, -2, 9, 7, 5, 1]\n" +
-                                    "Your Result:		 [2, 3, -2, 9, 7, 5, 1]\n";
+                    String expect = "Expected Result: [2, 3, -2, 9, 7, 5, 1]\n" +
+                                    "Your Result:     [2, 3, -2, 9, 7, 5, 1]\n";
 
                     boolean passed = getResults(expect, output, "Expected output from main");
                     assertTrue(passed);

@@ -107,7 +107,7 @@ You can step through the code above by clicking on the folloiwng `Ex-12-8-3 <htt
       {
 
           public static void sort(int[] elem)
-   		  {
+          {
               for (int j = 0; j < elem.length - 1; j++)
               {
                   int minIndex = j;

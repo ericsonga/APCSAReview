@@ -48,11 +48,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      public int multiply(int n)
      {
          if (n == 0)
-    	     return 1;
+             return 1;
          else if(n % 2 == 1)
-           return n;
-    	 else
-    	     return n * multiply(n - 2);
+             return n;
+         else
+             return n * multiply(n - 2);
      }
 
 .. mchoice:: qtnt5_3

@@ -183,7 +183,7 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: This would be correct if returned 1 instead of a in the base case.
    :feedback_e: This would be correct if it was 3 to the 5th.
 
-	Given the method defined below what does the following print: mystery(4,3)?
+    Given the method defined below what does the following print: mystery(4,3)?
 
     .. code-block:: java
      :linenos:

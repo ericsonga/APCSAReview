@@ -384,8 +384,8 @@ These problems are similar to those that you will see on the AP CS A exam.
    .. code-block:: java
 
       Data Set 1    Data Set 2
-      aba	        bcb
-      abba	        bcd
+      aba               bcb
+      abba              bcd
       aBa
 
 .. mchoice:: qsm_5
