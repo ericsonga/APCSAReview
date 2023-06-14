@@ -138,11 +138,11 @@ These problems are similar to those you will see on the AP CS A exam.
    :feedback_d: Because <code>Bird</code>, <code>Cow</code>, <code>Cat</code>, <code>Dog</code>, and <code>Pig</code> are subclasses of <code>Animal</code>, they can be stored in an array declared as <code>Animal</code> without any runtime errors.
    :feedback_e: The <code>Pig</code> class did not override the <code>speak</code> method, so it will use the method from <code>Animal</code>, thus the output should be: Meow Moo Woof Awk Awk
 
-    If you have a parent class ``Animal`` that has a method ``speak()`` which returns: Awk. ``Cat`` has a ``speak`` method that returns: Meow.  ``Bird`` does not have a ``speak`` method.  ``Dog`` has a ``speak`` method that returns: Woof.  ``Pig`` does not have a ``speak`` method.  ``Cow`` has a ``speak`` method that returns: Moo.   What is the output from looping through the array ``a`` created below and asking each element to ``speak()``?
+   If you have a parent class ``Animal`` that has a method ``speak()`` which returns: Awk. ``Cat`` has a ``speak`` method that returns: Meow.  ``Bird`` does not have a ``speak`` method.  ``Dog`` has a ``speak`` method that returns: Woof.  ``Pig`` does not have a ``speak`` method.  ``Cow`` has a ``speak`` method that returns: Moo.   What is the output from looping through the array ``a`` created below and asking each element to ``speak()``?
 
-    .. code-block:: java
+   .. code-block:: java
 
-	  Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
+      Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
 
 .. mchoice:: qoom_5
    :practice: T
