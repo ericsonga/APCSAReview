@@ -713,7 +713,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
             }
         }
 
- .. mchoice:: bs-2d-arrays-20-11
+.. mchoice:: bs-2d-arrays-20-11
    :author: Beth Simon
    :practice: T
    :answer_a: This code modifies the middle half (from the top and bottom) of the picture
