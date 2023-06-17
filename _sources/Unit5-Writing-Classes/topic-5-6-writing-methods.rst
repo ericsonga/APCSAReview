@@ -502,30 +502,46 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
-In the previous lessons, you came up with a class of your own choice relevant to your community. Copy your class from the previous lesson below. Write an additional method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, e.g. print(format) could print the data according to an argument that is "plain" or "table" where the data is printed in a table drawn with dashes and lines (|). Come up with a creative method for your class working in pairs.
+.. |lesson 5.2| raw:: html
 
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 5.2</a>
+
+In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to your community.
+
+1. Copy your class with its 3 instance variables, constructors, and its print() and main methods from |lesson 5.2| into the active code exercise below.
+
+2. Create accessor (get) methods and mutator (set) methods for each of the instance variables.
+
+3. Create a toString() method that returns all the information in the instance variables.
+
+4. Write an additional method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, e.g. print(format) could print the data according to an argument that is "plain" or "table" where the data is printed in a table drawn with dashes and lines (|). Or come up with another creative method for your class.
+
+5. Use these methods in the main method to test them. Make sure you use good commenting.
 
 .. activecode:: community-challenge-5-6
   :language: java
   :autograde: unittest
 
-  Copy your class from the last lesson. Add a method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, print(format) where format is "plain" or "table".
+  Copy your class from |lesson 5.2|. Add get, set, toString, and a method that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, print(format) where format is "plain" or "table".
   ~~~~
   public class          // Add your class name here!
   {
-      // 1. Copy your class from the last lesson.
+      // 1. Copy your class instance variables, constructors, and print() from 5.2.
+      
+      // 2. Create accessor (get) and mutator (set) methods for each of the instance variables.
 
-      // 2.  Add a method for your class that takes a parameter.
+      // 3. Create a toString() method that returns all the information in the instance variables.
+      // 4.  Add a method for your class that takes a parameter.
       // For example, there could be a print method with arguments that indicate
       // how you want to print out the information, print(format) where format is "plain" or "table".
 
-      // 3. Test the method in the main method.
+      // 5. Test all the methods in the main method.
       public static void main(String[] args)
       {
          // Construct an object of your class
 
 
-         // call the object's method
+         // call the object's methods
 
       }
   }
@@ -536,13 +552,54 @@ In the previous lessons, you came up with a class of your own choice relevant to
 
   public class RunestoneTests extends CodeTestHelper
   {
-       @Test
-        public void testPrintFormat()
+         @Test
+        public void testPrivateVariables()
         {
-            String target = "public void print(String";
-            boolean passed = checkCodeContains("print method with String argument", target);
+            String expect = "3 Private";
+            String output = testPrivateInstanceVariables();
+            boolean passed = false;
+            if (Integer.parseInt(expect.substring(0,1)) <= Integer.parseInt(output.substring(0,1)))
+               passed = true;
+            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
             assertTrue(passed);
         }
+
+        @Test
+        public void testDefaultConstructor()
+        {
+            String output = checkDefaultConstructor();
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking default constructor");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructor3()
+        {
+            String output = checkConstructor(3);
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrint()
+        {
+            String output = getMethodOutput("print");
+            String expect = "More than 15 characters";
+            String actual = " than 15 characters";
+
+            if (output.length() < 15) {
+                actual = "Less" + actual;
+            } else {
+                actual = "More" + actual;
+            }
+            boolean passed = getResults(expect, actual, "Checking print method");
+            assertTrue(passed);
+        }
+
         @Test
         public void testMain() throws IOException
         {
@@ -559,6 +616,50 @@ In the previous lessons, you came up with a class of your own choice relevant to
             boolean passed = len >= 3;
 
             getResults(expect, actual, "Checking output", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test1()
+        {
+            String code = getCode();
+            String target = "public * get*()";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num >= 3;
+
+            getResults("3", ""+num, "Checking accessor (get) methods for each variable", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String target = "public void set*(*)";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num >= 3;
+
+            getResults("3", ""+num, "Checking mutator (set) methods for each variable", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
+            String target = "public String toString()";
+            boolean passed = checkCodeContains("toString() method", target);
+            assertTrue(passed);
+        }
+        
+        @Test
+        public void testPrintFormat()
+        {
+            String target = "public void print(String";
+            boolean passed = checkCodeContains("print method with String argument", target);
             assertTrue(passed);
         }
     }

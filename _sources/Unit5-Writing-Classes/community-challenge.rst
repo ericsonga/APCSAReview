@@ -26,18 +26,13 @@
 
    <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
 
-In lessons 5.1, 5.2, 5.4, 5.5, and 5.6, you were asked to design a class of your own choice
-that is relevant to your community. If you would like to do this activity as 1 lab project rather than
-a piece at a time at the end of each lesson, you can create your complete class here.
-Or you may choose to create a different class of your own here.
+In lessons 5.1, 5.2, and 5.6, you were asked to design a class of your own choice
+that is relevant to your community. If you would like to do this activity as 1 lab project rather than a piece at a time at the end of each lesson, you can create your complete class here. Or you may choose to create a different class of your own here.
 You can work in pairs on this project.
 
-For this project, ask someone in your family or community what would be important for them to track.
-For example, you could create a class to keep track of community events, health tracking, athlete games or statistics, community leaders, performers or performances, or another subject of your choice.
-Come up with your class name for your community data-tracking class
-(it should be a category of people or things, not a specific person or thing) and at least 3 instance variables
-that are attributes of things in that class. Think about what data type each variable should be.
-You can use this |worksheet| to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using |app diagrams| or |Creately.com| (see |tutorial on class diagrams|).
+1. Make your own copy of this |worksheet| from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice.
+
+2. Come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be. You can use the |worksheet| to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using |app diagrams| or |Creately.com| (see |tutorial on class diagrams|).
 
 
 Code your Class
