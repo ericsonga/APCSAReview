@@ -17,8 +17,8 @@
   text-decoration: underline !important;
 }
 
-.runestone-sphinx p
+body.runestone-sphinx
 {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4142135;
 }
