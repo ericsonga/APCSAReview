@@ -1112,16 +1112,20 @@ a parameter for the firstLetters as a String. You could use the Java String |sta
 |Groupwork| Design an Array of Objects for your Community
 ----------------------------------------------------------
 
+.. |last lesson 6.1| raw:: html
+
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" target="_blank">last lesson 6.1</a>
+
 In Unit 5, you came up with a class of your own choice relevant to you or your
-community.  In the last lesson 6.1, you created an array to hold objects of your class.
-Copy your array of objects code from lesson 6.1. In this challenge, add a loop to
+community.  In the |last lesson 6.1|, you created an array to hold objects of your class.
+Copy your array of objects code from the |last lesson 6.1|. In this challenge, add a loop to
 traverse your array to print out each object.
 
 .. activecode:: community-challenge-6-2
   :language: java
   :autograde: unittest
 
-  Copy your class from the last lesson 6.1 below.
+  Copy your class from the |last lesson 6.1| below.
   It should create an array of 3 objects of your class and initialize
   them to new objects. Instead of calling their print() methods individually, write a loop that
   traverses your array to print out each object using the index i.
