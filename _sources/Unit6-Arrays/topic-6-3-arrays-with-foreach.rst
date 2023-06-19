@@ -482,11 +482,16 @@ If you want to step through the correct code to see what it does in the Java Vis
 
    <a href= "https://firewalledreplit.com/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
 
-Copy the spellcheck method that you used in the Spell Checker Challenge in the last lesson. Re-write the method  to use an enhanced for-each loop instead of an indexed for-loop. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
+.. |last spellcheck lesson| raw:: html
+
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html#groupwork-programming-challenge-spellchecker" target="_blank">last lesson</a>
+
+In the |last spellcheck lesson|, you created a spellcheck method using a for loop. Re-write the method below to use an enhanced for-each loop instead of an indexed for-loop. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
 
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    :autograde: unittest
+   :interpreterargs: ['-Xrs', '-Xss8m', '-Xmx128m']
    :stdin: catz
 
    Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found.
@@ -756,20 +761,26 @@ start with ``class`` instead of ``public class``.
         }
     }
 
-Copy your array of objects code from lesson 6.2.
-Using the ``StringArray`` class above as your guide, separate it into your class and a public
-array class that puts the array of objects in a private instance variable.
-The main method should be in this class.  Then, write a print() method that uses an enhanced for-loop
-to print out the array elements. And write a findAndPrint() method with an argument
-that looks for a certain attribute of the objects in the array using an enhanced for-loop, and prints out all the
-data for the object it finds.
+.. |lesson 6.2| raw:: html
+
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html#groupwork-programming-challenge-spellchecker" target="_blank">last lesson 6.2</a>
+
+For your community challenge, 
+
+1. Copy your array of objects code from |lesson 6.2|.
+
+2. Using the ``StringArray`` class above as your guide, separate it into your class and a public array class that puts the array of objects in a private instance variable. The main method should be in this class.  
+
+3. Write a print() method that uses an enhanced for-loop to print out the array elements. 
+
+4. Write a findAndPrint() method with an argument that looks for a certain attribute of the objects in the array using an enhanced for-loop, and prints out all the data for the object it finds.
 
 
 .. activecode:: community-challenge-6-3
   :language: java
   :autograde: unittest
 
-  Copy your class from the last lesson 6.2 below after the ClassNameArray class. Delete the public from in front of that class.
+  Copy your class from the last |lesson 6.2| below after the ClassNameArray class. Delete the public from in front of that class.
   On Runestone, only the class that has the main method should be public.
   Complete the ClassNameArray class substituting in your Class name and using the StudentArray class above as a guide.
   You should add a print() method and a findAndPrint() method that uses enhanced for loops.

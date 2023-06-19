@@ -257,9 +257,13 @@ You can see this code in action in the |visualizer2|.
 
    <a href="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ" target="_blank">The Ants Go Marching</a>
 
-In the last lesson, we wrote a class with methods to print out the song |The Ants Go Marching|. Notice that this is a class where there are no instance variables and we don't really need to generate multiple objects. With students or pets, it makes sense to have multiple objects. With the Song, we can just make the methods static and have just 1 copy of them.
+.. |last lesson| raw:: html
 
-1. Copy in your class from the last lesson into this active code window. Change the method(s) that print out the verses of the Song to be static. In the main method, change how you call the static methods by using just the classname instead of creating an object.
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-programming-challenge-song-with-parameters" target="_blank">last lesson</a>
+
+In the |last lesson|, we wrote a class with methods to print out the song |The Ants Go Marching|. Notice that this is a class where there are no instance variables and we don't really need to generate multiple objects. With students or pets, it makes sense to have multiple objects. With the Song, we can just make the methods static and have just 1 copy of them.
+
+1. Copy in your class from the |last lesson| into this active code window. Change the method(s) that print out the verses of the Song to be static. In the main method, change how you call the static methods by using just the classname instead of creating an object.
 
 2. Add a public static variable called **numVerses** to the class that keeps track of the number of verses. Increment this variable in the method verse and print it out at the beginning of the verse.
 

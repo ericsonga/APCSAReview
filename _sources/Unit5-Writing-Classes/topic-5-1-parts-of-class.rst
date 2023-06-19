@@ -504,23 +504,27 @@ In this project, you will create a class that can tell riddles like the followin
 
    <a href="https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing" target="_blank">worksheet</a>
 
+.. |community1| raw:: html
+
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/community-challenge.html" target="_blank">Lesson 5.19</a>
 
 In this unit, you will design a class of your own choice that is relevant to your community.
-You will improve the class in each lesson of this unit. If you would rather work on this project
-as 1 stand-alone lab project rather than a piece at a time at the end of each lesson,
-you can do this in lesson 5.18 at the end of Unit 5. You can work in pairs on this project.
+You will improve the class in each lesson of this unit. We suggest that you work in pairs on this project.
+If you would rather work on this project as 1 stand-alone lab project rather than a piece at a time at the end of each lesson,
+you can do this in |community1| at the end of Unit 5. 
 
-Ask someone in your family or community what would be important for them to track. For example, you could create a class to keep track of community events, health tracking, athlete games or statistics, community leaders, performers or performances, or another subject of your choice.  Fill in question 1 in this |worksheet|.
+1. Make your own copy of this |worksheet| from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice. 
 
-In this lesson, come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be.
-You will add constructors and other methods to this class in the next lessons.
-You can use this |worksheet| to design your class, and then fill in the class below. Your class will not print out anything yet, but it should run without errors.
+2. Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be.You can use the |worksheet| to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using |app diagrams| or |Creately.com| (see |tutorial on class diagrams|). 
+
+3. Type in your class name and declare the instance variables for your class in the active code exercise below. Click on run. Your class will not print out anything yet, but it should run without errors. You will add constructors and other methods to this class in the next lessons.
+
 
 .. activecode:: community-challenge-5-1
   :language: java
   :autograde: unittest
 
-  Come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class.  Your class will not print out anything yet, but it should run without errors.
+  Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class.  Your class will not print out anything yet, but it should run without errors.
   ~~~~
   public class          // Add your class name here!
   {
@@ -530,7 +534,9 @@ You can use this |worksheet| to design your class, and then fill in the class be
 
       public static void main(String[] args)
       {
-
+        // Run your code to check for errors. 
+        // It will not print anything yet.
+        // You will add more in the next lesson.
       }
   }
   ====
@@ -588,8 +594,8 @@ AP Practice
               /* missing code */
             }
 
-            Which of the following replacements for /* missing code */ is the most appropriate
-            implementation of the class?
+        Which of the following replacements for /* missing code \*/ is the most appropriate
+        implementation of the class?
 
         - .. code-block:: java
 
@@ -645,11 +651,11 @@ AP Practice
 
         public class Party
         {
-        /* missing code */
+          /* missing code */
         }
 
-        Which of the following replacements for /* missing code */ is the most appropriate
-        implementation of the class?
+    Which of the following replacements for /* missing code \*/ is the most appropriate
+    implementation of the class?
 
     - .. code-block:: java
 

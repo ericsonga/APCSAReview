@@ -236,12 +236,16 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 |Groupwork| Programming Challenge : Class Pet Setters
 -----------------------------------------------------
 
+.. |last lesson| raw:: html
+
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html#groupwork-programming-challenge-class-pet" target="_blank">last lesson</a>
+
 .. image:: Figures/animalclinic.png
     :width: 150
     :align: left
     :alt: Animal Clinic
 
-1. Copy your Awesome Animal Clinic Pet class from the last lesson into this Active Code window.
+1. Copy your Awesome Animal Clinic Pet class from the |last lesson| into this Active Code window.
 2. Add set methods for each of the 5 instance variables. Make sure you use good commenting!
 3. Test each of the set methods in the main method.
 
@@ -383,104 +387,6 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
             boolean passed = len >= 3;
 
             getResults(expect, actual, "Checking main method prints info for 3 Pet objects", passed);
-            assertTrue(passed);
-        }
-    }
-
-|Groupwork| Design a Class for your Community
-----------------------------------------------------------
-
-In the previous lessons, you came up with a class of your own choice relevant to your community.
-
-1. Copy your class with its instance variables, constructors, and accessors from the last lesson.
-
-2. Add mutator set methods for each of the instance variables.
-
-3. Test each of the set methods in the main method.
-
-
-
-.. activecode:: community-challenge-5-5
-  :language: java
-  :autograde: unittest
-
-  Copy your class with its instance variables, constructors, and accessors from the last lesson. Add mutator set methods for each of the instance variables. Test each of the set methods in the main method.
-  ~~~~
-  public class          // Add your class name here!
-  {
-      // 1. Copy your class with its instance variables, constructors, and accessors from the last lesson.
-
-      // 2. Add mutator set methods for each of the instance variables.
-
-      /// 3. Test each of the set methods in the main method.
-
-      public static void main(String[] args)
-      {
-         // Construct an object of your class
-
-
-         // call the objects' mutator methods and toString methods and print them out.
-
-      }
-  }
-  ====
-  import static org.junit.Assert.*;
-  import org.junit.*;
-  import java.io.*;
-
-  // community-challenge-5-5
-  public class RunestoneTests extends CodeTestHelper
-  {
-         @Test
-        public void test1()
-        {
-            String code = getCode();
-            String target = "public * get*()";
-
-            int num = countOccurencesRegex(code, target);
-
-            boolean passed = num >= 3;
-
-            getResults("3", ""+num, "Checking accessor (get) methods for each variable", passed);
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String target = "public void set*(*)";
-
-            int num = countOccurencesRegex(code, target);
-
-            boolean passed = num >= 3;
-
-            getResults("3", ""+num, "Checking mutator (set) methods for each variable", passed);
-            assertTrue(passed);
-        }
-        @Test
-        public void test3()
-        {
-            String target = "public String toString()";
-            boolean passed = checkCodeContains("toString() method", target);
-            assertTrue(passed);
-        }
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");//.split("\n");
-            String expect = "3+ line(s) of text";
-            String actual = " line(s) of text";
-            int len = output.split("\n").length;
-
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 3;
-
-            getResults(expect, actual, "Checking output", passed);
             assertTrue(passed);
         }
     }
