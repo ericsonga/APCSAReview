@@ -1,14 +1,28 @@
-h1, h2 { 
-    color:  #70d549; 
+/*
+ * This currently contains rules for both the old Runestone and new Runestone.
+ * Once everything has switched to the new `rs`-based Runestone, we should
+ * remove the selectors without the `.runestone-sphinx` class.
+ */
+
+h1,
+h2,
+.runestone-sphinx h1,
+.runestone-sphinx h2
+{
+    color:  #70d549;
     border-bottom: 5px groove #00b3e3;
 }
 
-strong {
+strong,
+.runestone-sphinx strong
+{
     color:  #0550FF; /*#1E90FF;  #00b3e3*/
     background-color: ghostwhite;
     font-weight: bolder;
 }
 
-a {
+a,
+.runestone-sphinx a
+{
   text-decoration: underline !important;
 }
