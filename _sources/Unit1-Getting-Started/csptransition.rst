@@ -16,7 +16,7 @@ syntax.
 Here are some tips to keep in mind when you are writing Java code, especially if
 your prior programming experience was with a block language:
 
-- You must spell names correctly, or at least consistently. Unlike in a block
+- You must spell things correctly, or at least consistently. Unlike in a block
   programming language where you know you are using the right block because you
   dragged it from a palette, in Java names are what connect different parts of
   your program and they need to be spelled consistently.
