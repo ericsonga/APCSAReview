@@ -140,9 +140,6 @@ Click to reveal the algorithm and practice problems to help you write your solut
         :feedback_c: You must reference the ArrayList list using a dot operator to use the add() method. Try again!
 
         How do you append a new item, 7, to the end of a non-empty ArrayList<Integer> list?
-.. .. disqus::
-   :shortname: cslearn4u
-   :identifier: apcsa-climbClubAFRQ
 
 Try and Solve It
 -------------------

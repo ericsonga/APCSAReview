@@ -59,10 +59,6 @@ To make a subclass inherit from a superclass, use the Java keyword **extends** w
 
 .. The ``Person`` class declared below will inherit from the ``Object`` class.
 
-.. .. code-block:: java
-
-  public class Person
-
 Why Use Inheritance?
 ---------------------
 

@@ -108,20 +108,6 @@ These problems are easier than most of those that you will usually see on the AP
 
    Which of the following is the correct way to add 2 between the 1 and 3 in the following list ``nums = [1, 3, 4]``?
 
-.. .. mchoice:: qale_8
-   :practice: T
-   :answer_a: It is a type of class.
-   :answer_b: The methods in an interface will be public and abstract.
-   :answer_c: It is like a contract in that the class that implements the interface must provide the methods defined in the interface.
-   :answer_d: You can create an object of an interface type.
-   :correct: d
-   :feedback_a: An interface is a special type of abstract class in Java.
-   :feedback_b: The methods defined in an interface are public and abstract.
-   :feedback_c: An interface is like a contract for the implementing classes.
-   :feedback_d: You can not create an object of an interface type.  This is why you create a ``List`` using the <code>ArrayList</code> class which implements the ``List`` interface.
-
-   Which of the following is *false* about an interface?
-
 .. mchoice:: qale_9
    :practice: T
    :answer_a: [2, 3]

@@ -1,7 +1,3 @@
-.. .. qnum::
-   :prefix: 0-1-
-   :start: 0
-
 Preface
 ===============
 
