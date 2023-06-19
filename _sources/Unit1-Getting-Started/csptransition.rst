@@ -30,12 +30,16 @@ your prior programming experience was with a block language:
   won't run. That’s different than this paragraph which you can still read even
   though we forgot the period at the end of this sentence
 
-- Java is in the family of programming languages that use curly brackets
-  (``{}``) to group together statements. The curly bracket notation may be
-  familiar to you from the AP CSP pseudocode which uses them in a similar way. 
+- Java is in the family of programming languages that use curly braces (``{}``)
+  to group together statements. The curly brace notation may be familiar to you
+  from the AP CSP pseudocode which uses them in a similar way.
 
 - You should match the indentation of your code to the structure created by your
-  curly brackets. In this book you can use the "Reformat" button on coding
+  curly brackets.
+
+.. 
+  [Uncomment this and add it to the last bullet point once the Reformat button ships.]
+  In this book you can use the "Reformat" button on coding
   activities to make sure they match. Get in the habit of clicking it frequently
   to keep your code tidy.
 
