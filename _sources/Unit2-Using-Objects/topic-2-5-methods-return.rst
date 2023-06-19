@@ -71,7 +71,7 @@ Here are some examples of using get methods for the turtle object yertle.
 
 .. note::
 
-    A common error is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like saving it into a variable or printing it out.
+    A common error is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like assigning it to a variable or printing it out.
 
 |CodingEx| **Coding Exercise:**
 

@@ -83,7 +83,7 @@ Here's an example of an accessor method called getName() for the Student class w
 
     - Forgetting a return type like int before the method name.
     - Forgetting to use the return keyword to return a value at the end of the method.
-    - Forgetting to do something with the value returned from a method (like saving it into a variable or printing it out).
+    - Forgetting to do something with the value returned from a method (like assigning it to a variable or printing it out).
 
 
 .. |Java visualizer1| raw:: html
@@ -495,5 +495,3 @@ AP Practice
     - The return type of the getId method needs to be defined as int.
 
       + Correct! Accessor methods have a return type of the instance variable they are returning.
-
-
