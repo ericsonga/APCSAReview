@@ -2,14 +2,16 @@ Transitioning from AP CSP to AP CS A
 ====================================
 
 If you have taken the AP CSP (Computer Science Principles) course and exam you
-should be well prepared for AP CS A. However, there are likely to be a few
-things you’ll have to get used to. If in CSP, or elsewhere, you used a block
-coding language like App Inventor, Scratch, Snap!, or App Lab, you are used to
-creating program structures by plugging together blocks; now you’ll have to
-create similar structures purely in text. If, on the other hand, you’ve
-previously used a different text-based language, such as Python or Javascript,
-you will probably find many things similar in Java but others annoyingly
-different, at least at first.
+should be well prepared for AP CS A. However, there are likely to be a few new
+things to get used to. If your CSP class used a block coding language like App
+Inventor, Scratch, Snap!, or App Lab, you learned to create program structures
+by plugging together blocks. In Java, the structures are similar but you'll have
+to get used to expressing them in text.
+
+On the other hand, if you’ve previously used a different text-based language,
+such as Python or Javascript, while you will be used to the idea of writing
+programs in text you'll have to get used to some specific details of Java's
+syntax.
 
 Here are some tips to keep in mind when you are writing Java code, especially if
 your prior programming experience was with a block langauge:
@@ -30,8 +32,7 @@ your prior programming experience was with a block langauge:
 
 - Java is in the family of programming languages that use curly brackets
   (``{}``) to group together statements. The curly bracket notation may be
-  familiar to you from the AP CSP pseudocode which is very similar to Java
-  notation.
+  familiar to you from the AP CSP pseudocode which uses them in a similar way. 
 
 - You should match the indentation of your code to the structure created by your
   curly brackets. In this book you can use the "Reformat" button on coding
