@@ -5,39 +5,6 @@
 Peer Instruction: 2D Arrays Multiple Choice Questions
 -----------------------------------------------------
 
-.. .. mchoice:: bs-2d-arrays-6-6   This question refers to (int) as rounding instead of truncating
-   :author: Beth Simon
-   :practice: T
-   :answer_a: 1, 2, 3, and 4
-   :answer_b: 1, 2, and 4
-   :answer_c: 1 and 4
-   :answer_d: 2 and 4
-   :correct: c
-   :feedback_a: Incorrect. While this code does set the new value of red to one half of the original, that is not done by calling (int)
-   :feedback_b: Correct. (int) casts the result of the multiplication to match the variable type of value, and this results in rounding to a whole number.
-   :feedback_c: Incorrect. While (int) does round and set value to a whole number, consider ALL the functionalities present
-   :feedback_d: Incorrect. While (int) does cast the result and set value to a whole number, consider ALL the functionalities present
-
-    In the decreaseRed method we see
-
-    .. code-block:: java
-
-        Pixel[] pixelArray = this.getPixels();
-        int value = 0;
-        for (Pixel pO: pixelArray)
-        {
-            value = pO.getRed();
-            value = (int) (value * .5);
-            pO.setRed(value);
-        }
-
-
-   What is the (int) for?
-    1. Making sure value is set to a whole (int) number
-    2. Doing a cast
-    3. Making sure value is set to one half of the original red
-    4. Rounding the calculation appropriately
-
 .. mchoice:: bs-2d-arrays-7-6
    :author: Beth Simon
    :practice: T
