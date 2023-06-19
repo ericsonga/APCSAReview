@@ -37,42 +37,6 @@ These problems are easier than most of those that you will usually see on the AP
 
    Under which of these conditions is it appropriate to overload a method (ie: the class will contain two methods with the same name)?
 
-.. .. mchoice:: qooe_3
-   :practice: T
-   :answer_a: I and II only
-   :answer_b: II only
-   :answer_c: I, II and III
-   :answer_d: I only
-   :answer_e: III only
-   :correct: b
-   :feedback_a: An abstract class can have constructors. A class with an abstract method must also be declared as abstract.
-   :feedback_b: A class with an abstract method must also be declared abstract. You can have constructors and fields in an abstract class.
-   :feedback_c: A class with an abstract method must also be abstract. You can have constructors and fields in an abstract class.
-   :feedback_d: Only II is true. You can have constructors in an abstract class. A class with an abstract method must also be declared abstract.
-   :feedback_e: Only II is true. You can have fields in an abstract class. A class with an abstract method must also be declared abstract.
-
-   Which of the following statements about a class that contains an abstract method is (are) true?
-
-   .. code-block:: java
-
-      I. You can't have any constructors in this class.
-      II.  This class must be declared as abstract.
-      III.  You can't declare any fields in this class.
-
-.. .. mchoice:: qooe_4
-   :practice: T
-   :answer_a: Abstract classes cannot be instantiated, but they can be sub-classed.
-   :answer_b: Abstract classes can be instantiated, but they cannot be sub-classed.
-   :answer_c: Abstract classes can only contain abstract methods.  They can be sub-classed.
-   :answer_d: Abstract classes can only contain abstract methods.  They cannot be sub-classed.
-   :correct: a
-   :feedback_a: Sub-classes must implement the abstract methods declared in the abstract class or also be declared abstract.
-   :feedback_b: You can not create an object of an abstract class type.  You can only create objects from concrete (not abstract) classes.
-   :feedback_c: Abstract classes can contain fields and non-abstract methods.
-   :feedback_d: Abstract classes can contain fields and non-abstract methods.  They can also be sub-classed.
-
-   Which of the following is true about abstract classes?
-
 .. mchoice:: qooe_5
    :practice: T
    :answer_a: Use four unrelated classes: <code>Car</code>, <code>Doors</code>, <code>AirConditioning</code>, and <code>MilesPerGallon</code>.

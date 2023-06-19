@@ -71,10 +71,6 @@ The variable ``message`` declared below has a **declared type** of ``Object`` an
   Object message = new String("hi");
   message.indexOf("h"); // ERROR!! Objects don't have indexOf!
 
-.. .. note::
-
-   Any object variable can refer to an object of the declared type or *any descendant (subclass) of the declared type* at run-time. The class ``String`` inherits from the class ``Object`` so an ``Object`` variable can hold a reference to a ``String`` object.  But, you can only call methods that are available in the ``Object`` class unless you cast it back to the ``String`` class.
-
 At compile time, the compiler uses the declared type to check that the methods you are trying to use are available to an object of that type.  The code won't compile if the methods don't exist in that class or some parent class of that class.  At run-time, the actual method that is called depends on the actual type of the object.  Remember that an object keeps a reference to the class that created it (an object of the class called ``Class``).  When a method is called at run-time the first place that is checked for that method is the class that created the object.  If the method is found there it will be executed.  If not, the parent of that class will be checked and so on until the method is found.
 
 In the last lesson on inheritance hierarchies, we were actually seeing polymorphic behavior at run-time in the following ways.

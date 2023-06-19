@@ -340,52 +340,6 @@ You can step through the code above by clicking on this |Java Visualizer 1|.
 You can step through the code above by clicking on the following |Java visualizer 2|.
 
 
-.. .. mchoice:: qalAdd3
-   :answer_a: [5, 4, 3, 2]
-   :answer_b: [5, 4, 1, 3]
-   :answer_c: [2, 5, 4, 3]
-   :answer_d: [5, 2, 4, 3]
-   :correct: d
-   :feedback_a: Remember that <code>add(obj)</code> adds the object to the end of the list.
-   :feedback_b: This would be true if it was <code>add(obj, index)</code>, but it is <code>add(index, obj)</code>
-   :feedback_c: This would be true if the first index was 1, but it is 0.
-   :feedback_d: This adds the 2 to index 1, but first moves all other values past that index to the right.
-
-   What will print when the following code executes?
-
-   .. code-block:: java
-
-      ArrayList<Integer> list1 = new ArrayList<Integer>();
-      list1.add(5);
-      list1.add(4);
-      list1.add(3);
-      list1.add(1, 2);
-      System.out.println(list1);
-
-.. You can step through the code above by clicking on the following `Example-8-5-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+2)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
-
-.. .. mchoice:: qalAdd4
-   :answer_a: [1, 3, 2]
-   :answer_b: [1, 3, 2, 1]
-   :answer_c: [1, 1, 2, 3]
-   :answer_d: [1, 2, 3]
-   :correct: b
-   :feedback_a: You can add duplicate objects to a list so this list will have two 1's.
-   :feedback_b: The add method adds each object to the end of the list and lists can hold duplicate objects.
-   :feedback_c: This would be true if the list was sorted as you add to it, but this is not true.
-   :feedback_d: This would be true if the list was sorted and you couldn't add duplicate objects, but lists are not sorted and you can add duplicate objects.
-
-   What will print when the following code executes?
-
-   .. code-block:: java
-
-      ArrayList<Integer> list1 = new ArrayList<Integer>();
-      list1.add(1);
-      list1.add(3);
-      list1.add(2);
-      list1.add(1);
-      System.out.println(list1);
-
 Remove(index) from ArrayList
 ----------------------------------
 
@@ -468,27 +422,6 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
 
 You can step through the code above by clicking on the following `RemoveExample  <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(2)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
-
-.. Run the code below to see how the list changes. Can you add your name to the list and print it out and then remove it and print it out?
-
-.. .. activecode:: listremove
-   :language: java
-
-   import java.util.*;  // import all classes in this package.
-   public class Test
-   {
-      public static void main(String[] args)
-      {
-         ArrayList<String> nameList = new ArrayList<String>();
-         nameList.add("Diego");
-         System.out.println(nameList);
-         nameList.add("Grace");
-         System.out.println(nameList);
-         nameList.remove(1);
-         System.out.println(nameList);
-         System.out.println(nameList.size());
-      }
-   }
 
 ArrayList get/set Methods
 ------------------------------------

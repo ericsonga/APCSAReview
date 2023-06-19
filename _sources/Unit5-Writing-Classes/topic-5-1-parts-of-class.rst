@@ -40,22 +40,7 @@ Watch this short video to review the vocabulary in object-oriented programming:
     :height: 415
     :align: center
 
-.. .. |video| raw:: html
-
-   <a href="https://www.youtube.com/watch?v=1JJL0YszYik" target="_blank">video</a>
-
-
-.. Here is a fun |video| demonstrating the difference between the class
-
 You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. For example, the class House below is a blueprint of a house and the objects which are individual houses built from that blueprint. You can't live on a blueprint although it describes a house! But you can use it to build houses and live in those.
-
-
-.. .. youtube:: 1JJL0YszYik
-    :height: 315
-    :width: 560
-    :align: left
-
-
 
 To write your own class, you typically start a class declaration with ``public`` then ``class`` then the name of the class.  The body of the class is defined inside a ``{`` and a ``}``. For example, the class House below. Then, you can create objects of that new House type by using ``Classname objectname = new Classname();``
 

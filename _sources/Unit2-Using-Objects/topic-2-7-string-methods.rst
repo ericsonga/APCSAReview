@@ -182,23 +182,6 @@ Run the code below to see the output from the String methods ``length``, ``subst
      String s1 = "baby";
      String s2 = s1.substring(0,3);
 
-.. .. mchoice:: qsb_4
-   :practice: T
-   :answer_a: 7
-   :answer_b: 8
-   :answer_c: 9
-   :correct: c
-   :feedback_a: Count spaces and punctuation in the length.
-   :feedback_b: Did you forget to count a space or punctuation?
-   :feedback_c: The length method returns the number of characters including spaces and punctuation.
-
-   What is the value of len after the following executes?
-
-   .. code-block:: java
-
-     String s1 = "Miss you!";
-     int len = s1.length();
-
 .. mchoice:: qsb_4b
    :practice: T
    :answer_a: by

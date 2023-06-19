@@ -183,12 +183,6 @@ all require different number of bits.  An integer gets 32 bits of memory, a doub
 
 To **declare** (create) a variable, you  specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (``;``). Java uses the keyword **int** for integer, **double** for a floating point number (a double precision number), and **boolean** for a Boolean value (true or false).
 
-.. .. figure:: Figures/typeName.png
-    :width: 100px
-    :figclass: align-center
-
-    Figure 2: How to Declare a Variable
-
 Here is an example declaration of a variable called score.
 
 .. code-block:: java
@@ -305,38 +299,6 @@ When you are printing out variables, you can use the **string concatenation** op
             :click-incorrect:System.out.println(powerUp);:endclick:
         :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
-
-
-.. .. figure:: Figures/typeNameValue.png
-    :width: 150px
-    :figclass: align-center
-
-    Figure 3: How to Declare and Initialize the Value of a Variable
-
-
-
-
-
-.. .. |Exercise| **Check Your Understanding**
-
-.. .. clickablearea:: var_declar_and_init
-    :question: Click on all of the statements that both declare and initialize a variable in one statement.
-    :iscode:
-    :feedback: Variables are initialized using name = value;
-
-    :click-incorrect:public class Test2:endclick:
-    :click-incorrect:{:endclick:
-        :click-incorrect:public static void main(String[] args):endclick:
-        :click-incorrect:{:endclick:
-            :click-correct:int numLives = 0;:endclick:
-            :click-incorrect:System.out.println(numLives);:endclick:
-            :click-correct:double health = 8.5;:endclick:
-            :click-incorrect:System.out.println(health);:endclick:
-            :click-correct:boolean powerUp = true;:endclick:
-            :click-incorrect:System.out.println(powerUp);:endclick:
-        :click-incorrect:}:endclick:
-    :click-incorrect:}:endclick:
-
 
 The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location associated with the variable name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4.  A variable always has to be on the left side of the ``=`` and a value or expression on the right.
 
@@ -546,13 +508,6 @@ The convention in Java and many programming languages is to always start a varia
 
    -    :^\s*topScore$: Correct.
         :.*: In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.
-
-.. .. fillintheblank:: fillName3
-
-   What is the camel case variable name for a variable that represents the last score?
-
-   -    :^\s*lastScore$: Correct.
-        :.*: In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.  This would be lastScore
 
 
 |Groupwork| Debugging Challenge : Weather Report
