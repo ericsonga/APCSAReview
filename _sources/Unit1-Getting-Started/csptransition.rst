@@ -5,8 +5,8 @@ If you have taken the AP CSP (Computer Science Principles) course and exam you
 should be well prepared for AP CS A. However, there are likely to be a few new
 things to get used to. If your CSP class used a block coding language like App
 Inventor, Scratch, Snap!, or App Lab, you learned to create program structures
-by plugging together blocks. In Java, the structures are similar but you'll have
-to get used to expressing them in text.
+by plugging together blocks. In Java you'll find the structures are similar but
+you'll have to get used to expressing them in text.
 
 On the other hand, if you’ve previously used a different text-based language,
 such as Python or Javascript, while you will be used to the idea of writing
@@ -14,11 +14,11 @@ programs in text you'll have to get used to some specific details of Java's
 syntax.
 
 Here are some tips to keep in mind when you are writing Java code, especially if
-your prior programming experience was with a block langauge:
+your prior programming experience was with a block language:
 
 - You must spell names correctly, or at least consistently. Unlike in a block
   programming language where you know you are using the right block because you
-  dragged it from a pallete, in Java names are what connect different parts of
+  dragged it from a palette, in Java names are what connect different parts of
   your program and they need to be spelled consistently.
 
 - You must pay attention to case: names that differ only in case—one starting
