@@ -288,7 +288,7 @@ Common Errors with If Statements
 
 Here are some rules to follow with if statements to avoid some common errors:
 
-   - Always use curly brackets ``{`` and ``}`` to enclose the block of statements under the if condition. Java doesn't care if you indent the code -- it goes by the { }.
+   - Always use curly braces (``{`` and ``}``) to enclose the block of statements under the if condition. Java doesn't care if you indent the code -- it goes by the ``{ }``.
 
    - Don't put in a semicolon ``;`` after the first line of the if statement, if (test);. The if statement is a multiline block of code that starts with the if condition and then { the body of the if statement }.
 
@@ -457,7 +457,7 @@ Here's a |repl version| that uses the Scanner class to first have the user ask a
 Summary
 -------------------
 
-- if statements test a boolean expression and if it is true, go on to execute the following statement or block of statements surrounded by curly brackets { } like below.
+- if statements test a boolean expression and if it is true, go on to execute the following statement or block of statements surrounded by curly braces  (``{}``) like below.
 
 .. code-block:: java
 

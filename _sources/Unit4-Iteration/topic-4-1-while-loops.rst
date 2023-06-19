@@ -43,7 +43,7 @@ When you play a song, you can set it to loop, which means that when it reaches t
 
 A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false, we exit the loop and continue with the statements that are after the body of the ``while`` loop.  If the condition is false the first time you check it, the body of the loop will not execute.
 
-Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs more than once. The curly brackets { } are optional when there is just 1 statement following the condition, but required if there are more than 1 statement in the loop. In the AP exam, they will always use curly brackets, which is a good practice to follow.
+Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs more than once. The curly braces (``{}``) are optional when there is just 1 statement following the condition, but required if there are more than 1 statement in the loop. In the AP exam, they will always use curly braces, which is a good practice to follow.
 
 .. code-block:: java
 

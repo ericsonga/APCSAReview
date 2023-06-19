@@ -210,7 +210,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
 Initializer Lists to Create Arrays
 ------------------------------------
 
-Another way to create an array is to use an **initializer list**. You can initialize (set) the values in the array to a list of values in curly brackets { } when you create it, like below.  In this case you don't specify the size of the array, it will be determined from the number of values that you specify.
+Another way to create an array is to use an **initializer list**. You can initialize (set) the values in the array to a list of values in curly braces (``{}``) when you create it, like below.  In this case you don't specify the size of the array, it will be determined from the number of values that you specify.
 
 .. code-block:: java
 
