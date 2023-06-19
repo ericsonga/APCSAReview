@@ -400,7 +400,7 @@ The rule is that the else clause will always be a part of the closest unmatched 
     }
 
 
-You can use curly brackets { } to enclose a nested if and have the else clause belong to the the top level if clause like below:
+You can use curly braces (``{}``) to enclose a nested `if and have the else clause belong to the the top level if clause like below:
 
 .. code-block:: java
 

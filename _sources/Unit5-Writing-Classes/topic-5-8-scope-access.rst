@@ -32,7 +32,7 @@ Scope and Access
     single: local variable
 
 
-The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly brackets { } -- this is its scope.
+The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly braces (``{}``) -- this is its scope.
 
 Java has 3 levels of scope that correspond to different types of variables:
 

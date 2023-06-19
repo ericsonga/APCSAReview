@@ -35,7 +35,7 @@ your prior programming experience was with a block language:
   from the AP CSP pseudocode which uses them in a similar way.
 
 - You should match the indentation of your code to the structure created by your
-  curly brackets.
+  curly braces.
 
 .. 
   [Uncomment this and add it to the last bullet point once the Reformat button ships.]

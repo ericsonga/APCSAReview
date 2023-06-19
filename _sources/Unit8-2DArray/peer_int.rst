@@ -44,7 +44,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :answer_d: Location D
    :correct: d
    :feedback_a: Incorrect. This statement will only print once, and most of the code has yet to be called
-   :feedback_b: Incorrect. This would result in the print statement being run in a loop, instead of the contents inside the brackets
+   :feedback_b: Incorrect. This would result in the print statement being run in a loop, instead of the contents inside the curly braces
    :feedback_c: Incorrect. This way, the statement will print new information each time the code is run
    :feedback_d: Correct. Location D allows you to assess and print the all varibales used in this code block. This gives you the most data, and makes it the optiomal location.
 

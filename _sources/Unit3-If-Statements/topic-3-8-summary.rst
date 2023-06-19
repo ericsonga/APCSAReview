@@ -70,16 +70,16 @@ For more practice, see this |Quizlet|.
 Common Mistakes
 ---------------
 
-  -  Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==.
+  - Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==.
 
-  - Putting a ; at the end of ``if (test);``. Remember that the if statement ends after ``if (test) statement;`` or use curly brackets ``if (test) { statements; }``.
+  - Putting a ; at the end of ``if (test);``. Remember that the if statement ends after ``if (test) statement;`` or use curly braces ``if (test) { statements; }``.
 
-  -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.
+  - Using two ``if``'s one after the other instead of an ``if`` and ``else``.
 
-  -  Trouble with compound boolean expressions which are two or more Boolean expressions joined by **and (&&)`` or **or (||)**.
+  - Trouble with compound boolean expressions which are two or more Boolean expressions joined by **and (&&)`` or **or (||)**.
 
   - Not understanding that `||` is an inclusive-or where one or *both* conditions must be true.
 
-  -  Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.
+  - Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.
 
   -  Not understanding short circuit evaluation which is that if evaluation of the first Boolean expression is enough to determine the truth of a complex conditional the second expression will not be evaluated.

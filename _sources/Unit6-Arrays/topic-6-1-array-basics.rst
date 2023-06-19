@@ -210,7 +210,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
 Initializer Lists to Create Arrays
 ------------------------------------
 
-Another way to create an array is to use an **initializer list**. You can initialize (set) the values in the array to a list of values in curly brackets { } when you create it, like below.  In this case you don't specify the size of the array, it will be determined from the number of values that you specify.
+Another way to create an array is to use an **initializer list**. You can initialize (set) the values in the array to a list of values in curly braces (``{}``) when you create it, like below.  In this case you don't specify the size of the array, it will be determined from the number of values that you specify.
 
 .. code-block:: java
 
@@ -859,7 +859,7 @@ AP Practice
 
 We will see in the next lesson that the index of an array is often a variable named ``i``
 that is used in loops to traverse an array.
-In challenging AP problems, you will see mathematical expressions inside the array brackets [].
+In challenging AP problems, you will see mathematical expressions inside the square brackets (``[]``).
 For example, ``array[i-1]`` refers to the previous element right before the ith element in array,
 and ``array[i+1]`` refers to the next element after the ith element.  In the problems below, note that
 arrays can be passed in as arguments to methods and returned as values, just like any variable.
