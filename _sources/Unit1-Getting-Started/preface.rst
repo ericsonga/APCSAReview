@@ -4,9 +4,13 @@ Preface
 ..  index::
     single: license
 
-CSAwesome is a free AP CSA curriculum that was created in 2019 by adapting the AP CSA Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan.
+CSAwesome is a free AP CSA curriculum that is endorsed by the College Board as an official AP CSA curriculum and PD provider. It was created in 2019 by adapting the AP CSA Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. 
 
-CSAwesome is an official College Board CSA curriculum and PD provider as of 2020. Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CSA 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, Beth Simon, Colleen Lewis (for her awesome Java memory model videos), John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, Kyle Gillette, and Peter Bowers for feedback, edits, and ideas. In the summer 2020, we are very grateful to CSA teacher extraordinaire Kate McDonnell who created a JUnit test code suite for our Java server, and many volunteers including Pat Clark, Emma Brown, Emma Pinnell, Megha Sharma, Arjun Balaji, and Anvita Gollu who helped to add many junit tests to each active code to make them auto-gradable. Our hopes are that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CSA.
+Dr. Beryl Hoffman, Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CSA 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org) to help transition students and teachers from AP CSP to AP CSA.  Special thanks to Barb Ericson, Beth Simon, Colleen Lewis (for her awesome Java memory model videos), John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, Kyle Gillette, and Peter Bowers for feedback, edits, and ideas. 
+
+In the summer of 2020, CSA teacher extraordinaire Kate McDonnell from Cherry Creek Schools in CO created a JUnit test code suite for our Java servers to provide feedback to students in every active code. Many volunteers including Pat Clark, Emma Brown, Emma Pinnell, Megha Sharma, Arjun Balaji, and Anvita Gollu helped to add many junit tests to each active code to make them auto-gradable. 
+
+In the summer of 2023, Peter Seibel, author, software developer, and Berkeley High School AP CSA teacher, began making valuable improvements to the CSAwesome text and Runestone platform. 
 
 .. |form| raw:: html
 
@@ -18,7 +22,7 @@ If you see errors or bugs, please report them with this |form|.
 **Acknowledgements**
 
 
-We gratefully acknowledge the use of the Runestone platform and Jobe server run by Brad Miller, and the past use of the Jobe server from the University of Canterbury, New Zealand.
+We gratefully acknowledge the use of the Runestone platform and Jobe servers run by Brad Miller, and the past use of the Jobe server from the University of Canterbury, New Zealand.
 
 Special thanks also to the following people that we have collaborated with:
 
