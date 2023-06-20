@@ -43,7 +43,7 @@ In the last unit, we learned about arrays to hold collections of related data. B
 
 Luckily, Java has a class  called **ArrayList** which is a re-sizable array. An ArrayList has an underlying array that grows or shrinks as needed. You can use ArrayList instead of arrays whenever you don't know the size of the array you need or you know that you will add and remove items and may need to change the array's size dynamically during run time. An ArrayList is **mutable**, meaning it can change during runtime by adding and removing objects from it.
 
-An ArrayList is often called just a **list** on the CS A exam. In past AP CS A exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
+An ArrayList is often called just a **list** on the CS A exam. In past AP CSA exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
 
 .. mchoice:: qloopList
    :answer_a: A list will always use less memory than an array.
@@ -89,7 +89,7 @@ Another option is to import everything at the same level in a package using ``im
 
 .. note::
 
-   Don't worry about adding import statements on the AP CS A exam.  Any that you need will be provided for you.
+   Don't worry about adding import statements on the AP CSA exam.  Any that you need will be provided for you.
 
 |Exercise| **Check your understanding**
 
@@ -375,7 +375,7 @@ You can add values to an ArrayList by using its **add** method, described in det
 
    <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a" target="_blank">2017 Free Response Question</a>
 
-This programming challenge is based on the |FRQ 2017| part 1a on the 2017 AP CS A exam. In this question, you are asked to write a constructor for a class called Digits. This constructor takes an integer number as its argument and divides it up into its digits and puts the digits into an ArrayList. For example, new Digits(154) creates an ArrayList with the digits [1, 5, 4].
+This programming challenge is based on the |FRQ 2017| part 1a on the 2017 AP CSA exam. In this question, you are asked to write a constructor for a class called Digits. This constructor takes an integer number as its argument and divides it up into its digits and puts the digits into an ArrayList. For example, new Digits(154) creates an ArrayList with the digits [1, 5, 4].
 
 First, let's discuss how to break up a number into its digits. Try the code below. What happens if you divide an integer by 10? Remember that in integer division the result truncates (cuts off) everything to the right of the decimal point. Which digit can you get by using mod 10 which returns the remainder after dividing by 10? Try a different number and guess what it will print and then run to check.
 

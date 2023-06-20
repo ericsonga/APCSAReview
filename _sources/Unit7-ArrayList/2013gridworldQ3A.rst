@@ -416,7 +416,7 @@ Write the method ``getEmptyLocations`` in the code below.
         /**
          * A Location object represents the row and column of a location
          * in a two-dimensional grid.
-         * The API of this class is testable on the AP CS A and AB exams.
+         * The API of this class is testable on the AP CSA and AB exams.
          */
          class Location implements Comparable
         {
@@ -992,7 +992,7 @@ Write the method ``getEmptyLocations`` in the code below.
         /**
          * A Location object represents the row and column of a location
          * in a two-dimensional grid.
-         * The API of this class is testable on the AP CS A and AB exams.
+         * The API of this class is testable on the AP CSA and AB exams.
          */
         public class Location implements Comparable
         {

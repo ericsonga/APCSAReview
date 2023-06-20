@@ -35,7 +35,7 @@ Array Algorithms (FRQs)
 In this lesson, you will study different Free Response Questions and responses that develop algorithms using arrays.
 
 
-Here are some common algorithms that you should be familiar with for the AP CS A exam:
+Here are some common algorithms that you should be familiar with for the AP CSA exam:
 
 - Determine the minimum or maximum value in an array
 - Compute a sum, average, or mode of array elements

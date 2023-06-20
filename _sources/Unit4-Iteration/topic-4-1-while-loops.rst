@@ -538,7 +538,7 @@ Summary
 
 - If the Boolean expression evaluates to false initially, the loop body is not executed at all.
 
-- **Input-controlled loops** often use a **sentinel value** that is input by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CS A exam, but are very useful to accept data from the user.
+- **Input-controlled loops** often use a **sentinel value** that is input by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CSA exam, but are very useful to accept data from the user.
 
 - There are standard algorithms to compute a sum or average.
 

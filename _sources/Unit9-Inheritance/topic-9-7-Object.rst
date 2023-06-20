@@ -20,9 +20,9 @@
     :align: middle
     :alt: groupwork
 
-.. |AP CS A Reference Sheet| raw:: html
+.. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 .. image:: ../../_static/time45.png
     :width: 250
@@ -31,7 +31,7 @@
 Object Superclass
 ====================
 
-The **Object** class is the superclass of all other classes in Java and a part of the built-in java.lang package. If a parent class isn't specified using the **extends** keyword, the class will inherit from the ``Object`` class.  What does a class inherit from the ``Object`` class?  The |AP CS A Reference Sheet| lists the two main methods that are most used, toString() and equals(Object), from the Object class at the bottom, which are covered in more detail below.
+The **Object** class is the superclass of all other classes in Java and a part of the built-in java.lang package. If a parent class isn't specified using the **extends** keyword, the class will inherit from the ``Object`` class.  What does a class inherit from the ``Object`` class?  The |AP CSA Reference Sheet| lists the two main methods that are most used, toString() and equals(Object), from the Object class at the bottom, which are covered in more detail below.
 
 - String toString()
 - boolean equals(Object other)

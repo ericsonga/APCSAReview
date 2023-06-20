@@ -235,7 +235,7 @@ Activity 2: Actual Code - (Optional)
 
 You can do all of Activity 2 with the actual code using the Scanner class for input instead if you prefer.
 
-Here is the actual code for the |Magpie lab on repl.it|.  It uses the ``Scanner`` class to read input from the user.  The ``Scanner`` class is not on the AP CS A exam. You can log in to repl.it and use this code and change it to do this lab.
+Here is the actual code for the |Magpie lab on repl.it|.  It uses the ``Scanner`` class to read input from the user.  The ``Scanner`` class is not on the AP CSA exam. You can log in to repl.it and use this code and change it to do this lab.
 
 Or you can copy and paste in the code from below into any Integrated Development Environment (IDE) like DrJava or JGrasp to run on your computer.
 

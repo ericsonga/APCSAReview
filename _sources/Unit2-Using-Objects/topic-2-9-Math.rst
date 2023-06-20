@@ -228,11 +228,11 @@ Other Math functions that you can use are:
 - double random() :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
 
 
-.. |AP CS A Reference Sheet| raw:: html
+.. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
-These are all listed in the |AP CS A Reference Sheet| that you can use during the exam.
+These are all listed in the |AP CSA Reference Sheet| that you can use during the exam.
 
 |Groupwork| Programming Challenge : Random Numbers
 --------------------------------------------------

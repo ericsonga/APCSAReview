@@ -11,7 +11,7 @@ Multiple-Choice Exercises
 Easier Multiple Choice Questions
 ----------------------------------
 
-These problems are easier than most of those that you will usually see on the AP CS A exam.
+These problems are easier than most of those that you will usually see on the AP CSA exam.
 
 .. mchoice:: qaeasy_1
    :practice: T
@@ -179,7 +179,7 @@ You can step through the code above using the Java Visualizer by clicking on the
 Medium Multiple Choice Questions
 ----------------------------------
 
-These problems are similar to those you will see on the AP CS A exam.
+These problems are similar to those you will see on the AP CSA exam.
 
 .. mchoice:: qamed_1
    :practice: T
@@ -514,7 +514,7 @@ You can step through the code above using the Java Visualizer by clicking on the
 Hard Multiple Choice Questions
 ----------------------------------
 
-These problems are harder than most of those that you will usually see on the AP CS A exam.
+These problems are harder than most of those that you will usually see on the AP CSA exam.
 
 .. mchoice:: qahard_1
    :practice: T

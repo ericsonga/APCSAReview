@@ -5,7 +5,7 @@
 Hard Multiple Choice Questions
 ----------------------------------
 
-These problems are harder than those that you will typically see on the AP CS A exam.
+These problems are harder than those that you will typically see on the AP CSA exam.
 
 .. mchoice:: qa2dh_1
    :practice: T

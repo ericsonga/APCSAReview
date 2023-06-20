@@ -169,7 +169,7 @@ And here is a short |video2| that describes how merge sort works.
     :height: 315
 
 
-The code for ``mergeSort`` below is from the AP CS A course description.
+The code for ``mergeSort`` below is from the AP CSA course description.
 
 To identify a merge sort look for the following:
 

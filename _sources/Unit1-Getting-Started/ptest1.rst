@@ -32,7 +32,7 @@
    :start: 1
 
 
-Pretest for the AP CS A Exam
+Pretest for the AP CSA Exam
 ------------------------------
 
 Please try the following pretest. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. If you have no idea on the answer, it is okay to skip questions or to make your best guess.

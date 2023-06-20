@@ -7,7 +7,7 @@ Inheritance
 
 Class Periods: 14-15
 
-AP CS A Exam Weighting: 5-10%
+AP CSA Exam Weighting: 5-10%
 
 
 .. Moving first 2 lessons to Unit 5

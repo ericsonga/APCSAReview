@@ -21,9 +21,9 @@
     :alt: groupwork
 
 
-.. |AP CS A Reference Sheet| raw:: html
+.. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 .. image:: ../../_static/time90.png
     :width: 225
@@ -52,7 +52,7 @@ Remember that strings are a sequence of characters where each character is at a 
 
    The first character in a Java String is at index 0 and the last characters is at **length()** - 1. So loops processing Strings should start at 0!
 
-The String methods (covered in lesson 2.7 and given in the |AP CS A Reference Sheet|) that are most often used to process strings are:
+The String methods (covered in lesson 2.7 and given in the |AP CSA Reference Sheet|) that are most often used to process strings are:
 
 - **int length()** : returns the number of characters in a String object.
 
@@ -324,7 +324,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
 
 3. (Optional - challenging and not autograded) What if you like both cats and dogs? After you replace "cat" with "dog", add another loop that looks for the word "dogs" and adds " and cats" to it. Do not replace "dog", just replace "dogs". This will just replace the first sentence in the example below but you can add other sentences to test. For this loop, you will need to use a special version of indexOf that searches from a given index, so that you don't end up with an infinite loop that keeps finding the first "dogs". Make sure you add a variable **fromIndex** that is initialized to 0 and that is changed each time through the loop to skip over the last word that was found.
 
-   - **int indexOf(String target, int fromIndex)** searches left-to-right for the target substring, but starts the search at the given fromIndex. You are not required to know this version of indexOf for the AP CS A exam, but you can use it (and any valid Java code) in the Free Response Questions.
+   - **int indexOf(String target, int fromIndex)** searches left-to-right for the target substring, but starts the search at the given fromIndex. You are not required to know this version of indexOf for the AP CSA exam, but you can use it (and any valid Java code) in the Free Response Questions.
 
 .. activecode:: challenge4-3-string-replace
    :language: java

@@ -114,7 +114,7 @@ Please log into Runestone and fill out the following survey.  You do not have to
    :option_5: strongly disagree
    :option_6: prefer not to answer
 
-   I am confident that I will do well in this course and the AP CS A exam.
+   I am confident that I will do well in this course and the AP CSA exam.
 
 .. poll:: qcareer
    :option_1: strongly agree

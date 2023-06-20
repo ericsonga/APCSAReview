@@ -3,7 +3,7 @@
     :align: center
 
 ==========================================
-AP CS A Java Course
+AP CSA Java Course
 ==========================================
 
 Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**

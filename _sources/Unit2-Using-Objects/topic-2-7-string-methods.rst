@@ -19,9 +19,9 @@
     :align: middle
     :alt: groupwork
 
-.. |AP CS A Reference Sheet| raw:: html
+.. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 .. image:: ../../_static/time90.png
     :width: 250
@@ -52,7 +52,7 @@ A string holds characters in a sequence.  Each character is at a position or **i
 
    The first character in a string is at index 0 and the last characters is at **length** -1.
 
-For the AP CS A exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the |AP CS A Reference Sheet| that you get during the exam so you don't have to memorize these.
+For the AP CSA exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the |AP CSA Reference Sheet| that you get during the exam so you don't have to memorize these.
 
 
     -  **int length()** method returns the number of characters in the string, including spaces and special characters like punctuation.
@@ -525,7 +525,7 @@ Summary
 
 - String objects are **immutable**, meaning that String methods do not change the String object. Any method that seems to change a string actually creates a new string.
 
-- The following String methods and constructors, including what they do and when they are used, are part of the |AP CS A Reference Sheet| that you can use during the exam:
+- The following String methods and constructors, including what they do and when they are used, are part of the |AP CSA Reference Sheet| that you can use during the exam:
 
   - **String(String str)** : Constructs a new String object that represents the same sequence of characters as str.
 

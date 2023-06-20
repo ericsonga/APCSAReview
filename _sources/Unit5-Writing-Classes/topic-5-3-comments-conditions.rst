@@ -288,7 +288,7 @@ Let's consider the substring method in Java. This method has a strong preconditi
 Software Validity and Use-Case Diagrams
 ----------------------------------------
 
-Preconditions and postconditions are covered on the AP CS A exam. Software validity, testing, and use-case diagrams which are discussed in this subsection are not covered on the AP CS A exam, but they are described here because they use preconditions and postconditions and are used by professional programmers.
+Preconditions and postconditions are covered on the AP CSA exam. Software validity, testing, and use-case diagrams which are discussed in this subsection are not covered on the AP CSA exam, but they are described here because they use preconditions and postconditions and are used by professional programmers.
 
 Determining the preconditions and postconditions help us to test our code and determine the **validity** of our software.  Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use.
 
