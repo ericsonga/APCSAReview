@@ -703,8 +703,8 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_a: This would be true if num1 and num2 were both greater than 0 and num1 was greater than num2.  However, num2 is less than 0.
       :feedback_b: This would be true if num1 and num2 were both greater than 0 and num1 was less than or equal to num2.  However, num2 is less than 0.
       :feedback_c: The first test is false since num2 is less than 0 and for a complex conditional joined with And (&&) to be true both expressions must be true.  Next, <code>else if ((num2<0) || (num1<0))</code> is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.
-      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code).
-      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code).
+      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code>).
+      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code>).
 
       Consider the following method.  What is the output from ``conditionTest(3,-2);``?
 
