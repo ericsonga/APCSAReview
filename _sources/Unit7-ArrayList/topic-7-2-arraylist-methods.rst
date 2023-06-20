@@ -612,7 +612,7 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
               + toDoList[0] );
 
           // remove item 0 and move everything down
-          //  (this can be done in 1 command with ArrayList)
+          //  (this can be done in one method call with ArrayList)
           toDoList[0] = toDoList[1];
           toDoList[1] = toDoList[2];
           toDoList[2] = "";

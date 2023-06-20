@@ -108,7 +108,7 @@ You can skip these if you think you know what to do already.  Click the buttons 
       :answer_d: .getNumRows()
       :correct: d
       :feedback_a: This call works for strings, but we aren't working with strings.
-      :feedback_b: This is not an applicable command for grid
+      :feedback_b: This is not an applicable method for grid
       :feedback_c: This does not exist.
       :feedback_d: Correct, this will return the height of the grid.
 
