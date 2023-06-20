@@ -74,7 +74,7 @@ As we saw in the last lesson, you can get the number of items in a ArrayList usi
 
 .. note::
 
-   With arrays, you use the ``length`` field to get the number of items in the array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the ArrayList. You will not be penalized if you mix up length and size() in the CS A exam. The number of items in an empty ArrayList is 0.
+   With arrays, you use the ``length`` field to get the number of items in the array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the ArrayList. You will not be penalized if you mix up length and size() in the CSA exam. The number of items in an empty ArrayList is 0.
 
 Add(obj) to an ArrayList
 -----------------------------

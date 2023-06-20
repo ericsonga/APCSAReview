@@ -89,7 +89,7 @@ You can also simplify negated boolean expressions that have relational operators
 Truth Tables
 ------------
 
-Although you do not have to memorize De Morgan's Laws for the CS A Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) is equivalent to !a || !b by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
+Although you do not have to memorize De Morgan's Laws for the CSA Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) is equivalent to !a || !b by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
 
 +-------+-------+-----------+----------+
 | a     | b     | !(a && b) | !a || !b |

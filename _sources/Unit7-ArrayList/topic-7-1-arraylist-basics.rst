@@ -43,7 +43,7 @@ In the last unit, we learned about arrays to hold collections of related data. B
 
 Luckily, Java has a class  called **ArrayList** which is a re-sizable array. An ArrayList has an underlying array that grows or shrinks as needed. You can use ArrayList instead of arrays whenever you don't know the size of the array you need or you know that you will add and remove items and may need to change the array's size dynamically during run time. An ArrayList is **mutable**, meaning it can change during runtime by adding and removing objects from it.
 
-An ArrayList is often called just a **list** on the CS A exam. In past AP CSA exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
+An ArrayList is often called just a **list** on the CSA exam. In past AP CSA exams, the interface **List** is often used to declare an ArrayList. Interfaces are no longer on the exam, but if you see List being used, just assume it's an ArrayList.
 
 .. mchoice:: qloopList
    :answer_a: A list will always use less memory than an array.
