@@ -8,7 +8,7 @@ Boolean Expressions and If Statements
 
 Class Periods: 11-13 (including lab)
 
-AP CS A Exam Weighting: 15-17.5%
+AP CSA Exam Weighting: 15-17.5%
 
 .. toctree::
    :maxdepth: 3

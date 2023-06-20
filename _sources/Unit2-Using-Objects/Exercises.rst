@@ -11,7 +11,7 @@ These questions are mostly about Strings, but more questions on using other obje
 Easier Multiple Choice Questions
 ---------------------------------
 
-These problems are mostly easier than what you will see on the AP CS A exam.
+These problems are mostly easier than what you will see on the AP CSA exam.
 
 .. mchoice:: AP2-1-5
    :practice: T
@@ -151,7 +151,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
 Medium Multiple Choice Questions
 ----------------------------------
 
-These problems are similar to those that you will see on the AP CS A exam.
+These problems are similar to those that you will see on the AP CSA exam.
 
 .. mchoice:: AP2-2-5
    :practice: T
@@ -445,7 +445,7 @@ These problems are similar to those that you will see on the AP CS A exam.
 Hard Multiple Choice Questions
 ----------------------------------
 
-These problems are harder than most of those that you will usually see on the AP CS A exam.
+These problems are harder than most of those that you will usually see on the AP CSA exam.
 
 .. mchoice:: qsm_7
    :practice: T

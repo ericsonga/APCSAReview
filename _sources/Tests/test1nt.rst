@@ -2,10 +2,10 @@
    :prefix: 12-2-
    :start: 1
 
-Exam 1 for the AP CS A Exam (not timed)
+Exam 1 for the AP CSA Exam (not timed)
 ----------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.
+The following problems are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.
 
 .. mchoice:: qtnt1_1
    :answer_a: (a >= b) && (b >= 0)

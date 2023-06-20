@@ -5,7 +5,7 @@
 Midterm Test
 --------------
 
-The following 20 questions are similar to what you might see on the AP CS A exam for Units 1 - 5.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.
+The following 20 questions are similar to what you might see on the AP CSA exam for Units 1 - 5.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.
 
 We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.
 

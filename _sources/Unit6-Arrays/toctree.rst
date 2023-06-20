@@ -7,7 +7,7 @@ Arrays
 
 Class Periods: 6-8
 
-AP CS A Exam Weighting: 10-15%
+AP CSA Exam Weighting: 10-15%
 
 .. toctree::
    :maxdepth: 3

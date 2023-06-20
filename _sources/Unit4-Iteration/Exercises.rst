@@ -9,7 +9,7 @@ Multiple Choice Exercises
 Easier Multiple Choice Questions
 ----------------------------------
 
-These problems are easier than most of those that you will usually see on the AP CS A exam.
+These problems are easier than most of those that you will usually see on the AP CSA exam.
 
 .. mchoice:: qle_1
    :practice: T
@@ -226,7 +226,7 @@ These problems are easier than most of those that you will usually see on the AP
 Medium Multiple Choice Questions
 ----------------------------------
 
-These problems are similar to those you will see on the AP CS A exam.
+These problems are similar to those you will see on the AP CSA exam.
 
 .. mchoice:: qlm_1
    :practice: T

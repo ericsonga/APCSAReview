@@ -149,7 +149,7 @@ Instance Variables
 
 **Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance variables are also called **attributes**, **fields**, or **properties**.
 
-Instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
+Instance variables in general and on the AP CSA exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
 
 .. note::
 
@@ -282,7 +282,7 @@ Object-Oriented Design
    <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
 
 
-In **Object-Oriented Design** (OOD), programmers first decide which classes are needed to solve a problem and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CS A exam). If you want to draw your own, |app diagrams| or |Creately.com| are good free online drawing tools for UML class diagrams.
+In **Object-Oriented Design** (OOD), programmers first decide which classes are needed to solve a problem and then figure out the data and methods in each class. For example, here is the class diagram for the Turtle class that we have seen before. The - in front of the attributes indicate that they are private, and the + in front of the methods indicate that they are public. Here is a |tutorial on class diagrams| that explains it in more detail if you are curious (Class diagrams are not on the AP CSA exam). If you want to draw your own, |app diagrams| or |Creately.com| are good free online drawing tools for UML class diagrams.
 
 
 .. figure:: Figures/turtleUMLClassDiagram.png

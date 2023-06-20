@@ -1,8 +1,8 @@
-Transitioning from AP CSP to AP CS A
+Transitioning from AP CSP to AP CSA
 ====================================
 
 If you have taken the AP CSP (Computer Science Principles) course and exam you
-should be well prepared for AP CS A. However, there are likely to be a few new
+should be well prepared for AP CSA. However, there are likely to be a few new
 things to get used to. If your CSP class used a block coding language like App
 Inventor, Scratch, Snap!, or App Lab, you learned to create program structures
 by plugging together blocks. In Java you'll find the structures are similar but
@@ -51,7 +51,7 @@ your prior programming experience was with a block language:
 
    <a href="https://docs.google.com/document/d/1LB6a36tRKGgTGJUcpT_3TspXFqn5luu1YU8YmYt1CQs/edit?usp=sharing" target="_blank">code.org App Lab code to Java</a>
 
-Here is a comparison of some App Inventor blocks compared to AP CSP pseudocode and Java code used in AP CS A (|open in Google Docs|).
+Here is a comparison of some App Inventor blocks compared to AP CSP pseudocode and Java code used in AP CSA (|open in Google Docs|).
 
 .. raw:: html
 

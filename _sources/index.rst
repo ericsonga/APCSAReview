@@ -3,10 +3,10 @@
     :align: center
 
 ==========================================
-AP CS A Java Course
+AP CSA Java Course
 ==========================================
 
-Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
+Welcome to CSAwesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
 
 CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
 

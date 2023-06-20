@@ -8,7 +8,7 @@ Writing Classes
 
 Class Periods: 12-14
 
-AP CS A Exam Weighting: 5-7.5%
+AP CSA Exam Weighting: 5-7.5%
 
 
 .. toctree::

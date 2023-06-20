@@ -5,7 +5,7 @@
 Medium Multiple Choice Questions
 ----------------------------------
 
-These problems are similar to those you will see on the AP CS A exam.
+These problems are similar to those you will see on the AP CSA exam.
 
 .. mchoice:: qrm_1
    :practice: T

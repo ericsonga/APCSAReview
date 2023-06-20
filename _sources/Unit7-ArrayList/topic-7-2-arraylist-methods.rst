@@ -37,11 +37,11 @@ ArrayList Methods
    pair: arraylist; set
    pair: arraylist; remove
 
-.. |AP CS A Reference Sheet| raw:: html
+.. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CS A Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
-The following are the ``ArrayList`` methods that you need to know for the AP CS A exam.  These are included on the |AP CS A Reference Sheet| that you will receive during the exam so you do not need to memorize them. The E in the method headers below stands for the type of the element in the ArrayList; this type E can be any Object type. We will look at how these methods work below.
+The following are the ``ArrayList`` methods that you need to know for the AP CSA exam.  These are included on the |AP CSA Reference Sheet| that you will receive during the exam so you do not need to memorize them. The E in the method headers below stands for the type of the element in the ArrayList; this type E can be any Object type. We will look at how these methods work below.
 
     -  **int size()** returns the number of elements in the list
 
@@ -74,7 +74,7 @@ As we saw in the last lesson, you can get the number of items in a ArrayList usi
 
 .. note::
 
-   With arrays, you use the ``length`` field to get the number of items in the array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the ArrayList. You will not be penalized if you mix up length and size() in the CS A exam. The number of items in an empty ArrayList is 0.
+   With arrays, you use the ``length`` field to get the number of items in the array.  But, with an ``ArrayList`` you use the ``size()`` method to get the number of items in the ArrayList. You will not be penalized if you mix up length and size() in the CSA exam. The number of items in an empty ArrayList is 0.
 
 Add(obj) to an ArrayList
 -----------------------------

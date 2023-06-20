@@ -26,7 +26,7 @@
 Sorting Algorithms
 ==================
 
-There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CS A exam are:
+There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CSA exam are:
 
 .. index::
    single: selection sort
@@ -78,7 +78,7 @@ To identify a selection sort look for the following:
 * if the value in the array at the index of the inner loop is less than the value at the smallest index then set the smallest index to the index of the inner loop (see lines 12 - 15)
 * swap the value at the outer loop index and the smallest value (the one at the smallest value index) (see lines 17-19)
 
-The code for ``selectionSort`` below is from the AP CS A course description.
+The code for ``selectionSort`` below is from the AP CSA course description.
 
 .. activecode:: selSort
   :language: java
@@ -227,7 +227,7 @@ To identify an insertion sort look for the following:
 * decrement the possible index (subtract one from it) (see line 14)
 * when the while loop ends set the value at the possible index to temp (see line 16)
 
-The code for ``insertionSort`` below is from the AP CS A course description.
+The code for ``insertionSort`` below is from the AP CSA course description.
 
 .. activecode:: insertionSort
   :language: java

@@ -7,7 +7,7 @@ Iteration (Loops)
 
 Class Periods: 14-16 (including lab)
 
-AP CS A Exam Weighting: 17.5-22.5%
+AP CSA Exam Weighting: 17.5-22.5%
 
 
 .. toctree::

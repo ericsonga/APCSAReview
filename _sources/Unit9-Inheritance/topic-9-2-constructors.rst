@@ -368,7 +368,7 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
 
    <a href="https://www.dropbox.com/s/2lmkd1m2sfh3xqc/ShapeExample.zip" target="_blank" style="text-decoration:underline">files here</a>
 
-For a more complex example of drawing shapes, try running this |repl.it Java Swing code| (or download the |files here| by clicking on Download on the top right and use the files in your own Java IDE). When the yellow panel comes up, click on either the Rectangle or the Oval button and then click and drag somewhere on the yellow panel to draw that shape. Take a look at the Rectangle.java and Oval.java files to see how they inherit from the Shape class in Shape.java. Java Swing graphical programming is not covered on the AP CS A exam, but it is a lot of fun!
+For a more complex example of drawing shapes, try running this |repl.it Java Swing code| (or download the |files here| by clicking on Download on the top right and use the files in your own Java IDE). When the yellow panel comes up, click on either the Rectangle or the Oval button and then click and drag somewhere on the yellow panel to draw that shape. Take a look at the Rectangle.java and Oval.java files to see how they inherit from the Shape class in Shape.java. Java Swing graphical programming is not covered on the AP CSA exam, but it is a lot of fun!
 
 Summary
 ---------

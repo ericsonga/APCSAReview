@@ -26,7 +26,7 @@ Consumer Review Lab
    <a href="https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html#while-find-and-replace-loop" target="_blank" style="text-decoration:underline">Lesson 4.3 Loops and Strings</a>
 
 
-The Consumer Review Lab is a new AP CS A Lab released in 2019 to practice loops and calling methods to prepare for the free response question on control structures and methods. Here is a link to the |student guide|. The teacher guide and the code files are available in the AP Course Audit Portal. The code files are also below.
+The Consumer Review Lab is a new AP CSA Lab released in 2019 to practice loops and calling methods to prepare for the free response question on control structures and methods. Here is a link to the |student guide|. The teacher guide and the code files are available in the AP Course Audit Portal. The code files are also below.
 
 Activity 0 Analyzing Reviews
 -----------------------------

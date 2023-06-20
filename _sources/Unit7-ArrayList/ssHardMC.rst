@@ -5,7 +5,7 @@
 Hard Search/Sort Multiple Choice Questions
 ------------------------------------------
 
-These problems are harder than those you will see on the AP CS A exam.
+These problems are harder than those you will see on the AP CSA exam.
 
 .. mchoice:: qssm_1
    :practice: T
@@ -21,7 +21,7 @@ These problems are harder than those you will see on the AP CS A exam.
    :feedback_d: This would be true if array was not modified at all in the main method.
    :feedback_e: This would be true if the conditional statement inside the for loop stated "if (key.compareTo(letters[i]) < 0)" and if the loop did not iterate through every item of the letters array, because that would put the array in a reverse alphabetical order.
 
-   What is printed when the following main method is executed? The break; statement used in this code breaks out of or terminates the loop at that point. It is not used on the AP CS A exam.
+   What is printed when the following main method is executed? The break; statement used in this code breaks out of or terminates the loop at that point. It is not used on the AP CSA exam.
 
    .. code-block:: java
 

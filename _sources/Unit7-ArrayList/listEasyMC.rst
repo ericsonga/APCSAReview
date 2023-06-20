@@ -5,7 +5,7 @@
 Easier Multiple Choice Questions
 ----------------------------------
 
-These problems are easier than most of those that you will usually see on the AP CS A exam.
+These problems are easier than most of those that you will usually see on the AP CSA exam.
 
 .. mchoice:: qale_1
    :practice: T

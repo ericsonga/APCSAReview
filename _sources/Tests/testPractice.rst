@@ -2,10 +2,10 @@
    :prefix: 12-1-
    :start: 1
 
-Preparing for the AP CS A Exam
+Preparing for the AP CSA Exam
 ==================================
 
-This chapter contains practice tests to help you prepare for the AP CS A exam. I have also listed other
+This chapter contains practice tests to help you prepare for the AP CSA exam. I have also listed other
 materials that you might find useful below.
 
 Nice resource with tips on how to do well on the exam from Rebecca Dovi.

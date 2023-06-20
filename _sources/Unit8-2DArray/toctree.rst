@@ -7,7 +7,7 @@
 
 Class Periods: 10-12 (including labs)
 
-AP CS A Exam Weighting: 7.5-10%
+AP CSA Exam Weighting: 7.5-10%
 
 
 

@@ -37,7 +37,7 @@ Searching Algorithms
    pair: search; sequential
    pair: search; binary
 
-Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
+Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CSA exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
 
 .. the video is Searching.mov
 
@@ -73,7 +73,7 @@ Sequential or linear search is the only method that can be used to find a value 
   :language: java
   :autograde: unittest
 
-  The code for ``sequentialSearch`` for arrays below is from a previous AP CS A course description. Click on the Code Lens button or the link below to see this code running in the Java visualizer.
+  The code for ``sequentialSearch`` for arrays below is from a previous AP CSA course description. Click on the Code Lens button or the link below to see this code running in the Java visualizer.
   ~~~~
   public class ArraySearcher
   {
@@ -283,7 +283,7 @@ Binary search keeps dividing the sorted search space into half. It compares a ta
 
 Binary search calculates the middle index as ``left + right / 2`` where left starts out at 0 and right starts out at the array length - 1 (the index of the last element).   Remember that integer division gives an integer result so 2.5 becomes 2.  It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one.  If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index.    It also stops when left is greater than right which indicates that the value wasn't found and it returns -1.
 
-The code for ``binarySearch`` below is from the AP CS A course description. A recursive version of this algorithm will be covered in Unit 10.
+The code for ``binarySearch`` below is from the AP CSA course description. A recursive version of this algorithm will be covered in Unit 10.
 
 .. activecode:: binSearch
   :language: java
