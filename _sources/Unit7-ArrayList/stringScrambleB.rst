@@ -109,7 +109,7 @@ This section contains a plain English explanation of one way to solve this probl
        :answer_c: (index < wordList.size())
        :answer_d: (wordList(index) != wordList.size())
        :correct: c
-       :feedback_a: the .current() command does not exist
+       :feedback_a: the .current() method does not exist
        :feedback_b: this form of range control does not work with while loops
        :feedback_c: Correct!
        :feedback_d: this does not accurately update the list as you iterate through wordList

@@ -144,7 +144,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
    :autograde: unittest
    :practice: T
 
-   In the following code, add another array declaration that creates an array of 5 doubles called prices and another array of 5 Strings called names and corresponding System.out.println commands.
+   In the following code, add another two more array declarations, one that creates an array of 5 doubles called prices and another of 5 Strings called names. Then add ``System.out.println`` calls to print their lengths.
    ~~~~
    public class Test1
    {

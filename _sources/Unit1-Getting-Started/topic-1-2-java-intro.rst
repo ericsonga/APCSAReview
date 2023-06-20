@@ -120,14 +120,14 @@ You can copy the Java source code shown in this book into a file and save it if 
 
 
 
-Print Commands
+Print Methods
 -------------------
 
 .. index::
    single: String
    single: String literal
 
-Java has two different print commands to print output to the screen:
+Java has two different methods to print output to the screen:
 
 - **System.out.println(value)** : prints the value followed by a new line (ln)
 - **System.out.print(value)** : prints the value without advancing to the next line
@@ -184,7 +184,7 @@ Java has two different print commands to print output to the screen:
         }
    }
 
-Most command keywords in Java must be in lowercase, but class names such as System and String are capitalized. Commands in Java must end with a semicolon (;). Think of the semicolon (;) in Java like a period (.) in English. You use a semicolon (``;``) to show the end of a Java **statement**, just the way you use a period (.) to show the end of an English sentence.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
+Special words—also called **keywords**—such as ``public``, ``class``, and ``if`` must be in lowercase, but class names such as ``System`` and ``String`` are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
 
 Syntax Errors and Debugging
 -----------------------------
@@ -354,7 +354,7 @@ Click on the |runbutton| button below to try and run the following code.  Look f
 
 |CodingEx| **Coding Exercise: Compile Time Error 3**
 
-Click on the |runbutton| button below to try and run the following code.  What is wrong this time?  Can you fix it?  After you fix the first error, you may encounter a 2nd error! Fix that one too! Hints: How do you end a command in Java? Also, check for capitalization.
+Click on the |runbutton| button below to try and run the following code.  What is wrong this time?  Can you fix it?  After you fix the first error, you may encounter a 2nd error! Fix that one too! Hints: How do you end a statement in Java? Also, check for capitalization.
 
 .. activecode:: sc2error3
    :language: java
@@ -485,9 +485,9 @@ Summary
 
 - A **string literal** is enclosed in double quotes ('' '').
 
-- Java command lines end in ; (semicolon). { } are used to enclose blocks of code. // and ``/* */`` are used for comments.
+- Java statements end in ``;`` (semicolon). ``{ }`` are used to enclose blocks of code. ``//`` and ``/* */`` are used for comments.
 
-- A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ; at end of command lines, matching { }, (), and "".
+- A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
 
 AP Practice
 ------------
@@ -572,7 +572,7 @@ AP Practice
 
     - Putting the semicolon after the ) on each line.
 
-      + Correct! The semicolon should go after each command but not in the comment.
+      + Correct! The semicolon should go after each statement but not in the comment.
 
 
 .. hparsons:: mp-main-method-order-1
