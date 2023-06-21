@@ -27,22 +27,27 @@ a,
   text-decoration: underline !important;
 }
 
+blockquote,
+.runestone-sphinx blockquote
+{
+  font-size: inherit;
+}
 
 /*
  * Table on Unit1's aboutcsa page.
  */
 
-#csatable
+#aboutcsa-table
 {
   padding-top: 1em;
 }
 
-#csatable th,
-#csatable td
+#aboutcsa-table th,
+#aboutcsa-table td
 {
   text-align: center;
 }
 
-#csatable thead {
+#aboutcsa-table thead {
   background-color: lightblue;
 }
