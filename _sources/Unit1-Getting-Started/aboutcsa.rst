@@ -2,7 +2,7 @@ About the AP CSA Exam
 ======================
 
 This curriculum will prepare you for the Advanced Placement Computer Science A
-Exam. This exam tests your programming skills in Java.
+Exam which tests your programming skills in Java.
 
 The AP CSA exam is 3 hours long and has two sections—multiple choice and
 free-response. You will be given one hour and 30 minutes for each part. The
@@ -11,29 +11,36 @@ response questions where you have to write Java code by hand. Each part is worth
 50% of your grade. During the exam, you will have access to the |AP CSA
 Reference Sheet|.
 
-The 4 free response questions cover the following areas.
+The 4 free response questions cover the following areas (from |AP CSA Free Response|):
 
-- Question 1: Methods and Control Structures, where students call methods and
-  work with control structures without the added complexity of data structures.
+  - **Question 1**: Methods and Control Structures—You’ll be asked to write program
+    code to create objects of a class and call methods, and satisfy method
+    specifications using expressions, conditional statements, and iterative
+    statements.
 
-- Question 2: Class, where students design and implement a described class.
+  - **Question 2**: Classes—You’ll be asked to write program code to define a new
+    type by creating a class and satisfy method specifications using
+    expressions, conditional statements, and iterative statements.
 
-- Question 3: Array/ArrayList, where students complete program code that uses
-  array or ArrayList objects.
+  - **Question 3**: Array/ArrayList—You’ll be asked to write program code to satisfy
+    method specifications and create, traverse, and manipulate elements in 1D
+    array or ArrayList objects.
 
-- Question 4: 2D Array, where students complete program code that uses 2D
-  arrays.
+  - **Question 4**: 2D Array—You’ll be asked to write program code to satisfy method
+    specifications and create, traverse, and manipulate elements in 2D array
+    objects.
 
-The College Board specifies the CSA course in units as shown in the table below
-and provides formative assessments called Personal Progress Checks for each unit
-on the AP portal. The CSAwesome curriculum follows the AP CSA units and provides
-many interactive exercises in each unit.
+The College Board specifies the AP CSA course in the 10 units shown in the table
+below. On the College Board's AP Portal they provide formative assessments
+called Personal Progress Checks for each unit. This CSAwesome curriculum is
+organized around the AP CSA units and also provides many interactive exercises
+in each unit.
 
-Additionally, CSA courses are required to provide at least 20 hours of lab time
-in which students practice Java programming.
+The College Board also requires AP CSA courses to provide at least 20 hours of
+lab time for you to practice Java programming.
 
-.. container:: testy
-   :name: csatable
+.. container::
+   :name: aboutcsa-table
 
    ======= ======================= =============== ========== ========
    Unit    Title                   Exam Weight     Class Days Lab Days
@@ -98,3 +105,7 @@ careers!
 .. |AP Audit|  raw:: html
 
    <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank" style="text-decoration:underline">AP Audit</a>
+
+.. |AP CSA Free Response|  raw:: html
+
+   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment" target="_blank">AP CSA Free Response</a>
