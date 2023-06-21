@@ -80,31 +80,31 @@ careers!
 
 .. |AP CSA site| raw:: html
 
-   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CSA site</a>
+   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank">AP CSA site</a>
 
 .. |AP CSA CED| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CSA Course and Exam Description (CED)</a>
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP CSA Course and Exam Description (CED)</a>
 
 .. |CS Careers| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank" style="text-decoration:underline">CS Careers</a>
+   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank">CS Careers</a>
 
 .. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank" style="text-decoration:underline">AP CSA Java Quick Reference Sheet</a>
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 .. |AP CSA past FRQs| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank" style="text-decoration:underline">AP CSA Past Free Response Questions</a>
+   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank">AP CSA Past Free Response Questions</a>
 
 .. |FRQ resource| raw:: html
 
-   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank" style="text-decoration:underline">FRQ resource</a>
+   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank">FRQ resource</a>
 
 .. |AP Audit|  raw:: html
 
-   <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank" style="text-decoration:underline">AP Audit</a>
+   <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank">AP Audit</a>
 
 .. |AP CSA Free Response|  raw:: html
 
