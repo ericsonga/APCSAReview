@@ -186,7 +186,7 @@ html_short_title ='AP CSAwesome'
 # of the sidebar.
 
 # logo is included in layout file
-#html_logo = "../source/_static/logo_small.png"
+html_logo = "_static/CSAwesomeLogo.png"
 
 
 # The name of an image file (within the static path) to use as favicon of the
