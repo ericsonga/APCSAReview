@@ -33,6 +33,20 @@ blockquote,
   font-size: inherit;
 }
 
+section h1,
+.runestone-sphinx section h1
+{
+  padding-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+section section h2,
+.runestone-sphinx section section h2
+{
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 /*
  * Table on Unit1's aboutcsa page.
  */
