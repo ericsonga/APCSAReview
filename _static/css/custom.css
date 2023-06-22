@@ -27,6 +27,12 @@ a,
   text-decoration: underline !important;
 }
 
+blockquote,
+.runestone-sphinx blockquote
+{
+  font-size: inherit;
+}
+
 section h1,
 .runestone-sphinx section h1
 {
@@ -39,4 +45,23 @@ section section h2,
 {
   padding-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+/*
+ * Table on Unit1's aboutcsa page.
+ */
+
+#aboutcsa-table
+{
+  padding-top: 1em;
+}
+
+#aboutcsa-table th,
+#aboutcsa-table td
+{
+  text-align: center;
+}
+
+#aboutcsa-table thead {
+  background-color: lightblue;
 }

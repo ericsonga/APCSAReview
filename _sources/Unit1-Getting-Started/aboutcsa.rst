@@ -1,79 +1,111 @@
 About the AP CSA Exam
 ======================
 
-This curriculum will prepare you for the Advanced Placement Computer Science A Exam. This exam tests your programming skills in Java.
+This curriculum will prepare you for the Advanced Placement Computer Science A
+Exam which tests your programming skills in Java.
 
-The AP CSA exam is 3 hours long and has two sections — multiple choice and free-response. You will be given one hour and 30 minutes for each part.  The first part has 40 multiple-choice questions, and the second part has 4 free response questions where you have to write Java code by hand. Each part is worth 50% of your grade. During the exam, you will have access to the |AP CSA Reference Sheet|.
+The AP CSA exam is 3 hours long and has two sections—multiple choice and
+free-response. You will be given one hour and 30 minutes for each part. The
+first part has 40 multiple-choice questions, and the second part has 4 free
+response questions where you have to write Java code by hand. Each part is worth
+50% of your grade. During the exam, you will have access to the |AP CSA
+Reference Sheet|.
 
-Starting in 2020, the AP CSA exam will cover the following units and will provide formative assessments called Personal Progress Checks for each unit in the AP portal. 20 hours of lab time is required in AP CSA courses to allow students to practice Java programming. Note that abstract classes, interfaces, and binary/hex conversion have been removed from AP CSA starting in 2020. This curriculum is arranged to follow the AP CSA units and provides many interactive exercises in each unit.
+The 4 free response questions cover the following areas (from |AP CSA Free Response|):
 
-.. raw:: html
+  - **Question 1**: Methods and Control Structures—You’ll be asked to write program
+    code to create objects of a class and call methods, and satisfy method
+    specifications using expressions, conditional statements, and iterative
+    statements.
 
-    <style> #csatable th, td { padding-left: 4px; }</style>
-    <table id="csatable" border width="80%" style="border:1px solid black"><thead style="background-color:lightblue;"><tr><th>Unit</th><th>Title</th><th>Exam Weight</th><th>Class Days</th><th>Lab Days</th></tr></thead>
-    <tbody><tr><td>Unit 1</td><td>Primitive Types</td>
-    <td>2.5–5%</td><td>8-10</td><td></td></tr>
-    <tr><td>Unit 2 </td><td> Using Objects  </td><td>   5–7.5%     </td><td> 13-15</td><td></td></tr>
-    <tr><td>Unit 3 </td><td> Boolean Exprs/ifs</td><td> 15–17.5%  </td><td>  11-13   </td><td>3-5
-    </td></tr>
-    <tr><td>Unit 4 </td><td> Iteration </td><td>        17.5–22.5%</td><td> 14-16  </td><td>4-6
-    </td></tr>
-    <tr><td>Unit 5 </td><td> Writing Classes </td><td>  5-7.5%  </td><td>    12-14</td><td>3-6</td>
-    </tr>
-    <tr><td>Unit 6 </td><td> Array  </td><td>           10–15%  </td><td>    6-8</td><td>
-    </td></tr>
-    <tr><td>Unit 7 </td><td> ArrayList </td><td>        2.5–7.5%   </td><td> 10-12 </td><td>3-6</td>
-    </tr>
-    <tr><td>Unit 8 </td><td> 2D Array  </td><td>        7.5–10%   </td><td>  10-12   </td><td>4-7
-    </td></tr>
-    <tr><td>Unit 9 </td><td> Inheritance </td><td>      5-10%  </td><td>     14-15  </td><td>3-6
-    </td></tr>
-    <tr><td>Unit 10 </td><td>Recursion  </td><td>       5–7.5%    </td><td>  3-5  <td></td>
-    </td></tr>
-    </tbody></table><p>
+  - **Question 2**: Classes—You’ll be asked to write program code to define a new
+    type by creating a class and satisfy method specifications using
+    expressions, conditional statements, and iterative statements.
 
+  - **Question 3**: Array/ArrayList—You’ll be asked to write program code to satisfy
+    method specifications and create, traverse, and manipulate elements in 1D
+    array or ArrayList objects.
 
-The 4 free response questions allow students to write code to answer a problem and cover the following areas.
+  - **Question 4**: 2D Array—You’ll be asked to write program code to satisfy method
+    specifications and create, traverse, and manipulate elements in 2D array
+    objects.
 
+The College Board specifies the AP CSA course in the 10 units shown in the table
+below. On the College Board's AP Portal they provide formative assessments
+called Personal Progress Checks for each unit. This CSAwesome curriculum is
+organized around the AP CSA units and also provides many interactive exercises
+in each unit.
 
-- Question 1: Methods and Control Structures, where students call methods and work with control structures without the added complexity of data structures.
-- Question 2: Class, where students design and implement a described class.
-- Question 3: Array/ArrayList, where students complete program code that uses array or ArrayList objects.
-- Question 4: 2D Array, where students complete program code that uses 2D arrays.
+The College Board also requires AP CSA courses to provide at least 20 hours of
+lab time for you to practice Java programming.
+
+.. container::
+   :name: aboutcsa-table
+
+   ======= ======================= =============== ========== ========
+   Unit    Title                   Exam Weight     Class Days Lab Days
+   ======= ======================= =============== ========== ========
+   1       Primitive Types         2.5–5%          8-10
+   ------- ----------------------- --------------- ---------- --------
+   2       Using Objects           5–7.5%          13-15
+   ------- ----------------------- --------------- ---------- --------
+   3       Boolean Exprs/ifs       15–17.5%        11-13      3-5
+   ------- ----------------------- --------------- ---------- --------
+   4       Iteration               17.5–22.5%      14-16      4-6
+   ------- ----------------------- --------------- ---------- --------
+   5       Writing Classes         5-7.5%          12-14      3-6
+   ------- ----------------------- --------------- ---------- --------
+   6       Array                   10–15%          6-8
+   ------- ----------------------- --------------- ---------- --------
+   7       ArrayList               2.5–7.5%        10-12      3-6
+   ------- ----------------------- --------------- ---------- --------
+   8       2D Array                7.5–10%         10-12      4-7
+   ------- ----------------------- --------------- ---------- --------
+   9       Inheritance             5-10%           14-15      3-6
+   ------- ----------------------- --------------- ---------- --------
+   10      Recursion               5–7.5%          3-5
+   ======= ======================= =============== ========== ========
+
+For more information on the exam see the College Board |AP CSA site| and the
+200+ page |AP CSA CED|. The |AP CSA past FRQs| are available online. Here is an
+|FRQ resource| that categorizes the past FRQs by topic and provides links to
+their solutions (which are available online in many places). The College Board
+provides a question bank and formative assessment quizzes for each unit online
+for registered AP classes.
+
+Also check out this list of |CS Careers| that taking CSA can lead to. Learning
+to code is an increasingly important skill that has applications in many
+careers!
 
 
 .. |AP CSA site| raw:: html
 
-   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CSA site</a>
+   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank">AP CSA site</a>
 
 .. |AP CSA CED| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank" style="text-decoration:underline">AP CSA Course and Exam Description (CED)</a>
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP CSA Course and Exam Description (CED)</a>
 
 .. |CS Careers| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank" style="text-decoration:underline">CS Careers</a>
+   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank">CS Careers</a>
 
 .. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank" style="text-decoration:underline">AP CSA Java Quick Reference Sheet</a>
-
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 .. |AP CSA past FRQs| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank" style="text-decoration:underline">AP CSA Past Free Response Questions</a>
+   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank">AP CSA Past Free Response Questions</a>
 
 .. |FRQ resource| raw:: html
 
-   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank" style="text-decoration:underline">FRQ resource</a>
-
+   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank">FRQ resource</a>
 
 .. |AP Audit|  raw:: html
 
-   <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank" style="text-decoration:underline">AP Audit</a>
+   <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank">AP Audit</a>
 
+.. |AP CSA Free Response|  raw:: html
 
-For more information on the exam see the College Board |AP CSA site| and the 200+ page |AP CSA CED|. The |AP CSA past FRQs| are available online. Here is an |FRQ resource| that categorizes the past FRQs by topic and provides links to their solutions (which are available online in many places). The College Board provides a question bank and formative assessment quizzes for each unit online for registered AP classes.
-
-Also check out this list of |CS Careers| that taking CSA can lead to. Learning to code is an increasingly important skill that has applications in many careers!
-
+   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment" target="_blank">AP CSA Free Response</a>
