@@ -44,14 +44,38 @@
 Objects - Instances of Classes
 ===============================
 
+Java is an **object-oriented programming** language. That means that one of the
+primary ways of organizing our programs is in terms of **objects**. Objects are
+a kind of value that combines data and the code that operates on that data into
+a single unit. Objects are defined in Java by writing **classes** which provide
+a blueprint for creating objects of a certain kind, describing the data and code
+that all **instances** of that class have.
+
+Sometimes classes and objects are used to model things in the real world, such
+as if we made a ``Student`` class to represent students in a school. Other times
+classes are just ways of organizing different parts of our programs that may not
+correspond to anything in the world outside the computer.
+
+But in Java all programs are built out of classes. This is why, as you saw in
+Unit 1, every Java programs starts with ``public class``: the first thing we
+have to do when we write a Java program is define at least one class.
+
 What are Objects and Classes?
 ------------------------------
 
-Java is an **object-oriented programming** language that can be used to model objects in the real world. We've seen that Java programs start with ``public class``.  A **class** is used to define a new data type or a blueprint for objects.
+**Objects** are values created by **constructing** an **instance** of a
+**class**. We used ``String`` objects in Unit 1 and variables declared of type
+``String`` such as ``String name;``. In this unit we'll work with a new class,
+``Turtle`` which creates  animated turtles. Later on, in Unit 5, you'll
+learn to write your own classes.
 
-**Objects** are the variables created from a **class** definition, and they are **instances** of a class. We've created String objects in Unit 1 using the String class, for example ``String name;``. In this unit we'll work with a class called Turtle for animated turtles as well as the String class. In Unit 5, you'll learn to write your own classes.
-
-You can think of a class like a blueprint or a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.
+When you think about making objects from a class, you can think of a class like a
+blueprint or a cookie cutter. It is used to create the cookies (objects) and can
+be used to create as many cookies (objects) as you want. As a blueprint, each
+class defines the **attributes** its objects have (the properties or what each
+object knows about itself) and the **behaviors** (what each object can do). In
+Java code, the attributes are written as **instance variables** in the class,
+and the behaviors are written as **methods**.
 
 .. figure:: Figures/cookieCutterLabelled.png
     :width: 500px
@@ -60,9 +84,21 @@ You can think of a class like a blueprint or a cookie cutter.  It is used to cre
 
     Figure 1: Using a cookie cutter (class) to make cookies (objects)
 
-You can think of a class as the type or classification.  Each type can have **attributes** (the object's properties or what it knows about itself) and **behaviors** (what an object does). In Java code, the attributes are written as **instance variables** in the class, and the behaviors are written as **methods**.
+You can also think of a class defining a new type. Just like you use ``int`` to
+declare variables that can hold an whole number value, you can use ``Turtle`` to
+declare a variable whose value has to be an instance of the ``Turtle`` class.
+And just like the Java compiler will only let you do things with the values of
+``int`` variables that make sense (like adding and multiplying them), it will
+only let you do things with values of a ``Turtle`` variable that make sense to do
+with turtles, namely accessing the instance variables and methods defined in the
+``Turtle`` class.
 
-The following picture has lots of cats (objects of the type cat).  They are all different, but they share the same attributes and behaviors that make up a cat. They are all **instances** of a cat with different values for their attributes. Name some of the attributes and behaviors of the cats below. For example, the color (*attribute*) of the first cat is black (*attribute value*) and it is playing (*behavior*).
+The following picture has lots of cats (objects of the type cat). They are all
+different, but they share the same attributes and behaviors that make up a cat.
+They are all **instances** of cat with different values for their attributes.
+Name some of the attributes and behaviors of the cats below. For example, the
+color (*attribute*) of the first cat is black (*attribute value*) and it is
+playing (*behavior*).
 
 .. figure:: Figures/catsLabelled.png
     :width: 500px
@@ -73,7 +109,9 @@ The following picture has lots of cats (objects of the type cat).  They are all 
 
 .. shortanswer:: cats
 
-    Discuss with your class: What are some attributes of cats? What are some behaviors of cats? (Note that attributes are often nouns or adjectives describing features of cats, and behaviors are often verbs).
+    Discuss with your class: What are some attributes of cats? What are some
+    behaviors of cats? (Note that attributes are often nouns or adjectives
+    describing features of cats, and behaviors are often verbs).
 
 .. |video1| raw:: html
 
