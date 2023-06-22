@@ -44,13 +44,12 @@
 Objects - Instances of Classes
 ===============================
 
-Java is an **object-oriented programming** language. That means that after we’ve
-exhausted the possibilities of primitive types like ``int``, ``double``, and
-``boolean``, one of the primary ways of organizing our programs is in terms of
-**objects**. Objects are a kind of value that combines data and the code that
-operates on that data into a single unit. Objects are defined in Java by writing
-**classes** which provide a blueprint for creating objects of a certain kind,
-describing the data and code that all **instances** of that class have.
+Java is an **object-oriented programming** language. That means that one of the
+primary ways of organizing our programs is in terms of **objects**. Objects are
+a kind of value that combines data and the code that operates on that data into
+a single unit. Objects are defined in Java by writing **classes** which provide
+a blueprint for creating objects of a certain kind, describing the data and code
+that all **instances** of that class have.
 
 Sometimes classes and objects are used to model things in the real world, such
 as if we made a ``Student`` class to represent students in a school. Other times
