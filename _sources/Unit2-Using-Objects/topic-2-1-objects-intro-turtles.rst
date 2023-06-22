@@ -90,7 +90,7 @@ declare variables that can hold an whole number value, you can use ``Turtle`` to
 declare a variable whose value has to be an instance of the ``Turtle`` class.
 And just like the Java compiler will only let you do things with the values of
 ``int`` variables that make sense (like adding and multiplying them), it will
-only let you do thigs with values of a ``Turtle`` variable that make sense to do
+only let you do things with values of a ``Turtle`` variable that make sense to do
 with turtles, namely accessing the instance variables and methods defined in the
 ``Turtle`` class.
 
