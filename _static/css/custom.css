@@ -4,20 +4,28 @@
  * remove the selectors without the `.runestone-sphinx` class.
  */
 
+:root {
+    --emphasisColor: #007d9f;
+}
+
+:root[data-theme="dark"] {
+    --emphasisColor: #00b3e3;
+}
+
+
 h1,
 h2,
 .runestone-sphinx h1,
 .runestone-sphinx h2
 {
-    color:  #00b3e3;
+    color:  var(--emphasisColor);
     border-bottom: 2px solid  #70d549;
 }
 
 strong,
 .runestone-sphinx strong
 {
-    color:  #0550FF; /*#1E90FF;  #00b3e3*/
-    background-color: ghostwhite;
+    color:  var(--emphasisColor);
     font-weight: bolder;
 }
 
@@ -66,6 +74,9 @@ section section h2,
   background-color: lightblue;
 }
 
+/*
+ * Time estimates at the top right of some pages.
+ */
 
 .runestone-sphinx div.unit-time
 {
