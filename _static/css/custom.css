@@ -26,3 +26,17 @@ a,
 {
   text-decoration: underline !important;
 }
+
+section h1,
+.runestone-sphinx section h1
+{
+  padding-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+section section h2,
+.runestone-sphinx section section h2
+{
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+}
