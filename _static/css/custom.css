@@ -9,6 +9,15 @@ h2,
 .runestone-sphinx h1,
 .runestone-sphinx h2
 {
+    color:  #007d9f;
+    border-bottom: 2px solid  #70d549;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] .runestone-sphinx h1,
+[data-theme="dark"] .runestone-sphinx h2
+{
     color:  #00b3e3;
     border-bottom: 2px solid  #70d549;
 }
