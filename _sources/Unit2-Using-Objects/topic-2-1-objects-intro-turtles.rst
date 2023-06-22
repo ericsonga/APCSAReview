@@ -44,14 +44,39 @@
 Objects - Instances of Classes
 ===============================
 
+Java is an **object-oriented programming** language. That means that after we’ve
+exhausted the possibilities of primitive types like ``int``, ``double``, and
+``boolean``, one of the primary ways of organizing our programs is in terms of
+**objects**. Objects are a kind of value that combines data and the code that
+operates on that data into a single unit. Objects are defined in Java by writing
+**classes** which provide a blueprint for creating objects of a certain kind,
+describing the data and code that all **instances** of that class have.
+
+Sometimes classes and objects are used to model things in the real world, such
+as if we made a ``Student`` class to represent students in a school. Other times
+classes are just ways of organizing different parts of our programs that may not
+correspond to anything in the world outside the computer.
+
+But in Java all programs are built out of classes. This is why, as you saw in
+Unit 1, every Java programs starts with ``public class``: the first thing we
+have to do when we write a Java program is define at least one class.
+
 What are Objects and Classes?
 ------------------------------
 
-Java is an **object-oriented programming** language that can be used to model objects in the real world. We've seen that Java programs start with ``public class``.  A **class** is used to define a new data type or a blueprint for objects.
+**Objects** are values created by **constructing** an **instance** of a
+**class**. We used ``String`` objects in Unit 1 and variables declared of type
+``String`` such as ``String name;``. In this unit we'll work with a new class,
+``Turtle`` which creates  animated turtles. Later on, in Unit 5, you'll
+learn to write your own classes.
 
-**Objects** are the variables created from a **class** definition, and they are **instances** of a class. We've created String objects in Unit 1 using the String class, for example ``String name;``. In this unit we'll work with a class called Turtle for animated turtles as well as the String class. In Unit 5, you'll learn to write your own classes.
-
-You can think of a class like a blueprint or a cookie cutter.  It is used to create the cookies (objects) and can be used to create as many cookies (objects) as you want.
+When you think about making objects from a class, you can think of a class like a
+blueprint or a cookie cutter. It is used to create the cookies (objects) and can
+be used to create as many cookies (objects) as you want. As a blueprint, each
+class defines the **attributes** its objects have (the properties or what each
+object knows about itself) and the **behaviors** (what each object can do). In
+Java code, the attributes are written as **instance variables** in the class,
+and the behaviors are written as **methods**.
 
 .. figure:: Figures/cookieCutterLabelled.png
     :width: 500px
@@ -60,9 +85,21 @@ You can think of a class like a blueprint or a cookie cutter.  It is used to cre
 
     Figure 1: Using a cookie cutter (class) to make cookies (objects)
 
-You can think of a class as the type or classification.  Each type can have **attributes** (the object's properties or what it knows about itself) and **behaviors** (what an object does). In Java code, the attributes are written as **instance variables** in the class, and the behaviors are written as **methods**.
+You can also think of a class defining a new type. Just like you use ``int`` to
+declare variables that can hold an whole number value, you can use ``Turtle`` to
+declare a variable whose value has to be an instance of the ``Turtle`` class.
+And just like the Java compiler will only let you do things with the values of
+``int`` variables that make sense (like adding and multiplying them), it will
+only let you do thigs with values of a ``Turtle`` variable that make sense to do
+with turtles, namely accessing the instance variables and methods defined in the
+``Turtle`` class.
 
-The following picture has lots of cats (objects of the type cat).  They are all different, but they share the same attributes and behaviors that make up a cat. They are all **instances** of a cat with different values for their attributes. Name some of the attributes and behaviors of the cats below. For example, the color (*attribute*) of the first cat is black (*attribute value*) and it is playing (*behavior*).
+The following picture has lots of cats (objects of the type cat). They are all
+different, but they share the same attributes and behaviors that make up a cat.
+They are all **instances** of cat with different values for their attributes.
+Name some of the attributes and behaviors of the cats below. For example, the
+color (*attribute*) of the first cat is black (*attribute value*) and it is
+playing (*behavior*).
 
 .. figure:: Figures/catsLabelled.png
     :width: 500px
@@ -73,7 +110,9 @@ The following picture has lots of cats (objects of the type cat).  They are all 
 
 .. shortanswer:: cats
 
-    Discuss with your class: What are some attributes of cats? What are some behaviors of cats? (Note that attributes are often nouns or adjectives describing features of cats, and behaviors are often verbs).
+    Discuss with your class: What are some attributes of cats? What are some
+    behaviors of cats? (Note that attributes are often nouns or adjectives
+    describing features of cats, and behaviors are often verbs).
 
 .. |video1| raw:: html
 
@@ -149,7 +188,10 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 Intro to Objects with Turtles
 -----------------------------
 
-The Turtle class (that we've written for you and hidden on this page) is a blueprint for turtle objects. It defines attributes for graphical turtles like their color and position and methods to make the turtles move. Try the Java program below that creates a Turtle object called yertle using the Turtle class.
+The Turtle class (that we've written for you and hidden on this page) is a
+blueprint for turtle objects. It defines attributes for graphical turtles like
+their color and position and methods to make the turtles move. Try the Java
+program below that creates a Turtle object called yertle using the Turtle class.
 
 .. activecode:: TurtleTest
     :language: java
@@ -157,7 +199,11 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
     :datafile: turtleClasses.jar
 
     Try clicking the run button below to see what the following program does.
-    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work or is too slow in your browser, you can
+    also see the ``Turtle`` code in action at this |repl link| (refresh page
+    after forking and if it gets stuck) or download the files |github| to use in
+    your own IDE.)
+
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -199,7 +245,8 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
 
    <a href="https://www.youtube.com/watch?v=TFmmG4_KK8I&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
 
-The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.
+The following |video2| shows how the program creates a ``World`` object called
+``habitat`` and a ``Turtle`` object called ``yertle`` in memory.
 
 .. youtube:: TFmmG4_KK8I
     :width: 650
@@ -208,7 +255,14 @@ The following |video2| shows how the program creates a ``World`` object called `
     :optional:
 
 
-The **dot operator** (.) is used to run an object's method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by default. The parentheses ``()`` after a method name are there in case you need to give the method **arguments** (some data) to do its job, for example to go forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the code above to go forward 50 pixels instead and then run it again.
+The **dot operator** (.) is used to run an object's method. You can think of the
+(.) as asking the object to do something (execute one of its methods). For
+example, ``yertle.forward()`` asks the turtle ``yertle`` to go ``forward``. It
+doesn't tell ``yertle`` how much to go forward, so it goes forward 100 pixels by
+default. The parentheses ``()`` after a method name are there in case you need
+to give the method **arguments** (some data) to do its job, for example to go
+forward 50 pixels instead of 100 in ``yertle.forward(50);`` Try changing the
+code above to go forward 50 pixels instead and then run it again.
 
 |Exercise| **Check your understanding**
 
@@ -225,9 +279,6 @@ The **dot operator** (.) is used to run an object's method. You can think of the
    :feedback_d: Which way does yertle first move in the example above?
 
    Which way does a turtle face when it is first created?
-
-
-
 
 .. mchoice:: 2_1_type_object
    :answer_a: object
@@ -279,7 +330,19 @@ The **dot operator** (.) is used to run an object's method. You can think of the
    :adaptive:
    :noindent:
 
-   The following program uses a turtle to draw a sort-of sideways capital L as seen in the image, but the lines are mixed up.  The program should do all necessary set-up: import items, start the class definition, start the main method, and create a habitat and turtle. Then it should ask the turtle to turn right, go forward, turn left, and then go forward 50 pixels. Next, it should ask the habitat to show itself.  Finally, it should close the main method and class definition. We have added a compass to the picture to indicate the directions north, south, west, and east. Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There are three extra blocks that are not needed in a correct solution.  Then click on Check Me to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.
+   The following program uses a turtle to draw a sort-of sideways capital L as
+   seen in the image, but the lines are mixed up. The program should do all
+   necessary set-up: import items, start the class definition, start the main
+   method, and create a habitat and turtle. Then it should ask the turtle to
+   turn right, go forward, turn left, and then go forward 50 pixels. Next, it
+   should ask the habitat to show itself. Finally, it should close the main
+   method and class definition. We have added a compass to the picture to
+   indicate the directions north, south, west, and east. Drag the needed blocks
+   of statements from the left column to the right column and put them in the
+   right order. There are three extra blocks that are not needed in a correct
+   solution. Then click on Check Me to see if you are right. You will be told if
+   any of the lines are in the wrong order or are the wrong blocks.
+
    -----
    import java.util.*;
    import java.awt.*;
@@ -319,7 +382,10 @@ The **dot operator** (.) is used to run an object's method. You can think of the
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    In the code below, ``yertle`` goes forward and then turns left. Can you change the code to make ``yertle`` go ``forward`` twice and then ``turnRight``?
+    In the code below, ``yertle`` goes forward and then turns left. Can you
+    change the code to make ``yertle`` go ``forward`` twice and then
+    ``turnRight``?
+
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -377,8 +443,10 @@ The **dot operator** (.) is used to run an object's method. You can think of the
 Creating Turtle Objects
 ------------------------
 
-When you write a class like the ``Turtle`` class, you can create many objects of that class type. In the code below,
-two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your turtle and add in a line like the following in the main method to make it move:
+When you write a class like the ``Turtle`` class, you can create many objects of
+that class type. In the code below, two turtle objects are created: ``yertle``
+and ``myrtle``. You can name your turtle and add in a line like the following in
+the main method to make it move:
 
 .. code-block:: java
 
@@ -395,6 +463,7 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
     :datafile: turtleClasses.jar
 
     Can you add another turtle object to the code below?
+
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -463,7 +532,10 @@ Here is a class diagram that shows some of the attributes and methods in the cla
 
 We encourage you to work in pairs for this challenge.
 
-Create a ``Turtle`` object below and have it draw a shape.  For example, have it draw a small square and then a large square by calling the forward method multiple times. In the next lessons, we will draw more complicated shapes. Here are some simple turtle methods that you could use:
+Create a ``Turtle`` object below and have it draw a shape. For example, have it
+draw a small square and then a large square by calling the forward method
+multiple times. In the next lessons, we will draw more complicated shapes. Here
+are some simple turtle methods that you could use:
 
 - ``forward();``
 - ``turnLeft();``
@@ -479,7 +551,9 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Create a Turtle object and have it draw a shape, for example a small square and then a larger square (by calling the forward method multiple times).
+    Create a Turtle object and have it draw a shape, for example a small square
+    and then a larger square (by calling the forward method multiple times).
+
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -577,13 +651,20 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
 Summary
 -------------------
 
-- A **class** defines a new data type (a classification). It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
+- A **class** defines a new data type (a classification). It is the formal
+  implementation, or blueprint, of the *attributes* and *behaviors* of the
+  objects of that class.
 
-- An **object** is a specific **instance** of a class with defined attributes. Objects are declared as variables of a class type.
+- An **object** is a specific **instance** of a class its own copies of the
+  attributes defined by the class. Objects can be assigned to variables whose
+  type is declared to be the class of the object.
 
-- An **attribute** or **instance variable** is data the object knows about itself. For example a turtle object knows the direction it is facing or its color.
+- An **attribute** or **instance variable** is data the object knows about
+  itself. For example a turtle object knows the direction it is facing or its
+  color.
 
-- A **behavior** or **method** is something that an object can do.  For example a turtle object can go forward 100 pixels.
+- A **behavior** or **method** is something that an object can do. For example a
+  turtle object can go forward 100 pixels.
 
 
 AP Practice
@@ -593,7 +674,9 @@ AP Practice
 
    <a href="https://www.youtube.com/watch?v=Y9vn6u3901Y&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
 
-This |video3| shows another class called Belt and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
+This |video3| shows another class called Belt and how it has 3 instance
+variables to define its attributes. Every belt object has its own copy of
+instance variables.
 
 .. youtube:: Y9vn6u3901Y
     :width: 650
@@ -601,7 +684,8 @@ This |video3| shows another class called Belt and how it has 3 instance variable
     :align: center
     :optional:
 
-Try these AP practice questions that will help to prepare you for the AP Classroom progress checks.
+Try these AP practice questions that will help to prepare you for the AP
+Classroom progress checks.
 
 .. mchoice:: AP2-1-1
    :practice: T
@@ -646,8 +730,6 @@ Try these AP practice questions that will help to prepare you for the AP Classro
     - A boolean variable called ``partyStarted`` to represent whether the party has started.
 
     The object ``myParty`` is declared as type Party. Which of the following descriptions is accurate?
-
-
 
 .. datafile:: turtleClasses.jar
     :hide:
