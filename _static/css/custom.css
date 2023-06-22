@@ -9,8 +9,8 @@ h2,
 .runestone-sphinx h1,
 .runestone-sphinx h2
 {
-    color:  #70d549;
-    border-bottom: 5px groove #00b3e3;
+    color:  #00b3e3;
+    border-bottom: 2px solid  #70d549;
 }
 
 strong,
