@@ -3,9 +3,6 @@
     :align: middle
     :alt: groupwork
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

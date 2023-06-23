@@ -1,5 +1,4 @@
-    :width: 250
-    :align: right
+   
 
 .. raw:: html
 
@@ -623,8 +622,7 @@ How image processing is related to new scientific breakthroughs
 -----------------------------------------------------------------
 
 .. image:: Figures/CeciliaAragon.png
-    :width: 200
-    :align: right
+   
 
 Many of today’s important scientific breakthroughs are being made by large, interdisciplinary
 collaborations of scientists working in geographically widely distributed locations, producing, collecting,

@@ -29,9 +29,6 @@
     pair: method; argument
     pair: method; return
 
-    :width: 225
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

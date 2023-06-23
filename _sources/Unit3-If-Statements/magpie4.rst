@@ -5,9 +5,6 @@
 .. highlight:: java
    :linenothreshold: 4
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

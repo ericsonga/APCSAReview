@@ -106,11 +106,9 @@ Index
 
 If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CSAwesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
 
-(last revised 6/19/2023)
+(last revised 6/22/2023)
 
 © Copyright 2015 Barb Ericson, Univ. Michigan, 2019 revised by Beryl Hoffman (Elms College). Created using `Runestone  <http://runestone.academy>`_.
 
 
-.. raw:: html
 
-    <div style="font-size:small;">Icons made by <a href="https://smashicons.com/" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> are licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</div>

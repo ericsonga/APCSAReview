@@ -27,9 +27,6 @@
    single: reference
    pair: String; definition
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

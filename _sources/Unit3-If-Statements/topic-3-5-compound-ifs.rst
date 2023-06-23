@@ -24,9 +24,6 @@
 
     <style>    td { text-align: left; } </style>
 
-    :width: 225
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

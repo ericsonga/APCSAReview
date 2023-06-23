@@ -2,9 +2,6 @@
 
    <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >Picture Lab</a>
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

@@ -19,9 +19,6 @@
     :align: middle
     :alt: groupwork
 
-    :width: 225
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

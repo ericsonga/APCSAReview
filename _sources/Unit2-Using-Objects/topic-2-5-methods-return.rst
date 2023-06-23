@@ -38,9 +38,6 @@
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

@@ -34,9 +34,6 @@
     pair: operators; equality
     pair: operators; inequality
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

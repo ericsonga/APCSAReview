@@ -23,9 +23,6 @@
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">

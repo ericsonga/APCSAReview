@@ -77,7 +77,7 @@ section section h2,
 /*
  * Time estimates at the top right of some pages.
  */
-
+div.unit-time,
 .runestone-sphinx div.unit-time
 {
   clear: right;
@@ -89,6 +89,7 @@ section section h2,
   color: grey;
 }
 
+div.unit-time svg,
 .runestone-sphinx div.unit-time svg {
   display: inline;
   vertical-align: middle;

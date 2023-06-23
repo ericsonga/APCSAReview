@@ -1,5 +1,4 @@
-    :width: 225
-    :align: right
+   
 
 .. raw:: html
 

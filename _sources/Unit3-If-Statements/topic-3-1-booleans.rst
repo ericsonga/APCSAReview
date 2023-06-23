@@ -25,9 +25,6 @@
    pair: Variable; boolean
    pair: boolean; variable
 
-    :width: 250
-    :align: right
-
 .. raw:: html
 
    <div class="unit-time">
