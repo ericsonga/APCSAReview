@@ -55,12 +55,6 @@ section section h2,
   margin-bottom: 0.5em;
 }
 
-.runestone-sphinx h1 code,
-.runestone-sphinx h2 code
-{
-  background-color: inherit;
-}
-
 .runestone-sphinx code
 {
   padding: 0;
