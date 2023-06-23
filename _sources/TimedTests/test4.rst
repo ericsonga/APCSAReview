@@ -372,7 +372,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :feedback_d: How does it miss one "x"?
        :feedback_e: Since the first character is "x" how can this be true?
 
-       What will the method below return when called with mystery(“xxzxyxx”)?
+       What will the method below return when called with mystery("xxzxyxx")?
 
        .. code-block:: java
 
@@ -424,9 +424,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
           Animal that has a method speak() which returns "Awk".
           Bird doesn’t have a speak method
-          Dog has a speak method that returns “Woof”
+          Dog has a speak method that returns "Woof"
           Pig doesn’t have a speak method
-          Cow has a speak method that returns “Moo”
+          Cow has a speak method that returns "Moo"
           Cat has a speak method that returns "Meow"
 
 
@@ -532,12 +532,3 @@ Click the |start| button when you are ready to begin the exam, but only then as 
             else
                return mid;
          }
-
-
-
-
-
-
-
-
-

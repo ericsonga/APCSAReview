@@ -64,7 +64,7 @@ Peer Instruction: Arrays Multiple Choice Questions
                     b = i;
                 }
             }
-            System.out.println(a + “,”+b);
+            System.out.println(a + ","+b);
         }
 
 .. mchoice:: bs-arrays-21-10

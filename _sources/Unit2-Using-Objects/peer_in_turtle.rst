@@ -32,7 +32,7 @@ Peer Instruction: Unit 2 Turtle Multiple Choice Questions
     :feedback_b: Correct! This is a method of the Turtle class. It should have a return type of void. It doesn’t produce a number – it causes an action to happen.
     :feedback_c: Correct! The bethsSquare parameter "size" is not used in the method. Perhaps it could replace the "100" in the method calls (ex. turtle1.forward(size)).
     :feedback_d: Incorrect! Although it is true that you could use turnRight instead of turnLeft, this is not necessarily an incorrect aspect of the code because turnLeft still produces the expected response.
-    :feedback_e: Correct! Because this is a method of the turtle class, it is callable by any turtle object. Whichever turtle calls it is the turtle that should be controlled (turned, moved forward). The object “this” can be used instead of "turtle1" to refer to the object performing the method.
+    :feedback_e: Correct! Because this is a method of the turtle class, it is callable by any turtle object. Whichever turtle calls it is the turtle that should be controlled (turned, moved forward). The object ``this`` can be used instead of ``turtle1`` to refer to the object performing the method.
 
     Why is this code incorrect? Assume this method is a method of the Turtle class (There are multiple correct answers)
 
@@ -53,7 +53,7 @@ Peer Instruction: Unit 2 Turtle Multiple Choice Questions
    :author: Beth Simon
    :practice: T
 
-   What’s the right way to “call” the bethsSquare method to draw a square (void method that takes one parameter)?
+   What’s the right way to call the bethsSquare method to draw a square (void method that takes one parameter)?
 
    -
        ::

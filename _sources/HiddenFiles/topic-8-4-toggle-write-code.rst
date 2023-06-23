@@ -188,7 +188,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Fill in the ``flipImage`` method. This should accept a two-dimensional String array ``image`` and flip the "image” 180 degrees vertically. For example, ``{ {"green", "red", "blue"}, {"cat", "dog", "yellow"} }`` would become ``{ {"blue", "red", "green"}, {"yellow", "dog", "cat"} }``.
+        Fill in the ``flipImage`` method. This should accept a two-dimensional String array ``image`` and flip the “image” 180 degrees vertically. For example, ``{ {"green", "red", "blue"}, {"cat", "dog", "yellow"} }`` would become ``{ {"blue", "red", "green"}, {"yellow", "dog", "cat"} }``.
         ~~~~
         import java.util.Arrays;
 
@@ -457,7 +457,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write the ``breakIntoLetters`` method. It should accept a two-dimensional String array, in which each row contains the characters of a word. It should then return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array. For example, calling ``breakIntoLetters`` on { {“b”, “a”, “t”, “h”}, {“t”, “e”, “n”, “s”}, {“j”, “a”, “c”, “k”}, {“l”, “a”, “z”, “y”} } should return {“bath”, “tens”, “jack”, “lazy”}.
+        Write the ``breakIntoLetters`` method. It should accept a two-dimensional String array, in which each row contains the characters of a word. It should then return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array. For example, calling ``breakIntoLetters`` on { {"b", "a", "t", "h"}, {"t", "e", "n", "s"}, {"j", "a", "c", "k"}, {"l", "a", "z", "y"} } should return {"bath", "tens", "jack", "lazy"}.
         ~~~~
         import java.util.Arrays;
 
@@ -595,4 +595,3 @@ This is the write code problems associated with the mixed up code problems.
                 assertTrue(passed);
             }
         }
-

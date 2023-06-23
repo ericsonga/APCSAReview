@@ -188,7 +188,7 @@ This is the write code problems associated with the mixed up code problems. Reme
         :practice: T
         :autograde: unittest
 
-        Finish the ``removeStar`` method. It should remove any occurrence of an asterisk (“*”) from a passed-in string. For example, calling ``removeStar`` on ``"ab*c**d”`` would return ``“abcd”``.
+        Finish the ``removeStar`` method. It should remove any occurrence of an asterisk (“*”) from a passed-in string. For example, calling ``removeStar`` on ``"ab*c**d"`` would return ``"abcd"``.
         ~~~~
         public class ListTest {
 

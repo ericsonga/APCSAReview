@@ -412,7 +412,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code to create a ``Person`` class. Each ``Person`` instance should have a String ``name`` attribute and a integer ``age`` attribute. There should also be ``getName`` and ``setName`` methods. Finally, there should to be a ``toString`` method that returns ``“{name} is {age} years old”`` (e.g., ``Person(“Carol”, 12)``’s toString method would return ``”Carol is 12 years old”``).
+        Write code to create a ``Person`` class. Each ``Person`` instance should have a String ``name`` attribute and a integer ``age`` attribute. There should also be ``getName`` and ``setName`` methods. Finally, there should to be a ``toString`` method that returns “{name} is {age} years old” (e.g., ``Person("Carol", 12)``’s toString method would return ``"Carol is 12 years old"``).
         ~~~~
         public class Person {
             // define a String instance variable "name"
@@ -487,7 +487,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code to create a ``Point`` class. Each ``Point`` instance should have integer ``x`` and ``y`` attributes (and the constructor should take those in that order). There should be getter methods for each: ``getX`` and ``getY``. There should be a ``getDistance`` method that takes in another ``Point`` object as an argument and calculates the euclidean distance from this object to that one (which would be sqrt((this.x - other.x) ^ 2 + (this.y - other.y) ^ 2)). Finally, there should to be a ``toString`` method that returns ``“(Point.x, Point.y)”`` (e.g., ``Point(3, 4)``’s toString method would return ``”(3, 4)”``).
+        Write code to create a ``Point`` class. Each ``Point`` instance should have integer ``x`` and ``y`` attributes (and the constructor should take those in that order). There should be getter methods for each: ``getX`` and ``getY``. There should be a ``getDistance`` method that takes in another ``Point`` object as an argument and calculates the euclidean distance from this object to that one (which would be sqrt((this.x - other.x) ^ 2 + (this.y - other.y) ^ 2)). Finally, there should to be a ``toString`` method that returns “(Point.x, Point.y)” (e.g., ``Point(3, 4)``’s toString method would return ``"(3, 4)"``).
         ~~~~
         public class Point {
             private int x;
@@ -648,7 +648,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write code that completes the ``Character`` class. Each ``Character`` instance has an integer ``healthPoints`` (abbreviated HP) attribute and a String ``name`` attribute. They also have the associated ``getHP``, ``setHP``, and ``getName`` methods. Using these, write code that finishes the ``fight(Character other)`` method that lets a character fight another. If the character's ``healthPoints`` are the same or more than ``other``'s, ``other``'s HP should be set to zero, the current character's HP should be set to the difference, and the program should print ``"{the character's name} wins"``. That entire section is already completed. On the other hand, if ``other``'s HP is greater, the current character's HP should be set to zero, ``other``'s HP should be set to the difference, and the program should print ``”{other’s name} wins”``.
+        Write code that completes the ``Character`` class. Each ``Character`` instance has an integer ``healthPoints`` (abbreviated HP) attribute and a String ``name`` attribute. They also have the associated ``getHP``, ``setHP``, and ``getName`` methods. Using these, write code that finishes the ``fight(Character other)`` method that lets a character fight another. If the character's ``healthPoints`` are the same or more than ``other``'s, ``other``'s HP should be set to zero, the current character's HP should be set to the difference, and the program should print “{the character's name} wins”. That entire section is already completed. On the other hand, if ``other``'s HP is greater, the current character's HP should be set to zero, ``other``'s HP should be set to the difference, and the program should print “{other’s name} wins”.
         ~~~~
         public class Character {
             private int healthPoints; // current HP of the character
