@@ -492,7 +492,7 @@ This is the write code problems associated with the mixed up code problems.
         :practice: T
         :autograde: unittest
 
-        Write the function ``doubleList``. This should take in an ArrayList ``words`` and insert a copy of each element such that ``{“cat”, “ribbon”, “house”}`` would become ``{“cat”, “cat”, “ribbon”, “ribbon”, “house”, “house”}``.
+        Write the function ``doubleList``. This should take in an ArrayList ``words`` and insert a copy of each element such that ``{"cat", "ribbon", "house"}`` would become ``{"cat", "cat", "ribbon", "ribbon", "house", "house"}``.
         ~~~~
         import java.util.List;
         import java.util.ArrayList;
