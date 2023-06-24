@@ -53,7 +53,7 @@ This is simliar to a toddler toy that has pictures of animals and when a handle 
     Figure 1: A see n say toy
 
 
-If you were simulating this toy in software you could create an Animal class that had a makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
+If you were simulating this toy in software you could create an ``Animal`` class that had a ``makeNoise`` method. Each subclass of ``Animal`` would override the ``makeNoise`` method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
 
 .. index::
     single: declared type
@@ -122,7 +122,6 @@ In all of these cases, there are no errors at compile-time because the compiler 
             for (Shape s : shapes)
             {
                s.what();
-               System.out.print(" ");
             }
          }
 
@@ -158,7 +157,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
    :feedback_c: This code will compile.  The student class does have a getInfo method.
    :feedback_d: There is no problem at run-time.
 
-   What is the output from running the main method in the Student class?
+   What is the output from running the ``main`` method in the ``Student`` class?
 
    .. code-block:: java
 
@@ -175,7 +174,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
          public static void main(String[] args)
          {
            Student s1 = new GradStudent();
-           s1.getInfo();
+           System.out.println(s1.getInfo());
          }
       }
 
@@ -202,7 +201,7 @@ You can step through this code using the Java Visualizer by clicking on the foll
    :feedback_c: The variable car is a Car object, so the constructor used is not the same as the fastCar object which is a RaceCar. The car constructor does not change the passed in parameter, so it is set to 5 initially.
    :feedback_d: RaceCar inherits from the Car class so all the public object methods in Car can be accessed by any object of the RaceCar class.
 
-   What is the output from running the main method in the Car class?
+   What is the output from running the ``main`` method in the ``Car`` class?
 
    .. code-block:: java
 
@@ -247,7 +246,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
    :feedback_b: At compile time the declared type is Book and the Book class does not have or inherit a getDefintion method.
    :feedback_c: Casting to Dictionary means that the compiler will check the Dictionary class for the getDefinition method.
 
-   Given the following class definitions and a declaration of Book b = new Dictionary which of the following will cause a compile-time error?
+   Given the following class definitions and a declaration of ``Book b = new Dictionary()`` which of the following will cause a compile-time error?
 
    .. code-block:: java
 
@@ -283,24 +282,33 @@ You can step through the code using the Java Visualizer by clicking on the follo
     :align: left
     :alt: Shopping
 
-In the last lesson, you created a class called DiscountedItem as part of a Shopping Cart application. Please copy your solutions from the last lesson into the Active Code window below (or in repl or another IDE) before completing this challenge.
+In the last lesson, you created a class called ``DiscountedItem`` as part of a
+Shopping Cart application. Please copy your solutions from the last lesson into
+the Active Code window below (or in repl or another IDE) before completing this
+challenge.
 
-The ShoppingCart contains a polymorphic ArrayList called order that you can use to add Items or DiscountedItems to the shopping cart. The Item class keeps track of the name and the price of each Item. The DiscountedItem class you wrote in the last lesson adds on a discount amount.
+The ``ShoppingCart`` contains a polymorphic ``ArrayList`` called ``order`` that
+you can use to add ``Items`` or ``DiscountedItems`` to the shopping cart. The
+``Item`` class keeps track of the name and the price of each Item. The
+``DiscountedItem`` class you wrote in the last lesson adds on a discount amount.
 
-In this challenge, you will write a method called ``int countDiscountedItems()`` in the ShoppingCart class.
+In this challenge, you will write a method called ``int countDiscountedItems()`` in the ``ShoppingCart`` class.
 
-- This method will use a loop to traverse the ArrayList of Items called order.
-- In the loop, you will test if each Item is a DiscountedItem by using the ``instanceof`` keyword ((object instanceof Class) returns true or false) similar to its use in the add(Item) method.
-- If it is a DiscountedItem, then you will count it.
+- This method will use a loop to traverse the ``ArrayList`` of ``Items`` called ``order``.
+- In the loop, you will test if each ``Item`` is a ``DiscountedItem`` by using the ``instanceof`` keyword (``object instanceof Class`` returns ``true`` or ``false``) similar to its use in the ``add(Item)`` method.
+- If it is a ``DiscountedItem``, then you will count it.
 - At the end of the loop, the method will return the count.
-- Make sure you print out the number of discounted items in the main method or in printOrder(), so that you can test your method. Add more items to the order to test it.
+- Make sure you print out the number of discounted items in the main method or in ``printOrder()``, so that you can test your method. Add more items to the order to test it.
 
 
 .. activecode:: challenge-9-6-shopping2
   :language: java
   :autograde: unittest
 
-  Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceof to test items to see if they are a DiscountedItem.
+  Copy in your code for ``DiscountedItem`` below and then write a method called
+  ``countDiscountedItems`` which traverses the polymorphic ``ArrayList<Item>``.
+  Use ``instanceof`` to test each item to see if it is a ``DiscountedItem``.
+
   ~~~~
   import java.util.*;
 
@@ -481,4 +489,3 @@ Summary
 - At compile time, methods in or inherited by the **declared type** determine the correctness of a non-static method call.
 
 - At run-time, the method in the **actual object type** is executed for a non-static method call. This is called **polymorphism**.
-
