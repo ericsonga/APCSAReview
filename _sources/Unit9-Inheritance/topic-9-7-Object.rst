@@ -384,7 +384,7 @@ and in Spanish which is what we call a “foot” in English.
 
            if (!(other instanceof Word))
            {
-               // It can’t be the same Word if it’s not a Word at all.
+               // It can't be the same Word if it's not a Word at all.
                // This also ensures that o.equals(null) is false because
                // null is not an instanceof any class.
                return false;
