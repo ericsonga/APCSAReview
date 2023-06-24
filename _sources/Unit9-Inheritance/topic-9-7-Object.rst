@@ -529,9 +529,9 @@ the next step:
    }
 
    /*
-    * Write the SavingsAccount class which inherits from Account,
-    * adds an interest rate instance variable. Write a constructor and a
-    * toString method.
+    * Write the SavingsAccount class which inherits from Account. Add an
+    * interest rate instance variable and write a constructor and a toString
+    * method.
     */
    class SavingsAccount
    {
