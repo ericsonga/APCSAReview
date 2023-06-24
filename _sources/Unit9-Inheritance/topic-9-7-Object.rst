@@ -471,7 +471,7 @@ method in one class in a class hierarchy.
 |Groupwork| Programming Challenge : Savings Account
 ---------------------------------------------------
 
-In the following code, contains the beginning of a class for representing a bank
+The following code contains the beginning of a class for representing a bank
 account containing the account holder's name and the money balance in the
 account.
 
