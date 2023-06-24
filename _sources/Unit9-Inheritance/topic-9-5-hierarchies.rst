@@ -191,29 +191,38 @@ Notice that in the following code, the print method has a parameter of type Pers
 Superclass Arrays and ArrayLists
 ---------------------------------
 
-Using inheritance hierarchies, we can create arrays and ArrayLists using the superclass type and put in values that are of the subclass type. This can be very useful! For example, here is a Shape array and a Shape ArrayList that can hold any objects of the Shape subclasses.
+Using inheritance hierarchies, we can create arrays and ``ArrayLists`` using the
+superclass type and put in values that are of the subclass types. This can be
+very useful! For example, here is some code that creates a ``Shape[]`` array and
+an ``ArrayList<Shape>``, both of which can hold any objects of ``Shape`` and any
+of its subclasses.
 
 .. code-block:: java
 
     // This shape array can hold the subclass objects too
     Shape[] shapeArray = { new Rectangle(), new Square(), new Shape() };
+
     // The shape ArrayList can add subclass objects too
     ArrayList<Shape> shapeList = new ArrayList<Shape>();
     shapeList.add(new Shape());
     shapeList.add(new Rectangle());
     shapeList.add(new Square());
 
-Notice that the add method in ArrayLists actually has a parameter type of Object, add(Object), but we can use it with any subclass object!
-
 |CodingEx| **Coding Exercise**
 
-The code below has an ArrayList of Pets that can hold Pet or Dog objects. Notice that the loop works with a variable of type Pet because Dogs are Pets too!
+The code below has an ``ArrayList<Pet>`` that can hold ``Pet`` or ``Dog``
+objects. Notice that the loop works with a variable of type ``Pet`` because a
+``Dog`` is a ``Pet`` too!
 
 .. activecode:: superclassArray
   :language: java
   :autograde: unittest
 
-  Scroll down to look at the Dog class and add a similar Cat class that extends Pet. Don't make the Cat class public because there can only be 1 public class in a file. Scroll back to the main method and add some Cat objects to the ArrayList too. Does the petList work with Cats too?
+  Scroll down to look at the ``Dog`` class and add a similar ``Cat`` class that
+  extends ``Pet``. Don't make the ``Cat`` class public because there can only be
+  1 public class in a file. Scroll back to the main method and add some ``Cat``
+  objects to the ``ArrayList`` too. Does the ``petList`` work with ``Cats`` too?
+
   ~~~~
   import java.util.*; // for ArrayList
 
