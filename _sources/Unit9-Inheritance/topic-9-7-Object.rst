@@ -341,7 +341,7 @@ We want two ``Word`` objects to be considered ``equals`` if and only if they are
 spelled the same `and` come from the same languag. The latter requirement is
 because sometimes different languages have words that are spelled the same but
 with different meanings such as “pie” which in English is a tasty baked treat
-and in Spanish which is what we call a “foot” in English.
+and in Spanish is what we call a “foot” in English.
 
 |CodingEx| **Coding Exercise**
 
