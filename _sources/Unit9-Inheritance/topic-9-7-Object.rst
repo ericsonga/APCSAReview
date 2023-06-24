@@ -42,27 +42,41 @@
 Object Superclass
 ====================
 
-The **Object** class is the superclass of all other classes in Java and a part of the built-in java.lang package. If a parent class isn't specified using the **extends** keyword, the class will inherit from the ``Object`` class.  What does a class inherit from the ``Object`` class?  The |AP CSA Reference Sheet| lists the two main methods that are most used, toString() and equals(Object), from the Object class at the bottom, which are covered in more detail below.
+The ``Object`` class is the superclass of all other classes in Java and a part
+of the built-in ``java.lang`` package. If a parent class isn't specified using
+the ``extends`` keyword, the class will inherit from the ``Object`` class. What
+does a class inherit from the ``Object`` class? The |AP CSA Reference Sheet|
+lists the two main methods that are most frequenly:
 
-- String toString()
-- boolean equals(Object other)
+- ``String toString()``
+- ``boolean equals(Object other)``
 
 
 
-toString() method
+``toString()`` method
 -----------------
 
-One commonly overridden Object method is toString(), which is often used to print out the attributes of an object. It is a good idea to write your own toString() method in every class. In a subclass, toString() can call the superclass toString() method using super.toString() and then add on its own attributes.
+One commonly overridden ``Object`` method is ``toString()``, which is often used
+to print out the attributes of an object. It is a good idea to write your own
+``toString()`` method in every class. In a subclass, ``toString()`` can call the
+superclass ``toString()`` method using ``super.toString()`` and then add on its
+own attributes.
 
 |CodingEx| **Coding Exercise**
 
-In the following code, the Person class overrides the Object toString() method and the Student class overrides the Person toString() method. They each add on their attributes.
+In the following code, the ``Person`` class overrides the ``Object toString()``
+method and the ``Student`` class overrides the ``Person toString()`` method.
+They each add on their attributes.
 
 .. activecode:: toStringDemo
   :language: java
   :autograde: unittest
 
-  After trying the code below, complete the subclass called APStudent that extends Student with a new attribute called APscore and override the toString() method to call the superclass method and then add on the APscore. Uncomment the APStudent object in the main method to test it.
+  After trying the code below, complete the subclass called ``APStudent`` that
+  extends ``Student`` with a new attribute called ``APscore`` and override the
+  ``toString()`` method to call the superclass method and then add on the
+  ``APscore``. Uncomment the ``APStudent`` object in the main method to test it.
+
   ~~~~
   public class Person
   {
@@ -150,16 +164,20 @@ In the following code, the Person class overrides the Object toString() method a
 
 
 
-equals Method
+``equals`` Method
 -----------------
 
-One of the important things that gets inherited from the Object superclass is the ``equals(Object obj)`` method.  This method is used to test if the current object and the passed object called ``obj`` are equal. But what does that mean?
+One of the important methods inherited from ``Object`` is the ``equals(Object
+obj)`` method. This method is used to test if the current object and the passed
+object called ``obj`` are equal. But what does that mean?
 
 .. index::
     single: override
     single: equals
 
-As seen in the code below, the ``equals`` method that is inherited from the ``Object`` class only returns true if the two objects references refer to the same object.
+As seen in the code below, the ``equals`` method that is inherited from the
+``Object`` class only returns ``true`` if the two objects references refer to
+the same object.
 
 |CodingEx| **Coding Exercise**
 
@@ -226,10 +244,14 @@ The ``equals`` method inherited from the ``Object`` class only returns true when
 
     Figure 1: A picture from the Java Visualizer showing that only p3 and p4 refer to the same object.
 
-Overriding the equals Method
------------------------------
+Overriding the ``equals`` Method
+--------------------------------
 
-If you want to change how the inherited ``equals`` method works you can **override** it so that the new method is called instead of the inherited one.  The ``String`` class **overrides** the inherited equals method to return true when the two objects have the same characters in the same order as shown in the code below.
+If you want to change how the inherited ``equals`` method works you can
+**override** it so that the new method is called instead of the inherited one.
+The ``String`` class **overrides** the inherited equals method to return
+``true`` when the two objects have the same characters in the same order as
+shown in the code below.
 
 |CodingEx| **Coding Exercise**
 
@@ -288,35 +310,41 @@ Any class can override the inherited ``equals`` method by providing a method wit
    ~~~~
    public class Person
    {
-      private String name;
+       private String name;
 
-      public Person(String theName)
-      {
-         this.name = theName;
-      }
+       public Person(String theName)
+       {
+           this.name = theName;
+       }
 
-      /** overridden equals method that checks if names are equal
+       /** overridden equals method that checks if names are equal
           in this Person object and an the other Object.
           */
-      public boolean equals(Object other)
-      {
-         // Type cast other to a Person
-         Person otherPerson = (Person) other;
-         // Check if names are equal
-         return this.name.equals(otherPerson.name);
-      }
+       public boolean equals(Object other)
+       {
+           if (!(other instanceof Person))
+           {
+               // Can't be equal if it's not another Person
+               return false;
+           }
+           // Now we now we can safely cast other to a Person ...
+           Person otherPerson = (Person) other;
+           // ... and check if the names are equal
+           return this.name.equals(otherPerson.name);
+       }
 
-      public static void main(String[] args)
-      {
-         Person p1 = new Person("Gabe");
-         Person p2 = new Person("Gus");
-         Person p3 = new Person("Gabe");
-         Person p4 = p3;
-         System.out.println(p1.equals(p2));
-         System.out.println(p2.equals(p3));
-         System.out.println(p1.equals(p3));
-         System.out.println(p3.equals(p4));
-      }
+       public static void main(String[] args)
+       {
+           Person p1 = new Person("Gabe");
+           Person p2 = new Person("Gus");
+           Person p3 = new Person("Gabe");
+           Person p4 = p3;
+           System.out.println(p1.equals(p2));
+           System.out.println(p2.equals(p3));
+           System.out.println(p1.equals(p3));
+           System.out.println(p3.equals(p4));
+           System.out.println(p1.equals("Gabe"));
+       }
    }
    ====
    import static org.junit.Assert.*;
@@ -333,7 +361,7 @@ Any class can override the inherited ``equals`` method by providing a method wit
          public void test1()
          {
              String output = getMethodOutput("main");
-             String expect = "false\nfalse\ntrue\ntrue";
+             String expect = "false\nfalse\ntrue\ntrue\nfalse";
 
              boolean passed = getResults(expect, output, "Checking output from main()", true);
              assertTrue(passed);
@@ -353,18 +381,26 @@ You can step through this code in the Java Visualizer by clicking on the followi
 To write your own equals method, you must:
 
 1. Use the ``public boolean equals(Object other)`` method signature
-2. Type cast other to your Classname
-3. Return whether this object's attribute(s) equals the other object's attribute(s) with == for primitive types like int and double, or equals for reference types like String or another class.
+
+2. Use ``instanceof`` to check if `other` is an instance of this class and return ``false`` if not.
+
+3. Type cast ``other`` to the current class
+
+4. Return whether this object's attribute(s) equals the other object's attribute(s) with ``==`` for primitive types like ``int`` and ``double``, or ``equals`` for reference types like ``String`` or another class.
 
 .. code-block:: java
 
     public boolean equals(Object other)
     {
+       if (!(other instanceof Classname))
+       {
+           return false;
+       }
        // Type cast other to your Classname
        Classname otherObj = (Classname) other;
        // Check if attributes are equal
        return (this.attribute == otherObj.attribute);
-       // or this.attribute.equals(otherObj.attribute) if attribute a String
+       // or this.attribute.equals(otherObj.attribute) if attribute is a reference type
     }
 
 If you need to check multiple attributes, for example a name and an address for Person objects, you can use && to combine tests.
@@ -373,6 +409,15 @@ If you need to check multiple attributes, for example a name and an address for 
 
     return (this.attribute1 == otherObj.attribute1) &&
            this.attribute2.equals(otherObj.attribute2)
+
+..
+  This is actually not really good advice. Overriding equals is unfortunately
+  quite complex in that there are a bunch of requirements on the contract. On of
+  which is that it be symmetric, i.e. o1.equals(o2) == o2.equals(o1). But if a
+  subclass overrides equals as described here it breaks symetry because
+  super.equals(sub) could return true while sub.equals(super) might return
+  false. Obviously we don't want to get into that whole mess but maybe it's
+  worth not leading them astray here.
 
 If you are writing an equals method for a subclass, you can call the superclass equals using the **super** keyword to check the attributes in the superclass and then check the attributes in the subclass.
 
@@ -389,20 +434,24 @@ In the following code, a bank account class contains the account holder's name a
 
 Work in pairs to write the following code and test each part before moving on to the next step:
 
-1. Write a subclass called SavingsAccount that extends Account and  adds an interest rate variable.
+1. Write a subclass called ``SavingsAccount`` that extends ``Account`` and  adds an interest rate variable.
 
-2. Write a constructor with 3 arguments (name, balance, interest rate) for the SavingsAccount class that uses the super constructor.
+2. Write a constructor with 3 arguments (name, balance, interest rate) for the ``SavingsAccount`` class that uses the super constructor.
 
-3. Write a toString() method for SavingsAccount that returns a call to the super toString() method and the interest rate.
+3. Write a ``toString`` method for ``SavingsAccount`` that returns a call to the super ``toString`` method and the interest rate.
 
-4. Write an equals method for SavingsAccount that calls the superclass equals method and checks that the interest rates are equal.
+4. Write an ``equals`` method for ``SavingsAccount`` that calls the `super class ``equals`` method and checks that the interest rates are equal.
 
 
 .. activecode:: challenge-9-7-savingsaccount
    :language: java
    :autograde: unittest
 
-   Complete the subclass SavingsAccount below which inherits from Account and adds an interest rate variable. Write a constructor with 3 arguments, a toString, and an equals method for it. Uncomment the code in main to test your new class and methods.
+   Complete the subclass ``SavingsAccount`` below which inherits from
+   ``Account`` and adds an interest rate variable. Write a constructor with 3
+   arguments, a ``toString``, and an ``equals`` method for it. Uncomment the
+   code in ``main`` to test your new class and methods.
+
    ~~~~
    public class Account
    {
@@ -540,14 +589,12 @@ Work in pairs to write the following code and test each part before moving on to
 Summary
 ---------
 
-- The Object class is the superclass of all other classes in Java and a part of the built-in java.lang package.
+- The ``Object`` class is the superclass of all other classes in Java and a part of the built-in ``java.lang`` package.
 
-- The following Object class methods and constructors, including what they do and when they are used, are part of the Java Quick Reference:
+- The following ``Object`` class methods are part of the Java Quick Reference:
 
-  - String toString()
-  - boolean equals(Object other)
+  - ``String toString()``
+  - ``boolean equals(Object other)``
 
 
 - Subclasses of Object often override the equals and toString methods with class-specific implementations.
-
-
