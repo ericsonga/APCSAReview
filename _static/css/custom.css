@@ -6,10 +6,12 @@
 
 :root {
     --emphasisColor: #007d9f;
+    --codeColor: #641227;
 }
 
 :root[data-theme="dark"] {
     --emphasisColor: #00b3e3;
+    --codeColor: #ffaaaa;
 }
 
 
@@ -55,10 +57,11 @@ section section h2,
   margin-bottom: 0.5em;
 }
 
+.code,
 .runestone-sphinx code
 {
   padding: 0;
-  color: #641227;
+  color: var(--codeColor);
   background-color: inherit;
 }
 
