@@ -393,8 +393,8 @@ and in Spanish which is what we call a “foot” in English.
            // Now we now we can safely cast other to a Word and
            // check if our two attributes are the same, using
            // equals to compare them because they are Strings.
-           Word otheWord = (Word) other;
-           return name.equals(otherWord.name) && language.equals(otherWord.language);
+           Word otherWord = (Word) other;
+           return spelling.equals(otherWord.spelling) && language.equals(otherWord.language);
        }
 
        public static void main(String[] args)
