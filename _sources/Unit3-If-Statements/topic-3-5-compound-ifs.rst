@@ -375,8 +375,8 @@ Short Circuit Evaluation
 
 Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second expression (on the right of the operator) isn't necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:
 
-- If two boolean values/expressions are combined with a logical **or** (||) and the first expression is true, then the second expression won’t be executed, since only one needs to be true for the result to be true.
-- If two boolean values/expressions are combined with a logical **and** (&&) and the first expression is false, then the second expression won't be executed.  If the first expression is false, the result will be false, since both sides of the && need to be true for the result to be true.
+- If two boolean values/expressions are combined with a logical **or** (``||``) and the first expression is true, then the second expression won’t be executed, since only one needs to be true for the result to be true.
+- If two boolean values/expressions are combined with a logical **and** (``&&``) and the first expression is false, then the second expression won't be executed.  If the first expression is false, the result will be false, since both sides of the && need to be true for the result to be true.
 
 
 
@@ -607,4 +607,3 @@ Try the game below written to practice Booleans. Click on **Booleans**, look at 
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
     <script>      window.scrollTo(0, 0);</script>
-

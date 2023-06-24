@@ -22,15 +22,15 @@ In this chapter you learned about **conditionals**.  **Conditionals** are used t
 Concept Summary
 ---------------
 
-- **Block of statements** - One or more statements enclosed in an open curly brace '{' and a closing curly brace '}'.
+- **Block of statements** - One or more statements enclosed in an open curly brace ``{`` and a closing curly brace ``}``.
 - **Boolean expression** - A mathematical or logical expression that is either true or false.
-- **compound Boolean expressions** - A Boolean expression with two or more conditions joined by a logical **and** '&&' or a logical **or** '||'.
+- **compound Boolean expressions** - A Boolean expression with two or more conditions joined by a logical **and** ``&&`` or a logical **or** ``||``.
 - **conditional** - Used to execute code only if a Boolean expression is true.
 - **DeMorgan's Laws** - Rules about how to distribute a negation on a complex conditional.
 - **logical and** - Used in compound boolean expressions that are true if both conditions are true.
 - **logical or** - Used in compound boolean expressions that are true if one of the conditions is true.
 - **negation** - turns a true statement false and a false statement true
-- **short circuit evaluation** - The type of evaluation used for logical **and** (&&) and logical **or** (||) expressions. If the first condition is false in a compound boolean expression joined with a logical **and**, then the second condition won’t be evaluated. If the first condition is true in a compound boolean expression joined with a logical **or** then the second condition won’t be evaluate.
+- **short circuit evaluation** - The type of evaluation used for logical **and** (``&&``) and logical **or** (``||``) expressions. If the first condition is false in a compound boolean expression joined with a logical **and**, then the second condition won’t be evaluated. If the first condition is true in a compound boolean expression joined with a logical **or** then the second condition won’t be evaluate.
 
 Java Keyword Summary
 --------------------
@@ -70,15 +70,15 @@ For more practice, see this |Quizlet|.
 Common Mistakes
 ---------------
 
-  - Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==.
+  - Using ``=`` instead of ``==`` in ``if``'s. Remember that ``=`` is used to assign values and ``==`` is used to test. ``if``s always use ``==``.
 
-  - Putting a ; at the end of ``if (test);``. Remember that the if statement ends after ``if (test) statement;`` or use curly braces ``if (test) { statements; }``.
+  - Putting a ``;`` at the end of ``if (test);``. Remember that the ``if`` statement ends after ``if (test) statement;`` or use curly braces ``if (test) { statements; }``.
 
   - Using two ``if``'s one after the other instead of an ``if`` and ``else``.
 
-  - Trouble with compound boolean expressions which are two or more Boolean expressions joined by **and (&&)`` or **or (||)**.
+  - Trouble with compound boolean expressions which are two or more Boolean expressions joined by ``&&`` or ``||``.
 
-  - Not understanding that `||` is an inclusive-or where one or *both* conditions must be true.
+  - Not understanding that ``||`` is an inclusive-or where one or *both* conditions must be true.
 
   - Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.
 

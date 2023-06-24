@@ -45,7 +45,7 @@ Equivalent Boolean Expressions (De Morgan's Laws)
    single: De Morgan's Laws
    single: negation
 
-What if you heard a rumor about a senior at your high school? And then you heard that the rumor wasn't true - it wasn't a senior at your high school. Which part of "a senior at your high school" wasn't true? Maybe they weren't a senior? Or maybe they didn't go to your high school? You could write this as a logic statement like below using negation (!) and the **and** (&&) operator since both parts have to be true for the whole statement to be true. (Thank you to Kevin Saxton from Kent School, CT for this example.)
+What if you heard a rumor about a senior at your high school? And then you heard that the rumor wasn't true - it wasn't a senior at your high school. Which part of "a senior at your high school" wasn't true? Maybe they weren't a senior? Or maybe they didn't go to your high school? You could write this as a logic statement like below using negation (``!``) and the **and** (``&&``) operator since both parts have to be true for the whole statement to be true. (Thank you to Kevin Saxton from Kent School, CT for this example.)
 
 .. code-block:: java
 
@@ -62,7 +62,7 @@ In this lesson, you will learn about De Morgan's Laws which simplify statements 
 De Morgan's Laws
 ----------------
 
-De Morgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an AND (&&) or OR (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state the following equivalencies. Here's an easy way to remember De Morgan's Laws: **move the NOT inside, AND becomes OR** and **move the NOT inside, OR becomes AND**.
+De Morgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an **and** (``&&``) or **or** (``||``), such as ``(x < 3) && (y > 2)``. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state the following equivalencies. Here's an easy way to remember De Morgan's Laws: **move the NOT inside, AND becomes OR** and **move the NOT inside, OR becomes AND**.
 
 .. figure:: Figures/demorgan.png
     :width: 400px
@@ -74,9 +74,9 @@ De Morgan's Laws were developed by Augustus De Morgan in the 1800s.  They show h
 
 In Java, De Morgan's Laws are written with the following operators:
 
-    -  **!(a && b)** is equivalent to **!a || !b**
+    -  ``!(a && b)`` is equivalent to ``!a || !b``
 
-    -  **!(a || b)** is equivalent to **!a && !b**
+    -  ``!(a || b)`` is equivalent to ``!a && !b``
 
 Going back to our example above, !(a senior && at our high school) is equivalent to !(a senior) or !(at our high school) using De Morgan's Laws:
 
@@ -87,20 +87,19 @@ Going back to our example above, !(a senior && at our high school) is equivalent
         a = "senior"
         b = "at our high school"
 
-You can also simplify negated boolean expressions that have relational operators like <, >, ==. You can move the negation inside the parentheses by flipping the relational operator to its opposite sign. For example, not (c equals d) is the same as saying c does not equal d.  An easy way to remember this is **To move the NOT, flip the sign**. Notice that == becomes !=, but < becomes >=,  > becomes <=, <= becomes >, and >= becomes < where the sign is flipped and an equal sign may also be added or removed.
+You can also simplify negated boolean expressions that have relational operators like ``<``, ``>``, ``==``. You can move the negation inside the parentheses by flipping the relational operator to its opposite sign. For example, not (c equals d) is the same as saying c does not equal d.  An easy way to remember this is **To move the NOT, flip the sign**. Notice that ``==`` becomes ``!=``, but ``<`` becomes ``>=``,  ``>`` becomes ``<=``, ``<=`` becomes ``>``, and ``>=`` becomes ``<`` where the sign is flipped and an equal sign may also be added or removed.
 
-
-  - !(c == d) is equivalent to (c != d)
-  - !(c != d) is equivalent to (c == d)
-  - !(c < d) is equivalent to (c >= d)
-  - !(c > d) is equivalent to (c <= d)
-  - !(c <= d) is equivalent to (c > d)
-  - !(c >= d) is equivalent to (c < d)
+  - ``!(c == d)`` is equivalent to ``c != d``
+  - ``!(c != d)`` is equivalent to ``c == d``
+  - ``!(c < d)`` is equivalent to ``c >= d``
+  - ``!(c > d)`` is equivalent to ``c <= d``
+  - ``!(c <= d)`` is equivalent to ``c > d``
+  - ``!(c >= d)`` is equivalent to ``c < d``
 
 Truth Tables
 ------------
 
-Although you do not have to memorize De Morgan's Laws for the CSA Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that !(a && b) is equivalent to !a || !b by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
+Although you do not have to memorize De Morgan's Laws for the CSA Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that ``!(a && b)`` is equivalent to ``!a || !b`` by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).
 
 +-------+-------+-----------+----------+
 | a     | b     | !(a && b) | !a || !b |
@@ -229,14 +228,14 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 
 We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
 
-Explore the following problems with your group. You may use |this worksheet| to complete your truth tables. Assume that x is an integer value, for example -1, 0, or 1.
+Explore the following problems with your group. You may use |this worksheet| to complete your truth tables. Assume that ``x`` is an integer value, for example -1, 0, or 1.
 
-1. Complete a truth table for the boolean expression: !(x == 0 || x >= 1). Is this the set of positive or negative numbers?  Is the expression true when x is positive? Or is it true when x is negative? You can try out the values when x is 1 or -1 or 0. Note that 0 is not positive or negative. You can try running the code below to check your answer.
+1. Complete a truth table for the boolean expression: ``!(x == 0 || x >= 1)``. Is this the set of positive or negative numbers?  Is the expression true when ``x`` is positive? Or is it true when ``x`` is negative? You can try out the values when ``x`` is 1 or -1 or 0. Note that 0 is not positive or negative. You can try running the code below to check your answer.
 
 
-2. Complete a truth table for the boolean expression: !(x == 0) && !(x >= 1). Is this the set of positive or negative numbers?
+2. Complete a truth table for the boolean expression: ``!(x == 0) && !(x >= 1)``. Is this the set of positive or negative numbers?
 
-3. Complete a truth table for the boolean expression: (x != 0) && (x < 1). Is this the set of positive or negative numbers?
+3. Complete a truth table for the boolean expression: ``(x != 0) && (x < 1)``. Is this the set of positive or negative numbers?
 
 4. Are the 3 boolean expressions equivalent? Why or why not?
 
@@ -248,7 +247,7 @@ Explore the following problems with your group. You may use |this worksheet| to 
    :language: java
    :autograde: unittest
 
-   Are these 3 boolean expressions equivalent? 1. !(x == 0 || x >= 1) , 2. !(x == 0) && !(x >= 1) , 3. (x != 0) && (x < 1)
+   Are these 3 boolean expressions equivalent? 1. ``!(x == 0 || x >= 1)`` , 2. ``!(x == 0) && !(x >= 1)`` , 3. ``(x != 0) && (x < 1)``
    ~~~~
    public class EquivalentExpressions
    {
@@ -374,17 +373,17 @@ Summary
 
 - De Morgan’s Laws can be applied to Boolean expressions to create equivalent ones:
 
-  - !(a && b) is equivalent to !a || !b
-  - !(a || b) is equivalent to !a && !b
+  - ``!(a && b)`` is equivalent to ``!a || !b``
+  - ``!(a || b)`` is equivalent to ``!a && !b``
 
 - A negated expression with a relational operator can be simplified by flipping the relational operator to its opposite sign.
 
-  - !(c == d) is equivalent to (c != d)
-  - !(c != d) is equivalent to (c == d)
-  - !(c < d) is equivalent to (c >= d)
-  - !(c > d) is equivalent to (c <= d)
-  - !(c <= d) is equivalent to (c > d)
-  - !(c >= d) is equivalent to (c < d)
+  - ``!(c == d)`` is equivalent to ``c != d``
+  - ``!(c != d)`` is equivalent to ``c == d``
+  - ``!(c < d)`` is equivalent to ``c >= d``
+  - ``!(c > d)`` is equivalent to ``c <= d``
+  - ``!(c <= d)`` is equivalent to ``c > d``
+  - ``!(c >= d)`` is equivalent to ``c < d``
 
 - Truth tables can be used to prove that 2 Boolean expressions are identical.
 
@@ -409,4 +408,3 @@ AP Practice
    :feedback_e: Try the expression with a = true. Is the result true?
 
     Which of the following best describes the value of the Boolean expression: a && !(b || a)
-
