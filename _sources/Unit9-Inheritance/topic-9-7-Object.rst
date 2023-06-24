@@ -606,5 +606,8 @@ Summary
   - ``String toString()``
   - ``boolean equals(Object other)``
 
+- Subclasses of Object often override the ``toString`` and ``equals`` methods
+  with class-specific implementations.
 
-- Subclasses of Object often override the equals and toString methods with class-specific implementations.
+- When overriding ``equals``, it’s important to satisfy all the requirements of
+  a correct implementation.
