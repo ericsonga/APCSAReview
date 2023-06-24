@@ -105,3 +105,17 @@ div.unit-time svg,
   display: inline;
   vertical-align: middle;
 }
+
+/*
+ * Give paragraphs immediatly after certain elements a bit of breathing room.
+ * This could also be achieved by giving some margin-bottom to those preceeding
+ * elements but this seems simpler for now.
+ */
+
+iframe + p,
+div.highlight-java + p,
+.runestone-sphinx iframe + p,
+.runestone-sphinx div.highlight-java + p
+{
+  margin-top: 10px;
+}
