@@ -46,7 +46,7 @@ The ``Object`` class is the superclass of all other classes in Java and a part
 of the built-in ``java.lang`` package. If a parent class isn't specified using
 the ``extends`` keyword, the class will inherit from the ``Object`` class. What
 does a class inherit from the ``Object`` class? The |AP CSA Reference Sheet|
-lists the two main methods that are most frequenly:
+lists the two main methods that are most frequently used:
 
 - ``String toString()``
 - ``boolean equals(Object other)``
