@@ -43,7 +43,7 @@ Polymorphism
 
 **Polymorphism** is a big word that you can break down into "poly" which means many and "morphism" which means form.  So, it just means many forms.  In Java it means that the method that gets called at **run-time** (when the code is run) depends on the *type* of the object at run-time.
 
-This is simliar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal.
+This is similar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal.
 
 .. figure:: Figures/SeeNSay.jpg
     :width: 250px
@@ -273,9 +273,13 @@ You can step through the code using the Java Visualizer by clicking on the follo
 |Groupwork| Programming Challenge : Shopping Cart 2
 ---------------------------------------------------
 
-.. |repl.it link| raw:: html
+.. |replit link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">replit link</a>
+
+.. |last lesson| raw:: html
+
+   <a href="https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-5-hierarchies.html#groupwork-programming-challenge-shopping-cart" target="_blank" style="text-decoration:underline">last lesson</a>
 
 .. image:: Figures/shoppingcart.png
     :width: 100
@@ -283,7 +287,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
     :alt: Shopping
 
 In the last lesson, you created a class called ``DiscountedItem`` as part of a
-Shopping Cart application. Please copy your solutions from the last lesson into
+Shopping Cart application. Please copy your solutions from the |last lesson| into
 the Active Code window below (or in repl or another IDE) before completing this
 challenge.
 
