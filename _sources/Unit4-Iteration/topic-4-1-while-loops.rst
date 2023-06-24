@@ -50,26 +50,46 @@ While Loops
     :width: 125
     :align: left
 
-When you play a song, you can set it to loop, which means that when it reaches the end it starts over at the beginning.  A **loop** in programming, also called **iteration** or **repetition**,  is a way to repeat one or more statements. If you didn't have loops to allow you to repeat code, your programs would get very long very quickly! Using a sequence of code, selection (ifs), and repetition (loops), the **control structures** in programming, you can construct an algorithm to solve almost any programming problem!
+When you play a song, you can set it to loop, which means that when it reaches
+the end it starts over at the beginning. A **loop** in programming, also called
+**iteration** or **repetition**, is a way to repeat one or more statements. If
+you didn't have loops to allow you to repeat code, your programs would get very
+long very quickly! Using a sequence of code, selection (ifs), and repetition
+(loops), the **control structures** in programming, you can construct an
+algorithm to solve almost any programming problem!
 
-A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false, we exit the loop and continue with the statements that are after the body of the ``while`` loop.  If the condition is false the first time you check it, the body of the loop will not execute.
+A ``while`` loop executes the body of the loop as long as (or while) a Boolean
+condition is true. When the condition is false, we exit the loop and continue
+with the statements that are after the body of the ``while`` loop. If the
+condition is false the first time you check it, the body of the loop will not
+execute.
 
-Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs more than once. The curly braces (``{}``) are optional when there is just 1 statement following the condition, but required if there are more than 1 statement in the loop. In the AP exam, they will always use curly braces, which is a good practice to follow.
+Notice the ``while`` statement looks a lot like an ``if`` statement, but it runs
+more than once. The curly braces (``{}``) are optional when there is just 1
+statement following the condition, but required if there are more than 1
+statement in the loop. In the AP exam, they will always use curly braces, which
+is a good practice to follow.
 
 .. code-block:: java
 
-    // if statements just run once if the condition is true
+    // The statements in an if run one time if the condition is
+    // is true and zero times if it is false.
     if (condition)
     {
         statements;
     }
-    // while statements are repeated while the condition is true
+
+    // The statements in a while loop run zero or more times,
+    // determined by how many times the condition is true
     while (condition)
     {
       statements;
     }
 
-If you took AP CSP with a block programming language like App Inventor, you may have used a loop block like below that looks very similar to Java while loops (or you may have used a for loop which will be covered in the next lesson). Almost every programming language has a while loop.
+If you took AP CSP with a block programming language like App Inventor, you may
+have used a loop block like below that looks very similar to Java ``while``
+loops (or you may have used a ``for`` loop which will be covered in the next
+lesson). Almost every programming language has a ``while`` loop.
 
 
 .. figure:: Figures/whileInAppInventor.png
@@ -77,10 +97,15 @@ If you took AP CSP with a block programming language like App Inventor, you may 
     :align: center
     :figclass: align-center
 
-    Figure 1: Comparing App Inventor and Java for while loops
+    Figure 1: Comparing App Inventor and Java for ``while`` loops
 
 
-If you're used to a language like Snap! or Scratch, you may be familiar with the Repeat Until loop. However, you have to be very careful comparing repeat until to while loops. The while test is the opposite of the repeat until test. For example, if you are repeatedly moving until reaching x position 100, you must create a Java while loop that repeatedly moves while it has *not* yet reached x position 100 or is less than 100 as below.
+If you're used to a language like Snap! or Scratch, you may be familiar with the
+Repeat Until loop. However, you have to be very careful comparing repeat until
+to ``while`` loops. The ``while`` test is the opposite of the repeat until test.
+For example, if you are repeatedly moving until reaching x position 100, you
+must create a Java ``while`` loop that repeatedly moves while it has *not* yet
+reached x position 100 or is less than 100 as below.
 
 
 .. figure:: Figures/ScratchRepeatUntilLoop.png
@@ -88,7 +113,7 @@ If you're used to a language like Snap! or Scratch, you may be familiar with the
     :align: center
     :figclass: align-center
 
-    Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java while loop
+    Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java ``while`` loop
 
 
 The following `video <https://www.youtube.com/watch?v=Uw9mv53Jnfs>`_ introduces while loops.
@@ -125,7 +150,7 @@ The simplest loops are **counter-controlled loops** like below, where the **loop
 
     Remember these 3 steps to writing a loop:
 
-    1. Initialize the loop variable (before the while loop)
+    1. Initialize the loop variable (before the ``while`` loop)
     2. Test the loop variable (in the loop header)
     3. Change the loop variable (in the while loop body at the end)
 
@@ -299,19 +324,51 @@ Common Errors with Loops
    single: infinite loop
    pair: loop; infinite
 
-One common error with loops is **infinite loops**.  An infinite loop is one that never stops (the condition is always true).
+One common error with loops is to accidentally create an **infinite loop**. An
+infinite loop is one that never stops because the condition is always true.
+
+Sometimes we will write an infinite loop on purpose like this:
 
 .. code-block:: java
 
-   // an infinite loop
    while (true)
    {
-      System.out.println("This is a loop that never ends");
+       System.out.println("This is a loop that never ends");
    }
 
-The infinite loop above is pretty obvious.  But, most infinite loops are accidental.  They usually occur because you forget to change the loop variable in the loop (step 3 of a loop).
+But if we create an infinite loop by accident, our program may seem to get
+stuck. For example look at this loop:
 
-Another common error with loops is an **off-by-one error** where the loop runs one too many or one too few times. This is usually a problem with step 2 the test condition and using the incorrect relational operator < or <=.
+.. code-block:: java
+
+   int i = 0;
+   while (i < 10)
+   {
+       System.out.println(i);
+   }
+
+That loop looks a lot like loops earlier in this chapter but it is actually an
+infinite loop. Can you see why?
+
+The problem in this loop—and a common way to accidentally create an infinite
+``while`` loop—is that although it includes steps 1 and 2 (initializing the loop
+variable and testing it) it forgot step 3 and never changes the loop variable.
+The loop variable, ``i``, starts at ``0`` and the loop loops as long as ``i <
+10`` which will always be true because there’s no code in the loop that changes
+``i``. The simple fix is to add a line that increments ``i``:
+
+.. code-block:: java
+
+   int i = 0;
+   while (i < 10)
+   {
+       System.out.println(i);
+       i++;
+   }
+
+Another common error with loops is an **off-by-one error** where the loop runs
+one too many or one too few times. This is usually a problem with step 2 the
+test condition and using the incorrect relational operator ``<`` or ``<=``.
 
 |CodingEx| **Coding Exercise**
 
@@ -320,7 +377,12 @@ Another common error with loops is an **off-by-one error** where the loop runs o
    :language: java
    :autograde: unittest
 
-   The while loop should print out the numbers 1 to 8, but it has 2 errors that cause an infinite loop and an off-by-one error. Can you fix the errors? If you run an infinite loop, you may need to refresh the page to stop it (so make sure all active code windows on the page have been saved and click on Load History after refreshing).
+   The while loop should print out the numbers 1 to 8, but it has 2 errors that
+   cause an infinite loop and an off-by-one error. Can you fix the errors? If
+   you run an infinite loop, you may need to refresh the page to stop it (so
+   make sure all active code windows on the page have been saved and click on
+   Load History after refreshing).
+
    ~~~~
    public class LoopTest2
    {
@@ -541,15 +603,24 @@ Summary
   - Test the loop variable
   - Change the loop variable
 
-- In loops, the Boolean expression is evaluated before each iteration of the loop body, including the first. When the expression evaluates to true, the loop body is executed. This continues until the expression evaluates to false which signals to exit the loop. If the Boolean expression evaluates to false initially, the loop body is not executed at all.
+- In ``while`` loops, the Boolean expression is evaluated before each iteration
+  of the loop body, including the first. When the expression evaluates to true,
+  the loop body is executed. This continues until the expression evaluates to
+  false which signals to exit the loop.
 
-- A loop is an **infinite loop** when the Boolean expression always evaluates to true so that the loop never ends.
+- If the Boolean expression evaluates to false initially, the loop body is not
+  executed at all.
 
-- **Off by one** errors occur when the iteration statement loops one time too many or one time too few.
+- A loop is an **infinite loop** when the Boolean expression always evaluates to
+  true so that the loop never ends.
 
-- If the Boolean expression evaluates to false initially, the loop body is not executed at all.
+- **Off-by-one** errors occur when the iteration statement loops one time too
+  many or one time too few.
 
-- **Input-controlled loops** often use a **sentinel value** that is input by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CSA exam, but are very useful to accept data from the user.
+- **Input-controlled loops** often use a **sentinel value** that is input by the
+  user like "bye" or -1 as the condition for the loop to stop. Input-controlled
+  loops are not on the AP CSA exam, but are very useful to accept data from the
+  user.
 
 - There are standard algorithms to compute a sum or average.
 
@@ -636,5 +707,3 @@ AP Practice
     - while (count <= 10)
 
       - This would print out one too many numbers, 0, 2, 4, 6, 8, 10.
-
-
