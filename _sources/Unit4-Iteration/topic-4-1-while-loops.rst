@@ -58,7 +58,7 @@ long very quickly! Using a sequence of code, selection (ifs), and repetition
 (loops), the **control structures** in programming, you can construct an
 algorithm to solve almost any programming problem!
 
-A ``while`` loop executes the body of the loop as long as (or while) a boolean
+A ``while`` loop executes the body of the loop as long as (or while) a ``boolean``
 condition is true. When the condition is false, we exit the loop and continue
 with the statements that are after the body of the ``while`` loop. If the
 condition is false the first time you check it, the body of the loop will not
