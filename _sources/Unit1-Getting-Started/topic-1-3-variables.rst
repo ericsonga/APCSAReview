@@ -213,7 +213,7 @@ Or you can set an initial value for the variable in the variable declaration. He
 
   int score = 4;
 
-  When you are printing out variables, you can use the **string concatenation** operator ``+`` to add them to another string inside System.out.print. Never put variables inside quotes ``""`` because that will print out the variable name letter by letter. You do not want to print out the variable name, but the value of the variable in memory. If you're not sure what this means, try putting quotes around the variable and see what happens. In the print out, if you want spaces between words and variables, you must put the space in the quotes. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".
+When you are printing out variables, you can use the **string concatenation** operator ``+`` to add them to another string inside System.out.print. Never put variables inside quotes ``""`` because that will print out the variable name letter by letter. You do not want to print out the variable name, but the value of the variable in memory. If you're not sure what this means, try putting quotes around the variable and see what happens. In the print out, if you want spaces between words and variables, you must put the space in the quotes. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".
 
 |CodingEx| **Coding Exercise:**
 
