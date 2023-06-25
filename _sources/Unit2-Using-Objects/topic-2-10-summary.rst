@@ -83,7 +83,7 @@ Java Keyword Summary
 
 
 
-- **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number. The range is the **(max number - min number + 1)**. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: (int)(Math.random()*6) + 5).
+- **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number. The range is the ``(max number - min number + 1)``. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: ``(int)(Math.random()*6) + 5)``.
 
 
 Vocabulary Practice

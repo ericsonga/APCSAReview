@@ -119,12 +119,12 @@ adjectives marked with * in the one of the given reviews with randomly selected 
 
 First, you need put in some positive and negative adjectives in the files positiveAdjectives.txt and negativeAdjectives.txt one word per line, and put * in front of the adjectives in simpleReview.txt or other review files.
 
-Then, write a ``public static String fakeReview(String filename)`` method that reads the contents of the argument filename into a String using the textToString method like in Activity 2, and generates and returns a fake review by replacing any word that starts with a * with a random adjective using the given randomAdjective() method.
+Then, write a ``public static String fakeReview(String filename)`` method that reads the contents of the argument filename into a ``String`` using the ``textToString`` method like in Activity 2, and generates and returns a fake review by replacing any word that starts with a * with a random adjective using the given ``randomAdjective`` method.
 
 Activity 4 : Create a More Positive or Negative Review
 -----------------------------------------------------------
 
-If your class has time continue on with Activity 4 which changes the fake review by replacing negative words with positive words or the opposite to make a review more positive or more negative. You can choose whether you want to make your review more positive or more negative and use the given methods randomPositiveAdjective() and randomNegativeAdjective().
+If your class has time continue on with Activity 4 which changes the fake review by replacing negative words with positive words or the opposite to make a review more positive or more negative. You can choose whether you want to make your review more positive or more negative and use the given methods ``randomPositiveAdjective`` and ``randomNegativeAdjective``.
 
 Activity 5 : Open-ended Activity
 ---------------------------------

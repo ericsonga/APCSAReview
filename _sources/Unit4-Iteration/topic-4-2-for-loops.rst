@@ -313,7 +313,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
 Decrementing Loops
 -------------------
 
-You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, "for (int i=5; i > 0; i--)`` counts from 5 down to 1.
+You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, ``for (int i=5; i > 0; i--)`` counts from 5 down to 1.
 
 |CodingEx| **Coding Exercise**
 

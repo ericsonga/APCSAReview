@@ -41,7 +41,7 @@ Concept Summary
 - **Compound assignment or shortcut operators** - Operators like ``x++`` which means ``x = x + 1`` or ``x *=y`` which means ``x = x * y``.
 - **modulo** - The ``%`` operator which returns the remainder from one number divide by another.
 - **arithmetic expression** - a sequence of operands and operators that describe a calculation to be performed, for example ``3*(2 + x)``
-- **operator precedence** - some operators are done before others, for example ``*, /, %`` have precedence over + and -, unless parentheses are used.
+- **operator precedence** - some operators are done before others, for example ``*``, ``/``, ``%`` have precedence over ``+`` and ``-``, unless parentheses are used.
 
 
 Java Keyword Summary
@@ -108,7 +108,3 @@ Common Mistakes
   -  using ``==`` to compare double values. Remember that double values are often an approximation. You might want to test if the absolute value of the difference between the two values is less than some amount instead.
 
   -  assuming that some value like 0 will be smaller than other ``int`` values.  Remember that ``int`` values can be negative as well.  If you want to set a value to the smallest possible ``int`` values use ``Integer.MIN_VALUE``.
-
-
-
-

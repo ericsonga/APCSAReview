@@ -340,15 +340,15 @@ If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and y
    But there is no 9th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. Note that 9 % 7 = 2 which means that 1/8/2019 is the 2nd day of the week starting at 0.
 
 
-The FRQ that involves writing an expression will probably use the **mod % operator**. Remember these tips about when to use the mod operator:
+The FRQ that involves writing an expression will probably use the **mod operator** (``%``). Remember these tips about when to use the ``%`` operator:
 
-- Use mod whenever you need to wrap around to the front if the value goes over the limit (num % limit). For example here for weekdays or for hours and minutes.
+- Use mod whenever you need to wrap around to the front if the value goes over the limit (``num % limit``). For example here for weekdays or for hours and minutes.
 
-- Use mod to check for odd or even numbers (num % 2 == 1) is odd and (num % 2 == 0) is even. Actually, you can use it to check if any number is evenly divisible by another (num1 % num2 == 0)
+- Use mod to check for odd or even numbers (``num % 2 != 0``) is odd and (``num % 2 == 0``) is even. Actually, you can use it to check if any number is evenly divisible by another (``num1 % num2 == 0``).
 
-- Use mod to get the last digit from an integer number (num % 10 = last digit on right).
+- Use ``%`` to get the last digit from an integer number (``num % 10`` = last digit on right).
 
-Try the mod operator below.
+Try the ``%`` operator below.
 
 .. reveal:: mod_r
    :showtitle: Reveal Problem
@@ -520,4 +520,3 @@ In the 2019 AP exam, part B dayOfWeek method was worth 4 points using the rubric
     :figclass: align-center
 
     Figure 2: Rubric for the dayOfWeek method
-
