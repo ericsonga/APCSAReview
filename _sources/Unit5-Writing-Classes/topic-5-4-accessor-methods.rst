@@ -203,7 +203,7 @@ There are, however, two consequences to this aspect of Java’s design: One is
 that it makes passing around objects when we call methods and return from them a
 lot less expensive because we don’t have to copy a bunch of data each time. The
 other, which we’ll cover in more detail in the next section when we talk about
-**mutating** objects is that two different references to the same object can see
+**mutating** objects, is that two different references to the same object can see
 changes made to the object via other references.
 
 
