@@ -10,6 +10,9 @@ Java Development Environments
     single: Eclipse
     single: BlueJ
     single: Netbeans
+    single: VSCode
+    single: Github
+    single: Codespaces
 
 The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs.
 
@@ -29,14 +32,14 @@ Online IDEs usually cannot use graphical user interfaces and just do input and o
 However, replit has a built-in javax.swing graphical user interface.
 You need to choose Java Swing instead of just Java to get this environment when you start a new repl project.
 
-Github Classroom and Coding Spaces
+Github Classroom and Codespaces
 -----------------------------------
 
 Github provides many free opportunities for students and teachers (https://docs.github.com/en/education/quickstart). 
 Github Classroom (https://classroom.github.com/) allows teachers to set up a classroom based on github repositories. 
 Github and git are widely used in the computer industry, so learning to use it is great experience for students.
-Github now has a cloud IDE called CodeSpaces (https://github.com/features/codespaces) which you can use for 60 hours a month for free or completely free if you join as a school or get approved as a teacher or student.
-In CodeSpaces, you can start from a blank template or a repo, open a .java file in the VSCode editor, follow prompts to install the Extension Pack for Java, click on the Run and Debug (play button), follow the prompts to install the Java debugger, and see the output of your code in the terminal. 
+Github now has a cloud IDE called Codespaces (https://github.com/features/codespaces) which you can use for 60 hours a month for free or completely free if you join as a school or get approved as a teacher or student.
+In Codespaces, you can start from a blank template or a repo, open a .java file in the VSCode editor, follow prompts to install the Extension Pack for Java, click on the Run and Debug (play button), follow the prompts to install the Java debugger, and see the output of your code in the terminal. 
 You can also use Copilot (https://github.com/features/copilot), which is a coding AI based on GPT, for free if you are approved for educational use. 
 
 VSCode
