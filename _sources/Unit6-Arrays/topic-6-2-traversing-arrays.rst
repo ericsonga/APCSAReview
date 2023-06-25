@@ -1002,7 +1002,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
 
 .. |repl.it| raw:: html
 
-   <a href= "https://firewalledreplit.com/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
+   <a href= "https://firewalledreplit.com/@BerylHoffman/SpellChecker1" target="_blank">replit</a>
 
 We encourage you to work in pairs for this challenge. Make sure you have done the last coding exercise above which will help you with this challenge.
 
@@ -1012,9 +1012,12 @@ The following Active Code uses a dictionary array of the most common 100 English
 1. Write a print10() method that prints out the first 10 words of the dictionary array.
 2. Write a spellcheck() method that takes a word as a parameter and returns true if it is in the dictionary array. It should return false if it is not found. Test your code below by changing the word sent to the spellcheck() method in main. This algorithm is called a **linear search** where we step through the array one element at a time (here the dictionary one word at a time) looking for a certain element.
 
+.. datafile:: dictionary.txt
+   :fromfile: ../../_static/dictionary.txt
 
 .. activecode:: challenge-6-2-spellchecker
    :language: java
+   :datafile: dictionary.txt
    :autograde: unittest
 
    public class SpellChecker
