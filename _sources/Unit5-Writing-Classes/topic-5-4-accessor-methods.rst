@@ -204,13 +204,7 @@ that it makes passing around objects when we call methods and return from them a
 lot less expensive because we don’t have to copy a bunch of data each time. The
 other, which we’ll cover in more detail in the next section when we talk about
 **mutating** objects is that two different references to the same object can see
-changes made to the object via other references. Code that calls a method that
-returns a reference can’t change the value of that reference in the place it
-came from, but it *can* potentially change the object itself by calling a method
-on it.
-
-
-
+changes made to the object via other references.
 
 
 ``toString``
