@@ -181,30 +181,15 @@ Try the following code. Note that this active code window has 2 classes! The mai
         }
     }
 
-
-
-There is a subtle difference in methods that return primitive types versus those
-that return reference/object types. If a method returns a primitive type like
-``int``, it returns a copy of the value. This is called **return by value**.
-This means the original value is not changed and the code that received the
-value can’t change the place it came from.
-
-Methods that return object types *also* return a copy of a value. However, the
-value is not the data that makes up the objects (such as all the characters in a
-``String``) but a **reference** to the object in memory.
-
-A reference is essentially a special number that tells Java where to find the
-actual data that makes up the object when we need it, such as when we want to
-call a method on it. Since there's no way to get at the “real” object other than
-through a reference you can usually just think of a reference to an object *as*
-the object.
-
-There are, however, two consequences to this aspect of Java’s design: One is
-that it makes passing around objects when we call methods and return from them a
-lot less expensive because we don’t have to copy a bunch of data each time. The
-other, which we’ll cover in more detail in the next section when we talk about
-**mutating** objects, is that two different references to the same object can see
-changes made to the object via other references.
+Getters always return the *value* of the object's instance variable which means
+the caller who receives that value has no ability to change the object's
+instance variable; they just get a copy of the value. However if the instance
+variable is a reference type like ``String`` or ``Person`` the value that is
+copied is the value of the reference. That means the caller receives a new copy
+of the reference that points to the same object as is stored in the instance
+variable. In the next section, when we talk about mutation, you'll see how that
+means that the caller might be able to change the object even though it can't
+change the reference.
 
 
 ``toString``
