@@ -184,12 +184,15 @@ If you have trouble telling ``<`` and ``>`` apart, think of ``<`` and ``>`` as
 arrows where the pointy end should point to the smaller value. If ``<`` (less
 than) points towards a smaller number on the left, then it evaluates to
 ``true``. On the other hand a ``>`` (greater than) expression will be ``true``
-only if the smaller number is on the right hand side. Or maybe you your
-elementary school teacher taught you the “hungry alligator” mnemonic—think of
-``<`` and ``>`` as the mouth of a hungry alligator which wants to eat the bigger
-number; the expression is only ``true`` if the alligator is in fact about to eat
-the bigger number. With ``<=`` and ``>=``, remember to write the two symbols in
-the order that you would say them “less than” followed by “or equal to”.
+only if the smaller number is on the right hand side. Or maybe you prefer the
+“hungry alligator” mnemonic beloved by elementary school teachers—think of ``<``
+and ``>`` as the mouths of hungry alligators which always want to eat the bigger
+number; a ``<`` or ``>`` expression is only ``true`` if the alligator is in fact
+about to eat the bigger number.
+
+To remember the correct order of the two characters in ``<=`` and ``>=``, just
+write them in the same order you would say them in English: “less than or equal
+to” not “equal to or less than”.
 
 |CodingEx| **Coding Exercise**
 
