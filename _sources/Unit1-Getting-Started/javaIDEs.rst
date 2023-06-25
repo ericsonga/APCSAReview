@@ -40,7 +40,9 @@ Github Classroom (https://classroom.github.com/) allows teachers to set up a cla
 Github and git are widely used in the computer industry, so learning to use it is great experience for students.
 Github now has a cloud IDE called Codespaces (https://github.com/features/codespaces) which you can use for 60 hours a month for free or completely free if you join as a school or get approved as a teacher or student.
 In Codespaces, you can start from a blank template or a repo, open a .java file in the VSCode editor, follow prompts to install the Extension Pack for Java, click on the Run and Debug (play button), follow the prompts to install the Java debugger, and see the output of your code in the terminal. 
-You can also use Copilot (https://github.com/features/copilot), which is a coding AI based on GPT, for free if you are approved for educational use. 
+You can also use Copilot (https://github.com/features/copilot), which is a coding AI based on GPT, for free if you are approved for educational use.
+
+Students will need to sign up for a free Github account (https://github.com/signup) if they don't already have one in order to use Codespaces.
 
 VSCode
 ---------
