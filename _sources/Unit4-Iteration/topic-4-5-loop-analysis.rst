@@ -269,7 +269,7 @@ In the code above the largest value that allows the loop to run is 6 (which is t
 
    The number of times a nested for loop body is executed is the number of times the outer loop runs multiplied by the number of times the inner loop runs (outer loop runs * inner loop runs).
 
-For the example above, the outer loop executes 4-0+1= 5 times and the inner 9-0+1=10 times so the total is 5 * 10 = 50.
+For the example above, the outer loop executes 4 - 0 + 1 = 5 times and the inner 9 - 0 + 1 = 10 times so the total is 5 * 10 = 50.
 
 
 
@@ -422,4 +422,3 @@ Try the game below to practice loop analysis. Click on **Loops** and click on th
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
     <script>      window.scrollTo(0, 0);</script>
-

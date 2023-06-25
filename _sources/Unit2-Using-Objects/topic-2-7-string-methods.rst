@@ -219,9 +219,9 @@ Run the code below to see the output from the String methods ``length``, ``subst
 CompareTo and Equals
 -----------------------
 
-We can compare primitive types like int and double using operators like == and < or >, which you will learn about in the next unit. However, with reference types like String, you must use the methods equals and compareTo, not == or < or >.
+We can compare primitive types like int and double using operators like ``==`` and ``<`` or ``>``, which you will learn about in the next unit. However, with reference types like String, you must use the methods ``equals`` and ``compareTo``, not ``==`` or ``<`` or ``>``.
 
-The method ``compareTo`` compares two strings character by character. If they are equal, it returns 0. If the first string is alphabetically ordered before the second string (which is the argument of compareTo), it returns a negative number. And if the first string is alphabetically ordered after the second string, it returns a positive number. (The actual number that it returns does not matter, but it is the distance in the first letter that is different, e.g. A is 7 letters away from H.)
+The method ``compareTo`` compares two strings character by character. If they are equal, it returns 0. If the first string is alphabetically ordered before the second string (which is the argument of ``compareTo``), it returns a negative number. And if the first string is alphabetically ordered after the second string, it returns a positive number. (The actual number that it returns does not matter, but it is the distance in the first letter that is different, e.g. A is 7 letters away from H.)
 
 .. figure:: Figures/compareTo.png
     :width: 350px
@@ -583,9 +583,3 @@ Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings*
     single: string
     single: reference
     single: object reference
-
-
-
-
-
-

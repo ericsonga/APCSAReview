@@ -206,7 +206,7 @@ With numerical values, the **or** (||) operator is often used to check for error
 
 
 
-The **not** (!) operator can be used to negate a boolean value. We've seen ! before in != (not equal).  If you use ! in expressions with && and ||, be careful because the results are often the opposite of what you think it will be at first. We'll see examples of this in the next lesson.
+The **not** (``!``) operator can be used to negate a boolean value. We've seen ``!`` before in ``!=`` (not equal).  If you use ``!`` in expressions with ``&&`` and ``||``, be careful because the results are often the opposite of what you think it will be at first. We'll see examples of this in the next lesson.
 
 |CodingEx| **Coding Exercise**
 
@@ -251,7 +251,7 @@ The **not** (!) operator can be used to negate a boolean value. We've seen ! bef
 Truth Tables
 ------------
 
-The following table (also called a **truth table**) shows the result for P && Q when P and Q are both expressions that can be true or false. An expression involving logical operators like (P && Q) evaluates to a Boolean value, true or false. As you can see below the result of P && Q is only true if both P and Q are true.
+The following table (also called a **truth table**) shows the result for ``P && Q`` when ``P`` and ``Q`` are both expressions that can be ``true`` or ``false``. An expression involving logical operators like ``P && Q`` evaluates to a ``boolean`` value, ``true`` or ``false``. As you can see below the result of ``P && Q`` is only ``true`` if both ``P`` and ``Q`` are ``true``.
 
 +-------+-------+-----------+
 | P     | Q     | P && Q    |
@@ -269,12 +269,12 @@ The following table (also called a **truth table**) shows the result for P && Q 
 
 .. fillintheblank:: 3_5_1_trueAndFalse
 
-   The truth table above is missing one result.  What is the result of P && Q when ``P=true`` and ``Q=false``?
+   The truth table above is missing one result.  What is the result of ``P && Q`` when ``P=true`` and ``Q=false``?
 
    -    :^false$: Correct.  Both values must be true for && to return true.
         :.*: Try it and see
 
-The following table shows the result for P || Q when P and Q are both expressions that can be true or false.  As you can see below the result of P || Q is true if either P or Q is true.  It is also true when both of them are true.
+The following table shows the result for ``P || Q`` when ``P`` and ``Q`` are both expressions that can be ``true`` or ``false``.  As you can see below the result of ``P || Q`` is ``true`` if either ``P`` or ``Q`` is ``true``.  It is also ``true`` when both of them are ``true``.
 
 +-------+-------+-----------+
 | P     | Q     | P || Q    |
@@ -375,8 +375,8 @@ Short Circuit Evaluation
 
 Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second expression (on the right of the operator) isn't necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:
 
-- If two boolean values/expressions are combined with a logical **or** (``||``) and the first expression is true, then the second expression won’t be executed, since only one needs to be true for the result to be true.
-- If two boolean values/expressions are combined with a logical **and** (``&&``) and the first expression is false, then the second expression won't be executed.  If the first expression is false, the result will be false, since both sides of the && need to be true for the result to be true.
+- If two boolean values/expressions are combined with a logical **or** (``||``) and the first expression is ``true``, then the second expression won’t be executed, since only one needs to be ``true`` for the result to be ``true``.
+- If two boolean values/expressions are combined with a logical **and** (``&&``) and the first expression is ``false``, then the second expression won't be executed.  If the first expression is ``false``, the result will be ``false``, since both sides of the ``&&`` need to be ``true`` for the result to be ``true``.
 
 
 
@@ -450,7 +450,7 @@ Explore the following problems with your group:
 
 
 
-1. Draw or print a |Venn diagram| of 4 intersecting circles. Put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using ==, <, >, and &&, for example Ada's age > Alan's age && Alan's age == Grace's age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using ==, !=, and &&, for example Ada's movie == Alan's movie && Alan's movie != Grace's movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).
+1. Draw or print a |Venn diagram| of 4 intersecting circles. Put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using ``==``, ``<``, ``>``, and ``&&``, for example Ada's age ``>`` Alan's age ``&&`` Alan's age ``==`` Grace's age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using ``==``, ``!=``, and ``&&``, for example Ada's movie ``==`` Alan's movie ``&&`` Alan's movie ``!=`` Grace's movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).
 
 2. Write the sentence "If it's sunny, OR if the temperature is greater than 80 and it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!". So, you will go to the beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it's not raining.
 
@@ -534,11 +534,11 @@ Summary
 
 - Logical operators ``!`` (not), ``&&`` (and), and ``||`` (or) are used with Boolean values.
 
-- ``(A && B)`` is true if both A and B are true.
+- ``A && B`` is ``true` if both ``A`` and ``B`` are ``true``.
 
-- ``(A || B)`` is true if either A or B (or both) are true.
+- ``A || B`` is ``true`` if either ``A`` or ``B`` (or both) are ``true``.
 
-- ``!(A)`` is true if A is false.
+- ``!A`` is ``true`` if ``A`` is ``false``.
 
 - In Java, ``!`` has precedence (is executed before) ``&&`` which has precedence over ``||``. Parentheses can be used to force the order of execution in a different way.
 

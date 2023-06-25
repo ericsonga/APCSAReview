@@ -157,7 +157,7 @@ Let's step through the following code in the |Java visualizer| to see the values
 Adding 1 to a Variable
 -------------------------
 
-If you use a variable to keep score you would probably increment it (add one to the current value) whenever score should go up.  You can do this by setting the variable to the current value of the variable plus one (score = score + 1) as shown below. The formula looks a little crazy in math class, but it makes sense in coding because the variable on the left is set to the value of the arithmetic expression on the right. So, the score variable is set to the previous value of score + 1.
+If you use a variable to keep score you would probably increment it (add one to the current value) whenever score should go up.  You can do this by setting the variable to the current value of the variable plus one (``score = score + 1``) as shown below. The formula looks a little crazy in math class, but it makes sense in coding because the variable on the left is set to the value of the arithmetic expression on the right. So, the score variable is set to the previous value of score plus 1.
 
 .. activecode:: lccv1
    :language: java
@@ -231,9 +231,19 @@ Operators
     pair: operators; equality
     pair: operators; inequality
 
-Java uses the standard mathematical operators for addition (+), subtraction (-), multiplication (*), and division (/). Arithmetic expressions can be of type int or double. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.  (You may have noticed that + was also used to put text together in the input program above -- more on this when we talk about strings.)
+Java uses the standard mathematical operators for addition (``+``), subtraction (``-``), multiplication (``*``), and division (``/``). Arithmetic expressions can be of type int or double. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.  (You may have noticed that ``+`` was also used to put text together in the input program above -- more on this when we talk about strings.)
 
-Java uses the operator **==** to test if the value on the left is equal to the value on the right and **!=** to test if two items are not equal.   Don't get one equal sign = confused with two equal signs ==. They mean different things in Java. One equal sign is used to assign a value to a variable. Two equal signs are used to test a variable to see if it is a certain value and that returns true or false as you'll see below.  Use == and != only with int values and not doubles because double values are an approximation and 3.3333 will not equal 3.3334 even though they are very close.
+Java uses the operator ``==`` to test if the value on the left is equal to the
+value on the right and ``!=`` to test if two items are not equal. Don't get one
+equal sign ``=`` confused with two equal signs ``==``. They mean different
+things in Java. One equal sign is used to assign a value to a variable. Two
+equal signs are used to test a variable to see if it is a certain value and that
+returns true or false as you'll see below. Also note that using ``==`` and
+``!=`` with ``double`` values can produce surprising results. Because ``double``
+values are only an approximation of the real numbers even things that should be
+mathematically equivalent might not be represented by the exactly same
+``double`` value and thus will not be ``==``. For instance write a small program
+that prints the value of ``0.3 == 0.1 + 0.2``; it will be ``false``!
 
 |CodingEx| **Coding Exercise:**
 
@@ -287,7 +297,7 @@ Java uses the operator **==** to test if the value on the left is equal to the v
 
 With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
 
-Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, so that \*, /, and % are done before + and -. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first.
+Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, just like when we do math (remember PEMDAS?), so that ``*``, ``/``, and ``%`` are done before ``+`` and ``-``. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.
 
 |CodingEx| **Coding Exercise:**
 
@@ -336,7 +346,7 @@ Operators can be used to create compound expressions with more than one operator
 The Modulo Operator
 --------------------
 
-The percent sign operator (%) is the **mod (modulo)** or **remainder** operator.  The mod operator (x % y) returns the remainder after you divide x (first number) by y (second number) so 5 % 2 will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number went into another evenly and the remainder?  That remainder is what is returned by the modulo operator.
+The percent sign operator (``%``) is the **mod (modulo)** or **remainder** operator.  The mod operator (``x % y``) returns the remainder after you divide x (first number) by y (second number) so ``5 % 2`` will return 1 since 2 goes into 5 two times with a remainder of 1.  Remember long division when you had to specify how many times one number went into another evenly and the remainder?  That remainder is what is returned by the modulo operator.
 
 .. figure:: Figures/mod-py.png
     :width: 150px
@@ -589,7 +599,7 @@ Summary
 
 - Arithmetic expressions include expressions of type int and double.
 
-- The arithmetic operators consist of +, -, \* , /, and % (modulo for the remainder in division).
+- The arithmetic operators consist of ``+``, ``-``, ``*`` , ``/``, and ``%`` (modulo for the remainder in division).
 
 - An arithmetic operation that uses two int values will evaluate to an int value. With integer division, any decimal part in the result will be thrown away.
 
@@ -597,11 +607,11 @@ Summary
 
 - Operators can be used to construct compound expressions.
 
-- During evaluation, operands are associated with operators according to **operator precedence** to determine how they are grouped. (\*, /, % have precedence over + and -, unless parentheses are used to group those.)
+- During evaluation, operands are associated with operators according to **operator precedence** to determine how they are grouped. (``*``, ``/``, ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to group those.)
 
 - An attempt to divide an integer by zero will result in an ArithmeticException to occur.
 
-- The assignment operator (=) allows a program to initialize or change the value stored in a variable.  The value of the expression on the right is stored in the variable on the left.
+- The assignment operator (``=``) allows a program to initialize or change the value stored in a variable.  The value of the expression on the right is stored in the variable on the left.
 
 - During execution, expressions are evaluated to produce a single value.
 

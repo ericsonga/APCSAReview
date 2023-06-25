@@ -463,8 +463,8 @@ Summary
 - **new** is used to create a new object of a class.
 - **null** is used to indicate that an object reference doesn't refer to any object yet.
 
-- String objects can be concatenated using the + or += operator, resulting in a new String object.
+- String objects can be concatenated using the ``+`` or ``+=`` operator, resulting in a new String object.
 
 - Primitive values can be concatenated with a String object. This causes implicit conversion of the values to String objects.
 
-- Escape sequences start with a backslash \\ and have special meaning in Java. Escape sequences used in this course include \", \\, and  \\n to print out a quote, backslash, and a new line.
+- Escape sequences start with a backslash ``\`` and have special meaning in Java. Escape sequences used in this course include ``\"``, ``\\``, and  ``\n`` to print out a quote, backslash, and a new line.

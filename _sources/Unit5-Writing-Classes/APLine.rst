@@ -1,5 +1,3 @@
-
-
 Free Response Question - APLine
 ================================
 
@@ -36,7 +34,7 @@ Try and Solve It
 Write the `APLine` class. Your implementation must include a constructor that has three integer parameters that represent ``a``, ``b``, and ``c``, in that order.
 You may assume that the values of the parameters representing ``a`` and ``b`` are not zero.
 
-It must also include a method ``getSlope()`` that calculates and returns the slope of the line (using the equation ``-a / b``) and a method ``isOnLine(x,y)`` that returns ``true`` if the point represented by its two parameters (``x`` and ``y``, in that order) is on the ``APLine`` and returns ``false`` otherwise, by testing  if
+It must also include a method ``getSlope()`` that calculates and returns the slope of the line (using the equation ``-a / b``) and a method ``isOnLine(x, y)`` that returns ``true`` if the point represented by its two parameters (``x`` and ``y``, in that order) is on the ``APLine`` and returns ``false`` otherwise, by testing  if
 ``ax + by + c`` is equal to 0.
 
 Your class must produce the indicated results when the main method below is run. You may ignore any issues related to integer overflow.

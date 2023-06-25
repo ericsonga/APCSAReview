@@ -52,7 +52,7 @@
 Compound Assignment Operators
 =============================
 
-Compound assignment operators are shortcuts that do a math operation and assignment in one step. For example, ``x += 1`` adds 1 to x and assigns the sum to x. It is the same as ``x = x + 1``. This pattern is possible with any operator put in front of the = sign, as seen below.
+Compound assignment operators are shortcuts that do a math operation and assignment in one step. For example, ``x += 1`` adds 1 to the current value of ``x`` and assigns the result back to ``x``. It is the same as ``x = x + 1``. This pattern is possible with any operator put in front of the ``=`` sign, as seen below.
 
 +------------+------------+-----------+----------+----------+
 |\+ shortcuts|\- shortcuts|\* shortcut|/ shortcut|% shortcut|
@@ -216,7 +216,3 @@ Summary
 - Compound assignment operators (+=, -=, \*=, /=, %=) can be used in place of the assignment operator.
 - The increment operator (``++``) and decrement operator (``--``) are used to add 1 or subtract 1 from the stored value of a variable. The new value is assigned to the variable.
 - The use of increment and decrement operators in prefix form (i.e., ++x) and inside other expressions (i.e., arr[x++]) is outside the scope of this course and the AP Exam.
-
-
-
-

@@ -49,17 +49,17 @@ Boolean Expressions
 Testing Equality (==)
 ----------------------
 
-The operators == and != (not equal) can be used to compare values. They return true or false boolean values.
+The operators ``==`` and ``!=`` (not equal) can be used to compare values. They return true or false boolean values.
 
 .. note::
 
-    One = sign changes the value of a variable. Two == equal signs are used to test if a variable holds a certain value, without changing its value!
+    One ``=`` sign changes the value of a variable. Two ``==`` equal signs are used to test if a variable holds a certain value, without changing its value!
 
 .. |Colleen video| raw:: html
 
    <a href="https://www.youtube.com/watch?v=bO9bejT0jwE&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
 
-Watch the following |Colleen video| which shows what happens in memory as primitive types like int and reference types like Dog are compared with == in a physical model of Java memory.
+Watch the following |Colleen video| which shows what happens in memory as primitive types like ``int`` and reference types like ``Dog`` are compared with ``==`` in a physical model of Java memory.
 
 .. youtube:: bO9bejT0jwE
     :width: 650
@@ -67,7 +67,7 @@ Watch the following |Colleen video| which shows what happens in memory as primit
     :align: center
     :optional:
 
-The following code shows how == is used with primitive types like int.
+The following code shows how ``==`` is used with primitive types like ``int``.
 
 
 
@@ -75,7 +75,7 @@ The following code shows how == is used with primitive types like int.
    :language: java
    :autograde: unittest
 
-   What will the code below print out? Try to guess before you run it! Note that 1 equal sign (=) is used for assigning a value and 2 equal signs (==) for testing values.
+   What will the code below print out? Try to guess before you run it! Note that 1 equal sign (``=``) is used for assigning a value and 2 equal signs (``==``) for testing values.
    ~~~~
    public class BoolTest1
    {
@@ -111,7 +111,7 @@ The following code shows how == is used with primitive types like int.
     }
 
 
-We can also use == or != to test if two reference values, like Turtle and String objects,  refer to the same object. In the figure below, we are creating two separate Turtle objects called juan and mia. They do not refer to same object or turtle. Then, we create a reference variable called friend that is set to mia. The turtle mia will have two ways (**references** or **aliases**) to name her -- she's both mia and friend, and these variables refer to the same object (same Turtle) in memory. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with == will return true which you can see in the code below.
+We can also use ``==`` or ``!=`` to test if two reference values, like ``Turtle`` and ``String`` objects,  refer to the same object. In the figure below, we are creating two separate ``Turtle`` objects called ``juan`` and ``mia``. They do not refer to same object or turtle. Then, we create a reference variable called ``friend`` that is set to ``mia``. The turtle ``mia`` will have two ways (**references** or **aliases**) to name her -- she's both ``mia`` and ``friend``, and these variables refer to the same object (same ``Turtle``) in memory. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with ``==`` will return true which you can see in the code below.
 
 .. figure:: Figures/turtleEquality.png
     :width: 500px
@@ -171,16 +171,16 @@ We can also use == or != to test if two reference values, like Turtle and String
 Relational Operators (<, >)
 ----------------------------
 
-The **Relational Operators** below in Java are used to compare numeric values or arithmetic expressions. Although some programming languages allow using relational operators like < to compare strings, Java only uses these operators for numbers, and uses the string methods compareTo() and equals() for comparing String values.
+The **Relational Operators** below in Java are used to compare numeric values or arithmetic expressions. Although some programming languages allow using relational operators like ``<`` to compare strings, Java only uses these operators for numbers, and uses the string methods compareTo() and equals() for comparing String values.
 
-- < Less Than
-- > Greater Than
-- <= Less than or equal to
-- >= Greater than or equal to
-- == Equals
-- != Does not equal
+- ``<`` Less Than
+- ``>`` Greater Than
+- ``<=`` Less than or equal to
+- ``>=`` Greater than or equal to
+- ``==`` Equals
+- ``!=`` Does not equal
 
-If you have trouble telling < and > apart, think of a number line and think of < and > as arrows; < (less than) points towards 0 and smaller numbers on the number line and > (greater than) points towards the larger numbers on the number line. Or remember that < starts with the smaller (less) point and > starts with the open wide (greater) side. With <= and >=, remember to write the two symbols in the order that you would say them "less than" followed by "or equal to".
+If you have trouble telling ``<`` and ``>`` apart, think of ``<`` and ``>`` as arrows where the pointy end should point to the smaller value. If ``<`` (less than) points towards a smaller number on the left, then it evaluates to ``true``. On the other hand  a ``>`` (greater than) expression will be ``true`` only if the smaller number is on the right hand side. Or maybe you your elementary school teacher taught you the “hungry aligator” mnemonic—think of ``<`` and ``>`` as the mouth of a hungry aligator which wants to eat the bigger number; the expression is only ``true`` if the aligator is in fact about to eat the bigger number.  With ``<=`` and ``>=``, remember to write the two symbols in the order that you would say them “less than” followed by “or equal to”.
 
 |CodingEx| **Coding Exercise**
 
@@ -401,9 +401,9 @@ Summary
 -------------------
 
 
-- Primitive values and reference values can be compared using relational operators (i.e., == and !=) in Java.
-- Arithmetic expression values can be compared using relational operators (i.e., <, >, <=, >=) in Java.
-- An expression involving relational operators evaluates to a Boolean value of true or false.
+- Primitive values and reference values can be compared using relational operators (i.e., ``==`` and ``!=``) in Java.
+- Arithmetic expression values can be compared using relational operators (i.e., ``<``, ``>``, ``<=``, ``>=``) in Java.
+- An expression involving relational operators evaluates to a ``boolean`` value of ``true`` or ``false``.
 
 
 AP Practice
@@ -488,6 +488,3 @@ Try the game below to practice. Click on **Relationals**,  evaluate the relation
 .. raw:: html
 
      <iframe id="page-embed" class="init" height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
-
-
-

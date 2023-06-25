@@ -37,7 +37,7 @@
 Comparing Objects
 =================
 
-Comparing objects is a little different than comparing primitive typed values like numbers. Objects can be very complex and have many attribute values or instance variables inside them. For example, the turtle objects have many instance variables like name, width, height, xPos, yPos, etc. When comparing two turtle objects, we need a specially written **equals** method to compare all of these values. In this lesson, we will take a look at String objects and how they are compared with == vs. the equals method.
+Comparing objects is a little different than comparing primitive typed values like numbers. Objects can be very complex and have many attribute values or instance variables inside them. For example, the ``Turtle`` objects have many instance variables like ``name``, ``width``, ``height``, ``xPos``, ``yPos``, etc. When comparing two ``Turtle`` objects, we need a specially written **equals** method to compare all of these values. In this lesson, we will take a look at ``String`` objects and the difference between comparing them with ``==`` vs. the ``equals`` method.
 
 
 String Equality
@@ -47,7 +47,7 @@ String Equality
    pair: String; equality
    pair: String; equals
 
-The **equals** method for Strings compares two strings letter by letter. ``s1.equals(s2)`` is true if s1 and s2 have all the same characters in the same order. With Strings and other objects, you almost always use equals instead of == to check their equality.
+The **equals** method for Strings compares two strings letter by letter. ``s1.equals(s2)`` is true if ``s1`` and ``s2`` have all the same characters in the same order. With ``Strings`` and other objects, you almost always use ``equals`` instead of ``==`` to check their equality.
 
 
 
@@ -158,7 +158,7 @@ If you use the ``new`` keyword to create a string, it will always create a new s
         }
     }
 
-Watch the `video below <https://www.youtube.com/watch?v=xZroaSGhgxA>`_ to see how this code works in memory. Since we used the ``new`` keyword, two different String objects will be created that each have the characters ``Hello`` in them.  So ``s1 == s2`` will be false since they don't refer to the same object, but ``s1.equals(s2)`` is true since the two different objects contain the same characters in the same order.
+Watch the `video below <https://www.youtube.com/watch?v=xZroaSGhgxA>`_ to see how this code works in memory. Since we used the ``new`` keyword, two different ``String`` objects will be created that each have the characters ``Hello`` in them.  So ``s1 == s2`` will be false since they don't refer to the same object, but ``s1.equals(s2)`` is true since the two different objects contain the same characters in the same order.
 
 .. youtube:: xZroaSGhgxA
     :width: 700
@@ -175,12 +175,12 @@ Here is the representation of these String objects in memory.
 
     Figure 3: Two strings that are equal with equals but not with ==.
 
-Note that you can also create Strings using string literals instead of new, like ``String s = "Hello"``. String literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and == on the AP exam.
+Note that you can also create ``Strings`` using string literals instead of new, like ``String s = "Hello"``. ``String`` literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and ``==`` on the AP exam.
 
 
 .. note::
 
-    Only use ``==`` with primitive types like int or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings to test if they are equal letter by letter.
+    Only use ``==`` with primitive types like ``int`` or to test if two strings (or objects) refer to the same object.  Use ``equals``, not ``==``, with strings to test if they are equal letter by letter.
 
 |Exercise| **Check your understanding**
 
@@ -243,7 +243,7 @@ Note that you can also create Strings using string literals instead of new, like
 Comparing with null
 --------------------
 
-One common place to use == or != with objects is to compare them to **null** to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with && in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole && test is false.
+One common place to use ``==`` or ``!=`` with objects is to compare them to **null** to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn't exist. Remember that **short-circuit evaluation** is used with ``&&`` in Java meaning that if the first part of the if condition is false, it doesn't even have to check the second condition and it knows the whole ``&&`` test is false.
 
 |CodingEx| **Coding Exercise**
 
@@ -251,7 +251,7 @@ One common place to use == or != with objects is to compare them to **null** to 
    :language: java
    :autograde: unittest
 
-   Try the following code to see a NullPointer error (if you don't see the error because of the autograding, you can copy it into the pencil icon scratch area to run it without the grader). Since s is null, indexOf throws an NullPointer error for s. Comment out the first if statement and run the program again. The second if statement avoids the error with shortcircuit evaluation. Because s != null is false, the rest of the boolean expression is not evaluated. Now, change s to set it to "apple" instead of null in the first line and run the code again to see that the if statements can print out that "apple contains an a".
+   Try the following code to see a ``NullPointerException`` (if you don't see the exception because of the autograding, you can copy it into the pencil icon scratch area to run it without the grader). Since ``s`` is ``null``, trying to access ``indexOf`` on ``s`` throws an ``NullPointerException``. Comment out the first ``if`` statement and run the program again. The second ``if`` statement avoids the error with shortcircuit evaluation. Because ``s != null`` is ``false``, the rest of the Boolean expression is not evaluated. Now, change ``s`` to set it to ``"apple"`` instead of ``null`` in the first line and run the code again to see that the ``if`` statements can print out that “apple contains an a”.
    ~~~~
    public class NullTest
    {
@@ -352,9 +352,9 @@ Summary
 
 - Two object references are considered **aliases** when they both reference the same object.
 
-- Object reference values can be compared, using == and !=, to identify aliases.
+- Object reference values can be compared, using ``==`` and ``!=``, to identify aliases.
 
-- A reference value can be compared with null, using == or !=,  to determine if the reference actually references an object.
+- A reference value can be compared with null, using ``==`` or ``!=``,  to determine if the reference actually references an object.
 
 
 AP Practice

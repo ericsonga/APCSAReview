@@ -148,7 +148,7 @@ The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It intr
 .. index::
     single: factorial
 
-See the method `factorial` below that calculates the **factorial** of a number.  The **factorial** of a number is defined as 1 for 0 and n * factorial (n-1) for any other number.
+See the method `factorial` below that calculates the **factorial** of a number.  The **factorial** of a number is defined as 1 for 0 and ``n * factorial (n-1)`` for any other number.
 
 .. code-block:: java
    :linenos:
