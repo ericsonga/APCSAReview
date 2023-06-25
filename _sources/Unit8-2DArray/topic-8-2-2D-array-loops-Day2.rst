@@ -100,7 +100,7 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
         }
     }
 
-In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set colArray to the current column array.  Then you can loop through the value in the column array.
+In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set ``colArray`` to the current column array.  Then you can loop through the value in the column array.
 
 
 
@@ -352,9 +352,9 @@ Photographs and images are made up of a 2D array of **pixels** which are tiny pi
 model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? If your class has time, do the reading and exercises for |picture lab A1 to A3| to first learn about digital pictures and RGB values.
 
 
-In this challenge, you will do a part of the Picture Lab to modify the pixels of a digital photo. Scroll down to the bottom of the following code and take a look at the zeroBlue() method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0.
+In this challenge, you will do a part of the Picture Lab to modify the pixels of a digital photo. Scroll down to the bottom of the following code and take a look at the ``zeroBlue`` method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0.
 
-Now, write a similar method called keepOnlyBlue() that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called switchColors() that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the getRed(), getGreen(), getBlue() to get the RGB values of the pixel and then swap them around by using the setRed, setGreen, setBlue methods and giving them different color values from the get methods as arguments.
+Now, write a similar method called ``keepOnlyBlue`` that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called ``switchColors`` that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the ``getRed``, ``getGreen``, ``getBlue`` to get the RGB values of the pixel and then swap them around by using the ``setRed``, ``setGreen``, ``setBlue`` methods and giving them different color values from the get methods as arguments.
 
 You can test the methods in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
 
@@ -1743,4 +1743,3 @@ Try the game below to practice loops with 2D arrays. Click on **Arrays** and the
 .. raw:: html
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
-

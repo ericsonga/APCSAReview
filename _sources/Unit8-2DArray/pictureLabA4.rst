@@ -1,5 +1,3 @@
-   
-
 .. raw:: html
 
    <div class="unit-time">
@@ -114,11 +112,11 @@ loop inside of another, to loop through all the values in a 2D array. Let's try 
      + correct!
 
 
-Here is the code for the getTotal() method in the IntArrayWorker class that totals all the values in a 2D array of integers in
-a private instance variable (field in the class) named matrix. Notice the nested for loop and how it
-uses matrix.length to get the number of rows and matrix[0].length to get the number of
-columns. Since matrix[0] returns the inner array in a 2D array, you can use
-matrix[0].length to get the number of columns.
+Here is the code for the ``getTotal`` method in the ``IntArrayWorker`` class that totals all the values in a 2D array of integers in
+a private instance variable (field in the class) named ``matrix``. Notice the nested ``for`` loop and how it
+uses ``matrix.length`` to get the number of rows and ``matrix[0].length`` to get the number of
+columns. Since ``matrix[0]`` returns the inner array in a 2D array, you can use
+``matrix[0].length`` to get the number of columns.
 
 .. code-block:: java
 
@@ -536,4 +534,3 @@ IntArrayWorkerTester.
                 assertTrue(passed);
             }
     }
-

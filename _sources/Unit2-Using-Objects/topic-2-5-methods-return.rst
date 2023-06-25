@@ -61,13 +61,13 @@ If a method is a **void method** and has **void** as its return type, like most 
 Get Methods
 ------------
 
-Get methods return the value of instance variables, for example getWidth() and getHeight() to get the height and width for a Turtle object.
+Get methods return the value of instance variables, for example ``getWidth`` and ``getHeight`` to get the height and width for a ``Turtle`` object.
 
 In the previous lesson, we used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value.
 
-When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()* means getWidth will return an int (an integer number).
+When you use a get method, you need to assign what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example ``int getWidth()`` means ``getWidth`` will return an ``int`` (an integer number).
 
-Here are some examples of using get methods for the turtle object yertle.
+Here are some examples of using get methods for the ``Turtle`` object ``yertle``.
 
 .. code-block:: java
 
@@ -206,10 +206,10 @@ Here are some examples of using get methods for the turtle object yertle.
         }
     }
 
-toString() Methods
+``toString`` Methods
 ------------------
 
-Another common method that returns a value is the **toString()** method. This method is called automatically to try to convert an object to a String when it is needed, for example in a print statement. In the Turtle class, the toString() method returns a String description of the turtle.
+Another common method that returns a value is the ``toString`` method. This method is called automatically to try to convert an object to a ``String`` when it is needed, for example in a print statement. In the ``Turtle`` class, the ``toString`` method returns a ``String`` description of the turtle.
 
 .. code-block:: java
 
@@ -353,9 +353,9 @@ Try this |visualization| to see this code in action.
 |Groupwork| Programming Challenge : Turtle Distances
 ----------------------------------------------------
 
-1. The Turtle class has a method called getDistance(x,y) which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)?
+1. The ``Turtle`` class has a method called ``getDistance(x,y)`` which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)?
 
-2. Add another turtle and make both turtles move. Then find the distance between them. You must use the getXPos() and getYPos() methods as well as the getDistance() method.
+2. Add another turtle and make both turtles move. Then find the distance between them. You must use the ``getXPos`` and ``getYPos`` methods as well as the ``getDistance`` method.
 
 .. activecode:: challenge2-5-TurtleDistance
     :language: java

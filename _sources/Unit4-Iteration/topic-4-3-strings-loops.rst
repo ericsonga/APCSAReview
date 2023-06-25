@@ -67,7 +67,7 @@ The String methods (covered in lesson 2.7 and given in the |AP CSA Reference She
 
 - **int length()** : returns the number of characters in a String object.
 
-- **int indexOf(String str)** : returns the index of the first occurrence of str; returns -1 if not found.
+- **int indexOf(String str)** : returns the index of the first occurrence of ``str`` or -1 if ``str` is not found.
 
 - **String substring(int from, int to)** : returns the substring beginning at index from  and ending at index (to – 1). Note that s.substring(i,i+1) returns the character at index i.
 
@@ -86,7 +86,7 @@ The String methods (covered in lesson 2.7 and given in the |AP CSA Reference She
 While Find and Replace Loop
 ---------------------------
 
-A while loop can be used with the String indexOf method to find certain characters in a string and process them, usually using the substring method.
+A while loop can be used with the ``String`` ``indexOf`` method to find certain characters in a string and process them, usually using the ``substring`` method.
 
 .. code-block:: java
 
@@ -145,7 +145,7 @@ Google has been scanning old books and then using software to read the scanned t
 
 |CodingEx| **Coding Exercise**
 
-The following code loops through a string replacing all 1's with l's.  Trace through the code below with a partner and explain how it works on the given message.  You can run it line by line in the |Java visualizer|. Note that indexOf here can work repeatedly to find the next occurrence of a 1 because they are replaced as soon as they are found.
+The following code loops through a string replacing all 1's with l's.  Trace through the code below with a partner and explain how it works on the given message.  You can run it line by line in the |Java visualizer|. Note that ``indexOf`` here can work repeatedly to find the next occurrence of a 1 because they are replaced as soon as they are found.
 
 .. activecode:: lclw1
    :language: java
@@ -262,7 +262,7 @@ For loops with strings usually start at 0 and use the string's length() for the 
    }
 
 
-Here is a for-loop that creates a new string that reverses the string s.  We start with a blank string sReversed and build up our reversed string in that variable by copying in characters from the string s. You can also run this code in this |Java visualizer link| or by clicking on the Code Lens button below.
+Here is a ``for`` loop that creates a new string that reverses the string ``s``.  We start with a blank string ``sReversed`` and build up our reversed string in that variable by copying in characters from the string ``s``. You can also run this code in this |Java visualizer link| or by clicking on the Code Lens button below.
 
 
 
@@ -333,7 +333,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
 
 2. (Optional - not autograded) add a counter to count the number of replacements and print it out.
 
-3. (Optional - challenging and not autograded) What if you like both cats and dogs? After you replace "cat" with "dog", add another loop that looks for the word "dogs" and adds " and cats" to it. Do not replace "dog", just replace "dogs". This will just replace the first sentence in the example below but you can add other sentences to test. For this loop, you will need to use a special version of indexOf that searches from a given index, so that you don't end up with an infinite loop that keeps finding the first "dogs". Make sure you add a variable **fromIndex** that is initialized to 0 and that is changed each time through the loop to skip over the last word that was found.
+3. (Optional - challenging and not autograded) What if you like both cats and dogs? After you replace "cat" with "dog", add another loop that looks for the word "dogs" and adds " and cats" to it. Do not replace "dog", just replace "dogs". This will just replace the first sentence in the example below but you can add other sentences to test. For this loop, you will need to use a special version of ``indexOf`` that searches from a given index, so that you don't end up with an infinite loop that keeps finding the first "dogs". Make sure you add a variable **fromIndex** that is initialized to 0 and that is changed each time through the loop to skip over the last word that was found.
 
    - **int indexOf(String target, int fromIndex)** searches left-to-right for the target substring, but starts the search at the given fromIndex. You are not required to know this version of indexOf for the AP CSA exam, but you can use it (and any valid Java code) in the Free Response Questions.
 

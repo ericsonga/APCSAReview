@@ -1,5 +1,3 @@
-   
-
 .. raw:: html
 
    <div class="unit-time">
@@ -176,15 +174,17 @@ The following code is the main method from the Picture class.
  }
 
 
-The method zeroBlue in the Picture class gets a two-dimensional array of Pixel objects
-from the current picture (the picture the method was called on). It then declares a variable that will refer
-to a Pixel object named pixelObj. It uses a nested for-each loop to loop through all the
-pixels in the picture. Inside the body of the nested for-each loop it sets the blue value for the
-current pixel to zero. Note that you cannot change the elements of an array when you use a for-each
-loop. If, however, the array elements are references to objects that have methods that allow changes,
-you can change the internal state of objects referenced in the array (pixels).
+The method ``zeroBlue`` in the ``Picture`` class gets a two-dimensional array of
+``Pixel`` objects from the current picture (the picture the method was called
+on). It then declares a variable that will refer to a ``Pixel`` object named
+``pixelObj``. It uses a nested for-each loop to loop through all the pixels in
+the picture. Inside the body of the nested for-each loop it sets the blue value
+for the current pixel to zero. Note that you cannot change the elements of an
+array when you use a for-each loop. If, however, the array elements are
+references to objects that have methods that allow changes, as they are here,
+you can change the internal state of objects referenced in the array.
 
-The following code is the zeroBlue method in the Picture class.
+The following code is the ``zeroBlue`` method in the ``Picture`` class.
 
 .. code-block:: java
 
@@ -231,7 +231,7 @@ Another option is to use for loops with indices to visit each pixel in the pictu
     :width: 250
     :align: left
 
-1. You may have done this exercise in the programming challenge in lesson 8.2. Using the zeroBlue method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the main method.
+1. You may have done this exercise in the programming challenge in lesson 8.2. Using the ``zeroBlue`` method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the ``main`` method.
 
 .. |repl.it project| raw:: html
 
@@ -432,7 +432,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
     :align: left
 
 2. Write the negate method to negate all the pixels in a picture. To negate a picture, set the red
-value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value
+value to 255 minus the current red value (use the pixel's ``getRed`` method), the green value to 255 minus the current green value
 and the blue value to 255 minus the current blue value.  Be sure to call the new test method in the main
 method.
 
@@ -2260,6 +2260,3 @@ Choose from these images:
          }
 
         } // end of SimplePicture class
-
-
-

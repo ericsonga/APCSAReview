@@ -306,7 +306,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
 Exercises:
 -------------
 
-In this activity, the chatbot is altered to look not only for keywords, but also specific phrases.  Magpie4.java adds two new methods, transformIWantToStatement and transformYouMeStatement and getResponse has been modified to add tests to find "I want to something" statements and "You something me" statements.
+In this activity, the chatbot is altered to look not only for keywords, but also specific phrases.  Magpie4.java adds two new methods, ``transformIWantToStatement`` and ``transformYouMeStatement`` and ``getResponse`` has been modified to add tests to find "I want to something" statements and "You something me" statements.
 
 
 Look at the code. See how it handles “I want to” and you/me statements.
@@ -316,9 +316,9 @@ Look at the code. See how it handles “I want to” and you/me statements.
    <a href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4" target="_blank">repl.it version 4</a>
 
 
-Then add two new methods, transformIWantStatement and transformIYouStatement, and calls to each as described below. Alter the code either above in the active code window or on |repl.it version 4| or in an IDE of your choice:
+Then add two new methods, ``transformIWantStatement`` and ``transformIYouStatement``, and calls to each as described below. Alter the code either above in the active code window or on |repl.it version 4| or in an IDE of your choice:
 
-* In a method transformIWantStatement, have it respond to “I want something” statements with “Would you really be happy if you had something?” You can use the already written transformIWantToStatement method as a guide. In doing this, you need to be careful about where you place the call to the method so it calls the right one. Test with the following:
+* In a method ``transformIWantStatement``, have it respond to “I want something” statements with “Would you really be happy if you had something?” You can use the already written ``transformIWantToStatement`` method as a guide. In doing this, you need to be careful about where you place the call to the method so it calls the right one. Test with the following:
 
   * Statement: I want fried chicken.
   * Response: Would you really be happy if you had fried chicken?
@@ -329,5 +329,3 @@ Then add two new methods, transformIWantStatement and transformIYouStatement, an
   * Response: Why do you like me?
 
 Find an example of when this structure does not work well. How can you improve it?
-
-

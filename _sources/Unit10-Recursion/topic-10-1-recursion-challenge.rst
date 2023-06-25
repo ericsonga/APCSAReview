@@ -112,7 +112,7 @@ Consider the following recursive method:
       -    :^0$: Correct!
            :.*: What is the value returned from strMethod("y")?
 
-Once strMethod("y") returns, the value from each recursive call on the stack can be calculated and returned.
+Once ``strMethod("y")`` returns, the value from each recursive call on the stack can be calculated and returned.
 
 .. code-block:: java
 
@@ -160,5 +160,3 @@ Summary
 - Writing recursive program code is outside the scope of the course and AP Exam.
 
 - Recursion can be used to traverse String, array, and ArrayList objects.
-
-

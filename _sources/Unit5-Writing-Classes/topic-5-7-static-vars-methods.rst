@@ -68,7 +68,7 @@ In Unit 2, we explored the Math class and its many static methods like Math.rand
 
 Static methods only have access to other static variables and static methods. Static methods cannot access or change the values of instance variables or the this reference (since there is no calling object for them), and static methods cannot call non-static methods. However, non-static methods have access to all variables (instance or static) and methods (static or non-static) in the class.
 
-Since there is only 1 copy of a static variable or method, static variables are often used to count how many objects are generated. In the following class Person, there is a static variable called personCounter that is incremented each time the Person constructor is called to initialize a new Person object. The static method printCounter() prints out its value.  You can also watch how it works in the |Java visualizer| by clicking the CodeLens button below.
+Since there is only 1 copy of a ``static`` variable or method, static variables are often used to count how many objects are generated. In the following class ``Person``, there is a ``static`` variable called ``personCounter`` that is incremented each time the ``Person`` constructor is called to initialize a new ``Person`` object. The static method ``printCounter`` prints out its value.  You can also watch how it works in the |Java visualizer| by clicking the CodeLens button below.
 
 .. activecode:: PersonClassStaticCounter
   :language: java

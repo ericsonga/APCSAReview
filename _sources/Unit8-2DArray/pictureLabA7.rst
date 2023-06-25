@@ -1,5 +1,3 @@
-   
-
 .. raw:: html
 
    <div class="unit-time">
@@ -36,8 +34,8 @@ starting and ending points for the row and column values to mirror just part of 
     Figure 1: Greek temple before (left) and after (right) mirroring the pediment
 
 To work with just part of a picture, change the starting and ending values for the nested for loops
-as shown in the following mirrorTemple method. This method also calculates the distance the
-current column is from the mirrorPoint and then adds that distance to the mirrorPoint
+as shown in the following ``mirrorTemple`` method. This method also calculates the distance the
+current column is from the ``mirrorPoint`` and then adds that distance to the ``mirrorPoint``
 to get the column to copy to.
 
 .. code-block:: java
@@ -63,7 +61,7 @@ to get the column to copy to.
       }
   }
 
-You can test this with the mirrorTemple method below.
+You can test this with the ``mirrorTemple`` method below.
 
 .. activecode:: picture-lab-A7-mirrorTemple
     :language: java
@@ -212,7 +210,7 @@ You can test this with the mirrorTemple method below.
       }
 
 
-How many times was leftPixel = pixels[row][col]; executed? The formula for the
+How many times was ``leftPixel = pixels[row][col];`` executed? The formula for the
 number of times a nested loop executes is the number of times the outer loop executes multiplied by the
 number of times the inner loop executes. The outer loop is the one looping through the rows, because it
 is outside the other loop. The inner loop is the one looping through the columns, because it is inside the
@@ -271,7 +269,7 @@ equals 263 times. The total is 70 * 263, which equals 18,410.
 |CodingEx| **Coding Exercises**
 
 1. Check the calculation of the number of times the body of the nested loop executes by adding an
-integer count variable to the mirrorTemple method that starts out at 0 and increments
+integer count variable to the ``mirrorTemple`` method that starts out at 0 and increments
 inside the body of the loop. Print the value of count after the nested loop ends.
 
 .. activecode:: picture-lab-A7-mirror-temple-count
@@ -433,7 +431,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
     :width: 150
     :align: left
 
-2. Write the method mirrorArms to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork |Explorer Repl| and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
+2. Write the method ``mirrorArms`` to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork |Explorer Repl| and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
 .. activecode:: picture-lab-A7-mirrorArms
     :language: java
@@ -600,7 +598,7 @@ inside the body of the loop. Print the value of count after the nested loop ends
     :width: 150
     :align: left
 
-3. Write the method mirrorGull to mirror the seagull ("seagull.jpg") to the right so
+3. Write the method ``mirrorGull`` to mirror the seagull ("seagull.jpg") to the right so
 that there are two seagulls on the beach near each other. Fork |Explorer Repl| and change it to explore seagull.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
 

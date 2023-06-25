@@ -94,7 +94,7 @@ following code segment.
    hikerClub.addClimb("Algonquin", 225);
    hikerClub.addClimb("Monadnock", 344);
 
-When the code segment has completed execution, the instance variable climbList would contain the
+When the code segment has completed execution, the instance variable ``climbList`` would contain the
 following entries in either of the orders shown below.
 
 .. image:: Figures/climbClubB.png
@@ -105,10 +105,10 @@ following entries in either of the orders shown below.
 Walk Through the Example
 --------------------------
 
-#. First you will create a new ``ClimbInfo`` object with a ``peakName`` of Monadnock and a climbTime of 274 and insert it in the empty ``climbList``.
-#. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Whiteface and a climbTime of 301.  You will compare the peakName of Whiteface to Monadnock and since it is greater you will try to continue but you will have reached the end of the ``climbList`` so you will insert it there.
-#. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Algonquin and a climbTime of 225.  You will compare Algonquin to Monadnock and since Algonquin is less than Monadnock you will insert it at position 0.
-#. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Monadnock and a climbTime of 334. You will compare Monadnock to Algonquin and since it is greater you will continue.  You will next check Monadnock to Monadnock and since they are equal you can insert it there.
+#. First you will create a new ``ClimbInfo`` object with a ``peakName`` of Monadnock and a ``climbTime`` of 274 and insert it in the empty ``climbList``.
+#. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Whiteface and a ``climbTime`` of 301.  You will compare the ``peakName`` of Whiteface to Monadnock and since it is greater you will try to continue but you will have reached the end of the ``climbList`` so you will insert it there.
+#. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Algonquin and a ``climbTime`` of 225.  You will compare Algonquin to Monadnock and since Algonquin is less than Monadnock you will insert it at position 0.
+#. Next you will create a new ``ClimbInfo`` object with a ``peakName`` of Monadnock and a ``climbTime`` of 334. You will compare Monadnock to Algonquin and since it is greater you will continue.  You will next check Monadnock to Monadnock and since they are equal you can insert it there.
 
 How To Solve This
 -------------------
@@ -321,6 +321,3 @@ The following video is also on YouTube at https://youtu.be/Fye33yPQk-g.  It walk
 .. youtube:: Fye33yPQk-g
     :width: 800
     :align: center
-
-
-

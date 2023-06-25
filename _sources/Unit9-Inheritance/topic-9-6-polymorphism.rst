@@ -88,7 +88,7 @@ In the last lesson on inheritance hierarchies, we were actually seeing polymorph
 
 1. Polymorphic assignment statements such as ``Shape s = new Rectangle();``
 2. Polymorphic parameters such as ``print(Shape)`` being called with different subclass types.
-3. Polymorphic array and ArrayList types such as ``Shape[] shapeArray = { new Rectangle(), new Square() };``
+3. Polymorphic array and ``ArrayList`` types such as ``Shape[] shapeArray = { new Rectangle(), new Square() };``
 
 In all of these cases, there are no errors at compile-time because the compiler checks that the "subclass is-a superclass" relationship is true. But at run-time, the Java interpreter will use the object's actual subclass type and call the subclass methods for any overridden methods. This is why they are polymorphic -- the same code can have different results depending on the object's actual type at run-time.
 

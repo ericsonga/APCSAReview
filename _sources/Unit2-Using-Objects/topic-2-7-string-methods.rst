@@ -231,9 +231,9 @@ The method ``compareTo`` compares two strings character by character. If they ar
 
     Figure 2: compareTo returns a negative or positive value or 0 based on alphabetical order
 
-The equals method compares the two strings character by character and returns true or false. Both compareTo and equals are case-sensitive. There are case-insensitive versions of these methods, ``compareToIgnoreCase`` and ``equalsIgnoreCase``, which are not on the AP exam.
+The ``equals`` method compares the two strings character by character and returns ``true`` or ``false``. Both ``compareTo`` and ``equals`` are case-sensitive. There are case-insensitive versions of these methods, ``compareToIgnoreCase`` and ``equalsIgnoreCase``, which are not on the AP exam.
 
-Run the example below to see the output from ``compareTo`` and ``equals``. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  Notice that equals is case-sensitive.
+Run the example below to see the output from ``compareTo`` and ``equals``. Since ``"Hello!"`` would be alphabetically ordered after ``"And"``, ``compareTo`` returns a positive number. Since ``"Hello!"`` would be alphabetically ordered before ``"Zoo"``, ``compareTo`` returns a negative number.  Notice that ``equals`` is case-sensitive.
 
 .. activecode:: lcsm2
    :language: java

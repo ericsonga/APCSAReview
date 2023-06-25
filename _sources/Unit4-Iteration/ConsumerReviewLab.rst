@@ -70,7 +70,7 @@ This method uses a **try catch** block for error-checking which is not covered i
         }
     }
 
-Notice that sentimentVal() is a static method. We've seen static methods before in the Math class, like Math.random(). How do you call static methods? You don't need to create an object; you can just use the class name. Note that this method takes an argument (the word to check) and has a return value (the sentiment value of that word). You will need to call it correctly and print out what it returns to see the results.
+Notice that ``sentimentVal`` is a ``static`` method. We've seen ``static`` methods before in the ``Math`` class, such as ``Math.random``. How do you call ``static`` methods? You don't need to create an object; you can just use the class name. Note that this method takes an argument (the word to check) and has a return value (the sentiment value of that word). You will need to call it correctly and print out what it returns to see the results.
 
 
 .. mchoice:: staticMethodCall
@@ -93,23 +93,23 @@ Notice that sentimentVal() is a static method. We've seen static methods before 
 Activity 2 :Total Sentiment Value and Star Ratings
 ---------------------------------------------------
 
-Now that you have read reviews and started exploring the sentimentVal method, you will write code to determine the sentiment of an entire review by totaling the sentiment of each word in the review and a star rating that is determined by the total sentiment.
+Now that you have read reviews and started exploring the ``sentimentVal`` method, you will write code to determine the sentiment of an entire review by totaling the sentiment of each word in the review and a star rating that is determined by the total sentiment.
 
 Working in pairs, pick an online review of your choice or make up a funny one. Copy and paste the content of the review into a new text file on repl or in your IDE, making sure to save the file with a .txt extension. There are also two test reviews already in the files called SimpleReview.txt and 26WestReview.txt that you could use as well.
 
-In pairs, do the Activity 2 worksheet from the |student guide| using the |repl student files| or a different IDE. You will write the code for the methods totalSentiment() and starRating(). The method signatures for these methods have already been put into Review.java. You will need to fill in the code inside these methods.
+In pairs, do the Activity 2 worksheet from the |student guide| using the |repl student files| or a different IDE. You will write the code for the methods ``totalSentiment`` and ``starRating``. The method signatures for these methods have already been put into Review.java. You will need to fill in the code inside these methods.
 
-Here are some hints to write the totalSentiment() method:
+Here are some hints to write the ``totalSentiment`` method:
 
-1. The method totalSentiment() needs to use the method ``String textToString( String fileName )`` to read in the file contents in the filename given as its argument into a String. Because this method is in the same class as the method totalSentiment(), it can be called without a class or object with just the method name, ``textToString(fileName);``, but make sure you save the file contents it returns into a variable.
+1. The method ``totalSentiment`` needs to use the method ``String textToString(String fileName)`` to read in the file contents in the filename given as its argument into a ``String``. Because this method is in the same class as the method ``totalSentiment``, it can be called without a class or object with just the method name, ``textToString(fileName);``, but make sure you save the file contents it returns into a variable.
 
 2. You can use a loop to go through each word in the file contents and add up their sentiment values. The total sentiment value will be returned.
 
-3. How do you get each word in the file contents? Look for the spaces! You may want to review |Lesson 4.3 Loops and Strings|. Remember how we looped to find all the 1's in a String? Here we're looking for all the spaces (" "). You will need to use indexOf to find the spaces and substring to get each word. To make it simpler, after finding a word, you could set the file contents to the rest of the review without that word.
+3. How do you get each word in the file contents? Look for the spaces! You may want to review |Lesson 4.3 Loops and Strings|. Remember how we looped to find all the 1's in a ``String``? Here we're looking for all the spaces (``" "``). You will need to use ``indexOf`` to find the spaces and substring to get each word. To make it simpler, after finding a word, you could set the file contents to the rest of the review without that word.
 
-4. To test the method, call it from the main method in Main.java and give it one of the review filenames like "SimpleReview.txt". Print out what it returns. You could also put a print statement in the loop of the method to see what words it finds and the running total.
+4. To test the method, call it from the ``main`` method in Main.java and give it one of the review filenames like "SimpleReview.txt". Print out what it returns. You could also put a print statement in the loop of the method to see what words it finds and the running total.
 
-The starRating() method is actually simpler. It needs to first call the totalSentiment() method that you wrote and save its result and then use that to decide the number of stars using if statements. You will have to decide the cut off values for the number of stars between 0 and 4 stars. SimpleReview.txt should probably return 0 or 1 star, and 26WestReview.txt should probably return 4 stars.
+The ``starRating`` method is actually simpler. It needs to first call the ``totalSentiment`` method that you wrote and save its result and then use that to decide the number of stars using if statements. You will have to decide the cut off values for the number of stars between 0 and 4 stars. SimpleReview.txt should probably return 0 or 1 star, and 26WestReview.txt should probably return 4 stars.
 
 Activity 3 : Autogenerate a Fake Review
 ----------------------------------------

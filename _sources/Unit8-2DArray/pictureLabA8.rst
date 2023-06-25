@@ -1,5 +1,3 @@
-   
-
 .. raw:: html
 
    <div class="unit-time">
@@ -18,13 +16,16 @@
 Picture Lab A8: Creating a Collage
 =====================================================
 
-You can copy one picture to another by copying the color from the pixels in one picture to the pixels in
-the other picture. To do this you will need to keep track of the row and column information for both the
-picture you are copying from and the picture you are copying to, as shown in the following copy
-method. The easiest way to do this is to declare and initialize both a fromRow and toRow in the
-outer for loop and increment them both at the end of the loop. A for loop can have more than
-one variable declaration and initialization and/or modification. Just separate the items with commas.
-Note that the inner loop has both a fromCol and a toCol declared, initialized, and incremented.
+You can copy one picture to another by copying the color from the pixels in one
+picture to the pixels in the other picture. To do this you will need to keep
+track of the row and column information for both the picture you are copying
+from and the picture you are copying to, as shown in the following copy method.
+The easiest way to do this is to declare and initialize both a ``fromRow`` and
+``toRow`` in the outer for loop and increment them both at the end of the loop.
+A for loop can have more than one variable declaration and initialization and/or
+modification. Just separate the items with commas. The inner loop in this code
+uses that to create two loop variables, ``fromCol`` and a ``toCol`` which are
+both declared, initialized, and incremented.
 
 .. code-block:: java
 
@@ -82,7 +83,7 @@ The following method shows how to create a simple collage using the copy method.
       this.show();
  }
 
-You can test this with the createCollage method below.
+You can test this with the ``createCollage`` method below.
 
 .. activecode:: picture-lab-A8-createCollage
     :language: java
@@ -298,8 +299,8 @@ You can test this with the createCollage method below.
     :width: 100
     :align: left
 
-1. Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the
-fromPic. You will need to add parameters that specify the start row, end row, start column,
+1. Create a second copy method called ``copyPartial`` that adds parameters to allow you to copy just part of the
+``fromPic``. You will need to add parameters that specify the start row, end row, start column,
 and end column to copy from.
 
 
@@ -542,7 +543,7 @@ and end column to copy from.
          }
       }
 
-2. Create a myCollage method that has at least three pictures (can be the same picture) copied
+2. Create a ``myCollage`` method that has at least three pictures (can be the same picture) copied
 three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this |repl.it project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 

@@ -523,9 +523,9 @@ In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to 
 
 2. Create accessor (get) methods and mutator (set) methods for each of the instance variables.
 
-3. Create a toString() method that returns all the information in the instance variables.
+3. Create a ``toString`` method that returns all the information in the instance variables.
 
-4. Write an additional method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, e.g. print(format) could print the data according to an argument that is "plain" or "table" where the data is printed in a table drawn with dashes and lines (|). Or come up with another creative method for your class.
+4. Write an additional method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, e.g. ``print(format)`` could print the data according to an argument that is "plain" or "table" where the data is printed in a table drawn with dashes and lines (``|``). Or come up with another creative method for your class.
 
 5. Use these methods in the main method to test them. Make sure you use good commenting.
 
@@ -538,7 +538,7 @@ In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to 
   public class          // Add your class name here!
   {
       // 1. Copy your class instance variables, constructors, and print() from 5.2.
-      
+
       // 2. Create accessor (get) and mutator (set) methods for each of the instance variables.
 
       // 3. Create a toString() method that returns all the information in the instance variables.
@@ -665,7 +665,7 @@ In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to 
             boolean passed = checkCodeContains("toString() method", target);
             assertTrue(passed);
         }
-        
+
         @Test
         public void testPrintFormat()
         {
@@ -828,4 +828,3 @@ AP Practice
     - I, II, III
 
       - II does not check against the boilingPoint and does not return only boolean values.
-

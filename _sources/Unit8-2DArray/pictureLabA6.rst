@@ -1,5 +1,3 @@
-   
-
 .. raw:: html
 
    <div class="unit-time">
@@ -78,7 +76,7 @@ The following method implements this algorithm. Note that, because the method is
       }
  }
 
-You can see mirrorVertical() in action by running the active code in the exercise below.
+You can see ``mirrorVertical`` in action by running the active code in the exercise below.
 
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
@@ -104,7 +102,7 @@ You can use caterpillar.jpg or one of the images seen at the bottom of this less
     :align: left
 
 1. Write the method mirrorVerticalRightToLeft that mirrors a picture around a mirror
-placed vertically from right to left, so that you get 2 tails for the caterpillar instead of two heads. Hint: you can copy the body of mirrorVertical and
+placed vertically from right to left, so that you get 2 tails for the caterpillar instead of two heads. Hint: you can copy the body of ``mirrorVertical`` and
 only change one line in the body of the method to accomplish this.
 
 
@@ -296,7 +294,7 @@ only change one line in the body of the method to accomplish this.
 
 
 
-2. Write the method mirrorHorizontal that mirrors a picture around a mirror placed
+2. Write the method ``mirrorHorizontal`` that mirrors a picture around a mirror placed
 horizontally at the middle of the height of the picture. Mirror from top to bottom as shown in the
 pictures below (Figure 3).
 
@@ -512,7 +510,7 @@ pictures below (Figure 3).
     :align: left
 
 
-3. Write the method mirrorHorizontalBotToTop that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this.
+3. Write the method ``mirrorHorizontalBotToTop`` that mirrors the picture around a mirror placed horizontally from bottom to top. Hint: you can copy the body of mirrorHorizontal and only change one line to accomplish this.
 
 .. activecode:: picture-lab-A6-mirrorHorizontalBotToTop
     :language: java
@@ -693,7 +691,7 @@ pictures below (Figure 3).
          }
       }
 
-4. Challenge — Work in groups to figure out the algorithm for the method mirrorDiagonal that mirrors just a square part of the picture from bottom left to top right around a mirror placed
+4. Challenge — Work in groups to figure out the algorithm for the method ``mirrorDiagonal`` that mirrors just a square part of the picture from bottom left to top right around a mirror placed
 on the diagonal line (the diagonal line is the one where the row index equals the column index).
 This will copy the triangular area to the left and below the diagonal line as shown below. This is
 like folding a square piece of paper from the bottom left to the top right, painting just the bottom
@@ -2005,6 +2003,3 @@ Choose from these images in this lesson.  To use your own images, you can fork t
          }
 
         } // end of SimplePicture class
-
-
-

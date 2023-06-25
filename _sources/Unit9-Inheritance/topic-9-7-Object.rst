@@ -64,9 +64,9 @@ own attributes.
 
 |CodingEx| **Coding Exercise**
 
-In the following code, the ``Person`` class overrides the ``Object toString()``
-method and the ``Student`` class overrides the ``Person toString()`` method.
-They each add on their attributes.
+In the following code, the ``Person`` class overrides the ``toString`` method
+from ``Object`` method and the ``Student`` class then overrides it again. In
+each class the new ``toString`` method adds the new attributes from that class.
 
 .. activecode:: toStringDemo
   :language: java

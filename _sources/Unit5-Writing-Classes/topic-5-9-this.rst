@@ -37,7 +37,7 @@
 this Keyword
 =================
 
-The keyword **this** can be used in a class to refer to the current calling object.
+The keyword ``this`` can be used in a class to refer to the current calling object.
 
 .. |Java visualizer| raw:: html
 
@@ -139,7 +139,7 @@ The keyword this is sometimes used by programmers to distinguish between variabl
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Pay%0A%20%20%20%7B%0A%20%20%20%20private%20double%20pay%3B%0A%0A%20%20%20%20public%20Pay%28double%20p%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20pay%20%3D%20p%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getPay%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20pay%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20calculatePayWithOvertime%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20this%20Pay%20object%20is%20passed%20to%20the%20Overtime%20constructor%0A%20%20%20%20%20%20%20%20Overtime%20ot%20%3D%20new%20Overtime%28this%29%3B%0A%20%20%20%20%20%20%20%20pay%20%3D%20ot.getOvertimePay%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Pay%20myPay%20%3D%20new%20Pay%28100.0%29%3B%0A%20%20%20%20%20%20%20%20myPay.calculatePayWithOvertime%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28myPay.getPay%28%29%29%3B%0A%20%20%20%20%7D%0A%20%20%20%7D%0A%0A%20%20%20class%20Overtime%0A%20%20%20%7B%0A%20%20%20%20private%20double%20payWithOvertime%3B%0A%0A%20%20%20%20public%20Overtime%28Pay%20p%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20payWithOvertime%20%3D%20p.getPay%28%29%20*%201.5%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getOvertimePay%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20payWithOvertime%3B%0A%20%20%20%20%7D%0A%20%20%20%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank" style="text-decoration:underline">Java visualizer</a>
 
-The **this** variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, Pay and Overtime. The Pay class declares an Overtime object and passes in **this** (the current Pay object) to its constructor which computes the overtime with respect to that Pay object. Try this code in the |Java visualizer2|. Here is an image that shows how this and myPay and p all refer to the same object in memory.
+The ``this`` variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, ``Pay`` and ``Overtime``. The ``Pay`` class declares an ``Overtime`` object and passes in ``this`` (the current ``Pay`` object) to its constructor which computes the overtime with respect to that ``Pay`` object. Try this code in the |Java visualizer2|. Here is an image that shows how ``this``, ``myPay`` and ``p`` all refer to the same object in memory.
 
 .. figure:: Figures/thisTrace.png
     :width: 400px
@@ -310,13 +310,13 @@ For this challenge, you can work in pairs to:
 
 - Create a class called BankAccount below that keeps track of the account holder's name, the account number, and the balance in the account. Make sure you use the appropriate data types for these.
 
-- Write 2 constructors for the class that initialize the instance variables to default values and to given parameters. For the parameters, use the same variable names as your instance variables. Use the **this** keyword to distinguish between the instance variables and the parameter variables.
+- Write 2 constructors for the class that initialize the instance variables to default values and to given parameters. For the parameters, use the same variable names as your instance variables. Use the ``this`` keyword to distinguish between the instance variables and the parameter variables.
 
-- Write a toString() method for the class. Use the **this** keyword to return the instance variables.
+- Write a ``toString`` method for the class. Use the ``this`` keyword to return the instance variables.
 
-- Write a withdraw(amount) and deposit(amount) for the class. Withdraw should subtract the amount from the balance as long as there is enough money in the account (the balance is larger than the amount). Deposit should add the amount to the balance.  Use the **this** keyword to refer to the balance.
+- Write ``withdraw(amount)`` and ``deposit(amount)`` methods for the class. The ``withdraw`` method should subtract the amount from the balance as long as there is enough money in the account (the balance is larger than the amount). And ``deposit`` should add the amount to the balance.  Use the ``this`` keyword to refer to the balance.
 
-- Test your class below with a main method that creates a Bank Account object and calls its deposit and withdraw methods and prints out the object to test its toString() method.
+- Test your class below with a ``main`` method that creates a ``BankAccount`` object and calls its ``deposit`` and ``withdraw`` methods and prints out the object to test its ``toString`` method.
 
 .. activecode:: challenge-5-9-BankAccount
   :language: java
@@ -519,8 +519,3 @@ AP Practice
     - Nothing, the code segment attempts to access the private variable totalTemp outside of its scope.
 
       - Incorrect. The totalTemp is never used outside its scope.
-
-
-
-
-

@@ -53,9 +53,9 @@
 Calling Methods With Parameters
 ===========================================
 
-In the last lessons, we used simple **methods** like forward() and turnRight() to make the turtle draw lines. You may have noticed that forward() and backward() always move the same number of pixels (100 pixels), and turnRight() and turnLeft() always turn at right angles (90 degrees). This is a little limiting. What if we wanted to draw a triangle or the letter A? These require smaller angles to draw diagonal lines and different length lines. Luckily, there are more complex methods in the Turtle class that let you specify the number of pixels to move forward or the number of degrees to turn. These values that you can give to methods to help them do their job are called **arguments** or **parameters**.
+In the last lessons, we used simple **methods** like ``forward`` and ``turnRight`` to make the turtle draw lines. You may have noticed that ``forward()`` and ``backward()`` always move the same number of pixels (100 pixels), and ``turnRight()`` and ``turnLeft()`` always turn at right angles (90 degrees). This is a little limiting. What if we wanted to draw a triangle or the letter A? These require smaller angles to draw diagonal lines and different length lines. Luckily, there are more complex methods in the ``Turtle`` class that let you specify the number of pixels to move forward or the number of degrees to turn. These values that you can give to methods to help them do their job are called **arguments** or **parameters**.
 
-The parentheses () after method names are there in case you need to give the method **actual parameters** or **arguments** (some data) to do its job. For example, we can give the argument 100 in forward(100) to make the turtle go forward 100 pixels or the argument 30 in turn(30) to make the turtle turn 30 degrees instead of 90 degrees.
+The parentheses ``()`` after method names when we call a method are there in case you need to give the method **actual parameters** or **arguments** (some data) to do its job. For example, we can give the argument 100 in ``forward(100)`` to make the turtle go forward 100 pixels or the argument 30 in ``turn(30)`` to make the turtle turn 30 degrees instead of 90 degrees.
 
 
 .. note::
@@ -63,7 +63,7 @@ The parentheses () after method names are there in case you need to give the met
     object.method(arguments); is used to call an object's method and give it some arguments (actual parameters) to do its job.
 
 
-Although some people use the words parameters and arguments interchangeably, there is a subtle difference. When you create your own method, the variables you define for it are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in the parameter variables. So, in the definition of the forward method, it has a parameter variable called pixels, and in the call to forward(100), the argument is the value 100 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 5. In this unit, you will learn to call methods that are already written for you.
+Although some people use the words parameters and arguments interchangeably, there is a subtle difference. When you create your own method, the variables you define for it are called **formal parameters**. When you call the method to do its job, you give or pass in **arguments** or **actual parameters** to it that are then saved in the parameter variables. So, in the definition of the ``forward`` method, it has a parameter variable called ``pixels``, and in the call to ``forward(100)``, the argument is the value 100 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 5. In this unit, you will learn to call methods that are already written for you.
 
 .. code-block:: java
 
@@ -448,7 +448,7 @@ Try this |visualization| to see this code in action.
 
 This creative challenge is fun to do collaboratively in pairs. Design a house and have the turtle draw it with different colors below (or with this |repl link|). Can you add windows and a door? Come up with your own house design as a team.
 
-To draw a window, you will need to do penUp() to walk the turtle into position, for example:
+To draw a window, you will need to call ``penUp`` to walk the turtle into position, for example:
 
 .. code-block:: java
 
@@ -656,4 +656,3 @@ AP Practice
     - splitPizza(slicesPerPerson);
 
       - This would not call the printSlices method.
-

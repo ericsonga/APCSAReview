@@ -403,7 +403,7 @@ Summary
 
 - We can determine the number of times a code segment will execute with a **statement execution count**. This is called **run-time analysis**.
 
-- The number of times a loop executes can be calculated by (largestValue - smallestValue + 1) where these are the largest and smallest values of the loop counter variable possible in the body of the loop.
+- The number of times a loop executes can be calculated by ``largestValue - smallestValue + 1`` where these are the largest and smallest values of the loop counter variable possible in the body of the loop.
 
 - The number of times a nested for-loop runs is the number of times the outer loop runs **times** the number of times the inner loop runs.
 
