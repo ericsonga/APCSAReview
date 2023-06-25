@@ -10,6 +10,9 @@ Java Development Environments
     single: Eclipse
     single: BlueJ
     single: Netbeans
+    single: VSCode
+    single: Github
+    single: Codespaces
 
 The tool that we use to compile a Java source file into a Java class file is called a **compiler**.  Most programmers use an **Integrated Development Environment** (IDE) that has the compiler built in and helps you write, compile, run, and debug programs.
 
@@ -17,8 +20,8 @@ You can learn Java by just using the interactive coding panels called **Active C
 
 However, it's a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CSA teachers:
 
-replit
--------
+Replit and Replit Teams for Education
+--------------------------------------
 
 Replit (https://replit.com/) is a great free online development environment. You can login with a Google account or make an account and create new projects (click the + new repl button and type in Java) and all of your code will be kept online in your account. Replit is a great option if you are using a Chromebook or you cannot install software on your computer or you want an easy no-installation option.  Replit also has a  free for teachers plan called Teams for Education (https://replit.com/teams-for-education) where teachers can set up virtual classrooms.  There is now a firewalled replit domain for schools at https://firewealled.replit.com that filters content so that students stay within the school filters, see https://docs.replit.com/firewalled-replit/firewalled-replit-faq.
 
@@ -29,12 +32,24 @@ Online IDEs usually cannot use graphical user interfaces and just do input and o
 However, replit has a built-in javax.swing graphical user interface.
 You need to choose Java Swing instead of just Java to get this environment when you start a new repl project.
 
-CodingRooms
------------
+Github Classroom and Codespaces
+-----------------------------------
 
-Coding Rooms (https://www.codingrooms.com/) is also a great online coding environment that has both free and paid versions.
-In Coding Rooms, you can set up a virtual classroom and watch all of your students code in real time.
-You can also make a copy of CSAwesome inside Coding Rooms and change the content.
+Github provides many free opportunities for students and teachers (https://docs.github.com/en/education/quickstart). 
+Github Classroom (https://classroom.github.com/) allows teachers to set up a classroom based on github repositories. 
+Github and git are widely used in the computer industry, so learning to use it is great experience for students.
+Github now has a cloud IDE called Codespaces (https://github.com/features/codespaces) which you can use for 60 hours a month for free or completely free if you join as a school or get approved as a teacher or student.
+In Codespaces, you can start from a blank template or a repo, open a .java file in the VSCode editor, follow prompts to install the Extension Pack for Java, click on the Run and Debug (play button), follow the prompts to install the Java debugger, and see the output of your code in the terminal. 
+You can also use Copilot (https://github.com/features/copilot), which is a coding AI based on GPT, for free if you are approved for educational use.
+
+Students will need to sign up for a free Github account (https://github.com/signup) if they don't already have one in order to use Codespaces.
+
+VSCode
+---------
+
+VSCode (https://code.visualstudio.com) is a widely used coding editor which you can download on your local computers. 
+It has many useful extensions. The code can be run in a terminal window in the editor. See https://code.visualstudio.com/docs/languages/java for Java support.
+This editor is different than Microsoft Visual Studio which is a very large IDE.  
 
 Dr. Java
 --------
