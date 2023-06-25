@@ -71,6 +71,13 @@ In a new class, constructors are usually written after the instance variables an
 
    Constructors must have the same name as the class! Constructors have no return type!
 
+..
+  I don't really like encouraging students to write meaningless no-arg
+  constructors. I'd much rather explain that you can write a no-arg constructor
+  but only should if you can create a meaningful default object. I'd argue that
+  a Person with no name, no email, and no phone number is not a meaningful
+  object. What do you think? -Peter
+
 Classes usually have more than one constructor. There are usually at least 2 constructors:
 
 - a constructor that takes no parameters
@@ -78,7 +85,7 @@ Classes usually have more than one constructor. There are usually at least 2 con
 
 The attributes of an object and their values at a given time define that object's state. The constructors initialize the object's state by assigning initial values to the instance variables that the object has as its attributes.
 
-Here are two constructors that could be written for the Person class. Notice that the first one initializes name, email, and phoneNumber to empty string "" as the default values. Most programmers use "" as the default value for String variables and 0 as the default value for int and double variables.
+Here are two constructors that could be written for the ``Person`` class. Notice that the first one initializes ``name``, ``email``, and ``phoneNumber`` to empty string ``""`` as the default values. Most programmers use ``""`` as the default value for ``String`` variables and 0 as the default value for ``int`` and ``double`` variables.
 
 .. code-block:: java
 
@@ -732,4 +739,3 @@ AP Practice
         }
 
       + Correct!
-

@@ -1,5 +1,3 @@
-   
-
 .. raw:: html
 
    <div class="unit-time">
@@ -75,7 +73,7 @@ would cause an out-of-bounds error.
       }
  }
 
-You can test this with the edgeDetection method below.
+You can test this with the ``edgeDetection`` method below.
 
 .. activecode:: picture-lab-A9-edgeDetection
     :language: java
@@ -622,7 +620,7 @@ How image processing is related to new scientific breakthroughs
 -----------------------------------------------------------------
 
 .. image:: Figures/CeciliaAragon.png
-   
+
 
 Many of today’s important scientific breakthroughs are being made by large, interdisciplinary
 collaborations of scientists working in geographically widely distributed locations, producing, collecting,

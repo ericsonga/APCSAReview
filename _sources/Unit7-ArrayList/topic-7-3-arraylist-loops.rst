@@ -670,9 +670,9 @@ In the class WordPairsList below, you will write the constructor which takes the
         }
     }
 
-In the next part of the FRQ challenge, you are asked to write a method called numMatches() that counts and returns the number of pairs where the first word is the same as the second word. For example, if the word array is ["hi","bye","hi"], the pairs generated would be ["hi","bye"], ["hi","hi"], and ["bye","hi"]. In the second pair ["hi","hi"], the first word is the same as the second word, so numMatches() would return 1.
+In the next part of the FRQ challenge, you are asked to write a method called ``numMatches`` that counts and returns the number of pairs where the first word is the same as the second word. For example, if the word array is ``["hi","bye","hi"]``, the pairs generated would be ``["hi","bye"]``, ``["hi","hi"]``, and ``["bye","hi"]``. In the second pair ``["hi","hi"]``, the first word is the same as the second word, so ``numMatches`` would return 1.
 
-For this method, you will need a loop that goes through the ArrayList allPairs and for each WordPair in allPairs, it checks to see if its first word (using the getFirst() method) equals the second word (using the getSecond() method). If there is a match, it increments a counter which it returns at the end of the method. To test this method, add another "there" into the words array and then uncomment the call to numMatches().
+For this method, you will need a loop that goes through the ``ArrayList`` ``allPairs`` and for each ``WordPair`` in ``allPairs``, it checks to see if its first word (using the ``getFirst`` method) equals the second word (using the ``getSecond`` method). If there is a match, it increments a counter which it returns at the end of the method. To test this method, add another "there" into the words array and then uncomment the call to ``numMatches``.
 
 Summary
 -----------

@@ -53,7 +53,7 @@ Corresponding to each get method, programmers also provide a public **set method
          }
      }
 
-Here's an example of the Student class with a mutator method called setName():
+Here's an example of the ``Student`` class with a mutator method called ``setName``:
 
 .. code-block:: java
 

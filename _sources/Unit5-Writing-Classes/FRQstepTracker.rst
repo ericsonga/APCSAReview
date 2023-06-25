@@ -354,7 +354,7 @@ Click to reveal a multiple choice problem to help you determine the accessor met
     }
 
 
-Here is the rubric for the accessor method activeDays() for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others' code.
+Here is the rubric for the accessor method ``activeDays`` for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others' code.
 
 
 .. figure:: Figures/stepTrackerRubric3.png
@@ -659,7 +659,7 @@ The complex accessor method **averageSteps()** must calculate the average number
 
       }
 
-Here is the rubric for the averageSteps method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others' code.
+Here is the rubric for the ``averageSteps`` method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others' code.
 
 .. figure:: Figures/stepTrackerRubric4.png
     :width: 700px
@@ -668,7 +668,3 @@ Here is the rubric for the averageSteps method for this problem.  Did you receiv
     :figclass: align-center
 
     Figure 4: Rubric for averageSteps method
-
-
-
-

@@ -171,7 +171,7 @@ We can also use ``==`` or ``!=`` to test if two reference values, like ``Turtle`
 Relational Operators (<, >)
 ----------------------------
 
-The **Relational Operators** below in Java are used to compare numeric values or arithmetic expressions. Although some programming languages allow using relational operators like ``<`` to compare strings, Java only uses these operators for numbers, and uses the string methods compareTo() and equals() for comparing String values.
+The **Relational Operators** below in Java are used to compare numeric values or arithmetic expressions. Although some programming languages allow using relational operators like ``<`` to compare strings, Java only uses these operators for numbers, and uses the methods ``compareTo`` and ``equals`` for comparing ``String`` values.
 
 - ``<`` Less Than
 - ``>`` Greater Than

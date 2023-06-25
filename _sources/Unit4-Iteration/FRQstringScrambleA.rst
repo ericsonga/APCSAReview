@@ -183,7 +183,7 @@ The code will need to loop through the characters in the string and compare two 
 Write the Code
 ===================
 
-Write the method scrambleWord below.
+Write the method ``scrambleWord`` below.
 
 .. activecode:: lcfrssa5
    :language: java

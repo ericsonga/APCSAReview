@@ -462,7 +462,7 @@ If you want to keep track of the top 5 highest scores in a game and the names of
         }
     }
 
-What happens if you try to access an element that is not there? Try to access a highScore or name at index 7 above to see what happens. The index must be between 0 and the length of the array - 1 or it will give an error message called ArrayIndexOutOfBoundsException.
+What happens if you try to access an element that is not there? Try to access a ``highScore`` or ``name`` at index 7 above to see what happens. The index must be between 0 and the length of the array - 1 or it will give an error message called ``ArrayIndexOutOfBoundsException``.
 
 .. note::
 
@@ -561,7 +561,7 @@ In this challenge, you will create a guide to different countries using arrays.
 
 3. Choose a random number using Math.random() and the **length** of one of the arrays and save it in a variable called index.
 
-4. Print out the country name, its capital, and its language, and the map image for that country using the random index to access the corresponding item in each parallel array. For the images, the printHTMLimage method has been given to get the image URL online and print it out as an HTML image.
+4. Print out the country name, its capital, and its language, and the map image for that country using the random index to access the corresponding item in each parallel array. For the images, the ``printHTMLimage`` method has been given to get the image URL online and print it out as an HTML image.
 
 5. Optional Extra Challenge: If you have more time for this project, you can combine what you learned in the last unit to **refactor** your code (which means restructure without changing the functionality) to make it object-oriented. Create a Country class that stores the country name, capital, language, and image file. In the main method, create an array of 10 Country objects with the data for each country passed to its constructor, and use a random number to choose a country object from the array and display its attributes. See the array of turtles in the next section below for help on how to create an array of objects.
 

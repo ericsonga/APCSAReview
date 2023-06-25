@@ -59,7 +59,7 @@ Code your Class
 
 5. Create mutator (set) methods for each of the instance variables.
 
-6. Create a toString() method that returns all the information in the instance variables.
+6. Create a ``toString`` method that returns all the information in the instance variables.
 
 7. Write an additional method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, e.g. print(format) could print the data according to an argument that is "plain" or "table" where the data is printed in a table drawn with dashes and lines (|).
 
@@ -235,4 +235,3 @@ To learn more about Java Swing, click on the different Swing components in the l
 .. raw:: html
 
     <iframe height="800px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Input-Form?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-

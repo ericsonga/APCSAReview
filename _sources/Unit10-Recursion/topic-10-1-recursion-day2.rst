@@ -232,7 +232,7 @@ What happens when we call ``bunnyEars(0)``?  It will return 0 since n is equal t
   bunnyEars(2) returns 2 + bunnyEars(1)
   bunnyEars(1) returns 2
 
-This approach shows the call stack from bottom to top.  Once bunnyEars(1) executes and returns 2 that value can be substituted back into the previous method call, starting at the top and working our way back toward the bottom (or beginning) of the call stack.
+This approach shows the call stack from bottom to top.  Once ``bunnyEars(1)`` executes and returns 2 that value can be substituted back into the previous method call, starting at the top and working our way back toward the bottom (or beginning) of the call stack.
 
 .. code-block:: java
   :linenos:

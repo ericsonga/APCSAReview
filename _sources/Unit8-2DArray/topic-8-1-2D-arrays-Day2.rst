@@ -55,7 +55,7 @@ When arrays are created their contents are automatically initialized to 0 for nu
 
 |CodingEx| **Coding Exercise**
 
-Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use the |Java visualizer| to see what the values are after this code runs. Edit the code to add in an extra row to the seatingChart and add your name and a friend's name in the columns of this extra row using assignment statements.
+Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use the |Java visualizer| to see what the values are after this code runs. Edit the code to add in an extra row to the ``seatingChart`` and add your name and a friend's name in the columns of this extra row using assignment statements.
 
 .. activecode:: 2DArraySet
   :language: java
@@ -317,9 +317,9 @@ ASCII is a commonly used character encoding standard where each key you press on
 
 We can represent ASCII art in a 2D array of rows and columns. What do you think the following code will print out? Try to guess before you run it. The loops to print out the 2D array will be explained in the next lesson. Then, do the following:
 
-1. Change the code to use 2 assignment statements with the 2D array asciiArt to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it.
+1. Change the code to use 2 assignment statements with the 2D array ``asciiArt`` to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it.
 
-2. Add a new asciiArt array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``.
+2. Add a new ``asciiArt`` array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``.
 
 .. activecode:: challenge-8-1-ascii-art
   :language: java
@@ -430,15 +430,15 @@ Summary
 
 - A 2D array is stored as an array of arrays. And the way 2D arrays are created and indexed is similar to 1D array objects.
 
-- 2D arrays are declared and created with the following syntax: datatype[][] variableName = new datatype[numberRows][numberCols];
+- 2D arrays are declared and created with the following syntax: ``datatype[][] variableName = new datatype[numberRows][numberCols]``;
 
 - 2D array objects that are not rectangular (that are ragged arrays) are outside the scope of the course and AP Exam.
 
-- For the purposes of the exam, when accessing the element at arr[first][second], the first index is used for rows, the second index is used for columns.
+- For the purposes of the exam, when accessing the element at ``arr[first][second]``, the ``first`` index is used for rows, the ``second`` index is used for columns.
 
-- The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays. For example, int[][] ticketInfo = { {25,20,25}, {25,20,25} };
+- The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays. For example, ``int[][] ticketInfo = { {25,20,25}, {25,20,25} }``;
 
-- The square brackets [row][col] are used to access and modify an element in a 2D array.
+- The square brackets ``[row][col]`` are used to access and modify an element in a 2D array.
 
 - "Row-major order" refers to an ordering of 2D array elements where traversal occurs across each row, while "column-major order" traversal occurs down each column.
 

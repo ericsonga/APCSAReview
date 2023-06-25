@@ -71,13 +71,13 @@ Once you have a JFrame, you can create graphical objects like buttons and labels
     button1.setBounds(10, 10, 100, 50);
     frame.add(button1);
 
-If you set the layout of the frame to null, you must use setBounds(x position, y position, width, height) for each component to set their position and size on the frame. Remember that the top left corner has the (x,y) coordinates (0,0). The bottom right corner coordinates are the size of your frame, for example (500,500). The width 100 and the height 50 are good sizes for most components. Some Java IDEs have GUI Visual Designers where you can drag and drop in and resize components.
+If you set the layout of the frame to null, you must use ``setBounds(x position, y position, width, height)`` for each component to set their position and size on the frame. Remember that the top left corner has the (x,y) coordinates (0,0). The bottom right corner coordinates are the size of your frame, for example (500,500). The width 100 and the height 50 are good sizes for most components. Some Java IDEs have GUI Visual Designers where you can drag and drop in and resize components.
 
 In |repl|, there is no GUI designer available, but it can display Java Swing GUIs. When creating a new repl, you can choose Java Swing as the file type, instead of just Java, to use a Java Swing UI.
 
 |CodingEx| **Coding Exercise**
 
-Here's a |Java Swing Example| on repl that sets up a JFrame with a JButton and a JLabel. It calls a special method called addActionListener where you can put the code to be executed when you click on a button. Can you add another button to it? Remember that you will need to create a JButton object, setBounds for it, and add it to the frame. Copy the addActionListener code and change it to work for your new button to say Good Bye instead of hello.
+Here's a |Java Swing Example| on repl that sets up a ``JFrame`` with a ``JButton`` and a ``JLabel``. It calls a special method called ``addActionListener`` where you can put the code to be executed when you click on a button. Can you add another button to it? Remember that you will need to create a ``JButton`` object, call ``setBounds`` on it, and add it to the frame. Copy the ``addActionListener`` code and change it to work for your new button to say “Good Bye” instead of “hello”.
 
 .. raw:: html
 

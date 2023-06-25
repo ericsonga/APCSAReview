@@ -42,7 +42,7 @@ Overriding Methods
 A subclass inherits all public methods from its superclass, and these methods remain public in the subclass. But, we also usually add more methods or instance variables to the subclass. Sometimes, we want to modify existing inherited methods. This is called **overriding**  methods.
 
 
-**Overriding** an inherited method means providing a public method in a subclass with the same **method signature** (method name, parameter type list and return type) as a public method in the superclass.  The method in the subclass will be called *instead of* the method in the superclass. One common method that is overridden is the toString() method. The example below shows a similar method called greet().
+**Overriding** an inherited method means providing a public method in a subclass with the same **method signature** (method name, parameter type list and return type) as a public method in the superclass.  The method in the subclass will be called *instead of* the method in the superclass. One method that is frequently overridden is the ``toString`` method. The example below shows a similar method called ``greet``.
 
 |CodingEx| **Coding Exercise**
 

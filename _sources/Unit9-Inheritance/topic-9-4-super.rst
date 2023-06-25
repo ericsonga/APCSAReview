@@ -49,7 +49,7 @@ The keyword super is very useful in allowing us to first execute the superclass 
 
 |CodingEx| **Coding Exercise**
 
-In the example below, the Student class overrides the getFood() method of the Person() class, and it uses super.getFood() to call the Person getFood() method before adding on to it. Here, a Person is associated with the food "Hamburger" and a Student is associated with "Hamburger" and "Taco".
+In the example below, the ``Student`` class overrides the ``getFood`` method of the ``Person`` class, and it uses ``super.getFood()`` to call the ``Person`` ``getFood`` method before adding on to it. Here, a ``Person`` is associated with the food "Hamburger" and a ``Student`` is associated with "Hamburger" and "Taco".
 
 .. activecode:: SuperEx
    :language: java
@@ -192,7 +192,10 @@ When the student ``getFood()`` method is executed it will start executing the ``
 
 You can step through this example using the Java Visualizer by clicking on the following link: `Super Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
 
-The toString() method is a common method that is overridden. A subclass can override the superclass toString() method and call the super.toString() before adding on its own instance variables.
+The ``toString`` method is commonly overridden. A subclass can override
+``toString`` but in its new ``toString`` method, it can call
+``super.toString()`` to get a string to which it can add its own instance
+variables.
 
 .. code-block:: java
 
@@ -205,15 +208,15 @@ The toString() method is a common method that is overridden. A subclass can over
 |Groupwork| Programming Challenge : Customer Info
 -------------------------------------------------
 
-The Customer class below keeps track of the names and addresses of customers. It has a toString() method that prints out the name and address of the object.
+The ``Customer`` class below keeps track of the names and addresses of customers. It has a ``toString`` method that prints out the name and address of the object.
 
-1. Create a subclass OnlineCustomer that inherits from the Customer class and adds a new instance variable for the email address of a online customer.
+1. Create a subclass ``OnlineCustomer`` that inherits from the ``Customer`` class and adds a new instance variable for the email address of a online customer.
 
 2. Write an OnlineCustomer constructor that take 3 arguments, name, address, email, and passes the name and address to the super (Customer) constructor.
 
-3. Override the toString() method in the OnlineCustomer class to call the super class toString() method and then add on the email address. See the example above for help.
+3. Override the ``toString`` method in the ``OnlineCustomer`` class to call the super class's ``toString`` method and then add on the email address. See the example above for help.
 
-4. Test the class by uncommenting the OnlineCustomer objects in the main method.
+4. Test the class by uncommenting the ``OnlineCustomer`` objects in the main method.
 
 .. activecode:: challenge-9-4-Customer-super
    :language: java

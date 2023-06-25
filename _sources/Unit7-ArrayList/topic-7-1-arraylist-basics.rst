@@ -281,7 +281,10 @@ You can also create ArrayLists of integer values.  However, you have to use ``In
 
 
 
-Although it is not on the AP exam, you can convert arrays to ArrayLists using its constructor with an argument Arrays.asList(arrayname) like the following. Note that ArrayLists have a toString() method that is automatically called to print the list in a nice format.
+Although it is not on the AP exam, you can convert an array to a ``List`` using
+the static method ``asList`` from the ``Arrays`` helper class:
+``Arrays.asList(arrayname)``. Note that ``ArrayList` has a ``toString`` method
+that is automatically called to print the list in a nice format.
 
 .. activecode:: ArrayListFromArray
    :language: java

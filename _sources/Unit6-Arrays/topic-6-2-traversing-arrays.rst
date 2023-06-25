@@ -136,7 +136,7 @@ We can use iteration with a **for loop** to visit each element of an array.  Thi
 
     Figure 2: For Loop Traversing Array
 
-For example, here is a loop traversing the highScores array to print every score. Follow the code below in the |visualizer3|.
+For example, here is a loop traversing the ``highScores`` array to print every score. Follow the code below in the |visualizer3|.
 
 .. |visualizer3| raw:: html
 
@@ -1120,8 +1120,8 @@ The following Active Code uses a dictionary array of the most common 100 English
     }
 
 
-3. Optional Challenge: Write a method printStartsWith(String) that prints out the words that start with a String of letters in the dictionary array. Your method should take
-a parameter for the firstLetters as a String. You could use the Java String |startsWith()| method here if you'd like to, or use indexOf() to see if the firstLetters is at index 0 of the string. This is not autograded.
+3. Optional Challenge: Write a method ``printStartsWith(String)`` that prints out the words that start with a ``String`` of letters in the ``dictionary`` array. Your method should take
+a parameter for the ``firstLetters`` as a ``String``. You could use the Java String |startsWith()| method here if you'd like to, or use ``indexOf`` to see if the ``firstLetters`` is at index 0 of the string. This is not autograded.
 
 |Groupwork| Design an Array of Objects for your Community
 ----------------------------------------------------------
