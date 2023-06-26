@@ -110,7 +110,7 @@ need to initialize your instance values to some other values. In that case you
 need to write a constructor that takes arguments and uses them to initialize
 your instance variables.
 
-For example, consider the constructor from ``Person`` class from the last
+For example, consider the constructor from the ``Person`` class from the last
 section.
 
 .. code-block:: java
@@ -220,148 +220,163 @@ values themselves.
    <a href="http://www.pythontutor.com/visualize.html#code=%20%20public%20class%20Fraction%0A%20%20%7B%0A%20%20%20%20%20//%20%20instance%20variables%0A%20%20%20%20%20private%20int%20numerator%3B%0A%20%20%20%20%20private%20int%20denominator%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20set%20instance%20variables%20to%20default%20values%0A%20%20%20%20%20public%20Fraction%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20numerator%20%3D%201%3B%0A%20%20%20%20%20%20%20%20denominator%20%3D%201%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20set%20instance%20variables%20to%20init%20parameters%0A%20%20%20%20%20public%20Fraction%28int%20initNumerator,%20int%20initDenominator%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20numerator%20%3D%20initNumerator%3B%0A%20%20%20%20%20%20%20%20denominator%20%3D%20initDenominator%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Print%20fraction%0A%20%20%20%20%20public%20void%20print%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28numerator%20%2B%20%22/%22%20%2B%20denominator%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Fraction%20f1%20%3D%20new%20Fraction%28%29%3B%0A%20%20%20%20%20%20%20%20Fraction%20f2%20%3D%20new%20Fraction%281,2%29%3B%0A%20%20%20%20%20%20%20%20//%20What%20will%20these%20print%20out%3F%0A%20%20%20%20%20%20%20%20f1.print%28%29%3B%0A%20%20%20%20%20%20%20%20f2.print%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=28&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 .. activecode:: class-Fraction
-  :language: java
-  :autograde: unittest
+   :language: java
+   :autograde: unittest
 
-  The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Note that this constructor sets the default instance variable values to 1 rather than 0 -- so we don't end up with divide by zero. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer| by clicking on the Code Lens button below.
-  ~~~~
-  public class Fraction
-  {
-     //  instance variables
-     private int numerator;
-     private int denominator;
+   The following class defines a ``Fraction`` with the instance variables
+   ``numerator`` and ``denominator``. It uses 2 constructors. Note that the
+   no-argument constructor sets the default instance variable values to 1 rather
+   than 0 since a fraction with 0 in the denominator is not valid. Try to guess
+   what it will print before you run it. Hint! Remember to start with the
+   ``main`` method! You can also view it in the |Java visualizer| by clicking on
+   the Code Lens button below.
 
-     // constructor: set instance variables to default values
-     public Fraction()
-     {
-        numerator = 1;
-        denominator = 1;
-     }
+   ~~~~
+   public class Fraction
+   {
+      //  instance variables
+      private int numerator;
+      private int denominator;
 
-     // constructor: set instance variables to init parameters
-     public Fraction(int initNumerator, int initDenominator)
-     {
-        numerator = initNumerator;
-        denominator = initDenominator;
-     }
+      // constructor: set instance variables to default values
+      public Fraction()
+      {
+         numerator = 1;
+         denominator = 1;
+      }
 
-     // Print fraction
-     public void print()
-     {
-       System.out.println(numerator + "/" + denominator);
-     }
+      // constructor: set instance variables to init parameters
+      public Fraction(int initNumerator, int initDenominator)
+      {
+         numerator = initNumerator;
+         denominator = initDenominator;
+      }
 
-     // main method for testing
-     public static void main(String[] args)
-     {
-        Fraction f1 = new Fraction();
-        Fraction f2 = new Fraction(1,2);
-        // What will these print out?
-        f1.print();
-        f2.print();
-     }
-  }
-  ====
-  // Test Code for Lesson 5.2.0.1 - Fraction
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+      // Print fraction
+      public void print()
+      {
+        System.out.println(numerator + "/" + denominator);
+      }
 
-    import java.io.*;
+      // main method for testing
+      public static void main(String[] args)
+      {
+         Fraction f1 = new Fraction();
+         Fraction f2 = new Fraction(1,2);
+         // What will these print out?
+         f1.print();
+         f2.print();
+      }
+   }
+   ====
+   // Test Code for Lesson 5.2.0.1 - Fraction
+   import static org.junit.Assert.*;
+   import org.junit.After;
+   import org.junit.Before;
+   import org.junit.Test;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "1/1\n1/2";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "Running main", true);
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "1/1\n1/2";
 
-    }
+           boolean passed = getResults(expect, output, "Running main", true);
+           assertTrue(passed);
+       }
+
+   }
 
 |CodingEx| **Coding Exercise**
 
 .. activecode:: class-Car
-  :language: java
-  :autograde: unittest
-  :practice: T
+   :language: java
+   :autograde: unittest
+   :practice: T
 
-  The following class defines a Car with the instance variables model and year, for example a Honda 2010 car. However, some of the code is missing. Fill in the code for the 2 constructors that are numbered 1 and 2. And fill in the code to call the constructors in the main method numbered 3. The car1 object should test the first constructor with default values and the car2 object should test the second constructor to create a Honda 2010 car. Run your program and make sure it works and prints out the information for both cars.
-  ~~~~
-  public class Car
-  {
-     //  instance variables
-     private String model;
-     private int year;
+   The following class defines a Car with the instance variables model and year,
+   for example a Honda 2010 car. However, some of the code is missing. Fill in
+   the code for the 2 constructors that are numbered 1 and 2. And fill in the
+   code to call the constructors in the main method numbered 3. The car1 object
+   should test the first constructor with default values and the car2 object
+   should test the second constructor to create a Honda 2010 car. Run your
+   program and make sure it works and prints out the information for both cars.
 
-     // constructor: set instance variables to default values
-     public Car()
-     {
-         // 1. set the instance variables to default values "" and 2019
+   ~~~~
+   public class Car
+   {
+      //  instance variables
+      private String model;
+      private int year;
+
+      // constructor: set instance variables to init parameters
+      public Car(String initModel, int initYear)
+      {
+          // 1. set the instance variables to the init parameter variables
 
 
-     }
+      }
 
-     // constructor: set instance variables to init parameters
-     public Car(String initModel, int initYear)
-     {
-         // 2. set the instance variables to the init parameter variables
+      // Print Car info
+      public void print()
+      {
+        System.out.println("Car model: " + model);
+        System.out.println("Car year: " + year);
+      }
 
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // 2. Call the constructor to create 2 new Car objects with different
+          // values The first car should be a 2023 Ford and the second car
+          // should be a 2010 Honda.
 
-     }
+          Car car1 =
+          Car car2 =
 
-     // Print Car info
-     public void print()
-     {
-       System.out.println("Car model: " + model);
-       System.out.println("Car year: " + year);
-     }
+          car1.print();
+          car2.print();
+      }
+   }
+   ====
+   // Test Code for Lesson 5.2.0 - Car
+   import static org.junit.Assert.*;
+   import org.junit.After;
+   import org.junit.Before;
+   import org.junit.Test;
 
-     // main method for testing
-     public static void main(String[] args)
-     {
-         // 3. call the constructor to create 2 new Car objects
-         // using the 2 constructors.
-         // car1 will be the default values.
-         // car2 should be a Honda 2010 car.
-         Car car1 =
-         Car car2 =
+   import java.io.*;
 
-         car1.print();
-         car2.print();
-     }
-  }
-  ====
-  // Test Code for Lesson 5.2.0 - Car
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Car model: Ford\nCar year: 2019\nCar model: Honda\nCar year: 2010";
 
-    import java.io.*;
+           boolean passed = getResults(expect, output, "Running main");
+           assertTrue(passed);
+       }
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Car model: \nCar year: 2019\nCar model: Honda\nCar year: 2010";
+   }
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
-        }
-
-    }
-
-Constructors are used to set the initial state of an object by initializing its instance variables. The examples above have instance variables that are primitive types, but you can have other objects, reference types, as instance variables. For example, a Person class could have an Address object as an instance variable, and the Address class could have String instance variables for the street, city, and state.
-
-(Advanced AP Topic Warning) When you pass object references as parameters to constructors or methods, they become aliases for the original object and can change it. If a constructor has an object instance variable, it can copy   the referenced object in the parameter using new and the constructor of the referenced object like below so that it does not change the state of the original object. You will see more examples like this in later lessons.
+(Advanced AP Topic Warning) When you pass object references as parameters to
+constructors or methods, those references refer to the same objects as the
+references in the caller. If the objects are immutable, like ``String`` objects
+it doesn’t matter at all. On the other hand, if the objects are **mutable**,
+meaning their instance variables can change after they are constructed, then
+storing the passed-in reference in an instance variable in your object can lead
+to surprising results: if some other code changes the object it will change for
+you too. If that’s not what you want, sometimes it makes sense to copy the
+object passed to the constructor and store the copy in the instance variable
+instead. How to make the copy will depend on the class of the object but often
+you can just construct a new object of the appropriate class using values from
+the original object as shown below.
 
 .. code-block:: java
 
