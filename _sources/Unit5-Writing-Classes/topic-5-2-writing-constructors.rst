@@ -228,7 +228,7 @@ values themselves.
    no-argument constructor sets the default instance variable values to 1 rather
    than 0 since a fraction with 0 in the denominator is not valid. Try to guess
    what it will print before you run it. Hint! Remember to start with the
-   ``main`` method! You can also view it in the |Java visualizer| by clicking on
+   ``main`` method! You can also view it in the Java visualizer by clicking on
    the Code Lens button below.
 
    ~~~~
