@@ -56,11 +56,14 @@ objects.
 
 Now it's time to learn to write our own constructors.
 
+Constructor Signature
+--------------------------------
+
 In the source code for a class, constructors are usually written after the
 instance variables and before any methods.
 
 The signature of a constructor is similar to the signature of a method except
-there is no return type, not even ``void``, and instead of a method name the
+there is no return type, not even ``void``, and instead of a method name, the
 name of the constructor is the same as the name of the class. The constructors
 you write will almost always be marked ``public``. Like methods, constructors
 also have a **parameter list** specified in parenthesis that declare the
@@ -86,6 +89,9 @@ called.
 
    Constructors must have the same name as the class! Constructors have no return type!
 
+The Job of a Constructor
+---------------------------------------
+
 The job of a constructor is to set the initial values for the object’s instance
 variables to useful values. But what does “useful” mean? Sometimes we describe
 the values of all an object's instance variables at a given time as the object's
@@ -102,7 +108,7 @@ write a constructor your class will automatically get what is called the
 **default no-argument constructor**. This constructor will initialize all your
 instance variables to the default value for their type: 0 for ``int`` and
 ``double``, ``false`` for ``boolean``, and ``null`` for all reference types. If
-those default values are sufficent to put your object into a valid state you may
+those default values are sufficient to put your object into a valid state you may
 not need to write a constructor at all.
 
 Usually, however, if you are writing a class that has instance variables, you
@@ -122,8 +128,10 @@ section.
        phoneNumber = initPhone;
    }
 
-This constructor ensures that all three of the instance variables in ``Person``
-are initialized to the values provided by whatever code called the constructor.
+This constructor ensures that all three of the instance variables (``name``, ``email``, and ``phoneNumber``) in ``Person`` 
+are initialized to the values provided by whatever code called the constructor. For example, in the constructor call  
+``new Person("Pat", "pat@gmail.com", "123-456-7890")``, the argument "Pat" is passed into the parameter variable ``initName``, 
+which the constructor then assigns to the instance variable ``name``.  
 
 One important note: if you do write a constructor, Java will not generate the
 default constructor for you. This is a good thing because it lets you make sure
@@ -224,8 +232,7 @@ values themselves.
    than 0 since a fraction with 0 in the denominator is not valid. Try to guess
    what it will print before you run it. Hint! Remember to start with the
    ``main`` method! You can also view it in the Java visualizer by clicking on
-   the Code Lens button below.
-
+   the Show CodeLens button below.
    ~~~~
    public class Fraction
    {
@@ -294,13 +301,11 @@ values themselves.
    :practice: T
 
    The following class defines a Car with the instance variables model and year,
-   for example a Honda 2010 car. However, some of the code is missing. Fill in
-   the code for the 2 constructors that are numbered 1 and 2. And fill in the
-   code to call the constructors in the main method numbered 3. The car1 object
-   should test the first constructor with default values and the car2 object
-   should test the second constructor to create a Honda 2010 car. Run your
-   program and make sure it works and prints out the information for both cars.
-
+   for example a Honda 2010 car. However, some of the code is missing. First, fill in
+   the code to create a Car constructor. Then, fill in the code to call the constructor 
+   in the main method to create 2 Car objects. The first car should be a 2023 Ford and 
+   the second car should be a 2010 Honda. Run your program and make sure it works and 
+   prints out the information for both cars.
    ~~~~
    public class Car
    {
@@ -360,7 +365,10 @@ values themselves.
 
    }
 
-(Advanced AP Topic Warning) When you pass object references as parameters to
+Advanced AP Topic: Reference parameters 
+------------------------------------------------
+
+When you pass object references as parameters to
 constructors or methods, those references refer to the same objects as the
 references in the caller. If the objects are immutable, like ``String`` objects
 it doesn’t matter at all. On the other hand, if the objects are **mutable**,
@@ -397,21 +405,21 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
 1. First, brainstorm in pairs to do the **Object-Oriented Design** for a Student class. What data should we store about Students? Come up with at least 4 different instance variables. What are the data types for the instance variables?
 
-2. Write a Student class below that has your 4 instance variables and write at least 3 different constructors: one that has no parameters and initializes the instance variables to default values, one that has 4 parameters to set the instance variables, and one that has 1 parameter for the most important instance variable and uses defaults for the others.
+2. Write a Student class below that has your 4 instance variables and write a constructor that has 4 parameters to set all of the instance variables.
 
 3. Add a print() method that uses System.out.println to print out all the instance variables.
 
-4. Add a main method that constructs at least 3 Student objects using the 3 different constructors and then calls their print() methods.
+4. Add a main method that constructs at least 2 Student objects using the constructor with different values and then calls their print() methods.
 
 .. activecode:: challenge-5-2-Student-class
   :language: java
   :autograde: unittest
 
-  Create a class Student with 4 instance variables, 3 constructors, and a print method. Write a main method that creates 3 Student objects with the 3 different constructors and calls their print() method.
+  Create a class Student with 4 instance variables, a constructor, and a print method. Write a main method that creates 2 Student objects with the constructor and calls their print() method.
   ~~~~
   /** class Student
    * with 4 instance variables,
-   * 3 constructors, a print method,
+   * a constructor, a print method,
    * and a main method to test them.
    */
    public class Student
@@ -419,10 +427,7 @@ We encourage you to work in pairs for this challenge to create a Student class w
        // Write 4 instance variables
 
 
-       // Write 3 constructors to initialize the instance variables
-       //  1. no parameters using default values
-       //  2. 1 parameter and the rest default values
-       //  3. 4 parameters
+       // Write a constructor with 4 parameters to initialize all of the instance variables
 
 
        // Write a print method that prints all the instance variables
@@ -435,7 +440,7 @@ We encourage you to work in pairs for this challenge to create a Student class w
       // main method
       public static void main(String[] args)
       {
-         // Construct 3 Student objects using the 3 different constructors
+         // Construct 2 Student objects using the constructor with different values
 
 
          // call their print() methods
@@ -443,8 +448,8 @@ We encourage you to work in pairs for this challenge to create a Student class w
       }
    }
    ====
-   // Test Code for Lesson 5.2.1 - Challenge - Student
-       import static org.junit.Assert.*;
+    // Test Code for Lesson 5.2.1 - Challenge - Student
+    import static org.junit.Assert.*;
     import org.junit.After;
     import org.junit.Before;
     import org.junit.Test;
@@ -466,10 +471,10 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
             int num = countOccurences(code, search);
 
-            String expect = search + "...) x 3";
+            String expect = search + "...) x 2";
             String actual = search + "...) x " + num;
 
-            boolean passed = getResults(expect, actual, "Checking that you made three Student objects");
+            boolean passed = getResults(expect, actual, "Checking that you made 2 Student objects");
             assertTrue(passed);
         }
 
@@ -480,10 +485,10 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
             int num = countOccurences(code, search);
 
-            String expect = search + "...) x 3";
+            String expect = search + "...) x 1";
             String actual = search + "...) x " + num;
 
-            boolean passed = getResults(expect, actual, "Checking that you made three constructors");
+            boolean passed = getResults(expect, actual, "Checking that you made a constructor");
             assertTrue(passed);
         }
 
@@ -494,10 +499,10 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
             int num = countOccurences(code, search);
 
-            String expect = search + " x 3";
+            String expect = search + " x 2";
             String actual = search + " x " + num;
 
-            boolean passed = getResults(expect, actual, "Checking that you called print three times");
+            boolean passed = getResults(expect, actual, "Checking that you called print 2 times");
             assertTrue(passed);
         }
 
@@ -519,37 +524,36 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
    <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html#groupwork-design-a-class-for-your-community" target="_blank">Lesson 5.1 Community Challenge</a>
 
-In the last lesson, you came up with a class of your own choice relevant to you or your community. In this lesson, you will add constructors to this class.
+In the last lesson, you came up with a class of your own choice relevant to you or your community. In this lesson, you will add a constructor to this class.
 
 1. Consult your completed worksheet or your code in |community5.1| for the class name and its 3 instance variables that you created. Copy them into the active code exercise below.
 
-2. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters.
+2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
 
 3. Write a print() method that uses System.out.println to print out all the instance variables.
 
-4. Write a main method that constructs at least 2 objects of your class using the 2 different constructors and then calls their print() methods.
+4. Write a main method that constructs at least 2 objects of your class using the constructor and then calls their print() methods.
 
 .. activecode:: community-challenge-5-2
   :language: java
   :autograde: unittest
 
-  Copy your class with its 3 instance variables from |community5.1|. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the 2 different constructors and then calls their print() methods.
+  Copy your class with its 3 instance variables from |community5.1|. Add a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the constructors and then calls their print() methods.
   ~~~~
   public class          // Add your class name here!
   {
       // 1. copy in your instance variables for class from the last lesson
 
-      // 2. Add a constructor with no parameters that initializes the instance variables to default values
-      // and a constructor with 3 parameters to set all of the instance variables to the given parameters.
+      // 2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
 
 
       // 3. Write a print() method that uses System.out.println to print out all the instance variables.
 
       // 4. Write a main method that constructs at least 2 objects of your class
-      // using the 2 different constructors and then calls their print() methods.
+      // using the constructor and then calls their print() methods.
       public static void main(String[] args)
       {
-         // Construct 2 objects of your class to test the 2 constructors
+         // Construct 2 objects of your class to test the constructors
 
 
          // call the objects print() methods
@@ -574,6 +578,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
             passed = getResults(expect, output, "Checking private instance variable(s)", passed);
             assertTrue(passed);
         }
+        /* No longer required
         @Test
         public void testDefaultConstructor()
         {
@@ -583,6 +588,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
             boolean passed = getResults(expect, output, "Checking default constructor");
             assertTrue(passed);
         }
+        */
 
         @Test
         public void testConstructor3()
@@ -593,7 +599,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
             boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
             assertTrue(passed);
         }
-                @Test
+        @Test
         public void testPrint()
         {
             String output = getMethodOutput("print");
@@ -635,7 +641,7 @@ Summary
 
 - **Constructors** are used to set the initial state of an object, which includes initial values for all instance variables.
 
-- When no constructor is written, Java provides a no-argument **default constructor**, and the instance variables are set to their default values (0 for int and double, null for objects like String).
+- When no constructor is written, Java provides a no-argument **default constructor**, and the instance variables are set to their default values (0 for ``int`` and ``double``, null for objects like ``String``).
 
 - Constructor parameters are local variables to the constructor and provide data to initialize instance variables.
 
@@ -658,6 +664,7 @@ AP Practice
             private String name;
             private int age;
             private boolean isSenior;
+
             public Cat(String n, int a)
             {
                 name = n;

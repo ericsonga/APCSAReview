@@ -51,7 +51,7 @@ Code your Class
 
 1. Create your class and its instance variables below.
 
-2. Add 2 constructors: a constructor with no parameters that initializes the instance variables to default values and a constructor with 3 parameters to set all of the instance variables to the given parameters.
+2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
 
 3. Write a print() method that uses System.out.println to print out all the instance variables.
 
@@ -63,7 +63,7 @@ Code your Class
 
 7. Write an additional method for your class that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, e.g. print(format) could print the data according to an argument that is "plain" or "table" where the data is printed in a table drawn with dashes and lines (|).
 
-8. Write a main method that constructs at least 2 objects of your class using the 2 different constructors and then calls all of the methods that you created above to test them.
+8. Write a main method that constructs at least 2 objects of your class using the constructor and then calls all of the methods that you created above to test them.
 
 
 .. activecode:: community-challenge-complete-project
@@ -76,8 +76,7 @@ Code your Class
   {
       // 1. write 3 instance variables for class: private type variableName;
 
-      // 2. Add a constructor with no parameters that initializes the instance variables to default values
-      // and a constructor with 3 parameters to set all of the instance variables to the given parameters.
+      // 2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
 
       // 3. Write a print() method that uses System.out.println to print out all the instance variables.
 
@@ -93,10 +92,10 @@ Code your Class
       // or "table" where the data is printed in a table drawn with dashes and lines (|).
 
       // 8. Write a main method that constructs at least 2 objects of your class
-      // using the 2 different constructors and then calls all of the methods that you created above to test them.
+      // using the constructor and then calls all of the methods that you created above to test them.
       public static void main(String[] args)
       {
-         // Construct 2 objects of your class to test the 2 constructors
+         // Construct 2 objects of your class using the constructor with different values
 
 
          // call all of the objects methods to test them
@@ -122,6 +121,7 @@ Code your Class
             assertTrue(passed);
         }
 
+        /* No longer required
         @Test
         public void testDefaultConstructor()
         {
@@ -130,7 +130,7 @@ Code your Class
 
             boolean passed = getResults(expect, output, "Checking default constructor");
             assertTrue(passed);
-        }
+        } */
 
         @Test
         public void testConstructor3()

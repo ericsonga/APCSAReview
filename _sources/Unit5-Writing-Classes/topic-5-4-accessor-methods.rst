@@ -195,10 +195,6 @@ change the reference.
 ``toString``
 ------------
 
-.. |Java visualizer| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20TesterClass%20%0A%20%20%7B%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Skyler%22,%20%22skyler%40sky.com%22,%20123456%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28s1%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%0A%20%20class%20Student%20%0A%20%20%7B%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20int%20id%3B%0A%20%20%20%20%20%0A%20%20%20%20%20public%20Student%28String%20initName,%20String%20initEmail,%20int%20initId%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20id%20%3D%20initId%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20toString%28%29%20method%0A%20%20%20%20%20public%20String%20toString%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20return%20id%20%2B%20%22%3A%20%22%20%2B%20name%20%2B%20%22,%20%22%20%2B%20email%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=14&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
 Another common method that returns a value is the ``toString`` method which returns a ``String`` description of the instance variables of the object.
 
 This method is called automatically to try to convert an object to a ``String``
@@ -210,7 +206,7 @@ Note that when we call ``System.out.println(s1)`` it will automatically call the
 ``toString`` method to get a ``String`` representation of the ``Student``
 object. The ``toString`` method will return a ``String`` that is then printed out.
 Watch how the control moves to the ``toString`` method and then comes back to ``main``
-in the |Java visualizer| or by using the Code Lens button.
+in the Java visualizer by using the Show CodeLens button.
 
 .. activecode:: StudentToString
   :language: java
@@ -283,13 +279,13 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 
 1. Create a class that keeps track of the attributes above for pet records at the animal clinic. Decide what instance variables are needed and their data types. Make sure you use ``int``, ``double``, and ``String`` data types. Make the instance variables ``private``.
 
-2. Create 2 constructors, one with no parameters and one with many parameters to initialize all the instance variables.
+2. Create a constructor with many parameters to initialize all the instance variables.
 
 3. Create accessor (get) methods for each of the instance variables.
 
 4. Create a ``toString`` method that returns all the information in a ``Pet``.
 
-5. In the ``main`` method below, create 3 ``Pet`` objects and call their constructors, accessor methods, and ``toString`` methods to test all your code.
+5. In the ``main`` method below, create 2 ``Pet`` objects with different values and call the constructor, accessor methods, and ``toString`` methods to test all your code.
 
 6. Make sure you use good commenting!
 
@@ -311,7 +307,7 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
      // keep track of the name, age, weight, type of animal, and breed of the pet
 
 
-     // Write 2 constructors, accessor (get) methods, and a toString method. Use good commenting.
+     // Write a constructor, accessor (get) methods, and a toString method. Use good commenting.
 
      // Don't forget to complete the main method in the TesterClass below!
   }
@@ -321,7 +317,7 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
      // main method for testing
      public static void main(String[] args)
      {
-        // Create 3 Pet objects and test all your methods
+        // Create 2 Pet objects and test all your methods
 
      }
    }
@@ -349,9 +345,9 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
                     count++;
             }
 
-            boolean passed = count >= 2;
+            boolean passed = count >= 1;
 
-            getResults("2+", ""+count, "Checking for 2 constructors", passed);
+            getResults("2+", ""+count, "Checking for constructor", passed);
             assertTrue(passed);
         }
 
@@ -396,9 +392,9 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 
             int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 3;
+            boolean passed = num >= 2;
 
-            getResults("3", ""+num, "Checking main method creates three Pet objects", passed);
+            getResults("2", ""+num, "Checking main method creates 2 Pet objects", passed);
             assertTrue(passed);
         }
 

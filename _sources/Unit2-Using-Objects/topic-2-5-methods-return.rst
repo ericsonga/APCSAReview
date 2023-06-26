@@ -207,7 +207,7 @@ Here are some examples of using get methods for the ``Turtle`` object ``yertle``
     }
 
 ``toString`` Methods
-------------------
+---------------------
 
 Another common method that returns a value is the ``toString`` method. This method is called automatically to try to convert an object to a ``String`` when it is needed, for example in a print statement. In the ``Turtle`` class, the ``toString`` method returns a ``String`` description of the turtle.
 

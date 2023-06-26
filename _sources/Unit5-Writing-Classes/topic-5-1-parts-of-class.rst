@@ -429,24 +429,16 @@ In this project, you will create a class that can tell riddles like the followin
         }
 
         @Test
-        public void testDefaultConstructor()
-        {
-            String[] args = {"Question 1", "Answer 1"};
-            String output = checkDefaultConstructor();
-            String expect = "fail";
+        public void testCallConstructors() {
+            String code = getCodeWithoutComments();
+            String search = "= new Riddle(";
 
-            boolean passed = getResults(expect, output, "Checking default constructor");
-            assertTrue(passed);
-        }
+            int num = countOccurences(code, search);
 
-        @Test
-        public void testConstructor()
-        {
-            String[] args = {"Question 1", "Answer 1"};
-            String output = checkConstructor(args);
-            String expect = "pass";
+            String expect = search + "...) x 2";
+            String actual = search + "...) x " + num;
 
-            boolean passed = getResults(expect, output, "Checking constructor with parameters");
+            boolean passed = getResults(expect, actual, "Checking that you made 2 Riddle objects");
             assertTrue(passed);
         }
 
