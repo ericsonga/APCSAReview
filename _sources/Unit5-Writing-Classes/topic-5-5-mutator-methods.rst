@@ -265,7 +265,7 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
   :language: java
   :autograde: unittest
 
-  Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with 2 constructors, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
+  Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with a constructor, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
   ~~~~
   /**
       Pet class (complete comments)
@@ -284,7 +284,7 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
      // main method for testing
      public static void main(String[] args)
      {
-        // Create Pet objects and test all your set methods
+        // Create 2 Pet objects and test all your set methods
 
      }
    }
@@ -312,9 +312,9 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
                     count++;
             }
 
-            boolean passed = count >= 2;
+            boolean passed = count >= 1;
 
-            getResults("2+", ""+count, "Checking for 2 constructors", passed);
+            getResults("2+", ""+count, "Checking for constructor", passed);
             assertTrue(passed);
         }
 
@@ -373,9 +373,9 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 
             int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 3;
+            boolean passed = num >= 2;
 
-            getResults("3", ""+num, "Checking main method creates three Pet objects", passed);
+            getResults("2", ""+num, "Checking main method creates 2 Pet objects", passed);
             assertTrue(passed);
         }
 

@@ -39,12 +39,8 @@ this Keyword
 
 The keyword ``this`` can be used in a class to refer to the current calling object.
 
-.. |Java visualizer| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=%20public%20class%20Person%20%0A%20%20%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%0A%20%20%20%20%20public%20Person%28String%20theName%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20this.name%20%3D%20theName%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20accessor%20methods%20-%20getters%20%0A%20%20%20%20%20public%20String%20getName%28%29%20%7B%20return%20this.name%3B%7D%0A%20%20%20%20%20public%20String%20getEmail%28%29%20%7B%20return%20this.email%3B%7D%0A%20%20%20%20%20public%20String%20getPhoneNumber%28%29%20%7B%20return%20this.phoneNumber%3B%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20mutatoor%20methods%20-%20setters%0A%20%20%20%20%20public%20void%20setName%28String%20theName%29%20%7B%20this.name%20%3D%20theName%3B%7D%0A%20%20%20%20%20public%20void%20setEmail%28String%20theEmail%29%20%7Bthis.email%20%3D%20theEmail%3B%7D%0A%20%20%20%20%20public%20void%20setPhoneNumber%28String%20thePhoneNumber%29%20%7B%20this.phoneNumber%20%3D%20thePhoneNumber%3B%7D%0A%20%20%20%20%20public%20String%20toString%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20this.name%20%2B%20%22%20%22%20%2B%20this.email%20%2B%20%22%20%22%20%2B%20this.phoneNumber%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28p1%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22%29%3B%0A%20%20%20%20%20%20%20%20p2.setEmail%28%22jean%40gmail.com%22%29%3B%0A%20%20%20%20%20%20%20%20p2.setPhoneNumber%28%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28p2%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D%0A%20%20&cumulative=false&curInstr=25&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
 For example, in the following Class Person, when we create an object p1 and call the constructor or p1.setEmail(), the word "this" refers to p1. And when we make the same method calls with object p2, "this" refers to p2.
-Run the code below and also check it out in the |Java visualizer| with the Code Lens button which shows how this refers to different objects when the code is run.
+Run the code below and also check it out in the Java visualizer with the Show CodeLens button which shows how this refers to different objects when the code is run.
 
 
 .. activecode:: PersonClassThis
@@ -134,12 +130,7 @@ The keyword this is sometimes used by programmers to distinguish between variabl
         this.name = name;
      }
 
-
-.. |Java visualizer2| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Pay%0A%20%20%20%7B%0A%20%20%20%20private%20double%20pay%3B%0A%0A%20%20%20%20public%20Pay%28double%20p%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20pay%20%3D%20p%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getPay%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20pay%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20calculatePayWithOvertime%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20this%20Pay%20object%20is%20passed%20to%20the%20Overtime%20constructor%0A%20%20%20%20%20%20%20%20Overtime%20ot%20%3D%20new%20Overtime%28this%29%3B%0A%20%20%20%20%20%20%20%20pay%20%3D%20ot.getOvertimePay%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Pay%20myPay%20%3D%20new%20Pay%28100.0%29%3B%0A%20%20%20%20%20%20%20%20myPay.calculatePayWithOvertime%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28myPay.getPay%28%29%29%3B%0A%20%20%20%20%7D%0A%20%20%20%7D%0A%0A%20%20%20class%20Overtime%0A%20%20%20%7B%0A%20%20%20%20private%20double%20payWithOvertime%3B%0A%0A%20%20%20%20public%20Overtime%28Pay%20p%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20payWithOvertime%20%3D%20p.getPay%28%29%20*%201.5%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getOvertimePay%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20payWithOvertime%3B%0A%20%20%20%20%7D%0A%20%20%20%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank" style="text-decoration:underline">Java visualizer</a>
-
-The ``this`` variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, ``Pay`` and ``Overtime``. The ``Pay`` class declares an ``Overtime`` object and passes in ``this`` (the current ``Pay`` object) to its constructor which computes the overtime with respect to that ``Pay`` object. Try this code in the |Java visualizer2|. Here is an image that shows how ``this``, ``myPay`` and ``p`` all refer to the same object in memory.
+The ``this`` variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, ``Pay`` and ``Overtime``. The ``Pay`` class declares an ``Overtime`` object and passes in ``this`` (the current ``Pay`` object) to its constructor which computes the overtime with respect to that ``Pay`` object. Try this code in the active code exercise below with the Show CodeLens button to trace through it step by step. Here is an image that shows how ``this``, ``myPay`` and ``p`` all refer to the same object in memory.
 
 .. figure:: Figures/thisTrace.png
     :width: 400px
@@ -150,7 +141,7 @@ The ``this`` variable can be used anywhere you would use an object variable.  Yo
    :language: java
    :autograde: unittest
 
-   What does this code print out? Trace through the code with the CodeLens button. Notice how the this Pay object is passed to the Overtime constructor.
+   What does this code print out? Trace through the code with the Show CodeLens button. Notice how the this Pay object is passed to the Overtime constructor.
    ~~~~
    public class Pay
    {
@@ -310,7 +301,7 @@ For this challenge, you can work in pairs to:
 
 - Create a class called BankAccount below that keeps track of the account holder's name, the account number, and the balance in the account. Make sure you use the appropriate data types for these.
 
-- Write 2 constructors for the class that initialize the instance variables to default values and to given parameters. For the parameters, use the same variable names as your instance variables. Use the ``this`` keyword to distinguish between the instance variables and the parameter variables.
+- Write 2 constructors for the class: one that initializes all the instance variables and one that only has 2 parameters for the name and account number and initializes the balance to 0. For the parameters, use the same variable names as your instance variables. Use the ``this`` keyword to distinguish between the instance variables and the parameter variables.
 
 - Write a ``toString`` method for the class. Use the ``this`` keyword to return the instance variables.
 
@@ -343,7 +334,7 @@ For this challenge, you can work in pairs to:
             @Test
             public void test0()
             {
-               String output = getMethodOutput("main");
+                String output = getMethodOutput("main");
                 String expect = "Something like:\nName 101 100.0\nName 101 200.0\nName 101 100.0";
 
                 boolean passed = !output.contains("Method main does not exist");
@@ -355,10 +346,10 @@ For this challenge, you can work in pairs to:
             @Test
             public void test1()
             {
-                String output = checkDefaultConstructor();
+                String output = checkConstructor(2);
                 String expect = "pass";
 
-                boolean passed = getResults(expect, output, "Checking default constructor");
+                boolean passed = getResults(expect, output, "Checking 2-parameter constructor");
                 assertTrue(passed);
             }
 

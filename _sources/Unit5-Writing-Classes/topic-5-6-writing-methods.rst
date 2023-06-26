@@ -519,7 +519,7 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
 
 In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to your community.
 
-1. Copy your class with its 3 instance variables, constructors, and its print() and main methods from |lesson 5.2| into the active code exercise below.
+1. Copy your class with its 3 instance variables, constructor, and its print() and main methods from |lesson 5.2| into the active code exercise below.
 
 2. Create accessor (get) methods and mutator (set) methods for each of the instance variables.
 
@@ -537,7 +537,7 @@ In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to 
   ~~~~
   public class          // Add your class name here!
   {
-      // 1. Copy your class instance variables, constructors, and print() from 5.2.
+      // 1. Copy your class instance variables, constructor, and print() from 5.2.
 
       // 2. Create accessor (get) and mutator (set) methods for each of the instance variables.
 
@@ -575,7 +575,7 @@ In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to 
             assertTrue(passed);
         }
 
-        @Test
+        /* @Test
         public void testDefaultConstructor()
         {
             String output = checkDefaultConstructor();
@@ -583,7 +583,7 @@ In lessons 5.1 and 5.2, you came up with a class of your own choice relevant to 
 
             boolean passed = getResults(expect, output, "Checking default constructor");
             assertTrue(passed);
-        }
+        } */
 
         @Test
         public void testConstructor3()
