@@ -40,7 +40,11 @@ Writing Constructors
 .. index::
    pair: class; constructor
 
-In Unit 2, we learned how to create objects using constructor. Objects are created in programs by declaring a variable of the class and using the keyword new followed by a call to a constructor. **Constructors**  set the initial values for the object's instance variables.    For example, here is how we create World, Turtle, and Person objects.
+In Unit 2, we learned how to create objects by calling **constructors**. To
+review, a call to a constructor consists of the word ``new`` followed by the
+name of the class being constructed, and then an argument list in parentheses.
+For example, here is how we create ``World``, ``Turtle``, and ``Person``
+objects.
 
 .. code-block:: java
 
@@ -48,68 +52,125 @@ In Unit 2, we learned how to create objects using constructor. Objects are creat
     // ClassName variableName = new ConstructorName(arguments);
     World world = new World();
     Turtle t = new Turtle(world);
-    Person p = new Person("Pat","pat@gmail.com","123-456-7890");
+    Person p = new Person("Pat", "pat@gmail.com", "123-456-7890");
 
+Now it's time to learn to write our own constructors.
 
-In a new class, constructors are usually written after the instance variables and before any methods.    They typically start with ``public`` and then the *name* of the class: ``public ClassName()``. Unlike other methods, they do not have a return type, not even void, after the access modifier public.  They can take **parameters** (specified in parentheses) for the data which is used to initialize the instance variables.
+In the source code for a class, constructors are usually written after the
+instance variables and before any methods.
+
+The signature of a constructor is similar to the signature of a method except
+there is no return type, not even ``void``, and instead of a method name the
+name of the constructor is the same as the name of the class. The constructors
+you write will almost always be marked ``public``. Like methods, constructors
+also have a **parameter list** specified in parenthesis that declare the
+variables that will be used to hold the arguments passed when the constructor is
+called.
 
 .. code-block:: java
 
    public class ClassName
    {
+       /* Instance variable declarations go here, before constructors */
 
-      /* Instance Variable Declarations -- not shown */
+       /* Constructor - same name as Class, no return type */
+       public ClassName()
+       {
+           /* Implementation not shown */
+       }
 
-      /* Constructor - same name as Class, no return type */
-      public ClassName()
-      {
-        /* Implementation not shown */
-      }
+       /* Method definitions go here, after constructors */
    }
 
 .. note::
 
    Constructors must have the same name as the class! Constructors have no return type!
 
-..
-  I don't really like encouraging students to write meaningless no-arg
-  constructors. I'd much rather explain that you can write a no-arg constructor
-  but only should if you can create a meaningful default object. I'd argue that
-  a Person with no name, no email, and no phone number is not a meaningful
-  object. What do you think? -Peter
+The job of a constructor is to set the initial values for the object’s instance
+variables to useful values. But what does “useful” mean? Sometimes we describe
+the values of all an object's instance variables at a given time as the object's
+**state**. And we say an object is in a **valid state** when all its instance
+variables have values that let us use the object by invoking its public methods.
+So another way to describe the job of a constructor is to set the object’s
+instance values so it’s in a valid state and ready to be used.
 
-Classes usually have more than one constructor. There are usually at least 2 constructors:
+Classes can have zero or more constructors but they should all produce an object
+in a valid state.
 
-- a constructor that takes no parameters
-- a constructor that takes all the parameters necessary for initializing all the instance variables
+The easiest way to write a constructor is to *not* write one. If you do not
+write a constructor your class will automatically get what is called the
+**default no-argument constructor**. This constructor will initialize all your
+instance variables to the default value for their type: 0 for ``int`` and
+``double``, ``false`` for ``boolean``, and ``null`` for all reference types. If
+those default values are sufficent to put your object into a valid state you may
+not need to write a constructor at all.
 
-The attributes of an object and their values at a given time define that object's state. The constructors initialize the object's state by assigning initial values to the instance variables that the object has as its attributes.
+Usually, however, if you are writing a class that has instance variables, you
+need to initialize your instance values to some other values. In that case you
+probably need to write a constructor that takes arguments and uses them to
+initialize your instance variables.
 
-Here are two constructors that could be written for the ``Person`` class. Notice that the first one initializes ``name``, ``email``, and ``phoneNumber`` to empty string ``""`` as the default values. Most programmers use ``""`` as the default value for ``String`` variables and 0 as the default value for ``int`` and ``double`` variables.
+For example, consider the constructor from the ``Person`` class from the last
+section.
 
 .. code-block:: java
 
-     // default constructor: initialize instance vars to default empty strings
-     public Person()
-     {
-        name = "";
-        email = "";
-        phoneNumber = "";
-     }
+   public Person(String initName, String initEmail, String initPhone)
+   {
+       name = initName;
+       email = initEmail;
+       phoneNumber = initPhone;
+   }
 
-     // constructor: initialize all 3 instance variables to parameters
-     public Person(String initName, String initEmail, String initPhone)
-     {
-        name = initName;
-        email = initEmail;
-        phoneNumber = initPhone;
-     }
+This constructor ensures that all three of the instance variables in ``Person``
+are initialized to the values provided by whatever code called the constructor.
 
-If there are no constructors written for a class, Java provides a no-argument **default constructor** where the instance variables are set to their default values. For int and double variables, the default value used is **0**, and for String and other object variables, the default is **null**. However, if you do write at least one constructor, Java will not generate the default constructor for you, so you should write at least a constructor with no parameters and one with many parameters.
+One important note: if you do write a constructor, Java will not generate the
+default constructor for you. This is a good thing because it lets you make sure
+that instances of your class are always properly initialized. With this
+constructor in place, for instance, there’s no way to construct a ``Person``
+object without providing the three required ``String`` values.
+
+Sometimes you will want to write more than one constructor so there are
+different ways of making an instance of your class. One reason to do that is to
+make it convenient to create instances from different kinds of arguments. This
+is called **overloading** and we discussed it in Chapter 2 from the perspective
+of calling constructors.
+
+For instance, suppose we were writing a program that had another class
+``AddressBookEntry`` which had getters for name, email, and phone number. In
+that program it might be useful to write another ``Person`` constructor like
+this:
+
+.. code-block:: java
+
+   public Person(AddressBookEntry address) {
+   {
+       name = address.getName();
+       email = address.getEmail();
+       phoneNumber = address.getPhoneNumber();
+   }
+
+Sometimes you might still even want to provide a no-argument constructor. If
+there’s a valid object that you can create without any arguments, you could
+write a no-argument constructor for ``Person`` like:
+
+.. code-block:: java
+
+   public Person()
+   {
+       name = "Anonymous";
+       email = "unknown";
+       phoneNumber = "unknown";
+   }
+
+
+It’s up to you to decide if this is actually a useful value to have or if it
+would be better to force the users of the ``Person`` class to choose the
+values themselves.
 
 
 |Exercise| **Check Your Understanding**
-
 
 .. clickablearea:: name_constructor
     :question: Click on all the lines of code that are part of constructors in the following class.
@@ -153,154 +214,164 @@ If there are no constructors written for a class, Java provides a no-argument **
 
 |CodingEx| **Coding Exercise**
 
-
-.. |Java visualizer| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=%20%20public%20class%20Fraction%0A%20%20%7B%0A%20%20%20%20%20//%20%20instance%20variables%0A%20%20%20%20%20private%20int%20numerator%3B%0A%20%20%20%20%20private%20int%20denominator%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20set%20instance%20variables%20to%20default%20values%0A%20%20%20%20%20public%20Fraction%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20numerator%20%3D%201%3B%0A%20%20%20%20%20%20%20%20denominator%20%3D%201%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20set%20instance%20variables%20to%20init%20parameters%0A%20%20%20%20%20public%20Fraction%28int%20initNumerator,%20int%20initDenominator%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20numerator%20%3D%20initNumerator%3B%0A%20%20%20%20%20%20%20%20denominator%20%3D%20initDenominator%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Print%20fraction%0A%20%20%20%20%20public%20void%20print%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28numerator%20%2B%20%22/%22%20%2B%20denominator%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Fraction%20f1%20%3D%20new%20Fraction%28%29%3B%0A%20%20%20%20%20%20%20%20Fraction%20f2%20%3D%20new%20Fraction%281,2%29%3B%0A%20%20%20%20%20%20%20%20//%20What%20will%20these%20print%20out%3F%0A%20%20%20%20%20%20%20%20f1.print%28%29%3B%0A%20%20%20%20%20%20%20%20f2.print%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=28&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
 .. activecode:: class-Fraction
-  :language: java
-  :autograde: unittest
+   :language: java
+   :autograde: unittest
 
-  The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Note that this constructor sets the default instance variable values to 1 rather than 0 -- so we don't end up with divide by zero. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer| by clicking on the Code Lens button below.
-  ~~~~
-  public class Fraction
-  {
-     //  instance variables
-     private int numerator;
-     private int denominator;
+   The following class defines a ``Fraction`` with the instance variables
+   ``numerator`` and ``denominator``. It uses 2 constructors. Note that the
+   no-argument constructor sets the default instance variable values to 1 rather
+   than 0 since a fraction with 0 in the denominator is not valid. Try to guess
+   what it will print before you run it. Hint! Remember to start with the
+   ``main`` method! You can also view it in the Java visualizer by clicking on
+   the Code Lens button below.
 
-     // constructor: set instance variables to default values
-     public Fraction()
-     {
-        numerator = 1;
-        denominator = 1;
-     }
+   ~~~~
+   public class Fraction
+   {
+      //  instance variables
+      private int numerator;
+      private int denominator;
 
-     // constructor: set instance variables to init parameters
-     public Fraction(int initNumerator, int initDenominator)
-     {
-        numerator = initNumerator;
-        denominator = initDenominator;
-     }
+      // constructor: set instance variables to default values
+      public Fraction()
+      {
+         numerator = 1;
+         denominator = 1;
+      }
 
-     // Print fraction
-     public void print()
-     {
-       System.out.println(numerator + "/" + denominator);
-     }
+      // constructor: set instance variables to init parameters
+      public Fraction(int initNumerator, int initDenominator)
+      {
+         numerator = initNumerator;
+         denominator = initDenominator;
+      }
 
-     // main method for testing
-     public static void main(String[] args)
-     {
-        Fraction f1 = new Fraction();
-        Fraction f2 = new Fraction(1,2);
-        // What will these print out?
-        f1.print();
-        f2.print();
-     }
-  }
-  ====
-  // Test Code for Lesson 5.2.0.1 - Fraction
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+      // Print fraction
+      public void print()
+      {
+        System.out.println(numerator + "/" + denominator);
+      }
 
-    import java.io.*;
+      // main method for testing
+      public static void main(String[] args)
+      {
+         Fraction f1 = new Fraction();
+         Fraction f2 = new Fraction(1,2);
+         // What will these print out?
+         f1.print();
+         f2.print();
+      }
+   }
+   ====
+   // Test Code for Lesson 5.2.0.1 - Fraction
+   import static org.junit.Assert.*;
+   import org.junit.After;
+   import org.junit.Before;
+   import org.junit.Test;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "1/1\n1/2";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "Running main", true);
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "1/1\n1/2";
 
-    }
+           boolean passed = getResults(expect, output, "Running main", true);
+           assertTrue(passed);
+       }
+
+   }
 
 |CodingEx| **Coding Exercise**
 
 .. activecode:: class-Car
-  :language: java
-  :autograde: unittest
-  :practice: T
+   :language: java
+   :autograde: unittest
+   :practice: T
 
-  The following class defines a Car with the instance variables model and year, for example a Honda 2010 car. However, some of the code is missing. Fill in the code for the 2 constructors that are numbered 1 and 2. And fill in the code to call the constructors in the main method numbered 3. The car1 object should test the first constructor with default values and the car2 object should test the second constructor to create a Honda 2010 car. Run your program and make sure it works and prints out the information for both cars.
-  ~~~~
-  public class Car
-  {
-     //  instance variables
-     private String model;
-     private int year;
+   The following class defines a Car with the instance variables model and year,
+   for example a Honda 2010 car. However, some of the code is missing. Fill in
+   the code for the 2 constructors that are numbered 1 and 2. And fill in the
+   code to call the constructors in the main method numbered 3. The car1 object
+   should test the first constructor with default values and the car2 object
+   should test the second constructor to create a Honda 2010 car. Run your
+   program and make sure it works and prints out the information for both cars.
 
-     // constructor: set instance variables to default values
-     public Car()
-     {
-         // 1. set the instance variables to default values "" and 2019
+   ~~~~
+   public class Car
+   {
+      //  instance variables
+      private String model;
+      private int year;
+
+      // constructor: set instance variables to init parameters
+      public Car(String initModel, int initYear)
+      {
+          // 1. set the instance variables to the init parameter variables
 
 
-     }
+      }
 
-     // constructor: set instance variables to init parameters
-     public Car(String initModel, int initYear)
-     {
-         // 2. set the instance variables to the init parameter variables
+      // Print Car info
+      public void print()
+      {
+        System.out.println("Car model: " + model);
+        System.out.println("Car year: " + year);
+      }
 
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // 2. Call the constructor to create 2 new Car objects with different
+          // values The first car should be a 2023 Ford and the second car
+          // should be a 2010 Honda.
 
-     }
+          Car car1 =
+          Car car2 =
 
-     // Print Car info
-     public void print()
-     {
-       System.out.println("Car model: " + model);
-       System.out.println("Car year: " + year);
-     }
+          car1.print();
+          car2.print();
+      }
+   }
+   ====
+   // Test Code for Lesson 5.2.0 - Car
+   import static org.junit.Assert.*;
+   import org.junit.After;
+   import org.junit.Before;
+   import org.junit.Test;
 
-     // main method for testing
-     public static void main(String[] args)
-     {
-         // 3. call the constructor to create 2 new Car objects
-         // using the 2 constructors.
-         // car1 will be the default values.
-         // car2 should be a Honda 2010 car.
-         Car car1 =
-         Car car2 =
+   import java.io.*;
 
-         car1.print();
-         car2.print();
-     }
-  }
-  ====
-  // Test Code for Lesson 5.2.0 - Car
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Car model: Ford\nCar year: 2023\nCar model: Honda\nCar year: 2010";
 
-    import java.io.*;
+           boolean passed = getResults(expect, output, "Running main");
+           assertTrue(passed);
+       }
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Car model: \nCar year: 2019\nCar model: Honda\nCar year: 2010";
+   }
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
-        }
-
-    }
-
-Constructors are used to set the initial state of an object by initializing its instance variables. The examples above have instance variables that are primitive types, but you can have other objects, reference types, as instance variables. For example, a Person class could have an Address object as an instance variable, and the Address class could have String instance variables for the street, city, and state.
-
-(Advanced AP Topic Warning) When you pass object references as parameters to constructors or methods, they become aliases for the original object and can change it. If a constructor has an object instance variable, it can copy   the referenced object in the parameter using new and the constructor of the referenced object like below so that it does not change the state of the original object. You will see more examples like this in later lessons.
+(Advanced AP Topic Warning) When you pass object references as parameters to
+constructors or methods, those references refer to the same objects as the
+references in the caller. If the objects are immutable, like ``String`` objects
+it doesn’t matter at all. On the other hand, if the objects are **mutable**,
+meaning their instance variables can change after they are constructed, then
+storing the passed-in reference in an instance variable in your object can lead
+to surprising results: if some other code changes the object it will change for
+you too. If that’s not what you want, sometimes it makes sense to copy the
+object passed to the constructor and store the copy in the instance variable
+instead. How to make the copy will depend on the class of the object but often
+you can just construct a new object of the appropriate class using values from
+the original object as shown below.
 
 .. code-block:: java
 
