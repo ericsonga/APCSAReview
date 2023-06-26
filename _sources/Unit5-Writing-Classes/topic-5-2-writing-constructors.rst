@@ -302,8 +302,8 @@ values themselves.
 
    The following class defines a Car with the instance variables model and year,
    for example a Honda 2010 car. However, some of the code is missing. First, fill in
-   the code to create a Car constructor. Then, fill in the code to call the constructor 
-   in the main method to create 2 Car objects. The first car should be a 2023 Ford and 
+   the code to create a ``Car`` constructor. Then, fill in the code to call the constructor 
+   in the main method to create 2 ``Car`` objects. The first car should be a 2023 Ford and 
    the second car should be a 2010 Honda. Run your program and make sure it works and 
    prints out the information for both cars.
    ~~~~
