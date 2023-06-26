@@ -40,7 +40,11 @@ Writing Constructors
 .. index::
    pair: class; constructor
 
-In Unit 2, we learned how to create objects using constructor. Objects are created in programs by declaring a variable of the class and using the keyword new followed by a call to a constructor. **Constructors**  set the initial values for the object's instance variables.    For example, here is how we create World, Turtle, and Person objects.
+In Unit 2, we learned how to create objects by calling **constructors**. To
+review, a call to a constructor consists of the word ``new`` followed by the
+name of the class being constructed, and then an argument list in parentheses.
+For example, here is how we create ``World``, ``Turtle``, and ``Person``
+objects.
 
 .. code-block:: java
 
@@ -48,68 +52,125 @@ In Unit 2, we learned how to create objects using constructor. Objects are creat
     // ClassName variableName = new ConstructorName(arguments);
     World world = new World();
     Turtle t = new Turtle(world);
-    Person p = new Person("Pat","pat@gmail.com","123-456-7890");
+    Person p = new Person("Pat", "pat@gmail.com", "123-456-7890");
 
+Now it's time to learn to write our own constructors.
 
-In a new class, constructors are usually written after the instance variables and before any methods.    They typically start with ``public`` and then the *name* of the class: ``public ClassName()``. Unlike other methods, they do not have a return type, not even void, after the access modifier public.  They can take **parameters** (specified in parentheses) for the data which is used to initialize the instance variables.
+In the source code for a class, constructors are usually written after the
+instance variables and before any methods.
+
+The signature of a constructor is similar to the signature of a method except
+there is no return type, not even ``void``, and instead of a method name the
+name of the constructor is the same as the name of the class. The constructors
+you write will almost always be marked ``public``. Like methods, constructors
+also have a **parameter list** specified in parenthesis that declare the
+variables that will be used to hold the arguments passed when the constructor is
+called.
 
 .. code-block:: java
 
    public class ClassName
    {
+       /* Instance variable declarations go here, before constructors */
 
-      /* Instance Variable Declarations -- not shown */
+       /* Constructor - same name as Class, no return type */
+       public ClassName()
+       {
+           /* Implementation not shown */
+       }
 
-      /* Constructor - same name as Class, no return type */
-      public ClassName()
-      {
-        /* Implementation not shown */
-      }
+       /* Method definitions go here, after constructors */
    }
 
 .. note::
 
    Constructors must have the same name as the class! Constructors have no return type!
 
-..
-  I don't really like encouraging students to write meaningless no-arg
-  constructors. I'd much rather explain that you can write a no-arg constructor
-  but only should if you can create a meaningful default object. I'd argue that
-  a Person with no name, no email, and no phone number is not a meaningful
-  object. What do you think? -Peter
+The job of a constructor is to set the initial values for the object’s instance
+variables to useful values. But what does “useful” mean? Sometimes we describe
+the values of all an object's instance variables at a given time as the object's
+**state**. And we say an object is in a **valid state** when all its instance
+variables have values that let us use the object by invoking its public methods.
+So another way to describe the job of a constructor to set the the object’s
+instance values so it’s in a valid state and ready to be used.
 
-Classes usually have more than one constructor. There are usually at least 2 constructors:
+Classes can have zero or more constructors but they should all produce an object
+in a valid state.
 
-- a constructor that takes no parameters
-- a constructor that takes all the parameters necessary for initializing all the instance variables
+The easiest way to write a constructor is to *not* write one. If you do not
+write a constructor your class will automatically get what is called the
+**default no-argument constructor**. This constructor will initialize all your
+instance variables to the default value for their type: 0 for ``int`` and
+``double``, ``false`` for ``boolean``, and ``null`` for all reference types. If
+those default values are sufficent to put your object into a valid state you may
+not need to write a constructor at all.
 
-The attributes of an object and their values at a given time define that object's state. The constructors initialize the object's state by assigning initial values to the instance variables that the object has as its attributes.
+Usually, however, if you are writing a class that has instance variables, you
+need to initialize your instance values to some other values. In that case you
+need to write a constructor that takes arguments and uses them to initialize
+your instance variables.
 
-Here are two constructors that could be written for the ``Person`` class. Notice that the first one initializes ``name``, ``email``, and ``phoneNumber`` to empty string ``""`` as the default values. Most programmers use ``""`` as the default value for ``String`` variables and 0 as the default value for ``int`` and ``double`` variables.
+For example, consider the constructor from ``Person`` class from the last
+section.
 
 .. code-block:: java
 
-     // default constructor: initialize instance vars to default empty strings
-     public Person()
-     {
-        name = "";
-        email = "";
-        phoneNumber = "";
-     }
+   public Person(String initName, String initEmail, String initPhone)
+   {
+       name = initName;
+       email = initEmail;
+       phoneNumber = initPhone;
+   }
 
-     // constructor: initialize all 3 instance variables to parameters
-     public Person(String initName, String initEmail, String initPhone)
-     {
-        name = initName;
-        email = initEmail;
-        phoneNumber = initPhone;
-     }
+This constructor ensures that all three of the instance variables in ``Person``
+are initialized to the values provided by whatever code called the constructor.
 
-If there are no constructors written for a class, Java provides a no-argument **default constructor** where the instance variables are set to their default values. For int and double variables, the default value used is **0**, and for String and other object variables, the default is **null**. However, if you do write at least one constructor, Java will not generate the default constructor for you, so you should write at least a constructor with no parameters and one with many parameters.
+One important note: if you do write a constructor, Java will not generate the
+default constructor for you. This is a good thing because it lets you make sure
+that instances of your class are always properly initialized. With this
+constructor in place, for instance, there’s no way to construct a ``Person``
+object without providing the three required ``String`` values.
+
+Sometimes you will want to write more than one constructor so there are
+different ways of making an instance of your class. One reason to do that is to
+make it convenient to create instances from different kinds of arguments. This
+is called **overloading** and we discussed it in Chapter 2 from the perspective
+of calling constructors.
+
+For instance, suppose we were writing a program that had another class
+``AddressBookEntry`` which had getters for name, email, and phone number. In
+that program it might be useful to write another ``Person`` constructor like
+this:
+
+.. code-block:: java
+
+   public Person(AddressBookEntry address) {
+   {
+       name = address.getName();
+       email = address.getEmail();
+       phoneNumber = address.getPhoneNumber();
+   }
+
+Sometimes you still might still even want to provide a no-argument constructor.
+If there’s a valid object that you can create without any arguments, you could
+write a no-argument constructor for person like:
+
+.. code-block:: java
+
+   public Person()
+   {
+       name = "Anonymous";
+       email = "unknown";
+       phoneNumber = "unknown";
+   }
+
+
+It’s up to you to decide if this is actually a useful value to have or if it
+would be better to force the users of the ``Person`` class to choose the
+values themselves.
 
 
 |Exercise| **Check Your Understanding**
-
 
 .. clickablearea:: name_constructor
     :question: Click on all the lines of code that are part of constructors in the following class.
