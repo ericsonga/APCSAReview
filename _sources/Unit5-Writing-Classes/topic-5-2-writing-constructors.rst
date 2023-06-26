@@ -641,7 +641,7 @@ Summary
 
 - **Constructors** are used to set the initial state of an object, which includes initial values for all instance variables.
 
-- When no constructor is written, Java provides a no-argument **default constructor**, and the instance variables are set to their default values (0 for ``int`` and ``double``, null for objects like ``String``).
+- When no constructor is written, Java provides a no-argument **default constructor**, and the instance variables are set to their default values (0 for ``int`` and ``double``, ``null`` for objects like ``String``).
 
 - Constructor parameters are local variables to the constructor and provide data to initialize instance variables.
 
