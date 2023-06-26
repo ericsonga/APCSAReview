@@ -91,7 +91,7 @@ variables to useful values. But what does “useful” mean? Sometimes we descri
 the values of all an object's instance variables at a given time as the object's
 **state**. And we say an object is in a **valid state** when all its instance
 variables have values that let us use the object by invoking its public methods.
-So another way to describe the job of a constructor is to set the the object’s
+So another way to describe the job of a constructor is to set the object’s
 instance values so it’s in a valid state and ready to be used.
 
 Classes can have zero or more constructors but they should all produce an object
