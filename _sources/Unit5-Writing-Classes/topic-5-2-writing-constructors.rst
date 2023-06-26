@@ -357,7 +357,7 @@ values themselves.
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "Car model: Ford\nCar year: 2019\nCar model: Honda\nCar year: 2010";
+           String expect = "Car model: Ford\nCar year: 2023\nCar model: Honda\nCar year: 2010";
 
            boolean passed = getResults(expect, output, "Running main");
            assertTrue(passed);
