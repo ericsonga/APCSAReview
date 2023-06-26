@@ -151,7 +151,7 @@ this:
        phoneNumber = address.getPhoneNumber();
    }
 
-Sometimes you still might still even want to provide a no-argument constructor.
+Sometimes you might still even want to provide a no-argument constructor.
 If there’s a valid object that you can create without any arguments, you could
 write a no-argument constructor for person like:
 
