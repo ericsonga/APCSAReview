@@ -988,39 +988,29 @@ public class CodeTestHelper {
 
     // https://stackoverflow.com/questions/10120709/difference-between-printstacktrace-and-tostring#:~:text=toString%20()%20gives%20name%20of,is%20raised%20in%20the%20application.&text=While%20e.,Jon%20wrote%20in%20his%20answer.
     private String stackToString(Throwable e) {
-        if (e == null)
+        if (e == null) {
             return "Exception: stack null";
+        }
 
         StringWriter sw = new StringWriter();
         e.printStackTrace(new PrintWriter(sw));
 
         String trace = sw.toString();
 
-        String returnString = "";
-
-        String location = "", except = "";
-
         String causedBy = "Caused by: ";
-        int expLen = causedBy.length();
         int expStart = trace.indexOf(causedBy);
 
-        returnString += "Start: " + expStart + "\n";
-
         if (expStart > -1) {
-            except = trace.substring(expStart + expLen);
-            // trace = trace.substring(0, expStart-1);
-
+            String except = trace.substring(expStart + causedBy.length());
             int expEnd = except.indexOf(className + ".java");
             expEnd = except.indexOf("\n", expEnd);
-
-            if (expEnd > -1)
+            if (expEnd > -1) {
                 except = except.substring(0, expEnd);
+            }
+            return except;
         } else {
-            return "Exception in method";
+            return "Exception in method:\n" + trace;
         }
-
-        return except;
-
     }
 
     /**
