@@ -318,7 +318,7 @@ public class CodeTestHelper {
     public String getMethodOutput(String methodName)// throws IOException
     {
         if (methodName.equals("main")) {
-            return getMethodOutput(methodName, new String[1]);
+            return getMethodOutput(methodName, new Object[][] { new String[0] });
         }
         return getMethodOutput(methodName, null);
     }
