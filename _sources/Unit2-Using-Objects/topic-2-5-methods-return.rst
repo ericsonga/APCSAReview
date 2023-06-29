@@ -66,7 +66,7 @@ a line on the screen. Or both. These things they do are sometimes called
 
 In contrast, methods with a return type of anything `other` than ``void`` are
 called **non-void** methods. These methods **return** a value that the code
-calling the method can use. And because methods are invoked on an object, these
+calling the method can use. And because methods are called on an object, these
 methods can be used to return values that tell us things about an object’s
 internal state.
 
