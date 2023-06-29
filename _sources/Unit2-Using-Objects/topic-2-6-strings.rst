@@ -221,7 +221,9 @@ String Operators - Concatenation
 ``String``\ s can be added to each other to create a new string using the ``+``
 or ``+=`` operator . This is also called **appending** or **concatenating**. You
 can also add any other kind of value to a ``String`` with ``+`` or ``+=`` and
-the other value will be converted to a ``String`` automatically.
+the other value will be converted to a ``String`` automatically. Objects are
+converted by calling their ``toString`` method which we'll talk about in section
+5.4.
 
 Remember, however, that ``String``\ s are immutable, just like ``int``\ s and
 ``double``\ s. So when we add two ``String``\ s (or a ``String`` and another
