@@ -218,12 +218,10 @@ String Operators - Concatenation
 .. index::
    pair: String; append
 
-``String``\ s can be added to each other to create a new string using the ``+`` or
-``+=`` operator . This is also called **appending** or **concatenating**. You
-can also add any other kind of value to a ``String`` with ``+`` or ``+=`` and the
-other value will be converted to a ``String`` automatically. Objects will be
-converted by calling the ``toString`` method we discussed in the previous
-section.
+``String``\ s can be added to each other to create a new string using the ``+``
+or ``+=`` operator . This is also called **appending** or **concatenating**. You
+can also add any other kind of value to a ``String`` with ``+`` or ``+=`` and
+the other value will be converted to a ``String`` automatically.
 
 Remember, however, that ``String``\ s are immutable, just like ``int``\ s and
 ``double``\ s. So when we add two ``String``\ s (or a ``String`` and another
