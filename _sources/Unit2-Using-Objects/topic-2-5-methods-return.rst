@@ -56,18 +56,41 @@
 Calling Methods that Return Values
 ===================================
 
-If a method is a **void method** and has **void** as its return type, like most of the methods we have seen so far, that means that it does not return anything. But some methods **return** a value back that the program can use.
+If a method is a **void method** and has **void** as its return type, like most
+of the methods we have seen so far, that means that it does not return anything.
+But some methods **return** a value back that the program can use. Because
+methods are invoked `on` a given object, they can be used to return values that
+tell us things about the object’s internal state.
 
-Get Methods
-------------
+Accessors, a.k.a. Getters
+-------------------------
 
-Get methods return the value of instance variables, for example ``getWidth`` and ``getHeight`` to get the height and width for a ``Turtle`` object.
+A simple kind of method that returs a value is what is formally called an
+**accessor** becauses it accesses a value in an object. In the real world
+everyone calls them **getters**. A getter is a method, almost always named
+something that starts with ``get``, that takes no arguments and has a non-\
+``void`` return type. It usually just returns the value of one of the object’s
+instance variables. For example, the ``Turtle`` class has several getters,
+``getWidth`` and ``getHeight`` which return the width and the height of a
+``Turtle`` object and ``getXPos`` and ``getYPos`` which are the x and y values
+of the ``Turtle``\ ’s position, all of which are in fact stored as instance
+variables within the ``Turtle`` class.
 
-In the previous lesson, we used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value.
+That means that after you construct a ``Turtle``, either one of the default size
+or by specifying a specific width and height as arguments to the constructor,
+you don’t need to keep track of its size; you can always get the with and height
+values from the ``Turtle`` itself via the ``getWidth`` and ``getHeight``
+getters. And even better, if you create a ``Turtle`` and move it all around with
+the ``forward`` and ``turn`` methods we discussed in the last section, you don’t
+have to figure out where it ended up, you can just ask it with the ``getXPos``
+and ``getYPos`` getters.
 
-When you use a get method, you need to assign what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example ``int getWidth()`` means ``getWidth`` will return an ``int`` (an integer number).
+Note that when you use a getter, you need to do something with the value it
+returns. You might assign it to a variable, use it in an expression , or print
+it out. But if you don’t you’re just retrieving a value and doing nothing with
+it and might as well not have bothered to call it in the first place.
 
-Here are some examples of using get methods for the ``Turtle`` object ``yertle``.
+Here are some examples of using getters on the ``Turtle`` object ``yertle``.
 
 .. code-block:: java
 
@@ -86,16 +109,20 @@ Here are some examples of using get methods for the ``Turtle`` object ``yertle``
 
 |CodingEx| **Coding Exercise:**
 
-
-
 .. activecode:: TurtleTestGetSet
     :language: java
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Try the code below that changes the turtle's width and height. How big or small can you make yertle?
+    Try the code below that creates a turtle and moves it around a bit. Can you
+    confirm that its new position matches what you’d expect given the movements
+    it made? Try changing where it moves to make sure.
 
-    (If the code below does not work in your browser, you can also copy in the code below into the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work in your browser, you can also copy in the
+    code below into the Turtle code at this |repl link| (refresh page after
+    forking and if it gets stuck) or download the files |github| to use in your
+    own IDE.)
+
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -107,11 +134,11 @@ Here are some examples of using get methods for the ``Turtle`` object ``yertle``
       {
           World world = new World(300,300);
           Turtle yertle = new Turtle(world);
-          System.out.println("Yertle's width is: " + yertle.getWidth());
-          yertle.setWidth(200);
-          yertle.setHeight(200);
-          System.out.println("Yertle's width is: " + yertle.getWidth());
-          yertle.turnRight();
+          System.out.println("Yertle's is starting at: " + yertle.getXPos + ", " + yertle.getYPos());
+          yertle.forward(100);
+          yertle.turn(90);
+          yertle.forward(50);
+          System.out.println("Yertle's end up at: " + yertle.getXPos + ", " + yertle.getYPos());
           world.show(true);
       }
     }
@@ -129,7 +156,7 @@ Here are some examples of using get methods for the ``Turtle`` object ``yertle``
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\nimport java.lang.Math;\n\npublic class TurtleTestGetSet\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n      Turtle yertle = new Turtle(world);\n      System.out.println(\"Yertle's width is: \" + yertle.getWidth());\n      yertle.setWidth(200);\n      yertle.setHeight(200);\n      System.out.println(\"Yertle's width is: \" + yertle.getWidth());\n      yertle.turnRight();\n      world.show(true);\n  }\n}\n";
+            String orig = "import java.util.*;\nimport java.awt.*;\nimport java.lang.Math;\n\npublic class TurtleTestGetSet\n{\npublic static void main(String[] args)\n{\nWorld world = new World(300,300);\nTurtle yertle = new Turtle(world);\nSystem.out.println(\"Yertle's is starting at: \" + yertle.getXPos + \", \" + yertle.getYPos());\nyertle.forward(100);\nyertle.turn(90);\nyertle.forward(50);\nSystem.out.println(\"Yertle's end up at: \" + yertle.getXPos + \", \" + yertle.getYPos());\nworld.show(true);\n}\n}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -142,7 +169,10 @@ Here are some examples of using get methods for the ``Turtle`` object ``yertle``
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Fix the errors in the code below so that it prints out the area of the space that the turtle occupies by multiplying its width and height. Remember that you have to do something with the values that the get methods return.
+    Fix the errors in the code below so that it prints out the area of the space
+    that the turtle occupies by multiplying its width and height. Remember that
+    you have to do something with the values that the get methods return.
+
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -206,28 +236,6 @@ Here are some examples of using get methods for the ``Turtle`` object ``yertle``
         }
     }
 
-``toString`` Methods
----------------------
-
-Another important method that returns a value is the ``toString`` method. This
-method is called automatically by Java in a number of situations when it needs
-to convert an object to a ``String``. Most notably the methods
-``System.out.print`` and ``System.out.println`` use it to convert a object
-argument into a ``String`` to be printed.
-
-In the ``Turtle`` class, the ``toString`` method returns a human-readable
-description of the turtle. This is a typical use of ``toString``—to make it so
-if you ``System.out.println`` and object you get something useful.
-
-.. code-block:: java
-
-    Turtle yertle = new Turtle(world);
-    yertle.setName("yertle"); // set name before you use toString()
-    System.out.println(yertle.toString());
-    // Or you can just use the object here and it will call toString() automatically!
-    System.out.println(yertle);
-
-
 |CodingEx| **Coding Exercise:**
 
 .. activecode:: TurtleTestMethodsReturn2
@@ -235,7 +243,10 @@ if you ``System.out.println`` and object you get something useful.
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Try some of the get methods and the toString() method in the program below. Note that you have to print out what the get methods return in order to see what they do!
+    Try some of the get methods in the program below. Note that you have to
+    print out the values the get methods return in order to see them! If you
+    just call the get method and don’t print it, you’re computing a value and
+    then doing nothing with it.
     ~~~~
     import java.util.*;
     import java.awt.*;
