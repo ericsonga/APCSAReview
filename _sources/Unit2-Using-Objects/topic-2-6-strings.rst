@@ -302,7 +302,7 @@ assigning that new value back into the variable, again just like with numbers.
 
 You can even add other items to a string using the ``+`` operator. Primitive
 values like ``int`` and ``boolean`` will be converted to a ``String`` like what
-you would type into a Java program and objects will be converted to using the
+you would type into a Java program and objects will be converted to ``String`` using the
 ``toString`` method discussed in the previous section. All objects inherit a
 ``toString`` method that returns a ``String`` representation of the object and
 many classes **override** it to produce a useful human-readable value. (We'll
