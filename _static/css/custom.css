@@ -63,6 +63,7 @@ section section h2,
   padding: 0;
   color: var(--codeColor);
   background-color: inherit;
+  font-weight: bold;
 }
 
 
