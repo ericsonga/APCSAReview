@@ -62,8 +62,8 @@ return type. Such methods are sometimes called **void methods**. Because a
 it has some **side effect**—it changes the state of the object or maybe causes
 something to happen like drawing a line on the screen. Or both.
 
-In contrast all the methods with a return type of anything `other` than ``void``
-are called **non-void** methods. These methods **return** a value that the code
+In contrast methods with a return type of anything `other` than ``void`` are
+called **non-void** methods. These methods **return** a value that the code
 calling the method can use. And because methods are invoked on an object, these
 methods can be used to return values that tell us things about an object’s
 internal state.
@@ -93,15 +93,15 @@ That means that after you construct a ``Turtle``, either at the default position
 in the middle of the ``World`` or by specifying a starting point as arguments to
 the constructor, you don’t need to keep track of where you put it; you can
 always get its current position with the ``getXPos`` and ``getYPos`` getters.
-Better yet, if after creating a ``Turtle`` you move it all around with the
+Better yet, after creating a ``Turtle`` and moving it all around with the
 ``forward`` and ``turn`` methods we discussed in the previous section, you don’t
-have to figure out where it ended up, you can just ask it for its new position,
+have to figure out where it ended up; you can just ask it for its new position,
 again with the ``getXPos`` and ``getYPos`` getters.
 
 Note that when you use a getter, you need to do something with the value it
-returns. You might assign it to a variable, use it in an expression , or print
-it out. But if you don’t you’re just retrieving a value and doing nothing with
-it and might as well not have bothered to call the method in the first place.
+returns. You might assign it to a variable, use it in an expression, or print it
+out. If you don’t you’re just getting a value and doing nothing with it—you
+might as well not have bothered to call the getter in the first place.
 
 Here are some examples of using getters on the ``Turtle`` object ``yertle``.
 
@@ -327,9 +327,9 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
 Methods with Arguments and a Return Value
 -----------------------------------------
 
-Since getters take no arguments all they can do is return some value based on
-the current state of the object. But often it’s useful to have methods that
-compute values based on both the current state of the object and some arguments.
+Since getters take no arguments all they can do is return a value based on the
+current state of the object. But often it’s useful to have methods that compute
+values based on both the current state of the object and some arguments.
 
 For example, while we could use a ``Turtle``\ ’s ``getXPos`` and ``getYPos``
 getters and some math (remember your Pythagorean Theorem?) to figure out how far
