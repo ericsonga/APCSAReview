@@ -300,15 +300,21 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 - Type (dog, cat, lizard, etc.)
 - Breed
 
-1. Create a class that keeps track of the attributes above for pet records at the animal clinic. Decide what instance variables are needed and their data types. Make sure you use ``int``, ``double``, and ``String`` data types. Make the instance variables ``private``.
+1. Create a class that keeps track of the attributes above for pet records at
+   the animal clinic. Decide what instance variables are needed and their data
+   types. Make sure you use ``int``, ``double``, and ``String`` data types. Make
+   the instance variables ``private``.
 
-2. Create a constructor with many parameters to initialize all the instance variables.
+2. Create a constructor with many parameters to initialize all the instance
+   variables.
 
-3. Create accessor (get) methods for each of the instance variables.
+3. Create getters for each of the instance variables.
 
 4. Create a ``toString`` method that returns all the information in a ``Pet``.
 
-5. In the ``main`` method below, create 2 ``Pet`` objects with different values and call the constructor, accessor methods, and ``toString`` methods to test all your code.
+5. In the ``main`` method below, create 2 ``Pet`` objects with different values
+   and call the constructor, accessor methods, and ``toString`` methods to test
+   all your code.
 
 6. Make sure you use good commenting!
 
@@ -317,7 +323,9 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
   :language: java
   :autograde: unittest
 
-  Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic.
+  Create a Pet class that keeps track of the name, age, weight, type of animal,
+  and breed for records at an animal clinic.
+
   ~~~~
   /**
       Pet class (complete comments)

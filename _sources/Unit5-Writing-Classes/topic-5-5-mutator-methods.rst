@@ -309,7 +309,10 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
   :language: java
   :autograde: unittest
 
-  Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with a constructor, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
+  Create a ``Pet`` class that keeps track of the name, age, weight, type of
+  animal, and breed for records at an animal clinic with a constructor, a
+  ``toString`` method, and getters and setters for each instance variable.
+
   ~~~~
   /**
       Pet class (complete comments)
@@ -452,8 +455,8 @@ Summary
 - A void method does not return a value. Its header contains the keyword
   ``void`` before the method name.
 
-- A **setter* is a void method that changes the values of instance variables or
-  static variables.
+- A **setter** is a void method that changes the values of an instance or static
+  variable.
 
 AP Practice
 ------------
@@ -517,7 +520,7 @@ AP Practice
     :feedback_d: Mutator methods should have a void return type.
     :feedback_e: Mutator methods should have a void return type.
 
-    In the Party class below, the addPeople method is intended to increase the value of the instance variable numOfPeople by the value of the parameter additionalPeople. The method does not work as intended.
+    In the ``Party`` class below, the ``addPeople`` method is intended to increase the value of the instance variable ``numOfPeople`` by the value of the parameter ``additionalPeople``. The method does not work as intended.
 
     .. code-block:: java
 
@@ -536,4 +539,4 @@ AP Practice
             }
         }
 
-    Which of the following changes should be made so that the class definition compiles without error and the method addPeople works as intended?
+    Which of the following changes should be made so that the class definition compiles without error and the method ``addPeople`` works as intended?
