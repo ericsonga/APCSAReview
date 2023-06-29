@@ -76,7 +76,7 @@ To put it another way, void methods `do things` while non-void methods `produce
 values`.
 
 
-Accessors, a.k.a. Getters
+Accessors / Getters
 -------------------------
 
 A simple kind of method that returns a value is what is formally called an
