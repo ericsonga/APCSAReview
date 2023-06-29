@@ -1110,6 +1110,10 @@ public class CodeTestHelper {
     private boolean checkParameters(Method m, Object[] arguments) {
         String header = m.toGenericString().replace(className + ".", "");
 
+        // ???: Is this still needed. As we discovered, it doesn't handle the
+        // case where the main method has a throws clause. I *think* that maybe
+        // with the other fix at line 321, this may not be needed anymore? I'm
+        // not sure. -Peter
         if (header.equals("public static void main(java.lang.String[])"))
             return true;
 
