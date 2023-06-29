@@ -53,42 +53,55 @@
      </svg> Time estimate: 45 min.
    </div>
 
-Calling Methods that Return Values
-===================================
+Methods that Return Values
+==========================
 
-If a method is a **void method** and has **void** as its return type, like most
-of the methods we have seen so far, that means that it does not return anything.
-But some methods **return** a value back that the program can use. Because
-methods are invoked `on` a given object, they can be used to return values that
-tell us things about the object’s internal state.
+All the methods on ``Turtle`` that we’ve discussed so far have had a ``void``
+return type. Such methods are sometimes called **void methods**. Because a
+``void`` method don’t return any value, the only point of calling one is because
+it has some **side effect**—it changes the state of the object or maybe causes
+something to happen like drawing a line on the screen. Or both.
+
+In contrast all the methods with a return type of anything `other` than ``void``
+are called **non-void** methods. These methods **return** a value that the code
+calling the method can use. And because methods are invoked on an object, these
+methods can be used to return values that tell us things about an object’s
+internal state.
+
+In well-designed programs, non-void methods typically don’t have side effects.
+And void methods obviously can’t return values. So most methods are of one kind
+or the other: either a void method which is called for some side effect or a
+non-void method that is called to compute a value but otherwise has no effect.
+To put it another way, void methods `do things` while non-void methods `produce
+values`.
+
 
 Accessors, a.k.a. Getters
 -------------------------
 
-A simple kind of method that returs a value is what is formally called an
-**accessor** becauses it accesses a value in an object. In the real world
-everyone calls them **getters**. A getter is a method, almost always named
-something that starts with ``get``, that takes no arguments and has a non-\
-``void`` return type. It usually just returns the value of one of the object’s
-instance variables. For example, the ``Turtle`` class has several getters,
-``getWidth`` and ``getHeight`` which return the width and the height of a
-``Turtle`` object and ``getXPos`` and ``getYPos`` which are the x and y values
-of the ``Turtle``\ ’s position, all of which are in fact stored as instance
-variables within the ``Turtle`` class.
+A simple kind of method that returns a value is what is formally called an
+**accessor** because it accesses a value in an object. In the real world
+everyone calls them **getters**. A getter is a method that takes no arguments
+and has a non-\ ``void`` return type. In Java they are almost always named
+something that starts with ``get`` and they usually just return the value of one
+of the object’s instance variables. For example, the ``Turtle`` class has
+several getters, ``getWidth`` and ``getHeight`` which return the width and the
+height of a ``Turtle`` object and ``getXPos`` and ``getYPos`` which return the x
+and y values of the ``Turtle``\ ’s position.
 
-That means that after you construct a ``Turtle``, either one of the default size
-or by specifying a specific width and height as arguments to the constructor,
-you don’t need to keep track of its size; you can always get the with and height
-values from the ``Turtle`` itself via the ``getWidth`` and ``getHeight``
-getters. And even better, if you create a ``Turtle`` and move it all around with
-the ``forward`` and ``turn`` methods we discussed in the last section, you don’t
-have to figure out where it ended up, you can just ask it with the ``getXPos``
-and ``getYPos`` getters.
+That means that after you construct a ``Turtle``, either at the default position
+in the middle of the ``World`` or by specifying a starting point as arguments to
+the constructor, you don’t need to keep track of where you put it; you can
+always get its current position with the ``getXPos`` and ``getYPos`` getters.
+Better yet, if after creating a ``Turtle`` you move it all around with the
+``forward`` and ``turn`` methods we discussed in the previous section, you don’t
+have to figure out where it ended up, you can just ask it for its new position,
+again with the ``getXPos`` and ``getYPos`` getters.
 
 Note that when you use a getter, you need to do something with the value it
 returns. You might assign it to a variable, use it in an expression , or print
 it out. But if you don’t you’re just retrieving a value and doing nothing with
-it and might as well not have bothered to call it in the first place.
+it and might as well not have bothered to call the method in the first place.
 
 Here are some examples of using getters on the ``Turtle`` object ``yertle``.
 
@@ -243,10 +256,10 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Try some of the get methods in the program below. Note that you have to
-    print out the values the get methods return in order to see them! If you
-    just call the get method and don’t print it, you’re computing a value and
-    then doing nothing with it.
+    Try some of the ``Turtle`` getters in the program below. Remember that you
+    have to print out the values the getters return in order to see them!
+    Calling a getter just gets a value; it’s up to you to do something with it.
+
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -311,10 +324,32 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
         }
     }
 
-Methods with Arguments and Return Values
+Methods with Arguments and a Return Value
 -----------------------------------------
 
-Methods that take arguments and return values are like mathematical functions. Given some input, they return a value. For example, a square(x) method would take an argument x and return its square by multiplying it by itself.
+Since getters take no arguments all they can do is return some value based on
+the current state of the object. But often it’s useful to have methods that
+compute values based on both the current state of the object and some arguments.
+
+For example, while we could use a ``Turtle``\ ’s ``getXPos`` and ``getYPos``
+getters and some math (remember your Pythagorean Theorem?) to figure out how far
+away a ``Turtle`` is from any given point, if that’s a thing we need to do in a
+a lot of programs using ``Turtle``, it might be nice to be able to ask a
+``Turtle`` directly for its distance from a given point. After all, it knows
+where it is, so why not do the math for us?
+
+And indeed, the ``Turtle`` class has a method called ``getDistance`` that takes
+two ``int`` arguments representing an `x` value and a `y` value and returns the
+distance between the ``Turtle``\ ’s current position and that `x,y` point. This
+is not a getter because it doesn’t just get an existing value; it computes a new
+value based on the arguments it is passed as well as the state of the ``Turtle``.
+
+Methods that take arguments and return values are somewhat like mathematical
+functions. Given some input, they return a value. (Mathematicians expect that a
+function always returns the same value, given the same arguments. So they would
+not consider something like ``getDistance(x, y)`` a true function since its
+return value also depends on the current position of the ``Turtle``. But we’re
+doing programming, not math.)
 
 .. figure:: Figures/function.png
     :width: 400px
@@ -324,7 +359,11 @@ Methods that take arguments and return values are like mathematical functions. G
 
     Figure 1: Method that takes arguments and returns a value
 
-You will not write your own methods until Unit 5, but you should be able to trace through method calls like below. Notice that the **return statement** in a method returns the value that is indicated in the return type back to the calling method. The calling method must save or use or print that value.
+We will save a deeper discussion of actually writing getters and other methods
+until Unit 5 but for the AP progress checks for this unit you should be able to
+trace through method calls like the ones below. Notice that the **return
+statement** in a method returns the value and it must match declared return type
+of the method. The calling method must then do something useful with that value.
 
 |Exercise| **Check your understanding**
 
@@ -339,7 +378,7 @@ You will not write your own methods until Unit 5, but you should be able to trac
    :feedback_a: Make sure you call both methods and compute the square of 2 and then add the results.
    :feedback_b: Yes, square(2) returns 4 which is added to divide(6,2) which returns 3. The total of 4 + 3 is 7.
    :feedback_c: Make sure you add the results before printing it out.
-   :feedback_d: Make sure you square(2) and add the results before printint it out.
+   :feedback_d: Make sure you square(2) and add the results before printing it out.
    :feedback_e: Try the code in an active code window.
 
    What does the following code print out?
@@ -348,18 +387,21 @@ You will not write your own methods until Unit 5, but you should be able to trac
 
       public class MethodTrace
       {
-        public int square(int x)
-        {
-            return x*x;
-        }
-        public int divide(int x, int y)
-        {
+          public int square(int x)
+          {
+              return x*x;
+          }
+
+          public int divide(int x, int y)
+          {
               return x/y;
-        }
-        public static void main(String[] args) {
-            MethodTrace traceObj = new MethodTrace();
-            System.out.println( traceObj.square(2) + traceObj.divide(6,2) );
-        }
+          }
+
+          public static void main(String[] args)
+          {
+              MethodTrace traceObj = new MethodTrace();
+              System.out.println(traceObj.square(2) + traceObj.divide(6,2));
+          }
        }
 
 
@@ -372,9 +414,13 @@ Try this |visualization| to see this code in action.
 |Groupwork| Programming Challenge : Turtle Distances
 ----------------------------------------------------
 
-1. The ``Turtle`` class has a method called ``getDistance(x,y)`` which will return the turtle's distance from a point (x,y). Can you find yertle's distance from the point (0,0)?
+1. As we mentioned above, ``Turtle`` class has a method called
+   ``getDistance(x,y)`` which will return the turtle's distance from a point
+   (x,y). Can you find yertle's distance from the point (0,0)?
 
-2. Add another turtle and make both turtles move. Then find the distance between them. You must use the ``getXPos`` and ``getYPos`` methods as well as the ``getDistance`` method.
+2. Add another turtle and make both turtles move. Then find the distance between
+   them. You must use the ``getXPos`` and ``getYPos`` methods as well as the
+   ``getDistance`` method.
 
 .. activecode:: challenge2-5-TurtleDistance
     :language: java
@@ -461,8 +507,19 @@ Try this |visualization| to see this code in action.
 Summary
 -------------------
 
-- Some methods return values.
-- To use the return value when calling a method, it must be stored in a variable or used as part of an expression. The variable data type must match the return type of the method.
+- Non-void methods are methods that return values.
+
+- Non-void methods typically do not have side effects, and are called purely for
+  the value they return.
+
+- It is up to the caller of a non-void method to do something with the return
+  value, such as assigning it to a variable or using it as part of an
+  expression.
+
+- The value returned by a method has to match the declared return type of the
+  method. Thus it can only be used where a value of that type is allowed, such
+  as being assigned to a variable of that type. data type must match the return
+  type of the method.
 
 AP Practice
 -------------
