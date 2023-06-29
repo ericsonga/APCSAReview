@@ -58,22 +58,24 @@ Methods that Return Values
 
 All the methods on ``Turtle`` that we’ve discussed so far have had a ``void``
 return type. Such methods are sometimes called **void methods**. Because a
-``void`` method doesn’t return any value, the only point of calling one is because
-it has some **side effect**—it changes the state of the object or maybe causes
-something to happen like drawing a line on the screen. Or both.
+``void`` method doesn’t return any value, the only point of calling one is
+because it does something that can be observed by the user or by other code—it
+changes the state of the object or maybe causes something to happen like drawing
+a line on the screen. Or both. These things they do are sometimes called
+“effects”.
 
-In contrast methods with a return type of anything `other` than ``void`` are
+In contrast, methods with a return type of anything `other` than ``void`` are
 called **non-void** methods. These methods **return** a value that the code
 calling the method can use. And because methods are invoked on an object, these
 methods can be used to return values that tell us things about an object’s
 internal state.
 
-In well-designed programs, non-void methods typically don’t have side effects.
-And void methods obviously can’t return values. So most methods are of one kind
-or the other: either a void method which is called for some side effect or a
-non-void method that is called to compute a value but otherwise has no effect.
-To put it another way, void methods `do things` while non-void methods `produce
-values`.
+In well-designed programs, non-void methods typically don’t have effects; they
+just compute and return a value. And void methods obviously can’t return values.
+So most methods are of one kind or the other: either a void method which is
+called for some effect or a non-void method that is called to compute a value
+but otherwise has no effect. To put it another way, void methods `do things`
+while non-void methods `produce values`.
 
 
 Accessors / Getters
@@ -509,8 +511,8 @@ Summary
 
 - Non-void methods are methods that return values.
 
-- Non-void methods typically do not have side effects, and are called purely for
-  the value they return.
+- Non-void methods typically do not have effects, and are called purely for the
+  value they return.
 
 - It is up to the caller of a non-void method to do something with the return
   value, such as assigning it to a variable or using it as part of an
