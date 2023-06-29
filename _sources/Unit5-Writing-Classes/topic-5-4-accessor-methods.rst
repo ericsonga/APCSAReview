@@ -34,12 +34,21 @@
      </svg> Time estimate: 45 min.
    </div>
 
-Accessor Methods
-=================
+Accessors / Getters
+===================
 
-Since the instance variables in a class are usually marked as private to the class, programmers provide public methods that allow safe access to the instance variable values in a class. **Accessor methods**, also called **get methods** or **getters**, allow a way to get the value of each instance variable from outside of the class. In the next lesson, we will see **mutator methods**, also called **set methods** or **setters**, that allow a way to change the values of the instance variables. In Unit 2, we also used set/get methods with the Turtle class to get the Turtle object's width, height, xPosition, etc. or to change them.
+Since the instance variables in a class are usually marked as ``private`` to the
+class, if you want code outside the class to be able to access the value of an
+instance variable, you need to write what is formally called an **accessor
+methods** but which everyone actually just calls a **getter**. A getter is a
+``public`` method that takes no arguments and returns the value of the
+``private`` instance variable. (We discussed using getters in section 2.5.)
 
-If you used a language like App Inventor in an AP CSP class, you may have used setter and getter blocks. In App Inventor, you cannot make your own classes, but you can declare UI objects like Button1, Button2 from the Button class and use their get/set methods for any property like below.
+If you used a language like App Inventor in an AP CSP class, you may have used
+setter and getter blocks. In App Inventor, you cannot make your own classes, but
+you can declare UI objects like Button1, Button2 from the Button class and use
+their get/set methods for any property like below. (We'll talk about setters in
+Java in the next section.)
 
 .. figure:: Figures/AppInvSetGet.png
     :width: 300px
@@ -48,7 +57,9 @@ If you used a language like App Inventor in an AP CSP class, you may have used s
 
     Figure 1: App Inventor Set and Get blocks for object Button1
 
-Java programmers write get methods for each instance variable that look like the following. Notice that the get method returns the instance variable's value and it has a return type that is the same type as the variable that it is returning.
+You don't need to write a getter for every instance variable in a class but if
+you want code outside the class to be able to get the value of one of your
+instance variables, you'll need to write a getter that looks like the following.
 
 .. code-block:: java
 
@@ -65,7 +76,13 @@ Java programmers write get methods for each instance variable that look like the
 
   }
 
-Here's an example of an accessor method called ``getName`` for the ``Student`` class which also demonstrates how to call ``getName`` using a ``Student`` object:
+Notice that the getter’s return type is the same as the type of the instance
+variable and all the body of the getter does is return the value of the
+variable.
+
+Here's an example of an accessor method called ``getName`` for the ``Student``
+class which also demonstrates how to call ``getName`` using a ``Student``
+object:
 
 .. code-block:: java
 
@@ -88,13 +105,28 @@ Here's an example of an accessor method called ``getName`` for the ``Student`` c
         System.out.println("Name: " + s.getName() );
      }
 
+Note, that getters, like any method that returns the value of a variable, only
+return the *value* of the variable. In other words, the code that called the
+getter and which receives that value has no ability to change the object's
+instance variable; they just get a copy of the value. However if the instance
+variable is a reference type like ``String`` or ``Person`` the value that is
+copied is the value of the reference. That means the caller receives a new copy
+of the reference that points to the same object as is stored in the instance
+variable. In the next section, when we talk about mutation, you'll see how that
+means that the caller might be able to change the object even though it can't
+change the reference.
+
 .. note::
 
-    Some common errors with methods that return values are:
+    Some common errors when writing and using getters are:
 
-    - Forgetting a return type like int before the method name.
-    - Forgetting to use the return keyword to return a value at the end of the method.
-    - Forgetting to do something with the value returned from a method (like assigning it to a variable or printing it out).
+    - Forgetting a return type like ``int`` before the method name.
+
+    - Forgetting to use the ``return`` keyword to return a value at the end of
+      the method.
+
+    - Forgetting to do something with the value returned from a method, like
+      assigning it to a variable or printing it out.
 
 
 .. |Java visualizer1| raw:: html
@@ -181,27 +213,16 @@ Try the following code. Note that this active code window has 2 classes! The mai
         }
     }
 
-Getters always return the *value* of the object's instance variable which means
-the caller who receives that value has no ability to change the object's
-instance variable; they just get a copy of the value. However if the instance
-variable is a reference type like ``String`` or ``Person`` the value that is
-copied is the value of the reference. That means the caller receives a new copy
-of the reference that points to the same object as is stored in the instance
-variable. In the next section, when we talk about mutation, you'll see how that
-means that the caller might be able to change the object even though it can't
-change the reference.
-
-
 ``toString``
 ------------
 
-Another important method that returns a value is the ``toString`` method. This
-method is called automatically by Java in a number of situations when it needs
-to convert an object to a ``String``. Most notably the methods
-``System.out.print`` and ``System.out.println`` use it to convert a object
-argument into a ``String`` to be printed and when objects are added to
-``String``\ s with ``+` and ``+=`` their ``String`` representation comes from
-calling their ``toString`` method.
+While not strictly speaking a getter, another important method that returns a
+value is the ``toString`` method. This method is called automatically by Java in
+a number of situations when it needs to convert an object to a ``String``. Most
+notably the methods ``System.out.print`` and ``System.out.println`` use it to
+convert a object argument into a ``String`` to be printed and when objects are
+added to ``String``\ s with ``+`` and ``+=`` their ``String`` representation
+comes from calling their ``toString`` method.
 
 Here is the ``Student`` class again, but this time with a ``toString`` method.
 Note that when we call ``System.out.println(s1)`` it will automatically call the
@@ -427,21 +448,34 @@ You've been hired to create a software system for the Awesome Animal Clinic! The
 
 Summary
 -------
-- An accessor method allows other objects to obtain the value of instance variables or static variables.
 
-- A non-void method returns a single value. Its header includes the return type in place of the keyword void.
+- A getter allows other objects to obtain the value of instance variables or
+  static variables.
 
-- Accessor methods that return primitive types use "return by value" where a copy of the value is returned.
+- A non-void method returns a single value. Its header includes the return type
+  in place of the keyword void.
 
-- When the ``return`` expression is a reference to an object, a copy of that reference is returned, not a copy of the object.
+- A getter is a non-void method that returns the value of an instance variable.
+  Its return type matches the type of the instance variable.
 
-- The ``return`` keyword is used to return the flow of control to the point immediately following where the method or constructor was called.
+- Methods "return by value" where a copy of the value is returned. When the
+  value is a primitive type, the value is copied. When the value is a reference
+  to an object, the reference is copied, not the object.
 
-- The ``toString`` method is an overridden method that is included in classes to provide a description of a specific object. It generally includes what values are stored in the instance data of the object.
+- The ``return`` keyword is used to return the flow of control to the point
+  immediately following where the method or constructor was called.
 
-- If ``System.out.print`` or ``System.out.println`` is passed an object, that object’s ``toString`` method is called, and the returned ``String`` is printed.
+- The ``toString`` method is an overridden method that is included in classes to
+  provide a description of a specific object. It generally includes what values
+  are stored in the instance data of the object.
 
-- An object’s ``toString`` method is also used to get the ``String`` representation used when concatenating the object to a ``String`` with the ``+`` operator.
+- If ``System.out.print`` or ``System.out.println`` is passed an object, that
+  object’s ``toString`` method is called, and the returned ``String`` is
+  printed.
+
+- An object’s ``toString`` method is also used to get the ``String``
+  representation used when concatenating the object to a ``String`` with the
+  ``+`` operator.
 
 
 AP Practice
