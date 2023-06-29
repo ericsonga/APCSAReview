@@ -66,6 +66,10 @@ section section h2,
   font-weight: bold;
 }
 
+#summary ul.simple li
+{
+  padding-top: 1em;
+}
 
 /*
  * Table on Unit1's aboutcsa page.
