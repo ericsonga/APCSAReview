@@ -195,11 +195,13 @@ change the reference.
 ``toString``
 ------------
 
-Another common method that returns a value is the ``toString`` method which returns a ``String`` description of the instance variables of the object.
-
-This method is called automatically to try to convert an object to a ``String``
-when it is needed, for example when printing it with ``System.out.println`` or
-when we concatenate an object to a ``String`` with the ``+`` operator.
+Another important method that returns a value is the ``toString`` method. This
+method is called automatically by Java in a number of situations when it needs
+to convert an object to a ``String``. Most notably the methods
+``System.out.print`` and ``System.out.println`` use it to convert a object
+argument into a ``String`` to be printed and when objects are added to
+``String``\ s with ``+` and ``+=`` their ``String`` representation comes from
+calling their ``toString`` method.
 
 Here is the ``Student`` class again, but this time with a ``toString`` method.
 Note that when we call ``System.out.println(s1)`` it will automatically call the

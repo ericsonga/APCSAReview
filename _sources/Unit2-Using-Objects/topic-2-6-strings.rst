@@ -218,7 +218,20 @@ String Operators - Concatenation
 .. index::
    pair: String; append
 
-Strings can be **appended** to each other to create a new string using the ``+`` or ``+=`` operator . This is also called **concatenation**.
+``String``\ s can be added to each other to create a new string using the ``+``
+or ``+=`` operator . This is also called **appending** or **concatenating**. You
+can also add any other kind of value to a ``String`` with ``+`` or ``+=`` and
+the other value will be converted to a ``String`` automatically. Objects are
+converted by calling their ``toString`` method which we'll talk about in section
+5.4.
+
+Remember, however, that ``String``\ s are immutable, just like ``int``\ s and
+``double``\ s. So when we add two ``String``\ s (or a ``String`` and another
+value converted to a ``String``) we get a new ``String`` without making any
+change to the values being added together just like when we add `1 + 2` the
+original `1` and `2` aren't changed. When we use ``+=`` we are making a new
+``String`` by adding something to the current value of a variable and then
+assigning that new value back into the variable, again just like with numbers.
 
 .. activecode:: lcso1
    :language: java
@@ -287,7 +300,13 @@ Strings can be **appended** to each other to create a new string using the ``+``
    single: toString
    pair: Object; toString
 
-You can even add other items to a string using the ``+`` operator.  The other item will be converted to a string using the ``toString`` operator if it is an object and then appended to the current string.  All objects inherit a ``toString`` method that returns a string representation of the object.
+You can even add other items to a string using the ``+`` operator. Primitive
+values like ``int`` and ``boolean`` will be converted to a ``String`` like what
+you would type into a Java program and objects will be converted to ``String`` using the
+``toString`` method discussed in the previous section. All objects inherit a
+``toString`` method that returns a ``String`` representation of the object and
+many classes **override** it to produce a useful human-readable value. (We'll
+talk about overriding in detail in Unit 9.)
 
 |CodingEx| **Coding Exercise:**
 
