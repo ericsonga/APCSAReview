@@ -58,7 +58,7 @@ Methods that Return Values
 
 All the methods on ``Turtle`` that we’ve discussed so far have had a ``void``
 return type. Such methods are sometimes called **void methods**. Because a
-``void`` method don’t return any value, the only point of calling one is because
+``void`` method doesn’t return any value, the only point of calling one is because
 it has some **side effect**—it changes the state of the object or maybe causes
 something to happen like drawing a line on the screen. Or both.
 
