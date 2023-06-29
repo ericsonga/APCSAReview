@@ -228,7 +228,7 @@ section.
 Remember, however, that ``String``\ s are immutable, just like ``int``\ s and
 ``double``\ s. So when we add two ``String``\ s (or a ``String`` and another
 value converted to a ``String``) we get a new ``String`` without making any
-change to the values bein added together just like when we add `1 + 2` the
+change to the values being added together just like when we add `1 + 2` the
 original `1` and `2` aren't changed. When we use ``+=`` we are making a new
 ``String`` by adding something to the current value of a variable and then
 assigning that new value back into the variable, again just like with numbers.
