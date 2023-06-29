@@ -209,7 +209,15 @@ Here are some examples of using get methods for the ``Turtle`` object ``yertle``
 ``toString`` Methods
 ---------------------
 
-Another common method that returns a value is the ``toString`` method. This method is called automatically to try to convert an object to a ``String`` when it is needed, for example in a print statement. In the ``Turtle`` class, the ``toString`` method returns a ``String`` description of the turtle.
+Another important method that returns a value is the ``toString`` method. This
+method is called automatically by Java in a number of situations when it needs
+to convert an object to a ``String``. Most notably the methods
+``System.out.print`` and ``System.out.println`` use it to convert a object
+argument into a ``String`` to be printed.
+
+In the ``Turtle`` class, the ``toString`` method returns a human-readable
+description of the turtle. This is a typical use of ``toString``—to make it so
+if you ``System.out.println`` and object you get something useful.
 
 .. code-block:: java
 
