@@ -34,10 +34,40 @@
      </svg> Time estimate: 45 min.
    </div>
 
-Mutator Methods
-=================
+Mutators / Setters
+==================
 
-Corresponding to each get method, programmers also provide a public **set method** to change the value of a private instance variable in a class. These are called **mutator methods** (or settters or set or modifier methods). They are **void methods** meaning that they do not return a value, but they do take a **parameter**, the new value for the instance variable. Here are some examples of how to write a set method for an instance variable:
+As we saw in the last section, since we typically make instance variables
+``private``, we have to define getters if we want to allow code outside the
+class to access the value of particular instance variables.
+
+By the same token, if we want to allow code outside the class to `change` the
+value of an instance variable we have to provide what is formally called a
+**mutator method** but which everyone actually calls a **setter**. A setter is a
+void method with a name that starts with ``set`` and that takes a single
+argument of the same type as the instance variable to be set. The effect of a
+setter, as you would probably expect, is to assign the provided value to the
+instance variable.
+
+Just as you shouldn't reflexively write a getter for every instance variable,
+you should think even harder about whether you want to write a setter. Not all
+instance variables are meant to be manipulated directly by code outside the
+class.
+
+For example, consider the ``Turtle`` class. It provides getters ``getXPos`` and
+``getYPos`` but it does not provide corresponding setters. There are, however,
+methods that change a ``Turtle``\ ’s position like ``forward`` and ``moveTo``.
+But they do more than just changing the values of instance variables; they also
+take care of drawing lines on the screen if the pen is down. By not providing
+setters for those instance variables, the authors of the ``Turtle`` class can
+assume the a ``Turtle``\ ’s position won’t change other than by going through
+one of the approved movement methods. In general, you shouldn’t write a setter
+until you find a real reason to do so.
+
+How to write a setter
+---------------------
+
+Here are some examples of how to write a setter for an instance variable:
 
 .. code-block:: java
 
@@ -46,14 +76,14 @@ Corresponding to each get method, programmers also provide a public **set method
          //Instance variable declaration
          private typeOfVar varName;
 
-         // Mutator (setter) method template
+         // Setter method template
          public void setVarName(typeOfVar newValue)
          {
             varName = newValue;
          }
      }
 
-Here's an example of the ``Student`` class with a mutator method called ``setName``:
+Here's an example of the ``Student`` class with a setter for the ``name`` variable:
 
 .. code-block:: java
 
@@ -77,117 +107,131 @@ Here's an example of the ``Student`` class with a mutator method called ``setNam
      }
     }
 
-Notice the difference between set (mutator) and get (accessor) methods in the following figure. Getters return an instance variable's value and have the same return type as this variable and no parameters. Setters have a void return type and take a new value as a parameter to change the value of the instance variable.
+Notice the difference between setters and getters in the following figure.
+Getters return an instance variable's value and have the same return type as
+this variable and no parameters. Setters have a void return type and take a new
+value as a parameter to change the value of the instance variable.
 
 .. figure:: Figures/get-set-comparison.png
     :width: 600px
     :align: center
     :figclass: align-center
 
-    Figure 1: Comparison of set and get methods
+    Figure 1: Comparison of setters and getters
 
 
 |CodingEx| **Coding Exercise**
 
-Try the Student class below which this time has set methods added. You will need to fix one error. The main method is in a separate Tester class and does not have access to the private instance variables in the other Student class. Change the main method so that it uses a public mutator method (set method) to access the value instead.
+Try the ``Student`` class below which has had some setters added. Notice that
+there is no ``setId`` method even though there is a ``getId``. This is
+presumably because in the system this class is part of, while it makes sense for
+a student to change their name or email, their id should never change.
+
+You will need to fix one error. The ``main`` method is in a separate class
+``TesterClass`` and does not have access to the ``private`` instance variables
+in the ```Student`` class. Change the ``main`` method so that it uses a
+``public`` setter to change the value instead.
 
 .. activecode:: StudentObjExample2
-  :language: java
-  :autograde: unittest
+   :language: java
+   :autograde: unittest
 
-  Fix the main method to include a call to the appropriate set method.
-  ~~~~
-  public class TesterClass
-  {
-     // main method for testing
-     public static void main(String[] args)
-     {
-        Student s1 = new Student("Skyler", "skyler@sky.com", 123456);
-        System.out.println(s1);
-        s1.setName("Skyler 2");
-        // Main doesn't have access to email, use set method!
-        s1.email = "skyler2@gmail.com";
-        System.out.println(s1);
-     }
+   Fix the main method to include a call to the appropriate set method.
+   ~~~~
+   public class TesterClass
+   {
+       // main method for testing
+       public static void main(String[] args)
+       {
+           Student s1 = new Student("Skyler", "skyler@sky.com", 123456);
+           System.out.println(s1);
+           s1.setName("Skyler 2");
+           // Main doesn't have access to email, use set method!
+           s1.email = "skyler2@gmail.com";
+           System.out.println(s1);
+        }
    }
 
-  class Student
-  {
-     private String name;
-     private String email;
-     private int id;
+   class Student
+   {
+       private String name;
+       private String email;
+       private int id;
 
-     public Student(String initName, String initEmail, int initId)
-     {
-        name = initName;
-        email = initEmail;
-        id = initId;
-     }
-     // mutator methods - setters
-     public void setName(String newName)
-     {
-       name = newName;
-     }
-     public void setEmail(String newEmail)
-     {
-       email = newEmail;
-     }
-     public void setId(int newId)
-     {
-       id = newId;
-     }
-     // accessor methods - getters
-     public String getName()
-     {
-        return name;
-     }
-     public String getEmail()
-     {
-        return email;
-     }
-     public int getId()
-     {
-        return id;
-     }
-     public String toString() {
-        return id + ": " + name + ", " + email;
-     }
-  }
-  ====
-  import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
+       public Student(String initName, String initEmail, int initId)
+       {
+          name = initName;
+          email = initEmail;
+          id = initId;
+       }
 
-    // activeCode StudentObjExample2
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests()
-        {
-            super("TesterClass");
-        }
+       // Setters
 
-        @Test
-        public void test1()
-        {
-            String target = "s1.setEmail(\"skyler2@gmail.com\");";
-            boolean passed = checkCodeContains("call to setEmail()", target);
-            assertTrue(passed);
-        }
+       public void setName(String newName)
+       {
+           name = newName;
+       }
 
-        @Test
-        public void testMain()
-        {
-            String output = getMethodOutput("main");
-            String expect = "123456: Skyler, skyler@sky.com\n123456: Skyler 2, skyler2@gmail.com";
+       public void setEmail(String newEmail)
+       {
+           email = newEmail;
+       }
 
-            boolean passed = getResults(expect, output, "Checking main()", true);
-            assertTrue(passed);
-        }
-    }
+       // Getters
+
+       public String getName()
+       {
+           return name;
+       }
+
+       public String getEmail()
+       {
+           return email;
+       }
+
+       public int getId()
+       {
+           return id;
+       }
+
+       public String toString()
+       {
+           return id + ": " + name + ", " + email;
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;
+   import java.io.*;
+
+   // activeCode StudentObjExample2
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("TesterClass");
+       }
+
+       @Test
+       public void test1()
+       {
+           String target = "s1.setEmail(\"skyler2@gmail.com\");";
+           boolean passed = checkCodeContains("call to setEmail()", target);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testMain()
+       {
+           String output = getMethodOutput("main");
+           String expect = "123456: Skyler, skyler@sky.com\n123456: Skyler 2, skyler2@gmail.com";
+
+           boolean passed = getResults(expect, output, "Checking main()", true);
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check your understanding**
-
-
 
 
 .. mchoice:: setSignature
@@ -265,7 +309,10 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
   :language: java
   :autograde: unittest
 
-  Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with a constructor, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
+  Create a ``Pet`` class that keeps track of the name, age, weight, type of
+  animal, and breed for records at an animal clinic with a constructor, a
+  ``toString`` method, and getters and setters for each instance variable.
+
   ~~~~
   /**
       Pet class (complete comments)
@@ -405,9 +452,11 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 Summary
 --------
 
-- A void method does not return a value. Its header contains the keyword void before the method name.
+- A void method does not return a value. Its header contains the keyword
+  ``void`` before the method name.
 
-- A **mutator method** is often a void method that changes the values of instance variables or static variables.
+- A **mutator method** or **setter** is a void method that changes the values of an instance or static
+  variable.
 
 AP Practice
 ------------
@@ -471,7 +520,7 @@ AP Practice
     :feedback_d: Mutator methods should have a void return type.
     :feedback_e: Mutator methods should have a void return type.
 
-    In the Party class below, the addPeople method is intended to increase the value of the instance variable numOfPeople by the value of the parameter additionalPeople. The method does not work as intended.
+    In the ``Party`` class below, the ``addPeople`` method is intended to increase the value of the instance variable ``numOfPeople`` by the value of the parameter ``additionalPeople``. The method does not work as intended.
 
     .. code-block:: java
 
@@ -490,4 +539,4 @@ AP Practice
             }
         }
 
-    Which of the following changes should be made so that the class definition compiles without error and the method addPeople works as intended?
+    Which of the following changes should be made so that the class definition compiles without error and the method ``addPeople`` works as intended?
