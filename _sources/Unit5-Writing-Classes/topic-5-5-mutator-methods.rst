@@ -455,7 +455,7 @@ Summary
 - A void method does not return a value. Its header contains the keyword
   ``void`` before the method name.
 
-- A **setter** is a void method that changes the values of an instance or static
+- A **mutator method** or **setter** is a void method that changes the values of an instance or static
   variable.
 
 AP Practice
