@@ -1038,7 +1038,7 @@ The following Active Code uses a dictionary array of the most common 100 English
         * Return false if it is not found.
        */
 
-       public static void main(String[] args) throws IOException
+       public static void main(String[] args) 
        {
            SpellChecker checker = new SpellChecker();
            // Uncomment to test Part 1
