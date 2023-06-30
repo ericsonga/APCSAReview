@@ -105,7 +105,7 @@ object:
         System.out.println("Name: " + s.getName() );
      }
 
-Note, that getters, like any method that returns the value of a variable, only
+Note, that getters only
 return the *value* of the variable. In other words, the code that called the
 getter and which receives that value has no ability to change the object's
 instance variable; they just get a copy of the value. However if the instance
