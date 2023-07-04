@@ -32,15 +32,16 @@ import javax.tools.ToolProvider;
  * test classes easier. Methods should be tested even if they do not exist.
  *
  * @author Kate McDonnell
- * @version 2.0.1
- * @since 2022-07-08
+ * @version 2.0.2
+ * @since 2023-07-24
  * 
+ * @update 2.0.2 - Peter Seibel updated to allow for "throws exception" in main
  * @update 2.0.1 - added getMethodOutputChangedCode - can change the program to
  *         change values in static code, fixed for loop regex for .length
  * @update 2.0.0 - standard version since 2020
  */
 public class CodeTestHelper {
-    public static boolean replit = true;
+    public static boolean replit = false;
 
     private static String results = "";
     private static String mainOutput = "";
