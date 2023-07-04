@@ -17,6 +17,7 @@ AP CSA Exam Weighting: 10-15%
    topic-6-3-arrays-with-foreach.rst
    topic-6-4-array-algorithms.rst
    topic-6-5-summary.rst
+   topic-input-files.rst
    ArrayParsonsPractice.rst
    Arrays-mixed-code-toggle.rst
    ArrayPractice.rst
