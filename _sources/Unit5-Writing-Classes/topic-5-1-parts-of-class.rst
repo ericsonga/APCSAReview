@@ -693,19 +693,28 @@ you can do this in |community1| at the end of Unit 5.
 Summary
 ----------
 
-- Programmers use code to represent a physical object or nonphysical concept, real or imagined, by defining a class based on the attributes and/or behaviors of the object or concept.
+- Programmers use code to represent a physical object or nonphysical concept,
+  real or imagined, by defining a class based on the attributes and/or behaviors
+  of the object or concept.
 
-- **Instance Variables** define the attributes or data needed for objects, and **methods** define the behaviors or functions of the object.
+- **Instance Variables** define the attributes or data needed for objects, and
+  **methods** define the behaviors or functions of the object.
 
-- **Data encapsulation** is a technique in which the implementation details of a class are kept hidden from the user. The data is kept private with access only through the public methods that can act on the data in the class.
+- **Data encapsulation** is a technique in which the implementation details of a
+  class are kept hidden from the user. The data is kept private with access only
+  through the public methods that can act on the data in the class.
 
-- The keywords **public** and **private** affect the access of classes, data, constructors, and methods.
+- The keywords ``public`` and ``private`` affect the access of classes, data,
+  constructors, and methods.
 
-- The keyword private restricts access to the declaring class, while the keyword public allows access from classes outside the declaring class.
+- The keyword ``private`` restricts access to the declaring class, while the
+  keyword ``public`` allows access from classes outside the declaring class.
 
-- Instance variables are encapsulated by using the **private access modifier**.
+- Instance variables are encapsulated by using the ``private`` **access
+  modifier**.
 
-- Methods can be public or private, but they are usually public.
+- Methods can be ``public`` or ``private``. The set of ``public`` methods define
+  what other classes can do with an instance of a class.
 
 AP Practice
 ------------
