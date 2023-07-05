@@ -331,7 +331,7 @@ Methods
 Now to **methods** which define what we can actually do with an object. The most
 important methods in a class are the ``public`` methods since they can be
 accessed from outside the class. You may also write ``private`` methods that are
-not accessible outside of the class and therefore can only be used by by other
+not accessible outside of the class and therefore can only be used by other
 methods inside the same class. As you’ve probably figured out, the ``public``
 and ``private`` keywords determine the external access and visibility of
 classes, instance variables, constructors, and methods.
