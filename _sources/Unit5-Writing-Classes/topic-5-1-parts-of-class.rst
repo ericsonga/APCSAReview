@@ -70,7 +70,7 @@ always required. But the class definition proper always starts with the word
 the body, is defined inside a pair of ``{}``\ s.
 
 Since we’re talking about anatomy, let’s create a class called ``Person``.
-Classes are almost always named with captitalized names though this is a matter
+Classes are almost always named with capitalized names though this is a matter
 of style, not a rule of the language. Here is the basic skeleton of a ``Person``
 class:
 
@@ -82,7 +82,7 @@ class:
     }
 
 You can create instances of the ``Person`` class with ``new`` as in ``new
-Person()`` And you can delcare variables that can hold a reference to a
+Person()`` And you can declare variables that can hold a reference to a
 ``Person`` object with ``Person variableName``.
 
 Or put it altogether to declare some variables and initialize each one with a
@@ -422,7 +422,7 @@ class was “line”. Do you think it would have made sense to create a ``Line``
 class? Why or why not?)
 
 Once you’ve determined the classes you need, then you can go through the process
-we descibed above to design the individual classes. Note that you can often
+we described above to design the individual classes. Note that you can often
 identify methods that should exist on classes by looking for verbs in the
 specification like “move”.
 
@@ -430,7 +430,7 @@ Sometimes it’s useful, when designing a complex system with lots of classes, t
 make diagrams of the classes that show you at a glance what instance variables
 and methods they have. Often these can just be sketches in your notebook or on a
 whiteboard but there are also more formal systems such as the Unified Modeling
-Langauge (UML) for drawing these diagrams.
+Language (UML) for drawing these diagrams.
 
 For example, here is a UML class diagram for the ``Turtle`` class. The ``-`` in
 front of the attributes indicate that they are private, and the ``+`` in front
