@@ -133,7 +133,7 @@ class can have a ``main`` method which can be used to run that class as a
 program either to test that one class or sometimes as the entry point to a whole
 program made up of many classes and objects.
 
-Designing a class
+Designing a Class
 -----------------
 
 Now that we know what the skeleton of a class looks like and the elements that
