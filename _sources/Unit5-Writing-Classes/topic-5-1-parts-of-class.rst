@@ -44,9 +44,7 @@ own classes and make your own objects!
 Remember that a **class** in Java defines a blueprint for creating objects. When
 you create **objects**, you create new **instances** of that class and what you
 can do with those instances is determined by what methods are defined in the
-class. Also recall that objects are always accessed by **references**—the values
-we actually store in variables or pass when we call methods are references to
-the objects so we can have different variables that refer to the same object.
+class.
 
 For example in Unit 2, we created ``yertle`` and ``myrtle``, 2 ``Turtle``
 variables and assigned them references to objects created from the class
