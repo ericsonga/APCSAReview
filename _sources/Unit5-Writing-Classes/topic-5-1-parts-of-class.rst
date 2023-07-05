@@ -62,10 +62,10 @@ Watch this short video to review the vocabulary of object-oriented programming:
 Creating a Class
 ------------------
 
-Most classes you write will modified with the keyword ``public`` though it is
-not always required. But the class definition itself always starts with the word
-``class`` followed by the name of the class. Then the rest of the class, called
-the body, is defined inside a pair of ``{}``\ s.
+Most classes you write will have the keyword ``public`` before them though it is
+not required. The class definition itself always starts with the word ``class``
+followed by the name of the class. Then the rest of the class, called the body,
+is defined inside a pair of ``{}``\ s.
 
 Since we’re talking about anatomy, let’s create a class called ``Person``.
 Classes are almost always named with capitalized names though this is a matter
