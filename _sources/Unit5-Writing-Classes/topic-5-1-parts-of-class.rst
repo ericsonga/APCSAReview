@@ -62,8 +62,8 @@ Watch this short video to review the vocabulary of object-oriented programming:
 Creating a Class
 ------------------
 
-Most classes you write will start with the keyword ``public`` though it is not
-always required. But the class definition proper always starts with the word
+Most classes you write will modified with the keyword ``public`` though it is
+not always required. But the class definition itself always starts with the word
 ``class`` followed by the name of the class. Then the rest of the class, called
 the body, is defined inside a pair of ``{}``\ s.
 
@@ -115,10 +115,11 @@ objects of that class. Recall from Unit 2 that most methods either do things
 (like the ``Turtle`` methods that moved the turtle on the screen) or return
 values like the ``getXPos`` and ``getYPos`` on ``Turtle``.
 
-When a method is called, the code runs and whenever it refers to an instance
-variable it gets the specific values of the variable in the particular object we
-called the method on. Similarly, if it assigns a new value to an instance
-variable it only changes the value in that same object.
+When a method is called on an object, and the code refers to instance variables,
+it uses the instance variables for that object. For example in the ``Turtle``
+class the ``forward`` method changes an instance variable ``xPos``. When you
+call ``forward`` on ``yertle`` it changes ``xPos`` on the ``yertle`` object and
+when you call it on ``myrtle`` it changes the ``xPos`` on the ``myrtle`` object.
 
 Putting it all together, the three main anatomical features of a class are the
 **instance variables** which hold values associated with each object, the
