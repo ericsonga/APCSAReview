@@ -115,11 +115,12 @@ objects of that class. Recall from Unit 2 that most methods either do things
 (like the ``Turtle`` methods that moved the turtle on the screen) or return
 values like the ``getXPos`` and ``getYPos`` on ``Turtle``.
 
-When a method is called on an object, and the code refers to instance variables,
-it uses the instance variables for that object. For example in the ``Turtle``
-class the ``forward`` method changes an instance variable ``xPos``. When you
-call ``forward`` on ``yertle`` it changes ``xPos`` on the ``yertle`` object and
-when you call it on ``myrtle`` it changes the ``xPos`` on the ``myrtle`` object.
+The methods of the class share access to the object’s instance variables and
+when a method is called on an object it uses the instance variables for that
+object. For example in the ``Turtle`` class the ``forward`` method changes an
+instance variable ``xPos``. When you call ``forward`` on ``yertle`` it changes
+``xPos`` on the ``yertle`` object and when you call it on ``myrtle`` it changes
+the ``xPos`` on the ``myrtle`` object.
 
 Putting it all together, the three main anatomical features of a class are the
 **instance variables** which hold values associated with each object, the
@@ -255,7 +256,7 @@ only be accessed by code in the class that declares the variable.
 The ``Person`` class declares 3 private instance variables: ``name``, ``email``,
 and ``phoneNumber``. These are things that you might want to know about a
 person. They are declared at the top of the class and they exist inside the ``{
-}`` of the class. The methods of the class all share the instance variables.
+}`` of the class.
 
 Once we have created a class like ``Person``, we can create many instances
 (objects) of the class. The class is like a blueprint or cookie cutter that
