@@ -200,7 +200,7 @@ The ``java.nio.file`` package, added in Java version 7, provides a better and ea
    // It needs to be in a method that throws or handles IOException
    ArrayList<String> lines = Files.readAllLines(Paths.get("data.txt"));
 
-The advantage of storing the file in a dynamic data structure like an ``ArrayList``, instead of an array with a set size, is that you do not need to know how many lines are in the file.  The ``ArrayList`` can grow in size as needed.
+Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` which is a kind of ``List``. The advantage of storing the lines in a dynamic data structure like an ``ArrayList``, instead of an array, is that you do not need to know how many lines you are going to store when you create the ``ArrayList`` the way you do when you create an array.  The ``ArrayList`` can then grow in size as needed.
 
 |CodingEx| **Coding Exercise**
 
