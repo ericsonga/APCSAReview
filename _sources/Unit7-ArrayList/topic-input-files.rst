@@ -48,7 +48,7 @@ A **file** is storage for data that *persists* when the program is not running. 
 Java ``File``, ``Scanner``, and ``IOException`` Classes
 --------------------------------------------------------
 
-One way to connect a file to a Java program is to use the ``File`` class from the ``java.io`` package. This was used in Java before version 7 and is used by the College Board. A newer library ``nio`` will be presented in the next sections.  
+One way to connect a file to a Java program is to use the ``File`` class from the ``java.io`` package. (The `io` stands for **input/output**). This was used in Java before version 7 and is used by the College Board. A newer library ``nio`` will be presented in the next sections.  (The ``nio`` stands for, wait for it, "`new` input/output".)
 
 A file can be opened by creating a ``File`` object, using the name of the file or the complete path to the file, as the argument of the constructor, ``File(String str)``.
 
