@@ -198,7 +198,7 @@ The ``java.nio.file`` package, added in Java version 7, provides a better and ea
 
    // This connects and reads in the file in 1 line of code!
    // It needs to be in a method that throws or handles IOException
-   ArrayList<String> lines = Files.readAllLines(Paths.get("data.txt"));
+   List<String> lines = Files.readAllLines(Paths.get("data.txt"));
 
 Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` which is a kind of ``List``. The advantage of storing the lines in a dynamic data structure like an ``ArrayList``, instead of an array, is that you do not need to know how many lines you are going to store when you create the ``ArrayList`` the way you do when you create an array.  The ``ArrayList`` can then grow in size as needed.
 
@@ -208,7 +208,7 @@ Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` whi
    :language: java
    :datafile: pokemon.csv
 
-   Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into an ``List<String>`` named ``lines``. Add a loop that prints out the first 10 pokemon. :autograde: unittest to be added.
+   Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into a ``List<String>`` named ``lines``. Add a loop that prints out the first 10 pokemon. :autograde: unittest to be added.
    ~~~~
    import java.io.*;
    import java.util.*;
@@ -220,6 +220,7 @@ Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` whi
        {
            List<String> lines = Files.readAllLines(Paths.get("pokemon.csv"));
            // Add a loop that prints out the first 10 elements of the List lines
+           // The List here works just like ArrayLists
          
 
       }
@@ -253,7 +254,7 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
    :language: java
    :datafile: pokemon.csv
 
-   This program reads in some of the data from the pokemon file into an ArrayList of lines. Complete the main method to print out a random pokemon name and its image using the split method. :autograde: unittest to be added.
+   This program reads in some of the data from the pokemon file into a List of lines. Complete the main method to print out a random pokemon name and its image using the split method. :autograde: unittest to be added.
    ~~~~
    import java.io.*;
    import java.util.*;
@@ -263,8 +264,8 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
    {
        public static void main(String[] args) throws IOException
        {
-           ArrayList<String> lines = Files.readAllLines(Paths.get("pokemon.csv"));
-           // 1. pick a random number from 0 to the size of the ArrayList
+           List<String> lines = Files.readAllLines(Paths.get("pokemon.csv"));
+           // 1. pick a random number from 0 to the size of the List
 
            // 2. get the line of data at that random index
 
@@ -338,22 +339,21 @@ In this challenge, you will read in the data from the pokemon file and save it i
    {
        private ArrayList<Pokemon> pokemonList = new ArrayList<Pokemon>();
 
+       
+       // Write a method to read in the data, split it into attributes,
+       // and save it into an ArrayList of Pokemon objects
+
+
+       // Write a method that does something with the data
+       // for example find the Pokemon with the highest speed 
+       // or print out all the Pokemon of a certain type.
+       
        public static void main(String[] args) throws IOException
        {
             PokemonArrayList obj = new PokemonArrayList();
-            // Call a method to read in the data
+            // Call your method to read in the data
 
-            // Call another method to do something with the data
+            // Call your method to do something with the data
+
         }
-        
-        // Write a method to read in the data, split it into attributes,
-        // and save it into an ArrayList of Pokemon objects
-
-
-        // Write a method that does something with the data
-        // for example find the Pokemon with the highest speed 
-        // or print out all the Pokemon of a certain type.
-       
-   
-        
     }
