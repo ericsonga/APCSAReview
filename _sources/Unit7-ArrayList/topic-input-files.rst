@@ -208,7 +208,7 @@ The advantage of storing the file in a dynamic data structure like an ``ArrayLis
    :language: java
    :datafile: pokemon.csv
 
-   Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into an ArrayList ``lines``. Add a loop that prints out the first 10 pokemon. :autograde: unittest to be added.
+   Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into an ``List<String>`` named ``lines``. Add a loop that prints out the first 10 pokemon. :autograde: unittest to be added.
    ~~~~
    import java.io.*;
    import java.util.*;
