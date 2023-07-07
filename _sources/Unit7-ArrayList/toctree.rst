@@ -20,6 +20,7 @@ AP CSA Exam Weighting: 2.5–7.5%
    topic-7-6-sorting.rst
    topic-7-7-data-ethics.rst
    topic-7-8-summary.rst
+   topic-input-files.rst
    ListParsonsPractice.rst
    topic-7-9-toggle-problems.rst
    listPractice.rst
