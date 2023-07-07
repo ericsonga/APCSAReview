@@ -189,7 +189,7 @@ The following exercise reads in a data file about Pokemon and prints out the fir
 Reading in Files with ``java.nio.file``
 ----------------------------------------  
 
-The ``java.nio.file`` package, added in Java version 7, provides a better and easier way to read in files. The ``Files`` class in this package has a method called ``readAllLines`` that reads all of the lines in a file and returns them as a ``List`` of ``String`` objects. The ``readAllLines`` method throws an ``IOException`` if the file cannot be read. Here's how you can use it with an ``ArrayList`` which is a type of ``List``.
+The ``java.nio.file`` package, added in Java version 7, provides a better and easier way to read in files. The ``Files`` class in this package has a method called ``readAllLines`` that reads all of the lines in a file and returns them as a ``List`` of ``String`` objects. The ``readAllLines`` method throws an ``IOException`` if the file cannot be read. (``List`` is an **interface**. Interfaces are not on the AP CSA exam but are quite common in actual Java programming. For now all you need to know is that all the methods we've talked about using with ``ArrayList`` you can use on any ``List`` such as the one returned by ``readAllLines``.)
 
 .. code-block:: java
 
