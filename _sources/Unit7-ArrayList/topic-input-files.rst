@@ -218,7 +218,7 @@ The advantage of storing the file in a dynamic data structure like an ``ArrayLis
    {
        public static void main(String[] args) throws IOException
        {
-           ArrayList<String> lines = Files.readAllLines(Paths.get("pokemon.csv"));
+           List<String> lines = Files.readAllLines(Paths.get("pokemon.csv"));
            // Add a loop that prints out the first 10 elements of the ArrayList lines
          
 
