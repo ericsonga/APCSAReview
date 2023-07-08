@@ -63,7 +63,8 @@ instance variables, you'll need to write a getter that looks like the following.
 
 .. code-block:: java
 
-   class ExampleTemplate {
+   class ExampleTemplate 
+   {
 
      //Instance variable declaration
      private typeOfVar varName;
@@ -86,7 +87,8 @@ object:
 
 .. code-block:: java
 
-   class Student {
+   class Student 
+   {
 
      //Instance variable name
      private String name;

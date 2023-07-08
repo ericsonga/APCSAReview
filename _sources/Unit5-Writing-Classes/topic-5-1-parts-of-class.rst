@@ -77,6 +77,7 @@ class:
     public class Person
     {
        // define class here - also called the “body” of the class
+
     }
 
 You can create instances of the ``Person`` class with ``new`` as in ``new
@@ -128,6 +129,18 @@ Putting it all together, the three main anatomical features of a class are the
 **methods** who contain the code that gives the objects their behavior and which
 can use the instance variables defined in the class.
 
+.. code-block:: java
+
+    public class Person
+    {
+       // instance variables
+
+       // constructors
+
+       // methods
+
+    }
+
 And finally one last bit of weird anatomy, kind of like the appendix: any Java
 class can have a ``main`` method which can be used to run that class as a
 program either to test that one class or sometimes as the entry point to a whole
@@ -157,23 +170,15 @@ Remember that execution always starts in the ``main`` method. When a method like
 ``print`` is called, the code defined in the method runs but when it gets the
 values of ``name``, ``email``, and ``phoneNumber`` it gets the specific values
 of those variables that were set by the constructor when the particular object
-we called ``print`` on was created.
-
-After a method is done, control returns back to the next line of code in the
-``main`` method. You can also see this in the |Java visualizer| (click on the
-link and then Forward at the bottom to run the code step by step).
-
-
-.. |Java visualizer| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Person%20%0A%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20construct%20a%20Person%20copying%20in%20the%20data%20into%20the%20instance%20variables%0A%20%20%20%20%20public%20Person%28String%20initName,%20String%20initEmail,%20String%20initPhone%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20phoneNumber%20%3D%20initPhone%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Print%20all%20the%20data%20for%20a%20person%0A%20%20%20%20%20public%20void%20print%28%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22Name%3A%20%22%20%2B%20name%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Email%3A%20%22%20%2B%20email%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Phone%20Number%3A%20%22%20%2B%20phoneNumber%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20call%20the%20constructor%20to%20create%20a%20new%20person%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22,%20%22sana%40gmail.com%22,%20%22123-456-7890%22%29%3B%0A%20%20%20%20%20%20%20%20//%20call%20p1%27s%20print%20method%0A%20%20%20%20%20%20%20%20p1.print%28%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22,%20%22jean%40gmail.com%22,%20%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20p2.print%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&cumulative=false&curInstr=34&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
+we called ``print`` on was created. Click on the Show CodeLens button below and 
+the Next button to run the code step by step.
 
 .. activecode:: PersonClass
   :language: java
   :autograde: unittest
 
   Run the following class. Try changing the Person p2 object in main to your name.
+  Click on the Show CodeLens button and then Next to step through the code.
   ~~~~
   public class Person
   {

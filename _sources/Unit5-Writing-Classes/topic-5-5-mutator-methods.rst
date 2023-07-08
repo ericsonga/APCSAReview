@@ -71,8 +71,8 @@ Here are some examples of how to write a setter for an instance variable:
 
 .. code-block:: java
 
-     class ExampleTemplate {
-
+     class ExampleTemplate 
+     {
          //Instance variable declaration
          private typeOfVar varName;
 
@@ -87,8 +87,8 @@ Here's an example of the ``Student`` class with a setter for the ``name`` variab
 
 .. code-block:: java
 
-  class Student {
-
+  class Student 
+  {
      //Instance variable name
      private String name;
 

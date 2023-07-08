@@ -49,12 +49,14 @@ In Unit 2, we explored the Math class and its many static methods like Math.rand
 
 .. code-block:: java
 
-   class ClassName {
+   class ClassName 
+   {
      // static variable
      public static type variableName;
 
      // static method
-     public static returnType methodName(parameters) {
+     public static returnType methodName(parameters) 
+     {
            // implementation not shown
      }
    }
