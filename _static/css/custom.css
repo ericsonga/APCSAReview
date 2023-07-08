@@ -57,13 +57,14 @@ section section h2,
   margin-bottom: 0.5em;
 }
 
-.code,
+code,
 .runestone-sphinx code
 {
   padding: 0;
   color: var(--codeColor);
   background-color: inherit;
   font-weight: bold;
+  font-size: 100%;
 }
 
 #summary ul.simple li
@@ -112,8 +113,8 @@ div.unit-time svg,
 }
 
 /*
- * Give paragraphs immediatly after certain elements a bit of breathing room.
- * This could also be achieved by giving some margin-bottom to those preceeding
+ * Give paragraphs immediately after certain elements a bit of breathing room.
+ * This could also be achieved by giving some margin-bottom to those preceding
  * elements but this seems simpler for now.
  */
 
