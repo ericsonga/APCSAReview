@@ -242,22 +242,23 @@ The ``java.nio.file`` package, added in Java version 7, provides a better and ea
 
 .. code-block:: java
 
-   import java.io.*;
+   import java.nio.file.*;
    ...
 
    // This connects and reads in the file in 1 line of code!
    // It needs to be in a method that throws or handles IOException
    List<String> lines = Files.readAllLines(Paths.get("data.txt"));
 
-Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` which is a kind of ``List``. The advantage of storing the lines in a dynamic data structure like an ``ArrayList``, instead of an array, is that you do not need to know how many lines you are going to store when you create the ``ArrayList`` the way you do when you create an array.  The ``ArrayList`` can then grow in size as needed.
+Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` which is a kind of ``List``. The advantage of storing the lines in a dynamic data structure like an ``ArrayList``, instead of an array, is that you do not need to know how many lines you are going to store when you create the ``ArrayList`` the way you do when you create an array.  The ``ArrayList`` can then grow in size as needed. (If you absolutely need an array, you can convert the ``List`` to an array declared to be the correct size with  ``myArray = lines.toArray(myArray);``)
 
 |CodingEx| **Coding Exercise**
 
 .. activecode:: read-pokemon-file-nio
    :language: java
+   :autograde: unittest
    :datafile: pokemon.csv
 
-   Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into a ``List<String>`` named ``lines``. Add a loop that prints out the first 10 pokemon. :autograde: unittest to be added.
+   Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into a ``List<String>`` named ``lines``. Add a loop that prints out the first 10 pokemon.  
    ~~~~
    import java.io.*;
    import java.util.*;
@@ -328,9 +329,10 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
 
 .. activecode:: pokeImages
    :language: java
+   :autograde: unittest
    :datafile: pokemon.csv
 
-   This program reads in some of the data from the pokemon file into a List of lines. Complete the main method to print out a random pokemon name and its image using the split method. :autograde: unittest to be added.
+   This program reads in some of the data from the pokemon file into a List of lines. Complete the main method to print out a random pokemon name and its image using the split method.  
    ~~~~
    import java.io.*;
    import java.util.*;
