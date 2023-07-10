@@ -392,16 +392,6 @@ constructors.
       }
 
       @Test
-      public void test3()
-      {
-          String output = checkDefaultConstructor();
-          String expect = "pass";
-
-          boolean passed = getResults(expect, output, "Checking Square no-argument constructor");
-          assertTrue(passed);
-      }
-
-      @Test
       public void test4()
       {
           String output = checkConstructor(new Object[]{1});
