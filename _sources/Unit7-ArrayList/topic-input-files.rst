@@ -293,7 +293,7 @@ Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` whi
             assertTrue(passed);
        }
        @Test
-       public void getCode()
+       public void getMethodTest()
        {
           boolean passed = checkCodeContains("call to get method with lines", "lines.get");
           assertTrue(passed);
@@ -382,7 +382,7 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
             assertTrue(passed);
        }
        @Test
-       public void getCode()
+       public void getMethodTest()
        {
           boolean passed = checkCodeContains("call to get method with lines", "lines.get");
           assertTrue(passed);
@@ -397,19 +397,19 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
        @Test
        public void imageCode()
        {
-          boolean passed = checkCodeContains("call to PokeImages.printHTMLimage, "PokeImages.printHTMLimage");
+          boolean passed = checkCodeContains("call to PokeImages.printHTMLimage", "PokeImages.printHTMLimage");
           assertTrue(passed);
        }
        @Test
        public void nameIndexCode()
        {
-          boolean passed = checkCodeContains("the correct index for the name (1), "[1]");
+          boolean passed = checkCodeContains("the correct index for the name (1)", "[1]");
           assertTrue(passed);
        }
        @Test
        public void imageIndexCode()
        {
-          boolean passed = checkCodeContains("the correct index for the image url (8), "[8]");
+          boolean passed = checkCodeContains("the correct index for the image url (8)", "[8]");
           assertTrue(passed);
        }
     }
@@ -546,7 +546,7 @@ In this challenge, you will read in the data from the pokemon file and save it i
        @Test
        public void addCode()
        {
-          boolean passed = checkCodeContains("call to pokemonList.add, ".add");
+          boolean passed = checkCodeContains("call to pokemonList.add", ".add");
           assertTrue(passed);
        }
        @Test
