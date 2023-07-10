@@ -41,34 +41,59 @@ Inheritance and Constructors
 .. index::
     pair: constructor; super
 
-Subclasses inherit public methods from the superclass that they extend, but they cannot access the private instance variables of the superclass directly and must use the public accessor and mutator methods. And subclasses do not inherit constructors from the superclass.
+Subclasses inherit ``public`` methods from the superclass that they extend, but
+they cannot access the ``private`` instance variables of the superclass
+directly. And subclasses do not inherit constructors from the superclass. But
+inherited instance variables need to be properly initialized or none of the
+inherited methods are likely to work properly, so how can a subclass initialize
+the superclass's ``private`` variables?
 
-So, how do you initialize the superclass' private variables if you don't have direct access to them in the subclass?  In Java, the superclass constructor can be called from the first line of a subclass constructor by using the special keyword **super()** and passing appropriate parameters, for example ``super();`` or ``super(theName);`` as in the code below.
-The actual parameters given to super() are used to initialize the inherited instance variables, for example the name instance variable in the Person superclass.
+If the super class provides ``public`` setter methods for those variables the
+subclass could use those. But that won't always be the case. And sometimes
+constructors do more complex initialization than just setting variables.
+
+The way out is provided by the keyword ``super``. When used like the name of a
+method, i.e. when followed with parentheses and arguments, ``super`` provides a
+way to call the code in a superclass constructor, passing whatever arguments it
+needs. But unlike when we call a constructor with ``new``, a call to ``super``
+doesn't create a new object. Instead it runs the constructor’s code in the
+context of the object currently being constructed. This lets the superclass
+constructor initialize the instance variables declared in the superclass
+including ``private`` variables the subclass can’t directly access.
+
+It’s critical that all the instance variables in an object be properly
+initialized before the object is used, including by code in the rest of the
+constructor. To ensure that, if the constructor doesn’t start with a call to
+``super`` Java will automatically insert a call to ``super`` with no arguments.
+(That means if the superclass does not have a no-argument constructor that the
+subclasses will have to explicitly call ``super`` with the appropriate arguments
+for some constructor that does exist. This ensures that instances of the
+subclass are properly initialized.)
+
+For example the call to ``super(theName)`` in ``Employee`` below runs the code
+in the ``Person`` constructor that takes a ``String`` argument which presumably
+initializes an instance variable in the ``Person`` class to hold the name.
 
 .. code-block:: java
 
     public class Employee extends Person
     {
-        public Employee()
-        {
-            super(); // calls the Person() constructor
-        }
         public Employee(String theName)
         {
-            super(theName); // calls Person(theName) constructor
+            super(theName); // calls Person(String) constructor
         }
     }
 
 |CodingEx| **Coding Exercise**
 
-The ``super(theName)`` in the ``Employee`` constructor will call the constructor that takes a ``String`` object in the ``Person`` class to set the name.
-
 .. activecode:: InitPrivateInherited
   :language: java
   :autograde: unittest
 
-  Try creating another Employee object in the main method that passes in your name and then use the get methods to print it out. Which class constructor sets the name? Which class constructor sets the id?
+  Try creating another Employee object in the main method that passes in your
+  name and then use the get methods to print it out. Which class constructor
+  sets the name? Which class constructor sets the id?
+
   ~~~~
   class Person
   {
@@ -121,49 +146,70 @@ The ``super(theName)`` in the ``Employee`` constructor will call the constructor
   }
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+  import org.junit.*;;
+  import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Employee");
-            Employee.nextId = 1;
-        }
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests() {
+          super("Employee");
+          Employee.nextId = 1;
+      }
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "Dani\n#";
+      @Test
+      public void test1()
+      {
+          String output = getMethodOutput("main");
+          String expect = "Dani\n#";
 
-            boolean passed = getResults(expect, output, "Running main");
-            Employee.nextId = 1;
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Running main");
+          Employee.nextId = 1;
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String target = "Employee * = new Employee";
+      @Test
+      public void test2()
+      {
+          String code = getCode();
+          String target = "Employee * = new Employee";
 
-            int num = countOccurencesRegex(code, target);
+          int num = countOccurencesRegex(code, target);
 
-            boolean passed = num >= 2;
+          boolean passed = num >= 2;
 
-            getResults("2+", "" + num, "Creating new Employee()", passed);
-            Employee.nextId = 1;
-            assertTrue(passed);
-        }
-    }
+          getResults("2+", "" + num, "Creating new Employee()", passed);
+          Employee.nextId = 1;
+          assertTrue(passed);
+      }
+  }
 
+Chain of initialization
+-----------------------
 
-If a class has no constructor in Java, the compiler will add a no-argument constructor.  A no-argument constructor is one that doesn't have any parameters, for example ``public Person()``.
+As you may recall from Unit 5, if you do not write a constructor your class will
+automatically get a default no-argument constructor. In addition to initializing
+all instance variables to the default value for their type, the default
+no-argument constructor calls the superclass's no-argument constructor.
 
-If a subclass has no call to a superclass constructor using ``super`` as the first line in a subclass constructor then the compiler will automatically add a ``super()`` call as the first line in a constructor.  So, be sure to provide no-argument constructors in parent classes or be sure to use an explicit call to ``super()`` as the first line in the constructors of subclasses.
+This means you can only write a class with a default no-argument constructor if
+its superclass has a no-argument constructor. If you are extending a class
+without a no-argument constructor but you want your class to have a no-argument
+constructor you will need to explicitly write one and use ``super`` to call an
+existing constructor on the superclass with appropriate arguments.
 
-Regardless of whether the superclass constructor is called implicitly or explicitly, the process of calling superclass constructors continues until the Object constructor is called since every class inherits from the Object class.
+However it is created, explicitly or implicitly, the chain of ``super`` calls
+from each subclass to its superclass ends in the no-argument constructor of
+``java.lang.Object``. This is a special class defined in Java which is the superclass
+of any class that doesn’t explicitly ``extend`` some other class and the only
+class with no superclass and thus no ``super`` constructor that needs to be
+called.
+
+Once the chain reaches the top, at ``Object`` it starts unwinding, with first
+the ``Object`` constructor code running, then the constructor from its subclass,
+and so on until finally the constructor of the actual class being constructed
+runs. At that point any inherited instance variables will have been initialized
+so the constructor can safely call inherited methods that depend on those
+variables.
 
 |Exercise| **Check your understanding**
 
@@ -183,7 +229,9 @@ Regardless of whether the superclass constructor is called implicitly or explici
    :feedback_c: II is invalid. Children do not have direct access to private fields. You can use super in a constructor to initialize these by calling the parent's constructor with the same parameter list.
    :feedback_d: I is also okay
 
-   Given the class definitions of MPoint and NamedPoint below, which of the constructors that follow (labeled I, II, and III) would be valid in the NamedPoint class?
+   Given the class definitions of ``MPoint`` and ``NamedPoint`` below, which of
+   the constructors that follow (labeled I, II, and III) would be valid in the
+   ``NamedPoint`` class?
 
    .. code-block:: java
 
@@ -239,16 +287,22 @@ You can step through this code using the Java Visualizer by clicking the followi
 |Groupwork| Programming Challenge : Square is-a Rectangle
 ----------------------------------------------------------
 
-In this challenge, you are giving a class called Rectangle that has two instance variables, length and width, and two constructors that initialize them, and a method called draw() that uses nested loops to draw a length x width rectangle of stars. Try it out below.
+In this challenge, you are giving a class called ``Rectangle`` that has two
+instance variables, ``length`` and ``width``, a constructor that initializes
+them, and a method called ``draw`` that uses nested loops to draw a ``length`` x
+``width`` rectangle of stars. Try it out below.
 
-You will write a new class called Square that inherits from Rectangle. Is a square a rectangle? Yes! A square is a rectangle where the length and width are equal. Square will inherit length, width, and the draw method. You will write square constructors that will call the Rectangle constructors.
+You will write a new class called ``Square`` that inherits from ``Rectangle``.
+Is a square a rectangle? Yes! A square is a rectangle where the length and width
+are equal. ``Square`` will inherit ``length``, ``width``, and the ``draw``
+method. You will write ``Square`` constructors that will call the ``Rectangle``
+constructors.
 
-1. Make the class Square below inherit from Rectangle
-2. Add a Square no-argument constructor that calls Rectangle's constructor using super().
-3. Add a Square constructor with 1 argument for a side that calls Rectangle's constructor with 2 arguments using super.
-4. Uncomment the objects in the main method to test drawing the squares.
-5. Add an area() method to Rectangle that computes the area of the rectangle. Does it work for squares too? Test it.
-6. Add another subclass called LongRectangle which inherits from Rectangle but has the additional condition that the length is always 2 x the width. Write constructors for it and test it out.
+1. Make the class ``Square`` below inherit from ``Rectangle``
+2. Add a ``Square`` constructor with 1 argument for a side that calls ``Rectangle``\ ‘s constructor with 2 arguments using ``super``.
+3. Uncomment the objects in the ``main`` method to test drawing the squares.
+4. Add an ``area`` method to ``Rectangle`` that computes the area of the rectangle. Does it work for ``Square``\ s too? Test it.
+5. Add another subclass called ``LongRectangle`` which inherits from ``Rectangle`` but has the additional condition that the length is always 2 x the width. Write constructors for it and test it out.
 
 .. activecode:: challenge-9-2-Square-Rectangle
   :language: java
@@ -261,115 +315,107 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
       private int length;
       private int width;
 
-      public Rectangle()
-      {
-         length = 1;
-         width = 1;
-      }
-
       public Rectangle(int l, int w)
       {
-         length = l;
-         width = w;
+          length = l;
+          width = w;
       }
 
       public void draw()
       {
-        for(int i=0; i < length; i++)
-        {
-           for(int j=0; j < width; j++)
-               System.out.print("* ");
-            System.out.println();
-        }
-        System.out.println();
+          for(int i=0; i < length; i++)
+          {
+              for(int j=0; j < width; j++)
+              {
+                  System.out.print("* ");
+              }
+              System.out.println();
+          }
+          System.out.println();
       }
+
+      // 4a. Add an area method to compute the area of the rectangle.
 
   }
 
   // 1. Make the class square inherit from Rectangle
   public class Square
   {
-       // 2. Add a Square no-argument constructor
 
-       // 3. Add a Square constructor with 1 argument for a side
+      // 2. Add a Square constructor with 1 argument for a side
 
-       public static void main(String[] args)
-       {
+      public static void main(String[] args)
+      {
           Rectangle r = new Rectangle(3,5);
           r.draw();
-          // 4. Uncomment these to test
-          // Square s1 = new Square();
+          // 3. Uncomment these to test
+          // Square s1 = new Square(1);
           // s1.draw();
           // Square s = new Square(3);
           // s.draw();
-       }
+
+          // 4b. Add some tests for your area method after you write it
+      }
   }
+
+  // 5. Define the LongRectangle class here
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
+  import org.junit.*;
+  import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Square");
-        }
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests() {
+          super("Square");
+      }
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main").trim();
-            String expect = "* * * * *\n* * * * * \n* * * * * \n\n* \n\n* * * \n* * * \n* * *";
+      @Test
+      public void test1()
+      {
+          String output = getMethodOutput("main").trim();
+          String expect = "* * * * *\n* * * * * \n* * * * * \n\n* \n\n* * * \n* * * \n* * *";
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Running main");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test2()
-        {
-            String target = "extends Rectangle";
+      @Test
+      public void test2()
+      {
+          String target = "extends Rectangle";
 
-            boolean passed = checkCodeContains(target);
-            assertTrue(passed);
-        }
+          boolean passed = checkCodeContains(target);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test3()
-        {
-            String output = checkDefaultConstructor();
-            String expect = "pass";
+      @Test
+      public void test4()
+      {
+          String output = checkConstructor(new Object[]{1});
+          String expect = "pass";
 
-            boolean passed = getResults(expect, output, "Checking Square no-argument constructor");
-            assertTrue(passed);
-        }
+          boolean passed = getResults(expect, output, "Checking Square constructor with 1 argument (int)");
+          assertTrue(passed);
+      }
+      @Test
+       public void test5()
+       {
+           String target = "area";
 
-        @Test
-        public void test4()
-        {
-            String output = checkConstructor(new Object[]{1});
-            String expect = "pass";
+           boolean passed = checkCodeContains(target);
+           assertTrue(passed);
+       }
+       @Test
+       public void test6()
+       {
+           String target = "LongRectangle extends Rectangle";
 
-            boolean passed = getResults(expect, output, "Checking Square constructor with 1 argument (int)");
-            assertTrue(passed);
-        }
-        @Test
-         public void test5()
-         {
-             String target = "area";
-
-             boolean passed = checkCodeContains(target);
-             assertTrue(passed);
-         }
-         @Test
-         public void test6()
-         {
-             String target = "LongRectangle extends Rectangle";
-
-             boolean passed = checkCodeContains(target);
-             assertTrue(passed);
-         }
-    }
+           boolean passed = checkCodeContains(target);
+           assertTrue(passed);
+       }
+  }
 
 .. |repl.it Java Swing code| raw:: html
 
@@ -379,19 +425,32 @@ You will write a new class called Square that inherits from Rectangle. Is a squa
 
    <a href="https://www.dropbox.com/s/2lmkd1m2sfh3xqc/ShapeExample.zip" target="_blank" style="text-decoration:underline">files here</a>
 
-For a more complex example of drawing shapes, try running this |repl.it Java Swing code| (or download the |files here| by clicking on Download on the top right and use the files in your own Java IDE). When the yellow panel comes up, click on either the Rectangle or the Oval button and then click and drag somewhere on the yellow panel to draw that shape. Take a look at the Rectangle.java and Oval.java files to see how they inherit from the Shape class in Shape.java. Java Swing graphical programming is not covered on the AP CSA exam, but it is a lot of fun!
+For a more complex example of drawing shapes, try running this |repl.it Java
+Swing code| (or download the |files here| by clicking on Download on the top
+right and use the files in your own Java IDE). When the yellow panel comes up,
+click on either the Rectangle or the Oval button and then click and drag
+somewhere on the yellow panel to draw that shape. Take a look at the
+Rectangle.java and Oval.java files to see how they inherit from the Shape class
+in Shape.java. Java Swing graphical programming is not covered on the AP CSA
+exam, but it is a lot of fun!
 
 Summary
 ---------
 
-- Subclasses do not have access to the private instance variables in a superclass that they extend.
+- Subclasses do not have access to the ``private`` instance variables in a
+  superclass that they extend.
 
 - Constructors are not inherited.
 
-- The superclass constructor can be called from the first line of a subclass constructor by using the keyword super and passing appropriate parameters to set the private instance variables of the superclass.
+- A superclass constructor must be called from the first line of a subclass
+  constructor by using the keyword ``super`` and passing appropriate parameters.
+  If there is no explicit call to ``super`` an implicit call to ``super()`` will
+  be added by the Java compiler.
 
-- The actual parameters passed in the call to the superclass constructor provide values that the constructor can use to initialize the object’s instance variables.
+- The actual parameters passed in the call to ``super`` provide values that the
+  superclass constructor can use to initialize the object’s instance variables.
 
-- When a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.
-
-- Regardless of whether the superclass constructor is called implicitly or explicitly, the process of calling superclass constructors continues until the Object constructor is called. At this point, all of the constructors within the hierarchy execute beginning with the Object constructor.
+- Regardless of whether the superclass constructor is called implicitly or
+  explicitly, the process of calling superclass constructors continues until the
+  ``Object`` constructor is called. At this point, all of the constructors
+  within the hierarchy execute beginning with the ``Object`` constructor.
