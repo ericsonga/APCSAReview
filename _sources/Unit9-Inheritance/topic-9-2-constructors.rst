@@ -61,19 +61,18 @@ context of the object currently being constructed. This lets the superclass
 constructor initialize the instance variables declared in the superclass
 including ``private`` variables the subclass can’t directly access.
 
-In fact, since it is critical that all the instance variables in an object be
-properly initialized, Java requires that the first thing in any constructor in a
-subclass must be a call to ``super`` to rune one of the superclass's
-constructors. If there isn't an explicit call to ``super`` Java will
-automatically insert a call to ``super`` with no arguments. (That means if the
-superclass does not have a no-argument constructor that the subclasses will have
-to explicitly call ``super`` with the appropriate arguments for some constructor
-that does exist. This ensures that instances of the subclass are property
-initialized.)
+It's critical that all the instance variables in an object be properly
+initialized before the object is used, including by code in the rest of the
+constructor. To ensure that, if the constructor doesn't start with a call to
+``super`` Java will automatically insert a call to ``super`` with no arguments.
+(That means if the superclass does not have a no-argument constructor that the
+subclasses will have to explicitly call ``super`` with the appropriate arguments
+for some constructor that does exist. This ensures that instances of the
+subclass are property initialized.)
 
 For example the call to ``super(theName)`` in ``Employee`` below runs the code
 in the ``Person`` constructor that takes a ``String`` argument which presumably
-initializes the ``name`` instance variable in the ``Person`` class.
+initializes an instance variable in the ``Person`` class to hold the name.
 
 .. code-block:: java
 
