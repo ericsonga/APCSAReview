@@ -200,7 +200,7 @@ existing constructor on the superclass with appropriate arguments.
 
 However it is created, explicitly or implicitly, the chain of ``super`` calls
 from each subclass to its superclass ends in the no-argument constructor of
-``java.lang.Object``, the special class defined in Java which is the superclass
+``java.lang.Object``. This is a special class defined in Java which is the superclass
 of any class that doesn’t explicitly ``extend`` some other class and the only
 class with no superclass and thus no ``super`` constructor that needs to be
 called.
