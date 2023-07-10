@@ -61,14 +61,14 @@ context of the object currently being constructed. This lets the superclass
 constructor initialize the instance variables declared in the superclass
 including ``private`` variables the subclass can’t directly access.
 
-It's critical that all the instance variables in an object be properly
+It’s critical that all the instance variables in an object be properly
 initialized before the object is used, including by code in the rest of the
-constructor. To ensure that, if the constructor doesn't start with a call to
+constructor. To ensure that, if the constructor doesn’t start with a call to
 ``super`` Java will automatically insert a call to ``super`` with no arguments.
 (That means if the superclass does not have a no-argument constructor that the
 subclasses will have to explicitly call ``super`` with the appropriate arguments
 for some constructor that does exist. This ensures that instances of the
-subclass are property initialized.)
+subclass are properly initialized.)
 
 For example the call to ``super(theName)`` in ``Employee`` below runs the code
 in the ``Person`` constructor that takes a ``String`` argument which presumably
@@ -199,7 +199,7 @@ existing constructor on the superclass with appropriate arguments.
 
 However it is created, explicitly or implicitly, the chain of ``super`` calls
 from each subclass to its superclass ends in the no-argument constructor of
-``java.lang.Object``, the special class defined in Java which is the superclass
+``java.lang.Object``. This is a special class defined in Java which is the superclass
 of any class that doesn’t explicitly ``extend`` some other class and the only
 class with no superclass and thus no ``super`` constructor that needs to be
 called.
