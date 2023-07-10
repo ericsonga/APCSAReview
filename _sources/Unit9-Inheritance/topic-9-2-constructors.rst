@@ -68,7 +68,7 @@ constructors. If there isn't an explicit call to ``super`` Java will
 automatically insert a call to ``super`` with no arguments. (That means if the
 superclass does not have a no-argument constructor that the subclasses will have
 to explicitly call ``super`` with the appropriate arguments for some constructor
-that does exist. This ensures that instances of the subclass are property
+that does exist. This ensures that instances of the subclass are properly
 initialized.)
 
 For example the call to ``super(theName)`` in ``Employee`` below runs the code
