@@ -63,7 +63,7 @@ instance variables, you'll need to write a getter that looks like the following.
 
 .. code-block:: java
 
-   class ExampleTemplate 
+   class ExampleTemplate
    {
 
      //Instance variable declaration
@@ -78,8 +78,12 @@ instance variables, you'll need to write a getter that looks like the following.
   }
 
 Notice that the getter’s return type is the same as the type of the instance
-variable and all the body of the getter does is return the value of the
-variable.
+variable and all the body of the getter does is return the value of the variable
+using a ``return`` statement. (We'll talk more about the ``return`` statement in
+section 5.6 but for now just notice that it is followed by an expression whose
+value must be the same type as the return type in the method's header. In a
+getter that will definitely be true as long as the type of the instance variable
+and the return type of the getter are the same.)
 
 Here's an example of an accessor method called ``getName`` for the ``Student``
 class which also demonstrates how to call ``getName`` using a ``Student``
@@ -87,7 +91,7 @@ object:
 
 .. code-block:: java
 
-   class Student 
+   class Student
    {
 
      //Instance variable name
@@ -107,16 +111,15 @@ object:
         System.out.println("Name: " + s.getName() );
      }
 
-Note, that getters only
-return the *value* of the variable. In other words, the code that called the
-getter and which receives that value has no ability to change the object's
-instance variable; they just get a copy of the value. However if the instance
-variable is a reference type like ``String`` or ``Person`` the value that is
-copied is the value of the reference. That means the caller receives a new copy
-of the reference that points to the same object as is stored in the instance
-variable. In the next section, when we talk about mutation, you'll see how that
-means that the caller might be able to change the object even though it can't
-change the reference.
+Note, that getters only return the *value* of the variable. In other words, the
+code that called the getter and which receives that value has no ability to
+change the object's instance variable; they just get a copy of the value.
+However if the instance variable is a reference type like ``String`` or
+``Person`` the value that is copied is the value of the reference. That means
+the caller receives a new copy of the reference that points to the same object
+as is stored in the instance variable. In the next section, when we talk about
+mutation, you'll see how that means that the caller might be able to change the
+object even though it can't change the reference.
 
 .. note::
 
