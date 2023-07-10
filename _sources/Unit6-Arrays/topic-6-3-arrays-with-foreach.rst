@@ -491,14 +491,14 @@ If you want to step through the correct code to see what it does in the Java Vis
 In the |last spellcheck lesson|, you created a spellcheck method using a for loop. In this lesson, you will use enhanced for each loops instead. 
 
 1.  Write a new version of the ``spellcheck`` method to use an enhanced for-each loop instead of an indexed for-loop.  It should take a word as a parameter and return true if it is in the dictionary array. It should return false if it is not found. 
-2.  Write a method ``checkText`` that takes a String array of words which represents sentence of text and then calls your ``spellcheck`` method to check if each word in that text is spelled correctly. It should print out the misspelled words, and return false if it finds a misspelled word. Some helper code is provided in the main method that will split a String of words into a String array, and remove punctuation and convert to lowercase, before calling this method. 
+2.  Write a method ``checkText`` that takes a String array of words which represents sentence of text and then calls your ``spellcheck`` method to check if each word in that text is spelled correctly. It should count and print out the misspelled words, and return the number of misspelled words. Some helper code is provided in the main method that will split a String of words into a String array, and remove punctuation and convert to lowercase, before calling this method. 
 
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    :datafile: dictionary.txt
    :autograde: unittest
 
-   Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found. Write a checkText() method that takes a String[] parameter which is a sentence of text and then calls your spellcheck method above to check if each word in that text is spelled correctly using an enhanced for-each loop. 
+   Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found. Write a checkText() method that takes a String[] parameter which is a sentence of text and then calls your spellcheck method above to check if each word in that text is spelled correctly using an enhanced for-each loop. It should return a count of the misspelled words. 
    ~~~~
    import java.io.*;
    import java.nio.file.*;
@@ -517,8 +517,8 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
        /* Write a checkText() method that takes a String[] parameter which is a sentence
         * of text in a String array and then calls your spellcheck method above 
         * to check if each word in that text is spelled correctly. 
-        * Use an enhanced for each loop. It should print out the misspelled words,
-        * and return false if it finds a misspelled word.
+        * Use an enhanced for each loop. 
+        * It should count and print out the misspelled words, and return the count.
        */
 
 
@@ -540,7 +540,8 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
            // split the text into a String array
            String[] words = text.split(" ");
            // Call your checkText method
-           checker.checkText(words);
+           int numErrors = checker.checkText(words);
+           System.out.println("There were " + numErrors + " spelling errors in " + text);
            */
         }
 
@@ -631,13 +632,19 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
             assertTrue(passed);
         }
         @Test
+        public void testSignature()
+        {
+            boolean passed = checkCodeContains("Signature public int checkText(String[])", "public int checkText(String[]");
+            assertTrue(passed);
+        }
+        @Test
         public void testCheckText1()
         {
-            String[] sentence = {"dogz", "are","cool","tu"};
+            String[] sentence = {"dogz", "are","cool","tuu"};
             Object[] args = {sentence};
             String output = getMethodOutput("checkText", args);
-            String expect = "false";
-            boolean passed = getResults(expect, output, "checkText({\"dogz\", \"are\",\"cool\",\"tu\"})");
+            String expect = "2";
+            boolean passed = getResults(expect, output, "number of spelling errors in checkText({\"dogz\", \"are\",\"cool\",\"tuu\"})" );
             assertTrue(passed);
         }
         @Test
@@ -646,8 +653,8 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
             String[] sentence = {"dogs", "are","cool","too"};
             Object[] args = {sentence};
             String output = getMethodOutput("checkText", args);
-            String expect = "true";
-            boolean passed = getResults(expect, output, "checkText({\"dogs\", \"are\",\"cool\",\"too\"})");
+            String expect = "0";
+            boolean passed = getResults(expect, output, "number of spelling errors in checkText({\"dogs\", \"are\",\"cool\",\"too\"})" );
             assertTrue(passed);
         }
       }
