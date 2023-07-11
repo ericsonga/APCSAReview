@@ -376,7 +376,7 @@ Let's practice debugging some code!
    }
 
 
-Reading error messages
+Reading Error Messages
 ----------------------
 
 In the exercise below, you should click on the |runbutton| button to
