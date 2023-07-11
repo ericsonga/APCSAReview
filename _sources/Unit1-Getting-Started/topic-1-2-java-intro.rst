@@ -586,7 +586,7 @@ working with you. Here are some examples of good commenting:
 -----------------------------------
 
 .. image:: Figures/rubberduck.jpg
-    :width: 150
+    :width: 100px
     :align: left
     :alt: Rubber Duck
 
@@ -746,7 +746,3 @@ AP Practice
     - Putting the semicolon after the ) on each line.
 
       + Correct! The semicolon should go after each statement but not in the comment.
-
-
-
-
