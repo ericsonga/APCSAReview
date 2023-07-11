@@ -135,7 +135,7 @@ div.highlight-java + p,
  */
 .runestone-sphinx #main-content section > .runestone.ac_section
 {
-  max-width: var(--contentWidthRegular);
+  max-width: calc(var(--contentWidthRegular) + 100px);
 }
 
 
