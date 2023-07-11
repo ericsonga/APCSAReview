@@ -285,7 +285,7 @@ Let's practice debugging some code!
 
 |CodingEx| **Coding Exercise: Compile Time Error 1**
 
-Reading error messages
+Reading Error Messages
 ----------------------
 
 In the exercise below you should click on the |runbutton| button below to
