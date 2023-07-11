@@ -125,3 +125,29 @@ div.highlight-java + p,
 {
   margin-top: 10px;
 }
+
+/*
+ * Override these selectors which otherwise set the width to --contentWidthWide
+ */
+.runestone-sphinx #main-content section > .codelens,
+.runestone-sphinx #main-content section > .jupyterlite_sphinx_iframe_container,
+.runestone-sphinx #main-content section > .question,
+.runestone-sphinx #main-content section > .runestone.ac_section,
+.runestone-sphinx #main-content section > .runestone.codelens,
+.runestone-sphinx #main-content section > .runestone.parsons-container,
+.runestone-sphinx #main-content section > .runestone.parsons-problems,
+.runestone-sphinx #main-content section > .timedAssessment,
+.runestone-sphinx #main-content section > section
+{
+  max-width: var(--contentWidthRegular);
+}
+
+/*
+ * Set the width so it uses the space in the box. This was put in so the videos
+ * wouldn't overflow their box. Don't know if there are other things it will
+ * catch up that we don't want.
+ */
+.runestone iframe
+{
+  width: 100%;
+}
