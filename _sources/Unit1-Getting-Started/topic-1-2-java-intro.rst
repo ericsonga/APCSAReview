@@ -337,7 +337,7 @@ it!
 
 It is worth getting in the habit of really reading error messages. The people
 who wrote the Java compiler put in lot of work to try to make the error
-messages useful. If you actually read them you’ll soon learn to recognize
+messages useful. If you read them, you’ll soon learn to recognize
 common mistakes and will get much quicker at finding your syntax errors.
 
 
