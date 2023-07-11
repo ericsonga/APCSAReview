@@ -121,7 +121,8 @@ div.unit-time svg,
 iframe + p,
 div.highlight-java + p,
 .runestone-sphinx iframe + p,
-.runestone-sphinx div.highlight-java + p
+.runestone-sphinx div.highlight-java + p,
+.runestone-sphinx div.highlight-text + p
 {
   margin-top: 10px;
 }

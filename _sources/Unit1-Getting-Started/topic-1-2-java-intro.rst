@@ -283,11 +283,62 @@ Let's practice debugging some code!
    }
 
 
+Reading error messages
+----------------------
+
+In the exercise below, you should click on the |runbutton| button to
+compile and run the code. Unfortunately you will find there is a syntax error in
+the code that you need to fix. Before you try to fix it, look for the error
+message below the code. This is called a **compile time error** because it is an
+error detected by the compiler.
+
+It will be a lot easier to find the problem, and other problems like it, if you
+understand how to read the error message. So let’s take a closer look. It will
+look something like this:
+
+.. code-block:: text
+
+   FirstClass.java:5: error: unclosed string literal
+          System.out.println("Hi there!);
+                             ^
+   1 error
+
+The first line starts with the name of the file that was being compiled.
+Because you submitted your code via this web page you didn't actually name
+the file but it was named for you to match the name of your class. Then
+there's a colon (``:``) followed by a number. That number tells you the line
+number in the file where the compiler detected the error, in this case
+line 5.
+
+Error messages aren't always 100% accurate about where the error actually is;
+sometimes you actually need to change something a bit earlier in the program
+and sometimes a bit later. But the line number is the best place to start
+looking.
+
+After the line number and another colon, you will find the actual error message. These
+can be kind of cryptic but you should still read it. As you learn more Java
+vocabulary they will become more meaningful but they almost always contain
+some useful clues. For instance take this error message: “unclosed string
+literal”. You may not know what a string literal is (yet) but “unclosed”
+suggests something was opened and then not closed. Keep that thought in mind.
+
+Now look at the next two lines. The very next line is just the line of code
+from your program. But below that is a very important line containing a
+single caret (``^``) positioned to point at exactly where in the line the
+Java compiler thinks the problem is. In this case it’s pointing at the
+quotation mark (``”``) before “Hi”. So it’s complaining about something being
+unclosed and it’s pointing us at a quotation mark. Usually quotation marks
+come in pairs called the open quote and the close quote, right? And if you
+look at the line of code you’ll see that there’s no closing quotation mark.
+Could that be the problem? Try adding a quotation mark and see if that fixes
+it!
+
+It is worth getting in the habit of really reading error messages. The people
+who wrote the Java compiler put in lot of work to try to make the error
+messages useful. If you read them, you’ll soon learn to recognize
+common mistakes and will get much quicker at finding your syntax errors.
+
 |CodingEx| **Coding Exercise: Compile Time Error 1**
-
-Click on the |runbutton| button below to try and run the following code.  Look for an error message after the code.  This is called a **compile time error** because it is an error detected by the compiler.
-
-What is wrong?  Can you fix it?  The error message will tell you the line number that it thinks is causing the error (``FirstClass.java:5: error: unclosed string literal``).  Check line 5 to make sure that everything looks correct.  One good thing to check is that all ``{`` have a matching ``}`` and all ``(`` have a matching ``)`` and all starting ``"`` have a ending ``"`` as well. Try putting in the missing symbol and run again. This is called **debugging**.
 
 .. activecode:: sc2error1
    :language: java
@@ -298,10 +349,10 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
    ~~~~
    public class FirstClass
    {
-      public static void main(String[] args)
-      {
-          System.out.println("Hi there!);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println("Hi there!);
+       }
    }
 
    ====
@@ -321,12 +372,12 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
         }
    }
 
-
-
 |CodingEx| **Coding Exercise: Compile Time Error 2**
 
-
-Click on the |runbutton| button below to try and run the following code.  Look for an error message after the code. What is wrong this time?  Can you fix it?  One good thing to check is that all ``{`` have a matching ``}`` and all ``(`` have a matching ``)`` and all starting ``"`` have a ending ``"`` as well.
+Click on the |runbutton| button below to try and run the following code. Look
+for an error message after the code. This time the error message will probably
+point even more exactly at the problem than in the previous exercise. Try to fix
+the code and run it again.
 
 .. activecode:: sc2error2
    :language: java
@@ -337,10 +388,10 @@ Click on the |runbutton| button below to try and run the following code.  Look f
    ~~~~
    public class SecondClass
    {
-      public static void main(String[] args)
-      {
-          System.out.println("Hi there!";
-      }
+       public static void main(String[] args)
+       {
+           System.out.println("Hi there!";
+       }
    }
 
    ====
@@ -365,7 +416,21 @@ Click on the |runbutton| button below to try and run the following code.  Look f
 
 |CodingEx| **Coding Exercise: Compile Time Error 3**
 
-Click on the |runbutton| button below to try and run the following code.  What is wrong this time?  Can you fix it?  After you fix the first error, you may encounter a 2nd error! Fix that one too! Hints: How do you end a statement in Java? Also, check for capitalization.
+Click on the |runbutton| button below to try and run the following code. What is
+wrong this time? The first error message will probably point you directly at the
+problem. But after you fix that you’ll probably get a `new` error! That happens
+sometimes because the compiler can’t even detect the second error until the
+first one is fixed.
+
+This is another reason it’s important to read error messages. It's very tempting
+when we see that there's an error to jump immediately to trying to fix it. Arg,
+an error! Get rid of it! But if we don't slow down and read the message in a
+case like this, we might not notice that we've actually fixed the first error.
+If we don't notice that we fixed it, we might undo our change and `unfix` it!
+
+So read the error messages—they’re there to help you. With that in mind, see if
+you can fix both errors in this code. A hint for the second error:
+capitalization matters.
 
 .. activecode:: sc2error3
    :language: java
@@ -376,10 +441,10 @@ Click on the |runbutton| button below to try and run the following code.  What i
    ~~~~
    public class ThirdClass
    {
-      public static void main(String[] args)
-      {
-          system.out.println("Hi there!")
-      }
+       public static void main(String[] args)
+       {
+           system.out.println("Hi there!")
+       }
    }
 
    ====
@@ -408,7 +473,11 @@ Did you remember that System is capitalized in System.out.println? Did you find 
 Comments
 --------
 
-In Java and many text-based coding languages, // is used to mark the beginning of a comment. For multi-line comments, use ``/*`` to start the comment and ``*/`` to end the comment. The compiler will skip over comments. However, it is a good idea to use comments to make notes to yourself and other programmers working with you. Here are some examples of good commenting:
+In Java and many text-based coding languages, ``//`` is used to mark the
+beginning of a comment. For multi-line comments, use ``/*`` to start the comment
+and ``*/`` to end the comment. The compiler will skip over comments. However, it
+is a good idea to use comments to make notes to yourself and other programmers
+working with you. Here are some examples of good commenting:
 
 .. code-block:: java
 
