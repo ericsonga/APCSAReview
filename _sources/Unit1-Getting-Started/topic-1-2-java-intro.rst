@@ -317,7 +317,7 @@ sometimes you actually need to change something a bit earlier in the program
 and sometimes a bit later. But the line number is the best place to start
 looking.
 
-After the line number and another colon is the actual error message. These
+After the line number and another colon, you will find the actual error message. These
 can be kind of cryptic but you should still read it. As you learn more Java
 vocabulary they will become more meaningful but they almost always contain
 some useful clues. For instance take this error message: “unclosed string
