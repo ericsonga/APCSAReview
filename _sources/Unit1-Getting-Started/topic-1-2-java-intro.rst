@@ -130,6 +130,56 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
 You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
 
 
+.. hparsons:: mp-main-method-order-1
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3
+
+    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    public static
+    void main(
+    String[]
+    args)
+    public Static
+
+.. hparsons:: mp-main-method-order-2
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5
+
+    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    public
+    static
+    void
+    main(
+    String[]
+    args)
+    Void
+    Public
+
+.. hparsons:: mp-main-method-order-3
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5 6 7 8
+
+    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    public
+    static
+    void
+    main
+    (
+    String
+    []
+    args
+    )
+    ()
+
 
 Print Methods
 -------------------
@@ -196,6 +246,49 @@ Java has two different methods to print output to the screen:
    }
 
 Special words—also called **keywords**—such as ``public``, ``class``, and ``if`` must be in lowercase, but class names such as ``System`` and ``String`` are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
+
+
+.. hparsons:: mp-print-order-1
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5 6 7 8 9 10
+
+    Put the blocks in order to create a Java statement that will print "Hi!". There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    System
+    .
+    out
+    .
+    println
+    (
+    "
+    Hi!
+    "
+    )
+    ;
+    system
+
+.. hparsons:: mp-print-order-2
+    :language: java
+    :randomize:
+    :blockanswer: 0 1 2 3 4 5 6 7 8 9 10
+
+    Put the blocks in order to create a Java statement that will print "Bye!". There are extra blocks that you don't need.
+    ~~~~
+    --blocks--
+    System
+    .
+    out
+    .
+    println
+    (
+    "
+    Bye!
+    "
+    )
+    ;
+    Out
 
 Syntax Errors and Debugging
 -----------------------------
@@ -655,96 +748,5 @@ AP Practice
       + Correct! The semicolon should go after each statement but not in the comment.
 
 
-.. hparsons:: mp-main-method-order-1
-    :language: java
-    :randomize:
-    :blockanswer: 0 1 2 3
-
-    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
-    ~~~~
-    --blocks--
-    public static
-    void main(
-    String[]
-    args)
-    public Static
-
-.. hparsons:: mp-main-method-order-2
-    :language: java
-    :randomize:
-    :blockanswer: 0 1 2 3 4 5
-
-    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
-    ~~~~
-    --blocks--
-    public
-    static
-    void
-    main(
-    String[]
-    args)
-    Void
-    Public
-
-.. hparsons:: mp-main-method-order-3
-    :language: java
-    :randomize:
-    :blockanswer: 0 1 2 3 4 5 6 7 8
-
-    Put the blocks in order to create the first line for the ``main`` method. There are extra blocks that you don't need.
-    ~~~~
-    --blocks--
-    public
-    static
-    void
-    main
-    (
-    String
-    []
-    args
-    )
-    ()
 
 
-
-.. hparsons:: mp-print-order-1
-    :language: java
-    :randomize:
-    :blockanswer: 0 1 2 3 4 5 6 7 8 9 10
-
-    Put the blocks in order to create a Java statement that will print "Hi!". There are extra blocks that you don't need.
-    ~~~~
-    --blocks--
-    System
-    .
-    out
-    .
-    println
-    (
-    "
-    Hi!
-    "
-    )
-    ;
-    system
-
-.. hparsons:: mp-print-order-2
-    :language: java
-    :randomize:
-    :blockanswer: 0 1 2 3 4 5 6 7 8 9 10
-
-    Put the blocks in order to create a Java statement that will print "Bye!". There are extra blocks that you don't need.
-    ~~~~
-    --blocks--
-    System
-    .
-    out
-    .
-    println
-    (
-    "
-    Bye!
-    "
-    )
-    ;
-    Out
