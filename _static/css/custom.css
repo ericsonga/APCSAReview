@@ -138,7 +138,6 @@ div.highlight-java + p,
   max-width: var(--contentWidthRegular);
 }
 
-
 /*
  * Set the width so it uses the space in the box. This was put in so the videos
  * wouldn't overflow their box. Don't know if there are other things it will
