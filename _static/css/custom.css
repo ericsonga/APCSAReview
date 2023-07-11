@@ -7,6 +7,8 @@
 :root {
     --emphasisColor: #007d9f;
     --codeColor: #641227;
+    /* Make this as narrow as we can while still getting side-by-side Parson's problems. */
+    --contentWidthWide: calc(var(--contentWidthRegular) + 250px);
 }
 
 :root[data-theme="dark"] {
@@ -128,19 +130,9 @@ div.highlight-java + p,
 }
 
 /*
- * Override these selectors which otherwise set the width to --contentWidthWide.
- * For now we'll just do active code elements.
+ * Override this which would otherwise be --contentWidthWide. (We've also
+ * adjusted --contentWidthWide above to be slightly less wide.)
  */
-/*
-.runestone-sphinx #main-content section > .codelens,
-.runestone-sphinx #main-content section > .jupyterlite_sphinx_iframe_container,
-.runestone-sphinx #main-content section > .question,
-.runestone-sphinx #main-content section > .runestone.codelens,
-.runestone-sphinx #main-content section > .runestone.parsons-container,
-.runestone-sphinx #main-content section > .runestone.parsons-problems,
-.runestone-sphinx #main-content section > .timedAssessment,
-.runestone-sphinx #main-content section > section,
-*/
 .runestone-sphinx #main-content section > .runestone.ac_section
 {
   max-width: var(--contentWidthRegular);
