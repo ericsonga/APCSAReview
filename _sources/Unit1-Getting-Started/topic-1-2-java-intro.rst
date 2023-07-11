@@ -288,7 +288,7 @@ Let's practice debugging some code!
 Reading Error Messages
 ----------------------
 
-In the exercise below you should click on the |runbutton| button below to
+In the exercise below, you should click on the |runbutton| button to
 compile and run the code. Unfortunately you will find there is a syntax error in
 the code that you need to fix. Before you try to fix it, look for the error
 message below the code. This is called a **compile time error** because it is an
