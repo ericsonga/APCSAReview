@@ -283,9 +283,7 @@ Let's practice debugging some code!
    }
 
 
-|CodingEx| **Coding Exercise: Compile Time Error 1**
-
-Reading Error Messages
+Reading error messages
 ----------------------
 
 In the exercise below, you should click on the |runbutton| button to
@@ -340,6 +338,7 @@ who wrote the Java compiler put in lot of work to try to make the error
 messages useful. If you read them, you’ll soon learn to recognize
 common mistakes and will get much quicker at finding your syntax errors.
 
+|CodingEx| **Coding Exercise: Compile Time Error 1**
 
 .. activecode:: sc2error1
    :language: java
@@ -423,11 +422,14 @@ problem. But after you fix that you’ll probably get a `new` error! That happen
 sometimes because the compiler can’t even detect the second error until the
 first one is fixed.
 
-This is another reason it’s important to read the error message; if you just
-start trying to fix things without actually reading the error message you might
-not notice that you had actually fixed something. But if you read the messages
-you’ll see that the first error has gone away and now there’s a new error to
-debug. See if you can fix both errors in this code. A hint for the second error:
+This is another reason it’s important to read error messages. It's very tempting
+when we see that there's an error to jump immediately to trying to fix it. Arg,
+an error! Get rid of it! But if we don't slow down and read the message in a
+case like this, we might not notice that we've actually fixed the first error.
+If we don't notice that we fixed it, we might undo our change and `unfix` it!
+
+So read the error messages—they’re there to help you. With that in mind, see if
+you can fix both errors in this code. A hint for the second error:
 capitalization matters.
 
 .. activecode:: sc2error3
