@@ -162,5 +162,10 @@ div.highlight-java + p,
 */
 .ptx-runestone-container .ac_section .CodeMirror pre, 
 .runestone-sphinx .ac_section .CodeMirror pre {
-  font-family: Menlo,Monaco,Consolas,Courier New,monospace;
+  font-family: Menlo, Monaco, Consolas,"Courier New", monospace;
+}
+
+/* Try adding flex wrap on buttons */
+.ac_actions {
+  flex-wrap: wrap;
 }
