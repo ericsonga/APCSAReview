@@ -85,7 +85,7 @@ A simple kind of method that returns a value is what is formally called an
 **accessor** because it accesses a value in an object. In the real world
 everyone calls them **getters**. A getter is a method that takes no arguments
 and has a non-\ ``void`` return type. In Java they are almost always named
-something that starts with ``get`` and they usually just return the value of one
+something that starts with ``get``, and they usually just return the value of one
 of the object’s instance variables. For example, the ``Turtle`` class has
 several getters, ``getWidth`` and ``getHeight`` which return the width and the
 height of a ``Turtle`` object and ``getXPos`` and ``getYPos`` which return the x
@@ -102,7 +102,7 @@ again with the ``getXPos`` and ``getYPos`` getters.
 
 Note that when you use a getter, you need to do something with the value it
 returns. You might assign it to a variable, use it in an expression, or print it
-out. If you don’t you’re just getting a value and doing nothing with it—you
+out. If you don’t, you’re just getting a value and doing nothing with it—you
 might as well not have bothered to call the getter in the first place.
 
 Here are some examples of using getters on the ``Turtle`` object ``yertle``.
@@ -335,7 +335,7 @@ values based on both the current state of the object and some arguments.
 
 For example, while we could use a ``Turtle``\ ’s ``getXPos`` and ``getYPos``
 getters and some math (remember your Pythagorean Theorem?) to figure out how far
-away a ``Turtle`` is from any given point, if that’s a thing we need to do in a
+away a ``Turtle`` is from any given point, if that’s a thing we need to do in 
 a lot of programs using ``Turtle``, it might be nice to be able to ask a
 ``Turtle`` directly for its distance from a given point. After all, it knows
 where it is, so why not do the math for us?
@@ -362,9 +362,9 @@ doing programming, not math.)
     Figure 1: Method that takes arguments and returns a value
 
 We will save a deeper discussion of actually writing getters and other methods
-until Unit 5 but for the AP progress checks for this unit you should be able to
+until Unit 5, but for the AP progress checks for this unit, you should be able to
 trace through method calls like the ones below. Notice that the **return
-statement** in a method returns the value and it must match declared return type
+statement** in a method returns the value, and it must match declared return type
 of the method. The calling method must then do something useful with that value.
 
 |Exercise| **Check your understanding**
@@ -595,7 +595,7 @@ AP Practice
         water.lowerTemp();
         System.out.println(water.getTemp());
 
-    What is printed as a result of executing the code segment?
+    What is printed as a result of executing the code segment? (If you get stuck, try this |visualizationLiquid| to see this code in action.)
 
     - \-10
 
@@ -615,4 +615,9 @@ AP Practice
 
     - 40.0
 
-      + Correct, the Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it, and getTemp() returns the currentTemp value as a double.
+      + Correct, the Liquid() constructor sets the currentTemp instance variable to 50, and the lowerTemp() method subtracts 10 from it, and getTemp() returns the currentTemp value as a double.
+
+.. |visualizationLiquid| raw:: html
+
+   <a href="https://pythontutor.com/render.html#code=public%20class%20Liquid%20%7B%0A%20%20%0A%20%20%20%20private%20double%20boilingPoint%3B%0A%20%20%20%20private%20double%20freezingPoint%3B%0A%20%20%20%20private%20double%20currentTemp%3B%0A%0A%20%20%20%20public%20Liquid%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20currentTemp%20%3D%2050%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20lowerTemp%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20currentTemp%20-%3D%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getTemp%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20currentTemp%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20Liquid%20water%20%3D%20new%20Liquid%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20water.lowerTemp%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28water.getTemp%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=18&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">visualization</a>
+
