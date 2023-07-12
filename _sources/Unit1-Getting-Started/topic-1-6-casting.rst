@@ -336,7 +336,7 @@ If you get done early with the previous challenge, here's something else fun you
 can do in Java, although it's not covered in the AP exam.
 
 Java was one of the first programming languages to use |UNICODE| for its
-characters rather than ASCII. While ASCII could represent 255 characters which
+characters rather than ASCII. While ASCII could represent 128 characters which
 was plenty for English, Unicode is an international standard that tries to
 assign a number (which they like to call a “codepoint”) to every character in
 every language. Unicode codepoints are traditionally represented in hex code (a
