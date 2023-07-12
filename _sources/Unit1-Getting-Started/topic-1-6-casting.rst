@@ -388,19 +388,21 @@ languages?
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
+   import org.junit.*;
+   import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class ChallengeUnicode {   public static void main(String[] args)   {     System.out.println(\"A in ASCII and Unicode is the decimal number 65: \" + (char)65);     System.out.println(\"You can typecast a decimal number to char for the Chinese character for sun: \" + (char)11932);     System.out.println(\"Or you can print out the Chinese character for moon using unicode hex: \\u2E9D\"); }  }";
-
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testCount()
+       {
+           String code = getCodeWithoutComments();
+           int count = countOccurences(code, "Character.toString");
+           boolean passed = count >= 4;
+           passed = getResults("4+", ""+count, "Counting number of Character.toString", passed);
+           assertTrue(passed);
+       }  
+   }
 
 
 Summary
