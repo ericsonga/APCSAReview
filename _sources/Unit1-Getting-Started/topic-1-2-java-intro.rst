@@ -590,7 +590,7 @@ working with you. Here are some examples of good commenting:
     :align: left
     :alt: Rubber Duck
 
-In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
+In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
 
 Working in pairs, debug the following code. Can you find all the bugs and get the code to run?
 
