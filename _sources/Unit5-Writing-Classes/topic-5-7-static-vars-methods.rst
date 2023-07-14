@@ -302,71 +302,154 @@ In the |last lesson|, we wrote a class with methods to print out the song |The A
   }
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import org.junit.*;;
+   import java.io.*;
+   
+   /* Do NOT change Main or CodeTestHelper.java.
+      Put the active code exercise in a file like ForLoop.java.
+      Put your Junit test in the file RunestoneTests.java.
+      Run. Test by changing ForLoop.java (student code).
+      */
+   public class RunestoneTests extends CodeTestHelper {
+       @After
+       public void tearDown() {
+           super.tearDown();
+          //Song.numVerses = 0;
+   
+       }
+   
+       @Test
+       public void checkCodeContains1() {
+           // check verse 1
+           boolean passed = checkCodeContains(
+                   "verse(...) method header with two String parameters",
+                   "public static void verse(String *, String *)");
+   
+           assertTrue(passed);
+   
+       }
+   
+       @Test
+       public void checkCodeContains2() {
+           // check static
+           String code = getCode();
+           int actual = countOccurences(code, "Song.verse(");
+           String expected = "3";
+   
+           boolean passed = actual >= 3;
+           getResults(expected, "" + actual,
+                   "Checking that code contains three calls to verse(...) method using ClassName.staticMethod(...) syntax",
+                   passed);
+           assertTrue(passed);
+       }
+   
+       @Test
+       public void checkCodeContains3() {
+           // check static
+           String code = getCode();
+           int actual = countOccurences(code, "public static int numVerses = 0");
+           String expected = "1";
+   
+           boolean passed = actual >= 1;
+           getResults(expected, "" + actual,
+                   "Checking that code declares variable numVerses according to instructions and sets it to zero", passed);
+   
+           assertTrue(passed);
+   
+       }
+   
+       @Test
+       public void checkCodeContains4() {
+           // check static
+           String code = getCode();
+           boolean increment = code.contains("numVerses++");
+           String expected = "increments: true\n";
+           String actual = "increments: " + increment + "\n";
+   
+           String anytext = "[\\s\\S]*";
+           String regex = "System.out.print[ln]*\\([\"a-zA-Z0-9 +]*numVerses[\"a-zA-Z0-9 +]*\\);";
+           boolean printed = code.matches(anytext + regex + anytext);
+           expected += "prints: true";
+           actual += "prints: " + printed;
+   
+           boolean passed = increment && printed;
+           getResults(expected, actual, "Checking that code increments and prints numVerses", passed);
+   
+           assertTrue(passed);
+   
+       }
+   
+       @Test
+       public void testVerses() throws IOException {
+           String output = getMethodOutput("main").replaceAll(" his ", " a ").replaceAll("\n\n", "\n");
+           String[] actualArray = output.split("\n");
+   
+           boolean passed = true;
+           String error = "";
+           String expect = "No errors";
+           String actual = "No errors";
+   
+           int j = 0;
+   
+           for (int i = 0; i < actualArray.length; i++) {
+               while (j < expectedArray.length && expectedArray[j].length() < 2)
+                   j++;
+               while (i < expectedArray.length && actualArray[i].length() < 2)
+                   i++;
+   
+               if (j < expectedArray.length && actualArray[i].length() > 1) {
+                   /*
+                    * System.out.println(expectedArray[j]);
+                    * System.out.println(actualArray[i]);
+                    * System.out.println();
+                    */
+                   if(actualArray[i].matches("[\\s\\S]*[0-9]+[\\s\\S]*")) {
+                       continue;
+                   }
+                       
+                   String compAct = removeSpaces(actualArray[i].toLowerCase());
+                   String compExp = removeSpaces(expectedArray[j].toLowerCase());
+   
+                   if (!compAct.equals(compExp)) {
+                       expect = expectedArray[j].trim();
+                       actual = actualArray[i].trim() + "\n(Error on line " + (i + 1)
+                               + " of output)";
+                       passed = false;
+                       error = "\nThere may be more than one error! Did you forget a line?\n(check spelling, new lines, and punctuation carefully)";
+                       break;
+                   }
+               }
+   
+               j++;
+           }
+   
+           getResults(expect, actual, "Checking output from main" + error, passed);
+           assertTrue(passed);
+       }
+   
+       private static String expectedOutput = "The ants go marching one by one, hurrah, hurrah\n"
+               + "The ants go marching one by one, hurrah, hurrah\n"
+               + "The ants go marching one by one\n"
+               + "The little one stops to suck a thumb\n"
+               + "And they all go marching down to the ground\n"
+               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+               + "\n"
+               + "The ants go marching two by two, hurrah, hurrah\n"
+               + "The ants go marching two by two, hurrah, hurrah\n"
+               + "The ants go marching two by two\n"
+               + "The little one stops to tie a shoe\n"
+               + "And they all go marching down to the ground\n"
+               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+               + "\n"
+               + "The ants go marching three by three, hurrah, hurrah\n"
+               + "The ants go marching three by three, hurrah, hurrah\n"
+               + "The ants go marching three by three\n"
+               + "The little one stops to climb a tree\n"
+               + "And they all go marching down to the ground\n"
+               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
+       private static String[] expectedArray = expectedOutput.replaceAll("\n\n", "\n").split("\n");
+   }
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-      @Test
-      public void checkCodeContains1(){
-        //check verse 1
-        boolean passed = checkCodeContains("verse one method call", "verse(\"one\", \"suck");
-        Song.numVerses = 0;
-        assertTrue(passed);
-      }
-
-      @Test
-      public void checkCodeContains2(){
-         //check verse 2
-          boolean passed = checkCodeContains("verse two method call", "verse(\"two\", \"tie");
-          Song.numVerses = 0;
-          assertTrue(passed);
-      }
-
-      @Test
-      public void checkCodeContains3(){
-         //check verse 3
-          boolean passed = checkCodeContains("verse three method call", "verse(\"three\", \"climb a tree\"");
-          Song.numVerses = 0;
-          assertTrue(passed);
-      }
-      @Test
-        public void testMain() throws IOException
-        {
-            Song.numVerses = 0;
-            String output = getMethodOutput("main");
-            String expect = "The ants go marching three by three\nThe little one stops to climb a tree";
-            boolean passed = output.contains(expect);
-            getResults(expect, output, "Expected output from main contains 3 verses", passed);
-            Song.numVerses = 0;
-            assertTrue(passed);
-        }
-
-      @Test
-      public void checkCodeContains4(){
-         //check static
-         String code = getCode();
-         int actual = countOccurences(code, "static void");
-         String expected = "2";
-
-         boolean passed = actual >= 2;
-         getResults(expected, ""+actual, "Static void methods", passed);
-         Song.numVerses = 0;
-         assertTrue(passed);
-      }
-      @Test
-      public void checkCodeContains5(){
-         //check static
-         String code = getCode();
-         int actual = countOccurences(code, "static int");
-         String expected = "1";
-
-         boolean passed = actual >= 1;
-         getResults(expected, ""+actual, "Static int variable", passed);
-         Song.numVerses = 0;
-         assertTrue(passed);
-      }
-    }
 
 
 
