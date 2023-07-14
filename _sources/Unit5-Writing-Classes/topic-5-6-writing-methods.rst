@@ -473,42 +473,120 @@ Here's another song, |The Ants Go Marching|, that is very similar to the This Ol
   }
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import org.junit.*;
+   import java.io.*;
+   
+   /* Do NOT change Main or CodeTestHelper.java.
+      Put the active code exercise in a file like ForLoop.java.
+      Put your Junit test in the file RunestoneTests.java.
+      Run. Test by changing ForLoop.java (student code).
+      */
+   public class RunestoneTests extends CodeTestHelper {
+       @Test
+       public void checkCodeContains1() {
+           // check verse 1
+           boolean passed = checkCodeContains(
+                   "verse(...) method header with two String parameters",
+                   "public void verse(String *, String *)");
+   
+           assertTrue(passed);
+   
+       }
+   
+       @Test
+       public void checkCodeContains2() {
+           boolean passed = checkCodeContains(
+                   "a new Song object",
+                   "= new Song()");
+   
+           assertTrue(passed);
+       }
+   
+       @Test
+       public void checkCodeContains3() {
+           // check static
+           String code = getCode();
+           int actual = countOccurences(code, ".verse(");
+           String expected = "3";
+   
+           boolean passed = actual >= 3;
+           getResults(expected, "" + actual,
+                   "Checking that code contains three calls to verse(...) method using object.method(...) syntax",
+                   passed);
+           assertTrue(passed);
+       }
+   
+        @Test
+       public void testVerses() throws IOException {
+           String output = getMethodOutput("main").replaceAll(" his ", " a ").replaceAll("\n\n", "\n");
+           String[] actualArray = output.split("\n");
+   
+           boolean passed = true;
+           String error = "";
+           String expect = "No errors";
+           String actual = "No errors";
+   
+           int j = 0;
+   
+           for (int i = 0; i < actualArray.length; i++) {
+               while (j < expectedArray.length && expectedArray[j].length() < 2)
+                   j++;
+               while (i < expectedArray.length && actualArray[i].length() < 2)
+                   i++;
+   
+               if (j < expectedArray.length && actualArray[i].length() > 1) {
+                   /*
+                    * System.out.println(expectedArray[j]);
+                    * System.out.println(actualArray[i]);
+                    * System.out.println();
+                    */
+                   if(actualArray[i].matches("[\\s\\S]*[0-9]+[\\s\\S]*")) {
+                       continue;
+                   }
+                       
+                   String compAct = removeSpaces(actualArray[i].toLowerCase());
+                   String compExp = removeSpaces(expectedArray[j].toLowerCase());
+   
+                   if (!compAct.equals(compExp)) {
+                       expect = expectedArray[j].trim();
+                       actual = actualArray[i].trim() + "\n(Error on line " + (i + 1)
+                               + " of output)";
+                       passed = false;
+                       error = "\nThere may be more than one error! Did you forget a line?\n(check spelling, new lines, and punctuation carefully)";
+                       break;
+                   }
+               }
+   
+               j++;
+           }
+   
+           getResults(expect, actual, "Checking output from main" + error, passed);
+           assertTrue(passed);
+       }
+   
+       private static String expectedOutput = "The ants go marching one by one, hurrah, hurrah\n"
+               + "The ants go marching one by one, hurrah, hurrah\n"
+               + "The ants go marching one by one\n"
+               + "The little one stops to suck a thumb\n"
+               + "And they all go marching down to the ground\n"
+               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+               + "\n"
+               + "The ants go marching two by two, hurrah, hurrah\n"
+               + "The ants go marching two by two, hurrah, hurrah\n"
+               + "The ants go marching two by two\n"
+               + "The little one stops to tie a shoe\n"
+               + "And they all go marching down to the ground\n"
+               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
+               + "\n"
+               + "The ants go marching three by three, hurrah, hurrah\n"
+               + "The ants go marching three by three, hurrah, hurrah\n"
+               + "The ants go marching three by three\n"
+               + "The little one stops to climb a tree\n"
+               + "And they all go marching down to the ground\n"
+               + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
+       private static String[] expectedArray = expectedOutput.replaceAll("\n\n", "\n").split("\n");
+   }
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-      @Test
-      public void checkCodeContains1(){
-        //check verse 1
-        boolean passed = checkCodeContains("verse method call with 2 arguments for verse one", "verse(\"one\", \"suck");
-        assertTrue(passed);
-      }
-
-      @Test
-      public void checkCodeContains2(){
-         //check verse 2
-          boolean passed = checkCodeContains("verse method call with 2 arguments for verse two", "verse(\"two\", \"tie");
-        assertTrue(passed);
-      }
-
-      @Test
-      public void checkCodeContains3(){
-         //check verse 3
-          boolean passed = checkCodeContains("verse method call with 2 arguments for verse three", "verse(\"three\", \"climb a tree\"");
-        assertTrue(passed);
-      }
-
-          @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "The ants go marching three by three\nThe little one stops to climb a tree";
-            boolean passed = output.contains(expect);
-            getResults(expect, output, "Expected output from main contains 3 verses", passed);
-            assertTrue(passed);
-        }
-    }
 
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
