@@ -148,7 +148,7 @@ Click to reveal the Mixed Up Code for the solution to this problem.
       :numbered: left
       :adaptive:
 
-      The method <code>removeVariety</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.
+      The method ``removeVariety`` below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.
       -----
       private int removeVariety(String cookieVar) {
          int numBoxesRemoved = 0;

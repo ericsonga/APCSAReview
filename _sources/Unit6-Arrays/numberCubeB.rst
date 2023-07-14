@@ -65,7 +65,7 @@ Click to reveal the Mixed Up Code for the solution to this problem.
       :numbered: left
       :adaptive:
 
-      The method <code>getLongestRun</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      The method ``getLongestRun`` below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
       public static int getLongestRun(int[] values) {
          int currentLen = 0;

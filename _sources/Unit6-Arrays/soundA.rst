@@ -133,7 +133,7 @@ Click to reveal the Mixed Up Code for the solution of this problem.
       :numbered: left
       :adaptive:
 
-      The method <code>limitAmplitude</code> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.
+      The method ``limitAmplitude`` below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.
       -----
       public int limitAmplitude(int limit) {
       =====
