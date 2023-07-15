@@ -306,9 +306,8 @@ Here is a linear search algorithm where we access each row and then apply a line
             }
     }
 
-|Groupwork| Programming Challenge : Picture Lab
----------------------------------------------------
-
+2D Array of Objects
+--------------------
 
 .. index::
    single: images
@@ -319,10 +318,6 @@ Here is a linear search algorithm where we access each row and then apply a line
 .. index::
    single: pixels
 
-.. figure:: ../../_static/arch.jpg
-    :width: 200px
-    :align: left
-
 .. |CB Picture Lab| raw:: html
 
    <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >College Board Picture Lab</a>
@@ -331,38 +326,86 @@ Here is a linear search algorithm where we access each row and then apply a line
 
    <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
 
-.. |repl.it project| raw:: html
+.. |replit project| raw:: html
 
-   <a href= "https://firewalledreplit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+   <a href= "https://firewalledreplit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Replit Swing project</a>
 
 .. |repl 2| raw:: html
 
-   <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
+   <a href= "https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file" style="text-decoration:underline" target="_blank" >alternative Replit project</a>
 
-.. |picture lab A1 to A3| raw:: html
+.. |Picture Lab A1 to A3| raw:: html
 
    <a href= "pictureLabA1toA3.html" style="text-decoration:underline" target="_blank">Picture Lab sections A1 to A3</a>
 
-.. |Picture Lab| raw:: html
+.. |Picture Lab A5| raw:: html
 
-   <a href= "CBLabs.html" style="text-decoration:underline" target="_blank">Picture Lab</a>
+   <a href= "pictureLabA5.html#image-modification-exercises" style="text-decoration:underline" target="_blank">Picture Lab A5 Image Modification Exercises</a>
 
 
-Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  The color of a pixel is  represented using the RGB (Red, Green, Blue) color
-model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? If your class has time, do the reading and exercises for |picture lab A1 to A3| to first learn about digital pictures and RGB values.
+Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  For example, a pixel is shown at row 173 and column 214 of the image below.
 
+.. image:: Figures/pixel.jpg
+   :width: 300px
+   :align: center
+
+
+The color of a pixel is represented using the RGB (Red, Green, Blue) color
+model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? You can learn more about pixels in the |Picture Lab A1 to A3|.
+
+In Java, we can write a ``Pixel`` class to represent a pixel in an image at a given x and y coordinate. 
+
+.. code-block:: java
+   
+   public class Pixel 
+   {
+       private int x;
+       private int y;
+       /** Implementation not shown **/
+   }
+
+The |CB Picture Lab| contains a ``Pixel`` class and a ``Picture`` class that loads an image and creates a 2D array of pixels to represent it. For example, the ``Picture`` constructor below loads the image ``beach.jpg``, and the ``getPixels2D`` method returns its 2D array of pixels. You can get and set the red, green, and/or blue value for a Pixel object to change its color.  
+
+.. code-block:: java
+
+      Picture pict = new Picture("beach.jpg");
+      // A 2D array of pixels
+      Pixel[][] pixels = pict.getPixels2D();
+      Pixel p = pixels[0][0]; // get the first pixel
+      int blue = p.getBlue(); // get its blue value
+      System.out.println("Pixel (0,0) has a blue value of " + blue );
+      p.setBlue(255);  // set its blue value to 255
+ 
+ 
+You can loop through all the Pixel objects in the two-dimensional array to modify the picture. The following code is the ``zeroBlue`` method in the ``Picture`` class. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. You can experiment with this method and write your own methods to modify the pixels in the challenge below and the extended |Picture Lab A5|.
+
+.. code-block:: java
+
+   public void zeroBlue()
+   {
+       Pixel[][] pixels = this.getPixels2D();
+       for (Pixel[] rowArray : pixels)
+       {
+           for (Pixel p : rowArray)
+           {
+               p.setBlue(0);
+           }
+       }
+    }
+
+
+|Groupwork| Programming Challenge : Picture Lab
+---------------------------------------------------
+
+.. figure:: ../../_static/arch.jpg
+    :width: 200px
+    :align: left
 
 In this challenge, you will do a part of the Picture Lab to modify the pixels of a digital photo. Scroll down to the bottom of the following code and take a look at the ``zeroBlue`` method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0.
 
 Now, write a similar method called ``keepOnlyBlue`` that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called ``switchColors`` that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the ``getRed``, ``getGreen``, ``getBlue`` to get the RGB values of the pixel and then swap them around by using the ``setRed``, ``setGreen``, ``setBlue`` methods and giving them different color values from the get methods as arguments.
 
-You can test the methods in the active code below or in this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
-
-.. datafile:: arch.jpg
-   :image:
-   :fromfile: ../../_static/arch.jpg
-   :hide:
-
+You can test the methods in the active code below or in this |replit project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
 
 .. activecode:: challenge-8-2-picture
     :language: java
@@ -565,16 +608,14 @@ You can test the methods in the active code below or in this |repl.it project| o
       }
 
 
-
-
-Here are some more exercises from the |Picture Lab|:
+Here are some more exercises from the |Picture Lab A5|:
 
 - Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.
 
-- Write the grayscale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3).
+- Write the gray scale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3).
 
 
-You can continue on with the |Picture Lab| to mirror images and create collages and detect edges as the first step in recognizing objects in images.
+You can continue on with the next pages of |Picture Lab A5| to mirror images and create collages and detect edges as the first step in recognizing objects in images.
 
 Summary
 ----------
@@ -627,6 +668,11 @@ AP Practice
           }
       }
 
+
+.. datafile:: arch.jpg
+   :image:
+   :fromfile: ../../_static/arch.jpg
+   :hide:
 
 .. datafile:: pictureClasses.jar
         :hide:
