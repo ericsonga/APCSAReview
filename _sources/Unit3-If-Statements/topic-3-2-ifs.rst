@@ -180,78 +180,84 @@ Most if statements have a boolean condition that uses relational operators like 
    }
    ====
    // Test Code for Lesson 3.2.1 - Activity 1 - if-relational
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testPositive()
-        {
-            String output = "";
-            int num = -999;
-
-            while(num <= 0) {
-                output = getMethodOutput("main");
-                num = getNumber(output);
-            }
-
-            String expect = "The number is " + num + "\n" + num + " is positive!";
-
-            boolean passed = getResults(expect, output, "Testing positive numbers");
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testZero()
-        {
-            String output = "";
-            int num = -999;
-
-            while(num != 0) {
-                output = getMethodOutput("main");
-                num = getNumber(output);
-            }
-
-            String expect = "The number is " + num + "\n" + num + " is zero!";
-
-            boolean passed = getResults(expect, output, "Testing zero");
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testNegative()
-        {
-            String output = "";
-            int num = 999;
-
-            while(num >= 0) {
-                output = getMethodOutput("main");
-                num = getNumber(output);
-            }
-
-            String expect = "The number is " + num + "\n" + num + " is negative!";
-
-            boolean passed = getResults(expect, output,"Testing negative numbers");
-            assertTrue(passed);
-        }
-
-        private int getNumber(String output) {
-            output = output.replaceAll("The number is ", "");
-            int space = output.indexOf("\n");
-
-            String numStr = output;
-
-            if (space >= 0)
-                numStr = numStr.substring(0, space).trim();
-
-            return Integer.parseInt(numStr);
-        }
-    }
+   import static org.junit.Assert.*;
+   import org.junit.After;
+   import org.junit.Before;
+   import org.junit.Test;
+   
+   import java.io.*;
+   
+   public class RunestoneTests extends CodeTestHelper
+   {
+     
+       @Test
+       public void testPositive()
+       {
+           String output = "";
+           int num = -999, count = 0;
+   
+           while(num <= 0 && count < 40) {
+               output = getMethodOutput("main");
+               num = getNumber(output);
+               count++;
+           }
+   
+           String expect = "The number is " + num + "\n" + num + " is positive!";
+   
+           boolean passed = getResults(expect, output, "Testing positive numbers");
+           assertTrue(passed);
+       }
+        
+       @Test
+       public void testZero()
+       {
+           String output = "";
+           int num = -999, count = 0;
+   
+           while(num != 0 && count < 50) {
+               output = getMethodOutput("main");
+               num = getNumber(output);
+               count++;
+           }
+   
+           String expect = "The number is " + num + "\n" + num + " is zero!";
+   
+           boolean passed = getResults(expect, output, "Testing zero");
+           assertTrue(passed);
+       }
+       
+       @Test
+       public void testNegative()
+       {
+           String output = "";
+           int num = 999, count = 0;
+   
+           while(num >= 0 && count < 50) {
+               output = getMethodOutput("main");
+               //num = getNumber(output);
+               count++;
+           }
+   
+           String expect = "The number is " + num + "\n" + num + " is negative!";
+   
+           boolean passed = getResults(expect, output,"Testing negative numbers");
+           assertTrue(passed);
+       }
+   
+       private int getNumber(String output) {
+           output = output.replaceAll("The number is ", "");
+           int space = output.indexOf("\n");
+   
+           String numStr = output;
+   
+           if (space >= 0)
+               numStr = numStr.substring(0, space).trim();
+   
+           return Integer.parseInt(numStr);
+       }
+       
+    
+   }
 
 
 .. note::
