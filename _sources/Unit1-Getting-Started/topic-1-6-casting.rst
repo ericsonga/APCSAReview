@@ -282,19 +282,174 @@ This would be a good project to work together in pairs, and switch drivers (who 
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-       public void testAsgn1() throws IOException
-       {
-           String target = "(double) sum/3";
-           boolean passed = checkCodeContains("formula for average of 3 grades using sum and type casting to double", target);
+   import org.junit.*;
+   import java.io.*;
+   
+   import java.util.regex.Pattern;
+   import java.util.regex.MatchResult;
+   
+   /* Do NOT change Main or CodeTestHelper.java.
+      Put the active code exercise in a file like ForLoop.java.
+      Put your Junit test in the file RunestoneTests.java.
+      Run. Test by changing ForLoop.java (student code).
+      */
+   
+   public class RunestoneTests extends CodeTestHelper {
+       @Test
+       public void test4() throws IOException {
+           String actual = getMethodOutput("main");
+           String expect = "double value";
+   
+           boolean passed = actual.matches("[\\s\\S]*[0-9]+.[0-9]+[\\s\\S]*");
+   
+           if (!passed) {
+               getResults(expect, actual, "Checking that output is a double value", passed);
+               assertTrue(passed);
+               return;
+           }
+   
+           String code = getCode();
+           String regex = "grade[0-9]=[0-9]+";
+   
+           String[] matches = Pattern.compile(regex)
+                             .matcher(removeSpaces(code))
+                             .results()
+                             .map(MatchResult::group)
+                             .toArray(String[]::new);
+   
+           int[] grades = new int[3];
+   
+           String hint = "";
+           
+           if (matches.length > 3) {
+               hint = "\n(Did you declare too many grade variables?)";
+           } else if (matches.length < 3) {
+               hint = "\n(Did you declare too few grade variables?)";
+           }
+   
+           for (int i = 0; i < grades.length && i < matches.length; i++) {            
+               String val = matches[i].substring(matches[i].indexOf("=") + 1);
+               grades[i] = Integer.parseInt(val);
+           }
+   
+           double exp = (double) (grades[0] + grades[1] + grades[2]) / matches.length;
+   
+           passed = getResults("" + exp, actual, "Checking that calculation is correct" + hint);
            assertTrue(passed);
        }
-    }
+   
+       @Test
+       public void test1() throws IOException {
+           String code = removeSpaces(getCode());
+   
+           String expect = "Declared grade1, grade2, grade3, and average";
+           String actual = "";
+           String hint = "";
+   
+           boolean passed = true;
+   
+           String regex = "grade[1-3]=[0-9]+";
+   
+           String[] matches = Pattern.compile(regex)
+                             .matcher(removeSpaces(code))
+                             .results()
+                             .map(MatchResult::group)
+                             .toArray(String[]::new);
+   
+           if (matches.length != 3) {
+               passed = false;
+               actual += "Declared " + matches.length + " grade variables\n";
+           }
+   
+           if (!code.contains("doubleaverage")) {
+               passed = false;
+               actual += "Did not declare average as a double";
+           }
+   
+           if (!passed) {
+               hint = "\n(Check spelling and capitalization)";
+           } else {
+               actual = expect;
+           }
+   
+           getResults(expect, actual.trim(), "Checking that variables have been declared properly" + hint,
+                   passed);
+           assertTrue(passed);
+       }
+   
+       @Test
+       public void test3() throws IOException {
+           String code = removeSpaces(getCode());
+   
+           String expect = "Cast expression as a double";
+           String actual = "Cast expression as a double";
+   
+           boolean passed = true;
+   
+           if (!code.contains("(double)")) {
+               passed = false;
+               actual = "Did not cast anything as a double";
+           }
+   
+           getResults(expect, actual, "Checking that expression was cast as a double",
+                   passed);
+           assertTrue(passed);
+       }
+   
+       @Test
+       public void test2() throws IOException {
+           String codeAll = getCode();
+           String[] lines = codeAll.split("\n");
+   
+           String expect = "grade1 + grade2 + grade3\nsum / 3";
+           String actual1 = "", actual2 = "";
+           String hint = "";
+   
+           boolean passed = false;
+   
+           String regex = "grade[1-3]+\\+grade[1-3]+\\+grade[1-3]";
+   
+           for (int i = 0; i < lines.length; i++) {
+               String code = lines[i];
+               String noSpaces = removeSpaces(code);
+   
+               if (noSpaces.matches("[\\s\\S]*" + regex + "[\\s\\S]*")) {
+                   passed = true;
+                   actual1 = code.trim();
+                   break;
+               }
+   
+           }
+   
+           regex = "/3";
+   
+           for (int i = 0; i < lines.length; i++) {
+               String code = lines[i];
+               String noSpaces = removeSpaces(code);
+   
+               if (noSpaces.matches("[\\s\\S]*" + regex + "[\\s\\S]*")) {
+                   passed = true;
+                   actual2 = code.trim();
+                   break;
+               }
+   
+           }
+   
+           String actual = "No such expressions";
+           
+           if (actual1.length() > 0 || actual2.length() > 0) {
+               actual = (actual1 + "\n" + actual2);
+           }
+           
+           if (!passed) {
+               hint = "\n(Check spelling and capitalization)";
+           }
+   
+           getResults(expect, actual, "Checking that grades have been added together and divided by 3" + hint, passed);
+           assertTrue(passed);
+       }
+   }
+
 
 
 .. |repl| raw:: html
