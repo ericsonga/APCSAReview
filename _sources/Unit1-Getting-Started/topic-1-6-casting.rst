@@ -379,16 +379,28 @@ This would be a good project to work together in pairs, and switch drivers (who 
    
        @Test
        public void test3() throws IOException {
-           String code = removeSpaces(getCode());
+           String code = getCode();
+           String[] lines = code.split("\n");
    
-           String expect = "Cast expression as a double";
+           String expect = "(double)";
            String actual = "Cast expression as a double";
    
-           boolean passed = true;
+           boolean passed = false;
    
            if (!code.contains("(double)")) {
                passed = false;
-               actual = "Did not cast anything as a double";
+               actual = "no (double)";
+           }
+   
+           for (int i = 0; i < lines.length; i++) {
+               String line = lines[i];
+   
+               if (line.contains("(double)")) {
+                   passed = true;
+                   actual = line.trim();
+                   break;
+               }
+   
            }
    
            getResults(expect, actual, "Checking that expression was cast as a double",
@@ -449,6 +461,7 @@ This would be a good project to work together in pairs, and switch drivers (who 
            assertTrue(passed);
        }
    }
+
 
 
 
