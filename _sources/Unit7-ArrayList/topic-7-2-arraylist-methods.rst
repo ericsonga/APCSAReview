@@ -577,7 +577,15 @@ Here is a comparison of how to create arrays and ArrayLists:
    ArrayList<Integer> highScoreList = new ArrayList<Integer>();
    ArrayList<String> nameList = new ArrayList<String>();
 
-Here is a comparison of how to access and change elements in arrays and ArrayLists.
+.. |comparison handout| raw:: html
+
+   <a href="https://drive.google.com/file/d/1EzkHa3TNlbHOKVeZReQIf4HzuwwXsCAV/view?usp=sharing" target="_blank">comparison handout</a>
+
+Here is a comparison of how to access and change elements in arrays and ArrayLists. 
+Note that ArrayLists have a method ``size()`` instead of a ``length`` property, and 
+ArrayLists use get/set methods instead of square brackets ([]). 
+Here is a |comparison handout| of the basic operations to access 1-dimensional and 2-dimensional arrays 
+(which we will see in the next unit), ArrayLists, and Strings made by AP CSA teacher Sam Procopio of Bishop Blanchet High School.
 
 =========== ========================  ========================
 Operation   array                     ArrayList
