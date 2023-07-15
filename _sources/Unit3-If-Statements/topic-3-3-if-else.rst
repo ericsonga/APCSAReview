@@ -143,7 +143,7 @@ If/else statements can also be used with relational operators and numbers like b
    :autograde: unittest
    :practice: T
 
-   Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age's value to 15 and then run it again to see the result of the print statement in the else part. 
+   Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age's value to 15 and then run it again to see the result of the print statement in the else part.
    Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements.
    ~~~~
    public class DriversLicenseTest
@@ -188,26 +188,26 @@ If/else statements can also be used with relational operators and numbers like b
    public class EvenOrOdd
    {
    =====
-      public static void main(String[] args)
-      {
-      =====
-        int x = 92;
-        =====
-        if (x % 2 == 0)
-        =====
-        {
-           System.out.println("x is even");
-        }
-        =====
-        else
-        =====
-        {
-           System.out.println("x is odd");
-        }
-        =====
+       public static void main(String[] args)
+       {
+       =====
+           int x = 92;
+           =====
+           if (x % 2 == 0)
+           =====
+           {
+               System.out.println("x is even");
+           }
+           =====
+           else
+           =====
+           {
+               System.out.println("x is odd");
+           }
+           =====
        }
        =====
-    }
+   }
 
 
 |CodingEx| **Coding Exercise**
@@ -651,6 +651,3 @@ AP Practice
     - -10
 
       - This would print out "Low" which is correct according to this problem description.
-
-
-
