@@ -209,8 +209,8 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
         public void test1()
         {
             String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
+                    "import java.awt.*;\n"
+                        + "import java.util.*;\n\n"
                         + "public class TurtleConstructorTest\n"
                         + "{\n"
                         + "  public static void main(String[] args)\n"
@@ -430,22 +430,22 @@ First, as a warm up, do the following debugging exercise.
 
     Debug the following code.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleConstructorDebug
     {
-      public static void main(String[] args)
-      {
-          World w = new World(300,0);
-          turtle t0;
-          Turtle t1 = new Turtle();
-          Turtle t2 = new Turtle(world, 100, 50)
-          t0.forward();
-          t1.turnRight();
-          t2.turnLeft();
-          world.show(true);
-      }
+        public static void main(String[] args)
+        {
+            World w = new World(300,0);
+            turtle t0;
+            Turtle t1 = new Turtle();
+            Turtle t2 = new Turtle(world, 100, 50)
+            t0.forward();
+            t1.turnRight();
+            t2.turnLeft();
+            world.show(true);
+        }
     }
     ====
     import static org.junit.Assert.*;
@@ -465,8 +465,8 @@ First, as a warm up, do the following debugging exercise.
         public void test1()
         {
             String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
+                    "import java.awt.*;\n"
+                        + "import java.util.*;\n\n"
                         + "public class TurtleConstructorDebug\n"
                         + "{\n"
                         + "  public static void main(String[] args)\n"
@@ -779,4 +779,3 @@ AP Practice
                 inTheaters = false;
             }
         }
-
