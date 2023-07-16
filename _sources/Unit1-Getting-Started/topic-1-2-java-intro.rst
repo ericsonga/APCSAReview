@@ -243,7 +243,8 @@ Java has two different methods to print output to the screen:
            if (output.length() > 0)
            {
                actual = output.split("\n").length + actual;
-           } else
+           }
+           else
            {
                actual = output.length() + actual;
            }

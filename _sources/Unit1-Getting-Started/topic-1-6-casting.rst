@@ -355,7 +355,8 @@ This would be a good project to work together in pairs, and switch drivers (who 
            if (matches.length > 3)
            {
                hint = "\n(Did you declare too many grade variables?)";
-           } else if (matches.length < 3)
+           }
+           else if (matches.length < 3)
            {
                hint = "\n(Did you declare too few grade variables?)";
            }
@@ -412,7 +413,8 @@ This would be a good project to work together in pairs, and switch drivers (who 
            if (!passed)
            {
                hint = "\n(Check spelling and capitalization)";
-           } else
+           }
+           else
            {
                actual = expect;
            }
