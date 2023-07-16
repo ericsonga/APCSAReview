@@ -250,7 +250,7 @@ Coding Practice
               :autograde: unittest
               :practice: T
 
-              The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do this task.
+              The following code starts with ``String name1 = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do this task.
               ~~~~
               public class Test1
               {
@@ -258,7 +258,7 @@ Coding Practice
                   {
                       String name1 = "ALEX";
 
-                      System.out.println(firstNameCaps);
+                      System.out.println(name1);
                   }
               }
 
@@ -598,4 +598,3 @@ Here are some practice coding problems for Turtles.
             habitat.show(true);
         }
     }
-
