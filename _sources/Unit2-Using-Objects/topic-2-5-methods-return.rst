@@ -149,16 +149,16 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
             World world = new World(300, 300);
             Turtle yertle = new Turtle(world);
             System.out.println(
-                    "Yertle's is starting at: "
-                            + yertle.getXPos
+                    "Yertle is starting at: "
+                            + yertle.getXPos()
                             + ", "
                             + yertle.getYPos());
             yertle.forward(100);
             yertle.turn(90);
             yertle.forward(50);
             System.out.println(
-                    "Yertle's end up at: "
-                            + yertle.getXPos
+                    "Yertle has ended at: "
+                            + yertle.getXPos()
                             + ", "
                             + yertle.getYPos());
             world.show(true);
@@ -191,18 +191,17 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
                         + "{\n"
                         + "World world = new World(300,300);\n"
                         + "Turtle yertle = new Turtle(world);\n"
-                        + "System.out.println(\"Yertle's is starting at: \" + yertle.getXPos + \", \" +"
+                        + "System.out.println(\"Yertle is starting at: \" + yertle.getXPos() + \", \" +"
                         + " yertle.getYPos());\n"
                         + "yertle.forward(100);\n"
                         + "yertle.turn(90);\n"
                         + "yertle.forward(50);\n"
-                        + "System.out.println(\"Yertle's end up at: \" + yertle.getXPos + \", \" +"
+                        + "System.out.println(\"Yertle has ended at: \" + yertle.getXPos() + \", \" +"
                         + " yertle.getYPos());\n"
                         + "world.show(true);\n"
                         + "}\n"
                         + "}\n";
-            //boolean passed = codeChanged(orig);
-            boolean passed = codeDigestChanged("30f176551608df8c43b354d99ac4fbc7a2581f2a");
+            boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
     }
