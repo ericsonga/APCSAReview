@@ -205,7 +205,7 @@ Input with Variables
    <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank">Java Scanner Input Repl</a>
 
 
-.. |repl JavaIOConsole| raw:: html
+.. |JavaIOConsole| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank">Java Console Input Repl</a>
 
