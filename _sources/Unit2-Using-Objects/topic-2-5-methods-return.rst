@@ -157,7 +157,7 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
             yertle.turn(90);
             yertle.forward(50);
             System.out.println(
-                    "Yertle has ended at: "
+                    "Yertle has ended up at: "
                             + yertle.getXPos()
                             + ", "
                             + yertle.getYPos());
@@ -196,7 +196,7 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
                         + "yertle.forward(100);\n"
                         + "yertle.turn(90);\n"
                         + "yertle.forward(50);\n"
-                        + "System.out.println(\"Yertle has ended at: \" + yertle.getXPos() + \", \" +"
+                        + "System.out.println(\"Yertle has ended up at: \" + yertle.getXPos() + \", \" +"
                         + " yertle.getYPos());\n"
                         + "world.show(true);\n"
                         + "}\n"
