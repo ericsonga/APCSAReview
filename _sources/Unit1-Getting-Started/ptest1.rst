@@ -287,35 +287,39 @@ Please make sure you are logged into Runestone before beginning. Click the |star
 
         .. code-block:: java
 
-            public class TimeRecord
-            {
+           public class TimeRecord
+           {
                private int hours;
                private int minutes; // 0<=minutes<60
 
                public TimeRecord(int h, int m)
                {
-                  hours = h;
-                  minutes = m;
+                   hours = h;
+                   minutes = m;
                }
 
                // postcondition: returns the
                // number of hours
                public int getHours()
-               { /* implementation not shown */ }
+               {
+                   /* implementation not shown */
+               }
 
                // postcondition: returns the number
                // of minutes; 0 <= minutes < 60
                public int getMinutes()
-               { /* implementation not shown */ }
+               {
+                   /* implementation not shown */
+               }
 
                // precondition: h >= 0; m >= 0
                // postcondition: adds h hours and
                // m minutes to this TimeRecord
                public void advance(int h, int m)
                {
-                  hours = hours + h;
-                  minutes = minutes + m;
-                  /* missing code */
+                   hours = hours + h;
+                   minutes = minutes + m;
+                   /* missing code */
                }
 
                // ... other methods not shown
@@ -538,32 +542,32 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             public class Base
             {
 
-               public void methodOne()
-               {
-                  System.out.print("A");
-                  methodTwo();
-               }
+                public void methodOne()
+                {
+                    System.out.print("A");
+                    methodTwo();
+                }
 
-               public void methodTwo()
-               {
-                  System.out.print("B");
-               }
+                public void methodTwo()
+                {
+                    System.out.print("B");
+                }
             }
 
             public class Derived extends Base
             {
 
-               public void methodOne()
-               {
-                  super.methodOne();
-                  System.out.print("C");
-               }
+                public void methodOne()
+                {
+                    super.methodOne();
+                    System.out.print("C");
+                }
 
-               public void methodTwo()
-               {
-                  super.methodTwo();
-                  System.out.print("D");
-               }
+                public void methodTwo()
+                {
+                    super.methodTwo();
+                    System.out.print("D");
+                }
             }
 
     .. mchoice:: qpret_18

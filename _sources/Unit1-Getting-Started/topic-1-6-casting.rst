@@ -56,30 +56,38 @@ The casting operators (int) and (double) are used right next to a number or vari
    ~~~~
    public class OperatorTest
    {
-      public static void main(String[] args)
-      {
-        System.out.println(1 / 3);
-        System.out.println(1.0 / 3);
-        System.out.println(1 / 3.0);
-        System.out.println((double) 1 / 3);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(1 / 3);
+           System.out.println(1.0 / 3);
+           System.out.println(1 / 3.0);
+           System.out.println((double) 1 / 3);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "0\n0.3333333333333333\n0.3333333333333333\n0.3333333333333333\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "0\n"
+                       + "0.3333333333333333\n"
+                       + "0.3333333333333333\n"
+                       + "0.3333333333333333\n";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 Java assumes that if you are doing division with integers that you want an integer result and it will truncate and throw away the part after the decimal point.  But, if you use a mixture of integers (int) and decimal (double) numbers Java will assume that you want a double result. If there is at least one double in the operation, Java will widen the type of the other operand to double too and return the result in a double. If you have integers and you want a double result from some mathematical operation **cast** one of the integers to a double using (double) as shown above.
 
@@ -100,36 +108,44 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
    ~~~~
    public class NearestInt
    {
-      public static void main(String[] args)
-      {
-        double number = 5.0 / 3;
-        int nearestInt = (int)(number + 0.5);
-        System.out.println("5.0/3 = " + number);
-        System.out.println("5/3 truncated: " + (int)number );
-        System.out.println("5.0/3 rounded to nearest int: " + nearestInt);
-        double negNumber = -number;
-        int nearestNegInt = (int)(negNumber - 0.5);
-        System.out.println("-5.0/3 rounded to nearest negative int: " + nearestNegInt);
-      }
-    }
-    ====
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+       public static void main(String[] args)
+       {
+           double number = 5.0 / 3;
+           int nearestInt = (int) (number + 0.5);
+           System.out.println("5.0/3 = " + number);
+           System.out.println("5/3 truncated: " + (int) number);
+           System.out.println("5.0/3 rounded to nearest int: " + nearestInt);
+           double negNumber = -number;
+           int nearestNegInt = (int) (negNumber - 0.5);
+           System.out.println(
+                   "-5.0/3 rounded to nearest negative int: " + nearestNegInt);
+       }
+   }
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "5.0/3 = 1.6666666666666667\n5/3 truncated: 1\n5.0/3 rounded to nearest int: 2\n-5.0/3 rounded to nearest negative int: -2\n";
+   ====
+   import static org.junit.Assert.*;
 
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-     }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "5.0/3 = 1.6666666666666667\n"
+                       + "5/3 truncated: 1\n"
+                       + "5.0/3 rounded to nearest int: 2\n"
+                       + "-5.0/3 rounded to nearest negative int: -2\n";
+
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. index::
    pair: double; number of digits
@@ -147,29 +163,33 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
    ~~~~
    public class TestOverflow
    {
-      public static void main(String[] args)
-      {
-        int id = 2147483650; // overflow
-        int negative = -2147483650; // overflow
-      }
+       public static void main(String[] args)
+       {
+           int id = 2147483650; // overflow
+           int negative = -2147483650; // overflow
+       }
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "214748365\n-214748365\n";
+   import org.junit.*;
 
-            boolean passed = getResults(expect, output, "Fixed Integer Overflow Error", true);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "214748365\n-214748365\n";
+
+           boolean passed =
+                   getResults(
+                           expect, output, "Fixed Integer Overflow Error", true);
+           assertTrue(passed);
+       }
+   }
 
 .. index::
    pair: double; precision format
@@ -184,33 +204,34 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
    ~~~~
    public class TestFormat
    {
-      public static void main(String[] args)
-      {
-        double number = 10 / 3;
-        System.out.println(number);
-        System.out.println( String.format("%.02f", number) );
-      }
+       public static void main(String[] args)
+       {
+           double number = 10 / 3;
+           System.out.println(number);
+           System.out.println(String.format("%.02f", number));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "3.0\n3.00\n";
+   import org.junit.*;
 
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "3.0\n3.00\n";
 
-
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check your understanding**
 
@@ -261,209 +282,252 @@ This would be a good project to work together in pairs, and switch drivers (who 
    ~~~~
    public class Challenge1_6
    {
-      public static void main(String[] args)
-      {
-         // 1. Declare 3 int variables called grade1, grade2, grade3
-         // and initialize them to 3 values
+       public static void main(String[] args)
+       {
+           // 1. Declare 3 int variables called grade1, grade2, grade3
+           // and initialize them to 3 values
 
+           // 2. Declare an int variable called sum for the sum of the grades
 
-         // 2. Declare an int variable called sum for the sum of the grades
+           // 3. Declare a variable called average for the average of the grades
 
-         // 3. Declare a variable called average for the average of the grades
+           // 4. Write a formula to calculate the sum of the 3 grades (add them
+           // up).
 
-         // 4. Write a formula to calculate the sum of the 3 grades (add them up).
+           // 5. Write a formula to calculate the average of the 3 grades from
+           // the sum using division and type casting.
 
-         // 5. Write a formula to calculate the average of the 3 grades from the sum using division and type casting.
+           // 6. Print out the average
 
-         // 6. Print out the average
-
-
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
-   
-   import java.util.regex.Pattern;
    import java.util.regex.MatchResult;
-   
+   import java.util.regex.Pattern;
+
    /* Do NOT change Main or CodeTestHelper.java.
-      Put the active code exercise in a file like ForLoop.java.
-      Put your Junit test in the file RunestoneTests.java.
-      Run. Test by changing ForLoop.java (student code).
-      */
-   
-   public class RunestoneTests extends CodeTestHelper {
+   Put the active code exercise in a file like ForLoop.java.
+   Put your Junit test in the file RunestoneTests.java.
+   Run. Test by changing ForLoop.java (student code).
+   */
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
-       public void test4() throws IOException {
+       public void test4() throws IOException
+       {
            String actual = getMethodOutput("main");
            String expect = "double value";
-   
+
            boolean passed = actual.matches("[\\s\\S]*[0-9]+.[0-9]+[\\s\\S]*");
-   
-           if (!passed) {
-               getResults(expect, actual, "Checking that output is a double value", passed);
+
+           if (!passed)
+           {
+               getResults(
+                       expect,
+                       actual,
+                       "Checking that output is a double value",
+                       passed);
                assertTrue(passed);
                return;
            }
-   
+
            String code = getCode();
            String regex = "grade[0-9]=[0-9]+";
-   
-           String[] matches = Pattern.compile(regex)
-                             .matcher(removeSpaces(code))
-                             .results()
-                             .map(MatchResult::group)
-                             .toArray(String[]::new);
-   
+
+           String[] matches =
+                   Pattern.compile(regex)
+                           .matcher(removeSpaces(code))
+                           .results()
+                           .map(MatchResult::group)
+                           .toArray(String[]::new);
+
            int[] grades = new int[3];
-   
+
            String hint = "";
-           
-           if (matches.length > 3) {
+
+           if (matches.length > 3)
+           {
                hint = "\n(Did you declare too many grade variables?)";
-           } else if (matches.length < 3) {
+           }
+           else if (matches.length < 3)
+           {
                hint = "\n(Did you declare too few grade variables?)";
            }
-   
-           for (int i = 0; i < grades.length && i < matches.length; i++) {            
+
+           for (int i = 0; i < grades.length && i < matches.length; i++)
+           {
                String val = matches[i].substring(matches[i].indexOf("=") + 1);
                grades[i] = Integer.parseInt(val);
            }
-   
-           double exp = (double) (grades[0] + grades[1] + grades[2]) / matches.length;
-   
-           passed = getResults("" + exp, actual, "Checking that calculation is correct" + hint);
+
+           double exp =
+                   (double) (grades[0] + grades[1] + grades[2]) / matches.length;
+
+           passed =
+                   getResults(
+                           "" + exp,
+                           actual,
+                           "Checking that calculation is correct" + hint);
            assertTrue(passed);
        }
-   
+
        @Test
-       public void test1() throws IOException {
+       public void test1() throws IOException
+       {
            String code = removeSpaces(getCode());
-   
+
            String expect = "Declared grade1, grade2, grade3, and average";
            String actual = "";
            String hint = "";
-   
+
            boolean passed = true;
-   
+
            String regex = "grade[1-3]=[0-9]+";
-   
-           String[] matches = Pattern.compile(regex)
-                             .matcher(removeSpaces(code))
-                             .results()
-                             .map(MatchResult::group)
-                             .toArray(String[]::new);
-   
-           if (matches.length != 3) {
+
+           String[] matches =
+                   Pattern.compile(regex)
+                           .matcher(removeSpaces(code))
+                           .results()
+                           .map(MatchResult::group)
+                           .toArray(String[]::new);
+
+           if (matches.length != 3)
+           {
                passed = false;
                actual += "Declared " + matches.length + " grade variables\n";
            }
-   
-           if (!code.contains("doubleaverage")) {
+
+           if (!code.contains("doubleaverage"))
+           {
                passed = false;
                actual += "Did not declare average as a double";
            }
-   
-           if (!passed) {
+
+           if (!passed)
+           {
                hint = "\n(Check spelling and capitalization)";
-           } else {
+           }
+           else
+           {
                actual = expect;
            }
-   
-           getResults(expect, actual.trim(), "Checking that variables have been declared properly" + hint,
+
+           getResults(
+                   expect,
+                   actual.trim(),
+                   "Checking that variables have been declared properly" + hint,
                    passed);
            assertTrue(passed);
        }
-   
+
        @Test
-       public void test3() throws IOException {
+       public void test3() throws IOException
+       {
            String code = getCode();
            String[] lines = code.split("\n");
-   
+
            String expect = "(double)";
            String actual = "Cast expression as a double";
-   
+
            boolean passed = false;
-   
-           if (!code.contains("(double)")) {
+
+           if (!code.contains("(double)"))
+           {
                passed = false;
                actual = "no (double)";
            }
-   
-           for (int i = 0; i < lines.length; i++) {
+
+           for (int i = 0; i < lines.length; i++)
+           {
                String line = lines[i];
-   
-               if (line.contains("(double)")) {
+
+               if (line.contains("(double)"))
+               {
                    passed = true;
                    actual = line.trim();
                    break;
                }
-   
            }
-   
-           getResults(expect, actual, "Checking that expression was cast as a double",
+
+           getResults(
+                   expect,
+                   actual,
+                   "Checking that expression was cast as a double",
                    passed);
            assertTrue(passed);
        }
-   
+
        @Test
-       public void test2() throws IOException {
+       public void test2() throws IOException
+       {
            String codeAll = getCode();
            String[] lines = codeAll.split("\n");
-   
+
            String expect = "grade1 + grade2 + grade3\nsum / 3";
            String actual1 = "", actual2 = "";
            String hint = "";
-   
+
            boolean passed = false;
-   
+
            String regex = "grade[1-3]+\\+grade[1-3]+\\+grade[1-3]";
-   
-           for (int i = 0; i < lines.length; i++) {
+
+           for (int i = 0; i < lines.length; i++)
+           {
                String code = lines[i];
                String noSpaces = removeSpaces(code);
-   
-               if (noSpaces.matches("[\\s\\S]*" + regex + "[\\s\\S]*")) {
+
+               if (noSpaces.matches("[\\s\\S]*" + regex + "[\\s\\S]*"))
+               {
                    passed = true;
                    actual1 = code.trim();
                    break;
                }
-   
            }
-   
+
            regex = "/3";
-   
-           for (int i = 0; i < lines.length; i++) {
+
+           for (int i = 0; i < lines.length; i++)
+           {
                String code = lines[i];
                String noSpaces = removeSpaces(code);
-   
-               if (noSpaces.matches("[\\s\\S]*" + regex + "[\\s\\S]*")) {
+
+               if (noSpaces.matches("[\\s\\S]*" + regex + "[\\s\\S]*"))
+               {
                    passed = true;
                    actual2 = code.trim();
                    break;
                }
-   
            }
-   
+
            String actual = "No such expressions";
-           
-           if (actual1.length() > 0 || actual2.length() > 0) {
+
+           if (actual1.length() > 0 || actual2.length() > 0)
+           {
                actual = (actual1 + "\n" + actual2);
            }
-           
-           if (!passed) {
+
+           if (!passed)
+           {
                hint = "\n(Check spelling and capitalization)";
            }
-   
-           getResults(expect, actual, "Checking that grades have been added together and divided by 3" + hint, passed);
+
+           getResults(
+                   expect,
+                   actual,
+                   "Checking that grades have been added together and divided by"
+                       + " 3"
+                           + hint,
+                   passed);
            assertTrue(passed);
        }
    }
-
-
-
 
 .. |repl| raw:: html
 
@@ -545,18 +609,22 @@ languages?
    {
        public static void main(String[] args)
        {
-           System.out.println("'A' in ASCII and Unicode: " + Character.toString(65));
+           System.out.println(
+                   "'A' in ASCII and Unicode: " + Character.toString(65));
            System.out.println("Chinese for 'sun': " + Character.toString(11932));
            System.out.println("A smiley emoji: " + Character.toString(128512));
 
            // Old style. Doesn't work for all codepoints.
-           System.out.println("This also works: " + (char)65);
-           System.out.println("But this doesn't: " + (char)128512);
-        }
+           System.out.println("This also works: " + (char) 65);
+           System.out.println("But this doesn't: " + (char) 128512);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
@@ -567,11 +635,15 @@ languages?
            String code = getCodeWithoutComments();
            int count = countOccurences(code, "Character.toString");
            boolean passed = count >= 4;
-           passed = getResults("4+", ""+count, "Counting number of Character.toString", passed);
+           passed =
+                   getResults(
+                           "4+",
+                           "" + count,
+                           "Counting number of Character.toString",
+                           passed);
            assertTrue(passed);
-       }  
+       }
    }
-
 
 Summary
 -------------------

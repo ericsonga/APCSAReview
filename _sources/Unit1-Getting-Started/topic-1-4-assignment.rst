@@ -167,35 +167,35 @@ If you use a variable to keep score you would probably increment it (add one to 
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        int score = 0;
-        System.out.println(score);
-        score = score + 1;
-        System.out.println(score);
-      }
+       public static void main(String[] args)
+       {
+           int score = 0;
+           System.out.println(score);
+           score = score + 1;
+           System.out.println(score);
+       }
    }
+
    ====
    // Test Code for Lesson 1.4 Expressions - iccv1
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+   import static org.junit.Assert.*;
 
-    import java.io.*;
+   import org.junit.Test;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "0\n1\n";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n1\n";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 Input with Variables
 --------------------
@@ -205,7 +205,7 @@ Input with Variables
    <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank">Java Scanner Input Repl</a>
 
 
-.. |repl JavaIOConsole| raw:: html
+.. |JavaIOConsole| raw:: html
 
    <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank">Java Console Input Repl</a>
 
@@ -260,38 +260,38 @@ that prints the value of ``0.3 == 0.1 + 0.2``; it will be ``false``!
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        System.out.println(2 + 3);
-        System.out.println(2 - 3);
-        System.out.println(2 * 3);
-        System.out.println(2 / 3);
-        // == is to test while = is to assign
-        System.out.println(2 == 3);
-        System.out.println(2 != 3);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(2 + 3);
+           System.out.println(2 - 3);
+           System.out.println(2 * 3);
+           System.out.println(2 / 3);
+           // == is to test while = is to assign
+           System.out.println(2 == 3);
+           System.out.println(2 != 3);
+       }
    }
+
    ====
    // Test Code for Lesson 1.4 Expressions - iccv1
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "5\n-1\n6\n0\nfalse\ntrue";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.Test;
 
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "5\n-1\n6\n0\nfalse\ntrue";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -314,37 +314,34 @@ Operators can be used to create compound expressions with more than one operator
    ~~~~
    public class TestCompound
    {
-      public static void main(String[] args)
-      {
-        System.out.println(2 + 3 * 2);
-        System.out.println((2 + 3) * 2);
-        System.out.println(2 + (3 * 2));
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(2 + 3 * 2);
+           System.out.println((2 + 3) * 2);
+           System.out.println(2 + (3 * 2));
+       }
    }
+
    ====
    // Test Code for Lesson 1.4 Expressions - compounds
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "8\n10\n8";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.Test;
 
+   import java.io.*;
 
-
-
-
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "8\n10\n8";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 The Modulo Operator
 --------------------
@@ -380,35 +377,35 @@ Here is a |video2| about mod.
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        System.out.println(11 % 10);
-        System.out.println(3 % 4);
-        System.out.println(8 % 2);
-        System.out.println(9 % 2);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(11 % 10);
+           System.out.println(3 % 4);
+           System.out.println(8 % 2);
+           System.out.println(9 % 2);
+       }
    }
+
    ====
    // Test Code for Lesson 1.4 Expressions - lcop2
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+   import static org.junit.Assert.*;
 
-    import java.io.*;
+   import org.junit.Test;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "1\n3\n0\n1";
-            boolean passed = getResults(expect, output, "Expected output from main",true);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "1\n3\n0\n1";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
    The result of x % y when x is smaller than y is always x.  The value y can't go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.
@@ -468,27 +465,28 @@ In this programming challenge, you will calculate your age, and your pet's age f
    ~~~~
    public class Challenge1_4
    {
-      public static void main(String[] args)
-      {
-          // Fill in values for these variables
-          int currentYear =
-          int birthYear =
-          int dogBirthYear =
+       public static void main(String[] args)
+       {
+           // Fill in values for these variables
+           int currentYear =
+           int birthYear =
+           int dogBirthYear =
 
-          // Write a formula to calculate your age
-          // from the currentYear and your birthYear variables
-          int age =
+           // Write a formula to calculate your age from the currentYear and
+           // your birthYear variables
+           int age =
 
-          // Write a formula to calculate your dog's age
-          // from the currentYear and dogBirthYear variables
-          int dogAge =
+           // Write a formula to calculate your dog's age from the currentYear
+           // and dogBirthYear variables
+           int dogAge =
 
-          // Calculate the age of your dog in dogYears (7 times your dog's age in human years)
-          int dogYearsAge =
+           // Calculate the age of your dog in dogYears (7 times your dog's age
+           // in human years)
+           int dogYearsAge =
 
-          // Print out your age, your dog's age, and your dog's age in dog years. Make sure you print out text too so that the user knows what is being printed out.
-
-
+           // Print out your age, your dog's age, and your dog's age in dog
+           // years. Make sure you print out text too so that the user knows what
+           // is being printed out.
 
       }
    }
