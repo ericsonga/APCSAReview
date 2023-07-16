@@ -179,6 +179,7 @@ Most if statements have a boolean condition that uses relational operators like 
       }
    }
    ====
+   
    // Test Code for Lesson 3.2.1 - Activity 1 - if-relational
    import static org.junit.Assert.*;
    import org.junit.After;
@@ -187,76 +188,103 @@ Most if statements have a boolean condition that uses relational operators like 
    
    import java.io.*;
    
-   public class RunestoneTests extends CodeTestHelper
-   {
-     
+   import java.util.regex.Pattern;
+   import java.util.regex.MatchResult;
+   
+   public class RunestoneTests extends CodeTestHelper {
+   
        @Test
-       public void testPositive()
-       {
+       public void testPositive() {
            String output = "";
            int num = -999, count = 0;
    
-           while(num <= 0 && count < 40) {
+           while (num <= 0 && count < 50) {
                output = getMethodOutput("main");
                num = getNumber(output);
                count++;
+   
+               if (num == 9999999) {
+                   getResults("The number is ##\n## is positive!",output,"Did you forget to print the number?", false);
+                   assertTrue(false);
+                   return;
+               }
            }
    
            String expect = "The number is " + num + "\n" + num + " is positive!";
    
-           boolean passed = getResults(expect, output, "Testing positive numbers");
+           boolean passed = output.contains("positive");
+           getResults(expect, output, "Testing positive numbers", passed);
            assertTrue(passed);
        }
-        
+   
        @Test
-       public void testZero()
-       {
+       public void testZero() {
            String output = "";
            int num = -999, count = 0;
    
-           while(num != 0 && count < 50) {
+           while (num != 0 && count < 50) {
                output = getMethodOutput("main");
                num = getNumber(output);
                count++;
+   
+               if (num == 9999999) {
+                   getResults("The number is ##\n## is zero!",output,"Did you forget to print the number?", false);
+                   assertTrue(false);
+                   return;
+               }
            }
    
            String expect = "The number is " + num + "\n" + num + " is zero!";
    
-           boolean passed = getResults(expect, output, "Testing zero");
+           boolean passed = output.contains("zero");
+           getResults(expect, output, "Testing zero", passed);
            assertTrue(passed);
        }
-       
+   
        @Test
-       public void testNegative()
-       {
+       public void testNegative() {
            String output = "";
            int num = 999, count = 0;
    
-           while(num >= 0 && count < 50) {
+           while (num >= 0 && count < 50) {
                output = getMethodOutput("main");
-               //num = getNumber(output);
+               num = getNumber(output);
                count++;
+   
+               if (num == 9999999) {
+                   getResults("The number is ##\n## is negative!",output,"Did you forget to print the number?", false);
+                   assertTrue(false);
+                   return;
+               }
            }
    
            String expect = "The number is " + num + "\n" + num + " is negative!";
    
-           boolean passed = getResults(expect, output,"Testing negative numbers");
+           boolean passed = output.contains("negative");
+           getResults(expect, output, "Testing negative numbers", passed);
            assertTrue(passed);
        }
    
        private int getNumber(String output) {
-           output = output.replaceAll("The number is ", "");
-           int space = output.indexOf("\n");
+           String regex = "[0-9]+";
    
-           String numStr = output;
+           String[] matches = Pattern.compile(regex)
+                   .matcher(output)
+                   .results()
+                   .map(MatchResult::group)
+                   .toArray(String[]::new);
    
-           if (space >= 0)
-               numStr = numStr.substring(0, space).trim();
+           int num = 9999999;
+           
+           if (matches.length > 0)
+               num = Integer.parseInt(matches[0]);
    
-           return Integer.parseInt(numStr);
+           if (output.contains("-"))
+               num *= -1;
+   
+           return num;
        }
-       
-    
+   
    }
 
 
