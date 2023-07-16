@@ -48,9 +48,9 @@ To use Java Swing, you usually need to import the following libraries:
 
 .. code-block:: java
 
-    import java.swing.*;
     import java.awt.*;
     import java.awt.event.*;
+    import java.swing.*;
 
 To set up a JFrame window for your UI, declare an object of type JFrame, set its size in pixels, its layout, and make it visible:
 

@@ -107,30 +107,32 @@ After you put the mixed up code in order above, type in the same code below to m
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleDraw7
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle yertle = new Turtle(habitat);
-          // Make yertle draw a 7 using the code above
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle yertle = new Turtle(habitat);
+            // Make yertle draw a 7 using the code above
 
-
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleDraw7");
         }
 
@@ -153,60 +155,79 @@ After you put the mixed up code in order above, type in the same code below to m
 
     Can you make yertle draw the digital number 8, as 2 squares on top of each other?
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleDraw8
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(500,500);
-          Turtle yertle = new Turtle(habitat);
-          // Make yertle draw an 8 with 2 squares
-          yertle.forward();
+        public static void main(String[] args)
+        {
+            World habitat = new World(500, 500);
+            Turtle yertle = new Turtle(habitat);
+            // Make yertle draw an 8 with 2 squares
+            yertle.forward();
 
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleDraw8");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleDraw8\n{\n  public static void main(String[] args)\n  {\n      World habitat = new World(300,300);\n      Turtle yertle = new Turtle(habitat);\n      // Make yertle draw an 8 with 2 squares\n      yertle.forward();\n\n\n      habitat.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.awt.*;\n"
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleDraw8\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World habitat = new World(300,300);\n"
+                            + "      Turtle yertle = new Turtle(habitat);\n"
+                            + "      // Make yertle draw an 8 with 2 squares\n"
+                            + "      yertle.forward();\n\n\n"
+                            + "      habitat.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
 
         @Test
-        public void test2() {
+        public void test2()
+        {
             String code = getCode();
             int numForward = countOccurences(code, "forward(");
 
             boolean passed = numForward >= 7;
 
-            passed = getResults("7 or more", ""+numForward, "Calls to forward()", passed);
+            passed = getResults("7 or more", "" + numForward, "Calls to forward()", passed);
             assertTrue(passed);
         }
 
         @Test
-        public void test3() {
+        public void test3()
+        {
             String code = getCode();
             int numTurn = countOccurences(code, ".turn");
 
             boolean passed = numTurn >= 5;
 
-            passed = getResults("5 or more", ""+numTurn, "Calls to turnRight() or turnLeft()", passed);
+            passed =
+                    getResults("5 or more", "" + numTurn, "Calls to turnRight() or turnLeft()", passed);
             assertTrue(passed);
         }
     }
@@ -331,8 +352,8 @@ Methods inside the same class can call each other using just ``methodName()``, b
 
    .. code-block:: java
 
-      public class Song
-      {
+    public class Song
+    {
         public void print()
         {
             System.out.print("I like to ");
@@ -349,13 +370,13 @@ Methods inside the same class can call each other using just ``methodName()``, b
 
         public void eat()
         {
-           System.out.print("eat ");
+            System.out.print("eat ");
         }
 
         public static void main(String[] args)
         {
-           Song s = new Song();
-           s.print();
+            Song s = new Song();
+            s.print();
         }
     }
 
@@ -404,35 +425,47 @@ You may notice that it is challenging to have your turtle draw with these simple
 
     Create a drawing of a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or a number from today's date.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleLetter
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
 
-
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleLetter");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleLetter\n{\n  public static void main(String[] args)\n  {\n      World habitat = new World(300,300);\n\n\n\n      habitat.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.awt.*;\n"
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleLetter\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World habitat = new World(300,300);\n\n\n\n"
+                            + "      habitat.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -444,11 +477,15 @@ You may notice that it is challenging to have your turtle draw with these simple
             String[] lines = code.split("\n");
 
             boolean passed = lines.length >= 20;
-            passed = getResults("20 or more lines", lines.length + " lines", "Adding a reasonable amount of lines to code", passed);
+            passed =
+                    getResults(
+                            "20 or more lines",
+                            lines.length + " lines",
+                            "Adding a reasonable amount of lines to code",
+                            passed);
             assertTrue(passed);
         }
     }
-
 
 Summary
 -------------------

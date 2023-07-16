@@ -20,40 +20,39 @@ Coding Practice
               ~~~~
               public class Test1
               {
-                  public static void main(String[] args)
-                  {
-
-                  }
+                  public static void main(String[] args) {}
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testCheckCodeContains1()
-                    {
-                        boolean passed = checkCodeContainsNoRegex("random number up to 100", "Math.random()*100");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                     @Test
-                    public void testCheckCodeContains2()
-                    {
-                        boolean passed = checkCodeContainsNoRegex("random number starting at 1", "+1");
-                        assertTrue(passed);
-                    }
+              import java.io.*;
 
-                     @Test
-                    public void testCheckCodeContains3()
-                    {
-                        boolean passed = checkCodeContains("casting to int", "(int)");
-                        assertTrue(passed);
-                    }
-                }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testCheckCodeContains1()
+                  {
+                      boolean passed = checkCodeContainsNoRegex("random number up to 100", "Math.random()*100");
+                      assertTrue(passed);
+                  }
 
+                  @Test
+                  public void testCheckCodeContains2()
+                  {
+                      boolean passed = checkCodeContainsNoRegex("random number starting at 1", "+1");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCheckCodeContains3()
+                  {
+                      boolean passed = checkCodeContains("casting to int", "(int)");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -106,29 +105,30 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "smh";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                     @Test
-                    public void testCodeContains()
-                    {
-                        String target = ".substring(0,1)";
-                        boolean passed = checkCodeContains("substring method", target);
-                        assertTrue(passed);
-                    }
-                }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "smh";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains()
+                  {
+                      String target = ".substring(0,1)";
+                      boolean passed = checkCodeContains("substring method", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -147,9 +147,10 @@ Coding Practice
                       String firstName = "Sofia";
                       String middleName = "Maria";
                       String lastName = "Hernandez";
-                      String initials = firstName.substring(0,1) +
-                                        middleName.substring(0,1) +
-                                        lastName.substring(0,1);
+                      String initials =
+                              firstName.substring(0, 1)
+                                      + middleName.substring(0, 1)
+                                      + lastName.substring(0, 1);
                       System.out.println(initials.toLowerCase());
                   }
               }
@@ -184,28 +185,31 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "mee";
-                        boolean passed = output.equals(expect);
-                        passed = getResults(expect, output, "Expected output from main", passed);
-                        assertTrue(passed);
-                    }
-                      @Test
-                    public void testCodeContains()
-                    {
-                        String target = ".substring(0,3)";
-                        boolean passed = checkCodeContains("substring method ", target);
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "mee";
+                      boolean passed = output.equals(expect);
+                      passed = getResults(expect, output, "Expected output from main", passed);
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains()
+                  {
+                      String target = ".substring(0,3)";
+                      boolean passed = checkCodeContains("substring method ", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -222,7 +226,7 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       String message = "Meet me by the bridge";
-                      String part = message.substring(0,3);
+                      String part = message.substring(0, 3);
                       String lower = part.toLowerCase();
                       System.out.println(lower);
                   }
@@ -246,7 +250,7 @@ Coding Practice
               :autograde: unittest
               :practice: T
 
-              The following code starts with ``String firstNameCaps = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do this task.
+              The following code starts with ``String name1 = ALEX;`` and should print ``Alex``.  Use the ``toLowerCase`` and ``substring`` methods to do this task.
               ~~~~
               public class Test1
               {
@@ -254,35 +258,36 @@ Coding Practice
                   {
                       String name1 = "ALEX";
 
-
-
-                      System.out.println(firstNameCaps);
+                      System.out.println(name1);
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Alex";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                     @Test
-                    public void testCodeContains()
-                    {
-                        String target = ".substring(";
-                        boolean passed = checkCodeContains("substring method", target);
-                        assertTrue(passed);
-                    }
-                }
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Alex";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains()
+                  {
+                      String target = ".substring(";
+                      boolean passed = checkCodeContains("substring method", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -299,9 +304,8 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       String name1 = "ALEX";
-                      String nameLower= name1.toLowerCase();
-                      String finalName = name1.substring(0,1) +
-                                         nameLower.substring(1);
+                      String nameLower = name1.toLowerCase();
+                      String finalName = name1.substring(0, 1) + nameLower.substring(1);
                       System.out.println(finalName);
                   }
               }
@@ -329,40 +333,43 @@ Coding Practice
                   {
                       String message = "I am very happy!";
                       String target = "very ";
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "I am happy!";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                     @Test
-                    public void testCodeContains()
-                    {
-                        String target = ".substring(";
-                        boolean passed = checkCodeContains("substring method", target);
-                        assertTrue(passed);
-                    }
-                     @Test
-                    public void testCodeContains2()
-                    {
-                        String target = ".indexOf(";
-                        boolean passed = checkCodeContains("indexOf method", target);
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "I am happy!";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains()
+                  {
+                      String target = ".substring(";
+                      boolean passed = checkCodeContains("substring method", target);
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains2()
+                  {
+                      String target = ".indexOf(";
+                      boolean passed = checkCodeContains("indexOf method", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -381,8 +388,9 @@ Coding Practice
                       String message = "I am very happy!";
                       String target = "very ";
                       int pos = message.indexOf(target);
-                      String newMessage = message.substring(0,pos) +
-                                          message.substring(pos+target.length());
+                      String newMessage =
+                              message.substring(0, pos)
+                                      + message.substring(pos + target.length());
                       System.out.println(newMessage);
                   }
               }
@@ -409,41 +417,43 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       String message = "That was great - lol.";
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "That was great - laugh out loud";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                     @Test
-                    public void testCodeContains()
-                    {
-                        String target = ".substring(";
-                        boolean passed = checkCodeContains("substring method", target);
-                        assertTrue(passed);
-                    }
-                     @Test
-                    public void testCodeContains2()
-                    {
-                        String target = ".indexOf(";
-                        boolean passed = checkCodeContains("indexOf method", target);
-                        assertTrue(passed);
-                    }
-                }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "That was great - laugh out loud";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains()
+                  {
+                      String target = ".substring(";
+                      boolean passed = checkCodeContains("substring method", target);
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains2()
+                  {
+                      String target = ".indexOf(";
+                      boolean passed = checkCodeContains("indexOf method", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -462,9 +472,10 @@ Coding Practice
                       String message = "That was great - lol.";
                       String target = "lol";
                       int pos = message.indexOf(target);
-                      String newMessage = message.substring(0,pos) +
-                                          "laugh out loud" +
-                                          message.substring(pos + target.length());
+                      String newMessage =
+                              message.substring(0, pos)
+                                      + "laugh out loud"
+                                      + message.substring(pos + target.length());
                       System.out.println(newMessage);
                   }
               }
@@ -493,18 +504,18 @@ Here are some practice coding problems for Turtles.
     Finish the code below to have ``t1`` draw a triangle where all of the
     sides are length 50.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle t1 = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle t1 = new Turtle(habitat);
 
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
 
 .. activecode:: Turtle-eoc-rect-ac
@@ -514,18 +525,18 @@ Here are some practice coding problems for Turtles.
     Finish the code below to have ``t1`` draw a rectangle.  The vertical
     sides should be length 50 and the horizontal length 100.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle t1  = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle t1 = new Turtle(habitat);
 
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
 
 .. activecode:: Turtle-eoc-draw-seven-ac
@@ -539,14 +550,14 @@ Here are some practice coding problems for Turtles.
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle t1  = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300,300);
+            Turtle t1  = new Turtle(habitat);
 
-          habitat.show(true);
-      }
-
+            habitat.show(true);
+        }
+    }
 
 .. activecode:: Turtle-eoc-draw-four-ac
     :language: java
@@ -554,18 +565,18 @@ Here are some practice coding problems for Turtles.
 
     Finish the code below to have ``t1`` draw the number four.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle t1  = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle t1 = new Turtle(habitat);
 
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
 
 .. activecode:: Turtle-eoc-draw-interesting-ac
@@ -574,16 +585,16 @@ Here are some practice coding problems for Turtles.
 
     Finish the code below to have ``t1`` draw something interesting.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle t1  = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle t1 = new Turtle(habitat);
 
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }

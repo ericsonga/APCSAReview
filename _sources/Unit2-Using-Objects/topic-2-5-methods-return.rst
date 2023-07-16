@@ -139,39 +139,68 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     own IDE.)
 
     ~~~~
-    import java.util.*;
     import java.awt.*;
-    import java.lang.Math;
+    import java.util.*;
 
     public class TurtleTestGetSet
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
-          System.out.println("Yertle's is starting at: " + yertle.getXPos + ", " + yertle.getYPos());
-          yertle.forward(100);
-          yertle.turn(90);
-          yertle.forward(50);
-          System.out.println("Yertle's end up at: " + yertle.getXPos + ", " + yertle.getYPos());
-          world.show(true);
-      }
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
+            System.out.println(
+                    "Yertle is starting at: "
+                            + yertle.getXPos()
+                            + ", "
+                            + yertle.getYPos());
+            yertle.forward(100);
+            yertle.turn(90);
+            yertle.forward(50);
+            System.out.println(
+                    "Yertle has ended up at: "
+                            + yertle.getXPos()
+                            + ", "
+                            + yertle.getYPos());
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTestGetSet");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\nimport java.lang.Math;\n\npublic class TurtleTestGetSet\n{\npublic static void main(String[] args)\n{\nWorld world = new World(300,300);\nTurtle yertle = new Turtle(world);\nSystem.out.println(\"Yertle's is starting at: \" + yertle.getXPos + \", \" + yertle.getYPos());\nyertle.forward(100);\nyertle.turn(90);\nyertle.forward(50);\nSystem.out.println(\"Yertle's end up at: \" + yertle.getXPos + \", \" + yertle.getYPos());\nworld.show(true);\n}\n}\n";
+            String orig =
+                    "import java.awt.*;\n"
+                        + "import java.util.*;\n\n"
+                        + "public class TurtleTestGetSet\n"
+                        + "{\n"
+                        + "public static void main(String[] args)\n"
+                        + "{\n"
+                        + "World world = new World(300,300);\n"
+                        + "Turtle yertle = new Turtle(world);\n"
+                        + "System.out.println(\"Yertle is starting at: \" + yertle.getXPos() + \", \" +"
+                        + " yertle.getYPos());\n"
+                        + "yertle.forward(100);\n"
+                        + "yertle.turn(90);\n"
+                        + "yertle.forward(50);\n"
+                        + "System.out.println(\"Yertle has ended up at: \" + yertle.getXPos() + \", \" +"
+                        + " yertle.getYPos());\n"
+                        + "world.show(true);\n"
+                        + "}\n"
+                        + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -189,30 +218,33 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     you have to do something with the values that the get methods return.
 
     ~~~~
-    import java.util.*;
     import java.awt.*;
     import java.lang.Math;
+    import java.util.*;
 
     public class TurtleArea
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+        public static void main(String[] args)
+        {
+            World world = new World(300,300);
+            Turtle yertle = new Turtle(world);
 
-          int area;
-          yertle.getWidth() * getHeight;
-          System.out.println("Yertle's area is: ");
-      }
+            int area;
+            yertle.getWidth() * getHeight;
+            System.out.println("Yertle's area is: ");
+        }
     }
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleArea");
         }
 
@@ -224,8 +256,10 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
             boolean passed = getResults(expected, actual, "Prints correct answer");
             assertTrue(passed);
         }
-         @Test
-        public void test2() {
+
+        @Test
+        public void test2()
+        {
             String code = getCode();
             String target = ".getHeight()";
 
@@ -238,7 +272,8 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
         }
 
         @Test
-        public void test3() {
+        public void test3()
+        {
             String code = getCode();
             String target = ".getWidth()";
 
@@ -263,32 +298,33 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     Calling a getter just gets a value; it’s up to you to do something with it.
 
     ~~~~
-    import java.util.*;
     import java.awt.*;
-    import java.lang.Math;
+    import java.util.*;
 
     public class TurtleTestMethods2
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
 
-          // Try some get methods here!
+            // Try some get methods here!
 
-
-
-          world.show(true);
-      }
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTestMethods2");
         }
 
@@ -318,7 +354,9 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
         public void test3()
         {
             String code = getCode();
-            int num = countOccurences(code, "toString()") + countOccurences(code, "System.out.println(yertle)");
+            int num =
+                    countOccurences(code, "toString()")
+                            + countOccurences(code, "System.out.println(yertle)");
 
             boolean passed = num > 0;
             getResults(">=1", "" + num, "Calls to toString()", passed);
@@ -335,7 +373,7 @@ values based on both the current state of the object and some arguments.
 
 For example, while we could use a ``Turtle``\ ’s ``getXPos`` and ``getYPos``
 getters and some math (remember your Pythagorean Theorem?) to figure out how far
-away a ``Turtle`` is from any given point, if that’s a thing we need to do in 
+away a ``Turtle`` is from any given point, if that’s a thing we need to do in
 a lot of programs using ``Turtle``, it might be nice to be able to ask a
 ``Turtle`` directly for its distance from a given point. After all, it knows
 where it is, so why not do the math for us?
@@ -391,21 +429,20 @@ of the method. The calling method must then do something useful with that value.
       {
           public int square(int x)
           {
-              return x*x;
+              return x * x;
           }
 
           public int divide(int x, int y)
           {
-              return x/y;
+              return x / y;
           }
 
           public static void main(String[] args)
           {
               MethodTrace traceObj = new MethodTrace();
-              System.out.println(traceObj.square(2) + traceObj.divide(6,2));
+              System.out.println(traceObj.square(2) + traceObj.divide(6, 2));
           }
-       }
-
+      }
 
 .. |visualization| raw:: html
 
@@ -429,34 +466,35 @@ Try this |visualization| to see this code in action.
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    import java.util.*;
     import java.awt.*;
-    import java.lang.Math;
+    import java.util.*;
 
     public class TurtleTestDistance
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
 
-          // Can you find yertle's distance from the point (0,0)?
+            // Can you find yertle's distance from the point (0,0)?
 
-          // Can you find the distance between 2 turtles?
+            // Can you find the distance between 2 turtles?
 
-
-
-          world.show(true);
-      }
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTestDistance");
         }
 
@@ -504,7 +542,6 @@ Try this |visualization| to see this code in action.
             assertTrue(passed);
         }
     }
-
 
 Summary
 -------------------
@@ -620,4 +657,3 @@ AP Practice
 .. |visualizationLiquid| raw:: html
 
    <a href="https://pythontutor.com/render.html#code=public%20class%20Liquid%20%7B%0A%20%20%0A%20%20%20%20private%20double%20boilingPoint%3B%0A%20%20%20%20private%20double%20freezingPoint%3B%0A%20%20%20%20private%20double%20currentTemp%3B%0A%0A%20%20%20%20public%20Liquid%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20currentTemp%20%3D%2050%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20lowerTemp%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20currentTemp%20-%3D%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getTemp%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20currentTemp%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20Liquid%20water%20%3D%20new%20Liquid%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20water.lowerTemp%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28water.getTemp%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=18&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">visualization</a>
-

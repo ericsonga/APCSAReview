@@ -63,28 +63,31 @@ You can declare a variable to be of type ``String``.
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        String greeting = null;
-        System.out.println(greeting);
-      }
+       public static void main(String[] args)
+       {
+           String greeting = null;
+           System.out.println(greeting);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "null";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "null";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 The code above declares an object variable named ``greeting`` and sets the value of greeting to the Java keyword ``null`` to show that it doesn't refer to any object yet.  So ``System.out.println(greeting);`` will print ``null``.
 
@@ -130,31 +133,36 @@ In both cases an object of the ``String`` class will be created in memory and th
    ~~~~
    public class StringTest
    {
-      public static void main(String[] args)
-      {
-          String greeting1 = "Hello!";
-          String greeting2 = new String("Welcome!");
-          System.out.println(greeting1);
-          System.out.println(greeting2);
+       public static void main(String[] args)
+       {
+           String greeting1 = "Hello!";
+           String greeting2 = new String("Welcome!");
+           System.out.println(greeting1);
+           System.out.println(greeting2);
        }
-    }
+   }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
-        public void testChangedCode() {
-            String origCode = "public class StringTest {      public static void main(String[] args)      { String greeting1 = \"Hello!\";        String greeting2 = new String(\"Welcome!\"); System.out.println(greeting1); System.out.println(greeting2); }    }";
+        public void testChangedCode()
+        {
+            String origCode =
+                    "public class StringTest {      public static void main(String[] args)      {"
+                            + " String greeting1 = \"Hello!\";        String greeting2 = new"
+                            + " String(\"Welcome!\"); System.out.println(greeting1);"
+                            + " System.out.println(greeting2); }    }";
             boolean changed = codeChanged(origCode);
             assertTrue(changed);
         }
     }
-
-
-
 
 .. activecode:: lcsb2
    :language: java
@@ -164,31 +172,34 @@ In both cases an object of the ``String`` class will be created in memory and th
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        String greeting = "Hello";
-        Class currClass = greeting.getClass();
-        System.out.println(currClass);
-        Class parentClass = currClass.getSuperclass();
-        System.out.println(parentClass);
-      }
+       public static void main(String[] args)
+       {
+           String greeting = "Hello";
+           Class currClass = greeting.getClass();
+           System.out.println(currClass);
+           Class parentClass = currClass.getSuperclass();
+           System.out.println(parentClass);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "class java.lang.String\nclass java.lang.Object";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "class java.lang.String\nclass java.lang.Object";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. index::
    single: parent class
@@ -242,31 +253,34 @@ assigning that new value back into the variable, again just like with numbers.
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-          String start = "Happy Birthday";
-          String name = "Jose";
-          String result = start + " " + name;  // add together strings
-          result += "!"; // add on to the same string
-          System.out.println(result);
-      }
+       public static void main(String[] args)
+       {
+           String start = "Happy Birthday";
+           String name = "Jose";
+           String result = start + " " + name; // add together strings
+           result += "!"; // add on to the same string
+           System.out.println(result);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Happy Birthday Jose Hernandez!!!";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Happy Birthday Jose Hernandez!!!";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 .. note::
    Note that spaces are not added between strings automatically.  If you want a space between two strings then add one using + " " +. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".  And remember that variables are never put inside the quotes ("") since this would print the variable name out letter by letter instead of its value.
@@ -319,15 +333,18 @@ talk about overriding in detail in Unit 9.)
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        String message = "12" + 4 + 3;
-        System.out.println(message);
-      }
+       public static void main(String[] args)
+       {
+           String message = "12" + 4 + 3;
+           System.out.println(message);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
@@ -342,12 +359,13 @@ talk about overriding in detail in Unit 9.)
        }
 
        @Test
-       public void testParen() throws IOException {
+       public void testParen() throws IOException
+       {
            String code = removeSpaces(getCodeWithoutComments());
            String expect = "(4+3)";
            boolean passed = code.contains(expect);
 
-           passed = getResults(""+true, ""+passed, "Checking code for added parentheses");
+           passed = getResults("" + true, "" + passed, "Checking code for added parentheses");
            assertTrue(passed);
        }
    }
@@ -367,30 +385,34 @@ What if you wanted to print out a double quote " character? Since the double quo
    ~~~~
    public class TestEscape
    {
-      public static void main(String[] args)
-      {
-        String message = "Here is a backslash quote \" " +
-          " and a backslashed backslash (\\) " +
-          "Backslash n \n prints out a new line.";
-        System.out.println(message);
-      }
+       public static void main(String[] args)
+       {
+           String message =
+                   "Here is a backslash quote \" "
+                           + " and a backslashed backslash (\\) "
+                           + "Backslash n \n prints out a new line.";
+           System.out.println(message);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = output;
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = output;
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 |Groupwork| Programming Challenge : Mad Libs
 --------------------------------------------
@@ -418,59 +440,56 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
    ~~~~
    public class MadLibs1
    {
-      public static void main(String[] args)
-      {
-        // fill these in with silly words/strings (don't read the poem yet)
-        String pluralnoun1 =
-        String color1 =
-        String color2 =
-        String food =
-        String pluralnoun2 =
+       public static void main(String[] args)
+       {
+           // fill these in with silly words/strings (don't read the poem yet)
+           String pluralnoun1 = null;
+           String color1 = null;
+           String color2 = null;
+           String food = null;
+           String pluralnoun2 = null;
 
 
-        // Run to see the silly poem!
-        System.out.println("Roses are " + color1);
-        System.out.println(pluralnoun1 + " are " + color2);
-        System.out.println("I like " + food);
-        System.out.println("Do " + pluralnoun2 + " like them too?");
+           // Run to see the silly poem!
+           System.out.println("Roses are " + color1);
+           System.out.println(pluralnoun1 + " are " + color2);
+           System.out.println("I like " + food);
+           System.out.println("Do " + pluralnoun2 + " like them too?");
 
-        // Now come up with your own silly poem!
-
-      }
+           // Now come up with your own silly poem!
+       }
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Roses are *\n* are *\nI like *\nDo * like them too?";
+   import org.junit.*;
 
-            boolean passed = getResultsRegEx(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+   import java.io.*;
 
-        @Test
-        public void testNull() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "null";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Roses are *\n* are *\nI like *\nDo * like them too?";
 
-            String actual = countOccurences(output, expect) + " null values";
+           boolean passed = getResultsRegEx(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-            boolean passed = getResults("0 null values", actual, "No null values");
-            assertTrue(passed);
-        }
-    }
+       @Test
+       public void testNull() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "null";
 
+           String actual = countOccurences(output, expect) + " null values";
 
-
-
+           boolean passed = getResults("0 null values", actual, "No null values");
+           assertTrue(passed);
+       }
+   }
 
 Summary
 -------------------
