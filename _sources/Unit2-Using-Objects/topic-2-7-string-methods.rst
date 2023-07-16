@@ -498,10 +498,13 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
       public static void main(String[] args)
       {
 
-          String word =
+          String word = "pig";
 
-          // Use word.substring to construct word in pig latin
-          String pigLatin =
+          // Change this to use word.substring to construct the pig latin
+          // version of word. It should work even if you change the value of
+          // word above.
+          String pigLatin = "";
+
 
           System.out.println(word + " in Pig Latin is " + pigLatin);
       }
