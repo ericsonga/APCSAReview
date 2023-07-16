@@ -1479,7 +1479,7 @@ public class CodeTestHelper {
             return passed;
         } catch (NoSuchAlgorithmException nsae) {
             String msg = "Test could not be completed";
-            results += formatOutput("true", "false", msg, false);;
+            results += formatOutput("true", "false", msg, false);
             results += "\n";
             return false;
         }
