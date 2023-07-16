@@ -377,26 +377,27 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
           World world = new World(500,400);
           Turtle yertle = new Turtle(world);
 
-          // This is a loop that runs 10 times (you will learn to write loops in Unit 4)
-          for(int i=1; i <= 10; i++)
+          // This is a loop that runs 10 times (you will learn to write loops in
+          // Unit 4)
+          for(int i = 1; i <= 10; i++)
           {
            // Can you choose a randomX between 0-500?
            // Can you adjust for the 20 pixel width of the turtle,
            // so it doesn't get cut off at the edges?
            // Move the range from 20 to 480.
-           int randomX =
+           int randomX = 0;
            // Can you choose a randomY between 0-400?
            // Can you adjust for the 20 pixel height of the turtle,
            // so it doesn't get cut off at the edges?
-           int randomY =
+           int randomY = 0;
 
            yertle.moveTo(randomX, randomY);
            yertle.turnRight();
 
            // Can you choose a random red, green, and blue value between 0-255?
-           int randomR =
-           int randomG =
-           int randomB =
+           int randomR = 0;
+           int randomG = 0;
+           int randomB = 0;
 
            yertle.setColor(new Color(randomR, randomG, randomB));
 
@@ -455,5 +456,3 @@ Summary
 - The values returned from Math.random can be manipulated to produce a random int or double in a defined range.
 
 - **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number. The range is the **(max number - min number + 1)**. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: ``(int)(Math.random()*6) + 5``.
-
-
