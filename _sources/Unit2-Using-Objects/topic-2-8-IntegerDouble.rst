@@ -179,9 +179,9 @@ Here are some more useful methods in the Integer and  Double classes:
            String output = getMethodOutput("main");
            String expect =
                    "2\n"
-                       + "3.5\n"
-                       + "Age 16 in 10 years is 26\n"
-                       + "Note that + with strings does concatenation, not addition: 1610";
+                           + "3.5\n"
+                           + "Age 16 in 10 years is 26\n"
+                           + "Note that + with strings does concatenation, not addition: 1610";
            boolean passed = getResults(expect, output, "Expected output from main", true);
            assertTrue(passed);
        }

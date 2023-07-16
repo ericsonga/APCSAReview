@@ -156,9 +156,9 @@ In both cases an object of the ``String`` class will be created in memory and th
         {
             String origCode =
                     "public class StringTest {      public static void main(String[] args)      {"
-                        + " String greeting1 = \"Hello!\";        String greeting2 = new"
-                        + " String(\"Welcome!\"); System.out.println(greeting1);"
-                        + " System.out.println(greeting2); }    }";
+                            + " String greeting1 = \"Hello!\";        String greeting2 = new"
+                            + " String(\"Welcome!\"); System.out.println(greeting1);"
+                            + " System.out.println(greeting2); }    }";
             boolean changed = codeChanged(origCode);
             assertTrue(changed);
         }

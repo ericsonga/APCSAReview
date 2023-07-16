@@ -466,21 +466,21 @@ First, as a warm up, do the following debugging exercise.
         {
             String orig =
                     "import java.awt.*;\n"
-                        + "import java.util.*;\n\n"
-                        + "public class TurtleConstructorDebug\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World w = new World(300,0);\n"
-                        + "      turtle t0;\n"
-                        + "      Turtle t1 = new Turtle();\n"
-                        + "      Turtle t2 = new Turtle(world, 100, 50)\n"
-                        + "      t0.forward();\n"
-                        + "      t1.turnRight();\n"
-                        + "      t2.turnLeft();\n"
-                        + "      world.show(true);\n"
-                        + "  }\n"
-                        + "}\n";
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleConstructorDebug\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World w = new World(300,0);\n"
+                            + "      turtle t0;\n"
+                            + "      Turtle t1 = new Turtle();\n"
+                            + "      Turtle t2 = new Turtle(world, 100, 50)\n"
+                            + "      t0.forward();\n"
+                            + "      t1.turnRight();\n"
+                            + "      t2.turnLeft();\n"
+                            + "      world.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -648,7 +648,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
             boolean passed =
                     checkCodeContains(
                             "constructor for a large 150x200 CustomTurtle with a green body and a blue"
-                                + " shell at position (150,300) in world1",
+                                    + " shell at position (150,300) in world1",
                             target);
             assertTrue(passed);
         }
@@ -660,7 +660,7 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
             boolean passed =
                     checkCodeContains(
                             "constructor for a small 25x50 CustomTurtle with a red body and a yellow"
-                                + " shell at position (350,200) in world1",
+                                    + " shell at position (350,200) in world1",
                             target);
             assertTrue(passed);
         }
@@ -779,3 +779,4 @@ AP Practice
                 inTheaters = false;
             }
         }
+

@@ -201,7 +201,8 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
                         + "world.show(true);\n"
                         + "}\n"
                         + "}\n";
-            boolean passed = codeChanged(orig);
+            //boolean passed = codeChanged(orig);
+            boolean passed = codeDigestChanged("30f176551608df8c43b354d99ac4fbc7a2581f2a");
             assertTrue(passed);
         }
     }
@@ -218,21 +219,21 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     you have to do something with the values that the get methods return.
 
     ~~~~
-    import java.util.*;
     import java.awt.*;
     import java.lang.Math;
+    import java.util.*;
 
     public class TurtleArea
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+        public static void main(String[] args)
+        {
+            World world = new World(300,300);
+            Turtle yertle = new Turtle(world);
 
-          int area;
-          yertle.getWidth() * getHeight;
-          System.out.println("Yertle's area is: ");
-      }
+            int area;
+            yertle.getWidth() * getHeight;
+            System.out.println("Yertle's area is: ");
+        }
     }
     ====
     import static org.junit.Assert.*;
@@ -467,7 +468,6 @@ Try this |visualization| to see this code in action.
     :datafile: turtleClasses.jar
 
     import java.awt.*;
-    import java.lang.Math;
     import java.util.*;
 
     public class TurtleTestDistance

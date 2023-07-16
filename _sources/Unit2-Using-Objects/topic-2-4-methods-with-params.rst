@@ -378,21 +378,21 @@ Use the Code Lens button or this |Java Visualizer| to step through the code.
     {
         public String expected =
                 "Old MacDonald had a farm\n"
-                    + "E-I-E-I-O\n"
-                    + "And on that farm he had a cow\n"
-                    + "E-I-E-I-O\n"
-                    + "With a moo moo here,\n"
-                    + "And a moo moo there,\n"
-                    + "Old MacDonald had a farm\n"
-                    + "E-I-E-I-O\n"
-                    + "Old MacDonald had a farm\n"
-                    + "E-I-E-I-O\n"
-                    + "And on that farm he had a duck\n"
-                    + "E-I-E-I-O\n"
-                    + "With a quack quack here,\n"
-                    + "And a quack quack there,\n"
-                    + "Old MacDonald had a farm\n"
-                    + "E-I-E-I-O";
+                        + "E-I-E-I-O\n"
+                        + "And on that farm he had a cow\n"
+                        + "E-I-E-I-O\n"
+                        + "With a moo moo here,\n"
+                        + "And a moo moo there,\n"
+                        + "Old MacDonald had a farm\n"
+                        + "E-I-E-I-O\n"
+                        + "Old MacDonald had a farm\n"
+                        + "E-I-E-I-O\n"
+                        + "And on that farm he had a duck\n"
+                        + "E-I-E-I-O\n"
+                        + "With a quack quack here,\n"
+                        + "And a quack quack there,\n"
+                        + "Old MacDonald had a farm\n"
+                        + "E-I-E-I-O";
 
         public RunestoneTests()
         {
@@ -544,15 +544,15 @@ It may help to act out the code pretending you are the turtle. Remember that the
         {
             String orig =
                     "import java.awt.*;\n"
-                        + "import java.util.*;\n"
-                        + "public class TurtleHouse\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World world = new World(300,300);\n\n\n\n"
-                        + "      world.show(true);\n"
-                        + "  }\n"
-                        + "}\n";
+                            + "import java.util.*;\n"
+                            + "public class TurtleHouse\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World world = new World(300,300);\n\n\n\n"
+                            + "      world.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
