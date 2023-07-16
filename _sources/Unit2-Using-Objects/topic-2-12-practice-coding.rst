@@ -550,14 +550,14 @@ Here are some practice coding problems for Turtles.
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle t1  = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300,300);
+            Turtle t1  = new Turtle(habitat);
 
-          habitat.show(true);
-      }
-
+            habitat.show(true);
+        }
+    }
 
 .. activecode:: Turtle-eoc-draw-four-ac
     :language: java
