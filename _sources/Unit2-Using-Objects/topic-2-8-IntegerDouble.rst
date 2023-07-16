@@ -200,16 +200,16 @@ Can you find and fix all the bugs in the following code to use the correct Integ
    ~~~~
    public class Debug
    {
-      public static void main(String[] args)
-      {
-        integer i = 2.3;
-        Double d = 5;
-        System.out.println( i.intValue );
-        System.out.println( doubleValue() );
-        // Print out the min and max values possible for integers
-        System.out.println(Integer.min_value);
-        System.out.println( int.MAX_VALUE() );
-      }
+       public static void main(String[] args)
+       {
+           integer i = 2.3;
+           Double d = 5;
+           System.out.println( i.intValue );
+           System.out.println( doubleValue() );
+           // Print out the min and max values possible for integers
+           System.out.println(Integer.min_value);
+           System.out.println( int.MAX_VALUE() );
+       }
    }
    ====
    import static org.junit.Assert.*;
@@ -269,5 +269,3 @@ Summary
 
   - Passed as a parameter to a method that expects a value of the corresponding primitive type.
   - Assigned to a variable of the corresponding primitive type.
-
-
