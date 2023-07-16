@@ -122,30 +122,30 @@ For example, if you divide 5/3 using integer division, Java will truncate 1.67 t
        }
    }
 
-    ====
-    import static org.junit.Assert.*;
+   ====
+   import static org.junit.Assert.*;
 
-    import org.junit.*;
+   import org.junit.*;
 
-    import java.io.*;
+   import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect =
-                    "5.0/3 = 1.6666666666666667\n"
-                        + "5/3 truncated: 1\n"
-                        + "5.0/3 rounded to nearest int: 2\n"
-                        + "-5.0/3 rounded to nearest negative int: -2\n";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "5.0/3 = 1.6666666666666667\n"
+                       + "5/3 truncated: 1\n"
+                       + "5.0/3 rounded to nearest int: 2\n"
+                       + "-5.0/3 rounded to nearest negative int: -2\n";
 
-            boolean passed =
-                    getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. index::
    pair: double; number of digits
