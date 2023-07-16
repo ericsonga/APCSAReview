@@ -647,7 +647,8 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
 
    }
 
-   public class MyArrayList 
+   /* Change this class name to a meaningful name for the whole dataset. */
+   public class Data 
    {
        // Declare an ArrayList of your class type
 
