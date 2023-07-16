@@ -215,7 +215,7 @@ different **method signature**, where it requires a different number or type of 
                 "\n" +
                 "        world.show(true);\n" +
                 "    }\n" +
-                "}\n";
+                "}\n"
             );
             assertTrue(passed);
         }
