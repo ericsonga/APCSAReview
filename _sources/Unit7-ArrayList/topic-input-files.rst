@@ -666,7 +666,7 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
 
        public static void main(String[] args) throws IOException
        {
-            MyArrayList obj = new MyArrayList();
+            Data obj = new Data(); // change to your class name
             // Call your method to read in the data
 
             // Call your method to do something with the data
