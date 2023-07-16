@@ -66,32 +66,31 @@ The ``Math.random()`` method returns a number greater than or equal to 0.0, and 
    ~~~~
    public class Test3
    {
-      public static void main(String[] args)
-      {
-        System.out.println(Math.random());
-        System.out.println(Math.random());
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(Math.random());
+           System.out.println(Math.random());
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = output;
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
 
-
-
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = output;
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 You can use ``Math.random`` and a cast to integer to return a random integer between some starting and ending value.  The code below will create a random integer from 0 to 9. Remember that casting a double value to integer ``(int)`` will throw away any values after the decimal point.
 
@@ -106,18 +105,21 @@ You can use ``Math.random`` and a cast to integer to return a random integer bet
    ~~~~
    public class Test4
    {
-      public static void main(String[] args)
-      {
-        System.out.println((int) (Math.random() * 10));
-      }
+       public static void main(String[] args)
+       {
+           System.out.println((int) (Math.random() * 10));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
        public void testContainsRange() throws IOException
        {
@@ -125,7 +127,7 @@ You can use ``Math.random`` and a cast to integer to return a random integer bet
            boolean passed = checkCodeContains("Math.random in range 1 to 10", target);
            assertTrue(passed);
        }
-    }
+   }
 
 .. note::
 
@@ -279,69 +281,81 @@ Now what about the combination lock for this challenge? It has 3 dials with 0-40
    ~~~~
    public class MathChallenge
    {
-      public static void main(String[] args)
-      {
-          // 1. Use Math.random() to generate 3 integers from 0-40 (not including 40) and print them out.
+       public static void main(String[] args)
+       {
+           // 1. Use Math.random() to generate 3 integers from 0-40 (not
+           // including 40) and print them out.
 
+           // 2. Calculate the number of combinations to choose 3 numbers between
+           // 0-40 (not including 40) using Math.pow() and print it out.
+           // For example, Math.pow(10,2) is 10^2 and the number of permutations
+           // to choose 2 numbers between 0-9.
 
-          // 2. Calculate the number of combinations to choose 3 numbers between 0-40 (not including 40) using Math.pow() and print it out.
-          // For example, Math.pow(10,2) is 10^2 and the number of permutations to choose 2 numbers between 0-9.
-
-
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    import java.util.ArrayList;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String[] lines = output.split("\\s+");
+   import org.junit.*;
 
-            boolean passed = lines.length >= 2;
+   import java.io.*;
 
-            passed = getResults("2+ lines of output", lines.length + " lines of output", "Expected output", passed);
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String[] lines = output.split("\\s+");
 
-        @Test
-        public void test2()
-        {
-            String output = getMethodOutput("main");
-            boolean passed = output.contains("64000");
-            passed = getResults("true", "" + passed, "Prints 40^3", passed);
-            assertTrue(passed);
-        }
+           boolean passed = lines.length >= 2;
 
-        @Test
-        public void test3()
-        {
-            String code = getCode();
-            int num = countOccurences(code, "(int)(Math.random()*40");
+           passed =
+                   getResults(
+                           "2+ lines of output",
+                           lines.length + " lines of output",
+                           "Expected output",
+                           passed);
+           assertTrue(passed);
+       }
 
-            boolean passed = num >= 3;
-            passed = getResults("3", ""+num, "Calls to Math.random() for a random number from 0 up to 40", passed);
-            assertTrue(passed);
-        }
+       @Test
+       public void test2()
+       {
+           String output = getMethodOutput("main");
+           boolean passed = output.contains("64000");
+           passed = getResults("true", "" + passed, "Prints 40^3", passed);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test4()
-        {
-            String code = getCode();
-            int num = countOccurences(code, "Math.pow(");
+       @Test
+       public void test3()
+       {
+           String code = getCode();
+           int num = countOccurences(code, "(int)(Math.random()*40");
 
-            boolean passed = num >= 1;
-            passed = getResults("1 or more", ""+num, "Calls to Math.pow(...)", passed);
-            assertTrue(passed);
-        }
-    }
+           boolean passed = num >= 3;
+           passed =
+                   getResults(
+                           "3",
+                           "" + num,
+                           "Calls to Math.random() for a random number from 0 up to 40",
+                           passed);
+           assertTrue(passed);
+       }
 
+       @Test
+       public void test4()
+       {
+           String code = getCode();
+           int num = countOccurences(code, "Math.pow(");
+
+           boolean passed = num >= 1;
+           passed = getResults("1 or more", "" + num, "Calls to Math.pow(...)", passed);
+           assertTrue(passed);
+       }
+   }
 
 Here's another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by CSA teacher Zac Martin.
 
@@ -392,15 +406,17 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
     }
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("DancingTurtles");
         }
-
 
         @Test
         public void test1()
@@ -409,19 +425,19 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
             int numRandom = countOccurences(code, "Math.random()");
 
             boolean passed = numRandom >= 5;
-            passed = getResults("5+", ""+numRandom, "5+ calls to Math.random()", passed);
+            passed = getResults("5+", "" + numRandom, "5+ calls to Math.random()", passed);
             assertTrue(passed);
         }
 
         @Test
         public void test2()
         {
-           boolean passed = checkCodeContainsNoRegex("Random numbers for 0-255 colors (256 values)","Math.random() * 256");
-           assertTrue(passed);
+            boolean passed =
+                    checkCodeContainsNoRegex(
+                            "Random numbers for 0-255 colors (256 values)", "Math.random() * 256");
+            assertTrue(passed);
         }
     }
-
-
 
 Summary
 -------------------

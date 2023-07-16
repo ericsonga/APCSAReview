@@ -139,39 +139,69 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     own IDE.)
 
     ~~~~
-    import java.util.*;
     import java.awt.*;
-    import java.lang.Math;
+    import java.util.*;
 
     public class TurtleTestGetSet
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
-          System.out.println("Yertle's is starting at: " + yertle.getXPos + ", " + yertle.getYPos());
-          yertle.forward(100);
-          yertle.turn(90);
-          yertle.forward(50);
-          System.out.println("Yertle's end up at: " + yertle.getXPos + ", " + yertle.getYPos());
-          world.show(true);
-      }
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
+            System.out.println(
+                    "Yertle's is starting at: "
+                            + yertle.getXPos
+                            + ", "
+                            + yertle.getYPos());
+            yertle.forward(100);
+            yertle.turn(90);
+            yertle.forward(50);
+            System.out.println(
+                    "Yertle's end up at: "
+                            + yertle.getXPos
+                            + ", "
+                            + yertle.getYPos());
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTestGetSet");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\nimport java.lang.Math;\n\npublic class TurtleTestGetSet\n{\npublic static void main(String[] args)\n{\nWorld world = new World(300,300);\nTurtle yertle = new Turtle(world);\nSystem.out.println(\"Yertle's is starting at: \" + yertle.getXPos + \", \" + yertle.getYPos());\nyertle.forward(100);\nyertle.turn(90);\nyertle.forward(50);\nSystem.out.println(\"Yertle's end up at: \" + yertle.getXPos + \", \" + yertle.getYPos());\nworld.show(true);\n}\n}\n";
+            String orig =
+                    "import java.util.*;\n"
+                        + "import java.awt.*;\n"
+                        + "import java.lang.Math;\n\n"
+                        + "public class TurtleTestGetSet\n"
+                        + "{\n"
+                        + "public static void main(String[] args)\n"
+                        + "{\n"
+                        + "World world = new World(300,300);\n"
+                        + "Turtle yertle = new Turtle(world);\n"
+                        + "System.out.println(\"Yertle's is starting at: \" + yertle.getXPos + \", \" +"
+                        + " yertle.getYPos());\n"
+                        + "yertle.forward(100);\n"
+                        + "yertle.turn(90);\n"
+                        + "yertle.forward(50);\n"
+                        + "System.out.println(\"Yertle's end up at: \" + yertle.getXPos + \", \" +"
+                        + " yertle.getYPos());\n"
+                        + "world.show(true);\n"
+                        + "}\n"
+                        + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -207,12 +237,15 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     }
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleArea");
         }
 
@@ -224,8 +257,10 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
             boolean passed = getResults(expected, actual, "Prints correct answer");
             assertTrue(passed);
         }
-         @Test
-        public void test2() {
+
+        @Test
+        public void test2()
+        {
             String code = getCode();
             String target = ".getHeight()";
 
@@ -238,7 +273,8 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
         }
 
         @Test
-        public void test3() {
+        public void test3()
+        {
             String code = getCode();
             String target = ".getWidth()";
 
@@ -263,32 +299,33 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
     Calling a getter just gets a value; it’s up to you to do something with it.
 
     ~~~~
-    import java.util.*;
     import java.awt.*;
-    import java.lang.Math;
+    import java.util.*;
 
     public class TurtleTestMethods2
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
 
-          // Try some get methods here!
+            // Try some get methods here!
 
-
-
-          world.show(true);
-      }
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTestMethods2");
         }
 
@@ -318,7 +355,9 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
         public void test3()
         {
             String code = getCode();
-            int num = countOccurences(code, "toString()") + countOccurences(code, "System.out.println(yertle)");
+            int num =
+                    countOccurences(code, "toString()")
+                            + countOccurences(code, "System.out.println(yertle)");
 
             boolean passed = num > 0;
             getResults(">=1", "" + num, "Calls to toString()", passed);
@@ -391,21 +430,20 @@ of the method. The calling method must then do something useful with that value.
       {
           public int square(int x)
           {
-              return x*x;
+              return x * x;
           }
 
           public int divide(int x, int y)
           {
-              return x/y;
+              return x / y;
           }
 
           public static void main(String[] args)
           {
               MethodTrace traceObj = new MethodTrace();
-              System.out.println(traceObj.square(2) + traceObj.divide(6,2));
+              System.out.println(traceObj.square(2) + traceObj.divide(6, 2));
           }
-       }
-
+      }
 
 .. |visualization| raw:: html
 
@@ -451,12 +489,15 @@ Try this |visualization| to see this code in action.
     }
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTestDistance");
         }
 
@@ -504,7 +545,6 @@ Try this |visualization| to see this code in action.
             assertTrue(passed);
         }
     }
-
 
 Summary
 -------------------

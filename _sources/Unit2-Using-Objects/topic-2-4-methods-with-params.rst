@@ -163,38 +163,56 @@ different **method signature**, where it requires a different number or type of 
     1. Can you make yertle draw a square and change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the |Color| class in Java which has some colors predefined like red, yellow, blue, magenta, cyan. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
     2. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need external angles of 120 degree for an equilateral triangle. Use the turn method which has a parameter for the angle of the turn in degrees. For example, turn(90) is the same as turnRight(). Try drawing a triangle with different colors.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTestMethods1
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
 
-          yertle.forward(100);
-          yertle.turnLeft();
-          yertle.forward(75);
+            yertle.forward(100);
+            yertle.turnLeft();
+            yertle.forward(75);
 
-          world.show(true);
-      }
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTestMethods1");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleTestMethods1\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n      Turtle yertle = new Turtle(world);\n\n      yertle.forward(100);\n      yertle.turnLeft();\n      yertle.forward(75);\n\n      world.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.util.*;\n"
+                        + "import java.awt.*;\n\n"
+                        + "public class TurtleTestMethods1\n"
+                        + "{\n"
+                        + "  public static void main(String[] args)\n"
+                        + "  {\n"
+                        + "      World world = new World(300,300);\n"
+                        + "      Turtle yertle = new Turtle(world);\n\n"
+                        + "      yertle.forward(100);\n"
+                        + "      yertle.turnLeft();\n"
+                        + "      yertle.forward(75);\n\n"
+                        + "      world.show(true);\n"
+                        + "  }\n"
+                        + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -206,7 +224,7 @@ different **method signature**, where it requires a different number or type of 
             int numColors = countOccurences(code, "Color(");
 
             boolean passed = numColors >= 3;
-            passed = getResults("3 or more", ""+numColors, "Changes color at least 3 times", passed);
+            passed = getResults("3 or more", "" + numColors, "Changes color at least 3 times", passed);
             assertTrue(passed);
         }
 
@@ -217,7 +235,7 @@ different **method signature**, where it requires a different number or type of 
             int numTurns = countOccurences(code, ".turn");
 
             boolean passed = numTurns >= 3;
-            passed = getResults("3 or more", ""+numTurns, "Turns at least 3 times", passed);
+            passed = getResults("3 or more", "" + numTurns, "Turns at least 3 times", passed);
             assertTrue(passed);
         }
 
@@ -228,7 +246,7 @@ different **method signature**, where it requires a different number or type of 
             int numTurns = countOccurences(code, ".turn(");
 
             boolean passed = numTurns >= 1;
-            passed = getResults("1 or more", ""+numTurns, "Calls to turn(...)", passed);
+            passed = getResults("1 or more", "" + numTurns, "Calls to turn(...)", passed);
             assertTrue(passed);
         }
 
@@ -239,12 +257,10 @@ different **method signature**, where it requires a different number or type of 
             int numForward = countOccurences(code, ".forward(");
 
             boolean passed = numForward >= 4;
-            passed = getResults("4 or more", ""+numForward, "Calls to forward()", passed);
+            passed = getResults("4 or more", "" + numForward, "Calls to forward()", passed);
             assertTrue(passed);
         }
     }
-
-
 
 |CodingEx| **Coding Exercise**
 
@@ -334,6 +350,7 @@ Use the Code Lens button or this |Java Visualizer| to step through the code.
             System.out.println("Old MacDonald had a farm");
             chorus();
         }
+
         public void chorus()
         {
             System.out.println("E-I-E-I-O");
@@ -341,21 +358,41 @@ Use the Code Lens button or this |Java Visualizer| to step through the code.
 
         public static void main(String[] args)
         {
-           Song s = new Song();
-           s.verse("cow", "moo");
-           s.verse("duck","quack");
+            Song s = new Song();
+            s.verse("cow", "moo");
+            s.verse("duck", "quack");
         }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public String expected = "Old MacDonald had a farm\nE-I-E-I-O\nAnd on that farm he had a cow\nE-I-E-I-O\nWith a moo moo here,\nAnd a moo moo there,\nOld MacDonald had a farm\nE-I-E-I-O\nOld MacDonald had a farm\nE-I-E-I-O\nAnd on that farm he had a duck\nE-I-E-I-O\nWith a quack quack here,\nAnd a quack quack there,\nOld MacDonald had a farm\nE-I-E-I-O";
+        public String expected =
+                "Old MacDonald had a farm\n"
+                    + "E-I-E-I-O\n"
+                    + "And on that farm he had a cow\n"
+                    + "E-I-E-I-O\n"
+                    + "With a moo moo here,\n"
+                    + "And a moo moo there,\n"
+                    + "Old MacDonald had a farm\n"
+                    + "E-I-E-I-O\n"
+                    + "Old MacDonald had a farm\n"
+                    + "E-I-E-I-O\n"
+                    + "And on that farm he had a duck\n"
+                    + "E-I-E-I-O\n"
+                    + "With a quack quack here,\n"
+                    + "And a quack quack there,\n"
+                    + "Old MacDonald had a farm\n"
+                    + "E-I-E-I-O";
 
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("Song");
         }
 
@@ -388,7 +425,7 @@ Use the Code Lens button or this |Java Visualizer| to step through the code.
             int numVerses = countOccurences(code, "verse(");
             boolean passed = numVerses >= 4;
             // + 1 because of verse method definition
-            passed = getResults("3 or more", ""+numVerses, "Number of verses", passed);
+            passed = getResults("3 or more", "" + numVerses, "Number of verses", passed);
             assertTrue(passed);
         }
     }
@@ -415,22 +452,24 @@ Use the Code Lens button or this |Java Visualizer| to step through the code.
 
       public class MethodTrace
       {
-        public void square(int x)
-        {
-            System.out.print(x*x);
-        }
-        public void divide(int x, int y)
-        {
-            System.out.println(x/y);
-        }
-        public static void main(String[] args) {
-            MethodTrace traceObj = new MethodTrace();
-            traceObj.square(5);
-            System.out.print(" and ");
-            traceObj.divide(4,2);
-        }
-       }
+          public void square(int x)
+          {
+              System.out.print(x * x);
+          }
 
+          public void divide(int x, int y)
+          {
+              System.out.println(x / y);
+          }
+
+          public static void main(String[] args)
+          {
+              MethodTrace traceObj = new MethodTrace();
+              traceObj.square(5);
+              System.out.print(" and ");
+              traceObj.divide(4, 2);
+          }
+      }
 
 .. |visualization| raw:: html
 
@@ -470,35 +509,47 @@ It may help to act out the code pretending you are the turtle. Remember that the
 
     Draw a Turtle House! Make sure you use forward, turn, penUp, penDown, moveTo methods as well as different colors. Have fun!
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleHouse
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
 
-
-
-          world.show(true);
-      }
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleHouse");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleHouse\n{\n  public static void main(String[] args)\n  {\n      World world = new World(300,300);\n\n\n\n      world.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.util.*;\n"
+                        + "import java.awt.*;\n\n"
+                        + "public class TurtleHouse\n"
+                        + "{\n"
+                        + "  public static void main(String[] args)\n"
+                        + "  {\n"
+                        + "      World world = new World(300,300);\n\n\n\n"
+                        + "      world.show(true);\n"
+                        + "  }\n"
+                        + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -510,7 +561,7 @@ It may help to act out the code pretending you are the turtle. Remember that the
             int num = countOccurences(code, "moveTo(");
 
             boolean passed = num >= 1;
-            passed = getResults("1 or more", ""+num, "Calls moveTo(...)", passed);
+            passed = getResults("1 or more", "" + num, "Calls moveTo(...)", passed);
             assertTrue(passed);
         }
 
@@ -521,7 +572,7 @@ It may help to act out the code pretending you are the turtle. Remember that the
             int num = countOccurences(code, ".penUp()");
 
             boolean passed = num >= 1;
-            passed = getResults("1 or more", ""+num, "Calls penUp()", passed);
+            passed = getResults("1 or more", "" + num, "Calls penUp()", passed);
             assertTrue(passed);
         }
 
@@ -532,9 +583,10 @@ It may help to act out the code pretending you are the turtle. Remember that the
             int num = countOccurences(code, ".penDown(");
 
             boolean passed = num >= 1;
-            passed = getResults("1 or more", ""+num, "Calls penDown()", passed);
+            passed = getResults("1 or more", "" + num, "Calls penDown()", passed);
             assertTrue(passed);
         }
+
         @Test
         public void test5()
         {
@@ -542,7 +594,7 @@ It may help to act out the code pretending you are the turtle. Remember that the
             int numTurns = countOccurences(code, ".turn");
 
             boolean passed = numTurns >= 6;
-            passed = getResults("6 or more", ""+numTurns, "turns", passed);
+            passed = getResults("6 or more", "" + numTurns, "turns", passed);
             assertTrue(passed);
         }
 
@@ -553,11 +605,10 @@ It may help to act out the code pretending you are the turtle. Remember that the
             int numForward = countOccurences(code, ".forward(");
 
             boolean passed = numForward >= 6;
-            passed = getResults("6 or more", ""+numForward, "Calls to forward()", passed);
+            passed = getResults("6 or more", "" + numForward, "Calls to forward()", passed);
             assertTrue(passed);
         }
     }
-
 
 Summary
 -------------------

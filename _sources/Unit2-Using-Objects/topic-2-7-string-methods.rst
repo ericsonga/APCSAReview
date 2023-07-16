@@ -90,45 +90,49 @@ Run the code below to see the output from the String methods ``length``, ``subst
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        String message1 = "This is a test";
-        String message2 = "Hello Class";
+       public static void main(String[] args)
+       {
+           String message1 = "This is a test";
+           String message2 = "Hello Class";
 
-        System.out.println(message1.length());
-        System.out.println(message2.length());
+           System.out.println(message1.length());
+           System.out.println(message2.length());
 
-        System.out.println(message1.substring(0,3));
-        System.out.println(message1.substring(2,3));
-        System.out.println(message1.substring(5));
+           System.out.println(message1.substring(0, 3));
+           System.out.println(message1.substring(2, 3));
+           System.out.println(message1.substring(5));
 
-        System.out.println(message1.indexOf("is")); // This will match the is in "This"!
-        System.out.println(message1.indexOf("Hello"));
-        System.out.println(message2.indexOf("Hello"));
+           System.out.println(
+                   message1.indexOf("is")); // This will match the is in "This"!
+           System.out.println(message1.indexOf("Hello"));
+           System.out.println(message2.indexOf("Hello"));
 
-        // lowercase and uppercase are not on the AP exam, but still useful
-        System.out.println(message2.toLowerCase());
-        System.out.println(message2.toUpperCase());
-      }
+           // lowercase and uppercase are not on the AP exam, but still useful
+           System.out.println(message2.toLowerCase());
+           System.out.println(message2.toUpperCase());
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main").trim();
-            String expect = "14\n11\nThi\ni\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
-            boolean passed = output.contains(expect);
+   import org.junit.*;
 
-            getResults(expect, output, "Expected output from main", passed);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main").trim();
+           String expect = "14\n11\nThi\ni\nis a test\n2\n-1\n0\nhello class\nHELLO CLASS";
+           boolean passed = output.contains(expect);
+
+           getResults(expect, output, "Expected output from main", passed);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -243,36 +247,37 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Since
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        String message = "Hello!";
+       public static void main(String[] args)
+       {
+           String message = "Hello!";
 
-        System.out.println(message.compareTo("Hello!"));
-        System.out.println(message.compareTo("And"));
-        System.out.println(message.compareTo("Zoo"));
+           System.out.println(message.compareTo("Hello!"));
+           System.out.println(message.compareTo("And"));
+           System.out.println(message.compareTo("Zoo"));
 
-        System.out.println(message.equals("Hello!"));
-        System.out.println(message.equals("hello!"));
-      }
+           System.out.println(message.equals("Hello!"));
+           System.out.println(message.equals("hello!"));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "0\n7\n-18\ntrue\nfalse";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n7\n-18\ntrue\nfalse";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. |String class| raw:: html
 
@@ -402,40 +407,45 @@ The following code shows some common mistakes with strings.
    ~~~~
    public class StringMistakes
    {
-      public static void main(String[] args)
-      {
-        String str1 = "Hello!";
+       public static void main(String[] args)
+       {
+           String str1 = "Hello!";
 
-        // Print out the first letter?
-        System.out.println("The first letter in " + str1 + ":" + str1.substring(1,1) );
+           // Print out the first letter?
+           System.out.println(
+                   "The first letter in " + str1 + ":" + str1.substring(1, 1));
 
-        // Print out the last character?
-        System.out.println("The last char. in " + str1 + ":" + str1.substring(8) );
+           // Print out the last character?
+           System.out.println(
+                   "The last char. in " + str1 + ":" + str1.substring(8));
 
-        // Print str1 in lower case? Will str1 change?
-        str1.toLowerCase();
-        System.out.println("In lowercase: " + str1);
-
-      }
+           // Print str1 in lower case? Will str1 change?
+           str1.toLowerCase();
+           System.out.println("In lowercase: " + str1);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main").trim();
-            String expect = "The first letter in Hello!:H\nThe last char. in Hello!:!\nIn lowercase: hello!";
-            boolean passed = output.contains(expect);
+   import org.junit.*;
 
-            getResults(expect, output, "Expected output from main", passed);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main").trim();
+           String expect =
+                   "The first letter in Hello!:H\nThe last char. in Hello!:!\nIn lowercase: hello!";
+           boolean passed = output.contains(expect);
+
+           getResults(expect, output, "Expected output from main", passed);
+           assertTrue(passed);
+       }
+   }
 
 Here is a list of common mistakes made with Strings.
 
@@ -498,32 +508,37 @@ Your teacher may ask you to create this program in a Java IDE like |repl| so tha
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "* in Pig Latin is *ay";
-            boolean passed = getResultsRegEx(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "* in Pig Latin is *ay";
+           boolean passed = getResultsRegEx(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+
        @Test
        public void testContainsSubstring()
        {
            String target = "word.substring(";
            int count = countOccurences(getCode(), target);
            boolean passed = count >= 2;
-           passed = getResults("2 substring calls", count + " substring call(s)","Code contains calls to substring method", passed);
+           passed =
+                   getResults(
+                           "2 substring calls",
+                           count + " substring call(s)",
+                           "Code contains calls to substring method",
+                           passed);
            assertTrue(passed);
        }
-    }
-
-
-
+   }
 
 Summary
 -------------------

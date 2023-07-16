@@ -204,31 +204,35 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
     Try clicking the run button below to see what the following program does.
     (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle yertle = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle yertle = new Turtle(habitat);
 
-          yertle.forward();
-          yertle.turnLeft();
-          yertle.forward();
+            yertle.forward();
+            yertle.turnLeft();
+            yertle.forward();
 
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTest");
         }
 
@@ -366,30 +370,34 @@ The **dot operator** (.) is used to run an object's method. You can think of the
 
     In the code below, ``yertle`` goes forward and then turns left. Can you change the code to make ``yertle`` go ``forward`` twice and then ``turnRight``?
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest2
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle yertle = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle yertle = new Turtle(habitat);
 
-          yertle.forward();
-          yertle.turnLeft();
+            yertle.forward();
+            yertle.turnLeft();
 
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTest2");
         }
 
@@ -401,7 +409,7 @@ The **dot operator** (.) is used to run an object's method. You can think of the
 
             int count = countOccurences(code, expect);
 
-            boolean passed = getResults("2 time(s)", "" + count  + " time(s)", "yertle.forward() twice");
+            boolean passed = getResults("2 time(s)", "" + count + " time(s)", "yertle.forward() twice");
             assertTrue(passed);
         }
 
@@ -441,35 +449,39 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
 
     Can you add another turtle object to the code below?
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest3
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle yertle = new Turtle(habitat);
-          Turtle myrtle = new Turtle(habitat);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle yertle = new Turtle(habitat);
+            Turtle myrtle = new Turtle(habitat);
 
-          yertle.forward();
-          yertle.turnLeft();
-          yertle.forward();
+            yertle.forward();
+            yertle.turnLeft();
+            yertle.forward();
 
-          myrtle.turnRight();
-          myrtle.forward();
+            myrtle.turnRight();
+            myrtle.forward();
 
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTest3");
         }
 
@@ -482,7 +494,7 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
             int count = countOccurences(code, expect);
 
             boolean passed = count >= 3;
-            passed = getResults("3+ Turtles", "" + count  + " Turtles", "Add a new Turtle(s)", passed);
+            passed = getResults("3+ Turtles", "" + count + " Turtles", "Add a new Turtle(s)", passed);
             assertTrue(passed);
         }
     }
@@ -526,35 +538,37 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
 
     Create a Turtle object and have it draw a shape, for example a small square and then a larger square (by calling the forward method multiple times).
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleTest
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(500,500);
-          // 1. Create a Turtle object in the habitat
+        public static void main(String[] args)
+        {
+            World habitat = new World(500, 500);
+            // 1. Create a Turtle object in the habitat
 
-          // 2. Have the turtle draw a small square
+            // 2. Have the turtle draw a small square
 
-          // 3. Have the turtle draw a large square
+            // 3. Have the turtle draw a large square
 
-          // 4. Play around!
+            // 4. Play around!
 
-
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleTest");
         }
 
@@ -568,7 +582,12 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
 
             boolean passed = count >= 1;
 
-            passed = getResults("1+ Turtle(s)", "" + count  + " Turtle(s)", "At least 1 Turtle in habitat", passed);
+            passed =
+                    getResults(
+                            "1+ Turtle(s)",
+                            "" + count + " Turtle(s)",
+                            "At least 1 Turtle in habitat",
+                            passed);
             assertTrue(passed);
         }
 
@@ -577,7 +596,7 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
         {
             String code = getCode();
             String right = ".turnRight()";
-            String left  = ".turnLeft()";
+            String left = ".turnLeft()";
 
             int countR = countOccurences(code, right);
             int countL = countOccurences(code, left);
@@ -585,7 +604,12 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
 
             boolean passed = countR >= 6 || countL >= 6 || (countL >= 3 && countR >= 3);
 
-            passed = getResults("6+ turns", "" + count  + " turns(s)", "two squares (6+ right or left turns total)", passed);
+            passed =
+                    getResults(
+                            "6+ turns",
+                            "" + count + " turns(s)",
+                            "two squares (6+ right or left turns total)",
+                            passed);
             assertTrue(passed);
         }
 
@@ -602,22 +626,29 @@ Create a ``Turtle`` object below and have it draw a shape.  For example, have it
 
             boolean passed = forward >= 8 || backward >= 8 || (backward >= 4 && forward >= 4);
 
-            passed = getResults("8+ moves", "" + moves  + " move(s)", "two squares (8 moves total)", passed);
+            passed =
+                    getResults(
+                            "8+ moves", "" + moves + " move(s)", "two squares (8 moves total)", passed);
             assertTrue(passed);
         }
 
         @Test
-        public void test4() {
+        public void test4()
+        {
             String[] code = getCode().split("\n");
             int expect = 38;
 
             boolean passed = code.length >= expect;
 
-            passed = getResults(expect + "+ line(s)", "" + code.length  + " lines(s)", "More than " + expect + " lines of code", passed);
+            passed =
+                    getResults(
+                            expect + "+ line(s)",
+                            "" + code.length + " lines(s)",
+                            "More than " + expect + " lines of code",
+                            passed);
             assertTrue(passed);
         }
     }
-
 
 Summary
 -------------------

@@ -172,42 +172,61 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
 
     (If the code below does not work in your browser, you can also use the ``Turtle`` code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleConstructorTest
     {
-      public static void main(String[] args)
-      {
-          // Change the World constructor to 300x400
-          World world1 = new World(300,300);
+        public static void main(String[] args)
+        {
+            // Change the World constructor to 300x400
+            World world1 = new World(300, 300);
 
-          // Change the Turtle constructor to put the turtle in the top right corner
-          Turtle t1 = new Turtle(world1);
+            // Change the Turtle constructor to put the turtle in the top right
+            // corner
+            Turtle t1 = new Turtle(world1);
 
-          t1.turnLeft();
-          world1.show(true);
-      }
+            t1.turnLeft();
+            world1.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleConstructorTest");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorTest\n{\n  public static void main(String[] args)\n  {\n      // Change the World constructor to 300x400\n      World world1 = new World(300,300);\n\n      // Change the Turtle constructor to put the turtle in the top right corner\n      Turtle t1 = new Turtle(world1);\n\n      t1.turnLeft();\n      world1.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.util.*;\n"
+                        + "import java.awt.*;\n\n"
+                        + "public class TurtleConstructorTest\n"
+                        + "{\n"
+                        + "  public static void main(String[] args)\n"
+                        + "  {\n"
+                        + "      // Change the World constructor to 300x400\n"
+                        + "      World world1 = new World(300,300);\n\n"
+                        + "      // Change the Turtle constructor to put the turtle in the top right"
+                        + " corner\n"
+                        + "      Turtle t1 = new Turtle(world1);\n\n"
+                        + "      t1.turnLeft();\n"
+                        + "      world1.show(true);\n"
+                        + "  }\n"
+                        + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
-
     }
 
 Object Variables and References
@@ -430,19 +449,38 @@ First, as a warm up, do the following debugging exercise.
     }
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleConstructorDebug");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorDebug\n{\n  public static void main(String[] args)\n  {\n      World w = new World(300,0);\n      turtle t0;\n      Turtle t1 = new Turtle();\n      Turtle t2 = new Turtle(world, 100, 50)\n      t0.forward();\n      t1.turnRight();\n      t2.turnLeft();\n      world.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.util.*;\n"
+                        + "import java.awt.*;\n\n"
+                        + "public class TurtleConstructorDebug\n"
+                        + "{\n"
+                        + "  public static void main(String[] args)\n"
+                        + "  {\n"
+                        + "      World w = new World(300,0);\n"
+                        + "      turtle t0;\n"
+                        + "      Turtle t1 = new Turtle();\n"
+                        + "      Turtle t2 = new Turtle(world, 100, 50)\n"
+                        + "      t0.forward();\n"
+                        + "      t1.turnRight();\n"
+                        + "      t2.turnLeft();\n"
+                        + "      world.show(true);\n"
+                        + "  }\n"
+                        + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -483,122 +521,147 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
 
     Use the CustomTurtle constructors to create the following turtles.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class CustomTurtleRunner
     {
-      public static void main(String[] args)
-      {
-          World world1 = new World(400,400);
+        public static void main(String[] args)
+        {
+            World world1 = new World(400, 400);
 
-          // 1. Change the constructor call below to create a large
-          // 150x200 CustomTurtle with a green body (Color.green)
-          // and a blue shell (Color.blue) at position (150,300).
-          // Move it forward to see it.
-          CustomTurtle turtle1 = new CustomTurtle(world1);
-          turtle1.forward();
+            // 1. Change the constructor call below to create a large
+            // 150x200 CustomTurtle with a green body (Color.green)
+            // and a blue shell (Color.blue) at position (150,300).
+            // Move it forward to see it.
+            CustomTurtle turtle1 = new CustomTurtle(world1);
+            turtle1.forward();
 
+            // 2. Create a small 25x50 CustomTurtle with a red body
+            // and a yellow shell at position (350,200)
+            // Move it forward to see it.
 
-          // 2. Create a small 25x50 CustomTurtle with a red body
-          // and a yellow shell at position (350,200)
-          // Move it forward to see it.
+            // 3. Create a CustomTurtle of your own design
 
-
-          // 3. Create a CustomTurtle of your own design
-
-          world1.show(true);
-      }
+            world1.show(true);
+        }
     }
 
     class CustomTurtle extends Turtle
     {
-       private int x;
-       private int y;
-       private World w;
-       private Color bodycolor;
-       private Color shellcolor;
-       private int width;
-       private int height;
+        private int x;
+        private int y;
+        private World w;
+        private Color bodycolor;
+        private Color shellcolor;
+        private int width;
+        private int height;
 
-     /** Constructor that takes the model display
-       * @param modelDisplay the thing that displays the model or world
-       */
-      public CustomTurtle(ModelDisplay modelDisplay)
-      {
-        // let the parent constructor handle it
-        super(modelDisplay);
-      }
+        /**
+         * Constructor that takes the model display
+         *
+         * @param modelDisplay the thing that displays the model or world
+         */
+        public CustomTurtle(ModelDisplay modelDisplay)
+        {
+            // let the parent constructor handle it
+            super(modelDisplay);
+        }
 
-      /** Constructor that takes the model
-       * display to draw it on and custom colors and size
-       * @param m the world
-       * @param body : the body color
-       * @param shell : the shell color
-       * @param w: width
-       * @param h: height
-       */
-      public CustomTurtle(ModelDisplay m, Color body, Color shell, int w, int h)
-      {
-        // let the parent constructor handle it
-        super(m);
-        bodycolor = body;
-        setBodyColor(body);
-        shellcolor = shell;
-        setShellColor(shell);
-        height = h;
-        width = w;
-        setHeight(h);
-        setWidth(w);
-      }
+        /**
+         * Constructor that takes the model display to draw it on and custom
+         * colors and size
+         *
+         * @param m the world
+         * @param body : the body color
+         * @param shell : the shell color
+         * @param w: width
+         * @param h: height
+         */
+        public CustomTurtle(
+                ModelDisplay m, Color body, Color shell, int w, int h)
+                {
+            // let the parent constructor handle it
+            super(m);
+            bodycolor = body;
+            setBodyColor(body);
+            shellcolor = shell;
+            setShellColor(shell);
+            height = h;
+            width = w;
+            setHeight(h);
+            setWidth(w);
+        }
 
-    /** Constructor that takes the x and y and a model
-       * display to draw it on and custom colors and size
-       * @param x the starting x position
-       * @param y the starting y position
-       * @param m the world
-       * @param body : the body color
-       * @param shell : the shell color
-       * @param w: width
-       * @param h: height
-       */
-      public CustomTurtle(int x, int y, ModelDisplay m,  Color body, Color shell, int w, int h)
-      {
-        // let the parent constructor handle it
-        super(x,y,m);
-        bodycolor = body;
-        setBodyColor(body);
-        shellcolor = shell;
-        setShellColor(shell);
-        height = h;
-        width = w;
-        setHeight(h);
-        setWidth(w);
-      }
+        /**
+         * Constructor that takes the x and y and a model display to draw it on
+         * and custom colors and size
+         *
+         * @param x the starting x position
+         * @param y the starting y position
+         * @param m the world
+         * @param body : the body color
+         * @param shell : the shell color
+         * @param w: width
+         * @param h: height
+         */
+        public CustomTurtle(
+                int x,
+                int y,
+                ModelDisplay m,
+                Color body,
+                Color shell,
+                int w,
+                int h)
+                {
+            // let the parent constructor handle it
+            super(x, y, m);
+            bodycolor = body;
+            setBodyColor(body);
+            shellcolor = shell;
+            setShellColor(shell);
+            height = h;
+            width = w;
+            setHeight(h);
+            setWidth(w);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-          public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("CustomTurtleRunner");
-          }
+        }
 
         @Test
         public void test1()
         {
             String target = "new CustomTurtle(150,300,world1, Color.green, Color.blue, 150, 200)";
-            boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300) in world1",target);
+            boolean passed =
+                    checkCodeContains(
+                            "constructor for a large 150x200 CustomTurtle with a green body and a blue"
+                                + " shell at position (150,300) in world1",
+                            target);
             assertTrue(passed);
         }
+
         @Test
         public void test2()
         {
             String target = "new CustomTurtle(350,200,world1, Color.red, Color.yellow, 25, 50)";
-            boolean passed = checkCodeContains("constructor for a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200) in world1",target);
+            boolean passed =
+                    checkCodeContains(
+                            "constructor for a small 25x50 CustomTurtle with a red body and a yellow"
+                                + " shell at position (350,200) in world1",
+                            target);
             assertTrue(passed);
         }
     }

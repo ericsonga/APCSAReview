@@ -138,9 +138,6 @@ We estimate that a score of about 50% on this test would correspond to the passi
                 }
             }
 
-
-
-
     .. mchoice:: AP2-3-3
        :practice: T
        :random:
@@ -162,31 +159,30 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
             public class Liquid
             {
-              private double boilingPoint;
-              private double freezingPoint;
-              private double currentTemp;
+                private double boilingPoint;
+                private double freezingPoint;
+                private double currentTemp;
 
-              public Liquid(double b)
-              {
-                boilingPoint = b;
-              }
+                public Liquid(double b)
+                {
+                    boilingPoint = b;
+                }
 
-              void lowerTemp()
-              {
-                currentTemp -= 10;
-              }
+                void lowerTemp()
+                {
+                    currentTemp -= 10;
+                }
 
-              void raiseTemp()
-              {
-                currentTemp += 10;
-              }
+                void raiseTemp()
+                {
+                    currentTemp += 10;
+                }
 
-              void freeze()
-              {
-                currentTemp = freezingPoint;
-              }
+                void freeze()
+                {
+                    currentTemp = freezingPoint;
+                }
             }
-
 
     .. mchoice:: AP2-3-4
         :practice: T

@@ -79,14 +79,14 @@ These problems are mostly easier than what you will see on the AP CSA exam.
 
      public class Person
      {
-          private String name;
-          private int age;
+         private String name;
+         private int age;
 
-          public Person(String a, int b)
-          {
+         public Person(String a, int b)
+         {
              name = a;
              age = b;
-          }
+         }
      }
 
 .. mchoice:: qse_2
@@ -245,8 +245,6 @@ These problems are similar to those that you will see on the AP CSA exam.
             newAccount.printCurrentTotal();
         }
     }
-
-
 
 .. mchoice:: qve_new6
    :practice: T
@@ -465,24 +463,22 @@ These problems are harder than most of those that you will usually see on the AP
 
      public class Test
      {
-        String someFunc(String str)
-        {
-            return someOtherFunc(str + " Hoo");
-        }
+         String someFunc(String str)
+         {
+             return someOtherFunc(str + " Hoo");
+         }
 
-        String someOtherFunc(String str)
-        {
-            return "Hoo " + str;
-        }
+         String someOtherFunc(String str)
+         {
+             return "Hoo " + str;
+         }
 
-        public static void main(String[] args)
-        {
-            Test x = new Test();
-            System.out.print("Woo " + x.someFunc("Woo"));
-        }
+         public static void main(String[] args)
+         {
+             Test x = new Test();
+             System.out.print("Woo " + x.someFunc("Woo"));
+         }
      }
-
-
 
 .. mchoice:: qsh_1
    :practice: T
@@ -592,6 +588,5 @@ These problems are harder than most of those that you will usually see on the AP
             System.out.println(x.someVar);
         }
     }
-
 
 The Mark Complete button and green check mark are intentionally not included for this page because there may be many quiz-bank exercises on this page.
