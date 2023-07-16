@@ -107,22 +107,21 @@ After you put the mixed up code in order above, type in the same code below to m
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleDraw7
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle yertle = new Turtle(habitat);
-          // Make yertle draw a 7 using the code above
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle yertle = new Turtle(habitat);
+            // Make yertle draw a 7 using the code above
 
-
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
 
@@ -190,19 +189,19 @@ After you put the mixed up code in order above, type in the same code below to m
         public void test1()
         {
             String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
-                        + "public class TurtleDraw8\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World habitat = new World(300,300);\n"
-                        + "      Turtle yertle = new Turtle(habitat);\n"
-                        + "      // Make yertle draw an 8 with 2 squares\n"
-                        + "      yertle.forward();\n\n\n"
-                        + "      habitat.show(true);\n"
-                        + "  }\n"
-                        + "}\n";
+                    "import java.awt.*;\n"
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleDraw8\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World habitat = new World(300,300);\n"
+                            + "      Turtle yertle = new Turtle(habitat);\n"
+                            + "      // Make yertle draw an 8 with 2 squares\n"
+                            + "      yertle.forward();\n\n\n"
+                            + "      habitat.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -457,16 +456,16 @@ You may notice that it is challenging to have your turtle draw with these simple
         public void test1()
         {
             String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
-                        + "public class TurtleLetter\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World habitat = new World(300,300);\n\n\n\n"
-                        + "      habitat.show(true);\n"
-                        + "  }\n"
-                        + "}\n";
+                    "import java.awt.*;\n"
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleLetter\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World habitat = new World(300,300);\n\n\n\n"
+                            + "      habitat.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }

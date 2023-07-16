@@ -183,9 +183,8 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
         public void test1()
         {
             String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n"
-                        + "import java.lang.Math;\n\n"
+                    "import java.awt.*;\n"
+                        + "import java.util.*;\n\n"
                         + "public class TurtleTestGetSet\n"
                         + "{\n"
                         + "public static void main(String[] args)\n"
@@ -374,7 +373,7 @@ values based on both the current state of the object and some arguments.
 
 For example, while we could use a ``Turtle``\ ’s ``getXPos`` and ``getYPos``
 getters and some math (remember your Pythagorean Theorem?) to figure out how far
-away a ``Turtle`` is from any given point, if that’s a thing we need to do in 
+away a ``Turtle`` is from any given point, if that’s a thing we need to do in
 a lot of programs using ``Turtle``, it might be nice to be able to ask a
 ``Turtle`` directly for its distance from a given point. After all, it knows
 where it is, so why not do the math for us?
@@ -467,26 +466,25 @@ Try this |visualization| to see this code in action.
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    import java.util.*;
     import java.awt.*;
     import java.lang.Math;
+    import java.util.*;
 
     public class TurtleTestDistance
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
 
-          // Can you find yertle's distance from the point (0,0)?
+            // Can you find yertle's distance from the point (0,0)?
 
-          // Can you find the distance between 2 turtles?
+            // Can you find the distance between 2 turtles?
 
-
-
-          world.show(true);
-      }
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
 
@@ -660,4 +658,3 @@ AP Practice
 .. |visualizationLiquid| raw:: html
 
    <a href="https://pythontutor.com/render.html#code=public%20class%20Liquid%20%7B%0A%20%20%0A%20%20%20%20private%20double%20boilingPoint%3B%0A%20%20%20%20private%20double%20freezingPoint%3B%0A%20%20%20%20private%20double%20currentTemp%3B%0A%0A%20%20%20%20public%20Liquid%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20currentTemp%20%3D%2050%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20lowerTemp%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20currentTemp%20-%3D%2010%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getTemp%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20currentTemp%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20Liquid%20water%20%3D%20new%20Liquid%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20water.lowerTemp%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28water.getTemp%28%29%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=18&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">visualization</a>
-

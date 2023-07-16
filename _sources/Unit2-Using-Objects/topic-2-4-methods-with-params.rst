@@ -198,22 +198,7 @@ different **method signature**, where it requires a different number or type of 
         @Test
         public void test1()
         {
-            String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
-                        + "public class TurtleTestMethods1\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World world = new World(300,300);\n"
-                        + "      Turtle yertle = new Turtle(world);\n\n"
-                        + "      yertle.forward(100);\n"
-                        + "      yertle.turnLeft();\n"
-                        + "      yertle.forward(75);\n\n"
-                        + "      world.show(true);\n"
-                        + "  }\n"
-                        + "}\n";
-            boolean passed = codeChanged(orig);
+            boolean passed = codeDigestChanged("1f92cb0f45abe66d191d9dcd05840c552a488109");
             assertTrue(passed);
         }
 
@@ -540,8 +525,8 @@ It may help to act out the code pretending you are the turtle. Remember that the
         public void test1()
         {
             String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
+                    "import java.awt.*;\n"
+                        + "import java.util.*;\n"
                         + "public class TurtleHouse\n"
                         + "{\n"
                         + "  public static void main(String[] args)\n"
