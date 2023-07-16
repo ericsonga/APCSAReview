@@ -226,42 +226,46 @@ When you are printing out variables, you can use the **string concatenation** op
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        int score;
-        score = 0;
-        System.out.print("The score is ");
-        System.out.println(score);
+       public static void main(String[] args)
+       {
+           int score;
+           score = 0;
+           System.out.print("The score is ");
+           System.out.println(score);
 
-        double price = 23.25;
-        System.out.println("The price is " + price);
+           double price = 23.25;
+           System.out.println("The price is " + price);
 
-        boolean won = false;
-        System.out.println(won);
-        won = true;
-        System.out.println(won);
+           boolean won = false;
+           System.out.println(won);
+           won = true;
+           System.out.println(won);
 
-        String name = "Jose";
-        System.out.println("Hi " + name);
-      }
+           String name = "Jose";
+           System.out.println("Hi " + name);
+       }
    }
 
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "The score is 0\nThe price is 23.25\nfalse\ntrue\nHi Jose";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "The score is 0\nThe price is 23.25\nfalse\ntrue\nHi Jose";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
    }
 
 .. note::
@@ -324,30 +328,33 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
    ~~~~
    public class Test3
    {
-      public static void main(String[] args)
-      {
-        int score;
-        4 = score;
-        System.out.println(score);
-      }
+       public static void main(String[] args)
+       {
+           int score;
+           4 = score;
+           System.out.println(score);
+       }
    }
 
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "4";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "4";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
    }
 
 |Exercise| **Check Your Understanding**
@@ -415,29 +422,33 @@ The keyword **final** can be used in front of a variable declaration to make it 
    ~~~~
    public class TestFinal
    {
-      public static void main(String[] args)
-      {
-        final double PI = 3.14;
-        System.out.println(PI);
-        PI = 4.2; // This will cause a syntax error
-      }
+       public static void main(String[] args)
+       {
+           final double PI = 3.14;
+           System.out.println(PI);
+           PI = 4.2; // This will cause a syntax error
+       }
    }
+
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "3.14";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "3.14";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
    }
 
 Naming Variables
@@ -477,30 +488,33 @@ The convention in Java and many programming languages is to always start a varia
    ~~~~
    public class CaseSensitiveClass
    {
-      public static void main(String[] args)
-      {
-        int gameScore = 0; // variable name using camel case
-        // this is using a different variable without camel case!
-        System.out.println("gameScore is " + gamescore);
-      }
+       public static void main(String[] args)
+       {
+           int gameScore = 0; // variable name using camel case
+           // this is using a different variable without camel case!
+           System.out.println("gameScore is " + gamescore);
+       }
    }
 
    ====
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "gameScore is 0\n";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "gameScore is 0\n";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check Your Understanding**
 
@@ -553,21 +567,26 @@ The convention in Java and many programming languages is to always start a varia
 
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-    @Test
-    public void testMain() throws IOException
-    {
-        String output = getMethodOutput("main");
-        String expect = "Welcome to the weather report on Channel 101 \nThe temperature today is 70.5\nIs it sunny today? true";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-    }
-    }
-
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "Welcome to the weather report on Channel 101 \n"
+                       + "The temperature today is 70.5\n"
+                       + "Is it sunny today? true";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 Summary
 -------------------

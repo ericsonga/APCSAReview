@@ -74,36 +74,40 @@ The most common shortcut operator ``++``, the plus-plus or **increment** operato
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        int score = 0;
-        System.out.println(score);
-        score++;
-        System.out.println(score);
-        score *= 2;
-        System.out.println(score);
-        int penalty = 5;
-        score -= penalty/2;
-        System.out.println(score);
-      }
+       public static void main(String[] args)
+       {
+           int score = 0;
+           System.out.println(score);
+           score++;
+           System.out.println(score);
+           score *= 2;
+           System.out.println(score);
+           int penalty = 5;
+           score -= penalty / 2;
+           System.out.println(score);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "0\n1\n2\n0";
+   import org.junit.*;
 
-            boolean passed = getResults(expect, output, "Expected output from main",true);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n1\n2\n0";
+
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 

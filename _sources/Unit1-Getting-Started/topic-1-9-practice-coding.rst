@@ -28,20 +28,23 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Mary's favorite color is blue";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Mary's favorite color is blue";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -57,9 +60,9 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                     String name = "Mary";
-                     String color = "blue";
-                     System.out.println(name + "'s favorite color is " + color);
+                      String name = "Mary";
+                      String color = "blue";
+                      System.out.println(name + "'s favorite color is " + color);
                   }
               }
 
@@ -92,21 +95,23 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Gabby's favorite sport is soccer";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Gabby's favorite sport is soccer";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -152,25 +157,27 @@ Coding Practice
                       String color = "red";
                       System.out.println();
                   }
-
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Your name is Carly and your favorite color is red";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Your name is Carly and your favorite color is red";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -188,9 +195,12 @@ Coding Practice
                   {
                       String name = "Carly";
                       String color = "red";
-                      System.out.println("Your name is " + name
-                            + " and your favorite color is " + color);
-                   }
+                      System.out.println(
+                              "Your name is "
+                                      + name
+                                      + " and your favorite color is "
+                                      + color);
+                  }
               }
 
         .. tab:: Discussion
@@ -223,21 +233,23 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Your name is Justin and your age is 16";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Your name is Justin and your age is 16";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -286,23 +298,28 @@ Coding Practice
                       System.out.println();
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Julian's favorite color is green. His favorite food is pizza.";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect =
+                              "Julian's favorite color is green. His favorite food is"
+                                  + " pizza.";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -321,8 +338,13 @@ Coding Practice
                       String name = "Julian";
                       String color = "green";
                       String food = "pizza";
-                      System.out.println(name + "'s favorite color is " + color +
-                                         ".  His favorite food is " + food + ".");
+                      System.out.println(
+                              name
+                                      + "'s favorite color is "
+                                      + color
+                                      + ".  His favorite food is "
+                                      + food
+                                      + ".");
                   }
               }
 
@@ -355,37 +377,45 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                   @Test
-                    public void testPrintStringsA() throws IOException
-                    {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testPrintStringsA() throws IOException
+                  {
                       String target1 = "+animal";
-                      //boolean passed1 = checkCodeContains("print animal string", target1);
-                      String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
+                      // boolean passed1 = checkCodeContains("print animal string",
+                      // target1);
+                      String code =
+                              getCodeWithoutComments()
+                                      .replaceAll(" ", "")
+                                      .replaceAll("\n", "");
                       boolean passed1 = code.contains(target1);
 
-                      getResults(""+true, ""+passed1, "Code prints animal variable");
+                      getResults("" + true, "" + passed1, "Code prints animal variable");
 
                       assertTrue(passed1);
-                    }
+                  }
 
-                     @Test
-                    public void testPrintStringsB() throws IOException
-                    {
-                        String target1 = "+food";
-                        //boolean passed1 = checkCodeContains("print food string", target1);
-                        String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-                        boolean passed1 = code.contains(target1);
+                  @Test
+                  public void testPrintStringsB() throws IOException
+                  {
+                      String target1 = "+food";
+                      // boolean passed1 = checkCodeContains("print food string", target1);
+                      String code =
+                              getCodeWithoutComments()
+                                      .replaceAll(" ", "")
+                                      .replaceAll("\n", "");
+                      boolean passed1 = code.contains(target1);
 
-                        getResults(""+true, ""+passed1, "Code prints food variable");
-                        assertTrue(passed1);
-                    }
-                }
-
+                      getResults("" + true, "" + passed1, "Code prints food variable");
+                      assertTrue(passed1);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -403,8 +433,13 @@ Coding Practice
                   {
                       String animal = "horse";
                       String food = "chicken";
-                      System.out.println("My favorite animal is a " + animal + ".  " +
-                                         "My favorite food is " + food + ".");
+                      System.out.println(
+                              "My favorite animal is a "
+                                      + animal
+                                      + ".  "
+                                      + "My favorite food is "
+                                      + food
+                                      + ".");
                   }
               }
 
@@ -437,36 +472,43 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                   @Test
-                    public void testPrintStringsA() throws IOException
-                    {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testPrintStringsA() throws IOException
+                  {
                       String target1 = "+movie";
-                      //boolean passed1 = checkCodeContains("print movie string", target1);
-                      String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
+                      // boolean passed1 = checkCodeContains("print movie string", target1);
+                      String code =
+                              getCodeWithoutComments()
+                                      .replaceAll(" ", "")
+                                      .replaceAll("\n", "");
                       boolean passed1 = code.contains(target1);
 
-                      getResults(""+true, ""+passed1, "Code prints movie variable");
+                      getResults("" + true, "" + passed1, "Code prints movie variable");
                       assertTrue(passed1);
-                    }
+                  }
 
-                     @Test
-                    public void testPrintStringsB() throws IOException
-                    {
-                        String target1 = "+book";
-                        //boolean passed1 = checkCodeContains("print book string", target1);
-                        String code = getCodeWithoutComments().replaceAll(" ", "").replaceAll("\n","");
-                        boolean passed1 = code.contains(target1);
+                  @Test
+                  public void testPrintStringsB() throws IOException
+                  {
+                      String target1 = "+book";
+                      // boolean passed1 = checkCodeContains("print book string", target1);
+                      String code =
+                              getCodeWithoutComments()
+                                      .replaceAll(" ", "")
+                                      .replaceAll("\n", "");
+                      boolean passed1 = code.contains(target1);
 
-                        getResults(""+true, ""+passed1, "Code prints book variable");
-                        assertTrue(passed1);
-                    }
-                }
-
+                      getResults("" + true, "" + passed1, "Code prints book variable");
+                      assertTrue(passed1);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -519,22 +561,23 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "25.0";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "25.0";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -590,22 +633,23 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "21.480555555555554\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "21.480555555555554\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -621,8 +665,8 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                      double height = 60;    // in inches (60 inches is 5 feet)
-                      double weight = 110;    // in pounds
+                      double height = 60; // in inches (60 inches is 5 feet)
+                      double weight = 110; // in pounds
                       double heightSquared = height * height;
                       double bodyMassIndex = weight / heightSquared;
                       double bodyMassIndexMetric = bodyMassIndex * 703;
@@ -661,21 +705,23 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
-                 public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "136.17021276595744\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
 
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "136.17021276595744\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -727,23 +773,26 @@ Coding Practice
                       System.out.println(finalPrice);
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "16.32\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
 
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "16.32\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -796,21 +845,23 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "3\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
 
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "3\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -830,7 +881,7 @@ Coding Practice
                       int numHours = numSecs / 3600;
                       int numDays = numHours / 24;
                       System.out.println(numDays);
-                   }
+                  }
               }
 
         .. tab:: Discussion
@@ -863,31 +914,33 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
-                //import java.util.regex.*;
-                /* Do NOT change Main or CodeTestHelper.java. */
-                public class RunestoneTests extends CodeTestHelper
-                {
+
+              import org.junit.*;
+
+              import java.io.*;
+
+              // import java.util.regex.*;
+              /* Do NOT change Main or CodeTestHelper.java. */
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
                   public void testMain() throws IOException
                   {
-                    String output = getMethodOutput("main");
-                    String expect = "2.5\n";
-                    boolean passed = getResults(expect, output, "Expected output from main");
-                    assertTrue(passed);
+                      String output = getMethodOutput("main");
+                      String expect = "2.5\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
                   }
 
                   @Test
                   public void testFormulaNumMonths() throws IOException
                   {
-                    String target = "double numMonths = numWeeks / 4;";
-                    boolean passed = checkCodeContains("formula for numMonths", target);
-                    assertTrue(passed);
-                    }
-                }
-
-
+                      String target = "double numMonths = numWeeks / 4;";
+                      boolean passed = checkCodeContains("formula for numMonths", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -932,43 +985,50 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                     // Your code should use the variables
-                     // numGallons, milesPerGallon, and miles
-                     // and print out miles
+                      // Your code should use the variables
+                      // numGallons, milesPerGallon, and miles
+                      // and print out miles
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
                   public void testMain() throws IOException
                   {
-                    String output = getMethodOutput("main");
-                    String expect = "80.0\n";
-                    boolean passed = getResults(expect, output, "Expected output from main");
-                    assertTrue(passed);
+                      String output = getMethodOutput("main");
+                      String expect = "80.0\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
                   }
 
-                @Test
+                  @Test
                   public void testFormulaMiles() throws IOException
                   {
-                    String target1 = removeSpaces("numGallons * milesPerGallon");
-                    String target2 = removeSpaces("milesPerGallon * numGallons");
+                      String target1 = removeSpaces("numGallons * milesPerGallon");
+                      String target2 = removeSpaces("milesPerGallon * numGallons");
 
-                    String code = removeSpaces(getCode());
-                    code = code.replaceAll("\\(", "").replaceAll("\\)", "");
+                      String code = removeSpaces(getCode());
+                      code = code.replaceAll("\\(", "").replaceAll("\\)", "");
 
-                    boolean passed = code.contains(target1) || code.contains(target2);
-                    getResults("true", "" + passed, "Formula variant for miles using milesPerGallon and numGallons", passed);
-                    assertTrue(passed);
+                      boolean passed = code.contains(target1) || code.contains(target2);
+                      getResults(
+                              "true",
+                              "" + passed,
+                              "Formula variant for miles using milesPerGallon and"
+                                  + " numGallons",
+                              passed);
+                      assertTrue(passed);
                   }
-                }
-
-
+              }
 
         .. tab:: Answer
 
@@ -988,7 +1048,6 @@ Coding Practice
                       double milesPerGallon = 32;
                       double miles = numGallons * milesPerGallon;
                       System.out.println(miles);
-
                   }
               }
 
@@ -1013,42 +1072,52 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                     // Your code should use the variables
-                     // secondsInDay and secondsInThreeDays
-                     // and print out secondsInThreeDays
+                      // Your code should use the variables
+                      // secondsInDay and secondsInThreeDays
+                      // and print out secondsInThreeDays
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
-                public class RunestoneTests extends CodeTestHelper
-                {
+
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
                   public void testMain() throws IOException
                   {
-                    String output = getMethodOutput("main");
-                    String expect = "259200\n";
-                    boolean passed = getResults(expect, output, "Expected output from main");
-                    assertTrue(passed);
+                      String output = getMethodOutput("main");
+                      String expect = "259200\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
                   }
 
-                @Test
+                  @Test
                   public void testFormulaMiles() throws IOException
                   {
-                    String target1 = removeSpaces("int secondsInThreeDays = secondsInDay * 3;");
-                    String target2 = removeSpaces("int secondsInThreeDays = 3 * secondsInDay;");
-                    String code = removeSpaces(getCode());
-                    boolean passed1 = code.contains(target1);
-                    boolean passed2 = code.contains(target2);
+                      String target1 =
+                              removeSpaces("int secondsInThreeDays = secondsInDay * 3;");
+                      String target2 =
+                              removeSpaces("int secondsInThreeDays = 3 * secondsInDay;");
+                      String code = removeSpaces(getCode());
+                      boolean passed1 = code.contains(target1);
+                      boolean passed2 = code.contains(target2);
 
-                    boolean passed = passed1 || passed2;
-                    getResults("true", "" + passed, "formula for secondsInThreeDays using secondsInDay", passed);
-                    assertTrue(passed);
+                      boolean passed = passed1 || passed2;
+                      getResults(
+                              "true",
+                              "" + passed,
+                              "formula for secondsInThreeDays using secondsInDay",
+                              passed);
+                      assertTrue(passed);
                   }
-                }
-
+              }
 
         .. tab:: Answer
 
@@ -1095,38 +1164,44 @@ Coding Practice
               {
                   public static void main(String[] args)
                   {
-                    // Your code should use the variables
-                    // money, pricePerWing, numWings
-                    // and print out numWings
+                      // Your code should use the variables
+                      // money, pricePerWing, numWings
+                      // and print out numWings
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
                   public void testMain() throws IOException
                   {
-                    String output = getMethodOutput("main");
-                    String expect = "6\n";
-                    boolean passed = getResults(expect, output, "Expected output from main");
-                    assertTrue(passed);
+                      String output = getMethodOutput("main");
+                      String expect = "6\n";
+                      boolean passed =
+                              getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
                   }
 
                   @Test
                   public void testFormulaWings() throws IOException
                   {
-                    String target = "int numWings = (int)(money / pricePerWing)";
-                    boolean passed = checkCodeContains("formula for numWings using money and pricePerWing, and type casting", target);
-                    assertTrue(passed);
+                      String target = "int numWings = (int)(money / pricePerWing)";
+                      boolean passed =
+                              checkCodeContains(
+                                      "formula for numWings using money and pricePerWing,"
+                                          + " and type casting",
+                                      target);
+                      assertTrue(passed);
                   }
-                }
-
-
+              }
 
         .. tab:: Answer
 

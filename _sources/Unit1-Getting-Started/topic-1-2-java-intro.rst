@@ -81,10 +81,10 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
 
    public class MyClass
    {
-      public static void main(String[] args)
-      {
-         // Put your code here!
-      }
+       public static void main(String[] args)
+       {
+           // Put your code here!
+       }
    }
 
 .. note::
@@ -101,31 +101,32 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
    ~~~~
    public class MyClass
    {
-      public static void main(String[] args)
-      {
-          System.out.println("Hi there!");
-      }
+       public static void main(String[] args)
+       {
+           System.out.println("Hi there!");
+       }
    }
 
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Hi there!";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Hi there!";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
    }
-
-
 
 You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
 
@@ -204,45 +205,52 @@ Java has two different methods to print output to the screen:
    ~~~~
    public class MyClass
    {
-      public static void main(String[] args)
-      {
-          System.out.print("Hi ");
-          System.out.println("there");
-          System.out.print("!");
-      }
+       public static void main(String[] args)
+       {
+           System.out.print("Hi ");
+           System.out.println("there");
+           System.out.print("!");
+       }
    }
 
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Hi there!";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-        @Test
-        public void testLineCount() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "1 output line";
-            String actual = "  output line";
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Hi there!";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-            if (output.length() > 0) {
+       @Test
+       public void testLineCount() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "1 output line";
+           String actual = "  output line";
+
+           if (output.length() > 0)
+           {
                actual = output.split("\n").length + actual;
-            } else {
+           } else
+           {
                actual = output.length() + actual;
            }
-           boolean passed = getResults(expect, actual, "Checking lines of output");
+           boolean passed =
+                   getResults(expect, actual, "Checking lines of output");
            assertTrue(passed);
-        }
+       }
    }
 
 Special words—also called **keywords**—such as ``public``, ``class``, and ``if`` must be in lowercase, but class names such as ``System`` and ``String`` are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
@@ -450,19 +458,22 @@ common mistakes and will get much quicker at finding your syntax errors.
 
    ====
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Hi there!";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Hi there!";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
    }
 
 |CodingEx| **Coding Exercise: Compile Time Error 2**
@@ -490,22 +501,23 @@ the code and run it again.
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Hi there!";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Hi there!";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
    }
-
-
 
 |CodingEx| **Coding Exercise: Compile Time Error 3**
 
@@ -544,21 +556,23 @@ capitalization matters.
    // should pass if/when they run code
    // This doesn't really work because it filters out the \n
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Hi there!";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Hi there!";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
    }
-
 
 Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon?
 
@@ -615,22 +629,23 @@ Working in pairs, debug the following code. Can you find all the bugs and get th
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Good morning! Good afternoon! And good evening";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Good morning! Good afternoon! And good evening";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
    }
-
-
 
 Summary
 -------------------
@@ -641,12 +656,11 @@ Summary
 
    public class MyClass
    {
-      public static void main(String[] args)
-      {
-          System.out.println("Hi there!");
-      }
+       public static void main(String[] args)
+       {
+           System.out.println("Hi there!");
+       }
    }
-
 
 - A Java program starts with **public class NameOfClass { }**. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.
 
