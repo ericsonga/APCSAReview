@@ -198,7 +198,25 @@ different **method signature**, where it requires a different number or type of 
         @Test
         public void test1()
         {
-            boolean passed = codeDigestChanged("1f92cb0f45abe66d191d9dcd05840c552a488109");
+            boolean passed = codeChanged(
+                "import java.awt.*;\n" +
+                "import java.util.*;\n" +
+                "\n" +
+                "public class TurtleTestMethods1\n" +
+                "{\n" +
+                "    public static void main(String[] args)\n" +
+                "    {\n" +
+                "        World world = new World(300, 300);\n" +
+                "        Turtle yertle = new Turtle(world);\n" +
+                "\n" +
+                "        yertle.forward(100);\n" +
+                "        yertle.turnLeft();\n" +
+                "        yertle.forward(75);\n" +
+                "\n" +
+                "        world.show(true);\n" +
+                "    }\n" +
+                "}\n";
+            );
             assertTrue(passed);
         }
 
