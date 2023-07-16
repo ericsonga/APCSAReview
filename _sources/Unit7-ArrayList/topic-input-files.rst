@@ -636,8 +636,8 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
    import java.util.*;
    import java.nio.file.*;
    
-   /* Change YourClassName below */
-   class YourClassName
+   /* Change this class name to a meaningful name for one record from the dataset. */
+   class OneItem
    {
        // Add at least 3 attributes found in the data file
          
