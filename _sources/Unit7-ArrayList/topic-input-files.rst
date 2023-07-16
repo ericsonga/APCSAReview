@@ -642,7 +642,7 @@ Let's try this code in the exercise below.
 |Groupwork| Programming Challenge: ArrayList of Objects from Input File
 ------------------------------------------------------------------------
 
-Let's end with a challenge that combines all the skills you have learned so far. You could work in pairs for this challenge. Choose a dataset from the files below to read into an ``ArrayList`` of objects. Look at the columns of the dataset you have chosen to decide on the name and at least 3 attributes for your class. Each row in the data file will be an object of your class that you will add to the ``ArrayList``. 
+Let's end with a challenge that combines all the skills you have learned so far. You could work in pairs for this challenge. Choose a dataset from the files below to read into an ``ArrayList`` of objects. Look at the columns of the dataset you have chosen to decide on the name and at least 3 attributes for your class. Each row in the data file will be an object of your class that you will add to the ``ArrayList``. If you find another data CSV file online that you would like to use, you can read from a URL instead of a file in Java using the ``java.net`` package following the directions here https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html.
 
 .. datafile:: WorldIndicators2000.csv
    :fromfile: ../../_static/datasets/WorldIndicators2000.csv
