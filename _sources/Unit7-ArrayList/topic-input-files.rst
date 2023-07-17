@@ -629,7 +629,7 @@ Let's try this code in the exercise below.
        }
 
        @Test
-       public void testConstructor()
+       public void testFindTypeHeader()
        {
            boolean passed =
                    checkCodeContains(
