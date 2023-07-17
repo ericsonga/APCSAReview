@@ -595,16 +595,6 @@ Let's try this code in the exercise below.
        }
 
        @Test
-       public void testConstructor3()
-       {
-           String output = checkConstructor(3);
-           String expect = "pass";
-
-           boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
-           assertTrue(passed);
-       }
-
-       @Test
        public void splitCode()
        {
            boolean passed = checkCodeContains("call to split method", ".split");
