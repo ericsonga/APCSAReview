@@ -657,7 +657,7 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
 
 .. activecode:: challenge-file
    :language: java
-   :datafile: pokemon.csv, WorldIndicators2000.csv
+   :datafile: pokemon.csv, WorldIndicators2000.csv, StateData2020-CDC-Census.csv, fastfood2023.csv
 
    **Input File Challenge:** Design the class for your input file that has at least 3 attributes that can be found in the file. Then, read in the data from the file, split each line, and save the data in an ``ArrayList`` of objects. Finally, do something interesting with the data using a loop, for example you could find the object with the max or min attribute value or print out all the objects of a certain attribute value.
    ~~~~
