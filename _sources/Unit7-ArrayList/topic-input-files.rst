@@ -368,7 +368,7 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
    :autograde: unittest
    :datafile: pokemon.csv
 
-   This program reads in some of the data from the pokemon file into a List of lines. Complete the main method to print out a random pokemon name and its image using the split method.  
+   **PokeImages:** This program reads in some of the data from the pokemon file into a List of lines. Complete the main method to print out a random pokemon name and its image using the split method.  
    ~~~~
    import java.io.*;
    import java.nio.file.*;
@@ -502,7 +502,7 @@ Let's try this code in the exercise below.
    :language: java
    :datafile: pokemon.csv
 
-   Design the class Pokemon that has at least 3 attributes that can be found in the Pokemon file, including its name, type1, and imagefile, and any other attributes from the file that you would like. Write a constructor and getters for these attributes. Then, read in the data from the pokemon file, split each line, and save the data in an ``ArrayList`` of Pokemon objects. Write a ``findType`` method that loops through the ArrayList to find the Pokemon of a type given as the argument and prints out their names and images.  
+   **Pokemon ArrayList:** Design the class Pokemon that has at least 3 attributes that can be found in the Pokemon file, including its name, type1, and imagefile, and any other attributes from the file that you would like. Write a constructor and getters for these attributes. Then, read in the data from the pokemon file, split each line, and save the data in an ``ArrayList`` of Pokemon objects. Write a ``findType`` method that loops through the ArrayList to find the Pokemon of a type given as the argument and prints out their names and images.  
    ~~~~
    import java.io.*;
    import java.nio.file.*;
@@ -657,7 +657,7 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
 
 .. activecode:: challenge-file
    :language: java
-   :datafile: pokemon.csv, WorldIndicators2000.csv, StateData2020-CDC-Census.csv, fastfood2023.csv
+   :datafile: pokemon.csv, WorldIndicators2000.csv
 
    **Input File Challenge:** Design the class for your input file that has at least 3 attributes that can be found in the file. Then, read in the data from the file, split each line, and save the data in an ``ArrayList`` of objects. Finally, do something interesting with the data using a loop, for example you could find the object with the max or min attribute value or print out all the objects of a certain attribute value.
    ~~~~
