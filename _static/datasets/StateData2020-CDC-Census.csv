@@ -1,0 +1,53 @@
+STATE,Population in 2016 from census.gov,Non-insured percentage (percentage of people who do not have health insurance in 2016 from CDC.gov),Firearms Death RATE of death from firearms for every 100K population in 2016 from CDC.gov,Firearm Deaths totals in 2016,Drug Overdose death rates per 100K population 2016,Drug overdose deaths total,URL for state info: base url https://www.cdc.gov
+Alabama,4860545,10,21.5,1046,16.2,756,/nchs/pressroom/states/alabama/alabama.htm
+Alaska,741522,14,23.3,177,16.8,128,/nchs/pressroom/states/alaska/alaska.htm
+Arizona,6908642,11,15.2,1094,20.3,1382,/nchs/pressroom/states/arizona/arizona.htm
+Arkansas,2988231,7.1,17.8,541,14,401,/nchs/pressroom/states/arkansas/arkansas.htm
+California,39296476,7.1,7.9,3184,11.2,4654,/nchs/pressroom/states/california/california.htm
+Colorado,5530105,7.7,14.3,812,16.6,942,/nchs/pressroom/states/colorado/colorado.htm
+Connecticut,3587685,3.9,4.6,172,27.4,971,/nchs/pressroom/states/connecticut/connecticut.htm
+Delaware,952698,3.6,11,111,30.8,282,/nchs/pressroom/states/delaware/delaware.htm
+District of Columbia,684336,3.9,13.8,107,38.8,269,/nchs/pressroom/states/dc/dc.htm
+Florida,20656589,13.8,12.6,2704,23.7,4728,/nchs/pressroom/states/florida/florida.htm
+Georgia,10313620,12.9,15,1571,13.3,1394,/nchs/pressroom/states/georgia/georgia.htm
+Hawaii,1428683,2.7,4.5,66,12.8,191,/nchs/pressroom/states/hawaii/hawaii.htm
+Idaho,1680026,11.2,14.6,242,15.2,243,/nchs/pressroom/states/idaho/idaho.htm
+Illinois,12835726,5.7,11.7,1490,18.9,2411,/nchs/pressroom/states/illinois/illinois.htm
+Indiana,6634007,7.8,15,997,24,1526,/nchs/pressroom/states/indiana/indiana.htm
+Iowa,3130869,3.7,9.2,288,10.6,314,/nchs/pressroom/states/iowa/iowa.htm
+Kansas,2907731,7.9,13.4,383,11.1,313,/nchs/pressroom/states/kansas/kansas.htm
+Kentucky,4436113,6.8,17.5,772,33.5,1419,/nchs/pressroom/states/kentucky/kentucky.htm
+Louisiana,4686157,13.1,21.3,987,21.8,996,/nchs/pressroom/states/louisiana/louisiana.htm
+Maine,1330232,7.7,8.3,123,28.7,353,/nchs/pressroom/states/maine/maine.htm
+Maryland,6024752,5.6,11.9,707,33.2,2044,/nchs/pressroom/states/maryland/maryland.htm
+Massachusetts,6823721,2.6,3.4,242,33,2227,/nchs/pressroom/states/massachusetts/massachusetts.htm
+Michigan,9933445,6.7,12.3,1230,24.4,2347,/nchs/pressroom/states/michigan/michigan.htm
+Minnesota,5525050,5,7.6,432,12.5,672,/nchs/pressroom/states/minnesota/minnesota.htm
+Mississippi,2985415,12.3,19.9,587,12.1,352,/nchs/pressroom/states/mississippi/mississippi.htm
+Missouri,6091176,9.4,19,1144,23.6,1371,/nchs/pressroom/states/missouri/missouri.htm
+Montana,1038656,9.3,18.9,194,11.7,119,/nchs/pressroom/states/montana/montana.htm
+Nebraska,1907603,10.2,9.1,171,6.4,120,/nchs/pressroom/states/nebraska/nebraska.htm
+Nevada,2939254,11,16.8,498,21.7,665,/nchs/pressroom/states/nevada/nevada.htm
+New Hampshire,1335015,7.2,9.3,132,39,481,/nchs/pressroom/states/newhampshire/newhampshire.htm
+New Jersey,8978416,7.2,5.5,485,23.2,2056,/nchs/pressroom/states/newjersey/newjersey.htm
+New Mexico,2085432,11.3,18.1,383,25.2,500,/nchs/pressroom/states/newmexico/newmexico.htm
+New York,19836286,5.4,4.4,900,18,3638,/nchs/pressroom/states/newyork/newyork.htm
+North Carolina,10156689,11.4,13.7,1409,19.7,1956,/nchs/pressroom/states/northcarolina/northcarolina.htm
+North Dakota,755548,7,11.9,90,10.6,77,/nchs/pressroom/states/northdakota/northdakota.htm
+Ohio,11622554,6.3,12.9,1524,39.1,4329,/nchs/pressroom/states/ohio/ohio.htm
+Oklahoma,3921207,16.5,19.6,766,21.5,813,/nchs/pressroom/states/oklahoma/oklahoma.htm
+Oregon,4085989,8.3,11.9,513,11.9,506,/nchs/pressroom/states/oregon/oregon.htm
+Pennsylvania,12787085,7.2,12,1555,37.9,4627,/nchs/pressroom/states/pennsylvania/pennsylvania.htm
+Puerto Rico,3406520,,,,,,
+Rhode Island,1057566,4.2,4.1,49,30.8,326,/nchs/pressroom/states/rhodeisland/rhodeisland.htm
+South Carolina,4959822,10,17.7,891,18.1,879,/nchs/pressroom/states/southcarolina/southcarolina.htm
+South Dakota,861542,8.7,13.4,108,8.4,69,/nchs/pressroom/states/southdakota/southdakota.htm
+Tennessee,6649404,8.9,17.1,1148,24.5,1630,/nchs/pressroom/states/tenessee/tennessee.htm
+Texas,27904862,18.7,12.1,3353,10.1,2831,/nchs/pressroom/states/texas/texas.htm
+Utah,3044321,7.1,12.9,370,22.4,635,/nchs/pressroom/states/utah/utah.htm
+Vermont,623354,3.7,11.1,78,22.2,125,/nchs/pressroom/states/vermont/vermont.htm
+Virginia,8414380,9.3,12.1,1049,16.7,1405,/nchs/pressroom/states/virginia/virginia.htm
+Washington,7280934,5.7,9,686,14.5,1102,/nchs/pressroom/states/washington/washington.htm
+West Virginia,1828637,6.2,17.5,332,52,884,/nchs/pressroom/states/westvirginia/westvirginia.htm
+Wisconsin,5772917,6.5,11.4,664,19.3,1074,/nchs/pressroom/states/wisconsin/wisconsin.htm
+Wyoming,584910,11.5,17.4,101,17.6,99,/nchs/pressroom/states/wyoming/wyoming.htm

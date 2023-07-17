@@ -31,7 +31,7 @@
           viewBox="0 0 16 16">
        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-     </svg> Time estimate: 45 min.
+     </svg> Time estimate: 90 min.
    </div>
 
 Input Files (Optional)
@@ -66,7 +66,7 @@ But what if you misspell the file name or the file does not exist? The ``Scanner
 
    import java.io.*;
    import java.util.*;
-   
+
    public class FileIO 
    {
                                              // Notice throws IOException here
@@ -94,40 +94,49 @@ Try the following exercise to practice reading in a file. Notice the compiler er
    ~~~~
    import java.io.*;
    import java.util.*;
-   
-   public class FileIO 
+
+   public class FileIO
    {
-       public static void main(String[] args) 
+       public static void main(String[] args)
        {
            File myFile = new File("dictionary.txt");
            Scanner scan = new Scanner(myFile);
-           System.out.println("The first word in the dictionary file is: " 
-                               + scan.nextLine() );
+           System.out.println(
+                   "The first word in the dictionary file is: " + scan.nextLine());
            scan.close();
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
+       public RunestoneTests()
+       {
+           super("FileIO");
+       }
+
        @Test
        public void testMain() throws IOException
        {
-            String output = getMethodOutput("main");
-            String expect = "The first word in the dictionary file is: a";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
+           String output = getMethodOutput("main");
+           String expect = "The first word in the dictionary file is: a";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
        }
+
        @Test
        public void fixedCode()
        {
-          boolean passed = checkCodeContains("throws IOException", "throws IOException");
-          assertTrue(passed);
+           boolean passed = checkCodeContains("throws IOException", "throws IOException");
+           assertTrue(passed);
        }
-    }
+   }
 
 Reading in Data with Scanner
 -----------------------------
@@ -171,7 +180,7 @@ We can save a file into an array. In the ``SpellChecker`` class, we read the dat
 The following exercise reads in a data file about Pokemon and prints out the first 10 lines in the file. This file has the extension *csv* which stands for **Comma Separated Values**. All spreadsheets can be saved as CSV text files, and spreadsheet software can easily open CSV files as spreadsheets.
 
 .. datafile:: pokemon.csv
-   :fromfile: ../../_static/pokemon.csv
+   :fromfile: ../../_static/datasets/pokemon.csv
 
 |CodingEx| **Coding Exercise**
 
@@ -184,7 +193,7 @@ The following exercise reads in a data file about Pokemon and prints out the fir
    ~~~~
    import java.io.*;
    import java.util.*;
-   
+
    public class ReadData 
    {
        public static void main(String[] args) throws IOException
@@ -199,11 +208,11 @@ The following exercise reads in a data file about Pokemon and prints out the fir
            while (         )
            {
                // 2. Read in the next line of the file
-   
+
                // 3. Assign the line to the ith element of the pokemonLines array
-               
+
                // 4. Print out the line
-      
+
                i++; // line count
             }
             scan.close();           
@@ -211,29 +220,41 @@ The following exercise reads in a data file about Pokemon and prints out the fir
    }
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
+       public RunestoneTests()
+       {
+           super("ReadData");
+       }
+
        @Test
        public void testMain() throws IOException
        {
-            String output = getMethodOutput("main");
-            String[] lines = output.split("\\s+");
-            boolean passed = lines.length >= 10;
+           String output = getMethodOutput("main");
+           String[] lines = output.split("\\s+");
+           boolean passed = lines.length >= 10;
 
-            passed = getResults("10+ lines of output", lines.length + " lines of output", "Expected output", passed);
-            assertTrue(passed);
+           passed =
+                   getResults(
+                           "10+ lines of output",
+                           lines.length + " lines of output",
+                           "Expected output",
+                           passed);
+           assertTrue(passed);
        }
+
        @Test
        public void arrayCode()
        {
-          boolean passed = checkCodeContains("assignment to pokemonLines[i]", "pokemonLines[i]");
-          assertTrue(passed);
+           boolean passed = checkCodeContains("assignment to pokemonLines[i]", "pokemonLines[i]");
+           assertTrue(passed);
        }
-    }
-
+   }
 
 Reading in Files with ``java.nio.file``
 ----------------------------------------  
@@ -261,25 +282,29 @@ Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` whi
    Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into a ``List<String>`` named ``lines``. Add a loop that prints out the first 10 pokemon.  
    ~~~~
    import java.io.*;
-   import java.util.*;
    import java.nio.file.*;
-   
-   public class ReadData 
+   import java.util.*;
+
+   public class ReadData
    {
        public static void main(String[] args) throws IOException
        {
            List<String> lines = Files.readAllLines(Paths.get("pokemon.csv"));
            // Add a loop that prints out the first 10 elements of the List lines
            // You can use the get method with Lists just like ArrayLists
-         
 
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
    import org.junit.*;
    import java.io.*;
 
+   public RunestoneTests() 
+   {
+       super("ReadData");
+   }
    public class RunestoneTests extends CodeTestHelper
    {
        @Test
@@ -300,12 +325,23 @@ Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` whi
        }
     }
 
-   
+
 
 Object-Oriented Design with CSV Files
 ---------------------------------------------
-    
+
+.. image:: https://play.pokemonshowdown.com/sprites/bw/pikachu.png
+   :width: 100px
+   :align: left
+   :alt: Pikachu
+
 If you take a look at the Pokemon CSV file, you'll notice that each line contains multiple data attributes separated by commas. These attributes include each Pokemon's name, type, speed, etc. on each row. Typically, the first line of a CSV file serves as the header, indicating the names of these attributes. 
+
+.. code=block:: text
+
+   // The first line of the Pokemon CSV file
+   Number, Pokemon, Type 1, Type 2, HP, Attack, Defense, Speed, PNG, Description
+
 
 To better organize and work with this data, we can create a ``Pokemon`` class that corresponds to these attributes using object-oriented design. A CSV data file can be saved into an ``ArrayList`` of ``Pokemon`` objects by splitting each line (except the header) into the attributes for one ``Pokemon`` object.
 
@@ -335,10 +371,10 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
    This program reads in some of the data from the pokemon file into a List of lines. Complete the main method to print out a random pokemon name and its image using the split method.  
    ~~~~
    import java.io.*;
-   import java.util.*;
    import java.nio.file.*;
+   import java.util.*;
 
-   public class PokeImages 
+   public class PokeImages
    {
        public static void main(String[] args) throws IOException
        {
@@ -347,73 +383,91 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
            //    (don't use the 0th row which is the headers)
 
            // 2. get the line of data at that random index from the List lines
-        
-           // 3. Use the split method to split the line into a String array
-                
-           // 4. Print out the name. What is the index for the name in the split array?
 
-           // 5. Call the PokeImages.printHTMLimage method below 
+           // 3. Use the split method to split the line into a String array
+
+           // 4. Print out the name. What is the index for the name in the split
+           // array?
+
+           // 5. Call the PokeImages.printHTMLimage method below
            //    with an element of the array to print out the image.
            //    What is the index for the image url in the array?
-          
+
        }
-            
-        // This method will just work in Active Code which interprets html
-        public static void printHTMLimage(String url)
-        {
-            System.out.print("<img src=" + url + " width=300px />");
-        }
+
+       // This method will just work on Runestone to print out images
+       public static void printHTMLimage(String url)
+       {
+           System.out.print("<img src=" + url + " width=300px />");
+       }
    }
+
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
+       public RunestoneTests()
+       {
+           super("PokeImages");
+       }
+
        @Test
        public void testMain() throws IOException
        {
-            String output = getMethodOutput("main");
-            String[] lines = output.split("\\s+");
-            boolean passed = lines.length >= 1;
+           String output = getMethodOutput("main");
+           String[] lines = output.split("\\s+");
+           boolean passed = lines.length >= 1;
 
-            passed = getResults("1+ lines of output", lines.length + " lines of output", "Expected output", passed);
-            assertTrue(passed);
+           passed =
+                   getResults(
+                           "1+ lines of output",
+                           lines.length + " lines of output",
+                           "Expected output",
+                           passed);
+           assertTrue(passed);
        }
+
        @Test
        public void getMethodTest()
        {
-          boolean passed = checkCodeContains("call to get method with lines", "lines.get");
-          assertTrue(passed);
+           boolean passed = checkCodeContains("call to get method with lines", "lines.get");
+           assertTrue(passed);
        }
-       
+
        @Test
        public void splitCode()
        {
-          boolean passed = checkCodeContains("call to split method", ".split");
-          assertTrue(passed);
-       } 
+           boolean passed = checkCodeContains("call to split method", ".split");
+           assertTrue(passed);
+       }
+
        @Test
        public void imageCode()
        {
-          boolean passed = checkCodeContains("call to PokeImages.printHTMLimage", "PokeImages.printHTMLimage");
-          assertTrue(passed);
+           boolean passed =
+                   checkCodeContains("call to PokeImages.printHTMLimage", "PokeImages.printHTMLimage");
+           assertTrue(passed);
        }
+
        @Test
        public void nameIndexCode()
        {
-          boolean passed = checkCodeContains("the correct index for the name (1)", "[1]");
-          assertTrue(passed);
+           boolean passed = checkCodeContains("the correct index for the name (1)", "[1]");
+           assertTrue(passed);
        }
+
        @Test
        public void imageIndexCode()
        {
-          boolean passed = checkCodeContains("the correct index for the image url (8)", "[8]");
-          assertTrue(passed);
+           boolean passed = checkCodeContains("the correct index for the image url (8)", "[8]");
+           assertTrue(passed);
        }
-    }
-
+   }
 
 Once we have extracted the individual pieces of data from each line of the CSV file, the next step is to save this data into a ``Pokemon`` object. We must first create a ``Pokemon`` class with instance variables that correspond to the data attributes, and a constructor that initializes these variables. Assuming that we have already written the ``Pokemon`` class and constructor, the following code creates a Pokemon object from the data using its constructor and saves it into an ``ArrayList`` of ``Pokemon`` objects.
 
@@ -440,122 +494,292 @@ Once we have extracted the individual pieces of data from each line of the CSV f
     }
 
 
-Let's try to put together this code in the programming challenge below.
+Let's try this code in the exercise below.
 
-|Groupwork| Programming Challenge: Pokemon ArrayList 
-------------------------------------------------------
-
-In this challenge, you will read in the data from the pokemon file and save it into an ``ArrayList`` of ``Pokemon`` objects. 
-
-1. Design a class called ``Pokemon``. Choose at least 3 attributes that can be found in the pokemon file for your class. Write a constructor that takes in these attributes as parameters and saves them into instance variables. You may need to add some getters and a ``toString`` method as well.
-
-2. Read in the data from the pokemon file. You can use ``Files.readAllLines`` or the ``Scanner`` class. 
-
-3. Inside a loop, split each line into its attributes and create a ``Pokemon`` object using its constructor. Add the object to the ``Pokemon ArrayList``. 
-
-4. Do something interesting with the data using a loop, for example you could find the Pokemon with the highest speed or print out all the Pokemon of a certain type.
+|CodingEx| **Coding Exercise**
 
 .. activecode:: challenge-pokemon-file
    :language: java
    :datafile: pokemon.csv
-   
-   Design the class Pokemon that has at least 3 attributes that can be found in the pokemon file. Then, read in the data from the pokemon file, split each line, and save the data in an ``ArrayList`` of Pokemon objects. Finally, do something interesting with the data using a loop, for example you could find the Pokemon with the highest speed or print out all the Pokemon of a certain type.
+
+   Design the class Pokemon that has at least 3 attributes that can be found in the Pokemon file, including its name, type1, and imagefile, and any other attributes from the file that you would like. Write a constructor and getters for these attributes. Then, read in the data from the pokemon file, split each line, and save the data in an ``ArrayList`` of Pokemon objects. Write a ``findType`` method that loops through the ArrayList to find the Pokemon of a type given as the argument and prints out their names and images.  
    ~~~~
    import java.io.*;
-   import java.util.*;
    import java.nio.file.*;
-   
+   import java.util.*;
+
    class Pokemon
    {
-       // Add at least 3 attributes of a Pokemon found in the data file
-         
+       // Add at least 3 attributes of a Pokemon including name, type1, and imagefile
+
        // Add a constructor that initializes the attributes of a Pokemon
-         
-       // Add any getters that you need and a toString method     
+       //  to the values given as arguments
+
+       // Add getters for the attributes
    }
 
-   public class PokemonArrayList 
+   public class PokemonArrayList
    {
        private ArrayList<Pokemon> pokemonList = new ArrayList<Pokemon>();
 
-       
        // Write a method to read in the data (it may throw an exception).
        // Loop through each row to split it into attributes.
        //     Create a new Pokemon object from the attributes.
        //     and save it into the pokemonList
 
+       // Write a findType method that print out all the
+       // Pokemon of a certain type given as an argument.
+       // This method can call printHTMLimage(url) defined below.
 
-       // Write a method that does something with the data
-       // for example find the Pokemon with the highest speed 
-       // or print out all the Pokemon of a certain type.
-
+       // This method will just work on Runestone to print out images
+       public static void printHTMLimage(String url)
+       {
+           System.out.print("<img src=" + url + " width=300px />");
+       }
 
        public static void main(String[] args) throws IOException
        {
-            PokemonArrayList obj = new PokemonArrayList();
-            // Call your method to read in the data
+           PokemonArrayList obj = new PokemonArrayList();
+           // Call your method to read in the data
 
-            // Call your method to do something with the data
+           // Call your method to find all the Pokemon of a certain type
+           // obj.findType("Grass");
+       }
+   }
 
-        }
-   } 
    ====
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("PokemonArrayList");
+       }
+
+       @Test
+       public void testPrivateVariables()
+       {
+           String code = getCode();
+           int count = countOccurences(code, "private");
+           boolean passed = count >= 3;
+           getResults("3", count + "", "Number of private instance variables", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testConstructor()
+       {
+           boolean passed = checkCodeContains("Pokemon constructor", "public Pokemon(");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String[] lines = output.split("\\s+");
+           boolean passed = lines.length >= 2;
+
+           passed =
+                   getResults(
+                           "2+ lines of output",
+                           lines.length + " lines of output",
+                           "Expected output",
+                           passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testConstructor3()
+       {
+           String output = checkConstructor(3);
+           String expect = "pass";
+
+           boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void splitCode()
+       {
+           boolean passed = checkCodeContains("call to split method", ".split");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void addCode()
+       {
+           boolean passed = checkCodeContains("call to pokemonList.add", ".add");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void countForLoops()
+       {
+           String code = removeSpaces(getCode());
+           int count = countOccurences(code, "for");
+           boolean passed = count >= 2;
+           getResults("2", count + "", "For loops used in 2 methods", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testConstructor()
+       {
+           boolean passed =
+                   checkCodeContains(
+                           "public void findType method with a String argument",
+                           "public void findType(String");
+           assertTrue(passed);
+       }
+   }
+
+|Groupwork| Programming Challenge: ArrayList of Objects from Input File
+------------------------------------------------------------------------
+
+Let's end with a challenge that combines all the skills you have learned so far. You could work in pairs for this challenge. Choose a dataset from the files below to read into an ``ArrayList`` of objects. Look at the columns of the dataset you have chosen to decide on the name and at least 3 attributes for your class. Each row in the data file will be an object of your class that you will add to the ``ArrayList``. If you find another data CSV file online that you would like to use, you can read from a URL instead of a file in Java using the ``java.net`` package following the directions here https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html.
+
+.. datafile:: WorldIndicators2000.csv
+   :fromfile: ../../_static/datasets/WorldIndicators2000.csv
+
+.. datafile:: StateData2020-CDC-Census.csv
+   :fromfile: ../../_static/datasets/StateData2020-CDC-Census.csv
+
+.. datafile:: fastfood2023.csv
+   :fromfile: ../../_static/datasets/fastfood2023.csv
+
+.. datafile:: NBAPlayerStats2021-2022.csv
+   :fromfile: ../../_static/datasets/NBAPlayerStats2021-2022.csv
+
+After you have chosen an input file, use the Pokemon exercise in the section above as a guide to:
+
+1. Design a class for the input file that you have chosen. Choose at least 3 attributes that can be found in the file for your class. Write a constructor that takes in these attributes as parameters and saves them into instance variables. You may need to add some getters and a ``toString`` method as well.
+
+2. Declare an ``ArrayList`` of your class type.
+
+3. Read in the data from the file. You can use ``Files.readAllLines`` or the ``Scanner`` class. 
+
+4. Inside a loop, split each line into its attributes and create an object for your class using its constructor. Add the object to the ``ArrayList``. 
+
+5. Do something interesting with the data using a loop, for example you could find the maximum or minimum value of an attribute or print out all the objects that have the same attribute value. 
+
+.. activecode:: challenge-file
+   :language: java
+   :datafile: pokemon.csv, WorldIndicators2000.csv, StateData2020-CDC-Census.csv, fastfood2023.csv, NBAPlayerStats2021-2022.csv
+
+   **Input File Challenge:** Design the class for your input file that has at least 3 attributes that can be found in the file. Then, read in the data from the file, split each line, and save the data in an ``ArrayList`` of objects. Finally, do something interesting with the data using a loop, for example you could find the object with the max or min attribute value or print out all the objects of a certain attribute value.
+   ~~~~
+   import java.io.*;
+   import java.nio.file.*;
+   import java.util.*;
+
+   /* Change this class name to a meaningful name for one record from the dataset. */
+   class OneItem
+   {
+       // Add at least 3 attributes found in the data file
+
+       // Add a constructor that initializes the attributes
+
+       // Add any getters and toString methods that you need
+
+   }
+
+   /* Change this class name to a meaningful name for the whole dataset. */
+   public class Data
+   {
+       // Declare an ArrayList of your class type
+
+       // Write a method to read in the data (it may throw an exception).
+       // Loop through each row to split it into attributes.
+       //     Create a new  object from the attributes.
+       //     and save it into the ArrayList.
+
+       // Write a method that does something with the data
+       // for example find the object with a min or max attribute value
+       // or print out all the objects of a certain attribute value.
+
+       public static void main(String[] args) throws IOException
+       {
+           Data obj = new Data(); // change to your class name
+           // Call your method to read in the data
+
+           // Call your method to do something with the data
+
+       }
+   }
+
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
        @Test
-       public void testPrivateVariables() {
-            String code = getCode();
-            int count = countOccurences(code,"private");
-            boolean passed = count >= 3;
-            getResults("3", count+"", "Number of private instance variables", passed);
-            assertTrue(passed);
-        }
-       @Test
-       public void testConstructor()
+       public void testPrivateVariables()
        {
-          boolean passed = checkCodeContains("Pokemon constructor", "public Pokemon(");
-          assertTrue(passed);
+           String code = getCode();
+           int count = countOccurences(code, "private");
+           boolean passed = count >= 3;
+           getResults("3", count + "", "Number of private instance variables", passed);
+           assertTrue(passed);
        }
+
+       @Test
+       public void testConstructor3()
+       {
+           String output = checkConstructor(3);
+           String expect = "pass";
+
+           boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+           assertTrue(passed);
+       }
+
        @Test
        public void testMain() throws IOException
        {
-            String output = getMethodOutput("main");
-            String[] lines = output.split("\\s+");
-            boolean passed = lines.length >= 2;
+           String output = getMethodOutput("main");
+           String[] lines = output.split("\\s+");
+           boolean passed = lines.length >= 2;
 
-            passed = getResults("2+ lines of output", lines.length + " lines of output", "Expected output", passed);
-            assertTrue(passed);
+           passed =
+                   getResults(
+                           "2+ lines of output",
+                           lines.length + " lines of output",
+                           "Expected output",
+                           passed);
+           assertTrue(passed);
        }
-       @Test
-       public void constructorCall()
-       {
-          boolean passed = checkCodeContains("call to Pokemon constructor", "new Pokemon");
-          assertTrue(passed);
-       }
-       
+
        @Test
        public void splitCode()
        {
-          boolean passed = checkCodeContains("call to split method", ".split");
-          assertTrue(passed);
-       } 
+           boolean passed = checkCodeContains("call to split method", ".split");
+           assertTrue(passed);
+       }
+
        @Test
        public void addCode()
        {
-          boolean passed = checkCodeContains("call to pokemonList.add", ".add");
-          assertTrue(passed);
+           boolean passed = checkCodeContains("call to add to ArrayList", ".add");
+           assertTrue(passed);
        }
+
        @Test
        public void countForLoops()
-        {
-            String code = removeSpaces(getCode());
-            int count = countOccurences(code,"for(");
-            boolean passed = count >= 2;
-            getResults("2", count+"", "For loops used in 2 methods", passed);
-            assertTrue(passed);
-        }
-    }
+       {
+           String code = removeSpaces(getCode());
+           int count = countOccurences(code, "for(");
+           boolean passed = count >= 2;
+           getResults("2", count + "", "For loops used in 2 methods", passed);
+           assertTrue(passed);
+       }
+   }
+
