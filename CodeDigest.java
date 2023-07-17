@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
@@ -14,8 +15,6 @@ public class CodeDigest {
     }
 
     private static String getStdin() throws IOException {
-        return new BufferedReader(new InputStreamReader(System.in))
-                .lines()
-                .collect(Collectors.joining("\n"));
+      return new String(System.in.readAllBytes(), StandardCharsets.UTF_8);
     }
 }
