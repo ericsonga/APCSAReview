@@ -653,9 +653,6 @@ Let's end with a challenge that combines all the skills you have learned so far.
 .. datafile:: fastfood2023.csv
    :fromfile: ../../_static/datasets/fastfood2023.csv
 
-.. datafile:: NBAPlayerStats2021-2022.csv
-   :fromfile: ../../_static/datasets/NBAPlayerStats2021-2022.csv
-
 After you have chosen an input file, use the Pokemon exercise in the section above as a guide to:
 
 1. Design a class for the input file that you have chosen. Choose at least 3 attributes that can be found in the file for your class. Write a constructor that takes in these attributes as parameters and saves them into instance variables. You may need to add some getters and a ``toString`` method as well.
@@ -670,7 +667,7 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
 
 .. activecode:: challenge-file
    :language: java
-   :datafile: pokemon.csv, WorldIndicators2000.csv, StateData2020-CDC-Census.csv, fastfood2023.csv, NBAPlayerStats2021-2022.csv
+   :datafile: pokemon.csv, WorldIndicators2000.csv, StateData2020-CDC-Census.csv, fastfood2023.csv
 
    **Input File Challenge:** Design the class for your input file that has at least 3 attributes that can be found in the file. Then, read in the data from the file, split each line, and save the data in an ``ArrayList`` of objects. Finally, do something interesting with the data using a loop, for example you could find the object with the max or min attribute value or print out all the objects of a certain attribute value.
    ~~~~
