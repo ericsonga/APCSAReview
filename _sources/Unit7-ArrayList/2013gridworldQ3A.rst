@@ -59,8 +59,10 @@ You can skip these if you think you know what to do already.  Click the buttons 
        :iscode:
        :feedback: The method header for getEmptyLocations is "public static ? getEmptyLocations (?)". What information should replace the "?" and what does that tell you about the method?
 
-       Write the :click-incorrect:GridWorldUtilities:endclick: method:click-incorrect: getEmptyLocations:endclick:. If there are no empty :click-incorrect:locations:endclick: in :click-correct:Grid:endclick:, the :click-incorrect:method:endclick: returns an empty :click-correct:Arraylist:endclick:.
-       Otherwise, it returns an Arraylist of all :click-incorrect:empty:endclick: :click-incorrect:locations in Grid:endclick:. Each :click-incorrect:empty location:endclick: should appear exactly once in the Arraylist.
+       Write the :click-incorrect:GridWorldUtilities:endclick: method :click-incorrect:getEmptyLocations.:endclick: 
+       If there are no empty :click-incorrect:locations:endclick: in :click-correct:Grid,:endclick: the :click-incorrect:method:endclick: returns an empty :click-correct:Arraylist.:endclick:
+       Otherwise, it returns an Arraylist of all :click-incorrect:empty:endclick: :click-incorrect:locations in Grid:endclick:. 
+       Each :click-incorrect:empty location:endclick: should appear exactly once in the Arraylist.
 
 
 .. reveal:: grid_wrld_cu_r2
