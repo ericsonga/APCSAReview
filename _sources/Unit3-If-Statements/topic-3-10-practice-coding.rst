@@ -61,8 +61,14 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       int x = 3;
-                      if (x > 0) System.out.println("x is greater than 0");
-                      else System.out.println("x is less than or equal 0");
+                      if (x > 0)
+                      {
+                          System.out.println("x is greater than 0");
+                      }
+                      else
+                      {
+                          System.out.println("x is less than or equal 0");
+                      }
                   }
               }
 
@@ -132,9 +138,18 @@ Coding Practice
                   {
                       int guess = 7;
                       int answer = 9;
-                      if (guess < answer) System.out.println("Your guess is too low");
-                      else if (guess == answer) System.out.println("You are right!");
-                      else System.out.println("Your guess is too high");
+                      if (guess < answer)
+                      {
+                          System.out.println("Your guess is too low");
+                      }
+                      else if (guess == answer)
+                      {
+                          System.out.println("You are right!");
+                      }
+                      else
+                      {
+                          System.out.println("Your guess is too high");
+                      }
                   }
               }
 
@@ -161,8 +176,14 @@ Coding Practice
                   {
                       boolean doneHomework = True;
                       boolean cleanedRoom = true;
-                      if (doneHomework && cleanedRoom) System.out.println("You cannot go out");
-                      else System.out.println("You can go out");
+                      if (doneHomework && cleanedRoom)
+                      {
+                          System.out.println("You cannot go out");
+                      }
+                      else
+                      {
+                          System.out.println("You can go out");
+                      }
                   }
               }
 
@@ -201,8 +222,14 @@ Coding Practice
                   {
                       boolean doneHomework = true;
                       boolean cleanedRoom = true;
-                      if (doneHomework && cleanedRoom) System.out.println("You can go out");
-                      else System.out.println("You cannot go out");
+                      if (doneHomework && cleanedRoom)
+                      {
+                          System.out.println("You can go out");
+                      }
+                      else
+                      {
+                          System.out.println("You cannot go out");
+                      }
                   }
               }
 
@@ -297,7 +324,10 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       int x = -3;
-                      if (x > 0) System.out.println("x is less than 0");
+                      if (x > 0)
+                      {
+                          System.out.println("x is less than 0");
+                      }
                   }
               }
 
@@ -361,9 +391,18 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       int x = -3;
-                      if (x < 0) System.out.println("x is less than 0");
-                      else if (x == 0) System.out.println("x is equal to 0");
-                      else System.out.println("x is greater than 0");
+                      if (x < 0)
+                      {
+                          System.out.println("x is less than 0");
+                      }
+                      else if (x == 0)
+                      {
+                          System.out.println("x is equal to 0");
+                      }
+                      else
+                      {
+                          System.out.println("x is greater than 0");
+                      }
                   }
               }
 
@@ -457,8 +496,14 @@ Coding Practice
                   {
                       boolean canWalk = true;
                       boolean haveRide = false;
-                      if (canWalk || haveRide) System.out.println("You can go out");
-                      else System.out.println("You can't go out");
+                      if (canWalk || haveRide)
+                      {
+                          System.out.println("You can go out");
+                      }
+                      else
+                      {
+                          System.out.println("You can't go out");
+                      }
                   }
               }
 
@@ -547,8 +592,14 @@ Coding Practice
                   {
                       boolean haveHomework = false;
                       boolean didDishes = true;
-                      if (!haveHomework && didDishes) System.out.println("You can go out");
-                      else System.out.println("You can't go out");
+                      if (!haveHomework && didDishes)
+                      {
+                          System.out.println("You can go out");
+                      }
+                      else
+                      {
+                          System.out.println("You can't go out");
+                      }
                   }
               }
 
@@ -640,8 +691,14 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       double temp = 103.5;
-                      if (temp > 100) System.out.println("You have a fever");
-                      else System.out.println("You don't have a fever");
+                      if (temp > 100)
+                      {
+                          System.out.println("You have a fever");
+                      }
+                      else
+                      {
+                          System.out.println("You don't have a fever");
+                      }
                   }
               }
 
@@ -747,10 +804,22 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       int temp = 100;
-                      if (temp < 30) System.out.println("It is freezing");
-                      else if (temp < 50) System.out.println("It is cold");
-                      else if (temp < 90) System.out.println("It is nice out");
-                      else System.out.println("It is hot");
+                      if (temp < 30)
+                      {
+                          System.out.println("It is freezing");
+                      }
+                      else if (temp < 50)
+                      {
+                          System.out.println("It is cold");
+                      }
+                      else if (temp < 90)
+                      {
+                          System.out.println("It is nice out");
+                      }
+                      else
+                      {
+                          System.out.println("It is hot");
+                      }
                   }
               }
 
@@ -884,11 +953,26 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       int score = 67;
-                      if (score >= 92) System.out.println("A");
-                      else if (score >= 82) System.out.println("B");
-                      else if (score >= 72) System.out.println("C");
-                      else if (score >= 62) System.out.println("D");
-                      else System.out.println("E");
+                      if (score >= 92)
+                      {
+                          System.out.println("A");
+                      }
+                      else if (score >= 82)
+                      {
+                          System.out.println("B");
+                      }
+                      else if (score >= 72)
+                      {
+                          System.out.println("C");
+                      }
+                      else if (score >= 62)
+                      {
+                          System.out.println("D");
+                      }
+                      else
+                      {
+                          System.out.println("E");
+                      }
                   }
               }
 
@@ -914,8 +998,3 @@ In particular we recommend solving the following problems
 * http://codingbat.com/prob/p169213
 * http://codingbat.com/prob/p178728
 * http://codingbat.com/prob/p115233
-
-
-
-
-
