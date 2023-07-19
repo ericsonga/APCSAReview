@@ -68,38 +68,46 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
    ~~~~
    public class TestElseIf
    {
-      public static void main(String[] args)
-      {
-        int x = 2;
-        if (x < 0)
-        {
-          System.out.println("x is negative");
-        }
-        else if (x == 0)
-        {
-           System.out.println("x is 0");
-        }
-        else
-        {
-          System.out.println("x is positive");
-        }
-        System.out.println("after conditional");
-      }
+       public static void main(String[] args)
+       {
+           int x = 2;
+           if (x < 0)
+           {
+               System.out.println("x is negative");
+           }
+           else if (x == 0)
+           {
+               System.out.println("x is 0");
+           }
+           else
+           {
+               System.out.println("x is positive");
+           }
+           System.out.println("after conditional");
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class TestElseIf { public static void main(String[] args) { int x = 2; if (x < 0) { System.out.println(\"x is negative\");  } else if (x == 0) {  System.out.println(\"x is 0\"); } else { System.out.println(\"x is positive\"); } System.out.println(\"after conditional\"); } }";
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class TestElseIf { public static void main(String[] args) { int x = 2; if"
+                       + " (x < 0) { System.out.println(\"x is negative\");  } else if (x == 0) { "
+                       + " System.out.println(\"x is 0\"); } else { System.out.println(\"x is"
+                       + " positive\"); } System.out.println(\"after conditional\"); } }";
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
+   }
 
 Here is a flowchart for a conditional with 3 options like in the code above.
 
@@ -217,73 +225,75 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    ~~~~
    public class IfDebug
    {
-      public static void main(String[] args)
-      {
-          int score = 93;
-          String grade = "";
+       public static void main(String[] args)
+       {
+           int score = 93;
+           String grade = "";
 
-          if (score >= 90)
-          {
-             grade = "A";
-          }
-          if (score >= 80)
-          {
-            grade = "B";
-          }
-          if (score >= 70)
-          {
-             grade = "C";
-          }
-          if (score >= 60)
-          {
-             grade = "D";
-          }
-          else
-          {
-             grade = "F";
-          }
+           if (score >= 90)
+           {
+               grade = "A";
+           }
+           if (score >= 80)
+           {
+               grade = "B";
+           }
+           if (score >= 70)
+           {
+               grade = "C";
+           }
+           if (score >= 60)
+           {
+               grade = "D";
+           }
+           else
+           {
+               grade = "F";
+           }
 
-          System.out.println(grade);
-      }
+           System.out.println(grade);
+       }
    }
+
    ====
    // Test Code for Lesson 3.4 - lccbIfDebug
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMainCorrectOutput() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expected = "A\n";
-            boolean passed = getResults(expected, output, "Expected output from main");
-            assertTrue(passed);
-        }
+   import org.junit.Test;
 
-        @Test
-        public void testCodeContainsFourElses()
-        {
-            String code = getCode();
-            String[] tokens = code.split("\\s+");
+   import java.io.*;
 
-            int expectedElseCount = 4;
-            int actualElseCount  = 0;
-            for (int i = 0; i < tokens.length; i++) {
-                if (tokens[i].equals("else")) {
-                    actualElseCount++;
-                }
-            }
-            boolean passed = getResults(expectedElseCount, actualElseCount, "Expected number of else's");
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMainCorrectOutput() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expected = "A\n";
+           boolean passed = getResults(expected, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void testCodeContainsFourElses()
+       {
+           String code = getCode();
+           String[] tokens = code.split("\\s+");
 
+           int expectedElseCount = 4;
+           int actualElseCount = 0;
+           for (int i = 0; i < tokens.length; i++)
+           {
+               if (tokens[i].equals("else"))
+               {
+                   actualElseCount++;
+               }
+           }
+           boolean passed =
+                   getResults(expectedElseCount, actualElseCount, "Expected number of else's");
+           assertTrue(passed);
+       }
+   }
 
 .. activecode::  ifelseifBattery
   :language: java
@@ -301,39 +311,50 @@ Here is a flowchart for a conditional with 3 options like in the code above.
           System.out.println("All okay!");
       }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class BatteryTest {  public static void main(String[] args)  {  int battery = 60;  System.out.println(\"All okay!\");  }  }";
+  import org.junit.*;
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
+  import java.io.*;
 
-        @Test
-        public void testCodeContains3(){
-          boolean ifCheck1 = checkCodeContains("if statement for battery above 100", "if (battery > 100)");
-            assertTrue(ifCheck1);
-        }
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testChangedCode()
+      {
+          String origCode =
+                  "public class BatteryTest {  public static void main(String[] args)  {  int battery"
+                      + " = 60;  System.out.println(\"All okay!\");  }  }";
 
-        @Test
-        public void testCodeContains5(){
-            boolean ifCheck1 = checkCodeContains("if statement for battery less than 50", "if (battery < 50)");
-            assertTrue(ifCheck1);
-        }
+          boolean changed = codeChanged(origCode);
+          assertTrue(changed);
+      }
 
-        @Test
-        public void testCodeContains4(){
+      @Test
+      public void testCodeContains3()
+      {
+          boolean ifCheck1 =
+                  checkCodeContains("if statement for battery above 100", "if (battery > 100)");
+          assertTrue(ifCheck1);
+      }
+
+      @Test
+      public void testCodeContains5()
+      {
+          boolean ifCheck1 =
+                  checkCodeContains("if statement for battery less than 50", "if (battery < 50)");
+          assertTrue(ifCheck1);
+      }
+
+      @Test
+      public void testCodeContains4()
+      {
           boolean ifCheck2 = checkCodeContains("else", "else");
           assertTrue(ifCheck2);
-        }
-    }
+      }
+  }
 
 |Groupwork| Programming Challenge : Adventure
 ---------------------------------------------
@@ -385,110 +406,125 @@ In a game like Adventure, else if statements can be used to respond to commands 
 
   Copy and paste your all of your code from repl.it and run to see if it passes the autograder tests. Include the link to your repl.it code in comments. Note that this code will only run with the autograder's input and will not ask the user for input.
   ~~~~
-  // Copy in your link to your code on repl.it here:
-  // Copy in all of your code from repl.it below (include import and public class Main)
-
+    // Copy in your link to your code on repl.it here:
+    // Copy in all of your code from repl.it below (include import and public class
+    // Main)
 
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-           super("Main", input1.replaceAll(" ", "\n")); // For Book
-        }
+  import org.junit.*;
 
-        private static int goal = 5;
-        private static String input1 = "n s e w y y y y y y y y y y y y y y";
-        private static String input2 = "s e w y n y y y y y y y y y y y y y";
-        private static String input3 = "e w y n s y y y y y y y y y y y y y";
-        private static String input4 = "w y n s e y y y y y y y y y y y y y";
-        private static String input5 = "y n s e w y y y y y y y y y y y y y";
-        private String output1, output2, output3, output4, output5;
+  import java.io.*;
 
-        @Test
-        public void test1()
-        {
-            String input = input1.replaceAll(" ", "\n");
-            String output = getMethodOutputWithInput("main", input);
-            output1 = output;
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("Main", input1.replaceAll(" ", "\n")); // For Book
+      }
 
-            String[] lines = output.split("\n");
+      private static int goal = 5;
+      private static String input1 = "n s e w y y y y y y y y y y y y y y";
+      private static String input2 = "s e w y n y y y y y y y y y y y y y";
+      private static String input3 = "e w y n s y y y y y y y y y y y y y";
+      private static String input4 = "w y n s e y y y y y y y y y y y y y";
+      private static String input5 = "y n s e w y y y y y y y y y y y y y";
+      private String output1, output2, output3, output4, output5;
 
-            boolean passed = lines.length >= goal;
+      @Test
+      public void test1()
+      {
+          String input = input1.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output1 = output;
 
-            passed = getResults(goal +"+ lines", "" + lines.length + " lines", "Outputs at least " + goal +" lines", passed);
-            assertTrue(passed);
-        }
+          String[] lines = output.split("\n");
 
-        @Test
-        public void test2()
-        {
-            String input = input2.replaceAll(" ", "\n");
-            String output = getMethodOutputWithInput("main", input);
-            output2 = output;
+          boolean passed = lines.length >= goal;
 
-            input = input3.replaceAll(" ", "\n");
-            output = getMethodOutputWithInput("main", input);
-            output3 = output;
+          passed =
+                  getResults(
+                          goal + "+ lines",
+                          "" + lines.length + " lines",
+                          "Outputs at least " + goal + " lines",
+                          passed);
+          assertTrue(passed);
+      }
 
-            input = input4.replaceAll(" ", "\n");
-            output = getMethodOutputWithInput("main", input);
-            output4 = output;
+      @Test
+      public void test2()
+      {
+          String input = input2.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output2 = output;
 
-            input = input5.replaceAll(" ", "\n");
-            output = getMethodOutputWithInput("main", input);
-            output5 = output;
+          input = input3.replaceAll(" ", "\n");
+          output = getMethodOutputWithInput("main", input);
+          output3 = output;
 
-            if (output1 == null) {
-                input = input1.replaceAll(" ", "\n");
-                output1 = getMethodOutputWithInput("main", input);
-            }
+          input = input4.replaceAll(" ", "\n");
+          output = getMethodOutputWithInput("main", input);
+          output4 = output;
 
-            boolean passed = !output1.equals(output2) && !output1.equals(output3) && !output1.equals(output4) && !output1.equals(output5);
+          input = input5.replaceAll(" ", "\n");
+          output = getMethodOutputWithInput("main", input);
+          output5 = output;
 
-            passed = getResults("true", "" + passed, "Outputs different results for different inputs", passed);
-            assertTrue(passed);
-        }
+          if (output1 == null)
+          {
+              input = input1.replaceAll(" ", "\n");
+              output1 = getMethodOutputWithInput("main", input);
+          }
 
-        @Test
-        public void test3()
-        {
-            String code = getCode();
-            int num = countOccurences(code, "if");
-            boolean passed = num >= 4;
+          boolean passed =
+                  !output1.equals(output2)
+                          && !output1.equals(output3)
+                          && !output1.equals(output4)
+                          && !output1.equals(output5);
 
-            getResults("4", "" + num, "Number of if statements", passed);
-            assertTrue(passed);
-        }
+          passed =
+                  getResults(
+                          "true",
+                          "" + passed,
+                          "Outputs different results for different inputs",
+                          passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test4()
-        {
-            String code = getCode();
-            int elseif = countOccurences(code, "else if");
-            boolean passed = elseif >= 3;
+      @Test
+      public void test3()
+      {
+          String code = getCode();
+          int num = countOccurences(code, "if");
+          boolean passed = num >= 4;
 
-            getResults(""+3, ""+elseif, "Number of else if statements", passed);
-            assertTrue(passed);
-        }
+          getResults("4", "" + num, "Number of if statements", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test5()
-        {
-            String code = getCode();
-            int num = countOccurences(code, "else {");
-            boolean passed = num >= 1;
+      @Test
+      public void test4()
+      {
+          String code = getCode();
+          int elseif = countOccurences(code, "else if");
+          boolean passed = elseif >= 3;
 
-            getResults("1", "" + num, "Number of else statements", passed);
-            assertTrue(passed);
-        }
-    }
+          getResults("" + 3, "" + elseif, "Number of else if statements", passed);
+          assertTrue(passed);
+      }
 
+      @Test
+      public void test5()
+      {
+          String code = getCode();
+          int num = countOccurences(code, "else {");
+          boolean passed = num >= 1;
 
-
+          getResults("1", "" + num, "Number of else statements", passed);
+          assertTrue(passed);
+      }
+  }
 
 Summary
 --------

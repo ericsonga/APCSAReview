@@ -98,35 +98,35 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        boolean isRaining = true;
-        if (isRaining)
-        {
-           System.out.println("Take an umbrella!");
-        }
-        System.out.println("Drive carefully");
-      }
+       public static void main(String[] args)
+       {
+           boolean isRaining = true;
+           if (isRaining)
+           {
+               System.out.println("Take an umbrella!");
+           }
+           System.out.println("Drive carefully");
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Take an umbrella! \nDrive carefully";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
 
-
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Take an umbrella! \nDrive carefully";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check your understanding**
 
@@ -157,136 +157,154 @@ Most if statements have a boolean condition that uses relational operators like 
    ~~~~
    public class TestNumbers
    {
-      public static void main(String[] args)
-      {
-          // Get a random number from -10 up to 10.
-          int number = (int) (Math.random()*21) - 10;
-          System.out.println("The number is " + number);
+       public static void main(String[] args)
+       {
+           // Get a random number from -10 up to 10.
+           int number = (int) (Math.random() * 21) - 10;
+           System.out.println("The number is " + number);
 
-          // is it positive?
-          if (number > 0)
-          {
-              System.out.println(number + " is positive!");
-          }
-          // is it 0?
-          if (number == 0)
-          {
-              System.out.println(number + " is zero!");
-          }
-          // is it negative?
-          // Add another if statement
+           // is it positive?
+           if (number > 0)
+           {
+               System.out.println(number + " is positive!");
+           }
+           // is it 0?
+           if (number == 0)
+           {
+               System.out.println(number + " is zero!");
+           }
+           // is it negative?
+           // Add another if statement
 
-      }
+       }
    }
+
    ====
-   
    // Test Code for Lesson 3.2.1 - Activity 1 - if-relational
    import static org.junit.Assert.*;
-   import org.junit.After;
-   import org.junit.Before;
+
    import org.junit.Test;
-   
+
    import java.io.*;
-   
-   import java.util.regex.Pattern;
    import java.util.regex.MatchResult;
-   
-   public class RunestoneTests extends CodeTestHelper {
-   
+   import java.util.regex.Pattern;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+
        @Test
-       public void testPositive() {
+       public void testPositive()
+       {
            String output = "";
            int num = -999, count = 0;
-   
-           while (num <= 0 && count < 50) {
+
+           while (num <= 0 && count < 50)
+           {
                output = getMethodOutput("main");
                num = getNumber(output);
                count++;
-   
-               if (num == 9999999) {
-                   getResults("The number is ##\n## is positive!",output,"Did you forget to print the number?", false);
+
+               if (num == 9999999)
+               {
+                   getResults(
+                           "The number is ##\n## is positive!",
+                           output,
+                           "Did you forget to print the number?",
+                           false);
                    assertTrue(false);
                    return;
                }
            }
-   
+
            String expect = "The number is " + num + "\n" + num + " is positive!";
-   
+
            boolean passed = output.contains("positive");
            getResults(expect, output, "Testing positive numbers", passed);
            assertTrue(passed);
        }
-   
+
        @Test
-       public void testZero() {
+       public void testZero()
+       {
            String output = "";
            int num = -999, count = 0;
-   
-           while (num != 0 && count < 50) {
+
+           while (num != 0 && count < 50)
+           {
                output = getMethodOutput("main");
                num = getNumber(output);
                count++;
-   
-               if (num == 9999999) {
-                   getResults("The number is ##\n## is zero!",output,"Did you forget to print the number?", false);
+
+               if (num == 9999999)
+               {
+                   getResults(
+                           "The number is ##\n## is zero!",
+                           output,
+                           "Did you forget to print the number?",
+                           false);
                    assertTrue(false);
                    return;
                }
            }
-   
+
            String expect = "The number is " + num + "\n" + num + " is zero!";
-   
+
            boolean passed = output.contains("zero");
            getResults(expect, output, "Testing zero", passed);
            assertTrue(passed);
        }
-   
+
        @Test
-       public void testNegative() {
+       public void testNegative()
+       {
            String output = "";
            int num = 999, count = 0;
-   
-           while (num >= 0 && count < 50) {
+
+           while (num >= 0 && count < 50)
+           {
                output = getMethodOutput("main");
                num = getNumber(output);
                count++;
-   
-               if (num == 9999999) {
-                   getResults("The number is ##\n## is negative!",output,"Did you forget to print the number?", false);
+
+               if (num == 9999999)
+               {
+                   getResults(
+                           "The number is ##\n## is negative!",
+                           output,
+                           "Did you forget to print the number?",
+                           false);
                    assertTrue(false);
                    return;
                }
            }
-   
+
            String expect = "The number is " + num + "\n" + num + " is negative!";
-   
+
            boolean passed = output.contains("negative");
            getResults(expect, output, "Testing negative numbers", passed);
            assertTrue(passed);
        }
-   
-       private int getNumber(String output) {
+
+       private int getNumber(String output)
+       {
            String regex = "[0-9]+";
-   
-           String[] matches = Pattern.compile(regex)
-                   .matcher(output)
-                   .results()
-                   .map(MatchResult::group)
-                   .toArray(String[]::new);
-   
+
+           String[] matches =
+                   Pattern.compile(regex)
+                           .matcher(output)
+                           .results()
+                           .map(MatchResult::group)
+                           .toArray(String[]::new);
+
            int num = 9999999;
-           
-           if (matches.length > 0)
-               num = Integer.parseInt(matches[0]);
-   
-           if (output.contains("-"))
-               num *= -1;
-   
+
+           if (matches.length > 0) num = Integer.parseInt(matches[0]);
+
+           if (output.contains("-")) num *= -1;
+
            return num;
        }
-   
    }
-
 
 .. note::
 
@@ -352,41 +370,44 @@ Here are some rules to follow with if statements to avoid some common errors:
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-          boolean isCold = false;
-          if (isCold = true);
-              System.out.println("Wear a coat");
-              System.out.println("Wear gloves");
-
-      }
+       public static void main(String[] args)
+       {
+           boolean isCold = false;
+           if (isCold = true);
+               System.out.println("Wear a coat");
+               System.out.println("Wear gloves");
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "";
-            boolean passed = getResults(expect, output, "Expected output from main if isCold is false");
-            assertTrue(passed);
-        }
-        @Test
-        public void testCountCurlies()
-        {
-            String code = getCode();
-            int num = countOccurences(code, "{");
-            boolean passed = num >= 3;
+   import org.junit.*;
 
-            getResults("3", "" + num, "Number of {", passed);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "";
+           boolean passed = getResults(expect, output, "Expected output from main if isCold is false");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testCountCurlies()
+       {
+           String code = getCode();
+           int num = countOccurences(code, "{");
+           boolean passed = num >= 3;
+
+           getResults("3", "" + num, "Number of {", passed);
+           assertTrue(passed);
+       }
+   }
 
 |Groupwork| Programming Challenge : Magic 8 Ball
 ------------------------------------------------
@@ -416,77 +437,84 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 
    public class Magic8Ball
    {
-      public static void main(String[] args)
-      {
-        // Get a random number from 1 to 8
+       public static void main(String[] args)
+       {
+           // Get a random number from 1 to 8
 
-        // Use if statements to test the random number
-        // and print out 1 of 8 random responses
+           // Use if statements to test the random number
+           // and print out 1 of 8 random responses
 
-
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.util.ArrayList;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Magic8Ball");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
+   import java.io.*;
+   import java.util.ArrayList;
 
-            boolean passed = output.length() > 0;
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Magic8Ball");
+       }
 
-            passed = getResults("Output length > 0", "Output length of " + output.length(), "Prints a statement", passed);
-            assertTrue(passed);
-        }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
 
+           boolean passed = output.length() > 0;
 
-        @Test
-        public void test2()
-        {
-            String[] output = new String[200];
+           passed =
+                   getResults(
+                           "Output length > 0",
+                           "Output length of " + output.length(),
+                           "Prints a statement",
+                           passed);
+           assertTrue(passed);
+       }
 
-            for (int i = 0; i < output.length; i++) {
-                output[i] = getMethodOutput("main");
-            }
+       @Test
+       public void test2()
+       {
+           String[] output = new String[200];
 
-            ArrayList <String> lines = new ArrayList <String> ();
+           for (int i = 0; i < output.length; i++)
+           {
+               output[i] = getMethodOutput("main");
+           }
 
-            for (int i = 0; i < output.length; i++) {
-                if (!lines.contains(output[i]))
-                    lines.add(output[i]);
-            }
+           ArrayList<String> lines = new ArrayList<String>();
 
-            int responses = lines.size();
-            boolean passed = lines.size() >= 8;
+           for (int i = 0; i < output.length; i++)
+           {
+               if (!lines.contains(output[i])) lines.add(output[i]);
+           }
 
-            passed = getResults("8", ""+responses, "Unique responses", passed);
-            assertTrue(passed);
-        }
+           int responses = lines.size();
+           boolean passed = lines.size() >= 8;
 
-        @Test
-        public void test3()
-        {
-            String code = getCodeWithoutComments();
+           passed = getResults("8", "" + responses, "Unique responses", passed);
+           assertTrue(passed);
+       }
 
-            int numIfs = countOccurences(code, "if");
+       @Test
+       public void test3()
+       {
+           String code = getCodeWithoutComments();
 
-            boolean passed = numIfs >= 7;
+           int numIfs = countOccurences(code, "if");
 
-            passed = getResults("7 or more", ""+numIfs, "Code has at least 7 if statements", passed);
-            assertTrue(passed);
-        }
-    }
+           boolean passed = numIfs >= 7;
 
+           passed = getResults("7 or more", "" + numIfs, "Code has at least 7 if statements", passed);
+           assertTrue(passed);
+       }
+   }
 
 .. |repl version| raw:: html
 
