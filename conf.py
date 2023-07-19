@@ -30,7 +30,7 @@ import pkg_resources
 #html_defer_js = True
 
 # new for title page
-course_description = "CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan, and Beryl Hoffman, Elms College."
+course_description = "CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan; Beryl Hoffman, Elms College; and Peter Seibel, Berkeley High School."
 key_words = "AP CSA Java"
 shelf_section = "AP Computer Science"
 
@@ -62,14 +62,14 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'CSAwesome'
-copyright = '2015 Barb Ericson, 2019 revised by Beryl Hoffman'
+copyright = 'Barbara Ericson,  Beryl Hoffman, Peter Seibel, 2015-2023.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '2021'
+version = '2023'
 # The full version, including alpha/beta/rc tags.
 release = 'beta'
 
@@ -129,7 +129,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "AP CSAwesome!",
+    'navbar_title': "AP CSAwesome",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Units",
