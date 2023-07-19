@@ -57,7 +57,7 @@ Run the following code and see the responses to these 4 inputs.
                    || statement.indexOf("father") >= 0
                    || statement.indexOf("sister") >= 0
                    || statement.indexOf("brother") >= 0)
-                   {
+           {
                response = "Tell me more about your family.";
            }
            else
@@ -330,7 +330,7 @@ Here is the code for Magpie2.java.
                   || statement.indexOf("father") >= 0
                   || statement.indexOf("sister") >= 0
                   || statement.indexOf("brother") >= 0)
-                  {
+          {
               response = "Tell me more about your family.";
           }
           else

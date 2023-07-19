@@ -88,7 +88,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
                    || findKeyword(statement, "father") >= 0
                    || findKeyword(statement, "sister") >= 0
                    || findKeyword(statement, "brother") >= 0)
-                   {
+           {
                response = "Tell me more about your family.";
            }
 

@@ -246,7 +246,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
                    || findKeyword(statement, "father") >= 0
                    || findKeyword(statement, "sister") >= 0
                    || findKeyword(statement, "brother") >= 0)
-                   {
+           {
                response = "Tell me more about your family.";
            }
            else
@@ -303,7 +303,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
                        // letter
                        && ((after.compareTo("a") < 0)
                                || (after.compareTo("z") > 0)))
-                               {
+               {
                    return psn;
                }
 
