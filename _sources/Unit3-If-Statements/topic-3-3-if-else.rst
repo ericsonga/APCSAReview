@@ -482,14 +482,16 @@ The |Animal Guessing program| below uses the following decision tree:
 
 .. code-block:: java
 
-      System.out.println("Is it a pet (y/n)?");
-      answer = scan.nextLine();
-      if (answer.equals("y")) {
-           System.out.println("I guess a dog! Click on run to play again.");
-       }
-       else {
-           System.out.println("I guess an elephant! Click on run to play again.");
-       }
+   System.out.println("Is it a pet (y/n)?");
+   answer = scan.nextLine();
+   if (answer.equals("y"))
+   {
+       System.out.println("I guess a dog! Click on run to play again.");
+   }
+   else
+   {
+       System.out.println("I guess an elephant! Click on run to play again.");
+   }
 
 3. Did you notice that when it asked "Is it a pet?" and you said "y", it immediately guessed "dog"? What if you were thinking of a cat? Try to come up with a question that distinguishes dogs from cats and put in code in the correct place (in place of the code that prints out "I guess a dog") to ask the question, get the answer, and use an if/else to guess cat or dog. Run your code and test both possibilities!
 
