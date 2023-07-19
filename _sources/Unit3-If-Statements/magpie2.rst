@@ -42,65 +42,80 @@ Run the following code and see the responses to these 4 inputs.
    ~~~~
    public class Magpie2
    {
-      public String getGreeting()
-      {
-        return "Hello, let's talk.";
-      }
+       public String getGreeting()
+       {
+           return "Hello, let's talk.";
+       }
 
-      public String getResponse(String statement)
-      {
-        String response = "";
-        if (statement.indexOf("no") >= 0) {
-          response = "Why so negative?";
-        } else if (statement.indexOf("mother") >= 0
-                    || statement.indexOf("father") >= 0
-                    || statement.indexOf("sister") >= 0
-                    || statement.indexOf("brother") >= 0) {
-          response = "Tell me more about your family.";
-        } else {
-          response = getRandomResponse();
-        }
-        return response;
-      }
+       public String getResponse(String statement)
+       {
+           String response = "";
+           if (statement.indexOf("no") >= 0)
+           {
+               response = "Why so negative?";
+           } else if (statement.indexOf("mother") >= 0
+                   || statement.indexOf("father") >= 0
+                   || statement.indexOf("sister") >= 0
+                   || statement.indexOf("brother") >= 0)
+           {
+               response = "Tell me more about your family.";
+           }
+           else
+           {
+               response = getRandomResponse();
+           }
+           return response;
+       }
 
-      private String getRandomResponse()
-      {
-        final int NUMBER_OF_RESPONSES = 4;
-        double r = Math.random();
-        int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
-        String response = "";
+       private String getRandomResponse()
+       {
+           final int NUMBER_OF_RESPONSES = 4;
+           double r = Math.random();
+           int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
+           String response = "";
 
-        if (whichResponse == 0) {
-          response = "Interesting, tell me more.";
-        } else if (whichResponse == 1) {
-          response = "Hmmm.";
-        } else if (whichResponse == 2) {
-          response = "Do you really think so?";
-        } else if (whichResponse == 3) {
-          response = "You don't say.";
-        }
-        return response;
-      }
+           if (whichResponse == 0)
+           {
+               response = "Interesting, tell me more.";
+           }
+           else if (whichResponse == 1)
+           {
+               response = "Hmmm.";
+           }
+           else if (whichResponse == 2)
+           {
+               response = "Do you really think so?";
+           }
+           else if (whichResponse == 3)
+           {
+               response = "You don't say.";
+           }
+           return response;
+       }
 
-      public static void main(String[] args)
-      {
-        Magpie2 maggie = new Magpie2();
+       public static void main(String[] args)
+       {
+           Magpie2 maggie = new Magpie2();
 
-        System.out.println(maggie.getGreeting());
-        System.out.println(">My mother and I talked last night.");
-        System.out.println(maggie.getResponse("My mother and I talked last night."));
-        System.out.println(">I said no.");
-        System.out.println(maggie.getResponse("I said no!"));
-        System.out.println(">The weather is nice.");
-        System.out.println(maggie.getResponse("The weather is nice."));
-        System.out.println(">Do you know my brother?");
-        System.out.println(maggie.getResponse("Do you know my brother?"));
-      }
+           System.out.println(maggie.getGreeting());
+           System.out.println(">My mother and I talked last night.");
+           System.out.println(
+                   maggie.getResponse("My mother and I talked last night."));
+           System.out.println(">I said no.");
+           System.out.println(maggie.getResponse("I said no!"));
+           System.out.println(">The weather is nice.");
+           System.out.println(maggie.getResponse("The weather is nice."));
+           System.out.println(">Do you know my brother?");
+           System.out.println(maggie.getResponse("Do you know my brother?"));
+       }
    }
+
    ====
     // should pass if/when they run code
     import static org.junit.Assert.*;
+
     import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -259,29 +274,28 @@ Here is the code for MagpieRunner2.java.
 
   /**
    * A simple class to run the Magpie class.
+   *
    * @author Laurie White
    * @version April 2012
    */
   public class MagpieRunner2
   {
 
-     /**
-      * Create a Magpie, give it user input, and print its replies.
-      */
-     public static void main(String[] args)
-     {
-        Magpie2 maggie = new Magpie2();
+      /** Create a Magpie, give it user input, and print its replies. */
+      public static void main(String[] args)
+      {
+          Magpie2 maggie = new Magpie2();
 
-        System.out.println (maggie.getGreeting());
-        Scanner in = new Scanner (System.in);
-        String statement = in.nextLine();
+          System.out.println(maggie.getGreeting());
+          Scanner in = new Scanner(System.in);
+          String statement = in.nextLine();
 
-        while (!statement.equals("Bye"))
-        {
-            System.out.println (maggie.getResponse(statement));
-            statement = in.nextLine();
-        }
-     }
+          while (!statement.equals("Bye"))
+          {
+              System.out.println(maggie.getResponse(statement));
+              statement = in.nextLine();
+          }
+      }
   }
 
 Here is the code for Magpie2.java.
@@ -292,6 +306,7 @@ Here is the code for Magpie2.java.
   {
       /**
        * Get a default greeting
+       *
        * @return a greeting
        */
       public String getGreeting()
@@ -302,8 +317,7 @@ Here is the code for Magpie2.java.
       /**
        * Gives a response to a user statement
        *
-       * @param statement
-       *            the user statement
+       * @param statement the user statement
        * @return a response based on the rules given
        */
       public String getResponse(String statement)
@@ -312,8 +326,7 @@ Here is the code for Magpie2.java.
           if (statement.indexOf("no") >= 0)
           {
               response = "Why so negative?";
-          }
-          else if (statement.indexOf("mother") >= 0
+          } else if (statement.indexOf("mother") >= 0
                   || statement.indexOf("father") >= 0
                   || statement.indexOf("sister") >= 0
                   || statement.indexOf("brother") >= 0)
@@ -329,13 +342,14 @@ Here is the code for Magpie2.java.
 
       /**
        * Pick a default response to use if nothing else fits.
+       *
        * @return a non-committal string
        */
       private String getRandomResponse()
       {
           final int NUMBER_OF_RESPONSES = 4;
           double r = Math.random();
-          int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+          int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
           String response = "";
 
           if (whichResponse == 0)
@@ -356,5 +370,6 @@ Here is the code for Magpie2.java.
           }
 
           return response;
-       }
-   }
+      }
+  }
+

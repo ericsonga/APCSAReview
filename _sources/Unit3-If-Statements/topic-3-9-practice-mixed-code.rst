@@ -57,11 +57,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (homeworkLeft && cleaned) #paired
    =====
+           {    
                System.out.println("You can go out");
+           }
    =====
            else
    =====
+           {
                System.out.println("You can not go out");
+           }
    =====
        }
    }
@@ -87,11 +91,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (x >= 1 || x <= 10) #paired
    =====
+           {
                System.out.println("1 <= x <= 10");
+           }
    =====
            else
    =====
+           {
                System.out.println("x is not in range");
+           }
    =====
        }
    }
@@ -117,11 +125,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
           if (message.indexof("ringing") >= 0) #paired
    =====
+          {
               System.out.println("Answer the phone!");
+          }
    =====
           else
    =====
+          {
               System.out.println("I don't hear anything.");
+          }
    =====
        }
    }
@@ -148,11 +160,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (favPizza && favWings) #paired
    =====
+           {
                System.out.println("Your fav is junk food");
+           }
    =====
            else
    =====
+           {
                System.out.println("Your fav is not junk");
+           }
    =====
        }
    }
@@ -177,16 +193,22 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (speed > 65 || speed < 75) #paired
    =====
+           {
                System.out.println("50");
+           }
    =====
            else if (speed >= 75 && speed < 85)
    =====
            else if (speed >= 75 || speed < 85) #paired
    =====
+           {
                System.out.println("100");
+           }
    =====
            else if (speed >= 85)
+           {
                System.out.println("200");
+           }
    =====
        }
    }
@@ -210,11 +232,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (!weekend)
    =====
+           {
                System.out.println("7:00am");
+           }
    =====
            else
    =====
+           {
                System.out.println("10:00am");
+           }
    =====
        }
    }
@@ -241,11 +267,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (!driving || !eating) #paired
    =====
+           {
                System.out.println("Can text now");
+           }
    =====
            else
    =====
+           {
                System.out.println("Can't text now");
+           }
    =====
        }
    }
@@ -277,11 +307,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (aF || eF || iF || oF || uF)
    =====
+           {
                System.out.println("Starts with a vowel");
+           }
    =====
            else
    =====
+           {
                System.out.println("Starts with a consonant");
+           }
    =====
        }
    }
@@ -304,20 +338,30 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
            if (score >= 90)
    =====
+           {
                System.out.println("A");
+           }
    =====
            else if (score >= 80)
    =====
+           {
                System.out.println("B");
+           }
    =====
            else if (score >= 70)
+           {
                System.out.println("C");
+           }
    =====
            else if (score >= 60)
+           {
                System.out.println("D");
+           }
    =====
            else
+           {
                System.out.println("E");
+           }
    =====
        }
    }

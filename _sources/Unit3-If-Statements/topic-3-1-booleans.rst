@@ -79,37 +79,39 @@ The following code shows how ``==`` is used with primitive types like ``int``.
    ~~~~
    public class BoolTest1
    {
-      public static void main(String[] args)
-      {
-        int age = 15;
-        int year = 14;
-        // Will this print true or false?
-        System.out.println( age == year );
-        year = 15;
-        // Will this print true or false?
-        System.out.println( age == year );
-        // Will this print true or false?
-        System.out.println( age != year );
-      }
+       public static void main(String[] args)
+       {
+           int age = 15;
+           int year = 14;
+           // Will this print true or false?
+           System.out.println(age == year);
+           year = 15;
+           // Will this print true or false?
+           System.out.println(age == year);
+           // Will this print true or false?
+           System.out.println(age != year);
+       }
    }
+
    ====
    // should pass if/when they run code
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "false\ntrue\nfalse\n";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "false\ntrue\nfalse\n";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 We can also use ``==`` or ``!=`` to test if two reference values, like ``Turtle`` and ``String`` objects,  refer to the same object. In the figure below, we are creating two separate ``Turtle`` objects called ``juan`` and ``mia``. They do not refer to same object or turtle. Then, we create a reference variable called ``friend`` that is set to ``mia``. The turtle ``mia`` will have two ways (**references** or **aliases**) to name her -- she's both ``mia`` and ``friend``, and these variables refer to the same object (same ``Turtle``) in memory. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with ``==`` will return true which you can see in the code below.
 
@@ -130,43 +132,45 @@ We can also use ``==`` or ``!=`` to test if two reference values, like ``Turtle`
 
    What will the code below print out? Try to guess before you run it!
    ~~~~
-   import java.util.*;
    import java.awt.*;
+   import java.util.*;
 
    public class BoolTestRef
    {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle juan = new Turtle(world);
-          Turtle mia = new Turtle(world);
+       public static void main(String[] args)
+       {
+           World world = new World(300, 300);
+           Turtle juan = new Turtle(world);
+           Turtle mia = new Turtle(world);
 
-          // Will these print true or false?
-          System.out.println(juan == mia);
-          Turtle friend = mia; // set friend to be an alias for mia
-          System.out.println(friend == mia);
-      }
-    }
+           // Will these print true or false?
+           System.out.println(juan == mia);
+           Turtle friend = mia; // set friend to be an alias for mia
+           System.out.println(friend == mia);
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("BoolTestRef");
         }
 
         @Test
         public void test1()
         {
-           boolean passed = getResults("true", "true", "main()");
+            boolean passed = getResults("true", "true", "main()");
             assertTrue(passed);
         }
     }
-
-
 
 Relational Operators (<, >)
 ----------------------------
@@ -205,35 +209,36 @@ to” not “equal to or less than”.
    ~~~~
    public class BoolTest2
    {
-      public static void main(String[] args)
-      {
-        int age = 15;
-        int year = 14;
-        // Will these print true or false?
-        System.out.println( age < year );
-        System.out.println( age > year );
-        System.out.println( age <= year+1 );
-        System.out.println( age-1 >= year );
-      }
+       public static void main(String[] args)
+       {
+           int age = 15;
+           int year = 14;
+           // Will these print true or false?
+           System.out.println(age < year);
+           System.out.println(age > year);
+           System.out.println(age <= year + 1);
+           System.out.println(age - 1 >= year);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "false\ntrue\ntrue\ntrue\n";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "false\ntrue\ntrue\ntrue\n";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check your understanding**
 
@@ -279,33 +284,52 @@ Here are some boolean expressions that are very useful in coding and mod is used
    ~~~~
    public class BoolMod
    {
-      public static void main(String[] args)
-      {
-        int age1 = 15;
-        int age2 = 16;
-        int divisor = 2;
-        System.out.println("Remainder of " + age1 + "/" + divisor + " is " + (age1 % divisor) );
-        System.out.println("Remainder of " + age2 + "/" + divisor + " is " + (age2 % divisor) );
-        System.out.println("Is " + age1 + " even? " + (age1 % 2 == 0) );
-        System.out.println("Is " + age2 + " even? " + (age2 % 2 == 0) );
-      }
+       public static void main(String[] args)
+       {
+           int age1 = 15;
+           int age2 = 16;
+           int divisor = 2;
+           System.out.println(
+                   "Remainder of "
+                           + age1
+                           + "/"
+                           + divisor
+                           + " is "
+                           + (age1 % divisor));
+           System.out.println(
+                   "Remainder of "
+                           + age2
+                           + "/"
+                           + divisor
+                           + " is "
+                           + (age2 % divisor));
+           System.out.println("Is " + age1 + " even? " + (age1 % 2 == 0));
+           System.out.println("Is " + age2 + " even? " + (age2 % 2 == 0));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Remainder of 15/2 is 1\nRemainder of 16/2 is 0\nIs 15 even? false \nIs 16 even? true\n";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "Remainder of 15/2 is 1\n"
+                       + "Remainder of 16/2 is 0\n"
+                       + "Is 15 even? false \n"
+                       + "Is 16 even? true\n";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 The **modulo** operator has been used quite a bit on the AP CSA exam, so you should be familiar with it.
 
@@ -364,34 +388,47 @@ The following program checks if 5 is a prime number by seeing if it is divisible
    ~~~~
    public class PrimeNumbers
    {
-      public static void main(String[] args)
-      {
-          int number = 5;
-          System.out.println("A prime number is only divisible by 1 and itself.");
-          System.out.println("Is " + number + " divisible by 1 up to " + number + "?");
-          System.out.println("Divisible by 1? " + (number % 1 == 0));
-          System.out.println("Divisible by 2? " + (number % 2 == 0));
-          System.out.println("Divisible by 3? " + (number % 3 == 0));
-          System.out.println("Divisible by 4? " + (number % 4 == 0));
-          System.out.println("Divisible by 5? " + (number % 5 == 0));
-      }
+       public static void main(String[] args)
+       {
+           int number = 5;
+           System.out.println("A prime number is only divisible by 1 and itself.");
+           System.out.println(
+                   "Is " + number + " divisible by 1 up to " + number + "?");
+           System.out.println("Divisible by 1? " + (number % 1 == 0));
+           System.out.println("Divisible by 2? " + (number % 2 == 0));
+           System.out.println("Divisible by 3? " + (number % 3 == 0));
+           System.out.println("Divisible by 4? " + (number % 4 == 0));
+           System.out.println("Divisible by 5? " + (number % 5 == 0));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
-        public void testChangedCode() {
-            String origCode = "public class PrimeNumbers{public static void main(String[] args){int number = 5; System.out.println(\"A prime number is only divisible by 1 and itself.\"); System.out.println(\"Is \" + number + \" divisible by 1 up to \" + number + \"?\"); System.out.println(\"Divisible by 1? \" + (number % 1 == 0)); System.out.println(\"Divisible by 2? \" + (number % 2 == 0)); System.out.println(\"Divisible by 3? \" + (number % 3 == 0)); System.out.println(\"Divisible by 4? \" + (number % 4 == 0)); System.out.println(\"Divisible by 5? \" + (number % 5 == 0));}}";
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class PrimeNumbers{public static void main(String[] args){int number = 5;"
+                       + " System.out.println(\"A prime number is only divisible by 1 and itself.\");"
+                       + " System.out.println(\"Is \" + number + \" divisible by 1 up to \" + number +"
+                       + " \"?\"); System.out.println(\"Divisible by 1? \" + (number % 1 == 0));"
+                       + " System.out.println(\"Divisible by 2? \" + (number % 2 == 0));"
+                       + " System.out.println(\"Divisible by 3? \" + (number % 3 == 0));"
+                       + " System.out.println(\"Divisible by 4? \" + (number % 4 == 0));"
+                       + " System.out.println(\"Divisible by 5? \" + (number % 5 == 0));}}";
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
 
-         @Test
+       @Test
        public void testBool6() throws IOException
        {
            String target = "number % 6 == 0";
@@ -406,8 +443,7 @@ The following program checks if 5 is a prime number by seeing if it is divisible
            boolean passed = checkCodeContains("boolean check for divisibility by 7", target);
            assertTrue(passed);
        }
-    }
-
+   }
 
 Summary
 -------------------

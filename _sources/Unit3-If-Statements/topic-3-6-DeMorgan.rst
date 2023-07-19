@@ -140,29 +140,34 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        int x = 2;
-        int y = 3;
-        System.out.println(!(x < 3 && y > 2));
-      }
+       public static void main(String[] args)
+       {
+           int x = 2;
+           int y = 3;
+           System.out.println(!(x < 3 && y > 2));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class Test1 {public static void main(String[] args) { int x = 2; int y = 3; System.out.println(!(x < 3 && y > 2)); } }";
+   import org.junit.*;
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
-    }
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class Test1 {public static void main(String[] args) { int x = 2; int y = 3;"
+                       + " System.out.println(!(x < 3 && y > 2)); } }";
+
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
+   }
 
 |Exercise| **Check your understanding**
 
@@ -251,43 +256,50 @@ Explore the following problems with your group. You may use |this worksheet| to 
    ~~~~
    public class EquivalentExpressions
    {
-      public static void main(String[] args)
-      {
-          int x = -1; // try with x = -1, x = 0, and x = 1
-          System.out.println(!(x == 0 || x >= 1));
-          // add print statements for expressions in #2 and #3
-          // to see if they are equivalent when x = -1, 0, and 1.
+       public static void main(String[] args)
+       {
+           int x = -1; // try with x = -1, x = 0, and x = 1
+           System.out.println(!(x == 0 || x >= 1));
+           // add print statements for expressions in #2 and #3
+           // to see if they are equivalent when x = -1, 0, and 1.
 
-
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
-        public void testChangedCode() {
-             String origCode = "public class EquivalentExpressions { public static void main(String[] args) { int x = -1;  System.out.println(!(x == 0 || x >= 1));   } }";
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class EquivalentExpressions { public static void main(String[] args) { int"
+                       + " x = -1;  System.out.println(!(x == 0 || x >= 1));   } }";
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
 
-      @Test
-      public void testAddedCode(){
-        boolean output2 = checkCodeContains("(x != 0) && (x < 1)");
-        assertTrue(output2);
-      }
+       @Test
+       public void testAddedCode()
+       {
+           boolean output2 = checkCodeContains("(x != 0) && (x < 1)");
+           assertTrue(output2);
+       }
 
-      @Test
-      public void testAddedCode2(){
-        boolean output3 = checkCodeContains("!(x == 0) && !(x >= 1)");
-        assertTrue(output3);
-      }
-    }
+       @Test
+       public void testAddedCode2()
+       {
+           boolean output3 = checkCodeContains("!(x == 0) && !(x >= 1)");
+           assertTrue(output3);
+       }
+   }
 
 .. mchoice:: qcbdm3_1
    :practice: T

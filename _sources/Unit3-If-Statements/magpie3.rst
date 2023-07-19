@@ -38,48 +38,51 @@ and ``toLowerCase`` methods.  Do they do what you thought they would?  The metho
    Run the code below. Why do you think you might want to change the string to all lowercase characters? Why doesn't the value of ``sample`` change? Do string methods change the string? Try some other string methods.
    ~~~~
    /**
-    * A program to allow students to try out different
-    * String methods.
+    * A program to allow students to try out different String methods.
+    *
     * @author Laurie White
     * @version April 2012
     */
    public class StringExplorer
    {
 
-      public static void main(String[] args)
-      {
-         String sample = "The quick brown fox jumped over the lazy dog.";
+       public static void main(String[] args)
+       {
+           String sample = "The quick brown fox jumped over the lazy dog.";
 
-         //  Demonstrate the indexOf method.
-         int position = sample.indexOf("quick");
-         System.out.println ("sample.indexOf(\"quick\") = " + position);
+           //  Demonstrate the indexOf method.
+           int position = sample.indexOf("quick");
+           System.out.println("sample.indexOf(\"quick\") = " + position);
 
-         //  Demonstrate the toLowerCase method.
-         String lowerCase = sample.toLowerCase();
-         System.out.println ("sample.toLowerCase() = " + lowerCase);
-         System.out.println ("After toLowerCase(), sample = " + sample);
+           //  Demonstrate the toLowerCase method.
+           String lowerCase = sample.toLowerCase();
+           System.out.println("sample.toLowerCase() = " + lowerCase);
+           System.out.println("After toLowerCase(), sample = " + sample);
 
-         //  Try other methods here:
+           //  Try other methods here:
 
-     }
+       }
    }
+
    ====
    // should pass if/when they run code
-    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "sample.indexOf(\"quick\") = 4\n...";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "sample.indexOf(\"quick\") = 4\n...";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. |String in Java documentation| raw:: html
 
@@ -202,203 +205,190 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
    Modify the code below to print the values of ``psn``, ``before``, and ``after`` right after the comment on line 100 in the ``findKeyword`` method below. Record each of the values in a table. The College Board student guide for the |Magpie Chatbot Lab| has a table on page 8 that can be printed. Use the CodeLens button to step through the code.
    ~~~~
    /**
-    * A program to carry on conversations with a human user.
-    * This version:
-    * <ul><li>
-    *    Uses advanced search for keywords
-    * </li></ul>
+    * A program to carry on conversations with a human user. This version:
+    *
+    * <ul>
+    *   <li>Uses advanced search for keywords
+    * </ul>
     *
     * @author Laurie White
     * @version April 2012
     */
    public class Magpie3
    {
-      /**
-       * Get a default greeting
-       *
-       * @return a greeting
-       */
-      public String getGreeting()
-      {
-         return "Hello, let's talk.";
-      }
+       /**
+        * Get a default greeting
+        *
+        * @return a greeting
+        */
+       public String getGreeting()
+       {
+           return "Hello, let's talk.";
+       }
 
-      /**
-       * Gives a response to a user statement
-       *
-       * @param statement
-       *            the user statement
-       * @return a response based on the rules given
-       */
-      public String getResponse(String statement)
-      {
-         String response = "";
-         if (statement.length() == 0)
-         {
-            response = "Say something, please.";
-         }
-         else if (findKeyword(statement, "no") >= 0)
-         {
-            response = "Why so negative?";
-         }
-         else if (findKeyword(statement, "mother") >= 0
-                || findKeyword(statement, "father") >= 0
-                || findKeyword(statement, "sister") >= 0
-                || findKeyword(statement, "brother") >= 0)
-         {
-            response = "Tell me more about your family.";
-         }
-         else
-         {
-            response = getRandomResponse();
-         }
-         return response;
-      }
+       /**
+        * Gives a response to a user statement
+        *
+        * @param statement the user statement
+        * @return a response based on the rules given
+        */
+       public String getResponse(String statement)
+       {
+           String response = "";
+           if (statement.length() == 0)
+           {
+               response = "Say something, please.";
+           }
+           else if (findKeyword(statement, "no") >= 0)
+           {
+               response = "Why so negative?";
+           } else if (findKeyword(statement, "mother") >= 0
+                   || findKeyword(statement, "father") >= 0
+                   || findKeyword(statement, "sister") >= 0
+                   || findKeyword(statement, "brother") >= 0)
+           {
+               response = "Tell me more about your family.";
+           }
+           else
+           {
+               response = getRandomResponse();
+           }
+           return response;
+       }
 
-      /**
-       * Search for one word in phrase. The search is not case
-       * sensitive. This method will check that the given goal
-       * is not a substring of a longer string (so, for
-       * example, "I know" does not contain "no").
-       *
-       * @param statement
-       *            the string to search
-       * @param goal
-       *            the string to search for
-       * @param startPos
-       *            the character of the string to begin the
-       *            search at
-       * @return the index of the first occurrence of goal in
-       *         statement or -1 if it's not found
-       */
-      private int findKeyword(String statement, String goal,
-            int startPos)
-      {
-         String phrase = statement.trim();
-         // The only change to incorporate the startPos is in
-         // the line below
-         int psn = phrase.toLowerCase().indexOf(
-                goal.toLowerCase(), startPos);
+       /**
+        * Search for one word in phrase. The search is not case sensitive. This method
+        * will check that the given goal is not a substring of a longer string (so,
+        * for example, "I know" does not contain "no").
+        *
+        * @param statement the string to search
+        * @param goal the string to search for
+        * @param startPos the character of the string to begin the search at
+        * @return the index of the first occurrence of goal in statement or -1 if it's
+        *     not found
+        */
+       private int findKeyword(String statement, String goal, int startPos)
+       {
+           String phrase = statement.trim();
+           // The only change to incorporate the startPos is in
+           // the line below
+           int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
 
-         // Refinement--make sure the goal isn't part of a
-         // word
-         while (psn >= 0)
-         {
-            // Find the string of length 1 before and after
-            // the word
-            String before = " ", after = " ";
-            if (psn > 0)
-            {
-                before = phrase.substring(psn - 1, psn)
-                        .toLowerCase();
-            }
-            if (psn + goal.length() < phrase.length())
-            {
-                after = phrase.substring(
-                        psn + goal.length(),
-                        psn + goal.length() + 1)
-                        .toLowerCase();
-            }
+           // Refinement--make sure the goal isn't part of a
+           // word
+           while (psn >= 0)
+           {
+               // Find the string of length 1 before and after
+               // the word
+               String before = " ", after = " ";
+               if (psn > 0)
+               {
+                   before = phrase.substring(psn - 1, psn).toLowerCase();
+               }
+               if (psn + goal.length() < phrase.length())
+               {
+                   after =
+                           phrase.substring(
+                                           psn + goal.length(),
+                                           psn + goal.length() + 1)
+                                   .toLowerCase();
+               }
 
-            /* determine the values of psn, before, and after at this point */
+               /* determine the values of psn, before, and after at this point */
 
-            // If before and after aren't letters, we've
-            // found the word
-            if (((before.compareTo("a") < 0) || (before
-                    .compareTo("z") > 0)) // before is not a
-                                            // letter
-                    && ((after.compareTo("a") < 0) || (after
-                            .compareTo("z") > 0)))
-            {
-                return psn;
-            }
+               // If before and after aren't letters, we've
+               // found the word
+               if (((before.compareTo("a") < 0)
+                               || (before.compareTo("z") > 0)) // before is not a
+                       // letter
+                       && ((after.compareTo("a") < 0)
+                               || (after.compareTo("z") > 0)))
+               {
+                   return psn;
+               }
 
-            // The last position didn't work, so let's find
-            // the next, if there is one.
-            psn = phrase.indexOf(goal.toLowerCase(),
-                    psn + 1);
+               // The last position didn't work, so let's find
+               // the next, if there is one.
+               psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+           }
 
-         }
+           return -1;
+       }
 
-        return -1;
-      }
+       /**
+        * Search for one word in phrase. The search is not case sensitive. This method
+        * will check that the given goal is not a substring of a longer string (so,
+        * for example, "I know" does not contain "no"). The search begins at the
+        * beginning of the string.
+        *
+        * @param statement the string to search
+        * @param goal the string to search for
+        * @return the index of the first occurrence of goal in statement or -1 if it's
+        *     not found
+        */
+       private int findKeyword(String statement, String goal)
+       {
+           return findKeyword(statement, goal, 0);
+       }
 
-      /**
-       * Search for one word in phrase. The search is not case
-       * sensitive. This method will check that the given goal
-       * is not a substring of a longer string (so, for
-       * example, "I know" does not contain "no"). The search
-       * begins at the beginning of the string.
-       *
-       * @param statement
-       *            the string to search
-       * @param goal
-       *            the string to search for
-       * @return the index of the first occurrence of goal in
-       *         statement or -1 if it's not found
-       */
-      private int findKeyword(String statement, String goal)
-      {
-         return findKeyword(statement, goal, 0);
-      }
+       /**
+        * Pick a default response to use if nothing else fits.
+        *
+        * @return a non-committal string
+        */
+       private String getRandomResponse()
+       {
+           final int NUMBER_OF_RESPONSES = 4;
+           double r = Math.random();
+           int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
+           String response = "";
 
-      /**
-       * Pick a default response to use if nothing else fits.
-       *
-       * @return a non-committal string
-       */
-      private String getRandomResponse()
-      {
-         final int NUMBER_OF_RESPONSES = 4;
-         double r = Math.random();
-         int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
-         String response = "";
+           if (whichResponse == 0)
+           {
+               response = "Interesting, tell me more.";
+           }
+           else if (whichResponse == 1)
+           {
+               response = "Hmmm.";
+           }
+           else if (whichResponse == 2)
+           {
+               response = "Do you really think so?";
+           }
+           else if (whichResponse == 3)
+           {
+               response = "You don't say.";
+           }
 
-         if (whichResponse == 0)
-         {
-             response = "Interesting, tell me more.";
-         }
-         else if (whichResponse == 1)
-         {
-             response = "Hmmm.";
-         }
-         else if (whichResponse == 2)
-         {
-             response = "Do you really think so?";
-         }
-         else if (whichResponse == 3)
-         {
-             response = "You don't say.";
-         }
+           return response;
+       }
 
-         return response;
-      }
+       public static void main(String[] args)
+       {
+           Magpie3 maggie = new Magpie3();
 
-      public static void main(String[] args)
-      {
-        Magpie3 maggie = new Magpie3();
-
-        maggie.findKeyword("yesterday is today's day before.", "day", 0);
-
-      }
-
+           maggie.findKeyword("yesterday is today's day before.", "day", 0);
+       }
    }
+
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
+
    import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-      @Test
-      public void testMain() throws IOException
-      {
-         String output = getMethodOutput("main");
-         String expect = "6...";
-         boolean passed = getResults(expect, output, "Expected output from main", true);
-         assertTrue(passed);
-      }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "6...";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
    }
 
 .. |Java Visualizer| raw:: html

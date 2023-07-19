@@ -72,33 +72,35 @@ When the operator ``==`` is used to compare object variables, it returns true wh
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        String s1 = new String("Hello");
-        String s2 = new String("Bye");
-        String s3 = s2;   // s3 is now an alias for s2
-        System.out.println(s3);
-        System.out.println(s2 == s3);
-        System.out.println(s2.equals(s3));
-      }
+       public static void main(String[] args)
+       {
+           String s1 = new String("Hello");
+           String s2 = new String("Bye");
+           String s3 = s2; // s3 is now an alias for s2
+           System.out.println(s3);
+           System.out.println(s2 == s3);
+           System.out.println(s2.equals(s3));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Bye\ntrue\ntrue\n";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Bye\ntrue\ntrue\n";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 The following `video <https://www.youtube.com/watch?v=hhYBVgmC-vw>`_ traces through the code above and shows how ``==`` and ``equals`` work with String objects in memory.
 
@@ -133,30 +135,33 @@ If you use the ``new`` keyword to create a string, it will always create a new s
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        String s1 = new String("Hello");
-        String s2 = new String("Hello");
-        System.out.println(s1 == s2);
-        System.out.println(s1.equals(s2));
-      }
+       public static void main(String[] args)
+       {
+           String s1 = new String("Hello");
+           String s2 = new String("Hello");
+           System.out.println(s1 == s2);
+           System.out.println(s1.equals(s2));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "false\ntrue\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "false\ntrue\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 Watch the `video below <https://www.youtube.com/watch?v=xZroaSGhgxA>`_ to see how this code works in memory. Since we used the ``new`` keyword, two different ``String`` objects will be created that each have the characters ``Hello`` in them.  So ``s1 == s2`` will be false since they don't refer to the same object, but ``s1.equals(s2)`` is true since the two different objects contain the same characters in the same order.
 
@@ -255,60 +260,69 @@ One common place to use ``==`` or ``!=`` with objects is to compare them to **nu
    ~~~~
    public class NullTest
    {
-      public static void main(String[] args)
-      {
-        String s = null;
-        if (s.indexOf("a") >= 0)
-        {
-            System.out.println(s + " contains an a");
-        }
-        if (s != null && s.indexOf("a") >= 0)
-        {
-            System.out.println(s + " contains an a");
-        }
-      }
+       public static void main(String[] args)
+       {
+           String s = null;
+           if (s.indexOf("a") >= 0)
+           {
+               System.out.println(s + " contains an a");
+           }
+           if (s != null && s.indexOf("a") >= 0)
+           {
+               System.out.println(s + " contains an a");
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("NullTest");
-        }
+   import org.junit.*;
 
-        @Test
-        public void testMain() {
-            String output = getMethodOutput("main");
-            String expect = "apple contains an a\napple contains an a";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "Checking main() gives correct results");
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("NullTest");
+       }
 
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class NullTest { public static void main(String[] args) { String s = null; if (s.indexOf(\"a\") >= 0) {  System.out.println(s + \" contains an a\"); } if (s != null && s.indexOf(\"a\") >= 0) { System.out.println(s + \" contains an a\"); } } }";
+       @Test
+       public void testMain()
+       {
+           String output = getMethodOutput("main");
+           String expect = "apple contains an a\napple contains an a";
 
-            boolean changed = codeChanged(origCode);
+           boolean passed = getResults(expect, output, "Checking main() gives correct results");
+       }
 
-            assertTrue(changed);
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class NullTest { public static void main(String[] args) { String s = null;"
+                       + " if (s.indexOf(\"a\") >= 0) {  System.out.println(s + \" contains an a\"); }"
+                       + " if (s != null && s.indexOf(\"a\") >= 0) { System.out.println(s + \""
+                       + " contains an a\"); } } }";
 
-        }
+           boolean changed = codeChanged(origCode);
 
-        @Test
-        public void testCodeContains()
-        {
-            String code = getCode();
-            String target1 = "String s = ";
-            String target2 = "System.out.println(s + \" contains an a\");";
+           assertTrue(changed);
+       }
 
-            boolean passed = code.contains(target1) && code.contains(target2);
-            getResults("true", ""+passed, "Checking that code has not been removed", passed);
-            assertTrue(passed);
-        }
-    }
+       @Test
+       public void testCodeContains()
+       {
+           String code = getCode();
+           String target1 = "String s = ";
+           String target2 = "System.out.println(s + \" contains an a\");";
+
+           boolean passed = code.contains(target1) && code.contains(target2);
+           getResults("true", "" + passed, "Checking that code has not been removed", passed);
+           assertTrue(passed);
+       }
+   }
 
 The `following video <https://www.youtube.com/watch?v=GPdoHm1K8HA>`_ shows how the null string reference works in memory.
 
@@ -330,15 +344,25 @@ What will the following code print out? Trace through the code by drawing diagra
     String s3 = new String("hi");
     String s4 = new String("bye");
     if (s1 == null)
+    {
         s1 = s2;
+    }
     if (s1 == s2)
-       System.out.println("s1 and s2 refer to the same object");
+    {
+        System.out.println("s1 and s2 refer to the same object");
+    }
     if (s2 == s3)
-       System.out.println("s2 and s3 refer to the same object");
+    {
+        System.out.println("s2 and s3 refer to the same object");
+    }
     if (s3 == s4)
-       System.out.println("s3 and s4 refer to the same object");
+    {
+        System.out.println("s3 and s4 refer to the same object");
+    }
     if (s1.equals(s2) && s2.equals(s3))
+    {
         System.out.println("s1, s2, s3 are equal");
+    }
 
 .. shortanswer:: challenge3-7-tracingStrings
 

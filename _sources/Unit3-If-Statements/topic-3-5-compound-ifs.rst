@@ -67,43 +67,53 @@ What if you want two things to be true before the body of the conditional is exe
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        boolean cleanedRoom = true;
-        boolean didHomework = false;
-        if (cleanedRoom && didHomework)
-        {
-            System.out.println("You can go out");
-        }
-        else
-        {
-            System.out.println("No, you can't go out");
-        }
-      }
+       public static void main(String[] args)
+       {
+           boolean cleanedRoom = true;
+           boolean didHomework = false;
+           if (cleanedRoom && didHomework)
+           {
+               System.out.println("You can go out");
+           }
+           else
+           {
+               System.out.println("No, you can't go out");
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class Test1 { public static void main(String[] args){ boolean cleanedRoom = true; boolean didHomework = false; if (cleanedRoom && didHomework){ System.out.println(\"You can go out\");} else { System.out.println(\"No, you can't go out\");}}}";
+   import org.junit.*;
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
-        @Test
-        public void testMain() {
-            String output = getMethodOutput("main");
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class Test1 { public static void main(String[] args){ boolean cleanedRoom ="
+                       + " true; boolean didHomework = false; if (cleanedRoom && didHomework){"
+                       + " System.out.println(\"You can go out\");} else { System.out.println(\"No,"
+                       + " you can't go out\");}}}";
+
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
+
+       @Test
+       public void testMain()
+       {
+           String output = getMethodOutput("main");
            String expect = "You can go out";
 
            boolean passed = getResults(expect, output, "Expected output from main");
            assertTrue(passed);
-        }
-    }
+       }
+   }
 
 What if it is okay if only one of two things is true? Use ``||`` as a logical **or** to join two Boolean expressions and the body of the condition will be executed if one or both are true.
 
@@ -118,43 +128,53 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        boolean walking = false;
-        boolean carIsAvailable = false;
-        if (walking || carIsAvailable)
-        {
-           System.out.println("You can go out");
-        }
-        else
-        {
-          System.out.println("No, you can't go out");
-        }
-      }
+       public static void main(String[] args)
+       {
+           boolean walking = false;
+           boolean carIsAvailable = false;
+           if (walking || carIsAvailable)
+           {
+               System.out.println("You can go out");
+           }
+           else
+           {
+               System.out.println("No, you can't go out");
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class Test2 { public static void main(String[] args){ boolean walking = false; boolean carIsAvailable = false; if (walking || carIsAvailable) { System.out.println(\"You can go out\"); } else{System.out.println(\"No, you can't go out\"); }}}";
+   import org.junit.*;
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
-        @Test
-        public void testMain() {
-            String output = getMethodOutput("main");
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class Test2 { public static void main(String[] args){ boolean walking ="
+                       + " false; boolean carIsAvailable = false; if (walking || carIsAvailable) {"
+                       + " System.out.println(\"You can go out\"); } else{System.out.println(\"No, you"
+                       + " can't go out\"); }}}";
+
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
+
+       @Test
+       public void testMain()
+       {
+           String output = getMethodOutput("main");
            String expect = "You can go out";
 
            boolean passed = getResults(expect, output, "Expected output from main");
            assertTrue(passed);
-        }
-    }
+       }
+   }
 
 .. note::
 
@@ -174,37 +194,42 @@ With numerical values, the **or** (||) operator is often used to check for error
    ~~~~
    public class TestNum
    {
-      public static void main(String[] args)
-      {
-        int score = 10; // Try -10 and 110
-        if (score < 0 || score > 100)
-        {
-            System.out.println("Score has an illegal value.");
-        }
-        if (score >= 0 && score <= 100)
-        {
-            System.out.println("Score is in the range 0-100");
-        }
-
-      }
+       public static void main(String[] args)
+       {
+           int score = 10; // Try -10 and 110
+           if (score < 0 || score > 100)
+           {
+               System.out.println("Score has an illegal value.");
+           }
+           if (score >= 0 && score <= 100)
+           {
+               System.out.println("Score is in the range 0-100");
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-         @Test
-        public void testChangedCode() {
-            String origCode = "public class TestNum{public static void main(String[] args){int score = 10;  if (score < 0 || score > 100){ System.out.println(\"Score has an illegal value.\");}if (score >= 0 && score <= 100){ System.out.println(\"Score is in the range 0-100\");}}}";
+   import org.junit.*;
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
-    }
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class TestNum{public static void main(String[] args){int score = 10;  if"
+                       + " (score < 0 || score > 100){ System.out.println(\"Score has an illegal"
+                       + " value.\");}if (score >= 0 && score <= 100){ System.out.println(\"Score is"
+                       + " in the range 0-100\");}}}";
 
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
+   }
 
 The **not** (``!``) operator can be used to negate a boolean value. We've seen ``!`` before in ``!=`` (not equal).  If you use ``!`` in expressions with ``&&`` and ``||``, be careful because the results are often the opposite of what you think it will be at first. We'll see examples of this in the next lesson.
 
@@ -218,30 +243,38 @@ The **not** (``!``) operator can be used to negate a boolean value. We've seen `
    The code below says if homework is not done, you can't go out. Try different values for ``homeworkDone``.
    ~~~~
    public class TestNot
-   {    public static void main(String[] args)
-      {
-        boolean homeworkDone = false;
-        if (!homeworkDone)
-        {
-            System.out.println("Sorry, you can't go out!");
-        }
-      }
+   {
+       public static void main(String[] args)
+       {
+           boolean homeworkDone = false;
+           if (!homeworkDone)
+           {
+               System.out.println("Sorry, you can't go out!");
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
-        public void testChangedCode() {
-            String origCode = "public class TestNot{public static void main(String[] args){ boolean homeworkDone = false; if (!homeworkDone) { System.out.println(\"Sorry, you can't go out!\"); } } }";
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class TestNot{public static void main(String[] args){ boolean homeworkDone"
+                       + " = false; if (!homeworkDone) { System.out.println(\"Sorry, you can't go"
+                       + " out!\"); } } }";
 
-            boolean changed = codeChanged(origCode);
-            assertTrue(changed);
-        }
-    }
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
+   }
 
 .. note::
 
@@ -467,67 +500,78 @@ Explore the following problems with your group:
    ~~~~
    public class TruthTable
    {
-      public static void main(String[] args)
-      {
-          // Test multiple values for these variables
-          boolean sunny = false;
-          int temperature = 90;
-          boolean raining = false;
+       public static void main(String[] args)
+       {
+           // Test multiple values for these variables
+           boolean sunny = false;
+           int temperature = 90;
+           boolean raining = false;
 
-          // Write an if statement for: If it's sunny,
-          //  OR if the temperature is greater than 80
-          //     and it's not raining, "Go to the beach!"
+           // Write an if statement for: If it's sunny,
+           //  OR if the temperature is greater than 80
+           //     and it's not raining, "Go to the beach!"
 
-
-      }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
-        public void testMain() throws IOException
-        {
-          String expect = "Go to the beach!";
-          String output = getMethodOutput("main");
-          String code = getCode();
-          boolean passed;
-          if (getCode().contains("boolean sunny = false"))
-             passed = getResults(expect, output, "Prints Go to the beach! with initial input (sunny = false; temperature = 90; raining = false;)");
-          else
-            passed = getResults("sunny = false","sunny = true", "Set sunny to false to test");
+       public void testMain() throws IOException
+       {
+           String expect = "Go to the beach!";
+           String output = getMethodOutput("main");
+           String code = getCode();
+           boolean passed;
+           if (getCode().contains("boolean sunny = false"))
+               passed =
+                       getResults(
+                               expect,
+                               output,
+                               "Prints Go to the beach! with initial input (sunny = false; temperature"
+                                   + " = 90; raining = false;)");
+           else passed = getResults("sunny = false", "sunny = true", "Set sunny to false to test");
 
-          assertTrue(passed);
-        }
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testCodeContains1(){
-          boolean ifStatement = checkCodeContains("conditional: if", "if");
-          assertTrue(ifStatement);
-        }
+       @Test
+       public void testCodeContains1()
+       {
+           boolean ifStatement = checkCodeContains("conditional: if", "if");
+           assertTrue(ifStatement);
+       }
 
-        @Test
-        public void testCodeContains2(){
-          boolean ifStatement1 = checkCodeContains("conditional: temperature greater than 80", "temperature > 80");
+       @Test
+       public void testCodeContains2()
+       {
+           boolean ifStatement1 =
+                   checkCodeContains("conditional: temperature greater than 80", "temperature > 80");
 
-          assertTrue(ifStatement1);
-        }
+           assertTrue(ifStatement1);
+       }
 
-         @Test
-        public void testCodeContains4(){
-          boolean ifStatement3 = checkCodeContains("and", "&&");
-          assertTrue(ifStatement3);
-        }
-        @Test
-        public void testCodeContains5(){
-          boolean ifStatement3 = checkCodeContains("or", "||");
-          assertTrue(ifStatement3);
-        }
-    }
+       @Test
+       public void testCodeContains4()
+       {
+           boolean ifStatement3 = checkCodeContains("and", "&&");
+           assertTrue(ifStatement3);
+       }
 
+       @Test
+       public void testCodeContains5()
+       {
+           boolean ifStatement3 = checkCodeContains("or", "||");
+           assertTrue(ifStatement3);
+       }
+   }
 
 Summary
 --------

@@ -29,21 +29,22 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "x is greater than 0\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "x is greater than 0\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -61,9 +62,13 @@ Coding Practice
                   {
                       int x = 3;
                       if (x > 0)
+                      {
                           System.out.println("x is greater than 0");
+                      }
                       else
+                      {
                           System.out.println("x is less than or equal 0");
+                      }
                   }
               }
 
@@ -100,21 +105,22 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Your guess is too low\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "Your guess is too low\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -133,11 +139,17 @@ Coding Practice
                       int guess = 7;
                       int answer = 9;
                       if (guess < answer)
+                      {
                           System.out.println("Your guess is too low");
+                      }
                       else if (guess == answer)
+                      {
                           System.out.println("You are right!");
+                      }
                       else
+                      {
                           System.out.println("Your guess is too high");
+                      }
                   }
               }
 
@@ -165,28 +177,34 @@ Coding Practice
                       boolean doneHomework = True;
                       boolean cleanedRoom = true;
                       if (doneHomework && cleanedRoom)
-                           System.out.println("You cannot go out");
+                      {
+                          System.out.println("You cannot go out");
+                      }
                       else
+                      {
                           System.out.println("You can go out");
+                      }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "You can go out\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "You can go out\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -205,9 +223,13 @@ Coding Practice
                       boolean doneHomework = true;
                       boolean cleanedRoom = true;
                       if (doneHomework && cleanedRoom)
+                      {
                           System.out.println("You can go out");
+                      }
                       else
+                      {
                           System.out.println("You cannot go out");
+                      }
                   }
               }
 
@@ -241,21 +263,22 @@ Coding Practice
               }
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "x is between 0 and 10 inclusive\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "x is between 0 and 10 inclusive\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -274,8 +297,7 @@ Coding Practice
                       int x = 3;
                       if (x >= 0 && x <= 10)
                           System.out.println("x is between 0 and 10 inclusive");
-                      else
-                          System.out.println("x is either less than 0 or greater than 10");
+                      else System.out.println("x is either less than 0 or greater than 10");
                   }
               }
 
@@ -303,50 +325,56 @@ Coding Practice
                   {
                       int x = -3;
                       if (x > 0)
+                      {
                           System.out.println("x is less than 0");
-
+                      }
                   }
-
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
                       String output = getMethodOutput("main");
                       String expect = "x is less than 0";
                       boolean passed = getResults(expect, output, "Expected output from main if x = -3");
                       assertTrue(passed);
-                    }
+                  }
 
-                    @Test
-                    public void testCountIfs()
-                    {
-                        String code = getCode();
-                        int num = countOccurences(code, "if");
-                        boolean passed = num >= 2;
+                  @Test
+                  public void testCountIfs()
+                  {
+                      String code = getCode();
+                      int num = countOccurences(code, "if");
+                      boolean passed = num >= 2;
 
-                        getResults("2+", "" + num, "Number of if statements", passed);
-                        assertTrue(passed);
-                    }
+                      getResults("2+", "" + num, "Number of if statements", passed);
+                      assertTrue(passed);
+                  }
 
-                    @Test
-                    public void testCheckCodeContains2()
-                    {
-                        boolean ifGreater = checkCodeContains("Test if x greater than 0", "if (x > 0)");
+                  @Test
+                  public void testCheckCodeContains2()
+                  {
+                      boolean ifGreater = checkCodeContains("Test if x greater than 0", "if (x > 0)");
 
-                        boolean ifEqual = checkCodeContains("Test if equal", "if (x == 0)");
-                        boolean passed = getResults("Test if x greater than 0 or test if x is equal to 0", "Greater than: " + ifGreater + ", Equal to: " + ifEqual, "Test if x greater than 0 or if x equal to 0", ifGreater || ifEqual );
-                        assertTrue(passed);
-                    }
-                }
-
-
+                      boolean ifEqual = checkCodeContains("Test if equal", "if (x == 0)");
+                      boolean passed =
+                              getResults(
+                                      "Test if x greater than 0 or test if x is equal to 0",
+                                      "Greater than: " + ifGreater + ", Equal to: " + ifEqual,
+                                      "Test if x greater than 0 or if x equal to 0",
+                                      ifGreater || ifEqual);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -364,14 +392,18 @@ Coding Practice
                   {
                       int x = -3;
                       if (x < 0)
+                      {
                           System.out.println("x is less than 0");
+                      }
                       else if (x == 0)
+                      {
                           System.out.println("x is equal to 0");
+                      }
                       else
+                      {
                           System.out.println("x is greater than 0");
-
+                      }
                   }
-
               }
 
         .. tab:: Discussion
@@ -397,48 +429,56 @@ Coding Practice
                   {
                       boolean canWalk = true;
                       boolean haveRide = false;
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testCheckCodeContains()
-                    {
-                        boolean output1 = checkCodeContains("print statement You can go out", "System.out.println(\"You can go out\")");
-                        assertTrue(output1);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testCheckCodeContains2()
-                    {
-                        boolean output2 = checkCodeContains("print statement You can't go out", "System.out.println(\"You can't go out\")");
-                        assertTrue(output2);
-                    }
+              import java.io.*;
 
-                    @Test
-                    public void testCheckCodeContains3()
-                    {
-                        boolean output3 = checkCodeContains("or", "||");
-                        assertTrue(output3);
-                    }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testCheckCodeContains()
+                  {
+                      boolean output1 =
+                              checkCodeContains(
+                                      "print statement You can go out", "System.out.println(\"You can go out\")");
+                      assertTrue(output1);
+                  }
 
-                      @Test
-                    public void testChangedCode() {
-                        String origCode = "public class Test1 { public static void main(String[] args) { boolean canWalk = true; boolean haveRide = false; } }";
+                  @Test
+                  public void testCheckCodeContains2()
+                  {
+                      boolean output2 =
+                              checkCodeContains(
+                                      "print statement You can't go out",
+                                      "System.out.println(\"You can't go out\")");
+                      assertTrue(output2);
+                  }
 
-                        boolean changed = codeChanged(origCode);
+                  @Test
+                  public void testCheckCodeContains3()
+                  {
+                      boolean output3 = checkCodeContains("or", "||");
+                      assertTrue(output3);
+                  }
 
-                        assertTrue(changed);
+                  @Test
+                  public void testChangedCode()
+                  {
+                      String origCode =
+                              "public class Test1 { public static void main(String[] args) { boolean canWalk ="
+                                  + " true; boolean haveRide = false; } }";
 
-                    }
-                }
+                      boolean changed = codeChanged(origCode);
 
+                      assertTrue(changed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -457,9 +497,13 @@ Coding Practice
                       boolean canWalk = true;
                       boolean haveRide = false;
                       if (canWalk || haveRide)
+                      {
                           System.out.println("You can go out");
+                      }
                       else
+                      {
                           System.out.println("You can't go out");
+                      }
                   }
               }
 
@@ -486,45 +530,51 @@ Coding Practice
                   {
                       boolean haveHomework = false;
                       boolean didDishes = true;
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testCheckCodeContains()
-                    {
-                        boolean output1 = checkCodeContains("print statement You can go out", "System.out.println(\"You can go out\")");
-                        assertTrue(output1);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testCheckCodeContains2()
-                    {
-                        boolean output2 = checkCodeContains("and", "&&");
-                        assertTrue(output2);
-                    }
+              import java.io.*;
 
-                    @Test
-                    public void testCheckCodeContains3()
-                    {
-                        boolean output2 = checkCodeContains("not", "!");
-                        assertTrue(output2);
-                    }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testCheckCodeContains()
+                  {
+                      boolean output1 =
+                              checkCodeContains(
+                                      "print statement You can go out", "System.out.println(\"You can go out\")");
+                      assertTrue(output1);
+                  }
 
-                     @Test
-                    public void testChangedCode() {
-                        String origCode = "public class Test1 { public static void main(String[] args) { boolean haveHomework = false; boolean didDishes = true; } }";
-                        boolean changed = codeChanged(origCode);
-                        assertTrue(changed);
-                    }
-                }
+                  @Test
+                  public void testCheckCodeContains2()
+                  {
+                      boolean output2 = checkCodeContains("and", "&&");
+                      assertTrue(output2);
+                  }
 
+                  @Test
+                  public void testCheckCodeContains3()
+                  {
+                      boolean output2 = checkCodeContains("not", "!");
+                      assertTrue(output2);
+                  }
+
+                  @Test
+                  public void testChangedCode()
+                  {
+                      String origCode =
+                              "public class Test1 { public static void main(String[] args) { boolean haveHomework"
+                                  + " = false; boolean didDishes = true; } }";
+                      boolean changed = codeChanged(origCode);
+                      assertTrue(changed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -543,10 +593,13 @@ Coding Practice
                       boolean haveHomework = false;
                       boolean didDishes = true;
                       if (!haveHomework && didDishes)
+                      {
                           System.out.println("You can go out");
+                      }
                       else
+                      {
                           System.out.println("You can't go out");
-
+                      }
                   }
               }
 
@@ -574,42 +627,54 @@ Coding Practice
                       double temp = 103.5;
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testCheckCodeContains()
-                    {
-                        boolean output1 = checkCodeContains("print statement You have a fever", "System.out.println(\"You have a fever\")");
-                        assertTrue(output1);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testCheckCodeContains2()
-                    {
-                        boolean output2 = checkCodeContains("print statement You don't have a fever", "System.out.println(\"You don't have a fever\")");
-                        assertTrue(output2);
-                    }
+              import java.io.*;
 
-                    @Test
-                    public void testCheckCodeContains3()
-                    {
-                        boolean output4 = checkCodeContains("if statement for temp greater than 100", "if (temp > 100)");
-                        assertTrue(output4);
-                    }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testCheckCodeContains()
+                  {
+                      boolean output1 =
+                              checkCodeContains(
+                                      "print statement You have a fever",
+                                      "System.out.println(\"You have a fever\")");
+                      assertTrue(output1);
+                  }
 
-                     @Test
-                    public void testChangedCode() {
-                        String origCode = "public class Test1 { public static void main(String[] args) { double temp = 103.5; } }";
-                        boolean changed = codeChanged(origCode);
-                        assertTrue(changed);
-                    }
-                }
+                  @Test
+                  public void testCheckCodeContains2()
+                  {
+                      boolean output2 =
+                              checkCodeContains(
+                                      "print statement You don't have a fever",
+                                      "System.out.println(\"You don't have a fever\")");
+                      assertTrue(output2);
+                  }
 
+                  @Test
+                  public void testCheckCodeContains3()
+                  {
+                      boolean output4 =
+                              checkCodeContains("if statement for temp greater than 100", "if (temp > 100)");
+                      assertTrue(output4);
+                  }
+
+                  @Test
+                  public void testChangedCode()
+                  {
+                      String origCode =
+                              "public class Test1 { public static void main(String[] args) { double temp = 103.5;"
+                                  + " } }";
+                      boolean changed = codeChanged(origCode);
+                      assertTrue(changed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -627,12 +692,15 @@ Coding Practice
                   {
                       double temp = 103.5;
                       if (temp > 100)
+                      {
                           System.out.println("You have a fever");
+                      }
                       else
+                      {
                           System.out.println("You don't have a fever");
+                      }
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -656,64 +724,70 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       int temp = 100;
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                     @Test
-                    public void testCountIfs()
-                    {
-                        String code = getCode();
-                        int num = countOccurences(code, "if");
-                        boolean passed = num >= 3;
+              import org.junit.*;
 
-                        getResults("3+", "" + num, "Number of if statements", passed);
-                        assertTrue(passed);
-                    }
+              import java.io.*;
 
-                      @Test
-                    public void testCountElses()
-                    {
-                        String code = getCode();
-                        int num = countOccurences(code, "else");
-                        boolean passed = num >= 3;
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testCountIfs()
+                  {
+                      String code = getCode();
+                      int num = countOccurences(code, "if");
+                      boolean passed = num >= 3;
 
-                        getResults("3+", "" + num, "Number of else statements", passed);
-                        assertTrue(passed);
-                    }
+                      getResults("3+", "" + num, "Number of if statements", passed);
+                      assertTrue(passed);
+                  }
 
-                      @Test
-                    public void testCountPrints()
-                    {
-                        String code = getCode();
-                        int num = countOccurences(code, "System.out.print");
-                        boolean passed = num >= 4;
+                  @Test
+                  public void testCountElses()
+                  {
+                      String code = getCode();
+                      int num = countOccurences(code, "else");
+                      boolean passed = num >= 3;
 
-                        getResults("4+", "" + num, "Number of print statements", passed);
-                        assertTrue(passed);
-                    }
+                      getResults("3+", "" + num, "Number of else statements", passed);
+                      assertTrue(passed);
+                  }
 
-                    @Test
-                    public void testMain() throws IOException
-                    {
+                  @Test
+                  public void testCountPrints()
+                  {
+                      String code = getCode();
+                      int num = countOccurences(code, "System.out.print");
+                      boolean passed = num >= 4;
+
+                      getResults("4+", "" + num, "Number of print statements", passed);
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testMain() throws IOException
+                  {
                       String expect = "It is hot";
                       String output = getMethodOutput("main");
                       boolean passed = getResults(expect, output, "Prints It is hot if temp = 100");
                       assertTrue(passed);
-                    }
-                     @Test
-                    public void testChangedCode() {
-                        String origCode = "public class Test1 { public static void main(String[] args) {  int temp = 100; } }";
-                        boolean changed = codeChanged(origCode);
-                        assertTrue(changed);
-                    }
-                }
+                  }
+
+                  @Test
+                  public void testChangedCode()
+                  {
+                      String origCode =
+                              "public class Test1 { public static void main(String[] args) {  int temp = 100; }"
+                                  + " }";
+                      boolean changed = codeChanged(origCode);
+                      assertTrue(changed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -731,13 +805,21 @@ Coding Practice
                   {
                       int temp = 100;
                       if (temp < 30)
+                      {
                           System.out.println("It is freezing");
+                      }
                       else if (temp < 50)
+                      {
                           System.out.println("It is cold");
+                      }
                       else if (temp < 90)
+                      {
                           System.out.println("It is nice out");
+                      }
                       else
+                      {
                           System.out.println("It is hot");
+                      }
                   }
               }
 
@@ -764,88 +846,97 @@ Coding Practice
                   public static void main(String[] args)
                   {
                       int score = 67;
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
-                    public void testChangedCode() {
-                        String origCode = "public class Test1 { public static void main(String[] args) {        int score = 67; } }";
+                  public void testChangedCode()
+                  {
+                      String origCode =
+                              "public class Test1 { public static void main(String[] args) {        int score ="
+                                  + " 67; } }";
 
-                        boolean changed = codeChanged(origCode);
+                      boolean changed = codeChanged(origCode);
 
-                        assertTrue(changed);
-
-                    }
+                      assertTrue(changed);
+                  }
 
                   @Test
-                    public void testCheckCodeContains()
-                    {
+                  public void testCheckCodeContains()
+                  {
 
-                       boolean outputA = checkCodeContains("print statement - A", "System.out.println(\"A\")");
-                       assertTrue(outputA);
+                      boolean outputA = checkCodeContains("print statement - A", "System.out.println(\"A\")");
+                      assertTrue(outputA);
+                  }
 
-                    }
-
-                    @Test
-                    public void testCheckCodeContains2()
-                    {
+                  @Test
+                  public void testCheckCodeContains2()
+                  {
                       boolean outputB = checkCodeContains("print statement - B", "System.out.println(\"B\")");
                       assertTrue(outputB);
-                    }
+                  }
 
-                    @Test
-                    public void testCheckCodeContains3()
-                    {
+                  @Test
+                  public void testCheckCodeContains3()
+                  {
                       boolean outputC = checkCodeContains("print statement - C", "System.out.println(\"C\")");
                       assertTrue(outputC);
-                    }
+                  }
 
-                    @Test
-                    public void testCheckCodeContains4()
-                    {
+                  @Test
+                  public void testCheckCodeContains4()
+                  {
                       boolean outputD = checkCodeContains("print statement - D", "System.out.println(\"D\")");
                       assertTrue(outputD);
-                    }
+                  }
 
-                    @Test
-                    public void testCheckCodeContains5()
-                    {
+                  @Test
+                  public void testCheckCodeContains5()
+                  {
                       boolean outputE = checkCodeContains("print statement - E", "System.out.println(\"E\")");
                       assertTrue(outputE);
-                    }
+                  }
 
-                    @Test
-                    public void testCheckCodeContains6(){
+                  @Test
+                  public void testCheckCodeContains6()
+                  {
                       boolean output = checkCodeContains("if you scored 92 or higher", "if (score >= 92)");
                       assertTrue(output);
-                    }
+                  }
 
-                    @Test
-                    public void testCheckCodeContains7(){
-                      boolean output = checkCodeContains("else if you scored 82 or higher", "else if (score >= 82)");
+                  @Test
+                  public void testCheckCodeContains7()
+                  {
+                      boolean output =
+                              checkCodeContains("else if you scored 82 or higher", "else if (score >= 82)");
                       assertTrue(output);
-                    }
+                  }
 
-                    @Test
-                    public void testCheckCodeContains8(){
-                      boolean output = checkCodeContains("else if you scored 72 or higher", "else if (score >= 72)");
+                  @Test
+                  public void testCheckCodeContains8()
+                  {
+                      boolean output =
+                              checkCodeContains("else if you scored 72 or higher", "else if (score >= 72)");
                       assertTrue(output);
-                    }
+                  }
 
-                    @Test
-                    public void testCheckCodeContains9(){
-                      boolean output = checkCodeContains("else if you scored 62 or higher", "else if (score >= 62)");
+                  @Test
+                  public void testCheckCodeContains9()
+                  {
+                      boolean output =
+                              checkCodeContains("else if you scored 62 or higher", "else if (score >= 62)");
                       assertTrue(output);
-                    }
-                }
-
+                  }
+              }
 
         .. tab:: Answer
 
@@ -863,16 +954,25 @@ Coding Practice
                   {
                       int score = 67;
                       if (score >= 92)
+                      {
                           System.out.println("A");
+                      }
                       else if (score >= 82)
+                      {
                           System.out.println("B");
+                      }
                       else if (score >= 72)
+                      {
                           System.out.println("C");
+                      }
                       else if (score >= 62)
+                      {
                           System.out.println("D");
+                      }
                       else
+                      {
                           System.out.println("E");
-
+                      }
                   }
               }
 
@@ -898,8 +998,3 @@ In particular we recommend solving the following problems
 * http://codingbat.com/prob/p169213
 * http://codingbat.com/prob/p178728
 * http://codingbat.com/prob/p115233
-
-
-
-
-

@@ -73,11 +73,26 @@ These problems are easier than most of those that you will usually see on the AP
 
    .. code-block:: java
 
-     if (score >= 90) grade = "A";
-     if (score >= 80) grade = "B";
-     if (score >= 70) grade = "C";
-     if (score >= 60) grade = "D";
-     else grade = "E";
+     if (score >= 90)
+     {
+         grade = "A";
+     }
+     if (score >= 80)
+     {
+         grade = "B";
+     }
+     if (score >= 70)
+     {
+         grade = "C";
+     }
+     if (score >= 60)
+     {
+         grade = "D";
+     }
+     else
+     {
+         grade = "E";
+     }
 
 .. mchoice:: qce_4
    :practice: T
@@ -94,9 +109,13 @@ These problems are easier than most of those that you will usually see on the AP
    .. code-block:: java
 
      if (x > 0 || (y / x) == 3)
-        System.out.println("first case");
+     {
+         System.out.println("first case");
+     }
      else
-        System.out.println("second case");
+     {
+         System.out.println("second case");
+     }
 
 
 
@@ -124,9 +143,9 @@ These problems are similar to those you will see on the AP CSA exam.
 .. mchoice:: qcm_2
    :practice: T
    :answer_a: x = 0;
-   :answer_b: if (x > 2) x *= 2;
-   :answer_c: if (x > 2) x = 0;
-   :answer_d: if (x > 2) x = 0; else x *= 2;
+   :answer_b: if (x > 2) { x *= 2; }
+   :answer_c: if (x > 2) { x = 0; }
+   :answer_d: if (x > 2) { x = 0; } else { x *= 2; }
    :correct: c
    :feedback_a: If x was set to 1 then it would still equal 1.
    :feedback_b: What happens in the original when x is greater than 2?
@@ -145,10 +164,10 @@ These problems are similar to those you will see on the AP CSA exam.
 .. mchoice:: qcm_3
    :practice: T
    :answer_a: x = 0;
-   :answer_b: if (x > 0) x = 0;
-   :answer_c: if (x < 0) x = 0;
-   :answer_d: if (x > 0) x = -x; else x = 0;
-   :answer_e: if (x < 0) x = 0; else x = -1;
+   :answer_b: if (x > 0) { x = 0; }
+   :answer_c: if (x < 0) { x = 0; }
+   :answer_d: if (x > 0) { x = -x; } else { x = 0; }
+   :answer_e: if (x < 0) { x = 0; } else { x = -1; }
    :correct: a
    :feedback_a: No matter what x is set to originally, the code will reset it to 0.
    :feedback_b: Even if x is < 0, the above code will set it to 0.
@@ -288,7 +307,3 @@ These problems are harder than most of those that you will usually see on the AP
 
 
 The Mark Complete button and green check mark are intentionally not included in the Exercises.html pages because these pages may be used for many quiz-bank exercises.
-
-
-
-
