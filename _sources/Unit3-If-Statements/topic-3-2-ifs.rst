@@ -298,9 +298,15 @@ Most if statements have a boolean condition that uses relational operators like 
 
            int num = 9999999;
 
-           if (matches.length > 0) num = Integer.parseInt(matches[0]);
+           if (matches.length > 0)
+           {
+               num = Integer.parseInt(matches[0]);
+           }
 
-           if (output.contains("-")) num *= -1;
+           if (output.contains("-"))
+           {
+               num *= -1;
+           }
 
            return num;
        }
@@ -492,7 +498,10 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 
            for (int i = 0; i < output.length; i++)
            {
-               if (!lines.contains(output[i])) lines.add(output[i]);
+               if (!lines.contains(output[i]))
+               {
+                   lines.add(output[i]);
+               }
            }
 
            int responses = lines.size();
