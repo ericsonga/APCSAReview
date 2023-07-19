@@ -117,11 +117,15 @@ Many others have been involved in the creation of content for the eBook (includi
 This work is licensed under a |creative commons|.
 
 Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_
-2014
+2014-2023
 All rights reserved.
 
 Beryl Hoffman `hoffmanb@elms.edu <mailto://hoffmanb@elms.edu>`_
-2019
+2019-2023
+All rights reserved.
+
+Peter Seibel `peterseibel@berkeley.net <mailto://peterseibel@berkeley.net>`_
+2023
 All rights reserved.
 
 
