@@ -26,16 +26,23 @@ Mixed Up Code Practice
        int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
        String response = "";
    =====
-       if (whichResponse == 0) {
+       if (whichResponse == 0) 
+       {
            response = "Interesting, tell me more.";
    =====
-       } else if (whichResponse == 1) {
+       } 
+       else if (whichResponse == 1) 
+       {
            response = "Hmmm.";
    =====
-       } else if (whichResponse == 2) {
+       } 
+       else if (whichResponse == 2) 
+       {
            response = "Do you really think so?";
    =====
-       } else if (whichResponse == 3) {
+       } 
+       else if (whichResponse == 3) 
+       {
            response = "You don't say.";
        }
    =====
