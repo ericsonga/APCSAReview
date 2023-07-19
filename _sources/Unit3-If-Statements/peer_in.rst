@@ -28,9 +28,13 @@ Peer Instruction: Unit 3 Multiple Choice Questions
         botAvg = botP.getAverage();
 
         if (Math.abs(topAv – botAv) < 10)
-        topP.setColor(Color.WHITE);
+        {
+            topP.setColor(Color.WHITE);
+        }
         else
-        topP.setColor(Color.BLACK);
+        {
+            topP.setColor(Color.BLACK);
+        }
 
     .. image:: https://i.postimg.cc/85NS2JGG/lecture15-Q07.png
       :width: 100
