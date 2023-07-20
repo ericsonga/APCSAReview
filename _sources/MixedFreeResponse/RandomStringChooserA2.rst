@@ -45,6 +45,7 @@ The code below has comments to help you get started.  It also has a main method 
 
 .. activecode:: RandomStrChooserA1-2
    :language: java
+   :autograde: unittest
 
    import java.util.List;
    import java.util.ArrayList;

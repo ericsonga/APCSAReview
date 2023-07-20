@@ -600,6 +600,7 @@ languages?
 
 .. activecode:: challenge1-6-unicode
    :language: java
+   :autograde: unittest
 
    Can you print out a letter from 3 different languages using this |Unicode
    Lookup| site?
