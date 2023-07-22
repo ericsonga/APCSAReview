@@ -28,33 +28,34 @@ Coding Practice with Loops
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "5\n4\n3\n2\n1\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import java.io.*;
 
-                    @Test
-                    public void testForLoop() throws IOException
-                    {
-                        String target = "for(int * = 5;";
-                        boolean passed = checkCodeContains("for loop", target);
-                        assertTrue(passed);
-                    }
-                }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "5\n4\n3\n2\n1\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
+                  @Test
+                  public void testForLoop() throws IOException
+                  {
+                      String target = "for(int * = 5;";
+                      boolean passed = checkCodeContains("for loop", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -68,11 +69,9 @@ Coding Practice with Loops
               {
                   public static void main(String[] args)
                   {
-                      for (int x = 5; x > 0; x = x - 1)
-                          System.out.println(x);
+                      for (int x = 5; x > 0; x = x - 1) System.out.println(x);
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -95,38 +94,39 @@ Coding Practice with Loops
               {
                   public static void main(String[] args)
                   {
-                      for (int x = 1; x <= 10; x++)
-                          System.out.println(x);
+                      for (int x = 1; x <= 10; x++) System.out.println(x);
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
-                //import java.util.regex.*;
-                /* Do NOT change Main or CodeTestHelper.java. */
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n";
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testForLoop() throws IOException
-                    {
-                        String target = "while (";
-                        boolean passed = checkCodeContains("while loop", target);
-                        assertTrue(passed);
-                    }
-                }
+              import java.io.*;
 
+              // import java.util.regex.*;
+              /* Do NOT change Main or CodeTestHelper.java. */
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testForLoop() throws IOException
+                  {
+                      String target = "while (";
+                      boolean passed = checkCodeContains("while loop", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -178,31 +178,34 @@ Coding Practice with Loops
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import java.io.*;
 
-                    @Test
-                    public void testForLoop() throws IOException
-                    {
-                        String target = "for (int * = 5;";
-                        boolean passed = checkCodeContains("for loop", target);
-                        assertTrue(passed);
-                    }
-                }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n";
+
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testForLoop() throws IOException
+                  {
+                      String target = "for (int * = 5;";
+                      boolean passed = checkCodeContains("for loop", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -244,36 +247,37 @@ Coding Practice with Loops
               {
                   public static void main(String[] args)
                   {
-                      for (int x = 10; x <= 100; x=x+10)
-                          System.out.println(x);
+                      for (int x = 10; x <= 100; x = x + 10) System.out.println(x);
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import java.io.*;
 
-                    @Test
-                    public void testForLoop() throws IOException
-                    {
-                        String target = "while (";
-                        boolean passed = checkCodeContains("while loop", target);
-                        assertTrue(passed);
-                    }
-                }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testForLoop() throws IOException
+                  {
+                      String target = "while (";
+                      boolean passed = checkCodeContains("while loop", target);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -283,8 +287,8 @@ Coding Practice with Loops
               :language: java
               :optional:
 
-               public class Test1
-               {
+              public class Test1
+              {
                   public static void main(String[] args)
                   {
                       int x = 10;
@@ -325,35 +329,37 @@ Coding Practice with Loops
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
                   public void testMain() throws IOException
                   {
-                    String output = getMethodOutput("main");
-                    String expect = "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n";
+                      String output = getMethodOutput("main");
+                      String expect = "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n";
 
-                    boolean passed = getResults(expect, output, "Expected output from main");
-                    assertTrue(passed);
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
                   }
 
-                    @Test
-                    public void testWhileLoop() throws IOException
-                    {
-                        String target1 = "x=x+1;";
-                        String target2 = "x++;";
-                        String code = removeSpaces(getCode());
-                        boolean passed = code.contains(target1) || code.contains(target2);
-                        getResults("true", ""+passed, "changing the loop variable x");
-                        assertTrue(passed);
-                    }
-                }
-
+                  @Test
+                  public void testWhileLoop() throws IOException
+                  {
+                      String target1 = "x=x+1;";
+                      String target2 = "x++;";
+                      String code = removeSpaces(getCode());
+                      boolean passed = code.contains(target1) || code.contains(target2);
+                      getResults("true", "" + passed, "changing the loop variable x");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -399,31 +405,31 @@ Coding Practice with Loops
                   {
                       for (int x = 10; x >= 5; x--)
                       {
-                         System.out.println(x);
-                         x--;
+                          System.out.println(x);
+                          x--;
                       }
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "10\n9\n8\n7\n6\n5\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "10\n9\n8\n7\n6\n5\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -439,9 +445,8 @@ Coding Practice with Loops
                   {
                       for (int x = 10; x >= 5; x--)
                       {
-                         System.out.println(x);
+                          System.out.println(x);
                       }
-
                   }
               }
 
@@ -469,30 +474,31 @@ Coding Practice with Loops
                       int x = 10;
                       while (x >= 0)
                       {
-                         x--;
-                         System.out.println(x);
+                          x--;
+                          System.out.println(x);
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -509,8 +515,8 @@ Coding Practice with Loops
                       int x = 10;
                       while (x > 0)
                       {
-                         System.out.println(x);
-                         x--;
+                          System.out.println(x);
+                          x--;
                       }
                   }
               }
@@ -534,38 +540,37 @@ Coding Practice with Loops
               ~~~~
               public class Test1
               {
-                  public static void main(String[] args)
-                  {
-
-
-                  }
+                  public static void main(String[] args) {}
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
+              import org.junit.*;
+
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
                   @Test
                   public void testMain() throws IOException
                   {
-                    String output = getMethodOutput("main");
-                    String expect = "100\n90\n80\n70\n60\n50\n40\n30\n20\n10\n0\n";
+                      String output = getMethodOutput("main");
+                      String expect = "100\n90\n80\n70\n60\n50\n40\n30\n20\n10\n0\n";
 
-                    boolean passed = getResults(expect, output, "Expected output from main");
-                    assertTrue(passed);
-                    }
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                     @Test
-                    public void testForLoop() throws IOException
-                    {
-                       String code = getCode();
-                       boolean passed = code.contains("for") || code.contains("while");
-                       getResults("Expected loop",""+passed, "Checking for loop",passed);
-                       assertTrue(passed);
-                    }
-                }
+                  @Test
+                  public void testForLoop() throws IOException
+                  {
+                      String code = getCode();
+                      boolean passed = code.contains("for") || code.contains("while");
+                      getResults("Expected loop", "" + passed, "Checking for loop", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -579,8 +584,7 @@ Coding Practice with Loops
               {
                   public static void main(String[] args)
                   {
-                      for (int x = 100; x >= 0; x = x - 10)
-                          System.out.println(x);
+                      for (int x = 100; x >= 0; x = x - 10) System.out.println(x);
                   }
               }
 
@@ -605,40 +609,48 @@ Coding Practice with Loops
               ~~~~
               public class Test1
               {
-                  public static void main(String[] args)
-                  {
-
-                  }
+                  public static void main(String[] args) {}
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "10 is even\n9 is odd\n8 is even\n7 is odd\n6 is even\n5 is odd\n4 is even\n3 is odd\n2 is even\n1 is odd\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import java.io.*;
 
-                     @Test
-                    public void testIfLoop()
-                    {
-                       String code = getCode();
-                       boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
-                       getResults("Expected loop and if",""+passed, "Checking for loop and if statement",passed);
-                        assertTrue(passed);
-                    }
-                }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect =
+                              "10 is even\n"
+                                  + "9 is odd\n"
+                                  + "8 is even\n"
+                                  + "7 is odd\n"
+                                  + "6 is even\n"
+                                  + "5 is odd\n"
+                                  + "4 is even\n"
+                                  + "3 is odd\n"
+                                  + "2 is even\n"
+                                  + "1 is odd\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-
+                  @Test
+                  public void testIfLoop()
+                  {
+                      String code = getCode();
+                      boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
+                      getResults(
+                              "Expected loop and if", "" + passed, "Checking for loop and if statement", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -654,10 +666,8 @@ Coding Practice with Loops
                   {
                       for (int x = 10; x >= 1; x--)
                       {
-                          if (x % 2 == 0)
-                              System.out.println(x + " is even");
-                          else
-                              System.out.println(x + " is odd");
+                          if (x % 2 == 0) System.out.println(x + " is even");
+                          else System.out.println(x + " is odd");
                       }
                   }
               }
@@ -681,40 +691,39 @@ Coding Practice with Loops
               ~~~~
               public class Test1
               {
-                  public static void main(String[] args)
-                  {
-
-                  }
+                  public static void main(String[] args) {}
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                     @Test
-                    public void testForLoop()
-                    {
-                       // String target = "for (";
-                       // boolean passed = checkCodeContains("for loop", target);
-                       String code = getCode();
-                       boolean passed = code.contains("for") || code.contains("while");
-                       getResults("Expected loop",""+passed, "Checking for loop",passed);
-                       assertTrue(passed);
-                    }
-                }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "0\n10\n20\n30\n40\n50\n60\n70\n80\n90\n100\n";
 
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testForLoop()
+                  {
+                      // String target = "for (";
+                      // boolean passed = checkCodeContains("for loop", target);
+                      String code = getCode();
+                      boolean passed = code.contains("for") || code.contains("while");
+                      getResults("Expected loop", "" + passed, "Checking for loop", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -730,7 +739,7 @@ Coding Practice with Loops
                   {
                       for (int x = 0; x <= 10; x++)
                       {
-                         System.out.println(x * 10);
+                          System.out.println(x * 10);
                       }
                   }
               }
@@ -756,36 +765,37 @@ Coding Practice with Loops
               {
                   public static void main(String[] args)
                   {
-                         String message = "help";
-
+                      String message = "help";
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "help\nhel\nhe\nh\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                    @Test
-                    public void testForLoop()
-                    {
-                       String code = getCode();
-                       boolean passed = code.contains("for") || code.contains("while");
-                       getResults("Expected loop",""+passed, "Checking for loop",passed);
-                       assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
 
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "help\nhel\nhe\nh\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testForLoop()
+                  {
+                      String code = getCode();
+                      boolean passed = code.contains("for") || code.contains("while");
+                      getResults("Expected loop", "" + passed, "Checking for loop", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -803,11 +813,10 @@ Coding Practice with Loops
                       while (message.length() > 0)
                       {
                           System.out.println(message);
-                          message = message.substring(0,message.length() - 1);
+                          message = message.substring(0, message.length() - 1);
                       }
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -833,36 +842,45 @@ Coding Practice with Loops
                   {
                       String message = "Ix lovex youxxx";
                       System.out.println(message);
-
-
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
-                //import java.util.regex.*;
-                /* Do NOT change Main or CodeTestHelper.java. */
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "Ix lovex youxxx\nI lovex youxxx\nI love youxxx\nI love youxx\nI love youx\nI love you\n";
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                     @Test
-                    public void testForLoop()
-                    {
-                       String code = getCode();
-                       boolean passed = code.contains("for") || code.contains("while");
-                       getResults("Expected loop",""+passed, "Checking for loop",passed);
-                       assertTrue(passed);
-                    }
-                }
+              import org.junit.*;
+
+              import java.io.*;
+
+              // import java.util.regex.*;
+              /* Do NOT change Main or CodeTestHelper.java. */
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect =
+                              "Ix lovex youxxx\n"
+                                  + "I lovex youxxx\n"
+                                  + "I love youxxx\n"
+                                  + "I love youxx\n"
+                                  + "I love youx\n"
+                                  + "I love you\n";
+
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testForLoop()
+                  {
+                      String code = getCode();
+                      boolean passed = code.contains("for") || code.contains("while");
+                      getResults("Expected loop", "" + passed, "Checking for loop", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -881,9 +899,9 @@ Coding Practice with Loops
                       int pos = message.indexOf("x");
                       while (pos >= 0)
                       {
-                         message = message.substring(0,pos) + message.substring(pos+1);
-                         pos = message.indexOf("x");
-                         System.out.println(message);
+                          message = message.substring(0, pos) + message.substring(pos + 1);
+                          pos = message.indexOf("x");
+                          System.out.println(message);
                       }
                   }
               }
@@ -913,32 +931,36 @@ Coding Practice with Loops
                       String message = "xyxxzax";
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "4";
+              import org.junit.*;
 
-                        boolean passed = output.contains(expect);
-                        getResults(expect, output, "Expected output from main", passed);
-                        assertTrue(passed);
-                    }
-                    @Test
-                    public void testForLoop()
-                    {
-                       String code = getCode();
-                       boolean passed = code.contains("for") || code.contains("while");
-                       getResults("Expected loop",""+passed, "Checking for loop",passed);
-                       assertTrue(passed);
-                    }
-                }
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "4";
+
+                      boolean passed = output.contains(expect);
+                      getResults(expect, output, "Expected output from main", passed);
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testForLoop()
+                  {
+                      String code = getCode();
+                      boolean passed = code.contains("for") || code.contains("while");
+                      getResults("Expected loop", "" + passed, "Checking for loop", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -959,7 +981,7 @@ Coding Practice with Loops
                       while (pos >= 0)
                       {
                           count++;
-                          message = message.substring(pos+1);
+                          message = message.substring(pos + 1);
                           pos = message.indexOf("x");
                       }
                       System.out.println("There were " + count + " x's");
@@ -987,39 +1009,42 @@ Coding Practice with Loops
               ~~~~
               public class Test1
               {
-                  public static void main(String[] args)
-                  {
-                  }
+                  public static void main(String[] args) {}
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "***\n***\n***\n***\n***\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                     @Test
-                    public void test2() {
-                        String code = getCode();
-                        String target = "for (int * = #; * ? *; *~)";
+              import java.io.*;
 
-                        int num = countOccurencesRegex(code, target);
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "***\n***\n***\n***\n***\n";
 
-                        boolean passed = num == 2;
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                        getResults("2", ""+num, "2 For loops (nested)", passed);
-                        assertTrue(passed);
-                    }
-                }
+                  @Test
+                  public void test2()
+                  {
+                      String code = getCode();
+                      String target = "for (int * = #; * ? *; *~)";
+
+                      int num = countOccurencesRegex(code, target);
+
+                      boolean passed = num == 2;
+
+                      getResults("2", "" + num, "2 For loops (nested)", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -1035,11 +1060,11 @@ Coding Practice with Loops
                   {
                       for (int row = 0; row < 5; row++)
                       {
-                         for (int col = 0; col < 3; col++)
-                         {
-                             System.out.print("*");
-                         }
-                         System.out.println();
+                          for (int col = 0; col < 3; col++)
+                          {
+                              System.out.print("*");
+                          }
+                          System.out.println();
                       }
                   }
               }
@@ -1064,41 +1089,42 @@ Coding Practice with Loops
               ~~~~
               public class Test1
               {
-                  public static void main(String[] args)
-                  {
-                  }
+                  public static void main(String[] args) {}
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "*****\n*****\n*****\n";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                    @Test
-                    public void test2() {
-                        String code = getCode();
-                        String target = "for (int * = #; * ? *; *~)";
+              import java.io.*;
 
-                        int num = countOccurencesRegex(code, target);
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "*****\n*****\n*****\n";
 
-                        boolean passed = num == 2;
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                        getResults("2", ""+num, "2 For loops (nested)", passed);
-                        assertTrue(passed);
-                    }
-                }
+                  @Test
+                  public void test2()
+                  {
+                      String code = getCode();
+                      String target = "for (int * = #; * ? *; *~)";
 
+                      int num = countOccurencesRegex(code, target);
 
+                      boolean passed = num == 2;
+
+                      getResults("2", "" + num, "2 For loops (nested)", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -1114,11 +1140,11 @@ Coding Practice with Loops
                   {
                       for (int row = 0; row < 3; row++)
                       {
-                         for (int col = 0; col < 5; col++)
-                         {
-                             System.out.print("*");
-                         }
-                         System.out.println();
+                          for (int col = 0; col < 5; col++)
+                          {
+                              System.out.print("*");
+                          }
+                          System.out.println();
                       }
                   }
               }
@@ -1143,40 +1169,41 @@ Coding Practice with Loops
               ~~~~
               public class Test1
               {
-                  public static void main(String[] args)
-                  {
-                  }
+                  public static void main(String[] args) {}
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "55555\n4444\n333\n22\n1\n";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
-                    @Test
-                    public void test2() {
-                        String code = getCode();
-                        String target = "for (int * = #; * ? *; *~)";
+              import org.junit.*;
 
-                        int num = countOccurencesRegex(code, target);
+              import java.io.*;
 
-                        boolean passed = num == 2;
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "55555\n4444\n333\n22\n1\n";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                        getResults("2", ""+num, "2 For loops (nested)", passed);
-                        assertTrue(passed);
-                    }
-                }
+                  @Test
+                  public void test2()
+                  {
+                      String code = getCode();
+                      String target = "for (int * = #; * ? *; *~)";
 
+                      int num = countOccurencesRegex(code, target);
 
+                      boolean passed = num == 2;
+
+                      getResults("2", "" + num, "2 For loops (nested)", passed);
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -1192,11 +1219,11 @@ Coding Practice with Loops
                   {
                       for (int x = 5; x >= 1; x--)
                       {
-                         for (int y = x; y > 0; y--)
-                         {
-                             System.out.print(x);
-                         }
-                         System.out.println();
+                          for (int y = x; y > 0; y--)
+                          {
+                              System.out.print(x);
+                          }
+                          System.out.println();
                       }
                   }
               }

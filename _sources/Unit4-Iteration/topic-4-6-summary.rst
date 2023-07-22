@@ -85,32 +85,35 @@ Here is an example of a while loop that doesn't ever change the value in the loo
    ~~~~
    public class Loop1
    {
-      public static void main(String[] args)
-      {
-          int x = 3;
-          while (x > 0)
-          {
-             System.out.println(x);
-          }
-      }
+       public static void main(String[] args)
+       {
+           int x = 3;
+           while (x > 0)
+           {
+               System.out.println(x);
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;;
-     import java.io.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         @Test
-         public void test1()
-         {
-             String output = getMethodOutput("main");
-             String expect = "3\n2\n1";
+   import org.junit.*;
 
-             boolean passed = getResults(expect, output, "Expected output");
-             assertTrue(passed);
-         }
-     }
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "3\n2\n1";
+
+           boolean passed = getResults(expect, output, "Expected output");
+           assertTrue(passed);
+       }
+   }
 
 Here is an example of going past the bounds of a string.  This code should double all but the first and last letter in message.  Fix the code so that it doesn't cause an out of bounds error.
 
@@ -122,36 +125,39 @@ Here is an example of going past the bounds of a string.  This code should doubl
    ~~~~
    public class Loop2
    {
-      public static void main(String[] args)
-      {
-          String result = "";
-          String message = "watch out";
-          int pos = 0;
-          while (pos < message.length())
-          {
-             result = result + message.substring(pos,pos+2);
-             pos = pos + 1;
-          }
-          System.out.println(result);
-      }
+       public static void main(String[] args)
+       {
+           String result = "";
+           String message = "watch out";
+           int pos = 0;
+           while (pos < message.length())
+           {
+               result = result + message.substring(pos, pos + 2);
+               pos = pos + 1;
+           }
+           System.out.println(result);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;;
-     import java.io.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         @Test
-         public void test1()
-         {
-             String output = getMethodOutput("main");
-             String expect = "waattcchh  oouut";
+   import org.junit.*;
 
-             boolean passed = getResults(expect, output, "Expected output");
-             assertTrue(passed);
-         }
-     }
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "waattcchh  oouut";
+
+           boolean passed = getResults(expect, output, "Expected output");
+           assertTrue(passed);
+       }
+   }
 
 Here is an example of jumping out of a loop too early.  The code below is intended to test if all of the letters in a string are in ascending order from left to right. But, it doesn't work correctly.  Can you fix it?
 
@@ -163,54 +169,56 @@ Here is an example of jumping out of a loop too early.  The code below is intend
    ~~~~
    public class Loop3
    {
-      public static boolean isInOrder(String check)
-      {
+       public static boolean isInOrder(String check)
+       {
            int pos = 0;
            while (pos < check.length() - 1)
            {
-               String letter1 = check.substring(pos, pos+1);
-               String letter2 = check.substring(pos+1, pos+2);
+               String letter1 = check.substring(pos, pos + 1);
+               String letter2 = check.substring(pos + 1, pos + 2);
                if (letter1.compareTo(letter2) < 0)
                {
-                  return true;
+                   return true;
                }
                pos++;
            }
            return false;
-      }
+       }
 
-      public static void main(String[] args)
-      {
-         System.out.println(isInOrder("abca") + " should return false");
-         System.out.println(isInOrder("abc") + " should return true");
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(isInOrder("abca") + " should return false");
+           System.out.println(isInOrder("abc") + " should return true");
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;;
-     import java.io.*;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-         @Test
-         public void test1()
-         {
-             String output = getMethodOutput("main");
-             String expect = "false should return false\ntrue should return true";
+   import org.junit.*;
 
-             boolean passed = getResults(expect, output, "Expected output");
-             assertTrue(passed);
-         }
-         @Test
-         public void test2()
-         {
-             boolean output = Loop3.isInOrder("zxy");
+   import java.io.*;
 
-             boolean passed = output == false;
-             getResults("false", output+"","isInOrder(\"zxy\")", passed);
-             assertTrue(passed);
-         }
-     }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "false should return false\ntrue should return true";
 
+           boolean passed = getResults(expect, output, "Expected output");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void test2()
+       {
+           boolean output = Loop3.isInOrder("zxy");
+
+           boolean passed = output == false;
+           getResults("false", output + "", "isInOrder(\"zxy\")", passed);
+           assertTrue(passed);
+       }
+   }
 

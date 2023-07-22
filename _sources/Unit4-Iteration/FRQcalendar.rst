@@ -48,41 +48,53 @@ The APCalendar class contains methods used to calculate information about a cale
 
     public class APCalendar
     {
-     /** Returns true if year is a leap year and false otherwise. */
-     private static boolean isLeapYear(int year)
-     { /* implementation not shown */ }
+        /** Returns true if year is a leap year and false otherwise. */
+        private static boolean isLeapYear(int year)
+        {
+            /* implementation not shown */
+        }
 
-     /** Returns the number of leap years between year1 and year2, inclusive.
-     * Precondition: 0 <= year1 <= year2
-     */
-     public static int numberOfLeapYears(int year1, int year2)
-     { /* to be implemented in part (a) */ }
+        /**
+         * Returns the number of leap years between year1 and year2, inclusive.
+         * Precondition: 0 <= year1 <= year2
+         */
+        public static int numberOfLeapYears(int year1, int year2)
+        {
+            /* to be implemented in part (a) */
+        }
 
-     /** Returns the value representing the day of the week for the first day of year,
-     * where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
-     */
-     private static int firstDayOfYear(int year)
-     { /* implementation not shown */ }
+        /**
+         * Returns the value representing the day of the week for the first day of
+         * year, where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
+         */
+        private static int firstDayOfYear(int year)
+        {
+            /* implementation not shown */
+        }
 
-     /** Returns n, where month, day, and year specify the nth day of the year.
-     * Returns 1 for January 1 (month = 1, day = 1) of any year.
-     * Precondition: The date represented by month, day, year is a valid date.
-     */
-     private static int dayOfYear(int month, int day, int year)
-     { /* implementation not shown */ }
+        /**
+         * Returns n, where month, day, and year specify the nth day of the year.
+         * Returns 1 for January 1 (month = 1, day = 1) of any year. Precondition: The
+         * date represented by month, day, year is a valid date.
+         */
+        private static int dayOfYear(int month, int day, int year)
+        {
+            /* implementation not shown */
+        }
 
-     /** Returns the value representing the day of the week for the given date
-     * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,
-     * and 6 denotes Saturday.
-     * Precondition: The date represented by month, day, year is a valid date.
-     */
-     public static int dayOfWeek(int month, int day, int year)
-     { /* to be implemented in part (b) */ }
+        /**
+         * Returns the value representing the day of the week for the given date
+         * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ..., and 6
+         * denotes Saturday. Precondition: The date represented by month, day, year is
+         * a valid date.
+         */
+        public static int dayOfWeek(int month, int day, int year)
+        {
+            /* to be implemented in part (b) */
+        }
 
-     // There may be instance variables, constructors, and other methods not shown.
+        // There may be instance variables, constructors, and other methods not shown.
     }
-
-
 
 Part A: numberOfLeapYear()
 ===========================
@@ -184,75 +196,78 @@ Next, plan your loop. Click to reveal some problems that may help you to plan th
 
    Write the code for the method numberOfLeapYears below and run to test it.
    ~~~~
-   import java.util.Calendar;
    import java.util.GregorianCalendar;
 
    public class APCalendar
    {
 
-    /** Returns the number of leap years between year1 and year2, inclusive.
-     * Precondition: 0 <= year1 <= year2
-    */
-    public static int numberOfLeapYears(int year1, int year2)
-    {
-      // WRITE YOUR CODE HERE
+       /**
+        * Returns the number of leap years between year1 and year2, inclusive.
+        * Precondition: 0 <= year1 <= year2
+        */
+       public static int numberOfLeapYears(int year1, int year2)
+       {
+           // WRITE YOUR CODE HERE
 
-    }
+       }
 
-    /** Returns true if year is a leap year and false otherwise. */
-    private static boolean isLeapYear(int year)
-    {
-        return new GregorianCalendar().isLeapYear(year);
-    }
+       /** Returns true if year is a leap year and false otherwise. */
+       private static boolean isLeapYear(int year)
+       {
+           return new GregorianCalendar().isLeapYear(year);
+       }
 
-    public static void main(String[] args)
-    {
-        int answer = APCalendar.numberOfLeapYears(2000, 2050);
-        System.out.println("Your answer should be 13: " + answer);
-    }
+       public static void main(String[] args)
+       {
+           int answer = APCalendar.numberOfLeapYears(2000, 2050);
+           System.out.println("Your answer should be 13: " + answer);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("APCalendar");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "Your answer should be 13: 13";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("APCalendar");
+       }
 
-        @Test
-        public void test2()
-        {
-            int answer = APCalendar.numberOfLeapYears(1990, 2100);
-            int expect = 27;
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "Your answer should be 13: 13";
 
-            boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(1990, 2100)");
-            assertTrue(passed);
-        }
+           boolean passed = getResults(expect, output, "Running main");
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test3()
-        {
-            int answer = APCalendar.numberOfLeapYears(2001, 2002);
-            int expect = 0;
+       @Test
+       public void test2()
+       {
+           int answer = APCalendar.numberOfLeapYears(1990, 2100);
+           int expect = 27;
 
-            boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(2001, 2002)");
-            assertTrue(passed);
-        }
-    }
+           boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(1990, 2100)");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void test3()
+       {
+           int answer = APCalendar.numberOfLeapYears(2001, 2002);
+           int expect = 0;
+
+           boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(2001, 2002)");
+           assertTrue(passed);
+       }
+   }
 
 In the 2019 AP exam, part A numberOfLeapYears method was worth 5 points using the rubric below. Did you receive all 5 points? In class, your teacher may have you grade each others' code.
 
@@ -377,25 +392,28 @@ Try the ``%`` operator below.
        }
        ====
        import static org.junit.Assert.*;
-        import org.junit.*;;
-        import java.io.*;
 
-        public class RunestoneTests extends CodeTestHelper
-        {
-            public RunestoneTests() {
-                super("Mod");
-            }
+       import org.junit.*;
 
-            @Test
-            public void test1()
-            {
-                String output = getMethodOutput("main");
-                String expect = "Remainder of 7/7 is 0\nRemainder of 8/7 is 1\nRemainder of 9/7 is 2";
+       import java.io.*;
 
-                boolean passed = getResults(expect, output, "Running main");
-                assertTrue(passed);
-            }
-        }
+       public class RunestoneTests extends CodeTestHelper
+       {
+           public RunestoneTests()
+           {
+               super("Mod");
+           }
+
+           @Test
+           public void test1()
+           {
+               String output = getMethodOutput("main");
+               String expect = "Remainder of 7/7 is 0\nRemainder of 8/7 is 1\nRemainder of 9/7 is 2";
+
+               boolean passed = getResults(expect, output, "Running main");
+               assertTrue(passed);
+           }
+       }
 
 .. reveal:: dow_r4
    :showtitle: Reveal Problem
@@ -431,84 +449,90 @@ Complete the code for the method dayOfWeek below for Part B of this FRQ.
    public class APCalendar
    {
 
-     /** Returns the value representing the day of the week for the given date
-     * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,
-     * and 6 denotes Saturday.
-     * Precondition: The date represented by month, day, year is a valid date.
-     */
-    public static int dayOfWeek(int month, int day, int year)
-    {
-        // WRITE YOUR CODE HERE using methods firstDayOfYear and dayOfYear
+       /**
+        * Returns the value representing the day of the week for the given date
+        * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ..., and 6
+        * denotes Saturday. Precondition: The date represented by month, day, year is
+        * a valid date.
+        */
+       public static int dayOfWeek(int month, int day, int year)
+       {
+           // WRITE YOUR CODE HERE using methods firstDayOfYear and dayOfYear
 
-    }
+       }
 
-    public static void main(String[] args)
-    {
-        int answer = APCalendar.dayOfWeek(1, 8, 2019);
-        System.out.println("Your answer should be 2: " + answer);
-    }
+       public static void main(String[] args)
+       {
+           int answer = APCalendar.dayOfWeek(1, 8, 2019);
+           System.out.println("Your answer should be 2: " + answer);
+       }
 
-    /** Returns the value representing the day of the week for the first day of year,
-    * where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
-    */
-    private static int firstDayOfYear(int year)
-    {
-        GregorianCalendar gc = new GregorianCalendar(year, Calendar.JANUARY, 1);
-        return gc.get(Calendar.DAY_OF_WEEK) - 1;
-    }
+       /**
+        * Returns the value representing the day of the week for the first day of
+        * year, where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
+        */
+       private static int firstDayOfYear(int year)
+       {
+           GregorianCalendar gc = new GregorianCalendar(year, Calendar.JANUARY, 1);
+           return gc.get(Calendar.DAY_OF_WEEK) - 1;
+       }
 
-    /** Returns n, where month, day, and year specify the nth day of the year.
-    * Returns 1 for January 1 (month = 1, day = 1) of any year.
-    * Precondition: The date represented by month, day, year is a valid date.
-    */
-    private static int dayOfYear(int month, int day, int year)
-    {
-        GregorianCalendar gc = new GregorianCalendar(year, month - 1, day);
-        return gc.get(Calendar.DAY_OF_YEAR);
-    }
+       /**
+        * Returns n, where month, day, and year specify the nth day of the year.
+        * Returns 1 for January 1 (month = 1, day = 1) of any year. Precondition: The
+        * date represented by month, day, year is a valid date.
+        */
+       private static int dayOfYear(int month, int day, int year)
+       {
+           GregorianCalendar gc = new GregorianCalendar(year, month - 1, day);
+           return gc.get(Calendar.DAY_OF_YEAR);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("APCalendar");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "Your answer should be 2: 2";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("APCalendar");
+       }
 
-        @Test
-        public void test2()
-        {
-            int answer = APCalendar.dayOfWeek(7, 2, 2020);
-            int expect = 4;
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "Your answer should be 2: 2";
 
-            boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(7, 2, 2020)");
-            assertTrue(passed);
-        }
+           boolean passed = getResults(expect, output, "Running main");
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test3()
-        {
-            int answer = APCalendar.dayOfWeek(2, 29, 2022);
-            int expect = 2;
+       @Test
+       public void test2()
+       {
+           int answer = APCalendar.dayOfWeek(7, 2, 2020);
+           int expect = 4;
 
-            boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(2, 29, 2022)");
-            assertTrue(passed);
-        }
-    }
+           boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(7, 2, 2020)");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void test3()
+       {
+           int answer = APCalendar.dayOfWeek(2, 29, 2022);
+           int expect = 2;
+
+           boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(2, 29, 2022)");
+           assertTrue(passed);
+       }
+   }
 
 In the 2019 AP exam, part B dayOfWeek method was worth 4 points using the rubric below. Did you receive all 4 points? In class, your teacher may have you grade each others' code.
 

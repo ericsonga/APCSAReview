@@ -40,17 +40,17 @@ This page is based on a POGIL activity from Helen Hu at that site.
    ~~~~
    public class ModModl1
    {
-      public static void main(String[] args)
-      {
-          System.out.println(9 % 4);
-          System.out.println(10 % 4);
-          System.out.println(11 % 4);
-          System.out.println(12 % 4);
-          System.out.println(13 % 4);
-          System.out.println(14 % 4);
-          System.out.println(15 % 4);
-          System.out.println(16 % 4);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(9 % 4);
+           System.out.println(10 % 4);
+           System.out.println(11 % 4);
+           System.out.println(12 % 4);
+           System.out.println(13 % 4);
+           System.out.println(14 % 4);
+           System.out.println(15 % 4);
+           System.out.println(16 % 4);
+       }
    }
 
 Look at the expressions in the code above and the output.  Then answer the following questions.
