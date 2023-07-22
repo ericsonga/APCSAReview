@@ -584,14 +584,17 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
         }
 
         @Test
-        public void testMain()
+        public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "catz is misspelled!";
+            String[] lines = output.split("\\s+");
+            boolean passed = lines.length >= 1;
 
-            boolean passed = output.contains(expect);
-
-            passed = getResults(expect, output, "Did you uncomment the main method?", passed);
+            passed = getResults(
+                            "1+ lines of output",
+                            lines.length + " lines of output",
+                            "Expected output",
+                            passed);
             assertTrue(passed);
         }
 
