@@ -19,63 +19,66 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-              // Add your code here
-
+                // Add your code here
 
             }
-         }
+        }
+
          ====
          import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
 
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
+         import org.junit.*;
 
-              @Test
-              public void test1()
-              {
-                  String output = getMethodOutput("main");
-                  String expect = "Any number between 1 and 50";
-                  int out = Integer.parseInt(output);
+         import java.io.*;
 
-                  boolean passed = (out > 0) && (out <= 50);
+         public class RunestoneTests extends CodeTestHelper
+         {
+             public RunestoneTests()
+             {
+                 super("Test1");
+             }
 
-                  passed = getResults(expect, output, "Running main", passed);
-                  assertTrue(passed);
-              }
+             @Test
+             public void test1()
+             {
+                 String output = getMethodOutput("main");
+                 String expect = "Any number between 1 and 50";
+                 int out = Integer.parseInt(output);
 
-              @Test
-              public void test2()
-              {
-                  boolean passed = checkCodeContains("Math.random()");
-                  assertTrue(passed);
-              }
-              @Test
-              public void test3()
-              {
-                  boolean passed = checkCodeContains("50");
-                  assertTrue(passed);
-              }
+                 boolean passed = (out > 0) && (out <= 50);
 
-              @Test
-              public void test4()
-              {
-                  boolean passed = checkCodeContains("+1");
-                  assertTrue(passed);
-              }
+                 passed = getResults(expect, output, "Running main", passed);
+                 assertTrue(passed);
+             }
 
-              @Test
-              public void test5()
-              {
-                  boolean passed = checkCodeContains("(int)");
-                  assertTrue(passed);
-              }
-          }
+             @Test
+             public void test2()
+             {
+                 boolean passed = checkCodeContains("Math.random()");
+                 assertTrue(passed);
+             }
 
+             @Test
+             public void test3()
+             {
+                 boolean passed = checkCodeContains("50");
+                 assertTrue(passed);
+             }
+
+             @Test
+             public void test4()
+             {
+                 boolean passed = checkCodeContains("+1");
+                 assertTrue(passed);
+             }
+
+             @Test
+             public void test5()
+             {
+                 boolean passed = checkCodeContains("(int)");
+                 assertTrue(passed);
+             }
+         }
 
 .. activecode:: u2_muc_wc2
         :language: java
@@ -88,47 +91,50 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-               String message = "I hope this works";
-               // Add your code here
-
+                String message = "I hope this works";
+                // Add your code here
 
             }
-         }
+        }
+
          ====
          import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
 
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
+         import org.junit.*;
 
-              @Test
-              public void test1()
-              {
-                  String output = getMethodOutput("main");
-                  String expect = "I ks";
+         import java.io.*;
 
-                  boolean passed = getResults(expect, output, "Running main");
-                  assertTrue(passed);
-              }
+         public class RunestoneTests extends CodeTestHelper
+         {
+             public RunestoneTests()
+             {
+                 super("Test1");
+             }
 
-              @Test
-              public void test2()
-              {
-                  boolean passed = checkCodeContains(".substring(0, 2)");
-                  assertTrue(passed);
-              }
+             @Test
+             public void test1()
+             {
+                 String output = getMethodOutput("main");
+                 String expect = "I ks";
 
-              @Test
-              public void test3()
-              {
-                  boolean passed = checkCodeContains(".length()");
-                  assertTrue(passed);
-              }
-          }
+                 boolean passed = getResults(expect, output, "Running main");
+                 assertTrue(passed);
+             }
+
+             @Test
+             public void test2()
+             {
+                 boolean passed = checkCodeContains(".substring(0, 2)");
+                 assertTrue(passed);
+             }
+
+             @Test
+             public void test3()
+             {
+                 boolean passed = checkCodeContains(".length()");
+                 assertTrue(passed);
+             }
+         }
 
 .. activecode:: u2_muc_wc3
         :language: java
@@ -141,36 +147,39 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-                 String first = "Gerald";
-                 String middle = "Foster";
-                 String last= "Jones";
+                String first = "Gerald";
+                String middle = "Foster";
+                String last = "Jones";
 
-                 // Add your code here
-
+                // Add your code here
 
             }
-         }
+        }
+
          ====
          import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
 
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
+         import org.junit.*;
 
-                @Test
-                public void test1()
-                {
-                    String output = getMethodOutput("main");
-                    String expect = "gfj";
+         import java.io.*;
 
-                    boolean passed = getResults(expect, output, "Running main");
-                    assertTrue(passed);
-                }
-          }
+         public class RunestoneTests extends CodeTestHelper
+         {
+             public RunestoneTests()
+             {
+                 super("Test1");
+             }
+
+             @Test
+             public void test1()
+             {
+                 String output = getMethodOutput("main");
+                 String expect = "gfj";
+
+                 boolean passed = getResults(expect, output, "Running main");
+                 assertTrue(passed);
+             }
+         }
 
 .. activecode:: u2_muc_wc4
         :language: java
@@ -183,36 +192,38 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-                 String message = "Don't Pokemon and drive!";
+                String message = "Don't Pokemon and drive!";
 
-                 // Add your code here
-
+                // Add your code here
 
             }
-         }
+        }
+
          ====
          import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
 
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
+         import org.junit.*;
 
-                @Test
-                public void test1()
-                {
-                    String output = getMethodOutput("main");
-                    String message = "Don't Pokemon and drive!";
-                    String expect = message.toUpperCase();
+         import java.io.*;
 
-                    boolean passed = getResults(expect, output, "Running main");
-                    assertTrue(passed);
-                }
-          }
+         public class RunestoneTests extends CodeTestHelper
+         {
+             public RunestoneTests()
+             {
+                 super("Test1");
+             }
 
+             @Test
+             public void test1()
+             {
+                 String output = getMethodOutput("main");
+                 String message = "Don't Pokemon and drive!";
+                 String expect = message.toUpperCase();
+
+                 boolean passed = getResults(expect, output, "Running main");
+                 assertTrue(passed);
+             }
+         }
 
 .. activecode:: u2_muc_wc5
         :language: java
@@ -225,34 +236,37 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-                 String message = "Have a nice day!";
+                String message = "Have a nice day!";
 
-                 // Add your code here
-
+                // Add your code here
 
             }
-         }
+        }
+
          ====
          import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
 
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
+         import org.junit.*;
 
-                @Test
-                public void test1()
-                {
-                    String output = getMethodOutput("main");
-                    String expect = "HAV";
+         import java.io.*;
 
-                    boolean passed = getResults(expect, output, "Running main");
-                    assertTrue(passed);
-                }
-          }
+         public class RunestoneTests extends CodeTestHelper
+         {
+             public RunestoneTests()
+             {
+                 super("Test1");
+             }
+
+             @Test
+             public void test1()
+             {
+                 String output = getMethodOutput("main");
+                 String expect = "HAV";
+
+                 boolean passed = getResults(expect, output, "Running main");
+                 assertTrue(passed);
+             }
+         }
 
 .. activecode:: u2_muc_wc6
         :language: java
@@ -265,32 +279,35 @@ This is the write code problems associated with the mixed up code problems.
         {
             public static void main(String[] args)
             {
-                 String message = "Have a nice day!";
+                String message = "Have a nice day!";
 
-                 // Add your code here
-
+                // Add your code here
 
             }
-         }
+        }
+
          ====
          import static org.junit.Assert.*;
-          import org.junit.*;
-          import java.io.*;
 
-          public class RunestoneTests extends CodeTestHelper
-          {
-              public RunestoneTests() {
-                  super("Test1");
-              }
+         import org.junit.*;
 
-                @Test
-                public void test1()
-                {
-                    String output = getMethodOutput("main");
-                    String expect = "nice day";
+         import java.io.*;
 
-                    boolean passed = getResults(expect, output, "Running main");
-                    assertTrue(passed);
-                }
-          }
+         public class RunestoneTests extends CodeTestHelper
+         {
+             public RunestoneTests()
+             {
+                 super("Test1");
+             }
+
+             @Test
+             public void test1()
+             {
+                 String output = getMethodOutput("main");
+                 String expect = "nice day";
+
+                 boolean passed = getResults(expect, output, "Running main");
+                 assertTrue(passed);
+             }
+         }
 

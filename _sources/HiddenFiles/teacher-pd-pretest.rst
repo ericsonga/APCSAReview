@@ -198,29 +198,29 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
                  public class Liquid
                  {
-                   private double freezingPoint;
-                   private double currentTemp;
+                     private double freezingPoint;
+                     private double currentTemp;
 
-                   public Liquid()
-                   {
-                     freezingPoint = 0;
-                     currentTemp = 0;
-                   }
+                     public Liquid()
+                     {
+                         freezingPoint = 0;
+                         currentTemp = 0;
+                     }
 
-                   public void lowerTemp(double degrees)
-                   {
-                     currentTemp -= degrees;
-                   }
+                     public void lowerTemp(double degrees)
+                     {
+                         currentTemp -= degrees;
+                     }
 
-                   public void raiseTemp(double degrees)
-                   {
-                     currentTemp += degrees;
-                   }
+                     public void raiseTemp(double degrees)
+                     {
+                         currentTemp += degrees;
+                     }
 
-                   void freeze()
-                   {
-                     currentTemp = freezingPoint;
-                   }
+                     void freeze()
+                     {
+                         currentTemp = freezingPoint;
+                     }
                  }
 
         Assume that the following Liquid object has been declared.
@@ -470,7 +470,7 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
                public class Cat
                {
-                 /* missing code */
+                   /* missing code */
                }
 
           Which of the following replacements for the missing code is the most appropriate implementation of a class Cat which contains attributes for the cat’s name and age and a constructor?
@@ -587,12 +587,12 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
                public class Student
                {
-                    private int id;
+                   private int id;
 
-                    public void getId()
-                    {
+                   public void getId()
+                   {
                        return id;
-                    }
+                   }
                }
 
           The accessor method getId is intended to return the id of a Student object. Which of the following best explains why the class does not compile?
