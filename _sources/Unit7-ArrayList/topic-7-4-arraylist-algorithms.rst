@@ -135,42 +135,43 @@ You can step through the code above by clicking on the following `Example2 <http
 
    public class ArrayListLoop
    {
-    public static void main(String[] args)
-    {
-      ArrayList<Integer> arr = new ArrayList<Integer>();
-      for(int i=0; i < 5; i++)
-      {
-         arr.add(i);
-
-      }
-      for(int i=0; i < arr.size(); i++)
-      {
-         if (i % 2 == 0)
-         {
-            System.out.println("Removing element " + i + " : " + arr.get(i));
-            arr.remove(i);
-         }
-      }
-      System.out.println(arr);
-    }
+       public static void main(String[] args)
+       {
+           ArrayList<Integer> arr = new ArrayList<Integer>();
+           for (int i = 0; i < 5; i++)
+           {
+               arr.add(i);
+           }
+           for (int i = 0; i < arr.size(); i++)
+           {
+               if (i % 2 == 0)
+               {
+                   System.out.println("Removing element " + i + " : " + arr.get(i));
+                   arr.remove(i);
+               }
+           }
+           System.out.println(arr);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Removing element 0: 0\nRemoving element 2: 3\n[1, 2, 4]";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Removing element 0: 0\nRemoving element 2: 3\n[1, 2, 4]";
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -186,30 +187,33 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
    ~~~~
    import java.util.*;
 
-    public class ParallelTests
-    {
-        public static void main(String[] args)
-        {
-            ArrayList<Integer> test1Grades = new ArrayList<Integer>();
-            ArrayList<Integer> test2Grades = new ArrayList<Integer>();
-            test1Grades.add(100);
-            test2Grades.add(100);
-            test1Grades.add(80);
-            test2Grades.add(70);
-            test1Grades.add(70);
-            test2Grades.add(90);
-            double total = 0;
-            for (int i = 0; i < test1Grades.size(); i++)
-            {
-                total +=  test1Grades.get(i) + test2Grades.get(i);
-            }
-            int numberOfGrades = test1Grades.size() * 2;
-            System.out.println("Average over two tests: " + total/numberOfGrades);
-        }
-    }
+   public class ParallelTests
+   {
+       public static void main(String[] args)
+       {
+           ArrayList<Integer> test1Grades = new ArrayList<Integer>();
+           ArrayList<Integer> test2Grades = new ArrayList<Integer>();
+           test1Grades.add(100);
+           test2Grades.add(100);
+           test1Grades.add(80);
+           test2Grades.add(70);
+           test1Grades.add(70);
+           test2Grades.add(90);
+           double total = 0;
+           for (int i = 0; i < test1Grades.size(); i++)
+           {
+               total += test1Grades.get(i) + test2Grades.get(i);
+           }
+           int numberOfGrades = test1Grades.size() * 2;
+           System.out.println("Average over two tests: " + total / numberOfGrades);
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -223,7 +227,6 @@ Some algorithms require multiple String, array, or ArrayList objects to be trave
             assertTrue(passed);
         }
     }
-
 
 We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. These will get easier with practice!
 

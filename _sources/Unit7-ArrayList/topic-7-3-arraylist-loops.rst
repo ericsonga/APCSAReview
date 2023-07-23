@@ -58,7 +58,8 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
 
    What does the following code do? Guess before you run it. Then, add another enhanced for each loop that computes the product of all the elements in myList by multiplying them. Print out the product after the new loop.
    ~~~~
-   import java.util.*;  // import all classes in this package.
+   import java.util.*; // import all classes in this package.
+
    public class Test1
    {
        public static void main(String[] args)
@@ -68,9 +69,9 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
            myList.add(30);
            myList.add(20);
            int total = 0;
-           for (Integer value: myList)
+           for (Integer value : myList)
            {
-                total += value;
+               total += value;
            }
            System.out.println("Sum of all elements: " + total);
 
@@ -79,41 +80,46 @@ You can use a enhanced for-each loop to traverse through all of the items in a l
 
        }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testExpected() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "100";
-            boolean passed = output.contains(expect);
-            getResults(expect, output, "Prints out sum", passed);
-            assertTrue(passed);
-        }
-          @Test
-        public void testProduct() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "30000";
-            boolean passed = output.contains(expect);
-            getResults(expect, output, "Prints out product", passed);
-            assertTrue(passed);
-        }
-        @Test
-        public void countForLoops()
-        {
-            String code = removeSpaces(getCode());
-            int count = countOccurences(code,"for(Integer");
-            boolean passed = count >= 2;
-            getResults("2", count+"", "Number of for each loops", passed);
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testExpected() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "100";
+           boolean passed = output.contains(expect);
+           getResults(expect, output, "Prints out sum", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testProduct() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "30000";
+           boolean passed = output.contains(expect);
+           getResults(expect, output, "Prints out product", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void countForLoops()
+       {
+           String code = removeSpaces(getCode());
+           int count = countOccurences(code, "for(Integer");
+           boolean passed = count >= 2;
+           getResults("2", count + "", "Number of for each loops", passed);
+           assertTrue(passed);
+       }
+   }
 
 For Loop
 ----------------------
@@ -133,6 +139,7 @@ If you try to use an index that is outside of the range of 0 to the number of el
    The following code will throw an ArrayIndexOutOfBoundsException. Can you fix it?
    ~~~~
    import java.util.*;
+
    public class TestForLoop
    {
        public static void main(String[] args)
@@ -142,36 +149,39 @@ If you try to use an index that is outside of the range of 0 to the number of el
            myList.add(30);
            myList.add(20);
            int total = 0;
-           for (int i=0; i <= myList.size(); i++)
+           for (int i = 0; i <= myList.size(); i++)
            {
                total = total + myList.get(i);
            }
            System.out.println(total);
        }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "100";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-        @Test
-        public void fixedCode()
-        {
-          boolean passed = checkCodeContains("fixed test in loop", "i < myList.size()");
-          assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "100";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void fixedCode()
+       {
+           boolean passed = checkCodeContains("fixed test in loop", "i < myList.size()");
+           assertTrue(passed);
+       }
+   }
 
 While Loop
 ----------------------
@@ -231,21 +241,22 @@ The example below demonstrates a while loop and an object-oriented approach wher
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "[Amun, Ethan, Donnie, Ethan]\nAfter removing Ethan: [Amun, Donnie]";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
+   import org.junit.*;
 
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "[Amun, Ethan, Donnie, Ethan]\nAfter removing Ethan: [Amun, Donnie]";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 Be careful when you remove items from a list as you loop through it.  Remember that removing an item from a list will shift the remaining items to the left.   Notice that the method above only increments the current index if an item was not removed from the list.  If you increment the index in all cases you will miss checking some of the elements since the rest of the items shift left when you remove one.
 
@@ -371,59 +382,63 @@ You can put any kind of Objects into an ArrayList. For example, here is an Array
 
   public class StudentList
   {
-     // main method for testing
-     public static void main(String[] args)
-     {
-         ArrayList<Student> roster = new ArrayList<Student>();
-         roster.add(new Student("Skyler", "skyler@sky.com", 123456));
-         roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
-         // Replace this with a for each loop that prints out each student on a separate line
-         System.out.println(roster);
-     }
-   }
+      // main method for testing
+      public static void main(String[] args)
+      {
+          ArrayList<Student> roster = new ArrayList<Student>();
+          roster.add(new Student("Skyler", "skyler@sky.com", 123456));
+          roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
+          // Replace this with a for each loop that prints out each student on a
+          // separate line
+          System.out.println(roster);
+      }
+  }
 
   class Student
   {
-     private String name;
-     private String email;
-     private int id;
+      private String name;
+      private String email;
+      private int id;
 
-     public Student(String initName, String initEmail, int initId)
-     {
-        name = initName;
-        email = initEmail;
-        id = initId;
-     }
+      public Student(String initName, String initEmail, int initId)
+      {
+          name = initName;
+          email = initEmail;
+          id = initId;
+      }
 
-     // toString() method
-     public String toString()
-     {
-       return id + ": " + name + ", " + email;
-     }
+      // toString() method
+      public String toString()
+      {
+          return id + ": " + name + ", " + email;
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "123456: Skyler, skyler@sky.com\n789012: Ayanna, ayanna@gmail.com";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-         @Test
-        public void loopCode()
-        {
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "123456: Skyler, skyler@sky.com\n789012: Ayanna, ayanna@gmail.com";
+          boolean passed = getResults(expect, output, "Expected output from main");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void loopCode()
+      {
           boolean passed = checkCodeContains("for loop", "for");
           assertTrue(passed);
-        }
-    }
-
+      }
+  }
 
 |Groupwork| Programming Challenge : FRQ Word Pairs
 ---------------------------------------------------
@@ -440,21 +455,29 @@ You are given a class called WordPair that can store pairs of words.
 
 .. code-block:: java
 
-    class WordPair {
+    class WordPair
+    {
         private String word1;
         private String word2;
 
-        public WordPair(String w1, String w2) {
+        public WordPair(String w1, String w2)
+        {
             word1 = w1;
             word2 = w2;
         }
-        public String getFirst() {
+
+        public String getFirst()
+        {
             return word1;
         }
-        public String getSecond() {
+
+        public String getSecond()
+        {
             return word2;
         }
-        public String toString() {
+
+        public String toString()
+        {
             return "(" + word1 + ", " + word2 + ")";
         }
     }
@@ -469,44 +492,56 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
    ~~~~
    import java.util.*;
 
-   public class WordPairTest {
-        public static void main(String[] args)
-        {
-            // Create an ArrayList of WordPair objects called pairs
+   public class WordPairTest
+   {
+       public static void main(String[] args)
+       {
+           // Create an ArrayList of WordPair objects called pairs
 
+           pairs.add(new WordPair("hi", "there"));
+           pairs.add(new WordPair("hi", "bye"));
+           System.out.println(pairs);
+       }
+   }
 
-            pairs.add(new WordPair("hi","there"));
-            pairs.add(new WordPair("hi","bye"));
-            System.out.println(pairs);
-        }
-    }
+   class WordPair
+   {
+       private String word1;
+       private String word2;
 
-    class WordPair {
-        private String word1;
-        private String word2;
+       public WordPair(String w1, String w2)
+       {
+           word1 = w1;
+           word2 = w2;
+       }
 
-        public WordPair(String w1, String w2) {
-            word1 = w1;
-            word2 = w2;
-        }
-        public String getFirst() {
-            return word1;
-        }
-        public String getSecond() {
-            return word2;
-        }
-        public String toString() {
-            return "(" + word1 + ", " + word2 + ")";
-        }
-    }
+       public String getFirst()
+       {
+           return word1;
+       }
+
+       public String getSecond()
+       {
+           return word2;
+       }
+
+       public String toString()
+       {
+           return "(" + word1 + ", " + word2 + ")";
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("WordPairTest");
         }
 
@@ -518,14 +553,14 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
+
         @Test
         public void hasArrayList()
         {
-          boolean passed = checkCodeContains("ArrayList declaration", "ArrayList<WordPair>");
-          assertTrue(passed);
+            boolean passed = checkCodeContains("ArrayList declaration", "ArrayList<WordPair>");
+            assertTrue(passed);
         }
     }
-
 
 .. figure:: Figures/wordpairs.png
     :width: 200px
@@ -551,67 +586,79 @@ In the class WordPairsList below, you will write the constructor which takes the
    ~~~~
    import java.util.*;
 
-    public class WordPairsList
-    {
-        private ArrayList<WordPair> allPairs;
+   public class WordPairsList
+   {
+       private ArrayList<WordPair> allPairs;
 
-        public WordPairsList(String[] words)
-        {
-            // WRITE YOUR CODE HERE
-            // initialize allPairs to an empty ArrayList of WordPair objects
+       public WordPairsList(String[] words)
+       {
+           // WRITE YOUR CODE HERE
+           // initialize allPairs to an empty ArrayList of WordPair objects
 
-            // nested loops through the words array to add each pair to allPairs
+           // nested loops through the words array to add each pair to allPairs
 
+       }
 
-        }
+       public int numMatches()
+       {
+           // Write the code for the second part described below
+           return 0;
+       }
 
-        public int numMatches()
-        {
-            //Write the code for the second part described below
-            return 0;
-        }
+       public String toString()
+       {
+           return allPairs.toString();
+       }
 
-        public String toString() {
-            return allPairs.toString();
-        }
+       public static void main(String[] args)
+       {
+           String[] words = {"Hi", "there", "Tyler", "Sam"};
+           WordPairsList list = new WordPairsList(words);
+           System.out.println(list);
+           // For second part below, uncomment this test:
+           // System.out.println("The number of matched pairs is: " +
+           // list.numMatches());
+       }
+   }
 
+   class WordPair
+   {
+       private String word1;
+       private String word2;
 
-        public static void main(String[] args)
-        {
-            String[] words = {"Hi", "there", "Tyler", "Sam"};
-            WordPairsList list = new WordPairsList(words);
-            System.out.println(list);
-            // For second part below, uncomment this test:
-            //System.out.println("The number of matched pairs is: " + list.numMatches());
-        }
-    }
+       public WordPair(String w1, String w2)
+       {
+           word1 = w1;
+           word2 = w2;
+       }
 
-    class WordPair {
-        private String word1;
-        private String word2;
+       public String getFirst()
+       {
+           return word1;
+       }
 
-        public WordPair(String w1, String w2) {
-            word1 = w1;
-            word2 = w2;
-        }
-        public String getFirst() {
-            return word1;
-        }
-        public String getSecond() {
-            return word2;
-        }
-        public String toString() {
-            return "(" + word1 + ", " + word2 + ")";
-        }
-    }
+       public String getSecond()
+       {
+           return word2;
+       }
+
+       public String toString()
+       {
+           return "(" + word1 + ", " + word2 + ")";
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("WordPairsList");
         }
 
@@ -619,13 +666,13 @@ In the class WordPairsList below, you will write the constructor which takes the
         public void test1()
         {
             String output = getMethodOutput("main");
-            String expect = "[(Hi, there), (Hi, Tyler), (Hi, Sam), (there, Tyler), (there, Sam), (Tyler, Sam)]";
+            String expect =
+                    "[(Hi, there), (Hi, Tyler), (Hi, Sam), (there, Tyler), (there, Sam), (Tyler, Sam)]";
 
             boolean passed = output.contains(expect);
 
             String[] lines = output.split("\n");
-            if (lines.length > 1)
-                output = lines[0];
+            if (lines.length > 1) output = lines[0];
 
             getResults(expect, output, "Part 1 - Add all word pairs from main()", passed);
             assertTrue(passed);
@@ -639,33 +686,41 @@ In the class WordPairsList below, you will write the constructor which takes the
 
             boolean passed = output.contains(expect);
             String[] lines = output.split("\n");
-            if (lines.length > 1)
-                output = lines[1];
+            if (lines.length > 1) output = lines[1];
 
             getResults(expect, output, "Part 2 - call to numMatches from main()", passed);
             assertTrue(passed);
         }
 
         @Test
-        public void test3() {
+        public void test3()
+        {
             String[] words = {"Hi", "Hi", "Test", "Test"};
             WordPairsList list = new WordPairsList(words);
             String output = list.toString();
             String expect = "[(Hi, Hi), (Hi, Test), (Hi, Test), (Hi, Test), (Hi, Test), (Test, Test)]";
 
-            boolean passed = getResults(expect, output, "Part 1 - Add all word pairs with {\"Hi\", \"Hi\", \"Test\", \"Test\"}");
+            boolean passed =
+                    getResults(
+                            expect,
+                            output,
+                            "Part 1 - Add all word pairs with {\"Hi\", \"Hi\", \"Test\", \"Test\"}");
             assertTrue(passed);
-
         }
 
         @Test
-        public void test4() {
+        public void test4()
+        {
             String[] words = {"Hi", "Hi", "Test", "Test"};
             WordPairsList list = new WordPairsList(words);
             String output = "The number of matched pairs is: " + list.numMatches();
             String expect = "The number of matched pairs is: 2";
 
-            boolean passed = getResults(expect, output, "Part 2 - numMatches() with {\"Hi\", \"Hi\", \"Test\", \"Test\"}");
+            boolean passed =
+                    getResults(
+                            expect,
+                            output,
+                            "Part 2 - numMatches() with {\"Hi\", \"Hi\", \"Test\", \"Test\"}");
             assertTrue(passed);
         }
     }

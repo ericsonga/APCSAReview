@@ -85,7 +85,7 @@ You can import just the classes you need from a package as shown below.  Just pr
 
 .. code-block:: java
 
-  import java.util.ArrayList; // import just the ArrayList class
+  // import just the ArrayList class
 
 .. index::
    single: package
@@ -149,18 +149,22 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
    {
        public static void main(String[] args)
        {
-          ArrayList<String> nameList = null;
-          System.out.println(nameList);
+           ArrayList<String> nameList = null;
+           System.out.println(nameList);
        }
-    }
+   }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("ArrayListDeclare");
         }
 
@@ -173,10 +177,7 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
             boolean passed = getResults(expect, output, "main()", true);
             assertTrue(passed);
         }
-
     }
-
-
 
 Declaring a ArrayList doesn't actually create a ArrayList. It only creates a variable that can refer to a ArrayList.  To actually create a ArrayList use ``new ArrayList<Type>()``. If you leave off the ``<Type>`` it will default to ``Object``.
 
@@ -190,38 +191,42 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
    The following code demonstrates a NullPointerException. Change the list2 declaration so that it creates a new Arraylist to remove the NullPointerException.
    ~~~~
    import java.util.*; // import needed for ArrayList
+
    public class ArrayListCreateStr
    {
        public static void main(String[] args)
        {
-          ArrayList<String> nameList = new ArrayList<String>();
-          System.out.println("The size of nameList is: " + nameList.size());
-          ArrayList<String> list2 = null;
-          System.out.println("The size of list2 is: " + list2.size());
+           ArrayList<String> nameList = new ArrayList<String>();
+           System.out.println("The size of nameList is: " + nameList.size());
+           ArrayList<String> list2 = null;
+           System.out.println("The size of list2 is: " + list2.size());
        }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("ArrayListCreateStr");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "The size of nameList is: 0\nThe size of list2 is: 0";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()", true);
-            assertTrue(passed);
-        }
-     }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("ArrayListCreateStr");
+       }
 
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "The size of nameList is: 0\nThe size of list2 is: 0";
+
+           boolean passed = getResults(expect, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 You can also create ArrayLists of integer values.  However, you have to use ``Integer`` as the type because ArrayLists can only hold objects, not primitive values.  All primitive types must be **wrapped** in objects before they are added to an ArrayList.  For example, ``int`` values can be wrapped in ``Integer`` objects, ``double`` values can be wrapped in ``Double`` objects. You can actually put in any kind of Objects in an ArrayList, even for a class that you wrote in Unit 5 like Student or Person or Pet.
 
@@ -233,36 +238,40 @@ You can also create ArrayLists of integer values.  However, you have to use ``In
    Here's an example of a Integer ArrayList.
    ~~~~
    import java.util.*; // import everything at this level
+
    public class ArrayListCreateInt
    {
        public static void main(String[] args)
        {
-          ArrayList<Integer> numList = new ArrayList<Integer>();
-          System.out.println(numList.size());
+           ArrayList<Integer> numList = new ArrayList<Integer>();
+           System.out.println(numList.size());
        }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("ArrayListCreateInt");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "0";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("ArrayListCreateInt");
+       }
 
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "0";
+
+           boolean passed = getResults(expect, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check your understanding**
 
@@ -293,36 +302,41 @@ that is automatically called to print the list in a nice format.
    Example code creating an ArrayList from an array.
    ~~~~
    import java.util.*;
+
    public class ArrayListFromArray
    {
        public static void main(String[] args)
        {
-          String[] names = {"Dakota", "Madison", "Brooklyn"};
-          ArrayList<String> namesList = new ArrayList<String>(Arrays.asList(names));
-          System.out.println(namesList);
+           String[] names = {"Dakota", "Madison", "Brooklyn"};
+           ArrayList<String> namesList = new ArrayList<String>(Arrays.asList(names));
+           System.out.println(namesList);
        }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("ArrayListFromArray");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "[Dakota, Madison, Brooklyn]";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("ArrayListFromArray");
+       }
+
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "[Dakota, Madison, Brooklyn]";
+
+           boolean passed = getResults(expect, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 |CodingEx| **Coding Exercise**
 
@@ -335,51 +349,59 @@ You can add values to an ArrayList by using its **add** method, described in det
    Can you add another item to the shopping list?
    ~~~~
    import java.util.*;
+
    public class Shopping
    {
-      public static void main(String[] args)
-      {
-          ArrayList<String> shoppingList = new ArrayList<String>();
-          System.out.println("Size: " + shoppingList.size());
-          shoppingList.add("carrots");
-          System.out.println(shoppingList);
-          shoppingList.add("bread");
-          System.out.println(shoppingList);
-          shoppingList.add("chocolate");
-          System.out.println(shoppingList);
-          System.out.println("Size: " + shoppingList.size());
-          ArrayList<Integer> quantities = new ArrayList<Integer>();
-          quantities.add(2);
-          quantities.add(4);
-          System.out.println(quantities);
-     }
+       public static void main(String[] args)
+       {
+           ArrayList<String> shoppingList = new ArrayList<String>();
+           System.out.println("Size: " + shoppingList.size());
+           shoppingList.add("carrots");
+           System.out.println(shoppingList);
+           shoppingList.add("bread");
+           System.out.println(shoppingList);
+           shoppingList.add("chocolate");
+           System.out.println(shoppingList);
+           System.out.println("Size: " + shoppingList.size());
+           ArrayList<Integer> quantities = new ArrayList<Integer>();
+           quantities.add(2);
+           quantities.add(4);
+           System.out.println(quantities);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Shopping");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "Size: 0\n[carrots]\n[carrots, bread]\n[carrots, bread, chocolate]\nSize: 3\n[2, 4]";
+   import java.io.*;
 
-            boolean passed = !output.equals(expect);
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Shopping");
+       }
 
-            passed = getResults(expect, output, "Changed code", passed);
-            assertTrue(passed);
-        }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "Size: 0\n"
+                       + "[carrots]\n"
+                       + "[carrots, bread]\n"
+                       + "[carrots, bread, chocolate]\n"
+                       + "Size: 3\n"
+                       + "[2, 4]";
 
-    }
+           boolean passed = !output.equals(expect);
 
-
+           passed = getResults(expect, output, "Changed code", passed);
+           assertTrue(passed);
+       }
+   }
 
 |Groupwork| Programming Challenge : FRQ Digits
 ---------------------------------------------------
@@ -401,35 +423,40 @@ First, let's discuss how to break up a number into its digits. Try the code belo
    ~~~~
    public class DivideBy10
    {
-      public static void main(String[] args)
-      {
-         int number = 154;
-         System.out.println(number / 10);
-         System.out.println(number % 10);
-      }
+       public static void main(String[] args)
+       {
+           int number = 154;
+           System.out.println(number / 10);
+           System.out.println(number % 10);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("DivideBy10");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String origCode = "public class DivideBy10{public static void main(String[] args){int number = 154;System.out.println(number / 10);System.out.println(number % 10);}}";
+   import java.io.*;
 
-            boolean changed = codeChanged(origCode);
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("DivideBy10");
+       }
 
-            assertTrue(changed);
+       @Test
+       public void test1()
+       {
+           String origCode =
+                   "public class DivideBy10{public static void main(String[] args){int number ="
+                       + " 154;System.out.println(number / 10);System.out.println(number % 10);}}";
 
-        }
-    }
+           boolean changed = codeChanged(origCode);
+
+           assertTrue(changed);
+       }
+   }
 
 We can use a while loop to print out each digit in reverse order starting from the right (4, 5, 1 for the number 154) while dividing it by 10. You can try it in the active code above. Here is the pseudocode:
 
@@ -450,64 +477,68 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
 
    public class Digits
    {
-      /** A list of digits */
-      private ArrayList<Integer> digitList;
+       /** A list of digits */
+       private ArrayList<Integer> digitList;
 
-      /** Constructs a list of digits from the given number */
-      public Digits(int number)
-      {
-          // initialize digitList to an empty ArrayList of Integers
+       /** Constructs a list of digits from the given number */
+       public Digits(int number)
+       {
+           // initialize digitList to an empty ArrayList of Integers
 
-          // Use a while loop to add each digit in number to digitList
+           // Use a while loop to add each digit in number to digitList
 
-          //Use Collections.reverse(digitList); to reverse the digits
+           // Use Collections.reverse(digitList); to reverse the digits
 
-      }
+       }
 
-      /** returns the string representation of the digits list */
-      public String toString()
-      {
-         return digitList.toString();
-      }
+       /** returns the string representation of the digits list */
+       public String toString()
+       {
+           return digitList.toString();
+       }
 
-      public static void main(String[] args)
-      {
-         Digits d1 = new Digits(154);
-         System.out.println(d1);
-      }
+       public static void main(String[] args)
+       {
+           Digits d1 = new Digits(154);
+           System.out.println(d1);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Digits");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "[1, 5, 4]";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "Digits(154)");
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Digits");
+       }
 
-        @Test
-        public void test2()
-        {
-            Digits test = new Digits(123456);
-            String output = test.toString();
-            String expect = "[1, 2, 3, 4, 5, 6]";
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "[1, 5, 4]";
 
-            boolean passed = getResults(expect, output, "Digits(123456)");
-            assertTrue(passed);
-        }
-    }
+           boolean passed = getResults(expect, output, "Digits(154)");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test2()
+       {
+           Digits test = new Digits(123456);
+           String output = test.toString();
+           String expect = "[1, 2, 3, 4, 5, 6]";
+
+           boolean passed = getResults(expect, output, "Digits(123456)");
+           assertTrue(passed);
+       }
+   }
 
 Summary
 -----------

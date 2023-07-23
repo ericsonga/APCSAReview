@@ -32,7 +32,7 @@ These problems are harder than those you will see on the AP CSA exam.
           {
               int i, j;
               String key;
-              String[] letters = {"E","D","C","B","A","B"};
+              String[] letters = {"E", "D", "C", "B", "A", "B"};
               for (j = 1; j < letters.length; j++)
               {
                   key = letters[j];
@@ -78,15 +78,15 @@ You can step through the code above by clicking on the following link `Ex-12-8-1
           public static void main(String[] args)
           {
               int count = 0;
-              int[] numbers = {-5,4,-5,3,-2,-4};
+              int[] numbers = {-5, 4, -5, 3, -2, -4};
               for (int j = 0; j < numbers.length; j++)
               {
-                  if(numbers[j] < 0 && numbers[j] % 2 != 0)
+                  if (numbers[j] < 0 && numbers[j] % 2 != 0)
                   {
                       count++;
                   }
               }
-          System.out.println(count);
+              System.out.println(count);
           }
       }
 
@@ -118,13 +118,13 @@ You can step through the code above by clicking on the following link `Ex-12-8-2
              String subj2 = null;
              for (int j = 0; j < guestList.length; j++)
              {
-                 subj1 = guestList[j].substring(0,1);
-                 subj2 = guestList[j].substring(guestList[j].length()-1);
-                 if(subj1.equalsIgnoreCase(subj2))
+                 subj1 = guestList[j].substring(0, 1);
+                 subj2 = guestList[j].substring(guestList[j].length() - 1);
+                 if (subj1.equalsIgnoreCase(subj2))
                  {
                      count--;
                  }
-                 else if(subj1.equalsIgnoreCase("a"))
+                 else if (subj1.equalsIgnoreCase("a"))
                  {
                      count++;
                  }
@@ -132,7 +132,6 @@ You can step through the code above by clicking on the following link `Ex-12-8-2
              System.out.println(count);
          }
      }
-
 
 You can step through the code above by clicking on the following link `Ex-12-8-3 <https://goo.gl/MGXSF2>`_.
 
@@ -156,10 +155,10 @@ You can step through the code above by clicking on the following link `Ex-12-8-3
      {
          public static void main(String[] args)
          {
-             int[] arr = {8,7,7,3,4,1};
+             int[] arr = {8, 7, 7, 3, 4, 1};
              for (int i = 0; i < arr.length; i++)
              {
-                 if(arr[i] % 2 == 0)
+                 if (arr[i] % 2 == 0)
                  {
                      int temp = arr[0];
                      arr[0] = arr[i];
@@ -195,20 +194,19 @@ You can step through the code above by clicking on the following link `Ex-12-8-4
      {
          private static boolean check(int n)
          {
-             for(int i = 2; i < n; i++)
+             for (int i = 2; i < n; i++)
              {
-                 if(n % i == 0)
-                     return false;
+                 if (n % i == 0) return false;
              }
              return true;
          }
 
          public static void main(String[] args)
          {
-             int[] arr = {5,3,2,9,3,4};
+             int[] arr = {5, 3, 2, 9, 3, 4};
              for (int i = 0; i < arr.length; i++)
              {
-                 if(check(arr[i]))
+                 if (check(arr[i]))
                  {
                      int temp = arr[0];
                      arr[0] = arr[i];
@@ -242,32 +240,31 @@ You can step through the code above by clicking on the following link `Ex-12-8-5
 
       public class GradeSort
       {
-         public static void main(String[] args)
-         {
-            String[] names = {"Anna","John","Billy","Bob","Roger","Dominic"};
-            int[] grades = {93,100,67,84,86, 93};
-            int i, j, first, temp;
-            String temp2;
-            for (i = grades.length - 1; i > 0; i--)
-            {
-                first = 0;
-                for (j = 1; j <= i; j++)
-                {
-                    if (grades[j] < grades[first])
-                        first = j;
-                }
-                temp = grades[first];
-                grades[first] = grades[i];
-                grades[i] = temp;
-                temp2 = names[first];
-                names[first] = names[i];
-                names[i] = temp2;
-            }
-            for (int t = 0; t < names.length; t++)
-            {
-                System.out.print((names[t]) + " ");
-            }
-         }
+          public static void main(String[] args)
+          {
+              String[] names = {"Anna", "John", "Billy", "Bob", "Roger", "Dominic"};
+              int[] grades = {93, 100, 67, 84, 86, 93};
+              int i, j, first, temp;
+              String temp2;
+              for (i = grades.length - 1; i > 0; i--)
+              {
+                  first = 0;
+                  for (j = 1; j <= i; j++)
+                  {
+                      if (grades[j] < grades[first]) first = j;
+                  }
+                  temp = grades[first];
+                  grades[first] = grades[i];
+                  grades[i] = temp;
+                  temp2 = names[first];
+                  names[first] = names[i];
+                  names[i] = temp2;
+              }
+              for (int t = 0; t < names.length; t++)
+              {
+                  System.out.print((names[t]) + " ");
+              }
+          }
       }
 
 You can step through the code above by clicking on the following link `Ex-12-8-6 <https://goo.gl/rXzB1c>`_.
@@ -292,19 +289,19 @@ You can step through the code above by clicking on the following link `Ex-12-8-6
      {
          private static boolean divCheck(int n)
          {
-             if(n % 2 == 0 || n % 3 == 0)
+             if (n % 2 == 0 || n % 3 == 0)
              {
-               return true;
+                 return true;
              }
              return false;
          }
 
          public static void main(String[] args)
          {
-             int[] arr = {6,7,17,3,2,9,1,5};
+             int[] arr = {6, 7, 17, 3, 2, 9, 1, 5};
              for (int i = 0; i < arr.length; i++)
              {
-                 if(divCheck(arr[i]))
+                 if (divCheck(arr[i]))
                  {
                      int temp = arr[0];
                      arr[0] = arr[i];
