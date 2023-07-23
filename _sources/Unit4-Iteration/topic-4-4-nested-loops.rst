@@ -97,29 +97,6 @@ What does the following code print out? Watch the code run in the  |Java visuali
        }
 
        @Test
-       public void test1()
-       {
-           String orig =
-                   "public class NestedLoops\n"
-                       + "{\n\n"
-                       + "   public static void main(String[] args)\n"
-                       + "   {\n"
-                       + "       for (int row = 1; row <= 3; row++)\n"
-                       + "       {\n"
-                       + "           for (int col = 1; col <= 5; col++)\n"
-                       + "           {\n"
-                       + "               System.out.print(\"*\");\n"
-                       + "           }\n"
-                       + "           System.out.println();\n"
-                       + "       }\n"
-                       + "   }\n"
-                       + "}\n";
-
-           boolean passed = codeChanged(orig);
-           assertTrue(passed);
-       }
-
-       @Test
        public void test2()
        {
            boolean passed =
@@ -283,37 +260,7 @@ Try nested loops with turtles to create a snowflake design!
         public RunestoneTests()
         {
             super("TurtleDrawSnowflake");
-        }
-
-        @Test
-        public void test1()
-        {
-            String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
-                        + "public class TurtleDrawSnowflake\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World world = new World(300,300);\n"
-                        + "      Turtle yertle = new Turtle(world);\n"
-                        + "      yertle.setColor(Color.blue);\n\n"
-                        + "      for (int i = 1; i <= 5; i++) {\n\n"
-                        + "         // inner loop draws a square\n"
-                        + "         for(int sides = 1; sides <= 4; sides++) {\n"
-                        + "             yertle.forward();\n"
-                        + "             yertle.turn(90);\n"
-                        + "         }\n"
-                        + "         // turn a little before drawing square again\n"
-                        + "         yertle.turn(30);\n"
-                        + "      }\n"
-                        + "      world.show(true);\n"
-                        + "  }\n"
-                        + "}\n";
-
-            boolean passed = codeChanged(orig);
-            assertTrue(passed);
-        }
+        }     
 
         @Test
         public void test2()
@@ -425,30 +372,6 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
         public RunestoneTests()
         {
             super("TurtleSnowflakes");
-        }
-
-        @Test
-        public void test1()
-        {
-            String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
-                        + "public class TurtleSnowflakes\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World world = new World(300,300);\n"
-                        + "      Turtle yertle = new Turtle(world);\n"
-                        + "      yertle.setColor(Color.blue);\n\n"
-                        + "      // Write a for loop that runs many times\n\n"
-                        + "         // Write an inner loop that draws a triangle\n\n\n\n"
-                        + "         // turn 30 degrees before drawing triangle again\n\n\n"
-                        + "      world.show(true);\n"
-                        + "  }\n"
-                        + "}\n";
-
-            boolean passed = codeChanged(orig);
-            assertTrue(passed);
         }
 
         @Test
