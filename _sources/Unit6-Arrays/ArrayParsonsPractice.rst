@@ -17,7 +17,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    int[] arr = {1, 2, 3, 4, 5};
    =====
-   for (int i = 0; i < arr.length; i++) {
+   for (int i = 0; i < arr.length; i++) 
+   {
    =====
        arr[i] = arr[i] * 2;
    =====
@@ -35,7 +36,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    int[] arr = new int[11];
    =====
-   for (int i = 0; i < 11; i++) {
+   for (int i = 0; i < 11; i++) 
+   {
    =====
        arr[i] = i * 5;
    =====
@@ -54,9 +56,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    int[] arr = {14, -5, 2, 17, 29, -8, 36};
    =====
-   for (int value : arr) {
+   for (int value : arr) 
+   {
    =====
-       if (value % 2 == 0) {
+       if (value % 2 == 0) 
+       {
    =====
            System.out.println(value);
    =====
@@ -73,15 +77,19 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should return the smallest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order with the correct indentation on the right.  Click the Check button to check your solution.
    -----
-   public static int findSmallest(int[] arr) {
+   public static int findSmallest(int[] arr) 
+   {
    =====
        int smallest = arr[0];
    =====
-       for (int i = 0 ; i < arr.length; i++) {
+       for (int i = 0 ; i < arr.length; i++) 
+       {
    =====
-           if (arr[i] < smallest) {
+           if (arr[i] < smallest) 
+           {
    =====
-           if (arr[i] > smallest) { #distractor
+           if (arr[i] > smallest) 
+           { #distractor
    =====
                smallest = arr[i];
    =====
@@ -102,13 +110,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should return the average given an array of integers (the parameter).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order with the correct indentation on the right.  Click the Check button to check your solution.
    -----
-   public static double findAverage(int[] arr) {
+   public static double findAverage(int[] arr) 
+   {
    =====
        double sum = 0;
    =====
        int sum = 0; #distractor
    =====
-       for (int i = 0; i < arr.length; i++) {
+       for (int i = 0; i < arr.length; i++) 
+       {
    =====
            sum += arr[i];
    =====
@@ -127,17 +137,21 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should return the largest integer given an array of integers (the parameter).  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.
    -----
-   public static int findLargest(int[] arr) {
+   public static int findLargest(int[] arr) 
+   {
    =====
       int largest = arr[0];
    =====
       int largest = arr.get(0); #distractor
    =====
-      for (int i = 0; i < arr.length; i++) {
+      for (int i = 0; i < arr.length; i++) 
+      {
    =====
-          if (largest < arr[i]) {
+          if (largest < arr[i]) 
+          {
    =====
-          if (largest > arr[i]) { #distractor
+          if (largest > arr[i]) 
+          { #distractor
    =====
               largest = arr[i];
    =====
@@ -158,15 +172,18 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should return an integer array that is "right shifted" by one -- so {6, 2, 5, 3} returns {3, 6, 2, 5} (the parameter). Note that the method return type is int[] which means it will return an int array. But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static int[] shiftRight(int[] arr) {
+   public static int[] shiftRight(int[] arr) 
+   {
    =====
        int[] result = new int[arr.length];
    =====
        result[0] = arr[arr.length-1];
    =====
-       for (int i = 0; i < arr.length - 1; i++) {
+       for (int i = 0; i < arr.length - 1; i++) 
+       {
    =====
-       for (int i = 0; i < arr.length; i++) { #distractor
+       for (int i = 0; i < arr.length; i++) 
+       { #distractor
    =====
            result[i + 1] = arr[i];
    =====
@@ -185,7 +202,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) -- so {1,2,3,4} should return {2,3}.  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static int[] makeMiddle(int[] arr) {
+   public static int[] makeMiddle(int[] arr) 
+   {
    =====
        int[] result = new int[2];
    =====
@@ -209,7 +227,8 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program segment is a method that should return string array that is in reverse order -- so {"b", "a", "z"} should return {"z", "a", "b"}.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static String[] reverse(String[] arr) {
+   public static String[] reverse(String[] arr) 
+   {
    =====
        String[] result = new String[arr.length];
    =====
@@ -217,9 +236,11 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        int i = arr.length; #distractor
    =====
-       for (String element: arr) {
+       for (String element: arr) 
+       {
    =====
-       for (element: arr) { #distractor
+       for (element: arr) 
+       { #distractor
    =====
          result[i] = element;
    =====
@@ -240,13 +261,16 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program copies the first half of an array given as an argument to the method into a result array which is returned. But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
-   public static int[] firstHalf(int[] arr) {
+   public static int[] firstHalf(int[] arr) 
+   {
    =====
        int[] result = new int[arr.length / 2];
    =====
-       for (int i = 0; i < result.length; i++) {
+       for (int i = 0; i < result.length; i++) 
+       {
    =====
-       for (int i = 0; i < arr.length; i++) { #distractor
+       for (int i = 0; i < arr.length; i++) 
+       { #distractor
    =====
          result[i] = arr[i];
    =====

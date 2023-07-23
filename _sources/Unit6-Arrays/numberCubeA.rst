@@ -22,10 +22,13 @@ The following is a free response question from 2009.  It was question 1 on the e
 
    public class NumberCube
    {
-       /** @return an integer value between 1 and 6, inclusive
+       /**
+        * @return an integer value between 1 and 6, inclusive
         */
        public int toss()
-       { /* implementation not shown */ }
+       {
+           /* implementation not shown */
+       }
 
        // There may be instance variables, constructors, and methods not shown.
    }
@@ -100,8 +103,10 @@ Click to reveal the Mixed Up Code for the solution to this problem.
 
       The method ``getCubeTosses`` below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
-      public static int[] getCubeTosses(NumberCube cube,
-                                     int numTosses) {
+      public static int[] getCubeTosses(
+                                NumberCube cube,
+                                int numTosses) 
+      {
       =====
         int[] cubeTosses = new int[numTosses];
       =====
@@ -129,12 +134,13 @@ Try and Solve Part A
    FRQ Number Cube A: Write the method ``getCubeTosses`` that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.
    ~~~~
     import java.util.Arrays;
+
     public class NumberCube
     {
 
         public int toss()
         {
-            return (int)( (Math.random() * 6) + 1 );
+            return (int) ((Math.random() * 6) + 1);
         }
 
         public static int[] getCubeTosses(NumberCube cube, int numTosses)
@@ -142,23 +148,32 @@ Try and Solve Part A
             // Complete this method
         }
 
-        public static void main(String[] args) {
+        public static void main(String[] args)
+        {
             NumberCube cube = new NumberCube();
             int numTosses = 9;
             int[] tosses = getCubeTosses(cube, numTosses);
 
-            if(tosses.length < numTosses) {
-              System.out.println("It looks like you are not returning an array of the correct size:");
-              System.out.println(Arrays.toString(tosses));
-            } else {
-              System.out.println("You returned an array of the correct size:");
-              System.out.println(Arrays.toString(tosses));
+            if (tosses.length < numTosses)
+            {
+                System.out.println(
+                        "It looks like you are not returning an array of the correct"
+                            + " size:");
+                System.out.println(Arrays.toString(tosses));
+            }
+            else
+            {
+                System.out.println("You returned an array of the correct size:");
+                System.out.println(Arrays.toString(tosses));
             }
         }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
@@ -174,46 +189,58 @@ Try and Solve Part A
         }
 
         @Test
-        public void test1() {
+        public void test1()
+        {
             NumberCube c = new NumberCube();
             int[] results = NumberCube.getCubeTosses(c, 20);
 
             String expect = "20";
             String actual = "" + results.length;
 
-            boolean passed = getResults(expect, actual, "Checking getNumTosses() returns an array of the correct size");
+            boolean passed =
+                    getResults(
+                            expect,
+                            actual,
+                            "Checking getNumTosses() returns an array of the correct size");
             assertTrue(passed);
         }
 
         @Test
-        public void test2() {
+        public void test2()
+        {
             NumberCube c = new NumberCube();
             int[] results = NumberCube.getCubeTosses(c, 100);
 
             boolean passed = true;
             int same = 0;
 
-            for (int i = 0; i < results.length; i++) {
-                if (i < results.length - 1 && results[i] == results[i+1])
-                    same++;
+            for (int i = 0; i < results.length; i++)
+            {
+                if (i < results.length - 1 && results[i] == results[i + 1]) same++;
 
-                if (results[i] < 1 || results[i] > 6)
-                    passed = false;
+                if (results[i] < 1 || results[i] > 6) passed = false;
             }
 
             if (same > 25) passed = false;
 
             String expect = "true";
-            String actual = "" +passed;
+            String actual = "" + passed;
 
-            passed = getResults(expect, actual, "Checking that tosses are within proper range (1-6, no 0)", passed);
+            passed =
+                    getResults(
+                            expect,
+                            actual,
+                            "Checking that tosses are within proper range (1-6, no 0)",
+                            passed);
             assertTrue(passed);
         }
 
         @Test
-        public void test3() {
+        public void test3()
+        {
             String target = "cube.toss()";
             boolean passed = checkCodeContains("call to cube.toss()", target);
             assertTrue(passed);
         }
     }
+

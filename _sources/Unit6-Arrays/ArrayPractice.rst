@@ -21,47 +21,58 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int arr1 = {1, 3, 7, 9, 15, 17};
-                      for (int index = 0; index <= arr1.length; index+=2)
+                      for (int index = 0; index <= arr1.length; index += 2)
                       {
                           System.out.print(index + ", ");
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "1, 7, 15, ";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testCodeContains1(){
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "1, 7, 15, ";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains1()
+                  {
                       boolean passed = checkCodeContains("correct array data type", "int[] arr1");
                       assertTrue(passed);
-                    }
+                  }
 
-                    @Test
-                    public void testCodeContains2(){
-                      boolean passed = checkCodeContains("correct for loop condition", "for (int index = 0; index < arr1.length; index+=2)");
+                  @Test
+                  public void testCodeContains2()
+                  {
+                      boolean passed =
+                              checkCodeContains(
+                                      "correct for loop condition",
+                                      "for (int index = 0; index < arr1.length; index+=2)");
                       assertTrue(passed);
-                    }
+                  }
 
-                    @Test
-                    public void testCodeContains3(){
-                      boolean passed = checkCodeContains("access values in array instead of index", "System.out.print(arr1[index] + \", \")");
+                  @Test
+                  public void testCodeContains3()
+                  {
+                      boolean passed =
+                              checkCodeContains(
+                                      "access values in array instead of index",
+                                      "System.out.print(arr1[index] + \", \")");
                       assertTrue(passed);
-                    }
-                }
-
+                  }
+              }
 
         .. tab:: Answer
 
@@ -78,13 +89,12 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] arr1 = {1, 3, 7, 9, 15, 17};
-                      for (int index = 0; index < arr1.length; index+=2)
+                      for (int index = 0; index < arr1.length; index += 2)
                       {
                           System.out.print(arr1[index] + ", ");
                       }
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -108,45 +118,51 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] a1 = {1, 3, 7, 9, 15};
-                      for (int i = a1.length; i > 0; i--)
-                          System.out.print(arr[i] + ", ");
+                      for (int i = a1.length; i > 0; i--) System.out.print(arr[i] + ", ");
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "15, 9, 7, 3, 1, ";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testCodeContains1(){
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "15, 9, 7, 3, 1, ";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains1()
+                  {
                       boolean passed = checkCodeContains("correct starting index", "int i = a1.length-1;");
                       assertTrue(passed);
-                    }
+                  }
 
-                     @Test
-                    public void testCodeContains2(){
+                  @Test
+                  public void testCodeContains2()
+                  {
                       boolean passed = checkCodeContains("correct ending index", "i >= 0;");
                       assertTrue(passed);
-                    }
+                  }
 
-                     @Test
-                    public void testCodeContains3(){
-                      boolean passed = checkCodeContains("correct array variable name", "System.out.print(a1[i] + \", \");");
+                  @Test
+                  public void testCodeContains3()
+                  {
+                      boolean passed =
+                              checkCodeContains(
+                                      "correct array variable name", "System.out.print(a1[i] + \", \");");
                       assertTrue(passed);
-                    }
-                }
-
+                  }
+              }
 
         .. tab:: Answer
 
@@ -163,11 +179,9 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] a1 = {1, 3, 7, 9, 15};
-                      for (int i = a1.length - 1; i >= 0; i--)
-                          System.out.print(a1[i] + ", ");
+                      for (int i = a1.length - 1; i >= 0; i--) System.out.print(a1[i] + ", ");
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -197,31 +211,33 @@ Code Practice with Arrays
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testCodeContains()
-                    {
+              import org.junit.*;
 
-                        boolean passed = checkCodeContains("for each loop", "for (int * : arr1)");
-                        assertTrue(passed);
-                    }
+              import java.io.*;
 
-                    @Test
-                    public void testCodeContains1()
-                    {
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testCodeContains()
+                  {
 
-                        boolean passed = checkCodeContains("print statement variable name", "System.out.print(* + \", \");");
-                        assertTrue(passed);
-                    }
-                }
+                      boolean passed = checkCodeContains("for each loop", "for (int * : arr1)");
+                      assertTrue(passed);
+                  }
 
+                  @Test
+                  public void testCodeContains1()
+                  {
 
+                      boolean passed =
+                              checkCodeContains("print statement variable name", "System.out.print(* + \", \");");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -238,7 +254,7 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] arr1 = {1, 3, 7, 9};
-                      for (int value: arr1)
+                      for (int value : arr1)
                       {
                           System.out.print(value + ", ");
                       }
@@ -267,36 +283,36 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] a1 = {0, 3, 6, 7, 9, 10};
-                      for (int value : a1)
-                      {
-                      }
+                      for (int value : a1) {}
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "3 7 9 ";
+              import org.junit.*;
 
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                         assertTrue(passed);
-                    }
-                    @Test
-                    public void testContains()
-                    {
-                      boolean passed = checkCodeContains("Use % to see if value is odd","value % 2 ");
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "3 7 9 ";
+
+                      boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
-                    }
-                }
+                  }
 
-
+                  @Test
+                  public void testContains()
+                  {
+                      boolean passed = checkCodeContains("Use % to see if value is odd", "value % 2 ");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -323,7 +339,6 @@ Code Practice with Arrays
                   }
               }
 
-
         .. tab:: Discussion
 
             .. disqus::
@@ -345,50 +360,48 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int getSum(int[] arr)
-                  {
-
-                  }
+                  public static int getSum(int[] arr) {}
 
                   public static void main(String[] args)
                   {
                       int[] a1 = {1, 2, 5, 3};
-                      System.out.println("It should print 11 " +
-                                         " and your answer is: " + getSum(a1));
+                      System.out.println(
+                              "It should print 11 " + " and your answer is: " + getSum(a1));
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "It should print 11  and your answer is: 11";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testMethod(){
-                       int[] nums = {10, 20, 30, 40, 50};
-                       Object[] args = {nums};
+              import java.io.*;
 
-                       // name of method, arguments are (nums, 30)
-                       String output = getMethodOutput("getSum", args);
-                       String expect = "150";
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "It should print 11  and your answer is: 11";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                       boolean passed = getResults(expect, output,
-                                "getSum({10, 20, 30, 40, 50})");
-                       assertTrue(passed);
-                    }
-                }
+                  @Test
+                  public void testMethod()
+                  {
+                      int[] nums = {10, 20, 30, 40, 50};
+                      Object[] args = {nums};
 
+                      // name of method, arguments are (nums, 30)
+                      String output = getMethodOutput("getSum", args);
+                      String expect = "150";
 
+                      boolean passed = getResults(expect, output, "getSum({10, 20, 30, 40, 50})");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -404,19 +417,19 @@ Code Practice with Arrays
               {
                   public static int getSum(int[] arr)
                   {
-                     int sum = 0;
-                     for (int value : arr)
-                     {
-                         sum = sum + value;
-                     }
-                     return sum;
+                      int sum = 0;
+                      for (int value : arr)
+                      {
+                          sum = sum + value;
+                      }
+                      return sum;
                   }
 
                   public static void main(String[] args)
                   {
                       int[] a1 = {1, 2, 5, 3};
-                      System.out.println("It should print 11 " +
-                                         " and your answer is: " + getSum(a1));
+                      System.out.println(
+                              "It should print 11 " + " and your answer is: " + getSum(a1));
                   }
               }
 
@@ -440,48 +453,50 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int getSumNonNeg(int[] arr)
-                  {
-                  }
+                  public static int getSumNonNeg(int[] arr) {}
 
                   public static void main(String[] args)
                   {
                       int[] a1 = {1, 2, 5, 3, -1, -20};
-                      System.out.println("The code should print 11 " +
-                                         "and your answer is: " + getSumNonNeg(a1));
+                      System.out.println(
+                              "The code should print 11 "
+                                      + "and your answer is: "
+                                      + getSumNonNeg(a1));
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "The code should print 11 and your answer is: 11";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testMethod(){
-                       int[] nums = {10, -20, 30, -40, 50};
-                       Object[] args = {nums};
+              import java.io.*;
 
-                       // name of method, arguments are (nums, 30)
-                       String output = getMethodOutput("getSumNonNeg", args);
-                       String expect = "90";
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "The code should print 11 and your answer is: 11";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
 
-                       boolean passed = getResults(expect, output,
-                                "getSum({10, -20, 30, -40, 50})");
-                       assertTrue(passed);
-                    }
-                }
+                  @Test
+                  public void testMethod()
+                  {
+                      int[] nums = {10, -20, 30, -40, 50};
+                      Object[] args = {nums};
 
+                      // name of method, arguments are (nums, 30)
+                      String output = getMethodOutput("getSumNonNeg", args);
+                      String expect = "90";
+
+                      boolean passed = getResults(expect, output, "getSum({10, -20, 30, -40, 50})");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -501,23 +516,23 @@ Code Practice with Arrays
                       int sum = 0;
                       for (int value : arr)
                       {
-                          if (value >= 0)
-                              sum = sum + value;
+                          if (value >= 0) sum = sum + value;
                       }
                       return sum;
                   }
 
-
                   public static void main(String[] args)
                   {
-                      int[] a1 = {1, 2, 5, 3, -1, -20,};
-                      System.out.println("The code should print 11 " +
-                                         "and your answer is: " + getSumNonNeg(a1));
+                      int[] a1 =
+                      {
+                          1, 2, 5, 3, -1, -20,
+                      };
+                      System.out.println(
+                              "The code should print 11 "
+                                      + "and your answer is: "
+                                      + getSumNonNeg(a1));
                   }
               }
-
-
-
 
         .. tab:: Discussion
 
@@ -541,34 +556,35 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
-
                   }
-
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expectNewL = "Landon\nGabby\n";
-                        boolean passedNewL = getResults(expectNewL, output, "Expected output from main");
-                        assertTrue(passedNewL);
-                    }
-                    @Test
-                    public void testCodeContains()
-                    {
+              import org.junit.*;
 
-                        boolean passed = checkCodeContains("for loop", "for");
-                        assertTrue(passed);
-                    }
-                }
+              import java.io.*;
 
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expectNewL = "Landon\nGabby\n";
+                      boolean passedNewL = getResults(expectNewL, output, "Expected output from main");
+                      assertTrue(passedNewL);
+                  }
+
+                  @Test
+                  public void testCodeContains()
+                  {
+
+                      boolean passed = checkCodeContains("for loop", "for");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -585,7 +601,7 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
-                      for (int i = 1; i < stArr1.length; i+=2)
+                      for (int i = 1; i < stArr1.length; i += 2)
                       {
                           System.out.println(stArr1[i]);
                       }
@@ -612,9 +628,7 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int getSumChars(String[] strArr)
-                  {
-                  }
+                  public static int getSumChars(String[] strArr) {}
 
                   public static void main(String[] args)
                   {
@@ -622,51 +636,53 @@ Code Practice with Arrays
                       System.out.println(getSumChars(strArr));
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "9";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testCodeContains1(){
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "9";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains1()
+                  {
                       boolean passed = checkCodeContains("adding length of each string", ".length()");
                       assertTrue(passed);
-                    }
+                  }
 
-                    @Test
-                    public void testCodecontains(){
+                  @Test
+                  public void testCodecontains()
+                  {
                       boolean passed = checkCodeContains("for loop", "for");
                       assertTrue(passed);
-                    }
+                  }
 
-                    @Test
-                    public void testMethod(){
-                       String[] strs = {"a","aa","aaa"};
-                       Object[] args = {strs};
+                  @Test
+                  public void testMethod()
+                  {
+                      String[] strs = {"a", "aa", "aaa"};
+                      Object[] args = {strs};
 
-                       // name of method, arguments are (nums, 30)
-                       String output = getMethodOutput("getSumChars", args);
-                       String expect = "6";
+                      // name of method, arguments are (nums, 30)
+                      String output = getMethodOutput("getSumChars", args);
+                      String expect = "6";
 
-                       boolean passed = getResults(expect, output,
-                                "getSumChars({\"a\",\"aa\",\"aaa\"})");
-                       assertTrue(passed);
-                    }
-                }
-
-
-
+                      boolean passed = getResults(expect, output, "getSumChars({\"a\",\"aa\",\"aaa\"})");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -697,7 +713,6 @@ Code Practice with Arrays
                   }
               }
 
-
         .. tab:: Discussion
 
             .. disqus::
@@ -718,9 +733,7 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int findMin(int[] arr)
-                  {
-                  }
+                  public static int findMin(int[] arr) {}
 
                   public static void main(String[] args)
                   {
@@ -728,45 +741,46 @@ Code Practice with Arrays
                       System.out.println(findMin(arr));
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "-3";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                    @Test
-                    public void testCodeContains2(){
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "-3";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains2()
+                  {
                       boolean passed = checkCodeContains("for loop", "for");
                       assertTrue(passed);
-                    }
+                  }
 
-                     @Test
-                    public void testMethod(){
-                       int[] nums = {10, 20, 5, 40, 50};
-                       Object[] args = {nums};
+                  @Test
+                  public void testMethod()
+                  {
+                      int[] nums = {10, 20, 5, 40, 50};
+                      Object[] args = {nums};
 
-                       // name of method, arguments are (nums, 30)
-                       String output = getMethodOutput("findMin", args);
-                       String expect = "5";
+                      // name of method, arguments are (nums, 30)
+                      String output = getMethodOutput("findMin", args);
+                      String expect = "5";
 
-                       boolean passed = getResults(expect, output,
-                                "findMin({10, 20, 5, 40, 50})");
-                       assertTrue(passed);
-                    }
-                }
-
-
-
+                      boolean passed = getResults(expect, output, "findMin({10, 20, 5, 40, 50})");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -783,17 +797,17 @@ Code Practice with Arrays
 
                   public static int findMin(int[] arr)
                   {
-                       int min = arr[0];
-                       int value = 0;
-                       for (int i = 1; i < arr.length; i++)
-                       {
-                           value = arr[i];
-                           if (value < min)
-                           {
-                               min = value;
-                           }
-                        }
-                        return min;
+                      int min = arr[0];
+                      int value = 0;
+                      for (int i = 1; i < arr.length; i++)
+                      {
+                          value = arr[i];
+                          if (value < min)
+                          {
+                              min = value;
+                          }
+                      }
+                      return min;
                   }
 
                   public static void main(String[] args)
@@ -823,52 +837,55 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static double getAverage(int[] arr)
-                  {
-                  }
+                  public static double getAverage(int[] arr) {}
 
                   public static void main(String[] args)
                   {
                       int[] arr = {20, 3, 18, 55, 4};
-                      System.out.println(getAverage(arr));;
+                      System.out.println(getAverage(arr));
+                      ;
                   }
               }
+
               ====
               import static org.junit.Assert.*;
-                import org.junit.*;
-                import java.io.*;
 
-                public class RunestoneTests extends CodeTestHelper
-                {
-                    @Test
-                    public void testMain() throws IOException
-                    {
-                        String output = getMethodOutput("main");
-                        String expect = "20.0";
-                        boolean passed = getResults(expect, output, "Expected output from main");
-                        assertTrue(passed);
-                    }
+              import org.junit.*;
 
-                       @Test
-                    public void testCodeContains2(){
+              import java.io.*;
+
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "20.0";
+                      boolean passed = getResults(expect, output, "Expected output from main");
+                      assertTrue(passed);
+                  }
+
+                  @Test
+                  public void testCodeContains2()
+                  {
                       boolean passed = checkCodeContains("for loop", "for");
                       assertTrue(passed);
-                    }
+                  }
 
-                     @Test
-                    public void testMethod(){
-                       int[] nums = {10, 20, 30, 40, 50};
-                       Object[] args = {nums};
+                  @Test
+                  public void testMethod()
+                  {
+                      int[] nums = {10, 20, 30, 40, 50};
+                      Object[] args = {nums};
 
-                       // name of method, arguments are (nums, 30)
-                       String output = getMethodOutput("getAverage", args);
-                       String expect = "30.0";
+                      // name of method, arguments are (nums, 30)
+                      String output = getMethodOutput("getAverage", args);
+                      String expect = "30.0";
 
-                       boolean passed = getResults(expect, output,
-                                "getAverage({10, 20, 30, 40, 50})");
-                       assertTrue(passed);
-                    }
-                }
+                      boolean passed = getResults(expect, output, "getAverage({10, 20, 30, 40, 50})");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -896,12 +913,10 @@ Code Practice with Arrays
                   public static void main(String[] args)
                   {
                       int[] arr = {20, 3, 18, 55, 4};
-                      System.out.println(getAverage(arr));;
+                      System.out.println(getAverage(arr));
+                      ;
                   }
               }
-
-
-
 
         .. tab:: Discussion
 

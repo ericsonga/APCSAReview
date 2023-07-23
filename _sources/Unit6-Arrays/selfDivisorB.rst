@@ -21,51 +21,59 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
    public class SelfDivisor
    {
 
-      /** @param number the number to be tested
-       *         Precondition: number > 0
-       *  @return true if every decimal digit of
-       *          number is a divisor of number;
-       *          false otherwise
-       */
-      public static boolean isSelfDivisor(int number)
-      {
-        int currNumber = number;
-        int digit = 0;
-        while (currNumber > 0)
-        {
-           digit = currNumber % 10;
-           if (digit == 0) return false;
-           if (number % digit != 0) return false;
-           currNumber = currNumber / 10;
-        }
-        return true;
-      }
+       /**
+        * @param number the number to be tested Precondition: number > 0
+        * @return true if every decimal digit of number is a divisor of number; false
+        *     otherwise
+        */
+       public static boolean isSelfDivisor(int number)
+       {
+           int currNumber = number;
+           int digit = 0;
+           while (currNumber > 0)
+           {
+               digit = currNumber % 10;
+               if (digit == 0) 
+               {
+                   return false;
+               }
+               if (number % digit != 0) 
+               {
+                   return false;
+               }
+               currNumber = currNumber / 10;
+           }
+           return true;
+       }
 
-      /**
-       * @param start starting point for values to be checked
-       * Precondition: start > 0
-       * @param num the size of the array to be returned
-       * Precondition: num > 0
-       * @return an array containing the first num
-       * integers >= start that are self-divisors
-       */
-      public static int[] firstNumSelfDivisors(int start,
-                                               int num)
-      { /* to be implemented in part (b) */ }
+       /**
+        * @param start starting point for values to be checked Precondition: start > 0
+        * @param num the size of the array to be returned Precondition: num > 0
+        * @return an array containing the first num integers >= start that are
+        *     self-divisors
+        */
+       public static int[] firstNumSelfDivisors(int start, int num)
+       {
+           /* to be implemented in part (b) */
+       }
 
-      public static void main (String[] args)
-      {
-        System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
-        for (int n : firstNumSelfDivisors(10, 3))
-           System.out.print(n + " ");
-        System.out.println();
+       public static void main(String[] args)
+       {
+           System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
+           for (int n : firstNumSelfDivisors(10, 3)) 
+           {
+               System.out.print(n + " ");
+           }
+           System.out.println();
 
-        System.out.println("Self divisors for firstNumSelfDivisors(22, 5)");
-        for (int n : firstNumSelfDivisors(22, 5))
-           System.out.print(n + " ");
-        System.out.println();
-      }
-    }
+           System.out.println("Self divisors for firstNumSelfDivisors(22, 5)");
+           for (int n : firstNumSelfDivisors(22, 5)) 
+           {
+               System.out.print(n + " ");
+           }
+           System.out.println();
+       }
+   }
 
 How to solve this problem
 ===========================
@@ -122,54 +130,65 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
    public class SelfDivisor
    {
 
-      /** @param number the number to be tested
-       *         Precondition: number > 0
-       *  @return true if every decimal digit of
-       *          number is a divisor of number;
-       *          false otherwise
-       */
-      public static boolean isSelfDivisor(int number)
-      {
-        int currNumber = number;
-        int digit = 0;
-        while (currNumber > 0)
-        {
-           digit = currNumber % 10;
-           if (digit == 0) return false;
-           if (number % digit != 0) return false;
-           currNumber = currNumber / 10;
-        }
-        return true;
-      }
+       /**
+        * @param number the number to be tested Precondition: number > 0
+        * @return true if every decimal digit of number is a divisor of number; false
+        *     otherwise
+        */
+       public static boolean isSelfDivisor(int number)
+       {
+           int currNumber = number;
+           int digit = 0;
+           while (currNumber > 0)
+           {
+               digit = currNumber % 10;
+               if (digit == 0) 
+               {
+                   return false;
+               }               
+               if (number % digit != 0) 
+               {
+                   return false;
+               }
+               currNumber = currNumber / 10;
+           }
+           return true;
+       }
 
-      /**
-       * @param start starting point for values to be checked
-       * Precondition: start > 0
-       * @param num the size of the array to be returned
-       * Precondition: num > 0
-       * @return an array containing the first num
-       * integers >= start that are self-divisors
-       */
-      public static int[] firstNumSelfDivisors(int start,
-                                               int num)
-      { /* to be implemented in part (b) */ }
+       /**
+        * @param start starting point for values to be checked Precondition: start > 0
+        * @param num the size of the array to be returned Precondition: num > 0
+        * @return an array containing the first num integers >= start that are
+        *     self-divisors
+        */
+       public static int[] firstNumSelfDivisors(int start, int num)
+       {
+           /* to be implemented in part (b) */
+       }
 
-      public static void main (String[] args)
-      {
-        System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
-        for (int n : firstNumSelfDivisors(10, 3))
-           System.out.print(n + " ");
-        System.out.println();
+       public static void main(String[] args)
+       {
+           System.out.println("Self divisors for firstNumSelfDivisors(10, 3):");
+           for (int n : firstNumSelfDivisors(10, 3)) 
+           {
+               System.out.print(n + " ");
+           }
+           System.out.println();
 
-        System.out.println("Self divisors for firstNumSelfDivisors(22, 5):");
-        for (int n : firstNumSelfDivisors(22, 5))
-           System.out.print(n + " ");
-        System.out.println();
-      }
-    }
+           System.out.println("Self divisors for firstNumSelfDivisors(22, 5):");
+           for (int n : firstNumSelfDivisors(22, 5)) 
+           {
+               System.out.print(n + " ");
+           }
+           System.out.println();
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
+
     import org.junit.*;
+
     import java.io.*;
     import java.util.Arrays;
 
@@ -179,13 +198,18 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
         public void testMain()
         {
             String output = getMethodOutput("main");
-            String expect = "Self divisors for firstNumSelfDivisors(10, 3):\n11 12 15\nSelf divisors for firstNumSelfDivisors(22, 5):\n22 24 33 36 44";
+            String expect =
+                    "Self divisors for firstNumSelfDivisors(10, 3):\n"
+                        + "11 12 15\n"
+                        + "Self divisors for firstNumSelfDivisors(22, 5):\n"
+                        + "22 24 33 36 44";
             boolean passed = getResults(expect, output, "Checking output from main");
             assertTrue(passed);
         }
 
         @Test
-        public void test2() {
+        public void test2()
+        {
             String msg = "Checking firstNumSelfDivisors(5, 10)";
             String output = Arrays.toString(SelfDivisor.firstNumSelfDivisors(5, 10));
             String expect = "[5, 6, 7, 8, 9, 11, 12, 15, 22, 24]";

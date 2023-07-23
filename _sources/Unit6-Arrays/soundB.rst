@@ -123,7 +123,8 @@ Click to reveal the Mixed Up Code for the solution of this problem.
 
       The method ``trimSilenceFromBeginning`` below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
-      public void trimSilenceFromBeginning() {
+      public void trimSilenceFromBeginning() 
+      {
         int i = 0;
       =====
         while (this.samples[i] == 0)
@@ -157,75 +158,95 @@ Try and Solve Part B
    FRQ Sound B: Finish writing the method ``trimSilenceFromBeginning`` below that removes the silence from the beginning of a sound. To remove starting silence, a new array of values is created that contains the same values as the original ``samples`` array in the same order but without the leading zeros. The instance variable ``samples`` is updated to refer to the new array.
    ~~~~
    import java.util.Arrays;
+
    public class Sound
    {
        /** the array of values in this sound; guaranteed not to be null */
-       private int[] samples = {0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0};
+       private int[] samples =
+       {
+           0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0
+       };
 
-       /** Removes all silence from the beginning of this sound.
-        *  Silence is represented by a value of 0.
-        *  Precondition: samples contains at least one nonzero value
-        *  Postcondition: the length of samples reflects the removal of starting silence
+       /**
+        * Removes all silence from the beginning of this sound. Silence is represented
+        * by a value of 0. Precondition: samples contains at least one nonzero value
+        * Postcondition: the length of samples reflects the removal of starting
+        * silence
         */
        public void trimSilenceFromBeginning()
        {
-         // Complete this method
+           // Complete this method
        }
 
        public static void main(String[] args)
        {
 
-         Sound s = new Sound();
+           Sound s = new Sound();
 
-         System.out.println("The original array of samples is " + Arrays.toString(s.samples));
-         s.trimSilenceFromBeginning();
-         System.out.println("The new array of samples is " + Arrays.toString(s.samples));
-         System.out.println("The length of the new array should be 12 and is " + s.samples.length);
+           System.out.println(
+                   "The original array of samples is " + Arrays.toString(s.samples));
+           s.trimSilenceFromBeginning();
+           System.out.println(
+                   "The new array of samples is " + Arrays.toString(s.samples));
+           System.out.println(
+                   "The length of the new array should be 12 and is "
+                           + s.samples.length);
        }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    import java.lang.reflect.Field;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain()
-        {
-            String output = getMethodOutput("main");
-            String expect = "-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0";
+   import org.junit.*;
 
-            boolean passed = output.contains(expect);
+   import java.io.*;
+   import java.lang.reflect.Field;
 
-            expect = "The original array of samples is [0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0]\nThe new array of samples is [-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0]";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain()
+       {
+           String output = getMethodOutput("main");
+           String expect = "-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0";
 
-            getResults(expect, output, "Checking output from main()", passed);
-            assertTrue(passed);
-        }
+           boolean passed = output.contains(expect);
 
-        @Test
-        public void test2() {
-            Sound s = new Sound();
-            s.trimSilenceFromBeginning();
+           expect =
+                   "The original array of samples is [0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37,"
+                       + " 29, 0, 0]\n"
+                       + "The new array of samples is [-14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0]";
 
-            try {
-                Field sampleField = Sound.class.getDeclaredField("samples");
-                sampleField.setAccessible(true);
+           getResults(expect, output, "Checking output from main()", passed);
+           assertTrue(passed);
+       }
 
-                int[] samples = (int[]) sampleField.get(s);
+       @Test
+       public void test2()
+       {
+           Sound s = new Sound();
+           s.trimSilenceFromBeginning();
 
-                String expected = "12";
-                String actual = ""+ samples.length;
+           try
+           {
+               Field sampleField = Sound.class.getDeclaredField("samples");
+               sampleField.setAccessible(true);
 
-                String msg = "Checking samples array length after trimSilenceFromBeginning()";
-                boolean passed = getResults(expected, actual, msg);
-                assertTrue(passed);
+               int[] samples = (int[]) sampleField.get(s);
 
-            } catch (Exception e) {
-                getResults("", "", "There was a error with the testing code.", false);
-                fail();
-            }
-        }
-    }
+               String expected = "12";
+               String actual = "" + samples.length;
+
+               String msg = "Checking samples array length after trimSilenceFromBeginning()";
+               boolean passed = getResults(expected, actual, msg);
+               assertTrue(passed);
+
+           }
+           catch (Exception e)
+           {
+               getResults("", "", "There was a error with the testing code.", false);
+               fail();
+           }
+       }
+   }
+

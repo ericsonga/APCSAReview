@@ -159,45 +159,50 @@ To create an empty array after declaring the variable, use the **new** keyword w
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-          // Array example
-          int[] highScores = new int[10];
-          // Add an array of 5 doubles called prices.
+       public static void main(String[] args)
+       {
+           // Array example
+           int[] highScores = new int[10];
+           // Add an array of 5 doubles called prices.
 
-          // Add an array of 5 Strings called names.
+           // Add an array of 5 Strings called names.
 
-          System.out.println("Array highScores declared with size " + highScores.length);
-          // Print out the length of the new arrays
-      }
+           System.out.println(
+                   "Array highScores declared with size " + highScores.length);
+           // Print out the length of the new arrays
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Test1");
-        }
+   import org.junit.*;
 
-        @Test
-        public void testDouble() throws IOException
-        {
-            String target = "new double[5];";
-            boolean passed = checkCodeContains(target);
-            assertTrue(passed);
-        }
+   import java.io.*;
 
-        @Test
-        public void testString() throws IOException
-        {
-            String target = "new String[5];";
-            boolean passed = checkCodeContains(target);
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Test1");
+       }
+
+       @Test
+       public void testDouble() throws IOException
+       {
+           String target = "new double[5];";
+           boolean passed = checkCodeContains(target);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testString() throws IOException
+       {
+           String target = "new String[5];";
+           boolean passed = checkCodeContains(target);
+           assertTrue(passed);
+       }
+   }
 
 .. index::
    pair: array; initialization
@@ -270,47 +275,52 @@ Arrays know their length (how many elements they can store).  It is a public rea
    ~~~~
    public class Test2
    {
-      public static void main(String[] args)
-      {
-        int[ ] highScores = {99,98,98,88,68};
-        System.out.println(highScores.length);
-      }
+       public static void main(String[] args)
+       {
+           int[] highScores = {99, 98, 98, 88, 68};
+           System.out.println(highScores.length);
+       }
    }
+
    ====
    // Test for Lesson 6.1.2 - While Loop FindAndReplace lclw1
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Test2");
-        }
+   import org.junit.*;
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main").trim();
-            String expect = "6";
+   import java.io.*;
 
-            //boolean pass = !output.equals(expect.trim());
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Test2");
+       }
 
-            boolean passed = getResults(expect, output, "Did you add another value?");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main").trim();
+           String expect = "6";
 
-        @Test
-        public void testChangedCode() {
-            String origCode = "public class Test2 { public static void main (String [] args) { int [] highScores = {99,98,98,88,68}; System.out.println(highScores.length); } }";
+           // boolean pass = !output.equals(expect.trim());
 
-            boolean changed = codeChanged(origCode);
+           boolean passed = getResults(expect, output, "Did you add another value?");
+           assertTrue(passed);
+       }
 
-            assertTrue(changed);
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class Test2 { public static void main (String [] args) { int [] highScores"
+                       + " = {99,98,98,88,68}; System.out.println(highScores.length); } }";
 
-        }
-    }
+           boolean changed = codeChanged(origCode);
 
+           assertTrue(changed);
+       }
+   }
 
 .. note::
 
@@ -413,54 +423,58 @@ If you want to keep track of the top 5 highest scores in a game and the names of
    ~~~~
    public class Test1
    {
-      public static void main(String[] args)
-      {
-        // declare, create, initialize arrays
-        int[ ] highScores = {99,98,98,88,68};
-        String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
+       public static void main(String[] args)
+       {
+           // declare, create, initialize arrays
+           int[] highScores = {99, 98, 98, 88, 68};
+           String[] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
 
-        // Print corresponding names and scores
-        System.out.println(names[0] + " has a score of " + highScores[0]);
-        System.out.println(names[1] + " has a score of " + highScores[1]);
-      }
+           // Print corresponding names and scores
+           System.out.println(names[0] + " has a score of " + highScores[0]);
+           System.out.println(names[1] + " has a score of " + highScores[1]);
+       }
    }
+
    ====
    // Test for Lesson 6.1.2 - While Loop FindAndReplace lclw1
 
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Test1");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Jamal has a score of 99\nEmily has a score of 98";
+   import java.io.*;
 
-            boolean passed = !output.equals(expect);
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Test1");
+       }
 
-            passed = getResults(expect, output, "Did you change the main?", passed);
-            assertTrue(passed);
-        }
+       @Test
+       public void test1() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Jamal has a score of 99\nEmily has a score of 98";
 
-        @Test
-        public void test2() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Mateo has a score of 88";
+           boolean passed = !output.equals(expect);
 
-            boolean passed = output.contains("Mateo");
+           passed = getResults(expect, output, "Did you change the main?", passed);
+           assertTrue(passed);
+       }
 
-            passed = getResults(expect, output, "Did you print out Mateo?", passed);
-            assertTrue(passed);
-        }
-    }
+       @Test
+       public void test2() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Mateo has a score of 88";
+
+           boolean passed = output.contains("Mateo");
+
+           passed = getResults(expect, output, "Did you print out Mateo?", passed);
+           assertTrue(passed);
+       }
+   }
 
 What happens if you try to access an element that is not there? Try to access a ``highScore`` or ``name`` at index 7 above to see what happens. The index must be between 0 and the length of the array - 1 or it will give an error message called ``ArrayIndexOutOfBoundsException``.
 
@@ -495,51 +509,58 @@ Here's a fun String array of image filenames. The following code displays an onl
    ~~~~
    public class ImageEx
    {
-    public static void main(String[] args)
-    {
-        String[] images = {"cow.jpg", "kitten.jpg",
-                  "puppy.jpg", "pig.jpg", "reindeer.jpg"};
+       public static void main(String[] args)
+       {
+           String[] images =
+           {
+               "cow.jpg", "kitten.jpg", "puppy.jpg", "pig.jpg", "reindeer.jpg"
+           };
 
-        ImageEx obj = new ImageEx();
-        // Change index to see different images in the array!
-        // Can you have it pick out a random image?
-        int index = 0;
-        obj.printHTMLimage( images[index] );
-     }
+           ImageEx obj = new ImageEx();
+           // Change index to see different images in the array!
+           // Can you have it pick out a random image?
+           int index = 0;
+           obj.printHTMLimage(images[index]);
+       }
 
-     // This method will just work in Active Code which interprets html
-     public void printHTMLimage(String filename)
-     {
-        String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("<img src=" + baseURL + filename + " width=500px />");
-      }
-    }
+       // This method will just work in Active Code which interprets html
+       public void printHTMLimage(String filename)
+       {
+           String baseURL =
+                   "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
+           System.out.print("<img src=" + baseURL + filename + " width=500px />");
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;;
-     import java.io.*;
 
-     // ActiveCode imageArray
-     public class RunestoneTests extends CodeTestHelper
-     {
-         @Test
-         public void testCode()
-         {
-             String code = getCode();
-             String expect = "int index = 0;";
+    import org.junit.*;
 
-             boolean passed = !code.contains(expect);
+    import java.io.*;
 
-             getResults("index not 0",passed + "", "Changed index to another value", passed);
-             assertTrue(passed);
-         }
+    // ActiveCode imageArray
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void testCode()
+        {
+            String code = getCode();
+            String expect = "int index = 0;";
 
-         @Test
-         public void testRandomAdded() {
-             boolean passed = checkCodeContains("Math.random to set index", "Math.random");
-             assertTrue(passed);
-         }
-     }
+            boolean passed = !code.contains(expect);
+
+            getResults("index not 0", passed + "", "Changed index to another value", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testRandomAdded()
+        {
+            boolean passed = checkCodeContains("Math.random to set index", "Math.random");
+            assertTrue(passed);
+        }
+    }
 
 |Groupwork| Programming Challenge : Countries Array
 ---------------------------------------------------------
@@ -571,105 +592,126 @@ In this challenge, you will create a guide to different countries using arrays.
 
    public class Countries
    {
-     public static void main(String[] args)
-     {
-          // 1. Declare 4 arrays and initialize them to the given values.
-          // Countries: China, Egypt, France, Germany, India, Japan, Kenya, Mexico, United Kingdom, United States
-          // Capitals: Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi, Mexico City, London, Washington D.C.
-          // Languages: Chinese, Arabic, French, German, Hindi, Japanese, Swahili, Spanish, English, English
-          // Filenames for map images: China.jpg, Egypt.jpg, France.jpg, Germany.jpg, India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
+       public static void main(String[] args)
+       {
+           // 1. Declare 4 arrays and initialize them to the given values.
+           // Countries: China, Egypt, France, Germany, India, Japan, Kenya, Mexico,
+           // United Kingdom, United States
+           // Capitals: Beijing, Cairo, Paris, Berlin, New Delhi, Tokyo, Nairobi,
+           // Mexico City, London, Washington D.C.
+           // Languages: Chinese, Arabic, French, German, Hindi, Japanese, Swahili,
+           // Spanish, English, English
+           // Filenames for map images: China.jpg, Egypt.jpg, France.jpg, Germany.jpg,
+           // India.jpg, Japan.jpg, Kenya.jpg, Mexico.jpg, UK.jpg, US.jpg
 
-          // 2. Pick a random number up to the length of one of the arrays and save in the variable index
+           // 2. Pick a random number up to the length of one of the arrays and save
+           // in the variable index
 
-          // 3. Print out the info in each array using the random index
+           // 3. Print out the info in each array using the random index
 
-          // Example of showing image files using an array called images (your array name above may be different)
-          // (this will only work in Active Code)
-          // Countries obj = new Countries();
-          // obj.printHTMLimage( images[index] );
+           // Example of showing image files using an array called images (your array
+           // name above may be different)
+           // (this will only work in Active Code)
+           // Countries obj = new Countries();
+           // obj.printHTMLimage( images[index] );
 
-      }
+       }
 
-      // This method will just work in Active Code which interprets html
-      public void printHTMLimage(String filename)
-      {
-        String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("<img src=" + baseURL + filename + " width=500px />");
-      }
-     }
+       // This method will just work in Active Code which interprets html
+       public void printHTMLimage(String filename)
+       {
+           String baseURL =
+                   "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
+           System.out.print("<img src=" + baseURL + filename + " width=500px />");
+       }
+   }
+
      ====
      // Test for Lesson 6.1 - challenge
      import static org.junit.Assert.*;
-     import org.junit.*;;
+
+     import org.junit.*;
+
      import java.io.*;
 
      public class RunestoneTests extends CodeTestHelper
      {
-        public RunestoneTests() {
-            super("Countries");
-        }
+         public RunestoneTests()
+         {
+             super("Countries");
+         }
 
-        @Test
-        public void test1() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Country Capital Language Image";
+         @Test
+         public void test1() throws IOException
+         {
+             String output = getMethodOutput("main");
+             String expect = "Country Capital Language Image";
 
-            int len = expect.split(" ").length;
+             int len = expect.split(" ").length;
 
-            boolean passed = len == 4 && output.contains(".jpg");
+             boolean passed = len == 4 && output.contains(".jpg");
 
-            passed = getResults(expect, expect, "Did you print all the info?", passed);
-            assertTrue(passed);
-        }
+             passed = getResults(expect, expect, "Did you print all the info?", passed);
+             assertTrue(passed);
+         }
 
-        @Test
-        public void test2() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "<img src";
+         @Test
+         public void test2() throws IOException
+         {
+             String output = getMethodOutput("main");
+             String expect = "<img src";
 
-            boolean passed = output.contains(expect);
+             boolean passed = output.contains(expect);
 
-            //passed = getResults(expect + "...", output, "Did you uncomment the image code?", passed);
-            passed = getResults("image", "image", "Did you uncomment the image code?", passed);
-            assertTrue(passed);
-        }
+             // passed = getResults(expect + "...", output, "Did you uncomment the image code?", passed);
+             passed = getResults("image", "image", "Did you uncomment the image code?", passed);
+             assertTrue(passed);
+         }
 
-        @Test
-        public void test3() throws IOException
-        {
-            String[] lines = new String[10];
+         @Test
+         public void test3() throws IOException
+         {
+             String[] lines = new String[10];
 
-            for (int i = 0; i < lines.length; i++)
-            {
-                lines[i] = getMethodOutput("main");
-            }
+             for (int i = 0; i < lines.length; i++)
+             {
+                 lines[i] = getMethodOutput("main");
+             }
 
-            int difft = 10;
+             int difft = 10;
 
-            for (int i = 0; i < lines.length-1; i++) {
-                if (lines[i].equals(lines[i+1])) {
-                    difft--;
-                }
-            }
+             for (int i = 0; i < lines.length - 1; i++)
+             {
+                 if (lines[i].equals(lines[i + 1]))
+                 {
+                     difft--;
+                 }
+             }
 
-            boolean passed = difft > 3;
+             boolean passed = difft > 3;
 
-            passed = getResults("> 3 Countries", difft + " countries", "Can pick a random different country > 3 times?", passed);
-            assertTrue(passed);
-        }
+             passed =
+                     getResults(
+                             "> 3 Countries",
+                             difft + " countries",
+                             "Can pick a random different country > 3 times?",
+                             passed);
+             assertTrue(passed);
+         }
 
-        @Test
-        public void testArrays() throws IOException {
-            //System.out.println(program);
-            String code = getCode();
+         @Test
+         public void testArrays() throws IOException
+         {
+             // System.out.println(program);
+             String code = getCode();
 
-            int arrays = countOccurences(code, "String[]");
+             int arrays = countOccurences(code, "String[]");
 
-            boolean passed = getResults("5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays?");
-            assertTrue(passed);
-        }
+             boolean passed =
+                     getResults(
+                             "5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays?");
+             assertTrue(passed);
+         }
      }
 
 |Groupwork| Design an Array of Objects for your Community
@@ -699,50 +741,57 @@ And we can use ``array[index].method()`` to call a method of an object in the ar
     Can you change the array size to 3 and create and add 1 more Turtle object to the array?
     Make this new turtle turnRight and go forward using its indexed array variable.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleArray
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          // Declare an array for 2 Turtle objects
-          Turtle[] turtarray = new Turtle[2];
-          // Initialize the array elements by constructing each turtle object
-          turtarray[0] = new Turtle(world);
-          turtarray[1] = new Turtle(world);
-          // Call each turtle's methods
-          turtarray[0].forward();
-          turtarray[1].turnLeft();
-          turtarray[1].forward();
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            // Declare an array for 2 Turtle objects
+            Turtle[] turtarray = new Turtle[2];
+            // Initialize the array elements by constructing each turtle object
+            turtarray[0] = new Turtle(world);
+            turtarray[1] = new Turtle(world);
+            // Call each turtle's methods
+            turtarray[0].forward();
+            turtarray[1].turnLeft();
+            turtarray[1].forward();
 
-          world.show(true);
-      }
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
-        public void testArrayDeclaration() throws IOException {
-           boolean passed = checkCodeContains("an array declaration of size 3", "Turtle[3]");
-           assertTrue(passed);
+        public void testArrayDeclaration() throws IOException
+        {
+            boolean passed = checkCodeContains("an array declaration of size 3", "Turtle[3]");
+            assertTrue(passed);
         }
 
         @Test
-        public void testInit()  {
-           boolean passed = checkCodeContains("initialization for array element 2", "[2] = new Turtle");
-           assertTrue(passed);
+        public void testInit()
+        {
+            boolean passed =
+                    checkCodeContains("initialization for array element 2", "[2] = new Turtle");
+            assertTrue(passed);
         }
 
         @Test
-        public void testprint()  {
-           boolean passed = checkCodeContains("call forward() of array element 2", "[2].forward();");
-           assertTrue(passed);
+        public void testprint()
+        {
+            boolean passed = checkCodeContains("call forward() of array element 2", "[2].forward();");
+            assertTrue(passed);
         }
     }
 
@@ -788,59 +837,71 @@ community.  In this unit, you will create an array to hold objects of your class
   }
   ====
   import static org.junit.Assert.*;
+
   import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-        @Test
-        public void testArrayDeclaration() throws IOException {
-           boolean passed = checkCodeContains("an array declaration of size 3", "[3]");
-           assertTrue(passed);
-        }
+      @Test
+      public void testArrayDeclaration() throws IOException
+      {
+          boolean passed = checkCodeContains("an array declaration of size 3", "[3]");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testObjs() throws IOException {
-            String code = getCode();
-            String target = "new";
-            int count = countOccurences(code, target);
-            boolean passed = (count >= 4);
-            getResults("4+ " + target, count + "+ " + target,
-            "Did you declare 3 objects of your class using new and your constructor?",passed);
-            assertTrue(passed);
-        }
+      @Test
+      public void testObjs() throws IOException
+      {
+          String code = getCode();
+          String target = "new";
+          int count = countOccurences(code, target);
+          boolean passed = (count >= 4);
+          getResults(
+                  "4+ " + target,
+                  count + "+ " + target,
+                  "Did you declare 3 objects of your class using new and your constructor?",
+                  passed);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testInit()  {
-           boolean passed = checkCodeContains("initialization for array element 0", "[0]=");
-           assertTrue(passed);
-        }
+      @Test
+      public void testInit()
+      {
+          boolean passed = checkCodeContains("initialization for array element 0", "[0]=");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testprint()  {
-           boolean passed = checkCodeContains("call to print() of array element 0", "[0].print();");
-           assertTrue(passed);
-        }
+      @Test
+      public void testprint()
+      {
+          boolean passed = checkCodeContains("call to print() of array element 0", "[0].print();");
+          assertTrue(passed);
+      }
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");//.split("\n");
-            String expect = "3+ line(s) of text";
-            String actual = " line(s) of text";
-            int len = output.split("\n").length;
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main"); // .split("\n");
+          String expect = "3+ line(s) of text";
+          String actual = " line(s) of text";
+          int len = output.split("\n").length;
 
-            if (output.length() > 0) {
-                actual = len + actual;
-            } else {
-                actual = output.length() + actual;
-            }
-            boolean passed = len >= 3;
+          if (output.length() > 0)
+          {
+              actual = len + actual;
+          }
+          else
+          {
+              actual = output.length() + actual;
+          }
+          boolean passed = len >= 3;
 
-            getResults(expect, actual, "Checking output", passed);
-            assertTrue(passed);
-        }
-    }
+          getResults(expect, actual, "Checking output", passed);
+          assertTrue(passed);
+      }
+  }
 
 Summary
 --------------------------
