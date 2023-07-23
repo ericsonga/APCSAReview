@@ -158,7 +158,8 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
         public static void main(String[] args)
         {
             World world = new World(300, 300);
-            // Change 0,0 to other values outside of 0-300 to break the preconditions
+            // Change 0, 0 in the Turtle constructor to other values 
+            // outside of 0-300 to break the preconditions 
             // and see what happens
             Turtle t = new Turtle(0, 0, world);
             t.turnRight();
@@ -183,22 +184,9 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
         @Test
         public void test1()
         {
-            String orig =
-                    "import java.util.*;\n"
-                        + "import java.awt.*;\n\n"
-                        + "public class TurtlePreconditions\n"
-                        + "{\n"
-                        + "  public static void main(String[] args)\n"
-                        + "  {\n"
-                        + "      World world = new World(300,300);\n"
-                        + "      // Change 0,0 to other values outside of 0-300 to break the"
-                        + " preconditions and see what happens\n"
-                        + "      Turtle t = new Turtle(0,0,world);\n"
-                        + "      t.turnRight();\n"
-                        + "      world.show(true);\n"
-                        + "  }\n"
-                        + "}";
-            boolean passed = codeChanged(orig);
+            String code = getCode();
+            boolean passed = !(code.contains("new Turtle(0, 0"));
+            passed = getResults("true", "" + passed, "Change (0, 0) to try to break preconditions", passed);
             assertTrue(passed);
         }
     }
