@@ -187,35 +187,41 @@ See the method `factorial` below that calculates the **factorial** of a number. 
 
        public static int factorial(int n)
        {
-           if (n == 0)
-               return 1;
-           else
-               return n * factorial(n-1);
+           if (n == 0) return 1;
+           else return n * factorial(n - 1);
        }
 
        public static void main(String[] args)
        {
            System.out.println("factorial of 3 is: " + factorial(3));
-           System.out.println("factorial of 4 is: " +factorial(4));
-           System.out.println("factorial of 5 is: " +factorial(5));
+           System.out.println("factorial of 4 is: " + factorial(4));
+           System.out.println("factorial of 5 is: " + factorial(5));
        }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-      public class RunestoneTests extends CodeTestHelper
-     {
-         @Test
-         public void testMain() throws IOException
-         {
-             String output = getMethodOutput("main");
-             String expect = "factorial of 3 is: 6\nfactorial of 4 is: 24\nfactorial of 5 is: 120\nfactorial of 6 is: 720\nfactorial of 1 is: 1\n";
-             boolean passed = getResults(expect, output, "Expected output from main");
-             assertTrue(passed);
-         }
-     }
 
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "factorial of 3 is: 6\n"
+                       + "factorial of 4 is: 24\n"
+                       + "factorial of 5 is: 120\n"
+                       + "factorial of 6 is: 720\n"
+                       + "factorial of 1 is: 1\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 Base Case
 ==========

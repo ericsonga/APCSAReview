@@ -50,34 +50,36 @@ In Unit 7, we learned about two search algorithms, linear search and binary sear
 
   public class IterativeBinarySearch
   {
-     public static int binarySearch(int[] elements, int target) {
-        int left = 0;
-        int right = elements.length - 1;
-        while (left <= right)
-        {
-           int middle = (left + right) / 2;
-           if (target < elements[middle])
-           {
-              right = middle - 1;
-           }
-           else if (target > elements[middle])
-           {
-              left = middle + 1;
-           }
-           else {
-              return middle;
-           }
-         }
-         return -1;
-     }
+      public static int binarySearch(int[] elements, int target)
+      {
+          int left = 0;
+          int right = elements.length - 1;
+          while (left <= right)
+          {
+              int middle = (left + right) / 2;
+              if (target < elements[middle])
+              {
+                  right = middle - 1;
+              }
+              else if (target > elements[middle])
+              {
+                  left = middle + 1;
+              }
+              else
+              {
+                  return middle;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        int[] arr1 = {-20, 3, 15, 81, 432};
+      public static void main(String[] args)
+      {
+          int[] arr1 = {-20, 3, 15, 81, 432};
 
-        int index = binarySearch(arr1,81);
-        System.out.println(index);
-     }
+          int index = binarySearch(arr1, 81);
+          System.out.println(index);
+      }
   }
 
 .. |Java visualizer| raw:: html
@@ -111,35 +113,40 @@ Here is the Java code for a recursive binary search:
   ~~~~
   public class RecursiveBinarySearch
   {
-    public static int recursiveBinarySearch(int[] array, int start, int end, int target)
-    {
-        int middle = (start + end)/2;
-        // base case: check middle element
-        if (target == array[middle]) {
-            return middle;
-        }
-        // base case: check if we've run out of elements
-        if(end < start){
-            return -1; // not found
-        }
-        // recursive call: search start to middle
-        if (target < array[middle]){
-            return recursiveBinarySearch(array, start, middle - 1, target);
-        }
-        // recursive call: search middle to end
-        if (target > array[middle]){
-            return recursiveBinarySearch(array, middle + 1, end, target);
-        }
-        return -1;
-    }
+      public static int recursiveBinarySearch(
+              int[] array, int start, int end, int target)
+              {
+          int middle = (start + end) / 2;
+          // base case: check middle element
+          if (target == array[middle])
+          {
+              return middle;
+          }
+          // base case: check if we've run out of elements
+          if (end < start)
+          {
+              return -1; // not found
+          }
+          // recursive call: search start to middle
+          if (target < array[middle])
+          {
+              return recursiveBinarySearch(array, start, middle - 1, target);
+          }
+          // recursive call: search middle to end
+          if (target > array[middle])
+          {
+              return recursiveBinarySearch(array, middle + 1, end, target);
+          }
+          return -1;
+      }
 
-   public static void main(String[] args)
-   {
-      int[] array = { 3, 7, 12, 19, 22, 25, 29, 30 };
-      int target = 25;
-      int foundIndex = recursiveBinarySearch(array, 0, array.length-1, target);
-      System.out.println(target + " was found at index " + foundIndex);
-   }
+      public static void main(String[] args)
+      {
+          int[] array = {3, 7, 12, 19, 22, 25, 29, 30};
+          int target = 25;
+          int foundIndex = recursiveBinarySearch(array, 0, array.length - 1, target);
+          System.out.println(target + " was found at index " + foundIndex);
+      }
   }
 
 .. |Java visualizer link| raw:: html
@@ -194,74 +201,74 @@ To identify a merge sort look for the following:
 
   public class SortTest
   {
-     public static void mergeSort(int[] elements)
-     {
-        int n = elements.length;
-        int[] temp = new int[n];
-        mergeSortHelper(elements, 0, n - 1, temp);
-     }
+      public static void mergeSort(int[] elements)
+      {
+          int n = elements.length;
+          int[] temp = new int[n];
+          mergeSortHelper(elements, 0, n - 1, temp);
+      }
 
-     private static void mergeSortHelper(int[] elements,
-                                         int from, int to, int[] temp)
-     {
-         if (from < to)
-         {
-            int middle = (from + to) / 2;
-            mergeSortHelper(elements, from, middle, temp);
-            mergeSortHelper(elements, middle + 1, to, temp);
-            merge(elements, from, middle, to, temp);
-         }
-     }
+      private static void mergeSortHelper(
+              int[] elements, int from, int to, int[] temp)
+              {
+          if (from < to)
+          {
+              int middle = (from + to) / 2;
+              mergeSortHelper(elements, from, middle, temp);
+              mergeSortHelper(elements, middle + 1, to, temp);
+              merge(elements, from, middle, to, temp);
+          }
+      }
 
-     private static void merge(int[] elements, int from,
-                               int mid, int to, int[] temp)
-     {
-        int i = from;
-        int j = mid + 1;
-        int k = from;
+      private static void merge(
+              int[] elements, int from, int mid, int to, int[] temp)
+              {
+          int i = from;
+          int j = mid + 1;
+          int k = from;
 
-        while (i <= mid && j <= to)
-        {
-           if (elements[i] < elements[j])
-           {
+          while (i <= mid && j <= to)
+          {
+              if (elements[i] < elements[j])
+              {
+                  temp[k] = elements[i];
+                  i++;
+              }
+              else
+              {
+                  temp[k] = elements[j];
+                  j++;
+              }
+              k++;
+          }
+
+          while (i <= mid)
+          {
               temp[k] = elements[i];
               i++;
-           }
-           else
-           {
+              k++;
+          }
+
+          while (j <= to)
+          {
               temp[k] = elements[j];
               j++;
-           }
-           k++;
-        }
+              k++;
+          }
 
-        while (i <= mid)
-        {
-           temp[k] = elements[i];
-           i++;
-           k++;
-        }
+          for (k = from; k <= to; k++)
+          {
+              elements[k] = temp[k];
+          }
+      }
 
-        while (j <= to)
-        {
-           temp[k] = elements[j];
-           j++;
-           k++;
-        }
-
-        for (k = from; k <= to; k++)
-        {
-           elements[k] = temp[k];
-        }
-     }
-
-     public static void main(String[] args)
-     {
-        int[] arr1 = {86, 3, 43, 5};
-        System.out.println(Arrays.toString(arr1));
-        mergeSort(arr1);
-        System.out.println(Arrays.toString(arr1));
-     }
+      public static void main(String[] args)
+      {
+          int[] arr1 = {86, 3, 43, 5};
+          System.out.println(Arrays.toString(arr1));
+          mergeSort(arr1);
+          System.out.println(Arrays.toString(arr1));
+      }
   }
 
 You can see this executing using the |Java visualizer for merge sort|.
