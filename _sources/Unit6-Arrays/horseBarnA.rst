@@ -42,21 +42,25 @@ Another class called HorseBarn consists of N numbered spaces where each space ca
 
    public class HorseBarn
    {
-      /** The spaces in the barn. Each array element holds a reference to the horse
-      * that is currently occupying the space. A null value indicates an empty space.
-      */
-      private Horse[] spaces;
+       /**
+        * The spaces in the barn. Each array element holds a reference to the horse
+        * that is currently occupying the space. A null value indicates an empty
+        * space.
+        */
+       private Horse[] spaces;
 
-      /** Returns the index of the space that contains the horse with the specified
-       *  name.
-       * Precondition: No two horses in the barn have the same name.
-       * @param name the name of the horse to find
-       * @return the index of the space containing the horse with the specified
-       *      name;
-       *      -1 if no horse with the specified name is in the barn.
-       */
-      public int findHorseSpace(String name)
-      { /* to be implemented in part (a) */ }
+       /**
+        * Returns the index of the space that contains the horse with the specified
+        * name. Precondition: No two horses in the barn have the same name.
+        *
+        * @param name the name of the horse to find
+        * @return the index of the space containing the horse with the specified name;
+        *     -1 if no horse with the specified name is in the barn.
+        */
+       public int findHorseSpace(String name)
+       {
+           /* to be implemented in part (a) */
+       }
    }
 
 **Part a.**  Write the HorseBarn method findHorseSpace. This method returns the index of the space in which the horse with the specified name is located. If there is no horse with the specified name in the barn, the method returns -1.
@@ -121,165 +125,189 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
    ~~~~
    class Horse
    {
-      private String name;
-      private int weight;
+       private String name;
+       private int weight;
 
-      public Horse(String theName, int theWeight)
-      {
-         this.name = theName;
-         this.weight = theWeight;
-      }
+       public Horse(String theName, int theWeight)
+       {
+           this.name = theName;
+           this.weight = theWeight;
+       }
 
-      public String getName() { return this.name;}
+       public String getName()
+       {
+           return this.name;
+       }
 
-      public int getWeight() { return this.weight; }
+       public int getWeight()
+       {
+           return this.weight;
+       }
 
-      public String toString()
-      {
-         return "name: " + this.name + " weight: " + this.weight;
-      }
+       public String toString()
+       {
+           return "name: " + this.name + " weight: " + this.weight;
+       }
    }
-
 
    public class HorseBarn
    {
-      private Horse[] spaces;
+       private Horse[] spaces;
 
-      /** Constructor that takes the number of stalls
-       * @param numStalls - the number of stalls in the barn
-       */
-      public HorseBarn(int numStalls)
-      {
-        spaces = new Horse[numStalls];
-      }
+       /**
+        * Constructor that takes the number of stalls
+        *
+        * @param numStalls - the number of stalls in the barn
+        */
+       public HorseBarn(int numStalls)
+       {
+           spaces = new Horse[numStalls];
+       }
 
-      /** Returns the index of the space that contains the horse with the specified name.
-       * * Precondition: No two horses in the barn have the same name.
-       * @param name the name of the horse to find
-       * @return the index of the space containing the horse with the specified name;
-       * -1 if no horse with the specified name is in the barn.
-       */
-      public int findHorseSpace(String name)
-      {
+       /**
+        * Returns the index of the space that contains the horse with the specified
+        * name. * Precondition: No two horses in the barn have the same name.
+        *
+        * @param name the name of the horse to find
+        * @return the index of the space containing the horse with the specified name;
+        *     -1 if no horse with the specified name is in the barn.
+        */
+       public int findHorseSpace(String name) {}
 
-      }
+       public String toString()
+       {
+           String result = "";
+           Horse h = null;
+           for (int i = 0; i < spaces.length; i++)
+           {
+               h = spaces[i];
+               result = result + "space " + i + " has ";
+               if (h == null) result = result + " null \n";
+               else result = result + h.toString() + "\n";
+           }
+           return result;
+       }
 
-      public String toString()
-      {
-        String result = "";
-        Horse h = null;
-        for (int i = 0; i < spaces.length; i++) {
-          h = spaces[i];
-          result = result + "space " + i + " has ";
-          if (h == null) result = result + " null \n";
-          else result = result + h.toString() + "\n";
-        }
-        return result;
-      }
+       public static void main(String[] args)
+       {
+           HorseBarn barn = new HorseBarn(7);
+           barn.spaces[0] = new Horse("Trigger", 1340);
+           barn.spaces[2] = new Horse("Silver", 1210);
+           barn.spaces[3] = new Horse("Lady", 1575);
+           barn.spaces[5] = new Horse("Patches", 1350);
+           barn.spaces[6] = new Horse("Duke", 1410);
 
-      public static void main (String[] args)
-      {
-        HorseBarn barn = new HorseBarn(7);
-        barn.spaces[0] = new Horse("Trigger", 1340);
-        barn.spaces[2] = new Horse("Silver",1210);
-        barn.spaces[3] = new Horse("Lady", 1575);
-        barn.spaces[5] = new Horse("Patches", 1350);
-        barn.spaces[6] = new Horse("Duke", 1410);
+           // print out what is in the barn
+           System.out.println(barn);
 
-        // print out what is in the barn
-        System.out.println(barn);
-
-        // test
-        System.out.println("Index of Trigger should be 0 and is " +
-                           barn.findHorseSpace("Trigger"));
-        System.out.println("Index of Silver should be 2 and is " +
-                           barn.findHorseSpace("Silver"));
-        System.out.println("Index of Coco should be -1 and is " +
-                           barn.findHorseSpace("Coco"));
-      }
+           // test
+           System.out.println(
+                   "Index of Trigger should be 0 and is "
+                           + barn.findHorseSpace("Trigger"));
+           System.out.println(
+                   "Index of Silver should be 2 and is "
+                           + barn.findHorseSpace("Silver"));
+           System.out.println(
+                   "Index of Coco should be -1 and is "
+                           + barn.findHorseSpace("Coco"));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.lang.reflect.Field;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Index of Trigger should be 0 and is 0\nIndex of Silver should be 2 and is 2\nIndex of Coco should be -1 and is -1";
+   import org.junit.*;
 
-            boolean passed = removeSpaces(output).contains(removeSpaces(expect));
+   import java.io.*;
+   import java.lang.reflect.Field;
 
-            getResults(expect, output, "Expected output from main", passed);
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "Index of Trigger should be 0 and is 0\n"
+                       + "Index of Silver should be 2 and is 2\n"
+                       + "Index of Coco should be -1 and is -1";
 
-        @Test
-        public void test1() {
-            HorseBarn barn = new HorseBarn(7);
+           boolean passed = removeSpaces(output).contains(removeSpaces(expect));
 
-            try {
-                Field barnField = HorseBarn.class.getDeclaredField("spaces");
-                barnField.setAccessible(true);
+           getResults(expect, output, "Expected output from main", passed);
+           assertTrue(passed);
+       }
 
-                Horse[] spaces = (Horse[]) barnField.get(barn);
+       @Test
+       public void test1()
+       {
+           HorseBarn barn = new HorseBarn(7);
 
-                spaces[1] = new Horse("Trigger", 1340);
-                spaces[3] = new Horse("Silver",1210);
-                spaces[4] = new Horse("Lady", 1575);
-                spaces[6] = new Horse("Patches", 1350);
-                spaces[0] = new Horse("Duke", 1410);
+           try
+           {
+               Field barnField = HorseBarn.class.getDeclaredField("spaces");
+               barnField.setAccessible(true);
 
-                String expected = "3";
-                String actual = "" + barn.findHorseSpace("Silver");
+               Horse[] spaces = (Horse[]) barnField.get(barn);
 
-                String msg = "Checking findHorseSpace(\"Silver\") with [\"Duke\", \"Trigger\", null, \"Silver\", \"Lady\", null, \"Patches\"]";
-                boolean passed = getResults(expected, actual, msg);
-                assertTrue(passed);
+               spaces[1] = new Horse("Trigger", 1340);
+               spaces[3] = new Horse("Silver", 1210);
+               spaces[4] = new Horse("Lady", 1575);
+               spaces[6] = new Horse("Patches", 1350);
+               spaces[0] = new Horse("Duke", 1410);
 
-            } catch (Exception e) {
-                getResults("", "", "There was a error with the testing code.", false);
-                fail();
-            }
+               String expected = "3";
+               String actual = "" + barn.findHorseSpace("Silver");
 
-        }
+               String msg =
+                       "Checking findHorseSpace(\"Silver\") with [\"Duke\", \"Trigger\", null,"
+                           + " \"Silver\", \"Lady\", null, \"Patches\"]";
+               boolean passed = getResults(expected, actual, msg);
+               assertTrue(passed);
 
-        @Test
-        public void test2() {
-            HorseBarn barn = new HorseBarn(7);
+           }
+           catch (Exception e)
+           {
+               getResults("", "", "There was a error with the testing code.", false);
+               fail();
+           }
+       }
 
-            try {
-                Field barnField = HorseBarn.class.getDeclaredField("spaces");
-                barnField.setAccessible(true);
+       @Test
+       public void test2()
+       {
+           HorseBarn barn = new HorseBarn(7);
 
-                Horse[] spaces = (Horse[]) barnField.get(barn);
+           try
+           {
+               Field barnField = HorseBarn.class.getDeclaredField("spaces");
+               barnField.setAccessible(true);
 
-                spaces[1] = new Horse("Trigger", 1340);
-                spaces[3] = new Horse("Silver",1210);
-                //spaces[4] = new Horse("Lady", 1575);
-                spaces[6] = new Horse("Patches", 1350);
-                spaces[0] = new Horse("Duke", 1410);
+               Horse[] spaces = (Horse[]) barnField.get(barn);
 
-                String expected = "-1";
-                String actual = "" + barn.findHorseSpace("Lady");
+               spaces[1] = new Horse("Trigger", 1340);
+               spaces[3] = new Horse("Silver", 1210);
+               // spaces[4] = new Horse("Lady", 1575);
+               spaces[6] = new Horse("Patches", 1350);
+               spaces[0] = new Horse("Duke", 1410);
 
-                String msg = "Checking findHorseSpace(\"Lady\") with [\"Duke\", \"Trigger\", null, \"Silver\", null, null, \"Patches\"]";
-                boolean passed = getResults(expected, actual, msg);
-                assertTrue(passed);
+               String expected = "-1";
+               String actual = "" + barn.findHorseSpace("Lady");
 
-            } catch (Exception e) {
-                getResults("", "", "There was a error with the testing code.", false);
-                fail();
-            }
+               String msg =
+                       "Checking findHorseSpace(\"Lady\") with [\"Duke\", \"Trigger\", null,"
+                           + " \"Silver\", null, null, \"Patches\"]";
+               boolean passed = getResults(expected, actual, msg);
+               assertTrue(passed);
 
-        }
-    }
-
-
+           }
+           catch (Exception e)
+           {
+               getResults("", "", "There was a error with the testing code.", false);
+               fail();
+           }
+       }
+   }
 
 Video - One way to code the solution
 =====================================

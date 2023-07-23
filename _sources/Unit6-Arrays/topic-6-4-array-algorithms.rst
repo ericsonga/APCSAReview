@@ -93,63 +93,68 @@ Here are two common array traversal loops that can be used for these algorithms:
    ~~~~
    public class MinMax
    {
-      public static void main(String[] args)
-      {
-        int[ ] values = {6, 2, 1, 7, 12, 5};
-        int min = values[0]; // initialize min to the first element
-        for (int val : values)
-        {
-          if (val < min) // found a new min!
-              min = val;
-        }
-        System.out.println("Min is " + min );
-      }
+       public static void main(String[] args)
+       {
+           int[] values = {6, 2, 1, 7, 12, 5};
+           int min = values[0]; // initialize min to the first element
+           for (int val : values)
+           {
+               if (val < min) // found a new min!
+               min = val;
+           }
+           System.out.println("Min is " + min);
+       }
    }
+
    ====
    // Test for Lesson MinMax
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("MinMax");
+   import org.junit.*;
 
-            int[] numArray =  {2, 6, 7, 12, 5};
-            setDefaultValues(new Object[]{numArray});
-        }
+   import java.io.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "Max is 12";
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("MinMax");
 
-            boolean passed = output.contains(expect);
+           int[] numArray = {2, 6, 7, 12, 5};
+           setDefaultValues(new Object[] {numArray});
+       }
 
-            passed = getResults(expect, output, "Max element", passed);
-            assertTrue(passed);
-        }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "Max is 12";
 
-        @Test
-        public void test2()
-        {
-            String output = getMethodOutput("main");
-            String expect = "Average is 5.5";
+           boolean passed = output.contains(expect);
 
-            boolean passed = output.contains(expect);
+           passed = getResults(expect, output, "Max element", passed);
+           assertTrue(passed);
+       }
 
-            passed = getResults(expect, output, "Average", passed);
-            assertTrue(passed);
-        }
-        @Test
-        public void test3()
-        {
-          boolean passed = checkCodeContains("if statement using val >","if (val >");
-          assertTrue(passed);
-        }
-    }
+       @Test
+       public void test2()
+       {
+           String output = getMethodOutput("main");
+           String expect = "Average is 5.5";
+
+           boolean passed = output.contains(expect);
+
+           passed = getResults(expect, output, "Average", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test3()
+       {
+           boolean passed = checkCodeContains("if statement using val >", "if (val >");
+           assertTrue(passed);
+       }
+   }
 
 .. |visualizer| raw:: html
 
@@ -167,60 +172,66 @@ Here are two common array traversal loops that can be used for these algorithms:
    ~~~~
    public class Rotate
    {
-      public static void main(String[] args)
-      {
-        int[ ] values = {6, 2, 1, 7, 12, 5};
-        int first = values[0];
-        for (int i = 0; i < values.length; i++)
-        {
-           // if it's not the last element, copy the next one over
-          if (i < values.length - 1)
-          {
-              values[i] = values[i+1];
-          }
-          else {
-             // last element gets first
-             values[i] = first;
-            }
-        }
-        // print them out to see the results
-        for (int val : values)
-        {
-           System.out.print(val + " ");
-        }
-    }
+       public static void main(String[] args)
+       {
+           int[] values = {6, 2, 1, 7, 12, 5};
+           int first = values[0];
+           for (int i = 0; i < values.length; i++)
+           {
+               // if it's not the last element, copy the next one over
+               if (i < values.length - 1)
+               {
+                   values[i] = values[i + 1];
+               }
+               else
+               {
+                   // last element gets first
+                   values[i] = first;
+               }
+           }
+           // print them out to see the results
+           for (int val : values)
+           {
+               System.out.print(val + " ");
+           }
+       }
    }
+
    ====
    // Test for Lesson 6.4.2 - Rotate
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Rotate");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "5 6 2 1 7 12";
+   import java.io.*;
 
-            boolean passed = output.contains(expect);
-
-            passed = getResults(expect, output, "Rotate numbers to the right", passed);
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test3()
-        {
-          boolean passed = checkCodeContains("copying values[i-1] into values[i]","values[i] = values[i-1]");
-          assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Rotate");
        }
+
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "5 6 2 1 7 12";
+
+           boolean passed = output.contains(expect);
+
+           passed = getResults(expect, output, "Rotate numbers to the right", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test3()
+       {
+           boolean passed =
+                   checkCodeContains("copying values[i-1] into values[i]", "values[i] = values[i-1]");
+           assertTrue(passed);
+       }
+   }
 
 We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. These will get easier with practice!
 

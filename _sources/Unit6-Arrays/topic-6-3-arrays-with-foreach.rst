@@ -87,30 +87,34 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
    ~~~~
    public class ForEachDemo
    {
-      public static void main(String[] args)
-      {
-        int[] highScores = { 10, 9, 8, 8};
-        String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
-        // for each loop with an int array
-        for (int value : highScores)
-        {
-            System.out.println( value );
-        }
-        // for each loop with a String array
-        for (String value : names)
-        {
-            System.out.println(value); // this time it's a name!
-        }
-      }
-    }
+       public static void main(String[] args)
+       {
+           int[] highScores = {10, 9, 8, 8};
+           String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
+           // for each loop with an int array
+           for (int value : highScores)
+           {
+               System.out.println(value);
+           }
+           // for each loop with a String array
+           for (String value : names)
+           {
+               System.out.println(value); // this time it's a name!
+           }
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("ForEachDemo");
         }
 
@@ -153,49 +157,53 @@ Use the enhanced for each loop with arrays whenever you can, because it cuts dow
    ~~~~
    public class EvenLoop
    {
-      public static void main(String[] args)
-      {
-          int[ ] values = {6, 2, 1, 7, 12, 5};
-          // Rewrite this loop as a for each loop and run
-          for (int i=0; i < values.length; i++)
-          {
-              if (values[i] % 2 == 0)
-              {
-                 System.out.println(values[i] + " is even!");
-              }
-          }
-      }
+       public static void main(String[] args)
+       {
+           int[] values = {6, 2, 1, 7, 12, 5};
+           // Rewrite this loop as a for each loop and run
+           for (int i = 0; i < values.length; i++)
+           {
+               if (values[i] % 2 == 0)
+               {
+                   System.out.println(values[i] + " is even!");
+               }
+           }
+       }
    }
+
    ====
    // Test for Lesson 6.3.2 - EvenLoop
 
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("EvenLoop");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "6 is even!\n2 is even!\n12 is even!";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()");
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("EvenLoop");
+       }
 
-        @Test
-        public void test2()
-        {
-            boolean passed = checkCodeContains("for each loop", "for(int * : values)");
-            assertTrue(passed);
-        }
-    }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "6 is even!\n2 is even!\n12 is even!";
+
+           boolean passed = getResults(expect, output, "main()");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test2()
+       {
+           boolean passed = checkCodeContains("for each loop", "for(int * : values)");
+           assertTrue(passed);
+       }
+   }
 
 Foreach Loop Limitations
 --------------------------
@@ -218,55 +226,66 @@ What if we had a loop that incremented all the elements in the array. Would that
    ~~~~
    public class IncrementLoop
    {
-      public static void main(String[] args)
-      {
-          int[ ] values = {6, 2, 1, 7, 12, 5};
-          // Can this loop increment the values?
-          for (int val : values)
-          {
-            val++;
-            System.out.println("New val: " + val);
-          }
-          // Print out array to see if they really changed
-          System.out.println("Array after the loop: ");
-          for (int v : values)
-          {
-             System.out.print(v + " ");
-          }
-      }
+       public static void main(String[] args)
+       {
+           int[] values = {6, 2, 1, 7, 12, 5};
+           // Can this loop increment the values?
+           for (int val : values)
+           {
+               val++;
+               System.out.println("New val: " + val);
+           }
+           // Print out array to see if they really changed
+           System.out.println("Array after the loop: ");
+           for (int v : values)
+           {
+               System.out.print(v + " ");
+           }
+       }
    }
+
    ====
    // Test for Lesson 6.3.3 - IncrementLoop
 
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("IncrementLoop");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "New val: 7\nNew val: 3\nNew val: 2\nNew val: 8\nNew val: 13\nNew val: 6\nArray after the loop:\n7 3 2 8 13 6";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()");
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("IncrementLoop");
+       }
 
-        @Test
-        public void test2()
-        {
-            String target = "for (int * = #; * ? *.length; *~)";
-            boolean passed = checkCodeContains("for loop", target);
-            assertTrue(passed);
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "New val: 7\n"
+                       + "New val: 3\n"
+                       + "New val: 2\n"
+                       + "New val: 8\n"
+                       + "New val: 13\n"
+                       + "New val: 6\n"
+                       + "Array after the loop:\n"
+                       + "7 3 2 8 13 6";
 
-        }
-    }
+           boolean passed = getResults(expect, output, "main()");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test2()
+       {
+           String target = "for (int * = #; * ? *.length; *~)";
+           boolean passed = checkCodeContains("for loop", target);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
 
@@ -358,56 +377,57 @@ Here is an object-oriented example that has the array as a private instance vari
    ~~~~
    public class ArrayWorker
    {
-       private int[ ] values;
+       private int[] values;
 
        public ArrayWorker(int[] theValues)
        {
-          values = theValues;
+           values = theValues;
        }
 
        public double getAverage()
        {
-          double total = 0;
-          for (int val : values)
-          {
-             total  = total + val;
-          }
-          return total / values.length;
+           double total = 0;
+           for (int val : values)
+           {
+               total = total + val;
+           }
+           return total / values.length;
        }
 
        public static void main(String[] args)
        {
-           int[] numArray =  {2, 6, 7, 12, 5};
+           int[] numArray = {2, 6, 7, 12, 5};
            ArrayWorker aWorker = new ArrayWorker(numArray);
            System.out.println(aWorker.getAverage());
        }
    }
+
    ====
    // Test for Lesson 6.3.3 - IncrementLoop
 
-    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("ArrayWorker");
-        }
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "6.4";
+   import java.io.*;
 
-            boolean passed = getResults(expect, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("ArrayWorker");
+       }
 
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "6.4";
 
-
+           boolean passed = getResults(expect, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 |Exercise| **Check Your Understanding**
 
@@ -503,26 +523,27 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
    import java.io.*;
    import java.nio.file.*;
    import java.util.*;
-   
+
    public class SpellChecker
    {
-       // This dictionary includes 10,000 English words read in from the dictionary file
+       // This dictionary includes 10,000 English words read in from the dictionary
+       // file
        private String[] dictionary = new String[10000];
 
        /* Write a spellcheck() method using an enhanced for each loop
         * that takes a word as a parameter and returns true if it is
         * in the dictionary array. Return false if it is not found.
-       */
+        */
 
        /* Write a checkText() method that takes a String[] parameter which is a sentence
-        * of text in a String array and then calls your spellcheck method above 
-        * to check if each word in that text is spelled correctly. 
-        * Use an enhanced for each loop. 
+        * of text in a String array and then calls your spellcheck method above
+        * to check if each word in that text is spelled correctly.
+        * Use an enhanced for each loop.
         * It should count and print out the misspelled words, and return the count.
-       */
+        */
 
-
-       // Do not change "throws IOException" which is needed for reading in the input file 
+       // Do not change "throws IOException" which is needed for reading in the input
+       // file
        public static void main(String[] args) throws IOException
        {
            SpellChecker checker = new SpellChecker();
@@ -530,12 +551,12 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
            String word = "catz";
            System.out.println(word + " is spelled correctly? " + checker.spellcheck(word));
            System.out.println(word + " is spelled correctly? " + checker.spellcheck("cat"));
-           
+
            // Testing checkText method
            String text = "Catz are cool aminals!";
            // replace punctuation symbols with empty string
            text = text.replaceAll("\\p{Punct}", "");
-           // convert to lowercase 
+           // convert to lowercase
            text = text.toLowerCase();
            // split the text into a String array
            String[] words = text.split(" ");
@@ -543,21 +564,21 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
            int numErrors = checker.checkText(words);
            System.out.println("There were " + numErrors + " spelling errors in " + text);
            */
-        }
+       }
 
-       // The constructor reads in the dictionary from a file 
-       public SpellChecker() throws IOException 
+       // The constructor reads in the dictionary from a file
+       public SpellChecker() throws IOException
        {
            // Let's use java.nio method readAllLines and convert to an array!
            List<String> lines = Files.readAllLines(Paths.get("dictionary.txt"));
            dictionary = lines.toArray(dictionary);
-        
+
            /* The old java.io.* Scan/File method of reading in files, replaced by java.nio above // create File object
            File dictionaryFile = new File("dictionary.txt");
-     
+
            //Create Scanner object to read File
            Scanner scan = new Scanner(dictionaryFile);
-     
+
            // Reading each line of the file
            // and saving it in the array
            int i = 0;
@@ -569,98 +590,124 @@ In the |last spellcheck lesson|, you created a spellcheck method using a for loo
            }
            scan.close();
            */
-        }   
+       }
    }
+
    ====
    // Test for challenge-6-3-spell-checker
-    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("SpellChecker");
-        }
+   import org.junit.*;
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String[] lines = output.split("\\s+");
-            boolean passed = lines.length >= 1;
+   import java.io.*;
 
-            passed = getResults(
-                            "1+ lines of output",
-                            lines.length + " lines of output",
-                            "Expected output",
-                            passed);
-            assertTrue(passed);
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("SpellChecker");
+       }
 
-        @Test
-        public void test3()
-        {
-            Object[] args = {"dogz"};
-            String output = getMethodOutput("spellcheck", args);
-            String expect = "false";
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String[] lines = output.split("\\s+");
+           boolean passed = lines.length >= 1;
 
-            boolean passed = getResults(expect, output, "spellcheck(\"dogz\")");
-            assertTrue(passed);
-        }
+           passed =
+                   getResults(
+                           "1+ lines of output",
+                           lines.length + " lines of output",
+                           "Expected output",
+                           passed);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void test4()
-        {
-            Object[] args = {"dog"};
-            String output = getMethodOutput("spellcheck", args);
-            String expect = "true";
+       @Test
+       public void test3()
+       {
+           Object[] args = {"dogz"};
+           String output = getMethodOutput("spellcheck", args);
+           String expect = "false";
 
-            boolean passed = getResults(expect, output, "spellcheck(\"dog\") (If false, spellcheck may be returning false too soon!)");
-            assertTrue(passed);
-        }
+           boolean passed = getResults(expect, output, "spellcheck(\"dogz\")");
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testFor() throws IOException
-        {
-            String target = "for (int * = #; * ? #; *~)";
-            boolean passed = checkCodeNotContains("for loop", target);
-            assertTrue(passed);
-        }
+       @Test
+       public void test4()
+       {
+           Object[] args = {"dog"};
+           String output = getMethodOutput("spellcheck", args);
+           String expect = "true";
 
-        @Test
-        public void testForEach()
-        {
-            boolean passed = checkCodeContains("for each loop", "for(String * : dictionary)");
-            assertTrue(passed);
-        }
-        @Test
-        public void testSignature()
-        {
-            boolean passed = checkCodeContains("Signature public int checkText(String[])", "public int checkText(String[]");
-            assertTrue(passed);
-        }
-        @Test
-        public void testCheckText1()
-        {
-            String[] sentence = {"dogz", "are","cool","tuu"};
-            Object[] args = {sentence};
-            String output = getMethodOutput("checkText", args);
-            String expect = "2";
-            boolean passed = getResults(expect, output, "number of spelling errors in checkText({\"dogz\", \"are\",\"cool\",\"tuu\"})" );
-            assertTrue(passed);
-        }
-        @Test
-        public void testCheckText2()
-        {
-            String[] sentence = {"dogs", "are","cool","too"};
-            Object[] args = {sentence};
-            String output = getMethodOutput("checkText", args);
-            String expect = "0";
-            boolean passed = getResults(expect, output, "number of spelling errors in checkText({\"dogs\", \"are\",\"cool\",\"too\"})" );
-            assertTrue(passed);
-        }
-      }
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "spellcheck(\"dog\") (If false, spellcheck may be returning false too"
+                               + " soon!)");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testFor() throws IOException
+       {
+           String target = "for (int * = #; * ? #; *~)";
+           boolean passed = checkCodeNotContains("for loop", target);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testForEach()
+       {
+           boolean passed = checkCodeContains("for each loop", "for(String * : dictionary)");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testSignature()
+       {
+           boolean passed =
+                   checkCodeContains(
+                           "Signature public int checkText(String[])",
+                           "public int checkText(String[]");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testCheckText1()
+       {
+           String[] sentence = {"dogz", "are", "cool", "tuu"};
+           Object[] args = {sentence};
+           String output = getMethodOutput("checkText", args);
+           String expect = "2";
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "number of spelling errors in checkText({\"dogz\","
+                               + " \"are\",\"cool\",\"tuu\"})");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testCheckText2()
+       {
+           String[] sentence = {"dogs", "are", "cool", "too"};
+           Object[] args = {sentence};
+           String output = getMethodOutput("checkText", args);
+           String expect = "0";
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "number of spelling errors in checkText({\"dogs\","
+                               + " \"are\",\"cool\",\"too\"})");
+           assertTrue(passed);
+       }
+   }
 
 |Groupwork| Design an Array of Objects for your Community
 ----------------------------------------------------------
@@ -696,25 +743,25 @@ start with ``class`` instead of ``public class``.
       // Creates an array of the default size
       public StudentArray()
       {
-         array = new Student[size];
+          array = new Student[size];
       }
 
       // Creates aan array of the given size
       public StudentArray(int size)
       {
-         array = new Student[size];
+          array = new Student[size];
       }
 
       // Adds Student s to the array at index i
       public void add(int i, Student s)
       {
-        array[i] = s;
+          array[i] = s;
       }
 
       // prints the array of students
       public void print()
       {
-          for(Student s : array)
+          for (Student s : array)
           {
               // this will call Student's toString() method
               System.out.println(s);
@@ -723,96 +770,119 @@ start with ``class`` instead of ``public class``.
 
       /* Write a findAndPrint(name) method */
 
-
       public static void main(String[] args)
       {
-         // Create an object of this class and pass in size 3
-         StudentArray roster = new StudentArray(3);
-         // Add new Student objects at indices 0-2
-         roster.add(0, new Student("Skyler", "skyler@sky.com", 123456));
-         roster.add(1, new Student("Ayanna", "ayanna@gmail.com", 789012));
-         roster.add(2, new Student("Dakota", "dak@gmail.com", 112233));
-         roster.print();
-         System.out.println("Finding student Ayanna: ");
-         // uncomment to test
-         // roster.findAndPrint("Ayanna");
+          // Create an object of this class and pass in size 3
+          StudentArray roster = new StudentArray(3);
+          // Add new Student objects at indices 0-2
+          roster.add(0, new Student("Skyler", "skyler@sky.com", 123456));
+          roster.add(1, new Student("Ayanna", "ayanna@gmail.com", 789012));
+          roster.add(2, new Student("Dakota", "dak@gmail.com", 112233));
+          roster.print();
+          System.out.println("Finding student Ayanna: ");
+          // uncomment to test
+          // roster.findAndPrint("Ayanna");
       }
-    }
+  }
 
-    class Student
-    {
-        private String name;
-        private String email;
-        private int id;
+  class Student
+  {
+      private String name;
+      private String email;
+      private int id;
 
-        public Student(String initName, String initEmail, int initId)
-        {
-            name = initName;
-            email = initEmail;
-            id = initId;
-        }
+      public Student(String initName, String initEmail, int initId)
+      {
+          name = initName;
+          email = initEmail;
+          id = initId;
+      }
 
-        public String getName() { return name; }
-        public String getEmail() { return email; }
-        public int getId() { return id; }
+      public String getName()
+      {
+          return name;
+      }
 
-        // toString() method
-        public String toString()
-        {
-            return id + ": " + name + ", " + email;
-        }
-    }
+      public String getEmail()
+      {
+          return email;
+      }
+
+      public int getId()
+      {
+          return id;
+      }
+
+      // toString() method
+      public String toString()
+      {
+          return id + ": " + name + ", " + email;
+      }
+  }
+
   ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("StudentArray");
         }
 
-    @Test
-    public void test1()
-    {
-        String target = "findAndPrint(String";
-        boolean passed = checkCodeContains("findAndPrint method header with String paramenter",target);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test2()
-    {
-        String target = "roster.findAndPrint(";
-        boolean passed = checkCodeContains("call to roster.findAndPrint method (uncommented in main)",target);
-        assertTrue(passed);
-    }
-
-
-    @Test
-    public void testForEach()
-    {
-        String target = "for(Student";
-        String code = getCode().replaceAll("\\s", "");
-        int index = code.indexOf("findAndPrint(String");
-        boolean passed = false;
-        if (index > 0) {
-            code = code.substring(index, index + 200);
-            int num = countOccurences(code, target);
-            passed = num == 1;
-            }
-        getResults("true", ""+passed, "Checking that findAndPrint() contains an enhanced for loop for Student in array", passed);
+        @Test
+        public void test1()
+        {
+            String target = "findAndPrint(String";
+            boolean passed =
+                    checkCodeContains("findAndPrint method header with String paramenter", target);
             assertTrue(passed);
         }
-    @Test
-    public void testEquals()
-    {
+
+        @Test
+        public void test2()
+        {
+            String target = "roster.findAndPrint(";
+            boolean passed =
+                    checkCodeContains(
+                            "call to roster.findAndPrint method (uncommented in main)", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testForEach()
+        {
+            String target = "for(Student";
+            String code = getCode().replaceAll("\\s", "");
+            int index = code.indexOf("findAndPrint(String");
+            boolean passed = false;
+            if (index > 0)
+            {
+                code = code.substring(index, index + 200);
+                int num = countOccurences(code, target);
+                passed = num == 1;
+            }
+            getResults(
+                    "true",
+                    "" + passed,
+                    "Checking that findAndPrint() contains an enhanced for loop for Student in array",
+                    passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testEquals()
+        {
             boolean passed = checkCodeContains("use of equals method", ".equals(");
             assertTrue(passed);
-    }
-    @Test
-    public void testGetName()
+        }
+
+        @Test
+        public void testGetName()
         {
             boolean passed = checkCodeContains("use of getName() method", ".getName()");
             assertTrue(passed);
@@ -875,38 +945,40 @@ For your community challenge,
   }
   ====
   import static org.junit.Assert.*;
+
   import org.junit.*;
+
   import java.io.*;
 
   public class RunestoneTests extends CodeTestHelper
   {
-        @Test
-        public void testLoop()
-        {
-           String target = "for";
-           String code = getCode();
-           int num = countOccurences(code, target);
-           boolean passed = num >= 2;
-           getResults("2", ""+num, "Checking that at least 2 enhanced for loops are used", passed);
-           assertTrue(passed);
-        }
+      @Test
+      public void testLoop()
+      {
+          String target = "for";
+          String code = getCode();
+          int num = countOccurences(code, target);
+          boolean passed = num >= 2;
+          getResults("2", "" + num, "Checking that at least 2 enhanced for loops are used", passed);
+          assertTrue(passed);
+      }
 
-        @Test
-            public void testPrint()
-            {
-                String target = "public void print(";
-                boolean passed = checkCodeContains("print() method",target);
-                assertTrue(passed);
-            }
-        @Test
-            public void test1()
-            {
-                String target = "findAndPrint(";
-                boolean passed = checkCodeContains("findAndPrint method",target);
-                assertTrue(passed);
-            }
-    }
+      @Test
+      public void testPrint()
+      {
+          String target = "public void print(";
+          boolean passed = checkCodeContains("print() method", target);
+          assertTrue(passed);
+      }
 
+      @Test
+      public void test1()
+      {
+          String target = "findAndPrint(";
+          boolean passed = checkCodeContains("findAndPrint method", target);
+          assertTrue(passed);
+      }
+  }
 
 Summary
 -------
