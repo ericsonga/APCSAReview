@@ -88,137 +88,139 @@ You can test this with the ``edgeDetection`` method below.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
-      }
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      public void edgeDetection(int edgeDist)
-      {
-           Pixel leftPixel = null;
-           Pixel rightPixel = null;
-           Pixel[][] pixels = this.getPixels2D();
-           Color rightColor = null;
-           for (int row = 0; row < pixels.length; row++)
-           {
-                for (int col = 0; col < pixels[0].length-1; col++)
+        public void edgeDetection(int edgeDist)
+        {
+            Pixel leftPixel = null;
+            Pixel rightPixel = null;
+            Pixel[][] pixels = this.getPixels2D();
+            Color rightColor = null;
+            for (int row = 0; row < pixels.length; row++)
+            {
+                for (int col = 0; col < pixels[0].length - 1; col++)
                 {
-                     leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][col+1];
-                     rightColor = rightPixel.getColor();
-                     if (leftPixel.colorDistance(rightColor) >
-                     edgeDist)
-                       leftPixel.setColor(Color.BLACK);
-                     else
-                       leftPixel.setColor(Color.WHITE);
+                    leftPixel = pixels[row][col];
+                    rightPixel = pixels[row][col + 1];
+                    rightColor = rightPixel.getColor();
+                    if (leftPixel.colorDistance(rightColor) > edgeDist)
+                        leftPixel.setColor(Color.BLACK);
+                    else leftPixel.setColor(Color.WHITE);
                 }
-           }
-      }
+            }
+        }
 
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        // You can also try temple2.jpg
-        Picture pict = new Picture("swan.jpg");
-        pict.show();
-        pict.edgeDetection(12);
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            // You can also try temple2.jpg
+            Picture pict = new Picture("swan.jpg");
+            pict.show();
+            pict.edgeDetection(12);
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void edgeDetection(";
-         boolean passed = checkCodeContains("edgeDetection( method",target);
-         assertTrue(passed);
-       }
-      }
+    import org.junit.*;
 
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void edgeDetection(";
+            boolean passed = checkCodeContains("edgeDetection( method", target);
+            assertTrue(passed);
+        }
+    }
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
     :width: 30px
@@ -246,169 +248,186 @@ color distance is greater than the specified edge distance.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
-      }
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      /** Add another nested loop that compares the current pixel with the pixel below it and sets the current pixel color to black as well when the color distance is greater than the specified edge distance.
-      */
-      public void edgeDetection(int edgeDist)
-      {
-           Pixel leftPixel = null;
-           Pixel rightPixel = null;
-           Pixel[][] pixels = this.getPixels2D();
-           Color rightColor = null;
-           for (int row = 0; row < pixels.length; row++)
-           {
-                for (int col = 0; col < pixels[0].length-1; col++)
+        /**
+         * Add another nested loop that compares the current pixel with the pixel below
+         * it and sets the current pixel color to black as well when the color distance
+         * is greater than the specified edge distance.
+         */
+        public void edgeDetection(int edgeDist)
+        {
+            Pixel leftPixel = null;
+            Pixel rightPixel = null;
+            Pixel[][] pixels = this.getPixels2D();
+            Color rightColor = null;
+            for (int row = 0; row < pixels.length; row++)
+            {
+                for (int col = 0; col < pixels[0].length - 1; col++)
                 {
-                     leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][col+1];
-                     rightColor = rightPixel.getColor();
-                     if (leftPixel.colorDistance(rightColor) >
-                     edgeDist)
+                    leftPixel = pixels[row][col];
+                    rightPixel = pixels[row][col + 1];
+                    rightColor = rightPixel.getColor();
+                    if (leftPixel.colorDistance(rightColor) > edgeDist)
                         leftPixel.setColor(Color.BLACK);
-                     else
-                        leftPixel.setColor(Color.WHITE);
+                    else leftPixel.setColor(Color.WHITE);
                 }
-           }
-      }
+            }
+        }
 
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        // You can also try temple2.jpg
-        Picture pict = new Picture("swan.jpg");
-        pict.show();
-        pict.edgeDetection(12);
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            // You can also try temple2.jpg
+            Picture pict = new Picture("swan.jpg");
+            pict.show();
+            pict.edgeDetection(12);
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void edgeDetection(";
-         boolean passed = checkCodeContains("edgeDetection method",target);
-         assertTrue(passed);
-       }
-       @Test
-         public void test3()
-         {
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void edgeDetection(";
+            boolean passed = checkCodeContains("edgeDetection method", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void edgeDetection(");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 4;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 4;
             }
-            getResults("true", ""+passed, "Checking that edgeDetection contains 4 (2 nested) for loops", passed);
+            getResults(
+                    "true",
+                    "" + passed,
+                    "Checking that edgeDetection contains 4 (2 nested) for loops",
+                    passed);
             assertTrue(passed);
-         }
-         @Test
-         public void test2()
-         {
+        }
+
+        @Test
+        public void test2()
+        {
             String target = "colorDistance";
             String code = getCode();
             int index = code.indexOf("public void edgeDetection(");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that edgeDetection calls colorDistance twice", passed);
+            getResults(
+                    "true",
+                    "" + passed,
+                    "Checking that edgeDetection calls colorDistance twice",
+                    passed);
             assertTrue(passed);
-         }
-
-      }
+        }
+    }
 
 2. Work in groups to come up with another algorithm for edge detection and test it below.
 
@@ -426,174 +445,186 @@ color distance is greater than the specified edge distance.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
-      }
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      public void edgeDetection(int edgeDist)
-      {
-           Pixel leftPixel = null;
-           Pixel rightPixel = null;
-           Pixel[][] pixels = this.getPixels2D();
-           Color rightColor = null;
-           for (int row = 0; row < pixels.length; row++)
-           {
-                for (int col = 0; col < pixels[0].length-1; col++)
+        public void edgeDetection(int edgeDist)
+        {
+            Pixel leftPixel = null;
+            Pixel rightPixel = null;
+            Pixel[][] pixels = this.getPixels2D();
+            Color rightColor = null;
+            for (int row = 0; row < pixels.length; row++)
+            {
+                for (int col = 0; col < pixels[0].length - 1; col++)
                 {
-                     leftPixel = pixels[row][col];
-                     rightPixel = pixels[row][col+1];
-                     rightColor = rightPixel.getColor();
-                     if (leftPixel.colorDistance(rightColor) >
-                     edgeDist)
-                       leftPixel.setColor(Color.BLACK);
-                     else
-                       leftPixel.setColor(Color.WHITE);
+                    leftPixel = pixels[row][col];
+                    rightPixel = pixels[row][col + 1];
+                    rightColor = rightPixel.getColor();
+                    if (leftPixel.colorDistance(rightColor) > edgeDist)
+                        leftPixel.setColor(Color.BLACK);
+                    else leftPixel.setColor(Color.WHITE);
                 }
-           }
-      }
+            }
+        }
 
-      /** Come up with another algorithm for edgeDetection
-          in a method called myEdgeDetection
-      */
+        /**
+         * Come up with another algorithm for edgeDetection in a method called
+         * myEdgeDetection
+         */
 
-
-
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        // You can also try temple2.jpg
-        Picture pict = new Picture("swan.jpg");
-        pict.show();
-        pict.myEdgeDetection();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            // You can also try temple2.jpg
+            Picture pict = new Picture("swan.jpg");
+            pict.show();
+            pict.myEdgeDetection();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void myEdgeDetection(";
-         boolean passed = checkCodeContains("myEdgeDetection( method",target);
-         assertTrue(passed);
-       }
-       @Test
-         public void test3()
-         {
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void myEdgeDetection(";
+            boolean passed = checkCodeContains("myEdgeDetection( method", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void myEdgeDetection(");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that myEdgeDetection contains at least 2 for loops", passed);
+            getResults(
+                    "true",
+                    "" + passed,
+                    "Checking that myEdgeDetection contains at least 2 for loops",
+                    passed);
             assertTrue(passed);
-         }
+        }
 
-         @Test
-         public void test2()
-         {
+        @Test
+        public void test2()
+        {
             String target = "colorDistance";
             String code = getCode();
             int index = code.indexOf("public void myEdgeDetection(");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 1;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 1;
             }
-            getResults("true", ""+passed, "Checking that myEdgeDetection calls colorDistance at least once", passed);
+            getResults(
+                    "true",
+                    "" + passed,
+                    "Checking that myEdgeDetection calls colorDistance at least once",
+                    passed);
             assertTrue(passed);
-         }
-      }
+        }
+    }
 
 .. |repl.it project| raw:: html
 

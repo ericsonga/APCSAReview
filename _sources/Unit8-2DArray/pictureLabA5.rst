@@ -256,176 +256,182 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
-         */
-        super();
-      }
-
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
-
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
-
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
-
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
-
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
-
-      }
-
-      /**
-        zeroBlue() method sets the blue values at all pixels to zero
-     */
-      public void zeroBlue()
-      {
-        Pixel[][] pixels = this.getPixels2D();
-
-        for (Pixel[] rowArray : pixels)
-         {
-           for (Pixel p: rowArray)
-           {
-                  p.setBlue(0);
-           }
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
         }
-      }
 
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
+         */
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-     /*
-        keepOnlyBlue() method sets the blue values at all pixels to zero.
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-        Add new method here and call it from main.
-     */
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("beach.jpg");
-        pict.show();
-        pict.zeroBlue(); // Change this to call keepOnlyBlue()
-        pict.show();
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
+
+        ////////////////////// methods ///////////////////////////////////////
+
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
+
+        /** zeroBlue() method sets the blue values at all pixels to zero */
+        public void zeroBlue()
+        {
+            Pixel[][] pixels = this.getPixels2D();
+
+            for (Pixel[] rowArray : pixels)
+            {
+                for (Pixel p : rowArray)
+                {
+                    p.setBlue(0);
+                }
+            }
+        }
+
+        /*
+           keepOnlyBlue() method sets the blue values at all pixels to zero.
+
+           Add new method here and call it from main.
+        */
+
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("beach.jpg");
+            pict.show();
+            pict.zeroBlue(); // Change this to call keepOnlyBlue()
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void keepOnlyBlue()";
-         boolean passed = checkCodeContains("keepOnlyBlue() method",target);
-         assertTrue(passed);
-       }
-       @Test
-       public void test1b()
-       {
-         String target = ".keepOnlyBlue()";
-         boolean passed = checkCodeContains("Call to keepOnlyBlue() in main",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = ".setGreen(0);";
-         boolean passed = checkCodeContains("keepOnlyBlue() setting green pixels to the number 0",target);
-         assertTrue(passed);
-       }
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
         @Test
-       public void test2b()
-       {
-         String target = ".setRed(0);";
-         boolean passed = checkCodeContains("keepOnlyBlue() setting red pixels to the number 0",target);
-         assertTrue(passed);
-       }
+        public void test1()
+        {
+            String target = "public void keepOnlyBlue()";
+            boolean passed = checkCodeContains("keepOnlyBlue() method", target);
+            assertTrue(passed);
+        }
 
+        @Test
+        public void test1b()
+        {
+            String target = ".keepOnlyBlue()";
+            boolean passed = checkCodeContains("Call to keepOnlyBlue() in main", target);
+            assertTrue(passed);
+        }
 
-       @Test
-         public void test3()
-         {
+        @Test
+        public void test2()
+        {
+            String target = ".setGreen(0);";
+            boolean passed =
+                    checkCodeContains("keepOnlyBlue() setting green pixels to the number 0", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2b()
+        {
+            String target = ".setRed(0);";
+            boolean passed =
+                    checkCodeContains("keepOnlyBlue() setting red pixels to the number 0", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void keepOnlyBlue()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
+            getResults(
+                    "true", "" + passed, "Checking that keepOnlyBlue() contains 2 for loops", passed);
             assertTrue(passed);
-         }
-      }
+        }
+    }
 
 .. image:: Figures/negate.jpg
     :width: 250
@@ -449,154 +455,158 @@ method.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      }
+        /*
+           negate() method negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.
 
+           Add new method here.
+        */
 
-     /*
-        negate() method negates all the pixels in a picture by setting the red value to 255 minus the current red value (use the pixel's getRed() method), the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.
-
-        Add new method here.
-     */
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("puppies.jpg");
-        pict.show();
-        System.out.println("Negate: ");
-        pict.negate();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("puppies.jpg");
+            pict.show();
+            System.out.println("Negate: ");
+            pict.negate();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void negate()";
-         boolean passed = checkCodeContains("negate() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = "255";
-         boolean passed = checkCodeContains("negate() subtracts from 255",target);
-         assertTrue(passed);
-       }
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void negate()";
+            boolean passed = checkCodeContains("negate() method", target);
+            assertTrue(passed);
+        }
 
         @Test
-       public void test2b()
-       {
-         String target = ".getRed()";
-         boolean passed = checkCodeContains("negate() uses get methods",target);
-         assertTrue(passed);
-       }
+        public void test2()
+        {
+            String target = "255";
+            boolean passed = checkCodeContains("negate() subtracts from 255", target);
+            assertTrue(passed);
+        }
 
-       @Test
-         public void test3()
-         {
+        @Test
+        public void test2b()
+        {
+            String target = ".getRed()";
+            boolean passed = checkCodeContains("negate() uses get methods", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void negate()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that negate() contains 2 for loops", passed);
+            getResults("true", "" + passed, "Checking that negate() contains 2 for loops", passed);
             assertTrue(passed);
-         }
-      }
+        }
+    }
 
 .. image:: Figures/grayscale.jpg
     :width: 250
@@ -619,154 +629,159 @@ divide by 3).  Be sure to call the new test method in the main method.
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      }
+        /*
+           grayscale() method sets the red, green, andblue values to the average of the current red, green, and blue values (add all three values and divide by 3).
 
+           Add new method here.
+        */
 
-     /*
-        grayscale() method sets the red, green, andblue values to the average of the current red, green, and blue values (add all three values and divide by 3).
-
-        Add new method here.
-     */
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("blueMotorcycle.jpg");
-        pict.show();
-        System.out.println("Gray Scale: ");
-        pict.grayscale();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("blueMotorcycle.jpg");
+            pict.show();
+            System.out.println("Gray Scale: ");
+            pict.grayscale();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void grayscale()";
-         boolean passed = checkCodeContains("grayscale() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = ".getRed()";
-         boolean passed = checkCodeContains("grayscale() uses get methods",target);
-         assertTrue(passed);
-       }
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void grayscale()";
+            boolean passed = checkCodeContains("grayscale() method", target);
+            assertTrue(passed);
+        }
 
         @Test
-       public void test2b()
-       {
-         String target = "/3";
-         boolean passed = checkCodeContains("grayscale() divides by 3 to average the values",target);
-         assertTrue(passed);
-       }
+        public void test2()
+        {
+            String target = ".getRed()";
+            boolean passed = checkCodeContains("grayscale() uses get methods", target);
+            assertTrue(passed);
+        }
 
-       @Test
-         public void test3()
-         {
+        @Test
+        public void test2b()
+        {
+            String target = "/3";
+            boolean passed =
+                    checkCodeContains("grayscale() divides by 3 to average the values", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void grayscale()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that grayscale() contains 2 for loops", passed);
+            getResults("true", "" + passed, "Checking that grayscale() contains 2 for loops", passed);
             assertTrue(passed);
-         }
-      }
+        }
+    }
 
 .. image:: Figures/water.jpg
     :width: 200
@@ -792,145 +807,153 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
+        }
+
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
          */
-        super();
-      }
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
 
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
+        ////////////////////// methods ///////////////////////////////////////
 
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
 
-      }
+        /*
+           fixUnderwater() modifies the pixel colors to make the fish easier to see.
 
-     /*
-        fixUnderwater() modifies the pixel colors to make the fish easier to see.
+           Add new method here.
+        */
 
-        Add new method here.
-     */
-
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("water.jpg");
-        pict.show();
-        System.out.println("Fix Underwater: ");
-        pict.fixUnderwater();
-        pict.show();
-      }
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("water.jpg");
+            pict.show();
+            System.out.println("Fix Underwater: ");
+            pict.fixUnderwater();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void fixUnderwater()";
-         boolean passed = checkCodeContains("fixUnderwater() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void fixUnderwater()";
+            boolean passed = checkCodeContains("fixUnderwater() method", target);
+            assertTrue(passed);
+        }
 
         @Test
-       public void test2()
-       {
-         String target = ".setRed(";
-         boolean passed = checkCodeContains("fixUnderwater() uses the setRed() method to increase red values",target);
-         assertTrue(passed);
-       }
+        public void test2()
+        {
+            String target = ".setRed(";
+            boolean passed =
+                    checkCodeContains(
+                            "fixUnderwater() uses the setRed() method to increase red values", target);
+            assertTrue(passed);
+        }
 
-       @Test
-         public void test3()
-         {
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void fixUnderwater()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that fixUnderwater() contains 2 for loops", passed);
+            getResults(
+                    "true", "" + passed, "Checking that fixUnderwater() contains 2 for loops", passed);
             assertTrue(passed);
-         }
-      }
+        }
+    }
 
 .. image:: Figures/changetshirt.png
     :width: 150
@@ -951,179 +974,182 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
     import java.awt.image.BufferedImage;
     import java.text.*;
     import java.util.*;
-    import java.util.List;
 
     /**
-     * A class that represents a picture.  This class inherits from
-     * SimplePicture and allows the student to add functionality to
-     * the Picture class.
+     * A class that represents a picture. This class inherits from SimplePicture and
+     * allows the student to add functionality to the Picture class.
      *
      * @author Barbara Ericson ericson@cc.gatech.edu
      */
     public class Picture extends SimplePicture
     {
-      ///////////////////// constructors //////////////////////////////////
+        ///////////////////// constructors //////////////////////////////////
 
-      /**
-       * Constructor that takes no arguments
-       */
-      public Picture ()
-      {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
-         */
-        super();
-      }
-
-      /**
-       * Constructor that takes a file name and creates the picture
-       * @param fileName the name of the file to create the picture from
-       */
-      public Picture(String fileName)
-      {
-        // let the parent class handle this fileName
-        super(fileName);
-      }
-
-      /**
-       * Constructor that takes the height and width
-       * @param height the height of the desired picture
-       * @param width the width of the desired picture
-       */
-      public Picture(int height, int width)
-      {
-        // let the parent class handle this width and height
-        super(width,height);
-      }
-
-      /**
-       * Constructor that takes a picture and creates a
-       * copy of that picture
-       * @param copyPicture the picture to copy
-       */
-      public Picture(Picture copyPicture)
-      {
-        // let the parent class do the copy
-        super(copyPicture);
-      }
-
-      /**
-       * Constructor that takes a buffered image
-       * @param image the buffered image to use
-       */
-      public Picture(BufferedImage image)
-      {
-        super(image);
-      }
-      ////////////////////// methods ///////////////////////////////////////
-
-      /**
-       * Method to return a string with information about this picture.
-       * @return a string with information about the picture such as fileName,
-       * height and width.
-       */
-      public String toString()
-      {
-        String output = "Picture, filename " + getFileName() +
-          " height " + getHeight()
-          + " width " + getWidth();
-        return output;
-
-      }
-
-      /**
-        zeroBlue() method sets the blue values at all pixels to zero
-     */
-      public void zeroBlue()
-      {
-        Pixel[][] pixels = this.getPixels2D();
-
-        for (Pixel[] rowArray : pixels)
-         {
-           for (Pixel p: rowArray)
-           {
-                  p.setBlue(0);
-           }
+        /** Constructor that takes no arguments */
+        public Picture()
+        {
+            /* not needed but use it to show students the implicit call to super()
+             * child constructors always call a parent constructor
+             */
+            super();
         }
-      }
 
+        /**
+         * Constructor that takes a file name and creates the picture
+         *
+         * @param fileName the name of the file to create the picture from
+         */
+        public Picture(String fileName)
+        {
+            // let the parent class handle this fileName
+            super(fileName);
+        }
 
-     /*
-       changeTshirt(): Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100).
+        /**
+         * Constructor that takes the height and width
+         *
+         * @param height the height of the desired picture
+         * @param width the width of the desired picture
+         */
+        public Picture(int height, int width)
+        {
+            // let the parent class handle this width and height
+            super(width, height);
+        }
 
-        Add new method here.
-     */
+        /**
+         * Constructor that takes a picture and creates a copy of that picture
+         *
+         * @param copyPicture the picture to copy
+         */
+        public Picture(Picture copyPicture)
+        {
+            // let the parent class do the copy
+            super(copyPicture);
+        }
 
-      /* Main method for testing
-       */
-      public static void main(String[] args)
-      {
-        Picture pict = new Picture("student.jpg");
-        pict.show();
-        System.out.println("Change tshirt color: ");
-        pict.changeTshirt();
-        pict.show();
-      }
+        /**
+         * Constructor that takes a buffered image
+         *
+         * @param image the buffered image to use
+         */
+        public Picture(BufferedImage image)
+        {
+            super(image);
+        }
+
+        ////////////////////// methods ///////////////////////////////////////
+
+        /**
+         * Method to return a string with information about this picture.
+         *
+         * @return a string with information about the picture such as fileName, height
+         *     and width.
+         */
+        public String toString()
+        {
+            String output =
+                    "Picture, filename "
+                            + getFileName()
+                            + " height "
+                            + getHeight()
+                            + " width "
+                            + getWidth();
+            return output;
+        }
+
+        /** zeroBlue() method sets the blue values at all pixels to zero */
+        public void zeroBlue()
+        {
+            Pixel[][] pixels = this.getPixels2D();
+
+            for (Pixel[] rowArray : pixels)
+            {
+                for (Pixel p : rowArray)
+                {
+                    p.setBlue(0);
+                }
+            }
+        }
+
+        /*
+          changeTshirt(): Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100).
+
+           Add new method here.
+        */
+
+        /* Main method for testing
+         */
+        public static void main(String[] args)
+        {
+            Picture pict = new Picture("student.jpg");
+            pict.show();
+            System.out.println("Change tshirt color: ");
+            pict.changeTshirt();
+            pict.show();
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
-       @Test
-       public void test1()
-       {
-         String target = "public void changeTshirt()";
-         boolean passed = checkCodeContains("changeTshirt() method",target);
-         assertTrue(passed);
-       }
+    import org.junit.*;
 
-       @Test
-       public void test2()
-       {
-         String target = "if";
-         boolean passed = checkCodeContains("changeTshirt uses if statement",target);
-         assertTrue(passed);
-       }
+    import java.io.*;
 
-       @Test
-       public void test2b()
-       {
-         String target = ".getRed() >";
-         boolean passed = checkCodeContains("changeTshirt() chacks if getRed() greater than a value",target);
-         assertTrue(passed);
-       }
+    public class RunestoneTests extends CodeTestHelper
+    {
+        @Test
+        public void test1()
+        {
+            String target = "public void changeTshirt()";
+            boolean passed = checkCodeContains("changeTshirt() method", target);
+            assertTrue(passed);
+        }
 
-       @Test
-       public void test2c()
-       {
-         String target = ".setRed(0)";
-         boolean passed = checkCodeContains("changeTshirt() uses setRed(0)",target);
-         assertTrue(passed);
-       }
+        @Test
+        public void test2()
+        {
+            String target = "if";
+            boolean passed = checkCodeContains("changeTshirt uses if statement", target);
+            assertTrue(passed);
+        }
 
-       @Test
-         public void test3()
-         {
+        @Test
+        public void test2b()
+        {
+            String target = ".getRed() >";
+            boolean passed =
+                    checkCodeContains("changeTshirt() chacks if getRed() greater than a value", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2c()
+        {
+            String target = ".setRed(0)";
+            boolean passed = checkCodeContains("changeTshirt() uses setRed(0)", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test3()
+        {
             String target = "for";
             String code = getCode();
             int index = code.indexOf("public void changeTshirt()");
             boolean passed = false;
-            if (index > 0) {
-             code = code.substring(index);
-             int num = countOccurences(code, target);
-             passed = num >= 2;
+            if (index > 0)
+            {
+                code = code.substring(index);
+                int num = countOccurences(code, target);
+                passed = num >= 2;
             }
-            getResults("true", ""+passed, "Checking that changeTshirt() contains 2 for loops", passed);
+            getResults(
+                    "true", "" + passed, "Checking that changeTshirt() contains 2 for loops", passed);
             assertTrue(passed);
-         }
-      }
-
+        }
+    }
 
 Choose from these images:
 

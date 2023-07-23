@@ -120,59 +120,62 @@ Since you can find out the number of rows and columns in a 2D array you can use 
    public class Test1
    {
 
-      public static double getAverage(int[][] a)
-      {
-         double total = 0;
-         int value = 0;
-         for (int row = 0; row < a.length; row++)
-         {
-            for (int col = 0; col < a[0].length; col++)
-            {
-               value = a[row][col];
-               total = total + value;
-            }
-         }
-         return total / (a.length * a[0].length);
-      }
+       public static double getAverage(int[][] a)
+       {
+           double total = 0;
+           int value = 0;
+           for (int row = 0; row < a.length; row++)
+           {
+               for (int col = 0; col < a[0].length; col++)
+               {
+                   value = a[row][col];
+                   total = total + value;
+               }
+           }
+           return total / (a.length * a[0].length);
+       }
 
-      public static void main(String[] args)
-      {
-         int[][] matrix = { {1,2,3},{4,5,6}};
-         System.out.println(getAverage(matrix));
-      }
+       public static void main(String[] args)
+       {
+           int[][] matrix = {{1, 2, 3}, {4, 5, 6}};
+           System.out.println(getAverage(matrix));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expected = "3.5";
+   import java.io.*;
 
-            boolean passed = !output.contains(expected);
+   public class RunestoneTests extends CodeTestHelper
+   {
 
-            passed = getResults("true", ""+passed, "Average has changed");
-            assertTrue(passed);
-        }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expected = "3.5";
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String expected = "int[][] matrix = { {1,2,3},{4,5,6}};";
+           boolean passed = !output.contains(expected);
 
-            boolean passed = !code.replaceAll(" ","").contains(expected.replaceAll(" ",""));
+           passed = getResults("true", "" + passed, "Average has changed");
+           assertTrue(passed);
+       }
 
-            passed = getResults("true", ""+passed, "Matrix has been changed");
-            assertTrue(passed);
-        }
-    }
+       @Test
+       public void test2()
+       {
+           String code = getCode();
+           String expected = "int[][] matrix = { {1,2,3},{4,5,6}};";
+
+           boolean passed = !code.replaceAll(" ", "").contains(expected.replaceAll(" ", ""));
+
+           passed = getResults("true", "" + passed, "Matrix has been changed");
+           assertTrue(passed);
+       }
+   }
 
 Some key things to notice about this code are:
 
@@ -237,36 +240,38 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
    ~~~~
    public class ColumnMajorTraversal
    {
-     public static void main(String[] args)
-      {
-        int[][] array = { {1,2,3},{4,5,6}};
-        for (int col = 0; col < array[0].length; col++)
-        {
-            for (int row = 0; row < array.length; row++)
-            {
-                System.out.println( array[row][col] );
-            }
-        }
-      }
+       public static void main(String[] args)
+       {
+           int[][] array = {{1, 2, 3}, {4, 5, 6}};
+           for (int col = 0; col < array[0].length; col++)
+           {
+               for (int row = 0; row < array.length; row++)
+               {
+                   System.out.println(array[row][col]);
+               }
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expected = "1\n4\n2\n5\n3\n6";
+   import org.junit.*;
 
-            boolean passed = getResults(expected, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
+   import java.io.*;
 
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expected = "1\n4\n2\n5\n3\n6";
+
+           boolean passed = getResults(expected, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 AP Practice
 ------------

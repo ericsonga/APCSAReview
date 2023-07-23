@@ -35,9 +35,12 @@ Code Practice with 2D Arrays
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -50,15 +53,15 @@ Code Practice with 2D Arrays
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+
                   @Test
                   public void testContains()
                   {
                       String target = "int[][] table = new int[3][3];";
                       boolean passed = checkCodeContains("3x3 declaration of int array table", target);
-                     assertTrue(passed);
+                      assertTrue(passed);
                   }
               }
-
 
         .. tab:: Answer
 
@@ -88,7 +91,6 @@ Code Practice with 2D Arrays
                   }
               }
 
-
         .. tab:: Discussion
 
             .. disqus::
@@ -112,7 +114,6 @@ Code Practice with 2D Arrays
                   {
                       // ADD CODE HERE //
 
-
                       // Should print the values in students in order
                       for (int row = 0; row < students.length; row++)
                       {
@@ -123,9 +124,12 @@ Code Practice with 2D Arrays
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -138,16 +142,15 @@ Code Practice with 2D Arrays
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+
                   @Test
                   public void testContains()
                   {
                       String target = "String[][] students";
                       boolean passed = checkCodeContains("2D String array called students", target);
-                     assertTrue(passed);
+                      assertTrue(passed);
                   }
               }
-
-
 
         .. tab:: Answer
 
@@ -163,8 +166,10 @@ Code Practice with 2D Arrays
                   public static void main(String[] args)
                   {
                       // Can declare and initialize in one line
-                      String[][] students = { {"Brice", "Marvin", "Anna"},
-                                             {"Kamal", "Maria", "Elissa"} };
+                      String[][] students =
+                      {
+                          {"Brice", "Marvin", "Anna"}, {"Kamal", "Maria", "Elissa"}
+                      };
 
                       for (int row = 0; row < students.length; row++)
                       {
@@ -175,7 +180,6 @@ Code Practice with 2D Arrays
                       }
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -198,15 +202,18 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = { {47,3,12},{51,74,20} };
+                      int[][] arr = {{47, 3, 12}, {51, 74, 20}};
 
                       // ADD CODE HERE //
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -216,24 +223,25 @@ Code Practice with 2D Arrays
                   {
                       String target = "arr[0][0]";
                       boolean passed = checkCodeContains("using arr to access 47", target);
-                     assertTrue(passed);
+                      assertTrue(passed);
                   }
+
                   @Test
                   public void testDigit2() throws IOException
                   {
                       String target = "arr[1][0]";
                       boolean passed = checkCodeContains("using arr to access 51", target);
-                     assertTrue(passed);
+                      assertTrue(passed);
                   }
+
                   @Test
                   public void testDigit3() throws IOException
                   {
                       String target = "arr[1][2]";
                       boolean passed = checkCodeContains("using arr to access 20", target);
-                     assertTrue(passed);
+                      assertTrue(passed);
                   }
               }
-
 
         .. tab:: Answer
 
@@ -248,7 +256,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = { {47,3,12},{51,74,20} };
+                      int[][] arr = {{47, 3, 12}, {51, 74, 20}};
 
                       // Prints 47, 51, 20 in that order
                       System.out.println(arr[0][0]);
@@ -278,15 +286,18 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
+                      int[][] arr = {{10, 39, 8}, {3}, {35, 87}, {22}, {34}};
 
                       // ADD CODE HERE //
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -307,6 +318,7 @@ Code Practice with 2D Arrays
                       boolean passed = checkCodeContains("Correct accessing of 8", target);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void testDigitTwo() throws IOException
                   {
@@ -314,6 +326,7 @@ Code Practice with 2D Arrays
                       boolean passed = checkCodeContains("Correct accessing of 3", target);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void testDigitThree() throws IOException
                   {
@@ -321,6 +334,7 @@ Code Practice with 2D Arrays
                       boolean passed = checkCodeContains("Correct accessing of 87", target);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void testDigitFour() throws IOException
                   {
@@ -329,8 +343,6 @@ Code Practice with 2D Arrays
                       assertTrue(passed);
                   }
               }
-
-
 
         .. tab:: Answer
 
@@ -345,14 +357,13 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] arr = { {10,39,8},{3},{35,87},{22},{34} };
+                      int[][] arr = {{10, 39, 8}, {3}, {35, 87}, {22}, {34}};
 
                       // Prints 8, 3, 87, and 34 in order
                       System.out.println(arr[0][2]);
                       System.out.println(arr[1][0]);
                       System.out.println(arr[2][1]);
                       System.out.println(arr[4][0]);
-
                   }
               }
 
@@ -386,8 +397,7 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"hello","there","world"},
-                                        {"how","are","you"} };
+                      String[][] arr = {{"hello", "there", "world"}, {"how", "are", "you"}};
 
                       System.out.print("Rows:");
                       // ADD CODE TO PRINT NUMBER OF ROWS HERE using arr //
@@ -397,9 +407,12 @@ Code Practice with 2D Arrays
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -412,6 +425,7 @@ Code Practice with 2D Arrays
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test2()
                   {
@@ -419,11 +433,13 @@ Code Practice with 2D Arrays
                       boolean passed = checkCodeContains("using arr and length to get number of rows", target);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test3()
                   {
                       String target = "arr[0].length";
-                      boolean passed = checkCodeContains("using arr[0] and length to get number of columns", target);
+                      boolean passed =
+                              checkCodeContains("using arr[0] and length to get number of columns", target);
                       assertTrue(passed);
                   }
               }
@@ -437,11 +453,11 @@ Code Practice with 2D Arrays
               :language: java
               :optional:
 
-              public class Test1 {
+              public class Test1
+              {
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"hello","there","world"},
-                                        {"how","are","you"} };
+                      String[][] arr = {{"hello", "there", "world"}, {"how", "are", "you"}};
 
                       System.out.print("Rows:");
                       System.out.println(arr.length);
@@ -471,16 +487,24 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "},
-                                        {"you ", "are "}, {"doing ", "well"} };
+                      String[][] arr =
+                      {
+                          {"Hey ", "there! "},
+                          {"I ", "hope "},
+                          {"you ", "are "},
+                          {"doing ", "well"}
+                      };
 
                       // ADD CODE HERE //
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -493,6 +517,7 @@ Code Practice with 2D Arrays
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test1()
                   {
@@ -502,7 +527,7 @@ Code Practice with 2D Arrays
                       int num = countOccurences(code, target);
                       boolean passed = (num >= 2);
 
-                      getResults("2", ""+num, "2 for loops", passed);
+                      getResults("2", "" + num, "2 for loops", passed);
                       assertTrue(passed);
                   }
               }
@@ -520,8 +545,13 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"Hey ", "there! "},{"I ", "hope "},
-                                        {"you ", "are "}, {"doing ", "well"} };
+                      String[][] arr =
+                      {
+                          {"Hey ", "there! "},
+                          {"I ", "hope "},
+                          {"you ", "are "},
+                          {"doing ", "well"}
+                      };
 
                       for (int row = 0; row < arr.length; row++)
                       {
@@ -557,9 +587,12 @@ Code Practice with 2D Arrays
                       // ADD CODE HERE //
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -568,12 +601,16 @@ Code Practice with 2D Arrays
                   public void testArrayDec() throws IOException
                   {
                       String code = removeSpaces(getCode());
-                      String expect =removeSpaces("String[][] colors = { {\"red\", \"yellow\", \"blue\"},{\"orange\", \"green\", \"purple\"}}");
+                      String expect =
+                              removeSpaces(
+                                      "String[][] colors = { {\"red\", \"yellow\", \"blue\"},{\"orange\","
+                                          + " \"green\", \"purple\"}}");
 
                       boolean passed = code.contains(expect);
-                      getResults("true", passed+"", "correct initialization of array", passed);
+                      getResults("true", passed + "", "correct initialization of array", passed);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void testOutput() throws IOException
                   {
@@ -596,8 +633,10 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] colors = { {"red","yellow","blue"},
-                                           {"orange","green","purple"} };
+                      String[][] colors =
+                      {
+                          {"red", "yellow", "blue"}, {"orange", "green", "purple"}
+                      };
 
                       for (int row = 0; row < colors.length; row++)
                       {
@@ -629,15 +668,18 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] array = { {4,7,8},{8,8,7} };
+                      int[][] array = {{4, 7, 8}, {8, 8, 7}};
 
-                      //ADD CODE HERE
+                      // ADD CODE HERE
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -651,24 +693,26 @@ Code Practice with 2D Arrays
                       getResults(expect, output, "Expected output from main", passed);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test1()
                   {
                       String target = "for";
                       int num = countOccurences(getCode(), target);
                       boolean passed = (num == 2);
-                      getResults("2", num+"","2 for loops",passed);
+                      getResults("2", num + "", "2 for loops", passed);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test2()
                   {
                       String target = "if (array[*][*] == 7)";
-                      boolean passed = checkCodeContains("if statement checking if array[*][*] element equals 7", target);
+                      boolean passed =
+                              checkCodeContains("if statement checking if array[*][*] element equals 7", target);
                       assertTrue(passed);
                   }
               }
-
 
         .. tab:: Answer
 
@@ -682,7 +726,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] array = { {4,7,8},{8,8,7} };
+                      int[][] array = {{4, 7, 8}, {8, 8, 7}};
 
                       int count = 0;
 
@@ -690,16 +734,13 @@ Code Practice with 2D Arrays
                       {
                           for (int col = 0; col < array[0].length; col++)
                           {
-                              if (array[row][col]==7)
-                                  count++;
+                              if (array[row][col] == 7) count++;
                           }
-
                       }
 
                       System.out.println(count);
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -722,15 +763,18 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      int[][] table = { {1,4,9},{11,4,3},{2,2,3} };
+                      int[][] table = {{1, 4, 9}, {11, 4, 3}, {2, 2, 3}};
 
-                      //ADD CODE HERE
+                      // ADD CODE HERE
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -744,6 +788,7 @@ Code Practice with 2D Arrays
                       getResults(expect, output, "Expected output from main", passed);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test1()
                   {
@@ -751,7 +796,6 @@ Code Practice with 2D Arrays
                       assertTrue(passed);
                   }
               }
-
 
         .. tab:: Answer
 
@@ -766,19 +810,17 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                       int[][] table = { {1,4,9},{11,4,3},{2,2,3} };
-                       int sum = 0;
+                      int[][] table = {{1, 4, 9}, {11, 4, 3}, {2, 2, 3}};
+                      int sum = 0;
 
-                       for (int col = 0; col < table[0].length; col++)
-                       {
-                           sum += table[1][col];
-                       }
+                      for (int col = 0; col < table[0].length; col++)
+                      {
+                          sum += table[1][col];
+                      }
 
-                       System.out.println("The sum is: "+sum);
+                      System.out.println("The sum is: " + sum);
                   }
               }
-
-
 
         .. tab:: Discussion
 
@@ -801,36 +843,39 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      int[][] array = { {1,2,3},{-1,-2,-3},{4,5,6} };
+                      int[][] array = {{1, 2, 3}, {-1, -2, -3}, {4, 5, 6}};
 
-                      //ADD CODE HERE
+                      // ADD CODE HERE
 
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
-               public class RunestoneTests extends CodeTestHelper
-               {
-                   @Test
-                   public void testMain() throws IOException
-                   {
-                       String output = getMethodOutput("main");
-                       String expect = "5";
-                       boolean passed = output.contains(expect);
-                       getResults(expect, output, "Expected output from main", passed);
-                       assertTrue(passed);
-                   }
-                   @Test
-                   public void test1()
-                   {
-                       boolean passed = checkCodeContains("1 for loop", "for");
-                       assertTrue(passed);
-                   }
-               }
+              public class RunestoneTests extends CodeTestHelper
+              {
+                  @Test
+                  public void testMain() throws IOException
+                  {
+                      String output = getMethodOutput("main");
+                      String expect = "5";
+                      boolean passed = output.contains(expect);
+                      getResults(expect, output, "Expected output from main", passed);
+                      assertTrue(passed);
+                  }
 
+                  @Test
+                  public void test1()
+                  {
+                      boolean passed = checkCodeContains("1 for loop", "for");
+                      assertTrue(passed);
+                  }
+              }
 
         .. tab:: Answer
 
@@ -845,20 +890,17 @@ Code Practice with 2D Arrays
 
                   public static void main(String[] args)
                   {
-                      int[][] array = { {1,2,3},{-1,-2,-3},{4,5,6} };
+                      int[][] array = {{1, 2, 3}, {-1, -2, -3}, {4, 5, 6}};
                       int total = 0;
 
                       for (int row = 0; row < array.length; row++)
                       {
                           total += array[row][row];
-
                       }
 
-                      System.out.println("The sum of the diagonal is: "+ total);
-
+                      System.out.println("The sum of the diagonal is: " + total);
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -883,9 +925,12 @@ Code Practice with 2D Arrays
                       // ADD CODE HERE //
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -898,6 +943,7 @@ Code Practice with 2D Arrays
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+
                   @Test
                   public void testArray()
                   {
@@ -912,11 +958,10 @@ Code Practice with 2D Arrays
                       String target = "for";
                       int num = countOccurences(getCode(), target);
                       boolean passed = (num == 2);
-                      getResults("2", num+"","2 for loops",passed);
+                      getResults("2", num + "", "2 for loops", passed);
                       assertTrue(passed);
                   }
               }
-
 
         .. tab:: Answer
 
@@ -930,7 +975,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] numbers = { {1,2,3}, {4,5,6} };
+                      int[][] numbers = {{1, 2, 3}, {4, 5, 6}};
 
                       for (int row = 0; row < numbers.length; row++)
                       {
@@ -941,7 +986,6 @@ Code Practice with 2D Arrays
                       }
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -966,9 +1010,12 @@ Code Practice with 2D Arrays
                       // ADD CODE HERE //
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -981,6 +1028,7 @@ Code Practice with 2D Arrays
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test1()
                   {
@@ -988,16 +1036,16 @@ Code Practice with 2D Arrays
                       boolean passed = checkCodeContains("correct array initialization", expect);
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test2()
                   {
                       String target = "for";
                       int num = countOccurences(getCode(), target);
                       boolean passed = (num == 2);
-                      getResults("2", num+"","2 for loops",passed);
+                      getResults("2", num + "", "2 for loops", passed);
                       assertTrue(passed);
                   }
-
               }
 
         .. tab:: Answer
@@ -1012,7 +1060,7 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      int[][] numbers = { {1,2,3}, {4,5,6}, {7,8,9} };
+                      int[][] numbers = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
                       for (int row = 0; row < numbers.length; row++)
                       {
                           for (int col = 0; col < numbers[1].length; col++)
@@ -1022,7 +1070,6 @@ Code Practice with 2D Arrays
                       }
                   }
               }
-
 
         .. tab:: Discussion
 
@@ -1046,7 +1093,10 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"red","orange", "purple"}, {"green","blue", "indigo"} };
+                      String[][] arr =
+                      {
+                          {"red", "orange", "purple"}, {"green", "blue", "indigo"}
+                      };
 
                       // ADD CODE HERE //
 
@@ -1059,9 +1109,12 @@ Code Practice with 2D Arrays
                       }
                   }
               }
+
               ====
               import static org.junit.Assert.*;
+
               import org.junit.*;
+
               import java.io.*;
 
               public class RunestoneTests extends CodeTestHelper
@@ -1074,6 +1127,7 @@ Code Practice with 2D Arrays
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+
                   @Test
                   public void test1() throws IOException
                   {
@@ -1096,7 +1150,10 @@ Code Practice with 2D Arrays
               {
                   public static void main(String[] args)
                   {
-                      String[][] arr = { {"red","orange", "purple"}, {"green","blue", "indigo"} };
+                      String[][] arr =
+                      {
+                          {"red", "orange", "purple"}, {"green", "blue", "indigo"}
+                      };
 
                       arr[0][2] = "yellow";
 
@@ -1109,7 +1166,6 @@ Code Practice with 2D Arrays
                       }
                   }
               }
-
 
         .. tab:: Discussion
 

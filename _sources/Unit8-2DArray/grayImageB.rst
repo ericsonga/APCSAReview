@@ -17,27 +17,26 @@ The following is part b of a free response question from 2012.  It was question 
 
    public class GrayImage
    {
-      public static final int BLACK = 0;
-      public static final int WHITE = 255;
+       public static final int BLACK = 0;
+       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image.
-       *  Guaranteed not to be null.
-       *  All values in the array are within the range
-       *  [BLACK, WHITE], inclusive.
-       */
-      private int[][] pixelValues;
+       /**
+        * The 2-dimensional representation of this image. Guaranteed not to be null.
+        * All values in the array are within the range [BLACK, WHITE], inclusive.
+        */
+       private int[][] pixelValues;
 
-      /** Processes this image in row-major order and
-       *  decreases the value of each pixel at position (row, col)
-       *  by the value of the pixel at position (row + 2, col + 2)
-       *  if it exists.
-       * Resulting values that would be less than BLACK are replaced
-       *   by BLACK.
-       * Pixels for which there is no pixel at
-       *   position (row + 2, col + 2) are unchanged.
-       */
-      public void processImage()
-      { /* to be implemented in part (b) */ }
+       /**
+        * Processes this image in row-major order and decreases the value of each
+        * pixel at position (row, col) by the value of the pixel at position (row + 2,
+        * col + 2) if it exists. Resulting values that would be less than BLACK are
+        * replaced by BLACK. Pixels for which there is no pixel at position (row + 2,
+        * col + 2) are unchanged.
+        */
+       public void processImage()
+       {
+           /* to be implemented in part (b) */
+       }
    }
 
 **Part b.**  Write the method ``processImage`` that modifies the image by changing the values in the instance variable ``pixelValues`` according to the following description. The pixels in the image are processed one at a time in row-major order. Row-major order processes the first row in the array from left to right and then processes the second row from left to right, continuing until all rows are processed from left to right. The first index of ``pixelValues`` represents the row number, and the second index represents the column number.
@@ -59,27 +58,26 @@ grayscale image with 4 rows and 5 columns.
 
    public class GrayImage
    {
-      public static final int BLACK = 0;
-      public static final int WHITE = 255;
+       public static final int BLACK = 0;
+       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image.
-       *  Guaranteed not to be null.
-       *  All values in the array are within the range
-       *  [BLACK, WHITE], inclusive.
-       */
-      private int[][] pixelValues;
+       /**
+        * The 2-dimensional representation of this image. Guaranteed not to be null.
+        * All values in the array are within the range [BLACK, WHITE], inclusive.
+        */
+       private int[][] pixelValues;
 
-      /** Processes this image in row-major order and
-       *  decreases the value of each pixel at position (row, col)
-       *  by the value of the pixel at position (row + 2, col + 2)
-       *  if it exists.
-       * Resulting values that would be less than BLACK are replaced
-       *   by BLACK.
-       * Pixels for which there is no pixel at
-       *   position (row + 2, col + 2) are unchanged.
-       */
-      public void processImage()
-      { /* to be implemented in part (b) */ }
+       /**
+        * Processes this image in row-major order and decreases the value of each
+        * pixel at position (row, col) by the value of the pixel at position (row + 2,
+        * col + 2) if it exists. Resulting values that would be less than BLACK are
+        * replaced by BLACK. Pixels for which there is no pixel at position (row + 2,
+        * col + 2) are unchanged.
+        */
+       public void processImage()
+       {
+           /* to be implemented in part (b) */
+       }
    }
 
 How to solve this problem
@@ -141,44 +139,43 @@ When comparing our pixel values to values deeper in the array, we need to be car
        ~~~~
        public class LoopTest
        {
-          public static void main(String[] args)
-          {
-            int[][] values = { {9, 8, 7, 6, 5},
-                              {7, 6, 5, 4, 3},
-                              {4, 3, 2, 1, 0},
-                              {4, 3, 2, 1, 0}};
-            for (int i = 0; i < values.length; i++)
-            {
-              for (int j = i; j < values[i].length; j++)
-              {
-                System.out.print(values[i][j] - values[i+2][j+2]);
-              }
-              System.out.println();
-            }
-          }
+           public static void main(String[] args)
+           {
+               int[][] values =
+               {
+                   {9, 8, 7, 6, 5}, {7, 6, 5, 4, 3}, {4, 3, 2, 1, 0}, {4, 3, 2, 1, 0}
+               };
+               for (int i = 0; i < values.length; i++)
+               {
+                   for (int j = i; j < values[i].length; j++)
+                   {
+                       System.out.print(values[i][j] - values[i + 2][j + 2]);
+                   }
+                   System.out.println();
+               }
+           }
        }
+
        ====
        import static org.junit.Assert.*;
-         import org.junit.*;
-         import java.io.*;
-         import java.util.List;
-         import java.util.ArrayList;
-         import java.util.Arrays;
 
-         public class RunestoneTests extends CodeTestHelper
-         {
+       import org.junit.*;
+
+       import java.io.*;
+
+       public class RunestoneTests extends CodeTestHelper
+       {
 
            @Test
            public void testMain() throws IOException
            {
-             String output = getMethodOutput("main");
-             String expect = "777\n" +
-                             "55\n";
+               String output = getMethodOutput("main");
+               String expect = "777\n" + "55\n";
 
-             boolean passed = getResults(expect, output, "Expected output from main");
-             assertTrue(passed);
+               boolean passed = getResults(expect, output, "Expected output from main");
+               assertTrue(passed);
            }
-         }
+       }
 
 Algorithm
 ===================
@@ -308,110 +305,110 @@ Try and Solve It
    ~~~~
    public class GrayImage
    {
-      public static final int BLACK = 0;
-      public static final int WHITE = 255;
+       public static final int BLACK = 0;
+       public static final int WHITE = 255;
 
-      /** The 2-dimensional representation of this image.
-       *  Guaranteed not to be null.
-       *  All values in the array are within the range
-       *  [BLACK, WHITE], inclusive.
-       */
-      private int[][] pixelValues;
+       /**
+        * The 2-dimensional representation of this image. Guaranteed not to be null.
+        * All values in the array are within the range [BLACK, WHITE], inclusive.
+        */
+       private int[][] pixelValues;
 
-      /** constructor that takes a 2D array */
-      public GrayImage(int[][] theArray)
-      {
-         pixelValues = theArray;
-      }
+       /** constructor that takes a 2D array */
+       public GrayImage(int[][] theArray)
+       {
+           pixelValues = theArray;
+       }
 
-      /** Processes this image in row-major order and
-       *  decreases the value of each pixel at position (row, col)
-       *  by the value of the pixel at position (row + 2, col + 2)
-       *  if it exists.
-       * Resulting values that would be less than BLACK are replaced
-       *   by BLACK.
-       * Pixels for which there is no pixel at
-       *   position (row + 2, col + 2) are unchanged.
-       */
-      public void processImage()
-      {
+       /**
+        * Processes this image in row-major order and decreases the value of each
+        * pixel at position (row, col) by the value of the pixel at position (row + 2,
+        * col + 2) if it exists. Resulting values that would be less than BLACK are
+        * replaced by BLACK. Pixels for which there is no pixel at position (row + 2,
+        * col + 2) are unchanged.
+        */
+       public void processImage() {}
 
-      }
+       public void printValues()
+       {
+           for (int r = 0; r < pixelValues.length; r++)
+           {
+               for (int c = 0; c < pixelValues[0].length; c++)
+               {
+                   System.out.print(pixelValues[r][c] + ", ");
+               }
+               System.out.println();
+           }
+       }
 
-      public void printValues()
-      {
-        for (int r = 0; r < pixelValues.length; r++)
-        {
-          for (int c = 0; c < pixelValues[0].length; c++)
-          {
-            System.out.print(pixelValues[r][c] + ", ");
-          }
-          System.out.println();
-        }
-      }
-
-      /** main for testing */
-      public static void main (String[] args)
-      {
-        int[][] values = { {221, 184, 178, 84, 135},
-                          {84, 255, 255, 130, 84},
-                          {78, 255, 0, 0, 78},
-                          {84, 130, 255, 130, 84}};
-        GrayImage image = new GrayImage(values);
-        image.printValues();
-        image.processImage();
-        System.out.println("after process image");
-        image.printValues();
-      }
+       /** main for testing */
+       public static void main(String[] args)
+       {
+           int[][] values =
+           {
+               {221, 184, 178, 84, 135},
+               {84, 255, 255, 130, 84},
+               {78, 255, 0, 0, 78},
+               {84, 130, 255, 130, 84}
+           };
+           GrayImage image = new GrayImage(values);
+           image.printValues();
+           image.processImage();
+           System.out.println("after process image");
+           image.printValues();
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-     import org.junit.*;
-     import java.io.*;
-     import java.util.List;
-     import java.util.ArrayList;
-     import java.util.Arrays;
 
-     public class RunestoneTests extends CodeTestHelper
-     {
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
 
        @Test
        public void testMain() throws IOException
        {
-         String output = getMethodOutput("main");
-         String expect = "221, 184, 178, 84, 135,\n" +
-                         "84, 255, 255, 130, 84,\n" +
-                         "78, 255, 0, 0, 78,\n" +
-                         "84, 130, 255, 130, 84,\n" +
-                         "after process image\n" +
-                         "221, 184, 100, 84, 135,\n" +
-                         "0, 125, 171, 130, 84,\n" +
-                         "78, 255, 0, 0, 78,\n" +
-                         "84, 130, 255, 130, 84,\n" ;
+           String output = getMethodOutput("main");
+           String expect =
+                   "221, 184, 178, 84, 135,\n"
+                           + "84, 255, 255, 130, 84,\n"
+                           + "78, 255, 0, 0, 78,\n"
+                           + "84, 130, 255, 130, 84,\n"
+                           + "after process image\n"
+                           + "221, 184, 100, 84, 135,\n"
+                           + "0, 125, 171, 130, 84,\n"
+                           + "78, 255, 0, 0, 78,\n"
+                           + "84, 130, 255, 130, 84,\n";
 
-         boolean passed = getResults(expect, output, "Expected output from main");
-         assertTrue(passed);
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
        }
 
-     @Test
+       @Test
        public void test1()
        {
-         String target = "pixelValues[row+2][col+2];";
-         boolean passed = checkCodeContainsRegex("subtracting pixel at row+2, col+2",target);
-         assertTrue(passed);
+           String target = "pixelValues[row+2][col+2];";
+           boolean passed = checkCodeContainsRegex("subtracting pixel at row+2, col+2", target);
+           assertTrue(passed);
        }
 
-     @Test
-     public void test2()
+       @Test
+       public void test2()
        {
-         String target1 = "pixelValues[row][col] < BLACK";
-         String target2 = "pixelValues[row][col] < 0";
+           String target1 = "pixelValues[row][col] < BLACK";
+           String target2 = "pixelValues[row][col] < 0";
 
-         boolean passed = checkCodeContainsRegex("check of pixel value at row, col less than 0",target2) ||                       checkCodeContainsRegex("or check of pixel value less than BLACK",target1);
-         assertTrue(passed);
+           boolean passed =
+                   checkCodeContainsRegex("check of pixel value at row, col less than 0", target2)
+                           || checkCodeContainsRegex(
+                                   "or check of pixel value less than BLACK", target1);
+           assertTrue(passed);
        }
-     }
-
+   }
 
 Video - One way to code the solution
 =====================================

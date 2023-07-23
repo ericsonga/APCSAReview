@@ -65,86 +65,87 @@ Try the code below. Did it print what you expected?  When you print a two dimens
   ~~~~
   public class TwoDArraySet
   {
-     public static void main(String[] args)
-     {
-        // declare arrays
-        int[][] ticketInfo;
-        String[][] seatingChart;
+      public static void main(String[] args)
+      {
+          // declare arrays
+          int[][] ticketInfo;
+          String[][] seatingChart;
 
-        // create arrays
-        ticketInfo = new int [2][3];
-        seatingChart =  new String [3][2];
+          // create arrays
+          ticketInfo = new int[2][3];
+          seatingChart = new String[3][2];
 
-        // initialize the array elements
-        ticketInfo[0][0] = 15;
-        ticketInfo[0][1] = 10;
-        ticketInfo[0][2] = 15;
-        ticketInfo[1][0] = 25;
-        ticketInfo[1][1] = 20;
-        ticketInfo[1][2] = 25;
-        seatingChart[0][0] = "Jamal";
-        seatingChart[0][1] = "Maria";
-        seatingChart[1][0] = "Jacob";
-        seatingChart[1][1] = "Suzy";
-        seatingChart[2][0] = "Emma";
-        seatingChart[2][1] = "Luke";
+          // initialize the array elements
+          ticketInfo[0][0] = 15;
+          ticketInfo[0][1] = 10;
+          ticketInfo[0][2] = 15;
+          ticketInfo[1][0] = 25;
+          ticketInfo[1][1] = 20;
+          ticketInfo[1][2] = 25;
+          seatingChart[0][0] = "Jamal";
+          seatingChart[0][1] = "Maria";
+          seatingChart[1][0] = "Jacob";
+          seatingChart[1][1] = "Suzy";
+          seatingChart[2][0] = "Emma";
+          seatingChart[2][1] = "Luke";
 
-        // print the contents
-        System.out.println(ticketInfo);
-        System.out.println(seatingChart);
-     }
+          // print the contents
+          System.out.println(ticketInfo);
+          System.out.println(seatingChart);
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("TwoDArraySet");
-        }
+  import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expected = "[[I@", expected2 = "[[Ljava.lang.String;@";
+  import java.io.*;
 
-            boolean passed = output.contains(expected) && output.contains(expected2);
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("TwoDArraySet");
+      }
 
-            passed = getResults("true", ""+passed, "Prints two 2D arrays");
-            assertTrue(passed);
-        }
+      @Test
+      public void test1()
+      {
+          String output = getMethodOutput("main");
+          String expected = "[[I@", expected2 = "[[Ljava.lang.String;@";
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String expected = "new String [4][2]";
+          boolean passed = output.contains(expected) && output.contains(expected2);
 
-            boolean passed = code.contains(expected);
+          passed = getResults("true", "" + passed, "Prints two 2D arrays");
+          assertTrue(passed);
+      }
 
-            passed = getResults("true", ""+passed, "Add another row to seatingChart");
-            assertTrue(passed);
-        }
+      @Test
+      public void test2()
+      {
+          String code = getCode();
+          String expected = "new String [4][2]";
 
-        @Test
-        public void test3()
-        {
-            String code = getCode();
-            String expected1 = "seatingChart[3][0]";
-            String expected2 = "seatingChart[3][1]";
+          boolean passed = code.contains(expected);
 
-            boolean passed = code.contains(expected1) && code.contains(expected2);
+          passed = getResults("true", "" + passed, "Add another row to seatingChart");
+          assertTrue(passed);
+      }
 
-            passed = getResults("true", ""+passed, "Give values to new elements");
-            assertTrue(passed);
-        }
-    }
+      @Test
+      public void test3()
+      {
+          String code = getCode();
+          String expected1 = "seatingChart[3][0]";
+          String expected2 = "seatingChart[3][1]";
 
+          boolean passed = code.contains(expected1) && code.contains(expected2);
 
-
+          passed = getResults("true", "" + passed, "Give values to new elements");
+          assertTrue(passed);
+      }
+  }
 
 |Exercise| **Check your understanding**
 
@@ -228,83 +229,103 @@ To get the value in a 2D array give the name of the array followed by the row an
   ~~~~
   public class TwoDArrayInitGet
   {
-     public static void main(String[] args)
-     {
-        String[][] seatingInfo = { {"Jamal", "Maria"},
-                                   {"Jake", "Suzy"},
-                                   {"Emma", "Luke"} };
-        String name = seatingInfo[0][0];
-        System.out.println(name + " is at [0,0]");
-
-     }
+      public static void main(String[] args)
+      {
+          String[][] seatingInfo =
+          {
+              {"Jamal", "Maria"},
+              {"Jake", "Suzy"},
+              {"Emma", "Luke"}
+          };
+          String name = seatingInfo[0][0];
+          System.out.println(name + " is at [0,0]");
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("TwoDArrayInitGet");
-        }
+  import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expected = "Jamal is at [0,0]";
+  import java.io.*;
 
-            boolean passed = output.contains(expected);
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("TwoDArrayInitGet");
+      }
 
-            passed = getResults("true", "" + passed, "Output contains " + expected);
-            assertTrue(passed);
-        }
+      @Test
+      public void test1()
+      {
+          String output = getMethodOutput("main");
+          String expected = "Jamal is at [0,0]";
 
-        @Test
-        public void test2()
-        {
-            String output = getMethodOutput("main");
-            String[] lines = output.split("\n");
+          boolean passed = output.contains(expected);
 
-            String expected = "[3,0]";
-            String actual = "";
+          passed = getResults("true", "" + passed, "Output contains " + expected);
+          assertTrue(passed);
+      }
 
-            boolean passed = false;
+      @Test
+      public void test2()
+      {
+          String output = getMethodOutput("main");
+          String[] lines = output.split("\n");
 
-            for (String l : lines) {
-                if (l.replaceAll(" ", "").contains(expected)) {
-                    actual = l;
-                    passed = true;
-                }
-            }
+          String expected = "[3,0]";
+          String actual = "";
 
-            passed = getResults("Name is at "+ expected, actual, "Add one name to new row and print it out", passed);
-            assertTrue(passed);
-        }
+          boolean passed = false;
 
-        @Test
-        public void test3()
-        {
-            String output = getMethodOutput("main");
-            String[] lines = output.split("\n");
+          for (String l : lines)
+          {
+              if (l.replaceAll(" ", "").contains(expected))
+              {
+                  actual = l;
+                  passed = true;
+              }
+          }
 
-            String expected = "[3,1]";
-            String actual = "";
+          passed =
+                  getResults(
+                          "Name is at " + expected,
+                          actual,
+                          "Add one name to new row and print it out",
+                          passed);
+          assertTrue(passed);
+      }
 
-            boolean passed = false;
+      @Test
+      public void test3()
+      {
+          String output = getMethodOutput("main");
+          String[] lines = output.split("\n");
 
-            for (String l : lines) {
-                if (l.replaceAll(" ", "").contains(expected)) {
-                    actual = l;
-                    passed = true;
-                }
-            }
+          String expected = "[3,1]";
+          String actual = "";
 
-            passed = getResults("Name is at "+ expected, actual, "Add second name to new row and print it out", passed);
-            assertTrue(passed);
-        }
-    }
+          boolean passed = false;
+
+          for (String l : lines)
+          {
+              if (l.replaceAll(" ", "").contains(expected))
+              {
+                  actual = l;
+                  passed = true;
+              }
+          }
+
+          passed =
+                  getResults(
+                          "Name is at " + expected,
+                          actual,
+                          "Add second name to new row and print it out",
+                          passed);
+          assertTrue(passed);
+      }
+  }
 
 |Groupwork| Programming Challenge : ASCII Art
 ---------------------------------------------------
@@ -329,101 +350,108 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
   ~~~~
   public class AsciiArt
   {
-     public static void main(String[] args)
-     {
+      public static void main(String[] args)
+      {
 
-        String[][] asciiArt = {
+          String[][] asciiArt =
+          {
               {" ", " ", "_", "_", "_", " ", " "},
               {" ", "(", "o", " ", "o", ")", " "},
               {"(", " ", " ", "V", " ", " ", ")"},
               {" ", "-", "m", "-", "m", "-", " "},
-         };
+          };
 
-        //Part 1: Add 2 assignment statements to change "o" to "@"
+          // Part 1: Add 2 assignment statements to change "o" to "@"
 
+          // print the asciiArt for Part 1
+          System.out.println("ASCII Art:");
+          for (String[] row : asciiArt)
+          {
+              for (String column : row) System.out.print(column);
+              System.out.println();
+          }
 
-        // print the asciiArt for Part 1
-        System.out.println("ASCII Art:");
-        for(String[] row : asciiArt) {
-          for(String column : row)
-            System.out.print(column);
-          System.out.println();
-        }
+          // Part 2: Create your own ASCII art array and print it out!
 
-        //Part 2: Create your own ASCII art array and print it out!
-
-
-     }
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("AsciiArt");
-        }
+  import org.junit.*;
 
-        @Test
-        public void test0()
-        {
-            String output = getMethodOutput("main");
-            String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
+  import java.io.*;
 
-            boolean passed = getResults(expect, output, "Running main()", true);
-            assertTrue(passed);
-        }
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("AsciiArt");
+      }
 
-        /* removed because doesn't work if their own art has o
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
+      @Test
+      public void test0()
+      {
+          String output = getMethodOutput("main");
+          String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
 
-            boolean passed = output.contains("@") && !output.contains("o");
-            passed = getResults(expect, output, "changed o to @", passed);
-            assertTrue(passed);
-        }
-        */
+          boolean passed = getResults(expect, output, "Running main()", true);
+          assertTrue(passed);
+      }
 
-        @Test
-        public void test2()
-        {
-            String output = getMethodOutput("main");
-            String expect = "___  \n (@ @) \n(  V  )\n -m-m-";
+      /* removed because doesn't work if their own art has o
+      @Test
+      public void test1()
+      {
+          String output = getMethodOutput("main");
+          String expect = "ASCII Art: \n___  \n (@ @) \n(  V  )\n -m-m-";
 
-            if (output.contains("-m-m-")) {
-                int i = output.indexOf("-m-m-") + "-m-m-".length();
-                output = output.substring(i);
-            }
+          boolean passed = output.contains("@") && !output.contains("o");
+          passed = getResults(expect, output, "changed o to @", passed);
+          assertTrue(passed);
+      }
+      */
 
-            String[] lines = output.split("\n");
+      @Test
+      public void test2()
+      {
+          String output = getMethodOutput("main");
+          String expect = "___  \n (@ @) \n(  V  )\n -m-m-";
 
-            boolean passed = output.length() >= 10 && lines.length >= 3;
+          if (output.contains("-m-m-"))
+          {
+              int i = output.indexOf("-m-m-") + "-m-m-".length();
+              output = output.substring(i);
+          }
 
-            passed = getResults("Your art", output, "added your own ascii art (should be at least 3 x 3)", passed);
-            assertTrue(passed);
-        }
+          String[] lines = output.split("\n");
 
-        @Test
-        public void test3()
-        {
-            String expect = "asciiArt[#][#] = \"@\"";
-            String code = getCode();
-            int num = countOccurencesRegex(code, expect);
+          boolean passed = output.length() >= 10 && lines.length >= 3;
 
-            boolean passed = num >= 2;
+          passed =
+                  getResults(
+                          "Your art",
+                          output,
+                          "added your own ascii art (should be at least 3 x 3)",
+                          passed);
+          assertTrue(passed);
+      }
 
-            getResults("2", ""+num, "Number of asciiArt[#][#] = \"@\" lines in code", passed);
+      @Test
+      public void test3()
+      {
+          String expect = "asciiArt[#][#] = \"@\"";
+          String code = getCode();
+          int num = countOccurencesRegex(code, expect);
 
-            assertTrue(passed);
-        }
-    }
+          boolean passed = num >= 2;
 
+          getResults("2", "" + num, "Number of asciiArt[#][#] = \"@\" lines in code", passed);
 
+          assertTrue(passed);
+      }
+  }
 
 Summary
 -------
