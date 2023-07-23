@@ -68,24 +68,26 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     adjacent and both equal to ``2``.
     For example, ``has22({1, 2, 2})`` returns ``true`` and ``has22({1, 2, 1, 2})`` returns ``false``.
     ~~~~
-    public class StudentCode {
+    public class StudentCode
+    {
 
-        public static boolean has22(int[] arr) {
+        public static boolean has22(int[] arr)
+        {
 
             // write  code here
 
         }
 
-        public static void main(String[] args) {
+        public static void main(String[] args)
+        {
 
             int[] arr = {1, 2, 2};
             System.out.println(has22(arr));
             int[] arr2 = {1, 2, 1, 2};
             System.out.println(has22(arr2));
-
         }
-
     }
+
     ====
     import static org.junit.Assert.*;
 
@@ -179,24 +181,25 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     and returns ``true`` if the array contains either 3 even or 3 odd values all next to each other.
     For example ``has3OddOrEven({2, 1, 3, 5})`` returns ``true`` and ``has3OddOrEven({2, 1, 2, 5})`` returns ``false``.
     ~~~~
-    public class StudentCode {
+    public class StudentCode
+    {
 
-        public static boolean has3OddOrEven(int[] arr) {
+        public static boolean has3OddOrEven(int[] arr)
+        {
 
             // write code here
         }
 
-
-        public static void main(String[] args) {
+        public static void main(String[] args)
+        {
 
             int[] arr = {2, 1, 3, 5};
             System.out.println(has3OddOrEven(arr));
             int[] arr2 = {2, 1, 2, 5};
             System.out.println(has3OddOrEven(arr2));
-
         }
-
     }
+
     ====
     import static org.junit.Assert.*;
 
@@ -292,24 +295,26 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     For example, ``isAscending({1, 2, 3})`` returns ``true`` and ``isAscending({1, 2, 3, 2})``
     returns ``false``.
     ~~~~
-    public class StudentCode {
+    public class StudentCode
+    {
 
-        public static boolean isAscending(int[] arr) {
+        public static boolean isAscending(int[] arr)
+        {
 
             // write code here
 
         }
 
-        public static void main(String[] args) {
+        public static void main(String[] args)
+        {
 
             int[] arr = {1, 2, 3};
             System.out.println(isAscending(arr));
             int[] arr2 = {1, 2, 3, 2};
             System.out.println(isAscending(arr2));
-
         }
-
     }
+
     ====
     import static org.junit.Assert.*;
 
@@ -404,24 +409,26 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     For example, ``isDescending({3, 2, 1})`` returns ``true`` and ``isDescending({3, 2, 1, 2})``
     returns ``false``.
     ~~~~
-    public class StudentCode {
+    public class StudentCode
+    {
 
-        public static boolean isDescending(int[] arr) {
+        public static boolean isDescending(int[] arr)
+        {
 
             // write code here
 
         }
 
-        public static void main(String[] args) {
+        public static void main(String[] args)
+        {
 
             int[] arr = {3, 2, 1};
             System.out.println(isDescending(arr));
             int[] arr2 = {3, 2, 1, 2};
             System.out.println(isDescending(arr2));
-
         }
-
     }
+
     ====
     import static org.junit.Assert.*;
 
@@ -514,24 +521,26 @@ Try to solve each of the following. Click the *Check Me* button to check each so
     than a passed value, ``x``. For example, ``isLevel({3, 4, 6}, 2)`` returns ``true``
     and ``isLevel({3, 5, 8, 6}, 2)`` returns ``false``.
     ~~~~
-    public class StudentCode {
+    public class StudentCode
+    {
 
-        public static boolean isLevel(int[] arr, int x) {
+        public static boolean isLevel(int[] arr, int x)
+        {
 
             // write code here
 
         }
 
-        public static void main(String[] args) {
+        public static void main(String[] args)
+        {
 
-            int[]arr = {3, 4, 6};
+            int[] arr = {3, 4, 6};
             System.out.println(isLevel(arr, 2));
-            int[]arr = {3, 5, 8, 6};
+            int[] arr = {3, 5, 8, 6};
             System.out.println(isLevel(arr, 2));
-
         }
-
     }
+
     ====
     import static org.junit.Assert.*;
 
